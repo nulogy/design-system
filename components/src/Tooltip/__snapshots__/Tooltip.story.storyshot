@@ -472,153 +472,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
                              Button 
                           </button>
                         }
-                      >
-                        <Styled(Box)
-                          className=" nds-popper-pop-up"
-                          id="random-id-14"
-                          maxWidth="24em"
-                          onBlur={[Function]}
-                          onFocus={[Function]}
-                          onMouseEnter={[Function]}
-                          onMouseLeave={[Function]}
-                          open={false}
-                          position={
-                            Object {
-                              "left": 0,
-                              "opacity": 0,
-                              "pointerEvents": "none",
-                              "position": "absolute",
-                              "top": 0,
-                            }
-                          }
-                          role="tooltip"
-                          theme={
-                            Object {
-                              "borders": Array [],
-                              "breakpoints": Object {
-                                "extraLarge": "1920px",
-                                "extraSmall": "0px",
-                                "large": "1360px",
-                                "medium": "1024px",
-                                "small": "768px",
-                              },
-                              "colors": Object {
-                                "black": "#011e38",
-                                "blackBlue": "#122b47",
-                                "blue": "#216beb",
-                                "darkBlue": "#00438f",
-                                "darkGrey": "#434d59",
-                                "green": "#008059",
-                                "grey": "#c0c8d1",
-                                "lightBlue": "#e1ebfa",
-                                "lightGreen": "#e9f7f2",
-                                "lightGrey": "#e4e7eb",
-                                "lightRed": "#fae6ea",
-                                "lightYellow": "#fcf5e3",
-                                "red": "#cc1439",
-                                "white": "#ffffff",
-                                "whiteGrey": "#f0f2f5",
-                                "yellow": "#ffbb00",
-                              },
-                              "fontSizes": Object {
-                                "large": "20px",
-                                "larger": "26px",
-                                "largest": "46px",
-                                "medium": "16px",
-                                "small": "14px",
-                                "smaller": "12px",
-                              },
-                              "fontWeights": Object {
-                                "bold": "600",
-                                "light": "300",
-                                "medium": "500",
-                                "normal": "400",
-                              },
-                              "fonts": Object {
-                                "base": "'IBM Plex Sans', sans-serif",
-                                "mono": "'IBM Plex Mono', monospace",
-                              },
-                              "lineHeights": Object {
-                                "base": "1.5",
-                                "sectionTitle": "1.23076923",
-                                "smallTextBase": "1.71428571",
-                                "smallTextCompressed": "1.14285714",
-                                "smallerText": "1.33333333",
-                                "subsectionTitle": "1.2",
-                                "title": "1.04347826",
-                              },
-                              "radii": Object {
-                                "circle": "50%",
-                                "medium": "4px",
-                                "small": "2px",
-                              },
-                              "shadows": Object {
-                                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                              },
-                              "space": Object {
-                                "half": "4px",
-                                "none": "0px",
-                                "x1": "8px",
-                                "x2": "16px",
-                                "x3": "24px",
-                                "x4": "32px",
-                                "x5": "40px",
-                                "x6": "48px",
-                                "x8": "64px",
-                              },
-                              "zIndex": Object {
-                                "content": 100,
-                                "overlay": 1000,
-                                "tabsBar": 210,
-                                "tabsScollIndicator": 200,
-                              },
-                            }
-                          }
-                        >
-                          <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                            id="random-id-14"
-                            onBlur={[Function]}
-                            onFocus={[Function]}
-                            onMouseEnter={[Function]}
-                            onMouseLeave={[Function]}
-                            open={false}
-                            role="tooltip"
-                          >
-                            I
-                             
-                            a
-                            m
-                             
-                            a
-                             
-                            T
-                            o
-                            o
-                            l
-                            t
-                            i
-                            p
-                            !
-                            <PopperArrow
-                              backgroundColor="white"
-                              borderColor="grey"
-                              key="popper-arrow"
-                              placement="bottom"
-                              style={Object {}}
-                            >
-                              <div
-                                className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                                style={Object {}}
-                              />
-                            </PopperArrow>
-                          </div>
-                        </Styled(Box)>
-                      </InnerPopper>
+                      />
                     </Popper>
                   </Manager>
                 </ForwardRef>
@@ -1022,7 +876,8 @@ exports[`Storyshots Tooltip open by default 1`] = `
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                       open={true}
-                      position={
+                      role="tooltip"
+                      style={
                         Object {
                           "left": 0,
                           "opacity": 0,
@@ -1031,7 +886,6 @@ exports[`Storyshots Tooltip open by default 1`] = `
                           "top": 0,
                         }
                       }
-                      role="tooltip"
                       theme={
                         Object {
                           "borders": Array [],
@@ -1120,7 +974,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                        className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                         id="random-id-38"
                         onBlur={[Function]}
                         onFocus={[Function]}
@@ -1128,6 +982,15 @@ exports[`Storyshots Tooltip open by default 1`] = `
                         onMouseLeave={[Function]}
                         open={true}
                         role="tooltip"
+                        style={
+                          Object {
+                            "left": 0,
+                            "opacity": 0,
+                            "pointerEvents": "none",
+                            "position": "absolute",
+                            "top": 0,
+                          }
+                        }
                       >
                         I
                          
@@ -1568,164 +1431,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
                          Button 
                       </button>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-30"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-30"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        <ForwardRef
-                          asLink={false}
-                          disabled={false}
-                          fullWidth={false}
-                          href="/"
-                          icon={null}
-                          iconSide="right"
-                          key="0"
-                          size="medium"
-                        >
-                          <Button__WrapperButton
-                            disabled={false}
-                            fullWidth={false}
-                            href="/"
-                            size="medium"
-                          >
-                            <button
-                              className="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
-                              disabled={false}
-                              href="/"
-                              size="medium"
-                            >
-                               Button 
-                            </button>
-                          </Button__WrapperButton>
-                        </ForwardRef>
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -2211,238 +1917,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
                          Button 
                       </button>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-29"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-29"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        <Link
-                          color="blue"
-                          href="/"
-                          key="0"
-                          theme={
-                            Object {
-                              "borders": Array [],
-                              "breakpoints": Object {
-                                "extraLarge": "1920px",
-                                "extraSmall": "0px",
-                                "large": "1360px",
-                                "medium": "1024px",
-                                "small": "768px",
-                              },
-                              "colors": Object {
-                                "black": "#011e38",
-                                "blackBlue": "#122b47",
-                                "blue": "#216beb",
-                                "darkBlue": "#00438f",
-                                "darkGrey": "#434d59",
-                                "green": "#008059",
-                                "grey": "#c0c8d1",
-                                "lightBlue": "#e1ebfa",
-                                "lightGreen": "#e9f7f2",
-                                "lightGrey": "#e4e7eb",
-                                "lightRed": "#fae6ea",
-                                "lightYellow": "#fcf5e3",
-                                "red": "#cc1439",
-                                "white": "#ffffff",
-                                "whiteGrey": "#f0f2f5",
-                                "yellow": "#ffbb00",
-                              },
-                              "fontSizes": Object {
-                                "large": "20px",
-                                "larger": "26px",
-                                "largest": "46px",
-                                "medium": "16px",
-                                "small": "14px",
-                                "smaller": "12px",
-                              },
-                              "fontWeights": Object {
-                                "bold": "600",
-                                "light": "300",
-                                "medium": "500",
-                                "normal": "400",
-                              },
-                              "fonts": Object {
-                                "base": "'IBM Plex Sans', sans-serif",
-                                "mono": "'IBM Plex Mono', monospace",
-                              },
-                              "lineHeights": Object {
-                                "base": "1.5",
-                                "sectionTitle": "1.23076923",
-                                "smallTextBase": "1.71428571",
-                                "smallTextCompressed": "1.14285714",
-                                "smallerText": "1.33333333",
-                                "subsectionTitle": "1.2",
-                                "title": "1.04347826",
-                              },
-                              "radii": Object {
-                                "circle": "50%",
-                                "medium": "4px",
-                                "small": "2px",
-                              },
-                              "shadows": Object {
-                                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                              },
-                              "space": Object {
-                                "half": "4px",
-                                "none": "0px",
-                                "x1": "8px",
-                                "x2": "16px",
-                                "x3": "24px",
-                                "x4": "32px",
-                                "x5": "40px",
-                                "x6": "48px",
-                                "x8": "64px",
-                              },
-                              "zIndex": Object {
-                                "content": 100,
-                                "overlay": 1000,
-                                "tabsBar": 210,
-                                "tabsScollIndicator": 200,
-                              },
-                            }
-                          }
-                          underline={true}
-                        >
-                          <a
-                            className="Link-sc-1lpx3d0-0 hFcUQo"
-                            color="blue"
-                            href="/"
-                          >
-                             Link 
-                          </a>
-                        </Link>
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -2834,145 +2309,7 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
                          Button 
                       </button>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-32"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-32"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        T
-                        o
-                        o
-                        l
-                        t
-                        i
-                        p
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -3466,7 +2803,8 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -3475,7 +2813,6 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -3564,7 +2901,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh fIA-DHu  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dkQvKF  nds-popper-pop-up"
                             id="random-id-16"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -3572,6 +2909,15 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             I
                              
@@ -4089,145 +3435,7 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
                          Button 
                       </button>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-31"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-31"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        T
-                        o
-                        o
-                        l
-                        t
-                        i
-                        p
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -4619,145 +3827,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                          Button 
                       </button>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-33"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-33"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        T
-                        o
-                        o
-                        l
-                        t
-                        i
-                        p
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -5020,145 +4090,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                          Link 
                       </a>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-34"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-34"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        T
-                        o
-                        o
-                        l
-                        t
-                        i
-                        p
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -5262,145 +4194,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         Inline Text
                       </span>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-35"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-35"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        T
-                        o
-                        o
-                        l
-                        t
-                        i
-                        p
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -5659,145 +4453,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         Box width 200px
                       </div>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-36"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-36"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        T
-                        o
-                        o
-                        l
-                        t
-                        i
-                        p
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -6052,145 +4708,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
                         Box
                       </div>
                     }
-                  >
-                    <Styled(Box)
-                      className=" nds-popper-pop-up"
-                      id="random-id-37"
-                      maxWidth="24em"
-                      onBlur={[Function]}
-                      onFocus={[Function]}
-                      onMouseEnter={[Function]}
-                      onMouseLeave={[Function]}
-                      open={false}
-                      position={
-                        Object {
-                          "left": 0,
-                          "opacity": 0,
-                          "pointerEvents": "none",
-                          "position": "absolute",
-                          "top": 0,
-                        }
-                      }
-                      role="tooltip"
-                      theme={
-                        Object {
-                          "borders": Array [],
-                          "breakpoints": Object {
-                            "extraLarge": "1920px",
-                            "extraSmall": "0px",
-                            "large": "1360px",
-                            "medium": "1024px",
-                            "small": "768px",
-                          },
-                          "colors": Object {
-                            "black": "#011e38",
-                            "blackBlue": "#122b47",
-                            "blue": "#216beb",
-                            "darkBlue": "#00438f",
-                            "darkGrey": "#434d59",
-                            "green": "#008059",
-                            "grey": "#c0c8d1",
-                            "lightBlue": "#e1ebfa",
-                            "lightGreen": "#e9f7f2",
-                            "lightGrey": "#e4e7eb",
-                            "lightRed": "#fae6ea",
-                            "lightYellow": "#fcf5e3",
-                            "red": "#cc1439",
-                            "white": "#ffffff",
-                            "whiteGrey": "#f0f2f5",
-                            "yellow": "#ffbb00",
-                          },
-                          "fontSizes": Object {
-                            "large": "20px",
-                            "larger": "26px",
-                            "largest": "46px",
-                            "medium": "16px",
-                            "small": "14px",
-                            "smaller": "12px",
-                          },
-                          "fontWeights": Object {
-                            "bold": "600",
-                            "light": "300",
-                            "medium": "500",
-                            "normal": "400",
-                          },
-                          "fonts": Object {
-                            "base": "'IBM Plex Sans', sans-serif",
-                            "mono": "'IBM Plex Mono', monospace",
-                          },
-                          "lineHeights": Object {
-                            "base": "1.5",
-                            "sectionTitle": "1.23076923",
-                            "smallTextBase": "1.71428571",
-                            "smallTextCompressed": "1.14285714",
-                            "smallerText": "1.33333333",
-                            "subsectionTitle": "1.2",
-                            "title": "1.04347826",
-                          },
-                          "radii": Object {
-                            "circle": "50%",
-                            "medium": "4px",
-                            "small": "2px",
-                          },
-                          "shadows": Object {
-                            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                          },
-                          "space": Object {
-                            "half": "4px",
-                            "none": "0px",
-                            "x1": "8px",
-                            "x2": "16px",
-                            "x3": "24px",
-                            "x4": "32px",
-                            "x5": "40px",
-                            "x6": "48px",
-                            "x8": "64px",
-                          },
-                          "zIndex": Object {
-                            "content": 100,
-                            "overlay": 1000,
-                            "tabsBar": 210,
-                            "tabsScollIndicator": 200,
-                          },
-                        }
-                      }
-                    >
-                      <div
-                        className="Box-sc-1qu1edy-0 sc-fzXfNh kAYrkP  nds-popper-pop-up"
-                        id="random-id-37"
-                        onBlur={[Function]}
-                        onFocus={[Function]}
-                        onMouseEnter={[Function]}
-                        onMouseLeave={[Function]}
-                        open={false}
-                        role="tooltip"
-                      >
-                        T
-                        o
-                        o
-                        l
-                        t
-                        i
-                        p
-                        <PopperArrow
-                          backgroundColor="white"
-                          borderColor="grey"
-                          key="popper-arrow"
-                          placement="bottom"
-                          style={Object {}}
-                        >
-                          <div
-                            className="PopperArrow-sc-1bcgj4w-0 jABZcb"
-                            style={Object {}}
-                          />
-                        </PopperArrow>
-                      </div>
-                    </Styled(Box)>
-                  </InnerPopper>
+                  />
                 </Popper>
               </Manager>
             </ForwardRef>
@@ -6686,7 +5204,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -6695,7 +5214,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -6784,7 +5302,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-17"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -6792,6 +5310,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             t
                             o
@@ -6935,7 +5462,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -6944,7 +5472,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -7033,7 +5560,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-18"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -7041,6 +5568,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             t
                             o
@@ -7178,7 +5714,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -7187,7 +5724,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -7276,7 +5812,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-19"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -7284,6 +5820,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             t
                             o
@@ -7521,7 +6066,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -7530,7 +6076,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -7619,7 +6164,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-20"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -7627,6 +6172,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             l
                             e
@@ -7771,7 +6325,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -7780,7 +6335,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -7869,7 +6423,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-21"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -7877,6 +6431,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             l
                             e
@@ -8015,7 +6578,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -8024,7 +6588,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -8113,7 +6676,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-22"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8121,6 +6684,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             l
                             e
@@ -8359,7 +6931,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -8368,7 +6941,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -8457,7 +7029,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-23"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8465,6 +7037,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             r
                             i
@@ -8610,7 +7191,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -8619,7 +7201,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -8708,7 +7289,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-24"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8716,6 +7297,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             r
                             i
@@ -8855,7 +7445,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -8864,7 +7455,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -8953,7 +7543,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-25"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -8961,6 +7551,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             r
                             i
@@ -9200,7 +7799,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -9209,7 +7809,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -9298,7 +7897,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-26"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -9306,6 +7905,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             b
                             o
@@ -9452,7 +8060,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -9461,7 +8070,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -9550,7 +8158,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-27"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -9558,6 +8166,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             b
                             o
@@ -9698,7 +8315,8 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -9707,7 +8325,6 @@ exports[`Storyshots Tooltip with placement 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -9796,7 +8413,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-28"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -9804,6 +8421,15 @@ exports[`Storyshots Tooltip with placement 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             b
                             o
@@ -10325,7 +8951,8 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                           onMouseEnter={[Function]}
                           onMouseLeave={[Function]}
                           open={true}
-                          position={
+                          role="tooltip"
+                          style={
                             Object {
                               "left": 0,
                               "opacity": 0,
@@ -10334,7 +8961,6 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                               "top": 0,
                             }
                           }
-                          role="tooltip"
                           theme={
                             Object {
                               "borders": Array [],
@@ -10423,7 +9049,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                           }
                         >
                           <div
-                            className="Box-sc-1qu1edy-0 sc-fzXfNh qNuDP  nds-popper-pop-up"
+                            className="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
                             id="random-id-15"
                             onBlur={[Function]}
                             onFocus={[Function]}
@@ -10431,6 +9057,15 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
                             onMouseLeave={[Function]}
                             open={true}
                             role="tooltip"
+                            style={
+                              Object {
+                                "left": 0,
+                                "opacity": 0,
+                                "pointerEvents": "none",
+                                "position": "absolute",
+                                "top": 0,
+                              }
+                            }
                           >
                             I
                              
