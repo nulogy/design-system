@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/nulogy/design-system/compare/v0.24.3...v1.0.0) (2020-02-19)
+
+
+* chore!: readme change to bump to v1 (#553) ([5442bb8](https://github.com/nulogy/design-system/commit/5442bb8)), closes [#553](https://github.com/nulogy/design-system/issues/553)
+
+
+### Bug Fixes
+
+* position updates from popper causing jank while scrolling ([#554](https://github.com/nulogy/design-system/issues/554)) ([87bea3f](https://github.com/nulogy/design-system/commit/87bea3f))
+
+
+### BREAKING CHANGES
+
+* bump to v1
+* update package versions to major version
+
+
+
+
+
 ## [0.24.3](https://github.com/nulogy/design-system/compare/v0.24.2...v0.24.3) (2020-02-14)
 
 **Note:** Version bump only for package @nulogy/nds
