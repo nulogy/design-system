@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
+import { Trans } from "react-i18next";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
@@ -65,6 +66,7 @@ class BaseAlert extends Component {
         {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
         <Box mr="auto">
           {title && <Text fontWeight="bold">{title}</Text>}
+          <Trans>Welcome to React</Trans>
           {children}
         </Box>
         {isCloseable && (
