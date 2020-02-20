@@ -1,5 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { Trans } from "react-i18next";
 import { Alert } from "../index";
 import { Link } from "../Link";
 
@@ -17,5 +18,10 @@ storiesOf("Alert", module)
   .add("With a link", () => (
     <Alert>
       An alert with <Link href="/">linked details</Link>.
+    </Alert>
+  ))
+  .add("With a translation", () => (
+    <Alert title="Danger title!" type="danger">
+      <Trans>Welcome to React</Trans>
     </Alert>
   ));
