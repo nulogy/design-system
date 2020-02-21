@@ -96,7 +96,6 @@
     "debounce": "^1.2.0",
     "gatsby-plugin-gtag": "^1.0.12",
     "i18next": "^19.3.1",
-    "i18next-xhr-backend": "^3.2.2",
     "mockdate": "^2.0.5",
     "polished": "3.4.4",
     "react-datepicker": "^2.10.1",

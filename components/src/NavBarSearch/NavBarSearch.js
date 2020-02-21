@@ -2,41 +2,30 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { darken, transparentize } from "polished";
+import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";
 import { Input } from "../Input";
 import { Icon } from "../Icon";
 import theme from "../theme";
 import { subPx } from "../utils";
 
-class BaseNavBarSearch extends React.Component {
-  constructor() {
-    super();
-
-    this.handleOnSubmit = this.handleOnSubmit.bind(this);
-  }
-
-  handleOnSubmit(e) {
-    const { onSubmit } = this.props;
-
+const BaseNavBarSearch = ({ name, onSubmit, ...props }) => {
+  const handleOnSubmit = e => {
     e.preventDefault();
     onSubmit(e);
-  }
-
-  render() {
-    const { name, ...props } = this.props;
-
-    return (
-      <form {...props} onSubmit={this.handleOnSubmit}>
-        <Flex role="search">
-          <Input id="navbar-search" type="search" aria-labelledby={name} required placeholder="Search Nulogy ..." />
-          <button id={name} aria-label={name}>
-            <Icon icon="search" />
-          </button>
-        </Flex>
-      </form>
-    );
-  }
-}
+  };
+  const { t } = useTranslation();
+  return (
+    <form {...props} onSubmit={handleOnSubmit}>
+      <Flex role="search">
+        <Input id="navbar-search" type="search" aria-labelledby={name} required placeholder={t("search nulogy")} />
+        <button id={name} aria-label={name}>
+          <Icon icon="search" />
+        </button>
+      </Flex>
+    </form>
+  );
+};
 
 const NavBarSearch = styled(BaseNavBarSearch)({
   background: theme.colors.lightBlue,

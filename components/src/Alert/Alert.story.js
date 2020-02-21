@@ -1,6 +1,5 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Trans } from "react-i18next";
 import { Alert } from "../index";
 import { Link } from "../Link";
 

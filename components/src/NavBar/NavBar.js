@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import ReactResizeDetector from "react-resize-detector";
+import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
@@ -145,6 +146,21 @@ const SmallHeader = styled.header(({ isOpen }) =>
 
 const pixelDigitsFrom = pixelString => parseInt(pixelString, 10);
 
+const MenuIcon = ({ isOpen }) => {
+  const { t } = useTranslation();
+  const icon = isOpen ? "close" : "menu";
+  const title = isOpen ? t("close menu") : "open menu";
+  return <Icon icon={icon} title={title} />;
+};
+
+MenuIcon.propTypes = {
+  isOpen: PropTypes.bool
+};
+
+MenuIcon.defaultProps = {
+  isOpen: false
+};
+
 /* eslint-disable react/destructuring-assignment */
 class SmallNavBarNoState extends React.Component {
   constructor() {
@@ -199,7 +215,7 @@ class SmallNavBarNoState extends React.Component {
                 onClick={toggleMenu}
                 aria-expanded={isOpen ? true : null}
               >
-                {isOpen ? <Icon icon="close" title="Close Menu" /> : <Icon icon="menu" title="Open Menu" />}
+                <MenuIcon isOpen={isOpen} />
               </MobileMenuTrigger>
             )}
           </Flex>

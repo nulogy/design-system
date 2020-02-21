@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import theme from "../theme";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
@@ -35,9 +36,10 @@ const PaginationButton = styled.button(props => ({
 
 const PreviousButton = props => {
   const { disabled, onClick } = props;
+  const { t } = useTranslation();
   return (
     <PaginationButton disabled={disabled} onClick={onClick}>
-      <Icon icon="leftArrow" ml="-8px" /> Previous
+      <Icon icon="leftArrow" ml="-8px" /> {t("previous")}
     </PaginationButton>
   );
 };
@@ -54,9 +56,10 @@ PreviousButton.defaultProps = {
 
 const NextButton = props => {
   const { disabled, onClick } = props;
+  const { t } = useTranslation();
   return (
     <PaginationButton disabled={disabled} onClick={onClick}>
-      Next <Icon icon="rightArrow" mr="-8px" />
+      {t("next")} <Icon icon="rightArrow" mr="-8px" />
     </PaginationButton>
   );
 };
@@ -93,7 +96,7 @@ export const getPageItemstoDisplay = (totalPages, currentPage) => {
 
 const Pagination = props => {
   const { currentPage, totalPages, onNext, onPrevious, onSelectPage, ...restProps } = props;
-
+  const { t } = useTranslation();
   return (
     <Flex as="nav" aria-label="Pagination navigation" {...restProps}>
       <PreviousButton disabled={currentPage === 1} onClick={onPrevious} />
@@ -113,7 +116,7 @@ const Pagination = props => {
               aria-current={isCurrentPage}
               currentPage={isCurrentPage}
               disabled={isCurrentPage}
-              aria-label={isCurrentPage ? null : `Go to page ${page}`}
+              aria-label={isCurrentPage ? null : t("go to page", { count: page })}
               key={page}
               onClick={() => onSelectPage(page)}
             >
