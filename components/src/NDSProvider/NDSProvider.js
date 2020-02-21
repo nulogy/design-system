@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { I18nextProvider } from "react-i18next";
@@ -31,7 +31,9 @@ const GlobalStyles = styled.div(({ theme }) => ({
 }));
 
 const NDSProvider = ({ theme, children, locale }) => {
-  i18n.changeLanguage(locale);
+  useEffect(() => {
+    i18n.changeLanguage(locale);
+  }, [locale]);
 
   return (
     <>
