@@ -76,10 +76,10 @@ addDecorator(story => {
       <Radio
         id="radio-es"
         onClick={() => {
-          setLocale("es");
+          setLocale("fr");
         }}
-        checked={locale === "es"}
-        labelText="Spanish"
+        checked={locale === "fr"}
+        labelText="French"
       />
       <NDSProvider locale={locale}>{story()}</NDSProvider>
     </div>

@@ -20,8 +20,3 @@ storiesOf("Alert", module)
       An alert with <Link href="/">linked details</Link>.
     </Alert>
   ));
-// .add("With a translation", () => (
-//   <Alert title="Danger title!" type="danger">
-//     <Trans>Welcome to React</Trans>
-//   </Alert>
-// ));
