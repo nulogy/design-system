@@ -1,19 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 import { Checkbox } from "../Checkbox";
 import { rowPropType } from "./Table.types";
 
 export const SELECTABLE_COLUMN_DATA_KEY = "selected";
 
-const selectHeaderFormatter = (onSelectHeader, isHeaderSelected) => () => (
-  <Checkbox checked={isHeaderSelected} onChange={onSelectHeader} aria-label="toggle all row selections" />
-);
+const selectHeaderFormatter = (onSelectHeader, isHeaderSelected) => () => {
+  const { t } = useTranslation();
+  const ariaLabel = isHeaderSelected ? t("select all") : t("deselect all");
+  return <Checkbox checked={isHeaderSelected} onChange={onSelectHeader} aria-label={ariaLabel} />;
+};
 
 const SelectCell = ({ row, onSelectRow }) => {
   const selectRowHandler = () => onSelectRow(row);
-  return (
-    <Checkbox aria-label="toggle row selection" checked={row[SELECTABLE_COLUMN_DATA_KEY]} onChange={selectRowHandler} />
-  );
+  const checked = row[SELECTABLE_COLUMN_DATA_KEY];
+  const { t } = useTranslation();
+  const ariaLabel = checked ? t("select row") : t("deselect row");
+  return <Checkbox aria-label={ariaLabel} checked={checked} onChange={selectRowHandler} />;
 };
 
 SelectCell.propTypes = {
