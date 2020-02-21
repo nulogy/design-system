@@ -2,17 +2,17 @@ import i18n from "i18next";
 import en from "../locales/en.json";
 import fr from "../locales/fr.json";
 
-// the translations
-// (tip move them in a JSON file and import them)
 const resources = {
   en: {
-    translation: en
+    nds: en
   },
   fr: {
-    translation: fr
+    nds: fr
   }
 };
 i18n.init({
+  ns: ["nds"],
+  defaultNS: "nds",
   resources,
   lng: "en",
 
