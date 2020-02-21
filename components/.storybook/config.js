@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { configure, addDecorator, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
 import { withA11y } from "@storybook/addon-a11y";
+import { Radio } from "../src";
 
 const req = require.context("../src", true, /\.story\.js$/);
 
@@ -61,9 +62,32 @@ addParameters({
 });
 
 addDecorator(story => {
+  const [locale, setLocale] = useState("en");
   return (
     <div style={{ padding: theme.space.x3 }}>
-      <NDSProvider locale="en">{story()}</NDSProvider>
+      <NDSProvider locale={locale}>
+        {story()}
+        <div style={{ bottom: 0, right: 0, position: "absolute", display: "flex" }}>
+          <Radio
+            id="radio-en"
+            onClick={() => {
+              setLocale("en");
+            }}
+            checked={locale === "en"}
+            labelText="English"
+            pr="x2"
+          />
+          <Radio
+            id="radio-fr"
+            onClick={() => {
+              setLocale("fr");
+            }}
+            checked={locale === "fr"}
+            labelText="French"
+            pr="x2"
+          />
+        </div>
+      </NDSProvider>
     </div>
   );
 });
