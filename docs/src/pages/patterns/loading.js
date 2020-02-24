@@ -321,7 +321,7 @@ export default () => (
           <Text m="0" mr="half" color="darlGrey">
             Applying status
           </Text>
-          <img src={loadingInlineImage} />
+          <img src={loadingInlineImage} alt="" />
         </Flex>
         <Flex alignItems="center">
           <Icon icon="check" color="green" mr="x1" />
