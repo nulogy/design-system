@@ -398,6 +398,14 @@ exports[`Storyshots Table with everything 1`] = `
                   "expectedQuantity": "2,475 eaches",
                   "id": "r10",
                 },
+                Object {
+                  "date": "2020-01-24",
+                  "expectedQuantity": Object {
+                    "unit": "eaches",
+                    "value": 2475,
+                  },
+                  "id": "r11",
+                },
               ]
             }
             rowsPerPage={5}
@@ -524,6 +532,14 @@ exports[`Storyshots Table with everything 1`] = `
                     "date": "2019-10-24",
                     "expectedQuantity": "2,475 eaches",
                     "id": "r10",
+                  },
+                  Object {
+                    "date": "2020-01-24",
+                    "expectedQuantity": Object {
+                      "unit": "eaches",
+                      "value": 2475,
+                    },
+                    "id": "r11",
                   },
                 ]
               }
@@ -5158,7 +5174,7 @@ exports[`Storyshots Table with everything 1`] = `
                 onPrevious={[Function]}
                 onSelectPage={[Function]}
                 pt="x2"
-                totalPages={2}
+                totalPages={3}
               >
                 <Styled(Box)
                   aria-label="Pagination navigation"
@@ -5344,6 +5360,24 @@ exports[`Storyshots Table with everything 1`] = `
                         onClick={[Function]}
                       >
                         2
+                      </button>
+                    </Styled(Pagination__PaginationButton)>
+                    <Styled(Pagination__PaginationButton)
+                      aria-current={false}
+                      aria-label="Go to page 3"
+                      currentPage={false}
+                      disabled={false}
+                      key="3"
+                      onClick={[Function]}
+                    >
+                      <button
+                        aria-current={false}
+                        aria-label="Go to page 3"
+                        className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+                        disabled={false}
+                        onClick={[Function]}
+                      >
+                        3
                       </button>
                     </Styled(Pagination__PaginationButton)>
                     <NextButton

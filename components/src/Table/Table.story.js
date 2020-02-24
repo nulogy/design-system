@@ -80,7 +80,8 @@ const rowDataWithEverything = [
   { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r7" },
   { heading: "And Another Company", cellRenderer: sectionRow, id: "r8" },
   { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r9", expandedContent },
-  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r10" }
+  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r10" },
+  { date: "2020-01-24", expectedQuantity: { value: 2475, unit: "eaches" }, id: "r11" }
 ];
 
 const footerRowData = [
