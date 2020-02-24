@@ -65,6 +65,7 @@ export default () => (
       </Text>
       <Box
         width={{ medium: "110%", large: "130%" }}
+        pt="x3"
         ml={{ medium: "-5%", large: "-15%" }}
       >
         <img
