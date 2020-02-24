@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
 import { getDuration } from "./TimeRange.utils";
+
+const DEFAULT_LABEL = "Time Range";
 
 const TimeRange = ({
   timeFormat,
@@ -86,9 +89,14 @@ const TimeRange = ({
     validateTimeRange();
   }, [startTime, endTime]);
 
+  const { t } = useTranslation();
+
   return (
     <RangeContainer
-      labelProps={labelProps}
+      labelProps={{
+        ...labelProps,
+        labelText: labelProps.labelText === DEFAULT_LABEL ? t("time range") : labelProps.labelText
+      }}
       startComponent={startInput}
       selected={endTime}
       endComponent={endInput}
@@ -124,7 +132,7 @@ TimeRange.defaultProps = {
   disableRangeValidation: false,
   labelProps: {
     ...FieldLabelDefaultProps,
-    labelText: "Time Range"
+    labelText: DEFAULT_LABEL
   },
   minTime: null,
   maxTime: null,

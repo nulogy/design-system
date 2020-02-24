@@ -38,7 +38,7 @@ const PreviousButton = props => {
   const { disabled, onClick } = props;
   const { t } = useTranslation();
   return (
-    <PaginationButton disabled={disabled} onClick={onClick}>
+    <PaginationButton disabled={disabled} onClick={onClick} aria-label={t("go to previous results")}>
       <Icon icon="leftArrow" ml="-8px" /> {t("previous")}
     </PaginationButton>
   );
@@ -58,7 +58,7 @@ const NextButton = props => {
   const { disabled, onClick } = props;
   const { t } = useTranslation();
   return (
-    <PaginationButton disabled={disabled} onClick={onClick}>
+    <PaginationButton disabled={disabled} onClick={onClick} aria-label={t("go to next results")}>
       {t("next")} <Icon icon="rightArrow" mr="-8px" />
     </PaginationButton>
   );
