@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 import { ControlIcon } from "..";
 import { rowPropType } from "./Table.types";
 import { SELECTABLE_COLUMN_DATA_KEY } from "./addSelectableControl";
@@ -8,12 +9,13 @@ const EXPANDABLE_COLUMN_DATA_KEY = "expanded";
 
 const ExpandCell = ({ row, onRowExpansionChange }) => {
   const expandRowHandler = () => onRowExpansionChange(row);
+  const { t } = useTranslation();
   return (
     <>
       {row.expandedContent && (
         <ControlIcon
           icon={row[EXPANDABLE_COLUMN_DATA_KEY] ? "upArrow" : "downArrow"}
-          label="toggle expansion"
+          label={row[EXPANDABLE_COLUMN_DATA_KEY] ? t("collapse row") : t("expand row")}
           onClick={expandRowHandler}
         />
       )}

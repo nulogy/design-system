@@ -48,7 +48,7 @@ const MonthRange = ({
   const validateDateRange = () => {
     let error;
     if (endMonth && startMonth && isBefore(endMonth, startMonth)) {
-      error = "End date is before start Month";
+      error = "end month is before start month";
     }
     setRangeError(error);
     if (onRangeChange) {
@@ -102,7 +102,7 @@ const MonthRange = ({
       }}
       startComponent={startDateInput}
       endComponent={endDateInput}
-      errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+      errorMessages={!disableRangeValidation ? [t(rangeError), errorMessage] : [errorMessage]}
     />
   );
 };
