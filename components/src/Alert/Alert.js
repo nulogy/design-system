@@ -82,7 +82,7 @@ class BaseAlert extends Component {
 BaseAlert.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  isCloseable: PropTypes.node,
+  isCloseable: PropTypes.bool,
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "informative", "success", "warning"]),
   ...propTypes.space
