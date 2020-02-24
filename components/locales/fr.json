@@ -2,7 +2,7 @@
   "close menu": "fermer le menu",
   "close": "fermer",
   "collapse row": "l'effondrement ligne",
-  "date range": "la plage de dates",
+  "date range": "Plage de dates",
   "deselect all rows": "désélectionner toutes les lignes",
   "deselect row": "désélectionnez ligne",
   "end date is before start date": "Date de fin qui est avant la date de début.",
@@ -14,7 +14,7 @@
   "go to previous results": "accédez aux résultats précédents",
   "go to": "aller à",
   "hide actions": "masquer les actions",
-  "month range": "mois",
+  "month range": "Mois",
   "next": "Prochaine",
   "open menu": "ouvrir le menu",
   "open": "ouvert",
@@ -32,5 +32,5 @@
   "show actions": "afficher les actions",
   "sort ascending": "trier par ordre croissant",
   "sort descending": "tri décroissant",
-  "time range": "plage de temps"
+  "time range": "Plage de temps"
 }
