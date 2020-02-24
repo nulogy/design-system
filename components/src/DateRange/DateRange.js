@@ -86,12 +86,12 @@ const DateRange = ({
     let error;
     if (endDate && startDate) {
       if (isBefore(endDate, startDate)) {
-        error = "End date is before start date";
+        error = "end date is before start date";
       }
       if (isSameDay(endDate, startDate) && showTimes) {
         const duration = getDuration(startTime, endTime);
         if (duration < 0) {
-          error = "End time is before start time";
+          error = "end time is before start time";
         }
       }
     }
@@ -179,7 +179,7 @@ const DateRange = ({
         }}
         startComponent={startDateInput}
         endComponent={endDateInput}
-        errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+        errorMessages={!disableRangeValidation ? [t(rangeError), errorMessage] : [errorMessage]}
       />
     </>
   );

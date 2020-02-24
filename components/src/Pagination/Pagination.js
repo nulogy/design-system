@@ -98,7 +98,7 @@ const Pagination = props => {
   const { currentPage, totalPages, onNext, onPrevious, onSelectPage, ...restProps } = props;
   const { t } = useTranslation();
   return (
-    <Flex as="nav" aria-label="Pagination navigation" {...restProps}>
+    <Flex as="nav" aria-label={t("pagination navigation")} {...restProps}>
       <PreviousButton disabled={currentPage === 1} onClick={onPrevious} />
       {getPageItemstoDisplay(totalPages, currentPage).map((page, index) => {
         const isCurrentPage = currentPage === page;

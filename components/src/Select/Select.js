@@ -1,5 +1,6 @@
 import React from "react";
 import Select, { components as selectComponents } from "react-select";
+import { useTranslation } from "react-i18next";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -67,41 +68,44 @@ const ReactSelect = ({
   onMenuClose,
   onInputChange,
   components
-}) => (
-  <Field>
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <Select
-        className={className}
-        classNamePrefix={classNamePrefix}
-        noOptionsMessage={noOptionsMessage}
-        placeholder={placeholder}
-        options={options}
-        labelText={labelText}
-        styles={customStyles(error)}
-        isDisabled={disabled}
-        isSearchable={autocomplete}
-        aria-required={required}
-        aria-invalid={error}
-        defaultMenuIsOpen={initialIsOpen}
-        maxMenuHeight={maxHeight}
-        inputId={id}
-        onBlur={onBlur}
-        onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
-        defaultValue={getReactSelectValue(options, defaultValue)}
-        value={getReactSelectValue(options, value)}
-        name={name}
-        isMulti={multiselect}
-        menuIsOpen={menuIsOpen}
-        onMenuOpen={onMenuOpen}
-        onMenuClose={onMenuClose}
-        menuPosition={menuPosition}
-        onInputChange={onInputChange}
-        components={{ Option: SelectOption, Control, ...components }}
-      />
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-    </MaybeFieldLabel>
-  </Field>
-);
+}) => {
+  const { t } = useTranslation();
+  return (
+    <Field>
+      <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+        <Select
+          className={className}
+          classNamePrefix={classNamePrefix}
+          noOptionsMessage={noOptionsMessage}
+          placeholder={placeholder || t("select ...")}
+          options={options}
+          labelText={labelText}
+          styles={customStyles(error)}
+          isDisabled={disabled}
+          isSearchable={autocomplete}
+          aria-required={required}
+          aria-invalid={error}
+          defaultMenuIsOpen={initialIsOpen}
+          maxMenuHeight={maxHeight}
+          inputId={id}
+          onBlur={onBlur}
+          onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
+          defaultValue={getReactSelectValue(options, defaultValue)}
+          value={getReactSelectValue(options, value)}
+          name={name}
+          isMulti={multiselect}
+          menuIsOpen={menuIsOpen}
+          onMenuOpen={onMenuOpen}
+          onMenuClose={onMenuClose}
+          menuPosition={menuPosition}
+          onInputChange={onInputChange}
+          components={{ Option: SelectOption, Control, ...components }}
+        />
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      </MaybeFieldLabel>
+    </Field>
+  );
+};
 
 ReactSelect.propTypes = SelectPropTypes;
 

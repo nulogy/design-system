@@ -41,12 +41,13 @@ const TimeRange = ({
   };
   const validateTimeRange = () => {
     let error;
+    const { t } = useTranslation();
     const end = endTime || defaultEndTime;
     const start = startTime || defaultStartTime;
     if (start && end) {
       const duration = getDuration(start, end);
       if (duration < 0) {
-        error = "End time is before start time";
+        error = t("end time is before start time");
       }
     }
     setRangeError(error);
