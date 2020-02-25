@@ -39,7 +39,7 @@ export default () => (
     <Intro>
       <Title>Loading Content</Title>
       <IntroText>
-        Loading pattern is used when a user’s action causes a delay in the
+        Loading patterns are used when a user’s action causes a delay in the
         system’s response. A successful loading indicator provides timely
         feedback on the progress of the user’s request and creates an illusion
         of time going by faster.
