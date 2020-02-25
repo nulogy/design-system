@@ -4,7 +4,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  Alert,
   Box,
   SectionTitle,
   SubsectionTitle,
@@ -67,10 +66,6 @@ export default () => (
           Pagination is used for splitting data up into multiple pages.
         </IntroText>
       </Box>
-      <Alert>
-        This component is in active development and may not be available in the
-        latest NDS release. For more information, see #design-system on slack.
-      </Alert>
     </Intro>
 
     <DocSection>
