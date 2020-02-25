@@ -37,7 +37,7 @@ export default () => (
       <title>Loading Content</title>
     </Helmet>
     <Intro>
-      <Title>Laoding Content</Title>
+      <Title>Loading Content</Title>
       <IntroText>
         Loading pattern is used when a user’s action causes a delay in the
         system’s response. A successful loading indicator provides timely
@@ -51,22 +51,22 @@ export default () => (
 
     <DocSection>
       <Text>
-        Nulogy Design System provides a range of loading methods to match many
-        situations.
+        Nulogy Design System provides a range of loading methods to match
+        various situations.
       </Text>
       <SectionTitle>Skeleton screens (progressive loading)</SectionTitle>
       <Text mb="x5">
-        Skeleton screen delivers information in increments as they are becoming
-        available making the loading experience fluid and seamless. Skeleton
-        screens are used for page or section loads and ideally, complete within
-        5 seconds, even though the duration of 10 seconds is acceptable. For
-        delays over 10 seconds, other methods that provide more feedback should
-        be considered.
+        The skeleton screens deliver information in increments as they are
+        becoming available, making the loading experience fluid and seamless.
+        The skeleton screens are used for page or section loads and typically
+        complete within 5 seconds, even though the duration of 10 seconds is
+        acceptable. For delays over 10 seconds, other methods that provide more
+        feedback should be considered.
       </Text>
       <Box
-        width={{ medium: "110%", large: "130%" }}
+        width={{ medium: "110%", large: "150%" }}
         pt="x3"
-        ml={{ medium: "-5%", large: "-15%" }}
+        ml={{ medium: "-5%", large: "-25%" }}
       >
         <img
           src={skeletonScreenImage}
@@ -88,16 +88,16 @@ export default () => (
       </Text>
       <Text>
         The indeterminate loading method is used for actions that can't be
-        estimated, unlike determinate which is used for actions that can be
-        estimated.
+        estimated, unlike determinate loading which is used for actions that can
+        be estimated.
       </Text>
       <Text>
-        For delays between 2 and 5 seconds animation is sufficient while for
-        delays over 5 seconds animation should be accompanied with the
+        For delays between 2 and 5 seconds the animation is sufficient, while
+        for delays over 5 seconds the animation should be accompanied with the
         appropriate combination of information and actions. If the action takes
-        longer than expected to execute warning with options to retry or abort
-        should be displayed. Examples of different variations are coming soon in
-        Storybook.
+        longer than expected to execute, a warning with options to retry or
+        abort should be displayed. Examples of different variations are coming
+        soon in Storybook.
       </Text>
       <Flex mt="x8" mb="x6">
         <Box width="240px" mx="auto">
@@ -198,10 +198,11 @@ export default () => (
     <DocSection>
       <SectionTitle>Progress widget</SectionTitle>
       <Text>
-        Progress Widget is used for actions that do not need to be completed
-        before another action can be performed and take at least 5 seconds. In
-        this method, the progress bar is surfaced in a modal window that can be
-        minimized. There can be multiple modal windows active at the same time.
+        Progress Widget is used for actions that take at least 5 seconds and
+        that do not need to be completed before another action can be performed.
+        In this method, the progress bar is displayed in a modal window that can
+        be minimized. There can be multiple modal windows active at the same
+        time.
       </Text>
       <Flex
         mt="x8"
@@ -332,7 +333,7 @@ export default () => (
         </Flex>
       </Flex>
       <Text fontSize="small" color="darkGrey" textAlign="center" mt="x2">
-        States of inline loading on an example of button
+        Button example of inline loading
       </Text>
     </DocSection>
   </Layout>
