@@ -27,4 +27,13 @@ storiesOf("Utilities|Type", module)
     <p class="nds-font-weight--medium">.nds-font-weight--medium</p>
     <p class="nds-font-weight--bold">.nds-font-weight--bold</p>
   `
+  )
+  .add(
+    "Text align",
+    () => `
+    <p class="nds-text-align--left">.nds-text-align--left</p>
+    <p class="nds-text-align--center">.nds-text-align--center</p>
+    <p class="nds-text-align--right">.nds-text-align--right</p>
+
+  `
   );
