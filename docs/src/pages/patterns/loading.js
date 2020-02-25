@@ -96,8 +96,7 @@ export default () => (
         for delays over 5 seconds the animation should be accompanied with the
         appropriate combination of information and actions. If the action takes
         longer than expected to execute, a warning with options to retry or
-        abort should be displayed. Examples of different variations are coming
-        soon in Storybook.
+        abort should be displayed.
       </Text>
       <Flex mt="x8" mb="x6">
         <Box width="240px" mx="auto">
@@ -193,6 +192,9 @@ export default () => (
         Example of indeterminate (left) and determinate (right) loading pattern
         with task/time counter, task list, and controls
       </Text>
+      <Alert>
+        Examples of different variations are coming soon in Storybook.
+      </Alert>
     </DocSection>
 
     <DocSection>
