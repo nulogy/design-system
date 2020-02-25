@@ -178,6 +178,15 @@ export const menuData = [
     ]
   },
   {
+    name: "Patterns",
+    links: [
+      {
+        name: "Loading Content",
+        href: "/patterns/loading"
+      }
+    ]
+  },
+  {
     name: "Guides",
     links: [
       {
