@@ -1,5 +1,12 @@
 import PropTypes from "prop-types";
 
+const valueType = PropTypes.oneOfType([
+  PropTypes.string,
+  PropTypes.number,
+  PropTypes.arrayOf(PropTypes.string),
+  PropTypes.arrayOf(PropTypes.number)
+]);
+
 export const SelectPropTypes = {
   autocomplete: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
@@ -21,8 +28,8 @@ export const SelectPropTypes = {
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   required: PropTypes.bool,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)]),
+  value: valueType,
+  defaultValue: valueType,
   className: PropTypes.string,
   classNamePrefix: PropTypes.string,
   menuIsOpen: PropTypes.bool,
