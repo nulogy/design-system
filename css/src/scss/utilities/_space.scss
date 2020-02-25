@@ -5,22 +5,28 @@ $scale: (
   x2: $size-base-x-2,
   x3: $size-base-x-3,
   x4: $size-base-x-4,
+  x5: $size-base-x-5,
   x6: $size-base-x-6,
-  x8: $size-base-x-8,
+  x8: $size-base-x-8
 );
 
-$properties: ['margin', 'padding'];
-$directions: ['top', 'right', 'bottom', 'left'];
+$properties: [ "margin", "padding" ];
+$directions: [ "top", "right", "bottom", "left" ];
 
 @each $name, $value in $scale {
   @each $property in $properties {
     #{$namespace} {
-      &#{$property}--#{$name} {#{$property}: $value !important;} // all
-      &#{$property}--none {#{$property}: 0 !important;} // none
+      &#{$property}--#{$name} {
+        #{$property}: $value !important;
+      } // all
+      &#{$property}--none {
+        #{$property}: 0 !important;
+      } // none
       @each $direction in $directions {
-        &#{$property}-#{$direction}--#{$name} {#{$property}-#{$direction}: $value !important;}
+        &#{$property}-#{$direction}--#{$name} {
+          #{$property}-#{$direction}: $value !important;
+        }
       }
     }
   }
 }
-
