@@ -229,7 +229,7 @@ export default () => (
               p="x1"
             />
             <Icon color="darkGrey" icon="close" size="40px" mr="half" p="x1" />
-            <Icon color="darkGrey" icon="getApp" size="40px" p="x1" />
+            <Icon color="darkGrey" icon="minimize" size="40px" p="x1" />
           </Flex>
           <Flex justifyContent="space-between" mb="half" alignItems="flex-end">
             <Text fontWeight="bold" m="0">
@@ -298,7 +298,7 @@ export default () => (
           </Flex>
           <Box position="relative" left="x1" height="40px">
             <Icon color="darkGrey" icon="more" size="40px" mr="half" p="x1" />
-            <Icon color="darkGrey" icon="getApp" size="40px" p="x1" />
+            <Icon color="darkGrey" icon="maximize" size="40px" p="x1" />
           </Box>
         </Flex>
       </Flex>
