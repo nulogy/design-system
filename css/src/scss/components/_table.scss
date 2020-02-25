@@ -1,0 +1,37 @@
+.Table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+}
+
+.Table__row {
+  padding-left: $size-base-x-2;
+  color: $color-base-dark-grey;
+  text-align: left;
+}
+
+.Table__heading {
+  font-weight: normal;
+  padding: $size-base-x-2;
+  border-bottom: 1px solid rgb(228, 231, 235);
+}
+
+.Table__cell {
+  padding: 16px;
+}
+
+tbody .Table__row:hover {
+  background: $color-base-white-grey;
+}
+
+.Table--compact {
+  .Table__row {
+    padding-left: $size-base-x-2;
+  }
+  .Table__heading {
+    padding: $size-base-x-1;
+  }
+  .Table__cell {
+    padding: $size-base-x-1;
+  }
+}
