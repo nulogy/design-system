@@ -101,7 +101,7 @@ export default () => (
       <SectionTitle>Related components</SectionTitle>
       <List>
         <ListItem>
-          <Link href="/components/radio-button">Radio button</Link>
+          <Link href="/components/radio">Radio button</Link>
         </ListItem>
         <ListItem>
           <Link href="/components/form">Form</Link>
