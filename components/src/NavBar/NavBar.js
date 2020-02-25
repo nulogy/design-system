@@ -149,7 +149,7 @@ const pixelDigitsFrom = pixelString => parseInt(pixelString, 10);
 const MenuIcon = ({ isOpen }) => {
   const { t } = useTranslation();
   const icon = isOpen ? "close" : "menu";
-  const title = isOpen ? t("close menu") : "open menu";
+  const title = isOpen ? t("close menu") : t("open menu");
   return <Icon icon={icon} title={title} />;
 };
 
