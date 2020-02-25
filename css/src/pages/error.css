@@ -5,6 +5,7 @@
 html,
 body {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -110,10 +111,6 @@ img {
 .Link:hover {
   cursor: pointer;
   color: #1254c7;
-}
-.Link:focus {
-  outline: none;
-  box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9);
 }
 
 /* -----------------------------------------

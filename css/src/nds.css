@@ -1,14 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans");
-/**
- * Do not edit directly
- * Generated on Mon, 21 Oct 2019
- */
 /* -----------------------------------------
     ## Default styles
 ----------------------------------------- */
 html,
 body {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
@@ -477,6 +474,54 @@ img {
   padding-left: 32px !important;
 }
 
+.nds-margin--x5 {
+  margin: 40px !important;
+}
+
+.nds-margin--none {
+  margin: 0 !important;
+}
+
+.nds-margin-top--x5 {
+  margin-top: 40px !important;
+}
+
+.nds-margin-right--x5 {
+  margin-right: 40px !important;
+}
+
+.nds-margin-bottom--x5 {
+  margin-bottom: 40px !important;
+}
+
+.nds-margin-left--x5 {
+  margin-left: 40px !important;
+}
+
+.nds-padding--x5 {
+  padding: 40px !important;
+}
+
+.nds-padding--none {
+  padding: 0 !important;
+}
+
+.nds-padding-top--x5 {
+  padding-top: 40px !important;
+}
+
+.nds-padding-right--x5 {
+  padding-right: 40px !important;
+}
+
+.nds-padding-bottom--x5 {
+  padding-bottom: 40px !important;
+}
+
+.nds-padding-left--x5 {
+  padding-left: 40px !important;
+}
+
 .nds-margin--x6 {
   margin: 48px !important;
 }
@@ -573,6 +618,10 @@ img {
   padding-left: 64px !important;
 }
 
+.nds-font-size--smaller {
+  font-size: 12px !important;
+}
+
 .nds-font-size--small {
   font-size: 14px !important;
 }
@@ -611,6 +660,18 @@ img {
 
 .nds-font-weight--bold {
   font-weight: 600;
+}
+
+.nds-text-align--left {
+  text-align: left;
+}
+
+.nds-text-align--center {
+  text-align: center;
+}
+
+.nds-text-align--right {
+  text-align: right;
 }
 
 .nds-clearfix:after {
@@ -717,6 +778,7 @@ img {
 .DangerButton,
 .QuietButton {
   -webkit-font-smoothing: antialiased;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
   border: 0;
   text-decoration: none;
@@ -744,7 +806,7 @@ img {
   color: #216beb;
   background: #ffffff;
   border: 1px solid #ffffff;
-  border: 1px solid #00438f;
+  border: 1px solid #216beb;
 }
 .Button:hover {
   background: #e6e6e6;
@@ -854,6 +916,69 @@ img {
 }
 
 /* -----------------------------------------
+    ## Card
+----------------------------------------- */
+.Card {
+  background-color: #f0f2f5;
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+  box-shadow: 0px 0px 3px 0px rgba(1, 30, 56, 0.2);
+}
+
+.Textarea,
+.Input {
+  width: 100%;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #011e38;
+  font-size: 16px;
+  display: block;
+  padding: 8px;
+  flex-grow: 1;
+  border: 1px solid #c0c8d1;
+  border-radius: 4px;
+  padding: 8px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 40px;
+}
+.Textarea:focus,
+.Input:focus {
+  outline: none;
+  color: #011e38;
+  border: 1px solid #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9);
+}
+
+.Label {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.71429;
+}
+
+.Textarea:disabled,
+.Input:disabled {
+  color: rgba(1, 30, 56, 0.3333);
+  border-color: #e4e7eb;
+}
+
+.Textarea--error,
+.Input--error {
+  color: #cc1439;
+  border-color: #cc1439;
+}
+.Textarea--error:focus,
+.Input--error:focus {
+  border-color: #cc1439;
+  box-shadow: 0px 0px 5px 0px rgba(204, 20, 57, 0.9);
+}
+
+.Form input,
+.Form textarea {
+  margin-bottom: 16px;
+}
+
+/* -----------------------------------------
     ## Link
 ----------------------------------------- */
 .Link {
@@ -863,9 +988,101 @@ img {
   cursor: pointer;
   color: #1254c7;
 }
-.Link:focus {
-  outline: none;
-  box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9);
+
+/* -----------------------------------------
+    ## List
+----------------------------------------- */
+.List {
+  margin: 0;
+}
+
+.List__item {
+  margin-bottom: 8px;
+}
+
+/* -----------------------------------------
+    ## Pagination
+----------------------------------------- */
+.Pagination {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Pagination__button {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71429;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  text-decoration: none;
+}
+.Pagination__button:not(:last-child) {
+  margin-right: 16px;
+}
+.Pagination__button:hover {
+  background: #e4e7eb;
+  cursor: pointer;
+}
+
+.Pagination__button--current {
+  border: 1px solid #00438f;
+  background: #00438f;
+  color: white;
+}
+.Pagination__button--current:hover {
+  background: #00438f;
+}
+
+.Pagination__button--disabled {
+  color: #c0c8d1;
+}
+.Pagination__button--disabled:hover {
+  background: white;
+  cursor: default;
+}
+
+.Pagination__seperator {
+  margin-right: 16px;
+}
+
+.Table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+}
+
+.Table__row {
+  padding-left: 16px;
+  color: #434d59;
+  text-align: left;
+}
+
+.Table__heading {
+  font-weight: normal;
+  padding: 16px;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.Table__cell {
+  padding: 16px;
+}
+
+tbody .Table__row:hover {
+  background: #f0f2f5;
+}
+
+.Table--compact .Table__row {
+  padding-left: 16px;
+}
+
+.Table--compact .Table__heading {
+  padding: 8px;
+}
+
+.Table--compact .Table__cell {
+  padding: 8px;
 }
 
 /* -----------------------------------------
