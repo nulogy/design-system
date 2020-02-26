@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.9](https://github.com/nulogy/design-system/compare/v1.0.8...v1.0.9) (2020-02-26)
+
+
+### Bug Fixes
+
+* update broken link on Radio Group docs page ([#567](https://github.com/nulogy/design-system/issues/567)) ([574b05f](https://github.com/nulogy/design-system/commit/574b05f))
+
+
+
+
+
 ## [1.0.8](https://github.com/nulogy/design-system/compare/v1.0.7...v1.0.8) (2020-02-26)
 
 **Note:** Version bump only for package @nulogy/docs
