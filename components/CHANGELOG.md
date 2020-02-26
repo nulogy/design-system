@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/nulogy/design-system/compare/v1.0.7...v1.0.8) (2020-02-26)
+
+
+### Bug Fixes
+
+* support numeric values in Select ([#565](https://github.com/nulogy/design-system/issues/565)) ([17ca18b](https://github.com/nulogy/design-system/commit/17ca18b))
+
+
+
+
+
 ## [1.0.7](https://github.com/nulogy/design-system/compare/v1.0.6...v1.0.7) (2020-02-25)
 
 **Note:** Version bump only for package @nulogy/components
