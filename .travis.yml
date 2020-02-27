@@ -3,7 +3,7 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
 before_script:
-  - export NODE_OPTIONS=–max_old_space_size=4096
+  - node --max_old_space_size=8192
   - yarn build
 after_success:
   - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
