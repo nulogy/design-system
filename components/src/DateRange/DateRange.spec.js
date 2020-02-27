@@ -60,7 +60,7 @@ describe("DateRange", () => {
       const latestCall = onChangeCalls[onChangeCalls.length - 1][0];
       expect(latestCall.startDate).toMatchDate(new Date("2020-02-05T11:01:58.135Z"));
       expect(latestCall.endDate).toMatchDate(new Date("2020-02-01T11:01:58.135Z"));
-      expect(latestCall.error).toEqual("End date is before start date");
+      expect(latestCall.error).toEqual("end date is before start date");
     });
     it("returns the selected range with an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
@@ -79,7 +79,7 @@ describe("DateRange", () => {
       expect(latestCall.endDate).toMatchDate(new Date("2020-02-05T11:01:58.135Z"));
       expect(latestCall.startTime).toEqual("23:00");
       expect(latestCall.endTime).toEqual("10:15");
-      expect(latestCall.error).toEqual("End time is before start time");
+      expect(latestCall.error).toEqual("end time is before start time");
     });
     it("returns the start date when the start date changes", () => {
       const onStartDateChange = jest.fn();

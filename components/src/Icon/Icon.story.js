@@ -21,7 +21,7 @@ IconCode.propTypes = {
 };
 
 storiesOf("Icon", module)
-  .add("Icon", () => (
+  .add("Icon (SkipStoryshot)", () => (
     <>
       {iconNames.map(iconName => (
         <Flex my="x2" key={iconName}>
