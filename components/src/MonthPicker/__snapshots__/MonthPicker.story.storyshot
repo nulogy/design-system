@@ -344,9 +344,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -471,11 +469,6 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -9253,9 +9246,7 @@ exports[`Storyshots MonthPicker default 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -9380,11 +9371,6 @@ exports[`Storyshots MonthPicker default 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -18255,9 +18241,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -18382,11 +18366,6 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -27261,9 +27240,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -27388,11 +27365,6 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -36261,9 +36233,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -36388,11 +36358,6 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,

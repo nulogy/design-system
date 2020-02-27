@@ -344,9 +344,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -471,11 +469,6 @@ exports[`Storyshots Tabs Tabs 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -8994,9 +8987,7 @@ exports[`Storyshots Tabs controlled 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -9121,11 +9112,6 @@ exports[`Storyshots Tabs controlled 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -17654,9 +17640,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -17781,11 +17765,6 @@ exports[`Storyshots Tabs set to fitted 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -26296,9 +26275,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -26423,11 +26400,6 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -34938,9 +34910,7 @@ exports[`Storyshots Tabs with all tab states 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -35065,11 +35035,6 @@ exports[`Storyshots Tabs with all tab states 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -43310,9 +43275,7 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -43437,11 +43400,6 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -51802,9 +51760,7 @@ exports[`Storyshots Tabs with inputs 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -51929,11 +51885,6 @@ exports[`Storyshots Tabs with inputs 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -60314,9 +60265,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -60441,11 +60390,6 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,

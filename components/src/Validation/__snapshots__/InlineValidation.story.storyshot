@@ -344,9 +344,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -471,11 +469,6 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -8807,9 +8800,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -8934,11 +8925,6 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -17412,9 +17398,7 @@ exports[`Storyshots Inline Validation with list items 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -17539,11 +17523,6 @@ exports[`Storyshots Inline Validation with list items 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -25915,9 +25894,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -26042,11 +26019,6 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,

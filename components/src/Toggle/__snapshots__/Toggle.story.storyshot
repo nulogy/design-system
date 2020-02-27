@@ -344,9 +344,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -471,11 +469,6 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -9282,9 +9275,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -9409,11 +9400,6 @@ exports[`Storyshots Toggle Toggle 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -17767,9 +17753,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -17894,11 +17878,6 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -26364,9 +26343,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -26491,11 +26468,6 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -35299,9 +35271,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -35426,11 +35396,6 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -43961,9 +43926,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -44088,11 +44051,6 @@ exports[`Storyshots Toggle With custom id 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -52578,9 +52536,7 @@ exports[`Storyshots Toggle With long text 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -52705,11 +52661,6 @@ exports[`Storyshots Toggle With long text 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -61196,9 +61147,7 @@ exports[`Storyshots Toggle With text 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -61323,11 +61272,6 @@ exports[`Storyshots Toggle With text 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,

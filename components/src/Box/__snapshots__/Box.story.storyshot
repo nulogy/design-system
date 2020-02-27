@@ -344,9 +344,7 @@ exports[`Storyshots Box Box 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -471,11 +469,6 @@ exports[`Storyshots Box Box 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -8741,9 +8734,7 @@ exports[`Storyshots Box With a background colour 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -8868,11 +8859,6 @@ exports[`Storyshots Box With a background colour 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -17141,9 +17127,7 @@ exports[`Storyshots Box With a responsive width 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -17268,11 +17252,6 @@ exports[`Storyshots Box With a responsive width 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -25553,9 +25532,7 @@ exports[`Storyshots Box With a set width 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -25680,11 +25657,6 @@ exports[`Storyshots Box With a set width 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -33953,9 +33925,7 @@ exports[`Storyshots Box With a shadow 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -34080,11 +34050,6 @@ exports[`Storyshots Box With a shadow 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -42546,9 +42511,7 @@ exports[`Storyshots Box With a text colour 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -42673,11 +42636,6 @@ exports[`Storyshots Box With a text colour 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -50945,9 +50903,7 @@ exports[`Storyshots Box With margin 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -51072,11 +51028,6 @@ exports[`Storyshots Box With margin 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -60013,9 +59964,7 @@ exports[`Storyshots Box With padding 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -60140,11 +60089,6 @@ exports[`Storyshots Box With padding 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,

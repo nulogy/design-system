@@ -344,31 +344,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -493,11 +469,6 @@ exports[`Storyshots Pagination Pagination 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -8470,7 +8441,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
@@ -8494,7 +8465,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 2"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="2"
@@ -8502,7 +8473,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 2"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8512,7 +8483,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 3"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="3"
@@ -8520,7 +8491,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 3"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8530,7 +8501,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -8538,7 +8509,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8548,7 +8519,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 5"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="5"
@@ -8556,7 +8527,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 5"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8587,7 +8558,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 7"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="7"
@@ -8595,7 +8566,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 7"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8618,7 +8589,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         disabled={false}
                         onClick={[Function]}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -8817,13 +8788,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -8831,7 +8802,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8859,7 +8830,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 3"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="3"
@@ -8867,7 +8838,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 3"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8877,7 +8848,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -8885,7 +8856,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8895,7 +8866,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 5"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="5"
@@ -8903,7 +8874,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 5"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8934,7 +8905,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 7"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="7"
@@ -8942,7 +8913,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 7"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -8965,7 +8936,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         disabled={false}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -9164,13 +9135,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -9178,7 +9149,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9188,7 +9159,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 2"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="2"
@@ -9196,7 +9167,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 2"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9224,7 +9195,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -9232,7 +9203,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9242,7 +9213,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 5"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="5"
@@ -9250,7 +9221,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 5"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9281,7 +9252,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 7"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="7"
@@ -9289,7 +9260,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 7"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9312,7 +9283,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         disabled={false}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -9511,13 +9482,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -9525,7 +9496,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9535,7 +9506,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 2"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="2"
@@ -9543,7 +9514,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 2"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9553,7 +9524,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 3"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="3"
@@ -9561,7 +9532,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 3"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9589,7 +9560,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 5"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="5"
@@ -9597,7 +9568,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 5"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9628,7 +9599,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 7"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="7"
@@ -9636,7 +9607,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 7"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9659,7 +9630,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         disabled={false}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -9858,13 +9829,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -9872,7 +9843,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9882,7 +9853,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 2"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="2"
@@ -9890,7 +9861,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 2"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9900,7 +9871,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 3"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="3"
@@ -9908,7 +9879,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 3"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9918,7 +9889,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -9926,7 +9897,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -9975,7 +9946,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 7"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="7"
@@ -9983,7 +9954,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 7"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10006,7 +9977,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         disabled={false}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -10205,13 +10176,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -10219,7 +10190,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10250,7 +10221,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 3"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="3"
@@ -10258,7 +10229,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 3"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10268,7 +10239,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -10276,7 +10247,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10286,7 +10257,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 5"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="5"
@@ -10294,7 +10265,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 5"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10322,7 +10293,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 7"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="7"
@@ -10330,7 +10301,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 7"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10353,7 +10324,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         disabled={false}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -10552,13 +10523,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -10566,7 +10537,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10597,7 +10568,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 3"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="3"
@@ -10605,7 +10576,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 3"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10615,7 +10586,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -10623,7 +10594,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10633,7 +10604,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 5"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="5"
@@ -10641,7 +10612,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 5"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10651,7 +10622,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 6"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="6"
@@ -10659,7 +10630,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 6"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -10700,7 +10671,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
                         disabled={true}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -11097,13 +11068,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                  [Function],
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -11228,11 +11193,6 @@ exports[`Storyshots Pagination on the first page 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -19205,7 +19165,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
@@ -19229,7 +19189,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 2"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="2"
@@ -19237,7 +19197,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 2"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -19247,7 +19207,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 3"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="3"
@@ -19255,7 +19215,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 3"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -19265,7 +19225,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -19273,7 +19233,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -19283,7 +19243,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 5"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="5"
@@ -19291,7 +19251,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 5"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -19322,7 +19282,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 10"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="10"
@@ -19330,7 +19290,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 10"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -19353,7 +19313,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
                         disabled={false}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -19750,13 +19710,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                  [Function],
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -19881,11 +19835,6 @@ exports[`Storyshots Pagination on the last page 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -27858,13 +27807,13 @@ exports[`Storyshots Pagination on the last page 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -27872,7 +27821,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -27903,7 +27852,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   </styled.p>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 6"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="6"
@@ -27911,7 +27860,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 6"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -27921,7 +27870,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 7"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="7"
@@ -27929,7 +27878,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 7"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -27939,7 +27888,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 8"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="8"
@@ -27947,7 +27896,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 8"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -27957,7 +27906,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 9"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="9"
@@ -27965,7 +27914,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 9"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -28006,7 +27955,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
                         disabled={true}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"
@@ -28403,13 +28352,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                  [Function],
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -28534,11 +28477,6 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -36511,13 +36449,13 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                           </ForwardRef>
                         </Styled(Component)>
                          
-                        Previous
+                        previous
                       </button>
                     </Pagination__PaginationButton>
                   </PreviousButton>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 1"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="1"
@@ -36525,7 +36463,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 1"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -36535,7 +36473,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 2"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="2"
@@ -36543,7 +36481,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 2"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -36571,7 +36509,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                   </Styled(Pagination__PaginationButton)>
                   <Styled(Pagination__PaginationButton)
                     aria-current={false}
-                    aria-label="go to page 4"
+                    aria-label="go to page"
                     currentPage={false}
                     disabled={false}
                     key="4"
@@ -36579,7 +36517,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                   >
                     <button
                       aria-current={false}
-                      aria-label="go to page 4"
+                      aria-label="go to page"
                       className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
                       disabled={false}
                       onClick={[Function]}
@@ -36602,7 +36540,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
                         disabled={false}
                         onClick={null}
                       >
-                        Next
+                        next
                          
                         <Styled(Component)
                           color="currentColor"

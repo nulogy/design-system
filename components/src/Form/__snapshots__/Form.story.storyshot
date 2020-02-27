@@ -344,11 +344,7 @@ exports[`Storyshots Form Demo form 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -473,11 +469,6 @@ exports[`Storyshots Form Demo form 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -10171,7 +10162,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                               },
                                             ]
                                           }
-                                          placeholder="Select..."
+                                          placeholder="select ..."
                                           styles={
                                             Object {
                                               "control": [Function],
@@ -10248,7 +10239,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                               ]
                                             }
                                             pageSize={5}
-                                            placeholder="Select..."
+                                            placeholder="select ..."
                                             screenReaderStatus={[Function]}
                                             styles={
                                               Object {
@@ -10359,7 +10350,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                     },
                                                   ],
                                                   "pageSize": 5,
-                                                  "placeholder": "Select...",
+                                                  "placeholder": "select ...",
                                                   "screenReaderStatus": [Function],
                                                   "styles": Object {
                                                     "control": [Function],
@@ -10520,7 +10511,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                           },
                                                         ],
                                                         "pageSize": 5,
-                                                        "placeholder": "Select...",
+                                                        "placeholder": "select ...",
                                                         "screenReaderStatus": [Function],
                                                         "styles": Object {
                                                           "control": [Function],
@@ -10663,7 +10654,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                             },
                                                           ],
                                                           "pageSize": 5,
-                                                          "placeholder": "Select...",
+                                                          "placeholder": "select ...",
                                                           "screenReaderStatus": [Function],
                                                           "styles": Object {
                                                             "control": [Function],
@@ -10831,7 +10822,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                   },
                                                                 ],
                                                                 "pageSize": 5,
-                                                                "placeholder": "Select...",
+                                                                "placeholder": "select ...",
                                                                 "screenReaderStatus": [Function],
                                                                 "styles": Object {
                                                                   "control": [Function],
@@ -10987,7 +10978,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         },
                                                                       ],
                                                                       "pageSize": 5,
-                                                                      "placeholder": "Select...",
+                                                                      "placeholder": "select ...",
                                                                       "screenReaderStatus": [Function],
                                                                       "styles": Object {
                                                                         "control": [Function],
@@ -11053,7 +11044,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                     <div
                                                                       className=" css-1yhx6vz-Placeholder"
                                                                     >
-                                                                      Select...
+                                                                      select ...
                                                                     </div>
                                                                   </EmotionCssPropInternal>
                                                                 </Placeholder>
@@ -11129,7 +11120,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         },
                                                                       ],
                                                                       "pageSize": 5,
-                                                                      "placeholder": "Select...",
+                                                                      "placeholder": "select ...",
                                                                       "screenReaderStatus": [Function],
                                                                       "styles": Object {
                                                                         "control": [Function],
@@ -11362,7 +11353,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                   },
                                                                 ],
                                                                 "pageSize": 5,
-                                                                "placeholder": "Select...",
+                                                                "placeholder": "select ...",
                                                                 "screenReaderStatus": [Function],
                                                                 "styles": Object {
                                                                   "control": [Function],
@@ -11513,7 +11504,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         },
                                                                       ],
                                                                       "pageSize": 5,
-                                                                      "placeholder": "Select...",
+                                                                      "placeholder": "select ...",
                                                                       "screenReaderStatus": [Function],
                                                                       "styles": Object {
                                                                         "control": [Function],
@@ -11676,7 +11667,7 @@ exports[`Storyshots Form Demo form 1`] = `
                                                                         },
                                                                       ],
                                                                       "pageSize": 5,
-                                                                      "placeholder": "Select...",
+                                                                      "placeholder": "select ...",
                                                                       "screenReaderStatus": [Function],
                                                                       "styles": Object {
                                                                         "control": [Function],
@@ -18235,9 +18226,7 @@ exports[`Storyshots Form Form 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -18362,11 +18351,6 @@ exports[`Storyshots Form Form 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -28199,9 +28183,7 @@ exports[`Storyshots Form With form sections 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -28326,11 +28308,6 @@ exports[`Storyshots Form With form sections 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -39379,9 +39356,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -39506,11 +39481,6 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -50353,9 +50323,7 @@ exports[`Storyshots Form Without title 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -50480,11 +50448,6 @@ exports[`Storyshots Form Without title 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,

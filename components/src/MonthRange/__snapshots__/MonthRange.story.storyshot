@@ -344,11 +344,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -473,11 +469,6 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -8386,7 +8377,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                 }
                 errorMessages={
                   Array [
-                    "",
+                    undefined,
                     null,
                   ]
                 }
@@ -8395,7 +8386,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                     "children": null,
                     "helpText": null,
                     "id": undefined,
-                    "labelText": "Month range",
+                    "labelText": "month range",
                     "requirementText": null,
                   }
                 }
@@ -8431,13 +8422,13 @@ exports[`Storyshots MonthRange custom locale 1`] = `
               >
                 <Styled(BaseFieldLabel)
                   helpText={null}
-                  labelText="Month range"
+                  labelText="month range"
                   requirementText={null}
                 >
                   <BaseFieldLabel
                     className="sc-fzXfLW casIUc"
                     helpText={null}
-                    labelText="Month range"
+                    labelText="month range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
@@ -8559,7 +8550,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                                 }
                               }
                             >
-                              Month range
+                              month range
                             </span>
                           </div>
                         </Box>
@@ -10008,7 +9999,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                 </Box>
                 <InlineValidation
                   errorList={null}
-                  errorMessage=""
+                  errorMessage={null}
                   key="0"
                 />
                 <InlineValidation
@@ -10370,11 +10361,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -10499,11 +10486,6 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -18374,7 +18356,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                 }
                 errorMessages={
                   Array [
-                    "",
+                    undefined,
                     null,
                   ]
                 }
@@ -18383,7 +18365,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                     "children": null,
                     "helpText": null,
                     "id": undefined,
-                    "labelText": "Month range",
+                    "labelText": "month range",
                     "requirementText": null,
                   }
                 }
@@ -18406,13 +18388,13 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
               >
                 <Styled(BaseFieldLabel)
                   helpText={null}
-                  labelText="Month range"
+                  labelText="month range"
                   requirementText={null}
                 >
                   <BaseFieldLabel
                     className="sc-fzXfLW casIUc"
                     helpText={null}
-                    labelText="Month range"
+                    labelText="month range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
@@ -18534,7 +18516,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                                 }
                               }
                             >
-                              Month range
+                              month range
                             </span>
                           </div>
                         </Box>
@@ -19883,7 +19865,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                 </Box>
                 <InlineValidation
                   errorList={null}
-                  errorMessage=""
+                  errorMessage={null}
                   key="0"
                 />
                 <InlineValidation
@@ -20245,11 +20227,7 @@ exports[`Storyshots MonthRange default 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -20374,11 +20352,6 @@ exports[`Storyshots MonthRange default 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -28285,7 +28258,7 @@ exports[`Storyshots MonthRange default 1`] = `
                 }
                 errorMessages={
                   Array [
-                    "",
+                    undefined,
                     null,
                   ]
                 }
@@ -28294,7 +28267,7 @@ exports[`Storyshots MonthRange default 1`] = `
                     "children": null,
                     "helpText": null,
                     "id": undefined,
-                    "labelText": "Month range",
+                    "labelText": "month range",
                     "requirementText": null,
                   }
                 }
@@ -28329,13 +28302,13 @@ exports[`Storyshots MonthRange default 1`] = `
               >
                 <Styled(BaseFieldLabel)
                   helpText={null}
-                  labelText="Month range"
+                  labelText="month range"
                   requirementText={null}
                 >
                   <BaseFieldLabel
                     className="sc-fzXfLW casIUc"
                     helpText={null}
-                    labelText="Month range"
+                    labelText="month range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
@@ -28457,7 +28430,7 @@ exports[`Storyshots MonthRange default 1`] = `
                                 }
                               }
                             >
-                              Month range
+                              month range
                             </span>
                           </div>
                         </Box>
@@ -29902,7 +29875,7 @@ exports[`Storyshots MonthRange default 1`] = `
                 </Box>
                 <InlineValidation
                   errorList={null}
-                  errorMessage=""
+                  errorMessage={null}
                   key="0"
                 />
                 <InlineValidation
@@ -30264,11 +30237,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -30393,11 +30362,6 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -38304,7 +38268,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                 }
                 errorMessages={
                   Array [
-                    "",
+                    undefined,
                     null,
                   ]
                 }
@@ -38313,7 +38277,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                     "children": null,
                     "helpText": null,
                     "id": undefined,
-                    "labelText": "Month range",
+                    "labelText": "month range",
                     "requirementText": null,
                   }
                 }
@@ -38348,13 +38312,13 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
               >
                 <Styled(BaseFieldLabel)
                   helpText={null}
-                  labelText="Month range"
+                  labelText="month range"
                   requirementText={null}
                 >
                   <BaseFieldLabel
                     className="sc-fzXfLW casIUc"
                     helpText={null}
-                    labelText="Month range"
+                    labelText="month range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
@@ -38476,7 +38440,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                                 }
                               }
                             >
-                              Month range
+                              month range
                             </span>
                           </div>
                         </Box>
@@ -39921,7 +39885,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                 </Box>
                 <InlineValidation
                   errorList={null}
-                  errorMessage=""
+                  errorMessage={null}
                   key="0"
                 />
                 <InlineValidation
@@ -40283,11 +40247,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -40412,11 +40372,6 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -48331,7 +48286,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                     "children": null,
                     "helpText": null,
                     "id": undefined,
-                    "labelText": "Month range",
+                    "labelText": "month range",
                     "requirementText": null,
                   }
                 }
@@ -48366,13 +48321,13 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
               >
                 <Styled(BaseFieldLabel)
                   helpText={null}
-                  labelText="Month range"
+                  labelText="month range"
                   requirementText={null}
                 >
                   <BaseFieldLabel
                     className="sc-fzXfLW casIUc"
                     helpText={null}
-                    labelText="Month range"
+                    labelText="month range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
@@ -48494,7 +48449,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                                 }
                               }
                             >
-                              Month range
+                              month range
                             </span>
                           </div>
                         </Box>
@@ -50296,11 +50251,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -50425,11 +50376,6 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -58324,7 +58270,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                 }
                 errorMessages={
                   Array [
-                    "",
+                    undefined,
                     null,
                   ]
                 }
@@ -58333,7 +58279,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                     "children": null,
                     "helpText": null,
                     "id": undefined,
-                    "labelText": "Month range",
+                    "labelText": "month range",
                     "requirementText": null,
                   }
                 }
@@ -58356,13 +58302,13 @@ exports[`Storyshots MonthRange individual input error 1`] = `
               >
                 <Styled(BaseFieldLabel)
                   helpText={null}
-                  labelText="Month range"
+                  labelText="month range"
                   requirementText={null}
                 >
                   <BaseFieldLabel
                     className="sc-fzXfLW casIUc"
                     helpText={null}
-                    labelText="Month range"
+                    labelText="month range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
@@ -58484,7 +58430,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                                 }
                               }
                             >
-                              Month range
+                              month range
                             </span>
                           </div>
                         </Box>
@@ -60042,7 +59988,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                 </Box>
                 <InlineValidation
                   errorList={null}
-                  errorMessage=""
+                  errorMessage={null}
                   key="0"
                 />
                 <InlineValidation
@@ -60404,11 +60350,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -60533,11 +60475,6 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -68444,7 +68381,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                 }
                 errorMessages={
                   Array [
-                    "",
+                    undefined,
                     "This range conflicts with another range",
                   ]
                 }
@@ -68453,7 +68390,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                     "children": null,
                     "helpText": null,
                     "id": undefined,
-                    "labelText": "Month range",
+                    "labelText": "month range",
                     "requirementText": null,
                   }
                 }
@@ -68488,13 +68425,13 @@ exports[`Storyshots MonthRange with custom error 1`] = `
               >
                 <Styled(BaseFieldLabel)
                   helpText={null}
-                  labelText="Month range"
+                  labelText="month range"
                   requirementText={null}
                 >
                   <BaseFieldLabel
                     className="sc-fzXfLW casIUc"
                     helpText={null}
-                    labelText="Month range"
+                    labelText="month range"
                     requirementText={null}
                   >
                     <FieldLabel__Label
@@ -68616,7 +68553,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                                 }
                               }
                             >
-                              Month range
+                              month range
                             </span>
                           </div>
                         </Box>
@@ -70061,7 +69998,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                 </Box>
                 <InlineValidation
                   errorList={null}
-                  errorMessage=""
+                  errorMessage={null}
                   key="0"
                 />
                 <InlineValidation

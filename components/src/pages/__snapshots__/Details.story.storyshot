@@ -344,9 +344,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -471,11 +469,6 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -14897,9 +14890,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -15024,11 +15015,6 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -30499,11 +30485,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -30628,11 +30610,6 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -46573,7 +46550,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           },
                                                         ]
                                                       }
-                                                      placeholder="Select..."
+                                                      placeholder="select ..."
                                                       styles={
                                                         Object {
                                                           "control": [Function],
@@ -46650,7 +46627,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                           ]
                                                         }
                                                         pageSize={5}
-                                                        placeholder="Select..."
+                                                        placeholder="select ..."
                                                         screenReaderStatus={[Function]}
                                                         styles={
                                                           Object {
@@ -46761,7 +46738,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                 },
                                                               ],
                                                               "pageSize": 5,
-                                                              "placeholder": "Select...",
+                                                              "placeholder": "select ...",
                                                               "screenReaderStatus": [Function],
                                                               "styles": Object {
                                                                 "control": [Function],
@@ -46922,7 +46899,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                       },
                                                                     ],
                                                                     "pageSize": 5,
-                                                                    "placeholder": "Select...",
+                                                                    "placeholder": "select ...",
                                                                     "screenReaderStatus": [Function],
                                                                     "styles": Object {
                                                                       "control": [Function],
@@ -47065,7 +47042,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                         },
                                                                       ],
                                                                       "pageSize": 5,
-                                                                      "placeholder": "Select...",
+                                                                      "placeholder": "select ...",
                                                                       "screenReaderStatus": [Function],
                                                                       "styles": Object {
                                                                         "control": [Function],
@@ -47233,7 +47210,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                               },
                                                                             ],
                                                                             "pageSize": 5,
-                                                                            "placeholder": "Select...",
+                                                                            "placeholder": "select ...",
                                                                             "screenReaderStatus": [Function],
                                                                             "styles": Object {
                                                                               "control": [Function],
@@ -47389,7 +47366,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                     },
                                                                                   ],
                                                                                   "pageSize": 5,
-                                                                                  "placeholder": "Select...",
+                                                                                  "placeholder": "select ...",
                                                                                   "screenReaderStatus": [Function],
                                                                                   "styles": Object {
                                                                                     "control": [Function],
@@ -47455,7 +47432,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                 <div
                                                                                   className=" css-1yhx6vz-Placeholder"
                                                                                 >
-                                                                                  Select...
+                                                                                  select ...
                                                                                 </div>
                                                                               </EmotionCssPropInternal>
                                                                             </Placeholder>
@@ -47531,7 +47508,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                     },
                                                                                   ],
                                                                                   "pageSize": 5,
-                                                                                  "placeholder": "Select...",
+                                                                                  "placeholder": "select ...",
                                                                                   "screenReaderStatus": [Function],
                                                                                   "styles": Object {
                                                                                     "control": [Function],
@@ -47764,7 +47741,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                               },
                                                                             ],
                                                                             "pageSize": 5,
-                                                                            "placeholder": "Select...",
+                                                                            "placeholder": "select ...",
                                                                             "screenReaderStatus": [Function],
                                                                             "styles": Object {
                                                                               "control": [Function],
@@ -47915,7 +47892,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                     },
                                                                                   ],
                                                                                   "pageSize": 5,
-                                                                                  "placeholder": "Select...",
+                                                                                  "placeholder": "select ...",
                                                                                   "screenReaderStatus": [Function],
                                                                                   "styles": Object {
                                                                                     "control": [Function],
@@ -48078,7 +48055,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                                                                                     },
                                                                                   ],
                                                                                   "pageSize": 5,
-                                                                                  "placeholder": "Select...",
+                                                                                  "placeholder": "select ...",
                                                                                   "screenReaderStatus": [Function],
                                                                                   "styles": Object {
                                                                                     "control": [Function],

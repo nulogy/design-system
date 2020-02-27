@@ -344,11 +344,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -473,11 +469,6 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -8501,7 +8492,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                             helpText={null}
                             id="navbar-search"
                             labelText={null}
-                            placeholder="Search Nulogy..."
+                            placeholder="search nulogy"
                             prefix={null}
                             prefixAlignment="left"
                             prefixWidth={null}
@@ -8610,7 +8601,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                   helpText={null}
                                   id="navbar-search"
                                   labelText={null}
-                                  placeholder="Search Nulogy..."
+                                  placeholder="search nulogy"
                                   prefix={null}
                                   prefixAlignment="left"
                                   prefixWidth={null}
@@ -8825,7 +8816,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                               disabled={false}
                                               error={false}
                                               id="navbar-search"
-                                              placeholder="Search Nulogy..."
+                                              placeholder="search nulogy"
                                               required={true}
                                               type="search"
                                             >
@@ -8836,7 +8827,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                                                 className="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                                                 disabled={false}
                                                 id="navbar-search"
-                                                placeholder="Search Nulogy..."
+                                                placeholder="search nulogy"
                                                 required={true}
                                                 type="search"
                                               />
@@ -9258,11 +9249,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
               "modules": Object {
                 "external": Array [],
               },
-              "observers": Object {
-                "languageChanged": Array [
-                  [Function],
-                ],
-              },
+              "observers": Object {},
               "options": Object {
                 "appendNamespaceToCIMode": false,
                 "appendNamespaceToMissingKey": false,
@@ -9387,11 +9374,6 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                 "whitelist": false,
               },
               "removeResourceBundle": [Function],
-              "reportNamespaces": ReportNamespaces {
-                "usedNamespaces": Object {
-                  "nds": true,
-                },
-              },
               "services": Object {
                 "backendConnector": Connector {
                   "backend": null,
@@ -17417,7 +17399,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                             helpText={null}
                             id="navbar-search"
                             labelText={null}
-                            placeholder="Search Nulogy..."
+                            placeholder="search nulogy"
                             prefix={null}
                             prefixAlignment="left"
                             prefixWidth={null}
@@ -17526,7 +17508,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                   helpText={null}
                                   id="navbar-search"
                                   labelText={null}
-                                  placeholder="Search Nulogy..."
+                                  placeholder="search nulogy"
                                   prefix={null}
                                   prefixAlignment="left"
                                   prefixWidth={null}
@@ -17741,7 +17723,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                               disabled={false}
                                               error={false}
                                               id="navbar-search"
-                                              placeholder="Search Nulogy..."
+                                              placeholder="search nulogy"
                                               required={true}
                                               type="search"
                                             >
@@ -17752,7 +17734,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                                                 className="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                                                 disabled={false}
                                                 id="navbar-search"
-                                                placeholder="Search Nulogy..."
+                                                placeholder="search nulogy"
                                                 required={true}
                                                 type="search"
                                               />
