@@ -33,7 +33,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
                   aria-required="true"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   id="navbar-search"
-                  placeholder="search nulogy"
+                  placeholder="Search Nulogy..."
                   required=""
                   type="search"
                 />
@@ -100,7 +100,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
                   aria-required="true"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   id="navbar-search"
-                  placeholder="search nulogy"
+                  placeholder="Search Nulogy..."
                   required=""
                   type="search"
                 />

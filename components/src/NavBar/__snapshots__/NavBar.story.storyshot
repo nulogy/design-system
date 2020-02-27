@@ -196,7 +196,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                             aria-required="true"
                             class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                             id="navbar-search"
-                            placeholder="search nulogy"
+                            placeholder="Search Nulogy..."
                             required=""
                             type="search"
                           />
@@ -943,7 +943,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                             aria-required="true"
                             class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                             id="navbar-search"
-                            placeholder="search nulogy"
+                            placeholder="Search Nulogy..."
                             required=""
                             type="search"
                           />
@@ -1865,7 +1865,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                             aria-required="true"
                             class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                             id="navbar-search"
-                            placeholder="search nulogy"
+                            placeholder="Search Nulogy..."
                             required=""
                             type="search"
                           />

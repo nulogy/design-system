@@ -32,7 +32,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="true"
@@ -43,28 +43,28 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 2"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 3"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 5"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
@@ -78,7 +78,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 7"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         7
@@ -87,7 +87,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -130,11 +130,11 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
@@ -148,21 +148,21 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 3"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 5"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
@@ -176,7 +176,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 7"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         7
@@ -185,7 +185,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -228,18 +228,18 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 2"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
@@ -253,14 +253,14 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 5"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
@@ -274,7 +274,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 7"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         7
@@ -283,7 +283,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -326,25 +326,25 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 2"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 3"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
@@ -358,7 +358,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 5"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
@@ -372,7 +372,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 7"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         7
@@ -381,7 +381,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -424,32 +424,32 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 2"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 3"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
@@ -470,7 +470,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 7"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         7
@@ -479,7 +479,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -522,11 +522,11 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
@@ -540,21 +540,21 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 3"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 5"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
@@ -568,7 +568,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 7"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         7
@@ -577,7 +577,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -620,11 +620,11 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
@@ -638,28 +638,28 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 3"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 5"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 6"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         6
@@ -676,7 +676,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
         class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
         disabled=""
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -731,7 +731,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="true"
@@ -742,28 +742,28 @@ exports[`Storyshots Pagination on the first page 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 2"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 3"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 5"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
@@ -777,7 +777,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 10"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         10
@@ -786,7 +786,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -840,11 +840,11 @@ exports[`Storyshots Pagination on the last page 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
@@ -858,28 +858,28 @@ exports[`Storyshots Pagination on the last page 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 6"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         6
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 7"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         7
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 8"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         8
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 9"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         9
@@ -896,7 +896,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
         class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
         disabled=""
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"
@@ -950,18 +950,18 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         previous
+         Previous
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 1"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         1
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 2"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
@@ -975,7 +975,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="go to page"
+        aria-label="go to page 4"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
@@ -984,7 +984,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
         aria-label="go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        next 
+        Next 
         <svg
           aria-hidden="true"
           class="sc-AykKD faeHcD"

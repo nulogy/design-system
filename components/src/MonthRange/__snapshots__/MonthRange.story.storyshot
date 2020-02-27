@@ -18,7 +18,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          month range
+          Month range
         </span>
       </div>
     </label>
@@ -146,7 +146,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          month range
+          Month range
         </span>
       </div>
     </label>
@@ -274,7 +274,7 @@ exports[`Storyshots MonthRange default 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          month range
+          Month range
         </span>
       </div>
     </label>
@@ -402,7 +402,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          month range
+          Month range
         </span>
       </div>
     </label>
@@ -530,7 +530,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          month range
+          Month range
         </span>
       </div>
     </label>
@@ -658,7 +658,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          month range
+          Month range
         </span>
       </div>
     </label>
@@ -819,7 +819,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          month range
+          Month range
         </span>
       </div>
     </label>
