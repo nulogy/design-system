@@ -124,6 +124,10 @@ export const menuData = [
         href: "/components/navbar"
       },
       {
+        name: "Overlay",
+        href: "/components/overlay"
+      },
+      {
         name: "Pagination",
         href: "/components/pagination"
       },
