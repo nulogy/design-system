@@ -113,12 +113,12 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={propsRows} />
-      <Text>
-        In addition to this props listed in the list the Overlay component
-        accepts <Link href="/components/flex">Flex's</Link> props since it is
-        it's extension.
+      <Text mb="x3">
+        In addition to this props listed below the Overlay component accepts{" "}
+        <Link href="/components/flex">Flex's</Link> props since it is it's
+        extension.
       </Text>
+      <PropsTable propsRows={propsRows} />
     </DocSection>
 
     <DocSection>
