@@ -28,9 +28,9 @@ describe("DropdownMenu", () => {
     });
 
     it("closes the menu on escape", () => {
-      getTrigger()
-        .click()
-        .click();
+      getTrigger().click();
+
+      cy.wait(500);
 
       cy.pressEscapeKey();
 
@@ -39,6 +39,8 @@ describe("DropdownMenu", () => {
 
     it("closes the menu when clicking outside of it", () => {
       getTrigger().click();
+
+      cy.wait(500);
 
       cy.clickOutsideElement();
 

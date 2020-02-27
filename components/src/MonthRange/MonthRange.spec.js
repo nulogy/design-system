@@ -40,7 +40,7 @@ describe("MonthRange", () => {
       const latestCall = onChangeCalls[onChangeCalls.length - 1][0];
       expect(latestCall.startDate).toMatchDate(new Date("2020-06-01T04:00:00.000Z"));
       expect(latestCall.endDate).toMatchDate(new Date("2020-04-01T04:00:00.000Z"));
-      expect(latestCall.error).toEqual("End date is before start Month");
+      expect(latestCall.error).toEqual("end month is before start month");
     });
     it("returns the start date when the start date changes", () => {
       const onStartDateChange = jest.fn();
