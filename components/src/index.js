@@ -41,3 +41,4 @@ export { TimePicker } from "./TimePicker";
 export { TimeRange } from "./TimeRange";
 export { RangeContainer } from "./RangeContainer";
 export { Overlay } from "./Overlay";
+export { LoadingAnimation } from "./LoadingAnimation";
