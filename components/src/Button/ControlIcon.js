@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import { Icon } from "../Icon";
 import theme from "../theme";
 
@@ -14,24 +16,27 @@ const getIconColorByState = ({ toggled, disabled }) => {
   return theme.colors.darkGrey;
 };
 
-const StyledButton = styled.button(({ toggled, disabled }) => ({
-  background: "transparent",
-  border: "none",
-  display: "flex",
-  alignItems: "center",
-  padding: theme.space.half,
-  borderRadius: theme.radii.circle,
-  color: getIconColorByState({ toggled, disabled }),
-  "&:focus": {
-    outline: "none",
-    boxShadow: theme.shadows.focus
-  },
-  "&:hover:enabled": {
-    cursor: "pointer",
-    color: theme.colors.blackBlue,
-    backgroundColor: theme.colors.lightGrey
-  }
-}));
+const StyledButton = styled.button(
+  ({ toggled, disabled }) => ({
+    background: "transparent",
+    border: "none",
+    display: "flex",
+    alignItems: "center",
+    padding: theme.space.half,
+    borderRadius: theme.radii.circle,
+    color: getIconColorByState({ toggled, disabled }),
+    "&:focus": {
+      outline: "none",
+      boxShadow: theme.shadows.focus
+    },
+    "&:hover:enabled": {
+      cursor: "pointer",
+      color: theme.colors.blackBlue,
+      backgroundColor: theme.colors.lightGrey
+    }
+  }),
+  space
+);
 
 const ControlIcon = React.forwardRef(({ icon, toggled, disabled, label, size, ...props }, ref) => (
   <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} {...props}>
@@ -45,7 +50,8 @@ ControlIcon.propTypes = {
   onClick: PropTypes.func,
   toggled: PropTypes.bool,
   disabled: PropTypes.bool,
-  size: PropTypes.string
+  size: PropTypes.string,
+  ...propTypes.space
 };
 
 ControlIcon.defaultProps = {
