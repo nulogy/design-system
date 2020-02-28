@@ -36,11 +36,11 @@ const alertStyles = {
   }
 };
 
-const CloseButton = ({ onClick }) => {
+const CloseButton = ({ onClick, "aria-label": ariaLabel }) => {
   const { t } = useTranslation();
   return (
     <Box>
-      <Link as="button" color="darkGrey" hover="blue" onClick={onClick} aria-label={t("close")}>
+      <Link as="button" color="darkGrey" hover="blue" onClick={onClick} aria-label={ariaLabel || t("close")}>
         <Icon icon="close" size="16" />
       </Link>
     </Box>
@@ -48,11 +48,13 @@ const CloseButton = ({ onClick }) => {
 };
 
 CloseButton.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  "aria-label": PropTypes.string
 };
 
 CloseButton.defaultProps = {
-  onClick: undefined
+  onClick: undefined,
+  "aria-label": undefined
 };
 
 class BaseAlert extends Component {
@@ -68,7 +70,7 @@ class BaseAlert extends Component {
   }
 
   render() {
-    const { children, isCloseable, title, type, className, ...props } = this.props;
+    const { children, isCloseable, title, type, className, closeAriaLabel, ...props } = this.props;
     const { isVisible } = this.state;
 
     return isVisible ? (
@@ -87,7 +89,7 @@ class BaseAlert extends Component {
           {title && <Text fontWeight="bold">{title}</Text>}
           {children}
         </Box>
-        {isCloseable && <CloseButton onClick={this.hideAlert} />}
+        {isCloseable && <CloseButton onClick={this.hideAlert} ariaLabel={closeAriaLabel} />}
       </Flex>
     ) : null;
   }
@@ -97,6 +99,7 @@ BaseAlert.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isCloseable: PropTypes.bool,
+  closeAriaLabel: PropTypes.string,
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "informative", "success", "warning"]),
   ...propTypes.space
@@ -105,6 +108,7 @@ BaseAlert.propTypes = {
 BaseAlert.defaultProps = {
   className: undefined,
   isCloseable: false,
+  closeAriaLabel: undefined,
   title: null,
   type: "informative"
 };

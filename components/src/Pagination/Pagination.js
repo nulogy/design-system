@@ -34,44 +34,50 @@ const PaginationButton = styled.button(props => ({
   }
 }));
 
-const PreviousButton = props => {
-  const { disabled, onClick } = props;
+const PreviousButton = ({ disabled, onClick, label, "aria-label": ariaLabel }) => {
   const { t } = useTranslation();
   return (
-    <PaginationButton disabled={disabled} onClick={onClick} aria-label={t("go to previous results")}>
-      <Icon icon="leftArrow" ml="-8px" /> {t("previous")}
+    <PaginationButton disabled={disabled} onClick={onClick} aria-label={ariaLabel || t("go to previous results")}>
+      <Icon icon="leftArrow" ml="-8px" /> {label || t("previous")}
     </PaginationButton>
   );
 };
 
 PreviousButton.propTypes = {
   disabled: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  "aria-label": PropTypes.string
 };
 
 PreviousButton.defaultProps = {
   disabled: false,
-  onClick: null
+  onClick: null,
+  label: undefined,
+  "aria-label": undefined
 };
 
-const NextButton = props => {
-  const { disabled, onClick } = props;
+const NextButton = ({ disabled, onClick, label, "aria-label": ariaLabel }) => {
   const { t } = useTranslation();
   return (
-    <PaginationButton disabled={disabled} onClick={onClick} aria-label={t("go to next results")}>
-      {t("next")} <Icon icon="rightArrow" mr="-8px" />
+    <PaginationButton disabled={disabled} onClick={onClick} aria-label={ariaLabel || t("go to next results")}>
+      {label || t("next")} <Icon icon="rightArrow" mr="-8px" />
     </PaginationButton>
   );
 };
 
 NextButton.propTypes = {
   disabled: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  label: PropTypes.string,
+  "aria-label": PropTypes.string
 };
 
 NextButton.defaultProps = {
   disabled: false,
-  onClick: null
+  onClick: null,
+  label: undefined,
+  "aria-label": undefined
 };
 
 const PageNumber = styled(PaginationButton)(props => ({
@@ -95,11 +101,28 @@ export const getPageItemstoDisplay = (totalPages, currentPage) => {
 };
 
 const Pagination = props => {
-  const { currentPage, totalPages, onNext, onPrevious, onSelectPage, ...restProps } = props;
+  const {
+    currentPage,
+    totalPages,
+    onNext,
+    onPrevious,
+    onSelectPage,
+    nextAriaLabel,
+    nextLabel,
+    previousAriaLabel,
+    previousLabel,
+    "aria-label": ariaLabel,
+    ...restProps
+  } = props;
   const { t } = useTranslation();
   return (
-    <Flex as="nav" aria-label={t("pagination navigation")} {...restProps}>
-      <PreviousButton disabled={currentPage === 1} onClick={onPrevious} />
+    <Flex as="nav" aria-label={ariaLabel || t("pagination navigation")} {...restProps}>
+      <PreviousButton
+        disabled={currentPage === 1}
+        onClick={onPrevious}
+        ariaLabel={previousAriaLabel}
+        label={previousLabel}
+      />
       {getPageItemstoDisplay(totalPages, currentPage).map((page, index) => {
         const isCurrentPage = currentPage === page;
 
@@ -124,7 +147,7 @@ const Pagination = props => {
             </PageNumber>
           );
       })}
-      <NextButton disabled={currentPage === totalPages} onClick={onNext} />
+      <NextButton disabled={currentPage === totalPages} onClick={onNext} ariaLabel={nextAriaLabel} label={nextLabel} />
     </Flex>
   );
 };
@@ -134,13 +157,23 @@ Pagination.propTypes = {
   totalPages: PropTypes.number.isRequired,
   onNext: PropTypes.func,
   onPrevious: PropTypes.func,
-  onSelectPage: PropTypes.func
+  onSelectPage: PropTypes.func,
+  nextLabel: PropTypes.string,
+  nextAriaLabel: PropTypes.string,
+  previousLabel: PropTypes.string,
+  previousAriaLabel: PropTypes.string,
+  "aria-label": PropTypes.string
 };
 
 Pagination.defaultProps = {
   onNext: null,
   onPrevious: null,
-  onSelectPage: null
+  onSelectPage: null,
+  nextLabel: undefined,
+  nextAriaLabel: undefined,
+  previousLabel: undefined,
+  previousAriaLabel: undefined,
+  "aria-label": undefined
 };
 
 export default Pagination;

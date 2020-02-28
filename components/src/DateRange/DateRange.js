@@ -56,6 +56,8 @@ const DateRange = ({
   const [endTime, setEndTime] = useState(defaultEndTime);
   const [rangeError, setRangeError] = useState();
 
+  const { t } = useTranslation();
+
   const changeStartDateHandler = date => {
     setStartDate(date);
     if (onStartDateChange) {
@@ -113,7 +115,7 @@ const DateRange = ({
         dateFormat={dateFormat}
         selected={startDate}
         onChange={changeStartDateHandler}
-        inputProps={{ error: rangeError, ...startDateInputProps }}
+        inputProps={{ "aria-label": t("select a start date"), error: rangeError, ...startDateInputProps }}
         errorMessage={startDateErrorMessage}
         minDate={minDate}
         maxDate={maxDate}
@@ -153,7 +155,10 @@ const DateRange = ({
         dateFormat={dateFormat}
         selected={endDate}
         onChange={changeEndDateHandler}
-        inputProps={endDateInputProps}
+        inputProps={{
+          "aria-label": t("select an end date"),
+          ...endDateInputProps
+        }}
         errorMessage={endDateErrorMessage}
         minDate={minDate}
         maxDate={maxDate}
@@ -166,8 +171,6 @@ const DateRange = ({
   useEffect(() => {
     validateDateRange();
   }, [startDate, endDate, startTime, endTime]);
-
-  const { t } = useTranslation();
 
   return (
     <>
