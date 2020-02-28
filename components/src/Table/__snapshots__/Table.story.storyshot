@@ -1626,7 +1626,7 @@ exports[`Storyshots Table with everything 1`] = `
                                         >
                                           <button
                                             aria-label="toggle expansion"
-                                            className="ControlIcon__StyledButton-sc-1h83lvi-0 fMjedc"
+                                            className="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
                                             disabled={false}
                                             onClick={[Function]}
                                           >

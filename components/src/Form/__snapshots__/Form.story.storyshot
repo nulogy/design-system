@@ -392,7 +392,7 @@ exports[`Storyshots Form Demo form 1`] = `
                   type="danger"
                 >
                   <BaseAlert
-                    className="sc-fzXfLS PPCpw"
+                    className="sc-fzXfLS bgmocU"
                     isCloseable={false}
                     title="Errors have occured ..."
                     type="danger"
@@ -401,7 +401,7 @@ exports[`Storyshots Form Demo form 1`] = `
                       bg="#fae6ea"
                       borderLeft="4px solid #cc1439"
                       borderRadius="4px"
-                      className="sc-fzXfLS PPCpw"
+                      className="sc-fzXfLS bgmocU"
                       p="x2"
                       role="alert"
                       theme={
@@ -492,7 +492,7 @@ exports[`Storyshots Form Demo form 1`] = `
                       }
                     >
                       <div
-                        className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS PPCpw"
+                        className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
                         role="alert"
                       >
                         <Styled(Component)
