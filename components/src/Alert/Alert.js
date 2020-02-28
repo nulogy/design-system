@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, layout } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
@@ -91,7 +91,8 @@ BaseAlert.propTypes = {
   closeAriaLabel: PropTypes.string,
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "informative", "success", "warning"]),
-  ...propTypes.space
+  ...propTypes.space,
+  ...propTypes.layout
 };
 
 BaseAlert.defaultProps = {
@@ -102,6 +103,6 @@ BaseAlert.defaultProps = {
   type: "informative"
 };
 
-const Alert = styled(BaseAlert)(space, alertStyles);
+const Alert = styled(BaseAlert)(space, layout, alertStyles);
 
 export default Alert;
