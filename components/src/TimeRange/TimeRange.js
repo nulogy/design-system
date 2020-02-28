@@ -21,11 +21,15 @@ const TimeRange = ({
   minTime,
   maxTime,
   interval,
-  locale
+  locale,
+  startAriaLabel,
+  endAriaLabel
 }) => {
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
   const [rangeError, setRangeError] = useState();
+
+  const { t } = useTranslation();
 
   const changeStartTimeHandler = date => {
     setStartTime(date);
@@ -69,6 +73,7 @@ const TimeRange = ({
       maxTime={endTime || maxTime}
       interval={interval}
       locale={locale}
+      aria-label={startAriaLabel || t("select a start time")}
     />
   );
 
@@ -82,14 +87,13 @@ const TimeRange = ({
       minTime={startTime || minTime}
       interval={interval}
       locale={locale}
+      aria-label={endAriaLabel || t("select an end time")}
     />
   );
 
   useEffect(() => {
     validateTimeRange();
   }, [startTime, endTime]);
-
-  const { t } = useTranslation();
 
   return (
     <RangeContainer
@@ -118,7 +122,9 @@ TimeRange.propTypes = {
   minTime: PropTypes.string,
   maxTime: PropTypes.string,
   interval: PropTypes.number,
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  startAriaLabel: PropTypes.string,
+  endAriaLabel: PropTypes.string
 };
 
 TimeRange.defaultProps = {
@@ -137,7 +143,9 @@ TimeRange.defaultProps = {
   minTime: null,
   maxTime: null,
   interval: undefined,
-  locale: undefined
+  locale: undefined,
+  startAriaLabel: undefined,
+  endAriaLabel: undefined
 };
 
 export default TimeRange;

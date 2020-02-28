@@ -113,6 +113,12 @@ const propsRows = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the overlay component."
+  },
+  {
+    name: "closeAriaLabel",
+    type: "String",
+    defaultValue: "close",
+    description: "Aria label on close button"
   }
 ];
 

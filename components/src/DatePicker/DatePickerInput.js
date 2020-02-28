@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 import { InputField } from "../Input/InputField";
 import { InputFieldDefaultProps, InputFieldPropTypes } from "../Input/InputField.type";
 
@@ -34,10 +35,12 @@ const DatePickerInput = forwardRef(
         onSpaceKeyPress(event);
       }
     };
+    const { t } = useTranslation();
 
     return (
       <InputField
         ref={ref}
+        aria-label={t("select a date")}
         {...inputProps}
         value={value}
         placeholder={inputProps.placeholder}

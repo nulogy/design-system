@@ -223,7 +223,9 @@ StatefulTable.propTypes = {
   onRowSelectionChange: PropTypes.func,
   onRowExpansionChange: PropTypes.func,
   rowsPerPage: PropTypes.number,
-  onPageChange: PropTypes.func
+  onPageChange: PropTypes.func,
+  selectAllAriaLabel: PropTypes.string,
+  deselectAllAriaLabel: PropTypes.string
 };
 
 StatefulTable.defaultProps = {
@@ -231,7 +233,9 @@ StatefulTable.defaultProps = {
   hasSelectableRows: false,
   selectedRows: [],
   isHeaderSelected: false,
-  onRowExpansionChange: null
+  onRowExpansionChange: null,
+  selectAllAriaLabel: undefined,
+  deselectAllAriaLabel: undefined
 };
 
 export default StatefulTable;

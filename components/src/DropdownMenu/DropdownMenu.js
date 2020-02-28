@@ -30,7 +30,9 @@ const DropdownMenu = React.forwardRef(
       id,
       boundariesElement,
       showDelay,
-      hideDelay
+      hideDelay,
+      openAriaLabel,
+      closeAriaLabel
     },
     ref
   ) => (
@@ -51,6 +53,8 @@ const DropdownMenu = React.forwardRef(
       modifiers={modifiers || transformPropsToModifiers({ boundariesElement })}
       backgroundColor={backgroundColor}
       borderColor={backgroundColor}
+      openAriaLabel={openAriaLabel}
+      closeAriaLabel={closeAriaLabel}
     >
       <DropdownMenuContainer className={className} id={id} backgroundColor={backgroundColor} showArrow={showArrow}>
         {children}
@@ -84,7 +88,9 @@ DropdownMenu.propTypes = {
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   defaultOpen: PropTypes.bool,
   modifiers: deprecatedProp(PropTypes.shape({}), "boundariesElement"),
-  boundariesElement: PropTypes.string
+  boundariesElement: PropTypes.string,
+  openAriaLabel: PropTypes.string,
+  closeAriaLabel: PropTypes.string
 };
 
 DropdownMenu.defaultProps = {
@@ -99,7 +105,9 @@ DropdownMenu.defaultProps = {
   hideDelay: "200",
   defaultOpen: false,
   modifiers: undefined,
-  boundariesElement: "viewport"
+  boundariesElement: "viewport",
+  openAriaLabel: undefined,
+  closeAriaLabel: undefined
 };
 
 export default DropdownMenu;

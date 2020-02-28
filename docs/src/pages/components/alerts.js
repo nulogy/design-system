@@ -49,6 +49,12 @@ const propsRows = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the alert component."
+  },
+  {
+    name: "closeAriaLabel",
+    type: "String",
+    defaultValue: "close",
+    description: "aria label for close button"
   }
 ];
 

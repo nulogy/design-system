@@ -82,6 +82,34 @@ const rowKeys = [
     type: "function",
     description:
       "Used to override the cell component in the row. No padding or other styles will be added in this case. It should return a react component."
+  },
+  {
+    name: "expandAriaLabel",
+    type: "string",
+    default: "expand",
+    description:
+      "When hasExpandableRows is true, replaces the aria-label for the expand button"
+  },
+  {
+    name: "collapseAriaLabel",
+    type: "string",
+    default: "expand",
+    description:
+      "When hasExpandableRows is true, replaces the aria-label for the collapse button"
+  },
+  {
+    name: "selectAriaLabel",
+    type: "string",
+    default: "select",
+    description:
+      "When hasSelectableRows is true, replaces the aria-label for the unchecked checkbox"
+  },
+  {
+    name: "deselectAriaLabel",
+    type: "string",
+    default: "deselect",
+    description:
+      "When hasSelectableRows is true, replaces the aria-label for the checked checkbox"
   }
 ];
 
@@ -204,6 +232,20 @@ const propsRows = [
     type: "boolean",
     defaultValue: "false",
     description: "Whether or not to display the table in compact mode"
+  },
+  {
+    name: "selectAllLabel",
+    type: "string",
+    default: "select all",
+    description:
+      "When hasSelectableRows is true, replaces the aria-label for the unchecked select all checkbox"
+  },
+  {
+    name: "deselectAriaLabel",
+    type: "string",
+    default: "Deselect all",
+    description:
+      "When hasSelectableRows is true, replaces the aria-label for the checked select all checkbox"
   }
 ];
 

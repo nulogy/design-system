@@ -30,7 +30,9 @@ const Popper = React.forwardRef(
       modifiers,
       backgroundColor,
       borderColor,
-      showArrow
+      showArrow,
+      openAriaLabel,
+      closeAriaLabel
     },
     popperRef
   ) => {
@@ -124,6 +126,8 @@ const Popper = React.forwardRef(
       return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
     };
     const { t } = useTranslation();
+    const openLabel = openAriaLabel || t("open");
+    const closeLabel = closeAriaLabel || t("close");
     return (
       <Manager ref={popperRef}>
         <Reference>
@@ -132,7 +136,7 @@ const Popper = React.forwardRef(
               "aria-haspopup": true,
               "aria-expanded": isOpen,
               "aria-describedby": id,
-              "aria-label": isOpen ? t("close") : t("open"),
+              "aria-label": isOpen ? closeLabel : openLabel,
               ...eventHandlers,
               ref
             })
@@ -192,7 +196,9 @@ Popper.propTypes = {
   modifiers: PropTypes.shape({}),
   backgroundColor: PropTypes.string,
   borderColor: PropTypes.string,
-  showArrow: PropTypes.bool
+  showArrow: PropTypes.bool,
+  openAriaLabel: PropTypes.string,
+  closeAriaLabel: PropTypes.string
 };
 
 Popper.defaultProps = {
@@ -206,7 +212,9 @@ Popper.defaultProps = {
   modifiers: null,
   backgroundColor: undefined,
   borderColor: undefined,
-  showArrow: true
+  showArrow: true,
+  openAriaLabel: undefined,
+  closeAriaLabel: undefined
 };
 
 export default Popper;
