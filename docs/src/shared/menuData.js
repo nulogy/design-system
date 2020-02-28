@@ -108,6 +108,10 @@ export const menuData = [
         href: "/components/list"
       },
       {
+        name: "Loading Animation",
+        href: "/components/loading-animation"
+      },
+      {
         name: "Modal",
         href: "/components/modal"
       },
