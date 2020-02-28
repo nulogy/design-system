@@ -48,8 +48,8 @@ export default () => (
     </Intro>
 
     <DocSection>
-      <Flex justifyContent="center">
-        <LoadingAnimation mt="x4" mb="x8" />
+      <Flex justifyContent="center" mt="x4" mb="x8">
+        <LoadingAnimation />
       </Flex>
       <Highlight className="js">
         {`import { LoadingAnimation } from "@nulogy/components";
