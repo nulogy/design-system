@@ -67,7 +67,8 @@ const ReactSelect = ({
   onMenuOpen,
   onMenuClose,
   onInputChange,
-  components
+  components,
+  "aria-label": ariaLabel
 }) => {
   const { t } = useTranslation();
   return (
@@ -100,6 +101,7 @@ const ReactSelect = ({
           menuPosition={menuPosition}
           onInputChange={onInputChange}
           components={{ Option: SelectOption, Control, ...components }}
+          aria-label={ariaLabel}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </MaybeFieldLabel>
