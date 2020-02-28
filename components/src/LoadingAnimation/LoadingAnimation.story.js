@@ -8,7 +8,7 @@ storiesOf("LoadingAnimation", module)
   .add("Inactive", () => <LoadingAnimation inactive>Example</LoadingAnimation>)
   .add("Page example - active", () => (
     <Overlay flexDirection="column" m={{ extraSmall: "x2", small: "x3" }}>
-      <Flex flexGrow="2" flexDirection="column" justifyContent="center" margin="auto" mb="104px">
+      <Flex flexGrow="2" flexDirection="column" justifyContent="center" margin="auto" mb="x4">
         <Text mb="x2" fontWeight="medium" textAlign="right">
           1/4
         </Text>
@@ -40,16 +40,14 @@ storiesOf("LoadingAnimation", module)
           Applying action ...
         </Text>
       </Flex>
-      <Box mb="x1">
-        <Alert type="warning" mb="x2">
-          This action takes longer than expected. Try again...
-        </Alert>
-        <Flex justifyContent="center">
-          <ControlIcon icon="refresh" mr="x1">
-            Retry
-          </ControlIcon>
-          <ControlIcon icon="close">Abort</ControlIcon>
-        </Flex>
-      </Box>
+      <Alert type="warning" mb="x2" position="absolute" bottom="x8">
+        This action takes longer than expected. Try again...
+      </Alert>
+      <Flex justifyContent="center" mb="x1">
+        <ControlIcon icon="refresh" mr="x1">
+          Retry
+        </ControlIcon>
+        <ControlIcon icon="close">Abort</ControlIcon>
+      </Flex>
     </Overlay>
   ));
