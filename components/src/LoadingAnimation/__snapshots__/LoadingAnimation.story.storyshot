@@ -1,0 +1,3032 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots LoadingAnimation Active 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <NDSProvider
+    theme={
+      Object {
+        "borders": Array [],
+        "breakpoints": Object {
+          "extraLarge": "1920px",
+          "extraSmall": "0px",
+          "large": "1360px",
+          "medium": "1024px",
+          "small": "768px",
+        },
+        "colors": Object {
+          "black": "#011e38",
+          "blackBlue": "#122b47",
+          "blue": "#216beb",
+          "darkBlue": "#00438f",
+          "darkGrey": "#434d59",
+          "green": "#008059",
+          "grey": "#c0c8d1",
+          "lightBlue": "#e1ebfa",
+          "lightGreen": "#e9f7f2",
+          "lightGrey": "#e4e7eb",
+          "lightRed": "#fae6ea",
+          "lightYellow": "#fcf5e3",
+          "red": "#cc1439",
+          "white": "#ffffff",
+          "whiteGrey": "#f0f2f5",
+          "yellow": "#ffbb00",
+        },
+        "fontSizes": Object {
+          "large": "20px",
+          "larger": "26px",
+          "largest": "46px",
+          "medium": "16px",
+          "small": "14px",
+          "smaller": "12px",
+        },
+        "fontWeights": Object {
+          "bold": "600",
+          "light": "300",
+          "medium": "500",
+          "normal": "400",
+        },
+        "fonts": Object {
+          "base": "'IBM Plex Sans', sans-serif",
+          "mono": "'IBM Plex Mono', monospace",
+        },
+        "lineHeights": Object {
+          "base": "1.5",
+          "sectionTitle": "1.23076923",
+          "smallTextBase": "1.71428571",
+          "smallTextCompressed": "1.14285714",
+          "smallerText": "1.33333333",
+          "subsectionTitle": "1.2",
+          "title": "1.04347826",
+        },
+        "radii": Object {
+          "circle": "50%",
+          "medium": "4px",
+          "small": "2px",
+        },
+        "shadows": Object {
+          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+        },
+        "space": Object {
+          "half": "4px",
+          "none": "0px",
+          "x1": "8px",
+          "x2": "16px",
+          "x3": "24px",
+          "x4": "32px",
+          "x5": "40px",
+          "x6": "48px",
+          "x8": "64px",
+        },
+        "zIndex": Object {
+          "content": 100,
+          "overlay": 1000,
+          "tabsBar": 210,
+          "tabsScollIndicator": 200,
+        },
+      }
+    }
+  >
+    <Memo(GlobalStyleComponent) />
+    <NDSProvider__GlobalStyles
+      theme={
+        Object {
+          "borders": Array [],
+          "breakpoints": Object {
+            "extraLarge": "1920px",
+            "extraSmall": "0px",
+            "large": "1360px",
+            "medium": "1024px",
+            "small": "768px",
+          },
+          "colors": Object {
+            "black": "#011e38",
+            "blackBlue": "#122b47",
+            "blue": "#216beb",
+            "darkBlue": "#00438f",
+            "darkGrey": "#434d59",
+            "green": "#008059",
+            "grey": "#c0c8d1",
+            "lightBlue": "#e1ebfa",
+            "lightGreen": "#e9f7f2",
+            "lightGrey": "#e4e7eb",
+            "lightRed": "#fae6ea",
+            "lightYellow": "#fcf5e3",
+            "red": "#cc1439",
+            "white": "#ffffff",
+            "whiteGrey": "#f0f2f5",
+            "yellow": "#ffbb00",
+          },
+          "fontSizes": Object {
+            "large": "20px",
+            "larger": "26px",
+            "largest": "46px",
+            "medium": "16px",
+            "small": "14px",
+            "smaller": "12px",
+          },
+          "fontWeights": Object {
+            "bold": "600",
+            "light": "300",
+            "medium": "500",
+            "normal": "400",
+          },
+          "fonts": Object {
+            "base": "'IBM Plex Sans', sans-serif",
+            "mono": "'IBM Plex Mono', monospace",
+          },
+          "lineHeights": Object {
+            "base": "1.5",
+            "sectionTitle": "1.23076923",
+            "smallTextBase": "1.71428571",
+            "smallTextCompressed": "1.14285714",
+            "smallerText": "1.33333333",
+            "subsectionTitle": "1.2",
+            "title": "1.04347826",
+          },
+          "radii": Object {
+            "circle": "50%",
+            "medium": "4px",
+            "small": "2px",
+          },
+          "shadows": Object {
+            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+          },
+          "space": Object {
+            "half": "4px",
+            "none": "0px",
+            "x1": "8px",
+            "x2": "16px",
+            "x3": "24px",
+            "x4": "32px",
+            "x5": "40px",
+            "x6": "48px",
+            "x8": "64px",
+          },
+          "zIndex": Object {
+            "content": 100,
+            "overlay": 1000,
+            "tabsBar": 210,
+            "tabsScollIndicator": 200,
+          },
+        }
+      }
+    >
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      >
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
+            }
+          }
+        >
+          <LoadingAnimation
+            inactive={false}
+          >
+            <svg
+              height="24px"
+              preserveAspectRatio="xMidYMid"
+              viewBox="0 0 100 10"
+              width="240px"
+              xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="translate(4 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#216beb"
+                  r="4"
+                  transform="scale(0.275039 0.275039)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.4734848484848484s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(22.4 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#ffbb00"
+                  r="4"
+                  transform="scale(0.0862935 0.0862935)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.37878787878787873s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(40.0 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#216beb"
+                  r="4"
+                  transform="scale(0.0000823166 0.0000823166)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.284090909090909s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(59.2 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#ffbb00"
+                  r="4"
+                  transform="scale(0.0779504 0.0779504)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.18939393939393936s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(77.6 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#216beb"
+                  r="4"
+                  transform="scale(0.262719 0.262719)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.09469696969696968s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(96 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#ffbb00"
+                  r="4"
+                  transform="scale(0.49324 0.49324)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="0s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+            </svg>
+          </LoadingAnimation>
+        </ThemeProvider>
+      </div>
+    </NDSProvider__GlobalStyles>
+  </NDSProvider>
+</div>
+`;
+
+exports[`Storyshots LoadingAnimation Inactive 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <NDSProvider
+    theme={
+      Object {
+        "borders": Array [],
+        "breakpoints": Object {
+          "extraLarge": "1920px",
+          "extraSmall": "0px",
+          "large": "1360px",
+          "medium": "1024px",
+          "small": "768px",
+        },
+        "colors": Object {
+          "black": "#011e38",
+          "blackBlue": "#122b47",
+          "blue": "#216beb",
+          "darkBlue": "#00438f",
+          "darkGrey": "#434d59",
+          "green": "#008059",
+          "grey": "#c0c8d1",
+          "lightBlue": "#e1ebfa",
+          "lightGreen": "#e9f7f2",
+          "lightGrey": "#e4e7eb",
+          "lightRed": "#fae6ea",
+          "lightYellow": "#fcf5e3",
+          "red": "#cc1439",
+          "white": "#ffffff",
+          "whiteGrey": "#f0f2f5",
+          "yellow": "#ffbb00",
+        },
+        "fontSizes": Object {
+          "large": "20px",
+          "larger": "26px",
+          "largest": "46px",
+          "medium": "16px",
+          "small": "14px",
+          "smaller": "12px",
+        },
+        "fontWeights": Object {
+          "bold": "600",
+          "light": "300",
+          "medium": "500",
+          "normal": "400",
+        },
+        "fonts": Object {
+          "base": "'IBM Plex Sans', sans-serif",
+          "mono": "'IBM Plex Mono', monospace",
+        },
+        "lineHeights": Object {
+          "base": "1.5",
+          "sectionTitle": "1.23076923",
+          "smallTextBase": "1.71428571",
+          "smallTextCompressed": "1.14285714",
+          "smallerText": "1.33333333",
+          "subsectionTitle": "1.2",
+          "title": "1.04347826",
+        },
+        "radii": Object {
+          "circle": "50%",
+          "medium": "4px",
+          "small": "2px",
+        },
+        "shadows": Object {
+          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+        },
+        "space": Object {
+          "half": "4px",
+          "none": "0px",
+          "x1": "8px",
+          "x2": "16px",
+          "x3": "24px",
+          "x4": "32px",
+          "x5": "40px",
+          "x6": "48px",
+          "x8": "64px",
+        },
+        "zIndex": Object {
+          "content": 100,
+          "overlay": 1000,
+          "tabsBar": 210,
+          "tabsScollIndicator": 200,
+        },
+      }
+    }
+  >
+    <Memo(GlobalStyleComponent) />
+    <NDSProvider__GlobalStyles
+      theme={
+        Object {
+          "borders": Array [],
+          "breakpoints": Object {
+            "extraLarge": "1920px",
+            "extraSmall": "0px",
+            "large": "1360px",
+            "medium": "1024px",
+            "small": "768px",
+          },
+          "colors": Object {
+            "black": "#011e38",
+            "blackBlue": "#122b47",
+            "blue": "#216beb",
+            "darkBlue": "#00438f",
+            "darkGrey": "#434d59",
+            "green": "#008059",
+            "grey": "#c0c8d1",
+            "lightBlue": "#e1ebfa",
+            "lightGreen": "#e9f7f2",
+            "lightGrey": "#e4e7eb",
+            "lightRed": "#fae6ea",
+            "lightYellow": "#fcf5e3",
+            "red": "#cc1439",
+            "white": "#ffffff",
+            "whiteGrey": "#f0f2f5",
+            "yellow": "#ffbb00",
+          },
+          "fontSizes": Object {
+            "large": "20px",
+            "larger": "26px",
+            "largest": "46px",
+            "medium": "16px",
+            "small": "14px",
+            "smaller": "12px",
+          },
+          "fontWeights": Object {
+            "bold": "600",
+            "light": "300",
+            "medium": "500",
+            "normal": "400",
+          },
+          "fonts": Object {
+            "base": "'IBM Plex Sans', sans-serif",
+            "mono": "'IBM Plex Mono', monospace",
+          },
+          "lineHeights": Object {
+            "base": "1.5",
+            "sectionTitle": "1.23076923",
+            "smallTextBase": "1.71428571",
+            "smallTextCompressed": "1.14285714",
+            "smallerText": "1.33333333",
+            "subsectionTitle": "1.2",
+            "title": "1.04347826",
+          },
+          "radii": Object {
+            "circle": "50%",
+            "medium": "4px",
+            "small": "2px",
+          },
+          "shadows": Object {
+            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+          },
+          "space": Object {
+            "half": "4px",
+            "none": "0px",
+            "x1": "8px",
+            "x2": "16px",
+            "x3": "24px",
+            "x4": "32px",
+            "x5": "40px",
+            "x6": "48px",
+            "x8": "64px",
+          },
+          "zIndex": Object {
+            "content": 100,
+            "overlay": 1000,
+            "tabsBar": 210,
+            "tabsScollIndicator": 200,
+          },
+        }
+      }
+    >
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      >
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
+            }
+          }
+        >
+          <LoadingAnimation
+            inactive={true}
+          >
+            <svg
+              height="24px"
+              preserveAspectRatio="xMidYMid"
+              viewBox="0 0 100 10"
+              width="240px"
+              xlink="http://www.w3.org/1999/xlink"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                transform="translate(4 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#c0c8d1"
+                  r="4"
+                  transform="scale(0.275039 0.275039)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.4734848484848484s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(22.4 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#e4e7eb"
+                  r="4"
+                  transform="scale(0.0862935 0.0862935)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.37878787878787873s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(40.0 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#c0c8d1"
+                  r="4"
+                  transform="scale(0.0000823166 0.0000823166)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.284090909090909s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(59.2 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#e4e7eb"
+                  r="4"
+                  transform="scale(0.0779504 0.0779504)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.18939393939393936s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(77.6 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#c0c8d1"
+                  r="4"
+                  transform="scale(0.262719 0.262719)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="-0.09469696969696968s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+              <g
+                transform="translate(96 5)"
+              >
+                <circle
+                  cx="0"
+                  cy="0"
+                  fill="#e4e7eb"
+                  r="4"
+                  transform="scale(0.49324 0.49324)"
+                >
+                  <animateTransform
+                    attributeName="transform"
+                    begin="0s"
+                    calcMode="spline"
+                    dur="1.1363636363636362s"
+                    keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                    keyTimes="0;0.5;1"
+                    repeatCount="indefinite"
+                    type="scale"
+                    values="0;1;0"
+                  />
+                </circle>
+              </g>
+            </svg>
+          </LoadingAnimation>
+        </ThemeProvider>
+      </div>
+    </NDSProvider__GlobalStyles>
+  </NDSProvider>
+</div>
+`;
+
+exports[`Storyshots LoadingAnimation Page example - active 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <NDSProvider
+    theme={
+      Object {
+        "borders": Array [],
+        "breakpoints": Object {
+          "extraLarge": "1920px",
+          "extraSmall": "0px",
+          "large": "1360px",
+          "medium": "1024px",
+          "small": "768px",
+        },
+        "colors": Object {
+          "black": "#011e38",
+          "blackBlue": "#122b47",
+          "blue": "#216beb",
+          "darkBlue": "#00438f",
+          "darkGrey": "#434d59",
+          "green": "#008059",
+          "grey": "#c0c8d1",
+          "lightBlue": "#e1ebfa",
+          "lightGreen": "#e9f7f2",
+          "lightGrey": "#e4e7eb",
+          "lightRed": "#fae6ea",
+          "lightYellow": "#fcf5e3",
+          "red": "#cc1439",
+          "white": "#ffffff",
+          "whiteGrey": "#f0f2f5",
+          "yellow": "#ffbb00",
+        },
+        "fontSizes": Object {
+          "large": "20px",
+          "larger": "26px",
+          "largest": "46px",
+          "medium": "16px",
+          "small": "14px",
+          "smaller": "12px",
+        },
+        "fontWeights": Object {
+          "bold": "600",
+          "light": "300",
+          "medium": "500",
+          "normal": "400",
+        },
+        "fonts": Object {
+          "base": "'IBM Plex Sans', sans-serif",
+          "mono": "'IBM Plex Mono', monospace",
+        },
+        "lineHeights": Object {
+          "base": "1.5",
+          "sectionTitle": "1.23076923",
+          "smallTextBase": "1.71428571",
+          "smallTextCompressed": "1.14285714",
+          "smallerText": "1.33333333",
+          "subsectionTitle": "1.2",
+          "title": "1.04347826",
+        },
+        "radii": Object {
+          "circle": "50%",
+          "medium": "4px",
+          "small": "2px",
+        },
+        "shadows": Object {
+          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+        },
+        "space": Object {
+          "half": "4px",
+          "none": "0px",
+          "x1": "8px",
+          "x2": "16px",
+          "x3": "24px",
+          "x4": "32px",
+          "x5": "40px",
+          "x6": "48px",
+          "x8": "64px",
+        },
+        "zIndex": Object {
+          "content": 100,
+          "overlay": 1000,
+          "tabsBar": 210,
+          "tabsScollIndicator": 200,
+        },
+      }
+    }
+  >
+    <Memo(GlobalStyleComponent) />
+    <NDSProvider__GlobalStyles
+      theme={
+        Object {
+          "borders": Array [],
+          "breakpoints": Object {
+            "extraLarge": "1920px",
+            "extraSmall": "0px",
+            "large": "1360px",
+            "medium": "1024px",
+            "small": "768px",
+          },
+          "colors": Object {
+            "black": "#011e38",
+            "blackBlue": "#122b47",
+            "blue": "#216beb",
+            "darkBlue": "#00438f",
+            "darkGrey": "#434d59",
+            "green": "#008059",
+            "grey": "#c0c8d1",
+            "lightBlue": "#e1ebfa",
+            "lightGreen": "#e9f7f2",
+            "lightGrey": "#e4e7eb",
+            "lightRed": "#fae6ea",
+            "lightYellow": "#fcf5e3",
+            "red": "#cc1439",
+            "white": "#ffffff",
+            "whiteGrey": "#f0f2f5",
+            "yellow": "#ffbb00",
+          },
+          "fontSizes": Object {
+            "large": "20px",
+            "larger": "26px",
+            "largest": "46px",
+            "medium": "16px",
+            "small": "14px",
+            "smaller": "12px",
+          },
+          "fontWeights": Object {
+            "bold": "600",
+            "light": "300",
+            "medium": "500",
+            "normal": "400",
+          },
+          "fonts": Object {
+            "base": "'IBM Plex Sans', sans-serif",
+            "mono": "'IBM Plex Mono', monospace",
+          },
+          "lineHeights": Object {
+            "base": "1.5",
+            "sectionTitle": "1.23076923",
+            "smallTextBase": "1.71428571",
+            "smallTextCompressed": "1.14285714",
+            "smallerText": "1.33333333",
+            "subsectionTitle": "1.2",
+            "title": "1.04347826",
+          },
+          "radii": Object {
+            "circle": "50%",
+            "medium": "4px",
+            "small": "2px",
+          },
+          "shadows": Object {
+            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+          },
+          "space": Object {
+            "half": "4px",
+            "none": "0px",
+            "x1": "8px",
+            "x2": "16px",
+            "x3": "24px",
+            "x4": "32px",
+            "x5": "40px",
+            "x6": "48px",
+            "x8": "64px",
+          },
+          "zIndex": Object {
+            "content": 100,
+            "overlay": 1000,
+            "tabsBar": 210,
+            "tabsScollIndicator": 200,
+          },
+        }
+      }
+    >
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      >
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
+            }
+          }
+        >
+          <Styled(Styled(Box))
+            alignItems="center"
+            dark={false}
+            flexDirection="column"
+            justifyContent="center"
+            m={
+              Object {
+                "extraSmall": "x2",
+                "small": "x3",
+              }
+            }
+            position="fixed"
+            theme={
+              Object {
+                "borders": Array [],
+                "breakpoints": Object {
+                  "extraLarge": "1920px",
+                  "extraSmall": "0px",
+                  "large": "1360px",
+                  "medium": "1024px",
+                  "small": "768px",
+                },
+                "colors": Object {
+                  "black": "#011e38",
+                  "blackBlue": "#122b47",
+                  "blue": "#216beb",
+                  "darkBlue": "#00438f",
+                  "darkGrey": "#434d59",
+                  "green": "#008059",
+                  "grey": "#c0c8d1",
+                  "lightBlue": "#e1ebfa",
+                  "lightGreen": "#e9f7f2",
+                  "lightGrey": "#e4e7eb",
+                  "lightRed": "#fae6ea",
+                  "lightYellow": "#fcf5e3",
+                  "red": "#cc1439",
+                  "white": "#ffffff",
+                  "whiteGrey": "#f0f2f5",
+                  "yellow": "#ffbb00",
+                },
+                "fontSizes": Object {
+                  "large": "20px",
+                  "larger": "26px",
+                  "largest": "46px",
+                  "medium": "16px",
+                  "small": "14px",
+                  "smaller": "12px",
+                },
+                "fontWeights": Object {
+                  "bold": "600",
+                  "light": "300",
+                  "medium": "500",
+                  "normal": "400",
+                },
+                "fonts": Object {
+                  "base": "'IBM Plex Sans', sans-serif",
+                  "mono": "'IBM Plex Mono', monospace",
+                },
+                "lineHeights": Object {
+                  "base": "1.5",
+                  "sectionTitle": "1.23076923",
+                  "smallTextBase": "1.71428571",
+                  "smallTextCompressed": "1.14285714",
+                  "smallerText": "1.33333333",
+                  "subsectionTitle": "1.2",
+                  "title": "1.04347826",
+                },
+                "radii": Object {
+                  "circle": "50%",
+                  "medium": "4px",
+                  "small": "2px",
+                },
+                "shadows": Object {
+                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                },
+                "space": Object {
+                  "half": "4px",
+                  "none": "0px",
+                  "x1": "8px",
+                  "x2": "16px",
+                  "x3": "24px",
+                  "x4": "32px",
+                  "x5": "40px",
+                  "x6": "48px",
+                  "x8": "64px",
+                },
+                "zIndex": Object {
+                  "content": 100,
+                  "overlay": 1000,
+                  "tabsBar": 210,
+                  "tabsScollIndicator": 200,
+                },
+              }
+            }
+          >
+            <div
+              className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfNQ cAaCcq"
+            >
+              <Styled(Box)
+                flexDirection="column"
+                flexGrow="2"
+                justifyContent="center"
+                margin="auto"
+                mb="x4"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 sc-AykKC jPEwvo"
+                >
+                  <styled.p
+                    color="currentColor"
+                    disabled={false}
+                    fontSize="16px"
+                    fontWeight="medium"
+                    inline={false}
+                    lineHeight="1.5"
+                    mb="x2"
+                    mt={0}
+                    textAlign="right"
+                  >
+                    <p
+                      className="sc-AykKF dDiJSY"
+                      color="currentColor"
+                      disabled={false}
+                      fontSize="16px"
+                      fontWeight="medium"
+                    >
+                      1/4
+                    </p>
+                  </styled.p>
+                  <Box
+                    mb="x1"
+                    theme={
+                      Object {
+                        "borders": Array [],
+                        "breakpoints": Object {
+                          "extraLarge": "1920px",
+                          "extraSmall": "0px",
+                          "large": "1360px",
+                          "medium": "1024px",
+                          "small": "768px",
+                        },
+                        "colors": Object {
+                          "black": "#011e38",
+                          "blackBlue": "#122b47",
+                          "blue": "#216beb",
+                          "darkBlue": "#00438f",
+                          "darkGrey": "#434d59",
+                          "green": "#008059",
+                          "grey": "#c0c8d1",
+                          "lightBlue": "#e1ebfa",
+                          "lightGreen": "#e9f7f2",
+                          "lightGrey": "#e4e7eb",
+                          "lightRed": "#fae6ea",
+                          "lightYellow": "#fcf5e3",
+                          "red": "#cc1439",
+                          "white": "#ffffff",
+                          "whiteGrey": "#f0f2f5",
+                          "yellow": "#ffbb00",
+                        },
+                        "fontSizes": Object {
+                          "large": "20px",
+                          "larger": "26px",
+                          "largest": "46px",
+                          "medium": "16px",
+                          "small": "14px",
+                          "smaller": "12px",
+                        },
+                        "fontWeights": Object {
+                          "bold": "600",
+                          "light": "300",
+                          "medium": "500",
+                          "normal": "400",
+                        },
+                        "fonts": Object {
+                          "base": "'IBM Plex Sans', sans-serif",
+                          "mono": "'IBM Plex Mono', monospace",
+                        },
+                        "lineHeights": Object {
+                          "base": "1.5",
+                          "sectionTitle": "1.23076923",
+                          "smallTextBase": "1.71428571",
+                          "smallTextCompressed": "1.14285714",
+                          "smallerText": "1.33333333",
+                          "subsectionTitle": "1.2",
+                          "title": "1.04347826",
+                        },
+                        "radii": Object {
+                          "circle": "50%",
+                          "medium": "4px",
+                          "small": "2px",
+                        },
+                        "shadows": Object {
+                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                        },
+                        "space": Object {
+                          "half": "4px",
+                          "none": "0px",
+                          "x1": "8px",
+                          "x2": "16px",
+                          "x3": "24px",
+                          "x4": "32px",
+                          "x5": "40px",
+                          "x6": "48px",
+                          "x8": "64px",
+                        },
+                        "zIndex": Object {
+                          "content": 100,
+                          "overlay": 1000,
+                          "tabsBar": 210,
+                          "tabsScollIndicator": 200,
+                        },
+                      }
+                    }
+                  >
+                    <div
+                      className="Box-sc-1qu1edy-0 iPmvAN"
+                    >
+                      <LoadingAnimation
+                        inactive={false}
+                      >
+                        <svg
+                          height="24px"
+                          preserveAspectRatio="xMidYMid"
+                          viewBox="0 0 100 10"
+                          width="240px"
+                          xlink="http://www.w3.org/1999/xlink"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            transform="translate(4 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#216beb"
+                              r="4"
+                              transform="scale(0.275039 0.275039)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.4734848484848484s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(22.4 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#ffbb00"
+                              r="4"
+                              transform="scale(0.0862935 0.0862935)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.37878787878787873s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(40.0 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#216beb"
+                              r="4"
+                              transform="scale(0.0000823166 0.0000823166)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.284090909090909s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(59.2 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#ffbb00"
+                              r="4"
+                              transform="scale(0.0779504 0.0779504)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.18939393939393936s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(77.6 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#216beb"
+                              r="4"
+                              transform="scale(0.262719 0.262719)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.09469696969696968s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(96 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#ffbb00"
+                              r="4"
+                              transform="scale(0.49324 0.49324)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="0s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                        </svg>
+                      </LoadingAnimation>
+                    </div>
+                  </Box>
+                  <styled.p
+                    color="darkGrey"
+                    disabled={false}
+                    fontSize="small"
+                    inline={false}
+                    lineHeight="1.5"
+                    mb={0}
+                    mt={0}
+                  >
+                    <p
+                      className="sc-AykKF kIbUBD"
+                      color="darkGrey"
+                      disabled={false}
+                      fontSize="small"
+                    >
+                      Applying action ...
+                    </p>
+                  </styled.p>
+                </div>
+              </Styled(Box)>
+              <Styled(Box)
+                justifyContent="center"
+                mb="x1"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 sc-AykKC iWmyyv"
+                >
+                  <ForwardRef
+                    disabled={true}
+                    icon="refresh"
+                    mr="x1"
+                    onClick={null}
+                    size="32px"
+                    toggled={false}
+                  >
+                    <ControlIcon__StyledButton
+                      disabled={true}
+                      mr="x1"
+                      onClick={null}
+                      toggled={false}
+                    >
+                      <button
+                        className="ControlIcon__StyledButton-sc-1h83lvi-0 enkneJ"
+                        disabled={true}
+                        onClick={null}
+                      >
+                        <Styled(Component)
+                          color="currentColor"
+                          icon="refresh"
+                          size="32px"
+                          title={null}
+                        >
+                          <ForwardRef
+                            className="sc-AykKD ceXkCz"
+                            color="currentColor"
+                            focusable={false}
+                            icon="refresh"
+                            size="32px"
+                            title={null}
+                          >
+                            <svg
+                              aria-hidden={true}
+                              className="sc-AykKD ceXkCz"
+                              color="currentColor"
+                              fill="currentColor"
+                              focusable={false}
+                              height="32px"
+                              icon="refresh"
+                              size="32px"
+                              title={null}
+                              viewBox="0 0 24 24"
+                              width="32px"
+                            >
+                              <path
+                                d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+                                key="0"
+                              />
+                            </svg>
+                          </ForwardRef>
+                        </Styled(Component)>
+                      </button>
+                    </ControlIcon__StyledButton>
+                  </ForwardRef>
+                  <ForwardRef
+                    disabled={false}
+                    icon="close"
+                    onClick={null}
+                    size="32px"
+                    toggled={false}
+                  >
+                    <ControlIcon__StyledButton
+                      disabled={false}
+                      onClick={null}
+                      toggled={false}
+                    >
+                      <button
+                        className="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
+                        disabled={false}
+                        onClick={null}
+                      >
+                        <Styled(Component)
+                          color="currentColor"
+                          icon="close"
+                          size="32px"
+                          title={null}
+                        >
+                          <ForwardRef
+                            className="sc-AykKD ceXkCz"
+                            color="currentColor"
+                            focusable={false}
+                            icon="close"
+                            size="32px"
+                            title={null}
+                          >
+                            <svg
+                              aria-hidden={true}
+                              className="sc-AykKD ceXkCz"
+                              color="currentColor"
+                              fill="currentColor"
+                              focusable={false}
+                              height="32px"
+                              icon="close"
+                              size="32px"
+                              title={null}
+                              viewBox="0 0 24 24"
+                              width="32px"
+                            >
+                              <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                key="0"
+                              />
+                            </svg>
+                          </ForwardRef>
+                        </Styled(Component)>
+                      </button>
+                    </ControlIcon__StyledButton>
+                  </ForwardRef>
+                </div>
+              </Styled(Box)>
+            </div>
+          </Styled(Styled(Box))>
+        </ThemeProvider>
+      </div>
+    </NDSProvider__GlobalStyles>
+  </NDSProvider>
+</div>
+`;
+
+exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
+<div
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
+>
+  <NDSProvider
+    theme={
+      Object {
+        "borders": Array [],
+        "breakpoints": Object {
+          "extraLarge": "1920px",
+          "extraSmall": "0px",
+          "large": "1360px",
+          "medium": "1024px",
+          "small": "768px",
+        },
+        "colors": Object {
+          "black": "#011e38",
+          "blackBlue": "#122b47",
+          "blue": "#216beb",
+          "darkBlue": "#00438f",
+          "darkGrey": "#434d59",
+          "green": "#008059",
+          "grey": "#c0c8d1",
+          "lightBlue": "#e1ebfa",
+          "lightGreen": "#e9f7f2",
+          "lightGrey": "#e4e7eb",
+          "lightRed": "#fae6ea",
+          "lightYellow": "#fcf5e3",
+          "red": "#cc1439",
+          "white": "#ffffff",
+          "whiteGrey": "#f0f2f5",
+          "yellow": "#ffbb00",
+        },
+        "fontSizes": Object {
+          "large": "20px",
+          "larger": "26px",
+          "largest": "46px",
+          "medium": "16px",
+          "small": "14px",
+          "smaller": "12px",
+        },
+        "fontWeights": Object {
+          "bold": "600",
+          "light": "300",
+          "medium": "500",
+          "normal": "400",
+        },
+        "fonts": Object {
+          "base": "'IBM Plex Sans', sans-serif",
+          "mono": "'IBM Plex Mono', monospace",
+        },
+        "lineHeights": Object {
+          "base": "1.5",
+          "sectionTitle": "1.23076923",
+          "smallTextBase": "1.71428571",
+          "smallTextCompressed": "1.14285714",
+          "smallerText": "1.33333333",
+          "subsectionTitle": "1.2",
+          "title": "1.04347826",
+        },
+        "radii": Object {
+          "circle": "50%",
+          "medium": "4px",
+          "small": "2px",
+        },
+        "shadows": Object {
+          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+        },
+        "space": Object {
+          "half": "4px",
+          "none": "0px",
+          "x1": "8px",
+          "x2": "16px",
+          "x3": "24px",
+          "x4": "32px",
+          "x5": "40px",
+          "x6": "48px",
+          "x8": "64px",
+        },
+        "zIndex": Object {
+          "content": 100,
+          "overlay": 1000,
+          "tabsBar": 210,
+          "tabsScollIndicator": 200,
+        },
+      }
+    }
+  >
+    <Memo(GlobalStyleComponent) />
+    <NDSProvider__GlobalStyles
+      theme={
+        Object {
+          "borders": Array [],
+          "breakpoints": Object {
+            "extraLarge": "1920px",
+            "extraSmall": "0px",
+            "large": "1360px",
+            "medium": "1024px",
+            "small": "768px",
+          },
+          "colors": Object {
+            "black": "#011e38",
+            "blackBlue": "#122b47",
+            "blue": "#216beb",
+            "darkBlue": "#00438f",
+            "darkGrey": "#434d59",
+            "green": "#008059",
+            "grey": "#c0c8d1",
+            "lightBlue": "#e1ebfa",
+            "lightGreen": "#e9f7f2",
+            "lightGrey": "#e4e7eb",
+            "lightRed": "#fae6ea",
+            "lightYellow": "#fcf5e3",
+            "red": "#cc1439",
+            "white": "#ffffff",
+            "whiteGrey": "#f0f2f5",
+            "yellow": "#ffbb00",
+          },
+          "fontSizes": Object {
+            "large": "20px",
+            "larger": "26px",
+            "largest": "46px",
+            "medium": "16px",
+            "small": "14px",
+            "smaller": "12px",
+          },
+          "fontWeights": Object {
+            "bold": "600",
+            "light": "300",
+            "medium": "500",
+            "normal": "400",
+          },
+          "fonts": Object {
+            "base": "'IBM Plex Sans', sans-serif",
+            "mono": "'IBM Plex Mono', monospace",
+          },
+          "lineHeights": Object {
+            "base": "1.5",
+            "sectionTitle": "1.23076923",
+            "smallTextBase": "1.71428571",
+            "smallTextCompressed": "1.14285714",
+            "smallerText": "1.33333333",
+            "subsectionTitle": "1.2",
+            "title": "1.04347826",
+          },
+          "radii": Object {
+            "circle": "50%",
+            "medium": "4px",
+            "small": "2px",
+          },
+          "shadows": Object {
+            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+          },
+          "space": Object {
+            "half": "4px",
+            "none": "0px",
+            "x1": "8px",
+            "x2": "16px",
+            "x3": "24px",
+            "x4": "32px",
+            "x5": "40px",
+            "x6": "48px",
+            "x8": "64px",
+          },
+          "zIndex": Object {
+            "content": 100,
+            "overlay": 1000,
+            "tabsBar": 210,
+            "tabsScollIndicator": 200,
+          },
+        }
+      }
+    >
+      <div
+        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      >
+        <ThemeProvider
+          theme={
+            Object {
+              "borders": Array [],
+              "breakpoints": Object {
+                "extraLarge": "1920px",
+                "extraSmall": "0px",
+                "large": "1360px",
+                "medium": "1024px",
+                "small": "768px",
+              },
+              "colors": Object {
+                "black": "#011e38",
+                "blackBlue": "#122b47",
+                "blue": "#216beb",
+                "darkBlue": "#00438f",
+                "darkGrey": "#434d59",
+                "green": "#008059",
+                "grey": "#c0c8d1",
+                "lightBlue": "#e1ebfa",
+                "lightGreen": "#e9f7f2",
+                "lightGrey": "#e4e7eb",
+                "lightRed": "#fae6ea",
+                "lightYellow": "#fcf5e3",
+                "red": "#cc1439",
+                "white": "#ffffff",
+                "whiteGrey": "#f0f2f5",
+                "yellow": "#ffbb00",
+              },
+              "fontSizes": Object {
+                "large": "20px",
+                "larger": "26px",
+                "largest": "46px",
+                "medium": "16px",
+                "small": "14px",
+                "smaller": "12px",
+              },
+              "fontWeights": Object {
+                "bold": "600",
+                "light": "300",
+                "medium": "500",
+                "normal": "400",
+              },
+              "fonts": Object {
+                "base": "'IBM Plex Sans', sans-serif",
+                "mono": "'IBM Plex Mono', monospace",
+              },
+              "lineHeights": Object {
+                "base": "1.5",
+                "sectionTitle": "1.23076923",
+                "smallTextBase": "1.71428571",
+                "smallTextCompressed": "1.14285714",
+                "smallerText": "1.33333333",
+                "subsectionTitle": "1.2",
+                "title": "1.04347826",
+              },
+              "radii": Object {
+                "circle": "50%",
+                "medium": "4px",
+                "small": "2px",
+              },
+              "shadows": Object {
+                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+              },
+              "space": Object {
+                "half": "4px",
+                "none": "0px",
+                "x1": "8px",
+                "x2": "16px",
+                "x3": "24px",
+                "x4": "32px",
+                "x5": "40px",
+                "x6": "48px",
+                "x8": "64px",
+              },
+              "zIndex": Object {
+                "content": 100,
+                "overlay": 1000,
+                "tabsBar": 210,
+                "tabsScollIndicator": 200,
+              },
+            }
+          }
+        >
+          <Styled(Styled(Box))
+            alignItems="center"
+            dark={false}
+            flexDirection="column"
+            justifyContent="center"
+            m={
+              Object {
+                "extraSmall": "x2",
+                "small": "x3",
+              }
+            }
+            position="fixed"
+            theme={
+              Object {
+                "borders": Array [],
+                "breakpoints": Object {
+                  "extraLarge": "1920px",
+                  "extraSmall": "0px",
+                  "large": "1360px",
+                  "medium": "1024px",
+                  "small": "768px",
+                },
+                "colors": Object {
+                  "black": "#011e38",
+                  "blackBlue": "#122b47",
+                  "blue": "#216beb",
+                  "darkBlue": "#00438f",
+                  "darkGrey": "#434d59",
+                  "green": "#008059",
+                  "grey": "#c0c8d1",
+                  "lightBlue": "#e1ebfa",
+                  "lightGreen": "#e9f7f2",
+                  "lightGrey": "#e4e7eb",
+                  "lightRed": "#fae6ea",
+                  "lightYellow": "#fcf5e3",
+                  "red": "#cc1439",
+                  "white": "#ffffff",
+                  "whiteGrey": "#f0f2f5",
+                  "yellow": "#ffbb00",
+                },
+                "fontSizes": Object {
+                  "large": "20px",
+                  "larger": "26px",
+                  "largest": "46px",
+                  "medium": "16px",
+                  "small": "14px",
+                  "smaller": "12px",
+                },
+                "fontWeights": Object {
+                  "bold": "600",
+                  "light": "300",
+                  "medium": "500",
+                  "normal": "400",
+                },
+                "fonts": Object {
+                  "base": "'IBM Plex Sans', sans-serif",
+                  "mono": "'IBM Plex Mono', monospace",
+                },
+                "lineHeights": Object {
+                  "base": "1.5",
+                  "sectionTitle": "1.23076923",
+                  "smallTextBase": "1.71428571",
+                  "smallTextCompressed": "1.14285714",
+                  "smallerText": "1.33333333",
+                  "subsectionTitle": "1.2",
+                  "title": "1.04347826",
+                },
+                "radii": Object {
+                  "circle": "50%",
+                  "medium": "4px",
+                  "small": "2px",
+                },
+                "shadows": Object {
+                  "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                  "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                  "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                  "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                  "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                },
+                "space": Object {
+                  "half": "4px",
+                  "none": "0px",
+                  "x1": "8px",
+                  "x2": "16px",
+                  "x3": "24px",
+                  "x4": "32px",
+                  "x5": "40px",
+                  "x6": "48px",
+                  "x8": "64px",
+                },
+                "zIndex": Object {
+                  "content": 100,
+                  "overlay": 1000,
+                  "tabsBar": 210,
+                  "tabsScollIndicator": 200,
+                },
+              }
+            }
+          >
+            <div
+              className="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfNQ cAaCcq"
+            >
+              <Styled(Box)
+                flexDirection="column"
+                flexGrow="2"
+                justifyContent="center"
+                margin="auto"
+                mb="x4"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 sc-AykKC jPEwvo"
+                >
+                  <styled.p
+                    color="grey"
+                    disabled={false}
+                    fontSize="16px"
+                    fontWeight="medium"
+                    inline={false}
+                    lineHeight="1.5"
+                    mb="x2"
+                    mt={0}
+                    textAlign="right"
+                  >
+                    <p
+                      className="sc-AykKF fpMdsE"
+                      color="grey"
+                      disabled={false}
+                      fontSize="16px"
+                      fontWeight="medium"
+                    >
+                      1/4
+                    </p>
+                  </styled.p>
+                  <Box
+                    mb="x1"
+                    theme={
+                      Object {
+                        "borders": Array [],
+                        "breakpoints": Object {
+                          "extraLarge": "1920px",
+                          "extraSmall": "0px",
+                          "large": "1360px",
+                          "medium": "1024px",
+                          "small": "768px",
+                        },
+                        "colors": Object {
+                          "black": "#011e38",
+                          "blackBlue": "#122b47",
+                          "blue": "#216beb",
+                          "darkBlue": "#00438f",
+                          "darkGrey": "#434d59",
+                          "green": "#008059",
+                          "grey": "#c0c8d1",
+                          "lightBlue": "#e1ebfa",
+                          "lightGreen": "#e9f7f2",
+                          "lightGrey": "#e4e7eb",
+                          "lightRed": "#fae6ea",
+                          "lightYellow": "#fcf5e3",
+                          "red": "#cc1439",
+                          "white": "#ffffff",
+                          "whiteGrey": "#f0f2f5",
+                          "yellow": "#ffbb00",
+                        },
+                        "fontSizes": Object {
+                          "large": "20px",
+                          "larger": "26px",
+                          "largest": "46px",
+                          "medium": "16px",
+                          "small": "14px",
+                          "smaller": "12px",
+                        },
+                        "fontWeights": Object {
+                          "bold": "600",
+                          "light": "300",
+                          "medium": "500",
+                          "normal": "400",
+                        },
+                        "fonts": Object {
+                          "base": "'IBM Plex Sans', sans-serif",
+                          "mono": "'IBM Plex Mono', monospace",
+                        },
+                        "lineHeights": Object {
+                          "base": "1.5",
+                          "sectionTitle": "1.23076923",
+                          "smallTextBase": "1.71428571",
+                          "smallTextCompressed": "1.14285714",
+                          "smallerText": "1.33333333",
+                          "subsectionTitle": "1.2",
+                          "title": "1.04347826",
+                        },
+                        "radii": Object {
+                          "circle": "50%",
+                          "medium": "4px",
+                          "small": "2px",
+                        },
+                        "shadows": Object {
+                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                        },
+                        "space": Object {
+                          "half": "4px",
+                          "none": "0px",
+                          "x1": "8px",
+                          "x2": "16px",
+                          "x3": "24px",
+                          "x4": "32px",
+                          "x5": "40px",
+                          "x6": "48px",
+                          "x8": "64px",
+                        },
+                        "zIndex": Object {
+                          "content": 100,
+                          "overlay": 1000,
+                          "tabsBar": 210,
+                          "tabsScollIndicator": 200,
+                        },
+                      }
+                    }
+                  >
+                    <div
+                      className="Box-sc-1qu1edy-0 iPmvAN"
+                    >
+                      <LoadingAnimation
+                        inactive={true}
+                      >
+                        <svg
+                          height="24px"
+                          preserveAspectRatio="xMidYMid"
+                          viewBox="0 0 100 10"
+                          width="240px"
+                          xlink="http://www.w3.org/1999/xlink"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g
+                            transform="translate(4 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#c0c8d1"
+                              r="4"
+                              transform="scale(0.275039 0.275039)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.4734848484848484s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(22.4 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#e4e7eb"
+                              r="4"
+                              transform="scale(0.0862935 0.0862935)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.37878787878787873s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(40.0 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#c0c8d1"
+                              r="4"
+                              transform="scale(0.0000823166 0.0000823166)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.284090909090909s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(59.2 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#e4e7eb"
+                              r="4"
+                              transform="scale(0.0779504 0.0779504)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.18939393939393936s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(77.6 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#c0c8d1"
+                              r="4"
+                              transform="scale(0.262719 0.262719)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="-0.09469696969696968s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                          <g
+                            transform="translate(96 5)"
+                          >
+                            <circle
+                              cx="0"
+                              cy="0"
+                              fill="#e4e7eb"
+                              r="4"
+                              transform="scale(0.49324 0.49324)"
+                            >
+                              <animateTransform
+                                attributeName="transform"
+                                begin="0s"
+                                calcMode="spline"
+                                dur="1.1363636363636362s"
+                                keySplines="0.3 0 0.7 1;0.3 0 0.7 1"
+                                keyTimes="0;0.5;1"
+                                repeatCount="indefinite"
+                                type="scale"
+                                values="0;1;0"
+                              />
+                            </circle>
+                          </g>
+                        </svg>
+                      </LoadingAnimation>
+                    </div>
+                  </Box>
+                  <styled.p
+                    color="grey"
+                    disabled={false}
+                    fontSize="small"
+                    inline={false}
+                    lineHeight="1.5"
+                    mb={0}
+                    mt={0}
+                  >
+                    <p
+                      className="sc-AykKF dxptTB"
+                      color="grey"
+                      disabled={false}
+                      fontSize="small"
+                    >
+                      Applying action ...
+                    </p>
+                  </styled.p>
+                </div>
+              </Styled(Box)>
+              <Styled(BaseAlert)
+                bottom="x8"
+                mb="x2"
+                position="absolute"
+                type="warning"
+              >
+                <BaseAlert
+                  bottom="x8"
+                  className="sc-fzXfLS keIsaA"
+                  isCloseable={false}
+                  mb="x2"
+                  position="absolute"
+                  title={null}
+                  type="warning"
+                >
+                  <Styled(Box)
+                    bg="#fcf5e3"
+                    borderLeft="4px solid #ffbb00"
+                    borderRadius="4px"
+                    bottom="x8"
+                    className="sc-fzXfLS keIsaA"
+                    mb="x2"
+                    p="x2"
+                    position="absolute"
+                    role="alert"
+                    theme={
+                      Object {
+                        "borders": Array [],
+                        "breakpoints": Object {
+                          "extraLarge": "1920px",
+                          "extraSmall": "0px",
+                          "large": "1360px",
+                          "medium": "1024px",
+                          "small": "768px",
+                        },
+                        "colors": Object {
+                          "black": "#011e38",
+                          "blackBlue": "#122b47",
+                          "blue": "#216beb",
+                          "darkBlue": "#00438f",
+                          "darkGrey": "#434d59",
+                          "green": "#008059",
+                          "grey": "#c0c8d1",
+                          "lightBlue": "#e1ebfa",
+                          "lightGreen": "#e9f7f2",
+                          "lightGrey": "#e4e7eb",
+                          "lightRed": "#fae6ea",
+                          "lightYellow": "#fcf5e3",
+                          "red": "#cc1439",
+                          "white": "#ffffff",
+                          "whiteGrey": "#f0f2f5",
+                          "yellow": "#ffbb00",
+                        },
+                        "fontSizes": Object {
+                          "large": "20px",
+                          "larger": "26px",
+                          "largest": "46px",
+                          "medium": "16px",
+                          "small": "14px",
+                          "smaller": "12px",
+                        },
+                        "fontWeights": Object {
+                          "bold": "600",
+                          "light": "300",
+                          "medium": "500",
+                          "normal": "400",
+                        },
+                        "fonts": Object {
+                          "base": "'IBM Plex Sans', sans-serif",
+                          "mono": "'IBM Plex Mono', monospace",
+                        },
+                        "lineHeights": Object {
+                          "base": "1.5",
+                          "sectionTitle": "1.23076923",
+                          "smallTextBase": "1.71428571",
+                          "smallTextCompressed": "1.14285714",
+                          "smallerText": "1.33333333",
+                          "subsectionTitle": "1.2",
+                          "title": "1.04347826",
+                        },
+                        "radii": Object {
+                          "circle": "50%",
+                          "medium": "4px",
+                          "small": "2px",
+                        },
+                        "shadows": Object {
+                          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                        },
+                        "space": Object {
+                          "half": "4px",
+                          "none": "0px",
+                          "x1": "8px",
+                          "x2": "16px",
+                          "x3": "24px",
+                          "x4": "32px",
+                          "x5": "40px",
+                          "x6": "48px",
+                          "x8": "64px",
+                        },
+                        "zIndex": Object {
+                          "content": 100,
+                          "overlay": 1000,
+                          "tabsBar": 210,
+                          "tabsScollIndicator": 200,
+                        },
+                      }
+                    }
+                  >
+                    <div
+                      className="Box-sc-1qu1edy-0 sc-AykKC ixuBaH sc-fzXfLS keIsaA"
+                      role="alert"
+                    >
+                      <Box
+                        mr="auto"
+                        theme={
+                          Object {
+                            "borders": Array [],
+                            "breakpoints": Object {
+                              "extraLarge": "1920px",
+                              "extraSmall": "0px",
+                              "large": "1360px",
+                              "medium": "1024px",
+                              "small": "768px",
+                            },
+                            "colors": Object {
+                              "black": "#011e38",
+                              "blackBlue": "#122b47",
+                              "blue": "#216beb",
+                              "darkBlue": "#00438f",
+                              "darkGrey": "#434d59",
+                              "green": "#008059",
+                              "grey": "#c0c8d1",
+                              "lightBlue": "#e1ebfa",
+                              "lightGreen": "#e9f7f2",
+                              "lightGrey": "#e4e7eb",
+                              "lightRed": "#fae6ea",
+                              "lightYellow": "#fcf5e3",
+                              "red": "#cc1439",
+                              "white": "#ffffff",
+                              "whiteGrey": "#f0f2f5",
+                              "yellow": "#ffbb00",
+                            },
+                            "fontSizes": Object {
+                              "large": "20px",
+                              "larger": "26px",
+                              "largest": "46px",
+                              "medium": "16px",
+                              "small": "14px",
+                              "smaller": "12px",
+                            },
+                            "fontWeights": Object {
+                              "bold": "600",
+                              "light": "300",
+                              "medium": "500",
+                              "normal": "400",
+                            },
+                            "fonts": Object {
+                              "base": "'IBM Plex Sans', sans-serif",
+                              "mono": "'IBM Plex Mono', monospace",
+                            },
+                            "lineHeights": Object {
+                              "base": "1.5",
+                              "sectionTitle": "1.23076923",
+                              "smallTextBase": "1.71428571",
+                              "smallTextCompressed": "1.14285714",
+                              "smallerText": "1.33333333",
+                              "subsectionTitle": "1.2",
+                              "title": "1.04347826",
+                            },
+                            "radii": Object {
+                              "circle": "50%",
+                              "medium": "4px",
+                              "small": "2px",
+                            },
+                            "shadows": Object {
+                              "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                              "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                              "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                              "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                              "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                            },
+                            "space": Object {
+                              "half": "4px",
+                              "none": "0px",
+                              "x1": "8px",
+                              "x2": "16px",
+                              "x3": "24px",
+                              "x4": "32px",
+                              "x5": "40px",
+                              "x6": "48px",
+                              "x8": "64px",
+                            },
+                            "zIndex": Object {
+                              "content": 100,
+                              "overlay": 1000,
+                              "tabsBar": 210,
+                              "tabsScollIndicator": 200,
+                            },
+                          }
+                        }
+                      >
+                        <div
+                          className="Box-sc-1qu1edy-0 jRfwdL"
+                        >
+                          This action takes longer than expected. Try again...
+                        </div>
+                      </Box>
+                    </div>
+                  </Styled(Box)>
+                </BaseAlert>
+              </Styled(BaseAlert)>
+              <Styled(Box)
+                justifyContent="center"
+                mb="x1"
+                theme={
+                  Object {
+                    "borders": Array [],
+                    "breakpoints": Object {
+                      "extraLarge": "1920px",
+                      "extraSmall": "0px",
+                      "large": "1360px",
+                      "medium": "1024px",
+                      "small": "768px",
+                    },
+                    "colors": Object {
+                      "black": "#011e38",
+                      "blackBlue": "#122b47",
+                      "blue": "#216beb",
+                      "darkBlue": "#00438f",
+                      "darkGrey": "#434d59",
+                      "green": "#008059",
+                      "grey": "#c0c8d1",
+                      "lightBlue": "#e1ebfa",
+                      "lightGreen": "#e9f7f2",
+                      "lightGrey": "#e4e7eb",
+                      "lightRed": "#fae6ea",
+                      "lightYellow": "#fcf5e3",
+                      "red": "#cc1439",
+                      "white": "#ffffff",
+                      "whiteGrey": "#f0f2f5",
+                      "yellow": "#ffbb00",
+                    },
+                    "fontSizes": Object {
+                      "large": "20px",
+                      "larger": "26px",
+                      "largest": "46px",
+                      "medium": "16px",
+                      "small": "14px",
+                      "smaller": "12px",
+                    },
+                    "fontWeights": Object {
+                      "bold": "600",
+                      "light": "300",
+                      "medium": "500",
+                      "normal": "400",
+                    },
+                    "fonts": Object {
+                      "base": "'IBM Plex Sans', sans-serif",
+                      "mono": "'IBM Plex Mono', monospace",
+                    },
+                    "lineHeights": Object {
+                      "base": "1.5",
+                      "sectionTitle": "1.23076923",
+                      "smallTextBase": "1.71428571",
+                      "smallTextCompressed": "1.14285714",
+                      "smallerText": "1.33333333",
+                      "subsectionTitle": "1.2",
+                      "title": "1.04347826",
+                    },
+                    "radii": Object {
+                      "circle": "50%",
+                      "medium": "4px",
+                      "small": "2px",
+                    },
+                    "shadows": Object {
+                      "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
+                      "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
+                      "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
+                      "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
+                      "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
+                    },
+                    "space": Object {
+                      "half": "4px",
+                      "none": "0px",
+                      "x1": "8px",
+                      "x2": "16px",
+                      "x3": "24px",
+                      "x4": "32px",
+                      "x5": "40px",
+                      "x6": "48px",
+                      "x8": "64px",
+                    },
+                    "zIndex": Object {
+                      "content": 100,
+                      "overlay": 1000,
+                      "tabsBar": 210,
+                      "tabsScollIndicator": 200,
+                    },
+                  }
+                }
+              >
+                <div
+                  className="Box-sc-1qu1edy-0 sc-AykKC iWmyyv"
+                >
+                  <ForwardRef
+                    disabled={false}
+                    icon="refresh"
+                    mr="x1"
+                    onClick={null}
+                    size="32px"
+                    toggled={false}
+                  >
+                    <ControlIcon__StyledButton
+                      disabled={false}
+                      mr="x1"
+                      onClick={null}
+                      toggled={false}
+                    >
+                      <button
+                        className="ControlIcon__StyledButton-sc-1h83lvi-0 fJbcqT"
+                        disabled={false}
+                        onClick={null}
+                      >
+                        <Styled(Component)
+                          color="currentColor"
+                          icon="refresh"
+                          size="32px"
+                          title={null}
+                        >
+                          <ForwardRef
+                            className="sc-AykKD ceXkCz"
+                            color="currentColor"
+                            focusable={false}
+                            icon="refresh"
+                            size="32px"
+                            title={null}
+                          >
+                            <svg
+                              aria-hidden={true}
+                              className="sc-AykKD ceXkCz"
+                              color="currentColor"
+                              fill="currentColor"
+                              focusable={false}
+                              height="32px"
+                              icon="refresh"
+                              size="32px"
+                              title={null}
+                              viewBox="0 0 24 24"
+                              width="32px"
+                            >
+                              <path
+                                d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+                                key="0"
+                              />
+                            </svg>
+                          </ForwardRef>
+                        </Styled(Component)>
+                      </button>
+                    </ControlIcon__StyledButton>
+                  </ForwardRef>
+                  <ForwardRef
+                    disabled={false}
+                    icon="close"
+                    onClick={null}
+                    size="32px"
+                    toggled={false}
+                  >
+                    <ControlIcon__StyledButton
+                      disabled={false}
+                      onClick={null}
+                      toggled={false}
+                    >
+                      <button
+                        className="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
+                        disabled={false}
+                        onClick={null}
+                      >
+                        <Styled(Component)
+                          color="currentColor"
+                          icon="close"
+                          size="32px"
+                          title={null}
+                        >
+                          <ForwardRef
+                            className="sc-AykKD ceXkCz"
+                            color="currentColor"
+                            focusable={false}
+                            icon="close"
+                            size="32px"
+                            title={null}
+                          >
+                            <svg
+                              aria-hidden={true}
+                              className="sc-AykKD ceXkCz"
+                              color="currentColor"
+                              fill="currentColor"
+                              focusable={false}
+                              height="32px"
+                              icon="close"
+                              size="32px"
+                              title={null}
+                              viewBox="0 0 24 24"
+                              width="32px"
+                            >
+                              <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                key="0"
+                              />
+                            </svg>
+                          </ForwardRef>
+                        </Styled(Component)>
+                      </button>
+                    </ControlIcon__StyledButton>
+                  </ForwardRef>
+                </div>
+              </Styled(Box)>
+            </div>
+          </Styled(Styled(Box))>
+        </ThemeProvider>
+      </div>
+    </NDSProvider__GlobalStyles>
+  </NDSProvider>
+</div>
+`;
