@@ -42,8 +42,8 @@ export default () => (
     <Intro>
       <Title>Loading Animation</Title>
       <IntroText>
-        Loading animation is used to indicate delay in the system when duration
-        can not be estimated.
+        Loading animation is used to indicate a delay in the system when
+        duration can not be estimated.
       </IntroText>
     </Intro>
 
@@ -69,7 +69,7 @@ export default () => (
           executed
         </ListItem>
         <ListItem>
-          When the action will take atleast 2 seconds to execute
+          When the action will take at least 2 seconds to execute
         </ListItem>
       </List>
     </DocSection>
@@ -83,7 +83,8 @@ export default () => (
       <DocSubsection>
         <SubsectionTitle>Active</SubsectionTitle>
         <Text mb="x3">
-          Active state is default state and is used to indicate loading process.
+          Active state is the default state and is used to indicate the loading
+          process.
         </Text>
         <Flex justifyContent="center" mt="x2" mb="x4">
           <LoadingAnimation />
