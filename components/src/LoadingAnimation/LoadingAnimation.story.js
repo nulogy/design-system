@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { LoadingAnimation } from ".";
-import { Overlay, Box, Flex, Text, IconicButton, Alert } from "../index";
+import { Overlay, Box, Flex, Text, ControlIcon, Alert } from "../index";
 
 storiesOf("LoadingAnimation", module)
   .add("Active", () => <LoadingAnimation>Example</LoadingAnimation>)
@@ -20,12 +20,10 @@ storiesOf("LoadingAnimation", module)
         </Text>
       </Flex>
       <Flex justifyContent="center" mb="x1">
-        <IconicButton icon="refresh" disabled labelHidden mr="x1">
+        <ControlIcon icon="refresh" disabled mr="x1">
           Retry
-        </IconicButton>
-        <IconicButton icon="close" labelHidden>
-          Abort
-        </IconicButton>
+        </ControlIcon>
+        <ControlIcon icon="close">Abort</ControlIcon>
       </Flex>
     </Overlay>
   ))
@@ -47,12 +45,10 @@ storiesOf("LoadingAnimation", module)
           This action takes longer than expected. Try again...
         </Alert>
         <Flex justifyContent="center">
-          <IconicButton icon="refresh" labelHidden mr="x1">
+          <ControlIcon icon="refresh" mr="x1">
             Retry
-          </IconicButton>
-          <IconicButton icon="close" labelHidden>
-            Abort
-          </IconicButton>
+          </ControlIcon>
+          <ControlIcon icon="close">Abort</ControlIcon>
         </Flex>
       </Box>
     </Overlay>
