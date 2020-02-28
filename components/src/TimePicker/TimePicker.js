@@ -91,13 +91,6 @@ const TimePicker = ({
   "aria-label": ariaLabel,
   ...props
 }) => {
-  const handleInputChange = event => {
-    const { value } = event.target;
-
-    if (onInputChange) {
-      onInputChange(value);
-    }
-  };
   const options = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
   const { t } = useTranslation();
   return (
@@ -107,8 +100,8 @@ const TimePicker = ({
         options={options}
         defaultValue={defaultValue}
         components={{ DropdownIndicator, Option: StyledSelectOption }}
-        onInputChange={handleInputChange}
         aria-label={ariaLabel || t("select a time")}
+        onInputChange={onInputChange}
         {...props}
         className={`nds-time-picker ${className || ""}`}
       />
