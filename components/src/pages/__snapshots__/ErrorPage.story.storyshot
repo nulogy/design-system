@@ -849,7 +849,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                             type="danger"
                           >
                             <BaseAlert
-                              className="sc-fzXfLS PPCpw"
+                              className="sc-fzXfLS bgmocU"
                               isCloseable={false}
                               title="We're sorry, but something went wrong."
                               type="danger"
@@ -858,7 +858,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                                 bg="#fae6ea"
                                 borderLeft="4px solid #cc1439"
                                 borderRadius="4px"
-                                className="sc-fzXfLS PPCpw"
+                                className="sc-fzXfLS bgmocU"
                                 p="x2"
                                 role="alert"
                                 theme={
@@ -949,7 +949,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS PPCpw"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
                                   role="alert"
                                 >
                                   <Styled(Component)
@@ -2092,7 +2092,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                         >
                           <Styled(BaseAlert)>
                             <BaseAlert
-                              className="sc-fzXfLS PPCpw"
+                              className="sc-fzXfLS bgmocU"
                               isCloseable={false}
                               title={null}
                               type="informative"
@@ -2101,7 +2101,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                                 bg="#e1ebfa"
                                 borderLeft="4px solid #216beb"
                                 borderRadius="4px"
-                                className="sc-fzXfLS PPCpw"
+                                className="sc-fzXfLS bgmocU"
                                 p="x2"
                                 role="alert"
                                 theme={
@@ -2192,7 +2192,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
                                   role="alert"
                                 >
                                   <Box
@@ -3282,7 +3282,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                             type="danger"
                           >
                             <BaseAlert
-                              className="sc-fzXfLS dyBUYE"
+                              className="sc-fzXfLS keIsaA"
                               isCloseable={false}
                               mb="x2"
                               title="We're sorry, but something went wrong."
@@ -3292,7 +3292,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                                 bg="#fae6ea"
                                 borderLeft="4px solid #cc1439"
                                 borderRadius="4px"
-                                className="sc-fzXfLS dyBUYE"
+                                className="sc-fzXfLS keIsaA"
                                 mb="x2"
                                 p="x2"
                                 role="alert"
@@ -3384,7 +3384,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                                 }
                               >
                                 <div
-                                  className="Box-sc-1qu1edy-0 sc-AykKC jJNLJZ sc-fzXfLS dyBUYE"
+                                  className="Box-sc-1qu1edy-0 sc-AykKC jJNLJZ sc-fzXfLS keIsaA"
                                   role="alert"
                                 >
                                   <Styled(Component)

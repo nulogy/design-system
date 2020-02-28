@@ -410,7 +410,7 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
                   >
                     <button
                       aria-label="sort ascending"
-                      className="ControlIcon__StyledButton-sc-1h83lvi-0 fMjedc"
+                      className="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
                       disabled={false}
                       onClick={[Function]}
                     >

@@ -2906,7 +2906,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                         type="danger"
                       >
                         <BaseAlert
-                          className="sc-fzXfLS gGPYNy"
+                          className="sc-fzXfLS btvWiy"
                           isCloseable={false}
                           mb="x4"
                           style={
@@ -2921,7 +2921,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                             bg="#fae6ea"
                             borderLeft="4px solid #cc1439"
                             borderRadius="4px"
-                            className="sc-fzXfLS gGPYNy"
+                            className="sc-fzXfLS btvWiy"
                             mb="x4"
                             p="x2"
                             role="alert"
@@ -3018,7 +3018,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-AykKC ooTz sc-fzXfLS gGPYNy"
+                              className="Box-sc-1qu1edy-0 sc-AykKC ooTz sc-fzXfLS btvWiy"
                               role="alert"
                               style={
                                 Object {
@@ -5196,7 +5196,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                         type="danger"
                       >
                         <BaseAlert
-                          className="sc-fzXfLS gGPYNy"
+                          className="sc-fzXfLS btvWiy"
                           isCloseable={false}
                           mb="x4"
                           style={
@@ -5211,7 +5211,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                             bg="#fae6ea"
                             borderLeft="4px solid #cc1439"
                             borderRadius="4px"
-                            className="sc-fzXfLS gGPYNy"
+                            className="sc-fzXfLS btvWiy"
                             mb="x4"
                             p="x2"
                             role="alert"
@@ -5308,7 +5308,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                             }
                           >
                             <div
-                              className="Box-sc-1qu1edy-0 sc-AykKC ooTz sc-fzXfLS gGPYNy"
+                              className="Box-sc-1qu1edy-0 sc-AykKC ooTz sc-fzXfLS btvWiy"
                               role="alert"
                               style={
                                 Object {

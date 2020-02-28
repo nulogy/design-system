@@ -280,7 +280,7 @@ exports[`Storyshots Alert Danger 1`] = `
             type="danger"
           >
             <BaseAlert
-              className="sc-fzXfLS PPCpw"
+              className="sc-fzXfLS bgmocU"
               isCloseable={false}
               title={null}
               type="danger"
@@ -289,7 +289,7 @@ exports[`Storyshots Alert Danger 1`] = `
                 bg="#fae6ea"
                 borderLeft="4px solid #cc1439"
                 borderRadius="4px"
-                className="sc-fzXfLS PPCpw"
+                className="sc-fzXfLS bgmocU"
                 p="x2"
                 role="alert"
                 theme={
@@ -380,7 +380,7 @@ exports[`Storyshots Alert Danger 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
                   role="alert"
                 >
                   <Styled(Component)
@@ -804,7 +804,7 @@ exports[`Storyshots Alert Informative 1`] = `
         >
           <Styled(BaseAlert)>
             <BaseAlert
-              className="sc-fzXfLS PPCpw"
+              className="sc-fzXfLS bgmocU"
               isCloseable={false}
               title={null}
               type="informative"
@@ -813,7 +813,7 @@ exports[`Storyshots Alert Informative 1`] = `
                 bg="#e1ebfa"
                 borderLeft="4px solid #216beb"
                 borderRadius="4px"
-                className="sc-fzXfLS PPCpw"
+                className="sc-fzXfLS bgmocU"
                 p="x2"
                 role="alert"
                 theme={
@@ -904,7 +904,7 @@ exports[`Storyshots Alert Informative 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
                   role="alert"
                 >
                   <Box
@@ -1293,7 +1293,7 @@ exports[`Storyshots Alert Success 1`] = `
             type="success"
           >
             <BaseAlert
-              className="sc-fzXfLS PPCpw"
+              className="sc-fzXfLS bgmocU"
               isCloseable={false}
               title={null}
               type="success"
@@ -1302,7 +1302,7 @@ exports[`Storyshots Alert Success 1`] = `
                 bg="#e9f7f2"
                 borderLeft="4px solid #008059"
                 borderRadius="4px"
-                className="sc-fzXfLS PPCpw"
+                className="sc-fzXfLS bgmocU"
                 p="x2"
                 role="alert"
                 theme={
@@ -1393,7 +1393,7 @@ exports[`Storyshots Alert Success 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC BbzHH sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC BbzHH sc-fzXfLS bgmocU"
                   role="alert"
                 >
                   <Styled(Component)
@@ -1819,7 +1819,7 @@ exports[`Storyshots Alert Warning 1`] = `
             type="warning"
           >
             <BaseAlert
-              className="sc-fzXfLS PPCpw"
+              className="sc-fzXfLS bgmocU"
               isCloseable={false}
               title={null}
               type="warning"
@@ -1828,7 +1828,7 @@ exports[`Storyshots Alert Warning 1`] = `
                 bg="#fcf5e3"
                 borderLeft="4px solid #ffbb00"
                 borderRadius="4px"
-                className="sc-fzXfLS PPCpw"
+                className="sc-fzXfLS bgmocU"
                 p="x2"
                 role="alert"
                 theme={
@@ -1919,7 +1919,7 @@ exports[`Storyshots Alert Warning 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC jDJpmO sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC jDJpmO sc-fzXfLS bgmocU"
                   role="alert"
                 >
                   <Box
@@ -2308,7 +2308,7 @@ exports[`Storyshots Alert With a close button 1`] = `
             isCloseable="true"
           >
             <BaseAlert
-              className="sc-fzXfLS PPCpw"
+              className="sc-fzXfLS bgmocU"
               isCloseable="true"
               title={null}
               type="informative"
@@ -2317,7 +2317,7 @@ exports[`Storyshots Alert With a close button 1`] = `
                 bg="#e1ebfa"
                 borderLeft="4px solid #216beb"
                 borderRadius="4px"
-                className="sc-fzXfLS PPCpw"
+                className="sc-fzXfLS bgmocU"
                 p="x2"
                 role="alert"
                 theme={
@@ -2408,7 +2408,7 @@ exports[`Storyshots Alert With a close button 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
                   role="alert"
                 >
                   <Box
@@ -3024,7 +3024,7 @@ exports[`Storyshots Alert With a link 1`] = `
         >
           <Styled(BaseAlert)>
             <BaseAlert
-              className="sc-fzXfLS PPCpw"
+              className="sc-fzXfLS bgmocU"
               isCloseable={false}
               title={null}
               type="informative"
@@ -3033,7 +3033,7 @@ exports[`Storyshots Alert With a link 1`] = `
                 bg="#e1ebfa"
                 borderLeft="4px solid #216beb"
                 borderRadius="4px"
-                className="sc-fzXfLS PPCpw"
+                className="sc-fzXfLS bgmocU"
                 p="x2"
                 role="alert"
                 theme={
@@ -3124,7 +3124,7 @@ exports[`Storyshots Alert With a link 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
                   role="alert"
                 >
                   <Box
@@ -3614,7 +3614,7 @@ exports[`Storyshots Alert With a title 1`] = `
             type="danger"
           >
             <BaseAlert
-              className="sc-fzXfLS PPCpw"
+              className="sc-fzXfLS bgmocU"
               isCloseable={false}
               title="Danger title!"
               type="danger"
@@ -3623,7 +3623,7 @@ exports[`Storyshots Alert With a title 1`] = `
                 bg="#fae6ea"
                 borderLeft="4px solid #cc1439"
                 borderRadius="4px"
-                className="sc-fzXfLS PPCpw"
+                className="sc-fzXfLS bgmocU"
                 p="x2"
                 role="alert"
                 theme={
@@ -3714,7 +3714,7 @@ exports[`Storyshots Alert With a title 1`] = `
                 }
               >
                 <div
-                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS PPCpw"
+                  className="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
                   role="alert"
                 >
                   <Styled(Component)
