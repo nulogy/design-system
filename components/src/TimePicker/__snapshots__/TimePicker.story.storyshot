@@ -47,6 +47,7 @@ exports[`Storyshots TimePicker default 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -145,6 +146,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -243,6 +245,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -341,6 +344,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -439,6 +443,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -569,6 +574,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"

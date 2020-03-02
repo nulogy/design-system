@@ -27,7 +27,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="deselect all"
+                  aria-label="select all"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -116,7 +116,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -157,7 +157,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -198,7 +198,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -239,7 +239,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -280,7 +280,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -321,7 +321,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -362,7 +362,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -423,7 +423,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="deselect all"
+                  aria-label="select all"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -469,7 +469,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -510,7 +510,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -551,7 +551,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -592,7 +592,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -633,7 +633,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -674,7 +674,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -715,7 +715,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
@@ -756,7 +756,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Deselect row"
+                  aria-label="Select row"
                   aria-required="false"
                   class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
                   type="checkbox"
