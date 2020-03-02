@@ -96,7 +96,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -180,7 +180,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1217,7 +1217,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1301,7 +1301,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1493,7 +1493,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1577,7 +1577,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1769,7 +1769,7 @@ exports[`Storyshots DateRange with times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1853,7 +1853,7 @@ exports[`Storyshots DateRange with times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
-                    aria-label="select a time"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
