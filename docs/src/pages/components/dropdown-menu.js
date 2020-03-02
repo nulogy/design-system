@@ -89,6 +89,18 @@ const propsRows = [
     defaultValue: "undefined",
     description:
       "The element which will define the boundaries of the dropdown position. The opened dropdown will never be placed outside of the defined boundaries"
+  },
+  {
+    name: "openAriaLabel",
+    type: "String",
+    defaultValue: "open",
+    description: "aria label when the dropdown is closed"
+  },
+  {
+    name: "openAriaLabel",
+    type: "String",
+    defaultValue: "open",
+    description: "aria label when the dropdown is closed"
   }
 ];
 

@@ -51,6 +51,36 @@ const propsRows = [
     type: "function",
     defaultValue: "null",
     description: "The function to run when a page number is clicked."
+  },
+  {
+    name: "nextLabel",
+    type: "string",
+    defaultValue: "Next",
+    description: "The next button label"
+  },
+  {
+    name: "previousLabel",
+    type: "string",
+    defaultValue: "Previous",
+    description: "The previous button label"
+  },
+  {
+    name: "nextAriaLabel",
+    type: "string",
+    defaultValue: "Next",
+    description: "The next button's aria label"
+  },
+  {
+    name: "previousAriaLabel",
+    type: "string",
+    defaultValue: "Previous",
+    description: "The previous button's aria label"
+  },
+  {
+    name: "aria-label",
+    type: "string",
+    defaultValue: "Pagination navigation",
+    description: "Aria label that describes the pagination navigation"
   }
 ];
 

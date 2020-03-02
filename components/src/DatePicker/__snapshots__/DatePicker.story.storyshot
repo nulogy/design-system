@@ -39,6 +39,7 @@ exports[`Storyshots DatePicker default 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -108,6 +109,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="MMMM d, yyyy"
@@ -177,6 +179,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -246,6 +249,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Month day, year"
@@ -315,6 +319,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
               >
                 <input
                   aria-invalid="true"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
                   placeholder="MMMM d, yyyy"
@@ -416,6 +421,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"

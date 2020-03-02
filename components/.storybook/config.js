@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { configure, addDecorator, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";

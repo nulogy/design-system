@@ -44,6 +44,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -95,6 +96,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -178,6 +180,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -242,6 +245,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -316,6 +320,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="From (Mon YYYY)"
@@ -370,6 +375,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="To (Mon YYYY)"
@@ -444,6 +450,7 @@ exports[`Storyshots DateRange default 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -498,6 +505,7 @@ exports[`Storyshots DateRange default 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -572,6 +580,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -626,6 +635,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -700,6 +710,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -754,6 +765,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -828,6 +840,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
               >
                 <input
                   aria-invalid="true"
+                  aria-label="Select a start date"
                   aria-required="true"
                   class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
                   placeholder="DD Mon YYYY"
@@ -915,6 +928,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -989,6 +1003,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -1043,6 +1058,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -1149,6 +1165,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -1200,6 +1217,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1283,6 +1301,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1347,6 +1366,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -1421,6 +1441,7 @@ exports[`Storyshots DateRange with time error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -1472,6 +1493,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1555,6 +1577,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1619,6 +1642,7 @@ exports[`Storyshots DateRange with time error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -1693,6 +1717,7 @@ exports[`Storyshots DateRange with times 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"
@@ -1744,6 +1769,7 @@ exports[`Storyshots DateRange with times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1827,6 +1853,7 @@ exports[`Storyshots DateRange with times 1`] = `
                 >
                   <input
                     aria-autocomplete="list"
+                    aria-label="Select a time"
                     autocapitalize="none"
                     autocomplete="off"
                     autocorrect="off"
@@ -1891,6 +1918,7 @@ exports[`Storyshots DateRange with times 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="Select an end date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="DD Mon YYYY"

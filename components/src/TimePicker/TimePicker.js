@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import { format, setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-
 import { components } from "react-select";
+import { useTranslation } from "react-i18next";
+
 import theme from "../theme";
 import { Select } from "../Select";
 import { TimePickerStyles } from "./TimePickerStyles";
@@ -78,35 +79,35 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
     .slice(startingInterval, finalInterval);
 };
 
-class TimePicker extends Component {
-  handleInputChange = event => {
-    const { value } = event.target;
-    const { onInputChange } = this.props;
-
-    if (onInputChange) {
-      onInputChange(value);
-    }
-  };
-
-  render() {
-    const { timeFormat, interval, className, minTime, maxTime, defaultValue, locale, ...props } = this.props;
-    const options = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
-
-    return (
-      <>
-        <TimePickerStyles />
-        <Select
-          options={options}
-          defaultValue={defaultValue}
-          components={{ DropdownIndicator, Option: StyledSelectOption }}
-          onInputChange={this.handleOnInputChange}
-          {...props}
-          className={`nds-time-picker ${className || ""}`}
-        />
-      </>
-    );
-  }
-}
+const TimePicker = ({
+  timeFormat,
+  interval,
+  className,
+  minTime,
+  maxTime,
+  defaultValue,
+  locale,
+  onInputChange,
+  "aria-label": ariaLabel,
+  ...props
+}) => {
+  const options = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
+  const { t } = useTranslation();
+  return (
+    <>
+      <TimePickerStyles />
+      <Select
+        options={options}
+        defaultValue={defaultValue}
+        components={{ DropdownIndicator, Option: StyledSelectOption }}
+        aria-label={ariaLabel || t("select a time")}
+        onInputChange={onInputChange}
+        {...props}
+        className={`nds-time-picker ${className || ""}`}
+      />
+    </>
+  );
+};
 
 TimePicker.propTypes = {
   timeFormat: PropTypes.string,
@@ -118,7 +119,8 @@ TimePicker.propTypes = {
   minTime: PropTypes.string,
   maxTime: PropTypes.string,
   defaultValue: PropTypes.string,
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  "aria-label": PropTypes.string
 };
 
 TimePicker.defaultProps = {
@@ -131,7 +133,8 @@ TimePicker.defaultProps = {
   minTime: undefined,
   maxTime: undefined,
   defaultValue: undefined,
-  locale: undefined
+  locale: undefined,
+  "aria-label": undefined
 };
 
 export default TimePicker;

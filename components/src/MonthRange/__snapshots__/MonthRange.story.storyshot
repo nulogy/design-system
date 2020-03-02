@@ -44,6 +44,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -98,6 +99,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -172,6 +174,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="From (Mon YYYY)"
@@ -226,6 +229,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="To (Mon YYYY)"
@@ -300,6 +304,7 @@ exports[`Storyshots MonthRange default 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -354,6 +359,7 @@ exports[`Storyshots MonthRange default 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -428,6 +434,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -482,6 +489,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -556,6 +564,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -610,6 +619,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -684,6 +694,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
               >
                 <input
                   aria-invalid="true"
+                  aria-label="select a date"
                   aria-required="true"
                   class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
                   placeholder="Mon YYYY"
@@ -771,6 +782,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -845,6 +857,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"
@@ -899,6 +912,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
               >
                 <input
                   aria-invalid="false"
+                  aria-label="select a date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
                   placeholder="Mon YYYY"

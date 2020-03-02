@@ -118,77 +118,73 @@ const overlayStyle = {
   zIndex: theme.zIndex.overlay
 };
 
-class Modal extends React.Component {
-  modalHasHeader() {
-    const { onRequestClose, title } = this.props;
+const Modal = ({
+  isOpen,
+  children,
+  title,
+  onRequestClose,
+  onAfterOpen,
+  shouldFocusAfterRender,
+  shouldReturnFocusAfterClose,
+  ariaLabel,
+  ariaDescribedBy,
+  portalClassName,
+  overlayClassName,
+  className,
+  id,
+  maxWidth,
+  appElement,
+  ariaHideApp,
+  footerContent,
+  closeAriaLabel
+}) => {
+  const modalHasHeader = () => {
     return onRequestClose || title;
-  }
-
-  render() {
-    const {
-      isOpen,
-      children,
-      title,
-      onRequestClose,
-      onAfterOpen,
-      shouldFocusAfterRender,
-      shouldReturnFocusAfterClose,
-      ariaLabel,
-      ariaDescribedBy,
-      portalClassName,
-      overlayClassName,
-      className,
-      id,
-      maxWidth,
-      appElement,
-      ariaHideApp,
-      footerContent
-    } = this.props;
-    return (
-      <StyledReactModal
-        maxWidth={maxWidth}
-        contentLabel={ariaLabel}
-        onRequestClose={onRequestClose}
-        onAfterOpen={onAfterOpen}
-        shouldFocusAfterRender={shouldFocusAfterRender}
-        shouldReturnFocusAfterClose={shouldReturnFocusAfterClose}
-        isOpen={isOpen}
-        portalClassName={portalClassName}
-        overlayClassName={overlayClassName}
-        className={className}
-        id={id}
-        aria={{
-          labelledby: title ? "modal-title" : undefined,
-          describedby: ariaDescribedBy
-        }}
-        shouldCloseOnOverlayClick
-        shouldCloseOnEsc
-        style={{
-          overlay: overlayStyle
-        }}
-        appElement={appElement}
-        ariaHideApp={ariaHideApp}
-      >
-        <PreventBodyElementScrolling>
-          {this.modalHasHeader(onRequestClose, title) && (
-            <ModalHeader hasCloseButton={onRequestClose}>
-              {title ? (
-                <SectionTitle id="modal-title" mb="none">
-                  {title}
-                </SectionTitle>
-              ) : (
-                <div style={{ height: theme.space.x4 }} />
-              )}
-              {onRequestClose && <ModalCloseButton onClick={onRequestClose} />}
-            </ModalHeader>
-          )}
-          <ModalContent>{children}</ModalContent>
-          {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
-        </PreventBodyElementScrolling>
-      </StyledReactModal>
-    );
-  }
-}
+  };
+  return (
+    <StyledReactModal
+      maxWidth={maxWidth}
+      contentLabel={ariaLabel}
+      onRequestClose={onRequestClose}
+      onAfterOpen={onAfterOpen}
+      shouldFocusAfterRender={shouldFocusAfterRender}
+      shouldReturnFocusAfterClose={shouldReturnFocusAfterClose}
+      isOpen={isOpen}
+      portalClassName={portalClassName}
+      overlayClassName={overlayClassName}
+      className={className}
+      id={id}
+      aria={{
+        labelledby: title ? "modal-title" : undefined,
+        describedby: ariaDescribedBy
+      }}
+      shouldCloseOnOverlayClick
+      shouldCloseOnEsc
+      style={{
+        overlay: overlayStyle
+      }}
+      appElement={appElement}
+      ariaHideApp={ariaHideApp}
+    >
+      <PreventBodyElementScrolling>
+        {modalHasHeader(onRequestClose, title) && (
+          <ModalHeader hasCloseButton={onRequestClose}>
+            {title ? (
+              <SectionTitle id="modal-title" mb="none">
+                {title}
+              </SectionTitle>
+            ) : (
+              <div style={{ height: theme.space.x4 }} />
+            )}
+            {onRequestClose && <ModalCloseButton onClick={onRequestClose} aria-label={closeAriaLabel} />}
+          </ModalHeader>
+        )}
+        <ModalContent>{children}</ModalContent>
+        {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
+      </PreventBodyElementScrolling>
+    </StyledReactModal>
+  );
+};
 
 Modal.propTypes = {
   isOpen: PropTypes.bool,
@@ -196,6 +192,7 @@ Modal.propTypes = {
   ariaLabel: PropTypes.string,
   children: PropTypes.node,
   onRequestClose: PropTypes.func,
+  closeAriaLabel: PropTypes.string,
   onAfterOpen: PropTypes.func,
   shouldFocusAfterRender: PropTypes.bool,
   shouldReturnFocusAfterClose: PropTypes.bool,
@@ -216,6 +213,7 @@ Modal.defaultProps = {
   ariaLabel: null,
   children: null,
   onRequestClose: null,
+  closeAriaLabel: undefined,
   onAfterOpen: null,
   shouldFocusAfterRender: true,
   shouldReturnFocusAfterClose: true,

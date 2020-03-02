@@ -10,12 +10,14 @@ const EXPANDABLE_COLUMN_DATA_KEY = "expanded";
 const ExpandCell = ({ row, onRowExpansionChange }) => {
   const expandRowHandler = () => onRowExpansionChange(row);
   const { t } = useTranslation();
+  const collapseLabel = row.collapseAriaLabel || t("collapse row");
+  const expandLabel = row.expandAriaLabel || t("expand row");
   return (
     <>
       {row.expandedContent && (
         <ControlIcon
           icon={row[EXPANDABLE_COLUMN_DATA_KEY] ? "upArrow" : "downArrow"}
-          label={row[EXPANDABLE_COLUMN_DATA_KEY] ? t("collapse row") : t("expand row")}
+          label={row[EXPANDABLE_COLUMN_DATA_KEY] ? collapseLabel : expandLabel}
           onClick={expandRowHandler}
         />
       )}
@@ -25,11 +27,15 @@ const ExpandCell = ({ row, onRowExpansionChange }) => {
 
 ExpandCell.propTypes = {
   row: rowPropType.isRequired,
-  onRowExpansionChange: PropTypes.func
+  onRowExpansionChange: PropTypes.func,
+  collapseAriaLabel: PropTypes.string,
+  expandAriaLabel: PropTypes.string
 };
 
 ExpandCell.defaultProps = {
-  onRowExpansionChange: null
+  onRowExpansionChange: null,
+  collapseAriaLabel: undefined,
+  expandAriaLabel: undefined
 };
 const expandCellRenderer = onRowExpansionChange => props => (
   <ExpandCell onRowExpansionChange={onRowExpansionChange} {...props} />

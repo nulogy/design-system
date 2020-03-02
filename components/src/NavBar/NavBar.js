@@ -42,49 +42,52 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   padding: `${theme.space.x2} ${theme.space.x3}`
 }));
 
-const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...props }) => (
-  <header {...props}>
-    <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
-      <Link
-        aria-label="Nulogy logo"
-        underline={false}
-        style={{ display: "block", height: subtext ? "56px" : "40px" }}
-        my={subtext ? "-8px" : null}
-        href={brandingLinkHref}
-      >
-        <Branding logoColor={getThemeColor(themeColor).logoColor} subtext={subtext} />
-      </Link>
-      <Flex
-        justifyContent="space-between"
-        alignContent="flex-end"
-        style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
-      >
-        {menuData.primaryMenu && (
-          <DesktopMenu
-            themeColorObject={getThemeColor(themeColor)}
-            style={{ paddingRight: theme.space.x3 }}
-            aria-label="Primary navigation"
-            menuData={menuData.primaryMenu}
-          />
-        )}
-        <Flex style={{ float: "right" }}>
-          {menuData.search && (
-            <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
-              <NavBarSearch {...menuData.search} />
-            </Box>
-          )}
-          {menuData.secondaryMenu && (
+const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...props }) => {
+  const { t } = useTranslation();
+  return (
+    <header {...props}>
+      <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
+        <Link
+          aria-label="Nulogy logo"
+          underline={false}
+          style={{ display: "block", height: subtext ? "56px" : "40px" }}
+          my={subtext ? "-8px" : null}
+          href={brandingLinkHref}
+        >
+          <Branding logoColor={getThemeColor(themeColor).logoColor} subtext={subtext} />
+        </Link>
+        <Flex
+          justifyContent="space-between"
+          alignContent="flex-end"
+          style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
+        >
+          {menuData.primaryMenu && (
             <DesktopMenu
               themeColorObject={getThemeColor(themeColor)}
-              aria-label="Secondary navigation"
-              menuData={menuData.secondaryMenu}
+              style={{ paddingRight: theme.space.x3 }}
+              aria-label={t("primary navigation")}
+              menuData={menuData.primaryMenu}
             />
           )}
+          <Flex style={{ float: "right" }}>
+            {menuData.search && (
+              <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
+                <NavBarSearch {...menuData.search} />
+              </Box>
+            )}
+            {menuData.secondaryMenu && (
+              <DesktopMenu
+                themeColorObject={getThemeColor(themeColor)}
+                aria-label={t("secondary navigation")}
+                menuData={menuData.secondaryMenu}
+              />
+            )}
+          </Flex>
         </Flex>
-      </Flex>
-    </NavBarBackground>
-  </header>
-);
+      </NavBarBackground>
+    </header>
+  );
+};
 
 const MenuDataPropTypes = {
   primaryMenu: PropTypes.arrayOf(isValidMenuItem),
