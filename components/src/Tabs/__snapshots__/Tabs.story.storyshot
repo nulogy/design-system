@@ -2,5014 +2,634 @@
 
 exports[`Storyshots Tabs Tabs 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <div
+      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+      width="0"
+    />
+    <div
+      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+      role="tablist"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <div />
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
+        role="tab"
+        tabindex="0"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <Tabs
-            defaultSelectedIndex={null}
-            fitted={false}
-            renderTabContentOnlyWhenSelected={false}
-          >
-            <TabFocusManager
-              tabRefs={
-                Array [
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Tab 1
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 2
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 3
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 4
-                  </button>,
-                ]
-              }
-            >
-              <TabScrollIndicators
-                indicatorWidth={40}
-                tabContainerRef={
-                  Object {
-                    "current": <div
-                      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                      role="tablist"
-                    >
-                      <div />
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Tab 1
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 2
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 3
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 4
-                      </button>
-                    </div>,
-                  }
-                }
-                tabRefs={
-                  Array [
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Tab 1
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 2
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 3
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 4
-                    </button>,
-                  ]
-                }
-              >
-                <TabScrollIndicators__TabScrollIndicatorContainer
-                  width={0}
-                >
-                  <div
-                    className="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
-                    width={0}
-                  />
-                </TabScrollIndicators__TabScrollIndicatorContainer>
-                <Tabs__TabContainer
-                  onScroll={[Function]}
-                  role="tablist"
-                >
-                  <div
-                    className="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                    onScroll={[Function]}
-                    role="tablist"
-                  >
-                    <ResizeDetector
-                      handleHeight={false}
-                      handleWidth={true}
-                      nodeType="div"
-                      onResize={[Function]}
-                      querySelector={null}
-                      refreshRate={1000}
-                      skipOnMount={false}
-                      targetDomEl={null}
-                    >
-                      <ChildWrapper>
-                        <div />
-                      </ChildWrapper>
-                    </ResizeDetector>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab1"
-                      fullWidth={false}
-                      index={0}
-                      key=".0"
-                      label="Tab 1"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={0}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab1"
-                        fullWidth={false}
-                        index={0}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={0}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={0}
-                        >
-                          Tab 1
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab2"
-                      fullWidth={false}
-                      index={1}
-                      key=".1"
-                      label="Tab 2"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab2"
-                        fullWidth={false}
-                        index={1}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 2
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab3"
-                      fullWidth={false}
-                      index={2}
-                      key=".2"
-                      label="Tab 3"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab3"
-                        fullWidth={false}
-                        index={2}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 3
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab4"
-                      fullWidth={false}
-                      index={3}
-                      key=".3"
-                      label="Tab 4"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab4"
-                        fullWidth={false}
-                        index={3}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 4
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                  </div>
-                </Tabs__TabContainer>
-              </TabScrollIndicators>
-            </TabFocusManager>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".0"
-              selected={false}
-            >
-              Tab 1 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".1"
-              selected={false}
-            >
-              Tab 2 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".2"
-              selected={false}
-            >
-              Tab 3 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".3"
-              selected={false}
-            >
-              Tab 4 Content
-            </div>
-          </Tabs>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab 1
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 3
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 4
+      </button>
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 1 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 2 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 3 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 4 Content
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Tabs controlled 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <div
+      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+      width="0"
+    />
+    <div
+      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+      role="tablist"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <div />
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
+        role="tab"
+        tabindex="0"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <ControlledTabs>
-            <Tabs
-              defaultSelectedIndex={null}
-              fitted={false}
-              onTabClick={[Function]}
-              renderTabContentOnlyWhenSelected={false}
-              selectedIndex={null}
-            >
-              <TabFocusManager
-                tabRefs={
-                  Array [
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Tab 1
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 2
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 3
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 4
-                    </button>,
-                  ]
-                }
-              >
-                <TabScrollIndicators
-                  indicatorWidth={40}
-                  tabContainerRef={
-                    Object {
-                      "current": <div
-                        class="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                        role="tablist"
-                      >
-                        <div />
-                        <button
-                          aria-selected="false"
-                          class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                          role="tab"
-                          tabindex="0"
-                        >
-                          Tab 1
-                        </button>
-                        <button
-                          aria-selected="false"
-                          class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                          role="tab"
-                          tabindex="-1"
-                        >
-                          Tab 2
-                        </button>
-                        <button
-                          aria-selected="false"
-                          class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                          role="tab"
-                          tabindex="-1"
-                        >
-                          Tab 3
-                        </button>
-                        <button
-                          aria-selected="false"
-                          class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                          role="tab"
-                          tabindex="-1"
-                        >
-                          Tab 4
-                        </button>
-                      </div>,
-                    }
-                  }
-                  tabRefs={
-                    Array [
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Tab 1
-                      </button>,
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 2
-                      </button>,
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 3
-                      </button>,
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 4
-                      </button>,
-                    ]
-                  }
-                >
-                  <TabScrollIndicators__TabScrollIndicatorContainer
-                    width={0}
-                  >
-                    <div
-                      className="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
-                      width={0}
-                    />
-                  </TabScrollIndicators__TabScrollIndicatorContainer>
-                  <Tabs__TabContainer
-                    onScroll={[Function]}
-                    role="tablist"
-                  >
-                    <div
-                      className="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                      onScroll={[Function]}
-                      role="tablist"
-                    >
-                      <ResizeDetector
-                        handleHeight={false}
-                        handleWidth={true}
-                        nodeType="div"
-                        onResize={[Function]}
-                        querySelector={null}
-                        refreshRate={1000}
-                        skipOnMount={false}
-                        targetDomEl={null}
-                      >
-                        <ChildWrapper>
-                          <div />
-                        </ChildWrapper>
-                      </ResizeDetector>
-                      <ForwardRef
-                        aria-selected={false}
-                        className="Tab1"
-                        fullWidth={false}
-                        index={0}
-                        key=".0"
-                        label="Tab 1"
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        selected={false}
-                        tabIndex={0}
-                      >
-                        <Tab__TabButton
-                          aria-selected={false}
-                          className="Tab1"
-                          fullWidth={false}
-                          index={0}
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={0}
-                        >
-                          <button
-                            aria-selected={false}
-                            className="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                            onClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            role="tab"
-                            selected={false}
-                            tabIndex={0}
-                          >
-                            Tab 1
-                          </button>
-                        </Tab__TabButton>
-                      </ForwardRef>
-                      <ForwardRef
-                        aria-selected={false}
-                        className="Tab2"
-                        fullWidth={false}
-                        index={1}
-                        key=".1"
-                        label="Tab 2"
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <Tab__TabButton
-                          aria-selected={false}
-                          className="Tab2"
-                          fullWidth={false}
-                          index={1}
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          <button
-                            aria-selected={false}
-                            className="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                            onClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            role="tab"
-                            selected={false}
-                            tabIndex={-1}
-                          >
-                            Tab 2
-                          </button>
-                        </Tab__TabButton>
-                      </ForwardRef>
-                      <ForwardRef
-                        aria-selected={false}
-                        className="Tab3"
-                        fullWidth={false}
-                        index={2}
-                        key=".2"
-                        label="Tab 3"
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <Tab__TabButton
-                          aria-selected={false}
-                          className="Tab3"
-                          fullWidth={false}
-                          index={2}
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          <button
-                            aria-selected={false}
-                            className="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
-                            onClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            role="tab"
-                            selected={false}
-                            tabIndex={-1}
-                          >
-                            Tab 3
-                          </button>
-                        </Tab__TabButton>
-                      </ForwardRef>
-                      <ForwardRef
-                        aria-selected={false}
-                        className="Tab4"
-                        fullWidth={false}
-                        index={3}
-                        key=".3"
-                        label="Tab 4"
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <Tab__TabButton
-                          aria-selected={false}
-                          className="Tab4"
-                          fullWidth={false}
-                          index={3}
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          <button
-                            aria-selected={false}
-                            className="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
-                            onClick={[Function]}
-                            onFocus={[Function]}
-                            onKeyDown={[Function]}
-                            role="tab"
-                            selected={false}
-                            tabIndex={-1}
-                          >
-                            Tab 4
-                          </button>
-                        </Tab__TabButton>
-                      </ForwardRef>
-                    </div>
-                  </Tabs__TabContainer>
-                </TabScrollIndicators>
-              </TabFocusManager>
-              <div
-                aria-hidden={true}
-                hidden={true}
-                key=".0"
-                selected={false}
-              >
-                Uncontrolled Content: Tab 1
-              </div>
-              <div
-                aria-hidden={true}
-                hidden={true}
-                key=".1"
-                selected={false}
-              >
-                Uncontrolled Content: Tab 2
-              </div>
-              <div
-                aria-hidden={true}
-                hidden={true}
-                key=".2"
-                selected={false}
-              >
-                Uncontrolled Content: Tab 3
-              </div>
-              <div
-                aria-hidden={true}
-                hidden={true}
-                key=".3"
-                selected={false}
-              >
-                Uncontrolled Content: Tab 4
-              </div>
-            </Tabs>
-            <div
-              className="ControlledTabContent"
-            >
-              Controlled Content: Tab 
-              1
-            </div>
-          </ControlledTabs>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab 1
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab3"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 3
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab4"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 4
+      </button>
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Uncontrolled Content: Tab 1
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Uncontrolled Content: Tab 2
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Uncontrolled Content: Tab 3
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Uncontrolled Content: Tab 4
+    </div>
+    <div
+      class="ControlledTabContent"
+    >
+      Controlled Content: Tab 1
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Tabs set to fitted 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <div
+      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+      width="0"
+    />
+    <div
+      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+      role="tablist"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <div />
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
+        role="tab"
+        tabindex="0"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <Tabs
-            defaultSelectedIndex={null}
-            fitted={true}
-            renderTabContentOnlyWhenSelected={false}
-          >
-            <TabFocusManager
-              tabRefs={
-                Array [
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Tab 1
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 2
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 3
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 4
-                  </button>,
-                ]
-              }
-            >
-              <TabScrollIndicators
-                indicatorWidth={40}
-                tabContainerRef={
-                  Object {
-                    "current": <div
-                      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                      role="tablist"
-                    >
-                      <div />
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Tab 1
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 2
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 3
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 4
-                      </button>
-                    </div>,
-                  }
-                }
-                tabRefs={
-                  Array [
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Tab 1
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 2
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 3
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 4
-                    </button>,
-                  ]
-                }
-              >
-                <TabScrollIndicators__TabScrollIndicatorContainer
-                  width={0}
-                >
-                  <div
-                    className="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
-                    width={0}
-                  />
-                </TabScrollIndicators__TabScrollIndicatorContainer>
-                <Tabs__TabContainer
-                  onScroll={[Function]}
-                  role="tablist"
-                >
-                  <div
-                    className="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                    onScroll={[Function]}
-                    role="tablist"
-                  >
-                    <ResizeDetector
-                      handleHeight={false}
-                      handleWidth={true}
-                      nodeType="div"
-                      onResize={[Function]}
-                      querySelector={null}
-                      refreshRate={1000}
-                      skipOnMount={false}
-                      targetDomEl={null}
-                    >
-                      <ChildWrapper>
-                        <div />
-                      </ChildWrapper>
-                    </ResizeDetector>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={true}
-                      index={0}
-                      key=".0"
-                      label="Tab 1"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={0}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={true}
-                        index={0}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={0}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={0}
-                        >
-                          Tab 1
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={true}
-                      index={1}
-                      key=".1"
-                      label="Tab 2"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={true}
-                        index={1}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 2
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={true}
-                      index={2}
-                      key=".2"
-                      label="Tab 3"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={true}
-                        index={2}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 3
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={true}
-                      index={3}
-                      key=".3"
-                      label="Tab 4"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={true}
-                        index={3}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 dXTOVp"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 4
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                  </div>
-                </Tabs__TabContainer>
-              </TabScrollIndicators>
-            </TabFocusManager>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".0"
-              selected={false}
-            >
-              Tab 1 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".1"
-              selected={false}
-            >
-              Tab 2 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".2"
-              selected={false}
-            >
-              Tab 3 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".3"
-              selected={false}
-            >
-              Tab 4 Content
-            </div>
-          </Tabs>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab 1
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 3
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 dXTOVp"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 4
+      </button>
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 1 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 2 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 3 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 4 Content
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <div
+      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+      width="0"
+    />
+    <div
+      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+      role="tablist"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <div />
+      <button
+        aria-selected="true"
+        class="Tab__TabButton-sc-69abpu-0 gZENlM"
+        role="tab"
+        selected=""
+        tabindex="0"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <Tabs
-            defaultSelectedIndex={0}
-            fitted={false}
-            renderTabContentOnlyWhenSelected={false}
-          >
-            <TabFocusManager
-              tabRefs={
-                Array [
-                  <button
-                    aria-selected="true"
-                    class="Tab__TabButton-sc-69abpu-0 gZENlM"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Tab 1
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 2
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 3
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 4
-                  </button>,
-                ]
-              }
-            >
-              <TabScrollIndicators
-                indicatorWidth={40}
-                tabContainerRef={
-                  Object {
-                    "current": <div
-                      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                      role="tablist"
-                    >
-                      <div />
-                      <button
-                        aria-selected="true"
-                        class="Tab__TabButton-sc-69abpu-0 gZENlM"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Tab 1
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 2
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 3
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 4
-                      </button>
-                    </div>,
-                  }
-                }
-                tabRefs={
-                  Array [
-                    <button
-                      aria-selected="true"
-                      class="Tab__TabButton-sc-69abpu-0 gZENlM"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Tab 1
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 2
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 3
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 4
-                    </button>,
-                  ]
-                }
-              >
-                <TabScrollIndicators__TabScrollIndicatorContainer
-                  width={0}
-                >
-                  <div
-                    className="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
-                    width={0}
-                  />
-                </TabScrollIndicators__TabScrollIndicatorContainer>
-                <Tabs__TabContainer
-                  onScroll={[Function]}
-                  role="tablist"
-                >
-                  <div
-                    className="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                    onScroll={[Function]}
-                    role="tablist"
-                  >
-                    <ResizeDetector
-                      handleHeight={false}
-                      handleWidth={true}
-                      nodeType="div"
-                      onResize={[Function]}
-                      querySelector={null}
-                      refreshRate={1000}
-                      skipOnMount={false}
-                      targetDomEl={null}
-                    >
-                      <ChildWrapper>
-                        <div />
-                      </ChildWrapper>
-                    </ResizeDetector>
-                    <ForwardRef
-                      aria-selected={true}
-                      fullWidth={false}
-                      index={0}
-                      key=".0"
-                      label="Tab 1"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={true}
-                      tabIndex={0}
-                    >
-                      <Tab__TabButton
-                        aria-selected={true}
-                        fullWidth={false}
-                        index={0}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={true}
-                        tabIndex={0}
-                      >
-                        <button
-                          aria-selected={true}
-                          className="Tab__TabButton-sc-69abpu-0 gZENlM"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={true}
-                          tabIndex={0}
-                        >
-                          Tab 1
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={1}
-                      key=".1"
-                      label="Tab 2"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={1}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 2
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={2}
-                      key=".2"
-                      label="Tab 3"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={2}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 3
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={3}
-                      key=".3"
-                      label="Tab 4"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={3}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 4
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                  </div>
-                </Tabs__TabContainer>
-              </TabScrollIndicators>
-            </TabFocusManager>
-            <div
-              aria-hidden={false}
-              hidden={false}
-              key=".0"
-              selected={true}
-            >
-              Tab 1 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".1"
-              selected={false}
-            >
-              Tab 2 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".2"
-              selected={false}
-            >
-              Tab 3 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".3"
-              selected={false}
-            >
-              Tab 4 Content
-            </div>
-          </Tabs>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab 1
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 3
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 4
+      </button>
+    </div>
+    <div
+      aria-hidden="false"
+      selected=""
+    >
+      Tab 1 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 2 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 3 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 4 Content
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Tabs with all tab states 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
-    >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    <div>
+      <button
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <div>
-            <ForwardRef
-              label="Tab"
-            >
-              <Tab__TabButton
-                role="tab"
-              >
-                <button
-                  className="Tab__TabButton-sc-69abpu-0 diybrS"
-                  role="tab"
-                >
-                  Tab
-                </button>
-              </Tab__TabButton>
-            </ForwardRef>
-            <ForwardRef
-              label="Tab"
-              selected={true}
-            >
-              <Tab__TabButton
-                role="tab"
-                selected={true}
-              >
-                <button
-                  className="Tab__TabButton-sc-69abpu-0 gZENlM"
-                  role="tab"
-                  selected={true}
-                >
-                  Tab
-                </button>
-              </Tab__TabButton>
-            </ForwardRef>
-            <ForwardRef
-              disabled={true}
-              label="Tab"
-            >
-              <Tab__TabButton
-                disabled={true}
-                role="tab"
-              >
-                <button
-                  className="Tab__TabButton-sc-69abpu-0 godSCT"
-                  disabled={true}
-                  role="tab"
-                >
-                  Tab
-                </button>
-              </Tab__TabButton>
-            </ForwardRef>
-            <ForwardRef
-              disabled={true}
-              label="Tab"
-              selected={true}
-            >
-              <Tab__TabButton
-                disabled={true}
-                role="tab"
-                selected={true}
-              >
-                <button
-                  className="Tab__TabButton-sc-69abpu-0 gAijGM"
-                  disabled={true}
-                  role="tab"
-                  selected={true}
-                >
-                  Tab
-                </button>
-              </Tab__TabButton>
-            </ForwardRef>
-          </div>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab
+      </button>
+      <button
+        class="Tab__TabButton-sc-69abpu-0 gZENlM"
+        role="tab"
+        selected=""
+      >
+        Tab
+      </button>
+      <button
+        class="Tab__TabButton-sc-69abpu-0 godSCT"
+        disabled=""
+        role="tab"
+      >
+        Tab
+      </button>
+      <button
+        class="Tab__TabButton-sc-69abpu-0 gAijGM"
+        disabled=""
+        role="tab"
+        selected=""
+      >
+        Tab
+      </button>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Tabs with content loaded on selection 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <div
+      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+      width="0"
+    />
+    <div
+      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+      role="tablist"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <div />
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
+        role="tab"
+        tabindex="0"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <Tabs
-            defaultSelectedIndex={null}
-            fitted={false}
-            renderTabContentOnlyWhenSelected={true}
-          >
-            <TabFocusManager
-              tabRefs={
-                Array [
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Tab 1
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 2
-                  </button>,
-                ]
-              }
-            >
-              <TabScrollIndicators
-                indicatorWidth={40}
-                tabContainerRef={
-                  Object {
-                    "current": <div
-                      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                      role="tablist"
-                    >
-                      <div />
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Tab 1
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 2
-                      </button>
-                    </div>,
-                  }
-                }
-                tabRefs={
-                  Array [
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Tab 1
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 2
-                    </button>,
-                  ]
-                }
-              >
-                <TabScrollIndicators__TabScrollIndicatorContainer
-                  width={0}
-                >
-                  <div
-                    className="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
-                    width={0}
-                  />
-                </TabScrollIndicators__TabScrollIndicatorContainer>
-                <Tabs__TabContainer
-                  onScroll={[Function]}
-                  role="tablist"
-                >
-                  <div
-                    className="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                    onScroll={[Function]}
-                    role="tablist"
-                  >
-                    <ResizeDetector
-                      handleHeight={false}
-                      handleWidth={true}
-                      nodeType="div"
-                      onResize={[Function]}
-                      querySelector={null}
-                      refreshRate={1000}
-                      skipOnMount={false}
-                      targetDomEl={null}
-                    >
-                      <ChildWrapper>
-                        <div />
-                      </ChildWrapper>
-                    </ResizeDetector>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab1"
-                      fullWidth={false}
-                      index={0}
-                      key=".0"
-                      label="Tab 1"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={0}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab1"
-                        fullWidth={false}
-                        index={0}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={0}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={0}
-                        >
-                          Tab 1
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab2"
-                      fullWidth={false}
-                      index={1}
-                      key=".1"
-                      label="Tab 2"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab2"
-                        fullWidth={false}
-                        index={1}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 2
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                  </div>
-                </Tabs__TabContainer>
-              </TabScrollIndicators>
-            </TabFocusManager>
-          </Tabs>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab 1
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Tabs with inputs 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <div
+      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+      width="0"
+    />
+    <div
+      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+      role="tablist"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <div />
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
+        role="tab"
+        tabindex="0"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <Tabs
-            defaultSelectedIndex={null}
-            fitted={false}
-            renderTabContentOnlyWhenSelected={false}
-          >
-            <TabFocusManager
-              tabRefs={
-                Array [
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Tab 1
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 2
-                  </button>,
-                ]
-              }
-            >
-              <TabScrollIndicators
-                indicatorWidth={40}
-                tabContainerRef={
-                  Object {
-                    "current": <div
-                      class="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                      role="tablist"
-                    >
-                      <div />
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Tab 1
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 2
-                      </button>
-                    </div>,
-                  }
-                }
-                tabRefs={
-                  Array [
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Tab 1
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 2
-                    </button>,
-                  ]
-                }
-              >
-                <TabScrollIndicators__TabScrollIndicatorContainer
-                  width={0}
-                >
-                  <div
-                    className="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
-                    width={0}
-                  />
-                </TabScrollIndicators__TabScrollIndicatorContainer>
-                <Tabs__TabContainer
-                  onScroll={[Function]}
-                  role="tablist"
-                >
-                  <div
-                    className="Tabs__TabContainer-o5d5cd-0 bBQknD"
-                    onScroll={[Function]}
-                    role="tablist"
-                  >
-                    <ResizeDetector
-                      handleHeight={false}
-                      handleWidth={true}
-                      nodeType="div"
-                      onResize={[Function]}
-                      querySelector={null}
-                      refreshRate={1000}
-                      skipOnMount={false}
-                      targetDomEl={null}
-                    >
-                      <ChildWrapper>
-                        <div />
-                      </ChildWrapper>
-                    </ResizeDetector>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab1"
-                      fullWidth={false}
-                      index={0}
-                      key=".0"
-                      label="Tab 1"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={0}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab1"
-                        fullWidth={false}
-                        index={0}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={0}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab1"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={0}
-                        >
-                          Tab 1
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      className="Tab2"
-                      fullWidth={false}
-                      index={1}
-                      key=".1"
-                      label="Tab 2"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        className="Tab2"
-                        fullWidth={false}
-                        index={1}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 2
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                  </div>
-                </Tabs__TabContainer>
-              </TabScrollIndicators>
-            </TabFocusManager>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".0"
-              selected={false}
-            >
-              <input
-                className="Input1"
-              />
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".1"
-              selected={false}
-            >
-              <input
-                className="Input2"
-              />
-            </div>
-          </Tabs>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab 1
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS Tab2"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      <input
+        class="Input1"
+      />
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      <input
+        class="Input2"
+      />
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Tabs with scrolling tabs 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <div
+      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+      width="0"
+    />
+    <div
+      class="Tabs__TabContainer-o5d5cd-0 bBQknD tab-container"
+      role="tablist"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <div />
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="0"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
-        >
-          <Tabs
-            className="tab-container"
-            defaultSelectedIndex={null}
-            fitted={false}
-            renderTabContentOnlyWhenSelected={false}
-          >
-            <TabFocusManager
-              tabRefs={
-                Array [
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="0"
-                  >
-                    Tab 1
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 2
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 3
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 4
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 5
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 6
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 7
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 8
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 9
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 10
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 11
-                  </button>,
-                  <button
-                    aria-selected="false"
-                    class="Tab__TabButton-sc-69abpu-0 diybrS"
-                    role="tab"
-                    tabindex="-1"
-                  >
-                    Tab 12
-                  </button>,
-                ]
-              }
-            >
-              <TabScrollIndicators
-                indicatorWidth={40}
-                tabContainerRef={
-                  Object {
-                    "current": <div
-                      class="Tabs__TabContainer-o5d5cd-0 bBQknD tab-container"
-                      role="tablist"
-                    >
-                      <div />
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="0"
-                      >
-                        Tab 1
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 2
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 3
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 4
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 5
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 6
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 7
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 8
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 9
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 10
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 11
-                      </button>
-                      <button
-                        aria-selected="false"
-                        class="Tab__TabButton-sc-69abpu-0 diybrS"
-                        role="tab"
-                        tabindex="-1"
-                      >
-                        Tab 12
-                      </button>
-                    </div>,
-                  }
-                }
-                tabRefs={
-                  Array [
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="0"
-                    >
-                      Tab 1
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 2
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 3
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 4
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 5
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 6
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 7
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 8
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 9
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 10
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 11
-                    </button>,
-                    <button
-                      aria-selected="false"
-                      class="Tab__TabButton-sc-69abpu-0 diybrS"
-                      role="tab"
-                      tabindex="-1"
-                    >
-                      Tab 12
-                    </button>,
-                  ]
-                }
-              >
-                <TabScrollIndicators__TabScrollIndicatorContainer
-                  width={0}
-                >
-                  <div
-                    className="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
-                    width={0}
-                  />
-                </TabScrollIndicators__TabScrollIndicatorContainer>
-                <Tabs__TabContainer
-                  className="tab-container"
-                  onScroll={[Function]}
-                  role="tablist"
-                >
-                  <div
-                    className="Tabs__TabContainer-o5d5cd-0 bBQknD tab-container"
-                    onScroll={[Function]}
-                    role="tablist"
-                  >
-                    <ResizeDetector
-                      handleHeight={false}
-                      handleWidth={true}
-                      nodeType="div"
-                      onResize={[Function]}
-                      querySelector={null}
-                      refreshRate={1000}
-                      skipOnMount={false}
-                      targetDomEl={null}
-                    >
-                      <ChildWrapper>
-                        <div />
-                      </ChildWrapper>
-                    </ResizeDetector>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={0}
-                      key=".0"
-                      label="Tab 1"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={0}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={0}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={0}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={0}
-                        >
-                          Tab 1
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={1}
-                      key=".1"
-                      label="Tab 2"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={1}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 2
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={2}
-                      key=".2"
-                      label="Tab 3"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={2}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 3
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={3}
-                      key=".3"
-                      label="Tab 4"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={3}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 4
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={4}
-                      key=".4"
-                      label="Tab 5"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={4}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 5
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={5}
-                      key=".5"
-                      label="Tab 6"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={5}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 6
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={6}
-                      key=".6"
-                      label="Tab 7"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={6}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 7
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={7}
-                      key=".7"
-                      label="Tab 8"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={7}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 8
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={8}
-                      key=".8"
-                      label="Tab 9"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={8}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 9
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={9}
-                      key=".9"
-                      label="Tab 10"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={9}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 10
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={10}
-                      key=".a"
-                      label="Tab 11"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={10}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 11
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                    <ForwardRef
-                      aria-selected={false}
-                      fullWidth={false}
-                      index={11}
-                      key=".b"
-                      label="Tab 12"
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      selected={false}
-                      tabIndex={-1}
-                    >
-                      <Tab__TabButton
-                        aria-selected={false}
-                        fullWidth={false}
-                        index={11}
-                        onClick={[Function]}
-                        onFocus={[Function]}
-                        onKeyDown={[Function]}
-                        role="tab"
-                        selected={false}
-                        tabIndex={-1}
-                      >
-                        <button
-                          aria-selected={false}
-                          className="Tab__TabButton-sc-69abpu-0 diybrS"
-                          onClick={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          role="tab"
-                          selected={false}
-                          tabIndex={-1}
-                        >
-                          Tab 12
-                        </button>
-                      </Tab__TabButton>
-                    </ForwardRef>
-                  </div>
-                </Tabs__TabContainer>
-              </TabScrollIndicators>
-            </TabFocusManager>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".0"
-              selected={false}
-            >
-              Tab 1 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".1"
-              selected={false}
-            >
-              Tab 2 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".2"
-              selected={false}
-            >
-              Tab 3 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".3"
-              selected={false}
-            >
-              Tab 4 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".4"
-              selected={false}
-            >
-              Tab 5 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".5"
-              selected={false}
-            >
-              Tab 6 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".6"
-              selected={false}
-            >
-              Tab 7 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".7"
-              selected={false}
-            >
-              Tab 8 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".8"
-              selected={false}
-            >
-              Tab 9 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".9"
-              selected={false}
-            >
-              Tab 10 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".a"
-              selected={false}
-            >
-              Tab 11 Content
-            </div>
-            <div
-              aria-hidden={true}
-              hidden={true}
-              key=".b"
-              selected={false}
-            >
-              Tab 12 Content
-            </div>
-          </Tabs>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+        Tab 1
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 2
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 3
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 4
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 5
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 6
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 7
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 8
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 9
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 10
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 11
+      </button>
+      <button
+        aria-selected="false"
+        class="Tab__TabButton-sc-69abpu-0 diybrS"
+        role="tab"
+        tabindex="-1"
+      >
+        Tab 12
+      </button>
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 1 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 2 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 3 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 4 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 5 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 6 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 7 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 8 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 9 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 10 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 11 Content
+    </div>
+    <div
+      aria-hidden="true"
+      hidden=""
+    >
+      Tab 12 Content
+    </div>
+  </div>
 </div>
 `;

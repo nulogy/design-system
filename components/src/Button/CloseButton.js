@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import { Icon } from "../Icon";
 import theme from "../theme";
 
@@ -45,11 +46,14 @@ const WrapperButton = styled.button(({ disabled }) => ({
   }
 }));
 
-const BaseCloseButton = React.forwardRef(({ ...props }, ref) => (
-  <WrapperButton aria-label="close" ref={ref} {...props}>
-    <Icon size={theme.space.x4} icon="close" p="half" />
-  </WrapperButton>
-));
+const BaseCloseButton = React.forwardRef(({ ...props }, ref) => {
+  const { t } = useTranslation();
+  return (
+    <WrapperButton aria-label={t("close")} ref={ref} {...props}>
+      <Icon size={theme.space.x4} icon="close" p="half" />
+    </WrapperButton>
+  );
+});
 
 const CloseButton = styled(BaseCloseButton)({});
 

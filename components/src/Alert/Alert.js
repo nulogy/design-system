@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space, layout } from "styled-system";
 import propTypes from "@styled-system/prop-types";
+import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
@@ -33,6 +34,25 @@ const alertStyles = {
   [`${Link}`]: {
     color: theme.colors.black
   }
+};
+
+const CloseButton = ({ onClick }) => {
+  const { t } = useTranslation();
+  return (
+    <Box>
+      <Link as="button" color="darkGrey" hover="blue" onClick={onClick} aria-label={t("close")}>
+        <Icon icon="close" size="16" />
+      </Link>
+    </Box>
+  );
+};
+
+CloseButton.propTypes = {
+  onClick: PropTypes.func
+};
+
+CloseButton.defaultProps = {
+  onClick: undefined
 };
 
 class BaseAlert extends Component {
@@ -67,13 +87,7 @@ class BaseAlert extends Component {
           {title && <Text fontWeight="bold">{title}</Text>}
           {children}
         </Box>
-        {isCloseable && (
-          <Box>
-            <Link as="button" color="darkGrey" hover="blue" onClick={this.hideAlert} aria-label="Close">
-              <Icon icon="close" size="16" />
-            </Link>
-          </Box>
-        )}
+        {isCloseable && <CloseButton onClick={this.hideAlert} />}
       </Flex>
     ) : null;
   }

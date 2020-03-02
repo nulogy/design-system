@@ -2,4485 +2,1007 @@
 
 exports[`Storyshots Pagination Pagination 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        disabled=""
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <Pagination
-            currentPage={1}
-            onNext={[Function]}
-            onPrevious={[Function]}
-            onSelectPage={[Function]}
-            totalPages={7}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={true}
-                  onClick={[Function]}
-                >
-                  <Pagination__PaginationButton
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
-                      disabled={true}
-                      onClick={[Function]}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 2"
-                  currentPage={false}
-                  disabled={false}
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 2"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    2
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 3"
-                  currentPage={false}
-                  disabled={false}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 3"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 5"
-                  currentPage={false}
-                  disabled={false}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 5"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep5"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 7"
-                  currentPage={false}
-                  disabled={false}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 7"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={[Function]}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={[Function]}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-          <Pagination
-            currentPage={2}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={7}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    2
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 3"
-                  currentPage={false}
-                  disabled={false}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 3"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 5"
-                  currentPage={false}
-                  disabled={false}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 5"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep5"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 7"
-                  currentPage={false}
-                  disabled={false}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 7"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-          <Pagination
-            currentPage={3}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={7}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 2"
-                  currentPage={false}
-                  disabled={false}
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 2"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    2
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 5"
-                  currentPage={false}
-                  disabled={false}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 5"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep5"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 7"
-                  currentPage={false}
-                  disabled={false}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 7"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-          <Pagination
-            currentPage={4}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={7}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 2"
-                  currentPage={false}
-                  disabled={false}
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 2"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    2
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 3"
-                  currentPage={false}
-                  disabled={false}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 3"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 5"
-                  currentPage={false}
-                  disabled={false}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 5"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep5"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 7"
-                  currentPage={false}
-                  disabled={false}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 7"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-          <Pagination
-            currentPage={5}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={7}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 2"
-                  currentPage={false}
-                  disabled={false}
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 2"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    2
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 3"
-                  currentPage={false}
-                  disabled={false}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 3"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep5"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 7"
-                  currentPage={false}
-                  disabled={false}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 7"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-          <Pagination
-            currentPage={6}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={7}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep1"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 3"
-                  currentPage={false}
-                  disabled={false}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 3"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 5"
-                  currentPage={false}
-                  disabled={false}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 5"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="6"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    6
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 7"
-                  currentPage={false}
-                  disabled={false}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 7"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-          <Pagination
-            currentPage={7}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={7}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep1"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 3"
-                  currentPage={false}
-                  disabled={false}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 3"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 5"
-                  currentPage={false}
-                  disabled={false}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 5"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 6"
-                  currentPage={false}
-                  disabled={false}
-                  key="6"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 6"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    6
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={true}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={true}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
-                      disabled={true}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 2"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 3"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 5"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        5
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 7"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 3"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 5"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        5
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 7"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 2"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        2
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 5"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        5
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 7"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 2"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 3"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        3
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 5"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        5
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 7"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 2"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 3"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        5
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 7"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 3"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 5"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        5
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        6
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 7"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 3"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 5"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        5
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 6"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        6
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        disabled=""
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Pagination on the first page 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        disabled=""
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <Pagination
-            currentPage={1}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={10}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={true}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={true}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
-                      disabled={true}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 2"
-                  currentPage={false}
-                  disabled={false}
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 2"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    2
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 3"
-                  currentPage={false}
-                  disabled={false}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 3"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 5"
-                  currentPage={false}
-                  disabled={false}
-                  key="5"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 5"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    5
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep5"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 10"
-                  currentPage={false}
-                  disabled={false}
-                  key="10"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 10"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    10
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 2"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 3"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 5"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        5
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 10"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        10
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Pagination on the last page 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <Pagination
-            currentPage={10}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={10}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <styled.p
-                  color="currentColor"
-                  disabled={false}
-                  fontSize="small"
-                  inline={false}
-                  key="sep1"
-                  lineHeight="smallTextBase"
-                  mb={0}
-                  mr="x2"
-                  mt={0}
-                  py="x1"
-                >
-                  <p
-                    className="sc-AykKF deuCmq"
-                    color="currentColor"
-                    disabled={false}
-                    fontSize="small"
-                  >
-                    ...
-                  </p>
-                </styled.p>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 6"
-                  currentPage={false}
-                  disabled={false}
-                  key="6"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 6"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    6
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 7"
-                  currentPage={false}
-                  disabled={false}
-                  key="7"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 7"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    7
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 8"
-                  currentPage={false}
-                  disabled={false}
-                  key="8"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 8"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    8
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 9"
-                  currentPage={false}
-                  disabled={false}
-                  key="9"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 9"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    9
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="10"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    10
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={true}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={true}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
-                      disabled={true}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <p
+        class="sc-AykKF deuCmq"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page 6"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        6
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 7"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        7
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 8"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        8
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 9"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        9
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        10
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        disabled=""
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Pagination with less than 5 pages 1`] = `
 <div
-  style={
-    Object {
-      "padding": "24px",
-    }
-  }
+  style="padding:24px"
 >
-  <NDSProvider
-    theme={
-      Object {
-        "borders": Array [],
-        "breakpoints": Object {
-          "extraLarge": "1920px",
-          "extraSmall": "0px",
-          "large": "1360px",
-          "medium": "1024px",
-          "small": "768px",
-        },
-        "colors": Object {
-          "black": "#011e38",
-          "blackBlue": "#122b47",
-          "blue": "#216beb",
-          "darkBlue": "#00438f",
-          "darkGrey": "#434d59",
-          "green": "#008059",
-          "grey": "#c0c8d1",
-          "lightBlue": "#e1ebfa",
-          "lightGreen": "#e9f7f2",
-          "lightGrey": "#e4e7eb",
-          "lightRed": "#fae6ea",
-          "lightYellow": "#fcf5e3",
-          "red": "#cc1439",
-          "white": "#ffffff",
-          "whiteGrey": "#f0f2f5",
-          "yellow": "#ffbb00",
-        },
-        "fontSizes": Object {
-          "large": "20px",
-          "larger": "26px",
-          "largest": "46px",
-          "medium": "16px",
-          "small": "14px",
-          "smaller": "12px",
-        },
-        "fontWeights": Object {
-          "bold": "600",
-          "light": "300",
-          "medium": "500",
-          "normal": "400",
-        },
-        "fonts": Object {
-          "base": "'IBM Plex Sans', sans-serif",
-          "mono": "'IBM Plex Mono', monospace",
-        },
-        "lineHeights": Object {
-          "base": "1.5",
-          "sectionTitle": "1.23076923",
-          "smallTextBase": "1.71428571",
-          "smallTextCompressed": "1.14285714",
-          "smallerText": "1.33333333",
-          "subsectionTitle": "1.2",
-          "title": "1.04347826",
-        },
-        "radii": Object {
-          "circle": "50%",
-          "medium": "4px",
-          "small": "2px",
-        },
-        "shadows": Object {
-          "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-          "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-          "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-          "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-          "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-        },
-        "space": Object {
-          "half": "4px",
-          "none": "0px",
-          "x1": "8px",
-          "x2": "16px",
-          "x3": "24px",
-          "x4": "32px",
-          "x5": "40px",
-          "x6": "48px",
-          "x8": "64px",
-        },
-        "zIndex": Object {
-          "content": 100,
-          "overlay": 1000,
-          "tabsBar": 210,
-          "tabsScollIndicator": 200,
-        },
-      }
-    }
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
-    <Memo(GlobalStyleComponent) />
-    <NDSProvider__GlobalStyles
-      theme={
-        Object {
-          "borders": Array [],
-          "breakpoints": Object {
-            "extraLarge": "1920px",
-            "extraSmall": "0px",
-            "large": "1360px",
-            "medium": "1024px",
-            "small": "768px",
-          },
-          "colors": Object {
-            "black": "#011e38",
-            "blackBlue": "#122b47",
-            "blue": "#216beb",
-            "darkBlue": "#00438f",
-            "darkGrey": "#434d59",
-            "green": "#008059",
-            "grey": "#c0c8d1",
-            "lightBlue": "#e1ebfa",
-            "lightGreen": "#e9f7f2",
-            "lightGrey": "#e4e7eb",
-            "lightRed": "#fae6ea",
-            "lightYellow": "#fcf5e3",
-            "red": "#cc1439",
-            "white": "#ffffff",
-            "whiteGrey": "#f0f2f5",
-            "yellow": "#ffbb00",
-          },
-          "fontSizes": Object {
-            "large": "20px",
-            "larger": "26px",
-            "largest": "46px",
-            "medium": "16px",
-            "small": "14px",
-            "smaller": "12px",
-          },
-          "fontWeights": Object {
-            "bold": "600",
-            "light": "300",
-            "medium": "500",
-            "normal": "400",
-          },
-          "fonts": Object {
-            "base": "'IBM Plex Sans', sans-serif",
-            "mono": "'IBM Plex Mono', monospace",
-          },
-          "lineHeights": Object {
-            "base": "1.5",
-            "sectionTitle": "1.23076923",
-            "smallTextBase": "1.71428571",
-            "smallTextCompressed": "1.14285714",
-            "smallerText": "1.33333333",
-            "subsectionTitle": "1.2",
-            "title": "1.04347826",
-          },
-          "radii": Object {
-            "circle": "50%",
-            "medium": "4px",
-            "small": "2px",
-          },
-          "shadows": Object {
-            "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-            "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-            "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-            "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-            "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-          },
-          "space": Object {
-            "half": "4px",
-            "none": "0px",
-            "x1": "8px",
-            "x2": "16px",
-            "x3": "24px",
-            "x4": "32px",
-            "x5": "40px",
-            "x6": "48px",
-            "x8": "64px",
-          },
-          "zIndex": Object {
-            "content": 100,
-            "overlay": 1000,
-            "tabsBar": 210,
-            "tabsScollIndicator": 200,
-          },
-        }
-      }
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
     >
-      <div
-        className="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
       >
-        <ThemeProvider
-          theme={
-            Object {
-              "borders": Array [],
-              "breakpoints": Object {
-                "extraLarge": "1920px",
-                "extraSmall": "0px",
-                "large": "1360px",
-                "medium": "1024px",
-                "small": "768px",
-              },
-              "colors": Object {
-                "black": "#011e38",
-                "blackBlue": "#122b47",
-                "blue": "#216beb",
-                "darkBlue": "#00438f",
-                "darkGrey": "#434d59",
-                "green": "#008059",
-                "grey": "#c0c8d1",
-                "lightBlue": "#e1ebfa",
-                "lightGreen": "#e9f7f2",
-                "lightGrey": "#e4e7eb",
-                "lightRed": "#fae6ea",
-                "lightYellow": "#fcf5e3",
-                "red": "#cc1439",
-                "white": "#ffffff",
-                "whiteGrey": "#f0f2f5",
-                "yellow": "#ffbb00",
-              },
-              "fontSizes": Object {
-                "large": "20px",
-                "larger": "26px",
-                "largest": "46px",
-                "medium": "16px",
-                "small": "14px",
-                "smaller": "12px",
-              },
-              "fontWeights": Object {
-                "bold": "600",
-                "light": "300",
-                "medium": "500",
-                "normal": "400",
-              },
-              "fonts": Object {
-                "base": "'IBM Plex Sans', sans-serif",
-                "mono": "'IBM Plex Mono', monospace",
-              },
-              "lineHeights": Object {
-                "base": "1.5",
-                "sectionTitle": "1.23076923",
-                "smallTextBase": "1.71428571",
-                "smallTextCompressed": "1.14285714",
-                "smallerText": "1.33333333",
-                "subsectionTitle": "1.2",
-                "title": "1.04347826",
-              },
-              "radii": Object {
-                "circle": "50%",
-                "medium": "4px",
-                "small": "2px",
-              },
-              "shadows": Object {
-                "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-              },
-              "space": Object {
-                "half": "4px",
-                "none": "0px",
-                "x1": "8px",
-                "x2": "16px",
-                "x3": "24px",
-                "x4": "32px",
-                "x5": "40px",
-                "x6": "48px",
-                "x8": "64px",
-              },
-              "zIndex": Object {
-                "content": 100,
-                "overlay": 1000,
-                "tabsBar": 210,
-                "tabsScollIndicator": 200,
-              },
-            }
-          }
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD dKbtnU"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
         >
-          <Pagination
-            currentPage={3}
-            onNext={null}
-            onPrevious={null}
-            onSelectPage={null}
-            totalPages={4}
-          >
-            <Styled(Box)
-              aria-label="Pagination navigation"
-              as="nav"
-              theme={
-                Object {
-                  "borders": Array [],
-                  "breakpoints": Object {
-                    "extraLarge": "1920px",
-                    "extraSmall": "0px",
-                    "large": "1360px",
-                    "medium": "1024px",
-                    "small": "768px",
-                  },
-                  "colors": Object {
-                    "black": "#011e38",
-                    "blackBlue": "#122b47",
-                    "blue": "#216beb",
-                    "darkBlue": "#00438f",
-                    "darkGrey": "#434d59",
-                    "green": "#008059",
-                    "grey": "#c0c8d1",
-                    "lightBlue": "#e1ebfa",
-                    "lightGreen": "#e9f7f2",
-                    "lightGrey": "#e4e7eb",
-                    "lightRed": "#fae6ea",
-                    "lightYellow": "#fcf5e3",
-                    "red": "#cc1439",
-                    "white": "#ffffff",
-                    "whiteGrey": "#f0f2f5",
-                    "yellow": "#ffbb00",
-                  },
-                  "fontSizes": Object {
-                    "large": "20px",
-                    "larger": "26px",
-                    "largest": "46px",
-                    "medium": "16px",
-                    "small": "14px",
-                    "smaller": "12px",
-                  },
-                  "fontWeights": Object {
-                    "bold": "600",
-                    "light": "300",
-                    "medium": "500",
-                    "normal": "400",
-                  },
-                  "fonts": Object {
-                    "base": "'IBM Plex Sans', sans-serif",
-                    "mono": "'IBM Plex Mono', monospace",
-                  },
-                  "lineHeights": Object {
-                    "base": "1.5",
-                    "sectionTitle": "1.23076923",
-                    "smallTextBase": "1.71428571",
-                    "smallTextCompressed": "1.14285714",
-                    "smallerText": "1.33333333",
-                    "subsectionTitle": "1.2",
-                    "title": "1.04347826",
-                  },
-                  "radii": Object {
-                    "circle": "50%",
-                    "medium": "4px",
-                    "small": "2px",
-                  },
-                  "shadows": Object {
-                    "error": "0px 0px 5px 0px rgba(204, 20, 57, .9)",
-                    "focus": "0px 0px 5px 0px rgba(33, 107, 235, .9)",
-                    "large": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)",
-                    "medium": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)",
-                    "small": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)",
-                  },
-                  "space": Object {
-                    "half": "4px",
-                    "none": "0px",
-                    "x1": "8px",
-                    "x2": "16px",
-                    "x3": "24px",
-                    "x4": "32px",
-                    "x5": "40px",
-                    "x6": "48px",
-                    "x8": "64px",
-                  },
-                  "zIndex": Object {
-                    "content": 100,
-                    "overlay": 1000,
-                    "tabsBar": 210,
-                    "tabsScollIndicator": 200,
-                  },
-                }
-              }
-            >
-              <nav
-                aria-label="Pagination navigation"
-                className="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
-              >
-                <PreviousButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="leftArrow"
-                        ml="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD dKbtnU"
-                          color="currentColor"
-                          focusable={false}
-                          icon="leftArrow"
-                          ml="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD dKbtnU"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="leftArrow"
-                            ml="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                       Previous
-                    </button>
-                  </Pagination__PaginationButton>
-                </PreviousButton>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 1"
-                  currentPage={false}
-                  disabled={false}
-                  key="1"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 1"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    1
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 2"
-                  currentPage={false}
-                  disabled={false}
-                  key="2"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 2"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    2
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={true}
-                  aria-label={null}
-                  currentPage={true}
-                  disabled={true}
-                  key="3"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={true}
-                    aria-label={null}
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
-                    disabled={true}
-                    onClick={[Function]}
-                  >
-                    3
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <Styled(Pagination__PaginationButton)
-                  aria-current={false}
-                  aria-label="Go to page 4"
-                  currentPage={false}
-                  disabled={false}
-                  key="4"
-                  onClick={[Function]}
-                >
-                  <button
-                    aria-current={false}
-                    aria-label="Go to page 4"
-                    className="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    4
-                  </button>
-                </Styled(Pagination__PaginationButton)>
-                <NextButton
-                  disabled={false}
-                  onClick={null}
-                >
-                  <Pagination__PaginationButton
-                    disabled={false}
-                    onClick={null}
-                  >
-                    <button
-                      className="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
-                      disabled={false}
-                      onClick={null}
-                    >
-                      Next 
-                      <Styled(Component)
-                        color="currentColor"
-                        icon="rightArrow"
-                        mr="-8px"
-                        size="24px"
-                        title={null}
-                      >
-                        <ForwardRef
-                          className="sc-AykKD faeHcD"
-                          color="currentColor"
-                          focusable={false}
-                          icon="rightArrow"
-                          mr="-8px"
-                          size="24px"
-                          title={null}
-                        >
-                          <svg
-                            aria-hidden={true}
-                            className="sc-AykKD faeHcD"
-                            color="currentColor"
-                            fill="currentColor"
-                            focusable={false}
-                            height="24px"
-                            icon="rightArrow"
-                            mr="-8px"
-                            size="24px"
-                            title={null}
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-                              key="0"
-                            />
-                          </svg>
-                        </ForwardRef>
-                      </Styled(Component)>
-                    </button>
-                  </Pagination__PaginationButton>
-                </NextButton>
-              </nav>
-            </Styled(Box)>
-          </Pagination>
-        </ThemeProvider>
-      </div>
-    </NDSProvider__GlobalStyles>
-  </NDSProvider>
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 1"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 2"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        2
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        disabled=""
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page 4"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+      >
+        4
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="sc-AykKD faeHcD"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
 </div>
 `;

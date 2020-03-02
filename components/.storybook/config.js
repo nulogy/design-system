@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { configure, addDecorator, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
 import { withA11y } from "@storybook/addon-a11y";
+import { select, withKnobs } from "@storybook/addon-knobs";
 
 const req = require.context("../src", true, /\.story\.js$/);
 
@@ -60,10 +61,14 @@ addParameters({
   }
 });
 
-addDecorator(story => (
-  <div style={{ padding: theme.space.x3 }}>
-    <NDSProvider>{story()}</NDSProvider>
-  </div>
-));
+addDecorator(withKnobs);
+
+addDecorator(story => {
+  return (
+    <div style={{ padding: theme.space.x3 }}>
+      <NDSProvider locale={select("NDSProvider Locale", ["en", "fr"], "en")}>{story()}</NDSProvider>
+    </div>
+  );
+});
 
 configure(loadStories, module);

@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { isBefore } from "date-fns";
+import { useTranslation } from "react-i18next";
 import { MonthPicker } from "../MonthPicker";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
+
+const DEFAULT_LABEL = "Month Range";
 
 const MonthRange = ({
   dateFormat,
@@ -45,7 +48,7 @@ const MonthRange = ({
   const validateDateRange = () => {
     let error;
     if (endMonth && startMonth && isBefore(endMonth, startMonth)) {
-      error = "End date is before start Month";
+      error = "end month is before start month";
     }
     setRangeError(error);
     if (onRangeChange) {
@@ -89,12 +92,17 @@ const MonthRange = ({
     validateDateRange();
   }, [startMonth, endMonth]);
 
+  const { t } = useTranslation();
+
   return (
     <RangeContainer
-      labelProps={labelProps}
+      labelProps={{
+        ...labelProps,
+        labelText: labelProps.labelText === DEFAULT_LABEL ? t("month range") : labelProps.labelText
+      }}
       startComponent={startDateInput}
       endComponent={endDateInput}
-      errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+      errorMessages={!disableRangeValidation ? [t(rangeError), errorMessage] : [errorMessage]}
     />
   );
 };
@@ -134,7 +142,7 @@ MonthRange.defaultProps = {
   disableRangeValidation: false,
   labelProps: {
     ...FieldLabelDefaultProps,
-    labelText: "Month Range"
+    labelText: DEFAULT_LABEL
   },
   minDate: null,
   maxDate: null,

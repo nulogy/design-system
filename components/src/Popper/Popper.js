@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 
+import { useTranslation } from "react-i18next";
 import { PopperArrow } from "../utils";
 import { keyCodes } from "../constants";
 
@@ -122,6 +123,7 @@ const Popper = React.forwardRef(
       const innerChildren = children.props.children;
       return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
     };
+    const { t } = useTranslation();
     return (
       <Manager ref={popperRef}>
         <Reference>
@@ -130,7 +132,7 @@ const Popper = React.forwardRef(
               "aria-haspopup": true,
               "aria-expanded": isOpen,
               "aria-describedby": id,
-              "aria-label": isOpen ? "Close" : "Open",
+              "aria-label": isOpen ? t("close") : t("open"),
               ...eventHandlers,
               ref
             })

@@ -21,7 +21,7 @@ describe("TimeRange", () => {
       const { queryByText } = render(
         <TimeRange onRangeChange={onRangeChange} defaultStartTime="12:00" defaultEndTime="05:00" />
       );
-      expect(queryByText("End time is before start time")).not.toBeNull();
+      expect(queryByText("end time is before start time")).not.toBeNull();
     });
     it("returns the start date when the start date changes", () => {
       const onStartTimeChange = jest.fn();

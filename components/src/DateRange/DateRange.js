@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { isBefore, isSameDay } from "date-fns";
 import styled from "styled-components";
 
+import { useTranslation } from "react-i18next";
 import { DatePicker } from "../DatePicker";
 import { RangeContainer } from "../RangeContainer";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
@@ -11,6 +12,8 @@ import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 import { TimePicker } from "../TimePicker";
 import theme from "../theme";
 import { getDuration } from "../TimeRange/TimeRange.utils";
+
+const DEFAULT_LABEL = "Date Range";
 
 const StyledStartTime = styled(TimePicker)({
   marginLeft: theme.space.x1
@@ -83,12 +86,12 @@ const DateRange = ({
     let error;
     if (endDate && startDate) {
       if (isBefore(endDate, startDate)) {
-        error = "End date is before start date";
+        error = "end date is before start date";
       }
       if (isSameDay(endDate, startDate) && showTimes) {
         const duration = getDuration(startTime, endTime);
         if (duration < 0) {
-          error = "End time is before start time";
+          error = "end time is before start time";
         }
       }
     }
@@ -164,14 +167,19 @@ const DateRange = ({
     validateDateRange();
   }, [startDate, endDate, startTime, endTime]);
 
+  const { t } = useTranslation();
+
   return (
     <>
       <DateRangeStyles />
       <RangeContainer
-        labelProps={labelProps}
+        labelProps={{
+          ...labelProps,
+          labelText: labelProps.labelText === DEFAULT_LABEL ? t("date range") : labelProps.labelText
+        }}
         startComponent={startDateInput}
         endComponent={endDateInput}
-        errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+        errorMessages={!disableRangeValidation ? [t(rangeError), errorMessage] : [errorMessage]}
       />
     </>
   );
@@ -220,7 +228,7 @@ DateRange.defaultProps = {
   disableRangeValidation: false,
   labelProps: {
     ...FieldLabelDefaultProps,
-    labelText: "Date Range"
+    labelText: DEFAULT_LABEL
   },
   minDate: null,
   maxDate: null,
