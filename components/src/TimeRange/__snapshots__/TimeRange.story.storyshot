@@ -18,7 +18,7 @@ exports[`Storyshots TimeRange custom locale 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          time range
+          Time range
         </span>
       </div>
     </label>
@@ -206,7 +206,7 @@ exports[`Storyshots TimeRange default 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          time range
+          Time range
         </span>
       </div>
     </label>
@@ -394,7 +394,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          time range
+          Time range
         </span>
       </div>
     </label>
@@ -582,7 +582,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          time range
+          Time range
         </span>
       </div>
     </label>
@@ -770,7 +770,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
         >
-          time range
+          Time range
         </span>
       </div>
     </label>
