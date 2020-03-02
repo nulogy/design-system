@@ -11,7 +11,14 @@ export const columnPropType = PropTypes.shape({
 });
 
 export const rowPropType = PropTypes.objectOf(
-  PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool, PropTypes.func, PropTypes.shape({})])
+  PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+    PropTypes.bool,
+    PropTypes.func,
+    PropTypes.node,
+    PropTypes.shape({})
+  ])
 );
 
 export const columnsPropType = PropTypes.arrayOf(columnPropType);
