@@ -26,7 +26,9 @@ before_deploy:
 deploy:
   provider: script
   script: yarn lerna publish --yes
-  cleanup: false
+  email: marianneb@nulogy.com
+  skip_cleanup: true
+  keep_history: true
   on:
     repo: nulogy/design-system
     branch: master
