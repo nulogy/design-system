@@ -522,14 +522,14 @@ exports[`Storyshots Table with everything 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="Go to page 2"
+        aria-label="Go to page {{count}}"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
       </button>
       <button
         aria-current="false"
-        aria-label="Go to page 3"
+        aria-label="Go to page {{count}}"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
@@ -654,28 +654,28 @@ exports[`Storyshots Table with pagination 1`] = `
       </button>
       <button
         aria-current="false"
-        aria-label="Go to page 2"
+        aria-label="Go to page {{count}}"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         2
       </button>
       <button
         aria-current="false"
-        aria-label="Go to page 3"
+        aria-label="Go to page {{count}}"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         3
       </button>
       <button
         aria-current="false"
-        aria-label="Go to page 4"
+        aria-label="Go to page {{count}}"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         4
       </button>
       <button
         aria-current="false"
-        aria-label="Go to page 5"
+        aria-label="Go to page {{count}}"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         5
@@ -689,7 +689,7 @@ exports[`Storyshots Table with pagination 1`] = `
       </p>
       <button
         aria-current="false"
-        aria-label="Go to page 8"
+        aria-label="Go to page {{count}}"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
       >
         8
