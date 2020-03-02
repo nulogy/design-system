@@ -14,7 +14,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
         aria-describedby="random-id-13"
         aria-expanded="false"
         aria-haspopup="true"
-        aria-label="open"
+        aria-label="Open"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
          Button 
@@ -35,7 +35,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
       aria-describedby="random-id-37"
       aria-expanded="true"
       aria-haspopup="true"
-      aria-label="close"
+      aria-label="Close"
       class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
     >
       Hover me
@@ -67,7 +67,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
       aria-describedby="random-id-29"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
     >
        Button 
@@ -87,7 +87,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
       aria-describedby="random-id-28"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
     >
        Button 
@@ -107,7 +107,7 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
       aria-describedby="random-id-31"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
     >
        Button 
@@ -130,7 +130,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
         aria-describedby="random-id-15"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
          Button 
@@ -163,7 +163,7 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
       aria-describedby="random-id-30"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
     >
        Button 
@@ -183,7 +183,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-describedby="random-id-32"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
     >
        Button 
@@ -192,7 +192,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-describedby="random-id-33"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Link-sc-1lpx3d0-0 hFcUQo"
       color="blue"
       href="/"
@@ -203,7 +203,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-describedby="random-id-34"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="sc-AykKF fhVcEi"
       color="currentColor"
       font-size="16px"
@@ -214,7 +214,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-describedby="random-id-35"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Box-sc-1qu1edy-0 kjiPdZ"
       width="200px"
     >
@@ -224,7 +224,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-describedby="random-id-36"
       aria-expanded="false"
       aria-haspopup="true"
-      aria-label="open"
+      aria-label="Open"
       class="Box-sc-1qu1edy-0 cYAGmG"
     >
       Box
@@ -247,7 +247,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-16"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -268,7 +268,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-17"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -289,7 +289,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-18"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -314,7 +314,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-19"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -335,7 +335,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-20"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -356,7 +356,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-21"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -381,7 +381,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-22"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -402,7 +402,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-23"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -423,7 +423,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-24"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -448,7 +448,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-25"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -469,7 +469,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-26"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -490,7 +490,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-describedby="random-id-27"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
         Tooltip trigger
@@ -526,7 +526,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
         aria-describedby="random-id-14"
         aria-expanded="true"
         aria-haspopup="true"
-        aria-label="close"
+        aria-label="Close"
         class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
       >
          Button 

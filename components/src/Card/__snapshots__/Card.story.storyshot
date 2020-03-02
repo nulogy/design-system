@@ -23,7 +23,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
         <button
           aria-expanded="false"
           aria-haspopup="true"
-          aria-label="open"
+          aria-label="Open"
           class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
           type="button"
         >
@@ -98,7 +98,7 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
         <button
           aria-expanded="false"
           aria-haspopup="true"
-          aria-label="open"
+          aria-label="Open"
           class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
           type="button"
         >
