@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/nulogy/design-system/compare/v1.1.0...v1.2.0) (2020-03-02)
+
+
+### Features
+
+* add locaization to NDS through locale prop on NDSProvider ([#570](https://github.com/nulogy/design-system/issues/570)) ([efb0f24](https://github.com/nulogy/design-system/commit/efb0f24))
+
+
+
+
+
 # [1.1.0](https://github.com/nulogy/design-system/compare/v1.0.9...v1.1.0) (2020-02-28)
 
 **Note:** Version bump only for package @nulogy/components-e2e

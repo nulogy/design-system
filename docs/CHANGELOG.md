@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/nulogy/design-system/compare/v1.1.0...v1.2.0) (2020-03-02)
+
+
+### Features
+
+* replace hard coded strings with props ([#573](https://github.com/nulogy/design-system/issues/573)) ([6a32adb](https://github.com/nulogy/design-system/commit/6a32adb))
+
+
+
+
+
 # [1.1.0](https://github.com/nulogy/design-system/compare/v1.0.9...v1.1.0) (2020-02-28)
 
 
