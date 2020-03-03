@@ -1,4 +1,4 @@
-// eslint-disable-file no-use-before-define
+/* eslint-disable-file */
 const React = require("react");
 const reactI18next = require("react-i18next");
 
