@@ -5,10 +5,14 @@ import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
 import { withA11y } from "@storybook/addon-a11y";
 import { select, withKnobs } from "@storybook/addon-knobs";
-
-const ALL_LOCALES = ["de_DE", "en_US", "es_MX", "fr_FR", "nl_NL", "pl_PL", "pt_BR", "ro_RO"];
+import { ALL_NDS_LOCALES } from "../src/locales.const";
 
 const req = require.context("../src", true, /\.story\.js$/);
+
+const localeKnobOptions = ALL_NDS_LOCALES.reduce((obj, i) => {
+  obj[`${i.label} "${i.value}"`] = i.value;
+  return obj;
+}, {});
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
@@ -68,7 +72,7 @@ addDecorator(withKnobs);
 addDecorator(story => {
   return (
     <div style={{ padding: theme.space.x3 }}>
-      <NDSProvider locale={select("NDSProvider Locale", ALL_LOCALES, "en_US")}>{story()}</NDSProvider>
+      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
     </div>
   );
 });

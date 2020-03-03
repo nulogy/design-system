@@ -212,6 +212,10 @@ export const menuData = [
       {
         name: "Style props",
         href: "/guides/style-props"
+      },
+      {
+        name: "Localization",
+        href: "/guides/localization"
       }
     ]
   },

@@ -42,3 +42,5 @@ export { TimeRange } from "./TimeRange";
 export { RangeContainer } from "./RangeContainer";
 export { Overlay } from "./Overlay";
 export { LoadingAnimation } from "./LoadingAnimation";
+
+export { ALL_NDS_LOCALES } from "./locales.const";

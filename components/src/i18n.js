@@ -1,4 +1,5 @@
 import i18n from "i18next";
+/* eslint-disable */
 import de_DE from "../locales/de_DE.json";
 import en_US from "../locales/en_US.json";
 import es_MX from "../locales/es_MX.json";
@@ -7,6 +8,7 @@ import nl_NL from "../locales/nl_NL.json";
 import pl_PL from "../locales/pl_pL.json";
 import pt_BR from "../locales/pt_BR.json";
 import ro_RO from "../locales/ro_RO.json";
+/* eslint-enable */
 
 const resources = {
   de_DE: {
