@@ -8,7 +8,7 @@ import theme from "../theme";
 import { Box } from "../Box";
 
 const ANIMATION_DURATION = 2;
-const TOAST_Y = "-56px";
+const TOAST_Y = "0px";
 
 export const fadeIn = keyframes`
 0% {
@@ -30,7 +30,7 @@ export const fadeOut = keyframes`
 
 export const slideOut = keyframes`
 0% {
-  bottom: 0;
+  bottom: 32px;
 }
 100% {
   bottom: ${TOAST_Y};
@@ -42,7 +42,7 @@ export const slideIn = keyframes`
   bottom: ${TOAST_Y};
 }
 100% {
-  bottom: 0;
+  bottom: 32px;
 }
 `;
 
@@ -51,7 +51,6 @@ const slideInStyle = css`
   animation-duration: 0.15s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
-  animation-delay: 0.1s;
 `;
 
 const slideOutStyle = css`
@@ -82,7 +81,6 @@ const AnimatedAlertBottom = styled(Alert)`
 `;
 
 const AnimatedBoxBottom = styled(Box)`
-  box-shadow: ${theme.shadows.medium};
   position: absolute;
   bottom: ${TOAST_Y};
   left: 0;
