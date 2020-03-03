@@ -6,6 +6,8 @@ import theme from "../src/theme";
 import { withA11y } from "@storybook/addon-a11y";
 import { select, withKnobs } from "@storybook/addon-knobs";
 
+const ALL_LOCALES = ["de_DE", "en_US", "es_MX", "fr_FR", "nl_NL", "pl_PL", "pt_BR", "ro_RO"];
+
 const req = require.context("../src", true, /\.story\.js$/);
 
 function loadStories() {
@@ -66,7 +68,7 @@ addDecorator(withKnobs);
 addDecorator(story => {
   return (
     <div style={{ padding: theme.space.x3 }}>
-      <NDSProvider locale={select("NDSProvider Locale", ["en", "fr"], "en")}>{story()}</NDSProvider>
+      <NDSProvider locale={select("NDSProvider Locale", ALL_LOCALES, "en_US")}>{story()}</NDSProvider>
     </div>
   );
 });
