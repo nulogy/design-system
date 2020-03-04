@@ -8,7 +8,7 @@ exports[`Storyshots Flex Flex 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -54,7 +54,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC kwkuVs"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bMqhOS"
       height="400px"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5"
     >
@@ -90,7 +90,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
       </div>
     </div>
     <p
-      class="sc-AykKF jKbmDj"
+      class="Text-sc-1wu7vpu-0 jRzHjr"
       color="currentColor"
       font-size="16px"
     >
@@ -108,10 +108,10 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bfEzXq"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gDhPPo"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
@@ -147,7 +147,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
       </div>
     </div>
     <p
-      class="sc-AykKF jKbmDj"
+      class="Text-sc-1wu7vpu-0 jRzHjr"
       color="currentColor"
       font-size="16px"
     >
@@ -165,7 +165,7 @@ exports[`Storyshots Flex With custom order 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -216,7 +216,7 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC kfmaOe"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bvqllw"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -262,7 +262,7 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC yAmtA"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cJUQXa"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -308,7 +308,7 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -354,7 +354,7 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC khOMAy"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fNTwpY"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -400,7 +400,7 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bfEzXq"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gDhPPo"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -446,7 +446,7 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hCqMUL"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iVoopp"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -492,7 +492,7 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC jKtKTJ"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 boPTXH"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -542,7 +542,7 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
       width="500"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC dKkYHc"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dxunDa"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
@@ -605,7 +605,7 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
       width="500"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC DYcjL"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dvMWKN"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
@@ -668,7 +668,7 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
       width="500"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cGflKI"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bRbsWG"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
@@ -727,7 +727,7 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC jNmqHm"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iYixTk"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -773,7 +773,7 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hLdNpw"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gcVblK"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -819,7 +819,7 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cSjYEX"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fMbRhR"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -865,7 +865,7 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC kwWCOH"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ieyYxt"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -911,7 +911,7 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC iqqOmY"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jJopHC"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
@@ -957,7 +957,7 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC egoSOR"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bNRoxD"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div

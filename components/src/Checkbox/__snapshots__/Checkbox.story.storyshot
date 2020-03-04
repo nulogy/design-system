@@ -8,7 +8,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -16,7 +16,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           type="checkbox"
         />
@@ -24,7 +24,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -44,7 +44,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -52,7 +52,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           type="checkbox"
         />
         <div
@@ -72,7 +72,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -81,7 +81,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
           aria-invalid="false"
           aria-required="false"
           checked=""
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           type="checkbox"
         />
@@ -89,7 +89,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -109,7 +109,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 jxKJCC"
@@ -118,7 +118,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa Checkbox-sc-1nm58f1-2 dGUzME"
           disabled=""
           id="checkbox-1"
           type="checkbox"
@@ -128,7 +128,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
           disabled=""
         />
         <p
-          class="sc-AykKF gRcVjH"
+          class="Text-sc-1wu7vpu-0 boKLRH"
           color="currentColor"
           disabled=""
           font-size="16px"
@@ -138,7 +138,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 jxKJCC"
@@ -148,7 +148,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
           aria-invalid="false"
           aria-required="false"
           checked=""
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa Checkbox-sc-1nm58f1-2 dGUzME"
           disabled=""
           id="checkbox-2"
           type="checkbox"
@@ -159,7 +159,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
           disabled=""
         />
         <p
-          class="sc-AykKF gRcVjH"
+          class="Text-sc-1wu7vpu-0 boKLRH"
           color="currentColor"
           disabled=""
           font-size="16px"
@@ -180,7 +180,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -188,7 +188,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
         <input
           aria-invalid="true"
           aria-required="false"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 djfPeS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 djfPeS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           type="checkbox"
         />
@@ -196,7 +196,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -205,7 +205,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -214,7 +214,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
           aria-invalid="true"
           aria-required="false"
           checked=""
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 djfPeS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 djfPeS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           type="checkbox"
         />
@@ -222,7 +222,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -242,7 +242,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -250,7 +250,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
         <input
           aria-invalid="false"
           aria-required="true"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           required=""
           type="checkbox"
@@ -259,7 +259,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -279,7 +279,7 @@ exports[`Storyshots Checkbox With state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -287,7 +287,7 @@ exports[`Storyshots Checkbox With state 1`] = `
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox-1"
           type="checkbox"
         />
@@ -295,7 +295,7 @@ exports[`Storyshots Checkbox With state 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -304,7 +304,7 @@ exports[`Storyshots Checkbox With state 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -312,7 +312,7 @@ exports[`Storyshots Checkbox With state 1`] = `
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox-2"
           type="checkbox"
         />
@@ -320,7 +320,7 @@ exports[`Storyshots Checkbox With state 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -340,7 +340,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -349,7 +349,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
           aria-invalid="false"
           aria-required="false"
           checked=""
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           readonly=""
           type="checkbox"
@@ -359,7 +359,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eUjqVh"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -368,7 +368,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -376,7 +376,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           readonly=""
           type="checkbox"
@@ -385,7 +385,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eUjqVh"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -394,7 +394,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -403,7 +403,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
           aria-invalid="true"
           aria-required="false"
           checked=""
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 djfPeS sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 djfPeS Checkbox-sc-1nm58f1-2 dGUzME"
           id="checkbox"
           readonly=""
           type="checkbox"
@@ -413,7 +413,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
           class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eUjqVh"
         />
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -422,7 +422,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+      class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
     >
       <label
         class="ClickInputLabel-j2axnv-0 jxKJCC"
@@ -432,7 +432,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
           aria-invalid="false"
           aria-required="false"
           checked=""
-          class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa Checkbox-sc-1nm58f1-2 dGUzME"
           disabled=""
           id="checkbox"
           readonly=""
@@ -444,7 +444,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
           disabled=""
         />
         <p
-          class="sc-AykKF gRcVjH"
+          class="Text-sc-1wu7vpu-0 boKLRH"
           color="currentColor"
           disabled=""
           font-size="16px"

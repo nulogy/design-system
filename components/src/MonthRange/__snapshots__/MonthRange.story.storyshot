@@ -8,7 +8,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -27,7 +27,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -36,7 +36,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -52,7 +52,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -71,10 +71,10 @@ exports[`Storyshots MonthRange custom locale 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -82,7 +82,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -91,7 +91,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -107,7 +107,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -138,7 +138,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -157,7 +157,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -166,7 +166,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -182,7 +182,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -201,10 +201,10 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -212,7 +212,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -221,7 +221,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -237,7 +237,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -268,7 +268,7 @@ exports[`Storyshots MonthRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -287,7 +287,7 @@ exports[`Storyshots MonthRange default 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -296,7 +296,7 @@ exports[`Storyshots MonthRange default 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -312,7 +312,7 @@ exports[`Storyshots MonthRange default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -331,10 +331,10 @@ exports[`Storyshots MonthRange default 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -342,7 +342,7 @@ exports[`Storyshots MonthRange default 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -351,7 +351,7 @@ exports[`Storyshots MonthRange default 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -367,7 +367,7 @@ exports[`Storyshots MonthRange default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -398,7 +398,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -417,7 +417,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -426,7 +426,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -442,7 +442,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -461,10 +461,10 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -472,7 +472,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -481,7 +481,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -497,7 +497,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -528,7 +528,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -547,7 +547,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -556,7 +556,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -572,7 +572,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -591,10 +591,10 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -602,7 +602,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -611,7 +611,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -627,7 +627,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -658,7 +658,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -677,7 +677,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -686,7 +686,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -703,7 +703,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -721,12 +721,12 @@ exports[`Storyshots MonthRange individual input error 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cGCKPF"
           color="#cc1439"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD bNpWy"
+            class="Icon-fc7twp-0 jqHWbl"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -741,10 +741,10 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 dIOwUC"
           >
             <p
-              class="sc-AykKF jKbmDj"
+              class="Text-sc-1wu7vpu-0 jRzHjr"
               color="currentColor"
               font-size="16px"
             >
@@ -754,10 +754,10 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -765,7 +765,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -774,7 +774,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -790,7 +790,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -821,7 +821,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -840,7 +840,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -849,7 +849,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -865,7 +865,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -884,10 +884,10 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -895,7 +895,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -904,7 +904,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -920,7 +920,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -940,12 +940,12 @@ exports[`Storyshots MonthRange with custom error 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC fdIsmY"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 KMefC"
       color="#cc1439"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD bNpWy"
+        class="Icon-fc7twp-0 jqHWbl"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -960,10 +960,10 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 dIOwUC"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >

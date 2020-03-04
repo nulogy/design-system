@@ -9,12 +9,12 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
   >
     <button
       aria-label="Cancel"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hAZPvX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 leqAoO IconicButton-sc-1u3dojp-2 hOBWmS"
       disabled=""
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="Icon-fc7twp-0 jysEEq"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -29,7 +29,7 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="Text-sc-1wu7vpu-0 cmRLI"
         color="currentColor"
         font-size="16px"
       >
@@ -38,12 +38,12 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
     </button>
     <button
       aria-label="Lock"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hAZPvX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 leqAoO IconicButton-sc-1u3dojp-2 hOBWmS"
       disabled=""
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="Icon-fc7twp-0 jysEEq"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -58,7 +58,7 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="Text-sc-1wu7vpu-0 cmRLI"
         color="currentColor"
         font-size="16px"
       >
@@ -78,11 +78,11 @@ exports[`Storyshots IconicButton with a hidden label 1`] = `
   >
     <button
       aria-label="Hidden Label"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 feBDxe sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 cqQSVp IconicButton-sc-1u3dojp-2 hOBWmS"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="Icon-fc7twp-0 jysEEq"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -116,11 +116,11 @@ exports[`Storyshots IconicButton with a long label 1`] = `
   >
     <button
       aria-label="I am an Iconic Button with a really really really long label"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 heRWcu IconicButton-sc-1u3dojp-2 hOBWmS"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="Icon-fc7twp-0 jysEEq"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -135,7 +135,7 @@ exports[`Storyshots IconicButton with a long label 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="Text-sc-1wu7vpu-0 cmRLI"
         color="currentColor"
         font-size="16px"
       >
@@ -155,11 +155,11 @@ exports[`Storyshots IconicButton with label 1`] = `
   >
     <button
       aria-label="Delete"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 heRWcu IconicButton-sc-1u3dojp-2 hOBWmS"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="Icon-fc7twp-0 jysEEq"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -174,7 +174,7 @@ exports[`Storyshots IconicButton with label 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="Text-sc-1wu7vpu-0 cmRLI"
         color="currentColor"
         font-size="16px"
       >
@@ -193,11 +193,11 @@ exports[`Storyshots IconicButton without a label 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <button
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 heRWcu IconicButton-sc-1u3dojp-2 hOBWmS"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="Icon-fc7twp-0 jysEEq"
         color="currentColor"
         fill="currentColor"
         focusable="false"

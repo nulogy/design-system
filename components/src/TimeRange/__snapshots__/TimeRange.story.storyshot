@@ -8,7 +8,7 @@ exports[`Storyshots TimeRange custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -27,7 +27,7 @@ exports[`Storyshots TimeRange custom locale 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -81,7 +81,7 @@ exports[`Storyshots TimeRange custom locale 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -100,10 +100,10 @@ exports[`Storyshots TimeRange custom locale 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -111,7 +111,7 @@ exports[`Storyshots TimeRange custom locale 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -165,7 +165,7 @@ exports[`Storyshots TimeRange custom locale 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -196,7 +196,7 @@ exports[`Storyshots TimeRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -215,7 +215,7 @@ exports[`Storyshots TimeRange default 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -269,7 +269,7 @@ exports[`Storyshots TimeRange default 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -288,10 +288,10 @@ exports[`Storyshots TimeRange default 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -299,7 +299,7 @@ exports[`Storyshots TimeRange default 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -353,7 +353,7 @@ exports[`Storyshots TimeRange default 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -384,7 +384,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -403,7 +403,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -457,7 +457,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -476,10 +476,10 @@ exports[`Storyshots TimeRange default selections 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -487,7 +487,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -541,7 +541,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -572,7 +572,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -591,7 +591,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -645,7 +645,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -664,10 +664,10 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -675,7 +675,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -729,7 +729,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -760,7 +760,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
       color="#011e38"
       style="display:block"
     >
@@ -779,7 +779,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -833,7 +833,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -852,10 +852,10 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fCVEij"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="Text-sc-1wu7vpu-0 jRzHjr"
           color="currentColor"
           font-size="16px"
         >
@@ -863,7 +863,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
       >
         <div
           class="nds-time-picker css-2b097c-container"
@@ -917,7 +917,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"

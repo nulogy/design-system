@@ -8,21 +8,21 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jlBcxZ"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cdNdPB"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cilXbR"
           width="100%"
         >
           <div
             class="Box-sc-1qu1edy-0 gBBctK"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 jnLXGP Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="48px"
@@ -65,12 +65,12 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
             class="Box-sc-1qu1edy-0 dVgOxh"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kaiHPv Alert-u8lbe-0 dikAgG"
               role="alert"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD fYtHvm"
+                class="Icon-fc7twp-0 fvROUF"
                 color="#cc1439"
                 fill="#cc1439"
                 focusable="false"
@@ -88,7 +88,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                 class="Box-sc-1qu1edy-0 jRfwdL"
               >
                 <p
-                  class="sc-AykKF frKGrq"
+                  class="Text-sc-1wu7vpu-0 deRFEe"
                   color="currentColor"
                   font-size="16px"
                   font-weight="bold"
@@ -106,7 +106,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
         style="border-top:solid 1px #e4e7eb"
       >
         <p
-          class="sc-AykKF kIbUBD"
+          class="Text-sc-1wu7vpu-0 bBEqIz"
           color="darkGrey"
           font-size="small"
         >
@@ -126,21 +126,21 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jlBcxZ"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cdNdPB"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cilXbR"
           width="100%"
         >
           <div
             class="Box-sc-1qu1edy-0 gBBctK"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 jnLXGP Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="48px"
@@ -183,7 +183,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
             class="Box-sc-1qu1edy-0 dVgOxh"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bMeZe Alert-u8lbe-0 dikAgG"
               role="alert"
             >
               <div
@@ -200,7 +200,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
         style="border-top:solid 1px #e4e7eb"
       >
         <p
-          class="sc-AykKF kIbUBD"
+          class="Text-sc-1wu7vpu-0 bBEqIz"
           color="darkGrey"
           font-size="small"
         >
@@ -220,21 +220,21 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jlBcxZ"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cdNdPB"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cilXbR"
           width="100%"
         >
           <div
             class="Box-sc-1qu1edy-0 eAbxAs"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 jnLXGP Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="48px"
@@ -277,12 +277,12 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
             class="Box-sc-1qu1edy-0 dVgOxh"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC jJNLJZ sc-fzXfLS keIsaA"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fFCJpb Alert-u8lbe-0 kpYvAK"
               role="alert"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD fYtHvm"
+                class="Icon-fc7twp-0 fvROUF"
                 color="#cc1439"
                 fill="#cc1439"
                 focusable="false"
@@ -300,7 +300,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                 class="Box-sc-1qu1edy-0 jRfwdL"
               >
                 <p
-                  class="sc-AykKF frKGrq"
+                  class="Text-sc-1wu7vpu-0 deRFEe"
                   color="currentColor"
                   font-size="16px"
                   font-weight="bold"
@@ -325,7 +325,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
         style="border-top:solid 1px #e4e7eb"
       >
         <p
-          class="sc-AykKF kIbUBD"
+          class="Text-sc-1wu7vpu-0 bBEqIz"
           color="darkGrey"
           font-size="small"
         >

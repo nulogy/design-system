@@ -8,13 +8,13 @@ exports[`Storyshots Pages/Details page Default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jgpCpZ"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -24,7 +24,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -64,12 +64,12 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -83,7 +83,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -111,12 +111,12 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               >
                 <div>
                   <button
@@ -129,7 +129,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -152,13 +152,13 @@ exports[`Storyshots Pages/Details page Default 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kftkEE"
       >
         <div
           class="Box-sc-1qu1edy-0 czbwcE"
         >
           <h1
-            class="sc-AykKG kjjZNK"
+            class="Text-sc-1wu7vpu-0-h1 dYSAlr"
             font-size="46px"
             font-weight="300"
           >
@@ -207,21 +207,21 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 fwepcq"
             >
               <h2
-                class="sc-AykKH bgiWDu"
+                class="Text-sc-1wu7vpu-0-h2 glngzX"
                 font-size="26px"
                 font-weight="500"
               >
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC euHflE"
+                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jIAWO"
               >
                 <div
                   class="Box-sc-1qu1edy-0 ezfApW"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -229,7 +229,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -241,7 +241,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -249,7 +249,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -261,7 +261,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -269,7 +269,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -281,7 +281,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -289,7 +289,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -301,7 +301,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -309,7 +309,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -321,7 +321,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -329,7 +329,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -347,7 +347,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 llptsQ"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="Text-sc-1wu7vpu-0-h2 eFqTRB"
                 font-size="26px"
                 font-weight="500"
               >
@@ -388,7 +388,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -407,11 +407,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -426,7 +426,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -436,7 +436,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -455,11 +455,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -474,7 +474,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -484,7 +484,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -503,11 +503,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -522,7 +522,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -532,7 +532,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -551,11 +551,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -570,7 +570,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -592,7 +592,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 fwepcq"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="Text-sc-1wu7vpu-0-h2 eFqTRB"
                 font-size="26px"
                 font-weight="500"
               >
@@ -627,7 +627,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -646,7 +646,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -665,7 +665,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -684,7 +684,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -710,17 +710,17 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 hxzuhQ"
             >
               <h3
-                class="sc-AykKI sc-AykKJ iembIV"
+                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 cxDzBp"
                 font-size="20px"
                 font-weight="500"
               >
                 Comments
               </h3>
               <form
-                class="sc-fzXfMx UmbCT"
+                class="Form-n70q8u-0 gBXptA"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                  class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
                 >
                   <textarea
                     aria-invalid="false"
@@ -734,12 +734,12 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   class="Box-sc-1qu1edy-0 jgHxgc"
                 >
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo sc-AykKK fmyQGk"
+                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo PrimaryButton-qz78sb-0 FEXbH"
                   >
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa QuietButton-sc-1l5k8i4-0 dgPQkb"
                   >
                     Cancel
                   </button>
@@ -762,13 +762,13 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jgpCpZ"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -778,7 +778,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -818,12 +818,12 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -837,7 +837,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -865,12 +865,12 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               >
                 <div>
                   <button
@@ -883,7 +883,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -906,17 +906,17 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kftkEE"
       >
         <div
           class="Box-sc-1qu1edy-0 ddCDMd"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC hzayjc"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 edVwBy"
             height="32px"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC llVkbw"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gbWxPe"
               width="[object Object]"
             >
               <a
@@ -928,7 +928,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="sc-AykKD bgTLfA"
+                class="Icon-fc7twp-0 ErSET"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
@@ -951,7 +951,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="sc-AykKD bgTLfA"
+                class="Icon-fc7twp-0 ErSET"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
@@ -967,11 +967,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </svg>
             </div>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 kHLgMR sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 HhAxY IconicButton-sc-1u3dojp-2 hOBWmS"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="Icon-fc7twp-0 jysEEq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -988,7 +988,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <h1
-            class="sc-AykKG kjjZNK"
+            class="Text-sc-1wu7vpu-0-h1 dYSAlr"
             font-size="46px"
             font-weight="300"
           >
@@ -1037,21 +1037,21 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 fwepcq"
             >
               <h2
-                class="sc-AykKH bgiWDu"
+                class="Text-sc-1wu7vpu-0-h2 glngzX"
                 font-size="26px"
                 font-weight="500"
               >
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC euHflE"
+                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jIAWO"
               >
                 <div
                   class="Box-sc-1qu1edy-0 ezfApW"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1059,7 +1059,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1071,7 +1071,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1079,7 +1079,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1091,7 +1091,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1099,7 +1099,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1111,7 +1111,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1119,7 +1119,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1131,7 +1131,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1139,7 +1139,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1151,7 +1151,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1159,7 +1159,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1177,7 +1177,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 llptsQ"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="Text-sc-1wu7vpu-0-h2 eFqTRB"
                 font-size="26px"
                 font-weight="500"
               >
@@ -1218,7 +1218,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1237,11 +1237,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1256,7 +1256,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1266,7 +1266,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1285,11 +1285,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1304,7 +1304,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1314,7 +1314,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1333,11 +1333,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1352,7 +1352,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1362,7 +1362,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1381,11 +1381,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1400,7 +1400,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1422,7 +1422,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 fwepcq"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="Text-sc-1wu7vpu-0-h2 eFqTRB"
                 font-size="26px"
                 font-weight="500"
               >
@@ -1457,7 +1457,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1476,7 +1476,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1495,7 +1495,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1514,7 +1514,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -1540,17 +1540,17 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 hxzuhQ"
             >
               <h3
-                class="sc-AykKI sc-AykKJ iembIV"
+                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 cxDzBp"
                 font-size="20px"
                 font-weight="500"
               >
                 Comments
               </h3>
               <form
-                class="sc-fzXfMx UmbCT"
+                class="Form-n70q8u-0 gBXptA"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                  class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
                 >
                   <textarea
                     aria-invalid="false"
@@ -1564,12 +1564,12 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   class="Box-sc-1qu1edy-0 jgHxgc"
                 >
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo sc-AykKK fmyQGk"
+                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo PrimaryButton-qz78sb-0 FEXbH"
                   >
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa QuietButton-sc-1l5k8i4-0 dgPQkb"
                   >
                     Cancel
                   </button>
@@ -1583,21 +1583,21 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eRdkwd"
           >
             <h2
-              class="sc-AykKH caijxQ"
+              class="Text-sc-1wu7vpu-0-h2 gRklbV"
               font-size="26px"
               font-weight="500"
             >
               I am sidebar
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 heRWcu IconicButton-sc-1u3dojp-2 hOBWmS"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="Icon-fc7twp-0 jysEEq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -1614,7 +1614,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <p
-            class="sc-AykKF jKbmDj"
+            class="Text-sc-1wu7vpu-0 jRzHjr"
             color="currentColor"
             font-size="16px"
           >
@@ -1635,13 +1635,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jgpCpZ"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -1651,7 +1651,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -1691,12 +1691,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -1710,7 +1710,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1738,12 +1738,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               >
                 <div>
                   <button
@@ -1756,7 +1756,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -1779,13 +1779,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kftkEE"
       >
         <div
           class="Box-sc-1qu1edy-0 czbwcE"
         >
           <h1
-            class="sc-AykKG kjjZNK"
+            class="Text-sc-1wu7vpu-0-h1 dYSAlr"
             font-size="46px"
             font-weight="300"
           >
@@ -1834,21 +1834,21 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 fwepcq"
             >
               <h2
-                class="sc-AykKH bgiWDu"
+                class="Text-sc-1wu7vpu-0-h2 glngzX"
                 font-size="26px"
                 font-weight="500"
               >
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC euHflE"
+                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jIAWO"
               >
                 <div
                   class="Box-sc-1qu1edy-0 ezfApW"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1856,7 +1856,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1868,7 +1868,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1876,7 +1876,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1888,7 +1888,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1896,7 +1896,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1908,7 +1908,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1916,7 +1916,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1928,7 +1928,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1936,7 +1936,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1948,7 +1948,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="Text-sc-1wu7vpu-0 jxaVNm"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1956,7 +1956,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="Text-sc-1wu7vpu-0 jRzHjr"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1974,7 +1974,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 llptsQ"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="Text-sc-1wu7vpu-0-h2 eFqTRB"
                 font-size="26px"
                 font-weight="500"
               >
@@ -2015,7 +2015,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2034,11 +2034,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2053,7 +2053,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2063,7 +2063,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2082,11 +2082,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2101,7 +2101,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2111,7 +2111,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2130,11 +2130,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2149,7 +2149,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2159,7 +2159,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2178,11 +2178,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="Icon-fc7twp-0 kUfAAl"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2197,7 +2197,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="Text-sc-1wu7vpu-0 jRzHjr"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2219,7 +2219,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 fwepcq"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="Text-sc-1wu7vpu-0-h2 eFqTRB"
                 font-size="26px"
                 font-weight="500"
               >
@@ -2254,7 +2254,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2273,7 +2273,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2292,7 +2292,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2311,7 +2311,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
                   >
                     <td
                       class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
@@ -2337,17 +2337,17 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 hxzuhQ"
             >
               <h3
-                class="sc-AykKI sc-AykKJ iembIV"
+                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 cxDzBp"
                 font-size="20px"
                 font-weight="500"
               >
                 Comments
               </h3>
               <form
-                class="sc-fzXfMx UmbCT"
+                class="Form-n70q8u-0 gBXptA"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                  class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
                 >
                   <textarea
                     aria-invalid="false"
@@ -2361,12 +2361,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   class="Box-sc-1qu1edy-0 jgHxgc"
                 >
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo sc-AykKK fmyQGk"
+                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo PrimaryButton-qz78sb-0 FEXbH"
                   >
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa QuietButton-sc-1l5k8i4-0 dgPQkb"
                   >
                     Cancel
                   </button>
@@ -2380,21 +2380,21 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eRdkwd"
           >
             <h2
-              class="sc-AykKH caijxQ"
+              class="Text-sc-1wu7vpu-0-h2 gRklbV"
               font-size="26px"
               font-weight="500"
             >
               Job 324400
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 heRWcu IconicButton-sc-1u3dojp-2 hOBWmS"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="Icon-fc7twp-0 jysEEq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -2411,23 +2411,23 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             </button>
           </div>
           <form
-            class="sc-fzXfMx UmbCT"
+            class="Form-n70q8u-0 gBXptA"
           >
             <fieldset
-              class="sc-fzXfMw iAKzA-d"
+              class="FormSection-sc-5yud6c-1 iWTTOf"
             >
               <legend
-                class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 hiJQbh"
                 font-size="20px"
                 font-weight="500"
               >
                 Job Information
               </legend>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2441,7 +2441,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -2459,10 +2459,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2475,14 +2475,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       Project description
                     </span>
                     <span
-                      class="sc-AykKF bNiwGI"
+                      class="Text-sc-1wu7vpu-0 AJnss"
                       color="darkGrey"
                       font-size="12px"
                     >
                       (Optional)
                     </span>
                     <p
-                      class="sc-AykKF sc-fzXfLV kckwMb"
+                      class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 gYbAkC"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2490,7 +2490,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </p>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -2507,10 +2507,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2591,10 +2591,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2608,7 +2608,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -2625,12 +2625,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </div>
                 </label>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cGCKPF"
                   color="#cc1439"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD bNpWy"
+                    class="Icon-fc7twp-0 jqHWbl"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
@@ -2645,10 +2645,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 dIOwUC"
                   >
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="Text-sc-1wu7vpu-0 jRzHjr"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2658,10 +2658,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2675,7 +2675,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -2693,10 +2693,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2710,7 +2710,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -2729,10 +2729,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2746,7 +2746,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -2764,10 +2764,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -2781,7 +2781,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -2799,7 +2799,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <fieldset
-                class="Fieldset-sc-9aoml1-0 SrOR sc-fzXfNd cniYLL"
+                class="Fieldset-sc-9aoml1-0 SrOR CheckboxGroup-sc-16y7xr8-0 dmMpTC"
               >
                 <legend
                   style="margin-bottom:8px"
@@ -2810,7 +2810,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Line Lead
                   </span>
                   <span
-                    class="sc-AykKF bNiwGI"
+                    class="Text-sc-1wu7vpu-0 AJnss"
                     color="darkGrey"
                     font-size="12px"
                   >
@@ -2818,7 +2818,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </span>
                 </legend>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -2826,7 +2826,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                       name="linelead"
                       type="checkbox"
                       value="christiaan"
@@ -2835,7 +2835,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                     />
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="Text-sc-1wu7vpu-0 jRzHjr"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2844,7 +2844,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -2852,7 +2852,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                       name="linelead"
                       type="checkbox"
                       value="matt"
@@ -2861,7 +2861,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
                     />
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="Text-sc-1wu7vpu-0 jRzHjr"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2870,7 +2870,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 jxKJCC"
@@ -2879,7 +2879,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa Checkbox-sc-1nm58f1-2 dGUzME"
                       disabled=""
                       name="linelead"
                       type="checkbox"
@@ -2890,7 +2890,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       disabled=""
                     />
                     <p
-                      class="sc-AykKF gRcVjH"
+                      class="Text-sc-1wu7vpu-0 boKLRH"
                       color="currentColor"
                       disabled=""
                       font-size="16px"
@@ -2900,7 +2900,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 jxKJCC"
@@ -2909,7 +2909,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa Checkbox-sc-1nm58f1-2 dGUzME"
                       disabled=""
                       name="linelead"
                       type="checkbox"
@@ -2920,7 +2920,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       disabled=""
                     />
                     <p
-                      class="sc-AykKF gRcVjH"
+                      class="Text-sc-1wu7vpu-0 boKLRH"
                       color="currentColor"
                       disabled=""
                       font-size="16px"
@@ -2931,7 +2931,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="Fieldset-sc-9aoml1-0 SrOR sc-fzXfNf cnzRUd"
+                class="Fieldset-sc-9aoml1-0 SrOR RadioGroup-pgv2w1-0 ipQJFh"
                 id="reconcile"
               >
                 <legend
@@ -2944,7 +2944,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </span>
                 </legend>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+                  class="Box-sc-1qu1edy-0 jgHxgc Radio-sc-82dpxx-2 fSARal"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -2953,7 +2953,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       aria-invalid="true"
                       aria-required="false"
                       checked=""
-                      class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+                      class="Radio__RadioInput-sc-82dpxx-1 ciJsGK Radio-sc-82dpxx-2 fSARal"
                       name="settingSelection"
                       type="radio"
                       value="yes"
@@ -2962,7 +2962,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
                     />
                     <span
-                      class="sc-AykKF jKbmDj"
+                      class="Text-sc-1wu7vpu-0 jRzHjr"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2971,7 +2971,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+                  class="Box-sc-1qu1edy-0 jgHxgc Radio-sc-82dpxx-2 fSARal"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -2979,7 +2979,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="true"
                       aria-required="false"
-                      class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+                      class="Radio__RadioInput-sc-82dpxx-1 ciJsGK Radio-sc-82dpxx-2 fSARal"
                       name="settingSelection"
                       type="radio"
                       value="no"
@@ -2988,7 +2988,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
                     />
                     <span
-                      class="sc-AykKF jKbmDj"
+                      class="Text-sc-1wu7vpu-0 jRzHjr"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2997,7 +2997,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+                  class="Box-sc-1qu1edy-0 jgHxgc Radio-sc-82dpxx-2 fSARal"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 jxKJCC"
@@ -3006,7 +3006,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="true"
                       aria-required="false"
-                      class="Radio__RadioInput-sc-82dpxx-1 bzuiei sc-fzXfNe kVFKSZ"
+                      class="Radio__RadioInput-sc-82dpxx-1 bzuiei Radio-sc-82dpxx-2 fSARal"
                       disabled=""
                       name="settingSelection"
                       type="radio"
@@ -3017,7 +3017,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       disabled=""
                     />
                     <span
-                      class="sc-AykKF gRcVjH"
+                      class="Text-sc-1wu7vpu-0 boKLRH"
                       color="currentColor"
                       disabled=""
                       font-size="16px"
@@ -3027,12 +3027,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cGCKPF"
                   color="#cc1439"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD bNpWy"
+                    class="Icon-fc7twp-0 jqHWbl"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
@@ -3047,10 +3047,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 dIOwUC"
                   >
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="Text-sc-1wu7vpu-0 jRzHjr"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -3060,7 +3060,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </fieldset>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq Toggle-sc-1oqd206-0 gIqgQC"
               >
                 <div
                   id="Job Visibility-label"
@@ -3093,7 +3093,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       />
                     </div>
                     <p
-                      class="sc-AykKF bqQwZK"
+                      class="Text-sc-1wu7vpu-0 flEKvK"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -3104,20 +3104,20 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </div>
             </fieldset>
             <fieldset
-              class="sc-fzXfMw iAKzA-d"
+              class="FormSection-sc-5yud6c-1 iWTTOf"
             >
               <legend
-                class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 hiJQbh"
                 font-size="20px"
                 font-weight="500"
               >
                 Rejects
               </legend>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -3131,7 +3131,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -3148,12 +3148,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </div>
                 </label>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cGCKPF"
                   color="#cc1439"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD bNpWy"
+                    class="Icon-fc7twp-0 jqHWbl"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
@@ -3168,10 +3168,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 dIOwUC"
                   >
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="Text-sc-1wu7vpu-0 jRzHjr"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -3181,10 +3181,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
                   color="#011e38"
                   style="display:block"
                 >
@@ -3198,7 +3198,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                   >
                     <div
                       class="Box-sc-1qu1edy-0 klanzh"
@@ -3215,7 +3215,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq Toggle-sc-1oqd206-0 gIqgQC"
               >
                 <div
                   id="Reject visibility-label"
@@ -3251,7 +3251,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       />
                     </div>
                     <p
-                      class="sc-AykKF ASBTe"
+                      class="Text-sc-1wu7vpu-0 bYIwbm"
                       color="currentColor"
                       disabled=""
                       font-size="16px"

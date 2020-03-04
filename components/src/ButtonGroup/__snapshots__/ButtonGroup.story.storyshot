@@ -15,7 +15,7 @@ exports[`Storyshots ButtonGroup ButtonGroup 1`] = `
         class="ButtonGroup-xkz195-0 jMubZv"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa PrimaryButton-qz78sb-0 FEXbH"
         >
           Button
         </button>
@@ -50,12 +50,12 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
         class="ButtonGroup-xkz195-0 jMubZv"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa PrimaryButton-qz78sb-0 FEXbH"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLO fTPgxe"
+          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa DangerButton-sc-1220u5k-0 hUeuBm"
         >
           Button
         </button>
@@ -65,16 +65,16 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa QuietButton-sc-1l5k8i4-0 dgPQkb"
         >
           Button
         </button>
         <button
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+          class="IconicButton__WrapperButton-sc-1u3dojp-1 heRWcu IconicButton-sc-1u3dojp-2 hOBWmS"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD kaUxeX"
+            class="Icon-fc7twp-0 jysEEq"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -91,11 +91,11 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
         </button>
         <button
           aria-label="Button"
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+          class="IconicButton__WrapperButton-sc-1u3dojp-1 heRWcu IconicButton-sc-1u3dojp-2 hOBWmS"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD kaUxeX"
+            class="Icon-fc7twp-0 jysEEq"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -110,7 +110,7 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
             />
           </svg>
           <p
-            class="sc-AykKF jTSHcw"
+            class="Text-sc-1wu7vpu-0 cmRLI"
             color="currentColor"
             font-size="16px"
           >
@@ -138,7 +138,7 @@ exports[`Storyshots ButtonGroup with alignment right 1`] = `
         class="ButtonGroup-xkz195-0 kPeNAt"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa PrimaryButton-qz78sb-0 FEXbH"
         >
           Button
         </button>
@@ -173,7 +173,7 @@ exports[`Storyshots ButtonGroup with alignment spaced 1`] = `
         class="ButtonGroup-xkz195-0 fGhOgc"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa PrimaryButton-qz78sb-0 FEXbH"
         >
           Button
         </button>

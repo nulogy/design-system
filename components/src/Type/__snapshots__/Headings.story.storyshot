@@ -8,7 +8,7 @@ exports[`Storyshots Headings Section Title 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <h2
-      class="sc-AykKH dIrZHw"
+      class="Text-sc-1wu7vpu-0-h2 iNwjDZ"
       font-size="26px"
       font-weight="500"
     >
@@ -26,7 +26,7 @@ exports[`Storyshots Headings Subsection Title 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <h3
-      class="sc-AykKI sc-AykKJ kxSqMb"
+      class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 gjtGVH"
       font-size="20px"
       font-weight="500"
     >
@@ -44,7 +44,7 @@ exports[`Storyshots Headings Title 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <h1
-      class="sc-AykKG caGURK"
+      class="Text-sc-1wu7vpu-0-h1 hfLeOn"
       font-size="46px"
       font-weight="300"
     >
@@ -62,14 +62,14 @@ exports[`Storyshots Headings With a custom margin 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <h1
-      class="sc-AykKG kjjZNK"
+      class="Text-sc-1wu7vpu-0-h1 dYSAlr"
       font-size="46px"
       font-weight="300"
     >
       Title
     </h1>
     <p
-      class="sc-AykKF jKbmDj"
+      class="Text-sc-1wu7vpu-0 jRzHjr"
       color="currentColor"
       font-size="16px"
     >

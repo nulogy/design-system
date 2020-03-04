@@ -8,10 +8,10 @@ exports[`Storyshots TimePicker default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
         color="#011e38"
         style="display:block"
       >
@@ -76,7 +76,7 @@ exports[`Storyshots TimePicker default 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -107,10 +107,10 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
         color="#011e38"
         style="display:block"
       >
@@ -175,7 +175,7 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -206,10 +206,10 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
         color="#011e38"
         style="display:block"
       >
@@ -274,7 +274,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -305,10 +305,10 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
         color="#011e38"
         style="display:block"
       >
@@ -373,7 +373,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -404,10 +404,10 @@ exports[`Storyshots TimePicker with error state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
         color="#011e38"
         style="display:block"
       >
@@ -472,7 +472,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -490,12 +490,12 @@ exports[`Storyshots TimePicker with error state 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cGCKPF"
           color="#cc1439"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD bNpWy"
+            class="Icon-fc7twp-0 jqHWbl"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -510,10 +510,10 @@ exports[`Storyshots TimePicker with error state 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 dIOwUC"
           >
             <p
-              class="sc-AykKF jKbmDj"
+              class="Text-sc-1wu7vpu-0 jRzHjr"
               color="currentColor"
               font-size="16px"
             >
@@ -535,10 +535,10 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
         color="#011e38"
         style="display:block"
       >
@@ -603,7 +603,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfNM bbcoHp"
+                  class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 ZhxHr"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"

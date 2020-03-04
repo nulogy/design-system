@@ -8,12 +8,12 @@ exports[`Storyshots Alert Danger 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kaiHPv Alert-u8lbe-0 dikAgG"
       role="alert"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD fYtHvm"
+        class="Icon-fc7twp-0 fvROUF"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
@@ -45,7 +45,7 @@ exports[`Storyshots Alert Informative 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bMeZe Alert-u8lbe-0 dikAgG"
       role="alert"
     >
       <div
@@ -66,12 +66,12 @@ exports[`Storyshots Alert Success 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC BbzHH sc-fzXfLS bgmocU"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cXfMPp Alert-u8lbe-0 dikAgG"
       role="alert"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD dRgXOV"
+        class="Icon-fc7twp-0 doFfoo"
         color="#008059"
         fill="#008059"
         focusable="false"
@@ -103,7 +103,7 @@ exports[`Storyshots Alert Warning 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC jDJpmO sc-fzXfLS bgmocU"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 KrSVA Alert-u8lbe-0 dikAgG"
       role="alert"
     >
       <div
@@ -124,7 +124,7 @@ exports[`Storyshots Alert With a close button 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bMeZe Alert-u8lbe-0 dikAgG"
       role="alert"
     >
       <div
@@ -142,7 +142,7 @@ exports[`Storyshots Alert With a close button 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD jLAULF"
+            class="Icon-fc7twp-0 ljOenw"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -171,7 +171,7 @@ exports[`Storyshots Alert With a link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bMeZe Alert-u8lbe-0 dikAgG"
       role="alert"
     >
       <div
@@ -200,12 +200,12 @@ exports[`Storyshots Alert With a title 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kaiHPv Alert-u8lbe-0 dikAgG"
       role="alert"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD fYtHvm"
+        class="Icon-fc7twp-0 fvROUF"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
@@ -223,7 +223,7 @@ exports[`Storyshots Alert With a title 1`] = `
         class="Box-sc-1qu1edy-0 jRfwdL"
       >
         <p
-          class="sc-AykKF frKGrq"
+          class="Text-sc-1wu7vpu-0 deRFEe"
           color="currentColor"
           font-size="16px"
           font-weight="bold"

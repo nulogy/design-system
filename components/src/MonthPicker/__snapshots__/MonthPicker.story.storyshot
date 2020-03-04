@@ -8,7 +8,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -17,7 +17,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
           class="react-datepicker__input-container"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
           >
             <div
               class="Box-sc-1qu1edy-0 klanzh"
@@ -33,7 +33,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="sc-AykKD sc-fzXfMy edCVOB"
+                class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -63,7 +63,7 @@ exports[`Storyshots MonthPicker default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -72,7 +72,7 @@ exports[`Storyshots MonthPicker default 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
             color="#011e38"
             style="display:block"
           >
@@ -86,7 +86,7 @@ exports[`Storyshots MonthPicker default 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -102,7 +102,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -133,7 +133,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -142,7 +142,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
             color="#011e38"
             style="display:block"
           >
@@ -156,7 +156,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -172,7 +172,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -203,7 +203,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -212,7 +212,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
             color="#011e38"
             style="display:block"
           >
@@ -226,7 +226,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -242,7 +242,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -273,7 +273,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB nds-month-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq nds-month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -282,7 +282,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy FieldLabel-sc-1t1cp4f-1 kbOEDh"
             color="#011e38"
             style="display:block"
           >
@@ -296,7 +296,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -312,7 +312,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD sc-fzXfMy edCVOB"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 bFShPe"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -331,12 +331,12 @@ exports[`Storyshots MonthPicker with error state 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cGCKPF"
         color="#cc1439"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD bNpWy"
+          class="Icon-fc7twp-0 jqHWbl"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -351,10 +351,10 @@ exports[`Storyshots MonthPicker with error state 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 dIOwUC"
         >
           <p
-            class="sc-AykKF jKbmDj"
+            class="Text-sc-1wu7vpu-0 jRzHjr"
             color="currentColor"
             font-size="16px"
           >

@@ -20,7 +20,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -29,7 +29,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="select all"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -60,13 +60,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
       </thead>
       <tbody>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -76,7 +76,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-label="Select row"
                   aria-required="false"
                   checked=""
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -103,13 +103,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -118,7 +118,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -144,13 +144,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -159,7 +159,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -185,13 +185,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -200,7 +200,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -226,13 +226,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -241,7 +241,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -267,13 +267,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -282,7 +282,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -308,13 +308,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -323,7 +323,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -349,13 +349,13 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -364,7 +364,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -416,7 +416,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -425,7 +425,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="select all"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -456,13 +456,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
       </thead>
       <tbody>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -471,7 +471,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -497,13 +497,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -512,7 +512,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -538,13 +538,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -553,7 +553,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -579,13 +579,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -594,7 +594,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -620,13 +620,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -635,7 +635,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -661,13 +661,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -676,7 +676,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -702,13 +702,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -717,7 +717,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div
@@ -743,13 +743,13 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-1 aOgoL"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jgHxgc Checkbox-sc-1nm58f1-2 dGUzME"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 hdKIjC"
@@ -758,7 +758,7 @@ exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS Checkbox-sc-1nm58f1-2 dGUzME"
                   type="checkbox"
                 />
                 <div

@@ -11,10 +11,10 @@ exports[`Storyshots NavBar NavBar 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -24,7 +24,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -64,12 +64,12 @@ exports[`Storyshots NavBar NavBar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -83,7 +83,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -111,7 +111,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                   Inspector
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -139,7 +139,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                   Operations
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -167,24 +167,24 @@ exports[`Storyshots NavBar NavBar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <div
                 class="Box-sc-1qu1edy-0 dzXcDh"
               >
                 <form
-                  class="sc-fzXfMz dMkYCt"
+                  class="NavBarSearch-sc-1aq0npd-0 fyjian"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                     role="search"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
                     >
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                       >
                         <div
                           class="Box-sc-1qu1edy-0 klanzh"
@@ -209,7 +209,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-AykKD bZVMDg"
+                        class="Icon-fc7twp-0 ggllMz"
                         color="currentColor"
                         fill="currentColor"
                         focusable="false"
@@ -228,7 +228,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
               </div>
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               >
                 <div>
                   <button
@@ -241,7 +241,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                     User@Nulogy.com
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -269,7 +269,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -307,10 +307,10 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD hSBPrB"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 jwCbey"
         >
           <a
             aria-label="Nulogy logo"
@@ -320,7 +320,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
             style="display:block;height:56px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -358,7 +358,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                 </g>
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHwizS"
                 width="100%"
               >
                 <span
@@ -371,12 +371,12 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -390,7 +390,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD ellzgk"
+                    class="Icon-fc7twp-0 gZDbDv"
                     color="#00438f"
                     fill="#00438f"
                     focusable="false"
@@ -428,7 +428,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             />
           </div>
@@ -450,10 +450,10 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -463,7 +463,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -503,12 +503,12 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -522,7 +522,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -560,7 +560,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             />
           </div>
@@ -582,10 +582,10 @@ exports[`Storyshots NavBar With branding only 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -595,7 +595,7 @@ exports[`Storyshots NavBar With branding only 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -635,11 +635,11 @@ exports[`Storyshots NavBar With branding only 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             />
           </div>
@@ -661,10 +661,10 @@ exports[`Storyshots NavBar With custom link components 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -674,7 +674,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -714,12 +714,12 @@ exports[`Storyshots NavBar With custom link components 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -733,7 +733,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -771,7 +771,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             />
           </div>
@@ -793,10 +793,10 @@ exports[`Storyshots NavBar With subtext 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -806,7 +806,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
             style="display:block;height:56px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -844,7 +844,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                 </g>
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHwizS"
                 width="100%"
               >
                 <span
@@ -857,12 +857,12 @@ exports[`Storyshots NavBar With subtext 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -876,7 +876,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -914,24 +914,24 @@ exports[`Storyshots NavBar With subtext 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <div
                 class="Box-sc-1qu1edy-0 cEcojp"
               >
                 <form
-                  class="sc-fzXfMz dMkYCt"
+                  class="NavBarSearch-sc-1aq0npd-0 fyjian"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                     role="search"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
                     >
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                       >
                         <div
                           class="Box-sc-1qu1edy-0 klanzh"
@@ -956,7 +956,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-AykKD bZVMDg"
+                        class="Icon-fc7twp-0 ggllMz"
                         color="currentColor"
                         fill="currentColor"
                         focusable="false"
@@ -993,10 +993,10 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -1006,7 +1006,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -1046,12 +1046,12 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -1065,7 +1065,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1099,7 +1099,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             />
           </div>
@@ -1121,10 +1121,10 @@ exports[`Storyshots NavBar Without search 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -1134,7 +1134,7 @@ exports[`Storyshots NavBar Without search 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -1174,12 +1174,12 @@ exports[`Storyshots NavBar Without search 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -1193,7 +1193,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1221,7 +1221,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                   Inspector
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1249,7 +1249,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                   Operations
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1277,12 +1277,12 @@ exports[`Storyshots NavBar Without search 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               >
                 <div>
                   <button
@@ -1295,7 +1295,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                     User@Nulogy.com
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -1323,7 +1323,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -1361,10 +1361,10 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -1374,7 +1374,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -1414,16 +1414,16 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               >
                 <div>
                   <button
@@ -1436,7 +1436,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                     User@Nulogy.com
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -1464,7 +1464,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="Icon-fc7twp-0 TOboa"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -1502,10 +1502,10 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -1515,7 +1515,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -1555,12 +1555,12 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -1574,7 +1574,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1602,7 +1602,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                   Inspector
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1630,7 +1630,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                   Operations
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1658,7 +1658,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             />
           </div>
@@ -1680,10 +1680,10 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
       class="NavBarstory__ResetStorybookView-hsfjc-0 btnCWm"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="NavBar-iayrjp-3 hxpyAK"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hgboSK"
         >
           <a
             aria-label="Nulogy logo"
@@ -1693,7 +1693,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 bskpiF Branding-ranqri-2 fKCmhi"
             >
               <svg
                 height="32px"
@@ -1733,12 +1733,12 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jLTFLh"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh DesktopMenu-e4dzdq-4 hsPxvr"
               style="padding-right:24px"
             >
               <div>
@@ -1752,7 +1752,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1780,7 +1780,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                   Inspector
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1808,7 +1808,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                   Operations
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="Icon-fc7twp-0 TOboa"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1836,24 +1836,24 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
               style="float:right"
             >
               <div
                 class="Box-sc-1qu1edy-0 cEcojp"
               >
                 <form
-                  class="sc-fzXfMz dMkYCt"
+                  class="NavBarSearch-sc-1aq0npd-0 fyjian"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
                     role="search"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
                     >
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
                       >
                         <div
                           class="Box-sc-1qu1edy-0 klanzh"
@@ -1878,7 +1878,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                     >
                       <svg
                         aria-hidden="true"
-                        class="sc-AykKD bZVMDg"
+                        class="Icon-fc7twp-0 ggllMz"
                         color="currentColor"
                         fill="currentColor"
                         focusable="false"

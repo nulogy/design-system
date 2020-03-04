@@ -75,7 +75,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 fUpMMZ"
     >
       <span
-        class="sc-AykKH kMmipS"
+        class="Text-sc-1wu7vpu-0-h2 bVqybX"
         font-size="26px"
         font-weight="500"
       >
@@ -92,7 +92,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 fUpMMZ"
     >
       <span
-        class="sc-AykKI sc-AykKJ caWLFB"
+        class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 gxDUnN"
         font-size="20px"
         font-weight="500"
       >
@@ -109,7 +109,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 fUpMMZ"
     >
       <span
-        class="sc-AykKF eOMZSl"
+        class="Text-sc-1wu7vpu-0 jKfpqd"
         color="currentColor"
         font-size="16px"
       >
@@ -126,7 +126,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 fUpMMZ"
     >
       <span
-        class="sc-AykKF eqAfpn"
+        class="Text-sc-1wu7vpu-0 jlSuNf"
         color="currentColor"
         font-size="small"
       >
@@ -143,7 +143,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 fUpMMZ"
     >
       <span
-        class="sc-AykKF dSnkMp"
+        class="Text-sc-1wu7vpu-0 iNFAkh"
         color="currentColor"
         font-size="smaller"
       >

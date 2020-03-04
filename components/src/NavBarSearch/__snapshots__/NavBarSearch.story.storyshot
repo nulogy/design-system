@@ -11,17 +11,17 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
       class="Box-sc-1qu1edy-0 cgRXwI"
     >
       <form
-        class="sc-fzXfMz dMkYCt"
+        class="NavBarSearch-sc-1aq0npd-0 fyjian"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
           role="search"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+            class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -46,7 +46,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD bZVMDg"
+              class="Icon-fc7twp-0 ggllMz"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -78,17 +78,17 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
       class="Box-sc-1qu1edy-0 cgRXwI"
     >
       <form
-        class="sc-fzXfMz dMkYCt"
+        class="NavBarSearch-sc-1aq0npd-0 fyjian"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iqbYEA"
           role="search"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+            class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 lhNPaq"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 PZCMZ"
             >
               <div
                 class="Box-sc-1qu1edy-0 klanzh"
@@ -113,7 +113,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD bZVMDg"
+              class="Icon-fc7twp-0 ggllMz"
               color="currentColor"
               fill="currentColor"
               focusable="false"
