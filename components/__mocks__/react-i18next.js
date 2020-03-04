@@ -1,8 +1,9 @@
-// eslint-disable-file no-use-before-define
+/* eslint-disable */
 const React = require("react");
 const reactI18next = require("react-i18next");
 
-const en = require("../locales/en.json");
+const en_US = require("../locales/en_US.json");
+/* eslint-enable */
 
 const hasChildren = node => node && (node.children || (node.props && node.props.children));
 
@@ -34,7 +35,7 @@ const renderNodes = reactNodes => {
 };
 
 const useMock = [k => k, {}];
-useMock.t = k => en[k] || k;
+useMock.t = k => en_US[k] || k;
 useMock.i18n = {};
 
 module.exports = {

@@ -45,6 +45,8 @@ class App extends React.Component {
 }
 ```
 
+If your app is localized, you can pass the locale to NDSProvider and all default strings within any NDS components will be translated. For an example and full list of locales see [Localization](https://nulogy.design/guides/localization).
+
 #### 3. Import desired components
 
 ```js
