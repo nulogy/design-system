@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/nulogy/design-system/compare/v1.3.0...v1.4.0) (2020-03-04)
+
+
+### Features
+
+* assorted CSS library improvements ([#576](https://github.com/nulogy/design-system/issues/576)) ([db04666](https://github.com/nulogy/design-system/commit/db04666))
+
+
+
+
+
 # [1.0.0](https://github.com/nulogy/design-system/compare/v0.24.3...v1.0.0) (2020-02-19)
 
 **Note:** Version bump only for package @nulogy/css
