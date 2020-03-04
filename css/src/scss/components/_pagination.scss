@@ -1,0 +1,49 @@
+/* -----------------------------------------
+    ## Pagination
+----------------------------------------- */
+
+.Pagination {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Pagination__button {
+  font-size: $size-font-small;
+  padding: $size-base-x-1 $size-base-x-2;
+  line-height: $line-height-small-text-base;
+  display: flex;
+  border-radius: $radius-border-medium;
+  border: 1px solid $color-base-light-grey;
+  color: $color-base-black;
+  text-decoration: none;
+
+  &:not(:last-child) {
+    margin-right: $size-base-x-2;
+  }
+
+  &:hover {
+    background: $color-base-light-grey;
+    cursor: pointer;
+  }
+}
+
+.Pagination__button--current {
+  border: 1px solid $color-base-dark-blue;
+  background: $color-base-dark-blue;
+  color: white;
+  &:hover {
+    background: $color-base-dark-blue;
+  }
+}
+
+.Pagination__button--disabled {
+  color: $color-base-grey;
+  &:hover {
+    background: white;
+    cursor: default;
+  }
+}
+
+.Pagination__seperator {
+  margin-right: $size-base-x-2;
+}

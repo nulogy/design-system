@@ -4,6 +4,7 @@
 
 %button {
   -webkit-font-smoothing: antialiased;
+  font-family: $font-family-base;
   font-weight: $weight-font-medium;
   border: 0;
   text-decoration: none;
@@ -57,7 +58,7 @@
 
 .Button {
   @include button($background: $color-base-white, $font: $color-base-blue)
-    border: 1px solid $color-base-dark-blue;
+    border: 1px solid $color-base-blue;
   &:hover {
     background: $color-base-light-blue;
   }

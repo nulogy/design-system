@@ -1,15 +1,7 @@
-/* -----------------------------------------
-    ## Link
------------------------------------------ */
-
 .Link {
   color: $color-base-blue;
   &:hover {
     cursor: pointer;
     color: darken($color-base-blue, 10%);
-  }
-  &:focus {
-    outline: none;
-    box-shadow: $shadow-focus;
   }
 }
