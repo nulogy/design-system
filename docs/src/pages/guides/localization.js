@@ -50,8 +50,8 @@ export default () => (
           Pagination Component
         </Link>{" "}
         using the "Knobs" section you should be able to select an NDS Provider
-        Locale from a dropdown and observe the labels translate according the
-        the selected locale.
+        Locale from a dropdown and observe the labels translate according to the
+        selected locale.
       </Text>
     </DocSection>
     <DocSection>
