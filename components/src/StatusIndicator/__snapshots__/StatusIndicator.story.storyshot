@@ -82,7 +82,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxgMl irYLZC"
+        class="Text-sc-1wu7vpu-0-h2 brpaKQ"
         font-size="26px"
         font-weight="500"
       >
@@ -100,7 +100,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxheI sc-Axmtr jGoQwU"
+        class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 MApIk"
         font-size="20px"
         font-weight="500"
       >
@@ -118,7 +118,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxhCb czaJmK"
+        class="Text-sc-1wu7vpu-0 ipzFTA"
         color="currentColor"
         font-size="16px"
       >
@@ -136,7 +136,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxhCb dfJiXK"
+        class="Text-sc-1wu7vpu-0 gtpyno"
         color="currentColor"
         font-size="small"
       >
@@ -154,7 +154,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxhCb gttWcT"
+        class="Text-sc-1wu7vpu-0 emQXPB"
         color="currentColor"
         font-size="smaller"
       >
@@ -172,7 +172,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
       class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxhCb czaJmK"
+        class="Text-sc-1wu7vpu-0 ipzFTA"
         color="currentColor"
         font-size="16px"
       >
@@ -216,10 +216,10 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
     >
       <span
-        class="sc-AxgMl fyyuUF"
+        class="Text-sc-1wu7vpu-0-h2 beQSnH"
         font-size="26px"
         font-weight="500"
       >
@@ -234,10 +234,10 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
     >
       <span
-        class="sc-AxheI sc-Axmtr iRBWoo"
+        class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 kekrzE"
         font-size="20px"
         font-weight="500"
       >
@@ -252,10 +252,10 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
     >
       <span
-        class="sc-AxhCb laTFNi"
+        class="Text-sc-1wu7vpu-0 kmQoAM"
         color="currentColor"
         font-size="16px"
       >
@@ -270,10 +270,10 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
     >
       <span
-        class="sc-AxhCb chBKUG"
+        class="Text-sc-1wu7vpu-0 icwHeY"
         color="currentColor"
         font-size="small"
       >
@@ -288,10 +288,10 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
     >
       <span
-        class="sc-AxhCb hlgKbb"
+        class="Text-sc-1wu7vpu-0 gQrkYx"
         color="currentColor"
         font-size="smaller"
       >

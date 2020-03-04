@@ -12,7 +12,7 @@ exports[`Storyshots TruncatedText TruncatedText 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="sc-AxhCb hpmHVQ sc-fzqAbL kjPEQA"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
       color="currentColor"
       font-size="16px"
     >
@@ -34,7 +34,7 @@ exports[`Storyshots TruncatedText as title 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="sc-AxhUy jXBjWt sc-fzqAbL kjPEQA"
+      class="Text-sc-1wu7vpu-0-h1 VooJu TruncatedText__StyledWrapper-noy865-0 jYAXtT"
       font-size="46px"
       font-weight="300"
     >
@@ -52,7 +52,7 @@ exports[`Storyshots TruncatedText under max characters 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AxhCb hpmHVQ sc-fzqAbL zrxPo"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
       color="currentColor"
       font-size="16px"
     >
@@ -74,7 +74,7 @@ exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="sc-AxhCb hpmHVQ sc-fzqAbL kjPEQA"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
       color="currentColor"
       font-size="16px"
     >
@@ -96,7 +96,7 @@ exports[`Storyshots TruncatedText with max characters 10 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="sc-AxhCb hpmHVQ sc-fzqAbL kjPEQA"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
       color="currentColor"
       font-size="16px"
     >
@@ -114,7 +114,7 @@ exports[`Storyshots TruncatedText without tooltip 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AxhCb hpmHVQ sc-fzqAbL zrxPo"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
       color="currentColor"
       font-size="16px"
     >

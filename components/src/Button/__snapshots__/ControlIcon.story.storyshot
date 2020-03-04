@@ -13,7 +13,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ fZltSY"
+        class="Icon-fc7twp-0 efirdb"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -45,7 +45,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ fZltSY"
+        class="Icon-fc7twp-0 efirdb"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -76,7 +76,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ fZltSY"
+        class="Icon-fc7twp-0 efirdb"
         color="currentColor"
         fill="currentColor"
         focusable="false"

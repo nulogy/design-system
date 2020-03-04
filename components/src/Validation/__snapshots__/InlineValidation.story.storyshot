@@ -8,12 +8,12 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm fYetcd"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
       color="#cc1439"
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ gcJrrZ"
+        class="Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -28,10 +28,10 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -51,12 +51,12 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm fYetcd"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
       color="#cc1439"
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ gcJrrZ"
+        class="Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -71,10 +71,10 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -123,12 +123,12 @@ exports[`Storyshots Inline Validation with list items 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm fYetcd"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
       color="#cc1439"
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ gcJrrZ"
+        class="Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -143,10 +143,10 @@ exports[`Storyshots Inline Validation with list items 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -183,12 +183,12 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm fYetcd"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
       color="#cc1439"
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ gcJrrZ"
+        class="Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -203,7 +203,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
       >
         <ul
           class="List-sc-1cqkmnl-0 diqcEx"

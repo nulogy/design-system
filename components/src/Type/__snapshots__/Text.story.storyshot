@@ -11,7 +11,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
       class="Box-sc-1qu1edy-0 duXuoY"
     >
       <p
-        class="sc-AxhCb fTtmG"
+        class="Text-sc-1wu7vpu-0 hdrQgs"
         color="currentColor"
         disabled=""
         font-size="16px"
@@ -23,7 +23,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
       class="Box-sc-1qu1edy-0 fXRdUR"
     >
       <p
-        class="sc-AxhCb kNjXdR"
+        class="Text-sc-1wu7vpu-0 kUDEbP"
         color="white"
         disabled=""
         font-size="16px"
@@ -35,7 +35,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
       class="Box-sc-1qu1edy-0 ffhBHW"
     >
       <p
-        class="sc-AxhCb kNjXdR"
+        class="Text-sc-1wu7vpu-0 kUDEbP"
         color="white"
         disabled=""
         font-size="16px"
@@ -55,14 +55,14 @@ exports[`Storyshots Text Set to inline 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <span
-      class="sc-AxhCb czaJmK"
+      class="Text-sc-1wu7vpu-0 ipzFTA"
       color="currentColor"
       font-size="16px"
     >
       Inline text
     </span>
     <span
-      class="sc-AxhCb hpmHVQ"
+      class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
       font-size="16px"
     >
@@ -80,7 +80,7 @@ exports[`Storyshots Text Text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AxhCb hpmHVQ"
+      class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
       font-size="16px"
     >
@@ -98,7 +98,7 @@ exports[`Storyshots Text With a color 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AxhCb kVUoJL"
+      class="Text-sc-1wu7vpu-0 dXhWql"
       color="blue"
       font-size="16px"
     >
@@ -116,14 +116,14 @@ exports[`Storyshots Text With a custom margin 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AxhCb gznDoW"
+      class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
       font-size="16px"
     >
       Text 24px bottom margin.
     </p>
     <p
-      class="sc-AxhCb hpmHVQ"
+      class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
       font-size="16px"
     >
@@ -144,7 +144,7 @@ exports[`Storyshots Text With a size 1`] = `
       class="Box-sc-1qu1edy-0 eBHmui"
     >
       <p
-        class="sc-AxhCb hpmHVQ"
+        class="Text-sc-1wu7vpu-0 RbfMK"
         color="currentColor"
         font-size="16px"
       >
@@ -155,14 +155,14 @@ exports[`Storyshots Text With a size 1`] = `
       class="Box-sc-1qu1edy-0 eBHmui"
     >
       <p
-        class="sc-AxhCb iuDmhU"
+        class="Text-sc-1wu7vpu-0 hsSevS"
         color="currentColor"
         font-size="small"
       >
         Small (14px/24px)
       </p>
       <p
-        class="sc-AxhCb iduuMb"
+        class="Text-sc-1wu7vpu-0 gQDLhx"
         color="currentColor"
         font-size="small"
       >
@@ -173,7 +173,7 @@ exports[`Storyshots Text With a size 1`] = `
       class="Box-sc-1qu1edy-0 eBHmui"
     >
       <p
-        class="sc-AxhCb fTcPjZ"
+        class="Text-sc-1wu7vpu-0 kLNwfz"
         color="currentColor"
         font-size="smaller"
       >

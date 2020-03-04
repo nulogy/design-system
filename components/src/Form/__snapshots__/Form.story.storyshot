@@ -8,22 +8,22 @@ exports[`Storyshots Form Demo form 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzoXzr jYbPbp"
+      class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="sc-AxgMl hWPmHw"
+        class="Text-sc-1wu7vpu-0-h2 heWDlS"
         font-size="26px"
         font-weight="500"
       >
         Job 324400
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm jjmQyk sc-fznyAO hRCpfl"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 eToTOV"
         role="alert"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ eSGrht"
+          class="Icon-fc7twp-0 ewGQci"
           color="#cc1439"
           fill="#cc1439"
           focusable="false"
@@ -41,7 +41,7 @@ exports[`Storyshots Form Demo form 1`] = `
           class="Box-sc-1qu1edy-0 iDnpba"
         >
           <p
-            class="sc-AxhCb lgbEcN"
+            class="Text-sc-1wu7vpu-0 dFPjNj"
             color="currentColor"
             font-size="16px"
             font-weight="bold"
@@ -49,7 +49,7 @@ exports[`Storyshots Form Demo form 1`] = `
             Errors have occured ...
           </p>
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -85,20 +85,20 @@ exports[`Storyshots Form Demo form 1`] = `
         </div>
       </div>
       <fieldset
-        class="sc-fzoLag lbLQKU"
+        class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
+          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
           font-size="20px"
           font-weight="500"
         >
           Job Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -112,7 +112,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -130,10 +130,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -146,14 +146,14 @@ exports[`Storyshots Form Demo form 1`] = `
                 Project description
               </span>
               <span
-                class="sc-AxhCb gXnznd"
+                class="Text-sc-1wu7vpu-0 bphWXP"
                 color="darkGrey"
                 font-size="12px"
               >
                 (Optional)
               </span>
               <p
-                class="sc-AxhCb sc-fzokOt itwNrV"
+                class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
                 color="currentColor"
                 font-size="16px"
               >
@@ -161,7 +161,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -178,10 +178,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -274,10 +274,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -291,7 +291,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -308,12 +308,12 @@ exports[`Storyshots Form Demo form 1`] = `
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
             color="#cc1439"
           >
             <svg
               aria-hidden="true"
-              class="sc-AxirZ gcJrrZ"
+              class="Icon-fc7twp-0 QuoIa"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -328,10 +328,10 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+              class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
             >
               <p
-                class="sc-AxhCb hpmHVQ"
+                class="Text-sc-1wu7vpu-0 RbfMK"
                 color="currentColor"
                 font-size="16px"
               >
@@ -341,10 +341,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -358,7 +358,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -376,10 +376,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -393,7 +393,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -412,10 +412,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -429,7 +429,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -447,10 +447,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -464,7 +464,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -482,7 +482,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <fieldset
-          class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
+          class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
         >
           <legend
             style="margin-bottom:8px"
@@ -493,7 +493,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Line Lead
             </span>
             <span
-              class="sc-AxhCb gXnznd"
+              class="Text-sc-1wu7vpu-0 bphWXP"
               color="darkGrey"
               font-size="12px"
             >
@@ -501,7 +501,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -509,7 +509,7 @@ exports[`Storyshots Form Demo form 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                 name="linelead"
                 type="checkbox"
                 value="christiaan"
@@ -519,7 +519,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 data-testid="visual-checkbox"
               />
               <p
-                class="sc-AxhCb hpmHVQ"
+                class="Text-sc-1wu7vpu-0 RbfMK"
                 color="currentColor"
                 font-size="16px"
               >
@@ -528,7 +528,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -536,7 +536,7 @@ exports[`Storyshots Form Demo form 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                 name="linelead"
                 type="checkbox"
                 value="matt"
@@ -546,7 +546,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 data-testid="visual-checkbox"
               />
               <p
-                class="sc-AxhCb hpmHVQ"
+                class="Text-sc-1wu7vpu-0 RbfMK"
                 color="currentColor"
                 font-size="16px"
               >
@@ -555,7 +555,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -564,7 +564,7 @@ exports[`Storyshots Form Demo form 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 dQkcBn"
                 disabled=""
                 name="linelead"
                 type="checkbox"
@@ -576,7 +576,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 disabled=""
               />
               <p
-                class="sc-AxhCb fTtmG"
+                class="Text-sc-1wu7vpu-0 hdrQgs"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -586,7 +586,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -595,7 +595,7 @@ exports[`Storyshots Form Demo form 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 dQkcBn"
                 disabled=""
                 name="linelead"
                 type="checkbox"
@@ -607,7 +607,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 disabled=""
               />
               <p
-                class="sc-AxhCb fTtmG"
+                class="Text-sc-1wu7vpu-0 hdrQgs"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -618,7 +618,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzpmMD enYpte"
+          class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
           id="reconcile"
         >
           <legend
@@ -631,7 +631,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
+            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -640,7 +640,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 aria-invalid="true"
                 aria-required="false"
                 checked=""
-                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
+                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh Radio-sc-82dpxx-2 jeIhWi"
                 name="settingSelection"
                 type="radio"
                 value="yes"
@@ -649,7 +649,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
               />
               <span
-                class="sc-AxhCb hpmHVQ"
+                class="Text-sc-1wu7vpu-0 RbfMK"
                 color="currentColor"
                 font-size="16px"
               >
@@ -658,7 +658,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
+            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -666,7 +666,7 @@ exports[`Storyshots Form Demo form 1`] = `
               <input
                 aria-invalid="true"
                 aria-required="false"
-                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
+                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh Radio-sc-82dpxx-2 jeIhWi"
                 name="settingSelection"
                 type="radio"
                 value="no"
@@ -675,7 +675,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
               />
               <span
-                class="sc-AxhCb hpmHVQ"
+                class="Text-sc-1wu7vpu-0 RbfMK"
                 color="currentColor"
                 font-size="16px"
               >
@@ -684,7 +684,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
+            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -693,7 +693,7 @@ exports[`Storyshots Form Demo form 1`] = `
               <input
                 aria-invalid="true"
                 aria-required="false"
-                class="Radio__RadioInput-sc-82dpxx-1 hBtCEn sc-fzoXWK bhiMMA"
+                class="Radio__RadioInput-sc-82dpxx-1 hBtCEn Radio-sc-82dpxx-2 jeIhWi"
                 disabled=""
                 name="settingSelection"
                 type="radio"
@@ -704,7 +704,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 disabled=""
               />
               <span
-                class="sc-AxhCb fTtmG"
+                class="Text-sc-1wu7vpu-0 hdrQgs"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -714,12 +714,12 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
             color="#cc1439"
           >
             <svg
               aria-hidden="true"
-              class="sc-AxirZ gcJrrZ"
+              class="Icon-fc7twp-0 QuoIa"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -734,10 +734,10 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+              class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
             >
               <p
-                class="sc-AxhCb hpmHVQ"
+                class="Text-sc-1wu7vpu-0 RbfMK"
                 color="currentColor"
                 font-size="16px"
               >
@@ -747,7 +747,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
         >
           <div
             id="Job Visibility-label"
@@ -780,7 +780,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 />
               </div>
               <p
-                class="sc-AxhCb iNRqzd"
+                class="Text-sc-1wu7vpu-0 cOGezP"
                 color="currentColor"
                 font-size="16px"
               >
@@ -791,20 +791,20 @@ exports[`Storyshots Form Demo form 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzoLag lbLQKU"
+        class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
+          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
           font-size="20px"
           font-weight="500"
         >
           Rejects
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -818,7 +818,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -835,12 +835,12 @@ exports[`Storyshots Form Demo form 1`] = `
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
             color="#cc1439"
           >
             <svg
               aria-hidden="true"
-              class="sc-AxirZ gcJrrZ"
+              class="Icon-fc7twp-0 QuoIa"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -855,10 +855,10 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+              class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
             >
               <p
-                class="sc-AxhCb hpmHVQ"
+                class="Text-sc-1wu7vpu-0 RbfMK"
                 color="currentColor"
                 font-size="16px"
               >
@@ -868,10 +868,10 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -885,7 +885,7 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -902,7 +902,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
         >
           <div
             id="Reject visibility-label"
@@ -938,7 +938,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 />
               </div>
               <p
-                class="sc-AxhCb kigzKX"
+                class="Text-sc-1wu7vpu-0 jVsGHh"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -962,20 +962,20 @@ exports[`Storyshots Form Form 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzoXzr jYbPbp"
+      class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="sc-AxgMl hWPmHw"
+        class="Text-sc-1wu7vpu-0-h2 heWDlS"
         font-size="26px"
         font-weight="500"
       >
         New Profile
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
           color="#011e38"
           style="display:block"
         >
@@ -989,7 +989,7 @@ exports[`Storyshots Form Form 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
               class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1006,10 +1006,10 @@ exports[`Storyshots Form Form 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
           color="#011e38"
           style="display:block"
         >
@@ -1022,14 +1022,14 @@ exports[`Storyshots Form Form 1`] = `
               Date of birth
             </span>
             <span
-              class="sc-AxhCb gXnznd"
+              class="Text-sc-1wu7vpu-0 bphWXP"
               color="darkGrey"
               font-size="12px"
             >
               (Optional)
             </span>
             <p
-              class="sc-AxhCb sc-fzokOt itwNrV"
+              class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
               color="currentColor"
               font-size="16px"
             >
@@ -1037,7 +1037,7 @@ exports[`Storyshots Form Form 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
               class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1055,10 +1055,10 @@ exports[`Storyshots Form Form 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
           color="#011e38"
           style="display:block"
         >
@@ -1071,7 +1071,7 @@ exports[`Storyshots Form Form 1`] = `
               Place of birth
             </span>
             <span
-              class="sc-AxhCb gXnznd"
+              class="Text-sc-1wu7vpu-0 bphWXP"
               color="darkGrey"
               font-size="12px"
             >
@@ -1079,7 +1079,7 @@ exports[`Storyshots Form Form 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
               class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1108,30 +1108,30 @@ exports[`Storyshots Form With form sections 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzoXzr jYbPbp"
+      class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="sc-AxgMl hWPmHw"
+        class="Text-sc-1wu7vpu-0-h2 heWDlS"
         font-size="26px"
         font-weight="500"
       >
         New Profile
       </h2>
       <fieldset
-        class="sc-fzoLag lbLQKU"
+        class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
+          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
           font-size="20px"
           font-weight="500"
         >
           Personal Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1145,7 +1145,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1162,10 +1162,10 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1178,14 +1178,14 @@ exports[`Storyshots Form With form sections 1`] = `
                 Date of birth
               </span>
               <span
-                class="sc-AxhCb gXnznd"
+                class="Text-sc-1wu7vpu-0 bphWXP"
                 color="darkGrey"
                 font-size="12px"
               >
                 (Optional)
               </span>
               <p
-                class="sc-AxhCb sc-fzokOt itwNrV"
+                class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
                 color="currentColor"
                 font-size="16px"
               >
@@ -1193,7 +1193,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1211,10 +1211,10 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1227,7 +1227,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 Place of birth
               </span>
               <span
-                class="sc-AxhCb gXnznd"
+                class="Text-sc-1wu7vpu-0 bphWXP"
                 color="darkGrey"
                 font-size="12px"
               >
@@ -1235,7 +1235,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1253,20 +1253,20 @@ exports[`Storyshots Form With form sections 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzoLag lbLQKU"
+        class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
+          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
           font-size="20px"
           font-weight="500"
         >
           General Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1280,7 +1280,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1297,10 +1297,10 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1314,7 +1314,7 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1344,23 +1344,23 @@ exports[`Storyshots Form With form sections without titles 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzoXzr jYbPbp"
+      class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="sc-AxgMl hWPmHw"
+        class="Text-sc-1wu7vpu-0-h2 heWDlS"
         font-size="26px"
         font-weight="500"
       >
         New Profile
       </h2>
       <fieldset
-        class="sc-fzoLag hRFyEi"
+        class="FormSection-sc-5yud6c-1 klMAvm"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1374,7 +1374,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1391,10 +1391,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1407,14 +1407,14 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 Date of birth
               </span>
               <span
-                class="sc-AxhCb gXnznd"
+                class="Text-sc-1wu7vpu-0 bphWXP"
                 color="darkGrey"
                 font-size="12px"
               >
                 (Optional)
               </span>
               <p
-                class="sc-AxhCb sc-fzokOt itwNrV"
+                class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
                 color="currentColor"
                 font-size="16px"
               >
@@ -1422,7 +1422,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1440,10 +1440,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1456,7 +1456,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 Place of birth
               </span>
               <span
-                class="sc-AxhCb gXnznd"
+                class="Text-sc-1wu7vpu-0 bphWXP"
                 color="darkGrey"
                 font-size="12px"
               >
@@ -1464,7 +1464,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1482,13 +1482,13 @@ exports[`Storyshots Form With form sections without titles 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzoLag hRFyEi"
+        class="FormSection-sc-5yud6c-1 klMAvm"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1502,7 +1502,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1519,10 +1519,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -1536,7 +1536,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1566,13 +1566,13 @@ exports[`Storyshots Form Without title 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzoXzr bruFHJ"
+      class="Form-n70q8u-0 ilQSyT"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
           color="#011e38"
           style="display:block"
         >
@@ -1586,7 +1586,7 @@ exports[`Storyshots Form Without title 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
               class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1603,10 +1603,10 @@ exports[`Storyshots Form Without title 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
           color="#011e38"
           style="display:block"
         >
@@ -1619,14 +1619,14 @@ exports[`Storyshots Form Without title 1`] = `
               Date of birth
             </span>
             <span
-              class="sc-AxhCb gXnznd"
+              class="Text-sc-1wu7vpu-0 bphWXP"
               color="darkGrey"
               font-size="12px"
             >
               (Optional)
             </span>
             <p
-              class="sc-AxhCb sc-fzokOt itwNrV"
+              class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
               color="currentColor"
               font-size="16px"
             >
@@ -1634,7 +1634,7 @@ exports[`Storyshots Form Without title 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
               class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1652,10 +1652,10 @@ exports[`Storyshots Form Without title 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
           color="#011e38"
           style="display:block"
         >
@@ -1668,7 +1668,7 @@ exports[`Storyshots Form Without title 1`] = `
               Place of birth
             </span>
             <span
-              class="sc-AxhCb gXnznd"
+              class="Text-sc-1wu7vpu-0 bphWXP"
               color="darkGrey"
               font-size="12px"
             >
@@ -1676,7 +1676,7 @@ exports[`Storyshots Form Without title 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
               class="Box-sc-1qu1edy-0 hxUhcg"

@@ -47,7 +47,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -69,7 +69,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -80,7 +80,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="sc-AxirZ fZltSY"
+                class="Icon-fc7twp-0 efirdb"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -112,7 +112,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -134,7 +134,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -145,7 +145,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="sc-AxirZ fZltSY"
+                class="Icon-fc7twp-0 efirdb"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -177,7 +177,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -199,7 +199,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -210,7 +210,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="sc-AxirZ fZltSY"
+                class="Icon-fc7twp-0 efirdb"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -242,7 +242,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -264,7 +264,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -339,7 +339,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -361,7 +361,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -372,7 +372,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             >
               <svg
                 aria-hidden="true"
-                class="sc-AxirZ fZltSY"
+                class="Icon-fc7twp-0 efirdb"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -404,7 +404,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -426,7 +426,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -437,7 +437,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             >
               <svg
                 aria-hidden="true"
-                class="sc-AxirZ fZltSY"
+                class="Icon-fc7twp-0 efirdb"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -476,7 +476,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
               class="Box-sc-1qu1edy-0 kOlJoM"
             >
               <p
-                class="sc-AxhCb iBTYSy"
+                class="Text-sc-1wu7vpu-0 iHOIzo"
                 color="blackBlue"
                 font-size="16px"
                 font-weight="bold"
@@ -487,7 +487,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -509,7 +509,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -520,7 +520,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             >
               <svg
                 aria-hidden="true"
-                class="sc-AxirZ fZltSY"
+                class="Icon-fc7twp-0 efirdb"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -559,7 +559,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
               class="Box-sc-1qu1edy-0 kOlJoM"
             >
               <p
-                class="sc-AxhCb iBTYSy"
+                class="Text-sc-1wu7vpu-0 iHOIzo"
                 color="blackBlue"
                 font-size="16px"
                 font-weight="bold"
@@ -570,7 +570,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -592,7 +592,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"

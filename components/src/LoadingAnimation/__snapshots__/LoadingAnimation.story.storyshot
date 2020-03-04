@@ -324,13 +324,13 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzomME ddnWI"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm lbYCih"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gsptzN"
       >
         <p
-          class="sc-AxhCb gaAytt"
+          class="Text-sc-1wu7vpu-0 kyRgWL"
           color="currentColor"
           font-size="16px"
           font-weight="medium"
@@ -489,7 +489,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
           </svg>
         </div>
         <p
-          class="sc-AxhCb dIWMIG"
+          class="Text-sc-1wu7vpu-0 keXslM"
           color="darkGrey"
           font-size="small"
         >
@@ -497,7 +497,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm hEysGg"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eRyacc"
       >
         <button
           class="ControlIcon__StyledButton-sc-1h83lvi-0 jupSnY"
@@ -505,7 +505,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ fZltSY"
+            class="Icon-fc7twp-0 efirdb"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -524,7 +524,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ fZltSY"
+            class="Icon-fc7twp-0 efirdb"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -552,13 +552,13 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzomME ddnWI"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm lbYCih"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gsptzN"
       >
         <p
-          class="sc-AxhCb dERJRz"
+          class="Text-sc-1wu7vpu-0 gfZztd"
           color="grey"
           font-size="16px"
           font-weight="medium"
@@ -717,7 +717,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
           </svg>
         </div>
         <p
-          class="sc-AxhCb bAcJdc"
+          class="Text-sc-1wu7vpu-0 dJrfVi"
           color="grey"
           font-size="small"
         >
@@ -725,7 +725,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm hFmmOS sc-fznyAO hAJdLz"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQbNmG Alert-u8lbe-0 OiBBb"
         role="alert"
       >
         <div
@@ -735,14 +735,14 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm hEysGg"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eRyacc"
       >
         <button
           class="ControlIcon__StyledButton-sc-1h83lvi-0 jlPgHC"
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ fZltSY"
+            class="Icon-fc7twp-0 efirdb"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -761,7 +761,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ fZltSY"
+            class="Icon-fc7twp-0 efirdb"
             color="currentColor"
             fill="currentColor"
             focusable="false"

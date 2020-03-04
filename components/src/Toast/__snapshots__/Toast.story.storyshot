@@ -13,10 +13,10 @@ exports[`Storyshots Toast Toast 1`] = `
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzoydu cvwJDF"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm iElDdL sc-fznyAO sc-fzqMAW khVfbf"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bxjnP Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
         role="alert"
       >
         <div
@@ -38,10 +38,10 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm fMYsrt"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
     >
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW sc-AxmLO gXSYqH"
+        class="Button__WrapperButton-sc-1omxup2-0 bclWrW PrimaryButton-qz78sb-0 cGyyDq"
       >
         Save Changes
       </button>
@@ -51,17 +51,17 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
         Reset
       </button>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW sc-fzozJi iomXmU"
+        class="Button__WrapperButton-sc-1omxup2-0 bclWrW DangerButton-sc-1220u5k-0 ehzMsl"
       >
         Trigger Error
       </button>
       <button
         aria-label="Delete"
-        class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+        class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ jrPxI"
+          class="Icon-fc7twp-0 cwKdbD"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -76,7 +76,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <p
-          class="sc-AxhCb djnyhr"
+          class="Text-sc-1wu7vpu-0 hHlnON"
           color="currentColor"
           font-size="16px"
         >
@@ -85,15 +85,15 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </button>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzoydu cvwJDF"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm cDxYdm sc-fznyAO sc-fzqMAW khVfbf"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
         role="alert"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ fYYMXW"
+          class="Icon-fc7twp-0 dqoulF"
           color="#008059"
           fill="#008059"
           focusable="false"
@@ -115,15 +115,15 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzoydu cvwJDF"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm cDxYdm sc-fznyAO sc-fzqMAW khVfbf"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
         role="alert"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ fYYMXW"
+          class="Icon-fc7twp-0 dqoulF"
           color="#008059"
           fill="#008059"
           focusable="false"
@@ -145,15 +145,15 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzoydu cvwJDF"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm cDxYdm sc-fznyAO sc-fzqMAW khVfbf"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
         role="alert"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ fYYMXW"
+          class="Icon-fc7twp-0 dqoulF"
           color="#008059"
           fill="#008059"
           focusable="false"
@@ -175,15 +175,15 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzoydu cvwJDF"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm jjmQyk sc-fznyAO sc-fzqMAW khVfbf"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
         role="alert"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ eSGrht"
+          class="Icon-fc7twp-0 ewGQci"
           color="#cc1439"
           fill="#cc1439"
           focusable="false"

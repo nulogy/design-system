@@ -8,7 +8,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -41,7 +41,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb iNRqzd"
+            class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
             font-size="16px"
           >
@@ -51,7 +51,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -83,7 +83,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb iNRqzd"
+            class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
             font-size="16px"
           >
@@ -104,7 +104,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -136,7 +136,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -183,7 +183,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -218,7 +218,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb kigzKX"
+            class="Text-sc-1wu7vpu-0 jVsGHh"
             color="currentColor"
             disabled=""
             font-size="16px"
@@ -229,7 +229,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -266,7 +266,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb kigzKX"
+            class="Text-sc-1wu7vpu-0 jVsGHh"
             color="currentColor"
             disabled=""
             font-size="16px"
@@ -288,7 +288,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -302,14 +302,14 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
             Toggle
           </span>
           <span
-            class="sc-AxhCb gXnznd"
+            class="Text-sc-1wu7vpu-0 bphWXP"
             color="darkGrey"
             font-size="12px"
           >
             (Required)
           </span>
           <p
-            class="sc-AxhCb sc-fzokOt itwNrV"
+            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
             color="currentColor"
             font-size="16px"
           >
@@ -336,7 +336,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb iNRqzd"
+            class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
             font-size="16px"
           >
@@ -357,7 +357,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -390,7 +390,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb iNRqzd"
+            class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
             font-size="16px"
           >
@@ -411,7 +411,7 @@ exports[`Storyshots Toggle With long text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -444,7 +444,7 @@ exports[`Storyshots Toggle With long text 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb iNRqzd"
+            class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
             font-size="16px"
           >
@@ -465,7 +465,7 @@ exports[`Storyshots Toggle With text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
     >
       <div
         id="Toggle-label"
@@ -497,7 +497,7 @@ exports[`Storyshots Toggle With text 1`] = `
             />
           </div>
           <p
-            class="sc-AxhCb iNRqzd"
+            class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
             font-size="16px"
           >
