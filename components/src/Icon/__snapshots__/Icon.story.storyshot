@@ -5,18 +5,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
       style="font-size:1em"
     >
       @1em:  
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -34,11 +34,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -53,11 +53,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -72,11 +72,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -91,11 +91,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -110,10 +110,10 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           focusable="false"
           height="1.25em"
           icon="loading"
@@ -192,11 +192,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
     >
       @2em:  
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -214,11 +214,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -233,11 +233,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -252,11 +252,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -271,11 +271,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -290,10 +290,10 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           focusable="false"
           height="1.25em"
           icon="loading"
@@ -372,11 +372,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
     >
       @3em:  
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -394,11 +394,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -413,11 +413,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -432,11 +432,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -451,11 +451,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -470,10 +470,10 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           focusable="false"
           height="1.25em"
           icon="loading"
@@ -552,11 +552,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
     >
       @4em:  
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -574,11 +574,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -593,11 +593,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -612,11 +612,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -631,11 +631,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -650,10 +650,10 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-0 cKMFdt"
+        class="Icon__IconContainer-fc7twp-0 kjlWWW"
       >
         <svg
-          class="sc-AykKE hrqlIQ"
+          class="sc-AxiKw gxEjkA"
           focusable="false"
           height="1.25em"
           icon="loading"
@@ -736,14 +736,14 @@ exports[`Storyshots Icon With a color 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD clTyrU"
+        class="sc-AxirZ dLhrP"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
@@ -761,7 +761,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD clTyrU"
+        class="sc-AxirZ dLhrP"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
@@ -776,7 +776,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD clTyrU"
+        class="sc-AxirZ dLhrP"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
@@ -791,7 +791,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD clTyrU"
+        class="sc-AxirZ dLhrP"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
@@ -806,7 +806,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD clTyrU"
+        class="sc-AxirZ dLhrP"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
@@ -820,7 +820,7 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD clTyrU"
+        class="sc-AxirZ dLhrP"
         focusable="false"
         height="24px"
         icon="loading"
@@ -894,11 +894,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD eXzbYd"
+        class="sc-AxirZ kIJkHo"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
@@ -916,7 +916,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eXzbYd"
+        class="sc-AxirZ kIJkHo"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
@@ -931,7 +931,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eXzbYd"
+        class="sc-AxirZ kIJkHo"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
@@ -946,7 +946,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eXzbYd"
+        class="sc-AxirZ kIJkHo"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
@@ -961,7 +961,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eXzbYd"
+        class="sc-AxirZ kIJkHo"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
@@ -975,7 +975,7 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD eXzbYd"
+        class="sc-AxirZ kIJkHo"
         focusable="false"
         height="24px"
         icon="loading"
@@ -1049,11 +1049,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD eGOLD"
+        class="sc-AxirZ fdOSrs"
         color="#008059"
         fill="#008059"
         focusable="false"
@@ -1071,7 +1071,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eGOLD"
+        class="sc-AxirZ fdOSrs"
         color="#008059"
         fill="#008059"
         focusable="false"
@@ -1086,7 +1086,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eGOLD"
+        class="sc-AxirZ fdOSrs"
         color="#008059"
         fill="#008059"
         focusable="false"
@@ -1101,7 +1101,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eGOLD"
+        class="sc-AxirZ fdOSrs"
         color="#008059"
         fill="#008059"
         focusable="false"
@@ -1116,7 +1116,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eGOLD"
+        class="sc-AxirZ fdOSrs"
         color="#008059"
         fill="#008059"
         focusable="false"
@@ -1130,7 +1130,7 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD eGOLD"
+        class="sc-AxirZ fdOSrs"
         focusable="false"
         height="24px"
         icon="loading"
@@ -1204,11 +1204,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kbaGLP"
+        class="sc-AxirZ RcMPE"
         color="#216beb"
         fill="#216beb"
         focusable="false"
@@ -1226,7 +1226,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD kbaGLP"
+        class="sc-AxirZ RcMPE"
         color="#216beb"
         fill="#216beb"
         focusable="false"
@@ -1241,7 +1241,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD kbaGLP"
+        class="sc-AxirZ RcMPE"
         color="#216beb"
         fill="#216beb"
         focusable="false"
@@ -1256,7 +1256,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD kbaGLP"
+        class="sc-AxirZ RcMPE"
         color="#216beb"
         fill="#216beb"
         focusable="false"
@@ -1271,7 +1271,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD kbaGLP"
+        class="sc-AxirZ RcMPE"
         color="#216beb"
         fill="#216beb"
         focusable="false"
@@ -1285,7 +1285,7 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD kbaGLP"
+        class="sc-AxirZ RcMPE"
         focusable="false"
         height="24px"
         icon="loading"
@@ -1359,11 +1359,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD aLmVb"
+        class="sc-AxirZ drA-Do"
         color="#122b47"
         fill="#122b47"
         focusable="false"
@@ -1381,7 +1381,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD aLmVb"
+        class="sc-AxirZ drA-Do"
         color="#122b47"
         fill="#122b47"
         focusable="false"
@@ -1396,7 +1396,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD aLmVb"
+        class="sc-AxirZ drA-Do"
         color="#122b47"
         fill="#122b47"
         focusable="false"
@@ -1411,7 +1411,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD aLmVb"
+        class="sc-AxirZ drA-Do"
         color="#122b47"
         fill="#122b47"
         focusable="false"
@@ -1426,7 +1426,7 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD aLmVb"
+        class="sc-AxirZ drA-Do"
         color="#122b47"
         fill="#122b47"
         focusable="false"
@@ -1440,7 +1440,7 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD aLmVb"
+        class="sc-AxirZ drA-Do"
         focusable="false"
         height="24px"
         icon="loading"
@@ -1522,14 +1522,14 @@ exports[`Storyshots Icon With a size 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD eBQUbO"
+        class="sc-AxirZ cjpzeR"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1547,7 +1547,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eBQUbO"
+        class="sc-AxirZ cjpzeR"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1562,7 +1562,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eBQUbO"
+        class="sc-AxirZ cjpzeR"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1577,7 +1577,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eBQUbO"
+        class="sc-AxirZ cjpzeR"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1592,7 +1592,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD eBQUbO"
+        class="sc-AxirZ cjpzeR"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1606,7 +1606,7 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD eBQUbO"
+        class="sc-AxirZ cjpzeR"
         focusable="false"
         height="8px"
         icon="loading"
@@ -1680,11 +1680,11 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD bUUoDN"
+        class="sc-AxirZ jgjeWu"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1702,7 +1702,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bUUoDN"
+        class="sc-AxirZ jgjeWu"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1717,7 +1717,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bUUoDN"
+        class="sc-AxirZ jgjeWu"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1732,7 +1732,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bUUoDN"
+        class="sc-AxirZ jgjeWu"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1747,7 +1747,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bUUoDN"
+        class="sc-AxirZ jgjeWu"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1761,7 +1761,7 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD bUUoDN"
+        class="sc-AxirZ jgjeWu"
         focusable="false"
         height="16px"
         icon="loading"
@@ -1835,11 +1835,11 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc"
+      class="Box-sc-1qu1edy-0 jlPsmj"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1857,7 +1857,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1872,7 +1872,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1887,7 +1887,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1902,7 +1902,7 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1916,7 +1916,7 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         focusable="false"
         height="24px"
         icon="loading"
@@ -1998,14 +1998,14 @@ exports[`Storyshots Icon With accessibility title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC krTeAh"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fsNgXa"
     >
       <svg
         aria-hidden="false"
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -2022,11 +2022,11 @@ exports[`Storyshots Icon With accessibility title 1`] = `
        This has a title attribute so it will be read by assistive devices.
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC krTeAh"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fsNgXa"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD bZVMDg"
+        class="sc-AxirZ eIlHGL"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -2050,18 +2050,18 @@ exports[`Storyshots Icon With added margin 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 fUpMMZ"
+      class="Box-sc-1qu1edy-0 bPFBWy"
     >
       <div
-        class="Box-sc-1qu1edy-0 eQeGVF"
+        class="Box-sc-1qu1edy-0 SsrzS"
         style="display:inline-block"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD hdBhAu"
+          class="sc-AxirZ kXJmhz"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -2077,12 +2077,12 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eQeGVF"
+        class="Box-sc-1qu1edy-0 SsrzS"
         style="display:inline-block"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dajFaC"
+          class="sc-AxirZ cqfYyd"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -2098,12 +2098,12 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eQeGVF"
+        class="Box-sc-1qu1edy-0 SsrzS"
         style="display:inline-block"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD fmDnJ"
+          class="sc-AxirZ hrbYWi"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -2119,12 +2119,12 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eQeGVF"
+        class="Box-sc-1qu1edy-0 SsrzS"
         style="display:inline-block"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD msOsM"
+          class="sc-AxirZ foLMLJ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -2140,12 +2140,12 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eQeGVF"
+        class="Box-sc-1qu1edy-0 SsrzS"
         style="display:inline-block"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD keEYXW"
+          class="sc-AxirZ hJhVGd"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -2161,12 +2161,12 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eQeGVF"
+        class="Box-sc-1qu1edy-0 SsrzS"
         style="display:inline-block"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD eeVhyb"
+          class="sc-AxirZ lbwIdY"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -2182,12 +2182,12 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eQeGVF"
+        class="Box-sc-1qu1edy-0 SsrzS"
         style="display:inline-block"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD gdEtFu"
+          class="sc-AxirZ hslsAj"
           color="currentColor"
           fill="currentColor"
           focusable="false"

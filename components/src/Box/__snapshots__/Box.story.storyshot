@@ -5,10 +5,10 @@ exports[`Storyshots Box Box 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 kgPSDa"
+      class="Box-sc-1qu1edy-0 iuijxl"
     >
       Hello World
     </div>
@@ -21,10 +21,10 @@ exports[`Storyshots Box With a background colour 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 djsAXX"
+      class="Box-sc-1qu1edy-0 jamsbG"
       color="white"
     >
       Hello World
@@ -38,10 +38,10 @@ exports[`Storyshots Box With a responsive width 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 iSqypz"
+      class="Box-sc-1qu1edy-0 cxGsXU"
       width="[object Object]"
     >
       Full width on extra small screens, 1/2 width on small and 1/4 width on medium
@@ -55,10 +55,10 @@ exports[`Storyshots Box With a set width 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 kPpbia"
+      class="Box-sc-1qu1edy-0 clejNr"
       width="0.5"
     >
       Half Width
@@ -72,20 +72,20 @@ exports[`Storyshots Box With a shadow 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jdHklY"
+      class="Box-sc-1qu1edy-0 bHmSeb"
     >
       Small shadow
     </div>
     <div
-      class="Box-sc-1qu1edy-0 iwQDQA"
+      class="Box-sc-1qu1edy-0 eyfCVZ"
     >
       Medium shadow
     </div>
     <div
-      class="Box-sc-1qu1edy-0 hfKkLc"
+      class="Box-sc-1qu1edy-0 bGaQQB"
     >
       Large shadow
     </div>
@@ -98,10 +98,10 @@ exports[`Storyshots Box With a text colour 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 dgiJtr"
+      class="Box-sc-1qu1edy-0 dCMDFS"
       color="blue"
     >
       Hello World
@@ -115,43 +115,43 @@ exports[`Storyshots Box With margin 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 kgPSDa"
+      class="Box-sc-1qu1edy-0 iuijxl"
     >
       <div
-        class="Box-sc-1qu1edy-0 hIhzoq"
+        class="Box-sc-1qu1edy-0 bIpQPr"
       >
         Margin
       </div>
       <div
-        class="Box-sc-1qu1edy-0 cuoOre"
+        class="Box-sc-1qu1edy-0 fNJCWd"
       >
         Margin top
       </div>
       <div
-        class="Box-sc-1qu1edy-0 dtHOjp"
+        class="Box-sc-1qu1edy-0 cfKJLu"
       >
         Margin right
       </div>
       <div
-        class="Box-sc-1qu1edy-0 ilVHVE"
+        class="Box-sc-1qu1edy-0 hSzfDt"
       >
         Margin bottom
       </div>
       <div
-        class="Box-sc-1qu1edy-0 haXiZu"
+        class="Box-sc-1qu1edy-0 dTezRN"
       >
         Margin left
       </div>
       <div
-        class="Box-sc-1qu1edy-0 hwRFIK"
+        class="Box-sc-1qu1edy-0 cgLFQx"
       >
         Margin x
       </div>
       <div
-        class="Box-sc-1qu1edy-0 cFAHtp"
+        class="Box-sc-1qu1edy-0 iWmXdK"
       >
         Margin y
       </div>
@@ -165,43 +165,43 @@ exports[`Storyshots Box With padding 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 kXqRXb"
+      class="Box-sc-1qu1edy-0 kbDFVk"
     >
       <div
-        class="Box-sc-1qu1edy-0 DrAYC"
+        class="Box-sc-1qu1edy-0 UfyFz"
       >
         Padding
       </div>
       <div
-        class="Box-sc-1qu1edy-0 DrAYC"
+        class="Box-sc-1qu1edy-0 UfyFz"
       >
         Padding top
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iNWRjl"
+        class="Box-sc-1qu1edy-0 dFirUG"
       >
         Padding right
       </div>
       <div
-        class="Box-sc-1qu1edy-0 fsPHko"
+        class="Box-sc-1qu1edy-0 kjVnmN"
       >
         Padding bottom
       </div>
       <div
-        class="Box-sc-1qu1edy-0 gibXYK"
+        class="Box-sc-1qu1edy-0 kYJNBN"
       >
         Padding left
       </div>
       <div
-        class="Box-sc-1qu1edy-0 chUAKr"
+        class="Box-sc-1qu1edy-0 qFcSW"
       >
         Padding x
       </div>
       <div
-        class="Box-sc-1qu1edy-0 bwmKJe"
+        class="Box-sc-1qu1edy-0 iDOULB"
       >
         Padding y
       </div>

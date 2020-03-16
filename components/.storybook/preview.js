@@ -1,5 +1,5 @@
 import React from "react";
-import { configure, addDecorator, addParameters } from "@storybook/react";
+import { addDecorator, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
@@ -7,16 +7,10 @@ import { withA11y } from "@storybook/addon-a11y";
 import { select, withKnobs } from "@storybook/addon-knobs";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
 
-const req = require.context("../src", true, /\.story\.js$/);
-
 const localeKnobOptions = ALL_NDS_LOCALES.reduce((obj, i) => {
   obj[`${i.label} "${i.value}"`] = i.value;
   return obj;
 }, {});
-
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
 
 const newViewports = {
   extraSmall: {
@@ -67,14 +61,8 @@ addParameters({
   }
 });
 
-addDecorator(withKnobs);
-
-addDecorator(story => {
-  return (
-    <div style={{ padding: theme.space.x3 }}>
-      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
-    </div>
-  );
-});
-
-configure(loadStories, module);
+addDecorator(story => (
+  <div style={{ padding: theme.space.x3 }}>
+    <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
+  </div>
+));

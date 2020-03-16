@@ -5,17 +5,17 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cMJGaY"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fBoXRL"
     >
       <button
         aria-describedby="random-id-13"
         aria-expanded="false"
         aria-haspopup="true"
         aria-label="Open"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
          Button 
       </button>
@@ -29,19 +29,19 @@ exports[`Storyshots Tooltip open by default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-describedby="random-id-37"
       aria-expanded="true"
       aria-haspopup="true"
       aria-label="Close"
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
       Hover me
     </button>
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+      class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
       id="random-id-37"
       open=""
       role="tooltip"
@@ -49,7 +49,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
     >
       I am an open Tooltip!
       <div
-        class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+        class="PopperArrow-sc-1bcgj4w-0 dVKthg"
       />
     </div>
   </div>
@@ -61,14 +61,14 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-describedby="random-id-29"
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
        Button 
     </button>
@@ -81,14 +81,14 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-describedby="random-id-28"
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
        Button 
     </button>
@@ -101,14 +101,14 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-describedby="random-id-31"
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
        Button 
     </button>
@@ -121,22 +121,22 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cMJGaY"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fBoXRL"
     >
       <button
         aria-describedby="random-id-15"
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
          Button 
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dkQvKF  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR NmAvy  nds-popper-pop-up"
         id="random-id-15"
         open=""
         role="tooltip"
@@ -144,7 +144,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
       >
         I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently.
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
     </div>
@@ -157,14 +157,14 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-describedby="random-id-30"
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
        Button 
     </button>
@@ -177,14 +177,14 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-describedby="random-id-32"
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
        Button 
     </button>
@@ -193,7 +193,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Link-sc-1lpx3d0-0 hFcUQo"
+      class="Link-sc-1lpx3d0-0 geMpSb"
       color="blue"
       href="/"
     >
@@ -204,7 +204,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="sc-AykKF fhVcEi"
+      class="sc-AxhCb hWjLUV"
       color="currentColor"
       font-size="16px"
     >
@@ -215,7 +215,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Box-sc-1qu1edy-0 kjiPdZ"
+      class="Box-sc-1qu1edy-0 hmICZS"
       width="200px"
     >
       Box width 200px
@@ -225,7 +225,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Box-sc-1qu1edy-0 cYAGmG"
+      class="Box-sc-1qu1edy-0 fpEmqv"
     >
       Box
     </div>
@@ -238,22 +238,22 @@ exports[`Storyshots Tooltip with placement 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
+      class="Box-sc-1qu1edy-0 sc-AxjAm iuFnUT"
     >
       <button
         aria-describedby="random-id-16"
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-16"
         open=""
         role="tooltip"
@@ -261,7 +261,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         top-start
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -269,12 +269,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-17"
         open=""
         role="tooltip"
@@ -282,7 +282,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         top
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -290,12 +290,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-18"
         open=""
         role="tooltip"
@@ -303,24 +303,24 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         top-end
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
+      class="Box-sc-1qu1edy-0 sc-AxjAm iuFnUT"
     >
       <button
         aria-describedby="random-id-19"
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-19"
         open=""
         role="tooltip"
@@ -328,7 +328,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         left-start
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -336,12 +336,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-20"
         open=""
         role="tooltip"
@@ -349,7 +349,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         left
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -357,12 +357,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-21"
         open=""
         role="tooltip"
@@ -370,24 +370,24 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         left-end
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
+      class="Box-sc-1qu1edy-0 sc-AxjAm iuFnUT"
     >
       <button
         aria-describedby="random-id-22"
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-22"
         open=""
         role="tooltip"
@@ -395,7 +395,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         right-start
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -403,12 +403,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-23"
         open=""
         role="tooltip"
@@ -416,7 +416,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         right
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -424,12 +424,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-24"
         open=""
         role="tooltip"
@@ -437,24 +437,24 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         right-end
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hoVOEM"
+      class="Box-sc-1qu1edy-0 sc-AxjAm iuFnUT"
     >
       <button
         aria-describedby="random-id-25"
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-25"
         open=""
         role="tooltip"
@@ -462,7 +462,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         bottom-start
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -470,12 +470,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-26"
         open=""
         role="tooltip"
@@ -483,7 +483,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         bottom
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
       <button
@@ -491,12 +491,12 @@ exports[`Storyshots Tooltip with placement 1`] = `
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-27"
         open=""
         role="tooltip"
@@ -504,7 +504,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
       >
         bottom-end
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
     </div>
@@ -517,22 +517,22 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cMJGaY"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fBoXRL"
     >
       <button
         aria-describedby="random-id-14"
         aria-expanded="true"
         aria-haspopup="true"
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
       >
          Button 
       </button>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNh dTupLa  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 sc-fznMAR jvBuZL  nds-popper-pop-up"
         id="random-id-14"
         open=""
         role="tooltip"
@@ -540,7 +540,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
       >
         I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters.
         <div
-          class="PopperArrow-sc-1bcgj4w-0 jABZcb"
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
         />
       </div>
     </div>

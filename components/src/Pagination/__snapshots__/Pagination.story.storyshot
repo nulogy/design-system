@@ -5,20 +5,20 @@ exports[`Storyshots Pagination Pagination 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
         disabled=""
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -36,7 +36,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         1
@@ -44,33 +44,33 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -79,18 +79,18 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -108,15 +108,15 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -135,13 +135,13 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         2
@@ -149,26 +149,26 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -177,18 +177,18 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -206,15 +206,15 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -233,20 +233,20 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         3
@@ -254,19 +254,19 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -275,18 +275,18 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -304,15 +304,15 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -331,27 +331,27 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         4
@@ -359,12 +359,12 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -373,18 +373,18 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -402,15 +402,15 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -429,40 +429,40 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         5
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -471,18 +471,18 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -500,15 +500,15 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -527,12 +527,12 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -541,27 +541,27 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         6
@@ -569,18 +569,18 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -598,15 +598,15 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -625,12 +625,12 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -639,47 +639,47 @@ exports[`Storyshots Pagination Pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         6
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
         disabled=""
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -704,20 +704,20 @@ exports[`Storyshots Pagination on the first page 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
         disabled=""
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -735,7 +735,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         1
@@ -743,33 +743,33 @@ exports[`Storyshots Pagination on the first page 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -778,18 +778,18 @@ exports[`Storyshots Pagination on the first page 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         10
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -814,19 +814,19 @@ exports[`Storyshots Pagination on the last page 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -845,12 +845,12 @@ exports[`Storyshots Pagination on the last page 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -859,47 +859,47 @@ exports[`Storyshots Pagination on the last page 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         6
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         7
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         8
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         9
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         10
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
         disabled=""
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -924,19 +924,19 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -955,20 +955,20 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         1
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         3
@@ -976,18 +976,18 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"

@@ -5,26 +5,26 @@ exports[`Storyshots Pages/Details page Default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 sc-AxjAm hYJWVc"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="sc-fzqNqU kikdAh"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzqARJ eqNOdL"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 ksBFcO"
+            class="Link-sc-1lpx3d0-0 hoHKDj"
             color="blue"
             href="/"
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
             >
               <svg
                 height="32px"
@@ -64,26 +64,26 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm hiyyOE"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               style="padding-right:24px"
             >
               <div>
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                   color="#ffffff"
                   type="button"
                 >
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="sc-AxirZ cAzNCm"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -102,7 +102,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 drMLzY"
+                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
                   color="#ffffff"
                   href="/"
                 >
@@ -111,25 +111,25 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               >
                 <div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                     color="#ffffff"
                     type="button"
                   >
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="sc-AxirZ cAzNCm"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -152,30 +152,30 @@ exports[`Storyshots Pages/Details page Default 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ddiKH"
       >
         <div
-          class="Box-sc-1qu1edy-0 czbwcE"
+          class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="sc-AykKG kjjZNK"
+            class="sc-AxhUy ichuyd"
             font-size="46px"
             font-weight="300"
           >
             I am title
           </h1>
           <div
-            class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+            class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
             width="0"
           />
           <div
-            class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+            class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
             role="tablist"
           >
             <div />
             <button
               aria-selected="true"
-              class="Tab__TabButton-sc-69abpu-0 gZENlM"
+              class="Tab__TabButton-sc-69abpu-0 kfQsHL"
               role="tab"
               selected=""
               tabindex="0"
@@ -184,7 +184,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tab__TabButton-sc-69abpu-0 diybrS"
+              class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
             >
@@ -192,7 +192,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tab__TabButton-sc-69abpu-0 diybrS"
+              class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
             >
@@ -204,24 +204,24 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             selected=""
           >
             <div
-              class="Box-sc-1qu1edy-0 fwepcq"
+              class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="sc-AykKH bgiWDu"
+                class="sc-AxgMl jfmynO"
                 font-size="26px"
                 font-weight="500"
               >
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC euHflE"
+                class="Box-sc-1qu1edy-0 sc-AxjAm hFXlbN"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ezfApW"
+                  class="Box-sc-1qu1edy-0 kppLzh"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -229,7 +229,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -237,11 +237,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jUEzSa"
+                  class="Box-sc-1qu1edy-0 iNeoFr"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -249,7 +249,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -257,11 +257,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 eQZEVD"
+                  class="Box-sc-1qu1edy-0 jgRzAy"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -269,7 +269,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -277,11 +277,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 ezfApW"
+                  class="Box-sc-1qu1edy-0 kppLzh"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -289,7 +289,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -297,11 +297,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jUEzSa"
+                  class="Box-sc-1qu1edy-0 iNeoFr"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -309,7 +309,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -317,11 +317,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 eQZEVD"
+                  class="Box-sc-1qu1edy-0 jgRzAy"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -329,7 +329,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -344,42 +344,42 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 llptsQ"
+              class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="sc-AxgMl gpplQs"
                 font-size="26px"
                 font-weight="500"
               >
                 Milestone Performance
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
                   >
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Milestone
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Expected Completion
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Actual Completion
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Performance
@@ -388,30 +388,30 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -426,7 +426,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -436,30 +436,30 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -474,7 +474,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -484,30 +484,30 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -522,7 +522,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -532,30 +532,30 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -570,7 +570,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -589,36 +589,36 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 fwepcq"
+              class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="sc-AxgMl gpplQs"
                 font-size="26px"
                 font-weight="500"
               >
                 Production Records
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
                   >
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Date
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Expected Quantity
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Actual Quantity
@@ -627,77 +627,77 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-01
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,025 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       1,800 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-02
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,250 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-03
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       1,425 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-24
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       -
                     </td>
@@ -707,39 +707,39 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               </table>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxzuhQ"
+              class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="sc-AykKI sc-AykKJ iembIV"
+                class="sc-AxheI sc-Axmtr kntYho"
                 font-size="20px"
                 font-weight="500"
               >
                 Comments
               </h3>
               <form
-                class="sc-fzXfMx UmbCT"
+                class="sc-fzoXzr bruFHJ"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                  class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
                 >
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ersWJQ"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 gvVykd"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc"
+                  class="Box-sc-1qu1edy-0 jlPsmj"
                 >
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo sc-AykKK fmyQGk"
+                    class="Button__WrapperButton-sc-1omxup2-0 kFmWUd sc-AxmLO gXSYqH"
                   >
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzoLsD hbDbFs"
                   >
                     Cancel
                   </button>
@@ -759,26 +759,26 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 sc-AxjAm hYJWVc"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="sc-fzqNqU kikdAh"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzqARJ eqNOdL"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 ksBFcO"
+            class="Link-sc-1lpx3d0-0 hoHKDj"
             color="blue"
             href="/"
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
             >
               <svg
                 height="32px"
@@ -818,26 +818,26 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm hiyyOE"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               style="padding-right:24px"
             >
               <div>
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                   color="#ffffff"
                   type="button"
                 >
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="sc-AxirZ cAzNCm"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -856,7 +856,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 drMLzY"
+                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
                   color="#ffffff"
                   href="/"
                 >
@@ -865,25 +865,25 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               >
                 <div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                     color="#ffffff"
                     type="button"
                   >
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="sc-AxirZ cAzNCm"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -906,21 +906,21 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ddiKH"
       >
         <div
-          class="Box-sc-1qu1edy-0 ddCDMd"
+          class="Box-sc-1qu1edy-0 hkydKC"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC hzayjc"
+            class="Box-sc-1qu1edy-0 sc-AxjAm ccgtWz"
             height="32px"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC llVkbw"
+              class="Box-sc-1qu1edy-0 sc-AxjAm hJWMIL"
               width="[object Object]"
             >
               <a
-                class="Link-sc-1lpx3d0-0 ihmJwB"
+                class="Link-sc-1lpx3d0-0 dNsOaA"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -928,7 +928,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="sc-AykKD bgTLfA"
+                class="sc-AxirZ dyHoPF"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
@@ -943,7 +943,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 />
               </svg>
               <a
-                class="Link-sc-1lpx3d0-0 ihmJwB"
+                class="Link-sc-1lpx3d0-0 dNsOaA"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -951,7 +951,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="sc-AykKD bgTLfA"
+                class="sc-AxirZ dyHoPF"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
@@ -967,11 +967,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </svg>
             </div>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 kHLgMR sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 dMQZdc sc-fzpans cKJzHK"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="sc-AxirZ jrPxI"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -988,24 +988,24 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <h1
-            class="sc-AykKG kjjZNK"
+            class="sc-AxhUy ichuyd"
             font-size="46px"
             font-weight="300"
           >
             I am title
           </h1>
           <div
-            class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+            class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
             width="0"
           />
           <div
-            class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+            class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
             role="tablist"
           >
             <div />
             <button
               aria-selected="true"
-              class="Tab__TabButton-sc-69abpu-0 gZENlM"
+              class="Tab__TabButton-sc-69abpu-0 kfQsHL"
               role="tab"
               selected=""
               tabindex="0"
@@ -1014,7 +1014,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tab__TabButton-sc-69abpu-0 diybrS"
+              class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
             >
@@ -1022,7 +1022,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tab__TabButton-sc-69abpu-0 diybrS"
+              class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
             >
@@ -1034,24 +1034,24 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             selected=""
           >
             <div
-              class="Box-sc-1qu1edy-0 fwepcq"
+              class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="sc-AykKH bgiWDu"
+                class="sc-AxgMl jfmynO"
                 font-size="26px"
                 font-weight="500"
               >
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC euHflE"
+                class="Box-sc-1qu1edy-0 sc-AxjAm hFXlbN"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ezfApW"
+                  class="Box-sc-1qu1edy-0 kppLzh"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1059,7 +1059,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1067,11 +1067,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jUEzSa"
+                  class="Box-sc-1qu1edy-0 iNeoFr"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1079,7 +1079,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1087,11 +1087,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 eQZEVD"
+                  class="Box-sc-1qu1edy-0 jgRzAy"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1099,7 +1099,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1107,11 +1107,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 ezfApW"
+                  class="Box-sc-1qu1edy-0 kppLzh"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1119,7 +1119,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1127,11 +1127,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jUEzSa"
+                  class="Box-sc-1qu1edy-0 iNeoFr"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1139,7 +1139,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1147,11 +1147,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 eQZEVD"
+                  class="Box-sc-1qu1edy-0 jgRzAy"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1159,7 +1159,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1174,42 +1174,42 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 llptsQ"
+              class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="sc-AxgMl gpplQs"
                 font-size="26px"
                 font-weight="500"
               >
                 Milestone Performance
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
                   >
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Milestone
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Expected Completion
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Actual Completion
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Performance
@@ -1218,30 +1218,30 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1256,7 +1256,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1266,30 +1266,30 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1304,7 +1304,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1314,30 +1314,30 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1352,7 +1352,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1362,30 +1362,30 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -1400,7 +1400,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -1419,36 +1419,36 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 fwepcq"
+              class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="sc-AxgMl gpplQs"
                 font-size="26px"
                 font-weight="500"
               >
                 Production Records
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
                   >
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Date
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Expected Quantity
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Actual Quantity
@@ -1457,77 +1457,77 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-01
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,025 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       1,800 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-02
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,250 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-03
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       1,425 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-24
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       -
                     </td>
@@ -1537,39 +1537,39 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </table>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxzuhQ"
+              class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="sc-AykKI sc-AykKJ iembIV"
+                class="sc-AxheI sc-Axmtr kntYho"
                 font-size="20px"
                 font-weight="500"
               >
                 Comments
               </h3>
               <form
-                class="sc-fzXfMx UmbCT"
+                class="sc-fzoXzr bruFHJ"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                  class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
                 >
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ersWJQ"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 gvVykd"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc"
+                  class="Box-sc-1qu1edy-0 jlPsmj"
                 >
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo sc-AykKK fmyQGk"
+                    class="Button__WrapperButton-sc-1omxup2-0 kFmWUd sc-AxmLO gXSYqH"
                   >
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzoLsD hbDbFs"
                   >
                     Cancel
                   </button>
@@ -1579,25 +1579,25 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 hjLctz"
+          class="Box-sc-1qu1edy-0 cTLuiE"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm fksKiQ"
           >
             <h2
-              class="sc-AykKH caijxQ"
+              class="sc-AxgMl cxfBlA"
               font-size="26px"
               font-weight="500"
             >
               I am sidebar
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="sc-AxirZ jrPxI"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -1614,7 +1614,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >
@@ -1632,26 +1632,26 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 sc-AxjAm hYJWVc"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="sc-fzqNqU kikdAh"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzqARJ eqNOdL"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 ksBFcO"
+            class="Link-sc-1lpx3d0-0 hoHKDj"
             color="blue"
             href="/"
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
             >
               <svg
                 height="32px"
@@ -1691,26 +1691,26 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm hiyyOE"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               style="padding-right:24px"
             >
               <div>
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                   color="#ffffff"
                   type="button"
                 >
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="sc-AxirZ cAzNCm"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -1729,7 +1729,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 drMLzY"
+                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
                   color="#ffffff"
                   href="/"
                 >
@@ -1738,25 +1738,25 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               >
                 <div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                     color="#ffffff"
                     type="button"
                   >
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="sc-AxirZ cAzNCm"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -1779,30 +1779,30 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ddiKH"
       >
         <div
-          class="Box-sc-1qu1edy-0 czbwcE"
+          class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="sc-AykKG kjjZNK"
+            class="sc-AxhUy ichuyd"
             font-size="46px"
             font-weight="300"
           >
             I am title
           </h1>
           <div
-            class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 jvTXov"
+            class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
             width="0"
           />
           <div
-            class="Tabs__TabContainer-o5d5cd-0 bBQknD"
+            class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
             role="tablist"
           >
             <div />
             <button
               aria-selected="true"
-              class="Tab__TabButton-sc-69abpu-0 gZENlM"
+              class="Tab__TabButton-sc-69abpu-0 kfQsHL"
               role="tab"
               selected=""
               tabindex="0"
@@ -1811,7 +1811,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tab__TabButton-sc-69abpu-0 diybrS"
+              class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
             >
@@ -1819,7 +1819,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             </button>
             <button
               aria-selected="false"
-              class="Tab__TabButton-sc-69abpu-0 diybrS"
+              class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
             >
@@ -1831,24 +1831,24 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             selected=""
           >
             <div
-              class="Box-sc-1qu1edy-0 fwepcq"
+              class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="sc-AykKH bgiWDu"
+                class="sc-AxgMl jfmynO"
                 font-size="26px"
                 font-weight="500"
               >
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 sc-AykKC euHflE"
+                class="Box-sc-1qu1edy-0 sc-AxjAm hFXlbN"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ezfApW"
+                  class="Box-sc-1qu1edy-0 kppLzh"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1856,7 +1856,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1864,11 +1864,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jUEzSa"
+                  class="Box-sc-1qu1edy-0 iNeoFr"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1876,7 +1876,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1884,11 +1884,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 eQZEVD"
+                  class="Box-sc-1qu1edy-0 jgRzAy"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1896,7 +1896,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1904,11 +1904,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 ezfApW"
+                  class="Box-sc-1qu1edy-0 kppLzh"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1916,7 +1916,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1924,11 +1924,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jUEzSa"
+                  class="Box-sc-1qu1edy-0 iNeoFr"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1936,7 +1936,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1944,11 +1944,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 eQZEVD"
+                  class="Box-sc-1qu1edy-0 jgRzAy"
                   width="0.3333333333333333"
                 >
                   <p
-                    class="sc-AykKF KmVJu"
+                    class="sc-AxhCb kcAKSd"
                     color="currentColor"
                     font-size="small"
                     font-weight="bold"
@@ -1956,7 +1956,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Purchase Order Number
                   </p>
                   <p
-                    class="sc-AykKF jKbmDj"
+                    class="sc-AxhCb hpmHVQ"
                     color="currentColor"
                     font-size="16px"
                   >
@@ -1971,42 +1971,42 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 llptsQ"
+              class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="sc-AxgMl gpplQs"
                 font-size="26px"
                 font-weight="500"
               >
                 Milestone Performance
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
                   >
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Milestone
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Expected Completion
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Actual Completion
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Performance
@@ -2015,30 +2015,30 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2053,7 +2053,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2063,30 +2063,30 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2101,7 +2101,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2111,30 +2111,30 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2149,7 +2149,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2159,30 +2159,30 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       PO Line Item Created
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Nov 3, 2019
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       Dec 13, 2019
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+                        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
                       >
                         <svg
                           aria-hidden="true"
-                          class="sc-AykKD hlJBW"
+                          class="sc-AxirZ hFkmER"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
@@ -2197,7 +2197,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                           />
                         </svg>
                         <p
-                          class="sc-AykKF jKbmDj"
+                          class="sc-AxhCb hpmHVQ"
                           color="currentColor"
                           font-size="16px"
                         >
@@ -2216,36 +2216,36 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 fwepcq"
+              class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="sc-AykKH kPIttU"
+                class="sc-AxgMl gpplQs"
                 font-size="26px"
                 font-weight="500"
               >
                 Production Records
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
                   >
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Date
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Expected Quantity
                     </th>
                     <th
-                      class="StyledTh-sc-10nzyk9-0 cmwBAa"
+                      class="StyledTh-sc-10nzyk9-0 sBlyT"
                       scope="col"
                     >
                       Actual Quantity
@@ -2254,77 +2254,77 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </thead>
                 <tbody>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-01
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,025 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       1,800 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-02
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,250 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-03
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       1,425 eaches
                     </td>
                   </tr>
                   <tr
-                    class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+                    class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
                   >
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2019-10-24
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       2,475 eaches
                     </td>
                     <td
-                      class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+                      class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
                     >
                       -
                     </td>
@@ -2334,39 +2334,39 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </table>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxzuhQ"
+              class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="sc-AykKI sc-AykKJ iembIV"
+                class="sc-AxheI sc-Axmtr kntYho"
                 font-size="20px"
                 font-weight="500"
               >
                 Comments
               </h3>
               <form
-                class="sc-fzXfMx UmbCT"
+                class="sc-fzoXzr bruFHJ"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                  class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
                 >
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ersWJQ"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 gvVykd"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc"
+                  class="Box-sc-1qu1edy-0 jlPsmj"
                 >
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hgwuNo sc-AykKK fmyQGk"
+                    class="Button__WrapperButton-sc-1omxup2-0 kFmWUd sc-AxmLO gXSYqH"
                   >
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzoLsD hbDbFs"
                   >
                     Cancel
                   </button>
@@ -2376,25 +2376,25 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 hjLctz"
+          class="Box-sc-1qu1edy-0 cTLuiE"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm fksKiQ"
           >
             <h2
-              class="sc-AykKH caijxQ"
+              class="sc-AxgMl cxfBlA"
               font-size="26px"
               font-weight="500"
             >
               Job 324400
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="sc-AxirZ jrPxI"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -2411,28 +2411,28 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             </button>
           </div>
           <form
-            class="sc-fzXfMx UmbCT"
+            class="sc-fzoXzr bruFHJ"
           >
             <fieldset
-              class="sc-fzXfMw iAKzA-d"
+              class="sc-fzoLag lbLQKU"
             >
               <legend
-                class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+                class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
                 font-size="20px"
                 font-weight="500"
               >
                 Job Information
               </legend>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2441,16 +2441,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                         id="project"
                         placeholder="Project 128703"
                       />
@@ -2459,15 +2459,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2475,14 +2475,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       Project description
                     </span>
                     <span
-                      class="sc-AykKF bNiwGI"
+                      class="sc-AxhCb gXnznd"
                       color="darkGrey"
                       font-size="12px"
                     >
                       (Optional)
                     </span>
                     <p
-                      class="sc-AykKF sc-fzXfLV kckwMb"
+                      class="sc-AxhCb sc-fzokOt itwNrV"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2490,16 +2490,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </p>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                         id="project-description"
                       />
                     </div>
@@ -2507,15 +2507,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2591,15 +2591,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2608,16 +2608,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="true"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
+                        class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
                         id="item-code"
                         value="WS2SB6"
                       />
@@ -2625,12 +2625,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </div>
                 </label>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
                   color="#cc1439"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD bNpWy"
+                    class="sc-AxirZ gcJrrZ"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
@@ -2645,10 +2645,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
                   >
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="sc-AxhCb hpmHVQ"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2658,15 +2658,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2675,16 +2675,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                         id="eaches-expected"
                         placeholder="2 000"
                       />
@@ -2693,15 +2693,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2710,16 +2710,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 hKYeEh"
+                        class="InputField__StyledInput-sc-6cu4mg-0 eRPyZS"
                         disabled=""
                         id="eaches-remaining"
                         value="18 000"
@@ -2729,15 +2729,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2746,16 +2746,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                         id="scheduled-start"
                         placeholder="MMM-DD-YYYY"
                       />
@@ -2764,15 +2764,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -2781,16 +2781,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                         id="scheduled-end"
                         placeholder="MMM-DD-YYYY"
                       />
@@ -2799,7 +2799,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <fieldset
-                class="Fieldset-sc-9aoml1-0 SrOR sc-fzXfNd cniYLL"
+                class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
               >
                 <legend
                   style="margin-bottom:8px"
@@ -2810,7 +2810,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Line Lead
                   </span>
                   <span
-                    class="sc-AykKF bNiwGI"
+                    class="sc-AxhCb gXnznd"
                     color="darkGrey"
                     font-size="12px"
                   >
@@ -2818,24 +2818,24 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </span>
                 </legend>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
                 >
                   <label
-                    class="ClickInputLabel-j2axnv-0 hdKIjC"
+                    class="ClickInputLabel-j2axnv-0 kemUmZ"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                       name="linelead"
                       type="checkbox"
                       value="christiaan"
                     />
                     <div
-                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                     />
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="sc-AxhCb hpmHVQ"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2844,24 +2844,24 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
                 >
                   <label
-                    class="ClickInputLabel-j2axnv-0 hdKIjC"
+                    class="ClickInputLabel-j2axnv-0 kemUmZ"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                       name="linelead"
                       type="checkbox"
                       value="matt"
                     />
                     <div
-                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                     />
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="sc-AxhCb hpmHVQ"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2870,27 +2870,27 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
                 >
                   <label
-                    class="ClickInputLabel-j2axnv-0 jxKJCC"
+                    class="ClickInputLabel-j2axnv-0 kjxgat"
                     disabled=""
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
                       disabled=""
                       name="linelead"
                       type="checkbox"
                       value="clemens"
                     />
                     <div
-                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                       disabled=""
                     />
                     <p
-                      class="sc-AykKF gRcVjH"
+                      class="sc-AxhCb fTtmG"
                       color="currentColor"
                       disabled=""
                       font-size="16px"
@@ -2900,27 +2900,27 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+                  class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
                 >
                   <label
-                    class="ClickInputLabel-j2axnv-0 jxKJCC"
+                    class="ClickInputLabel-j2axnv-0 kjxgat"
                     disabled=""
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
                       disabled=""
                       name="linelead"
                       type="checkbox"
                       value="nikola"
                     />
                     <div
-                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                      class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                       disabled=""
                     />
                     <p
-                      class="sc-AykKF gRcVjH"
+                      class="sc-AxhCb fTtmG"
                       color="currentColor"
                       disabled=""
                       font-size="16px"
@@ -2931,7 +2931,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </fieldset>
               <fieldset
-                class="Fieldset-sc-9aoml1-0 SrOR sc-fzXfNf cnzRUd"
+                class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzpmMD enYpte"
                 id="reconcile"
               >
                 <legend
@@ -2944,25 +2944,25 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </span>
                 </legend>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+                  class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
                 >
                   <label
-                    class="ClickInputLabel-j2axnv-0 hdKIjC"
+                    class="ClickInputLabel-j2axnv-0 kemUmZ"
                   >
                     <input
                       aria-invalid="true"
                       aria-required="false"
                       checked=""
-                      class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+                      class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
                       name="settingSelection"
                       type="radio"
                       value="yes"
                     />
                     <div
-                      class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+                      class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
                     />
                     <span
-                      class="sc-AykKF jKbmDj"
+                      class="sc-AxhCb hpmHVQ"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2971,24 +2971,24 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+                  class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
                 >
                   <label
-                    class="ClickInputLabel-j2axnv-0 hdKIjC"
+                    class="ClickInputLabel-j2axnv-0 kemUmZ"
                   >
                     <input
                       aria-invalid="true"
                       aria-required="false"
-                      class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+                      class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
                       name="settingSelection"
                       type="radio"
                       value="no"
                     />
                     <div
-                      class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+                      class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
                     />
                     <span
-                      class="sc-AykKF jKbmDj"
+                      class="sc-AxhCb hpmHVQ"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -2997,27 +2997,27 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+                  class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
                 >
                   <label
-                    class="ClickInputLabel-j2axnv-0 jxKJCC"
+                    class="ClickInputLabel-j2axnv-0 kjxgat"
                     disabled=""
                   >
                     <input
                       aria-invalid="true"
                       aria-required="false"
-                      class="Radio__RadioInput-sc-82dpxx-1 bzuiei sc-fzXfNe kVFKSZ"
+                      class="Radio__RadioInput-sc-82dpxx-1 hBtCEn sc-fzoXWK bhiMMA"
                       disabled=""
                       name="settingSelection"
                       type="radio"
                       value="maybe"
                     />
                     <div
-                      class="Radio__VisualRadio-sc-82dpxx-0 dWBwrU"
+                      class="Radio__VisualRadio-sc-82dpxx-0 bCyppR"
                       disabled=""
                     />
                     <span
-                      class="sc-AykKF gRcVjH"
+                      class="sc-AxhCb fTtmG"
                       color="currentColor"
                       disabled=""
                       font-size="16px"
@@ -3027,12 +3027,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
                   color="#cc1439"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD bNpWy"
+                    class="sc-AxirZ gcJrrZ"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
@@ -3047,10 +3047,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
                   >
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="sc-AxhCb hpmHVQ"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -3060,13 +3060,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </fieldset>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
               >
                 <div
                   id="Job Visibility-label"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -3075,25 +3075,25 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="ClickInputLabel-j2axnv-0 hdKIjC"
+                    class="ClickInputLabel-j2axnv-0 kemUmZ"
                   >
                     <div
-                      class="ToggleButton__Switch-asgrb8-1 evdDoW"
+                      class="ToggleButton__Switch-asgrb8-1 irhlNv"
                     >
                       <input
                         aria-labelledby="Job Visibility-label"
                         aria-required="false"
-                        class="ToggleButton__ToggleInput-asgrb8-2 bRfwtk"
+                        class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
                         id="job-visibility"
                         type="checkbox"
                         value="on"
                       />
                       <span
-                        class="ToggleButton__Slider-asgrb8-0 bExZFy"
+                        class="ToggleButton__Slider-asgrb8-0 bLvWmF"
                       />
                     </div>
                     <p
-                      class="sc-AykKF bqQwZK"
+                      class="sc-AxhCb iNRqzd"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -3104,25 +3104,25 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </div>
             </fieldset>
             <fieldset
-              class="sc-fzXfMw iAKzA-d"
+              class="sc-fzoLag lbLQKU"
             >
               <legend
-                class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+                class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
                 font-size="20px"
                 font-weight="500"
               >
                 Rejects
               </legend>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -3131,16 +3131,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="true"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
+                        class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
                         id="items"
                         value="235432"
                       />
@@ -3148,12 +3148,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </div>
                 </label>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
                   color="#cc1439"
                 >
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD bNpWy"
+                    class="sc-AxirZ gcJrrZ"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
@@ -3168,10 +3168,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
                   >
                     <p
-                      class="sc-AykKF jKbmDj"
+                      class="sc-AxhCb hpmHVQ"
                       color="currentColor"
                       font-size="16px"
                     >
@@ -3181,15 +3181,15 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                   color="#011e38"
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -3198,16 +3198,16 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                    class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 klanzh"
+                      class="Box-sc-1qu1edy-0 hxUhcg"
                       display="flex"
                     >
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                         id="quantity"
                       />
                     </div>
@@ -3215,13 +3215,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
+                class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
               >
                 <div
                   id="Reject visibility-label"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 iPmvAN"
+                    class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -3230,28 +3230,28 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="ClickInputLabel-j2axnv-0 jxKJCC"
+                    class="ClickInputLabel-j2axnv-0 kjxgat"
                     disabled=""
                   >
                     <div
-                      class="ToggleButton__Switch-asgrb8-1 evdDoW"
+                      class="ToggleButton__Switch-asgrb8-1 irhlNv"
                     >
                       <input
                         aria-labelledby="Reject visibility-label"
                         aria-required="false"
-                        class="ToggleButton__ToggleInput-asgrb8-2 bdUrci"
+                        class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
                         disabled=""
                         id="reject-visibility"
                         type="checkbox"
                         value="on"
                       />
                       <span
-                        class="ToggleButton__Slider-asgrb8-0 bzNtZY"
+                        class="ToggleButton__Slider-asgrb8-0 bQpZex"
                         disabled=""
                       />
                     </div>
                     <p
-                      class="sc-AykKF ASBTe"
+                      class="sc-AxhCb kigzKX"
                       color="currentColor"
                       disabled=""
                       font-size="16px"

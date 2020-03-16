@@ -5,7 +5,7 @@ exports[`Storyshots LoadingAnimation Active 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <svg
       height="24px"
@@ -163,7 +163,7 @@ exports[`Storyshots LoadingAnimation Inactive 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <svg
       height="24px"
@@ -321,16 +321,16 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfNQ cAaCcq"
+      class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzomME ddnWI"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC jPEwvo"
+        class="Box-sc-1qu1edy-0 sc-AxjAm lbYCih"
       >
         <p
-          class="sc-AykKF dDiJSY"
+          class="sc-AxhCb gaAytt"
           color="currentColor"
           font-size="16px"
           font-weight="medium"
@@ -338,7 +338,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
           1/4
         </p>
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <svg
             height="24px"
@@ -489,7 +489,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
           </svg>
         </div>
         <p
-          class="sc-AykKF kIbUBD"
+          class="sc-AxhCb dIWMIG"
           color="darkGrey"
           font-size="small"
         >
@@ -497,15 +497,15 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC iWmyyv"
+        class="Box-sc-1qu1edy-0 sc-AxjAm hEysGg"
       >
         <button
-          class="ControlIcon__StyledButton-sc-1h83lvi-0 enkneJ"
+          class="ControlIcon__StyledButton-sc-1h83lvi-0 jupSnY"
           disabled=""
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD ceXkCz"
+            class="sc-AxirZ fZltSY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -520,11 +520,11 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
           </svg>
         </button>
         <button
-          class="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
+          class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD ceXkCz"
+            class="sc-AxirZ fZltSY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -549,16 +549,16 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfNQ cAaCcq"
+      class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzomME ddnWI"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC jPEwvo"
+        class="Box-sc-1qu1edy-0 sc-AxjAm lbYCih"
       >
         <p
-          class="sc-AykKF fpMdsE"
+          class="sc-AxhCb dERJRz"
           color="grey"
           font-size="16px"
           font-weight="medium"
@@ -566,7 +566,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
           1/4
         </p>
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <svg
             height="24px"
@@ -717,7 +717,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
           </svg>
         </div>
         <p
-          class="sc-AykKF dxptTB"
+          class="sc-AxhCb bAcJdc"
           color="grey"
           font-size="small"
         >
@@ -725,24 +725,24 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC ixuBaH sc-fzXfLS keIsaA"
+        class="Box-sc-1qu1edy-0 sc-AxjAm hFmmOS sc-fznyAO hAJdLz"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 jRfwdL"
+          class="Box-sc-1qu1edy-0 iDnpba"
         >
           This action takes longer than expected. Try again...
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC iWmyyv"
+        class="Box-sc-1qu1edy-0 sc-AxjAm hEysGg"
       >
         <button
-          class="ControlIcon__StyledButton-sc-1h83lvi-0 fJbcqT"
+          class="ControlIcon__StyledButton-sc-1h83lvi-0 jlPgHC"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD ceXkCz"
+            class="sc-AxirZ fZltSY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -757,11 +757,11 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
           </svg>
         </button>
         <button
-          class="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
+          class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD ceXkCz"
+            class="sc-AxirZ fZltSY"
             color="currentColor"
             fill="currentColor"
             focusable="false"

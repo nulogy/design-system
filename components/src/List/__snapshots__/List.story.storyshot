@@ -5,26 +5,26 @@ exports[`Storyshots List List 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <ul
-      class="List-sc-1cqkmnl-0 eLAYYL"
+      class="List-sc-1cqkmnl-0 jrhpm"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 3
@@ -39,26 +39,26 @@ exports[`Storyshots List With compact spacing 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <ul
-      class="List-sc-1cqkmnl-0 fopWsv"
+      class="List-sc-1cqkmnl-0 gfYBVm"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 3
@@ -73,26 +73,26 @@ exports[`Storyshots List With custom colour 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <ul
-      class="List-sc-1cqkmnl-0 jCgiBP"
+      class="List-sc-1cqkmnl-0 cIngjC"
       color="red"
     >
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 3
@@ -107,27 +107,27 @@ exports[`Storyshots List With custom font size and line height 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <ul
-      class="List-sc-1cqkmnl-0 ruAsR"
+      class="List-sc-1cqkmnl-0 dPxgHI"
       color="currentColor"
       font-size="small"
     >
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 3
@@ -142,26 +142,26 @@ exports[`Storyshots List With left alignment 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <ul
-      class="List-sc-1cqkmnl-0 enngwk"
+      class="List-sc-1cqkmnl-0 joVEnl"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 3

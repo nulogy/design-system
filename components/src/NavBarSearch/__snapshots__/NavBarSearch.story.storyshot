@@ -5,33 +5,33 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 cgRXwI"
+      class="Box-sc-1qu1edy-0 crvLSl"
     >
       <form
-        class="sc-fzXfMz dMkYCt"
+        class="sc-fznxsB UrQbU"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+          class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
           role="search"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+            class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-labelledby="global-search"
                   aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="navbar-search"
                   placeholder="Search Nulogy..."
                   required=""
@@ -46,7 +46,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD bZVMDg"
+              class="sc-AxirZ eIlHGL"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -72,33 +72,33 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 cgRXwI"
+      class="Box-sc-1qu1edy-0 crvLSl"
     >
       <form
-        class="sc-fzXfMz dMkYCt"
+        class="sc-fznxsB UrQbU"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+          class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
           role="search"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+            class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-labelledby="global-search-2"
                   aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="navbar-search"
                   placeholder="Search Nulogy..."
                   required=""
@@ -113,7 +113,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD bZVMDg"
+              class="sc-AxirZ eIlHGL"
               color="currentColor"
               fill="currentColor"
               focusable="false"

@@ -5,29 +5,29 @@ exports[`Storyshots Radio Controlled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 hdKIjC"
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <input
           aria-checked="true"
           aria-invalid="false"
           aria-required="false"
           checked=""
-          class="Radio__RadioInput-sc-82dpxx-1 eKuWUu sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf sc-fzoXWK bhiMMA"
           id="radio-1"
           type="radio"
         />
         <div
           checked=""
-          class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
         />
         <span
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >
@@ -36,24 +36,24 @@ exports[`Storyshots Radio Controlled 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 hdKIjC"
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <input
           aria-checked="false"
           aria-invalid="false"
           aria-required="false"
-          class="Radio__RadioInput-sc-82dpxx-1 eKuWUu sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf sc-fzoXWK bhiMMA"
           id="radio-2"
           type="radio"
         />
         <div
-          class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
         />
         <span
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >
@@ -70,26 +70,26 @@ exports[`Storyshots Radio Radio 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 hdKIjC"
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Radio__RadioInput-sc-82dpxx-1 eKuWUu sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf sc-fzoXWK bhiMMA"
           id="radio"
           type="radio"
         />
         <div
-          class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
         />
         <span
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >
@@ -106,27 +106,27 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 hdKIjC"
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <input
           aria-invalid="false"
           aria-required="false"
           checked=""
-          class="Radio__RadioInput-sc-82dpxx-1 eKuWUu sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf sc-fzoXWK bhiMMA"
           id="radio"
           type="radio"
         />
         <div
-          class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
         />
         <span
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >
@@ -143,29 +143,29 @@ exports[`Storyshots Radio Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 jxKJCC"
+        class="ClickInputLabel-j2axnv-0 kjxgat"
         disabled=""
       >
         <input
           aria-invalid="false"
           aria-required="false"
-          class="Radio__RadioInput-sc-82dpxx-1 bzuiei sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 hBtCEn sc-fzoXWK bhiMMA"
           disabled=""
           id="radio-1"
           type="radio"
         />
         <div
-          class="Radio__VisualRadio-sc-82dpxx-0 dWBwrU"
+          class="Radio__VisualRadio-sc-82dpxx-0 bCyppR"
           disabled=""
         />
         <span
-          class="sc-AykKF gRcVjH"
+          class="sc-AxhCb fTtmG"
           color="currentColor"
           disabled=""
           font-size="16px"
@@ -175,10 +175,10 @@ exports[`Storyshots Radio Set to disabled 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 jxKJCC"
+        class="ClickInputLabel-j2axnv-0 kjxgat"
         disabled=""
       >
         <input
@@ -186,18 +186,18 @@ exports[`Storyshots Radio Set to disabled 1`] = `
           aria-invalid="false"
           aria-required="false"
           checked=""
-          class="Radio__RadioInput-sc-82dpxx-1 bzuiei sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 hBtCEn sc-fzoXWK bhiMMA"
           disabled=""
           id="radio-2"
           type="radio"
         />
         <div
           checked=""
-          class="Radio__VisualRadio-sc-82dpxx-0 dWBwrU"
+          class="Radio__VisualRadio-sc-82dpxx-0 bCyppR"
           disabled=""
         />
         <span
-          class="sc-AykKF gRcVjH"
+          class="sc-AxhCb fTtmG"
           color="currentColor"
           disabled=""
           font-size="16px"
@@ -215,26 +215,26 @@ exports[`Storyshots Radio Set to error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 hdKIjC"
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <input
           aria-invalid="true"
           aria-required="false"
-          class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
           id="radio"
           type="radio"
         />
         <div
-          class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
         />
         <span
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >
@@ -243,24 +243,24 @@ exports[`Storyshots Radio Set to error 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 hdKIjC"
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <input
           aria-invalid="true"
           aria-required="false"
           checked=""
-          class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
           id="radio"
           type="radio"
         />
         <div
-          class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
         />
         <span
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >
@@ -277,27 +277,27 @@ exports[`Storyshots Radio Set to required 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+      class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
     >
       <label
-        class="ClickInputLabel-j2axnv-0 hdKIjC"
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <input
           aria-invalid="false"
           aria-required="true"
-          class="Radio__RadioInput-sc-82dpxx-1 eKuWUu sc-fzXfNe kVFKSZ"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf sc-fzoXWK bhiMMA"
           id="radio"
           required=""
           type="radio"
         />
         <div
-          class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
         />
         <span
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >

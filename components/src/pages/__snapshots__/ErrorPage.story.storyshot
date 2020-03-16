@@ -5,24 +5,24 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fFiYMu"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
+        class="Box-sc-1qu1edy-0 sc-AxjAm QisuE"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
+          class="Box-sc-1qu1edy-0 sc-AxjAm ggeAFW"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 gBBctK"
+            class="Box-sc-1qu1edy-0 eEgbxx"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
             >
               <svg
                 height="48px"
@@ -62,15 +62,15 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dVgOxh"
+            class="Box-sc-1qu1edy-0 dKEgdE"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
+              class="Box-sc-1qu1edy-0 sc-AxjAm jjmQyk sc-fznyAO hRCpfl"
               role="alert"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD fYtHvm"
+                class="sc-AxirZ eSGrht"
                 color="#cc1439"
                 fill="#cc1439"
                 focusable="false"
@@ -85,10 +85,10 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                 />
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 jRfwdL"
+                class="Box-sc-1qu1edy-0 iDnpba"
               >
                 <p
-                  class="sc-AykKF frKGrq"
+                  class="sc-AxhCb lgbEcN"
                   color="currentColor"
                   font-size="16px"
                   font-weight="bold"
@@ -102,11 +102,11 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 klpJm"
+        class="Box-sc-1qu1edy-0 eUEsHJ"
         style="border-top:solid 1px #e4e7eb"
       >
         <p
-          class="sc-AykKF kIbUBD"
+          class="sc-AxhCb dIWMIG"
           color="darkGrey"
           font-size="small"
         >
@@ -123,24 +123,24 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fFiYMu"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
+        class="Box-sc-1qu1edy-0 sc-AxjAm QisuE"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
+          class="Box-sc-1qu1edy-0 sc-AxjAm ggeAFW"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 gBBctK"
+            class="Box-sc-1qu1edy-0 eEgbxx"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
             >
               <svg
                 height="48px"
@@ -180,14 +180,14 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dVgOxh"
+            class="Box-sc-1qu1edy-0 dKEgdE"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC iVdBqs sc-fzXfLS bgmocU"
+              class="Box-sc-1qu1edy-0 sc-AxjAm iElDdL sc-fznyAO hRCpfl"
               role="alert"
             >
               <div
-                class="Box-sc-1qu1edy-0 jRfwdL"
+                class="Box-sc-1qu1edy-0 iDnpba"
               >
                 We are currently adding new features to Nulogy Quality Control. We should be online shortly.
               </div>
@@ -196,11 +196,11 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 klpJm"
+        class="Box-sc-1qu1edy-0 eUEsHJ"
         style="border-top:solid 1px #e4e7eb"
       >
         <p
-          class="sc-AykKF kIbUBD"
+          class="sc-AxhCb dIWMIG"
           color="darkGrey"
           font-size="small"
         >
@@ -217,24 +217,24 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hXCvAj"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fFiYMu"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC eCPEWH"
+        class="Box-sc-1qu1edy-0 sc-AxjAm QisuE"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC euXIyr"
+          class="Box-sc-1qu1edy-0 sc-AxjAm ggeAFW"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 eAbxAs"
+            class="Box-sc-1qu1edy-0 lokTmN"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
             >
               <svg
                 height="48px"
@@ -274,15 +274,15 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dVgOxh"
+            class="Box-sc-1qu1edy-0 dKEgdE"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC jJNLJZ sc-fzXfLS keIsaA"
+              class="Box-sc-1qu1edy-0 sc-AxjAm eMHvGO sc-fznyAO hAJdLz"
               role="alert"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD fYtHvm"
+                class="sc-AxirZ eSGrht"
                 color="#cc1439"
                 fill="#cc1439"
                 focusable="false"
@@ -297,10 +297,10 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                 />
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 jRfwdL"
+                class="Box-sc-1qu1edy-0 iDnpba"
               >
                 <p
-                  class="sc-AykKF frKGrq"
+                  class="sc-AxhCb lgbEcN"
                   color="currentColor"
                   font-size="16px"
                   font-weight="bold"
@@ -311,7 +311,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
               </div>
             </div>
             <a
-              class="Link-sc-1lpx3d0-0 hFcUQo"
+              class="Link-sc-1lpx3d0-0 geMpSb"
               color="blue"
               href="#"
             >
@@ -321,11 +321,11 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 klpJm"
+        class="Box-sc-1qu1edy-0 eUEsHJ"
         style="border-top:solid 1px #e4e7eb"
       >
         <p
-          class="sc-AykKF kIbUBD"
+          class="sc-AxhCb dIWMIG"
           color="darkGrey"
           font-size="small"
         >

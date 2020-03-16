@@ -5,10 +5,10 @@ exports[`Storyshots Buttons As a link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
       href="/"
     >
       Create project
@@ -22,10 +22,10 @@ exports[`Storyshots Buttons Button 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
       Create project
     </button>
@@ -38,10 +38,10 @@ exports[`Storyshots Buttons DangerButton 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLO fTPgxe"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzozJi iomXmU"
     >
       Delete project
     </button>
@@ -54,10 +54,10 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
     >
       Create project
     </button>
@@ -70,10 +70,10 @@ exports[`Storyshots Buttons QuietButton 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzoLsD hbDbFs"
     >
       Create project
     </button>
@@ -86,10 +86,10 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hOMAfu sc-AykKK dmJkIW"
+      class="Button__WrapperButton-sc-1omxup2-0 gfuNnn sc-AxmLO iyIcyd"
       disabled=""
     >
       Create project
@@ -103,10 +103,10 @@ exports[`Storyshots Buttons Set to full width 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 gDovmz sc-AykKK fmyQGk"
+      class="Button__WrapperButton-sc-1omxup2-0 bkRlmc sc-AxmLO gXSYqH"
     >
       Create project
     </button>
@@ -119,14 +119,14 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD hZefax"
+        class="sc-AxirZ bwFfrg"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -143,12 +143,12 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
       Create project
     </button>
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
       Create project
       <svg
         aria-hidden="true"
-        class="sc-AykKD jZBXwS"
+        class="sc-AxirZ bMepUP"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -172,20 +172,20 @@ exports[`Storyshots Buttons With a selected size 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 doZlSP"
+      class="Button__WrapperButton-sc-1omxup2-0 hSnlTw"
     >
       Create project
     </button>
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
     >
       Create project
     </button>
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hlItJn"
+      class="Button__WrapperButton-sc-1omxup2-0 bDgRPA"
     >
       Create project
     </button>

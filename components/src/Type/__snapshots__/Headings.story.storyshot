@@ -5,10 +5,10 @@ exports[`Storyshots Headings Section Title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <h2
-      class="sc-AykKH dIrZHw"
+      class="sc-AxgMl hWPmHw"
       font-size="26px"
       font-weight="500"
     >
@@ -23,10 +23,10 @@ exports[`Storyshots Headings Subsection Title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <h3
-      class="sc-AykKI sc-AykKJ kxSqMb"
+      class="sc-AxheI sc-Axmtr iUwHNi"
       font-size="20px"
       font-weight="500"
     >
@@ -41,10 +41,10 @@ exports[`Storyshots Headings Title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <h1
-      class="sc-AykKG caGURK"
+      class="sc-AxhUy jXBjWt"
       font-size="46px"
       font-weight="300"
     >
@@ -59,17 +59,17 @@ exports[`Storyshots Headings With a custom margin 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <h1
-      class="sc-AykKG kjjZNK"
+      class="sc-AxhUy ichuyd"
       font-size="46px"
       font-weight="300"
     >
       Title
     </h1>
     <p
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >

@@ -5,13 +5,13 @@ exports[`Storyshots Text Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 fgSEox"
+      class="Box-sc-1qu1edy-0 duXuoY"
     >
       <p
-        class="sc-AykKF gRcVjH"
+        class="sc-AxhCb fTtmG"
         color="currentColor"
         disabled=""
         font-size="16px"
@@ -20,10 +20,10 @@ exports[`Storyshots Text Set to disabled 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 cloHC"
+      class="Box-sc-1qu1edy-0 fXRdUR"
     >
       <p
-        class="sc-AykKF dfMsAc"
+        class="sc-AxhCb kNjXdR"
         color="white"
         disabled=""
         font-size="16px"
@@ -32,10 +32,10 @@ exports[`Storyshots Text Set to disabled 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 hpTOkf"
+      class="Box-sc-1qu1edy-0 ffhBHW"
     >
       <p
-        class="sc-AykKF dfMsAc"
+        class="sc-AxhCb kNjXdR"
         color="white"
         disabled=""
         font-size="16px"
@@ -52,17 +52,17 @@ exports[`Storyshots Text Set to inline 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <span
-      class="sc-AykKF eOMZSl"
+      class="sc-AxhCb czaJmK"
       color="currentColor"
       font-size="16px"
     >
       Inline text
     </span>
     <span
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >
@@ -77,10 +77,10 @@ exports[`Storyshots Text Text 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >
@@ -95,10 +95,10 @@ exports[`Storyshots Text With a color 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AykKF dtTTCW"
+      class="sc-AxhCb kVUoJL"
       color="blue"
       font-size="16px"
     >
@@ -113,17 +113,17 @@ exports[`Storyshots Text With a custom margin 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AykKF fIxBQt"
+      class="sc-AxhCb gznDoW"
       color="currentColor"
       font-size="16px"
     >
       Text 24px bottom margin.
     </p>
     <p
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >
@@ -138,13 +138,13 @@ exports[`Storyshots Text With a size 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 eDSxfb"
+      class="Box-sc-1qu1edy-0 eBHmui"
     >
       <p
-        class="sc-AykKF jKbmDj"
+        class="sc-AxhCb hpmHVQ"
         color="currentColor"
         font-size="16px"
       >
@@ -152,17 +152,17 @@ exports[`Storyshots Text With a size 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 eDSxfb"
+      class="Box-sc-1qu1edy-0 eBHmui"
     >
       <p
-        class="sc-AykKF eUlarf"
+        class="sc-AxhCb iuDmhU"
         color="currentColor"
         font-size="small"
       >
         Small (14px/24px)
       </p>
       <p
-        class="sc-AykKF jgPnyM"
+        class="sc-AxhCb iduuMb"
         color="currentColor"
         font-size="small"
       >
@@ -170,10 +170,10 @@ exports[`Storyshots Text With a size 1`] = `
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 eDSxfb"
+      class="Box-sc-1qu1edy-0 eBHmui"
     >
       <p
-        class="sc-AykKF cvMnHO"
+        class="sc-AxhCb fTcPjZ"
         color="currentColor"
         font-size="smaller"
       >

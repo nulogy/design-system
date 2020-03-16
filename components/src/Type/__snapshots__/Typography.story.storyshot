@@ -5,138 +5,138 @@ exports[`Storyshots Typography Article 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <h1
-      class="sc-AykKG caGURK"
+      class="sc-AxhUy jXBjWt"
       font-size="46px"
       font-weight="300"
     >
       Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
     </h1>
     <h2
-      class="sc-AykKH dIrZHw"
+      class="sc-AxgMl hWPmHw"
       font-size="26px"
       font-weight="500"
     >
       Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
     </h2>
     <p
-      class="sc-AykKF fIxBQt"
+      class="sc-AxhCb gznDoW"
       color="currentColor"
       font-size="16px"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
-      class="sc-AykKI sc-AykKJ kxSqMb"
+      class="sc-AxheI sc-Axmtr iUwHNi"
       font-size="20px"
       font-weight="500"
     >
       Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?
     </h3>
     <p
-      class="sc-AykKF fIxBQt"
+      class="sc-AxhCb gznDoW"
       color="currentColor"
       font-size="16px"
     >
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
     </p>
     <h2
-      class="sc-AykKH dIrZHw"
+      class="sc-AxgMl hWPmHw"
       font-size="26px"
       font-weight="500"
     >
       Donec leo felis
     </h2>
     <h3
-      class="sc-AykKI sc-AykKJ kxSqMb"
+      class="sc-AxheI sc-Axmtr iUwHNi"
       font-size="20px"
       font-weight="500"
     >
       Two pargraphs and moderatly long title
     </h3>
     <p
-      class="sc-AykKF fIxBQt"
+      class="sc-AxhCb gznDoW"
       color="currentColor"
       font-size="16px"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
-      class="sc-AykKI sc-AykKJ kxSqMb"
+      class="sc-AxheI sc-Axmtr iUwHNi"
       font-size="20px"
       font-weight="500"
     >
       Two pargraphs with List
     </h3>
     <p
-      class="sc-AykKF fIxBQt"
+      class="sc-AxhCb gznDoW"
       color="currentColor"
       font-size="16px"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <ul
-      class="List-sc-1cqkmnl-0 eLAYYL"
+      class="List-sc-1cqkmnl-0 jrhpm"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 jlnRPI"
+        class="ListItem-qqenhw-0 fGfFTP"
         color="currentColor"
       >
         List Item 3
       </li>
     </ul>
     <p
-      class="sc-AykKF fIxBQt"
+      class="sc-AxhCb gznDoW"
       color="currentColor"
       font-size="16px"
     >
       Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <p
-      class="sc-AykKF fIxBQt"
+      class="sc-AxhCb gznDoW"
       color="currentColor"
       font-size="16px"
     >
       Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </p>
     <h3
-      class="sc-AykKI sc-AykKJ kxSqMb"
+      class="sc-AxheI sc-Axmtr iUwHNi"
       font-size="20px"
       font-weight="500"
     >
       This is small text (14px) with medium(default) line height (24px).
     </h3>
     <p
-      class="sc-AykKF iDqkiA"
+      class="sc-AxhCb gnwUfv"
       color="currentColor"
       font-size="0"
     >
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </p>
     <h3
-      class="sc-AykKI sc-AykKJ kxSqMb"
+      class="sc-AxheI sc-Axmtr iUwHNi"
       font-size="20px"
       font-weight="500"
     >
       This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...
     </h3>
     <p
-      class="sc-AykKF cOqBqe"
+      class="sc-AxhCb lmfFOx"
       color="currentColor"
       font-size="small"
     >
