@@ -7,6 +7,11 @@ import { withA11y } from "@storybook/addon-a11y";
 import { select, withKnobs } from "@storybook/addon-knobs";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
 
+const localeKnobOptions = ALL_NDS_LOCALES.reduce((obj, i) => {
+  obj[`${i.label} "${i.value}"`] = i.value;
+  return obj;
+}, {});
+
 const newViewports = {
   extraSmall: {
     name: "Extra small",
@@ -58,6 +63,6 @@ addParameters({
 
 addDecorator(story => (
   <div style={{ padding: theme.space.x3 }}>
-    <NDSProvider>{story()}</NDSProvider>
+    <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
   </div>
 ));
