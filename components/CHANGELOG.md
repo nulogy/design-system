@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/nulogy/design-system/compare/v1.4.1...v1.4.2) (2020-03-16)
+
+
+### Bug Fixes
+
+* select hover bug when text overflows select due to long words ([#578](https://github.com/nulogy/design-system/issues/578)) ([6045000](https://github.com/nulogy/design-system/commit/6045000c801416a3665a5d08541b7f43130f6870))
+
+
+
+
+
 ## [1.4.1](https://github.com/nulogy/design-system/compare/v1.4.0...v1.4.1) (2020-03-04)
 
 **Note:** Version bump only for package @nulogy/components
