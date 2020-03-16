@@ -5,15 +5,15 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-label="close"
-      class="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
+      class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD ceXkCz"
+        class="sc-AxirZ fZltSY"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -36,16 +36,16 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-label="close"
-      class="ControlIcon__StyledButton-sc-1h83lvi-0 NXazX"
+      class="ControlIcon__StyledButton-sc-1h83lvi-0 lkZGcS"
       disabled=""
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD ceXkCz"
+        class="sc-AxirZ fZltSY"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -68,15 +68,15 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-label="close"
-      class="ControlIcon__StyledButton-sc-1h83lvi-0 eNABZB"
+      class="ControlIcon__StyledButton-sc-1h83lvi-0 jjnZya"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD ceXkCz"
+        class="sc-AxirZ fZltSY"
         color="currentColor"
         fill="currentColor"
         focusable="false"

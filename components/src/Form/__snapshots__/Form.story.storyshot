@@ -5,25 +5,25 @@ exports[`Storyshots Form Demo form 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzXfMx dXtnjn"
+      class="sc-fzoXzr jYbPbp"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         Job 324400
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC hEeuHN sc-fzXfLS bgmocU"
+        class="Box-sc-1qu1edy-0 sc-AxjAm jjmQyk sc-fznyAO hRCpfl"
         role="alert"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD fYtHvm"
+          class="sc-AxirZ eSGrht"
           color="#cc1439"
           fill="#cc1439"
           focusable="false"
@@ -38,10 +38,10 @@ exports[`Storyshots Form Demo form 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 jRfwdL"
+          class="Box-sc-1qu1edy-0 iDnpba"
         >
           <p
-            class="sc-AykKF frKGrq"
+            class="sc-AxhCb lgbEcN"
             color="currentColor"
             font-size="16px"
             font-weight="bold"
@@ -49,30 +49,30 @@ exports[`Storyshots Form Demo form 1`] = `
             Errors have occured ...
           </p>
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >
             Instructions and description of errors
           </p>
           <ul
-            class="List-sc-1cqkmnl-0 fopWsv"
+            class="List-sc-1cqkmnl-0 gfYBVm"
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 jlnRPI"
+              class="ListItem-qqenhw-0 fGfFTP"
               color="currentColor"
             >
               Affected field
             </li>
             <li
-              class="ListItem-qqenhw-0 jlnRPI"
+              class="ListItem-qqenhw-0 fGfFTP"
               color="currentColor"
             >
               Unmet criteria
             </li>
             <li
-              class="ListItem-qqenhw-0 jlnRPI"
+              class="ListItem-qqenhw-0 fGfFTP"
               color="currentColor"
             >
               <a
@@ -85,25 +85,25 @@ exports[`Storyshots Form Demo form 1`] = `
         </div>
       </div>
       <fieldset
-        class="sc-fzXfMw iAKzA-d"
+        class="sc-fzoLag lbLQKU"
       >
         <legend
-          class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
           font-size="20px"
           font-weight="500"
         >
           Job Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -112,16 +112,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="project"
                   placeholder="Project 128703"
                 />
@@ -130,15 +130,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -146,14 +146,14 @@ exports[`Storyshots Form Demo form 1`] = `
                 Project description
               </span>
               <span
-                class="sc-AykKF bNiwGI"
+                class="sc-AxhCb gXnznd"
                 color="darkGrey"
                 font-size="12px"
               >
                 (Optional)
               </span>
               <p
-                class="sc-AykKF sc-fzXfLV kckwMb"
+                class="sc-AxhCb sc-fzokOt itwNrV"
                 color="currentColor"
                 font-size="16px"
               >
@@ -161,16 +161,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="project-description"
                 />
               </div>
@@ -178,15 +178,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -262,15 +262,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -279,16 +279,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="true"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
+                  class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
                   id="item-code"
                   value="WS2SB6"
                 />
@@ -296,12 +296,12 @@ exports[`Storyshots Form Demo form 1`] = `
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
             color="#cc1439"
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD bNpWy"
+              class="sc-AxirZ gcJrrZ"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -316,10 +316,10 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+              class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
             >
               <p
-                class="sc-AykKF jKbmDj"
+                class="sc-AxhCb hpmHVQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -329,15 +329,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -346,16 +346,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="eaches-expected"
                   placeholder="2 000"
                 />
@@ -364,15 +364,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -381,16 +381,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 hKYeEh"
+                  class="InputField__StyledInput-sc-6cu4mg-0 eRPyZS"
                   disabled=""
                   id="eaches-remaining"
                   value="18 000"
@@ -400,15 +400,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -417,16 +417,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="scheduled-start"
                   placeholder="MMM-DD-YYYY"
                 />
@@ -435,15 +435,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -452,16 +452,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="scheduled-end"
                   placeholder="MMM-DD-YYYY"
                 />
@@ -470,7 +470,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <fieldset
-          class="Fieldset-sc-9aoml1-0 SrOR sc-fzXfNd cniYLL"
+          class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
         >
           <legend
             style="margin-bottom:8px"
@@ -481,7 +481,7 @@ exports[`Storyshots Form Demo form 1`] = `
               Line Lead
             </span>
             <span
-              class="sc-AykKF bNiwGI"
+              class="sc-AxhCb gXnznd"
               color="darkGrey"
               font-size="12px"
             >
@@ -489,24 +489,24 @@ exports[`Storyshots Form Demo form 1`] = `
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 hdKIjC"
+              class="ClickInputLabel-j2axnv-0 kemUmZ"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                 name="linelead"
                 type="checkbox"
                 value="christiaan"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
               />
               <p
-                class="sc-AykKF jKbmDj"
+                class="sc-AxhCb hpmHVQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -515,24 +515,24 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 hdKIjC"
+              class="ClickInputLabel-j2axnv-0 kemUmZ"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                 name="linelead"
                 type="checkbox"
                 value="matt"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
               />
               <p
-                class="sc-AykKF jKbmDj"
+                class="sc-AxhCb hpmHVQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -541,27 +541,27 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 jxKJCC"
+              class="ClickInputLabel-j2axnv-0 kjxgat"
               disabled=""
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
                 disabled=""
                 name="linelead"
                 type="checkbox"
                 value="clemens"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 disabled=""
               />
               <p
-                class="sc-AykKF gRcVjH"
+                class="sc-AxhCb fTtmG"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -571,27 +571,27 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 jxKJCC"
+              class="ClickInputLabel-j2axnv-0 kjxgat"
               disabled=""
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 gYNwWa sc-fzXfNc bSPfCk"
+                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
                 disabled=""
                 name="linelead"
                 type="checkbox"
                 value="nikola"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 disabled=""
               />
               <p
-                class="sc-AykKF gRcVjH"
+                class="sc-AxhCb fTtmG"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -602,7 +602,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="Fieldset-sc-9aoml1-0 SrOR sc-fzXfNf cnzRUd"
+          class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzpmMD enYpte"
           id="reconcile"
         >
           <legend
@@ -615,25 +615,25 @@ exports[`Storyshots Form Demo form 1`] = `
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 hdKIjC"
+              class="ClickInputLabel-j2axnv-0 kemUmZ"
             >
               <input
                 aria-invalid="true"
                 aria-required="false"
                 checked=""
-                class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
                 name="settingSelection"
                 type="radio"
                 value="yes"
               />
               <div
-                class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+                class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
               />
               <span
-                class="sc-AykKF jKbmDj"
+                class="sc-AxhCb hpmHVQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -642,24 +642,24 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 hdKIjC"
+              class="ClickInputLabel-j2axnv-0 kemUmZ"
             >
               <input
                 aria-invalid="true"
                 aria-required="false"
-                class="Radio__RadioInput-sc-82dpxx-1 ciJsGK sc-fzXfNe kVFKSZ"
+                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh sc-fzoXWK bhiMMA"
                 name="settingSelection"
                 type="radio"
                 value="no"
               />
               <div
-                class="Radio__VisualRadio-sc-82dpxx-0 liXUJA"
+                class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
               />
               <span
-                class="sc-AykKF jKbmDj"
+                class="sc-AxhCb hpmHVQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -668,27 +668,27 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNe kVFKSZ"
+            class="Box-sc-1qu1edy-0 jlPsmj sc-fzoXWK bhiMMA"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 jxKJCC"
+              class="ClickInputLabel-j2axnv-0 kjxgat"
               disabled=""
             >
               <input
                 aria-invalid="true"
                 aria-required="false"
-                class="Radio__RadioInput-sc-82dpxx-1 bzuiei sc-fzXfNe kVFKSZ"
+                class="Radio__RadioInput-sc-82dpxx-1 hBtCEn sc-fzoXWK bhiMMA"
                 disabled=""
                 name="settingSelection"
                 type="radio"
                 value="maybe"
               />
               <div
-                class="Radio__VisualRadio-sc-82dpxx-0 dWBwrU"
+                class="Radio__VisualRadio-sc-82dpxx-0 bCyppR"
                 disabled=""
               />
               <span
-                class="sc-AykKF gRcVjH"
+                class="sc-AxhCb fTtmG"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -698,12 +698,12 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
             color="#cc1439"
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD bNpWy"
+              class="sc-AxirZ gcJrrZ"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -718,10 +718,10 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+              class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
             >
               <p
-                class="sc-AykKF jKbmDj"
+                class="sc-AxhCb hpmHVQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -731,13 +731,13 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
         >
           <div
             id="Job Visibility-label"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -746,25 +746,25 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="ClickInputLabel-j2axnv-0 hdKIjC"
+              class="ClickInputLabel-j2axnv-0 kemUmZ"
             >
               <div
-                class="ToggleButton__Switch-asgrb8-1 evdDoW"
+                class="ToggleButton__Switch-asgrb8-1 irhlNv"
               >
                 <input
                   aria-labelledby="Job Visibility-label"
                   aria-required="false"
-                  class="ToggleButton__ToggleInput-asgrb8-2 bRfwtk"
+                  class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
                   id="job-visibility"
                   type="checkbox"
                   value="on"
                 />
                 <span
-                  class="ToggleButton__Slider-asgrb8-0 bExZFy"
+                  class="ToggleButton__Slider-asgrb8-0 bLvWmF"
                 />
               </div>
               <p
-                class="sc-AykKF bqQwZK"
+                class="sc-AxhCb iNRqzd"
                 color="currentColor"
                 font-size="16px"
               >
@@ -775,25 +775,25 @@ exports[`Storyshots Form Demo form 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzXfMw iAKzA-d"
+        class="sc-fzoLag lbLQKU"
       >
         <legend
-          class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
           font-size="20px"
           font-weight="500"
         >
           Rejects
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -802,16 +802,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="true"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
+                  class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
                   id="items"
                   value="235432"
                 />
@@ -819,12 +819,12 @@ exports[`Storyshots Form Demo form 1`] = `
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
             color="#cc1439"
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD bNpWy"
+              class="sc-AxirZ gcJrrZ"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -839,10 +839,10 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+              class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
             >
               <p
-                class="sc-AykKF jKbmDj"
+                class="sc-AxhCb hpmHVQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -852,15 +852,15 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -869,16 +869,16 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="quantity"
                 />
               </div>
@@ -886,13 +886,13 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB sc-fzXfNg dHJaZc"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD sc-fznxKY drWwya"
         >
           <div
             id="Reject visibility-label"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -901,28 +901,28 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="ClickInputLabel-j2axnv-0 jxKJCC"
+              class="ClickInputLabel-j2axnv-0 kjxgat"
               disabled=""
             >
               <div
-                class="ToggleButton__Switch-asgrb8-1 evdDoW"
+                class="ToggleButton__Switch-asgrb8-1 irhlNv"
               >
                 <input
                   aria-labelledby="Reject visibility-label"
                   aria-required="false"
-                  class="ToggleButton__ToggleInput-asgrb8-2 bdUrci"
+                  class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
                   disabled=""
                   id="reject-visibility"
                   type="checkbox"
                   value="on"
                 />
                 <span
-                  class="ToggleButton__Slider-asgrb8-0 bzNtZY"
+                  class="ToggleButton__Slider-asgrb8-0 bQpZex"
                   disabled=""
                 />
               </div>
               <p
-                class="sc-AykKF ASBTe"
+                class="sc-AxhCb kigzKX"
                 color="currentColor"
                 disabled=""
                 font-size="16px"
@@ -943,28 +943,28 @@ exports[`Storyshots Form Form 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzXfMx dXtnjn"
+      class="sc-fzoXzr jYbPbp"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         New Profile
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
           color="#011e38"
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 iPmvAN"
+            class="Box-sc-1qu1edy-0 ilQgHG"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -973,16 +973,16 @@ exports[`Storyshots Form Form 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                 id="name"
               />
             </div>
@@ -990,15 +990,15 @@ exports[`Storyshots Form Form 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
           color="#011e38"
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 iPmvAN"
+            class="Box-sc-1qu1edy-0 ilQgHG"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1006,14 +1006,14 @@ exports[`Storyshots Form Form 1`] = `
               Date of birth
             </span>
             <span
-              class="sc-AykKF bNiwGI"
+              class="sc-AxhCb gXnznd"
               color="darkGrey"
               font-size="12px"
             >
               (Optional)
             </span>
             <p
-              class="sc-AykKF sc-fzXfLV kckwMb"
+              class="sc-AxhCb sc-fzokOt itwNrV"
               color="currentColor"
               font-size="16px"
             >
@@ -1021,16 +1021,16 @@ exports[`Storyshots Form Form 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                 id="birthdate"
                 placeholder="DD-MM-YYYY"
               />
@@ -1039,15 +1039,15 @@ exports[`Storyshots Form Form 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
           color="#011e38"
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 iPmvAN"
+            class="Box-sc-1qu1edy-0 ilQgHG"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1055,7 +1055,7 @@ exports[`Storyshots Form Form 1`] = `
               Place of birth
             </span>
             <span
-              class="sc-AykKF bNiwGI"
+              class="sc-AxhCb gXnznd"
               color="darkGrey"
               font-size="12px"
             >
@@ -1063,16 +1063,16 @@ exports[`Storyshots Form Form 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                 id="birthplace"
               />
             </div>
@@ -1089,38 +1089,38 @@ exports[`Storyshots Form With form sections 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzXfMx dXtnjn"
+      class="sc-fzoXzr jYbPbp"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         New Profile
       </h2>
       <fieldset
-        class="sc-fzXfMw iAKzA-d"
+        class="sc-fzoLag lbLQKU"
       >
         <legend
-          class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
           font-size="20px"
           font-weight="500"
         >
           Personal Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1129,16 +1129,16 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="name"
                 />
               </div>
@@ -1146,15 +1146,15 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1162,14 +1162,14 @@ exports[`Storyshots Form With form sections 1`] = `
                 Date of birth
               </span>
               <span
-                class="sc-AykKF bNiwGI"
+                class="sc-AxhCb gXnznd"
                 color="darkGrey"
                 font-size="12px"
               >
                 (Optional)
               </span>
               <p
-                class="sc-AykKF sc-fzXfLV kckwMb"
+                class="sc-AxhCb sc-fzokOt itwNrV"
                 color="currentColor"
                 font-size="16px"
               >
@@ -1177,16 +1177,16 @@ exports[`Storyshots Form With form sections 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="birthdate"
                   placeholder="DD-MM-YYYY"
                 />
@@ -1195,15 +1195,15 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1211,7 +1211,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 Place of birth
               </span>
               <span
-                class="sc-AykKF bNiwGI"
+                class="sc-AxhCb gXnznd"
                 color="darkGrey"
                 font-size="12px"
               >
@@ -1219,16 +1219,16 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="birthplace"
                 />
               </div>
@@ -1237,25 +1237,25 @@ exports[`Storyshots Form With form sections 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzXfMw iAKzA-d"
+        class="sc-fzoLag lbLQKU"
       >
         <legend
-          class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
           font-size="20px"
           font-weight="500"
         >
           General Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1264,16 +1264,16 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="gender"
                 />
               </div>
@@ -1281,15 +1281,15 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1298,16 +1298,16 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="occupation"
                 />
               </div>
@@ -1325,31 +1325,31 @@ exports[`Storyshots Form With form sections without titles 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzXfMx dXtnjn"
+      class="sc-fzoXzr jYbPbp"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         New Profile
       </h2>
       <fieldset
-        class="sc-fzXfMw jAYmwL"
+        class="sc-fzoLag hRFyEi"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1358,16 +1358,16 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="name"
                 />
               </div>
@@ -1375,15 +1375,15 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1391,14 +1391,14 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 Date of birth
               </span>
               <span
-                class="sc-AykKF bNiwGI"
+                class="sc-AxhCb gXnznd"
                 color="darkGrey"
                 font-size="12px"
               >
                 (Optional)
               </span>
               <p
-                class="sc-AykKF sc-fzXfLV kckwMb"
+                class="sc-AxhCb sc-fzokOt itwNrV"
                 color="currentColor"
                 font-size="16px"
               >
@@ -1406,16 +1406,16 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="birthdate"
                   placeholder="DD-MM-YYYY"
                 />
@@ -1424,15 +1424,15 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1440,7 +1440,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 Place of birth
               </span>
               <span
-                class="sc-AykKF bNiwGI"
+                class="sc-AxhCb gXnznd"
                 color="darkGrey"
                 font-size="12px"
               >
@@ -1448,16 +1448,16 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="birthplace"
                 />
               </div>
@@ -1466,18 +1466,18 @@ exports[`Storyshots Form With form sections without titles 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzXfMw jAYmwL"
+        class="sc-fzoLag hRFyEi"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1486,16 +1486,16 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="gender"
                 />
               </div>
@@ -1503,15 +1503,15 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
             color="#011e38"
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 iPmvAN"
+              class="Box-sc-1qu1edy-0 ilQgHG"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1520,16 +1520,16 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
             >
               <div
-                class="Box-sc-1qu1edy-0 klanzh"
+                class="Box-sc-1qu1edy-0 hxUhcg"
                 display="flex"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   id="occupation"
                 />
               </div>
@@ -1547,21 +1547,21 @@ exports[`Storyshots Form Without title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzXfMx UmbCT"
+      class="sc-fzoXzr bruFHJ"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
           color="#011e38"
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 iPmvAN"
+            class="Box-sc-1qu1edy-0 ilQgHG"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1570,16 +1570,16 @@ exports[`Storyshots Form Without title 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                 id="name"
               />
             </div>
@@ -1587,15 +1587,15 @@ exports[`Storyshots Form Without title 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
           color="#011e38"
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 iPmvAN"
+            class="Box-sc-1qu1edy-0 ilQgHG"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1603,14 +1603,14 @@ exports[`Storyshots Form Without title 1`] = `
               Date of birth
             </span>
             <span
-              class="sc-AykKF bNiwGI"
+              class="sc-AxhCb gXnznd"
               color="darkGrey"
               font-size="12px"
             >
               (Optional)
             </span>
             <p
-              class="sc-AykKF sc-fzXfLV kckwMb"
+              class="sc-AxhCb sc-fzokOt itwNrV"
               color="currentColor"
               font-size="16px"
             >
@@ -1618,16 +1618,16 @@ exports[`Storyshots Form Without title 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                 id="birthdate"
                 placeholder="DD-MM-YYYY"
               />
@@ -1636,15 +1636,15 @@ exports[`Storyshots Form Without title 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
           color="#011e38"
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 iPmvAN"
+            class="Box-sc-1qu1edy-0 ilQgHG"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1652,7 +1652,7 @@ exports[`Storyshots Form Without title 1`] = `
               Place of birth
             </span>
             <span
-              class="sc-AykKF bNiwGI"
+              class="sc-AxhCb gXnznd"
               color="darkGrey"
               font-size="12px"
             >
@@ -1660,16 +1660,16 @@ exports[`Storyshots Form Without title 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                 id="birthplace"
               />
             </div>

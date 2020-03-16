@@ -5,16 +5,16 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-label="Cancel"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hAZPvX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 ccTxAW sc-fzpans cKJzHK"
       disabled=""
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="sc-AxirZ jrPxI"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -29,7 +29,7 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="sc-AxhCb djnyhr"
         color="currentColor"
         font-size="16px"
       >
@@ -38,12 +38,12 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
     </button>
     <button
       aria-label="Lock"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hAZPvX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 ccTxAW sc-fzpans cKJzHK"
       disabled=""
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="sc-AxirZ jrPxI"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -58,7 +58,7 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="sc-AxhCb djnyhr"
         color="currentColor"
         font-size="16px"
       >
@@ -74,15 +74,15 @@ exports[`Storyshots IconicButton with a hidden label 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-label="Hidden Label"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 feBDxe sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 czaxuv sc-fzpans cKJzHK"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="sc-AxirZ jrPxI"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -97,7 +97,7 @@ exports[`Storyshots IconicButton with a hidden label 1`] = `
         />
       </svg>
       <div
-        class="IconicButton__HoverText-sc-1u3dojp-0 KHavs"
+        class="IconicButton__HoverText-sc-1u3dojp-0 gHFmsl"
         style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
       >
         Hidden Label
@@ -112,15 +112,15 @@ exports[`Storyshots IconicButton with a long label 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-label="I am an Iconic Button with a really really really long label"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="sc-AxirZ jrPxI"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -135,7 +135,7 @@ exports[`Storyshots IconicButton with a long label 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="sc-AxhCb djnyhr"
         color="currentColor"
         font-size="16px"
       >
@@ -151,15 +151,15 @@ exports[`Storyshots IconicButton with label 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
       aria-label="Delete"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="sc-AxirZ jrPxI"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -174,7 +174,7 @@ exports[`Storyshots IconicButton with label 1`] = `
         />
       </svg>
       <p
-        class="sc-AykKF jTSHcw"
+        class="sc-AxhCb djnyhr"
         color="currentColor"
         font-size="16px"
       >
@@ -190,14 +190,14 @@ exports[`Storyshots IconicButton without a label 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
     >
       <svg
         aria-hidden="true"
-        class="sc-AykKD kaUxeX"
+        class="sc-AxirZ jrPxI"
         color="currentColor"
         fill="currentColor"
         focusable="false"

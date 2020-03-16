@@ -5,17 +5,17 @@ exports[`Storyshots Branding Branding 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
     >
       <div
-        class="Box-sc-1qu1edy-0 kHxvsS"
+        class="Box-sc-1qu1edy-0 cqHFoz"
         width="0.5"
       >
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -56,7 +56,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -73,7 +73,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -111,11 +111,11 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+            class="Box-sc-1qu1edy-0 sc-AxjAm bQjeJX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 bCZnqu"
+              class="BrandingText-nluvkd-0 TxcJr"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
@@ -125,7 +125,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -163,24 +163,24 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+            class="Box-sc-1qu1edy-0 sc-AxjAm bQjeJX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 bCZnqu"
+              class="BrandingText-nluvkd-0 TxcJr"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 lkObZr"
+              class="Branding__Line-ranqri-1 gfZuug"
             />
           </div>
         </div>
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -221,7 +221,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -238,7 +238,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -276,11 +276,11 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC fBIOJo"
+            class="Box-sc-1qu1edy-0 sc-AxjAm eyCHpX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 bCZnqu"
+              class="BrandingText-nluvkd-0 TxcJr"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
@@ -290,7 +290,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -328,27 +328,27 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC fBIOJo"
+            class="Box-sc-1qu1edy-0 sc-AxjAm eyCHpX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 bCZnqu"
+              class="BrandingText-nluvkd-0 TxcJr"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 lkObZr"
+              class="Branding__Line-ranqri-1 gfZuug"
             />
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 hGoinM"
+        class="Box-sc-1qu1edy-0 cNiTF"
         width="0.5"
       >
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -389,7 +389,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -406,7 +406,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -444,11 +444,11 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+            class="Box-sc-1qu1edy-0 sc-AxjAm bQjeJX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 eaHa-dj"
+              class="BrandingText-nluvkd-0 klrjtc"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
@@ -458,7 +458,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
         >
           <svg
             height="32px"
@@ -496,24 +496,24 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+            class="Box-sc-1qu1edy-0 sc-AxjAm bQjeJX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 eaHa-dj"
+              class="BrandingText-nluvkd-0 klrjtc"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 ivpPpr"
+              class="Branding__Line-ranqri-1 iooZEo"
             />
           </div>
         </div>
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -554,7 +554,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -571,7 +571,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -609,11 +609,11 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC fBIOJo"
+            class="Box-sc-1qu1edy-0 sc-AxjAm eyCHpX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 eaHa-dj"
+              class="BrandingText-nluvkd-0 klrjtc"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
@@ -623,7 +623,7 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+          class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
         >
           <svg
             height="48px"
@@ -661,27 +661,27 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC fBIOJo"
+            class="Box-sc-1qu1edy-0 sc-AxjAm eyCHpX"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 eaHa-dj"
+              class="BrandingText-nluvkd-0 klrjtc"
               style="margin-left:;margin-right:4px"
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 ivpPpr"
+              class="Branding__Line-ranqri-1 iooZEo"
             />
           </div>
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC gjevXe"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fnHFWx"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
       >
         <svg
           height="32px"
@@ -719,11 +719,11 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+          class="Box-sc-1qu1edy-0 sc-AxjAm bQjeJX"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:;margin-right:4px"
           >
             Left Align
@@ -731,7 +731,7 @@ exports[`Storyshots Branding Branding 1`] = `
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 ksaudk sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 heEDKn sc-fznKkj fQkkzS"
       >
         <svg
           height="32px"
@@ -769,11 +769,11 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hFBdvf"
+          class="Box-sc-1qu1edy-0 sc-AxjAm ctsxTi"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:4px"
           >
             Center Align
@@ -781,7 +781,7 @@ exports[`Storyshots Branding Branding 1`] = `
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 gglXZm sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 bOWbLF sc-fznKkj fQkkzS"
       >
         <svg
           height="32px"
@@ -819,11 +819,11 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC gzjStV"
+          class="Box-sc-1qu1edy-0 sc-AxjAm hwJBSI"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:"
           >
             Right Align
@@ -832,10 +832,10 @@ exports[`Storyshots Branding Branding 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC gjevXe"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fnHFWx"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
       >
         <svg
           height="32px"
@@ -873,22 +873,22 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC joAJys"
+          class="Box-sc-1qu1edy-0 sc-AxjAm bQjeJX"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:;margin-right:4px"
           >
             Left Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 ksaudk sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 heEDKn sc-fznKkj fQkkzS"
       >
         <svg
           height="32px"
@@ -926,25 +926,25 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hFBdvf"
+          class="Box-sc-1qu1edy-0 sc-AxjAm ctsxTi"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:4px"
           >
             Center Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 gglXZm sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 bOWbLF sc-fznKkj fQkkzS"
       >
         <svg
           height="32px"
@@ -982,14 +982,14 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC gzjStV"
+          class="Box-sc-1qu1edy-0 sc-AxjAm hwJBSI"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:"
           >
             Right Align
@@ -998,10 +998,10 @@ exports[`Storyshots Branding Branding 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC gjevXe"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fnHFWx"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
       >
         <svg
           height="48px"
@@ -1039,11 +1039,11 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC fBIOJo"
+          class="Box-sc-1qu1edy-0 sc-AxjAm eyCHpX"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:;margin-right:4px"
           >
             Left Align
@@ -1051,7 +1051,7 @@ exports[`Storyshots Branding Branding 1`] = `
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 kEvDyG sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 yiUfZ sc-fznKkj fQkkzS"
       >
         <svg
           height="48px"
@@ -1089,11 +1089,11 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bsRzIj"
+          class="Box-sc-1qu1edy-0 sc-AxjAm huehni"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:4px"
           >
             Center Align
@@ -1101,7 +1101,7 @@ exports[`Storyshots Branding Branding 1`] = `
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 imshJw sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 jTTNBD sc-fznKkj fQkkzS"
       >
         <svg
           height="48px"
@@ -1139,11 +1139,11 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hrmEOt"
+          class="Box-sc-1qu1edy-0 sc-AxjAm fZrLU"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:"
           >
             Right Align
@@ -1152,10 +1152,10 @@ exports[`Storyshots Branding Branding 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC gjevXe"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fnHFWx"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 jnLXGP sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 kLCNLY sc-fznKkj fQkkzS"
       >
         <svg
           height="48px"
@@ -1193,22 +1193,22 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC fBIOJo"
+          class="Box-sc-1qu1edy-0 sc-AxjAm eyCHpX"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:;margin-right:4px"
           >
             Left Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 kEvDyG sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 yiUfZ sc-fznKkj fQkkzS"
       >
         <svg
           height="48px"
@@ -1246,25 +1246,25 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bsRzIj"
+          class="Box-sc-1qu1edy-0 sc-AxjAm huehni"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:4px"
           >
             Center Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 imshJw sc-fzXfLT bZTthB"
+        class="Branding__BrandingWrap-ranqri-0 jTTNBD sc-fznKkj fQkkzS"
       >
         <svg
           height="48px"
@@ -1302,14 +1302,14 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC hrmEOt"
+          class="Box-sc-1qu1edy-0 sc-AxjAm fZrLU"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 lkObZr"
+            class="Branding__Line-ranqri-1 gfZuug"
           />
           <span
-            class="BrandingText-nluvkd-0 bCZnqu"
+            class="BrandingText-nluvkd-0 TxcJr"
             style="margin-left:4px;margin-right:"
           >
             Right Align

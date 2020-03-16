@@ -5,23 +5,23 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bFiPjn"
+      class="Box-sc-1qu1edy-0 sc-AxjAm dthveY"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC dtldVq"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ksYmkv"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC dpkLuX"
+          class="Box-sc-1qu1edy-0 sc-AxjAm cCpJje"
           height="[object Object]"
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 kEvDyG sc-fzXfLT bZTthB"
+            class="Branding__BrandingWrap-ranqri-0 yiUfZ sc-fznKkj fQkkzS"
             style="margin-bottom:16px"
           >
             <svg
@@ -60,44 +60,44 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bsRzIj"
+              class="Box-sc-1qu1edy-0 sc-AxjAm huehni"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
               <span
-                class="BrandingText-nluvkd-0 bCZnqu"
+                class="BrandingText-nluvkd-0 TxcJr"
                 style="margin-left:4px;margin-right:4px"
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
             </div>
           </div>
           <p
-            class="sc-AykKF gSiXpO"
+            class="sc-AxhCb fVUkFJ"
             color="darkGrey"
             font-size="small"
           >
             Additional Text
           </p>
           <form
-            class="sc-fzXfMx UmbCT"
+            class="sc-fzoXzr bruFHJ"
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -106,31 +106,31 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -139,16 +139,16 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                       type="password"
                     />
                   </div>
@@ -156,7 +156,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 gDovmz sc-AykKK fmyQGk"
+              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc sc-AxmLO gXSYqH"
             >
               Sign In
             </button>
@@ -164,12 +164,12 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 JywQC"
+        class="Box-sc-1qu1edy-0 iZcQLf"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
         <p
-          class="sc-AykKF fjqeeR"
+          class="sc-AxhCb fCZlnw"
           color="darkGrey"
           font-size="16px"
         >
@@ -186,23 +186,23 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bFiPjn"
+      class="Box-sc-1qu1edy-0 sc-AxjAm dthveY"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC dtldVq"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ksYmkv"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC dpkLuX"
+          class="Box-sc-1qu1edy-0 sc-AxjAm cCpJje"
           height="[object Object]"
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 kEvDyG sc-fzXfLT bZTthB"
+            class="Branding__BrandingWrap-ranqri-0 yiUfZ sc-fznKkj fQkkzS"
             style="margin-bottom:16px"
           >
             <svg
@@ -241,38 +241,38 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bsRzIj"
+              class="Box-sc-1qu1edy-0 sc-AxjAm huehni"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
               <span
-                class="BrandingText-nluvkd-0 bCZnqu"
+                class="BrandingText-nluvkd-0 TxcJr"
                 style="margin-left:4px;margin-right:4px"
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
             </div>
           </div>
           <p
-            class="sc-AykKF bCrhHY"
+            class="sc-AxhCb ccSfUB"
             color="currentColor"
             font-size="small"
           >
             Additional Text
           </p>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC ooTz sc-fzXfLS btvWiy"
+            class="Box-sc-1qu1edy-0 sc-AxjAm cKtcwM sc-fznyAO cZKrkZ"
             role="alert"
             style="width:100%"
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD fYtHvm"
+              class="sc-AxirZ eSGrht"
               color="#cc1439"
               fill="#cc1439"
               focusable="false"
@@ -287,25 +287,25 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               />
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 jRfwdL"
+              class="Box-sc-1qu1edy-0 iDnpba"
             >
               text
             </div>
           </div>
           <form
-            class="sc-fzXfMx UmbCT"
+            class="sc-fzoXzr bruFHJ"
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -314,31 +314,31 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -347,16 +347,16 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                       type="password"
                     />
                   </div>
@@ -364,7 +364,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 gDovmz sc-AykKK fmyQGk"
+              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc sc-AxmLO gXSYqH"
             >
               Sign In
             </button>
@@ -372,12 +372,12 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 JywQC"
+        class="Box-sc-1qu1edy-0 iZcQLf"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
         <p
-          class="sc-AykKF fjqeeR"
+          class="sc-AxhCb fCZlnw"
           color="darkGrey"
           font-size="16px"
         >
@@ -394,23 +394,23 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bFiPjn"
+      class="Box-sc-1qu1edy-0 sc-AxjAm dthveY"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC dtldVq"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ksYmkv"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC dpkLuX"
+          class="Box-sc-1qu1edy-0 sc-AxjAm cCpJje"
           height="[object Object]"
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 kEvDyG sc-fzXfLT bZTthB"
+            class="Branding__BrandingWrap-ranqri-0 yiUfZ sc-fznKkj fQkkzS"
             style="margin-bottom:32px"
           >
             <svg
@@ -449,31 +449,31 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bsRzIj"
+              class="Box-sc-1qu1edy-0 sc-AxjAm huehni"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
               <span
-                class="BrandingText-nluvkd-0 bCZnqu"
+                class="BrandingText-nluvkd-0 TxcJr"
                 style="margin-left:4px;margin-right:4px"
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC ooTz sc-fzXfLS btvWiy"
+            class="Box-sc-1qu1edy-0 sc-AxjAm cKtcwM sc-fznyAO cZKrkZ"
             role="alert"
             style="width:100%"
           >
             <svg
               aria-hidden="true"
-              class="sc-AykKD fYtHvm"
+              class="sc-AxirZ eSGrht"
               color="#cc1439"
               fill="#cc1439"
               focusable="false"
@@ -488,25 +488,25 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               />
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 jRfwdL"
+              class="Box-sc-1qu1edy-0 iDnpba"
             >
               text
             </div>
           </div>
           <form
-            class="sc-fzXfMx UmbCT"
+            class="sc-fzoXzr bruFHJ"
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -515,31 +515,31 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -548,16 +548,16 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                       type="password"
                     />
                   </div>
@@ -565,7 +565,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 gDovmz sc-AykKK fmyQGk"
+              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc sc-AxmLO gXSYqH"
             >
               Sign In
             </button>
@@ -573,12 +573,12 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 JywQC"
+        class="Box-sc-1qu1edy-0 iZcQLf"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
         <p
-          class="sc-AykKF fjqeeR"
+          class="sc-AxhCb fCZlnw"
           color="darkGrey"
           font-size="16px"
         >
@@ -595,23 +595,23 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bFiPjn"
+      class="Box-sc-1qu1edy-0 sc-AxjAm dthveY"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC dtldVq"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ksYmkv"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC dpkLuX"
+          class="Box-sc-1qu1edy-0 sc-AxjAm cCpJje"
           height="[object Object]"
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 kEvDyG sc-fzXfLT bZTthB"
+            class="Branding__BrandingWrap-ranqri-0 yiUfZ sc-fznKkj fQkkzS"
             style="margin-bottom:16px"
           >
             <svg
@@ -650,44 +650,44 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bsRzIj"
+              class="Box-sc-1qu1edy-0 sc-AxjAm huehni"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
               <span
-                class="BrandingText-nluvkd-0 bCZnqu"
+                class="BrandingText-nluvkd-0 TxcJr"
                 style="margin-left:4px;margin-right:4px"
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
             </div>
           </div>
           <p
-            class="sc-AykKF gSiXpO"
+            class="sc-AxhCb fVUkFJ"
             color="darkGrey"
             font-size="small"
           >
             Additional Text
           </p>
           <form
-            class="sc-fzXfMx UmbCT"
+            class="sc-fzoXzr bruFHJ"
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -696,31 +696,31 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -729,16 +729,16 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                       type="password"
                     />
                   </div>
@@ -746,16 +746,16 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 gDovmz sc-AykKK fmyQGk"
+              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc sc-AxmLO gXSYqH"
             >
               Sign In
             </button>
           </form>
           <div
-            class="Box-sc-1qu1edy-0 hXOfXZ"
+            class="Box-sc-1qu1edy-0 csERpy"
           >
             <a
-              class="Link-sc-1lpx3d0-0 hFcUQo"
+              class="Link-sc-1lpx3d0-0 geMpSb"
               color="blue"
               href="/"
             >
@@ -765,12 +765,12 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 JywQC"
+        class="Box-sc-1qu1edy-0 iZcQLf"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
         <p
-          class="sc-AykKF fjqeeR"
+          class="sc-AxhCb fCZlnw"
           color="darkGrey"
           font-size="16px"
         >
@@ -787,23 +787,23 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bFiPjn"
+      class="Box-sc-1qu1edy-0 sc-AxjAm dthveY"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC dtldVq"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ksYmkv"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC dpkLuX"
+          class="Box-sc-1qu1edy-0 sc-AxjAm cCpJje"
           height="[object Object]"
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 kEvDyG sc-fzXfLT bZTthB"
+            class="Branding__BrandingWrap-ranqri-0 yiUfZ sc-fznKkj fQkkzS"
             style="margin-bottom:16px"
           >
             <svg
@@ -842,25 +842,25 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC bsRzIj"
+              class="Box-sc-1qu1edy-0 sc-AxjAm huehni"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
               <span
-                class="BrandingText-nluvkd-0 bCZnqu"
+                class="BrandingText-nluvkd-0 TxcJr"
                 style="margin-left:4px;margin-right:4px"
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 lkObZr"
+                class="Branding__Line-ranqri-1 gfZuug"
               />
             </div>
           </div>
           <p
-            class="sc-AykKF gSiXpO"
+            class="sc-AxhCb fVUkFJ"
             color="darkGrey"
             font-size="small"
           >
@@ -870,15 +870,15 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -887,31 +887,31 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 dHAtTZ"
+                      class="InputField__StyledInput-sc-6cu4mg-0 gnjdyw"
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+              class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
                 color="#011e38"
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 iPmvAN"
+                  class="Box-sc-1qu1edy-0 ilQgHG"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -920,16 +920,16 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+                  class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 klanzh"
+                    class="Box-sc-1qu1edy-0 hxUhcg"
                     display="flex"
                   >
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                       type="password"
                     />
                   </div>
@@ -937,22 +937,22 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc dmqVOD"
+              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs dfopnG"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 hdKIjC"
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
               >
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc dmqVOD"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs dfopnG"
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 />
                 <p
-                  class="sc-AykKF jKbmDj"
+                  class="sc-AxhCb hpmHVQ"
                   color="currentColor"
                   font-size="16px"
                 >
@@ -961,7 +961,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 gDovmz sc-AykKK fmyQGk"
+              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc sc-AxmLO gXSYqH"
             >
               Sign In
             </button>
@@ -969,12 +969,12 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 JywQC"
+        class="Box-sc-1qu1edy-0 iZcQLf"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
         <p
-          class="sc-AykKF fjqeeR"
+          class="sc-AxhCb fCZlnw"
           color="darkGrey"
           font-size="16px"
         >

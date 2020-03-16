@@ -5,18 +5,18 @@ exports[`Storyshots Input Input 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
         color="#011e38"
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -25,16 +25,16 @@ exports[`Storyshots Input Input 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
         >
           <div
-            class="Box-sc-1qu1edy-0 klanzh"
+            class="Box-sc-1qu1edy-0 hxUhcg"
             display="flex"
           >
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+              class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
             />
           </div>
         </div>
@@ -49,18 +49,18 @@ exports[`Storyshots Input set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
         color="#011e38"
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -69,16 +69,16 @@ exports[`Storyshots Input set to disabled 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
         >
           <div
-            class="Box-sc-1qu1edy-0 klanzh"
+            class="Box-sc-1qu1edy-0 hxUhcg"
             display="flex"
           >
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 hKYeEh"
+              class="InputField__StyledInput-sc-6cu4mg-0 eRPyZS"
               disabled=""
             />
           </div>
@@ -94,28 +94,28 @@ exports[`Storyshots Input set to required 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzXfMx dXtnjn"
+      class="sc-fzoXzr jYbPbp"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         Required field example
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
           color="#011e38"
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 iPmvAN"
+            class="Box-sc-1qu1edy-0 ilQgHG"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -124,16 +124,16 @@ exports[`Storyshots Input set to required 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="true"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                 required=""
               />
             </div>
@@ -141,7 +141,7 @@ exports[`Storyshots Input set to required 1`] = `
         </label>
       </div>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
       >
         Send
       </button>
@@ -155,43 +155,43 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <form
-      class="sc-fzXfMx jekoKQ"
+      class="sc-fzoXzr hkgMKA"
       mb="x6"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         Suffix
       </h2>
       <fieldset
-        class="sc-fzXfMw jAYmwL"
+        class="sc-fzoLag hRFyEi"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 gbjCIa"
+              class="Box-sc-1qu1edy-0 gtRBwd"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -201,26 +201,26 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 gbjCIa"
+              class="Box-sc-1qu1edy-0 gtRBwd"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -231,37 +231,37 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzXfMw iAKzA-d"
+        class="sc-fzoLag lbLQKU"
       >
         <legend
-          class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
           font-size="20px"
           font-weight="500"
         >
           With Custom Width
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 bIIlRs"
+              class="Box-sc-1qu1edy-0 fehlWH"
               width="360px"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -271,27 +271,27 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 bIIlRs"
+              class="Box-sc-1qu1edy-0 fehlWH"
               width="360px"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -303,30 +303,30 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
       </fieldset>
     </form>
     <form
-      class="sc-fzXfMx jekoKQ"
+      class="sc-fzoXzr hkgMKA"
       mb="x6"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         Prefix
       </h2>
       <fieldset
-        class="sc-fzXfMw jAYmwL"
+        class="sc-fzoLag hRFyEi"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 hdngKl"
+              class="Box-sc-1qu1edy-0 cujNNu"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -334,28 +334,28 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 hdngKl"
+              class="Box-sc-1qu1edy-0 cujNNu"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -363,40 +363,40 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
           </div>
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzXfMw iAKzA-d"
+        class="sc-fzoLag lbLQKU"
       >
         <legend
-          class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
           font-size="20px"
           font-weight="500"
         >
           With Custom Width
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 cIetMj"
+              class="Box-sc-1qu1edy-0 hEsaBU"
               width="360px"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -404,29 +404,29 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 cIetMj"
+              class="Box-sc-1qu1edy-0 hEsaBU"
               width="360px"
             >
               <p
-                class="sc-AykKF jUrMjw"
+                class="sc-AxhCb cATKmr"
                 color="currentColor"
                 font-size="16px"
               >
@@ -434,40 +434,40 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
           </div>
         </div>
       </fieldset>
       <fieldset
-        class="sc-fzXfMw iAKzA-d"
+        class="sc-fzoLag lbLQKU"
       >
         <legend
-          class="sc-AykKI sc-AykKJ sc-fzXfMv bUxjSG"
+          class="sc-AxheI sc-Axmtr sc-fzoyAV dtjMcd"
           font-size="20px"
           font-weight="500"
         >
           With right alignment
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 cIetMj"
+              class="Box-sc-1qu1edy-0 hEsaBU"
               width="360px"
             >
               <p
-                class="sc-AykKF cfBbAL"
+                class="sc-AxhCb fQCxOQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -475,29 +475,29 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+          class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+            class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
           >
             <div
-              class="Box-sc-1qu1edy-0 cIetMj"
+              class="Box-sc-1qu1edy-0 hEsaBU"
               width="360px"
             >
               <p
-                class="sc-AykKF cfBbAL"
+                class="sc-AxhCb fQCxOQ"
                 color="currentColor"
                 font-size="16px"
               >
@@ -505,13 +505,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 klanzh"
+              class="Box-sc-1qu1edy-0 hxUhcg"
               display="flex"
             >
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+                class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               />
             </div>
           </div>
@@ -519,27 +519,27 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
       </fieldset>
     </form>
     <form
-      class="sc-fzXfMx jekoKQ"
+      class="sc-fzoXzr hkgMKA"
       mb="x6"
     >
       <h2
-        class="sc-AykKH dIrZHw"
+        class="sc-AxgMl hWPmHw"
         font-size="26px"
         font-weight="500"
       >
         Prefix and Suffix
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
         >
           <div
-            class="Box-sc-1qu1edy-0 hdngKl"
+            class="Box-sc-1qu1edy-0 cujNNu"
           >
             <p
-              class="sc-AykKF jUrMjw"
+              class="sc-AxhCb cATKmr"
               color="currentColor"
               font-size="16px"
             >
@@ -547,20 +547,20 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 klanzh"
+            class="Box-sc-1qu1edy-0 hxUhcg"
             display="flex"
           >
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+              class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
             />
           </div>
           <div
-            class="Box-sc-1qu1edy-0 gbjCIa"
+            class="Box-sc-1qu1edy-0 gtRBwd"
           >
             <p
-              class="sc-AykKF jUrMjw"
+              class="sc-AxhCb cATKmr"
               color="currentColor"
               font-size="16px"
             >
@@ -579,18 +579,18 @@ exports[`Storyshots Input with all props 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
         color="#011e38"
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -598,14 +598,14 @@ exports[`Storyshots Input with all props 1`] = `
             Input
           </span>
           <span
-            class="sc-AykKF bNiwGI"
+            class="sc-AxhCb gXnznd"
             color="darkGrey"
             font-size="12px"
           >
             Required
           </span>
           <p
-            class="sc-AykKF sc-fzXfLV kckwMb"
+            class="sc-AxhCb sc-fzokOt itwNrV"
             color="currentColor"
             font-size="16px"
           >
@@ -613,16 +613,16 @@ exports[`Storyshots Input with all props 1`] = `
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
         >
           <div
-            class="Box-sc-1qu1edy-0 klanzh"
+            class="Box-sc-1qu1edy-0 hxUhcg"
             display="flex"
           >
             <input
               aria-invalid="false"
               aria-required="true"
-              class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+              class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               placeholder="Placeholder"
               required=""
             />
@@ -639,18 +639,18 @@ exports[`Storyshots Input with custom ID 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
         color="#011e38"
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -659,16 +659,16 @@ exports[`Storyshots Input with custom ID 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
         >
           <div
-            class="Box-sc-1qu1edy-0 klanzh"
+            class="Box-sc-1qu1edy-0 hxUhcg"
             display="flex"
           >
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 gMpUUS"
+              class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
               id="my-own-id"
             />
           </div>
@@ -684,18 +684,18 @@ exports[`Storyshots Input with error list  1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
         color="#011e38"
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -704,27 +704,27 @@ exports[`Storyshots Input with error list  1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
         >
           <div
-            class="Box-sc-1qu1edy-0 klanzh"
+            class="Box-sc-1qu1edy-0 hxUhcg"
             display="flex"
           >
             <input
               aria-invalid="true"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
+              class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
             />
           </div>
         </div>
       </label>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+        class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
         color="#cc1439"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD bNpWy"
+          class="sc-AxirZ gcJrrZ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -739,27 +739,27 @@ exports[`Storyshots Input with error list  1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
         >
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >
             Error message
           </p>
           <ul
-            class="List-sc-1cqkmnl-0 kMmxnE"
+            class="List-sc-1cqkmnl-0 diqcEx"
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 jlnRPI"
+              class="ListItem-qqenhw-0 fGfFTP"
               color="currentColor"
             >
               Error message 1
             </li>
             <li
-              class="ListItem-qqenhw-0 jlnRPI"
+              class="ListItem-qqenhw-0 fGfFTP"
               color="currentColor"
             >
               Error message 2
@@ -777,18 +777,18 @@ exports[`Storyshots Input with error message 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzXfLX sBbYB"
+      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
         color="#011e38"
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 iPmvAN"
+          class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -797,27 +797,27 @@ exports[`Storyshots Input with error message 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
         >
           <div
-            class="Box-sc-1qu1edy-0 klanzh"
+            class="Box-sc-1qu1edy-0 hxUhcg"
             display="flex"
           >
             <input
               aria-invalid="true"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 gpgWan"
+              class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
             />
           </div>
         </div>
       </label>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC bnFjvb"
+        class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
         color="#cc1439"
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD bNpWy"
+          class="sc-AxirZ gcJrrZ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -832,10 +832,10 @@ exports[`Storyshots Input with error message 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 iXAlLy"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
         >
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >

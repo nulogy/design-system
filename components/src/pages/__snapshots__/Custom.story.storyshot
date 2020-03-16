@@ -5,26 +5,26 @@ exports[`Storyshots Pages/Custom Default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 sc-AxjAm hYJWVc"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="sc-fzqNqU kikdAh"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzqARJ eqNOdL"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 ksBFcO"
+            class="Link-sc-1lpx3d0-0 hoHKDj"
             color="blue"
             href="/"
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
             >
               <svg
                 height="32px"
@@ -64,26 +64,26 @@ exports[`Storyshots Pages/Custom Default 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm hiyyOE"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               style="padding-right:24px"
             >
               <div>
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                   color="#ffffff"
                   type="button"
                 >
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="sc-AxirZ cAzNCm"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -102,7 +102,7 @@ exports[`Storyshots Pages/Custom Default 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 drMLzY"
+                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
                   color="#ffffff"
                   href="/"
                 >
@@ -111,25 +111,25 @@ exports[`Storyshots Pages/Custom Default 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               >
                 <div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                     color="#ffffff"
                     type="button"
                   >
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="sc-AxirZ cAzNCm"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -152,20 +152,20 @@ exports[`Storyshots Pages/Custom Default 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ddiKH"
       >
         <div
-          class="Box-sc-1qu1edy-0 czbwcE"
+          class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="sc-AykKG kjjZNK"
+            class="sc-AxhUy ichuyd"
             font-size="46px"
             font-weight="300"
           >
             I am title
           </h1>
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >
@@ -183,26 +183,26 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 sc-AxjAm hYJWVc"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="sc-fzqNqU kikdAh"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzqARJ eqNOdL"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 ksBFcO"
+            class="Link-sc-1lpx3d0-0 hoHKDj"
             color="blue"
             href="/"
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
             >
               <svg
                 height="32px"
@@ -242,26 +242,26 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm hiyyOE"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               style="padding-right:24px"
             >
               <div>
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                   color="#ffffff"
                   type="button"
                 >
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="sc-AxirZ cAzNCm"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -280,7 +280,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 drMLzY"
+                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
                   color="#ffffff"
                   href="/"
                 >
@@ -289,25 +289,25 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               >
                 <div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                     color="#ffffff"
                     type="button"
                   >
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="sc-AxirZ cAzNCm"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -330,21 +330,21 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ddiKH"
       >
         <div
-          class="Box-sc-1qu1edy-0 ddCDMd"
+          class="Box-sc-1qu1edy-0 hkydKC"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC hzayjc"
+            class="Box-sc-1qu1edy-0 sc-AxjAm ccgtWz"
             height="32px"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC llVkbw"
+              class="Box-sc-1qu1edy-0 sc-AxjAm hJWMIL"
               width="[object Object]"
             >
               <a
-                class="Link-sc-1lpx3d0-0 ihmJwB"
+                class="Link-sc-1lpx3d0-0 dNsOaA"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -352,7 +352,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="sc-AykKD bgTLfA"
+                class="sc-AxirZ dyHoPF"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
@@ -367,7 +367,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
                 />
               </svg>
               <a
-                class="Link-sc-1lpx3d0-0 ihmJwB"
+                class="Link-sc-1lpx3d0-0 dNsOaA"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -375,7 +375,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="sc-AykKD bgTLfA"
+                class="sc-AxirZ dyHoPF"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
@@ -391,11 +391,11 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </svg>
             </div>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 kHLgMR sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 dMQZdc sc-fzpans cKJzHK"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="sc-AxirZ jrPxI"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -412,14 +412,14 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <h1
-            class="sc-AykKG kjjZNK"
+            class="sc-AxhUy ichuyd"
             font-size="46px"
             font-weight="300"
           >
             I am title
           </h1>
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >
@@ -427,25 +427,25 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 hjLctz"
+          class="Box-sc-1qu1edy-0 cTLuiE"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm fksKiQ"
           >
             <h2
-              class="sc-AykKH caijxQ"
+              class="sc-AxgMl cxfBlA"
               font-size="26px"
               font-weight="500"
             >
               I am sidebar
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="sc-AxirZ jrPxI"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -462,7 +462,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >
@@ -480,26 +480,26 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cPTBzD"
+      class="Box-sc-1qu1edy-0 sc-AxjAm hYJWVc"
     >
       <header
-        class="sc-fzXfME ccPjEH"
+        class="sc-fzqNqU kikdAh"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfMD fCbdfN"
+          class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzqARJ eqNOdL"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 ksBFcO"
+            class="Link-sc-1lpx3d0-0 hoHKDj"
             color="blue"
             href="/"
             style="display:block;height:40px"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 bskpiF sc-fzXfLT bZTthB"
+              class="Branding__BrandingWrap-ranqri-0 gACiZG sc-fznKkj fQkkzS"
             >
               <svg
                 height="32px"
@@ -539,26 +539,26 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC doAOQv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm hiyyOE"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               style="padding-right:24px"
             >
               <div>
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                   color="#ffffff"
                   type="button"
                 >
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="sc-AykKD juSipL"
+                    class="sc-AxirZ cAzNCm"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
@@ -577,7 +577,7 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 drMLzY"
+                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
                   color="#ffffff"
                   href="/"
                 >
@@ -586,25 +586,25 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+              class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
               style="float:right"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 iMWbzh sc-fzXfMB hhzCOS"
+                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq sc-fznWqX cKQeME"
               >
                 <div>
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 fJBMju"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
                     color="#ffffff"
                     type="button"
                   >
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="sc-AykKD juSipL"
+                      class="sc-AxirZ cAzNCm"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
@@ -627,20 +627,20 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cHpsay"
+        class="Box-sc-1qu1edy-0 sc-AxjAm ddiKH"
       >
         <div
-          class="Box-sc-1qu1edy-0 czbwcE"
+          class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="sc-AykKG kjjZNK"
+            class="sc-AxhUy ichuyd"
             font-size="46px"
             font-weight="300"
           >
             I am title
           </h1>
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >
@@ -648,25 +648,25 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 hjLctz"
+          class="Box-sc-1qu1edy-0 cTLuiE"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-AykKC kKuJwv"
+            class="Box-sc-1qu1edy-0 sc-AxjAm fksKiQ"
           >
             <h2
-              class="sc-AykKH caijxQ"
+              class="sc-AxgMl cxfBlA"
               font-size="26px"
               font-weight="500"
             >
               I am sidebar
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+              class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD kaUxeX"
+                class="sc-AxirZ jrPxI"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -683,7 +683,7 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
             </button>
           </div>
           <p
-            class="sc-AykKF jKbmDj"
+            class="sc-AxhCb hpmHVQ"
             color="currentColor"
             font-size="16px"
           >

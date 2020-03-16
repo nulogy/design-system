@@ -5,10 +5,10 @@ exports[`Storyshots Link As a <button> 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Link-sc-1lpx3d0-0 mtyWY"
+      class="Link-sc-1lpx3d0-0 dpQmZf"
       color="blue"
     >
       Link
@@ -22,10 +22,10 @@ exports[`Storyshots Link Link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Link-sc-1lpx3d0-0 hFcUQo"
+      class="Link-sc-1lpx3d0-0 geMpSb"
       color="blue"
       href="http://nulogy.design"
     >
@@ -40,10 +40,10 @@ exports[`Storyshots Link With a different color 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Link-sc-1lpx3d0-0 kmDyah"
+      class="Link-sc-1lpx3d0-0 hOpqxk"
       color="black"
       href="http://nulogy.design"
     >
@@ -58,10 +58,10 @@ exports[`Storyshots Link Without underline 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Link-sc-1lpx3d0-0 ksBFcO"
+      class="Link-sc-1lpx3d0-0 hoHKDj"
       color="blue"
       href="http://nulogy.design"
     >

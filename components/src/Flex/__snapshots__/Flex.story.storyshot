@@ -5,38 +5,38 @@ exports[`Storyshots Flex Flex 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -51,46 +51,46 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC kwkuVs"
+      class="Box-sc-1qu1edy-0 sc-AxjAm eYrHwb"
       height="400px"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
       </div>
     </div>
     <p
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >
@@ -105,41 +105,41 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bfEzXq"
+      class="Box-sc-1qu1edy-0 sc-AxjAm drmJZx"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+        class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           5
@@ -147,7 +147,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
       </div>
     </div>
     <p
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >
@@ -162,42 +162,42 @@ exports[`Storyshots Flex With custom order 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hHVDfG"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 fCpcmC"
+        class="Box-sc-1qu1edy-0 jeXUhB"
         order="1"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 fCFVuU"
+        class="Box-sc-1qu1edy-0 jpYpSf"
         order="3"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 fCxyQL"
+        class="Box-sc-1qu1edy-0 frZDCe"
         order="2"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 fCWODm"
+        class="Box-sc-1qu1edy-0 jjupVN"
         order="5"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 fCOrZd"
+        class="Box-sc-1qu1edy-0 flvDFM"
         order="4"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
@@ -213,38 +213,38 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC kfmaOe"
+      class="Box-sc-1qu1edy-0 sc-AxjAm fMYsrt"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -259,38 +259,38 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC yAmtA"
+      class="Box-sc-1qu1edy-0 sc-AxjAm PbWXf"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -305,38 +305,38 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bFdvBb"
+      class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -351,38 +351,38 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC khOMAy"
+      class="Box-sc-1qu1edy-0 sc-AxjAm jTwUuZ"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -397,38 +397,38 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC bfEzXq"
+      class="Box-sc-1qu1edy-0 sc-AxjAm drmJZx"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -443,38 +443,38 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hCqMUL"
+      class="Box-sc-1qu1edy-0 sc-AxjAm eCeAlY"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -489,38 +489,38 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC jKtKTJ"
+      class="Box-sc-1qu1edy-0 sc-AxjAm kEeoXE"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -535,54 +535,54 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 iKepQe"
+      class="Box-sc-1qu1edy-0 hLZXXF"
       width="500"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC dKkYHc"
+        class="Box-sc-1qu1edy-0 sc-AxjAm dIUZyb"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           5
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           6
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           7
@@ -598,54 +598,54 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 iKepQe"
+      class="Box-sc-1qu1edy-0 hLZXXF"
       width="500"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC DYcjL"
+        class="Box-sc-1qu1edy-0 sc-AxjAm gtcHnC"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           5
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           6
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           7
@@ -661,54 +661,54 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 iKepQe"
+      class="Box-sc-1qu1edy-0 hLZXXF"
       width="500"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC cGflKI"
+        class="Box-sc-1qu1edy-0 sc-AxjAm hSEnBr"
         style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
       >
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           5
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           6
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jgHxgc"
+          class="Box-sc-1qu1edy-0 jlPsmj"
           style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
         >
           7
@@ -724,38 +724,38 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC jNmqHm"
+      class="Box-sc-1qu1edy-0 sc-AxjAm CFkNF"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -770,38 +770,38 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC hLdNpw"
+      class="Box-sc-1qu1edy-0 sc-AxjAm iyOZMn"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -816,38 +816,38 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC cSjYEX"
+      class="Box-sc-1qu1edy-0 sc-AxjAm lhuTyk"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -862,38 +862,38 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC kwWCOH"
+      class="Box-sc-1qu1edy-0 sc-AxjAm krUyOQ"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -908,38 +908,38 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC iqqOmY"
+      class="Box-sc-1qu1edy-0 sc-AxjAm APdvp"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5
@@ -954,38 +954,38 @@ exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC egoSOR"
+      class="Box-sc-1qu1edy-0 sc-AxjAm icnYye"
       style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jgHxgc"
+        class="Box-sc-1qu1edy-0 jlPsmj"
         style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
       >
         5

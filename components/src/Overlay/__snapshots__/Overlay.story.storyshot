@@ -5,23 +5,23 @@ exports[`Storyshots Overlay Dark 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >
       Background content
     </p>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfNQ hrKngL"
+      class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzomME cbDcKb"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzXfNi dLcGpC"
+        class="Box-sc-1qu1edy-0 sc-fznWOq ELElF"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >
@@ -38,17 +38,17 @@ exports[`Storyshots Overlay Light (default) 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="sc-AykKF jKbmDj"
+      class="sc-AxhCb hpmHVQ"
       color="currentColor"
       font-size="16px"
     >
       Background content
     </p>
     <div
-      class="Box-sc-1qu1edy-0 sc-AykKC sc-fzXfNQ bPGMPU"
+      class="Box-sc-1qu1edy-0 sc-AxjAm sc-fzomME iwOstw"
     >
       Overlay content
     </div>

@@ -5,74 +5,74 @@ exports[`Storyshots Table with everything 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 iEwgEs"
+            class="StyledTh-sc-10nzyk9-0 kfgNsH"
             scope="col"
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 hdKIjC"
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
               >
                 <input
                   aria-invalid="false"
                   aria-label="select all"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 />
               </label>
             </div>
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 iEwgEs"
+            class="StyledTh-sc-10nzyk9-0 kfgNsH"
             scope="col"
             width="30px"
           />
           <th
-            class="StyledTh-sc-10nzyk9-0 jzRkfM"
+            class="StyledTh-sc-10nzyk9-0 bocKtx"
             scope="col"
             width="15%"
           >
             Date
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 jzYsmw"
+            class="StyledTh-sc-10nzyk9-0 iPIuAn"
             scope="col"
             width="20%"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 jzYsmw"
+            class="StyledTh-sc-10nzyk9-0 iPIuAn"
             scope="col"
             width="20%"
           >
             Actual Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 jAqzSn"
+            class="StyledTh-sc-10nzyk9-0 esKZsE"
             scope="col"
             width="45%"
           >
             Note
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 iiuyMH"
+            class="StyledTh-sc-10nzyk9-0 djOqlg"
             scope="col"
             width="5%"
           />
@@ -80,16 +80,16 @@ exports[`Storyshots Table with everything 1`] = `
       </thead>
       <tbody>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >
           <td
             colspan="7"
           >
             <div
-              class="Box-sc-1qu1edy-0 fGWNgD"
+              class="Box-sc-1qu1edy-0 kOlJoM"
             >
               <p
-                class="sc-AykKF eruAHZ"
+                class="sc-AxhCb iBTYSy"
                 color="blackBlue"
                 font-size="16px"
                 font-weight="bold"
@@ -100,40 +100,40 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 hdKIjC"
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 />
               </label>
             </div>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 izeIox"
+              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
             >
               <svg
                 aria-hidden="true"
-                class="sc-AykKD ceXkCz"
+                class="sc-AxirZ fZltSY"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -149,37 +149,37 @@ exports[`Storyshots Table with everything 1`] = `
             </button>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             Tue, 01 Oct 2019
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,025 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             1,800 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td>
             <div
-              class="Box-sc-1qu1edy-0 dqSmZd"
+              class="Box-sc-1qu1edy-0 gqpebI"
             >
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD kaUxeX"
+                  class="sc-AxirZ jrPxI"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -198,65 +198,65 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 hdKIjC"
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 />
               </label>
             </div>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             Wed, 02 Oct 2019
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,250 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td>
             <div
-              class="Box-sc-1qu1edy-0 dqSmZd"
+              class="Box-sc-1qu1edy-0 gqpebI"
             >
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD kaUxeX"
+                  class="sc-AxirZ jrPxI"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -275,65 +275,65 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 hdKIjC"
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 />
               </label>
             </div>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             Thu, 03 Oct 2019
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             1,425 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td>
             <div
-              class="Box-sc-1qu1edy-0 dqSmZd"
+              class="Box-sc-1qu1edy-0 gqpebI"
             >
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD kaUxeX"
+                  class="sc-AxirZ jrPxI"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -352,67 +352,67 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jgHxgc sc-fzXfNc bSPfCk"
+              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 hdKIjC"
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
               >
                 <input
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 bJQgsS sc-fzXfNc bSPfCk"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 eVpbJR"
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
                 />
               </label>
             </div>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             Fri, 04 Oct 2019
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             675 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             1c Other Plant-related issue, equipment issues
           </td>
           <td>
             <div
-              class="Box-sc-1qu1edy-0 dqSmZd"
+              class="Box-sc-1qu1edy-0 gqpebI"
             >
               <button
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AykKD kaUxeX"
+                  class="sc-AxirZ jrPxI"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -433,71 +433,71 @@ exports[`Storyshots Table with everything 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 czwijJ"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 cmwBAa"
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
             colspan="3"
             scope="row"
           >
             Total
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             18,000 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             7,725 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 czwijJ"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 cmwBAa"
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
             colspan="3"
             scope="row"
           >
             Attainment
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             41.5%
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           />
         </tr>
       </tfoot>
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC htLZb"
+      class="Box-sc-1qu1edy-0 sc-AxjAm jjPFrO"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
         disabled=""
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -515,7 +515,7 @@ exports[`Storyshots Table with everything 1`] = `
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         1
@@ -523,25 +523,25 @@ exports[`Storyshots Table with everything 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -566,29 +566,29 @@ exports[`Storyshots Table with pagination 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 dvrgBW"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 kngHIX"
+          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 cmwBAa"
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
             scope="col"
           >
             Date
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 cmwBAa"
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 cmwBAa"
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
             scope="col"
           >
             Actual Quantity
@@ -597,20 +597,20 @@ exports[`Storyshots Table with pagination 1`] = `
       </thead>
       <tbody>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 gVJELy"
+          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2019-10-01
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,025 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 iZwXyP"
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             1,800 eaches
           </td>
@@ -620,16 +620,16 @@ exports[`Storyshots Table with pagination 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AykKC htLZb"
+      class="Box-sc-1qu1edy-0 sc-AxjAm jjPFrO"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 hWNkwR"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
         disabled=""
       >
         <svg
           aria-hidden="true"
-          class="sc-AykKD dKbtnU"
+          class="sc-AxirZ bkMeoj"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -647,7 +647,7 @@ exports[`Storyshots Table with pagination 1`] = `
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL ikgQRY"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
         disabled=""
       >
         1
@@ -655,33 +655,33 @@ exports[`Storyshots Table with pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         5
       </button>
       <p
-        class="sc-AykKF deuCmq"
+        class="sc-AxhCb iloBzF"
         color="currentColor"
         font-size="small"
       >
@@ -690,18 +690,18 @@ exports[`Storyshots Table with pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzXfNL fHUOFU"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
       >
         8
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kDWqWC"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AykKD faeHcD"
+          class="sc-AxirZ kMpsNU"
           color="currentColor"
           fill="currentColor"
           focusable="false"

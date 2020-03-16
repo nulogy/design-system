@@ -5,15 +5,15 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 eyPSNy sc-fzXfLW casIUc"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
       color="#011e38"
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 iPmvAN"
+        class="Box-sc-1qu1edy-0 ilQgHG"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -24,14 +24,14 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
       Example
     </label>
     <div
-      class="Box-sc-1qu1edy-0 dybxbc"
+      class="Box-sc-1qu1edy-0 iTGQcd"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AykKC kjDSUt"
+        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
       >
         <p
-          class="sc-AykKF jKbmDj"
+          class="sc-AxhCb hpmHVQ"
           color="currentColor"
           font-size="16px"
         >

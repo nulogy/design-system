@@ -5,27 +5,27 @@ exports[`Storyshots ButtonGroup ButtonGroup 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 kkRmBi"
+      class="Box-sc-1qu1edy-0 kmQbtL"
       width="500px"
     >
       <div
-        class="ButtonGroup-xkz195-0 jMubZv"
+        class="ButtonGroup-xkz195-0 dtwRCO"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
@@ -40,41 +40,41 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 cvCdjb"
+      class="Box-sc-1qu1edy-0 aJDrU"
       width="600px"
     >
       <div
-        class="ButtonGroup-xkz195-0 jMubZv"
+        class="ButtonGroup-xkz195-0 dtwRCO"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLO fTPgxe"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzozJi iomXmU"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-fzXfLP eLLQgR"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzoLsD hbDbFs"
         >
           Button
         </button>
         <button
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+          class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD kaUxeX"
+            class="sc-AxirZ jrPxI"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -91,11 +91,11 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
         </button>
         <button
           aria-label="Button"
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 hgEYuX sc-fzXfLQ bZudva"
+          class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
         >
           <svg
             aria-hidden="true"
-            class="sc-AykKD kaUxeX"
+            class="sc-AxirZ jrPxI"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -110,7 +110,7 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
             />
           </svg>
           <p
-            class="sc-AykKF jTSHcw"
+            class="sc-AxhCb djnyhr"
             color="currentColor"
             font-size="16px"
           >
@@ -128,27 +128,27 @@ exports[`Storyshots ButtonGroup with alignment right 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 kkRmBi"
+      class="Box-sc-1qu1edy-0 kmQbtL"
       width="500px"
     >
       <div
-        class="ButtonGroup-xkz195-0 kPeNAt"
+        class="ButtonGroup-xkz195-0 blsMJq"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
@@ -163,22 +163,22 @@ exports[`Storyshots ButtonGroup with alignment spaced 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 kkRmBi"
+      class="Box-sc-1qu1edy-0 kmQbtL"
       width="500px"
     >
       <div
-        class="ButtonGroup-xkz195-0 fGhOgc"
+        class="ButtonGroup-xkz195-0 hCnVmX"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa sc-AykKK fmyQGk"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
@@ -193,119 +193,119 @@ exports[`Storyshots ButtonGroup wrapping buttons 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 edIMFr"
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 bxEkvo"
+      class="Box-sc-1qu1edy-0 hkwtTx"
     >
       <div
-        class="ButtonGroup-xkz195-0 jMubZv"
+        class="ButtonGroup-xkz195-0 dtwRCO"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 eCnczG"
+      class="Box-sc-1qu1edy-0 uuGzP"
     >
       <div
-        class="ButtonGroup-xkz195-0 kPeNAt"
+        class="ButtonGroup-xkz195-0 blsMJq"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 kpKTNa"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
         >
           Button
         </button>
