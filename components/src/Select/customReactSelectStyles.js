@@ -71,6 +71,7 @@ const customStyles = error => {
     menu: (provided, state) => ({
       marginTop: 0,
       position: "absolute",
+      overflowX: "auto",
       zIndex: "100",
       width: "100%",
       background: theme.colors.white,
@@ -89,6 +90,7 @@ const customStyles = error => {
     }),
     menuList: provided => ({
       ...provided,
+      minWidth: "fit-content",
       padding: 0,
       borderRadius: theme.radii.medium
     }),
