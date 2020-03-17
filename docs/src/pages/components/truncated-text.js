@@ -55,7 +55,7 @@ const propsRows = [
   {
     name: "tooltipProps",
     type: "object",
-    description: "Additional options for the tooltip, see Tooltip Props table"
+    description: "Additional options for to be passed to the tooltip"
   }
 ];
 
