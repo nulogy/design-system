@@ -1,8 +1,8 @@
 describe("TruncatedText", () => {
   const assertNoTooltip = () => cy.get('[role="tooltip"]').should("not.exist");
-  const assertText = text => {
-    cy.get("p").should("be.visible");
-    cy.get("p").contains(text);
+  const assertText = (text, el = "p") => {
+    cy.get(el).should("be.visible");
+    cy.get(el).contains(text);
   };
   const assertTooltip = text => {
     cy.get('[aria-haspopup="true"]').trigger("mouseover");
@@ -54,7 +54,7 @@ describe("TruncatedText", () => {
       assertNoTooltip();
     });
   });
-  describe("default", () => {
+  describe("with custom truncation indicator", () => {
     beforeEach(() => {
       cy.renderFromStorybook("truncatedtext--with-custom-truncation-indicator");
     });
@@ -63,6 +63,14 @@ describe("TruncatedText", () => {
     });
     it("shows a tooltip with full content on hover", () => {
       assertTooltip("Special instructions are provided for the shipment");
+    });
+  });
+  describe("as title", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("truncatedtext--as-title");
+    });
+    it("shows the truncated text", () => {
+      assertText("Special instructions...", "h1");
     });
   });
 });

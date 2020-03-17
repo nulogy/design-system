@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Tooltip } from "../Tooltip";
 import { Text } from "../Type";
 
-const StyledTruncatedText = styled(Text)(({ hoverable }) => ({
+const StyledWrapper = styled("div")(({ hoverable }) => ({
   width: "fit-content",
   cursor: hoverable ? "pointer" : "default"
 }));
@@ -23,15 +23,16 @@ MaybeTooltip.defaultProps = {
   showTooltip: true
 };
 
-const TruncatedText = ({ children, indicator, maxCharacters, showTooltip, tooltipProps, ...props }) => {
-  const requiresTruncation = children.length > maxCharacters;
-  const truncatedText = requiresTruncation ? children.slice(0, maxCharacters) + indicator : children;
+const TruncatedText = ({ children, element, indicator, maxCharacters, showTooltip, tooltipProps }) => {
+  const innerText = children;
+  const requiresTruncation = innerText.length > maxCharacters;
+  const truncatedText = requiresTruncation ? innerText.slice(0, maxCharacters) + indicator : children;
   const hasTooltip = showTooltip && requiresTruncation;
   return (
-    <MaybeTooltip showTooltip={hasTooltip} tooltip={children} {...tooltipProps}>
-      <StyledTruncatedText hoverable={hasTooltip} {...props}>
+    <MaybeTooltip showTooltip={hasTooltip} tooltip={innerText} {...tooltipProps}>
+      <StyledWrapper as={element.type} hoverable={hasTooltip} {...element.props}>
         {truncatedText}
-      </StyledTruncatedText>
+      </StyledWrapper>
     </MaybeTooltip>
   );
 };
@@ -39,6 +40,7 @@ const TruncatedText = ({ children, indicator, maxCharacters, showTooltip, toolti
 TruncatedText.propTypes = {
   children: PropTypes.string,
   indicator: PropTypes.string,
+  element: PropTypes.node,
   maxCharacters: PropTypes.number,
   showTooltip: PropTypes.bool,
   tooltipProps: PropTypes.shape({})
@@ -47,6 +49,7 @@ TruncatedText.propTypes = {
 TruncatedText.defaultProps = {
   children: undefined,
   indicator: "...",
+  element: <Text />,
   maxCharacters: 20,
   showTooltip: true,
   tooltipProps: undefined

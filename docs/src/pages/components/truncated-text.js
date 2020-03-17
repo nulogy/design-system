@@ -28,6 +28,13 @@ const propsRows = [
     description: "The content to be truncated"
   },
   {
+    name: "element",
+    type: "node",
+    defaultValue: "<Text />",
+    description:
+      "The element to use to wrap the truncated text. Props can be passed to this element as usual."
+  },
+  {
     name: "indicator",
     type: "string",
     defaultValue: "...",
@@ -49,58 +56,6 @@ const propsRows = [
     name: "tooltipProps",
     type: "object",
     description: "Additional options for the tooltip, see Tooltip Props table"
-  }
-];
-
-const tooltipPropsRows = [
-  {
-    name: "tooltip",
-    type: "node",
-    defaultValue: "Required",
-    description: "The content to display inside of the tooltip."
-  },
-  {
-    name: "children",
-    type: "element",
-    defaultValue: "Required",
-    description: "Single child of tooltip must be able to accept a ref."
-  },
-  {
-    name: "maxWidth",
-    type: "string",
-    defaultValue: "24em",
-    description: "Width of the tooltip."
-  },
-  {
-    name: "placement",
-    type: "string",
-    defaultValue: "bottom",
-    description:
-      "The position of the tooltip relative to its trigger. Accepts top, top-start, top-end, bottom, bottom-end, left, left-start, left-end, right, right-start and right-end."
-  },
-  {
-    name: "showDelay",
-    type: "number|string",
-    defaultValue: "100",
-    description: "Time in seconds before the tooltip appears."
-  },
-  {
-    name: "hideDelay",
-    type: "number|string",
-    defaultValue: "350",
-    description: "Time in seconds before the tooltip disappears."
-  },
-  {
-    name: "className",
-    type: "String",
-    defaultValue: "undefined",
-    description: "className passed to the tooltip container element."
-  },
-  {
-    name: "defaultOpen",
-    type: "boolean",
-    defaultValue: "false",
-    description: "when set to true the tooltip will be open by default"
   }
 ];
 
@@ -130,16 +85,14 @@ export default () => (
 
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <Text>
-        In addition to the props in the table below, props from the{" "}
-        <Link href="/components/text">Text</Link> component can also be passed
-        to TruncatedText.
-      </Text>
       <PropsTable propsRows={propsRows} />
     </DocSection>
     <DocSection>
       <SectionTitle>Tooltip Props</SectionTitle>
-      <PropsTable propsRows={tooltipPropsRows} />
+      <Text>
+        Props from the <Link href="/components/tooltip">Tooltip</Link> component
+        can also be passed throught the tooltipProps object.
+      </Text>
     </DocSection>
 
     <DocSection>
