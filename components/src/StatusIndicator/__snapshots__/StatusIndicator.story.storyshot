@@ -177,6 +177,107 @@ exports[`Storyshots StatusIndicator Informative 1`] = `
 </div>
 `;
 
+exports[`Storyshots StatusIndicator Inside flex 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxgMl fyyuUF"
+        font-size="26px"
+        font-weight="500"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxheI sc-Axmtr iRBWoo"
+        font-size="20px"
+        font-weight="500"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxhCb laTFNi"
+        color="currentColor"
+        font-size="16px"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxhCb chBKUG"
+        color="currentColor"
+        font-size="small"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxhCb hlgKbb"
+        color="currentColor"
+        font-size="smaller"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots StatusIndicator Neutral 1`] = `
 <div
   style="padding:24px"
