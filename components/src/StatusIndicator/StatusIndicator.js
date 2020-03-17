@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, typography, flexbox } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import theme from "../theme";
 
@@ -44,27 +44,37 @@ const getStatusIndicatorColours = type => {
 const StatusIndicator = styled.p(
   {
     display: "inline-block",
-    fontSize: theme.fontSizes.smaller,
-    lineHeight: theme.lineHeights.smallerText,
     fontWeight: theme.fontWeights.bold,
     textTransform: "uppercase",
     letterSpacing: ".05em",
-    padding: `0 ${theme.space.x1}`,
-    borderRadius: theme.space.x1,
-    position: "relative",
-    top: "-2px"
+    borderRadius: theme.space.x1
   },
   space,
+  typography,
+  flexbox,
   ({ type }) => getStatusIndicatorColours(type)
 );
 
 StatusIndicator.propTypes = {
   type: PropTypes.oneOf(["neutral", "danger", "informative", "success", "warning", "quiet"]),
-  ...propTypes.space
+  ...propTypes.space,
+  ...propTypes.typography,
+  ...propTypes.flexbox
 };
 
 StatusIndicator.defaultProps = {
-  type: "neutral"
+  type: "neutral",
+  mt: "0",
+  mr: "0",
+  mb: "0",
+  ml: "0",
+  pt: "0",
+  pr: "x1",
+  pb: "0",
+  pl: "x1",
+  fontSize: "smaller",
+  lineHeight: "smallerText",
+  alignSelf: "center"
 };
 
 export default StatusIndicator;
