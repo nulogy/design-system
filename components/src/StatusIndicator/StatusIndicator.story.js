@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { StatusIndicator } from ".";
 import { Text, SectionTitle, SubsectionTitle } from "../Type";
 import { Box } from "../Box";
+import { Flex } from "../Flex";
 
 storiesOf("StatusIndicator", module)
   .add("All", () => (
@@ -36,35 +37,78 @@ storiesOf("StatusIndicator", module)
   .add("Danger", () => <StatusIndicator type="danger">Danger</StatusIndicator>)
   .add("Following text", () => (
     <>
-      <Box m="x3">
+      <Box mb="x3">
         <SectionTitle inline mr="x1">
           Label
         </SectionTitle>
         <StatusIndicator>Status</StatusIndicator>
       </Box>
-      <Box m="x3">
+      <Box mb="x3">
         <SubsectionTitle inline mr="x1">
           Label
         </SubsectionTitle>
         <StatusIndicator>Status</StatusIndicator>
       </Box>
-      <Box m="x3">
+      <Box mb="x3">
         <Text inline mr="x1">
           Label
         </Text>
         <StatusIndicator>Status</StatusIndicator>
       </Box>
-      <Box m="x3">
-        <Text fontSize="small" inline mr="x1">
+      <Box mb="x3">
+        <Text fontSize="small" lineHeight="smallTextBase" inline mr="x1">
           Label
         </Text>
         <StatusIndicator>Status</StatusIndicator>
       </Box>
-      <Box m="x3">
-        <Text fontSize="smaller" inline mr="x1">
+      <Box mb="x3">
+        <Text fontSize="smaller" lineHeight="smallerText" inline mr="x1">
           Label
         </Text>
         <StatusIndicator>Status</StatusIndicator>
       </Box>
+      <Box mb="x3">
+        <Text inline mr="x1">
+          Long label Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in eleifend metus, in tempus
+          sapien. Morbi eget felis est. Nunc facilisis vel nisi nec ornare. Ut blandit ullamcorper enim sed fringilla.
+          Quisque malesuada pharetra tincidunt. Mauris mauris tortor, maximus vitae tempor ac, tincidunt pharetra augue.
+          In eget suscipit est. Suspendisse feugiat risus urna
+        </Text>
+        <StatusIndicator>Status</StatusIndicator>
+      </Box>
+    </>
+  ))
+  .add("Inside flex", () => (
+    <>
+      <Flex mb="x3">
+        <SectionTitle inline mr="x1" mb="0">
+          Label
+        </SectionTitle>
+        <StatusIndicator>Status</StatusIndicator>
+      </Flex>
+      <Flex mb="x3">
+        <SubsectionTitle inline mr="x1" mb="0">
+          Label
+        </SubsectionTitle>
+        <StatusIndicator>Status</StatusIndicator>
+      </Flex>
+      <Flex mb="x3">
+        <Text inline mr="x1" mb="0">
+          Label
+        </Text>
+        <StatusIndicator>Status</StatusIndicator>
+      </Flex>
+      <Flex mb="x3">
+        <Text fontSize="small" lineHeight="smallTextBase" inline mr="x1" mb="0">
+          Label
+        </Text>
+        <StatusIndicator>Status</StatusIndicator>
+      </Flex>
+      <Flex mb="x3">
+        <Text fontSize="smaller" lineHeight="smallerText" inline mr="x1" mb="0">
+          Label
+        </Text>
+        <StatusIndicator>Status</StatusIndicator>
+      </Flex>
     </>
   ));
