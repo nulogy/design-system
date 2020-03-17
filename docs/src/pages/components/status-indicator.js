@@ -170,7 +170,8 @@ export default () => (
       <PropsTable propsRows={propsRows} />
       <Text mt="x3">
         The StatusIndicator component has access to{" "}
-        <InlineCode>space</InlineCode> style props. See the{" "}
+        <InlineCode>space</InlineCode>, <InlineCode>typography</InlineCode>, and{" "}
+        <InlineCode>flexbox</InlineCode> style props. See the{" "}
         <Link href="/guides/style-props">style prop documentation</Link> for a
         full list of available props.
       </Text>
