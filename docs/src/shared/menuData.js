@@ -182,6 +182,10 @@ export const menuData = [
       {
         name: "Tooltip",
         href: "/components/tooltip"
+      },
+      {
+        name: "Truncated Text",
+        href: "/components/truncated-text"
       }
     ]
   },

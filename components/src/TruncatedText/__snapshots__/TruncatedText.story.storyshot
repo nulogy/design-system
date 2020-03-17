@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TruncatedText TruncatedText 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      aria-describedby="random-id-38"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="sc-AxhCb sc-fzqAbL ewHLcq"
+      color="currentColor"
+      font-size="16px"
+    >
+      Special instructions...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText under max characters 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      class="sc-AxhCb sc-fzqAbL lbdOSO"
+      color="currentColor"
+      font-size="16px"
+    >
+      Item is available
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      aria-describedby="random-id-40"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="sc-AxhCb sc-fzqAbL ewHLcq"
+      color="currentColor"
+      font-size="16px"
+    >
+      Special instructions + 2...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText with max characters 10 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      aria-describedby="random-id-39"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="sc-AxhCb sc-fzqAbL ewHLcq"
+      color="currentColor"
+      font-size="16px"
+    >
+      Item is av...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText without tooltip 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      class="sc-AxhCb sc-fzqAbL lbdOSO"
+      color="currentColor"
+      font-size="16px"
+    >
+      Special instructions...
+    </p>
+  </div>
+</div>
+`;
