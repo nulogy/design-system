@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/nulogy/design-system/compare/v1.4.2...v1.5.0) (2020-03-18)
+
+
+### Features
+
+* add truncated text component ([#583](https://github.com/nulogy/design-system/issues/583)) ([722a6e4](https://github.com/nulogy/design-system/commit/722a6e4e6eb67ebbbecf769db26baa1ab3fcfa0f))
+
+
+
+
+
 ## [1.4.2](https://github.com/nulogy/design-system/compare/v1.4.1...v1.4.2) (2020-03-16)
 
 **Note:** Version bump only for package @nulogy/docs
