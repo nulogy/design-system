@@ -44,3 +44,4 @@ export { Overlay } from "./Overlay";
 export { LoadingAnimation } from "./LoadingAnimation";
 
 export { ALL_NDS_LOCALES } from "./locales.const";
+export { TruncatedText } from "./TruncatedText";

@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots TruncatedText TruncatedText 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      aria-describedby="random-id-38"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="sc-AxhCb hpmHVQ sc-fzqAbL kjPEQA"
+      color="currentColor"
+      font-size="16px"
+    >
+      Special instructions...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText as title 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <h1
+      aria-describedby="random-id-41"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="sc-AxhUy jXBjWt sc-fzqAbL kjPEQA"
+      font-size="46px"
+      font-weight="300"
+    >
+      Special instructions...
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText under max characters 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      class="sc-AxhCb hpmHVQ sc-fzqAbL zrxPo"
+      color="currentColor"
+      font-size="16px"
+    >
+      Item is available
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      aria-describedby="random-id-40"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="sc-AxhCb hpmHVQ sc-fzqAbL kjPEQA"
+      color="currentColor"
+      font-size="16px"
+    >
+      Special instructions + 2...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText with max characters 10 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      aria-describedby="random-id-39"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="sc-AxhCb hpmHVQ sc-fzqAbL kjPEQA"
+      color="currentColor"
+      font-size="16px"
+    >
+      Item is av...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TruncatedText without tooltip 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <p
+      class="sc-AxhCb hpmHVQ sc-fzqAbL zrxPo"
+      color="currentColor"
+      font-size="16px"
+    >
+      Special instructions...
+    </p>
+  </div>
+</div>
+`;
