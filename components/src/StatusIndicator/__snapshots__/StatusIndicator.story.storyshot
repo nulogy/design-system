@@ -8,37 +8,43 @@ exports[`Storyshots StatusIndicator All 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 ogdeZ"
+      class="StatusIndicator-t1vtrp-0 bAmZds"
+      font-size="smaller"
       type="neutral"
     >
       Neutral
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 bpXEKd"
+      class="StatusIndicator-t1vtrp-0 dfEhGU"
+      font-size="smaller"
       type="quiet"
     >
       Quiet
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 vdLbK"
+      class="StatusIndicator-t1vtrp-0 HGpwD"
+      font-size="smaller"
       type="informative"
     >
       Informative
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 gBtuFC"
+      class="StatusIndicator-t1vtrp-0 hFgyBj"
+      font-size="smaller"
       type="success"
     >
       Success
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 jYbbBN"
+      class="StatusIndicator-t1vtrp-0 eUxftY"
+      font-size="smaller"
       type="warning"
     >
       Warning
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 eptaEq"
+      class="StatusIndicator-t1vtrp-0 eYOOcD"
+      font-size="smaller"
       type="danger"
     >
       Danger
@@ -55,7 +61,8 @@ exports[`Storyshots StatusIndicator Danger 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 kEBduM"
+      class="StatusIndicator-t1vtrp-0 gbtKcH"
+      font-size="smaller"
       type="danger"
     >
       Danger
@@ -72,7 +79,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 bPFBWy"
+      class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
         class="sc-AxgMl irYLZC"
@@ -82,14 +89,15 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 ewmDkL"
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 bPFBWy"
+      class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
         class="sc-AxheI sc-Axmtr jGoQwU"
@@ -99,14 +107,15 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 ewmDkL"
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 bPFBWy"
+      class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
         class="sc-AxhCb czaJmK"
@@ -116,41 +125,62 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 ewmDkL"
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 bPFBWy"
+      class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxhCb gGqpvs"
+        class="sc-AxhCb dfJiXK"
         color="currentColor"
         font-size="small"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 ewmDkL"
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 bPFBWy"
+      class="Box-sc-1qu1edy-0 dgqwRo"
     >
       <span
-        class="sc-AxhCb eHrDLS"
+        class="sc-AxhCb gttWcT"
         color="currentColor"
         font-size="smaller"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 ewmDkL"
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 dgqwRo"
+    >
+      <span
+        class="sc-AxhCb czaJmK"
+        color="currentColor"
+        font-size="16px"
+      >
+        Long label Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in eleifend metus, in tempus sapien. Morbi eget felis est. Nunc facilisis vel nisi nec ornare. Ut blandit ullamcorper enim sed fringilla. Quisque malesuada pharetra tincidunt. Mauris mauris tortor, maximus vitae tempor ac, tincidunt pharetra augue. In eget suscipit est. Suspendisse feugiat risus urna
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
         type="neutral"
       >
         Status
@@ -168,11 +198,113 @@ exports[`Storyshots StatusIndicator Informative 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 dyxeGM"
+      class="StatusIndicator-t1vtrp-0 hnuXoH"
+      font-size="smaller"
       type="informative"
     >
       Informative
     </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots StatusIndicator Inside flex 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxgMl fyyuUF"
+        font-size="26px"
+        font-weight="500"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxheI sc-Axmtr iRBWoo"
+        font-size="20px"
+        font-weight="500"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxhCb laTFNi"
+        color="currentColor"
+        font-size="16px"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxhCb chBKUG"
+        color="currentColor"
+        font-size="small"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
+    <div
+      class="Box-sc-1qu1edy-0 sc-AxjAm iVQrfK"
+    >
+      <span
+        class="sc-AxhCb hlgKbb"
+        color="currentColor"
+        font-size="smaller"
+      >
+        Label
+      </span>
+      <p
+        class="StatusIndicator-t1vtrp-0 cIlGSI"
+        font-size="smaller"
+        type="neutral"
+      >
+        Status
+      </p>
+    </div>
   </div>
 </div>
 `;
@@ -185,7 +317,8 @@ exports[`Storyshots StatusIndicator Neutral 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 ewmDkL"
+      class="StatusIndicator-t1vtrp-0 cIlGSI"
+      font-size="smaller"
       type="neutral"
     >
       Neutral
@@ -202,7 +335,8 @@ exports[`Storyshots StatusIndicator Quiet 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 jiQOiD"
+      class="StatusIndicator-t1vtrp-0 fvoNSY"
+      font-size="smaller"
       type="quiet"
     >
       Quiet
@@ -219,7 +353,8 @@ exports[`Storyshots StatusIndicator Success 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 isWGuw"
+      class="StatusIndicator-t1vtrp-0 dXWjDv"
+      font-size="smaller"
       type="success"
     >
       Success
@@ -236,7 +371,8 @@ exports[`Storyshots StatusIndicator Warning 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 kuIqEL"
+      class="StatusIndicator-t1vtrp-0 hgaihM"
+      font-size="smaller"
       type="warning"
     >
       Warning
