@@ -61,10 +61,10 @@ const propsRows = [
 export default () => (
   <Layout>
     <Helmet>
-      <title>Tooltip</title>
+      <title>Toast</title>
     </Helmet>
     <Intro>
-      <Title>Tooltip</Title>
+      <Title>Toast</Title>
       <IntroText>
         Temporarily displayed messages that provide additional information or
         feedback about a user's action or event. Hovering over a message will
