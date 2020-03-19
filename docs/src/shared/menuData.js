@@ -176,6 +176,10 @@ export const menuData = [
         href: "/components/time-range"
       },
       {
+        name: "Toast",
+        href: "/components/toast"
+      },
+      {
         name: "Toggle",
         href: "/components/toggle"
       },

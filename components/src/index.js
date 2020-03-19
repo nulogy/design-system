@@ -45,3 +45,4 @@ export { LoadingAnimation } from "./LoadingAnimation";
 
 export { ALL_NDS_LOCALES } from "./locales.const";
 export { TruncatedText } from "./TruncatedText";
+export { Toast } from "./Toast";
