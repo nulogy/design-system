@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/nulogy/design-system/compare/v1.5.0...v1.5.1) (2020-03-19)
+
+
+### Bug Fixes
+
+* StatusIndicator spacing and flexbox bug ([#584](https://github.com/nulogy/design-system/issues/584)) ([c8642a2](https://github.com/nulogy/design-system/commit/c8642a205a6f431e5231d301dabe6da8f8f61ca9))
+
+
+
+
+
 # [1.5.0](https://github.com/nulogy/design-system/compare/v1.4.2...v1.5.0) (2020-03-18)
 
 
