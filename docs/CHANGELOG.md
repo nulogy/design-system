@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/nulogy/design-system/compare/v1.5.1...v1.6.0) (2020-03-19)
+
+
+### Features
+
+* add Toast component ([#585](https://github.com/nulogy/design-system/issues/585)) ([b74761e](https://github.com/nulogy/design-system/commit/b74761e713b301dc32844df2ffe00226d0c56b11))
+
+
+
+
+
 ## [1.5.1](https://github.com/nulogy/design-system/compare/v1.5.0...v1.5.1) (2020-03-19)
 
 
