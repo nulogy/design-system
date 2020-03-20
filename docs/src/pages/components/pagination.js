@@ -103,7 +103,7 @@ export default () => (
       <Highlight className="js">
         {`import {Pagination} from "@nulogy/components";
 
-<Pagination currentPage={2} totalPages={5}
+<Pagination currentPage={2} totalPages={5} />
 `}
       </Highlight>
     </DocSection>
