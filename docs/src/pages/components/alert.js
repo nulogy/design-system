@@ -61,13 +61,13 @@ const propsRows = [
 export default () => (
   <Layout>
     <Helmet>
-      <title>Alerts</title>
+      <title>Alert</title>
     </Helmet>
     <Intro>
-      <Title>Alerts</Title>
+      <Title>Alert</Title>
       <IntroText>
-        Alerts are concise, event-driven messages that communicate information
-        and require minimal interaction.
+        An alert is a concise, event-driven message that communicates
+        information and requires minimal interaction.
       </IntroText>
     </Intro>
 

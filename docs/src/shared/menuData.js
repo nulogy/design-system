@@ -24,8 +24,8 @@ export const menuData = [
     name: "Components",
     links: [
       {
-        name: "Alerts",
-        href: "/components/alerts"
+        name: "Alert",
+        href: "/components/alert"
       },
       {
         name: "Box",
