@@ -123,7 +123,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/loading-animation">
+          <Link href="https://storybook.nulogy.design/?path=/story/loadinganimation">
             View in Storybook
           </Link>
         </ListItem>
