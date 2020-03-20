@@ -171,6 +171,15 @@ export default () => (
     </DocSection>
 
     <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="/components/toast">Toast</Link>
+        </ListItem>
+      </List>
+    </DocSection>
+
+    <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
         <Link href="https://storybook.nulogy.design/?path=/story/alert--danger">
