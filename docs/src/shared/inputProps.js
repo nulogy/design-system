@@ -61,14 +61,14 @@ export const inputFieldProps = [
     type: "Function",
     defaultValue: "undefined",
     description:
-      "change event handler that will be run whenever the value of the input is updated."
+      "Change event handler that will be run whenever the value of the input is updated."
   },
   {
     name: "onBlur",
     type: "Function",
     defaultValue: "undefined",
     description:
-      "change event handler that will be run whenever the input loses focus."
+      "Change event handler that will be run whenever the input loses focus."
   }
 ];
 

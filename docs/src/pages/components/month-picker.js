@@ -24,7 +24,7 @@ const propsRows = [
     name: "selected",
     type: "Date",
     defaultValue: "undefined",
-    description: "the time to display"
+    description: "The time to display"
   },
   {
     name: "inputProps",
