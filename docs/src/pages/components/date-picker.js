@@ -78,11 +78,11 @@ export default () => (
         {`import { DatePicker } from "@nulogy/components";
 
 <DatePicker
-        selected={new Date("Fri, 01 Jan 2019")}
-        dateFormat="MMMM d, yyyy"
-        onChange={(val) => val}
-        onInputChange={(val) => val}
-      />
+  selected={new Date("Fri, 01 Jan 2019")}
+  dateFormat="MMMM d, yyyy"
+  onChange={(val) => val}
+  onInputChange={(val) => val}
+/>
 `}
       </Highlight>
     </DocSection>

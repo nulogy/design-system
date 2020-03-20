@@ -53,6 +53,7 @@ export default () => (
       </Flex>
       <Highlight className="js">
         {`import { LoadingAnimation } from "@nulogy/components";
+
 <LoadingAnimation />
 `}
       </Highlight>
@@ -89,11 +90,7 @@ export default () => (
         <Flex justifyContent="center" mt="x2" mb="x4">
           <LoadingAnimation />
         </Flex>
-        <Highlight className="js">
-          {`import { LoadingAnimation } from "@nulogy/components";
-<LoadingAnimation/>
-`}
-        </Highlight>
+        <Highlight className="js">{`<LoadingAnimation/>`}</Highlight>
       </DocSubsection>
       <DocSubsection>
         <SubsectionTitle>Inactive</SubsectionTitle>
@@ -104,11 +101,7 @@ export default () => (
         <Flex justifyContent="center" mt="x2" mb="x4">
           <LoadingAnimation inactive />
         </Flex>
-        <Highlight className="js">
-          {`import { LoadingAnimation } from "@nulogy/components";
-<LoadingAnimation inactive />
-`}
-        </Highlight>
+        <Highlight className="js">{`<LoadingAnimation inactive />`}</Highlight>
       </DocSubsection>
     </DocSection>
 

@@ -83,10 +83,7 @@ export default () => (
         </Text>
         <StatusIndicator>In progress</StatusIndicator>
         <Highlight className="js">
-          {`import {StatusIndicator} from "@nulogy/components";
-
-<StatusIndicator>In progress</StatusIndicator>
-`}
+          {`<StatusIndicator>In progress</StatusIndicator>`}
         </Highlight>
       </Box>
 
@@ -98,10 +95,7 @@ export default () => (
         </Text>
         <StatusIndicator type="informative">New</StatusIndicator>
         <Highlight className="js">
-          {`import {StatusIndicator} from "@nulogy/components";
-
-<StatusIndicator type="informative">Informative</StatusIndicator>
-`}
+          {`<StatusIndicator type="informative">Informative</StatusIndicator>`}
         </Highlight>
       </Box>
 
@@ -113,10 +107,7 @@ export default () => (
         </Text>
         <StatusIndicator type="success">2 days early</StatusIndicator>
         <Highlight className="js">
-          {`import {StatusIndicator} from "@nulogy/components";
-
-<StatusIndicator type="success">2 days early</StatusIndicator>
-`}
+          {`<StatusIndicator type="success">2 days early</StatusIndicator>`}
         </Highlight>
       </Box>
 
@@ -128,10 +119,7 @@ export default () => (
         </Text>
         <StatusIndicator type="danger">Canceled</StatusIndicator>
         <Highlight className="js">
-          {`import {StatusIndicator} from "@nulogy/components";
-
-<StatusIndicator type="danger">Canceled</StatusIndicator>
-`}
+          {`<StatusIndicator type="danger">Canceled</StatusIndicator>`}
         </Highlight>
       </Box>
 
@@ -143,10 +131,7 @@ export default () => (
         </Text>
         <StatusIndicator type="warning">At risk</StatusIndicator>
         <Highlight className="js">
-          {`import {StatusIndicator} from "@nulogy/components";
-
-<StatusIndicator type="warning">At risk</StatusIndicator>
-`}
+          {`<StatusIndicator type="warning">At risk</StatusIndicator>`}
         </Highlight>
       </Box>
 
@@ -157,10 +142,7 @@ export default () => (
         </Text>
         <StatusIndicator type="quiet">Quiet</StatusIndicator>
         <Highlight className="js">
-          {`import {StatusIndicator} from "@nulogy/components";
-
-<StatusIndicator type="quiet">Quiet</StatusIndicator>
-`}
+          {`<StatusIndicator type="quiet">Quiet</StatusIndicator>`}
         </Highlight>
       </Box>
     </DocSection>

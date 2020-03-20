@@ -117,8 +117,8 @@ export default () => (
         {`import { TimeRange } from "@nulogy/components";
 
 <TimeRange
-        onRangeChange={(val) => val}
-      />
+  onRangeChange={(val) => val}
+/>
 `}
       </Highlight>
     </DocSection>

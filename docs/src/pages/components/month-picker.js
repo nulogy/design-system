@@ -81,10 +81,10 @@ export default () => (
         {`import { MonthPicker } from "@nulogy/components";
 
 <MonthPicker
-        selected={new Date("Fri, 01 Jan 2019")}
-        onChange={(val) => val}
-        onInputChange={(val) => val}
-      />
+  selected={new Date("Fri, 01 Jan 2019")}
+  onChange={(val) => val}
+  onInputChange={(val) => val}
+/>
 `}
       </Highlight>
     </DocSection>
