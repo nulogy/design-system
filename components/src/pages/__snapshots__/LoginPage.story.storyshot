@@ -950,6 +950,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
                 <p
                   class="sc-AxhCb hpmHVQ"

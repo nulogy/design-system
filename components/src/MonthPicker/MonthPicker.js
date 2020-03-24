@@ -87,7 +87,16 @@ class MonthPicker extends Component {
   };
 
   render() {
-    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, locale } = this.props;
+    const {
+      dateFormat,
+      errorMessage,
+      errorList,
+      inputProps,
+      minDate,
+      maxDate,
+      locale,
+      "aria-label": ariaLabel
+    } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -97,7 +106,7 @@ class MonthPicker extends Component {
 
     const customInput = (
       <DatePickerInput
-        data-testid="month-picker-input"
+        aria-label={ariaLabel}
         inputProps={customInputProps}
         dateFormat={dateFormat}
         onInputChange={this.handleInputChange}
@@ -140,7 +149,8 @@ MonthPicker.propTypes = {
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
   locale: PropTypes.string,
-  disableAutocomplete: PropTypes.bool
+  disableAutocomplete: PropTypes.bool,
+  "aria-label": PropTypes.string
 };
 
 MonthPicker.defaultProps = {
@@ -154,7 +164,8 @@ MonthPicker.defaultProps = {
   minDate: undefined,
   maxDate: undefined,
   locale: undefined,
-  disableAutocomplete: false
+  disableAutocomplete: false,
+  "aria-label": undefined
 };
 
 export default MonthPicker;

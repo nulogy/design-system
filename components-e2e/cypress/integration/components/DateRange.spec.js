@@ -2,10 +2,12 @@ describe("Date Range", () => {
   const getStartDate = () => cy.get(".nds-datepicker-day--start-date");
   const getEndDate = () => cy.get(".nds-datepicker-day--end-date");
   const getInRangeDates = () => cy.get(".nds-datepicker-day--in-range");
+  const getStartInputComponent = () =>
+    cy.get("[aria-label='Select a start date']");
+  const getEndInputComponent = () =>
+    cy.get("[aria-label='Select an end date']");
 
   describe("Default", () => {
-    const getStartInputComponent = () => cy.get("input").eq(0);
-    const getEndInputComponent = () => cy.get("input").eq(1);
     beforeEach(() => {
       cy.renderFromStorybook("daterange--default-start-and-end-date");
     });
@@ -37,11 +39,11 @@ describe("Date Range", () => {
     });
   });
   describe("With times", () => {
-    const getStartInputComponent = () => cy.get("input").eq(0);
-    const getStartTimeInputComponent = () => cy.get("input").eq(1);
-    const getEndTimeInputComponent = () => cy.get("input").eq(2);
-    const getEndInputComponent = () => cy.get("input").eq(3);
-    const TIME_OPTION_SELECTOR = "div[class*='SelectOption']";
+    const getStartTimeInputComponent = () =>
+      cy.get("[aria-label='Select a start time']");
+    const getEndTimeInputComponent = () =>
+      cy.get("[aria-label='Select an end time']");
+    const TIME_OPTION_SELECTOR = "[data-testid='select-option']";
     const getDropdownOptions = () => cy.get(TIME_OPTION_SELECTOR);
     beforeEach(() => {
       cy.renderFromStorybook("daterange--with-times");

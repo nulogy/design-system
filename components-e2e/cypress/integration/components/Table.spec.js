@@ -1,10 +1,16 @@
 describe("Table", () => {
-  const headerCheckboxSelector = "th [data-testid='visual-checkbox']";
-  const headerCheckboxInputSelector = "th [type='checkbox']";
-  const rowCheckboxSelector = "tbody [data-testid='visual-checkbox']";
-  const rowCheckboxInputSelector = "tbody [type='checkbox']";
-  const rowExpandButtonSelector = "tbody [aria-label='Expand row']";
-  const rowCollapseButtonSelector = "tbody [aria-label='Collapse row']";
+  const headerCheckboxSelector =
+    "[data-testid='table-head'] [data-testid='visual-checkbox']";
+  const headerCheckboxInputSelector =
+    "[data-testid='table-head'] [type='checkbox']";
+  const rowCheckboxSelector =
+    "[data-testid='table-body'] [data-testid='visual-checkbox']";
+  const rowCheckboxInputSelector =
+    "[data-testid='table-body'] [type='checkbox']";
+  const rowExpandButtonSelector =
+    "[data-testid='table-body'] [aria-label='Expand row']";
+  const rowCollapseButtonSelector =
+    "[data-testid='table-body'] [aria-label='Collapse row']";
   const getNextPageButton = () => cy.get("[aria-label='Go to next results']");
   const getPreviousPageButton = () =>
     cy.get("[aria-label='Go to previous results']");
@@ -88,20 +94,20 @@ describe("Table", () => {
     it("navigates to next page when next button is clicked", () => {
       getNextPageButton().click();
 
-      cy.get("tbody").should("contain", "2019-10-02");
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-02");
     });
     it("navigates to previous page when previous button is clicked", () => {
       getNextPageButton().click();
-      cy.get("tbody").should("contain", "2019-10-02");
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-02");
       getPreviousPageButton().click();
 
-      cy.get("tbody").should("contain", "2019-10-01");
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-01");
       getPreviousPageButton().should("be.disabled");
     });
     it("navigates to specific page when a page button is clicked", () => {
       paginationButtons(5).click();
 
-      cy.get("tbody").should("contain", "2019-10-07");
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-07");
       paginationButtons(4)
         .next()
         .should("be.disabled");
@@ -109,7 +115,7 @@ describe("Table", () => {
     it("disables next button when on last page", () => {
       paginationButtons(8).click();
 
-      cy.get("tbody").should("contain", "2019-10-24");
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-24");
       paginationButtons(7)
         .next()
         .should("be.disabled");
@@ -130,7 +136,10 @@ describe("Table", () => {
       selectAll().click();
       selectAll().click();
 
-      cy.get("tbody").should("contain", "Thu, 24 Oct 2019");
+      cy.get("[data-testid='table-body']").should(
+        "contain",
+        "Thu, 24 Oct 2019"
+      );
       selectAllInput().should("not.be.checked");
       rowCheckboxesInput().should("not.be.checked");
 
@@ -150,13 +159,13 @@ describe("Table", () => {
       expandButtons().click();
       collapseButtons().should("exist");
       collapseButtons().click();
-      cy.get("tbody").should("not.contain", "Expands!");
+      cy.get("[data-testid='table-body']").should("not.contain", "Expands!");
     });
     it("expands the row when collapsed", () => {
       collapseButtons().should("not.exist");
       expandButtons().should("exist");
       expandButtons().click();
-      cy.get("tbody").should("contain", "Expands!");
+      cy.get("[data-testid='table-body']").should("contain", "Expands!");
     });
   });
 });

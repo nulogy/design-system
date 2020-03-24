@@ -61,7 +61,7 @@ describe("Datepicker", () => {
       });
 
       it("allows the user to select a date by typing", () => {
-        cy.get("input").type("{backspace}{backspace}20");
+        getDateInputComponent().type("{backspace}{backspace}20");
         getDateInputComponent().should("have.value", "01 Jan 2020");
       });
 
@@ -89,7 +89,7 @@ describe("Datepicker", () => {
 
       it("allows the user to select a date in a earlier month", () => {
         const getPreviousMonthButton = () =>
-          cy.get("button[aria-label='go to previous month']");
+          cy.get("[aria-label='go to previous month']");
 
         getDateInputComponent().click();
         getPreviousMonthButton().click();
@@ -98,7 +98,7 @@ describe("Datepicker", () => {
 
       it("allows the user to select a date in a later month", () => {
         const getNextMonthButton = () =>
-          cy.get("button[aria-label='go to next month']");
+          cy.get("[aria-label='go to next month']");
 
         getDateInputComponent().click();
         getNextMonthButton().click();
@@ -107,7 +107,7 @@ describe("Datepicker", () => {
       describe("with arrow keys", () => {
         it("pressing the down key selects the previous date", () => {
           getDateInputComponent().click();
-          cy.get("input").type("{downarrow}");
+          getDateInputComponent().type("{downarrow}");
           cy.get(
             ".react-datepicker__day--031.react-datepicker__day--selected"
           ).should("exist");
@@ -115,12 +115,12 @@ describe("Datepicker", () => {
         });
         it("displays the current month", () => {
           getDateInputComponent().click();
-          cy.get("input").type("{downarrow}");
+          getDateInputComponent().type("{downarrow}");
           cy.get(`${CALENDAR_SELECTOR} p`).contains("December 2018");
         });
         it("pressing the up key selects the next date", () => {
           getDateInputComponent().click();
-          cy.get("input").type("{uparrow}");
+          getDateInputComponent().type("{uparrow}");
           cy.get(
             ".react-datepicker__day--002.react-datepicker__day--selected"
           ).should("exist");
@@ -137,12 +137,14 @@ describe("Datepicker", () => {
       describe("with arrow keys", () => {
         it("pressing the up arrow selects a next date up to the max date", () => {
           getDateInputComponent().click();
-          cy.get("input").type("{uparrow}{uparrow}{uparrow}{uparrow}{uparrow}");
+          getDateInputComponent().type(
+            "{uparrow}{uparrow}{uparrow}{uparrow}{uparrow}"
+          );
           cy.get(
             ".react-datepicker__day--010.react-datepicker__day--selected"
           ).should("exist");
           getDateInputComponent().should("have.value", "10 Jan 2019");
-          cy.get("input").type("{uparrow}");
+          getDateInputComponent().type("{uparrow}");
           cy.get(
             ".react-datepicker__day--010.react-datepicker__day--selected"
           ).should("exist");
@@ -150,12 +152,12 @@ describe("Datepicker", () => {
         });
         it("pressing the down arrow selects a previous date up to the min date", () => {
           getDateInputComponent().click();
-          cy.get("input").type("{downarrow}{downarrow}");
+          getDateInputComponent().type("{downarrow}{downarrow}");
           cy.get(
             ".react-datepicker__day--003.react-datepicker__day--selected"
           ).should("exist");
           getDateInputComponent().should("have.value", "03 Jan 2019");
-          cy.get("input").type("{downarrow}");
+          getDateInputComponent().type("{downarrow}");
           cy.get(
             ".react-datepicker__day--003.react-datepicker__day--selected"
           ).should("exist");

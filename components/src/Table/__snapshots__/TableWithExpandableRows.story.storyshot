@@ -16,30 +16,36 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            data-testid="table-head"
             scope="col"
             width="30px"
           />
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >
@@ -302,30 +308,36 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            data-testid="table-head"
             scope="col"
             width="30px"
           />
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
         >

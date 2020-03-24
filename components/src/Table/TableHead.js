@@ -16,7 +16,7 @@ const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...
 const TableHead = ({ columns, compact }) => {
   const renderColumns = allColumns =>
     allColumns.map(column => (
-      <StyledTh scope="col" key={column.dataKey} width={column.width} compact={compact}>
+      <StyledTh scope="col" key={column.dataKey} width={column.width} compact={compact} data-testid="table-head">
         {renderHeaderCellContent(column)}
       </StyledTh>
     ));

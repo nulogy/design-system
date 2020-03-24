@@ -8,10 +8,10 @@ describe("MonthPicker", () => {
     const onInputChange = jest.fn();
 
     it("returns the selected date when the selection has changed", () => {
-      const { container } = render(
+      const { container, getByLabelText } = render(
         <MonthPicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onInputChange={onInputChange} />
       );
-      const input = container.querySelectorAll("input")[0];
+      const input = getByLabelText("select a date");
       fireEvent.click(input);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-1")[0]);
 

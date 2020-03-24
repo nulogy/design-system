@@ -32,6 +32,8 @@ const MonthRange = ({
   const [endMonth, setEndMonth] = useState(defaultEndDate);
   const [rangeError, setRangeError] = useState();
 
+  const { t } = useTranslation();
+
   const changeStartDateHandler = date => {
     setStartMonth(date);
     if (onStartDateChange) {
@@ -71,6 +73,7 @@ const MonthRange = ({
       maxDate={maxDate}
       locale={locale}
       disableAutocomplete={disableAutocomplete}
+      aria-label={t("select a start date")}
     />
   );
 
@@ -85,14 +88,13 @@ const MonthRange = ({
       maxDate={maxDate}
       locale={locale}
       disableAutocomplete={disableAutocomplete}
+      aria-label={t("select a start date")}
     />
   );
 
   useEffect(() => {
     validateDateRange();
   }, [startMonth, endMonth]);
-
-  const { t } = useTranslation();
 
   return (
     <RangeContainer

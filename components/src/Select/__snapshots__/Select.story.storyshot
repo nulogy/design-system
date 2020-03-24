@@ -25,66 +25,78 @@ exports[`Storyshots Select Select 1`] = `
           </span>
         </div>
         <div
-          class="Select css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class="SelectTest__control css-1liu8yu-Control"
+            class="Select css-2b097c-container"
           >
             <div
-              class="SelectTest__value-container css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class="SelectTest__placeholder css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class="SelectTest__control css-1liu8yu-Control"
               >
                 <div
-                  class="SelectTest__input"
-                  style="display:inline-block"
+                  class="SelectTest__value-container css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-11-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class="SelectTest__placeholder css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class="SelectTest__input"
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-11-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="SelectTest__indicators css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class="SelectTest__indicator-separator css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class="SelectTest__indicator SelectTest__dropdown-indicator css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class="SelectTest__indicators css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class="SelectTest__indicator-separator css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class="SelectTest__indicator SelectTest__dropdown-indicator css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -120,103 +132,121 @@ exports[`Storyshots Select With wrapping text 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-w42fll-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-w42fll-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-26-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-26-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
             <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class=" css-1l502d3-Menu"
-          >
-            <div
-              class=" css-fthyjs-MenuList"
+              data-testid="select-dropdown"
             >
               <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring"
-                type="option"
-                value="onestring"
+                class=" css-1l502d3-Menu"
               >
                 <div
-                  class=" css-o8533i-Option"
-                  id="react-select-26-option-0"
-                  tabindex="-1"
+                  class=" css-fthyjs-MenuList"
                 >
-                  Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Many words many words many words many words many words many words many words many words many words many words many words many words many words"
-                type="option"
-                value="manywords"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-26-option-1"
-                  tabindex="-1"
-                >
-                  Many words many words many words many words many words many words many words many words many words many words many words many words many words
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring"
+                    type="option"
+                    value="onestring"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-26-option-0"
+                      tabindex="-1"
+                    >
+                      Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Many words many words many words many words many words many words many words many words many words many words many words many words many words"
+                    type="option"
+                    value="manywords"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-26-option-1"
+                      tabindex="-1"
+                    >
+                      Many words many words many words many words many words many words many words many words many words many words many words many words many words
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -253,67 +283,79 @@ exports[`Storyshots Select set to disabled 1`] = `
           </span>
         </div>
         <div
-          class=" css-14jk2my-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1aojeu-Control"
+            class=" css-14jk2my-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-b1k6bm-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1aojeu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    disabled=""
-                    id="react-select-17-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-b1k6bm-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          disabled=""
+                          id="react-select-17-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-3igypj-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-3igypj-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -376,66 +418,78 @@ exports[`Storyshots Select set to required 1`] = `
             </span>
           </div>
           <div
-            class=" css-2b097c-container"
+            data-testid="select-container"
           >
             <div
-              class=" css-1liu8yu-Control"
+              class=" css-2b097c-container"
             >
               <div
-                class=" css-7zc8my"
+                data-testid="select-control"
               >
                 <div
-                  class=" css-1yhx6vz-Placeholder"
-                >
-                  Please select inventory status
-                </div>
-                <div
-                  class="css-17yls17-Input"
+                  class=" css-1liu8yu-Control"
                 >
                   <div
-                    class=""
-                    style="display:inline-block"
+                    class=" css-7zc8my"
                   >
-                    <input
-                      aria-autocomplete="list"
-                      autocapitalize="none"
-                      autocomplete="off"
-                      autocorrect="off"
-                      id="react-select-22-input"
-                      spellcheck="false"
-                      style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                      tabindex="0"
-                      type="text"
-                      value=""
+                    <div
+                      class=" css-1yhx6vz-Placeholder"
+                    >
+                      Please select inventory status
+                    </div>
+                    <div
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="css-17yls17-Input"
+                      >
+                        <div
+                          class=""
+                          style="display:inline-block"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            id="react-select-22-input"
+                            spellcheck="false"
+                            style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class=" css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <span
+                      class=" css-43ykx9-indicatorSeparator"
                     />
                     <div
-                      style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                    />
+                      aria-hidden="true"
+                      class=" css-1fi275-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-6q0nyr-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class=" css-1hb7zxy-IndicatorsContainer"
-              >
-                <span
-                  class=" css-43ykx9-indicatorSeparator"
-                />
-                <div
-                  aria-hidden="true"
-                  class=" css-1fi275-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                    />
-                  </svg>
                 </div>
               </div>
             </div>
@@ -478,128 +532,152 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class="css-jq32g8-multiValue"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class="css-1ekzmfk"
+                  class=" css-7zc8my"
                 >
-                  Accepted
-                </div>
-                <div
-                  class="css-82lhh1"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="14"
-                    viewBox="0 0 20 20"
-                    width="14"
+                  <div
+                    data-testid="select-multivalue"
                   >
-                    <path
-                      d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="css-jq32g8-multiValue"
-              >
-                <div
-                  class="css-1ekzmfk"
-                >
-                  Assigned to a line
-                </div>
-                <div
-                  class="css-82lhh1"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="14"
-                    viewBox="0 0 20 20"
-                    width="14"
+                    <div
+                      class="css-jq32g8-multiValue"
+                    >
+                      <div
+                        class="css-1ekzmfk"
+                      >
+                        Accepted
+                      </div>
+                      <div
+                        class="css-82lhh1"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-6q0nyr-Svg"
+                          focusable="false"
+                          height="14"
+                          viewBox="0 0 20 20"
+                          width="14"
+                        >
+                          <path
+                            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-testid="select-multivalue"
                   >
-                    <path
-                      d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                    />
-                  </svg>
+                    <div
+                      class="css-jq32g8-multiValue"
+                    >
+                      <div
+                        class="css-1ekzmfk"
+                      >
+                        Assigned to a line
+                      </div>
+                      <div
+                        class="css-82lhh1"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-6q0nyr-Svg"
+                          focusable="false"
+                          height="14"
+                          viewBox="0 0 20 20"
+                          width="14"
+                        >
+                          <path
+                            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-28-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="css-17yls17-Input"
-              >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-1hb7zxy-IndicatorsContainer"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-28-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    data-testid="select-clear"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class=" css-tlfecz-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-6q0nyr-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span
+                    class=" css-dgqsql-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <div
-                aria-hidden="true"
-                class=" css-tlfecz-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                  />
-                </svg>
-              </div>
-              <span
-                class=" css-dgqsql-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -628,253 +706,297 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
             </span>
           </div>
           <div
-            class=" css-2b097c-container"
+            data-testid="select-container"
           >
             <div
-              class=" css-1liu8yu-Control"
+              class=" css-2b097c-container"
             >
               <div
-                class=" css-7zc8my"
+                data-testid="select-control"
               >
                 <div
-                  class="css-jq32g8-multiValue"
+                  class=" css-1liu8yu-Control"
                 >
                   <div
-                    class="css-1ekzmfk"
+                    class=" css-7zc8my"
                   >
-                    PCN2 12387387484895884957848576867587685780
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    PCN4 12387387484895884957848576867587685780
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          PCN2 12387387484895884957848576867587685780
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    PCN1 12387387484895884957848576867587685780
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          PCN4 12387387484895884957848576867587685780
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    PCN9 12387387484895884957848576867587685780
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          PCN1 12387387484895884957848576867587685780
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    PCN7 12387387484895884957848576867587685780
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          PCN9 12387387484895884957848576867587685780
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    PCN6 12387387484895884957848576867587685780
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          PCN7 12387387484895884957848576867587685780
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    PCN3 12387387484895884957848576867587685780e
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          PCN6 12387387484895884957848576867587685780
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          PCN3 12387387484895884957848576867587685780e
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="css-17yls17-Input"
+                      >
+                        <div
+                          class=""
+                          style="display:inline-block"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            id="react-select-29-input"
+                            spellcheck="false"
+                            style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="css-17yls17-Input"
-                >
                   <div
-                    class=""
-                    style="display:inline-block"
+                    class=" css-1hb7zxy-IndicatorsContainer"
                   >
-                    <input
-                      aria-autocomplete="list"
-                      autocapitalize="none"
-                      autocomplete="off"
-                      autocorrect="off"
-                      id="react-select-29-input"
-                      spellcheck="false"
-                      style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                      tabindex="0"
-                      type="text"
-                      value=""
+                    <div
+                      data-testid="select-clear"
+                    >
+                      <div
+                        aria-hidden="true"
+                        class=" css-tlfecz-indicatorContainer"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-6q0nyr-Svg"
+                          focusable="false"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          width="20"
+                        >
+                          <path
+                            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class=" css-dgqsql-indicatorSeparator"
                     />
                     <div
-                      style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                    />
+                      aria-hidden="true"
+                      class=" css-1fi275-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-6q0nyr-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class=" css-1hb7zxy-IndicatorsContainer"
-              >
-                <div
-                  aria-hidden="true"
-                  class=" css-tlfecz-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                    />
-                  </svg>
-                </div>
-                <span
-                  class=" css-dgqsql-indicatorSeparator"
-                />
-                <div
-                  aria-hidden="true"
-                  class=" css-1fi275-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                    />
-                  </svg>
                 </div>
               </div>
             </div>
@@ -904,253 +1026,297 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
             </span>
           </div>
           <div
-            class=" css-2b097c-container"
+            data-testid="select-container"
           >
             <div
-              class=" css-1liu8yu-Control"
+              class=" css-2b097c-container"
             >
               <div
-                class=" css-7zc8my"
+                data-testid="select-control"
               >
                 <div
-                  class="css-jq32g8-multiValue"
+                  class=" css-1liu8yu-Control"
                 >
                   <div
-                    class="css-1ekzmfk"
+                    class=" css-7zc8my"
                   >
-                    Accepted
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    Assigned to a line
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          Accepted
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    On hold
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          Assigned to a line
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    Rejected
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          On hold
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    Open
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          Rejected
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    In progress
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          Open
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div
-                  class="css-jq32g8-multiValue"
-                >
-                  <div
-                    class="css-1ekzmfk"
-                  >
-                    In quarantine
-                  </div>
-                  <div
-                    class="css-82lhh1"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      width="14"
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          In progress
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-multivalue"
                     >
-                      <path
-                        d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                      />
-                    </svg>
+                      <div
+                        class="css-jq32g8-multiValue"
+                      >
+                        <div
+                          class="css-1ekzmfk"
+                        >
+                          In quarantine
+                        </div>
+                        <div
+                          class="css-82lhh1"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="css-6q0nyr-Svg"
+                            focusable="false"
+                            height="14"
+                            viewBox="0 0 20 20"
+                            width="14"
+                          >
+                            <path
+                              d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="css-17yls17-Input"
+                      >
+                        <div
+                          class=""
+                          style="display:inline-block"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            id="react-select-30-input"
+                            spellcheck="false"
+                            style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="css-17yls17-Input"
-                >
                   <div
-                    class=""
-                    style="display:inline-block"
+                    class=" css-1hb7zxy-IndicatorsContainer"
                   >
-                    <input
-                      aria-autocomplete="list"
-                      autocapitalize="none"
-                      autocomplete="off"
-                      autocorrect="off"
-                      id="react-select-30-input"
-                      spellcheck="false"
-                      style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                      tabindex="0"
-                      type="text"
-                      value=""
+                    <div
+                      data-testid="select-clear"
+                    >
+                      <div
+                        aria-hidden="true"
+                        class=" css-tlfecz-indicatorContainer"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-6q0nyr-Svg"
+                          focusable="false"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          width="20"
+                        >
+                          <path
+                            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span
+                      class=" css-dgqsql-indicatorSeparator"
                     />
                     <div
-                      style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                    />
+                      aria-hidden="true"
+                      class=" css-1fi275-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-6q0nyr-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class=" css-1hb7zxy-IndicatorsContainer"
-              >
-                <div
-                  aria-hidden="true"
-                  class=" css-tlfecz-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                    />
-                  </svg>
-                </div>
-                <span
-                  class=" css-dgqsql-indicatorSeparator"
-                />
-                <div
-                  aria-hidden="true"
-                  class=" css-1fi275-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                    />
-                  </svg>
                 </div>
               </div>
             </div>
@@ -1187,66 +1353,78 @@ exports[`Storyshots Select with a blank value 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-13-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-13-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -1282,66 +1460,78 @@ exports[`Storyshots Select with a defaultValue 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                Accepted
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-12-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    Accepted
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-12-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -1377,66 +1567,78 @@ exports[`Storyshots Select with an option selected 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                Accepted
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-14-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    Accepted
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-14-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -1462,178 +1664,201 @@ exports[`Storyshots Select with an option selected 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-w42fll-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                Accepted
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-w42fll-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-15-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    Accepted
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-15-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
             <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class=" css-1l502d3-Menu"
-          >
-            <div
-              class=" css-fthyjs-MenuList"
+              data-testid="select-dropdown"
             >
               <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 jXKITF"
-                data="[object Object]"
-                label="Accepted"
-                type="option"
-                value="accepted"
+                class=" css-1l502d3-Menu"
               >
                 <div
-                  class=" css-o8533i-Option"
-                  id="react-select-15-option-0"
-                  tabindex="-1"
+                  class=" css-fthyjs-MenuList"
                 >
-                  Accepted
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Assigned to a line"
-                type="option"
-                value="assigned"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-15-option-1"
-                  tabindex="-1"
-                >
-                  Assigned to a line
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="On hold"
-                type="option"
-                value="hold"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-15-option-2"
-                  tabindex="-1"
-                >
-                  On hold
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Rejected"
-                type="option"
-                value="rejected"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-15-option-3"
-                  tabindex="-1"
-                >
-                  Rejected
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Open"
-                type="option"
-                value="open"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-15-option-4"
-                  tabindex="-1"
-                >
-                  Open
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="In progress"
-                type="option"
-                value="progress"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-15-option-5"
-                  tabindex="-1"
-                >
-                  In progress
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="In quarantine"
-                type="option"
-                value="quarantine"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-15-option-6"
-                  tabindex="-1"
-                >
-                  In quarantine
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 jXKITF"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Accepted"
+                    type="option"
+                    value="accepted"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-15-option-0"
+                      tabindex="-1"
+                    >
+                      Accepted
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Assigned to a line"
+                    type="option"
+                    value="assigned"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-15-option-1"
+                      tabindex="-1"
+                    >
+                      Assigned to a line
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="On hold"
+                    type="option"
+                    value="hold"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-15-option-2"
+                      tabindex="-1"
+                    >
+                      On hold
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Rejected"
+                    type="option"
+                    value="rejected"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-15-option-3"
+                      tabindex="-1"
+                    >
+                      Rejected
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Open"
+                    type="option"
+                    value="open"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-15-option-4"
+                      tabindex="-1"
+                    >
+                      Open
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="In progress"
+                    type="option"
+                    value="progress"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-15-option-5"
+                      tabindex="-1"
+                    >
+                      In progress
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="In quarantine"
+                    type="option"
+                    value="quarantine"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-15-option-6"
+                      tabindex="-1"
+                    >
+                      In quarantine
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1677,66 +1902,78 @@ exports[`Storyshots Select with custom id 1`] = `
           </p>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="my-custom-id"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="my-custom-id"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -1772,66 +2009,78 @@ exports[`Storyshots Select with error list 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1j4q2ea-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1j4q2ea-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-20-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-20-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -1892,178 +2141,201 @@ exports[`Storyshots Select with error list 1`] = `
       class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <div
-        class=" css-2b097c-container"
+        data-testid="select-container"
       >
         <div
-          class=" css-1odmq7e-Control"
+          class=" css-2b097c-container"
         >
           <div
-            class=" css-7zc8my"
+            data-testid="select-control"
           >
             <div
-              class=" css-1yhx6vz-Placeholder"
-            >
-              Please select inventory status
-            </div>
-            <div
-              class="css-17yls17-Input"
+              class=" css-1odmq7e-Control"
             >
               <div
-                class=""
-                style="display:inline-block"
+                class=" css-7zc8my"
               >
-                <input
-                  aria-autocomplete="list"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  id="react-select-21-input"
-                  spellcheck="false"
-                  style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                  tabindex="0"
-                  type="text"
-                  value=""
+                <div
+                  class=" css-1yhx6vz-Placeholder"
+                >
+                  Please select inventory status
+                </div>
+                <div
+                  data-testid="select-input"
+                >
+                  <div
+                    class="css-17yls17-Input"
+                  >
+                    <div
+                      class=""
+                      style="display:inline-block"
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        autocapitalize="none"
+                        autocomplete="off"
+                        autocorrect="off"
+                        id="react-select-21-input"
+                        spellcheck="false"
+                        style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                        tabindex="0"
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class=" css-1hb7zxy-IndicatorsContainer"
+              >
+                <span
+                  class=" css-43ykx9-indicatorSeparator"
                 />
                 <div
-                  style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                />
+                  aria-hidden="true"
+                  class=" css-1fi275-indicatorContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="css-6q0nyr-Svg"
+                    focusable="false"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class=" css-1hb7zxy-IndicatorsContainer"
-          >
-            <span
-              class=" css-43ykx9-indicatorSeparator"
-            />
-            <div
-              aria-hidden="true"
-              class=" css-1fi275-indicatorContainer"
-            >
-              <svg
-                aria-hidden="true"
-                class="css-6q0nyr-Svg"
-                focusable="false"
-                height="20"
-                viewBox="0 0 20 20"
-                width="20"
-              >
-                <path
-                  d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div
-          class=" css-6mfljk-Menu"
-        >
-          <div
-            class=" css-fthyjs-MenuList"
+            data-testid="select-dropdown"
           >
             <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Accepted"
-              type="option"
-              value="accepted"
+              class=" css-6mfljk-Menu"
             >
               <div
-                class=" css-o8533i-Option"
-                id="react-select-21-option-0"
-                tabindex="-1"
+                class=" css-fthyjs-MenuList"
               >
-                Accepted
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Assigned to a line"
-              type="option"
-              value="assigned"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-21-option-1"
-                tabindex="-1"
-              >
-                Assigned to a line
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="On hold"
-              type="option"
-              value="hold"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-21-option-2"
-                tabindex="-1"
-              >
-                On hold
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Rejected"
-              type="option"
-              value="rejected"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-21-option-3"
-                tabindex="-1"
-              >
-                Rejected
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Open"
-              type="option"
-              value="open"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-21-option-4"
-                tabindex="-1"
-              >
-                Open
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="In progress"
-              type="option"
-              value="progress"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-21-option-5"
-                tabindex="-1"
-              >
-                In progress
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="In quarantine"
-              type="option"
-              value="quarantine"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-21-option-6"
-                tabindex="-1"
-              >
-                In quarantine
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Accepted"
+                  type="option"
+                  value="accepted"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-21-option-0"
+                    tabindex="-1"
+                  >
+                    Accepted
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Assigned to a line"
+                  type="option"
+                  value="assigned"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-21-option-1"
+                    tabindex="-1"
+                  >
+                    Assigned to a line
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="On hold"
+                  type="option"
+                  value="hold"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-21-option-2"
+                    tabindex="-1"
+                  >
+                    On hold
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Rejected"
+                  type="option"
+                  value="rejected"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-21-option-3"
+                    tabindex="-1"
+                  >
+                    Rejected
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Open"
+                  type="option"
+                  value="open"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-21-option-4"
+                    tabindex="-1"
+                  >
+                    Open
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="In progress"
+                  type="option"
+                  value="progress"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-21-option-5"
+                    tabindex="-1"
+                  >
+                    In progress
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="In quarantine"
+                  type="option"
+                  value="quarantine"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-21-option-6"
+                    tabindex="-1"
+                  >
+                    In quarantine
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -2148,66 +2420,78 @@ exports[`Storyshots Select with error message 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1j4q2ea-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1j4q2ea-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-18-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-18-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -2251,178 +2535,201 @@ exports[`Storyshots Select with error message 1`] = `
       class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
     >
       <div
-        class=" css-2b097c-container"
+        data-testid="select-container"
       >
         <div
-          class=" css-1odmq7e-Control"
+          class=" css-2b097c-container"
         >
           <div
-            class=" css-7zc8my"
+            data-testid="select-control"
           >
             <div
-              class=" css-1yhx6vz-Placeholder"
-            >
-              Please select inventory status
-            </div>
-            <div
-              class="css-17yls17-Input"
+              class=" css-1odmq7e-Control"
             >
               <div
-                class=""
-                style="display:inline-block"
+                class=" css-7zc8my"
               >
-                <input
-                  aria-autocomplete="list"
-                  autocapitalize="none"
-                  autocomplete="off"
-                  autocorrect="off"
-                  id="react-select-19-input"
-                  spellcheck="false"
-                  style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                  tabindex="0"
-                  type="text"
-                  value=""
+                <div
+                  class=" css-1yhx6vz-Placeholder"
+                >
+                  Please select inventory status
+                </div>
+                <div
+                  data-testid="select-input"
+                >
+                  <div
+                    class="css-17yls17-Input"
+                  >
+                    <div
+                      class=""
+                      style="display:inline-block"
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        autocapitalize="none"
+                        autocomplete="off"
+                        autocorrect="off"
+                        id="react-select-19-input"
+                        spellcheck="false"
+                        style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                        tabindex="0"
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class=" css-1hb7zxy-IndicatorsContainer"
+              >
+                <span
+                  class=" css-43ykx9-indicatorSeparator"
                 />
                 <div
-                  style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                />
+                  aria-hidden="true"
+                  class=" css-1fi275-indicatorContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="css-6q0nyr-Svg"
+                    focusable="false"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
           <div
-            class=" css-1hb7zxy-IndicatorsContainer"
-          >
-            <span
-              class=" css-43ykx9-indicatorSeparator"
-            />
-            <div
-              aria-hidden="true"
-              class=" css-1fi275-indicatorContainer"
-            >
-              <svg
-                aria-hidden="true"
-                class="css-6q0nyr-Svg"
-                focusable="false"
-                height="20"
-                viewBox="0 0 20 20"
-                width="20"
-              >
-                <path
-                  d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div
-          class=" css-6mfljk-Menu"
-        >
-          <div
-            class=" css-fthyjs-MenuList"
+            data-testid="select-dropdown"
           >
             <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Accepted"
-              type="option"
-              value="accepted"
+              class=" css-6mfljk-Menu"
             >
               <div
-                class=" css-o8533i-Option"
-                id="react-select-19-option-0"
-                tabindex="-1"
+                class=" css-fthyjs-MenuList"
               >
-                Accepted
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Assigned to a line"
-              type="option"
-              value="assigned"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-19-option-1"
-                tabindex="-1"
-              >
-                Assigned to a line
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="On hold"
-              type="option"
-              value="hold"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-19-option-2"
-                tabindex="-1"
-              >
-                On hold
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Rejected"
-              type="option"
-              value="rejected"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-19-option-3"
-                tabindex="-1"
-              >
-                Rejected
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="Open"
-              type="option"
-              value="open"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-19-option-4"
-                tabindex="-1"
-              >
-                Open
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="In progress"
-              type="option"
-              value="progress"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-19-option-5"
-                tabindex="-1"
-              >
-                In progress
-              </div>
-            </div>
-            <div
-              class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-              data="[object Object]"
-              label="In quarantine"
-              type="option"
-              value="quarantine"
-            >
-              <div
-                class=" css-o8533i-Option"
-                id="react-select-19-option-6"
-                tabindex="-1"
-              >
-                In quarantine
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Accepted"
+                  type="option"
+                  value="accepted"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-19-option-0"
+                    tabindex="-1"
+                  >
+                    Accepted
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Assigned to a line"
+                  type="option"
+                  value="assigned"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-19-option-1"
+                    tabindex="-1"
+                  >
+                    Assigned to a line
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="On hold"
+                  type="option"
+                  value="hold"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-19-option-2"
+                    tabindex="-1"
+                  >
+                    On hold
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Rejected"
+                  type="option"
+                  value="rejected"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-19-option-3"
+                    tabindex="-1"
+                  >
+                    Rejected
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Open"
+                  type="option"
+                  value="open"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-19-option-4"
+                    tabindex="-1"
+                  >
+                    Open
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="In progress"
+                  type="option"
+                  value="progress"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-19-option-5"
+                    tabindex="-1"
+                  >
+                    In progress
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="In quarantine"
+                  type="option"
+                  value="quarantine"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-19-option-6"
+                    tabindex="-1"
+                  >
+                    In quarantine
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -2494,66 +2801,78 @@ exports[`Storyshots Select with fixed positioning 1`] = `
             </span>
           </div>
           <div
-            class=" css-2b097c-container"
+            data-testid="select-container"
           >
             <div
-              class=" css-1liu8yu-Control"
+              class=" css-2b097c-container"
             >
               <div
-                class=" css-7zc8my"
+                data-testid="select-control"
               >
                 <div
-                  class=" css-1uccc91-singleValue"
-                >
-                  Accepted
-                </div>
-                <div
-                  class="css-17yls17-Input"
+                  class=" css-1liu8yu-Control"
                 >
                   <div
-                    class=""
-                    style="display:inline-block"
+                    class=" css-7zc8my"
                   >
-                    <input
-                      aria-autocomplete="list"
-                      autocapitalize="none"
-                      autocomplete="off"
-                      autocorrect="off"
-                      id="react-select-31-input"
-                      spellcheck="false"
-                      style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                      tabindex="0"
-                      type="text"
-                      value=""
+                    <div
+                      class=" css-1uccc91-singleValue"
+                    >
+                      Accepted
+                    </div>
+                    <div
+                      data-testid="select-input"
+                    >
+                      <div
+                        class="css-17yls17-Input"
+                      >
+                        <div
+                          class=""
+                          style="display:inline-block"
+                        >
+                          <input
+                            aria-autocomplete="list"
+                            autocapitalize="none"
+                            autocomplete="off"
+                            autocorrect="off"
+                            id="react-select-31-input"
+                            spellcheck="false"
+                            style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                            tabindex="0"
+                            type="text"
+                            value=""
+                          />
+                          <div
+                            style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class=" css-1hb7zxy-IndicatorsContainer"
+                  >
+                    <span
+                      class=" css-43ykx9-indicatorSeparator"
                     />
                     <div
-                      style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                    />
+                      aria-hidden="true"
+                      class=" css-1fi275-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-6q0nyr-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                        />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div
-                class=" css-1hb7zxy-IndicatorsContainer"
-              >
-                <span
-                  class=" css-43ykx9-indicatorSeparator"
-                />
-                <div
-                  aria-hidden="true"
-                  class=" css-1fi275-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                    />
-                  </svg>
                 </div>
               </div>
             </div>
@@ -2597,66 +2916,78 @@ exports[`Storyshots Select with helpText 1`] = `
           </p>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-23-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-23-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -2692,128 +3023,152 @@ exports[`Storyshots Select with multiselect 1`] = `
           </span>
         </div>
         <div
-          class="Select css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="Select css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class="css-jq32g8-multiValue"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class="css-1ekzmfk"
+                  class=" css-7zc8my"
                 >
-                  PCN2
-                </div>
-                <div
-                  class="css-82lhh1"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="14"
-                    viewBox="0 0 20 20"
-                    width="14"
+                  <div
+                    data-testid="select-multivalue"
                   >
-                    <path
-                      d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="css-jq32g8-multiValue"
-              >
-                <div
-                  class="css-1ekzmfk"
-                >
-                  PCN1
-                </div>
-                <div
-                  class="css-82lhh1"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="14"
-                    viewBox="0 0 20 20"
-                    width="14"
+                    <div
+                      class="css-jq32g8-multiValue"
+                    >
+                      <div
+                        class="css-1ekzmfk"
+                      >
+                        PCN2
+                      </div>
+                      <div
+                        class="css-82lhh1"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-6q0nyr-Svg"
+                          focusable="false"
+                          height="14"
+                          viewBox="0 0 20 20"
+                          width="14"
+                        >
+                          <path
+                            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-testid="select-multivalue"
                   >
-                    <path
-                      d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                    />
-                  </svg>
+                    <div
+                      class="css-jq32g8-multiValue"
+                    >
+                      <div
+                        class="css-1ekzmfk"
+                      >
+                        PCN1
+                      </div>
+                      <div
+                        class="css-82lhh1"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-6q0nyr-Svg"
+                          focusable="false"
+                          height="14"
+                          viewBox="0 0 20 20"
+                          width="14"
+                        >
+                          <path
+                            d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-27-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div
-                class="css-17yls17-Input"
-              >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-1hb7zxy-IndicatorsContainer"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-27-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    data-testid="select-clear"
+                  >
+                    <div
+                      aria-hidden="true"
+                      class=" css-tlfecz-indicatorContainer"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="css-6q0nyr-Svg"
+                        focusable="false"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        width="20"
+                      >
+                        <path
+                          d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span
+                    class=" css-dgqsql-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <div
-                aria-hidden="true"
-                class=" css-tlfecz-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                  />
-                </svg>
-              </div>
-              <span
-                class=" css-dgqsql-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -2849,178 +3204,201 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
           </span>
         </div>
         <div
-          class=" css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-w42fll-Control"
+            class=" css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                Accepted
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-w42fll-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-25-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    Accepted
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-25-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
             <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div
-            class=" css-1l502d3-Menu"
-          >
-            <div
-              class=" css-ktzzr0-MenuList"
+              data-testid="select-dropdown"
             >
               <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 jXKITF"
-                data="[object Object]"
-                label="Accepted"
-                type="option"
-                value="accepted"
+                class=" css-1l502d3-Menu"
               >
                 <div
-                  class=" css-o8533i-Option"
-                  id="react-select-25-option-0"
-                  tabindex="-1"
+                  class=" css-ktzzr0-MenuList"
                 >
-                  Accepted
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Assigned to a line"
-                type="option"
-                value="assigned"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-25-option-1"
-                  tabindex="-1"
-                >
-                  Assigned to a line
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="On hold"
-                type="option"
-                value="hold"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-25-option-2"
-                  tabindex="-1"
-                >
-                  On hold
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Rejected"
-                type="option"
-                value="rejected"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-25-option-3"
-                  tabindex="-1"
-                >
-                  Rejected
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="Open"
-                type="option"
-                value="open"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-25-option-4"
-                  tabindex="-1"
-                >
-                  Open
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="In progress"
-                type="option"
-                value="progress"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-25-option-5"
-                  tabindex="-1"
-                >
-                  In progress
-                </div>
-              </div>
-              <div
-                class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
-                data="[object Object]"
-                label="In quarantine"
-                type="option"
-                value="quarantine"
-              >
-                <div
-                  class=" css-o8533i-Option"
-                  id="react-select-25-option-6"
-                  tabindex="-1"
-                >
-                  In quarantine
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 jXKITF"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Accepted"
+                    type="option"
+                    value="accepted"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-25-option-0"
+                      tabindex="-1"
+                    >
+                      Accepted
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Assigned to a line"
+                    type="option"
+                    value="assigned"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-25-option-1"
+                      tabindex="-1"
+                    >
+                      Assigned to a line
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="On hold"
+                    type="option"
+                    value="hold"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-25-option-2"
+                      tabindex="-1"
+                    >
+                      On hold
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Rejected"
+                    type="option"
+                    value="rejected"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-25-option-3"
+                      tabindex="-1"
+                    >
+                      Rejected
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="Open"
+                    type="option"
+                    value="open"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-25-option-4"
+                      tabindex="-1"
+                    >
+                      Open
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="In progress"
+                    type="option"
+                    value="progress"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-25-option-5"
+                      tabindex="-1"
+                    >
+                      In progress
+                    </div>
+                  </div>
+                  <div
+                    class="SelectOption__StyledOption-sc-3ujurn-0 hYBdfU"
+                    data="[object Object]"
+                    data-testid="select-option"
+                    label="In quarantine"
+                    type="option"
+                    value="quarantine"
+                  >
+                    <div
+                      class=" css-o8533i-Option"
+                      id="react-select-25-option-6"
+                      tabindex="-1"
+                    >
+                      In quarantine
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3057,66 +3435,78 @@ exports[`Storyshots Select with state 1`] = `
           </span>
         </div>
         <div
-          class="Select css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class="SelectTest__control css-1liu8yu-Control"
+            class="Select css-2b097c-container"
           >
             <div
-              class="SelectTest__value-container css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class="SelectTest__placeholder css-1yhx6vz-Placeholder"
-              >
-                Please select inventory status
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class="SelectTest__control css-1liu8yu-Control"
               >
                 <div
-                  class="SelectTest__input"
-                  style="display:inline-block"
+                  class="SelectTest__value-container css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-16-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class="SelectTest__placeholder css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class="SelectTest__input"
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-16-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="SelectTest__indicators css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class="SelectTest__indicator-separator css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class="SelectTest__indicator SelectTest__dropdown-indicator css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class="SelectTest__indicators css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class="SelectTest__indicator-separator css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class="SelectTest__indicator SelectTest__dropdown-indicator css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="css-6q0nyr-Svg"
-                  focusable="false"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  width="20"
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
               </div>
             </div>
           </div>

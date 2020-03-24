@@ -14,11 +14,11 @@ describe("MonthRange", () => {
     });
     test("returns the selected range when the range changes", () => {
       const onRangeChange = jest.fn();
-      const { container } = render(<MonthRange onRangeChange={onRangeChange} />);
-      const startDateInput = container.querySelectorAll("input")[0];
+      const { container, getByLabelText } = render(<MonthRange onRangeChange={onRangeChange} />);
+      const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-3")[0]);
-      const endDateInput = container.querySelectorAll("input")[1];
+      const endDateInput = getByLabelText("Select an end date");
       fireEvent.click(endDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-5")[0]);
       const onChangeCalls = onRangeChange.mock.calls;
@@ -29,11 +29,11 @@ describe("MonthRange", () => {
     });
     it("returns the selected range with an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
-      const { container } = render(<MonthRange onRangeChange={onRangeChange} />);
-      const startDateInput = container.querySelectorAll("input")[0];
+      const { container, getByLabelText } = render(<MonthRange onRangeChange={onRangeChange} />);
+      const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-5")[0]);
-      const endDateInput = container.querySelectorAll("input")[1];
+      const endDateInput = getByLabelText("Select an end date");
       fireEvent.click(endDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-3")[0]);
       const onChangeCalls = onRangeChange.mock.calls;
@@ -45,10 +45,10 @@ describe("MonthRange", () => {
     it("returns the start date when the start date changes", () => {
       const onStartDateChange = jest.fn();
       const onEndDateChange = jest.fn();
-      const { container } = render(
+      const { container, getByLabelText } = render(
         <MonthRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );
-      const startDateInput = container.querySelectorAll("input")[0];
+      const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-3")[0]);
       const onChangeCalls = onStartDateChange.mock.calls;
@@ -59,10 +59,10 @@ describe("MonthRange", () => {
     it("returns the end date when the end date changes", () => {
       const onStartDateChange = jest.fn();
       const onEndDateChange = jest.fn();
-      const { container } = render(
+      const { container, getByLabelText } = render(
         <MonthRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );
-      const endDateInput = container.querySelectorAll("input")[1];
+      const endDateInput = getByLabelText("Select an end date");
       fireEvent.click(endDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-10")[0]);
       const latestCall = onEndDateChange.mock.calls[0][0];

@@ -28,6 +28,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -44,7 +45,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -83,6 +84,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -99,7 +101,7 @@ exports[`Storyshots MonthRange custom locale 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -158,6 +160,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -174,7 +177,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="From (Mon YYYY)"
@@ -213,6 +216,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -229,7 +233,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="To (Mon YYYY)"
@@ -288,6 +292,7 @@ exports[`Storyshots MonthRange default 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -304,7 +309,7 @@ exports[`Storyshots MonthRange default 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -343,6 +348,7 @@ exports[`Storyshots MonthRange default 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -359,7 +365,7 @@ exports[`Storyshots MonthRange default 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -418,6 +424,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -434,7 +441,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -473,6 +480,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -489,7 +497,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -548,6 +556,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -564,7 +573,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -603,6 +612,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -619,7 +629,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -678,6 +688,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -694,7 +705,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
               >
                 <input
                   aria-invalid="true"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="true"
                   class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
                   placeholder="Mon YYYY"
@@ -766,6 +777,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -782,7 +794,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -841,6 +853,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -857,7 +870,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"
@@ -896,6 +909,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+        data-testid="month-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -912,7 +926,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
               >
                 <input
                   aria-invalid="false"
-                  aria-label="select a date"
+                  aria-label="Select a start date"
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="Mon YYYY"

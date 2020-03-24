@@ -126,6 +126,7 @@ const DateRange = ({
         <StyledStartTime
           selected={startTime}
           defaultValue={defaultStartTime}
+          aria-label={t("select a start time")}
           minTime={minTime}
           maxTime={maxTime}
           timeFormat={timeFormat}
@@ -149,6 +150,7 @@ const DateRange = ({
           interval={interval}
           onChange={changeEndTimeHandler}
           locale={locale}
+          aria-label={t("select an end time")}
         />
       )}
       <DatePicker

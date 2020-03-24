@@ -84,7 +84,7 @@ LoadingContent.propTypes = {
 };
 
 const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers, compact }) => (
-  <tbody>
+  <tbody data-testid="table-body">
     {!loading ? (
       renderRows(rows, columns, keyField, noRowsContent, rowHovers, compact)
     ) : (

@@ -9,6 +9,7 @@ exports[`Storyshots MonthPicker custom locale 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+      data-testid="month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -64,6 +65,7 @@ exports[`Storyshots MonthPicker default 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+      data-testid="month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -134,6 +136,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+      data-testid="month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -204,6 +207,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+      data-testid="month-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -274,6 +278,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-month-picker"
+      data-testid="month-picker"
     >
       <div
         class="react-datepicker-wrapper"

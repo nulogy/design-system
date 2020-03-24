@@ -35,6 +35,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -61,6 +62,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -87,6 +89,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -153,6 +156,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -180,6 +184,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -207,6 +212,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -259,6 +265,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
           <div
             checked=""
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -285,6 +292,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -311,6 +319,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -364,6 +373,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
             disabled=""
           />
           <p
@@ -394,6 +404,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
             disabled=""
           />
           <p
@@ -424,6 +435,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
             disabled=""
           />
           <p
@@ -477,6 +489,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -503,6 +516,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -529,6 +543,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -629,6 +644,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -655,6 +671,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"
@@ -681,6 +698,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
             class="sc-AxhCb hpmHVQ"

@@ -74,7 +74,9 @@ TabScrollIndicator.propTypes = {
 TabScrollIndicator.defaultProps = {
   onClick: () => {},
   side: "left",
-  width: 40
+  width: 40,
+  ariaLabelLeft: undefined,
+  ariaLabelRight: undefined
 };
 
 export default TabScrollIndicator;

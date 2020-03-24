@@ -5,7 +5,7 @@ describe("Time Range", () => {
     cy.get("[aria-label='Select an end time']");
   const TIME_OPTION_SELECTOR = "[type='option']";
   const getDropdownOptions = () => cy.get(TIME_OPTION_SELECTOR);
-  const getValue = (i = 0) => cy.get("div[class*='singleValue']").eq(i);
+  const getValue = (i = 0) => cy.get("[data-testid='select-control']").eq(i);
 
   describe("Default", () => {
     beforeEach(() => {
@@ -31,7 +31,7 @@ describe("Time Range", () => {
       getDropdownOptions()
         .eq(10)
         .click();
-      getValue().should("have.text", "11:30 AM");
+      getValue(1).should("have.text", "11:30 AM");
       getStartTimeInputComponent().click();
       getDropdownOptions()
         .eq(0)
