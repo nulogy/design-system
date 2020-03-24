@@ -25,7 +25,7 @@ const StyledOption = styled.div(({ isSelected, isFocused }) => ({
 }));
 
 const SelectOption = props => (
-  <StyledOption {...props} cx={null}>
+  <StyledOption {...props} cx={null} data-testid="select-option">
     <components.Option {...props} />
   </StyledOption>
 );

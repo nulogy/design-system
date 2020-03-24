@@ -1,7 +1,9 @@
 describe("Time Range", () => {
-  const getStartTimeInputComponent = () => cy.get("input").eq(0);
-  const getEndTimeInputComponent = () => cy.get("input").eq(1);
-  const TIME_OPTION_SELECTOR = "div[class*='SelectOption']";
+  const getStartTimeInputComponent = () =>
+    cy.get("[aria-label='Select a start time']");
+  const getEndTimeInputComponent = () =>
+    cy.get("[aria-label='Select an end time']");
+  const TIME_OPTION_SELECTOR = "[type='option']";
   const getDropdownOptions = () => cy.get(TIME_OPTION_SELECTOR);
   const getValue = (i = 0) => cy.get("div[class*='singleValue']").eq(i);
 

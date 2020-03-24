@@ -114,7 +114,12 @@ const BaseCheckbox = props => {
           indeterminate={indeterminate}
           {...props}
         />
-        <VisualCheckbox disabled={disabled} checked={checked} indeterminate={indeterminate} />
+        <VisualCheckbox
+          disabled={disabled}
+          checked={checked}
+          indeterminate={indeterminate}
+          data-testid="visual-checkbox"
+        />
         {labelText && <Text disabled={disabled}>{labelText}</Text>}
       </ClickInputLabel>
     </Box>

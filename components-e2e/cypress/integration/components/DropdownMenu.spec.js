@@ -1,18 +1,16 @@
 describe("DropdownMenu", () => {
-  const getOpenButton = () => cy.get("button[aria-label='Open']");
-  const getCloseButton = () => cy.get("button[aria-label='Close']");
-  const getTrigger = () => cy.get("button[class*='IconicButton']");
+  const getOpenButton = () => cy.get("[aria-label='open dropdown']");
+  const getCloseButton = () => cy.get("[aria-label='close dropdown']");
   const getDropdownLink = () => cy.contains("Dropdown Link");
-  const getCustomTrigger = () => cy.contains("Custom Trigger");
-  const getDropdownContainer = () => cy.get(".nds-popper-pop-up");
+  const getDropdownButton = () => cy.contains("Dropdown Button");
   const assertDropdownIsOpen = () => {
     getCloseButton().should("exist");
-    cy.isInViewport("[class*='DropdownLink']");
-    getDropdownContainer().should("have.css", "opacity", "1");
+    getDropdownButton().should("exist");
   };
   const assertDropdownIsClosed = () => {
     getOpenButton().should("exist");
-    cy.get(".nds-popper-pop-up").should("not.exist");
+    getCloseButton().should("not.exist");
+    getDropdownButton().should("not.exist");
   };
 
   describe("default", () => {
@@ -20,15 +18,15 @@ describe("DropdownMenu", () => {
       cy.renderFromStorybook("dropdownmenu--dropdownmenu");
     });
     it("toggles the menu on click", () => {
-      getTrigger().click();
+      getOpenButton().click();
       assertDropdownIsOpen();
 
-      getTrigger().click();
+      getCloseButton().click();
       assertDropdownIsClosed();
     });
 
     it("closes the menu on escape", () => {
-      getTrigger().click();
+      getOpenButton().click();
 
       cy.wait(500);
 
@@ -38,7 +36,7 @@ describe("DropdownMenu", () => {
     });
 
     it("closes the menu when clicking outside of it", () => {
-      getTrigger().click();
+      getOpenButton().click();
 
       cy.wait(500);
 
@@ -48,10 +46,10 @@ describe("DropdownMenu", () => {
     });
 
     it("scrolls through the list on tabpress", () => {
-      getTrigger().click();
+      getOpenButton().click();
       // Add wait for dropdown to render
       cy.wait(500);
-      getTrigger().tab();
+      getCloseButton().tab();
 
       getDropdownLink().should("be.focused");
     });
@@ -59,7 +57,7 @@ describe("DropdownMenu", () => {
   it("can be opened with a different element", () => {
     cy.renderFromStorybook("dropdownmenu--with-custom-trigger");
 
-    getCustomTrigger().click();
+    getOpenButton().click();
 
     assertDropdownIsOpen();
   });

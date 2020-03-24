@@ -96,11 +96,16 @@ class MonthPicker extends Component {
     };
 
     const customInput = (
-      <DatePickerInput inputProps={customInputProps} dateFormat={dateFormat} onInputChange={this.handleInputChange} />
+      <DatePickerInput
+        data-testid="month-picker-input"
+        inputProps={customInputProps}
+        dateFormat={dateFormat}
+        onInputChange={this.handleInputChange}
+      />
     );
 
     return (
-      <Field className="nds-month-picker">
+      <Field className="nds-month-picker" data-testid="month-picker">
         <MonthPickerStyles />
         <ReactDatePicker
           selected={selectedDate}

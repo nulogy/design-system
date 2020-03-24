@@ -1,5 +1,5 @@
 describe("Monthpicker", () => {
-  const getMonthInputComponent = () => cy.get("input");
+  const getMonthInputComponent = () => cy.get("[aria-label='select a date']");
   const CALENDAR_SELECTOR = ".react-datepicker";
   const getCalendarComponent = () => cy.get(CALENDAR_SELECTOR);
 

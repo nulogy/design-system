@@ -59,7 +59,7 @@ describe("Pagination", () => {
         />
       );
       const clickPrevious = () => {
-        fireEvent.click(container.querySelectorAll("button")[0]);
+        fireEvent.click(container.querySelectorAll("[aria-label='Go to previous results']"));
       };
       clickPrevious();
       expect(onPreviousCallback).not.toHaveBeenCalled();
@@ -75,7 +75,7 @@ describe("Pagination", () => {
         />
       );
       const clickPrevious = () => {
-        fireEvent.click(container.querySelectorAll("button")[0]);
+        fireEvent.click(container.querySelectorAll("[aria-label='Go to previous results']"));
       };
       clickPrevious();
       expect(onPreviousCallback).toHaveBeenCalled();
@@ -90,7 +90,7 @@ describe("Pagination", () => {
           onSelectPage={onSelectPageCallback}
         />
       );
-      const paginationButtons = container.querySelectorAll("button");
+      const paginationButtons = container.querySelectorAll("[aria-label='Go to next results']");
       const clickNext = () => {
         fireEvent.click(paginationButtons[paginationButtons.length - 1]);
       };

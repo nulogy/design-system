@@ -15,7 +15,8 @@ const DatePickerInput = forwardRef(
       onUpKeyPress,
       onDownKeyPress,
       onEnterKeyPress,
-      onSpaceKeyPress
+      onSpaceKeyPress,
+      ...props
     },
     ref
   ) => {
@@ -48,6 +49,7 @@ const DatePickerInput = forwardRef(
         onClick={onClick}
         onKeyDown={handleKeyDown}
         onChange={handleChange}
+        {...props}
       />
     );
   }

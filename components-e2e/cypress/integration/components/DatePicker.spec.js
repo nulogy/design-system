@@ -1,5 +1,5 @@
 describe("Datepicker", () => {
-  const getDateInputComponent = () => cy.get("input");
+  const getDateInputComponent = () => cy.get("[aria-label='select a date']");
   const CALENDAR_SELECTOR = ".react-datepicker-popper";
   const getCalendarComponent = () => cy.get(CALENDAR_SELECTOR);
 
@@ -16,7 +16,7 @@ describe("Datepicker", () => {
 
     describe("displays a calendar", () => {
       const closesOnKeyPress = key => {
-        cy.get("input").type(key);
+        getDateInputComponent().type(key);
         getCalendarComponent().should("not.exist");
       };
       it("can open a calendar on click", () => {
