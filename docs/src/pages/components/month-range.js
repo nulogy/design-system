@@ -130,8 +130,8 @@ export default () => (
         {`import { MonthRange } from "@nulogy/components";
 
 <MonthRange
-        onRangeChange={(val) => val}
-      />
+  onRangeChange={(val) => val}
+/>
 `}
       </Highlight>
     </DocSection>

@@ -167,9 +167,7 @@ export default () => (
       <Highlight className="js">
         {`import { DateRange } from "@nulogy/components";
 
-<DateRange
-        onRangeChange={(val) => val}
-      />
+<DateRange onRangeChange={(val) => val} />
 `}
       </Highlight>
     </DocSection>
@@ -177,12 +175,10 @@ export default () => (
       <SectionTitle>Date Range with Times</SectionTitle>
       <DateRange showTimes />
       <Highlight className="js">
-        {`import { DateRange } from "@nulogy/components";
-
-<DateRange
-        showTimes
-        onRangeChange={(val) => val}
-      />
+        {`<DateRange
+  onRangeChange={(val) => val}
+  showTimes
+/>
 `}
       </Highlight>
     </DocSection>

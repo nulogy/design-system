@@ -67,7 +67,9 @@ export default () => (
       </Box>
       <Highlight className="js">
         {`import { Overlay } from "@nulogy/components";
+
 <Text>Background content sample</Text>
+
 <Overlay>
   <Text>Foreground sample content</Text>
 </Overlay>
@@ -103,7 +105,7 @@ export default () => (
         {`import { Overlay } from "@nulogy/components";
 <Text>Background content sample</Text>
 <Overlay dark>
-  <Card> 
+  <Card>
     <Text>Foreground sample content</Text>
   </Card>
 </Overlay>

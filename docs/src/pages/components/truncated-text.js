@@ -78,7 +78,9 @@ export default () => (
         Special instructions are provided for the shipment
       </TruncatedText>
       <Highlight className="js">
-        {`<TruncatedText>Special instructions are provided for the shipment</TruncatedText>
+        {`import { TruncatedText } from "@nulogy/components";
+
+<TruncatedText>Special instructions are provided for the shipment</TruncatedText>
 `}
       </Highlight>
     </DocSection>

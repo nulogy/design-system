@@ -61,13 +61,13 @@ const propsRows = [
 export default () => (
   <Layout>
     <Helmet>
-      <title>Alerts</title>
+      <title>Alert</title>
     </Helmet>
     <Intro>
-      <Title>Alerts</Title>
+      <Title>Alert</Title>
       <IntroText>
-        Alerts are concise, event-driven messages that communicate information
-        and require minimal interaction.
+        An alert is a concise, event-driven message that communicates
+        information and requires minimal interaction.
       </IntroText>
     </Intro>
 
@@ -168,6 +168,15 @@ export default () => (
         communicated, a link to the new screen can be provided in the child
         content using a <Link href="/components/link">Link</Link> component.
       </Text>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Related components</SectionTitle>
+      <List>
+        <ListItem>
+          <Link href="/components/toast">Toast</Link>
+        </ListItem>
+      </List>
     </DocSection>
 
     <DocSection>

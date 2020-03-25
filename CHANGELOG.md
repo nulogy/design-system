@@ -5,272 +5,150 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.6.0](https://github.com/nulogy/design-system/compare/v1.5.1...v1.6.0) (2020-03-19)
 
-
 ### Features
 
-* add Toast component ([#585](https://github.com/nulogy/design-system/issues/585)) ([b74761e](https://github.com/nulogy/design-system/commit/b74761e713b301dc32844df2ffe00226d0c56b11))
-
-
-
-
+- add Toast component ([#585](https://github.com/nulogy/design-system/issues/585)) ([b74761e](https://github.com/nulogy/design-system/commit/b74761e713b301dc32844df2ffe00226d0c56b11))
 
 ## [1.5.1](https://github.com/nulogy/design-system/compare/v1.5.0...v1.5.1) (2020-03-19)
 
-
 ### Bug Fixes
 
-* StatusIndicator spacing and flexbox bug ([#584](https://github.com/nulogy/design-system/issues/584)) ([c8642a2](https://github.com/nulogy/design-system/commit/c8642a205a6f431e5231d301dabe6da8f8f61ca9))
-
-
-
-
+- StatusIndicator spacing and flexbox bug ([#584](https://github.com/nulogy/design-system/issues/584)) ([c8642a2](https://github.com/nulogy/design-system/commit/c8642a205a6f431e5231d301dabe6da8f8f61ca9))
 
 # [1.5.0](https://github.com/nulogy/design-system/compare/v1.4.2...v1.5.0) (2020-03-18)
 
-
 ### Features
 
-* add truncated text component ([#583](https://github.com/nulogy/design-system/issues/583)) ([722a6e4](https://github.com/nulogy/design-system/commit/722a6e4e6eb67ebbbecf769db26baa1ab3fcfa0f))
-
-
-
-
+- add truncated text component ([#583](https://github.com/nulogy/design-system/issues/583)) ([722a6e4](https://github.com/nulogy/design-system/commit/722a6e4e6eb67ebbbecf769db26baa1ab3fcfa0f))
 
 ## [1.4.2](https://github.com/nulogy/design-system/compare/v1.4.1...v1.4.2) (2020-03-16)
 
-
 ### Bug Fixes
 
-* select hover bug when text overflows select due to long words ([#578](https://github.com/nulogy/design-system/issues/578)) ([6045000](https://github.com/nulogy/design-system/commit/6045000c801416a3665a5d08541b7f43130f6870))
-
-
-
-
+- select hover bug when text overflows select due to long words ([#578](https://github.com/nulogy/design-system/issues/578)) ([6045000](https://github.com/nulogy/design-system/commit/6045000c801416a3665a5d08541b7f43130f6870))
 
 ## [1.4.1](https://github.com/nulogy/design-system/compare/v1.4.0...v1.4.1) (2020-03-04)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 # [1.4.0](https://github.com/nulogy/design-system/compare/v1.3.0...v1.4.0) (2020-03-04)
-
 
 ### Features
 
-* assorted CSS library improvements ([#576](https://github.com/nulogy/design-system/issues/576)) ([db04666](https://github.com/nulogy/design-system/commit/db04666))
-
-
-
-
+- assorted CSS library improvements ([#576](https://github.com/nulogy/design-system/issues/576)) ([db04666](https://github.com/nulogy/design-system/commit/db04666))
 
 # [1.3.0](https://github.com/nulogy/design-system/compare/v1.2.3...v1.3.0) (2020-03-04)
 
-
 ### Features
 
-* Add all locales to NDS ([#577](https://github.com/nulogy/design-system/issues/577)) ([1ceb146](https://github.com/nulogy/design-system/commit/1ceb146))
-
-
-
-
+- Add all locales to NDS ([#577](https://github.com/nulogy/design-system/issues/577)) ([1ceb146](https://github.com/nulogy/design-system/commit/1ceb146))
 
 ## [1.2.3](https://github.com/nulogy/design-system/compare/v1.2.2...v1.2.3) (2020-03-03)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 ## [1.2.2](https://github.com/nulogy/design-system/compare/v1.2.1...v1.2.2) (2020-03-02)
-
 
 ### Bug Fixes
 
-* proptype warnings in table and navbar stories ([#574](https://github.com/nulogy/design-system/issues/574)) ([d41777a](https://github.com/nulogy/design-system/commit/d41777a))
-
-
-
-
+- proptype warnings in table and navbar stories ([#574](https://github.com/nulogy/design-system/issues/574)) ([d41777a](https://github.com/nulogy/design-system/commit/d41777a))
 
 ## [1.2.1](https://github.com/nulogy/design-system/compare/v1.2.0...v1.2.1) (2020-03-02)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 # [1.2.0](https://github.com/nulogy/design-system/compare/v1.1.0...v1.2.0) (2020-03-02)
-
 
 ### Features
 
-* add locaization to NDS through locale prop on NDSProvider ([#570](https://github.com/nulogy/design-system/issues/570)) ([efb0f24](https://github.com/nulogy/design-system/commit/efb0f24))
-* replace hard coded strings with props ([#573](https://github.com/nulogy/design-system/issues/573)) ([6a32adb](https://github.com/nulogy/design-system/commit/6a32adb))
-
-
-
-
+- add locaization to NDS through locale prop on NDSProvider ([#570](https://github.com/nulogy/design-system/issues/570)) ([efb0f24](https://github.com/nulogy/design-system/commit/efb0f24))
+- replace hard coded strings with props ([#573](https://github.com/nulogy/design-system/issues/573)) ([6a32adb](https://github.com/nulogy/design-system/commit/6a32adb))
 
 # [1.1.0](https://github.com/nulogy/design-system/compare/v1.0.9...v1.1.0) (2020-02-28)
 
-
 ### Features
 
-* Add Overlay and LoadingAnimation components ([#571](https://github.com/nulogy/design-system/issues/571)) ([f0918c8](https://github.com/nulogy/design-system/commit/f0918c8))
-
-
-
-
+- Add Overlay and LoadingAnimation components ([#571](https://github.com/nulogy/design-system/issues/571)) ([f0918c8](https://github.com/nulogy/design-system/commit/f0918c8))
 
 ## [1.0.9](https://github.com/nulogy/design-system/compare/v1.0.8...v1.0.9) (2020-02-26)
 
-
 ### Bug Fixes
 
-* removes in-progress alert from Pagination page ([#562](https://github.com/nulogy/design-system/issues/562)) ([6efa54d](https://github.com/nulogy/design-system/commit/6efa54d))
-* update broken link on Radio Group docs page ([#567](https://github.com/nulogy/design-system/issues/567)) ([574b05f](https://github.com/nulogy/design-system/commit/574b05f))
-
-
-
-
+- removes in-progress alert from Pagination page ([#562](https://github.com/nulogy/design-system/issues/562)) ([6efa54d](https://github.com/nulogy/design-system/commit/6efa54d))
+- update broken link on Radio Group docs page ([#567](https://github.com/nulogy/design-system/issues/567)) ([574b05f](https://github.com/nulogy/design-system/commit/574b05f))
 
 ## [1.0.8](https://github.com/nulogy/design-system/compare/v1.0.7...v1.0.8) (2020-02-26)
 
-
 ### Bug Fixes
 
-* support numeric values in Select ([#565](https://github.com/nulogy/design-system/issues/565)) ([17ca18b](https://github.com/nulogy/design-system/commit/17ca18b))
-
-
-
-
+- support numeric values in Select ([#565](https://github.com/nulogy/design-system/issues/565)) ([17ca18b](https://github.com/nulogy/design-system/commit/17ca18b))
 
 ## [1.0.7](https://github.com/nulogy/design-system/compare/v1.0.6...v1.0.7) (2020-02-25)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 ## [1.0.6](https://github.com/nulogy/design-system/compare/v1.0.5...v1.0.6) (2020-02-25)
 
 **Note:** Version bump only for package @nulogy/nds
-
-
-
-
 
 ## [1.0.5](https://github.com/nulogy/design-system/compare/v1.0.4...v1.0.5) (2020-02-25)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 ## [1.0.4](https://github.com/nulogy/design-system/compare/v1.0.3...v1.0.4) (2020-02-24)
-
 
 ### Bug Fixes
 
-* Add shape type option to Table rows ([#560](https://github.com/nulogy/design-system/issues/560)) ([b2a9f77](https://github.com/nulogy/design-system/commit/b2a9f77))
-
-
-
-
+- Add shape type option to Table rows ([#560](https://github.com/nulogy/design-system/issues/560)) ([b2a9f77](https://github.com/nulogy/design-system/commit/b2a9f77))
 
 ## [1.0.3](https://github.com/nulogy/design-system/compare/v1.0.2...v1.0.3) (2020-02-24)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 ## [1.0.2](https://github.com/nulogy/design-system/compare/v1.0.1...v1.0.2) (2020-02-20)
 
 **Note:** Version bump only for package @nulogy/nds
-
-
-
-
 
 ## [1.0.1](https://github.com/nulogy/design-system/compare/v1.0.0...v1.0.1) (2020-02-19)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 # [1.0.0](https://github.com/nulogy/design-system/compare/v0.24.3...v1.0.0) (2020-02-19)
 
-
-* chore!: readme change to bump to v1 (#553) ([5442bb8](https://github.com/nulogy/design-system/commit/5442bb8)), closes [#553](https://github.com/nulogy/design-system/issues/553)
-
+- chore!: readme change to bump to v1 (#553) ([5442bb8](https://github.com/nulogy/design-system/commit/5442bb8)), closes [#553](https://github.com/nulogy/design-system/issues/553)
 
 ### Bug Fixes
 
-* position updates from popper causing jank while scrolling ([#554](https://github.com/nulogy/design-system/issues/554)) ([87bea3f](https://github.com/nulogy/design-system/commit/87bea3f))
-
+- position updates from popper causing jank while scrolling ([#554](https://github.com/nulogy/design-system/issues/554)) ([87bea3f](https://github.com/nulogy/design-system/commit/87bea3f))
 
 ### BREAKING CHANGES
 
-* bump to v1
-* update package versions to major version
-
-
-
-
+- bump to v1
+- update package versions to major version
 
 ## [0.24.3](https://github.com/nulogy/design-system/compare/v0.24.2...v0.24.3) (2020-02-14)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 ## [0.24.2](https://github.com/nulogy/design-system/compare/v0.24.1...v0.24.2) (2020-02-14)
 
 **Note:** Version bump only for package @nulogy/nds
 
-
-
-
-
 ## [0.24.1](https://github.com/nulogy/design-system/compare/v0.24.0...v0.24.1) (2020-02-13)
-
 
 ### Bug Fixes
 
-* remove divider in Select ([#548](https://github.com/nulogy/design-system/issues/548)) ([eb65408](https://github.com/nulogy/design-system/commit/eb65408))
-
-
-
-
+- remove divider in Select ([#548](https://github.com/nulogy/design-system/issues/548)) ([eb65408](https://github.com/nulogy/design-system/commit/eb65408))
 
 # [0.24.0](https://github.com/nulogy/design-system/compare/v0.23.0...v0.24.0) (2020-02-13)
 
-
 ### Bug Fixes
 
-* update build status badge after migrating from travis-ci.org to .com ([#543](https://github.com/nulogy/design-system/issues/543)) ([a1eff0f](https://github.com/nulogy/design-system/commit/a1eff0f))
-
+- update build status badge after migrating from travis-ci.org to .com ([#543](https://github.com/nulogy/design-system/issues/543)) ([a1eff0f](https://github.com/nulogy/design-system/commit/a1eff0f))
 
 ### Features
 
-* create a checkbox that describes some options are checked but not all ([#546](https://github.com/nulogy/design-system/issues/546)) ([9982f65](https://github.com/nulogy/design-system/commit/9982f65))
-
-
-
-
+- create a checkbox that describes some options are checked but not all ([#546](https://github.com/nulogy/design-system/issues/546)) ([9982f65](https://github.com/nulogy/design-system/commit/9982f65))
 
 # [0.23.0](https://github.com/nulogy/design-system/compare/v0.22.1...v0.23.0) (2020-02-11)
 
@@ -606,7 +484,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added className prop to all components, [see example in Alerts props table](https://nulogy.design/components/alerts/)
+- Added className prop to all components, [see example in Alerts props table](https://nulogy.design/components/alert/)
 - Added `defaultValue` to [Select](http://storybook.nulogy.design/?path=/story/select--with-a-defaultvalue)
 - Added Drag icon to [Icon component](https://nulogy.design/components/icon/)
 
