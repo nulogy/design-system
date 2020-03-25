@@ -57,9 +57,9 @@ const TabScrollIndicator = ({ onClick, side, ariaLabelLeft, ariaLabelRight, ...p
       onClick={handleClick}
       onMouseDown={preventFocusMovement}
       side={side}
-      aria-label={side === "right" ? t("next") : t("previous")}
+      aria-label={side === "right" ? rightArrowLabel : leftArrowLabel}
     >
-      <Icon icon={side === "right" ? rightArrowLabel : leftArrowLabel} />
+      <Icon icon={side === "right" ? "rightArrow" : "leftArrow"} />
     </TabScrollIndicatorButton>
   );
 };
