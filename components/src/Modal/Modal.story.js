@@ -115,6 +115,60 @@ storiesOf("Modal", module)
         Content Content Content Content Content Content Content Content Content Content Content Content Content Content
         Content Content Content Content Content Content Content Content Content Content Content
       </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+    </Modal>
+  ))
+  .add("with scrolling content without footer content", () => (
+    <Modal title="Modal Title">
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
+      <Text>
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+        Content Content Content Content Content Content Content Content Content Content Content
+      </Text>
     </Modal>
   ))
   .add("with no title", () => <Modal footerContent={modalButtons}>Content Content Content</Modal>)
