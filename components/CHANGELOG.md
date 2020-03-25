@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/nulogy/design-system/compare/v2.0.0...v2.0.1) (2020-03-25)
+
+
+### Bug Fixes
+
+* area in Select options that do not respond to click ([#589](https://github.com/nulogy/design-system/issues/589)) ([5567417](https://github.com/nulogy/design-system/commit/5567417e0f61325a4ab18f139de1ae71a4f69933))
+
+
+
+
+
 # [2.0.0](https://github.com/nulogy/design-system/compare/v1.6.1...v2.0.0) (2020-03-25)
 
 
