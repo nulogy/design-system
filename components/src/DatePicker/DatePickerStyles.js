@@ -50,13 +50,11 @@ export const DatePickerStyles = createGlobalStyle({
       color: theme.colors.darkGrey,
       border: "2px solid transparent",
       display: "inline-block",
-      lineHeight: theme.space.x5,
+      lineHeight: theme.space.x4,
       textAlign: "center",
-      width: theme.space.x5,
-      marginRight: 0,
-      marginLeft: 0,
-      marginTop: theme.space.half,
-      marginBottom: theme.space.half,
+      width: "28px",
+      margin: theme.space.half,
+      boxSizing: "content-box",
       "&:hover": {
         backgroundColor: theme.colors.lightBlue,
         color: theme.colors.black
@@ -91,7 +89,7 @@ export const DatePickerStyles = createGlobalStyle({
       color: theme.colors.white,
       background: theme.colors.darkBlue,
       border: `2px solid ${theme.colors.darkBlue}`,
-      lineHeight: theme.space.x5,
+      lineHeight: theme.space.x4,
       cursor: "initial",
       "&:hover": {
         color: theme.colors.white,

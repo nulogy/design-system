@@ -34,7 +34,11 @@ export const DateRangeStyles = createGlobalStyle({
     [`.react-datepicker__day.${IN_RANGE_CLASS}`]: {
       backgroundColor: theme.colors.whiteGrey,
       color: theme.colors.black,
-      borderRadius: 0
+      borderRadius: 0,
+      marginRight: 0,
+      marginLeft: 0,
+      paddingRight: theme.space.half,
+      paddingLeft: theme.space.half
     },
     [`.react-datepicker__day.${START_DATE_CLASS},  .react-datepicker__day.${END_DATE_CLASS}`]: {
       color: theme.colors.white,
