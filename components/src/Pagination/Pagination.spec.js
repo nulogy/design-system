@@ -31,7 +31,7 @@ describe("Pagination", () => {
     const onPreviousCallback = jest.fn();
 
     it("onSelectPage: returns current page when a page is selected", () => {
-      const { container } = render(
+      const { getAllByLabelText } = render(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -41,15 +41,15 @@ describe("Pagination", () => {
         />
       );
       const clickPage = pageNum => {
-        fireEvent.click(container.querySelectorAll("button")[pageNum]);
+        fireEvent.click(getAllByLabelText("Go to page {{count}}")[pageNum]);
       };
       clickPage(2);
-      expect(onSelectPageCallback).toHaveBeenCalledWith(2);
+      expect(onSelectPageCallback).toHaveBeenCalledWith(4);
       clickPage(3);
-      expect(onSelectPageCallback).toHaveBeenCalledWith(3);
+      expect(onSelectPageCallback).toHaveBeenCalledWith(5);
     });
     it("onPrevious: prev button is disabled when current page is 1", () => {
-      const { container } = render(
+      const { getByLabelText } = render(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -59,13 +59,14 @@ describe("Pagination", () => {
         />
       );
       const clickPrevious = () => {
-        fireEvent.click(container.querySelectorAll("button")[0]);
+        const PreviousButton = getByLabelText("Go to previous results");
+        fireEvent.click(PreviousButton);
       };
       clickPrevious();
       expect(onPreviousCallback).not.toHaveBeenCalled();
     });
     it("onPrevious: calls previous page handler when previous button is clicked", () => {
-      const { container } = render(
+      const { getByLabelText } = render(
         <Pagination
           currentPage={2}
           totalPages={5}
@@ -75,13 +76,14 @@ describe("Pagination", () => {
         />
       );
       const clickPrevious = () => {
-        fireEvent.click(container.querySelectorAll("button")[0]);
+        const PreviousButton = getByLabelText("Go to previous results");
+        fireEvent.click(PreviousButton);
       };
       clickPrevious();
       expect(onPreviousCallback).toHaveBeenCalled();
     });
     it("onNext: calls next page handler when next button is clicked", () => {
-      const { container } = render(
+      const { getByLabelText } = render(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -90,11 +92,9 @@ describe("Pagination", () => {
           onSelectPage={onSelectPageCallback}
         />
       );
-      const paginationButtons = container.querySelectorAll("button");
-      const clickNext = () => {
-        fireEvent.click(paginationButtons[paginationButtons.length - 1]);
-      };
-      clickNext();
+      const NextButton = getByLabelText("Go to next results");
+
+      fireEvent.click(NextButton);
       expect(onNextCallback).toHaveBeenCalled();
     });
   });

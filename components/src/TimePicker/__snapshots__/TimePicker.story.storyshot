@@ -8,10 +8,10 @@ exports[`Storyshots TimePicker default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
         color="#011e38"
         style="display:block"
       >
@@ -25,70 +25,82 @@ exports[`Storyshots TimePicker default 1`] = `
           </span>
         </div>
         <div
-          class="nds-time-picker css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                HH:MM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-32-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    HH:MM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-32-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -107,10 +119,10 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
         color="#011e38"
         style="display:block"
       >
@@ -124,70 +136,82 @@ exports[`Storyshots TimePicker with custom locale 1`] = `
           </span>
         </div>
         <div
-          class="nds-time-picker css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                03:30 AM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-37-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    03:30 AM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-37-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -206,10 +230,10 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
         color="#011e38"
         style="display:block"
       >
@@ -223,70 +247,82 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
           </span>
         </div>
         <div
-          class="nds-time-picker css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                --:--
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-34-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    --:--
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-34-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -305,10 +341,10 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
         color="#011e38"
         style="display:block"
       >
@@ -322,70 +358,82 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
           </span>
         </div>
         <div
-          class="nds-time-picker css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                03:30
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-33-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    03:30
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-33-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
@@ -404,10 +452,10 @@ exports[`Storyshots TimePicker with error state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
         color="#011e38"
         style="display:block"
       >
@@ -421,81 +469,93 @@ exports[`Storyshots TimePicker with error state 1`] = `
           </span>
         </div>
         <div
-          class="nds-time-picker css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1j4q2ea-Control"
+            class="nds-time-picker css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                HH:MM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1j4q2ea-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-35-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    HH:MM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-35-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
           color="#cc1439"
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ gcJrrZ"
+            class="Icon-fc7twp-0 QuoIa"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -510,10 +570,10 @@ exports[`Storyshots TimePicker with error state 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
           >
             <p
-              class="sc-AxhCb hpmHVQ"
+              class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
               font-size="16px"
             >
@@ -535,10 +595,10 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
         color="#011e38"
         style="display:block"
       >
@@ -552,70 +612,82 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
           </span>
         </div>
         <div
-          class="nds-time-picker css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                HH:MM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-36-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    HH:MM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-36-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>

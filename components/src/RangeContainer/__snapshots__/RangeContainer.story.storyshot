@@ -8,7 +8,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -28,10 +28,10 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >

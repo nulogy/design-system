@@ -8,7 +8,7 @@ exports[`Storyshots Buttons As a link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
       href="/"
     >
       Create project
@@ -41,7 +41,7 @@ exports[`Storyshots Buttons DangerButton 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzozJi iomXmU"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr DangerButton-sc-1220u5k-0 ehzMsl"
     >
       Delete project
     </button>
@@ -57,7 +57,7 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-AxmLO gXSYqH"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
     >
       Create project
     </button>
@@ -73,7 +73,7 @@ exports[`Storyshots Buttons QuietButton 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr sc-fzoLsD hbDbFs"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 kGwYaA"
     >
       Create project
     </button>
@@ -89,7 +89,7 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 gfuNnn sc-AxmLO iyIcyd"
+      class="Button__WrapperButton-sc-1omxup2-0 gfuNnn PrimaryButton-qz78sb-0 hcOEwE"
       disabled=""
     >
       Create project
@@ -106,7 +106,7 @@ exports[`Storyshots Buttons Set to full width 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 bkRlmc sc-AxmLO gXSYqH"
+      class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
     >
       Create project
     </button>
@@ -126,7 +126,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ bwFfrg"
+        class="Icon-fc7twp-0 iVDunr"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -148,7 +148,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
       Create project
       <svg
         aria-hidden="true"
-        class="sc-AxirZ bMepUP"
+        class="Icon-fc7twp-0 ffVnNY"
         color="currentColor"
         fill="currentColor"
         focusable="false"

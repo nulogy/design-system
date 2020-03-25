@@ -16,11 +16,12 @@ exports[`Storyshots Table with everything 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            data-testid="table-head"
             scope="col"
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -29,22 +30,25 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="select all"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            data-testid="table-head"
             scope="col"
             width="30px"
           />
           <th
             class="StyledTh-sc-10nzyk9-0 bocKtx"
+            data-testid="table-head"
             scope="col"
             width="15%"
           >
@@ -52,6 +56,7 @@ exports[`Storyshots Table with everything 1`] = `
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 iPIuAn"
+            data-testid="table-head"
             scope="col"
             width="20%"
           >
@@ -59,6 +64,7 @@ exports[`Storyshots Table with everything 1`] = `
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 iPIuAn"
+            data-testid="table-head"
             scope="col"
             width="20%"
           >
@@ -66,6 +72,7 @@ exports[`Storyshots Table with everything 1`] = `
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 esKZsE"
+            data-testid="table-head"
             scope="col"
             width="45%"
           >
@@ -73,14 +80,17 @@ exports[`Storyshots Table with everything 1`] = `
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 djOqlg"
+            data-testid="table-head"
             scope="col"
             width="5%"
           />
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             colspan="7"
@@ -89,7 +99,7 @@ exports[`Storyshots Table with everything 1`] = `
               class="Box-sc-1qu1edy-0 kOlJoM"
             >
               <p
-                class="sc-AxhCb iBTYSy"
+                class="Text-sc-1wu7vpu-0 iHOIzo"
                 color="blackBlue"
                 font-size="16px"
                 font-weight="bold"
@@ -100,13 +110,13 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -115,11 +125,12 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -133,7 +144,7 @@ exports[`Storyshots Table with everything 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="sc-AxirZ fZltSY"
+                class="Icon-fc7twp-0 efirdb"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
@@ -174,12 +185,12 @@ exports[`Storyshots Table with everything 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -198,13 +209,13 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -213,11 +224,12 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -251,12 +263,12 @@ exports[`Storyshots Table with everything 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -275,13 +287,13 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -290,11 +302,12 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -328,12 +341,12 @@ exports[`Storyshots Table with everything 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -352,13 +365,13 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -367,11 +380,12 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -407,12 +421,12 @@ exports[`Storyshots Table with everything 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -488,7 +502,7 @@ exports[`Storyshots Table with everything 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AxjAm jjPFrO"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG"
     >
       <button
         aria-label="Go to previous results"
@@ -497,7 +511,7 @@ exports[`Storyshots Table with everything 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ bkMeoj"
+          class="Icon-fc7twp-0 bLUmHQ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -515,7 +529,7 @@ exports[`Storyshots Table with everything 1`] = `
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
         disabled=""
       >
         1
@@ -523,14 +537,14 @@ exports[`Storyshots Table with everything 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         3
       </button>
@@ -541,7 +555,7 @@ exports[`Storyshots Table with everything 1`] = `
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AxirZ kMpsNU"
+          class="Icon-fc7twp-0 dEtgXr"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -577,27 +591,32 @@ exports[`Storyshots Table with pagination 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -620,7 +639,7 @@ exports[`Storyshots Table with pagination 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 sc-AxjAm jjPFrO"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG"
     >
       <button
         aria-label="Go to previous results"
@@ -629,7 +648,7 @@ exports[`Storyshots Table with pagination 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ bkMeoj"
+          class="Icon-fc7twp-0 bLUmHQ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -647,7 +666,7 @@ exports[`Storyshots Table with pagination 1`] = `
       </button>
       <button
         aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl iMyzHg"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
         disabled=""
       >
         1
@@ -655,33 +674,33 @@ exports[`Storyshots Table with pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         2
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         3
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         4
       </button>
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         5
       </button>
       <p
-        class="sc-AxhCb iloBzF"
+        class="Text-sc-1wu7vpu-0 dqAYor"
         color="currentColor"
         font-size="small"
       >
@@ -690,7 +709,7 @@ exports[`Storyshots Table with pagination 1`] = `
       <button
         aria-current="false"
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 sc-fzoYkl bUYrGA"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         8
       </button>
@@ -701,7 +720,7 @@ exports[`Storyshots Table with pagination 1`] = `
         Next 
         <svg
           aria-hidden="true"
-          class="sc-AxirZ kMpsNU"
+          class="Icon-fc7twp-0 dEtgXr"
           color="currentColor"
           fill="currentColor"
           focusable="false"

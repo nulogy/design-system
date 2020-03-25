@@ -1,13 +1,11 @@
 describe("Select", () => {
-  const getSelectComponent = () => cy.get(".Select");
-  const getSelectOptions = () => cy.get(".SelectTest__option");
-  const getDropdownMenu = () => cy.get(".SelectTest__menu");
-  const getValue = () => cy.get(".SelectTest__control");
-  const getSelectedItems = () => cy.get("div[class*='multiValue']");
-  const getCloseButtons = () =>
-    cy.get("div[class*='multiValue'] div:last-child");
-  const getClearButton = () =>
-    cy.get("div[class*='indicatorContainer']").first();
+  const getSelectComponent = () => cy.get("[data-testid='select-container']");
+  const getDropdownMenu = () => cy.get("[data-testid='select-dropdown']");
+  const getValue = () => cy.get("[data-testid='select-control']");
+  const getMultiselect = () => getSelectComponent();
+  const getSelectedItems = () => cy.get("[data-testid='select-multivalue']");
+  const getCloseButtons = () => cy.get("[data-testid='select-multivalue'] svg");
+  const getClearButton = () => cy.get("[data-testid='select-clear']");
   const assertDropDownIsClosed = () => getDropdownMenu().should("not.exist");
   const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
@@ -17,62 +15,55 @@ describe("Select", () => {
     });
 
     it("has the correct initial state", () => {
-      getSelectedItems()
-        .first()
-        .should("have.text", "PCN2");
-      getSelectedItems()
-        .eq(1)
-        .should("have.text", "PCN1");
-      getSelectedItems().should("have.length", 2);
+      cy.contains("PCN1");
+      cy.contains("PCN2");
+      cy.contains("PCN3").should("not.exist");
     });
 
     it("can select all values", () => {
-      getSelectComponent().click();
+      getMultiselect().click();
 
       cy.focused().type("{enter}");
 
-      getSelectComponent().click();
+      getMultiselect().click();
 
       cy.focused().type("{enter}");
 
-      getSelectedItems()
-        .eq(2)
-        .should("have.text", "PCN4");
-      getSelectedItems()
-        .eq(3)
-        .should("have.text", "PCN9");
-      getSelectedItems().should("have.length", 4);
+      getMultiselect().contains("PCN1");
+      getMultiselect().contains("PCN2");
+      getMultiselect().contains("PCN4");
+      getMultiselect().contains("PCN9");
     });
 
     it("selects the first item when opened", () => {
-      getSelectComponent().click();
+      getMultiselect().click();
 
       cy.focused().type("{enter}");
 
-      getSelectedItems()
-        .eq(2)
-        .should("have.text", "PCN4");
-      getSelectedItems().should("have.length", 3);
+      getMultiselect().contains("PCN1");
+      getMultiselect().contains("PCN2");
+      getMultiselect().contains("PCN4");
+      getMultiselect()
+        .contains("PCN9")
+        .should("not.exist");
     });
 
     it("removes a selected item", () => {
-      getSelectedItems().should("have.length", 2);
-
       getCloseButtons()
         .first()
         .click();
 
-      getSelectedItems().should("have.length", 1);
+      getMultiselect().contains("PCN1");
     });
 
     it("removes using the keyboard", () => {
-      getSelectComponent().click();
+      getMultiselect().click();
 
       cy.focused().type("{leftarrow}");
 
       cy.focused().type("{del}");
 
-      getSelectedItems().should("have.length", 1);
+      getMultiselect().contains("PCN2");
     });
 
     it("removes all selected items", () => {
@@ -86,13 +77,13 @@ describe("Select", () => {
         .first()
         .click();
 
-      getSelectedItems().should("have.length", 0);
+      getMultiselect().contains("Please select inventory status");
     });
 
     it("clears all selected items", () => {
       getClearButton().click();
 
-      getSelectedItems().should("have.length", 0);
+      getMultiselect().contains("Please select inventory status");
     });
   });
 
@@ -113,7 +104,7 @@ describe("Select", () => {
 
       getSelectComponent().click();
 
-      getDropdownMenu()
+      getSelectComponent()
         .contains("Assigned to a line")
         .click();
 
@@ -125,7 +116,7 @@ describe("Select", () => {
       getSelectComponent().click();
       assertDropDownIsOpen();
 
-      cy.get("div#root").click("bottomRight");
+      cy.get("body").click("bottomRight");
       assertDropDownIsClosed();
     });
 
@@ -158,8 +149,8 @@ describe("Select", () => {
       assertDropDownIsClosed();
 
       getSelectComponent().click();
-      getSelectOptions()
-        .eq(1)
+      getSelectComponent()
+        .contains("Assigned to a line")
         .click();
 
       getValue().should("have.text", "Assigned to a line");

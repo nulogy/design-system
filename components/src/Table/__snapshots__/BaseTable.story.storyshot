@@ -16,27 +16,32 @@ exports[`Storyshots Table  with data 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -55,7 +60,7 @@ exports[`Storyshots Table  with data 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -74,7 +79,7 @@ exports[`Storyshots Table  with data 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -93,7 +98,7 @@ exports[`Storyshots Table  with data 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -112,7 +117,7 @@ exports[`Storyshots Table  with data 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -131,7 +136,7 @@ exports[`Storyshots Table  with data 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -150,7 +155,7 @@ exports[`Storyshots Table  with data 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -169,7 +174,7 @@ exports[`Storyshots Table  with data 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -210,27 +215,32 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -249,7 +259,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -268,7 +278,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -287,7 +297,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -306,7 +316,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -325,7 +335,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -344,7 +354,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -363,7 +373,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -404,25 +414,30 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           />
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -442,12 +457,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -466,7 +481,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -486,12 +501,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -510,7 +525,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -530,12 +545,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -554,7 +569,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -574,12 +589,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -598,7 +613,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -618,12 +633,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -642,7 +657,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -662,12 +677,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -686,7 +701,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -706,12 +721,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -730,7 +745,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -750,12 +765,12 @@ exports[`Storyshots Table with a custom cell component 1`] = `
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Open"
-                class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+                class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ jrPxI"
+                  class="Icon-fc7twp-0 cwKdbD"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -796,24 +811,28 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             <button
@@ -824,9 +843,11 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -848,7 +869,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -870,7 +891,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -892,7 +913,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -914,7 +935,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -936,7 +957,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -958,7 +979,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -980,7 +1001,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1024,27 +1045,32 @@ exports[`Storyshots Table with a footer 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1063,7 +1089,7 @@ exports[`Storyshots Table with a footer 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1082,7 +1108,7 @@ exports[`Storyshots Table with a footer 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1101,7 +1127,7 @@ exports[`Storyshots Table with a footer 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1120,7 +1146,7 @@ exports[`Storyshots Table with a footer 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1139,7 +1165,7 @@ exports[`Storyshots Table with a footer 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1158,7 +1184,7 @@ exports[`Storyshots Table with a footer 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1177,7 +1203,7 @@ exports[`Storyshots Table with a footer 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1259,27 +1285,32 @@ exports[`Storyshots Table with cell alignment 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Eaches
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Eaches
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1298,7 +1329,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1317,7 +1348,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1336,7 +1367,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1355,7 +1386,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1374,7 +1405,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1393,7 +1424,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1412,7 +1443,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1453,24 +1484,28 @@ exports[`Storyshots Table with custom column widths 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 kJomuc"
+            data-testid="table-head"
             scope="col"
             width="50%"
           >
@@ -1478,9 +1513,11 @@ exports[`Storyshots Table with custom column widths 1`] = `
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1502,7 +1539,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1524,7 +1561,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1546,7 +1583,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1570,7 +1607,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1592,7 +1629,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1614,7 +1651,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1636,7 +1673,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
           />
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1680,27 +1717,32 @@ exports[`Storyshots Table with full width section 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1719,7 +1761,7 @@ exports[`Storyshots Table with full width section 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1738,7 +1780,7 @@ exports[`Storyshots Table with full width section 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1757,7 +1799,7 @@ exports[`Storyshots Table with full width section 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1776,7 +1818,7 @@ exports[`Storyshots Table with full width section 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             colspan="3"
@@ -1785,7 +1827,7 @@ exports[`Storyshots Table with full width section 1`] = `
               class="Box-sc-1qu1edy-0 kOlJoM"
             >
               <p
-                class="sc-AxhCb iBTYSy"
+                class="Text-sc-1wu7vpu-0 iHOIzo"
                 color="blackBlue"
                 font-size="16px"
                 font-weight="bold"
@@ -1796,7 +1838,7 @@ exports[`Storyshots Table with full width section 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1815,7 +1857,7 @@ exports[`Storyshots Table with full width section 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1834,7 +1876,7 @@ exports[`Storyshots Table with full width section 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1875,11 +1917,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            data-testid="table-head"
             scope="col"
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -1888,152 +1931,176 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="select all"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 1
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 2
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 3
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 4
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 5
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 6
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 7
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 8
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 9
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 10
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 11
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 12
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 13
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 14
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 15
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 16
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 17
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 18
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 19
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 20
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Column 21
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2042,11 +2109,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -2158,13 +2226,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2173,11 +2241,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -2289,13 +2358,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2304,11 +2373,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -2420,13 +2490,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2435,11 +2505,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -2551,13 +2622,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2566,11 +2637,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -2682,13 +2754,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2697,11 +2769,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -2813,13 +2886,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2828,11 +2901,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -2944,13 +3018,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2959,11 +3033,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3075,13 +3150,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3090,11 +3165,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3206,13 +3282,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3221,11 +3297,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3337,13 +3414,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3352,11 +3429,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3468,13 +3546,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3483,11 +3561,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3599,13 +3678,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3614,11 +3693,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3730,13 +3810,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3745,11 +3825,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3861,13 +3942,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3876,11 +3957,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -3992,13 +4074,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4007,11 +4089,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -4123,13 +4206,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4138,11 +4221,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -4254,13 +4338,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4269,11 +4353,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -4385,13 +4470,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4400,11 +4485,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -4516,13 +4602,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4531,11 +4617,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -4647,13 +4734,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4662,11 +4749,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -4778,13 +4866,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4793,11 +4881,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -4909,13 +4998,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -4924,11 +5013,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5040,13 +5130,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5055,11 +5145,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5171,13 +5262,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5186,11 +5277,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5302,13 +5394,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5317,11 +5409,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5433,13 +5526,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5448,11 +5541,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5564,13 +5658,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5579,11 +5673,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5695,13 +5790,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5710,11 +5805,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5826,13 +5922,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5841,11 +5937,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -5957,13 +6054,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -5972,11 +6069,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -6088,13 +6186,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -6103,11 +6201,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -6219,13 +6318,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -6234,11 +6333,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -6350,13 +6450,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -6365,11 +6465,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -6481,13 +6582,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -6496,11 +6597,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -6612,13 +6714,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -6627,11 +6729,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -6743,13 +6846,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -6758,11 +6861,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -6874,13 +6978,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -6889,11 +6993,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7005,13 +7110,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7020,11 +7125,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7136,13 +7242,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7151,11 +7257,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7267,13 +7374,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7282,11 +7389,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7398,13 +7506,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7413,11 +7521,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7529,13 +7638,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7544,11 +7653,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7660,13 +7770,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7675,11 +7785,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7791,13 +7902,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7806,11 +7917,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -7922,13 +8034,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -7937,11 +8049,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -8053,13 +8166,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -8068,11 +8181,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -8184,13 +8298,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -8199,11 +8313,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -8315,13 +8430,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -8330,11 +8445,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -8446,13 +8562,13 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-0 dkuAUf"
+          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -8461,11 +8577,12 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
                   type="checkbox"
                 />
                 <div
                   class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
                 />
               </label>
             </div>
@@ -8599,31 +8716,36 @@ exports[`Storyshots Table with no data 1`] = `
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
         </tr>
       </thead>
-      <tbody>
+      <tbody
+        data-testid="table-body"
+      >
         <tr>
           <td
             colspan="2"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-fzoKki hiHudd"
+              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 dpBjul"
             >
               No records have been created for this table.
             </div>

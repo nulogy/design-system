@@ -11,17 +11,17 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
       class="Box-sc-1qu1edy-0 crvLSl"
     >
       <form
-        class="sc-fznxsB UrQbU"
+        class="NavBarSearch-sc-1aq0npd-0 lfszCe"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
           role="search"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+            class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -46,7 +46,7 @@ exports[`Storyshots NavBarSearch NavBarSearch 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-AxirZ eIlHGL"
+              class="Icon-fc7twp-0 dkBAgY"
               color="currentColor"
               fill="currentColor"
               focusable="false"
@@ -78,17 +78,17 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
       class="Box-sc-1qu1edy-0 crvLSl"
     >
       <form
-        class="sc-fznxsB UrQbU"
+        class="NavBarSearch-sc-1aq0npd-0 lfszCe"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AxjAm fZKVTx"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
           role="search"
         >
           <div
-            class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+            class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -113,7 +113,7 @@ exports[`Storyshots NavBarSearch With custom name 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="sc-AxirZ eIlHGL"
+              class="Icon-fc7twp-0 dkBAgY"
               color="currentColor"
               fill="currentColor"
               focusable="false"

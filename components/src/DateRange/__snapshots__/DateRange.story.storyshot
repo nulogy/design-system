@@ -8,7 +8,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -27,7 +27,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -36,7 +36,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -52,7 +52,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -71,83 +71,95 @@ exports[`Storyshots DateRange custom locale 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fznMnq dIVxMP css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                09:30 AM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-8-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    09:30 AM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a start time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-8-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -155,80 +167,92 @@ exports[`Storyshots DateRange custom locale 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fzoant gtaMKY css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                06:45 PM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-9-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    06:45 PM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select an end time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-9-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -237,7 +261,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -253,7 +277,7 @@ exports[`Storyshots DateRange custom locale 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -284,7 +308,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -303,7 +327,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -312,7 +336,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -328,7 +352,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -347,10 +371,10 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -358,7 +382,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -367,7 +391,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -383,7 +407,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -414,7 +438,7 @@ exports[`Storyshots DateRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -433,7 +457,7 @@ exports[`Storyshots DateRange default 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -442,7 +466,7 @@ exports[`Storyshots DateRange default 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -458,7 +482,7 @@ exports[`Storyshots DateRange default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -477,10 +501,10 @@ exports[`Storyshots DateRange default 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -488,7 +512,7 @@ exports[`Storyshots DateRange default 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -497,7 +521,7 @@ exports[`Storyshots DateRange default 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -513,7 +537,7 @@ exports[`Storyshots DateRange default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -544,7 +568,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -563,7 +587,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -572,7 +596,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -588,7 +612,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -607,10 +631,10 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -618,7 +642,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -627,7 +651,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -643,7 +667,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -674,7 +698,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -693,7 +717,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -702,7 +726,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -718,7 +742,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -737,10 +761,10 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -748,7 +772,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -757,7 +781,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -773,7 +797,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -804,7 +828,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -823,7 +847,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -832,7 +856,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -849,7 +873,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -867,12 +891,12 @@ exports[`Storyshots DateRange individual input error 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
           color="#cc1439"
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ gcJrrZ"
+            class="Icon-fc7twp-0 QuoIa"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -887,10 +911,10 @@ exports[`Storyshots DateRange individual input error 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
           >
             <p
-              class="sc-AxhCb hpmHVQ"
+              class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
               font-size="16px"
             >
@@ -900,10 +924,10 @@ exports[`Storyshots DateRange individual input error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -911,7 +935,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -920,7 +944,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -936,7 +960,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -967,7 +991,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -986,7 +1010,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -995,7 +1019,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1011,7 +1035,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1030,10 +1054,10 @@ exports[`Storyshots DateRange with custom error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -1041,7 +1065,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1050,7 +1074,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1066,7 +1090,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1086,12 +1110,12 @@ exports[`Storyshots DateRange with custom error 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm fYetcd"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
       color="#cc1439"
     >
       <svg
         aria-hidden="true"
-        class="sc-AxirZ gcJrrZ"
+        class="Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
@@ -1106,10 +1130,10 @@ exports[`Storyshots DateRange with custom error 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -1129,7 +1153,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -1148,7 +1172,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1157,7 +1181,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1173,7 +1197,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1192,83 +1216,95 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fznMnq dIVxMP css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                03:30 AM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-4-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    03:30 AM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a start time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-4-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -1276,80 +1312,92 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fzoant gtaMKY css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                01:30 PM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-5-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    01:30 PM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select an end time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-5-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1358,7 +1406,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1374,7 +1422,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1405,7 +1453,7 @@ exports[`Storyshots DateRange with time error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -1424,7 +1472,7 @@ exports[`Storyshots DateRange with time error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1433,7 +1481,7 @@ exports[`Storyshots DateRange with time error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1449,7 +1497,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1468,83 +1516,95 @@ exports[`Storyshots DateRange with time error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fznMnq dIVxMP css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                01:30 PM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-6-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    01:30 PM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a start time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-6-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -1552,80 +1612,92 @@ exports[`Storyshots DateRange with time error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fzoant gtaMKY css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1uccc91-singleValue"
-              >
-                10:30 AM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-7-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1uccc91-singleValue"
+                  >
+                    10:30 AM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select an end time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-7-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1634,7 +1706,7 @@ exports[`Storyshots DateRange with time error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1650,7 +1722,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1681,7 +1753,7 @@ exports[`Storyshots DateRange with times 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -1700,7 +1772,7 @@ exports[`Storyshots DateRange with times 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1709,7 +1781,7 @@ exports[`Storyshots DateRange with times 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1725,7 +1797,7 @@ exports[`Storyshots DateRange with times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1744,83 +1816,95 @@ exports[`Storyshots DateRange with times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fznMnq dIVxMP css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                HH:MM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-2-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    HH:MM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select a start time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-2-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm gwfLaO"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
-          class="sc-AxhCb hpmHVQ"
+          class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
           font-size="16px"
         >
@@ -1828,80 +1912,92 @@ exports[`Storyshots DateRange with times 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="nds-time-picker sc-fzoant gtaMKY css-2b097c-container"
+          data-testid="select-container"
         >
           <div
-            class=" css-1liu8yu-Control"
+            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
           >
             <div
-              class=" css-7zc8my"
+              data-testid="select-control"
             >
               <div
-                class=" css-1yhx6vz-Placeholder"
-              >
-                HH:MM
-              </div>
-              <div
-                class="css-17yls17-Input"
+                class=" css-1liu8yu-Control"
               >
                 <div
-                  class=""
-                  style="display:inline-block"
+                  class=" css-7zc8my"
                 >
-                  <input
-                    aria-autocomplete="list"
-                    aria-label="Select a time"
-                    autocapitalize="none"
-                    autocomplete="off"
-                    autocorrect="off"
-                    id="react-select-3-input"
-                    spellcheck="false"
-                    style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                    tabindex="0"
-                    type="text"
-                    value=""
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    HH:MM
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          aria-label="Select an end time"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-3-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
                   />
                   <div
-                    style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                  />
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="22px"
+                      icon="queryBuilder"
+                      viewBox="0 0 24 24"
+                      width="22px"
+                    >
+                      <path
+                        d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div
-              class=" css-1hb7zxy-IndicatorsContainer"
-            >
-              <span
-                class=" css-43ykx9-indicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                class=" css-1fi275-indicatorContainer"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="sc-AxirZ sc-fzpkJw ghostn"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="22px"
-                  icon="queryBuilder"
-                  viewBox="0 0 24 24"
-                  width="22px"
-                >
-                  <path
-                    d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
-                  />
-                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1910,7 +2006,7 @@ exports[`Storyshots DateRange with times 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -1926,7 +2022,7 @@ exports[`Storyshots DateRange with times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"

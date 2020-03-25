@@ -8,7 +8,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
         style="margin-bottom:8px"
@@ -20,7 +20,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -28,16 +28,17 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="a"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -46,7 +47,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -54,16 +55,17 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="b"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -72,7 +74,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -80,16 +82,17 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="c"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -110,7 +113,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
         style="margin-bottom:8px"
@@ -121,7 +124,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           Setting Selection
         </span>
         <span
-          class="sc-AxhCb gXnznd"
+          class="Text-sc-1wu7vpu-0 bphWXP"
           color="darkGrey"
           font-size="12px"
         >
@@ -129,14 +132,14 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
         </span>
       </legend>
       <p
-        class="sc-AxhCb sc-fzokOt itwNrV"
+        class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
         color="currentColor"
         font-size="16px"
       >
         Select a setting from the menu below:
       </p>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -145,7 +148,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
             aria-invalid="false"
             aria-required="true"
             checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             required=""
             type="checkbox"
@@ -153,9 +156,10 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -164,7 +168,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -172,7 +176,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           <input
             aria-invalid="false"
             aria-required="true"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             required=""
             type="checkbox"
@@ -180,9 +184,10 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -191,7 +196,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -199,7 +204,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           <input
             aria-invalid="false"
             aria-required="true"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             required=""
             type="checkbox"
@@ -207,9 +212,10 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -230,7 +236,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
         style="margin-bottom:8px"
@@ -242,7 +248,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -251,7 +257,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
             aria-invalid="false"
             aria-required="false"
             checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="a"
@@ -259,9 +265,10 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
           <div
             checked=""
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -270,7 +277,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -278,16 +285,17 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="b"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -296,7 +304,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -304,16 +312,17 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="c"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -334,7 +343,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
         style="margin-bottom:8px"
@@ -346,7 +355,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -356,7 +365,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
             aria-invalid="false"
             aria-required="false"
             checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 dQkcBn"
             disabled=""
             name="settingSelection"
             type="checkbox"
@@ -364,10 +373,11 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
             disabled=""
           />
           <p
-            class="sc-AxhCb fTtmG"
+            class="Text-sc-1wu7vpu-0 hdrQgs"
             color="currentColor"
             disabled=""
             font-size="16px"
@@ -377,7 +387,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -386,7 +396,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 dQkcBn"
             disabled=""
             name="settingSelection"
             type="checkbox"
@@ -394,10 +404,11 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
             disabled=""
           />
           <p
-            class="sc-AxhCb fTtmG"
+            class="Text-sc-1wu7vpu-0 hdrQgs"
             color="currentColor"
             disabled=""
             font-size="16px"
@@ -407,7 +418,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -416,7 +427,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 dQkcBn"
             disabled=""
             name="settingSelection"
             type="checkbox"
@@ -424,10 +435,11 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
             disabled=""
           />
           <p
-            class="sc-AxhCb fTtmG"
+            class="Text-sc-1wu7vpu-0 hdrQgs"
             color="currentColor"
             disabled=""
             font-size="16px"
@@ -449,7 +461,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
         style="margin-bottom:8px"
@@ -461,7 +473,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -470,16 +482,17 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
             aria-invalid="true"
             aria-required="false"
             checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="a"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -488,7 +501,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -496,16 +509,17 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
           <input
             aria-invalid="true"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="b"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -514,7 +528,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -522,16 +536,17 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
           <input
             aria-invalid="true"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="c"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -540,12 +555,12 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
         color="#cc1439"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ gcJrrZ"
+          class="Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -560,10 +575,10 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
         >
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -601,7 +616,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk sc-fzoNJl loPePV"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
         style="margin-bottom:8px"
@@ -613,7 +628,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -622,16 +637,17 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
             aria-invalid="true"
             aria-required="false"
             checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="a"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -640,7 +656,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -648,16 +664,17 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
           <input
             aria-invalid="true"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="b"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -666,7 +683,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj sc-fzoyTs kaPLDZ"
+        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -674,16 +691,17 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
           <input
             aria-invalid="true"
             aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR sc-fzoyTs kaPLDZ"
+            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 dQkcBn"
             name="settingSelection"
             type="checkbox"
             value="c"
           />
           <div
             class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            data-testid="visual-checkbox"
           />
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -692,12 +710,12 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
         color="#cc1439"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ gcJrrZ"
+          class="Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -712,10 +730,10 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
         >
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >

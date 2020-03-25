@@ -8,10 +8,10 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-AxjAm fMYsrt"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
     >
       <p
-        class="sc-AxhCb czaJmK"
+        class="Text-sc-1wu7vpu-0 ipzFTA"
         color="currentColor"
         font-size="16px"
       >
@@ -23,7 +23,7 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ eIlHGL"
+          class="Icon-fc7twp-0 dkBAgY"
           color="currentColor"
           fill="currentColor"
           focusable="false"

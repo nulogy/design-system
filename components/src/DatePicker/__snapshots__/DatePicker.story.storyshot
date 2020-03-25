@@ -8,7 +8,7 @@ exports[`Storyshots DatePicker default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -17,7 +17,7 @@ exports[`Storyshots DatePicker default 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -31,7 +31,7 @@ exports[`Storyshots DatePicker default 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -47,7 +47,7 @@ exports[`Storyshots DatePicker default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -78,7 +78,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -87,7 +87,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -101,7 +101,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -117,7 +117,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -148,7 +148,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -157,7 +157,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -171,7 +171,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -187,7 +187,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -218,7 +218,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -227,7 +227,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -241,7 +241,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -257,7 +257,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -288,7 +288,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -297,7 +297,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -311,7 +311,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -327,7 +327,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -346,12 +346,12 @@ exports[`Storyshots DatePicker with error state 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-AxjAm cUVzOc"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
         color="#cc1439"
       >
         <svg
           aria-hidden="true"
-          class="sc-AxirZ gcJrrZ"
+          class="Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
@@ -366,10 +366,10 @@ exports[`Storyshots DatePicker with error state 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 XSNbP"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
         >
           <p
-            class="sc-AxhCb hpmHVQ"
+            class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
             font-size="16px"
           >
@@ -390,7 +390,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -399,7 +399,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+            class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="#011e38"
             style="display:block"
           >
@@ -413,7 +413,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
                 class="Box-sc-1qu1edy-0 hxUhcg"
@@ -429,7 +429,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="sc-AxirZ sc-fzpjYC fnwFJs"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"

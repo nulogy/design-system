@@ -15,7 +15,8 @@ const DatePickerInput = forwardRef(
       onUpKeyPress,
       onDownKeyPress,
       onEnterKeyPress,
-      onSpaceKeyPress
+      onSpaceKeyPress,
+      "aria-label": ariaLabel
     },
     ref
   ) => {
@@ -40,7 +41,7 @@ const DatePickerInput = forwardRef(
     return (
       <InputField
         ref={ref}
-        aria-label={t("select a date")}
+        aria-label={ariaLabel || t("select a date")}
         {...inputProps}
         value={value}
         placeholder={inputProps.placeholder}
@@ -63,7 +64,8 @@ DatePickerInput.propTypes = {
   value: PropTypes.string,
   onInputChange: PropTypes.func.isRequired,
   dateFormat: PropTypes.string.isRequired,
-  inputProps: PropTypes.shape(InputFieldPropTypes)
+  inputProps: PropTypes.shape(InputFieldPropTypes),
+  "aria-label": PropTypes.string
 };
 
 DatePickerInput.defaultProps = {
@@ -74,7 +76,8 @@ DatePickerInput.defaultProps = {
   onEnterKeyPress: undefined,
   onSpaceKeyPress: undefined,
   value: undefined,
-  inputProps: InputFieldDefaultProps
+  inputProps: InputFieldDefaultProps,
+  "aria-label": undefined
 };
 
 export default DatePickerInput;

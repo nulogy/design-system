@@ -11,7 +11,51 @@ import SelectOption from "./SelectOption";
 const Control = props => {
   // eslint-disable-next-line react/prop-types
   const { isFocused } = props;
-  return <selectComponents.Control className={isFocused ? "nds-select--is-focused" : null} {...props} />;
+  return (
+    <div data-testid="select-control">
+      <selectComponents.Control className={isFocused ? "nds-select--is-focused" : null} {...props} />
+    </div>
+  );
+};
+
+const MultiValue = props => {
+  return (
+    <div data-testid="select-multivalue">
+      <selectComponents.MultiValue {...props} />
+    </div>
+  );
+};
+
+const ClearIndicator = props => {
+  return (
+    <div data-testid="select-clear">
+      <selectComponents.ClearIndicator {...props} />
+    </div>
+  );
+};
+
+const Menu = props => {
+  return (
+    <div data-testid="select-dropdown">
+      <selectComponents.Menu {...props} />
+    </div>
+  );
+};
+
+const SelectContainer = props => {
+  return (
+    <div data-testid="select-container">
+      <selectComponents.SelectContainer {...props} />
+    </div>
+  );
+};
+
+const Input = props => {
+  return (
+    <div data-testid="select-input">
+      <selectComponents.Input {...props} />
+    </div>
+  );
 };
 
 const getOption = (options, value) => {
@@ -100,7 +144,16 @@ const ReactSelect = ({
           onMenuClose={onMenuClose}
           menuPosition={menuPosition}
           onInputChange={onInputChange}
-          components={{ Option: SelectOption, Control, ...components }}
+          components={{
+            Option: SelectOption,
+            Control,
+            MultiValue,
+            ClearIndicator,
+            SelectContainer,
+            Menu,
+            Input,
+            ...components
+          }}
           aria-label={ariaLabel}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />

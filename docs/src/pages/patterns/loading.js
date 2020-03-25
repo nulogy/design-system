@@ -2,30 +2,21 @@
 
 import React from "react";
 import { Helmet } from "react-helmet";
-import Highlight from "react-highlight";
 import {
   Alert,
   Button,
-  IconicButton,
   Box,
   Flex,
   SectionTitle,
-  SubsectionTitle,
   Title,
-  Icon,
-  Link,
-  List,
-  ListItem
+  Icon
 } from "@nulogy/components";
 import {
   DocText as Text,
   Layout,
   Intro,
   IntroText,
-  DocSection,
-  DocSubsection,
-  PropsTable,
-  InlineCode
+  DocSection
 } from "../../components";
 import loadingImage from "../../images/patterns/loading/loading.svg";
 import skeletonScreenImage from "../../images/patterns/loading/skeleton-screen.png";

@@ -69,6 +69,24 @@ const propsRows = [
     type: "string",
     defaultValue: "null",
     description: "className passed to the tab content container"
+  },
+  {
+    name: "tabContentClassName",
+    type: "string",
+    defaultValue: "null",
+    description: "className passed to the tab content container"
+  },
+  {
+    name: "ariaLabelLeft",
+    type: "string",
+    defaultValue: "null",
+    description: "aria label on the left arrow button when tabs are scrollable"
+  },
+  {
+    name: "ariaLabelRight",
+    type: "string",
+    defaultValue: "null",
+    description: "aria label on the right arrow button when tabs are scrollable"
   }
 ];
 

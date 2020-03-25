@@ -1,5 +1,5 @@
 describe("Monthpicker", () => {
-  const getMonthInputComponent = () => cy.get("input");
+  const getMonthInputComponent = () => cy.get("[aria-label='select a date']");
   const CALENDAR_SELECTOR = ".react-datepicker";
   const getCalendarComponent = () => cy.get(CALENDAR_SELECTOR);
 
@@ -47,7 +47,7 @@ describe("Monthpicker", () => {
       });
 
       it("allows the user to select a date by typing", () => {
-        cy.get("input").type("{backspace}{backspace}20");
+        getMonthInputComponent().type("{backspace}{backspace}20");
         getMonthInputComponent().should("have.value", "Jan 2020");
       });
 
@@ -75,7 +75,7 @@ describe("Monthpicker", () => {
 
       it("allows the user to select a date in a earlier year", () => {
         const getPreviousMonthButton = () =>
-          cy.get("button.react-datepicker__navigation--previous");
+          cy.get(".react-datepicker__navigation--previous");
 
         getMonthInputComponent().click();
         getPreviousMonthButton().click();
@@ -84,7 +84,7 @@ describe("Monthpicker", () => {
 
       it("allows the user to select a date in a later year", () => {
         const getNextMonthButton = () =>
-          cy.get("button.react-datepicker__navigation--next");
+          cy.get(".react-datepicker__navigation--next");
 
         getMonthInputComponent().click();
         getNextMonthButton().click();
@@ -94,19 +94,19 @@ describe("Monthpicker", () => {
 
     describe("month auto-complete", () => {
       it("does not auto-complete when typed characters don't match", () => {
-        cy.get("input")
+        getMonthInputComponent()
           .clear()
           .type("app");
         getMonthInputComponent().should("have.value", "app");
       });
       it("does not auto-complete when not enough letters are typed", () => {
-        cy.get("input")
+        getMonthInputComponent()
           .clear()
           .type("de");
         getMonthInputComponent().should("have.value", "de");
       });
       it("auto-completes when typing characters that match case", () => {
-        cy.get("input")
+        getMonthInputComponent()
           .clear()
           .type("Apr");
         cy.get(
@@ -115,7 +115,7 @@ describe("Monthpicker", () => {
         getMonthInputComponent().should("have.value", "Apr 2019");
       });
       it("auto-completes when typing characters that ignore case", () => {
-        cy.get("input")
+        getMonthInputComponent()
           .clear()
           .type("mar");
         cy.get(
@@ -124,8 +124,8 @@ describe("Monthpicker", () => {
         getMonthInputComponent().should("have.value", "Mar 2019");
       });
       it("uses the last selected year to fill in the year", () => {
-        cy.get("input").type("{backspace}{backspace}30");
-        cy.get("input")
+        getMonthInputComponent().type("{backspace}{backspace}30");
+        getMonthInputComponent()
           .clear()
           .type("aug");
         cy.get(
@@ -164,13 +164,13 @@ describe("Monthpicker", () => {
     });
     describe("month auto-complete", () => {
       it("does not auto-complete when month is not in range", () => {
-        cy.get("input")
+        getMonthInputComponent()
           .clear()
           .type("jan");
         getMonthInputComponent().should("have.value", "jan");
       });
       it("auto-completes when month is on range", () => {
-        cy.get("input")
+        getMonthInputComponent()
           .clear()
           .type("jul");
         cy.get(
@@ -179,7 +179,7 @@ describe("Monthpicker", () => {
         getMonthInputComponent().should("have.value", "Jul 2019");
       });
       it("auto-completes when month is within range", () => {
-        cy.get("input")
+        getMonthInputComponent()
           .clear()
           .type("SEP");
         cy.get(

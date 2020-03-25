@@ -1,18 +1,25 @@
 describe("Table", () => {
-  const headerCheckboxSelector = "th div[class*='Checkbox__VisualCheckbox']";
-  const headerCheckboxInputSelector = "th input[type='checkbox']";
-  const rowCheckboxSelector = "tbody div[class*='Checkbox__VisualCheckbox']";
-  const rowCheckboxInputSelector = "tbody input[type='checkbox']";
-  const rowExpandButtonSelector = "tbody svg[icon*='downArrow']";
-  const rowCollapseButtonSelector = "tbody svg[icon*='upArrow']";
-
-  const paginationButtonSelector =
-    "button[class*='Pagination__PaginationButton']";
+  const headerCheckboxSelector =
+    "[data-testid='table-head'] [data-testid='visual-checkbox']";
+  const headerCheckboxInputSelector =
+    "[data-testid='table-head'] [type='checkbox']";
+  const rowCheckboxSelector =
+    "[data-testid='table-body'] [data-testid='visual-checkbox']";
+  const rowCheckboxInputSelector =
+    "[data-testid='table-body'] [type='checkbox']";
+  const rowExpandButtonSelector =
+    "[data-testid='table-body'] [aria-label='Expand row']";
+  const rowCollapseButtonSelector =
+    "[data-testid='table-body'] [aria-label='Collapse row']";
+  const getNextPageButton = () => cy.get("[aria-label='Go to next results']");
+  const getPreviousPageButton = () =>
+    cy.get("[aria-label='Go to previous results']");
   const selectAll = () => cy.get(headerCheckboxSelector);
   const selectAllInput = () => cy.get(headerCheckboxInputSelector);
   const rowCheckboxes = () => cy.get(rowCheckboxSelector);
   const rowCheckboxesInput = () => cy.get(rowCheckboxInputSelector);
-  const paginationButtons = () => cy.get(paginationButtonSelector);
+  const paginationButtons = pageNumber =>
+    cy.get(`[aria-label='Go to page ${pageNumber}']`);
   const expandButtons = () => cy.get(rowExpandButtonSelector);
   const collapseButtons = () => cy.get(rowCollapseButtonSelector);
 
@@ -85,46 +92,34 @@ describe("Table", () => {
       cy.renderFromStorybook("table--with-pagination");
     });
     it("navigates to next page when next button is clicked", () => {
-      paginationButtons()
-        .last()
-        .click();
+      getNextPageButton().click();
 
-      cy.get("tbody").should("contain", "2019-10-02");
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-02");
     });
     it("navigates to previous page when previous button is clicked", () => {
-      paginationButtons()
-        .last()
-        .click();
-      cy.get("tbody").should("contain", "2019-10-02");
-      paginationButtons()
-        .first()
-        .click();
+      getNextPageButton().click();
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-02");
+      getPreviousPageButton().click();
 
-      cy.get("tbody").should("contain", "2019-10-01");
-      paginationButtons().should("be.disabled");
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-01");
+      getPreviousPageButton().should("be.disabled");
     });
     it("navigates to specific page when a page button is clicked", () => {
-      paginationButtons()
-        .eq(5)
-        .click();
+      paginationButtons(5).click();
 
-      cy.get("tbody").should("contain", "2019-10-07");
-      paginationButtons()
-        .eq(5)
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-07");
+      paginationButtons(4)
+        .next()
         .should("be.disabled");
     });
     it("disables next button when on last page", () => {
-      paginationButtons()
-        .eq(-2)
-        .click();
+      paginationButtons(8).click();
 
-      cy.get("tbody").should("contain", "2019-10-24");
-      paginationButtons()
-        .eq(-2)
+      cy.get("[data-testid='table-body']").should("contain", "2019-10-24");
+      paginationButtons(7)
+        .next()
         .should("be.disabled");
-      paginationButtons()
-        .last()
-        .should("be.disabled");
+      getNextPageButton().should("be.disabled");
     });
   });
   describe("selections with pagination", () => {
@@ -137,19 +132,18 @@ describe("Table", () => {
       selectAllInput().should("be.checked");
       rowCheckboxesInput().should("be.checked");
 
-      paginationButtons()
-        .last()
-        .click();
+      getNextPageButton().click();
       selectAll().click();
       selectAll().click();
 
-      cy.get("tbody").should("contain", "Thu, 24 Oct 2019");
+      cy.get("[data-testid='table-body']").should(
+        "contain",
+        "Thu, 24 Oct 2019"
+      );
       selectAllInput().should("not.be.checked");
       rowCheckboxesInput().should("not.be.checked");
 
-      paginationButtons()
-        .first()
-        .click();
+      getPreviousPageButton().click();
 
       selectAllInput().should("be.checked");
       rowCheckboxesInput().should("be.checked");
@@ -165,13 +159,13 @@ describe("Table", () => {
       expandButtons().click();
       collapseButtons().should("exist");
       collapseButtons().click();
-      cy.get("tbody").should("not.contain", "Expands!");
+      cy.get("[data-testid='table-body']").should("not.contain", "Expands!");
     });
     it("expands the row when collapsed", () => {
       collapseButtons().should("not.exist");
       expandButtons().should("exist");
       expandButtons().click();
-      cy.get("tbody").should("contain", "Expands!");
+      cy.get("[data-testid='table-body']").should("contain", "Expands!");
     });
   });
 });

@@ -17,11 +17,11 @@ describe("TimePicker", () => {
 
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Time";
-      const { container } = render(
+      const { getByLabelText } = render(
         <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
       );
       const value = "20:00";
-      const input = container.querySelectorAll("input")[0];
+      const input = getByLabelText("Select a time");
       fireEvent.change(input, { target: { value } });
 
       expect(onInputChange).toHaveBeenCalledWith(value, { action: "input-change" });

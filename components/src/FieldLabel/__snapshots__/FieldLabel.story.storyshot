@@ -8,7 +8,7 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -34,7 +34,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -47,7 +47,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
           Default label
         </span>
         <p
-          class="sc-AxhCb sc-fzokOt itwNrV"
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
           color="currentColor"
           font-size="16px"
         >
@@ -75,7 +75,7 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -88,7 +88,7 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
           Default label
         </span>
         <span
-          class="sc-AxhCb gXnznd"
+          class="Text-sc-1wu7vpu-0 bphWXP"
           color="darkGrey"
           font-size="12px"
         >
@@ -108,7 +108,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -121,14 +121,14 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
           Default label
         </span>
         <span
-          class="sc-AxhCb gXnznd"
+          class="Text-sc-1wu7vpu-0 bphWXP"
           color="darkGrey"
           font-size="12px"
         >
           (Required)
         </span>
         <p
-          class="sc-AxhCb sc-fzokOt itwNrV"
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
           color="currentColor"
           font-size="16px"
         >
@@ -148,7 +148,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv sc-fzqBZW eNQuho"
+      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="#011e38"
       style="display:block"
     >
@@ -161,14 +161,14 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
           Default label
         </span>
         <span
-          class="sc-AxhCb gXnznd"
+          class="Text-sc-1wu7vpu-0 bphWXP"
           color="darkGrey"
           font-size="12px"
         >
           (Required)
         </span>
         <p
-          class="sc-AxhCb sc-fzokOt itwNrV"
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
           color="currentColor"
           font-size="16px"
         >
@@ -176,10 +176,10 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fzqNJr cZfPfD"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="Box-sc-1qu1edy-0 sc-AxjAm kqcjHY"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
             class="Box-sc-1qu1edy-0 hxUhcg"

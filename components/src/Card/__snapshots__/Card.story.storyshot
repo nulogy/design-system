@@ -8,13 +8,13 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj sc-fzqBkg buXsnU"
+      class="Box-sc-1qu1edy-0 jlPsmj CardSet-sc-143b99f-0 jjSQnJ"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fznWOq ELElF sc-fzolEj jKMuPZ"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM CPCard-sc-148dhup-0 bKrOJR"
       >
         <h3
-          class="sc-AxheI sc-Axmtr eWqABJ"
+          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 knAPDN"
           font-size="20px"
           font-weight="500"
         >
@@ -24,12 +24,12 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Open"
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+          class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ jrPxI"
+            class="Icon-fc7twp-0 cwKdbD"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -45,20 +45,20 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
           </svg>
         </button>
         <div
-          class="Box-sc-1qu1edy-0 sc-AxjAm APdvp"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hBnJSV"
         >
           <div
             class="Box-sc-1qu1edy-0 ipHJHH"
           >
             <p
-              class="sc-AxhCb hpmHVQ"
+              class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
               font-size="16px"
             >
               Item: Some item
             </p>
             <p
-              class="sc-AxhCb hpmHVQ"
+              class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
               font-size="16px"
             >
@@ -69,14 +69,14 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
             class="Box-sc-1qu1edy-0 jlPsmj"
           >
             <p
-              class="sc-AxhCb fQCxOQ"
+              class="Text-sc-1wu7vpu-0 edyTXm"
               color="currentColor"
               font-size="16px"
             >
               Due: Jun2 24, 2019
             </p>
             <p
-              class="sc-AxhCb fQCxOQ"
+              class="Text-sc-1wu7vpu-0 edyTXm"
               color="currentColor"
               font-size="16px"
             >
@@ -86,10 +86,10 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fznWOq ELElF sc-fzolEj jKMuPZ"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM CPCard-sc-148dhup-0 bKrOJR"
       >
         <h3
-          class="sc-AxheI sc-Axmtr eWqABJ"
+          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 knAPDN"
           font-size="20px"
           font-weight="500"
         >
@@ -99,12 +99,12 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
           aria-expanded="false"
           aria-haspopup="true"
           aria-label="Open"
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 jsJEWy sc-fzpans cKJzHK"
+          class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
           type="button"
         >
           <svg
             aria-hidden="true"
-            class="sc-AxirZ jrPxI"
+            class="Icon-fc7twp-0 cwKdbD"
             color="currentColor"
             fill="currentColor"
             focusable="false"
@@ -120,20 +120,20 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
           </svg>
         </button>
         <div
-          class="Box-sc-1qu1edy-0 sc-AxjAm APdvp"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hBnJSV"
         >
           <div
             class="Box-sc-1qu1edy-0 ipHJHH"
           >
             <p
-              class="sc-AxhCb hpmHVQ"
+              class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
               font-size="16px"
             >
               Item: Some item
             </p>
             <p
-              class="sc-AxhCb hpmHVQ"
+              class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
               font-size="16px"
             >
@@ -144,14 +144,14 @@ exports[`Storyshots Card Capacity Planing Cardset 1`] = `
             class="Box-sc-1qu1edy-0 jlPsmj"
           >
             <p
-              class="sc-AxhCb fQCxOQ"
+              class="Text-sc-1wu7vpu-0 edyTXm"
               color="currentColor"
               font-size="16px"
             >
               Due: Jun2 24, 2019
             </p>
             <p
-              class="sc-AxhCb fQCxOQ"
+              class="Text-sc-1wu7vpu-0 edyTXm"
               color="currentColor"
               font-size="16px"
             >
@@ -173,7 +173,7 @@ exports[`Storyshots Card Card 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fznWOq ELElF"
+      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
     >
       I am a card.
     </div>
@@ -189,20 +189,20 @@ exports[`Storyshots Card Cardset 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj sc-fzqBkg buXsnU"
+      class="Box-sc-1qu1edy-0 jlPsmj CardSet-sc-143b99f-0 jjSQnJ"
     >
       <div
-        class="Box-sc-1qu1edy-0 sc-fznWOq ELElF"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
       >
         I am a 1st card in a cardset.
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fznWOq ELElF"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
       >
         I am a 2nd card in a cardset.
       </div>
       <div
-        class="Box-sc-1qu1edy-0 sc-fznWOq ELElF"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
       >
         I am a 3rd card in a cardset.
       </div>
@@ -219,7 +219,7 @@ exports[`Storyshots Card Custom card 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 sc-fznWOq gRCqMA"
+      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 ftWbZx"
       color="white"
     >
       I am a custom card.

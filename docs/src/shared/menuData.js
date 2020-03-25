@@ -224,6 +224,10 @@ export const menuData = [
       {
         name: "Localization",
         href: "/guides/localization"
+      },
+      {
+        name: "Testing",
+        href: "/guides/testing"
       }
     ]
   },

@@ -13,7 +13,7 @@ describe("select", () => {
 
     const callback = jest.fn();
 
-    const { container, queryByText } = render(<Select options={options} onChange={callback} />);
+    const { container, queryByText } = render(<Select options={options} name="multiselect" onChange={callback} />);
 
     selectOption("Two", container, queryByText);
 

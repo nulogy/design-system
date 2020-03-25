@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 import theme from "../theme";
 import { Icon } from "../Icon";
 
@@ -42,46 +43,40 @@ const TabScrollIndicatorButton = styled.button(({ side, width }) => ({
 function preventFocusMovement(e) {
   e.preventDefault();
 }
-
-class TabScrollIndicator extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    const { onClick, side } = this.props;
-
+const TabScrollIndicator = ({ onClick, side, ariaLabelLeft, ariaLabelRight, ...props }) => {
+  const { t } = useTranslation();
+  const handleClick = () => {
     onClick(side);
-  }
-
-  render() {
-    const { side } = this.props;
-
-    return (
-      <TabScrollIndicatorButton
-        {...this.props}
-        tabIndex={-1}
-        onClick={this.handleClick}
-        onMouseDown={preventFocusMovement}
-        side={side}
-      >
-        <Icon icon={side === "right" ? "rightArrow" : "leftArrow"} />
-      </TabScrollIndicatorButton>
-    );
-  }
-}
-
+  };
+  const rightArrowLabel = ariaLabelRight || t("next");
+  const leftArrowLabel = ariaLabelLeft || t("previous");
+  return (
+    <TabScrollIndicatorButton
+      {...props}
+      tabIndex={-1}
+      onClick={handleClick}
+      onMouseDown={preventFocusMovement}
+      side={side}
+      aria-label={side === "right" ? rightArrowLabel : leftArrowLabel}
+    >
+      <Icon icon={side === "right" ? "rightArrow" : "leftArrow"} />
+    </TabScrollIndicatorButton>
+  );
+};
 TabScrollIndicator.propTypes = {
   onClick: PropTypes.func,
   side: PropTypes.oneOf(["left", "right"]),
-  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  ariaLabelLeft: PropTypes.string,
+  ariaLabelRight: PropTypes.string
 };
 
 TabScrollIndicator.defaultProps = {
   onClick: () => {},
   side: "left",
-  width: 40
+  width: 40,
+  ariaLabelLeft: undefined,
+  ariaLabelRight: undefined
 };
 
 export default TabScrollIndicator;
