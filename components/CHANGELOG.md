@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/nulogy/design-system/compare/v1.6.1...v2.0.0) (2020-03-25)
+
+
+* feat!: adds testing guidelines and fixes current test selectors  (#587) ([8bd17a6](https://github.com/nulogy/design-system/commit/8bd17a63b154c9ea00d9072161e6e48dac33e1cd)), closes [#587](https://github.com/nulogy/design-system/issues/587)
+
+
+### BREAKING CHANGES
+
+* Styled components package updates generated class names in components, this may introduce breaking changes if you rely on selectors using these class names 
+
+
+
+
+
 # [1.6.0](https://github.com/nulogy/design-system/compare/v1.5.1...v1.6.0) (2020-03-19)
 
 
