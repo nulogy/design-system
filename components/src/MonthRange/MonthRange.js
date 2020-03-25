@@ -88,7 +88,7 @@ const MonthRange = ({
       maxDate={maxDate}
       locale={locale}
       disableAutocomplete={disableAutocomplete}
-      aria-label={t("select a start date")}
+      aria-label={t("select an end date")}
     />
   );
 
