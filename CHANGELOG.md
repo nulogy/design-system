@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.3](https://github.com/nulogy/design-system/compare/v2.0.2...v2.0.3) (2020-03-26)
+
+
+### Bug Fixes
+
+* hover states in datepicker should have space between days ([#591](https://github.com/nulogy/design-system/issues/591)) ([6873420](https://github.com/nulogy/design-system/commit/6873420d61b2a591b80f17777eaedfb9499c723a))
+
+
+
+
+
 ## [2.0.2](https://github.com/nulogy/design-system/compare/v2.0.1...v2.0.2) (2020-03-26)
 
 **Note:** Version bump only for package @nulogy/nds
