@@ -73,3 +73,8 @@ it("checks the checkbox when the checkbox is clicked", () => {
   cy.get("[type='checkbox']").should("be.checked");
 });
 ```
+
+### Related Reading
+
+- [Making your UI tests resilient to change](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change)
+- [Which query should I use?](https://testing-library.com/docs/guide-which-query)
