@@ -6,6 +6,7 @@ import theme from "../theme";
 const START_DATE_CLASS = "nds-datepicker-day--start-date";
 const END_DATE_CLASS = "nds-datepicker-day--end-date";
 const IN_RANGE_CLASS = "nds-datepicker-day--in-range";
+const TWO_DAY_RANGE_CLASS = "nds-datepicker-two-day-range";
 
 const getAllDaysInRange = (startDate, endDate) => {
   if (endDate && startDate && isBefore(startDate, endDate)) {
@@ -16,6 +17,7 @@ const getAllDaysInRange = (startDate, endDate) => {
 };
 
 export const highlightDates = (startDate, endDate) => {
+  const datesInRange = getAllDaysInRange(startDate, endDate);
   return [
     {
       [START_DATE_CLASS]: [new Date(startDate)]
@@ -24,7 +26,10 @@ export const highlightDates = (startDate, endDate) => {
       [END_DATE_CLASS]: [new Date(endDate)]
     },
     {
-      [IN_RANGE_CLASS]: getAllDaysInRange(startDate, endDate)
+      [IN_RANGE_CLASS]: datesInRange
+    },
+    {
+      [TWO_DAY_RANGE_CLASS]: datesInRange.length === 2 ? datesInRange : []
     }
   ];
 };
@@ -34,7 +39,19 @@ export const DateRangeStyles = createGlobalStyle({
     [`.react-datepicker__day.${IN_RANGE_CLASS}`]: {
       backgroundColor: theme.colors.whiteGrey,
       color: theme.colors.black,
-      borderRadius: 0
+      borderRadius: 0,
+      marginRight: 0,
+      marginLeft: 0,
+      paddingRight: theme.space.half,
+      paddingLeft: theme.space.half
+    },
+    [`.react-datepicker__day.${START_DATE_CLASS}.${TWO_DAY_RANGE_CLASS}`]: {
+      borderTopRightRadius: 0,
+      borderBottomRightRadius: 0
+    },
+    [`.react-datepicker__day.${END_DATE_CLASS}.${TWO_DAY_RANGE_CLASS}`]: {
+      borderTopLeftRadius: 0,
+      borderBottomLeftRadius: 0
     },
     [`.react-datepicker__day.${START_DATE_CLASS},  .react-datepicker__day.${END_DATE_CLASS}`]: {
       color: theme.colors.white,
