@@ -78,6 +78,16 @@ exports[`Storyshots Modal with scrolling content 1`] = `
 </div>
 `;
 
+exports[`Storyshots Modal with scrolling content without footer content 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  />
+</div>
+`;
+
 exports[`Storyshots Modal with select 1`] = `
 <div
   style="padding:24px"

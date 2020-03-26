@@ -8,15 +8,15 @@ import { CloseButton } from "../Button";
 import theme from "../theme";
 import { PreventBodyElementScrolling } from "../utils";
 
-const ModalContent = styled.div({
+const ModalContent = styled.div(({ hasFooter }) => ({
   marginTop: "-64px",
-  marginBottom: "-72px",
+  marginBottom: hasFooter ? "-72px" : 0,
   overflow: "auto",
   paddingTop: "88px",
-  paddingBottom: "96px",
+  paddingBottom: hasFooter ? "96px" : theme.space.x2,
   paddingLeft: theme.space.x3,
   paddingRight: theme.space.x3
-});
+}));
 
 const getHeaderPaddingRight = closeButtonIncluded => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
 
@@ -179,7 +179,7 @@ const Modal = ({
             {onRequestClose && <ModalCloseButton onClick={onRequestClose} aria-label={closeAriaLabel} />}
           </ModalHeader>
         )}
-        <ModalContent>{children}</ModalContent>
+        <ModalContent hasFooter={!!footerContent}>{children}</ModalContent>
         {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
       </PreventBodyElementScrolling>
     </StyledReactModal>
