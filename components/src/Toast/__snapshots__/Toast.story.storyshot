@@ -13,7 +13,7 @@ exports[`Storyshots Toast Toast 1`] = `
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 hEHPqx"
     >
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bxjnP Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
@@ -85,7 +85,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </button>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 hEHPqx"
     >
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
@@ -115,7 +115,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 hEHPqx"
     >
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
@@ -145,7 +145,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 hEHPqx"
     >
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
@@ -175,7 +175,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 bYUTaw"
+      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 hEHPqx"
     >
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"

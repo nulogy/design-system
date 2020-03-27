@@ -41,7 +41,7 @@ const AnimatedAlert = styled(Alert)(({ visible }) => ({
 }));
 
 const AnimatedBoxBottom = styled(Box)(({ visible }) => ({
-  position: "absolute",
+  position: "fixed",
   bottom: 0,
   left: 0,
   right: 0,
