@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/nulogy/design-system/compare/v2.0.4...v2.0.5) (2020-03-27)
+
+
+### Bug Fixes
+
+* force Toast to stick to bottom of page when scrolling ([#593](https://github.com/nulogy/design-system/issues/593)) ([4b4af71](https://github.com/nulogy/design-system/commit/4b4af715a197e40a42551a9f7d404b37daeeaab4))
+
+
+
+
+
 ## [2.0.3](https://github.com/nulogy/design-system/compare/v2.0.2...v2.0.3) (2020-03-26)
 
 
