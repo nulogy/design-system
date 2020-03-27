@@ -17,7 +17,6 @@ import {
   PropsTable
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
-import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -56,8 +55,7 @@ const propsRows = [
     type: "Date",
     defaultValue: "undefined",
     description: "The latest date that can be selected"
-  },
-  localeProp
+  }
 ];
 
 export default () => (

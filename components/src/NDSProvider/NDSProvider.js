@@ -4,6 +4,7 @@ import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import { I18nextProvider } from "react-i18next";
 import defaultTheme from "../theme";
 import i18n from "../i18n";
+import { LocaleContext } from "./LocaleContext";
 
 const Reset = createGlobalStyle({
   body: {
@@ -34,16 +35,15 @@ const NDSProvider = ({ theme, children, locale }) => {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
-
   return (
-    <>
+    <LocaleContext.Provider value={{ locale }}>
       <Reset />
       <GlobalStyles theme={theme}>
         <I18nextProvider i18n={i18n}>
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </I18nextProvider>
       </GlobalStyles>
-    </>
+    </LocaleContext.Provider>
   );
 };
 

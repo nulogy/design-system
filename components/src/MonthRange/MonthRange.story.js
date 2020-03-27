@@ -1,10 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { withKnobs } from "@storybook/addon-knobs";
 
 import MonthRange from "./MonthRange";
-import { supportedDateLocales } from "../utils/datePickerLocales";
 
 storiesOf("MonthRange", module)
   .addDecorator(withKnobs)
@@ -61,15 +60,5 @@ storiesOf("MonthRange", module)
       onRangeChange={action("range changed")}
       onStartDateChange={action("start date changed")}
       onEndDateChange={action("end date changed")}
-    />
-  ))
-  .add("custom locale", () => (
-    <MonthRange
-      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
-      defaultEndDate={new Date("2019-09-10T05:00:00.000Z")}
-      onRangeChange={action("range changed")}
-      onStartDateChange={action("start date changed")}
-      onEndDateChange={action("end date changed")}
-      locale={select("locale", Object.keys(supportedDateLocales), "pl", "locales")}
     />
   ));

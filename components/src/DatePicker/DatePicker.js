@@ -10,6 +10,8 @@ import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
+import { LocaleContext } from "../NDSProvider/LocaleContext";
+import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
@@ -78,13 +80,12 @@ class DatePicker extends Component {
     this.datepickerRef.setOpen(false);
   };
 
-  renderHeader = props => {
-    const { locale } = this.props;
-    return <DatePickerHeader locale={locale} {...props} />;
+  renderHeader = ({ locale }) => {
+    return props => <DatePickerHeader locale={locale} {...props} />;
   };
 
   render() {
-    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, highlightDates, locale } = this.props;
+    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, highlightDates } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -107,23 +108,27 @@ class DatePicker extends Component {
     return (
       <Field className="nds-date-picker">
         <DatePickerStyles />
-        <ReactDatePicker
-          selected={selectedDate}
-          openToDate={selectedDate}
-          dateFormat={dateFormat}
-          onChange={this.handleSelectedDateChange}
-          customInput={customInput}
-          renderCustomHeader={this.renderHeader}
-          disabledKeyboardNavigation
-          strictParsing
-          minDate={minDate}
-          maxDate={maxDate}
-          highlightDates={highlightDates}
-          locale={locale}
-          ref={r => {
-            this.datepickerRef = r;
-          }}
-        />
+        <LocaleContext.Consumer>
+          {({ locale }) => (
+            <ReactDatePicker
+              selected={selectedDate}
+              openToDate={selectedDate}
+              dateFormat={dateFormat}
+              onChange={this.handleSelectedDateChange}
+              customInput={customInput}
+              renderCustomHeader={this.renderHeader(locale)}
+              disabledKeyboardNavigation
+              strictParsing
+              minDate={minDate}
+              maxDate={maxDate}
+              highlightDates={highlightDates}
+              locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
+              ref={r => {
+                this.datepickerRef = r;
+              }}
+            />
+          )}
+        </LocaleContext.Consumer>
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
     );
@@ -140,8 +145,7 @@ DatePicker.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
-  highlightDates: PropTypes.arrayOf(PropTypes.shape({})),
-  locale: PropTypes.string
+  highlightDates: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
 DatePicker.defaultProps = {
@@ -154,8 +158,7 @@ DatePicker.defaultProps = {
   errorList: undefined,
   minDate: undefined,
   maxDate: undefined,
-  highlightDates: undefined,
-  locale: undefined
+  highlightDates: undefined
 };
 
 export default DatePicker;

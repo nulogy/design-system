@@ -183,7 +183,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
                   placeholder="DD Mon YYYY"
-                  value="10 lip 2019"
+                  value="10 Jul 2019"
                 />
                 <svg
                   aria-hidden="true"

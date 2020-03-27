@@ -4,7 +4,6 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, select } from "@storybook/addon-knobs";
 
 import { DatePicker } from ".";
-import { supportedDateLocales } from "../utils/datePickerLocales";
 
 const selectedDateExamples = [
   new Date("2019-01-01T05:00:00.000Z"),
@@ -64,6 +63,5 @@ storiesOf("DatePicker", module)
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
-      locale={select("locale", Object.keys(supportedDateLocales), "pl", "locales")}
     />
   ));

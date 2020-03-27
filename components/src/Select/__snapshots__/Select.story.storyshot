@@ -59,7 +59,7 @@ exports[`Storyshots Select Select 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-11-input"
+                          id="react-select-9-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -166,7 +166,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-26-input"
+                          id="react-select-24-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -225,7 +225,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-26-option-0"
+                      id="react-select-24-option-0"
                       tabindex="-1"
                     >
                       Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring
@@ -241,7 +241,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-26-option-1"
+                      id="react-select-24-option-1"
                       tabindex="-1"
                     >
                       Many words many words many words many words many words many words many words many words many words many words many words many words many words
@@ -318,7 +318,7 @@ exports[`Storyshots Select set to disabled 1`] = `
                           autocomplete="off"
                           autocorrect="off"
                           disabled=""
-                          id="react-select-17-input"
+                          id="react-select-15-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -452,7 +452,7 @@ exports[`Storyshots Select set to required 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-22-input"
+                            id="react-select-20-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -619,7 +619,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-28-input"
+                          id="react-select-26-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -938,7 +938,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-29-input"
+                            id="react-select-27-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -1258,7 +1258,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-30-input"
+                            id="react-select-28-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -1387,7 +1387,7 @@ exports[`Storyshots Select with a blank value 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-13-input"
+                          id="react-select-11-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1494,7 +1494,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-12-input"
+                          id="react-select-10-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1601,7 +1601,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-14-input"
+                          id="react-select-12-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1698,7 +1698,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-15-input"
+                          id="react-select-13-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1757,7 +1757,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-15-option-0"
+                      id="react-select-13-option-0"
                       tabindex="-1"
                     >
                       Accepted
@@ -1773,7 +1773,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-15-option-1"
+                      id="react-select-13-option-1"
                       tabindex="-1"
                     >
                       Assigned to a line
@@ -1789,7 +1789,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-15-option-2"
+                      id="react-select-13-option-2"
                       tabindex="-1"
                     >
                       On hold
@@ -1805,7 +1805,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-15-option-3"
+                      id="react-select-13-option-3"
                       tabindex="-1"
                     >
                       Rejected
@@ -1821,7 +1821,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-15-option-4"
+                      id="react-select-13-option-4"
                       tabindex="-1"
                     >
                       Open
@@ -1837,7 +1837,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-15-option-5"
+                      id="react-select-13-option-5"
                       tabindex="-1"
                     >
                       In progress
@@ -1853,7 +1853,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-15-option-6"
+                      id="react-select-13-option-6"
                       tabindex="-1"
                     >
                       In quarantine
@@ -2043,7 +2043,7 @@ exports[`Storyshots Select with error list 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-20-input"
+                          id="react-select-18-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -2132,400 +2132,6 @@ exports[`Storyshots Select with error list 1`] = `
                 Error message 2
               </li>
             </ul>
-          </div>
-        </div>
-      </label>
-    </div>
-    <br />
-    <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
-    >
-      <div
-        data-testid="select-container"
-      >
-        <div
-          class=" css-2b097c-container"
-        >
-          <div
-            data-testid="select-control"
-          >
-            <div
-              class=" css-1odmq7e-Control"
-            >
-              <div
-                class=" css-7zc8my"
-              >
-                <div
-                  class=" css-1yhx6vz-Placeholder"
-                >
-                  Please select inventory status
-                </div>
-                <div
-                  data-testid="select-input"
-                >
-                  <div
-                    class="css-17yls17-Input"
-                  >
-                    <div
-                      class=""
-                      style="display:inline-block"
-                    >
-                      <input
-                        aria-autocomplete="list"
-                        autocapitalize="none"
-                        autocomplete="off"
-                        autocorrect="off"
-                        id="react-select-21-input"
-                        spellcheck="false"
-                        style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                        tabindex="0"
-                        type="text"
-                        value=""
-                      />
-                      <div
-                        style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                class=" css-1hb7zxy-IndicatorsContainer"
-              >
-                <span
-                  class=" css-43ykx9-indicatorSeparator"
-                />
-                <div
-                  aria-hidden="true"
-                  class=" css-1fi275-indicatorContainer"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="css-6q0nyr-Svg"
-                    focusable="false"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    width="20"
-                  >
-                    <path
-                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-testid="select-dropdown"
-          >
-            <div
-              class=" css-6mfljk-Menu"
-            >
-              <div
-                class=" css-fthyjs-MenuList"
-              >
-                <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
-                  data="[object Object]"
-                  data-testid="select-option"
-                  label="Accepted"
-                  type="option"
-                  value="accepted"
-                >
-                  <div
-                    class=" css-o8533i-Option"
-                    id="react-select-21-option-0"
-                    tabindex="-1"
-                  >
-                    Accepted
-                  </div>
-                </div>
-                <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
-                  data="[object Object]"
-                  data-testid="select-option"
-                  label="Assigned to a line"
-                  type="option"
-                  value="assigned"
-                >
-                  <div
-                    class=" css-o8533i-Option"
-                    id="react-select-21-option-1"
-                    tabindex="-1"
-                  >
-                    Assigned to a line
-                  </div>
-                </div>
-                <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
-                  data="[object Object]"
-                  data-testid="select-option"
-                  label="On hold"
-                  type="option"
-                  value="hold"
-                >
-                  <div
-                    class=" css-o8533i-Option"
-                    id="react-select-21-option-2"
-                    tabindex="-1"
-                  >
-                    On hold
-                  </div>
-                </div>
-                <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
-                  data="[object Object]"
-                  data-testid="select-option"
-                  label="Rejected"
-                  type="option"
-                  value="rejected"
-                >
-                  <div
-                    class=" css-o8533i-Option"
-                    id="react-select-21-option-3"
-                    tabindex="-1"
-                  >
-                    Rejected
-                  </div>
-                </div>
-                <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
-                  data="[object Object]"
-                  data-testid="select-option"
-                  label="Open"
-                  type="option"
-                  value="open"
-                >
-                  <div
-                    class=" css-o8533i-Option"
-                    id="react-select-21-option-4"
-                    tabindex="-1"
-                  >
-                    Open
-                  </div>
-                </div>
-                <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
-                  data="[object Object]"
-                  data-testid="select-option"
-                  label="In progress"
-                  type="option"
-                  value="progress"
-                >
-                  <div
-                    class=" css-o8533i-Option"
-                    id="react-select-21-option-5"
-                    tabindex="-1"
-                  >
-                    In progress
-                  </div>
-                </div>
-                <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
-                  data="[object Object]"
-                  data-testid="select-option"
-                  label="In quarantine"
-                  type="option"
-                  value="quarantine"
-                >
-                  <div
-                    class=" css-o8533i-Option"
-                    id="react-select-21-option-6"
-                    tabindex="-1"
-                  >
-                    In quarantine
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-        color="#cc1439"
-      >
-        <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
-          color="currentColor"
-          fill="currentColor"
-          focusable="false"
-          height="24px"
-          icon="error"
-          mr="x1"
-          viewBox="0 0 24 24"
-          width="24px"
-        >
-          <path
-            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-          />
-        </svg>
-        <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
-        >
-          <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
-            color="currentColor"
-            font-size="16px"
-          >
-            Please select an inventory status
-          </p>
-          <ul
-            class="List-sc-1cqkmnl-0 diqcEx"
-            color="currentColor"
-          >
-            <li
-              class="ListItem-qqenhw-0 fGfFTP"
-              color="currentColor"
-            >
-              Error message 1
-            </li>
-            <li
-              class="ListItem-qqenhw-0 fGfFTP"
-              color="currentColor"
-            >
-              Error message 2
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Select with error message 1`] = `
-<div
-  style="padding:24px"
->
-  <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  >
-    <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
-    >
-      <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
-        style="display:block"
-      >
-        <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
-        >
-          <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
-          >
-            Inventory status
-          </span>
-        </div>
-        <div
-          data-testid="select-container"
-        >
-          <div
-            class=" css-2b097c-container"
-          >
-            <div
-              data-testid="select-control"
-            >
-              <div
-                class=" css-1j4q2ea-Control"
-              >
-                <div
-                  class=" css-7zc8my"
-                >
-                  <div
-                    class=" css-1yhx6vz-Placeholder"
-                  >
-                    Please select inventory status
-                  </div>
-                  <div
-                    data-testid="select-input"
-                  >
-                    <div
-                      class="css-17yls17-Input"
-                    >
-                      <div
-                        class=""
-                        style="display:inline-block"
-                      >
-                        <input
-                          aria-autocomplete="list"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          id="react-select-18-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
-                          type="text"
-                          value=""
-                        />
-                        <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
-                >
-                  <span
-                    class=" css-43ykx9-indicatorSeparator"
-                  />
-                  <div
-                    aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      class="css-6q0nyr-Svg"
-                      focusable="false"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      width="20"
-                    >
-                      <path
-                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-          color="#cc1439"
-        >
-          <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 QuoIa"
-            color="currentColor"
-            fill="currentColor"
-            focusable="false"
-            height="24px"
-            icon="error"
-            mr="x1"
-            viewBox="0 0 24 24"
-            width="24px"
-          >
-            <path
-              d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
-            />
-          </svg>
-          <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
-          >
-            <p
-              class="Text-sc-1wu7vpu-0 RbfMK"
-              color="currentColor"
-              font-size="16px"
-            >
-              Please select an inventory status
-            </p>
           </div>
         </div>
       </label>
@@ -2765,6 +2371,400 @@ exports[`Storyshots Select with error message 1`] = `
           >
             Please select an inventory status
           </p>
+          <ul
+            class="List-sc-1cqkmnl-0 diqcEx"
+            color="currentColor"
+          >
+            <li
+              class="ListItem-qqenhw-0 fGfFTP"
+              color="currentColor"
+            >
+              Error message 1
+            </li>
+            <li
+              class="ListItem-qqenhw-0 fGfFTP"
+              color="currentColor"
+            >
+              Error message 2
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select with error message 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <div
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+    >
+      <label
+        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
+        color="#011e38"
+        style="display:block"
+      >
+        <div
+          class="Box-sc-1qu1edy-0 ilQgHG"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Inventory status
+          </span>
+        </div>
+        <div
+          data-testid="select-container"
+        >
+          <div
+            class=" css-2b097c-container"
+          >
+            <div
+              data-testid="select-control"
+            >
+              <div
+                class=" css-1j4q2ea-Control"
+              >
+                <div
+                  class=" css-7zc8my"
+                >
+                  <div
+                    class=" css-1yhx6vz-Placeholder"
+                  >
+                    Please select inventory status
+                  </div>
+                  <div
+                    data-testid="select-input"
+                  >
+                    <div
+                      class="css-17yls17-Input"
+                    >
+                      <div
+                        class=""
+                        style="display:inline-block"
+                      >
+                        <input
+                          aria-autocomplete="list"
+                          autocapitalize="none"
+                          autocomplete="off"
+                          autocorrect="off"
+                          id="react-select-16-input"
+                          spellcheck="false"
+                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                          tabindex="0"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class=" css-1hb7zxy-IndicatorsContainer"
+                >
+                  <span
+                    class=" css-43ykx9-indicatorSeparator"
+                  />
+                  <div
+                    aria-hidden="true"
+                    class=" css-1fi275-indicatorContainer"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="css-6q0nyr-Svg"
+                      focusable="false"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      width="20"
+                    >
+                      <path
+                        d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+          color="#cc1439"
+        >
+          <svg
+            aria-hidden="true"
+            class="Icon-fc7twp-0 QuoIa"
+            color="currentColor"
+            fill="currentColor"
+            focusable="false"
+            height="24px"
+            icon="error"
+            mr="x1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+            />
+          </svg>
+          <div
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+          >
+            <p
+              class="Text-sc-1wu7vpu-0 RbfMK"
+              color="currentColor"
+              font-size="16px"
+            >
+              Please select an inventory status
+            </p>
+          </div>
+        </div>
+      </label>
+    </div>
+    <br />
+    <div
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+    >
+      <div
+        data-testid="select-container"
+      >
+        <div
+          class=" css-2b097c-container"
+        >
+          <div
+            data-testid="select-control"
+          >
+            <div
+              class=" css-1odmq7e-Control"
+            >
+              <div
+                class=" css-7zc8my"
+              >
+                <div
+                  class=" css-1yhx6vz-Placeholder"
+                >
+                  Please select inventory status
+                </div>
+                <div
+                  data-testid="select-input"
+                >
+                  <div
+                    class="css-17yls17-Input"
+                  >
+                    <div
+                      class=""
+                      style="display:inline-block"
+                    >
+                      <input
+                        aria-autocomplete="list"
+                        autocapitalize="none"
+                        autocomplete="off"
+                        autocorrect="off"
+                        id="react-select-17-input"
+                        spellcheck="false"
+                        style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                        tabindex="0"
+                        type="text"
+                        value=""
+                      />
+                      <div
+                        style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class=" css-1hb7zxy-IndicatorsContainer"
+              >
+                <span
+                  class=" css-43ykx9-indicatorSeparator"
+                />
+                <div
+                  aria-hidden="true"
+                  class=" css-1fi275-indicatorContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="css-6q0nyr-Svg"
+                    focusable="false"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    width="20"
+                  >
+                    <path
+                      d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            data-testid="select-dropdown"
+          >
+            <div
+              class=" css-6mfljk-Menu"
+            >
+              <div
+                class=" css-fthyjs-MenuList"
+              >
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Accepted"
+                  type="option"
+                  value="accepted"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-17-option-0"
+                    tabindex="-1"
+                  >
+                    Accepted
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Assigned to a line"
+                  type="option"
+                  value="assigned"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-17-option-1"
+                    tabindex="-1"
+                  >
+                    Assigned to a line
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="On hold"
+                  type="option"
+                  value="hold"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-17-option-2"
+                    tabindex="-1"
+                  >
+                    On hold
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Rejected"
+                  type="option"
+                  value="rejected"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-17-option-3"
+                    tabindex="-1"
+                  >
+                    Rejected
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="Open"
+                  type="option"
+                  value="open"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-17-option-4"
+                    tabindex="-1"
+                  >
+                    Open
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="In progress"
+                  type="option"
+                  value="progress"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-17-option-5"
+                    tabindex="-1"
+                  >
+                    In progress
+                  </div>
+                </div>
+                <div
+                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  data="[object Object]"
+                  data-testid="select-option"
+                  label="In quarantine"
+                  type="option"
+                  value="quarantine"
+                >
+                  <div
+                    class=" css-o8533i-Option"
+                    id="react-select-17-option-6"
+                    tabindex="-1"
+                  >
+                    In quarantine
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        color="#cc1439"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 QuoIa"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="error"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+        >
+          <p
+            class="Text-sc-1wu7vpu-0 RbfMK"
+            color="currentColor"
+            font-size="16px"
+          >
+            Please select an inventory status
+          </p>
         </div>
       </div>
     </div>
@@ -2835,7 +2835,7 @@ exports[`Storyshots Select with fixed positioning 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-31-input"
+                            id="react-select-29-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -2950,7 +2950,7 @@ exports[`Storyshots Select with helpText 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-23-input"
+                          id="react-select-21-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -3110,7 +3110,7 @@ exports[`Storyshots Select with multiselect 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-27-input"
+                          id="react-select-25-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -3238,7 +3238,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-25-input"
+                          id="react-select-23-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -3297,7 +3297,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-25-option-0"
+                      id="react-select-23-option-0"
                       tabindex="-1"
                     >
                       Accepted
@@ -3313,7 +3313,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-25-option-1"
+                      id="react-select-23-option-1"
                       tabindex="-1"
                     >
                       Assigned to a line
@@ -3329,7 +3329,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-25-option-2"
+                      id="react-select-23-option-2"
                       tabindex="-1"
                     >
                       On hold
@@ -3345,7 +3345,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-25-option-3"
+                      id="react-select-23-option-3"
                       tabindex="-1"
                     >
                       Rejected
@@ -3361,7 +3361,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-25-option-4"
+                      id="react-select-23-option-4"
                       tabindex="-1"
                     >
                       Open
@@ -3377,7 +3377,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-25-option-5"
+                      id="react-select-23-option-5"
                       tabindex="-1"
                     >
                       In progress
@@ -3393,7 +3393,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-o8533i-Option"
-                      id="react-select-25-option-6"
+                      id="react-select-23-option-6"
                       tabindex="-1"
                     >
                       In quarantine
@@ -3469,7 +3469,7 @@ exports[`Storyshots Select with state 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-16-input"
+                          id="react-select-14-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
