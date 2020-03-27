@@ -35,7 +35,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.0.2](https://github.com/nulogy/design-system/compare/v2.0.1...v2.0.2) (2020-03-26)
 
-**Note:** Version bump only for package @nulogy/nds
+### Bug Fixes
+
+* Fix styles when modal has no footer content ([#590](https://github.com/nulogy/design-system/issues/590))
 
 
 
