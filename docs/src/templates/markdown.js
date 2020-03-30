@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import { Title, Box } from "@nulogy/components";
 import styled from "styled-components";
+import * as tokens from "@nulogy/tokens";
 import { Intro, IntroText, Layout } from "../components";
 
 const MarkdownStyles = styled.div`
@@ -18,11 +19,10 @@ const MarkdownStyles = styled.div`
   }
   a,
   a:visited {
-    color: tokens.color_base_blue;
-    text-decoration: none;
+    color: ${tokens.color_base_blue};
   }
   a:hover {
-    color: tokens.color_base_dark_blue;
+    color: ${tokens.color_base_dark_blue};
   }
 `;
 
