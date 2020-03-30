@@ -6,21 +6,21 @@ intro: "A guide to writing automated tests for NDS components. Here you can find
 
 ## Unit Tests
 
-Unit tests check if small pieces of our code do what they are supposed to do, e.g “When a user clicks a button does that fire the correct onClickHandler?”. They’re located alongside the component file, written using Jest and React-Testing-Library.
+Unit tests check if small pieces of our code do what they are supposed to do, e.g “When a user clicks a button does that fire the correct onClickHandler?”. They’re located alongside the component file, written using [Jest](https://jestjs.io/) and [React-Testing-Library](https://testing-library.com/docs/react-testing-library/intro).
 
-[View an example](https://github.com/nulogy/design-system/blob/master/components/src/Select/Select.spec.js) of unit testing our Select component.
+- [Unit testing example](https://github.com/nulogy/design-system/blob/master/components/src/Select/Select.spec.js)
 
 ## End-to-end Tests
 
-End-to-end tests are how we check our components are behaving correctly e.g: “When a user clicks a button does that open a dropdown menu?” We write these with Cypress in our components-e2e package.
+End-to-end tests are how we check our components are behaving correctly e.g: “When a user clicks a button does that open a dropdown menu?” We write these with [Cypress](https://www.cypress.io/) in our [components-e2e](https://github.com/nulogy/design-system/tree/master/components-e2e) package.
 
-[View an example](https://github.com/nulogy/design-system/blob/master/components-e2e/cypress/integration/components/Select.spec.js) of e2e testing our Select component.
+- [e2e testing example](https://github.com/nulogy/design-system/blob/master/components-e2e/cypress/integration/components/Select.spec.js)
 
 ## Selector Priority
 
 There are lots of ways to interact with an element in the dom, but not all are as resilient to change as others. We try to write our selectors in a way that resembles how a user interacts with components or pages. Our users don’t care about the class names we use, so neither should our tests.
 
-In light of this, we try to use selectors based on the following priority, as recommended by react-testing-library:
+In light of this, we try to use selectors based on the following priority, as recommended by [react-testing-library](https://testing-library.com/docs/guide-which-query):
 
 - Label
 - Placeholder
@@ -77,4 +77,3 @@ it("checks the checkbox when the checkbox is clicked", () => {
 ### Related Reading
 
 - [Making your UI tests resilient to change](https://kentcdodds.com/blog/making-your-ui-tests-resilient-to-change)
-- [Which query should I use?](https://testing-library.com/docs/guide-which-query)
