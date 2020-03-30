@@ -73,14 +73,14 @@ const togglePropsRows = [
     name: "toggled",
     type: "Boolean",
     defaultValue: "undefined",
-    description: "State of the toggle, use to control the toggle component."
+    description: "The value of the toggle when using as a controlled component."
   },
   {
     name: "onChange",
     type: "Function",
     defaultValue: "null",
     description:
-      "Function that triggers when toggle is clicked, used to control component."
+      "Function that triggers when toggle is clicked, use with the toggled prop for a controlled component."
   },
   {
     name: "required",
