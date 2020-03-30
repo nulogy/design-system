@@ -4,9 +4,7 @@
   "useWorkspaces": true,
   "command": {
     "version": {
-      "createRelease": "github"
-    },
-    "publish": {
+      "createRelease": "github",
       "ignoreChanges": [
         "**/__snapshots__/**",
         "**/**.spec.js",
@@ -14,11 +12,11 @@
         "*.md",
         "./docs/*",
         "./components-e2e/*"
-      ],
-      "conventionalCommits": true,
-      "allowBranch": [
-        "master"
       ]
+    },
+    "publish": {
+      "conventionalCommits": true,
+      "allowBranch": ["master"]
     }
   }
 }
