@@ -1,13 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { format } from "date-fns";
 
 import theme from "../theme";
-
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import { ControlIcon } from "../Button";
-import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
+import { localizedFormat } from "../utils/localized-date-fns";
 
 const DatePickerHeader = ({
   date,
@@ -26,7 +24,7 @@ const DatePickerHeader = ({
         disabled={prevMonthButtonDisabled}
       />
       <Text fontWeight="bold" color={theme.colors.blackBlue} px="x1" ml="half" fontSize="large">
-        {format(date, "MMMM yyyy", { locale: NDS_TO_DATE_FN_LOCALES_MAP[locale] })}
+        {localizedFormat(date, "MMMM yyyy", locale)}
       </Text>
       <ControlIcon
         icon="rightArrow"

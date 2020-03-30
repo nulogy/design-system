@@ -13,8 +13,8 @@ import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { Icon } from "../Icon";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
-import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
+import { localizedFormat } from "../utils/localized-date-fns";
 
 const DEFAULT_DATE_FORMAT = "MMM yyyy";
 const DEFAULT_PLACEHOLDER = "Mon YYYY";
@@ -54,7 +54,7 @@ class MonthPicker extends Component {
         start: isSameYear(currentDate, minDate) ? minDate : new Date(currentYear, 1),
         end: isSameYear(currentDate, maxDate) ? maxDate : new Date(currentYear, 12)
       }).map(date => ({
-        label: format(date, STANDALONE_MONTH_FORMAT, { locale: NDS_TO_DATE_FN_LOCALES_MAP[locale] }),
+        label: localizedFormat(date, STANDALONE_MONTH_FORMAT, locale),
         date
       }));
 

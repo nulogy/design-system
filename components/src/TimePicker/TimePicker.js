@@ -1,5 +1,5 @@
 import React from "react";
-import { format, setMinutes } from "date-fns";
+import { setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { components } from "react-select";
@@ -11,7 +11,7 @@ import { TimePickerStyles } from "./TimePickerStyles";
 import { Icon } from "../Icon";
 import SelectOption from "../Select/SelectOption";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
-import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
+import { localizedFormat } from "../utils/localized-date-fns";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 
@@ -73,8 +73,8 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
   }
   return allTimes
     .map(date => ({
-      value: format(date, MILITARY_TIME_FORMAT, { locale: NDS_TO_DATE_FN_LOCALES_MAP[locale] }),
-      label: format(date, timeFormat, { locale: NDS_TO_DATE_FN_LOCALES_MAP[locale] })
+      value: localizedFormat(date, MILITARY_TIME_FORMAT, locale),
+      label: localizedFormat(date, timeFormat, locale)
     }))
     .sort((a, b) => getIntervalFromTime(a.value, interval) - getIntervalFromTime(b.value, interval))
     .slice(startingInterval, finalInterval);

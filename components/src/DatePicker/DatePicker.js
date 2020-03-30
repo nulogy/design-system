@@ -116,7 +116,7 @@ class DatePicker extends Component {
               dateFormat={dateFormat}
               onChange={this.handleSelectedDateChange}
               customInput={customInput}
-              renderCustomHeader={this.renderHeader(locale)}
+              renderCustomHeader={this.renderHeader({ locale })}
               disabledKeyboardNavigation
               strictParsing
               minDate={minDate}
