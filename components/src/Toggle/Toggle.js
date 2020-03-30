@@ -6,7 +6,7 @@ import { HelpText, RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
 import { Text } from "../Type";
 import theme from "../theme";
-import { ClickInputLabel, omit } from "../utils";
+import { ClickInputLabel } from "../utils";
 import ToggleButton from "./ToggleButton";
 
 const labelTextStyles = {
