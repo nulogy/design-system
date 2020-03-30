@@ -55,7 +55,7 @@ NDSProvider.propTypes = {
 
 NDSProvider.defaultProps = {
   theme: defaultTheme,
-  locale: "en"
+  locale: "en_US"
 };
 
 export default NDSProvider;
