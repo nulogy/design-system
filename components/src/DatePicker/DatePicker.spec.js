@@ -1,5 +1,7 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
+
+import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { DatePicker } from ".";
 
 describe("DatePicker", () => {
@@ -8,7 +10,7 @@ describe("DatePicker", () => {
     const onInputChange = jest.fn();
 
     it("returns the selected date when the selection has changed", () => {
-      const { container, getByLabelText } = render(
+      const { container, getByLabelText } = renderWithNDSProvider(
         <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onInputChange={onInputChange} />
       );
       const input = getByLabelText("select a date");
@@ -21,7 +23,7 @@ describe("DatePicker", () => {
 
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Date";
-      const { getByLabelText } = render(
+      const { getByLabelText } = renderWithNDSProvider(
         <DatePicker
           selected={new Date("Fri, 01 Jan 2019")}
           onChange={onChange}

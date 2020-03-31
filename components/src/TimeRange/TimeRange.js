@@ -21,7 +21,6 @@ const TimeRange = ({
   minTime,
   maxTime,
   interval,
-  locale,
   startAriaLabel,
   endAriaLabel
 }) => {
@@ -72,7 +71,6 @@ const TimeRange = ({
       minTime={minTime}
       maxTime={endTime || maxTime}
       interval={interval}
-      locale={locale}
       aria-label={startAriaLabel || t("select a start time")}
     />
   );
@@ -86,7 +84,6 @@ const TimeRange = ({
       maxTime={maxTime}
       minTime={startTime || minTime}
       interval={interval}
-      locale={locale}
       aria-label={endAriaLabel || t("select an end time")}
     />
   );
@@ -122,7 +119,6 @@ TimeRange.propTypes = {
   minTime: PropTypes.string,
   maxTime: PropTypes.string,
   interval: PropTypes.number,
-  locale: PropTypes.string,
   startAriaLabel: PropTypes.string,
   endAriaLabel: PropTypes.string
 };
@@ -143,7 +139,6 @@ TimeRange.defaultProps = {
   minTime: null,
   maxTime: null,
   interval: undefined,
-  locale: undefined,
   startAriaLabel: undefined,
   endAriaLabel: undefined
 };

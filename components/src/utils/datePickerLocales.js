@@ -1,7 +1,5 @@
 import { registerLocale } from "react-datepicker";
-import { enUS, de, fr, es, ptBR, da, pl } from "date-fns/locale";
-
-export const supportedDateLocales = { enUS, de, fr, es, ptBR, da, pl };
+import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 
 export const registerDatePickerLocales = () =>
-  Object.keys(supportedDateLocales).map(locale => registerLocale(locale, supportedDateLocales[locale]));
+  Object.keys(NDS_TO_DATE_FN_LOCALES_MAP).map(locale => registerLocale(locale, NDS_TO_DATE_FN_LOCALES_MAP[locale]));

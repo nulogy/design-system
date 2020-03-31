@@ -17,7 +17,6 @@ import {
   PropsTable
 } from "../../components";
 import selectProps from "../../shared/selectProps";
-import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -45,7 +44,6 @@ const propsRows = [
     defaultValue: "undefined",
     description: "The latest time that can be selected."
   },
-  localeProp,
   ...selectProps.filter(prop => prop.name !== "options")
 ];
 

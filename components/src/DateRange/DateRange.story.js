@@ -1,10 +1,9 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { withKnobs } from "@storybook/addon-knobs";
 
 import DateRange from "./DateRange";
-import { supportedDateLocales } from "../utils/datePickerLocales";
 
 storiesOf("DateRange", module)
   .addDecorator(withKnobs)
@@ -95,18 +94,5 @@ storiesOf("DateRange", module)
       showTimes
       defaultStartTime="13:30"
       defaultEndTime="10:30"
-    />
-  ))
-  .add("custom locale", () => (
-    <DateRange
-      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
-      defaultEndDate={new Date("2019-09-10T05:00:00.000Z")}
-      defaultStartTime="09:30"
-      defaultEndTime="18:45"
-      onRangeChange={action("range changed")}
-      onStartDateChange={action("start date changed")}
-      onEndDateChange={action("end date changed")}
-      showTimes
-      locale={select("locale", Object.keys(supportedDateLocales), "pl", "locales")}
     />
   ));

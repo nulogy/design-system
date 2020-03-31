@@ -12,7 +12,9 @@ import theme from "../theme";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { Icon } from "../Icon";
-import { registerDatePickerLocales, supportedDateLocales } from "../utils/datePickerLocales";
+import { registerDatePickerLocales } from "../utils/datePickerLocales";
+import { LocaleContext } from "../NDSProvider/LocaleContext";
+import { localizedFormat } from "../utils/localized-date-fns";
 
 const DEFAULT_DATE_FORMAT = "MMM yyyy";
 const DEFAULT_PLACEHOLDER = "Mon YYYY";
@@ -42,17 +44,17 @@ class MonthPicker extends Component {
     }
   };
 
-  autoCompleteMonth = (value, currentDate) => {
+  autoCompleteMonth = (value, currentDate, locale) => {
     if (value.length > 2) {
       const STANDALONE_MONTH_FORMAT = "LLL";
-      const { minDate, maxDate, locale } = this.props;
+      const { minDate, maxDate } = this.props;
       const currentYear = Number(format(currentDate, "yyyy"));
 
       const months = eachMonthOfInterval({
         start: isSameYear(currentDate, minDate) ? minDate : new Date(currentYear, 1),
         end: isSameYear(currentDate, maxDate) ? maxDate : new Date(currentYear, 12)
       }).map(date => ({
-        label: format(date, STANDALONE_MONTH_FORMAT, { locale: supportedDateLocales[locale] }),
+        label: localizedFormat(date, STANDALONE_MONTH_FORMAT, locale),
         date
       }));
 
@@ -64,12 +66,12 @@ class MonthPicker extends Component {
     }
   };
 
-  handleInputChange = event => {
+  handleInputChange = (event, locale) => {
     const { value } = event.target;
     const { onInputChange, disableAutocomplete } = this.props;
     const { calendarDate } = this.state;
     if (!disableAutocomplete) {
-      this.debounceAutocomplete(value, calendarDate);
+      this.debounceAutocomplete(value, calendarDate, locale);
     }
 
     if (onInputChange) {
@@ -87,16 +89,7 @@ class MonthPicker extends Component {
   };
 
   render() {
-    const {
-      dateFormat,
-      errorMessage,
-      errorList,
-      inputProps,
-      minDate,
-      maxDate,
-      locale,
-      "aria-label": ariaLabel
-    } = this.props;
+    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, "aria-label": ariaLabel } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -104,34 +97,40 @@ class MonthPicker extends Component {
       placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
     };
 
-    const customInput = (
-      <DatePickerInput
-        aria-label={ariaLabel}
-        inputProps={customInputProps}
-        dateFormat={dateFormat}
-        onInputChange={this.handleInputChange}
-      />
-    );
-
     return (
       <Field className="nds-month-picker" data-testid="month-picker">
         <MonthPickerStyles />
-        <ReactDatePicker
-          selected={selectedDate}
-          openToDate={selectedDate}
-          dateFormat={dateFormat}
-          onChange={this.handleSelectedDateChange}
-          customInput={customInput}
-          previousYearButtonLabel={<Icon icon="leftArrow" size={theme.space.x4} />}
-          nextYearButtonLabel={<Icon icon="rightArrow" size={theme.space.x4} />}
-          excludeDates={[selectedDate]}
-          disabledKeyboardNavigation
-          minDate={minDate}
-          maxDate={maxDate}
-          strictParsing
-          showMonthYearPicker
-          locale={locale}
-        />
+        <LocaleContext.Consumer>
+          {({ locale }) => {
+            return (
+              <ReactDatePicker
+                selected={selectedDate}
+                openToDate={selectedDate}
+                dateFormat={dateFormat}
+                onChange={this.handleSelectedDateChange}
+                // prettier-ignore
+                customInput={(
+                  <DatePickerInput
+                    aria-label={ariaLabel}
+                    inputProps={customInputProps}
+                    dateFormat={dateFormat}
+                    onInputChange={e => this.handleInputChange(e, locale)}
+                  />
+                )
+                }
+                previousYearButtonLabel={<Icon icon="leftArrow" size={theme.space.x4} />}
+                nextYearButtonLabel={<Icon icon="rightArrow" size={theme.space.x4} />}
+                excludeDates={[selectedDate]}
+                disabledKeyboardNavigation
+                minDate={minDate}
+                maxDate={maxDate}
+                locale={locale}
+                strictParsing
+                showMonthYearPicker
+              />
+            );
+          }}
+        </LocaleContext.Consumer>
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
     );
@@ -148,7 +147,6 @@ MonthPicker.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
-  locale: PropTypes.string,
   disableAutocomplete: PropTypes.bool,
   "aria-label": PropTypes.string
 };
@@ -163,7 +161,6 @@ MonthPicker.defaultProps = {
   errorList: undefined,
   minDate: undefined,
   maxDate: undefined,
-  locale: undefined,
   disableAutocomplete: false,
   "aria-label": undefined
 };

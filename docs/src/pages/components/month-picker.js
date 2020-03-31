@@ -17,7 +17,6 @@ import {
   PropsTable
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
-import localeProp from "../../shared/localeProp";
 
 const propsRows = [
   {
@@ -57,7 +56,6 @@ const propsRows = [
     defaultValue: "undefined",
     description: "The latest date that can be selected"
   },
-  localeProp,
   {
     name: "disableAutocomplete",
     type: "boolean",
