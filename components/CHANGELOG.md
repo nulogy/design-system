@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/nulogy/design-system/compare/v2.0.6...v2.1.0) (2020-03-31)
+
+
+### Features
+
+* no longer need to pass locale prop to date components it will be passed from NDSProvider([#595](https://github.com/nulogy/design-system/issues/595)) ([edbe136](https://github.com/nulogy/design-system/commit/edbe1363a476a78d5f995e090f64bf9064cfbadf))
+
+
+
+
+
 ## [2.0.5](https://github.com/nulogy/design-system/compare/v2.0.4...v2.0.5) (2020-03-27)
 
 

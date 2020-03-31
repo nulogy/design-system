@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/nulogy/design-system/compare/v2.0.6...v2.1.0) (2020-03-31)
+
+**Note:** Version bump only for package @nulogy/components-e2e
+
+
+
+
+
 ## [2.0.5](https://github.com/nulogy/design-system/compare/v2.0.4...v2.0.5) (2020-03-27)
 
 **Note:** Version bump only for package @nulogy/components-e2e
