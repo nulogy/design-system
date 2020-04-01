@@ -20,8 +20,10 @@
   padding: $size-base-x-2;
 }
 
-tbody .Table__row:hover {
-  background: $color-base-white-grey;
+table tbody .Table__row:hover {
+  .Table__cell {
+    background: $color-base-white-grey;
+  }
 }
 
 .Table--compact {
@@ -39,7 +41,8 @@ tbody .Table__row:hover {
 .Table__message {
   margin: 0;
   font-size: $size-font-small;
-  padding: $size-base-x-1 0;
+  color: $color-base-dark-grey;
+  padding: $size-base-x-3 0;
 }
 
 .Table__heading--selectable {

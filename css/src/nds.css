@@ -1147,7 +1147,7 @@ img {
   padding: 16px;
 }
 
-tbody .Table__row:hover {
+table tbody .Table__row:hover .Table__cell {
   background: #f0f2f5;
 }
 
@@ -1166,7 +1166,8 @@ tbody .Table__row:hover {
 .Table__message {
   margin: 0;
   font-size: 14px;
-  padding: 8px 0;
+  color: #434d59;
+  padding: 24px 0;
 }
 
 .Table__heading--selectable {
