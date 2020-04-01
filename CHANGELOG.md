@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://github.com/nulogy/design-system/compare/v2.1.0...v2.1.1) (2020-04-01)
+
+
+### Bug Fixes
+
+* Toggle was not responding to toggled prop value ([#596](https://github.com/nulogy/design-system/issues/596)) ([68b5380](https://github.com/nulogy/design-system/commit/68b538049ede48c6a098e584e3fab2a3fdc27cc7))
+
+
+
+
+
 # [2.1.0](https://github.com/nulogy/design-system/compare/v2.0.6...v2.1.0) (2020-03-31)
 
 
