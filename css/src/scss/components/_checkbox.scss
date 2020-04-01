@@ -3,7 +3,6 @@
 ----------------------------------------- */
 
 .Checkbox {
-  cursor: pointer;
   display: flex;
   width: auto;
   user-select: none;
@@ -12,6 +11,7 @@
 }
 
 .Checkbox__input {
+  cursor: pointer;
   height: $size-base-x-2;
   width: $size-base-x-2;
   -webkit-appearance: none;
@@ -46,6 +46,7 @@
     color: #fff;
   }
   &:disabled {
+    cursor: default;
     border: 1px solid $color-base-light-grey;
     background-color: $color-base-white-grey;
     &:checked {
@@ -53,15 +54,17 @@
       background-color: $color-base-light-grey;
     }
     & + .Checkbox__Text {
+      cursor: default;
       opacity: 0.33;
     }
   }
 }
 
 .Checkbox__Text {
+  cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: $size-base-x-1;
+  padding-left: $size-base-x-1;
   font-size: $size-base-x-2;
   line-height: 1.5;
 }
