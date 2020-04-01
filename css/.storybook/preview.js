@@ -1,4 +1,4 @@
-import { configure, addParameters } from "@storybook/html";
+import { configure, addParameters, addDecorator } from "@storybook/html";
 import { create } from "@storybook/theming";
 import "../src/nds.css";
 
@@ -9,3 +9,5 @@ addParameters({
     })
   }
 });
+
+addDecorator(story => `<div style="padding:24px;">${story()}</div>`);
