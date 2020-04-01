@@ -11,13 +11,13 @@
 }
 
 .Table__heading {
-  font-weight: normal;
+  font-weight: $weight-font-normal;
   padding: $size-base-x-2;
-  border-bottom: 1px solid rgb(228, 231, 235);
+  border-bottom: 1px solid $color-base-light-grey;
 }
 
 .Table__cell {
-  padding: 16px;
+  padding: $size-base-x-2;
 }
 
 tbody .Table__row:hover {
@@ -33,5 +33,30 @@ tbody .Table__row:hover {
   }
   .Table__cell {
     padding: $size-base-x-1;
+  }
+}
+
+.Table__message {
+  margin: 0;
+  font-size: $size-font-small;
+  padding: $size-base-x-1 0;
+}
+
+.Table__heading--selectable {
+  width: 30px;
+}
+
+.Table__section {
+  background-color: $color-base-light-blue;
+  padding: $size-base-x-1 $size-base-x-2;
+  font-weight: $weight-font-bold;
+  color: $color-base-black-blue;
+}
+
+.Table__footer {
+  border-top: 1px solid $color-base-light-grey;
+  &-heading {
+    font-weight: $weight-font-normal;
+    padding: $size-base-x-2;
   }
 }
