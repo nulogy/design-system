@@ -1,10 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import { boolean } from "@storybook/addon-knobs";
 import { Toggle } from "../index";
 
 storiesOf("Toggle", module)
-  .add("Toggle", () => <Toggle onChange={action("on change")} />)
+  .add("Toggle", () => <Toggle />)
   .add("Toggle with all props", () => (
     <Toggle
       labelText="Toggle"
@@ -48,8 +49,11 @@ storiesOf("Toggle", module)
     />
   ))
   .add("Controlled Toggle", () => (
-    <>
-      <Toggle labelText="Toggle" toggled onText="on" offText="off" onChange={action("on change")} />
-      <Toggle labelText="Toggle" toggled={false} onText="on" offText="off" onChange={action("on change")} />
-    </>
+    <Toggle
+      labelText="Controlled Toggle"
+      toggled={boolean("Toggled", false)}
+      onText="on"
+      offText="off"
+      onChange={action("on change")}
+    />
   ));

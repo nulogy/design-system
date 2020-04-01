@@ -747,7 +747,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
         >
           <div
             id="Job Visibility-label"
@@ -768,6 +768,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 class="ToggleButton__Switch-asgrb8-1 irhlNv"
               >
                 <input
+                  aria-invalid="false"
                   aria-labelledby="Job Visibility-label"
                   aria-required="false"
                   class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
@@ -902,7 +903,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle-sc-1oqd206-0 lmHrFj"
+          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
         >
           <div
             id="Reject visibility-label"
@@ -924,6 +925,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 class="ToggleButton__Switch-asgrb8-1 irhlNv"
               >
                 <input
+                  aria-invalid="false"
                   aria-labelledby="Reject visibility-label"
                   aria-required="false"
                   class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"

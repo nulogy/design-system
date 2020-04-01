@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
@@ -6,7 +6,7 @@ import { HelpText, RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
 import { Text } from "../Type";
 import theme from "../theme";
-import { ClickInputLabel, omit } from "../utils";
+import { ClickInputLabel } from "../utils";
 import ToggleButton from "./ToggleButton";
 
 const labelTextStyles = {
@@ -44,23 +44,15 @@ MaybeToggleTitle.defaultProps = {
 };
 
 class BaseToggle extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
-    this.state = {
-      toggled: !!(props.toggled || props.defaultToggled)
-    };
-    this.handleClick = this.handleClick.bind(this);
     this.inputRef = React.createRef();
   }
 
-  handleClick(e) {
-    const { toggled } = this.props;
-    if (toggled === undefined) {
-      this.setState({
-        toggled: e.target.checked
-      });
-    }
-  }
+  handleClick = e => {
+    const { onClick } = this.props;
+    onClick(e);
+  };
 
   render() {
     const {
@@ -75,9 +67,9 @@ class BaseToggle extends React.Component {
       labelText,
       requirementText,
       helpText,
+      toggled,
       ...props
-    } = omit(this.props, "defaultToggled");
-    const { toggled } = this.state;
+    } = this.props;
     return (
       <Field className={className}>
         <MaybeToggleTitle
@@ -123,7 +115,6 @@ class BaseToggle extends React.Component {
 BaseToggle.propTypes = {
   onChange: PropTypes.func,
   toggled: PropTypes.bool,
-  defaultToggled: PropTypes.bool,
   disabled: PropTypes.bool,
   onText: PropTypes.string,
   offText: PropTypes.string,
@@ -133,13 +124,14 @@ BaseToggle.propTypes = {
   required: PropTypes.bool,
   helpText: PropTypes.node,
   labelText: PropTypes.string,
-  requirementText: PropTypes.string
+  requirementText: PropTypes.string,
+  error: PropTypes.bool,
+  onClick: PropTypes.func
 };
 
 BaseToggle.defaultProps = {
   onChange: () => {},
   toggled: undefined,
-  defaultToggled: undefined,
   disabled: false,
   onText: null,
   offText: null,
@@ -149,12 +141,48 @@ BaseToggle.defaultProps = {
   required: false,
   helpText: null,
   labelText: null,
-  requirementText: null
+  requirementText: null,
+  error: false,
+  onClick: () => {}
 };
 
-const Toggle = styled(BaseToggle)({
+const StyledToggle = styled(BaseToggle)({
   padding: `${theme.space.half} 0`,
   alignItems: "flex-start"
 });
+
+const StatefulToggle = ({ defaultToggled, onClick, ...props }) => {
+  const [toggled, setToggled] = useState(defaultToggled);
+
+  const handleClick = e => {
+    setToggled(!toggled);
+    onClick(e);
+  };
+
+  return <StyledToggle toggled={toggled} onClick={handleClick} {...props} />;
+};
+
+StatefulToggle.propTypes = {
+  defaultToggled: PropTypes.bool,
+  onClick: PropTypes.func
+};
+
+StatefulToggle.defaultProps = {
+  defaultToggled: undefined,
+  onClick: () => {}
+};
+
+const Toggle = ({ toggled, ...props }) =>
+  toggled === undefined ? <StatefulToggle {...props} /> : <StyledToggle toggled={toggled} {...props} />;
+
+Toggle.propTypes = {
+  ...StatefulToggle.propTypes,
+  ...BaseToggle.propTypes
+};
+
+Toggle.defaultProps = {
+  ...StatefulToggle.defaultProps,
+  ...BaseToggle.defaultProps
+};
 
 export default Toggle;
