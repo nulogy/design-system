@@ -21,11 +21,11 @@
 }
 
 .nds-rounded-corners {
-  border-radius: 4px;
+  border-radius: 4px !important;
 }
 
 .nds-rounded-corners--small {
-  border-radius: 2px;
+  border-radius: 2px !important;
 }
 
 /* Text colour and background modifiers
@@ -33,115 +33,115 @@
   .background--light-green {color: background-green;)
 */
 .nds-text--black {
-  color: #011e38;
+  color: #011e38 !important;
 }
 
 .nds-text--black-blue {
-  color: #122b47;
+  color: #122b47 !important;
 }
 
 .nds-text--dark-blue {
-  color: #00438f;
+  color: #00438f !important;
 }
 
 .nds-text--blue {
-  color: #216beb;
+  color: #216beb !important;
 }
 
 .nds-text--light-blue {
-  color: #e1ebfa;
+  color: #e1ebfa !important;
 }
 
 .nds-text--dark-grey {
-  color: #434d59;
+  color: #434d59 !important;
 }
 
 .nds-text--base-grey {
-  color: #c0c8d1;
+  color: #c0c8d1 !important;
 }
 
 .nds-text--light-grey {
-  color: #e4e7eb;
+  color: #e4e7eb !important;
 }
 
 .nds-text--white-grey {
-  color: #f0f2f5;
+  color: #f0f2f5 !important;
 }
 
 .nds-text--white {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .nds-text--yellow {
-  color: #ffbb00;
+  color: #ffbb00 !important;
 }
 
 .nds-text--green {
-  color: #008059;
+  color: #008059 !important;
 }
 
 .nds-text--red {
-  color: #cc1439;
+  color: #cc1439 !important;
 }
 
 .nds-background--black {
-  background: #011e38;
+  background: #011e38 !important;
 }
 
 .nds-background--black-blue {
-  background: #122b47;
+  background: #122b47 !important;
 }
 
 .nds-background--dark-blue {
-  background: #00438f;
+  background: #00438f !important;
 }
 
 .nds-background--blue {
-  background: #216beb;
+  background: #216beb !important;
 }
 
 .nds-background--light-blue {
-  background: #e1ebfa;
+  background: #e1ebfa !important;
 }
 
 .nds-background--dark-grey {
-  background: #434d59;
+  background: #434d59 !important;
 }
 
 .nds-background--base-grey {
-  background: #c0c8d1;
+  background: #c0c8d1 !important;
 }
 
 .nds-background--light-grey {
-  background: #e4e7eb;
+  background: #e4e7eb !important;
 }
 
 .nds-background--white-grey {
-  background: #f0f2f5;
+  background: #f0f2f5 !important;
 }
 
 .nds-background--white {
-  background: #ffffff;
+  background: #ffffff !important;
 }
 
 .nds-background--yellow {
-  background: #ffbb00;
+  background: #ffbb00 !important;
 }
 
 .nds-background--green {
-  background: #008059;
+  background: #008059 !important;
 }
 
 .nds-background--red {
-  background: #cc1439;
+  background: #cc1439 !important;
 }
 
 .nds-float-left {
-  float: left;
+  float: left !important;
 }
 
 .nds-float-right {
-  float: right;
+  float: right !important;
 }
 
 .nds-clearfix:after {
@@ -151,7 +151,7 @@
 }
 
 .nds-block {
-  display: block;
+  display: block !important;
 }
 
 .nds-inline {
@@ -163,19 +163,19 @@
 }
 
 .nds-shadow--small {
-  box-shadow: 0px 0px 3px 0px rgba(1, 30, 56, 0.2);
+  box-shadow: 0px 0px 3px 0px rgba(1, 30, 56, 0.2) !important;
 }
 
 .nds-shadow--medium {
-  box-shadow: 0px 1px 4px 0px rgba(1, 30, 56, 0.15);
+  box-shadow: 0px 1px 4px 0px rgba(1, 30, 56, 0.15) !important;
 }
 
 .nds-shadow--large {
-  box-shadow: 0px 3px 5px 0px rgba(1, 30, 56, 0.1);
+  box-shadow: 0px 3px 5px 0px rgba(1, 30, 56, 0.1) !important;
 }
 
 .nds-shadow--focus {
-  box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9);
+  box-shadow: 0px 0px 5px 0px rgba(33, 107, 235, 0.9) !important;
 }
 
 .nds-margin--none {
@@ -643,27 +643,27 @@
 }
 
 .nds-font-weight--normal {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .nds-font-weight--medium {
-  font-weight: 500;
+  font-weight: 500 !important;
 }
 
 .nds-font-weight--bold {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 .nds-text-align--left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .nds-text-align--center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .nds-text-align--right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .nds-clearfix:after {
@@ -673,19 +673,19 @@
 }
 
 .nds-vertical-align--top {
-  vertical-align: top;
+  vertical-align: top !important;
 }
 
 .nds-vertical-align--middle {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 
 .nds-vertical-align--bottom {
-  vertical-align: bottom;
+  vertical-align: bottom !important;
 }
 
 .nds-no-underline {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* -----------------------------------------

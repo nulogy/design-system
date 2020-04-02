@@ -26,22 +26,22 @@
   }
 
   &font-weight--normal {
-    font-weight: $weight-font-normal;
+    font-weight: $weight-font-normal !important;
   }
   &font-weight--medium {
-    font-weight: $weight-font-medium;
+    font-weight: $weight-font-medium !important;
   }
   &font-weight--bold {
-    font-weight: $weight-font-bold;
+    font-weight: $weight-font-bold !important;
   }
 
   &text-align--left {
-    text-align: left;
+    text-align: left !important;
   }
   &text-align--center {
-    text-align: center;
+    text-align: center !important;
   }
   &text-align--right {
-    text-align: right;
+    text-align: right !important;
   }
 }
