@@ -2,27 +2,19 @@
 /* -----------------------------------------
     ## Default styles
 ----------------------------------------- */
-html,
-body {
-  margin: 0;
+.nds {
   -webkit-font-smoothing: antialiased;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
   color: #011e38;
   font-family: "IBM Plex Sans", sans-serif;
   line-height: 1.5;
 }
-
-code {
+.nds * {
+  box-sizing: border-box;
+}
+.nds code {
   font-family: "IBM Plex Mono", monospace;
 }
-
-img {
+.nds img {
   max-width: 100%;
   height: auto;
   display: block;
