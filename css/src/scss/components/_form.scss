@@ -12,6 +12,7 @@
   line-height: $line-height-base;
   margin: 0;
   min-height: $size-base-x-5;
+  margin-top: $size-base-x-1;
 
   &:focus {
     outline: none;
@@ -29,6 +30,18 @@
   font-size: $size-font-small;
   font-weight: bold;
   line-height: $line-height-small-text-base;
+  &__required-text {
+    font-size: $size-font-smaller;
+    color: $color-base-dark-grey;
+    margin-left: $size-base-x-1;
+    line-height: 1.5;
+    font-weight: $weight-font-normal;
+  }
+  &__help-text {
+    margin: 0;
+    font-size: $size-font-small;
+    font-weight: $weight-font-normal;
+  }
 }
 
 .Textarea {
@@ -58,4 +71,38 @@
 .Form input,
 .Form textarea {
   margin-bottom: $size-base-x-2;
+}
+
+/* -----------------------------------------
+    ## Form Headings
+----------------------------------------- */
+
+.Form__heading {
+  margin-top: 0px;
+  margin-bottom: $size-base-x-2;
+  font-weight: $weight-font-medium;
+  font-size: $size-font-larger;
+  line-height: 1.23077;
+  margin-bottom: $size-base-x-6;
+}
+
+.Form__section-heading {
+  margin-bottom: $size-base-x-3;
+  padding: 0px;
+  font-weight: $weight-font-medium;
+  font-size: $size-font-large;
+  line-height: 1.2;
+}
+
+/* -----------------------------------------
+    ## Form Section
+----------------------------------------- */
+
+.Form__section {
+  // legend reset
+  border: none;
+  padding: 0;
+  margin: 0;
+  //
+  margin-bottom: $size-base-x-6;
 }
