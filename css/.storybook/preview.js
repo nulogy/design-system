@@ -10,4 +10,6 @@ addParameters({
   }
 });
 
-addDecorator(story => `<div style="padding:24px;">${story()}</div>`);
+addDecorator(
+  story => `<div class="nds" style="padding: 16px;">${story()}</div>`
+);
