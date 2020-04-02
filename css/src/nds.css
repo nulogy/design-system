@@ -892,18 +892,18 @@
   color: #216beb;
 }
 
-.Button.small,
-.PrimaryButton.small,
-.DangerButton.small,
-.QuietButton.small {
+.Button--small,
+.PrimaryButton--small,
+.DangerButton--small,
+.QuietButton--small {
   font-size: 14px !important;
   padding: 4px 8px !important;
 }
 
-.Button.large,
-.PrimaryButton.large,
-.DangerButton.large,
-.QuietButton.large {
+.Button--large,
+.PrimaryButton--large,
+.DangerButton--large,
+.QuietButton--large {
   padding: 16px 24px !important;
 }
 
