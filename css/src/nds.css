@@ -934,7 +934,7 @@ img {
   width: auto;
   user-select: none;
   align-items: center;
-  padding: 4px 0;
+  padding: 8px 0;
 }
 
 .Checkbox__input {
@@ -1132,7 +1132,7 @@ img {
   display: flex;
   width: auto;
   align-items: center;
-  padding: 4px 0;
+  padding: 8px 0;
   min-height: 24px;
 }
 
