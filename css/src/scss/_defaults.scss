@@ -2,28 +2,24 @@
     ## Default styles
 ----------------------------------------- */
 
-html,
-body {
-  margin: 0;
+.nds {
   -webkit-font-smoothing: antialiased;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-body {
   color: $color-base-black;
   font-family: $font-family-base;
   line-height: $line-height-base;
-}
 
-code {
-  font-family: $font-family-mono;
-}
+  * {
+    box-sizing: border-box;
+  }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  code {
+    font-family: $font-family-mono;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 }
