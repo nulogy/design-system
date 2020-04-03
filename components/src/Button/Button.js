@@ -3,9 +3,10 @@ import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import React from "react";
 import PropTypes from "prop-types";
+import icons from "@nulogy/icons";
+
 import { Icon } from "../Icon";
 import theme from "../theme";
-import icons from "../../icons/icons.json";
 import { subPx } from "../utils";
 
 const iconNames = Object.keys(icons);

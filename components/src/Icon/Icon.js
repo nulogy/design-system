@@ -2,7 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space, color } from "styled-system";
-import icons from "../../icons/icons.json";
+import icons from "@nulogy/icons";
+
 import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
 

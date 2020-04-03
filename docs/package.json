@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@nulogy/components": "^2.2.0",
+    "@nulogy/icons": "^1.0.0",
     "@nulogy/tokens": "^2.0.0",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.18.2",

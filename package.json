@@ -8,6 +8,7 @@
     "components-e2e",
     "css",
     "docs",
+    "icons",
     "tokens"
   ],
   "scripts": {
