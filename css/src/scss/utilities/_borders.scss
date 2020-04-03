@@ -1,4 +1,8 @@
 #{$namespace} {
-    &rounded-corners {border-radius: $radius-border-medium}
-    &rounded-corners--small {border-radius: $radius-border-small}
+  &rounded-corners {
+    border-radius: $radius-border-medium !important;
+  }
+  &rounded-corners--small {
+    border-radius: $radius-border-small !important;
+  }
 }
