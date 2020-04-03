@@ -1127,6 +1127,7 @@
   line-height: 1.5;
   margin: 0;
   min-height: 40px;
+  margin-top: 8px;
 }
 .Textarea:focus,
 .Input:focus {
@@ -1143,6 +1144,18 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 1.71429;
+}
+.Label__required-text {
+  font-size: 12px;
+  color: #434d59;
+  margin-left: 8px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.Label__help-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .Textarea:disabled,
@@ -1165,6 +1178,36 @@
 .Form input,
 .Form textarea {
   margin-bottom: 16px;
+}
+
+/* -----------------------------------------
+    ## Form Headings
+----------------------------------------- */
+.Form__heading {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23077;
+  margin-bottom: 48px;
+}
+
+.Form__section-heading {
+  margin-bottom: 24px;
+  padding: 0px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+/* -----------------------------------------
+    ## Form Section
+----------------------------------------- */
+.Form__section {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 48px;
 }
 
 .Link {
