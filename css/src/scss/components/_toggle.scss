@@ -16,7 +16,7 @@ $toggle-width: 48px;
   height: 0;
 }
 
-.Toggle__Slider {
+.Toggle__slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -30,7 +30,7 @@ $toggle-width: 48px;
   border-radius: $toggle-height/2;
 }
 
-.Toggle__Slider:before {
+.Toggle__slider:before {
   position: absolute;
   content: "";
   height: $toggle-height - 2;
@@ -41,7 +41,7 @@ $toggle-width: 48px;
   border-radius: 50%;
 }
 
-.Toggle__input:checked + .Toggle__Slider {
+.Toggle__input:checked + .Toggle__slider {
   background-color: $color-base-light-blue;
   &:before {
     background: $color-base-dark-blue;
@@ -52,11 +52,11 @@ $toggle-width: 48px;
   }
 }
 
-.Toggle__input:checked + .Toggle__Slider:before {
+.Toggle__input:checked + .Toggle__slider:before {
   transform: translateX($toggle-height);
 }
 
-.Toggle__Text {
+.Toggle__text {
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
