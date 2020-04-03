@@ -4,7 +4,7 @@
   color: $color-base-black;
   font-size: 16px;
   display: block;
-  padding: $size-base-x-1;
+  padding: ($size-base-x-1)-1;
   flex-grow: 1;
   border: 1px solid $color-base-grey;
   border-radius: $radius-border-medium;
