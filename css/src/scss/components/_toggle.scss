@@ -1,0 +1,67 @@
+/* -----------------------------------------
+    ## Toggle
+----------------------------------------- */
+$toggle-height: 24px;
+$toggle-width: 48px;
+
+.Toggle {
+  position: relative;
+  display: flex;
+}
+
+/* Hides default HTML checkbox */
+.Toggle__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.Toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-base-light-grey;
+  transition: 0.2s ease;
+  width: $toggle-width;
+  height: $toggle-height;
+  border-radius: $toggle-height/2;
+}
+
+.Toggle__slider:before {
+  position: absolute;
+  content: "";
+  height: $toggle-height - 2;
+  width: $toggle-height - 2;
+  border: 1px solid $color-base-grey;
+  background-color: $color-base-white;
+  transition: 0.2s ease;
+  border-radius: 50%;
+}
+
+.Toggle__input:checked + .Toggle__slider {
+  background-color: $color-base-light-blue;
+  &:before {
+    background: $color-base-dark-blue;
+    border: 1px solid $color-base-dark-blue;
+  }
+  &:focus {
+    box-shadow: $shadow-focus;
+  }
+}
+
+.Toggle__input:checked + .Toggle__slider:before {
+  transform: translateX($toggle-height);
+}
+
+.Toggle__text {
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: $toggle-width;
+  padding-left: $size-base-x-1;
+  font-size: $size-base-x-2;
+  line-height: 1.5;
+}
