@@ -1,0 +1,36 @@
+/* -----------------------------------------
+    ## Iconic Button
+----------------------------------------- */
+
+.IconicButton {
+  display: inline-flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  &:focus i {
+    box-shadow: $shadow-focus;
+  }
+  &:hover i {
+    background: $color-base-light-blue;
+  }
+  &:active i {
+    transform: scale(0.875);
+    transition: 0.2s ease-in;
+  }
+  i {
+    width: 32px;
+    height: 32px;
+    transition: 0.2s;
+    border-radius: 50%;
+    color: $color-base-dark-blue;
+    padding: $size-base-half 0;
+  }
+  &__text {
+    color: $color-base-dark-blue;
+    font-size: $size-font-base;
+    font-weight: $weight-font-medium;
+    margin: 0 $size-base-half;
+  }
+}

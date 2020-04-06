@@ -11,5 +11,8 @@ addParameters({
 });
 
 addDecorator(
-  story => `<div class="nds" style="padding: 16px;">${story()}</div>`
+  story => `
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <div class="nds" style="padding: 16px;">${story()}</div>`
 );
