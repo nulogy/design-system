@@ -20,10 +20,8 @@ storiesOf("LoadingAnimation", module)
         </Text>
       </Flex>
       <Flex justifyContent="center" mb="x1">
-        <ControlIcon icon="refresh" disabled mr="x1">
-          Retry
-        </ControlIcon>
-        <ControlIcon icon="close">Abort</ControlIcon>
+        <ControlIcon icon="refresh" disabled mr="x1" label="Retry" />
+        <ControlIcon icon="close" label="Abort" />
       </Flex>
     </Overlay>
   ))
@@ -44,10 +42,8 @@ storiesOf("LoadingAnimation", module)
         This action takes longer than expected. Try again...
       </Alert>
       <Flex justifyContent="center" mb="x1">
-        <ControlIcon icon="refresh" mr="x1">
-          Retry
-        </ControlIcon>
-        <ControlIcon icon="close">Abort</ControlIcon>
+        <ControlIcon icon="refresh" mr="x1" label="Retry" />
+        <ControlIcon icon="close" label="Abort" />
       </Flex>
     </Overlay>
   ));
