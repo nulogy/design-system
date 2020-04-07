@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { components } from "react-select";
+import { components } from "react-windowed-select";
 
 import theme from "../theme";
 import { subPx } from "../utils";
