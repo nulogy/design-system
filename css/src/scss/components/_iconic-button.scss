@@ -9,17 +9,17 @@
   align-items: center;
   outline: none;
   cursor: pointer;
-  &:focus i {
+  &:focus &__icon {
     box-shadow: $shadow-focus;
   }
-  &:hover i {
+  &:hover &__icon {
     background: $color-base-light-blue;
   }
-  &:active i {
+  &:active &__icon {
     transform: scale(0.875);
     transition: 0.2s ease-in;
   }
-  i {
+  &__icon {
     width: 32px;
     height: 32px;
     transition: 0.2s;
