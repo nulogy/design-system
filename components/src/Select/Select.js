@@ -1,5 +1,5 @@
 import React from "react";
-import Select, { components as selectComponents } from "react-select";
+import WindowedSelect, { components as selectComponents } from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -7,6 +7,8 @@ import { InlineValidation } from "../Validation";
 import customStyles from "./customReactSelectStyles";
 import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
 import SelectOption from "./SelectOption";
+
+const WINDOW_THRESHOLD = 100; // number of options beyond which the menu will be windowed
 
 const Control = props => {
   // eslint-disable-next-line react/prop-types
@@ -118,20 +120,20 @@ const ReactSelect = ({
   return (
     <Field>
       <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-        <Select
+        <WindowedSelect
           className={className}
           classNamePrefix={classNamePrefix}
           noOptionsMessage={noOptionsMessage}
           placeholder={placeholder || t("select ...")}
           options={options}
           labelText={labelText}
-          styles={customStyles(error)}
+          windowThreshold={WINDOW_THRESHOLD}
+          styles={customStyles({ error, maxHeight, windowed: options.length > WINDOW_THRESHOLD })}
           isDisabled={disabled}
           isSearchable={autocomplete}
           aria-required={required}
           aria-invalid={error}
           defaultMenuIsOpen={initialIsOpen}
-          maxMenuHeight={maxHeight}
           inputId={id}
           onBlur={onBlur}
           onChange={onChange && (option => onChange(extractValue(option, multiselect)))}

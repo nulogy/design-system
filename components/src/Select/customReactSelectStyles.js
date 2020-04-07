@@ -23,9 +23,11 @@ const getShadow = ({ errored, isOpen }) => {
   }
 };
 
-const customStyles = error => {
+const customStyles = ({ error, maxHeight, windowed }) => {
   return {
-    option: () => null,
+    option: () => ({
+      height: 38
+    }),
     control: (provided, state) => ({
       display: "flex",
       minHeight: theme.space.x5,
@@ -92,7 +94,10 @@ const customStyles = error => {
       ...provided,
       minWidth: "fit-content",
       padding: 0,
-      borderRadius: theme.radii.medium
+      maxHeight: parseInt(maxHeight, 10),
+      borderRadius: theme.radii.medium,
+      marginTop: windowed ? "-4px" : 0,
+      marginBottom: windowed ? "-4px" : 0
     }),
     multiValue: provided => ({
       ...provided,

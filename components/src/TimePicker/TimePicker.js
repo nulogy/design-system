@@ -2,7 +2,7 @@ import React from "react";
 import { setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { components } from "react-select";
+import { components } from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 
 import theme from "../theme";
