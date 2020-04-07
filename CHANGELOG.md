@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/nulogy/design-system/compare/v2.1.2...v2.2.0) (2020-04-07)
+
+
+### Features
+
+* Select now supports thousands of options without major performance issues ([#616](https://github.com/nulogy/design-system/issues/616)) ([3c0f951](https://github.com/nulogy/design-system/commit/3c0f951aaa33324ab26e8672843453166b06e544))
+
+
+
+
+
 ## [2.1.2](https://github.com/nulogy/design-system/compare/v2.1.1...v2.1.2) (2020-04-06)
 
 **Note:** Version bump only for package @nulogy/nds
