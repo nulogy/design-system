@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
@@ -39,10 +40,10 @@ const wrappingOptions = [
   }
 ];
 
-const SelectWithManyOptions = () => {
+const SelectWithManyOptions = ({ multiselect, labelText }) => {
   const [photoList, setPhotoList] = useState([]);
-  const [selectedValue, setSelectedValue] = useState(undefined);
   const getPhotos = async () => {
+    // returns 5000 items
     const data = await fetch("https://jsonplaceholder.typicode.com/photos");
     const json = await data.json();
     const results = json.map(({ title, id }) => ({
@@ -55,15 +56,10 @@ const SelectWithManyOptions = () => {
     const result = await getPhotos();
     setPhotoList(result);
   };
-  const handleChange = value => {
-    setSelectedValue(value);
-  };
   useEffect(() => {
     setOptions();
   }, []);
-  return (
-    <Select options={photoList} onChange={handleChange} value={selectedValue} labelText="Select from many options:" />
-  );
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} />;
 };
 
 class SelectWithState extends React.Component {
@@ -367,4 +363,9 @@ storiesOf("Select", module)
       </Box>
     </>
   ))
-  .add("with many options (SkipStoryshot)", () => <SelectWithManyOptions />);
+  .add("with many options (SkipStoryshot)", () => (
+    <>
+      <SelectWithManyOptions labelText="Select from many options:" />
+      <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
+    </>
+  ));
