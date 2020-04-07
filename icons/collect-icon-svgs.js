@@ -2,7 +2,7 @@ const fs = require("fs");
 const SVG = require("svgi");
 
 const jsonPath = "assets/icons.json";
-const svgPath = "icons";
+const svgPath = "assets";
 
 const parseSvg = svg => {
   const { nodes } = new SVG(svg).report();
