@@ -36,7 +36,7 @@ storiesOf("Components|Demo", module).add(
 
         <label class="Label"> Item code
             <input class="Input Input--error" value="WS2SB6" />
-            <p class="nds-text--red">Item WS2SB6 does not exist.</p>
+            <p class="Input__error-text"><i class="Input__error-icon material-icons">error_outline</i> Item WS2SB6 does not exist.</p>
         </label>
 
         <label class="Label"> Eaches expected on job
@@ -91,7 +91,7 @@ storiesOf("Components|Demo", module).add(
         <legend class="Form__section-heading">Rejects</legend>
         <label class="Label"> Item
             <input class="Input Input--error" value="235432" />
-            <p class="nds-text--red">Item 235432 is not a valid entry.</p>
+            <p class="Input__error-text"><i class="Input__error-icon material-icons">error_outline</i> Item 235432 is not a valid entry.</p>
         </label>
         <label class="Label"> Quantity
             <input class="Input" />

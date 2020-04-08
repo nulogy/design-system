@@ -69,6 +69,21 @@
   }
 }
 
+.Input__error-text,
+.Textarea__error-text,
+.Select__error-text {
+  display: flex;
+  color: $color-base-red;
+  font-weight: $weight-font-normal;
+  font-size: $size-font-medium;
+}
+
+.Input__error-icon,
+.Textarea__error-icon,
+.Select__error-icon {
+  margin-right: $size-base-x-1;
+}
+
 .Select {
   @extend %input-styles;
 }
