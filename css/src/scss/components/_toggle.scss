@@ -7,6 +7,7 @@ $toggle-width: 48px;
 .Toggle {
   position: relative;
   display: flex;
+  padding: $size-base-x-1 0;
 }
 
 /* Hides default HTML checkbox */
@@ -17,12 +18,7 @@ $toggle-width: 48px;
 }
 
 .Toggle__slider {
-  position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: $color-base-light-grey;
   transition: 0.2s ease;
   width: $toggle-width;
@@ -60,8 +56,7 @@ $toggle-width: 48px;
   cursor: pointer;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: $toggle-width;
-  padding-left: $size-base-x-1;
+  margin-left: $size-base-x-1;
   font-size: $size-base-x-2;
   line-height: 1.5;
 }
