@@ -1,8 +1,8 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Iconic Button", module).add(
-  "Iconic Button",
+storiesOf("Components|IconicButton", module).add(
+  "IconicButton",
   () => `
     <button class="IconicButton">
       <i class="IconicButton__icon material-icons">delete</i>
