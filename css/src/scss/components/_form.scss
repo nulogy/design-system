@@ -69,9 +69,11 @@
   }
 }
 
-.Form input,
-.Form textarea {
-  margin-bottom: $size-base-x-2;
+.Form {
+  .Input,
+  .Textarea {
+    margin-bottom: $size-base-x-2;
+  }
 }
 
 /* -----------------------------------------
