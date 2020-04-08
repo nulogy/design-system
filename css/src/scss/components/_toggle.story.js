@@ -5,8 +5,8 @@ storiesOf("Components|Toggle", module).add(
   () => `
   <label class="Toggle">
     <input type="checkbox" class="Toggle__input">
-    <div class="Toggle__slider"></div>
-    <p class="Toggle__text">I am a toggle</p>
+    <span class="Toggle__slider"></span>
+    <span class="Toggle__text">I am a toggle</span>
   </label>
   `
 );

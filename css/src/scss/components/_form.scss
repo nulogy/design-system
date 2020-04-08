@@ -30,7 +30,7 @@
   font-size: $size-font-small;
   font-weight: bold;
   line-height: $line-height-small-text-base;
-  &__required-text {
+  &__requirement-text {
     font-size: $size-font-smaller;
     color: $color-base-dark-grey;
     margin-left: $size-base-x-1;
@@ -38,6 +38,7 @@
     font-weight: $weight-font-normal;
   }
   &__help-text {
+    display: block;
     margin: 0;
     font-size: $size-font-small;
     font-weight: $weight-font-normal;

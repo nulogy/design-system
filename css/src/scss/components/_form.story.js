@@ -6,7 +6,7 @@ storiesOf("Components|Form", module)
     "Form",
     () => `
     <form class="Form">
-      <label class="Label"> Input<span class="Label__required-text">Required</span>
+      <label class="Label"> Input<span class="Label__requirement-text">Required</span>
         <p class="Label__help-text">Additional helpful text</p>
         <input class="Input" />
       </label>
