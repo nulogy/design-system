@@ -69,9 +69,14 @@
   }
 }
 
+.Select {
+  @extend %input-styles;
+}
+
 .Form {
   .Input,
-  .Textarea {
+  .Textarea,
+  .Select {
     margin-bottom: $size-base-x-2;
   }
 }

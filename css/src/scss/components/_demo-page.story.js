@@ -28,7 +28,7 @@ storiesOf("Components|Demo", module).add(
         </label>
 
         <label class="Label"> Project status
-            <select class="Input">
+            <select class="Select">
                 <option value="planned">Planned</option>
                 <option value="booked">Booked</option>
             </select>
@@ -111,7 +111,7 @@ storiesOf("Components|Demo", module).add(
       </div>
         <div class="nds-flex-grow-1 nds-order-1">
         </div>
-        
+
     </div>
 `
 );

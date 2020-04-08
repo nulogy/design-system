@@ -15,6 +15,13 @@ storiesOf("Components|Form", module)
         <textarea class="Textarea"></textarea>
       </label>
 
+      <label class="Label"> Select
+        <select class="Select">
+            <option value="planned">Planned</option>
+            <option value="booked">Booked</option>
+        </select>
+      </label>
+
       <div>
         <button class="PrimaryButton">Create project</button>
         <button class="QuietButton">Cancel</button>
