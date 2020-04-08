@@ -60,3 +60,28 @@ $toggle-width: 48px;
   font-size: $size-base-x-2;
   line-height: 1.5;
 }
+
+.Toggle__input:disabled {
+  & ~ .Toggle__text {
+    cursor: default;
+    opacity: 0.33;
+  }
+  & + .Toggle__slider {
+    cursor: default;
+    background-color: $color-base-light-grey;
+    &:before {
+      background-color: $color-base-white-grey;
+      border-color: $color-base-light-grey;
+    }
+  }
+}
+
+.Toggle__input:disabled:checked {
+  & + .Toggle__slider {
+    background-color: $color-base-white-grey;
+    &:before {
+      background-color: $color-base-light-grey;
+      border-color: $color-base-white-grey;
+    }
+  }
+}
