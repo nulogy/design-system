@@ -12,6 +12,104 @@ storiesOf("Components|Demo", module).add(
         <div class="nds-flex-grow-1">
         </div>
         <div style="border-left:1px solid #eee;" class="nds-w-100 nds@sm-w-33">
+        <form class="Form">
+
+    <h2 class="Form__heading">Job 324400</h2>
+
+    <fieldset class="Form__section">
+        <legend class="Form__section-heading">Job Information</legend>
+
+        <label class="Label">Project
+            <p class="Label__help-text">Additional helpful text</p>
+            <input class="Input" placeholder="Project 128703" />
+        </label>
+
+        <label class="Label"> Project description
+            <p class="Label__help-text">Project description helps identify the project.</p>
+            <input class="Input" />
+        </label>
+
+        <label class="Label"> Project status
+            <select class="Input">
+                <option value="planned">Planned</option>
+                <option value="booked">Booked</option>
+            </select>
+        </label>
+
+        <label class="Label"> Item code
+            <input class="Input Input--error" value="WS2SB6" />
+            <p class="nds-text--red">Item WS2SB6 does not exist.</p>
+        </label>
+
+        <label class="Label"> Eaches expected on job
+            <input class="Input" placeholder="2 000" />
+        </label>
+
+        <label class="Label"> Eaches remaining on project
+            <input class="Input" placeholder="18 000" disabled />
+        </label>
+
+        <label class="Label"> Line Lead <span class="Label__required-text">(Optional)</span></label>
+        <label class="Checkbox">
+        <input type="checkbox" class="Checkbox__input">
+            <p class="Checkbox__text" name="linelead">Christiaan Oostenburg </p>
+        </label>
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox__input">
+            <p class="Checkbox__text" name="linelead">Matt Dunn </p>
+        </label>
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox__input" disabled>
+            <p class="Checkbox__text" name="linelead">Clemens Park </p>
+        </label>
+        <label class="Checkbox">
+            <input type="checkbox" class="Checkbox__input" disabled>
+            <p class="Checkbox__text" name="linelead">Nikola Pejcic </p>
+        </label>
+
+        <label class="Label">Reconcile</label>
+        <label class="Radio Radio--error">
+            <input type="Radio" name="reconcile" class="Radio__input">
+            <p class="Radio__text">Yes</p>
+          </label>
+          <label class="Radio Radio--error">
+            <input type="Radio" name="reconcile" class="Radio__input" checked>
+            <p class="Radio__text">No</p>
+          </label>
+          <label class="Radio">
+            <input type="Radio" name="reconcile" class="Radio__input" checked disabled>
+            <p class="Radio__text">Maybe</p>
+          </label>
+
+          <label class="Label">Job visbility</label>
+          <label class="Toggle">
+            <input type="checkbox" class="Toggle__input">
+            <div class="Toggle__slider"></div>
+            <p class="Toggle__text">Visible</p>
+          </label>
+    </fieldset>
+
+    <fieldset class="Form__section">
+        <legend class="Form__section-heading">Rejects</legend>
+        <label class="Label"> Item
+            <input class="Input Input--error" value="235432" />
+            <p class="nds-text--red">Item 235432 is not a valid entry.</p>
+        </label>
+        <label class="Label"> Quantity
+            <input class="Input" />
+        </label>
+
+        <label class="Label">Job visbility</label>
+        <label class="Toggle">
+          <input type="checkbox" class="Toggle__input">
+          <div class="Toggle__slider"></div>
+          <p class="Toggle__text">Visible</p>
+        </label>
+    </fieldset>
+
+    <button class="PrimaryButton">Save job</button>
+
+</form>
       </div>
     </div>
 `
