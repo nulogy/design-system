@@ -1,4 +1,4 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &shadow--small {
     box-shadow: $shadow-box-small !important;
   }

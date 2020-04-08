@@ -27,7 +27,7 @@ $colors: (
   .background--light-green {color: background-green;)
 */
 
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &text {
     @include color-modifiers($attribute: "color");
   }

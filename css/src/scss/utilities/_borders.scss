@@ -1,4 +1,4 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &rounded-corners {
     border-radius: $radius-border-medium !important;
   }

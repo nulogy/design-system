@@ -1,4 +1,4 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &font-size--smaller {
     font-size: $size-font-smaller !important;
   }
