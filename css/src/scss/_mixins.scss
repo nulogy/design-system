@@ -28,7 +28,7 @@ $breakpoints: (
     // otherwise, add all the breakpoints
     @else {
       @include breakpoint($breakpoint-name) {
-        .nds-#{$breakpoint-name}- {
+        .nds\@#{$breakpoint-name}- {
           @content;
         }
       }
