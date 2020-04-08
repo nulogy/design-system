@@ -34,7 +34,7 @@
     font-size: $size-font-smaller;
     color: $color-base-dark-grey;
     margin-left: $size-base-x-1;
-    line-height: 1.5;
+    line-height: $line-height-base;
     font-weight: $weight-font-normal;
   }
   &__help-text {

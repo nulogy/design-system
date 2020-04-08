@@ -114,7 +114,83 @@ storiesOf("Components|Demo", module).add(
 
           </form>
         </div>
-        <div class="nds-flex-grow-1 nds-order-1">
+        <div class="nds-flex-grow-1 nds-order-1 nds-padding--x1">
+
+         <h1 class="Title">I am a Title<h1>
+
+         <h2 class="SectionTitle">Details</h2>
+
+         <div class="nds-flex">
+
+          <div class="nds-flex-grow-1">
+            <p class="Label">Purchase Order Number</p>
+            <p>7050007201911</p>
+          </div>
+          <div class="nds-flex-grow-1">
+            <p class="Label">Purchase Order Number</p>
+            <p>7050007201911</p>
+          </div>
+          <div class="nds-flex-grow-1">
+            <p class="Label">Purchase Order Number</p>
+            <p>7050007201911</p>
+          </div>
+         </div>
+
+         <div class="nds-flex">
+          <div class="nds-flex-grow-1">
+            <p class="Label">Purchase Order Number</p>
+            <p>7050007201911</p>
+          </div>
+          <div class="nds-flex-grow-1">
+            <p class="Label">Purchase Order Number</p>
+            <p>7050007201911</p>
+          </div>
+          <div class="nds-flex-grow-1">
+            <p class="Label">Purchase Order Number</p>
+            <p>7050007201911</p>
+          </div>
+
+         </div>
+
+         <h2 class="SectionTitle">Production Records</h2>
+
+         <table class="Table">
+            <tr class="Table__row">
+              <th class="Table__heading">Date</th>
+              <th class="Table__heading">Expected Quantity</th>
+              <th class="Table__heading">Actual Quantity</th>
+            </tr>
+            <tr class="Table__row">
+              <td class="Table__cell">2019-10-01</td>
+              <td class="Table__cell">2,025 eaches</td>
+              <td class="Table__cell">1,800 eaches</td>
+            </tr>
+            <tr class="Table__row">
+              <td class="Table__cell">2019-10-02</td>
+              <td class="Table__cell">2,475 eaches</td>
+              <td class="Table__cell">2,250 eaches</td>
+            </tr>
+            <tr class="Table__row">
+              <td class="Table__cell">2019-10-03</td>
+              <td class="Table__cell">2,475 eaches</td>
+              <td class="Table__cell">1,425 eaches</td>
+            </tr>
+            <tr class="Table__row">
+              <td class="Table__cell">2019-10-24</td>
+              <td class="Table__cell">2,475 eaches</td>
+              <td class="Table__cell">-</td>
+            </tr>
+        </table>
+
+        <form>
+          <h3 class="Form__section-heading">Comments</h3>
+          <textarea class="Textarea" placeholder="Leave a comment..." rows="4"></textarea>
+          <div class="nds-margin-top--x3">
+            <button class="PrimaryButton">Comment</button>
+            <button class="QuietButton">Cancel</button>
+          </div>
+        </form>
+        
         </div>
       </div>
     </div>
