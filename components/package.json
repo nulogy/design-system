@@ -14,7 +14,6 @@
     "build": "webpack --config ../webpack.config.js",
     "build:watch": "yarn build --watch",
     "build-storybook": "build-storybook",
-    "icons": "node scripts/collect-icon-svgs",
     "storyshots": "yarn workspace @nulogy/tokens build && jest --testPathPattern='Storyshots.spec.js'",
     "storyshots:update": "yarn storyshots -u",
     "storyshots:visual:initial": "rm -rf scripts/visual-storyshots/__image_snapshots__ && yarn run storyshots:visual",
@@ -89,6 +88,7 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
+    "@nulogy/icons": "^1.0.0",
     "@nulogy/tokens": "^2.0.0",
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",

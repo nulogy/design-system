@@ -5,10 +5,11 @@ import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { transparentize } from "polished";
+import icons from "@nulogy/icons";
+
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 import theme from "../theme";
-import icons from "../../icons/icons.json";
 
 const HoverText = styled.div({
   whiteSpace: "nowrap",

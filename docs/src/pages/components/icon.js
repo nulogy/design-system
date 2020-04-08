@@ -10,7 +10,8 @@ import {
   List,
   ListItem
 } from "@nulogy/components";
-import icons from "@nulogy/components/icons/icons.json";
+import icons from "@nulogy/icons";
+
 import {
   DocText as Text,
   Layout,

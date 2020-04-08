@@ -1,0 +1,20 @@
+{
+  "name": "@nulogy/icons",
+  "version": "1.0.0",
+  "description": "A collection of Nulogy's svg icons",
+  "main": "index.js",
+  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
+  "homepage": "http://nulogy.design",
+  "repository": "https://github.com/nulogy/design-system",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "icons": "node collect-icon-svgs"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "svgi": "^1.1.0"
+  }
+}

@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { storiesOf } from "@storybook/react";
+import icons from "@nulogy/icons";
+
 import { Box, Flex, Icon, InlineIcon } from "../index";
 import theme from "../theme";
-import icons from "../../icons/icons.json";
 
 const iconNames = [...Object.keys(icons), "loading"];
 const iconSubset = [...iconNames.slice(0, 5), "loading"];
