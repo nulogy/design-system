@@ -1,4 +1,4 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &float-left {
     float: left !important;
   }

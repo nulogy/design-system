@@ -1,4 +1,4 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &clearfix:after {
     content: "";
     display: table;

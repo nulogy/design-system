@@ -15,7 +15,7 @@ $directions: [ "top", "right", "bottom", "left" ];
 
 @each $name, $value in $scale {
   @each $property in $properties {
-    #{$namespace} {
+    @include generate-breakpoint-prefixes {
       &#{$property}--#{$name} {
         #{$property}: $value !important;
       } // all

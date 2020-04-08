@@ -1,4 +1,4 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &font-size--smaller {
     font-size: $size-font-smaller !important;
   }
@@ -26,22 +26,22 @@
   }
 
   &font-weight--normal {
-    font-weight: $weight-font-normal !important;
+    font-weight: $weight-font-normal;
   }
   &font-weight--medium {
-    font-weight: $weight-font-medium !important;
+    font-weight: $weight-font-medium;
   }
   &font-weight--bold {
-    font-weight: $weight-font-bold !important;
+    font-weight: $weight-font-bold;
   }
 
   &text-align--left {
-    text-align: left !important;
+    text-align: left;
   }
   &text-align--center {
-    text-align: center !important;
+    text-align: center;
   }
   &text-align--right {
-    text-align: right !important;
+    text-align: right;
   }
 }
