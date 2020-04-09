@@ -49,11 +49,12 @@
     cursor: default;
     border: 1px solid $color-base-light-grey;
     background-color: $color-base-white-grey;
+
     &:checked {
       border: 1px solid $color-base-light-grey;
       background-color: $color-base-light-grey;
     }
-    & + .Checkbox__Text {
+    & + .Checkbox__text {
       cursor: default;
       opacity: 0.33;
     }

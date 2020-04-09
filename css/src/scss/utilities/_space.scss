@@ -30,3 +30,36 @@ $directions: [ "top", "right", "bottom", "left" ];
     }
   }
 }
+
+@include generate-breakpoint-prefixes {
+  &w-0 {
+    width: 0 !important;
+  }
+  &w-1 {
+    width: 1% !important;
+  }
+  &w-25 {
+    width: 25% !important;
+  }
+  &w-33 {
+    width: 33.33% !important;
+  }
+  &w-50 {
+    width: 50% !important;
+  }
+  &w-66 {
+    width: 66.66% !important;
+  }
+  &w-75 {
+    width: 75% !important;
+  }
+  &w-99 {
+    width: 99% !important;
+  }
+  &w-100 {
+    width: 100% !important;
+  }
+  &w-auto {
+    width: auto !important;
+  }
+}

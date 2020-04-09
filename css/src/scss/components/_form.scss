@@ -30,14 +30,15 @@
   font-size: $size-font-small;
   font-weight: bold;
   line-height: $line-height-small-text-base;
-  &__required-text {
+  &__requirement-text {
     font-size: $size-font-smaller;
     color: $color-base-dark-grey;
     margin-left: $size-base-x-1;
-    line-height: 1.5;
+    line-height: $line-height-base;
     font-weight: $weight-font-normal;
   }
   &__help-text {
+    display: block;
     margin: 0;
     font-size: $size-font-small;
     font-weight: $weight-font-normal;
@@ -56,6 +57,7 @@
 .Input:disabled {
   color: transparentize($color-base-black, 0.6667);
   border-color: $color-base-light-grey;
+  background-color: $color-base-white-grey;
 }
 
 .Textarea--error,
@@ -68,9 +70,48 @@
   }
 }
 
-.Form input,
-.Form textarea {
-  margin-bottom: $size-base-x-2;
+.Input__error-text,
+.Textarea__error-text,
+.Select__error-text {
+  display: flex;
+  color: $color-base-red;
+  font-weight: $weight-font-normal;
+  font-size: $size-font-medium;
+}
+
+.Input__error-icon,
+.Textarea__error-icon,
+.Select__error-icon {
+  margin-right: $size-base-x-1;
+}
+
+.Select {
+  @extend %input-styles;
+}
+
+.Form {
+  .Input,
+  .Textarea,
+  .Select,
+  .Toggle,
+  fieldset {
+    margin-bottom: $size-base-x-2;
+  }
+
+  // reset browser defaults
+
+  fieldset {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding: 0;
+    border: 0;
+    margin-block-start: 0;
+  }
+
+  legend {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
 }
 
 /* -----------------------------------------

@@ -5,6 +5,8 @@
 .Title {
   font-size: $size-font-page-title;
   font-weight: $weight-font-light;
+  margin-top: 0;
+  margin-bottom: $size-base-x-6;
 }
 
 .SectionTitle {
