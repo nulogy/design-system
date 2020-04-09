@@ -12,9 +12,17 @@ $toggle-width: 48px;
 
 /* Hides default HTML checkbox */
 .Toggle__input {
-  opacity: 0;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
   width: 0;
   height: 0;
+  &:focus {
+    outline: none;
+    & ~ .Toggle__slider {
+      box-shadow: $shadow-focus;
+    }
+  }
 }
 
 .Toggle__slider {
@@ -42,9 +50,6 @@ $toggle-width: 48px;
   &:before {
     background: $color-base-dark-blue;
     border: 1px solid $color-base-dark-blue;
-  }
-  &:focus {
-    box-shadow: $shadow-focus;
   }
 }
 
