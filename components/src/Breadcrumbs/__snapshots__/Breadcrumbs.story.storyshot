@@ -11,7 +11,7 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
     >
       <li
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kRgdhj"
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
       >
         <a
           class="Link-sc-1lpx3d0-0 gJOWDu"
@@ -23,7 +23,7 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
       </li>
       <li
         aria-hidden="true"
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kEbsSo seperator"
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
       >
         <svg
           aria-hidden="true"
@@ -42,7 +42,7 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
         </svg>
       </li>
       <li
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kRgdhj"
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
       >
         <a
           class="Link-sc-1lpx3d0-0 gJOWDu"
@@ -54,7 +54,115 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
       </li>
       <li
         aria-hidden="true"
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kEbsSo seperator"
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dkBAgY"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </li>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Breadcrumbs without link 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <nav
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <li
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
+      >
+        <a
+          class="Link-sc-1lpx3d0-0 gJOWDu"
+          color="darkBlue"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dkBAgY"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </li>
+      <li
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
+      >
+        <a
+          class="Link-sc-1lpx3d0-0 gJOWDu"
+          color="darkBlue"
+          href="/Tenants"
+        >
+          Tenants
+        </a>
+      </li>
+      <li
+        aria-hidden="true"
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dkBAgY"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </li>
+      <li
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 kNhVLU"
+          color="darkBlue"
+          font-size="16px"
+        >
+          Current Tenant
+        </p>
+      </li>
+      <li
+        aria-hidden="true"
+        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
       >
         <svg
           aria-hidden="true"

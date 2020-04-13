@@ -24,8 +24,7 @@ const StyledLi = styled.li(space, () => ({
   listStyle: "none",
   display: "inline-flex",
   alignSelf: "center",
-  color: theme.colors.darkGrey,
-  ...space
+  color: theme.colors.darkGrey
 }));
 
 const Breadcrumbs = ({ children, as }) => {
