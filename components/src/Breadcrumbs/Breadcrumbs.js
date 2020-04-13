@@ -18,13 +18,22 @@ const insertSeparators = (items, className) => {
   }, []);
 };
 
-const StyledLi = styled.li(space, () => ({
+const StyledLi = styled.li(
+  () => ({
+    margin: 0,
+    padding: 0,
+    listStyle: "none",
+    display: "inline-flex",
+    alignSelf: "center",
+    color: theme.colors.darkGrey
+  }),
+  space
+);
+
+const StyledOl = styled.ol(() => ({
   margin: 0,
   padding: 0,
-  listStyle: "none",
-  display: "inline-flex",
-  alignSelf: "center",
-  color: theme.colors.darkGrey
+  display: "flex"
 }));
 
 const Breadcrumbs = ({ children, as }) => {
@@ -39,7 +48,11 @@ const Breadcrumbs = ({ children, as }) => {
     );
   });
 
-  return <Flex as={as}>{insertSeparators(allItems, "seperator")}</Flex>;
+  return (
+    <Flex as={as}>
+      <StyledOl>{insertSeparators(allItems, "seperator")}</StyledOl>
+    </Flex>
+  );
 };
 
 Breadcrumbs.propTypes = {

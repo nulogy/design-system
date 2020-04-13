@@ -10,68 +10,72 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
     <nav
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
     >
-      <li
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
+      <ol
+        class="Breadcrumbs__StyledOl-sc-1l75jcp-1 huaGZO"
       >
-        <a
-          class="Link-sc-1lpx3d0-0 gJOWDu"
-          color="darkBlue"
-          href="/"
+        <li
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 giKbgV"
         >
-          Home
-        </a>
-      </li>
-      <li
-        aria-hidden="true"
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
-      >
-        <svg
+          <a
+            class="Link-sc-1lpx3d0-0 gJOWDu"
+            color="darkBlue"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
           aria-hidden="true"
-          class="Icon-fc7twp-0 dkBAgY"
-          color="currentColor"
-          fill="currentColor"
-          focusable="false"
-          height="24px"
-          icon="rightArrow"
-          viewBox="0 0 24 24"
-          width="24px"
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 EZZxW seperator"
         >
-          <path
-            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-          />
-        </svg>
-      </li>
-      <li
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
-      >
-        <a
-          class="Link-sc-1lpx3d0-0 gJOWDu"
-          color="darkBlue"
-          href="/Tenants"
+          <svg
+            aria-hidden="true"
+            class="Icon-fc7twp-0 dkBAgY"
+            color="currentColor"
+            fill="currentColor"
+            focusable="false"
+            height="24px"
+            icon="rightArrow"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            />
+          </svg>
+        </li>
+        <li
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 giKbgV"
         >
-          Tenants
-        </a>
-      </li>
-      <li
-        aria-hidden="true"
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
-      >
-        <svg
+          <a
+            class="Link-sc-1lpx3d0-0 gJOWDu"
+            color="darkBlue"
+            href="/Tenants"
+          >
+            Tenants
+          </a>
+        </li>
+        <li
           aria-hidden="true"
-          class="Icon-fc7twp-0 dkBAgY"
-          color="currentColor"
-          fill="currentColor"
-          focusable="false"
-          height="24px"
-          icon="rightArrow"
-          viewBox="0 0 24 24"
-          width="24px"
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 EZZxW seperator"
         >
-          <path
-            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-          />
-        </svg>
-      </li>
+          <svg
+            aria-hidden="true"
+            class="Icon-fc7twp-0 dkBAgY"
+            color="currentColor"
+            fill="currentColor"
+            focusable="false"
+            height="24px"
+            icon="rightArrow"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            />
+          </svg>
+        </li>
+      </ol>
     </nav>
   </div>
 </div>
@@ -87,99 +91,103 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
     <nav
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
     >
-      <li
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
+      <ol
+        class="Breadcrumbs__StyledOl-sc-1l75jcp-1 huaGZO"
       >
-        <a
-          class="Link-sc-1lpx3d0-0 gJOWDu"
-          color="darkBlue"
-          href="/"
+        <li
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 giKbgV"
         >
-          Home
-        </a>
-      </li>
-      <li
-        aria-hidden="true"
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
-      >
-        <svg
+          <a
+            class="Link-sc-1lpx3d0-0 gJOWDu"
+            color="darkBlue"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li
           aria-hidden="true"
-          class="Icon-fc7twp-0 dkBAgY"
-          color="currentColor"
-          fill="currentColor"
-          focusable="false"
-          height="24px"
-          icon="rightArrow"
-          viewBox="0 0 24 24"
-          width="24px"
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 EZZxW seperator"
         >
-          <path
-            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-          />
-        </svg>
-      </li>
-      <li
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
-      >
-        <a
-          class="Link-sc-1lpx3d0-0 gJOWDu"
-          color="darkBlue"
-          href="/Tenants"
+          <svg
+            aria-hidden="true"
+            class="Icon-fc7twp-0 dkBAgY"
+            color="currentColor"
+            fill="currentColor"
+            focusable="false"
+            height="24px"
+            icon="rightArrow"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            />
+          </svg>
+        </li>
+        <li
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 giKbgV"
         >
-          Tenants
-        </a>
-      </li>
-      <li
-        aria-hidden="true"
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
-      >
-        <svg
+          <a
+            class="Link-sc-1lpx3d0-0 gJOWDu"
+            color="darkBlue"
+            href="/Tenants"
+          >
+            Tenants
+          </a>
+        </li>
+        <li
           aria-hidden="true"
-          class="Icon-fc7twp-0 dkBAgY"
-          color="currentColor"
-          fill="currentColor"
-          focusable="false"
-          height="24px"
-          icon="rightArrow"
-          viewBox="0 0 24 24"
-          width="24px"
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 EZZxW seperator"
         >
-          <path
-            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-          />
-        </svg>
-      </li>
-      <li
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 kHnooF"
-      >
-        <p
-          class="Text-sc-1wu7vpu-0 kNhVLU"
-          color="darkBlue"
-          font-size="16px"
+          <svg
+            aria-hidden="true"
+            class="Icon-fc7twp-0 dkBAgY"
+            color="currentColor"
+            fill="currentColor"
+            focusable="false"
+            height="24px"
+            icon="rightArrow"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            />
+          </svg>
+        </li>
+        <li
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 giKbgV"
         >
-          Current Tenant
-        </p>
-      </li>
-      <li
-        aria-hidden="true"
-        class="Breadcrumbs__StyledLi-sc-1l75jcp-0 ePjNVq seperator"
-      >
-        <svg
+          <p
+            class="Text-sc-1wu7vpu-0 kNhVLU"
+            color="darkBlue"
+            font-size="16px"
+          >
+            Current Tenant
+          </p>
+        </li>
+        <li
           aria-hidden="true"
-          class="Icon-fc7twp-0 dkBAgY"
-          color="currentColor"
-          fill="currentColor"
-          focusable="false"
-          height="24px"
-          icon="rightArrow"
-          viewBox="0 0 24 24"
-          width="24px"
+          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 EZZxW seperator"
         >
-          <path
-            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
-          />
-        </svg>
-      </li>
+          <svg
+            aria-hidden="true"
+            class="Icon-fc7twp-0 dkBAgY"
+            color="currentColor"
+            fill="currentColor"
+            focusable="false"
+            height="24px"
+            icon="rightArrow"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+            />
+          </svg>
+        </li>
+      </ol>
     </nav>
   </div>
 </div>
