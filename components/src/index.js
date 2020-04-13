@@ -42,6 +42,7 @@ export { TimeRange } from "./TimeRange";
 export { RangeContainer } from "./RangeContainer";
 export { Overlay } from "./Overlay";
 export { LoadingAnimation } from "./LoadingAnimation";
+export { Breadcrumbs } from "./Breadcrumbs";
 
 export { ALL_NDS_LOCALES } from "./locales.const";
 export { TruncatedText } from "./TruncatedText";
