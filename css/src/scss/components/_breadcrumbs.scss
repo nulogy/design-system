@@ -17,6 +17,9 @@
       i {
         color: $color-base-dark-grey;
       }
+      a:visited {
+        color: $color-base-dark-blue;
+      }
     }
   }
   &__item a:hover {
