@@ -8,8 +8,6 @@ import customStyles from "./customReactSelectStyles";
 import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
 import SelectOption from "./SelectOption";
 
-const WINDOW_THRESHOLD = 100; // number of options beyond which the menu will be windowed
-
 const Control = props => {
   // eslint-disable-next-line react/prop-types
   const { isFocused } = props;
@@ -114,7 +112,8 @@ const ReactSelect = ({
   onMenuClose,
   onInputChange,
   components,
-  "aria-label": ariaLabel
+  "aria-label": ariaLabel,
+  windowThreshold
 }) => {
   const { t } = useTranslation();
   return (
@@ -127,8 +126,8 @@ const ReactSelect = ({
           placeholder={placeholder || t("select ...")}
           options={options}
           labelText={labelText}
-          windowThreshold={WINDOW_THRESHOLD}
-          styles={customStyles({ error, maxHeight, windowed: options.length > WINDOW_THRESHOLD })}
+          windowThreshold={windowThreshold}
+          styles={customStyles({ error, maxHeight, windowed: options.length > windowThreshold })}
           isDisabled={disabled}
           isSearchable={autocomplete}
           aria-required={required}

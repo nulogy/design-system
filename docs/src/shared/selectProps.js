@@ -69,6 +69,13 @@ const selectProps = [
     defaultValue: "absolute",
     description: "The CSS position value of the menu. ex: 'fixed'"
   },
+  {
+    name: "windowThreshold",
+    type: "number",
+    defaultValue: "300",
+    description:
+      "The number of option at which to use virtualization to improve performance of the select"
+  },
   ...inputProps
 ];
 

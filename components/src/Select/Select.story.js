@@ -364,8 +364,8 @@ storiesOf("Select", module)
     </>
   ))
   .add("with many options (SkipStoryshot)", () => (
-    <>
+    <Box style={{ width: "300px" }}>
       <SelectWithManyOptions labelText="Select from many options:" />
       <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
-    </>
+    </Box>
   ));
