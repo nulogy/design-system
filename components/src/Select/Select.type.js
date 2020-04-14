@@ -36,7 +36,8 @@ export const SelectPropTypes = {
   onMenuOpen: PropTypes.func,
   onMenuClose: PropTypes.func,
   onInputChange: PropTypes.func,
-  components: PropTypes.object
+  components: PropTypes.object,
+  windowThreshold: PropTypes.number
 };
 
 export const SelectDefaultProps = {
@@ -67,5 +68,6 @@ export const SelectDefaultProps = {
   onMenuOpen: undefined,
   onMenuClose: undefined,
   onInputChange: undefined,
-  components: undefined
+  components: undefined,
+  windowThreshold: 300
 };

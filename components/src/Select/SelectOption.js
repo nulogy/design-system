@@ -15,10 +15,11 @@ const StyledOption = styled.div(({ isSelected, isFocused }) => ({
     fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
     background: isFocused ? theme.colors.lightBlue : null,
     minHeight: theme.space.x4,
-    cursor: "pointer",
+    minWidth: "max-content",
+    whiteSpace: "100%",
     "&:hover": {
       background: theme.colors.lightBlue,
-      minHeight: theme.space.x4
+      cursor: "pointer"
     }
   }
 }));
