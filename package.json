@@ -46,7 +46,8 @@
     "prettier": "1.17.0",
     "pretty-quick": "2.0.1",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "webpack": "^4.42.1"
   },
   "resolutions": {
     "**/svgi/js-yaml": "^3.13.1"
