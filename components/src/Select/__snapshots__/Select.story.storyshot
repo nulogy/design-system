@@ -216,7 +216,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                   class=" css-famnlw-MenuList"
                 >
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring"
@@ -232,7 +232,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Many words many words many words many words many words many words many words many words many words many words many words many words many words"
@@ -1748,7 +1748,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   class=" css-famnlw-MenuList"
                 >
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 cOCUoo"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kICoIv"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Accepted"
@@ -1764,7 +1764,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Assigned to a line"
@@ -1780,7 +1780,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="On hold"
@@ -1796,7 +1796,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Rejected"
@@ -1812,7 +1812,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Open"
@@ -1828,7 +1828,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="In progress"
@@ -1844,7 +1844,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="In quarantine"
@@ -2225,7 +2225,7 @@ exports[`Storyshots Select with error list 1`] = `
                 class=" css-famnlw-MenuList"
               >
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Accepted"
@@ -2241,7 +2241,7 @@ exports[`Storyshots Select with error list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Assigned to a line"
@@ -2257,7 +2257,7 @@ exports[`Storyshots Select with error list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="On hold"
@@ -2273,7 +2273,7 @@ exports[`Storyshots Select with error list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Rejected"
@@ -2289,7 +2289,7 @@ exports[`Storyshots Select with error list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Open"
@@ -2305,7 +2305,7 @@ exports[`Storyshots Select with error list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="In progress"
@@ -2321,7 +2321,7 @@ exports[`Storyshots Select with error list 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="In quarantine"
@@ -2619,7 +2619,7 @@ exports[`Storyshots Select with error message 1`] = `
                 class=" css-famnlw-MenuList"
               >
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Accepted"
@@ -2635,7 +2635,7 @@ exports[`Storyshots Select with error message 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Assigned to a line"
@@ -2651,7 +2651,7 @@ exports[`Storyshots Select with error message 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="On hold"
@@ -2667,7 +2667,7 @@ exports[`Storyshots Select with error message 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Rejected"
@@ -2683,7 +2683,7 @@ exports[`Storyshots Select with error message 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="Open"
@@ -2699,7 +2699,7 @@ exports[`Storyshots Select with error message 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="In progress"
@@ -2715,7 +2715,7 @@ exports[`Storyshots Select with error message 1`] = `
                   </div>
                 </div>
                 <div
-                  class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                  class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                   data="[object Object]"
                   data-testid="select-option"
                   label="In quarantine"
@@ -3288,7 +3288,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   class=" css-1hz449x-MenuList"
                 >
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 cOCUoo"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kICoIv"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Accepted"
@@ -3304,7 +3304,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Assigned to a line"
@@ -3320,7 +3320,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="On hold"
@@ -3336,7 +3336,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Rejected"
@@ -3352,7 +3352,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Open"
@@ -3368,7 +3368,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="In progress"
@@ -3384,7 +3384,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                     </div>
                   </div>
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 dnDQzZ"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 kYNuXi"
                     data="[object Object]"
                     data-testid="select-option"
                     label="In quarantine"
