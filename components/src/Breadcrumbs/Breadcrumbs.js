@@ -25,7 +25,10 @@ const StyledLi = styled.li(
     listStyle: "none",
     display: "inline-flex",
     alignSelf: "center",
-    color: theme.colors.darkGrey
+    color: theme.colors.darkGrey,
+    "a:visited": {
+      color: theme.colors.darkBlue
+    }
   }),
   space
 );
