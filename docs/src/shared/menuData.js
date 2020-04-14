@@ -36,6 +36,10 @@ export const menuData = [
         href: "/components/branding"
       },
       {
+        name: "Breadcrumbs",
+        href: "/components/breadcrumbs"
+      },
+      {
         name: "Buttons",
         href: "/components/buttons"
       },
