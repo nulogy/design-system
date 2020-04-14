@@ -1,9 +1,9 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &float-left {
-    float: left;
+    float: left !important;
   }
   &float-right {
-    float: right;
+    float: right !important;
   }
 
   &clearfix:after {
@@ -13,7 +13,7 @@
   }
 
   &block {
-    display: block;
+    display: block !important;
   }
   &inline {
     display: inline !important;

@@ -1,14 +1,14 @@
-#{$namespace} {
+@include generate-breakpoint-prefixes {
   &shadow--small {
-    box-shadow: $shadow-box-small;
+    box-shadow: $shadow-box-small !important;
   }
   &shadow--medium {
-    box-shadow: $shadow-box-medium;
+    box-shadow: $shadow-box-medium !important;
   }
   &shadow--large {
-    box-shadow: $shadow-box-large;
+    box-shadow: $shadow-box-large !important;
   }
   &shadow--focus {
-    box-shadow: $shadow-focus;
+    box-shadow: $shadow-focus !important;
   }
 }

@@ -89,17 +89,17 @@
 
 // Sizes
 
-.Button.small,
-.PrimaryButton.small,
-.DangerButton.small,
-.QuietButton.small {
+.Button--small,
+.PrimaryButton--small,
+.DangerButton--small,
+.QuietButton--small {
   font-size: $size-font-small !important;
   padding: $size-base-half $size-base-x-1 !important;
 }
 
-.Button.large,
-.PrimaryButton.large,
-.DangerButton.large,
-.QuietButton.large {
+.Button--large,
+.PrimaryButton--large,
+.DangerButton--large,
+.QuietButton--large {
   padding: $size-base-x-2 $size-base-x-3 !important;
 }

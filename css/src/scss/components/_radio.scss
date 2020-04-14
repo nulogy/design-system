@@ -1,0 +1,77 @@
+/* -----------------------------------------
+    ## Radio
+----------------------------------------- */
+
+.Radio {
+  display: flex;
+  width: auto;
+  align-items: center;
+  padding: $size-base-x-1 0;
+  min-height: $size-base-x-3;
+}
+
+.Radio__input {
+  cursor: pointer;
+  height: $size-base-x-2;
+  width: $size-base-x-2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid $color-base-grey;
+  border-radius: 50%;
+  background-color: $color-base-white;
+  position: relative;
+  margin: 0;
+  outline: none;
+  &:focus {
+    box-shadow: $shadow-focus;
+  }
+  &:checked {
+    border: 1px solid $color-base-dark-blue;
+    background-color: $color-base-dark-blue;
+  }
+  &:checked:before {
+    content: " ";
+    display: block;
+    position: relative;
+    left: 4px;
+    top: 4px;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+  &:disabled {
+    cursor: default;
+    border: 1px solid $color-base-light-grey;
+    background-color: $color-base-white-grey;
+    &:checked {
+      border: 1px solid $color-base-light-grey;
+      background-color: $color-base-light-grey;
+    }
+    & + .Radio__text {
+      cursor: default;
+      opacity: 0.33;
+    }
+  }
+}
+
+.Radio__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: $size-base-x-1;
+  font-size: $size-base-x-2;
+  line-height: 1.5;
+}
+
+.Radio--error {
+  .Radio__input {
+    border: 1px solid $color-base-red;
+    &:checked {
+      border: 1px solid $color-base-red;
+      background-color: $color-base-red;
+    }
+  }
+}
