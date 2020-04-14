@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/nulogy/design-system/compare/v2.4.0...v2.5.0) (2020-04-14)
+
+
+### Bug Fixes
+
+* windowed select should allow overflow to show text longer than the container ([#628](https://github.com/nulogy/design-system/issues/628)) ([bff0de6](https://github.com/nulogy/design-system/commit/bff0de6fcbd3819f702c4a1c27fa5937686c1455))
+
+
+
+
+
 # [2.4.0](https://github.com/nulogy/design-system/compare/v2.3.2...v2.4.0) (2020-04-14)
 
 

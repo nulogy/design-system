@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://github.com/nulogy/design-system/compare/v2.4.0...v2.5.0) (2020-04-14)
+
+
+### Features
+
+* add a large selection of css components to nulogy/css ([#625](https://github.com/nulogy/design-system/issues/625)) ([cbdbd64](https://github.com/nulogy/design-system/commit/cbdbd64534fac29595bf36913aa4869ea2e59fa1))
+
+
+
+
+
 # [2.0.0](https://github.com/nulogy/design-system/compare/v1.6.1...v2.0.0) (2020-03-25)
 
 **Note:** Version bump only for package @nulogy/css
