@@ -65,6 +65,7 @@
     "@storybook/theming": "^5.2.1",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "9.1.4",
+    "@types/react": "^16.9.34",
     "babel-eslint": "^10.0.3",
     "babel-jest": "24.1.0",
     "babel-loader": "8.0.6",
@@ -86,6 +87,7 @@
     "react-test-renderer": "^16.10",
     "regenerator-runtime": "^0.13.5",
     "svgi": "^1.1.0",
+    "typescript": "^3.8.3",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
   },
@@ -96,6 +98,7 @@
     "@styled-system/theme-get": "^5.1.2",
     "date-fns": "2.9.0",
     "debounce": "^1.2.0",
+    "gatsby": "^2.18.2",
     "gatsby-plugin-gtag": "^1.0.12",
     "i18next": "^19.3.1",
     "lerna": "^3.16.4",
