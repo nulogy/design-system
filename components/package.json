@@ -83,6 +83,8 @@
     "jest-styled-components": "7",
     "plop": "^2.4.0",
     "prop-types": "15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "puppeteer": "^1.10.0",
     "react-test-renderer": "^16.10",
     "regenerator-runtime": "^0.13.5",
