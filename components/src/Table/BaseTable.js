@@ -13,8 +13,19 @@ const StyledTable = styled.table({
   background: "white"
 });
 
-const BaseTable = ({ columns, rows, noRowsContent, keyField, id, loading, footerRows, rowHovers, compact }) => (
-  <StyledTable id={id}>
+const BaseTable = ({
+  columns,
+  rows,
+  noRowsContent,
+  keyField,
+  id,
+  loading,
+  footerRows,
+  rowHovers,
+  compact,
+  ...props
+}) => (
+  <StyledTable id={id} {...props}>
     <TableHead columns={columns} compact={compact} />
     <TableBody
       columns={columns}
