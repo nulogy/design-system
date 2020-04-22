@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.1](https://github.com/nulogy/design-system/compare/v2.5.0...v2.5.1) (2020-04-22)
+
+
+### Bug Fixes
+
+* accept a className in the Table component ([#630](https://github.com/nulogy/design-system/issues/630)) ([ff26d00](https://github.com/nulogy/design-system/commit/ff26d00bcc55a6fd82c97417190ef748e704045e))
+
+
+
+
+
 # [2.5.0](https://github.com/nulogy/design-system/compare/v2.4.0...v2.5.0) (2020-04-14)
 
 
