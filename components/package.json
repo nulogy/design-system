@@ -41,10 +41,8 @@
     "node": "*"
   },
   "main": "dist/main.js",
+  "module": "src/index.js",
   "browser": "dist/main.browser.js",
-  "files": [
-    "/dist"
-  ],
   "peerDependencies": {
     "react": ">=16.10.2",
     "react-dom": ">=16.10.2"
