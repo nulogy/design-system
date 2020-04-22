@@ -97,6 +97,7 @@ storiesOf("Table", module)
       rows={rowData}
       rowsPerPage={number("Rows per page", 1)}
       onPageChange={action("page changed")}
+      className="Table"
     />
   ))
   .add("with everything", () => (

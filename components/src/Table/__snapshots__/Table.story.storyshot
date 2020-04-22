@@ -583,7 +583,7 @@ exports[`Storyshots Table with pagination 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub Table"
     >
       <thead>
         <tr
