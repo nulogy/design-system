@@ -1,34 +1,33 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/29a91f95-431b-4c72-ac07-f01f2f2d8b1b/deploy-status)](https://app.netlify.com/sites/nulogy-design-system/deploys)
-[![Build Status](https://travis-ci.com/nulogy/design-system.svg?branch=master)](https://travis-ci.com/nulogy/design-system)
+# 🚚 Nulogy Design System
 
-# Nulogy Design System
+<p style="font-size: 21px; line-height: 1.5;">The Nulogy Design System is a collection of visual guidelines and UI components that enable our designers & developers to quickly create consistent experiences for our customers using established best practices.</p>
 
-The Nulogy Design System is a collection of Visual Guidelines and UI Components that will allow designers and developers to quickly create consistent experiences for our customers using established best practices.
+![Build status](https://img.shields.io/travis/com/nulogy/design-system?style=flat-square) ![Documentation site status](https://img.shields.io/netlify/6acbd77f-3248-4c04-9a44-58bc1a841f31?style=flat-square) ![Slack channel](https://img.shields.io/static/v1?label=slack&message=%23design-system&color=e01563&style=flat-square)
 
-## Components
+## 📦 Packages
 
-The primary way to interface with the system is by using our React components. They can be found in a package called [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components).
+This is a monorepo consisting of several packages, the most popular of which is [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components). If you're looking for a specific package, see below.
 
-## CSS
+| Package                                                                              | Description                                                                        |                                                                                                                                             |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components) | React components that take advantage of the Nulogy Design System                   | [![Components on NPM](https://img.shields.io/npm/v/@nulogy/components?style=flat-square)](https://www.npmjs.com/package/@nulogy/components) |
+| [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
+| [@nulogy/icons](https://github.com/nulogy/design-system/tree/master/icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
+| [@nulogy/tokens](https://github.com/nulogy/design-system/tree/master/tokens)         | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens)             |
 
-If your application can't use React components we also provide atomic CSS classes and Sass variables to build your own interface in Nulogy's style. These can be found in a package called [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css).
+## 🎨 UI Kit
 
-## Tokens
+Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab). See the [Designers' Getting Started Guide](https://nulogy.design/guides/designers/) for more detail.
 
-Design tokens are stored in their own package called [@nulogy/tokens](https://github.com/nulogy/design-system/tree/master/tokens). These are mostly used to build our Components and CSS packages above, but can also be imported directly into your application if needed.
+## 📚 Documentation
 
-## UI Kit
+For component documentation and general usage guides, see [nulogy.design](http://nulogy.design). For information on how to install and use a specific package, see that package's README.
 
-Designers can use the Nulogy Design System in Sketch by downloading the [Sketch UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab)
+## 🙏 Contributing
 
-## Resources
+Please see [Contributing.MD]() if you work at Nulogy and would like to contribute.
 
-- [Documentation](http://nulogy.design)
-- [Component Storybook](http://storybook.nulogy.design)
-- [@nulogy/components on npm](https://www.npmjs.com/package/@nulogy/components)
-- [@nulogy/css on npm](https://www.npmjs.com/package/@nulogy/css)
-- [@nulogy/tokens on npm](https://www.npmjs.com/package/@nulogy/tokens)
+## 🔗 Resources
 
-## Contributing
-
-- [CONTRIBUTING.md](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md)
+- [nulogy.design](http://nulogy.design)
+- [#design-system on Slack](slack://channel?id=CBAFQ4X7X/)
