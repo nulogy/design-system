@@ -1,6 +1,6 @@
 # @nulogy/icons
 
-> This is a collection of Material Icons that are used by Nulogy applications. This package is already imported into the <Icon /> component of the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components), and the icons here can be chosen with the `icon` prop.
+> This is a collection of Material Icons that are used by Nulogy applications. This package is already imported into the `<Icon />` component of the [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components), and the icons here can be chosen with the `icon` prop.
 
 ![npm (scoped)](https://img.shields.io/npm/v/@nulogy/css.svg)
 
