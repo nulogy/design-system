@@ -25,7 +25,7 @@ For component documentation and general usage guides, see [nulogy.design](http:/
 
 ## 🙌 Contributing
 
-Please see [Contributing.MD]() if you work at Nulogy and would like to contribute.
+Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md) if you work at Nulogy and would like to contribute.
 
 ## 🔗 Resources
 
