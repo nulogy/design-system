@@ -67,4 +67,4 @@ This will open a storybook at http://localhost:9000.
 
 ## 💬 Questions
 
-- [#design-system on Slack](slack://channel?id=CBAFQ4X7X/)
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X?)

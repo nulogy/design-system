@@ -30,4 +30,4 @@ Please see [Contributing.MD]() if you work at Nulogy and would like to contribut
 ## 🔗 Resources
 
 - [nulogy.design](http://nulogy.design)
-- [#design-system on Slack](slack://channel?id=CBAFQ4X7X/)
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X?)
