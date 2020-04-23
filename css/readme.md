@@ -11,7 +11,7 @@
 
 Note that the path will be different for your application.
 
-## 🚀 Usage
+## ✨ Usage
 
 There are two different types of CSS classes available: components and utility classes.
 
@@ -63,7 +63,7 @@ $ yarn
 $ yarn start
 ```
 
-This will open a storybook at http://localhost:9000.
+This will open a storybook at [http://localhost:9000](http://localhost:9000).
 
 ## 💬 Questions
 
