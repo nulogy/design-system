@@ -23,7 +23,7 @@ Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabst
 
 For component documentation and general usage guides, see [nulogy.design](http://nulogy.design). For information on how to install and use a specific package, see that package's README.
 
-## 🙏 Contributing
+## 🙌 Contributing
 
 Please see [Contributing.MD]() if you work at Nulogy and would like to contribute.
 
