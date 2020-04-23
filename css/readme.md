@@ -1,17 +1,17 @@
-![npm (scoped)](https://img.shields.io/npm/v/@nulogy/css.svg?color=blue)
-
 # @nulogy/css
 
-Want to use the Nulogy Design System but your application doesn't support React? You've come to the right place.
+<p style="font-size: 21px; line-height: 1.5;">A way to use the Nulogy Design System without having access to our React components.</p>
 
-## Installation
+![npm (scoped)](https://img.shields.io/npm/v/@nulogy/css.svg)
+
+## 📦 Installation
 
 1. Install the package: `yarn add @nulogy/css`
 2. Include the CSS where you need it: `<link rel="stylesheet" href="/node_modules/@nulogy/css/dist/nds.css" />`
 
-Note that the path may be different for your application.
+Note that the path will be different for your application.
 
-## Usage
+## 🚀 Usage
 
 There are two different types of CSS classes available: components and utility classes.
 
@@ -52,13 +52,19 @@ All utilitity classes are available responsively by adding a breakpoint prefix t
 .nds@xl-font-size--large (1920px and up)
 ```
 
-## Documentation
+## 📚 Documentation
 
 We don't actually host the CSS storybook anywhere at the moment. To see the full list of available classes and components along with usage examples:
 
-1. `git clone https://github.com/nulogy/design-system.git`
-2. `cd design-system/css`
-3. `yarn`
-4. `yarn start`
+```
+$ git clone https://github.com/nulogy/design-system.git
+$ cd design-system/css
+$ yarn
+$ yarn start
+```
 
 This will open a storybook at http://localhost:9000.
+
+## 💬 Questions
+
+- [#design-system on Slack](slack://channel?id=CBAFQ4X7X/)
