@@ -1,6 +1,6 @@
 # @nulogy/tokens
 
-> This is where Nulogy's design tokens are stored and converted using [Style Dictionar](https://amzn.github.io/style-dictionary)
+> This is where Nulogy's design tokens are stored and converted using [Style Dictionary](https://amzn.github.io/style-dictionary)
 
 ![npm (scoped)](https://img.shields.io/npm/v/@nulogy/tokens.svg)
 
@@ -26,4 +26,4 @@ After installing, you'll have access to three variable files:
 
 ## 💬 Questions
 
-- [#design-system on Slack](slack://channel?id=CBAFQ4X7X/)
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
