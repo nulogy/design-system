@@ -1,18 +1,18 @@
-![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg?color=blue)
-
 # @nulogy/components
 
-Built with React, compononents make it easy to create interfaces that conform to the principles of the Nulogy Design System. Components are [styled-components](https://www.styled-components.com/) written using [styled-system](https://jxnblk.com/styled-system/). This makes it possible to write CSS directly in JS and pass props based on our design constraints.
+> Built with React, compononents make it easy to create interfaces that conform to the principles of the Nulogy Design System.
 
-## Installation
+![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg)
+
+## 📦 Installation
+
+### 1. Add the package
 
 `yarn add @nulogy/components`
 
-## Usage
+### 2. Add fonts
 
-### 1. Add fonts
-
-Add [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans:300,400,500,600) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Sans) to your application
+Add [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans:300,400,500,600) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Sans) to your application, however you prefer to load assets. An example using Google Fonts is shown below.
 
 ```html
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet" />
@@ -34,8 +34,6 @@ class App extends React.Component {
 }
 ```
 
-You can also pass a locale prop to NDSProvider, see https://nulogy.design/guides/localization;
-
 ### 3. Import desired components
 
 ```js
@@ -44,4 +42,19 @@ import { Button } from "@nulogy/components";
 const SomeView = () => <Button>Click me</Button>;
 ```
 
-Please see the [documentation](http://nulogy.design/components/buttons) for instructions on how best to use each component.
+## ✨ Usage
+
+- See [nulogy.design](http://nulogy.design) for instructions on how best to use each component
+- See the [Storybook](storybook.nulogy.design) for usage examples
+
+## 🌎 Localization
+
+A `locale` prop can be passed to `<NDSProvider />` to change the language of aria-labels and strings inside our components. See the [Localization Guide](https://nulogy.design/guides/localization) for the full list of supported languages and their codes.
+
+## ⚠️ Testing components
+
+- See the [Testing Guide](https://nulogy.design/guides/testing) for information on how to test NDS components inside of your application.
+
+## 💬 Questions
+
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
