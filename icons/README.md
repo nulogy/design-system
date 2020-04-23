@@ -28,4 +28,4 @@ We use a subset of "Outlined" Material icons at Nulogy. To find and add a new on
 
 ## 💬 Questions
 
-- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X?)
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)

@@ -30,4 +30,4 @@ Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/master
 ## 🔗 Resources
 
 - [nulogy.design](http://nulogy.design)
-- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X?)
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)

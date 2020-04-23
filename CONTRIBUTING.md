@@ -79,4 +79,4 @@ _Coming soon_
 
 ## Resources
 
-- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X?)
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
