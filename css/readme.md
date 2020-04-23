@@ -1,6 +1,6 @@
 # @nulogy/css
 
-<p style="font-size: 21px; line-height: 1.5;">A way to use the Nulogy Design System without having access to our React components.</p>
+> A way to use the Nulogy Design System without having access to our React components.
 
 ![npm (scoped)](https://img.shields.io/npm/v/@nulogy/css.svg)
 

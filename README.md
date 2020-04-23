@@ -1,6 +1,6 @@
 # 🚚 Nulogy Design System
 
-<p style="font-size: 21px; line-height: 1.5;">The Nulogy Design System is a collection of visual guidelines and UI components that enable our designers & developers to quickly create consistent experiences for our customers using established best practices.</p>
+> The Nulogy Design System is a collection of visual guidelines and UI components that enable our designers & developers to quickly create consistent experiences for our customers using established best practices.
 
 ![Build status](https://img.shields.io/travis/com/nulogy/design-system?style=flat-square) ![Documentation site status](https://img.shields.io/netlify/6acbd77f-3248-4c04-9a44-58bc1a841f31?style=flat-square) ![Slack channel](https://img.shields.io/static/v1?label=slack&message=%23design-system&color=e01563&style=flat-square)
 

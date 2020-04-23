@@ -1,6 +1,6 @@
 # @nulogy/tokens
 
-<p style="font-size: 21px; line-height: 1.5;">This is where Nulogy's design tokens are stored and converted using <a href="https://amzn.github.io/style-dictionary">Style Dictionary</a>.</p>
+> This is where Nulogy's design tokens are stored and converted using [Style Dictionar](https://amzn.github.io/style-dictionary)
 
 ![npm (scoped)](https://img.shields.io/npm/v/@nulogy/tokens.svg)
 

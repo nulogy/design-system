@@ -1,6 +1,6 @@
 # @nulogy/components
 
-<p style="font-size: 21px; line-height: 1.5;">Built with React, compononents make it easy to create interfaces that conform to the principles of the Nulogy Design System. </p>
+> Built with React, compononents make it easy to create interfaces that conform to the principles of the Nulogy Design System.
 
 ![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg)
 
