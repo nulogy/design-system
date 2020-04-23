@@ -21,7 +21,7 @@
 After installing, you'll have access to three variable files:
 
 - `_variables.scss` for sass variables, used by @nulogy/css
-- `_exports.js` for javascript constants, used by @nulogy/components and converted into [theme](asdasd) file
+- `_exports.js` for javascript constants, used by @nulogy/components and converted into [theme](https://nulogy.design/theme) file
 - `variables.css` for access to css variables
 
 ## 💬 Questions
