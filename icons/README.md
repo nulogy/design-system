@@ -10,7 +10,7 @@ If you don't have access to the React component, you can install these directly:
 
 `$ yarn add @nulogy/icons`
 
-They can then be used in your application like any other `SVG`.
+They can then be used in your application like any other `.svg`.
 
 ## ➕ Adding a new icon
 
