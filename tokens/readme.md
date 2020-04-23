@@ -1,27 +1,29 @@
-![npm (scoped)](https://img.shields.io/npm/v/@nulogy/tokens.svg?color=blue)
-
 # @nulogy/tokens
-This is where Nulogy's design tokens are stored and converted using [Style Dictionary](https://amzn.github.io/style-dictionary). Tokens are mostly used in our React components and CSS classes, but tokens can be imported directly into your application if needed. 
+
+<p style="font-size: 21px; line-height: 1.5;">This is where Nulogy's design tokens are stored and converted using <a href="https://amzn.github.io/style-dictionary">Style Dictionary</a>.</p>
+
+![npm (scoped)](https://img.shields.io/npm/v/@nulogy/tokens.svg)
 
 ## What are tokens?
+
 > Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system for UI development.
+
 - [Salesforce](https://www.lightningdesignsystem.com/design-tokens/)
 
-## Installation
+## 📦 Installation
+
+**⚠️ Note** that this package is primarily designed to be used by [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components) and [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css). You probably shouldn't be pulling this into an application, unless you need access to raw sass, css, or javascript values for some reason.
+
 `yarn add @nulogy/tokens`
 
-## Usage 
+## ✨ Usage
 
-### In Sass
-`@import '/node_modules/@nulogy/tokens/dist/variables.scss';`
+After installing, you'll have access to three variable files:
 
-`.blue-thing {color: $color_base_blue}`
+- `_variables.scss` for sass variables, used by @nulogy/css
+- `_exports.js` for javascript constants, used by @nulogy/components and converted into [theme](asdasd) file
+- `variables.css` for access to css variables
 
-### With CSS Modules 
+## 💬 Questions
 
-In your component's jsx file, add `import "@nulogy/tokens/dist/variables.css";`
-
-`.blue-thing {color: var(--color-base-blue)}`
-
-### In JS 
-If you're using javascript, you can access our theme instead of the tokens directly. For instructions on that, see "For custom components" at [nulogy.design/theme](https://nulogy.design/theme/)
+- [#design-system on Slack](slack://channel?id=CBAFQ4X7X/)
