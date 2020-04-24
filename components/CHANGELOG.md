@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.2](https://github.com/nulogy/design-system/compare/v2.5.1...v2.5.2) (2020-04-24)
+
+
+### Bug Fixes
+
+* adds data-testid attribute to FieldLabel component ([#636](https://github.com/nulogy/design-system/issues/636)) ([b6a4447](https://github.com/nulogy/design-system/commit/b6a4447f0b189d9323c79964448d5784f5c78c8b))
+
+
+
+
+
 ## [2.5.1](https://github.com/nulogy/design-system/compare/v2.5.0...v2.5.1) (2020-04-22)
 
 
