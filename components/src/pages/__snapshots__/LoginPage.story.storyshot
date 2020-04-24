@@ -98,6 +98,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -131,6 +132,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -306,6 +308,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -339,6 +342,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -507,6 +511,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -540,6 +545,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -688,6 +694,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -721,6 +728,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -879,6 +887,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -912,6 +921,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               >
                 <div
                   class="Box-sc-1qu1edy-0 ilQgHG"
+                  data-testid="field-label"
                 >
                   <span
                     style="font-size:14px;font-weight:600;line-height:1.71428571"

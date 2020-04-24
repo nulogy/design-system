@@ -14,6 +14,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -146,6 +147,7 @@ exports[`Storyshots MonthRange default 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -278,6 +280,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -410,6 +413,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -542,6 +546,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -707,6 +712,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"

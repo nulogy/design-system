@@ -29,7 +29,7 @@ Label.defaultProps = {
 
 const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...props }) => (
   <Label style={{ display: "block" }} {...props}>
-    <Box mb={children && "x1"}>
+    <Box mb={children && "x1"} data-testid="field-label">
       <span style={labelTextStyles}>{labelText}</span>
       {requirementText && <RequirementText>{requirementText}</RequirementText>}
       {helpText && <HelpText>{helpText}</HelpText>}

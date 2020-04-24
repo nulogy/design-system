@@ -14,6 +14,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -144,6 +145,7 @@ exports[`Storyshots DateRange default 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -274,6 +276,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -404,6 +407,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -534,6 +538,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -697,6 +702,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -859,6 +865,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1159,6 +1166,7 @@ exports[`Storyshots DateRange with time error 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1459,6 +1467,7 @@ exports[`Storyshots DateRange with times 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
