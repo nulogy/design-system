@@ -72,6 +72,7 @@ const mainBundles = {
   plugins: [
     ...CORE_PLUGINS,
     resolve({
+      mainFields: ["main", "module"],
       extensions
     })
   ]
@@ -90,6 +91,7 @@ const mainMinBundle = {
   plugins: [
     ...CORE_PLUGINS,
     resolve({
+      mainFields: ["main", "module"],
       extensions
     }),
     terser()
