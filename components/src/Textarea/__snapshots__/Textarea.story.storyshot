@@ -17,6 +17,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
       >
         <div
           class="Box-sc-1qu1edy-0 ilQgHG"
+          data-testid="field-label"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -54,6 +55,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
       >
         <div
           class="Box-sc-1qu1edy-0 ilQgHG"
+          data-testid="field-label"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -90,6 +92,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
       >
         <div
           class="Box-sc-1qu1edy-0 ilQgHG"
+          data-testid="field-label"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -142,6 +145,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
       >
         <div
           class="Box-sc-1qu1edy-0 ilQgHG"
+          data-testid="field-label"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -179,6 +183,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
       >
         <div
           class="Box-sc-1qu1edy-0 ilQgHG"
+          data-testid="field-label"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -225,6 +230,7 @@ exports[`Storyshots Textarea set to required 1`] = `
         >
           <div
             class="Box-sc-1qu1edy-0 ilQgHG"
+            data-testid="field-label"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -268,6 +274,7 @@ exports[`Storyshots Textarea with error list 1`] = `
       >
         <div
           class="Box-sc-1qu1edy-0 ilQgHG"
+          data-testid="field-label"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -353,6 +360,7 @@ exports[`Storyshots Textarea with error message 1`] = `
       >
         <div
           class="Box-sc-1qu1edy-0 ilQgHG"
+          data-testid="field-label"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"

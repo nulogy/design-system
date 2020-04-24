@@ -23,6 +23,7 @@ exports[`Storyshots DatePicker default 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -93,6 +94,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -163,6 +165,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -233,6 +236,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -303,6 +307,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -405,6 +410,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"

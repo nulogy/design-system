@@ -14,6 +14,7 @@ exports[`Storyshots TimeRange default 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -226,6 +227,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -438,6 +440,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -650,6 +653,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 jlPsmj"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"

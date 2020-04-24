@@ -104,6 +104,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -139,6 +140,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -187,6 +189,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -283,6 +286,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -350,6 +354,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -385,6 +390,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -421,6 +427,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -456,6 +463,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -811,6 +819,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -878,6 +887,7 @@ exports[`Storyshots Form Demo form 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -983,6 +993,7 @@ exports[`Storyshots Form Form 1`] = `
         >
           <div
             class="Box-sc-1qu1edy-0 ilQgHG"
+            data-testid="field-label"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1017,6 +1028,7 @@ exports[`Storyshots Form Form 1`] = `
         >
           <div
             class="Box-sc-1qu1edy-0 ilQgHG"
+            data-testid="field-label"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1066,6 +1078,7 @@ exports[`Storyshots Form Form 1`] = `
         >
           <div
             class="Box-sc-1qu1edy-0 ilQgHG"
+            data-testid="field-label"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1139,6 +1152,7 @@ exports[`Storyshots Form With form sections 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1173,6 +1187,7 @@ exports[`Storyshots Form With form sections 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1222,6 +1237,7 @@ exports[`Storyshots Form With form sections 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1274,6 +1290,7 @@ exports[`Storyshots Form With form sections 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1308,6 +1325,7 @@ exports[`Storyshots Form With form sections 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1368,6 +1386,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1402,6 +1421,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1451,6 +1471,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1496,6 +1517,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1530,6 +1552,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           >
             <div
               class="Box-sc-1qu1edy-0 ilQgHG"
+              data-testid="field-label"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1580,6 +1603,7 @@ exports[`Storyshots Form Without title 1`] = `
         >
           <div
             class="Box-sc-1qu1edy-0 ilQgHG"
+            data-testid="field-label"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1614,6 +1638,7 @@ exports[`Storyshots Form Without title 1`] = `
         >
           <div
             class="Box-sc-1qu1edy-0 ilQgHG"
+            data-testid="field-label"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -1663,6 +1688,7 @@ exports[`Storyshots Form Without title 1`] = `
         >
           <div
             class="Box-sc-1qu1edy-0 ilQgHG"
+            data-testid="field-label"
           >
             <span
               style="font-size:14px;font-weight:600;line-height:1.71428571"

@@ -14,6 +14,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
     >
       <div
         class="Box-sc-1qu1edy-0 ilQgHG"
+        data-testid="field-label"
       >
         <span
           style="font-size:14px;font-weight:600;line-height:1.71428571"
