@@ -47,7 +47,8 @@
   ],
   "peerDependencies": {
     "react": ">=16.10.2",
-    "react-dom": ">=16.10.2"
+    "react-dom": ">=16.10.2",
+    "styled-components": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -117,7 +118,6 @@
     "react-resize-detector": "^4.2.0",
     "react-windowed-select": "^2.0.2",
     "smoothscroll-polyfill": "^0.4.4",
-    "styled-components": "^5.0.0",
     "styled-system": "^5.1.4",
     "svg-sprite-loader": "^3.8.0"
   },
