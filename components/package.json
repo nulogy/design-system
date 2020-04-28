@@ -86,12 +86,10 @@
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-test-renderer": "^16.10",
-    "rollup": "*",
+    "rollup": "^2.7.3",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-replace": "^2.2.0",
-    "rollup-plugin-terser": "^5.3.0",
-    "rollup-plugin-uglify": "^6.0.4",
     "svgi": "^1.1.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
