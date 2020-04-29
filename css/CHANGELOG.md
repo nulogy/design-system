@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.3](https://github.com/nulogy/design-system/compare/v2.5.2...v2.5.3) (2020-04-29)
+
+
+### Bug Fixes
+
+* remove max width from Alert to match React component ([#631](https://github.com/nulogy/design-system/issues/631)) ([10a3e24](https://github.com/nulogy/design-system/commit/10a3e24ebff5f420968fa56f5852cb5154653426))
+
+
+
+
+
 # [2.5.0](https://github.com/nulogy/design-system/compare/v2.4.0...v2.5.0) (2020-04-14)
 
 
