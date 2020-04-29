@@ -4,10 +4,6 @@ import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
 
-import * as dateFns from "date-fns";
-import * as popper from "react-popper";
-import * as reactI18n from "react-i18next";
-
 import packageJson from "./package.json";
 
 const EXTENSIONS = [".js", ".jsx"];
@@ -26,10 +22,7 @@ const CORE_PLUGINS = [
     include: [/node_modules/],
     namedExports: {
       "../node_modules/debounce/index.js": ["debounce"],
-      "../node_modules/react-windowed-select/lib/index.js": ["components"],
-      "../node_modules/react-i18next/dist/commonjs/index.js": Object.keys(reactI18n),
-      "../node_modules/react-popper/lib/cjs/index.js": Object.keys(popper),
-      "node_modules/date-fns/index.js": Object.keys(dateFns)
+      "../node_modules/react-windowed-select/lib/index.js": ["components"]
     }
   }),
   babel({
@@ -64,7 +57,7 @@ const mainBundles = {
   ],
   plugins: [
     resolve({
-      mainFields: ["main", "module"],
+      mainFields: ["module", "main"],
       extensions: EXTENSIONS
     }),
     ...CORE_PLUGINS
