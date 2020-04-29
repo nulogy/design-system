@@ -19,7 +19,6 @@
 
 .Alert {
   @include alert($color-base-blue, $color-base-light-blue);
-  display: flex;
 }
 
 .Alert__title {
