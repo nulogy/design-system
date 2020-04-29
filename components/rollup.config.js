@@ -5,12 +5,12 @@ import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
 
 import * as dateFns from "date-fns";
+import * as popper from "react-popper";
+import * as reactI18n from "react-i18next";
 
 import packageJson from "./package.json";
 
-const extensions = [".js", ".jsx"];
-
-const EXTERNALS = ["react", "react-dom", "prop-types", "styled-components"];
+const EXTENSIONS = [".js", ".jsx"];
 
 const GLOBALS = {
   react: "React",
@@ -19,22 +19,23 @@ const GLOBALS = {
   "styled-components": "styled"
 };
 
+const externals = Object.keys(GLOBALS);
+
 const CORE_PLUGINS = [
   commonjs({
     include: [/node_modules/],
     namedExports: {
       "../node_modules/debounce/index.js": ["debounce"],
       "../node_modules/react-windowed-select/lib/index.js": ["components"],
-      "../node_modules/react-i18next/dist/commonjs/index.js": ["I18nextProvider", "useTranslation"],
-      "../node_modules/react-popper/lib/cjs/index.js": ["Manager", "Reference", "Popper"],
-      "node_modules/date-fns/locale/index.js": ["enUS", "de", "fr", "es", "ptBR", "ro", "pl", "nl"],
+      "../node_modules/react-i18next/dist/commonjs/index.js": Object.keys(reactI18n),
+      "../node_modules/react-popper/lib/cjs/index.js": Object.keys(popper),
       "node_modules/date-fns/index.js": Object.keys(dateFns)
     }
   }),
   babel({
     runtimeHelpers: true,
     exclude: "./node_modules/**/*",
-    extensions
+    extensions: EXTENSIONS
   }),
   json(),
   replace({
@@ -45,13 +46,9 @@ const CORE_PLUGINS = [
 
 const ENTRY_FILE = "src/index.js";
 
-const baseConfig = {
-  input: ENTRY_FILE,
-  external: EXTERNALS
-};
-
 const mainBundles = {
-  ...baseConfig,
+  input: ENTRY_FILE,
+  external: externals,
   output: [
     {
       file: packageJson.main,
@@ -62,16 +59,15 @@ const mainBundles = {
     {
       file: packageJson.module,
       format: "es",
-      sourcemap: true,
       globals: GLOBALS
     }
   ],
   plugins: [
-    ...CORE_PLUGINS,
     resolve({
       mainFields: ["main", "module"],
-      extensions
-    })
+      extensions: EXTENSIONS
+    }),
+    ...CORE_PLUGINS
   ]
 };
 
