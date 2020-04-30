@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "3.0.6-autoimport",
+  "version": "3.0.7-autoimport",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
