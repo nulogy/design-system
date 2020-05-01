@@ -77,6 +77,8 @@ const mainBundles = {
       package.module and then if it's not specified look at
       package.main */
       mainFields: ["module", "main"],
+      /* modulesOnly: inspect resolved files are es2015 modules */
+      modulesOnly: true,
       /* extensions: specifies the file extensions to accept as imports */
       extensions: [".js", ".jsx"]
     }),
