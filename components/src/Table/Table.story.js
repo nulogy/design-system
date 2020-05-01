@@ -111,5 +111,6 @@ storiesOf("Table", module)
       hasSelectableRows={boolean("Selectable", true)}
       onRowSelectionChange={action("row selection changed")}
       onPageChange={action("page changed")}
+      className="Table"
     />
   ));
