@@ -55,6 +55,11 @@ const propsRows = [
     type: "Date",
     defaultValue: "undefined",
     description: "The latest date that can be selected"
+  },
+  {
+    name: "className",
+    type: "string",
+    defaultValue: "undefined"
   }
 ];
 

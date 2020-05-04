@@ -18,6 +18,9 @@ export const DatePickerStyles = createGlobalStyle({
     ".react-datepicker__triangle": {
       display: "none"
     },
+    ".react-datepicker-popper": {
+      zIndex: 1
+    },
     ".react-datepicker-popper[data-placement^='bottom']": {
       marginTop: "0"
     },
