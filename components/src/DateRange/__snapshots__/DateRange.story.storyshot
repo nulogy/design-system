@@ -28,7 +28,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -83,7 +83,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -159,7 +159,7 @@ exports[`Storyshots DateRange default 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -214,7 +214,7 @@ exports[`Storyshots DateRange default 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -290,7 +290,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -345,7 +345,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -421,7 +421,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -476,7 +476,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -552,7 +552,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -640,7 +640,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -716,7 +716,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -771,7 +771,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -879,7 +879,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1104,7 +1104,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1180,7 +1180,7 @@ exports[`Storyshots DateRange with time error 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1405,7 +1405,7 @@ exports[`Storyshots DateRange with time error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1481,7 +1481,7 @@ exports[`Storyshots DateRange with times 1`] = `
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"
@@ -1706,7 +1706,7 @@ exports[`Storyshots DateRange with times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
+        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
       >
         <div
           class="react-datepicker-wrapper"

@@ -160,7 +160,7 @@ DatePicker.defaultProps = {
   minDate: undefined,
   maxDate: undefined,
   highlightDates: undefined,
-  className: undefined
+  className: ""
 };
 
 export default DatePicker;
