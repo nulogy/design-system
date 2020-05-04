@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, boolean, number } from "@storybook/addon-knobs";
 import { Table } from ".";
 import { Box, DropdownButton, DropdownMenu, Text } from "..";
+import { Link } from "../Link";
 
 const dateToString = ({ cellData }) => {
   return new Date(cellData)
@@ -112,4 +113,25 @@ storiesOf("Table", module)
       onRowSelectionChange={action("row selection changed")}
       onPageChange={action("page changed")}
     />
-  ));
+  ))
+  .add("with pack manager styling", () => {
+    const columnsWithLinks = columns.map((column, i) => {
+      if (i === 0) {
+        return {
+          ...column,
+          cellRenderer: ({ cellData }) => <Link href="/">{cellData}</Link>
+        };
+      }
+      return column;
+    });
+    return (
+      <Table
+        packManagerStyle
+        columns={columnsWithLinks}
+        rows={rowData}
+        footerRows={footerRowData}
+        hasSelectableRows={boolean("Selectable", true)}
+        onRowSelectionChange={action("row selection changed")}
+      />
+    );
+  });
