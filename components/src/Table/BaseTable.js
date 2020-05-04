@@ -23,9 +23,9 @@ const BaseTable = ({
   footerRows,
   rowHovers,
   compact,
-  ...props
+  className
 }) => (
-  <StyledTable id={id} {...props}>
+  <StyledTable id={id} className={className}>
     <TableHead columns={columns} compact={compact} />
     <TableBody
       columns={columns}
@@ -49,7 +49,8 @@ BaseTable.propTypes = {
   loading: PropTypes.bool,
   footerRows: rowsPropType,
   rowHovers: PropTypes.bool,
-  compact: PropTypes.bool
+  compact: PropTypes.bool,
+  className: PropTypes.string
 };
 
 BaseTable.defaultProps = {
@@ -59,7 +60,8 @@ BaseTable.defaultProps = {
   loading: false,
   footerRows: [],
   rowHovers: true,
-  compact: false
+  compact: false,
+  className: undefined
 };
 
 export default BaseTable;

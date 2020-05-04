@@ -123,6 +123,7 @@ storiesOf("Table", module)
       rowHovers={boolean("Show row hovers", true)}
       compact={boolean("Show with compact styling", false)}
       loading={boolean("Show loading state", false)}
+      className="Table"
     />
   ))
   .add("with no data", () => (
