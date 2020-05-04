@@ -85,7 +85,7 @@ class DatePicker extends Component {
   };
 
   render() {
-    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, highlightDates } = this.props;
+    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, highlightDates, className } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -106,7 +106,7 @@ class DatePicker extends Component {
     );
 
     return (
-      <Field className="nds-date-picker">
+      <Field className={`${className} nds-date-picker`}>
         <DatePickerStyles />
         <LocaleContext.Consumer>
           {({ locale }) => (
@@ -145,7 +145,8 @@ DatePicker.propTypes = {
   errorList: PropTypes.arrayOf(PropTypes.string),
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
-  highlightDates: PropTypes.arrayOf(PropTypes.shape({}))
+  highlightDates: PropTypes.arrayOf(PropTypes.shape({})),
+  className: PropTypes.string
 };
 
 DatePicker.defaultProps = {
@@ -158,7 +159,8 @@ DatePicker.defaultProps = {
   errorList: undefined,
   minDate: undefined,
   maxDate: undefined,
-  highlightDates: undefined
+  highlightDates: undefined,
+  className: undefined
 };
 
 export default DatePicker;
