@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.4](https://github.com/nulogy/design-system/compare/v2.5.3...v2.5.4) (2020-05-04)
+
+
+### Bug Fixes
+
+* accept only className as other props cause warnings in Table ([#638](https://github.com/nulogy/design-system/issues/638)) ([0a687b6](https://github.com/nulogy/design-system/commit/0a687b667868267e871549e0f1c823cb4bf9f817))
+* firefox showing double scroll bars in Select ([#637](https://github.com/nulogy/design-system/issues/637)) ([72c33cd](https://github.com/nulogy/design-system/commit/72c33cd42e2913e06800426ae57acab511f744a2))
+* overlap issue with multiple stacked datepickers ([#640](https://github.com/nulogy/design-system/issues/640)) ([f520f24](https://github.com/nulogy/design-system/commit/f520f249ea79ae6132b7673c04c7242030e91c73))
+
+
+
+
+
 ## [2.5.2](https://github.com/nulogy/design-system/compare/v2.5.1...v2.5.2) (2020-04-24)
 
 

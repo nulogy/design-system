@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.4](https://github.com/nulogy/design-system/compare/v2.5.3...v2.5.4) (2020-05-04)
+
+
+### Bug Fixes
+
+* overlap issue with multiple stacked datepickers ([#640](https://github.com/nulogy/design-system/issues/640)) ([f520f24](https://github.com/nulogy/design-system/commit/f520f249ea79ae6132b7673c04c7242030e91c73))
+
+
+
+
+
 ## [2.5.2](https://github.com/nulogy/design-system/compare/v2.5.1...v2.5.2) (2020-04-24)
 
 **Note:** Version bump only for package @nulogy/docs
