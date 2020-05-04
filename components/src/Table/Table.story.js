@@ -125,13 +125,17 @@ storiesOf("Table", module)
       return column;
     });
     return (
-      <Table
-        packManagerStyle
-        columns={columnsWithLinks}
-        rows={rowData}
-        footerRows={footerRowData}
-        hasSelectableRows={boolean("Selectable", true)}
-        onRowSelectionChange={action("row selection changed")}
-      />
+      <>
+        <Table
+          packManagerStyle
+          columns={columnsWithLinks}
+          rows={rowData}
+          footerRows={footerRowData}
+          hasSelectableRows
+          onRowSelectionChange={action("row selection changed")}
+        />
+        <Table packManagerStyle columns={columnsWithLinks} rows={rowData} footerRows={footerRowData} />
+        <Table packManagerStyle columns={columnsWithLinks} rows={[]} />
+      </>
     );
   });

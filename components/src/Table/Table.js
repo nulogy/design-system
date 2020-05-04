@@ -3,12 +3,16 @@ import React from "react";
 import StatefulTable from "./StatefulTable";
 import BaseTable from "./BaseTable";
 import SortingColumnHeader from "./SortingColumnHeader";
-import theme from "../theme";
 import { Link } from "../Link";
 
 const PMCss = {
   fontFamily: `"Helvetica Neue", "Helvetica", "Arial", "sans-serif"`,
   fontSize: "12px",
+  ".nds-table__no-rows-content": {
+    padding: 0,
+    fontSize: "12px",
+    color: "#aaa"
+  },
   "thead tr": {
     borderBottom: "none"
   },
@@ -19,8 +23,13 @@ const PMCss = {
     paddingTop: 0,
     paddingBottom: 0
   },
+  "thead th, tfoot th, tbody td": {
+    "&:first-child": {
+      paddingLeft: "8px"
+    }
+  },
   "tbody tr:nth-child(odd)": {
-    backgroundColor: theme.colors.whiteGrey // #f0f0f0
+    backgroundColor: "#f0f0f0"
   },
 
   "tbody td, tfoot td": {
@@ -32,6 +41,9 @@ const PMCss = {
     fontSize: "12px",
     color: "#3593d8",
     textDecoration: "none",
+    "&:visited": {
+      color: "#660099"
+    },
     "&:hover": {
       textDecoration: "underline"
     }
