@@ -8,7 +8,7 @@ exports[`Storyshots DatePicker default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -79,7 +79,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -150,7 +150,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -221,7 +221,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -292,7 +292,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -395,7 +395,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-date-picker"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB undefined nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
