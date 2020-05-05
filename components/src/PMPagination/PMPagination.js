@@ -5,6 +5,7 @@ import { Pagination } from "../Pagination";
 /* Temporary Pack Manager (PM) legacy styled version of the component */
 
 export const PMPaginationCss = {
+  justifyContent: "flex-start",
   button: {
     fontSize: "12px",
     fontFamily: `"Helvetica Neue", "Helvetica", "Arial", "sans-serif"`,
@@ -22,6 +23,9 @@ export const PMPaginationCss = {
     "&[aria-current=true]": {
       backgroundColor: "#2E5C87",
       fontWeight: "bold"
+    },
+    svg: {
+      display: "none"
     }
   }
 };

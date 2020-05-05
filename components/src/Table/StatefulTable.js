@@ -196,7 +196,7 @@ class StatefulTable extends Component {
 
   render() {
     const { paginatedRows, currentPage } = this.state;
-    const { rowsPerPage, paginationCss } = this.props;
+    const { rowsPerPage, paginationProps, paginationCss } = this.props;
     return (
       <>
         <BaseTable {...this.getControlProps()} />
@@ -211,6 +211,7 @@ class StatefulTable extends Component {
             onPrevious={this.goToPrevPage}
             justifyContent="flex-end"
             css={paginationCss}
+            {...paginationProps}
           />
         )}
       </>
@@ -228,7 +229,8 @@ StatefulTable.propTypes = {
   selectAllAriaLabel: PropTypes.string,
   deselectAllAriaLabel: PropTypes.string,
   /* PM support only */
-  paginationCss: PropTypes.shape({})
+  paginationCss: PropTypes.shape({}),
+  paginationProps: PropTypes.shape(Pagination.propTypes)
 };
 
 StatefulTable.defaultProps = {
@@ -240,7 +242,8 @@ StatefulTable.defaultProps = {
   selectAllAriaLabel: undefined,
   deselectAllAriaLabel: undefined,
   /* PM support only */
-  paginationCss: undefined
+  paginationCss: undefined,
+  paginationProps: Pagination.defaultProps
 };
 
 export default StatefulTable;

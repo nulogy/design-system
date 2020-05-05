@@ -54,6 +54,4 @@ const PMCss = {
   }
 };
 
-export const PMTable = props => (
-  <Table css={PMCss} rowHovers={false} paginationCss={props.rowsPerPage && PMPaginationCss} {...props} />
-);
+export const PMTable = props => <Table css={PMCss} rowHovers={false} paginationCss={PMPaginationCss} {...props} />;

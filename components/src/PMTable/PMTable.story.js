@@ -49,6 +49,10 @@ storiesOf("PM/PMTable", module)
           hasSelectableRows
           onRowSelectionChange={action("row selection changed")}
           rowsPerPage={2}
+          paginationProps={{
+            nextLabel: "Next \u2192",
+            previousLabel: "\u2190 Previous"
+          }}
         />
         <PMTable columns={columnsWithLinks} rows={rowData} footerRows={footerRowData} />
         <PMTable columns={columnsWithLinks} rows={[]} />
