@@ -1,0 +1,1 @@
+export { PMPagination } from "./PMPagination";

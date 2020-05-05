@@ -47,3 +47,5 @@ export { Breadcrumbs } from "./Breadcrumbs";
 export { ALL_NDS_LOCALES } from "./locales.const";
 export { TruncatedText } from "./TruncatedText";
 export { Toast } from "./Toast";
+export { PMPagination } from "./PMPagination";
+export { PMTable } from "./PMTable";

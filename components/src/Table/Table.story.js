@@ -113,29 +113,4 @@ storiesOf("Table", module)
       onRowSelectionChange={action("row selection changed")}
       onPageChange={action("page changed")}
     />
-  ))
-  .add("with pack manager styling", () => {
-    const columnsWithLinks = columns.map((column, i) => {
-      if (i === 0) {
-        return {
-          ...column,
-          cellRenderer: ({ cellData }) => <Link href="/">{cellData}</Link>
-        };
-      }
-      return column;
-    });
-    return (
-      <>
-        <Table
-          packManagerStyle
-          columns={columnsWithLinks}
-          rows={rowData}
-          footerRows={footerRowData}
-          hasSelectableRows
-          onRowSelectionChange={action("row selection changed")}
-        />
-        <Table packManagerStyle columns={columnsWithLinks} rows={rowData} footerRows={footerRowData} />
-        <Table packManagerStyle columns={columnsWithLinks} rows={[]} />
-      </>
-    );
-  });
+  ));

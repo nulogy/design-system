@@ -23,31 +23,4 @@ storiesOf("Pagination", module)
   ))
   .add("on the first page", () => <Pagination currentPage={1} totalPages={10} />)
   .add("on the last page", () => <Pagination currentPage={10} totalPages={10} />)
-  .add("with less than 5 pages", () => <Pagination currentPage={3} totalPages={4} />)
-  .add("pack manager styling", () => (
-    <Pagination
-      currentPage={1}
-      totalPages={4}
-      css={{
-        button: {
-          fontSize: "12px",
-          fontFamily: `"Helvetica Neue", "Helvetica", "Arial", "sans-serif"`,
-          padding: "0 4px",
-          minWidth: "22px",
-          alignItems: "center",
-          justifyContent: "center",
-          borderRadius: "3px",
-          "&:not([disabled])": {
-            color: "#3593d8"
-          },
-          "&:not(:last-child)": {
-            marginRight: "6px"
-          },
-          "&[aria-current=true]": {
-            backgroundColor: "#2E5C87",
-            fontWeight: "bold"
-          }
-        }
-      }}
-    />
-  ));
+  .add("with less than 5 pages", () => <Pagination currentPage={3} totalPages={4} />);

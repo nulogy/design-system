@@ -1,0 +1,791 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots PM/PMTable default 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <table
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dgCtXD"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            data-testid="table-head"
+            scope="col"
+            width="30px"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="select all"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Date
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Actual Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-01
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,025 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,800 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-02
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,250 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-03
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,425 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-04
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            675 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-07
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,575 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-22
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,725 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-23
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+            >
+              <label
+                class="ClickInputLabel-j2axnv-0 kemUmZ"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-24
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            -
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            colspan="2"
+            scope="row"
+          >
+            Total
+          </th>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            18,000 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7,725 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            colspan="2"
+            scope="row"
+          >
+            Attainment
+          </th>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            41.5%
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <table
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dgCtXD"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Date
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Actual Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-01
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,025 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,800 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-02
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,250 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-03
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,425 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-04
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            675 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-07
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,575 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-22
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,725 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-23
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+        >
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 geMpSb"
+              color="blue"
+              href="/"
+            >
+              2019-10-24
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            -
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            colspan="1"
+            scope="row"
+          >
+            Total
+          </th>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            18,000 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7,725 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            colspan="1"
+            scope="row"
+          >
+            Attainment
+          </th>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            41.5%
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <table
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dgCtXD"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Date
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Actual Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr>
+          <td
+            colspan="3"
+          >
+            <div
+              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 dpBjul nds-table__no-rows-content"
+            >
+              No records have been created for this table.
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot />
+    </table>
+  </div>
+</div>
+`;
