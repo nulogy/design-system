@@ -8,7 +8,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dgCtXD"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dRHeiM"
     >
       <thead>
         <tr
@@ -158,282 +158,6 @@ exports[`Storyshots PM/PMTable default 1`] = `
             2,250 eaches
           </td>
         </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
-            >
-              <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
-              >
-                <input
-                  aria-invalid="false"
-                  aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
-                  type="checkbox"
-                />
-                <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
-                  data-testid="visual-checkbox"
-                />
-              </label>
-            </div>
-          </td>
-          <td>
-            <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
-              color="blue"
-              href="/"
-            >
-              2019-10-03
-            </a>
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            1,425 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
-            >
-              <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
-              >
-                <input
-                  aria-invalid="false"
-                  aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
-                  type="checkbox"
-                />
-                <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
-                  data-testid="visual-checkbox"
-                />
-              </label>
-            </div>
-          </td>
-          <td>
-            <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
-              color="blue"
-              href="/"
-            >
-              2019-10-04
-            </a>
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            675 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
-            >
-              <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
-              >
-                <input
-                  aria-invalid="false"
-                  aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
-                  type="checkbox"
-                />
-                <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
-                  data-testid="visual-checkbox"
-                />
-              </label>
-            </div>
-          </td>
-          <td>
-            <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
-              color="blue"
-              href="/"
-            >
-              2019-10-07
-            </a>
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            1,575 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
-            >
-              <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
-              >
-                <input
-                  aria-invalid="false"
-                  aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
-                  type="checkbox"
-                />
-                <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
-                  data-testid="visual-checkbox"
-                />
-              </label>
-            </div>
-          </td>
-          <td>
-            <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
-              color="blue"
-              href="/"
-            >
-              2019-10-22
-            </a>
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            1,725 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            -
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
-            >
-              <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
-              >
-                <input
-                  aria-invalid="false"
-                  aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
-                  type="checkbox"
-                />
-                <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
-                  data-testid="visual-checkbox"
-                />
-              </label>
-            </div>
-          </td>
-          <td>
-            <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
-              color="blue"
-              href="/"
-            >
-              2019-10-23
-            </a>
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            -
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
-            >
-              <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
-              >
-                <input
-                  aria-invalid="false"
-                  aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
-                  type="checkbox"
-                />
-                <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
-                  data-testid="visual-checkbox"
-                />
-              </label>
-            </div>
-          </td>
-          <td>
-            <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
-              color="blue"
-              href="/"
-            >
-              2019-10-24
-            </a>
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            -
-          </td>
-        </tr>
       </tbody>
       <tfoot>
         <tr
@@ -478,8 +202,86 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
       </tfoot>
     </table>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 kTyKut"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         ← Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next → 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dgCtXD"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dRHeiM"
     >
       <thead>
         <tr
@@ -740,7 +542,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tfoot>
     </table>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dgCtXD"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dRHeiM"
     >
       <thead>
         <tr

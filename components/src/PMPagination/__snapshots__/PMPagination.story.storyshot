@@ -9,7 +9,7 @@ exports[`Storyshots PM/PMPagination default 1`] = `
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd PMPagination___StyledPagination-h94owo-0 fmUYIu"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd PMPagination___StyledPagination-h94owo-0 gEPAWr"
     >
       <button
         aria-label="Go to previous results"
@@ -32,7 +32,7 @@ exports[`Storyshots PM/PMPagination default 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         ← Previous
       </button>
       <button
         aria-current="true"
@@ -66,7 +66,7 @@ exports[`Storyshots PM/PMPagination default 1`] = `
         aria-label="Go to next results"
         class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
       >
-        Next 
+        Next → 
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 dEtgXr"

@@ -230,7 +230,7 @@ StatefulTable.propTypes = {
   deselectAllAriaLabel: PropTypes.string,
   /* PM support only */
   paginationCss: PropTypes.shape({}),
-  paginationProps: PropTypes.shape(Pagination.propTypes)
+  paginationProps: PropTypes.shape({})
 };
 
 StatefulTable.defaultProps = {
@@ -243,7 +243,7 @@ StatefulTable.defaultProps = {
   deselectAllAriaLabel: undefined,
   /* PM support only */
   paginationCss: undefined,
-  paginationProps: Pagination.defaultProps
+  paginationProps: {}
 };
 
 export default StatefulTable;

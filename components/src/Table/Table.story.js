@@ -5,7 +5,6 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, boolean, number } from "@storybook/addon-knobs";
 import { Table } from ".";
 import { Box, DropdownButton, DropdownMenu, Text } from "..";
-import { Link } from "../Link";
 
 const dateToString = ({ cellData }) => {
   return new Date(cellData)
