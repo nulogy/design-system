@@ -48,6 +48,7 @@ storiesOf("PM/PMTable", module)
           footerRows={footerRowData}
           hasSelectableRows
           onRowSelectionChange={action("row selection changed")}
+          rowsPerPage={2}
         />
         <PMTable columns={columnsWithLinks} rows={rowData} footerRows={footerRowData} />
         <PMTable columns={columnsWithLinks} rows={[]} />

@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "../Link";
 import { Table } from "../Table";
+import { PMPaginationCss } from "../PMPagination/PMPagination";
 
 /* Temporary Pack Manager (PM) legacy styled version of the component */
 
@@ -37,6 +38,9 @@ const PMCss = {
     height: "34px",
     color: "#444"
   },
+  nav: {
+    backgroundColor: "#660099"
+  },
   [`${Link}`]: {
     fontSize: "12px",
     color: "#3593d8",
@@ -50,4 +54,6 @@ const PMCss = {
   }
 };
 
-export const PMTable = props => <Table css={PMCss} rowHovers={false} {...props} />;
+export const PMTable = props => (
+  <Table css={PMCss} rowHovers={false} paginationCss={props.rowsPerPage && PMPaginationCss} {...props} />
+);

@@ -4,7 +4,7 @@ import { Pagination } from "../Pagination";
 
 /* Temporary Pack Manager (PM) legacy styled version of the component */
 
-const PMCss = {
+export const PMPaginationCss = {
   button: {
     fontSize: "12px",
     fontFamily: `"Helvetica Neue", "Helvetica", "Arial", "sans-serif"`,
@@ -26,4 +26,4 @@ const PMCss = {
   }
 };
 
-export const PMPagination = props => <Pagination css={PMCss} {...props} />;
+export const PMPagination = props => <Pagination css={PMPaginationCss} {...props} />;
