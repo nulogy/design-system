@@ -15,7 +15,6 @@ const DatePickerInput = forwardRef(
       onUpKeyPress,
       onDownKeyPress,
       onEnterKeyPress,
-      onSpaceKeyPress,
       "aria-label": ariaLabel
     },
     ref
