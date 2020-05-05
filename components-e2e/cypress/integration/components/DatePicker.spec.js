@@ -37,11 +37,6 @@ describe("Datepicker", () => {
         closesOnKeyPress("{enter}");
       });
 
-      it("can close a calendar on space", () => {
-        getDateInputComponent().click();
-        closesOnKeyPress(" ");
-      });
-
       it("displays the selected date in the calendar", () => {
         getDateInputComponent().click();
         cy.get(

@@ -15,7 +15,6 @@ const DatePickerInput = forwardRef(
       onUpKeyPress,
       onDownKeyPress,
       onEnterKeyPress,
-      onSpaceKeyPress,
       "aria-label": ariaLabel
     },
     ref
@@ -32,8 +31,6 @@ const DatePickerInput = forwardRef(
         onDownKeyPress(event);
       } else if (event.keyCode === 13) {
         onEnterKeyPress(event);
-      } else if (event.keyCode === 32) {
-        onSpaceKeyPress(event);
       }
     };
     const { t } = useTranslation();
