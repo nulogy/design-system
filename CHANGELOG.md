@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.1](https://github.com/nulogy/design-system/compare/v2.6.0...v2.6.1) (2020-05-05)
+
+
+### Bug Fixes
+
+* Datepicker input should not clear space key ([#642](https://github.com/nulogy/design-system/issues/642)) ([15ecc48](https://github.com/nulogy/design-system/commit/15ecc48d469fc43d75fe1806f01cdcd6fb29ef6b))
+
+
+
+
+
 # [2.6.0](https://github.com/nulogy/design-system/compare/v2.5.4...v2.6.0) (2020-05-05)
 
 
