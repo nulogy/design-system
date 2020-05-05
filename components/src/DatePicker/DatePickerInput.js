@@ -32,7 +32,7 @@ const DatePickerInput = forwardRef(
         onDownKeyPress(event);
       } else if (event.keyCode === 13) {
         onEnterKeyPress(event);
-      } else if (event.keyCode === 32) {
+      } else if (event.keyCode === 32 && onSpaceKeyPress) {
         onSpaceKeyPress(event);
       }
     };

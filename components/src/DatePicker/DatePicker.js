@@ -76,10 +76,6 @@ class DatePicker extends Component {
     this.datepickerRef.setOpen(!isOpen);
   };
 
-  handleSpaceKey = () => {
-    this.datepickerRef.setOpen(false);
-  };
-
   renderHeader = ({ locale }) => {
     return props => <DatePickerHeader locale={locale} {...props} />;
   };
@@ -101,7 +97,6 @@ class DatePicker extends Component {
         onUpKeyPress={this.handleUpKey}
         onDownKeyPress={this.handleDownKey}
         onEnterKeyPress={this.handleEnterKey}
-        onSpaceKeyPress={this.handleSpaceKey}
       />
     );
 
