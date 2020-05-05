@@ -8,7 +8,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dRHeiM"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 ideIOb"
     >
       <thead>
         <tr
@@ -45,7 +45,35 @@ exports[`Storyshots PM/PMTable default 1`] = `
             data-testid="table-head"
             scope="col"
           >
-            Date
+            ID
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Ship
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Customer
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Ship To
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Shipped
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -60,6 +88,13 @@ exports[`Storyshots PM/PMTable default 1`] = `
             scope="col"
           >
             Actual Quantity
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Notes
           </th>
         </tr>
       </thead>
@@ -98,8 +133,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-01
+              1234454
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-01
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            National Widgets
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            99 Reactor Blvd., Springfield, SI
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -110,6 +165,11 @@ exports[`Storyshots PM/PMTable default 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             1,800 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
           </td>
         </tr>
         <tr
@@ -144,8 +204,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-02
+              1234455
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-02
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            National Widgets
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7 New St., New York, NY
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Yes
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -156,6 +236,11 @@ exports[`Storyshots PM/PMTable default 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,250 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
           </td>
         </tr>
       </tbody>
@@ -172,6 +257,18 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </th>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             18,000 eaches
           </td>
@@ -180,6 +277,9 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             7,725 eaches
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
         </tr>
         <tr
           class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
@@ -196,15 +296,30 @@ exports[`Storyshots PM/PMTable default 1`] = `
           />
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             41.5%
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
         </tr>
       </tfoot>
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 kTyKut"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
     >
       <button
         aria-label="Go to previous results"
@@ -281,7 +396,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </button>
     </nav>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dRHeiM"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 ideIOb"
     >
       <thead>
         <tr
@@ -292,7 +407,35 @@ exports[`Storyshots PM/PMTable default 1`] = `
             data-testid="table-head"
             scope="col"
           >
-            Date
+            ID
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Ship
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Customer
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Ship To
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Shipped
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -308,6 +451,13 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             Actual Quantity
           </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Notes
+          </th>
         </tr>
       </thead>
       <tbody
@@ -322,8 +472,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-01
+              1234454
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-01
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            National Widgets
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            99 Reactor Blvd., Springfield, SI
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -335,6 +505,11 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             1,800 eaches
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
@@ -345,8 +520,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-02
+              1234455
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-02
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            National Widgets
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7 New St., New York, NY
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Yes
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -358,6 +553,11 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             2,250 eaches
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
@@ -368,8 +568,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-03
+              1234461
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-03
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            LTS Corp
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            11 Peter St., Toronto, ON
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -381,6 +601,11 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             1,425 eaches
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
@@ -391,8 +616,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-04
+              1234424
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-04
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Neutron
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            5555 Hwy 6., Toronto, ON
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -404,6 +649,11 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             675 eaches
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
@@ -414,8 +664,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-07
+              1234453
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-07
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Scopewise
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7 New St., New York, NY
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -427,6 +697,11 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             1,575 eaches
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
@@ -437,8 +712,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-22
+              1232221
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-22
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Scopewise
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            871 Husky St., Toronto, ON
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -448,7 +743,12 @@ exports[`Storyshots PM/PMTable default 1`] = `
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
-            -
+            --
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
           </td>
         </tr>
         <tr
@@ -460,8 +760,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-23
+              1444453
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-23
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Fresh Farm
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7 New St., New York, NY
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Yes
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -471,7 +791,12 @@ exports[`Storyshots PM/PMTable default 1`] = `
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
-            -
+            --
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
           </td>
         </tr>
         <tr
@@ -483,8 +808,28 @@ exports[`Storyshots PM/PMTable default 1`] = `
               color="blue"
               href="/"
             >
-              2019-10-24
+              1224478
             </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-24
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            LTS Corp
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            12345 Rodeo Ave., Los Angeles, CA
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -494,7 +839,12 @@ exports[`Storyshots PM/PMTable default 1`] = `
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
-            -
+            --
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
           </td>
         </tr>
       </tbody>
@@ -511,6 +861,18 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </th>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             18,000 eaches
           </td>
@@ -519,6 +881,9 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             7,725 eaches
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
         </tr>
         <tr
           class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
@@ -535,14 +900,29 @@ exports[`Storyshots PM/PMTable default 1`] = `
           />
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             41.5%
           </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
         </tr>
       </tfoot>
     </table>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 dRHeiM"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 ideIOb"
     >
       <thead>
         <tr
@@ -553,7 +933,35 @@ exports[`Storyshots PM/PMTable default 1`] = `
             data-testid="table-head"
             scope="col"
           >
-            Date
+            ID
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Ship
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Customer
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Ship To
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Shipped
           </th>
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -569,6 +977,13 @@ exports[`Storyshots PM/PMTable default 1`] = `
           >
             Actual Quantity
           </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Notes
+          </th>
         </tr>
       </thead>
       <tbody
@@ -576,7 +991,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       >
         <tr>
           <td
-            colspan="3"
+            colspan="8"
           >
             <div
               class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 dpBjul nds-table__no-rows-content"
