@@ -7,7 +7,6 @@ import { PMPaginationCss } from "../PMPagination/PMPagination";
 /* Temporary Pack Manager (PM) legacy styled version of the component */
 
 const PMCss = {
-  fontFamily: `"Helvetica Neue", "Helvetica", "Arial", "sans-serif"`,
   fontSize: "12px",
   ".nds-table__no-rows-content": {
     padding: 0,

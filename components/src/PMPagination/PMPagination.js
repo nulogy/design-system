@@ -8,7 +8,6 @@ export const PMPaginationCss = {
   justifyContent: "flex-start",
   button: {
     fontSize: "12px",
-    fontFamily: `"Helvetica Neue", "Helvetica", "Arial", "sans-serif"`,
     padding: "0 4px",
     minWidth: "22px",
     alignItems: "center",

@@ -7,25 +7,102 @@ import { Link } from "../Link";
 import { PMTable } from ".";
 
 const columns = [
-  { label: "Date", dataKey: "date" },
+  { label: "ID", dataKey: "id" },
+  { label: "Expected Ship", dataKey: "date" },
+  { label: "Customer", dataKey: "customer" },
+  { label: "Ship To", dataKey: "shipTo" },
+  { label: "Shipped", dataKey: "shipped" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
-  { label: "Actual Quantity", dataKey: "actualQuantity" }
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
+  { label: "Notes", dataKey: "notes" }
 ];
 
 const rowData = [
-  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
-  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
-  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
-  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
-  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
-  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r7" },
-  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" },
-  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r9" }
+  {
+    id: "1234454",
+    date: "2019-10-01",
+    customer: "National Widgets",
+    shipTo: "99 Reactor Blvd., Springfield, SI",
+    shipped: "No",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    notes: "--"
+  },
+  {
+    id: "1234455",
+    date: "2019-10-02",
+    customer: "National Widgets",
+    shipTo: "7 New St., New York, NY",
+    shipped: "Yes",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "2,250 eaches",
+    notes: "--"
+  },
+  {
+    id: "1234461",
+    date: "2019-10-03",
+    customer: "LTS Corp",
+    shipTo: "11 Peter St., Toronto, ON",
+    shipped: "No",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,425 eaches",
+    notes: "--"
+  },
+  {
+    id: "1234424",
+    date: "2019-10-04",
+    customer: "Neutron",
+    shipTo: "5555 Hwy 6., Toronto, ON",
+    shipped: "No",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    notes: "--"
+  },
+  {
+    id: "1234453",
+    date: "2019-10-07",
+    customer: "Scopewise",
+    shipTo: "7 New St., New York, NY",
+    shipped: "No",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,575 eaches",
+    notes: "--"
+  },
+  {
+    id: "1232221",
+    date: "2019-10-22",
+    customer: "Scopewise",
+    shipTo: "871 Husky St., Toronto, ON",
+    shipped: "No",
+    expectedQuantity: "1,725 eaches",
+    actualQuantity: "--",
+    notes: "--"
+  },
+  {
+    id: "1444453",
+    date: "2019-10-23",
+    customer: "Fresh Farm",
+    shipTo: "7 New St., New York, NY",
+    shipped: "Yes",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "--",
+    notes: "--"
+  },
+  {
+    id: "1224478",
+    date: "2019-10-24",
+    customer: "LTS Corp",
+    shipTo: "12345 Rodeo Ave., Los Angeles, CA",
+    shipped: "No",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "--",
+    notes: "--"
+  }
 ];
 
 const footerRowData = [
-  { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches", id: "f1" },
-  { date: "Attainment", expectedQuantity: "", actualQuantity: "41.5%", id: "f2" }
+  { date: "", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches", id: "Total" },
+  { date: "", expectedQuantity: "", actualQuantity: "41.5%", id: "Attainment" }
 ];
 
 storiesOf("PM/PMTable", module)
