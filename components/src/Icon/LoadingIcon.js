@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { generateId } from "../utils";
+import generateId from "../utils/generateId";
 
 const LoadingIcon = ({ color, size, title, ...props }) => {
   const id = generateId();

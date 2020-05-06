@@ -1,1 +1,1 @@
-export { PMTable } from "./PMTable";
+export { default as PMTable } from "./PMTable";

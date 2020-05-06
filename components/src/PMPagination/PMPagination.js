@@ -29,4 +29,6 @@ export const PMPaginationCss = {
   }
 };
 
-export const PMPagination = props => <Pagination css={PMPaginationCss} {...props} />;
+const PMPagination = props => <Pagination css={PMPaginationCss} {...props} />;
+
+export default PMPagination;

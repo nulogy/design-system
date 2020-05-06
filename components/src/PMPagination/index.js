@@ -1,1 +1,1 @@
-export { PMPagination } from "./PMPagination";
+export { default as PMPagination } from "./PMPagination";
