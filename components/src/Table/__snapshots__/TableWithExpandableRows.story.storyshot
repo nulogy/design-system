@@ -481,7 +481,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          data-testid="table-row"
+          data-testid="expanded-table-row"
         >
           <td
             colspan="4"
@@ -568,7 +568,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          data-testid="table-row"
+          data-testid="expanded-table-row"
         >
           <td
             colspan="4"
