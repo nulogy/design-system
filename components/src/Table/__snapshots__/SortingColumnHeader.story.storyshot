@@ -20,6 +20,7 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
       <button
         aria-label="Sort ascending"
         class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+        type="button"
       >
         <svg
           aria-hidden="true"

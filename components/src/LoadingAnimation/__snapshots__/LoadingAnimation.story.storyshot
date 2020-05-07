@@ -503,6 +503,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
           aria-label="Retry"
           class="ControlIcon__StyledButton-sc-1h83lvi-0 jupSnY"
           disabled=""
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -523,6 +524,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         <button
           aria-label="Abort"
           class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -742,6 +744,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         <button
           aria-label="Retry"
           class="ControlIcon__StyledButton-sc-1h83lvi-0 jlPgHC"
+          type="button"
         >
           <svg
             aria-hidden="true"
@@ -762,6 +765,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         <button
           aria-label="Abort"
           class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+          type="button"
         >
           <svg
             aria-hidden="true"
