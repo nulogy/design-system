@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/nulogy/design-system/compare/v2.6.1...v2.7.0) (2020-05-07)
+
+
+### Features
+
+* adds data-testid attribute to TableBody rows ([#643](https://github.com/nulogy/design-system/issues/643)) ([0ced637](https://github.com/nulogy/design-system/commit/0ced63779744d62569095478b06d1e286ea8d28a))
+
+
+
+
+
 ## [2.6.1](https://github.com/nulogy/design-system/compare/v2.6.0...v2.6.1) (2020-05-05)
 
 

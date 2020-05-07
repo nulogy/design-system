@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://github.com/nulogy/design-system/compare/v2.6.1...v2.7.0) (2020-05-07)
+
+**Note:** Version bump only for package @nulogy/docs
+
+
+
+
+
 ## [2.6.1](https://github.com/nulogy/design-system/compare/v2.6.0...v2.6.1) (2020-05-05)
 
 **Note:** Version bump only for package @nulogy/docs
