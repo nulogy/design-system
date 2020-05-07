@@ -91,6 +91,7 @@ exports[`Storyshots Table with everything 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             colspan="7"
@@ -111,6 +112,7 @@ exports[`Storyshots Table with everything 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -210,6 +212,7 @@ exports[`Storyshots Table with everything 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -288,6 +291,7 @@ exports[`Storyshots Table with everything 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -366,6 +370,7 @@ exports[`Storyshots Table with everything 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -617,6 +622,7 @@ exports[`Storyshots Table with pagination 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"

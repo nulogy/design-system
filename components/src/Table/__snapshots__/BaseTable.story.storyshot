@@ -42,6 +42,7 @@ exports[`Storyshots Table  with data 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -61,6 +62,7 @@ exports[`Storyshots Table  with data 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -80,6 +82,7 @@ exports[`Storyshots Table  with data 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -99,6 +102,7 @@ exports[`Storyshots Table  with data 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -118,6 +122,7 @@ exports[`Storyshots Table  with data 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -137,6 +142,7 @@ exports[`Storyshots Table  with data 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -156,6 +162,7 @@ exports[`Storyshots Table  with data 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -175,6 +182,7 @@ exports[`Storyshots Table  with data 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -241,6 +249,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -260,6 +269,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -279,6 +289,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -298,6 +309,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -317,6 +329,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -336,6 +349,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -355,6 +369,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -374,6 +389,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -438,6 +454,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -482,6 +499,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -526,6 +544,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -570,6 +589,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -614,6 +634,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -658,6 +679,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -702,6 +724,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -746,6 +769,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -848,6 +872,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -870,6 +895,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -892,6 +918,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -914,6 +941,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -936,6 +964,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -958,6 +987,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -980,6 +1010,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1002,6 +1033,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1071,6 +1103,7 @@ exports[`Storyshots Table with a footer 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1090,6 +1123,7 @@ exports[`Storyshots Table with a footer 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1109,6 +1143,7 @@ exports[`Storyshots Table with a footer 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1128,6 +1163,7 @@ exports[`Storyshots Table with a footer 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1147,6 +1183,7 @@ exports[`Storyshots Table with a footer 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1166,6 +1203,7 @@ exports[`Storyshots Table with a footer 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1185,6 +1223,7 @@ exports[`Storyshots Table with a footer 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1204,6 +1243,7 @@ exports[`Storyshots Table with a footer 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1311,6 +1351,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1330,6 +1371,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1349,6 +1391,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1368,6 +1411,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1387,6 +1431,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1406,6 +1451,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1425,6 +1471,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1444,6 +1491,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1518,6 +1566,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1540,6 +1589,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1562,6 +1612,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1584,6 +1635,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1608,6 +1660,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1630,6 +1683,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1652,6 +1706,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1674,6 +1729,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1743,6 +1799,7 @@ exports[`Storyshots Table with full width section 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1762,6 +1819,7 @@ exports[`Storyshots Table with full width section 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1781,6 +1839,7 @@ exports[`Storyshots Table with full width section 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1800,6 +1859,7 @@ exports[`Storyshots Table with full width section 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1819,6 +1879,7 @@ exports[`Storyshots Table with full width section 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             colspan="3"
@@ -1839,6 +1900,7 @@ exports[`Storyshots Table with full width section 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1858,6 +1920,7 @@ exports[`Storyshots Table with full width section 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1877,6 +1940,7 @@ exports[`Storyshots Table with full width section 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -2095,6 +2159,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -2227,6 +2292,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -2359,6 +2425,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -2491,6 +2558,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -2623,6 +2691,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -2755,6 +2824,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -2887,6 +2957,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3019,6 +3090,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3151,6 +3223,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3283,6 +3356,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3415,6 +3489,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3547,6 +3622,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3679,6 +3755,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3811,6 +3888,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -3943,6 +4021,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4075,6 +4154,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4207,6 +4287,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4339,6 +4420,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4471,6 +4553,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4603,6 +4686,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4735,6 +4819,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4867,6 +4952,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -4999,6 +5085,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -5131,6 +5218,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -5263,6 +5351,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -5395,6 +5484,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -5527,6 +5617,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -5659,6 +5750,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -5791,6 +5883,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -5923,6 +6016,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6055,6 +6149,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6187,6 +6282,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6319,6 +6415,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6451,6 +6548,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6583,6 +6681,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6715,6 +6814,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6847,6 +6947,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -6979,6 +7080,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -7111,6 +7213,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -7243,6 +7346,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -7375,6 +7479,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -7507,6 +7612,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -7639,6 +7745,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -7771,6 +7878,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -7903,6 +8011,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -8035,6 +8144,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -8167,6 +8277,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -8299,6 +8410,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -8431,6 +8543,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -8563,6 +8676,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -8740,7 +8854,9 @@ exports[`Storyshots Table with no data 1`] = `
       <tbody
         data-testid="table-body"
       >
-        <tr>
+        <tr
+          data-testid="table-message-container"
+        >
           <td
             colspan="2"
           >
