@@ -41,7 +41,7 @@ const TableBodyRow = ({ row, columns, rowHovers, compact }) => {
     ));
   return (
     <>
-      <StyledTr rowHovers={rowHovers}>
+      <StyledTr rowHovers={rowHovers} data-testid="table-row">
         {row.heading ? (
           <TableCell row={row} colSpan={columns.length} cellData={row.heading} compact={compact} />
         ) : (
@@ -49,7 +49,7 @@ const TableBodyRow = ({ row, columns, rowHovers, compact }) => {
         )}
       </StyledTr>
       {row.expandedContent && row.expanded && (
-        <tr>
+        <tr data-testid="table-row">
           <td colSpan={columns.length}>{row.expandedContent({ row })}</td>
         </tr>
       )}
@@ -65,7 +65,7 @@ TableBodyRow.propTypes = {
 };
 
 const TableMessageContainer = ({ colSpan, children }) => (
-  <tr>
+  <tr data-testid="table-message-container">
     <td colSpan={colSpan}>
       <StyledMessageContainer>{children}</StyledMessageContainer>
     </td>
