@@ -38,8 +38,8 @@ const StyledButton = styled.button(
   space
 );
 
-const ControlIcon = React.forwardRef(({ icon, toggled, disabled, label, size, ...props }, ref) => (
-  <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} type="button" {...props}>
+const ControlIcon = React.forwardRef(({ icon, toggled, disabled, label, size, type, ...props }, ref) => (
+  <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} type={type} {...props}>
     <Icon size={size} icon={icon} />
   </StyledButton>
 ));
