@@ -32,6 +32,19 @@ const propsRows = [
     description: "Options for the input field, see inputProps table "
   },
   {
+    name: "onChange",
+    type: "Function",
+    defaultValue: "undefined",
+    description:
+      "Change event handler that will be run whenever the value of the input is updated."
+  },
+  {
+    name: "onInputChange",
+    type: "Function",
+    defaultValue: "undefined",
+    description: "Event handler for when the value typed into the input changes"
+  },
+  {
     name: "dateFormat",
     type: "String",
     defaultValue: "dd MMM yyyy",
