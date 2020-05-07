@@ -10,6 +10,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
     <button
       aria-label="close"
       class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -42,6 +43,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
       aria-label="close"
       class="ControlIcon__StyledButton-sc-1h83lvi-0 lkZGcS"
       disabled=""
+      type="button"
     >
       <svg
         aria-hidden="true"
@@ -73,6 +75,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
     <button
       aria-label="close"
       class="ControlIcon__StyledButton-sc-1h83lvi-0 jjnZya"
+      type="button"
     >
       <svg
         aria-hidden="true"

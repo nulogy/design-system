@@ -79,6 +79,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             <button
               aria-label="Expand row"
               class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
             >
               <svg
                 aria-hidden="true"
@@ -146,6 +147,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             <button
               aria-label="Expand row"
               class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
             >
               <svg
                 aria-hidden="true"
@@ -213,6 +215,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             <button
               aria-label="Expand row"
               class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
             >
               <svg
                 aria-hidden="true"
@@ -379,6 +382,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             <button
               aria-label="Expand row"
               class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
             >
               <svg
                 aria-hidden="true"
@@ -446,6 +450,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             <button
               aria-label="Collapse row"
               class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
             >
               <svg
                 aria-hidden="true"
@@ -533,6 +538,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             <button
               aria-label="Collapse row"
               class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
             >
               <svg
                 aria-hidden="true"

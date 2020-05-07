@@ -38,8 +38,8 @@ const StyledButton = styled.button(
   space
 );
 
-const ControlIcon = React.forwardRef(({ icon, toggled, disabled, label, size, ...props }, ref) => (
-  <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} {...props}>
+const ControlIcon = React.forwardRef(({ icon, toggled, disabled, label, size, type, ...props }, ref) => (
+  <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} type={type} {...props}>
     <Icon size={size} icon={icon} />
   </StyledButton>
 ));
@@ -51,6 +51,7 @@ ControlIcon.propTypes = {
   toggled: PropTypes.bool,
   disabled: PropTypes.bool,
   size: PropTypes.string,
+  type: PropTypes.string,
   ...propTypes.space
 };
 
@@ -58,6 +59,7 @@ ControlIcon.defaultProps = {
   onClick: null,
   toggled: false,
   disabled: false,
-  size: theme.space.x4
+  size: theme.space.x4,
+  type: "button"
 };
 export default ControlIcon;

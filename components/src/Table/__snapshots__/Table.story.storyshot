@@ -143,6 +143,7 @@ exports[`Storyshots Table with everything 1`] = `
             <button
               aria-label="Expand row"
               class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
             >
               <svg
                 aria-hidden="true"
