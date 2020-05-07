@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.7.2](https://github.com/nulogy/design-system/compare/v2.7.1...v2.7.2) (2020-05-07)
+
+
+### Bug Fixes
+
+* set button type on ControlIcon so it doesn't submit forms ([#645](https://github.com/nulogy/design-system/issues/645)) ([148cd4c](https://github.com/nulogy/design-system/commit/148cd4c3a0a32d34d8e93dc592a23f363f86d490))
+
+
+
+
+
 ## [2.7.1](https://github.com/nulogy/design-system/compare/v2.7.0...v2.7.1) (2020-05-07)
 
 
