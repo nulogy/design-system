@@ -103,6 +103,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -174,6 +175,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -465,6 +467,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       >
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -513,6 +516,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -561,6 +565,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -609,6 +614,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -657,6 +663,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -705,6 +712,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -753,6 +761,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -801,6 +810,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         </tr>
         <tr
           class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
         >
           <td>
             <a
@@ -989,7 +999,9 @@ exports[`Storyshots PM/PMTable default 1`] = `
       <tbody
         data-testid="table-body"
       >
-        <tr>
+        <tr
+          data-testid="table-message-container"
+        >
           <td
             colspan="8"
           >
