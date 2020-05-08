@@ -92,21 +92,38 @@ const TimePicker = ({
   ...props
 }) => {
   const { t } = useTranslation();
+
   return (
     <>
       <TimePickerStyles />
       <LocaleContext.Consumer>
-        {({ locale }) => (
-          <Select
-            options={getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || []}
-            defaultValue={defaultValue}
-            components={{ DropdownIndicator, Option: StyledSelectOption }}
-            aria-label={ariaLabel || t("select a time")}
-            onInputChange={onInputChange}
-            {...props}
-            className={`nds-time-picker ${className || ""}`}
-          />
-        )}
+        {({ locale }) => {
+          const options = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
+          const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
+          const filterOptions = (option, input) => {
+            const { label } = option;
+            const oneDigitHourRe = /^[0-9][:]/;
+            const parsedInput = oneDigitHourRe.test(input) ? `0${input}` : input;
+            const inputMatchesIntervals = optionsAtInterval.filter(step => step.label.includes(parsedInput));
+            if (inputMatchesIntervals.length > 0) {
+              // if matches exist in intervals only show times at intervals
+              return label.includes(parsedInput) && optionsAtInterval.map(step => step.label).includes(label);
+            }
+            return label.includes(parsedInput);
+          };
+          return (
+            <Select
+              options={options}
+              filterOption={filterOptions}
+              defaultValue={defaultValue}
+              components={{ DropdownIndicator, Option: StyledSelectOption }}
+              aria-label={ariaLabel || t("select a time")}
+              onInputChange={onInputChange}
+              {...props}
+              className={`nds-time-picker ${className || ""}`}
+            />
+          );
+        }}
       </LocaleContext.Consumer>
     </>
   );
