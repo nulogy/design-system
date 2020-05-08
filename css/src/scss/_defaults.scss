@@ -20,10 +20,10 @@
   code {
     font-family: $font-family-mono;
   }
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.nds--content-box {
+  * {
+    box-sizing: content-box;
   }
 }
