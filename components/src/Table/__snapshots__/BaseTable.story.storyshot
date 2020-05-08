@@ -8858,10 +8858,10 @@ exports[`Storyshots Table with no data 1`] = `
           data-testid="table-message-container"
         >
           <td
-            colspan="2"
+            colspan="3"
           >
             <div
-              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 dpBjul"
+              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 dpBjul nds-table__no-rows-content"
             >
               No records have been created for this table.
             </div>

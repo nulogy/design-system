@@ -508,7 +508,7 @@ exports[`Storyshots Table with everything 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
     >
       <button
         aria-label="Go to previous results"
@@ -646,7 +646,7 @@ exports[`Storyshots Table with pagination 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
     >
       <button
         aria-label="Go to previous results"

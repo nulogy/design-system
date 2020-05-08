@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
-import { ControlIcon } from "..";
+import { ControlIcon } from "../Button";
 import { rowPropType } from "./Table.types";
 import { SELECTABLE_COLUMN_DATA_KEY } from "./addSelectableControl";
 

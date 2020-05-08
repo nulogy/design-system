@@ -46,7 +46,7 @@ const PreviousButton = ({ disabled, onClick, label, "aria-label": ariaLabel }) =
 PreviousButton.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-  label: PropTypes.string,
+  label: PropTypes.node,
   "aria-label": PropTypes.string
 };
 
@@ -69,7 +69,7 @@ const NextButton = ({ disabled, onClick, label, "aria-label": ariaLabel }) => {
 NextButton.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
-  label: PropTypes.string,
+  label: PropTypes.node,
   "aria-label": PropTypes.string
 };
 
@@ -158,9 +158,9 @@ Pagination.propTypes = {
   onNext: PropTypes.func,
   onPrevious: PropTypes.func,
   onSelectPage: PropTypes.func,
-  nextLabel: PropTypes.string,
+  nextLabel: PropTypes.node,
   nextAriaLabel: PropTypes.string,
-  previousLabel: PropTypes.string,
+  previousLabel: PropTypes.node,
   previousAriaLabel: PropTypes.string,
   "aria-label": PropTypes.string
 };

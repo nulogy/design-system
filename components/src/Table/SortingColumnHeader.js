@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
-import { Text, Flex, ControlIcon } from "..";
+import { Text } from "../Type";
+import { Flex } from "../Flex";
+import { ControlIcon } from "../Button";
 import theme from "../theme";
 
 const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) => {

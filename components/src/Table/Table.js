@@ -6,6 +6,7 @@ import SortingColumnHeader from "./SortingColumnHeader";
 
 const Table = props => {
   const { hasSelectableRows, rowsPerPage, hasExpandableRows } = props;
+
   return hasSelectableRows || rowsPerPage || hasExpandableRows ? (
     <StatefulTable {...props} />
   ) : (

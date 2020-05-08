@@ -31,7 +31,7 @@ const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact) 
       />
     ))
   ) : (
-    <TableMessageContainer colSpan={columns.length - 1}>{noRowsContent}</TableMessageContainer>
+    <TableMessageContainer colSpan={columns.length}>{noRowsContent}</TableMessageContainer>
   );
 
 const TableBodyRow = ({ row, columns, rowHovers, compact }) => {
@@ -67,7 +67,7 @@ TableBodyRow.propTypes = {
 const TableMessageContainer = ({ colSpan, children }) => (
   <tr data-testid="table-message-container">
     <td colSpan={colSpan}>
-      <StyledMessageContainer>{children}</StyledMessageContainer>
+      <StyledMessageContainer className="nds-table__no-rows-content">{children}</StyledMessageContainer>
     </td>
   </tr>
 );
@@ -88,7 +88,7 @@ const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers,
     {!loading ? (
       renderRows(rows, columns, keyField, noRowsContent, rowHovers, compact)
     ) : (
-      <LoadingContent colSpan={columns.length - 1} />
+      <LoadingContent colSpan={columns.length} />
     )}
   </tbody>
 );
