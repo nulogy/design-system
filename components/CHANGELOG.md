@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/nulogy/design-system/compare/v2.7.2...v2.8.0) (2020-05-08)
+
+
+### Features
+
+* add PM style table ([#639](https://github.com/nulogy/design-system/issues/639)) ([fa76799](https://github.com/nulogy/design-system/commit/fa76799ef2cd3526268a47ebe332f9605413c379))
+
+
+
+
+
 ## [2.7.2](https://github.com/nulogy/design-system/compare/v2.7.1...v2.7.2) (2020-05-07)
 
 

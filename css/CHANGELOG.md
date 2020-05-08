@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://github.com/nulogy/design-system/compare/v2.7.2...v2.8.0) (2020-05-08)
+
+
+### Features
+
+* adds box-sizing modifier ([#646](https://github.com/nulogy/design-system/issues/646)) ([0d609db](https://github.com/nulogy/design-system/commit/0d609db86602bd0c0470b767f75a53964dbe0ddb))
+
+
+
+
+
 ## [2.5.3](https://github.com/nulogy/design-system/compare/v2.5.2...v2.5.3) (2020-04-29)
 
 
