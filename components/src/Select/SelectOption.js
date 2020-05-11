@@ -18,7 +18,7 @@ const StyledOption = styled.div(({ isSelected, isFocused }) => ({
     minWidth: "max-content",
     whiteSpace: "nowrap",
     "&:hover": {
-      background: theme.colors.lightBlue,
+      background: !isSelected ? theme.colors.lightBlue : null,
       cursor: "pointer"
     }
   }
