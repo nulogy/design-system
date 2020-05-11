@@ -14,6 +14,15 @@ storiesOf("TimePicker", module)
     <TimePicker
       defaultValue="03:30"
       timeFormat="HH:mm"
+      onChange={action("time changed")}
+      onInputChange={action("input changed")}
+      labelText="Duration"
+    />
+  ))
+  .add("with custom time interval", () => (
+    <TimePicker
+      defaultValue="03:30"
+      timeFormat="HH:mm"
       interval={30}
       onChange={action("time changed")}
       onInputChange={action("input changed")}
