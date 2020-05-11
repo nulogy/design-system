@@ -74,20 +74,24 @@ describe("Timepicker", () => {
           .eq(7)
           .contains("11:45 PM");
       });
-      it("shows matching times by interval as the user types", () => {
+      it("shows times by minute when minutes are added", () => {
         getInput().click();
         cy.focused().type("3:");
-        getDropdownOptions().should("have.length", 8);
         cy.focused().type("1");
-        getDropdownOptions().should("have.length", 2);
         getDropdownOptions()
           .first()
-          .contains("03:15 AM");
+          .contains("03:10 AM");
         getDropdownOptions()
           .eq(1)
-          .contains("03:15 PM");
+          .contains("03:11 AM");
+        getDropdownOptions()
+          .eq(2)
+          .contains("03:12 AM");
+        getDropdownOptions()
+          .eq(8)
+          .contains("03:18 AM");
       });
-      it("shows exact times if input does not fall on an interval", () => {
+      it("shows am and pm if not specified", () => {
         getInput().click();
         cy.focused().type("3:18");
         getDropdownOptions().should("have.length", 2);
@@ -98,7 +102,7 @@ describe("Timepicker", () => {
           .eq(1)
           .contains("03:18 PM");
       });
-      it("shows exact times if an exact time is entered", () => {
+      it("shows exact time if an exact time is entered", () => {
         getInput().click();
         cy.focused().type("3:18 PM");
         getDropdownOptions().should("have.length", 1);
@@ -106,15 +110,22 @@ describe("Timepicker", () => {
           .eq(0)
           .contains("03:18 PM");
       });
-      it("shows times by minute if input does not fall on an interval", () => {
+      it("ignores spaces in the time input", () => {
         getInput().click();
-        cy.focused().type("3:2");
+        cy.focused().type("3 : 2");
         getDropdownOptions()
           .eq(0)
           .contains("03:20 AM");
         getDropdownOptions()
           .eq(1)
           .contains("03:21 AM");
+      });
+      it("ignores lack of spaces in time input", () => {
+        getInput().click();
+        cy.focused().type("11:16PM");
+        getDropdownOptions()
+          .eq(0)
+          .contains("11:16 PM");
       });
     });
   });

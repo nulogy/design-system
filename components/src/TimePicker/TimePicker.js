@@ -80,6 +80,13 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
     .slice(startingInterval, finalInterval);
 };
 
+const standardizeTime = input => {
+  const standardizedInput = input.toUpperCase().replace(/ /g, "");
+  const oneDigitHourRe = /^[0-9][:]/;
+  const fourDigitTime = oneDigitHourRe.test(standardizedInput) ? `0${standardizedInput}` : standardizedInput;
+  return fourDigitTime;
+};
+
 const TimePicker = ({
   timeFormat,
   interval,
@@ -102,15 +109,16 @@ const TimePicker = ({
           const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
           const filterOptions = (option, input) => {
             const { label } = option;
-            const oneDigitHourRe = /^[0-9][:]/;
-            const parsedInput = oneDigitHourRe.test(input) ? `0${input}` : input;
-            const inputMatchesIntervals = optionsAtInterval.filter(step => step.label.includes(parsedInput));
+            const hasMinutesRe = /[:][0-9]/;
+            const standardizedInput = standardizeTime(input);
+            const standardizedLabel = standardizeTime(label);
+            const inputHasMinutes = hasMinutesRe.test(standardizedInput);
+            const matchesTimeByMinute = standardizedLabel.includes(standardizedInput);
+            const matchesTimeAtInterval =
+              matchesTimeByMinute &&
+              optionsAtInterval.map(step => standardizeTime(step.label)).includes(standardizedLabel);
 
-            if (inputMatchesIntervals.length > 0) {
-              // if matches exist in intervals only show times at intervals
-              return label.includes(parsedInput) && optionsAtInterval.map(step => step.label).includes(label);
-            }
-            return label.includes(parsedInput);
+            return inputHasMinutes ? matchesTimeByMinute : matchesTimeAtInterval;
           };
           return (
             <Select
