@@ -117,10 +117,14 @@ const TimePicker = ({
           const inputHasMinutes = /[:][0-9]/.test(standardizeTime(input));
           const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
           const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
+          const filteredOptions = () => {
+            const optionsList = inputHasMinutes ? optionsByMinute : optionsAtInterval;
+            return optionsList.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)));
+          };
           return (
             <Select
-              options={inputHasMinutes ? optionsByMinute : optionsAtInterval}
-              filterOption={filterOptions}
+              options={filteredOptions() || []}
+              filterOption={() => true}
               defaultValue={defaultValue}
               components={{ DropdownIndicator, Option: StyledSelectOption }}
               aria-label={ariaLabel || t("select a time")}
