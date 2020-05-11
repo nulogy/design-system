@@ -105,6 +105,7 @@ const TimePicker = ({
             const oneDigitHourRe = /^[0-9][:]/;
             const parsedInput = oneDigitHourRe.test(input) ? `0${input}` : input;
             const inputMatchesIntervals = optionsAtInterval.filter(step => step.label.includes(parsedInput));
+
             if (inputMatchesIntervals.length > 0) {
               // if matches exist in intervals only show times at intervals
               return label.includes(parsedInput) && optionsAtInterval.map(step => step.label).includes(label);

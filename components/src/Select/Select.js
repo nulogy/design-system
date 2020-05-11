@@ -113,7 +113,8 @@ const ReactSelect = ({
   onInputChange,
   components,
   "aria-label": ariaLabel,
-  windowThreshold
+  windowThreshold,
+  filterOption
 }) => {
   const { t } = useTranslation();
   return (
@@ -156,6 +157,7 @@ const ReactSelect = ({
             ...components
           }}
           aria-label={ariaLabel}
+          filterOption={filterOption}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </MaybeFieldLabel>
