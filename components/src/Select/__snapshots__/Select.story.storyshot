@@ -1759,7 +1759,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   class=" css-famnlw-MenuList"
                 >
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 lncjJW"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 jgydXG"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Accepted"
@@ -3306,7 +3306,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   class=" css-1hz449x-MenuList"
                 >
                   <div
-                    class="SelectOption__StyledOption-sc-3ujurn-0 lncjJW"
+                    class="SelectOption__StyledOption-sc-3ujurn-0 jgydXG"
                     data="[object Object]"
                     data-testid="select-option"
                     label="Accepted"
