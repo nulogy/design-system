@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://github.com/nulogy/design-system/compare/v2.8.0...v2.9.0) (2020-05-12)
+
+
+### Features
+
+* add ability to type in any time into the Timepicker ([#648](https://github.com/nulogy/design-system/issues/648)) ([8a64fc7](https://github.com/nulogy/design-system/commit/8a64fc7bb75e03b801d3ed1addd458c5d3a64872))
+
+
+
+
+
 # [2.8.0](https://github.com/nulogy/design-system/compare/v2.7.2...v2.8.0) (2020-05-08)
 
 
