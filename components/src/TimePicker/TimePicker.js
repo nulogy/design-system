@@ -100,14 +100,6 @@ const TimePicker = ({
 }) => {
   const [input, setInput] = useState("");
   const { t } = useTranslation();
-  const filterOptions = (option, value) => {
-    const { label } = option;
-
-    const standardizedInput = standardizeTime(value);
-    const standardizedLabel = standardizeTime(label);
-
-    return standardizedLabel.includes(standardizedInput);
-  };
 
   return (
     <>
