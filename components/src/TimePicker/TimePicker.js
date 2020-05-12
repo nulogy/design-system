@@ -120,10 +120,10 @@ const TimePicker = ({
               defaultValue={defaultValue}
               components={{ DropdownIndicator, Option: StyledSelectOption }}
               aria-label={ariaLabel || t("select a time")}
-              onInputChange={value => {
+              onInputChange={(value, ...args) => {
                 setInput(value);
                 if (onInputChange) {
-                  onInputChange(value);
+                  onInputChange(value, ...args);
                 }
               }}
               {...props}
