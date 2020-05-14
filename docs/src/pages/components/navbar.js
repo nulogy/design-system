@@ -109,8 +109,14 @@ const menuDataKeyRows = [
 const menuItemKeyRows = [
   {
     name: "name",
-    type: "string (required)",
+    type: "string | node (required)",
     description: "Unique identifier for the menu item."
+  },
+  {
+    name: "ariaLabel",
+    type: "string",
+    description:
+      "Add an aria-label if the `name` value is not a readable label, like an icon."
   },
   {
     name: "href",
@@ -128,7 +134,7 @@ const menuItemKeyRows = [
     name: "render",
     type: "function",
     description:
-      "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu."
+      "Function that returns JSX. This causes the menu item to render as the JSX provided wrapped in a component that provides styling and an onClick handler to close the menu. NOTE: Do not use `href` and `items` keys if you intend to use the render function."
   }
 ];
 
