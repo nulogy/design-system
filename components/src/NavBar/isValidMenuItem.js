@@ -11,7 +11,8 @@ const isValidMenuItem = function validArrayItem(arr, idx, componentName, locatio
 
   PropTypes.checkPropTypes(
     {
-      name: PropTypes.string.isRequired,
+      name: PropTypes.node.isRequired,
+      ariaLabel: PropTypes.string,
       href: PropTypes.string,
       items: PropTypes.arrayOf(isValidMenuItem),
       render: PropTypes.func

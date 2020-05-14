@@ -76,7 +76,7 @@ const Nav = styled.nav({
 
 const renderMenuTrigger = (menuItem, themeColorObject) => (
   <div key={menuItem.name}>
-    <MenuTrigger name={menuItem.name} menuData={menuItem.items} {...themeColorObject} />
+    <MenuTrigger name={menuItem.name} aria-label={menuItem.ariaLabel} menuData={menuItem.items} {...themeColorObject} />
   </div>
 );
 
