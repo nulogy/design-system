@@ -9,13 +9,13 @@ import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
 const StyledButton = styled.button(({ color, hoverColor, hoverBackground }) => ({
-  display: "block",
+  display: "flex",
+  alignItems: "center",
   position: "relative",
   color: themeGet(`colors.${color}`, color)(color),
   border: "none",
   backgroundColor: "transparent",
   textDecoration: "none",
-  verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: "background-color .2s",
   fontSize: `${theme.fontSizes.medium}`,
@@ -51,7 +51,7 @@ const MenuTriggerButton = React.forwardRef(({ name, color, hoverColor, hoverBack
   <StyledButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} ref={ref} {...props}>
     {name}
     <Icon
-      style={{ position: "absolute", top: "11px" }}
+      style={{ position: "absolute", top: "11px", right: "8px" }}
       icon="downArrow"
       color={themeGet(`colors.${color}`, color)(color)}
       size="20px"
