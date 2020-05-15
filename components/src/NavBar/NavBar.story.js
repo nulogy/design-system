@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { NavBar as NDSNavBar } from "../index";
+import { Icon } from "../Icon";
 
 const ResetStorybookView = styled.div({
   position: "absolute",
@@ -151,6 +152,18 @@ const secondaryMenu = [
   }
 ];
 
+const secondaryMenuCustomLinks = [
+  {
+    name: "User@Nulogy.com",
+    items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
+  },
+  {
+    name: <Icon icon="settings" />,
+    ariaLabel: "Settings",
+    items: [{ name: "Permissions", href: "/" }, { name: "Manage account", href: "/" }]
+  }
+];
+
 const search = {
   onSubmit: () => {}
 };
@@ -162,7 +175,9 @@ storiesOf("NavBar", module)
   .add("Without search and secondary menu", () => <NavBar menuData={{ primaryMenu }} />)
   .add("Without search and primary menu", () => <NavBar menuData={{ secondaryMenu }} />)
   .add("With branding only", () => <NavBar menuData={{}} />)
-  .add("With custom link components", () => <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks }} />)
+  .add("With custom link components", () => (
+    <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks, secondaryMenu: secondaryMenuCustomLinks, search }} />
+  ))
   .add("With text in the menu", () => <NavBar menuData={{ primaryMenu: primaryMenuText }} />)
   .add("With subtext", () => (
     <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />

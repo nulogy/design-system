@@ -76,7 +76,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -90,7 +90,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -122,7 +122,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -136,7 +136,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -849,7 +849,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -863,7 +863,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -895,7 +895,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -909,7 +909,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1741,7 +1741,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1755,7 +1755,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1787,7 +1787,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -1801,7 +1801,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >

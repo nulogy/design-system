@@ -76,7 +76,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -90,7 +90,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -104,7 +104,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -118,7 +118,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -132,7 +132,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -146,7 +146,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -234,7 +234,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -248,7 +248,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -262,7 +262,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -276,7 +276,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -383,7 +383,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 cMhQQz"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 dZyBSn"
                   color="#00438f"
                   type="button"
                 >
@@ -397,7 +397,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -515,7 +515,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -529,7 +529,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -726,7 +726,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -740,7 +740,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -773,7 +773,140 @@ exports[`Storyshots NavBar With custom link components 1`] = `
             <div
               class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
-            />
+            >
+              <div
+                class="Box-sc-1qu1edy-0 eBpgUm"
+              >
+                <form
+                  class="NavBarSearch-sc-1aq0npd-0 lfszCe"
+                >
+                  <div
+                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                    role="search"
+                  >
+                    <div
+                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                    >
+                      <div
+                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                      >
+                        <div
+                          class="Box-sc-1qu1edy-0 hxUhcg"
+                          display="flex"
+                        >
+                          <input
+                            aria-invalid="false"
+                            aria-labelledby="global-search"
+                            aria-required="true"
+                            class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                            id="navbar-search"
+                            placeholder="Search Nulogy..."
+                            required=""
+                            type="search"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <button
+                      aria-label="global-search"
+                      id="global-search"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="Icon-fc7twp-0 dkBAgY"
+                        color="currentColor"
+                        fill="currentColor"
+                        focusable="false"
+                        height="24px"
+                        icon="search"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                      >
+                        <path
+                          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <nav
+                aria-label="Secondary navigation"
+                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq DesktopMenu-e4dzdq-4 irbObu"
+              >
+                <div>
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                    color="#ffffff"
+                    type="button"
+                  >
+                    User@Nulogy.com
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 hIxIEB"
+                      color="#ffffff"
+                      fill="#ffffff"
+                      focusable="false"
+                      height="20px"
+                      icon="downArrow"
+                      p="2px"
+                      style="position:absolute;top:11px;right:8px"
+                      viewBox="0 0 24 24"
+                      width="20px"
+                    >
+                      <path
+                        d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div>
+                  <button
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Settings"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                    color="#ffffff"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 dkBAgY"
+                      color="currentColor"
+                      fill="currentColor"
+                      focusable="false"
+                      height="24px"
+                      icon="settings"
+                      viewBox="0 0 20 20"
+                      width="24px"
+                    >
+                      <path
+                        d="M15.95 10.78c.03-.25.05-.51.05-.78s-.02-.53-.06-.78l1.69-1.32c.15-.12.19-.34.1-.51l-1.6-2.77c-.1-.18-.31-.24-.49-.18l-1.99.8c-.42-.32-.86-.58-1.35-.78L12 2.34c-.03-.2-.2-.34-.4-.34H8.4c-.2 0-.36.14-.39.34l-.3 2.12c-.49.2-.94.47-1.35.78l-1.99-.8c-.18-.07-.39 0-.49.18l-1.6 2.77c-.1.18-.06.39.1.51l1.69 1.32c-.04.25-.07.52-.07.78s.02.53.06.78L2.37 12.1c-.15.12-.19.34-.1.51l1.6 2.77c.1.18.31.24.49.18l1.99-.8c.42.32.86.58 1.35.78l.3 2.12c.04.2.2.34.4.34h3.2c.2 0 .37-.14.39-.34l.3-2.12c.49-.2.94-.47 1.35-.78l1.99.8c.18.07.39 0 .49-.18l1.6-2.77c.1-.18.06-.39-.1-.51l-1.67-1.32zM10 13c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z"
+                      />
+                    </svg>
+                    <svg
+                      aria-hidden="true"
+                      class="Icon-fc7twp-0 hIxIEB"
+                      color="#ffffff"
+                      fill="#ffffff"
+                      focusable="false"
+                      height="20px"
+                      icon="downArrow"
+                      p="2px"
+                      style="position:absolute;top:11px;right:8px"
+                      viewBox="0 0 24 24"
+                      width="20px"
+                    >
+                      <path
+                        d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </nav>
+            </div>
           </div>
         </div>
       </header>
@@ -869,7 +1002,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -883,7 +1016,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1058,7 +1191,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1072,7 +1205,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1186,7 +1319,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1200,7 +1333,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1214,7 +1347,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1228,7 +1361,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1242,7 +1375,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1256,7 +1389,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1288,7 +1421,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -1302,7 +1435,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1316,7 +1449,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -1330,7 +1463,7 @@ exports[`Storyshots NavBar Without search 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1429,7 +1562,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -1443,7 +1576,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1457,7 +1590,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                   <button
                     aria-expanded="false"
                     aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                     color="#ffffff"
                     type="button"
                   >
@@ -1471,7 +1604,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px"
+                      style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1567,7 +1700,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1581,7 +1714,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1595,7 +1728,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1609,7 +1742,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1623,7 +1756,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1637,7 +1770,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1745,7 +1878,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1759,7 +1892,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1773,7 +1906,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1787,7 +1920,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1801,7 +1934,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                 <button
                   aria-expanded="false"
                   aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 ePWTMl"
+                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
                   color="#ffffff"
                   type="button"
                 >
@@ -1815,7 +1948,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px"
+                    style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
                   >

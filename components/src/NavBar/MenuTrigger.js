@@ -9,13 +9,13 @@ import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
 const StyledButton = styled.button(({ color, hoverColor, hoverBackground }) => ({
-  display: "block",
+  display: "flex",
+  alignItems: "center",
   position: "relative",
   color: themeGet(`colors.${color}`, color)(color),
   border: "none",
   backgroundColor: "transparent",
   textDecoration: "none",
-  verticalAlign: "middle",
   lineHeight: theme.lineHeights.base,
   transition: "background-color .2s",
   fontSize: `${theme.fontSizes.medium}`,
@@ -51,7 +51,7 @@ const MenuTriggerButton = React.forwardRef(({ name, color, hoverColor, hoverBack
   <StyledButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} ref={ref} {...props}>
     {name}
     <Icon
-      style={{ position: "absolute", top: "11px" }}
+      style={{ position: "absolute", top: "11px", right: "8px" }}
       icon="downArrow"
       color={themeGet(`colors.${color}`, color)(color)}
       size="20px"
@@ -61,7 +61,7 @@ const MenuTriggerButton = React.forwardRef(({ name, color, hoverColor, hoverBack
 ));
 
 MenuTriggerButton.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.node.isRequired,
   color: PropTypes.string,
   hoverColor: PropTypes.string,
   hoverBackground: PropTypes.string
@@ -74,7 +74,7 @@ MenuTriggerButton.defaultProps = {
 };
 
 const MenuTrigger = props => {
-  const { menuData, name, color, hoverColor, hoverBackground, ...otherProps } = props;
+  const { menuData, name, color, hoverColor, hoverBackground, "aria-label": ariaLabel, ...otherProps } = props;
   let dropdownMinWidth = "auto";
   const setDropdownMinWidth = popperData => {
     // Popper.js throws an error if popperData is not returned from this fn
@@ -94,7 +94,13 @@ const MenuTrigger = props => {
         preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
       }}
       trigger={() => (
-        <MenuTriggerButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} name={name} />
+        <MenuTriggerButton
+          color={color}
+          hoverColor={hoverColor}
+          hoverBackground={hoverBackground}
+          name={name}
+          aria-label={ariaLabel}
+        />
       )}
     >
       {({ closeMenu }) => (
@@ -114,7 +120,8 @@ const MenuTrigger = props => {
 };
 
 MenuTrigger.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.node.isRequired,
+  "aria-label": PropTypes.string,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
   color: PropTypes.string,
   hoverColor: PropTypes.string,
@@ -123,6 +130,7 @@ MenuTrigger.propTypes = {
 
 MenuTrigger.defaultProps = {
   menuData: null,
+  "aria-label": undefined,
   color: theme.colors.white,
   hoverColor: theme.colors.lightBlue,
   hoverBackground: theme.colors.black
