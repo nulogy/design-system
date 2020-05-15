@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.10.0](https://github.com/nulogy/design-system/compare/v2.9.0...v2.10.0) (2020-05-15)
+
+
+### Features
+
+* accept node as navbar menu name and add aria-label option ([#649](https://github.com/nulogy/design-system/issues/649)) ([8019ce1](https://github.com/nulogy/design-system/commit/8019ce1108b5fa6232870e82039a53e10e21003d))
+
+
+
+
+
 # [2.9.0](https://github.com/nulogy/design-system/compare/v2.8.0...v2.9.0) (2020-05-12)
 
 **Note:** Version bump only for package @nulogy/docs
