@@ -36,7 +36,7 @@ TableCell.propTypes = {
   column: columnPropType,
   row: rowPropType,
   colSpan: PropTypes.number,
-  cellData: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
+  cellData: PropTypes.oneOfType([PropTypes.object, PropTypes.node, PropTypes.bool]),
   compact: PropTypes.bool
 };
 
