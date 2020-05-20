@@ -61,6 +61,13 @@ const propsRows = [
     type: "String",
     defaultValue: "undefined",
     description: "className passed to the button component."
+  },
+  {
+    name: "asLink",
+    type: "Boolean",
+    defaultValue: "false",
+    description:
+      "When set, renders the button as an <a> link instead of a <button>."
   }
 ];
 
