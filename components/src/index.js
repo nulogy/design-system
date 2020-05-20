@@ -25,7 +25,7 @@ export { Field, Fieldset, Form, FormSection } from "./Form";
 export { ListItem, List } from "./List";
 export { Textarea } from "./Textarea";
 export { Tooltip } from "./Tooltip";
-export { Card, CardSet, CPCard } from "./Card";
+export { Card, CardSet } from "./Card";
 export { Modal } from "./Modal";
 export { Tab, Tabs } from "./Tabs";
 
