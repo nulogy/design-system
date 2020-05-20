@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.2](https://github.com/nulogy/design-system/compare/v2.10.1...v2.10.2) (2020-05-20)
+
+
+### Bug Fixes
+
+* removes unused CPCard component ([#650](https://github.com/nulogy/design-system/issues/650)) ([74643f9](https://github.com/nulogy/design-system/commit/74643f96aa085f4b2909265a4ad80c45525f4984))
+
+
+
+
+
 ## [2.10.1](https://github.com/nulogy/design-system/compare/v2.10.0...v2.10.1) (2020-05-19)
 
 
