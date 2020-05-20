@@ -23,11 +23,24 @@ import radioProps from "../../shared/radioProps";
 const checkboxProps = [
   ...radioProps,
   {
+    name: "checked",
+    type: "Boolean",
+    defaultValue: "false",
+    description: "Whether or not the checkbox has been checked"
+  },
+  {
     name: "indeterminate",
     type: "boolean",
     defaultValue: "undefined",
     description:
       "Displays the checkbox in an indeterminate state if checked. You must use the checkbox as a controlled input (give the checked prop a value) when using this prop"
+  },
+  {
+    name: "value",
+    type: "String",
+    defaultValue: "undefined",
+    description:
+      "The value of the checkbox that is submitted with the form. Required when using `indeterminate` checkbox."
   }
 ];
 

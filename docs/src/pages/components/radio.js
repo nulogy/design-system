@@ -20,6 +20,17 @@ import {
 } from "../../components";
 import radioProps from "../../shared/radioProps";
 
+const allRadioProps = [
+  ...radioProps,
+  {
+    name: "checked",
+    type: "boolean",
+    defaultValue: "undefined",
+    description:
+      "Whether or not this radio button is the currently selected item in the group"
+  }
+];
+
 export default () => (
   <Layout>
     <Helmet>
@@ -100,7 +111,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={radioProps} />
+      <PropsTable propsRows={allRadioProps} />
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
