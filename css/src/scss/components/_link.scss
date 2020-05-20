@@ -4,4 +4,7 @@
     cursor: pointer;
     color: darken($color-base-blue, 10%);
   }
+  &:visited {
+    color: $color-base-blue;
+  }
 }
