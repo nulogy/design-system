@@ -1,4 +1,4 @@
-const radioProps = [
+const radioAndCheckboxProps = [
   {
     name: "id",
     type: "String",
@@ -55,4 +55,4 @@ const radioProps = [
   }
 ];
 
-export default radioProps;
+export default radioAndCheckboxProps;

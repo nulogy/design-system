@@ -18,10 +18,10 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
-import radioProps from "../../shared/radioProps";
+import radioAndCheckboxProps from "../../shared/radioAndCheckboxProps";
 
 const checkboxProps = [
-  ...radioProps,
+  ...radioAndCheckboxProps,
   {
     name: "checked",
     type: "Boolean",

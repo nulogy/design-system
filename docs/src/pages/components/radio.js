@@ -18,10 +18,10 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
-import radioProps from "../../shared/radioProps";
+import radioAndCheckboxProps from "../../shared/radioAndCheckboxProps";
 
-const allRadioProps = [
-  ...radioProps,
+const radioProps = [
+  ...radioAndCheckboxProps,
   {
     name: "checked",
     type: "boolean",
@@ -111,7 +111,7 @@ export default () => (
     </DocSection>
     <DocSection>
       <SectionTitle>Props</SectionTitle>
-      <PropsTable propsRows={allRadioProps} />
+      <PropsTable propsRows={radioProps} />
     </DocSection>
     <DocSection>
       <SectionTitle>Related components</SectionTitle>
