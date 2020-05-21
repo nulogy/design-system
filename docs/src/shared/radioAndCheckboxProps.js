@@ -1,4 +1,4 @@
-const radioProps = [
+const radioAndCheckboxProps = [
   {
     name: "id",
     type: "String",
@@ -10,12 +10,6 @@ const radioProps = [
     type: "String",
     defaultValue: "undefined",
     description: "Identified that groups inputs together"
-  },
-  {
-    name: "checked",
-    type: "String",
-    defaultValue: "undefined",
-    description: "Value of input field for submission"
   },
   {
     name: "defaultChecked",
@@ -61,4 +55,4 @@ const radioProps = [
   }
 ];
 
-export default radioProps;
+export default radioAndCheckboxProps;

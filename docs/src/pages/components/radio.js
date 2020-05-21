@@ -18,7 +18,18 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
-import radioProps from "../../shared/radioProps";
+import radioAndCheckboxProps from "../../shared/radioAndCheckboxProps";
+
+const radioProps = [
+  ...radioAndCheckboxProps,
+  {
+    name: "checked",
+    type: "boolean",
+    defaultValue: "undefined",
+    description:
+      "Whether or not this radio button is the currently selected item in the group"
+  }
+];
 
 export default () => (
   <Layout>
