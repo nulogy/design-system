@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.10.6](https://github.com/nulogy/design-system/compare/v2.10.5...v2.10.6) (2020-05-21)
+
+
+### Bug Fixes
+
+* change TabContainerRef propType to object ([#658](https://github.com/nulogy/design-system/issues/658)) ([1bf87e5](https://github.com/nulogy/design-system/commit/1bf87e52d5e5b7df8fc789a463b01713fde21ca9))
+
+
+
+
+
 ## [2.10.2](https://github.com/nulogy/design-system/compare/v2.10.1...v2.10.2) (2020-05-20)
 
 
