@@ -80,6 +80,7 @@ const StyledReactModal = styled(ReactModal)(
     bottom: 0,
     backgroundColor: theme.colors.white,
     borderRadius: theme.radii.medium,
+    boxShadow: theme.shadows.large,
     border: null,
     width: "100%",
     height: "auto",
