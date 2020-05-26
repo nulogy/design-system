@@ -4,7 +4,7 @@ This is a guide for Nulogy employees who wish to contribute to the Design System
 
 ### Prerequisites
 
-1. Download and install the latest LTS version of [Node (10.15.0)](https://nodejs.org/en/)
+1. Download and install the latest LTS version of [Node (12.16.3)](https://nodejs.org/en/)
 2. Download and install the package manager [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
 
 ### Cloning the repo
