@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import theme from "../theme";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 
-const getHoverBackground = (currentPage, disabled) => {
+const getHoverBackground = (currentPage, disabled, theme) => {
   if (currentPage) {
     return theme.colors.darkBlue;
   }
@@ -17,20 +16,20 @@ const getHoverBackground = (currentPage, disabled) => {
   return theme.colors.lightGrey;
 };
 
-const PaginationButton = styled.button(props => ({
+const PaginationButton = styled.button(({ theme, disabled, currentPage }) => ({
   fontSize: theme.fontSizes.small,
   padding: `${theme.space.x1} ${theme.space.x2}`,
   lineHeight: theme.lineHeights.smallTextBase,
   display: "flex",
   borderRadius: theme.radii.medium,
-  border: `1px solid ${props.currentPage ? theme.colors.darkBlue : theme.colors.lightGrey}`,
-  color: props.disabled ? theme.colors.grey : theme.colors.black,
+  border: `1px solid ${currentPage ? theme.colors.darkBlue : theme.colors.lightGrey}`,
+  color: disabled ? theme.colors.grey : theme.colors.black,
   "&:not(:last-child)": {
     marginRight: theme.space.x2
   },
-  cursor: props.disabled ? "default" : "pointer",
+  cursor: disabled ? "default" : "pointer",
   "&:hover": {
-    background: getHoverBackground(props.currentPage, props.disabled)
+    background: getHoverBackground(currentPage, disabled, theme)
   }
 }));
 
@@ -80,9 +79,9 @@ NextButton.defaultProps = {
   "aria-label": undefined
 };
 
-const PageNumber = styled(PaginationButton)(props => ({
-  background: props.currentPage ? theme.colors.darkBlue : "transparent",
-  color: props.currentPage ? theme.colors.whiteGrey : theme.colors.black
+const PageNumber = styled(PaginationButton)(({ theme, currentPage }) => ({
+  background: currentPage ? theme.colors.darkBlue : "transparent",
+  color: currentPage ? theme.colors.whiteGrey : theme.colors.black
 }));
 
 const SEPERATOR = "...";

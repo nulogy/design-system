@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import theme from "../theme";
+import NDSTheme from "../theme";
 
 const LoadingAnimation = ({ inactive }) => {
-  const color1 = inactive ? theme.colors.grey : theme.colors.blue;
-  const color2 = inactive ? theme.colors.lightGrey : theme.colors.yellow;
+  const color1 = inactive ? NDSTheme.colors.grey : NDSTheme.colors.blue;
+  const color2 = inactive ? NDSTheme.colors.lightGrey : NDSTheme.colors.yellow;
   return (
     // Modified svg By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL
     <svg

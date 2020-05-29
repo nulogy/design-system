@@ -27,7 +27,7 @@ storiesOf("DropdownMenu", module)
     </DropdownMenu>
   ))
   .add("with custom colors", () => (
-    <DropdownMenu backgroundColor="blackBlue" openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+    <DropdownMenu defaultOpen backgroundColor="blackBlue" openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
       <DropdownLink href="/" {...customColors}>
         Dropdown Link
       </DropdownLink>

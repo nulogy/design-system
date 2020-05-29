@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import theme from "../theme";
 
-export const MonthPickerStyles = createGlobalStyle({
+export const MonthPickerStyles = createGlobalStyle(({ theme }) => ({
   ".nds-month-picker": {
     ".react-datepicker__input-container": {
       width: "184px",
@@ -108,4 +107,4 @@ export const MonthPickerStyles = createGlobalStyle({
       }
     }
   }
-});
+}));

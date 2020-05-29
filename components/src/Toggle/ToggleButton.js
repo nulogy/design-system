@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 
-const Slider = styled.span(({ disabled }) => ({
+const Slider = styled.span(({ disabled, theme }) => ({
   position: "absolute",
   height: theme.space.x3,
   width: theme.space.x6,
@@ -31,7 +30,7 @@ const Slider = styled.span(({ disabled }) => ({
   }
 }));
 
-const Switch = styled.div({
+const Switch = styled.div(({ theme }) => ({
   position: "relative",
   display: "inline-flex",
   minWidth: theme.space.x6,
@@ -41,9 +40,9 @@ const Switch = styled.div({
     width: "1px",
     height: "1px"
   }
-});
+}));
 
-const ToggleInput = styled.input(({ disabled }) => ({
+const ToggleInput = styled.input(({ disabled, theme }) => ({
   [`&:checked + ${Slider}:before`]: {
     transform: "translateX(24px)",
     backgroundColor: disabled ? theme.colors.lightGrey : theme.colors.darkBlue,

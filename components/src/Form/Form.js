@@ -8,7 +8,6 @@ import Field from "./Field";
 import { Alert } from "../Alert";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
-import theme from "../theme";
 
 const BaseForm = ({ title, children, ...props }) => (
   <form {...props}>
@@ -17,7 +16,7 @@ const BaseForm = ({ title, children, ...props }) => (
   </form>
 );
 
-const Form = styled(BaseForm)(space, ({ title }) => ({
+const Form = styled(BaseForm)(space, ({ title, theme }) => ({
   width: "100%",
   [`${SectionTitle}`]: {
     marginBottom: title ? theme.space.x6 : 0

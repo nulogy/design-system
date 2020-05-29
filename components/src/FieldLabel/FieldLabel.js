@@ -1,21 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, color } from "styled-system";
 import PropTypes from "prop-types";
 import { Box } from "../Box";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
-import theme from "../theme";
 import { FieldLabelProps, FieldLabelDefaultProps } from "./FieldLabel.type";
 
-const labelTextStyles = {
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase
-};
-
-const Label = styled.label(space, ({ color }) => ({
-  color: theme.colors[color] || color,
+const Label = styled.label(space, color, () => ({
   display: "inline-block"
 }));
 
@@ -24,13 +16,19 @@ Label.propTypes = {
 };
 
 Label.defaultProps = {
-  color: theme.colors.black
+  color: "black"
 };
+
+const LabelText = styled.span(({ theme }) => ({
+  fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.bold,
+  lineHeight: theme.lineHeights.smallTextBase
+}));
 
 const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...props }) => (
   <Label style={{ display: "block" }} {...props}>
     <Box mb={children && "x1"} data-testid="field-label">
-      <span style={labelTextStyles}>{labelText}</span>
+      <LabelText>{labelText}</LabelText>
       {requirementText && <RequirementText>{requirementText}</RequirementText>}
       {helpText && <HelpText>{helpText}</HelpText>}
     </Box>

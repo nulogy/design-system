@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import { Box } from "../Box";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
 import { Text } from "../Type";
-import theme from "../theme";
 import { ClickInputLabel } from "../utils";
 import ToggleButton from "./ToggleButton";
 
-const labelTextStyles = {
+const labelTextStyles = theme => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.smallTextBase
-};
+});
 
-const MaybeToggleTitle = ({ labelText, requirementText, helpText, children, ...props }) =>
-  labelText ? (
+const MaybeToggleTitle = ({ labelText, requirementText, helpText, children, ...props }) => {
+  const themeContext = useContext(ThemeContext);
+  return labelText ? (
     <div {...props}>
       <Box mb={children && "x1"}>
-        <span style={labelTextStyles}>{labelText}</span>
+        <span style={labelTextStyles(themeContext)}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
         {helpText && <HelpText>{helpText}</HelpText>}
       </Box>
@@ -28,6 +28,7 @@ const MaybeToggleTitle = ({ labelText, requirementText, helpText, children, ...p
   ) : (
     <>{children}</>
   );
+};
 
 MaybeToggleTitle.propTypes = {
   labelText: PropTypes.string,
@@ -146,10 +147,10 @@ BaseToggle.defaultProps = {
   onClick: () => {}
 };
 
-const StyledToggle = styled(BaseToggle)({
+const StyledToggle = styled(BaseToggle)(({ theme }) => ({
   padding: `${theme.space.half} 0`,
   alignItems: "flex-start"
-});
+}));
 
 const StatefulToggle = ({ defaultToggled, onClick, ...props }) => {
   const [toggled, setToggled] = useState(defaultToggled);

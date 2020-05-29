@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 import StyledTh from "./StyledTh";
 
-const StyledHeaderRow = styled.tr({
+const StyledHeaderRow = styled.tr(({ theme }) => ({
   color: theme.colors.darkGrey,
   borderBottom: `1px solid ${theme.colors.lightGrey}`
-});
+}));
 
 const defaultheaderFormatter = ({ label }) => label;
 

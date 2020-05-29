@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import theme from "../theme";
 
-export const DatePickerStyles = createGlobalStyle({
+export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
   ".nds-date-picker": {
     ".react-datepicker__input-container": {
       width: "184px",
@@ -100,4 +99,4 @@ export const DatePickerStyles = createGlobalStyle({
       }
     }
   }
-});
+}));

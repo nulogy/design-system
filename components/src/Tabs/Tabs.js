@@ -2,11 +2,10 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
 import ReactResizeDetector from "react-resize-detector";
-import theme from "../theme";
 import TabFocusManager from "./TabFocusManager";
 import TabScrollIndicators from "./TabScrollIndicators";
 
-const TabContainer = styled.div({
+const TabContainer = styled.div(({ theme }) => ({
   display: "flex",
   whiteSpace: "nowrap",
   overflowX: "scroll",
@@ -26,7 +25,7 @@ const TabContainer = styled.div({
     left: 0,
     right: 0
   }
-});
+}));
 
 class Tabs extends React.Component {
   constructor(props) {

@@ -60,9 +60,22 @@ addParameters({
     })
   }
 });
+const newTheme = {
+  ...theme,
+  fontSizes: {
+    ...theme.fontSizes,
+    medium: "14px"
+  }
+};
 
-addDecorator(story => (
-  <div style={{ padding: theme.space.x3 }}>
-    <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
-  </div>
-));
+addDecorator(story => {
+  console.log(theme);
+  console.log("new theme:", newTheme);
+  return (
+    <div style={{ padding: theme.space.x3 }}>
+      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} theme={newTheme}>
+        {story()}
+      </NDSProvider>
+    </div>
+  );
+});

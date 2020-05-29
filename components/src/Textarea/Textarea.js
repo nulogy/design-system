@@ -7,10 +7,9 @@ import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
-import theme from "../theme";
 import { subPx } from "../utils";
 
-const textareaStyles = {
+const textareaStyles = theme => ({
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
@@ -24,21 +23,22 @@ const textareaStyles = {
     color: theme.colors.black,
     borderColor: theme.colors.grey
   }
-};
+});
 
 const getTextareaStyle = props => {
+  const textareaStyleMap = textareaStyles(props.theme);
   if (props.disabled) {
-    return textareaStyles.disabled;
+    return textareaStyleMap.disabled;
   }
   if (props.error) {
-    return textareaStyles.error;
+    return textareaStyleMap.error;
   }
-  return textareaStyles.default;
+  return textareaStyleMap.default;
 };
 
 const StyledTextarea = styled.textarea(
   space,
-  {
+  ({ theme }) => ({
     display: "block",
     width: "100%",
     border: "1px solid",
@@ -58,7 +58,7 @@ const StyledTextarea = styled.textarea(
     "::placeholder": {
       color: transparentize(0.4, theme.colors.black)
     }
-  },
+  }),
   props => getTextareaStyle(props)
 );
 

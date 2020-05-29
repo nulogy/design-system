@@ -58,6 +58,17 @@ export default {
     mono: tokens.font_family_mono
   },
   borders: [],
+  borderWidths: {
+    none: tokens.size_base_none,
+    half: tokens.size_base_half,
+    x1: tokens.size_base_x_1,
+    x2: tokens.size_base_x_2,
+    x3: tokens.size_base_x_3,
+    x4: tokens.size_base_x_4,
+    x5: tokens.size_base_x_5,
+    x6: tokens.size_base_x_6,
+    x8: tokens.size_base_x_8
+  },
   shadows: {
     small: tokens.shadow_box_small,
     medium: tokens.shadow_box_medium,
