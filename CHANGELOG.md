@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.1](https://github.com/nulogy/design-system/compare/v2.11.0...v2.11.1) (2020-05-29)
+
+
+### Bug Fixes
+
+* add large shadow to Modal ([#660](https://github.com/nulogy/design-system/issues/660)) ([e6cb415](https://github.com/nulogy/design-system/commit/e6cb415447ee70fce319d993332033f701fc63d4))
+
+
+
+
+
 # [2.11.0](https://github.com/nulogy/design-system/compare/v2.10.6...v2.11.0) (2020-05-26)
 
 
