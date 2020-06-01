@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.12.0](https://github.com/nulogy/design-system/compare/v2.11.3...v2.12.0) (2020-06-01)
+
+
+### Features
+
+* add rounded corners for top only through class: nds-rounded-top-corners ([#664](https://github.com/nulogy/design-system/issues/664)) ([e2ef4cc](https://github.com/nulogy/design-system/commit/e2ef4cc75cb9c850ad929d49de2fe4c84f03a883))
+
+
+
+
+
 ## [2.10.3](https://github.com/nulogy/design-system/compare/v2.10.2...v2.10.3) (2020-05-20)
 
 
