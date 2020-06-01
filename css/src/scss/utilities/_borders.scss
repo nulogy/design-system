@@ -2,6 +2,10 @@
   &rounded-corners {
     border-radius: $radius-border-medium !important;
   }
+  &rounded-top-corners {
+    border-top-left-radius: $radius-border-medium !important;
+    border-top-right-radius: $radius-border-medium !important;
+  }
   &rounded-corners--small {
     border-radius: $radius-border-small !important;
   }
