@@ -23,7 +23,14 @@ const DatePickerHeader = ({
         onClick={decreaseMonth}
         disabled={prevMonthButtonDisabled}
       />
-      <Text fontWeight="bold" color={theme.colors.blackBlue} px="x1" ml="half" fontSize="large">
+      <Text
+        fontWeight="bold"
+        color={theme.colors.blackBlue}
+        px="x1"
+        ml="half"
+        fontSize="large"
+        style={{ textTransform: "capitalize" }}
+      >
         {localizedFormat(date, "MMMM yyyy", locale)}
       </Text>
       <ControlIcon
