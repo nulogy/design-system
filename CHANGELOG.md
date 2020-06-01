@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.11.3](https://github.com/nulogy/design-system/compare/v2.11.2...v2.11.3) (2020-06-01)
+
+
+### Bug Fixes
+
+* capitalize datepicker month names in all languages ([#662](https://github.com/nulogy/design-system/issues/662)) ([6f1b94d](https://github.com/nulogy/design-system/commit/6f1b94d4051ab458281f224374bc8c2ea9e9d148))
+
+
+
+
+
 ## [2.11.2](https://github.com/nulogy/design-system/compare/v2.11.1...v2.11.2) (2020-05-29)
 
 **Note:** Version bump only for package @nulogy/nds
