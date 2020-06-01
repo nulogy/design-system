@@ -9,6 +9,7 @@ const DropdownLink = styled.a(({ theme, bgHoverColor, hoverColor, color }) => ({
   lineHeight: theme.lineHeights.base,
   fontSize: theme.fontSizes.medium,
   transition: ".2s",
+  color: theme.colors[color],
   padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
   borderLeft: `${theme.space.half} solid transparent`,
   "&:hover": {
@@ -16,7 +17,7 @@ const DropdownLink = styled.a(({ theme, bgHoverColor, hoverColor, color }) => ({
     backgroundColor: theme.colors[bgHoverColor]
   },
   "&:visited": {
-    color
+    color: theme.colors[color]
   },
   "&:focus": {
     outline: "none",

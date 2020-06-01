@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const DropdownItem = styled.div(({ theme, hoverColor, bgHoverColor }) => ({
+const DropdownItem = styled.div(({ theme, color, hoverColor, bgHoverColor }) => ({
   "*": {
+    color: theme.colors[color],
     display: "block",
     width: "100%",
     cursor: "pointer",
@@ -15,17 +16,17 @@ const DropdownItem = styled.div(({ theme, hoverColor, bgHoverColor }) => ({
     padding: `${theme.space.x1} ${theme.space.x2}`,
     "&:hover, &:focus": {
       outline: "none",
-      color: hoverColor,
-      backgroundColor: bgHoverColor
+      color: theme.colors[hoverColor],
+      backgroundColor: theme.colors[bgHoverColor]
     },
     "&:disabled": {
       opacity: ".5"
     },
     "&:visited": {
-      color: hoverColor
+      color: theme.colors[hoverColor]
     },
     "&:active": {
-      color: hoverColor
+      color: theme.colors[hoverColor]
     }
   }
 }));
