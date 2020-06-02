@@ -7,7 +7,6 @@ const customColors = {
   hoverColor: "white",
   bgHoverColor: "black"
 };
-const cards = Array.from({ length: 100 }, (v, k) => k + 1);
 
 storiesOf("DropdownMenu", module)
   .add("DropdownMenu", () => (
@@ -64,17 +63,4 @@ storiesOf("DropdownMenu", module)
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     </DropdownMenu>
-  ))
-  .add("Many dropdowns", () => (
-    <>
-      {cards.map(i => (
-        <Card key={i}>
-          <Text>Card {i}</Text>
-          <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-            <DropdownLink href="/">Dropdown Link</DropdownLink>
-            <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-          </DropdownMenu>
-        </Card>
-      ))}
-    </>
   ));
