@@ -60,18 +60,11 @@ addParameters({
     })
   }
 });
-const newTheme = {
-  fontSizes: {
-    medium: "14px"
-  }
-};
 
 addDecorator(story => {
   return (
     <div style={{ padding: theme.space.x3 }}>
-      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} theme={newTheme}>
-        {story()}
-      </NDSProvider>
+      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
     </div>
   );
 });
