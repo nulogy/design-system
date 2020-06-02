@@ -29,12 +29,6 @@ const alertColours = {
   }
 };
 
-const alertStyles = {
-  [`${Link}`]: {
-    color: "black"
-  }
-};
-
 const CloseButton = ({ onClick, "aria-label": ariaLabel }) => {
   const { t } = useTranslation();
   return (
@@ -104,6 +98,10 @@ BaseAlert.defaultProps = {
   type: "informative"
 };
 
-const Alert = styled(BaseAlert)(space, layout, alertStyles);
+const Alert = styled(BaseAlert)(space, layout, ({ theme }) => ({
+  [`${Link}`]: {
+    color: theme.colors.black
+  }
+}));
 
 export default Alert;
