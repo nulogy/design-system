@@ -14,7 +14,7 @@ exports[`Storyshots TruncatedText TruncatedText 1`] = `
       aria-label="Open"
       class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Special instructions...
     </p>
@@ -35,8 +35,8 @@ exports[`Storyshots TruncatedText as title 1`] = `
       aria-haspopup="true"
       aria-label="Open"
       class="Text-sc-1wu7vpu-0-h1 VooJu TruncatedText__StyledWrapper-noy865-0 jYAXtT"
-      font-size="46px"
-      font-weight="300"
+      font-size="largest"
+      font-weight="light"
     >
       Special instructions...
     </h1>
@@ -54,7 +54,7 @@ exports[`Storyshots TruncatedText under max characters 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Item is available
     </p>
@@ -76,7 +76,7 @@ exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
       aria-label="Open"
       class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Special instructions + 2...
     </p>
@@ -98,7 +98,7 @@ exports[`Storyshots TruncatedText with max characters 10 1`] = `
       aria-label="Open"
       class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Item is av...
     </p>
@@ -116,7 +116,7 @@ exports[`Storyshots TruncatedText without tooltip 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Special instructions...
     </p>

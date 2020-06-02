@@ -18,8 +18,9 @@ exports[`Storyshots Pages/Details page Default 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -159,8 +160,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="46px"
-            font-weight="300"
+            font-size="largest"
+            font-weight="light"
           >
             I am title
           </h1>
@@ -169,7 +170,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             width="0"
           />
           <div
-            class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+            class="Tabs__TabContainer-o5d5cd-0 giufLG"
             role="tablist"
           >
             <div />
@@ -208,8 +209,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 hKxFww"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Details
               </h2>
@@ -231,7 +232,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -251,7 +252,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -271,7 +272,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -291,7 +292,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -311,7 +312,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -331,7 +332,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -348,8 +349,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Milestone Performance
               </h2>
@@ -358,7 +359,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
                   >
                     <th
                       class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -435,7 +436,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           10 Days Late
                         </p>
@@ -484,7 +485,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -533,7 +534,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -582,7 +583,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -603,8 +604,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Production Records
               </h2>
@@ -613,7 +614,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
                   >
                     <th
                       class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -730,8 +731,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             >
               <h3
                 class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 fKBIog"
-                font-size="20px"
-                font-weight="500"
+                font-size="large"
+                font-weight="medium"
               >
                 Comments
               </h3>
@@ -744,7 +745,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 gvVykd"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ktRBsI"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
@@ -758,7 +759,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 kGwYaA"
+                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 eAbPwX"
                   >
                     Cancel
                   </button>
@@ -791,8 +792,9 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -939,7 +941,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               width="[object Object]"
             >
               <a
-                class="Link-sc-1lpx3d0-0 dNsOaA"
+                class="Link-sc-1lpx3d0-0 fEeoTP"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -962,7 +964,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 />
               </svg>
               <a
-                class="Link-sc-1lpx3d0-0 dNsOaA"
+                class="Link-sc-1lpx3d0-0 fEeoTP"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -1008,8 +1010,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
           </div>
           <h1
             class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="46px"
-            font-weight="300"
+            font-size="largest"
+            font-weight="light"
           >
             I am title
           </h1>
@@ -1018,7 +1020,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             width="0"
           />
           <div
-            class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+            class="Tabs__TabContainer-o5d5cd-0 giufLG"
             role="tablist"
           >
             <div />
@@ -1057,8 +1059,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 hKxFww"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Details
               </h2>
@@ -1080,7 +1082,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1100,7 +1102,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1120,7 +1122,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1140,7 +1142,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1160,7 +1162,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1180,7 +1182,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1197,8 +1199,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Milestone Performance
               </h2>
@@ -1207,7 +1209,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
                   >
                     <th
                       class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -1284,7 +1286,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           10 Days Late
                         </p>
@@ -1333,7 +1335,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -1382,7 +1384,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -1431,7 +1433,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -1452,8 +1454,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Production Records
               </h2>
@@ -1462,7 +1464,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
                   >
                     <th
                       class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -1579,8 +1581,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             >
               <h3
                 class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 fKBIog"
-                font-size="20px"
-                font-weight="500"
+                font-size="large"
+                font-weight="medium"
               >
                 Comments
               </h3>
@@ -1593,7 +1595,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 gvVykd"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ktRBsI"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
@@ -1607,7 +1609,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 kGwYaA"
+                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 eAbPwX"
                   >
                     Cancel
                   </button>
@@ -1625,8 +1627,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="26px"
-              font-weight="500"
+              font-size="larger"
+              font-weight="medium"
             >
               I am sidebar
             </h2>
@@ -1654,7 +1656,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             I am sidebar content.
           </p>
@@ -1683,8 +1685,9 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -1824,8 +1827,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="46px"
-            font-weight="300"
+            font-size="largest"
+            font-weight="light"
           >
             I am title
           </h1>
@@ -1834,7 +1837,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             width="0"
           />
           <div
-            class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+            class="Tabs__TabContainer-o5d5cd-0 giufLG"
             role="tablist"
           >
             <div />
@@ -1873,8 +1876,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 hKxFww"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Details
               </h2>
@@ -1896,7 +1899,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1916,7 +1919,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1936,7 +1939,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1956,7 +1959,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1976,7 +1979,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -1996,7 +1999,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <p
                     class="Text-sc-1wu7vpu-0 RbfMK"
                     color="currentColor"
-                    font-size="16px"
+                    font-size="medium"
                   >
                     7050007201911
                   </p>
@@ -2013,8 +2016,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Milestone Performance
               </h2>
@@ -2023,7 +2026,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
                   >
                     <th
                       class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -2100,7 +2103,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           10 Days Late
                         </p>
@@ -2149,7 +2152,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -2198,7 +2201,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -2247,7 +2250,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         <p
                           class="Text-sc-1wu7vpu-0 RbfMK"
                           color="currentColor"
-                          font-size="16px"
+                          font-size="medium"
                         >
                           40 Days Late
                         </p>
@@ -2268,8 +2271,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="26px"
-                font-weight="500"
+                font-size="larger"
+                font-weight="medium"
               >
                 Production Records
               </h2>
@@ -2278,7 +2281,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               >
                 <thead>
                   <tr
-                    class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+                    class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
                   >
                     <th
                       class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -2395,8 +2398,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             >
               <h3
                 class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 fKBIog"
-                font-size="20px"
-                font-weight="500"
+                font-size="large"
+                font-weight="medium"
               >
                 Comments
               </h3>
@@ -2409,7 +2412,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 gvVykd"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ktRBsI"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
@@ -2423,7 +2426,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Comment
                   </button>
                   <button
-                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 kGwYaA"
+                    class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 eAbPwX"
                   >
                     Cancel
                   </button>
@@ -2441,8 +2444,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="26px"
-              font-weight="500"
+              font-size="larger"
+              font-weight="medium"
             >
               Job 324400
             </h2>
@@ -2475,8 +2478,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             >
               <legend
                 class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-                font-size="20px"
-                font-weight="500"
+                font-size="large"
+                font-weight="medium"
               >
                 Job Information
               </legend>
@@ -2484,8 +2487,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2493,7 +2496,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Project
                     </span>
@@ -2508,7 +2511,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                         id="project"
                         placeholder="Project 128703"
                       />
@@ -2520,8 +2523,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2529,7 +2532,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Project description
                     </span>
@@ -2541,9 +2544,9 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       (Optional)
                     </span>
                     <p
-                      class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
+                      class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Project description helps identify the project.
                     </p>
@@ -2558,7 +2561,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                         id="project-description"
                       />
                     </div>
@@ -2569,8 +2572,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2578,7 +2581,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Project status
                     </span>
@@ -2633,14 +2636,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                             </div>
                           </div>
                           <div
-                            class=" css-1hb7zxy-IndicatorsContainer"
+                            class=" css-173cxbq-IndicatorsContainer"
                           >
                             <span
-                              class=" css-43ykx9-indicatorSeparator"
+                              class=" css-4z5mi-indicatorSeparator"
                             />
                             <div
                               aria-hidden="true"
-                              class=" css-1fi275-indicatorContainer"
+                              class=" css-19phze7-indicatorContainer"
                             >
                               <svg
                                 aria-hidden="true"
@@ -2666,8 +2669,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2675,7 +2678,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Item code
                     </span>
@@ -2690,7 +2693,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="true"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
+                        class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
                         id="item-code"
                         value="WS2SB6"
                       />
@@ -2699,7 +2702,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
                 <div
                   class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-                  color="#cc1439"
+                  color="red"
                 >
                   <svg
                     aria-hidden="true"
@@ -2718,12 +2721,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
                   >
                     <p
                       class="Text-sc-1wu7vpu-0 RbfMK"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Item WS2SB6 does not exist.
                     </p>
@@ -2734,8 +2737,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2743,7 +2746,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Eaches expected on Job
                     </span>
@@ -2758,7 +2761,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                         id="eaches-expected"
                         placeholder="2 000"
                       />
@@ -2770,8 +2773,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2779,7 +2782,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Eaches remaining on Project
                     </span>
@@ -2794,7 +2797,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 eRPyZS"
+                        class="InputField__StyledInput-sc-6cu4mg-0 fdcdYd"
                         disabled=""
                         id="eaches-remaining"
                         value="18 000"
@@ -2807,8 +2810,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2816,7 +2819,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Scheduled start
                     </span>
@@ -2831,7 +2834,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                         id="scheduled-start"
                         placeholder="MMM-DD-YYYY"
                       />
@@ -2843,8 +2846,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -2852,7 +2855,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Scheduled end
                     </span>
@@ -2867,7 +2870,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                         id="scheduled-end"
                         placeholder="MMM-DD-YYYY"
                       />
@@ -2876,13 +2879,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <fieldset
-                class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
+                class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
               >
                 <legend
-                  style="margin-bottom:8px"
+                  class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
                   >
                     Line Lead
                   </span>
@@ -2895,7 +2898,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </span>
                 </legend>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2903,7 +2906,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                       name="linelead"
                       type="checkbox"
                       value="christiaan"
@@ -2915,14 +2918,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <p
                       class="Text-sc-1wu7vpu-0 RbfMK"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Christiaan Oostenbrug
                     </p>
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2930,7 +2933,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                       name="linelead"
                       type="checkbox"
                       value="matt"
@@ -2942,14 +2945,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <p
                       class="Text-sc-1wu7vpu-0 RbfMK"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Matt Dunn
                     </p>
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -2958,7 +2961,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 dQkcBn"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 eJJycu"
                       disabled=""
                       name="linelead"
                       type="checkbox"
@@ -2973,14 +2976,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Text-sc-1wu7vpu-0 hdrQgs"
                       color="currentColor"
                       disabled=""
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Clemens Park
                     </p>
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -2989,7 +2992,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 dQkcBn"
+                      class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 eJJycu"
                       disabled=""
                       name="linelead"
                       type="checkbox"
@@ -3004,7 +3007,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Text-sc-1wu7vpu-0 hdrQgs"
                       color="currentColor"
                       disabled=""
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Nikola Pejcic
                     </p>
@@ -3045,7 +3048,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <span
                       class="Text-sc-1wu7vpu-0 RbfMK"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                        Yes 
                     </span>
@@ -3071,7 +3074,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <span
                       class="Text-sc-1wu7vpu-0 RbfMK"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                        No 
                     </span>
@@ -3101,7 +3104,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Text-sc-1wu7vpu-0 hdrQgs"
                       color="currentColor"
                       disabled=""
-                      font-size="16px"
+                      font-size="medium"
                     >
                        Maybe 
                     </span>
@@ -3109,7 +3112,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
                 <div
                   class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-                  color="#cc1439"
+                  color="red"
                 >
                   <svg
                     aria-hidden="true"
@@ -3128,12 +3131,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
                   >
                     <p
                       class="Text-sc-1wu7vpu-0 RbfMK"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Only yes can be selected...
                     </p>
@@ -3141,7 +3144,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </fieldset>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
               >
                 <div
                   id="Job Visibility-label"
@@ -3159,7 +3162,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     class="ClickInputLabel-j2axnv-0 kemUmZ"
                   >
                     <div
-                      class="ToggleButton__Switch-asgrb8-1 irhlNv"
+                      class="ToggleButton__Switch-asgrb8-1 hOMJxD"
                     >
                       <input
                         aria-invalid="false"
@@ -3177,7 +3180,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     <p
                       class="Text-sc-1wu7vpu-0 cOGezP"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Hidden
                     </p>
@@ -3190,8 +3193,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             >
               <legend
                 class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-                font-size="20px"
-                font-weight="500"
+                font-size="large"
+                font-weight="medium"
               >
                 Rejects
               </legend>
@@ -3199,8 +3202,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -3208,7 +3211,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Item
                     </span>
@@ -3223,7 +3226,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="true"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
+                        class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
                         id="items"
                         value="235432"
                       />
@@ -3232,7 +3235,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
                 <div
                   class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-                  color="#cc1439"
+                  color="red"
                 >
                   <svg
                     aria-hidden="true"
@@ -3251,12 +3254,12 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     />
                   </svg>
                   <div
-                    class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+                    class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
                   >
                     <p
                       class="Text-sc-1wu7vpu-0 RbfMK"
                       color="currentColor"
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Item 235432 is not a valid entry.
                     </p>
@@ -3267,8 +3270,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                  color="#011e38"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  color="black"
                   style="display:block"
                 >
                   <div
@@ -3276,7 +3279,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                     >
                       Quantity
                     </span>
@@ -3291,7 +3294,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                         id="quantity"
                       />
                     </div>
@@ -3299,7 +3302,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
               >
                 <div
                   id="Reject visibility-label"
@@ -3318,7 +3321,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     disabled=""
                   >
                     <div
-                      class="ToggleButton__Switch-asgrb8-1 irhlNv"
+                      class="ToggleButton__Switch-asgrb8-1 hOMJxD"
                     >
                       <input
                         aria-invalid="false"
@@ -3339,7 +3342,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       class="Text-sc-1wu7vpu-0 jVsGHh"
                       color="currentColor"
                       disabled=""
-                      font-size="16px"
+                      font-size="medium"
                     >
                       Hidden
                     </p>

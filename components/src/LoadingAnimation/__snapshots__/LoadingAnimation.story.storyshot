@@ -332,7 +332,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 kyRgWL"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
           font-weight="medium"
         >
           1/4
@@ -564,7 +564,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 gfZztd"
           color="grey"
-          font-size="16px"
+          font-size="medium"
           font-weight="medium"
         >
           1/4
@@ -729,7 +729,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQbNmG Alert-u8lbe-0 OiBBb"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bOrzAg Alert-u8lbe-0 yTvFo"
         role="alert"
       >
         <div

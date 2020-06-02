@@ -11,8 +11,8 @@ exports[`Storyshots TimePicker default 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -20,7 +20,7 @@ exports[`Storyshots TimePicker default 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Start Time
           </span>
@@ -76,18 +76,18 @@ exports[`Storyshots TimePicker default 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -123,8 +123,8 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -132,7 +132,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Duration
           </span>
@@ -188,18 +188,18 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -235,8 +235,8 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -244,7 +244,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Duration
           </span>
@@ -265,7 +265,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     03:30
                   </div>
@@ -300,18 +300,18 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -347,8 +347,8 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -356,7 +356,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Duration
           </span>
@@ -377,7 +377,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     03:30
                   </div>
@@ -412,18 +412,18 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -459,8 +459,8 @@ exports[`Storyshots TimePicker with error state 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -468,7 +468,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             End Time
           </span>
@@ -524,18 +524,18 @@ exports[`Storyshots TimePicker with error state 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -556,7 +556,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
         </div>
         <div
           class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-          color="#cc1439"
+          color="red"
         >
           <svg
             aria-hidden="true"
@@ -575,12 +575,12 @@ exports[`Storyshots TimePicker with error state 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
           >
             <p
               class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
-              font-size="16px"
+              font-size="medium"
             >
               This time is invalid
             </p>
@@ -603,8 +603,8 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -612,7 +612,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             End Time
           </span>
@@ -668,18 +668,18 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"

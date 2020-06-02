@@ -92,7 +92,7 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       This solution involves using height instead min-height.
     </p>
@@ -149,7 +149,7 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       This solution involves wrapping Flex element with another Flex element with column direction..
     </p>

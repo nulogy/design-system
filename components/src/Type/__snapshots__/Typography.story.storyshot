@@ -9,71 +9,71 @@ exports[`Storyshots Typography Article 1`] = `
   >
     <h1
       class="Text-sc-1wu7vpu-0-h1 VooJu"
-      font-size="46px"
-      font-weight="300"
+      font-size="largest"
+      font-weight="light"
     >
       Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
     </h1>
     <h2
       class="Text-sc-1wu7vpu-0-h2 heWDlS"
-      font-size="26px"
-      font-weight="500"
+      font-size="larger"
+      font-weight="medium"
     >
       Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
     </h2>
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
       class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="20px"
-      font-weight="500"
+      font-size="large"
+      font-weight="medium"
     >
       Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?
     </h3>
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
     </p>
     <h2
       class="Text-sc-1wu7vpu-0-h2 heWDlS"
-      font-size="26px"
-      font-weight="500"
+      font-size="larger"
+      font-weight="medium"
     >
       Donec leo felis
     </h2>
     <h3
       class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="20px"
-      font-weight="500"
+      font-size="large"
+      font-weight="medium"
     >
       Two pargraphs and moderatly long title
     </h3>
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
       class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="20px"
-      font-weight="500"
+      font-size="large"
+      font-weight="medium"
     >
       Two pargraphs with List
     </h3>
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
@@ -103,21 +103,21 @@ exports[`Storyshots Typography Article 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </p>
     <h3
       class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="20px"
-      font-weight="500"
+      font-size="large"
+      font-weight="medium"
     >
       This is small text (14px) with medium(default) line height (24px).
     </h3>
@@ -130,8 +130,8 @@ exports[`Storyshots Typography Article 1`] = `
     </p>
     <h3
       class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="20px"
-      font-weight="500"
+      font-size="large"
+      font-weight="medium"
     >
       This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...
     </h3>

@@ -42,7 +42,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option A 
           </span>
@@ -69,7 +69,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option B 
           </span>
@@ -96,7 +96,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option C 
           </span>
@@ -146,7 +146,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option A 
           </span>
@@ -172,7 +172,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option B 
           </span>
@@ -198,7 +198,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option C 
           </span>
@@ -236,9 +236,9 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
         </span>
       </legend>
       <p
-        class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
+        class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
         color="currentColor"
-        font-size="16px"
+        font-size="medium"
       >
         Select a setting from the menu below:
       </p>
@@ -264,7 +264,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option A 
           </span>
@@ -291,7 +291,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option B 
           </span>
@@ -318,7 +318,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option C 
           </span>
@@ -373,7 +373,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
             class="Text-sc-1wu7vpu-0 hdrQgs"
             color="currentColor"
             disabled=""
-            font-size="16px"
+            font-size="medium"
           >
              Option A 
           </span>
@@ -403,7 +403,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
             class="Text-sc-1wu7vpu-0 hdrQgs"
             color="currentColor"
             disabled=""
-            font-size="16px"
+            font-size="medium"
           >
              Option B 
           </span>
@@ -433,7 +433,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
             class="Text-sc-1wu7vpu-0 hdrQgs"
             color="currentColor"
             disabled=""
-            font-size="16px"
+            font-size="medium"
           >
              Option C 
           </span>
@@ -484,7 +484,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option A 
           </span>
@@ -510,7 +510,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option B 
           </span>
@@ -536,7 +536,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option C 
           </span>
@@ -544,7 +544,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-        color="#cc1439"
+        color="red"
       >
         <svg
           aria-hidden="true"
@@ -563,12 +563,12 @@ exports[`Storyshots RadioGroup with error list 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
         >
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             Please select an option
           </p>
@@ -636,7 +636,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option A 
           </span>
@@ -662,7 +662,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option B 
           </span>
@@ -688,7 +688,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
           <span
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
              Option C 
           </span>
@@ -696,7 +696,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-        color="#cc1439"
+        color="red"
       >
         <svg
           aria-hidden="true"
@@ -715,12 +715,12 @@ exports[`Storyshots RadioGroup with error message 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
         >
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             Please select an option
           </p>
