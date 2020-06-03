@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.12.1](https://github.com/nulogy/design-system/compare/v2.12.0...v2.12.1) (2020-06-03)
+
+
+### Bug Fixes
+
+* Corrects Link underline prop type ([#665](https://github.com/nulogy/design-system/issues/665)) ([ed52eb9](https://github.com/nulogy/design-system/commit/ed52eb9bc887cf1feb92002af605f6c2458087f6))
+
+
+
+
+
 # [2.12.0](https://github.com/nulogy/design-system/compare/v2.11.3...v2.12.0) (2020-06-01)
 
 
