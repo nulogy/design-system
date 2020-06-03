@@ -78,9 +78,9 @@ export default {
     extraLarge: tokens.size_breakpoint_extra_large
   },
   zIndex: {
-    content: 100,
-    tabsScollIndicator: 200,
-    tabsBar: 210,
-    overlay: 1000
+    content: tokens.z_index_content,
+    tabsScollIndicator: tokens.z_index_tabs_scroll_indicator,
+    tabsBar: tokens.z_index_tabs_bar,
+    overlay: tokens.z_index_overlay
   }
 };

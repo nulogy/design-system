@@ -1,0 +1,16 @@
+{
+  "zIndex": {
+    "content": {
+      "value": 100
+    },
+    "tabsScollIndicator": {
+      "value": 200
+    },
+    "tabsBar": {
+      "value": 210
+    },
+    "overlay": {
+      "value": 1000
+    }
+  }
+}

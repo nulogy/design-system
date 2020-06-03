@@ -1,4 +1,7 @@
 @include generate-breakpoint-prefixes {
+  &shadow--none {
+    box-shadow: none !important;
+  }
   &shadow--small {
     box-shadow: $shadow-box-small !important;
   }
