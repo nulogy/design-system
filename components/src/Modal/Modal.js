@@ -175,7 +175,7 @@ const Modal = ({
                 {title}
               </SectionTitle>
             ) : (
-              <div style={{ height: theme.space.x4 }} />
+              <div style={{ height: themeContext.space.x4 }} />
             )}
             {onRequestClose && <ModalCloseButton onClick={onRequestClose} aria-label={closeAriaLabel} />}
           </ModalHeader>
