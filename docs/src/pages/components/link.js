@@ -39,8 +39,8 @@ const propsRows = [
   },
   {
     name: "underline",
-    type: "String",
-    defaultValue: "true",
+    type: "Boolean",
+    defaultValue: true,
     description: "Whether to show an underline or not."
   },
   {
