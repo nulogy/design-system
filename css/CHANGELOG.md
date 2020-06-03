@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.13.0](https://github.com/nulogy/design-system/compare/v2.12.1...v2.13.0) (2020-06-03)
+
+
+### Features
+
+* add overlay css component ([#666](https://github.com/nulogy/design-system/issues/666)) ([1cf892a](https://github.com/nulogy/design-system/commit/1cf892a85798c40702aad86ee6d5f34037307c8e))
+
+
+
+
+
 # [2.12.0](https://github.com/nulogy/design-system/compare/v2.11.3...v2.12.0) (2020-06-01)
 
 
