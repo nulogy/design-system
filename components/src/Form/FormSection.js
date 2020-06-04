@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { SubsectionTitle } from "../Type";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
-import theme from "../theme";
 
 const FormSectionTitle = styled(SubsectionTitle).attrs({
   as: "legend"
@@ -17,7 +16,7 @@ const BaseFormSection = ({ title, children, ...props }) => (
   </fieldset>
 );
 
-const FormSection = styled(BaseFormSection)(({ title }) => ({
+const FormSection = styled(BaseFormSection)(({ title, theme }) => ({
   width: "100%",
   padding: 0,
   margin: 0,

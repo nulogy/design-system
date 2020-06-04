@@ -10,18 +10,17 @@ import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField
 import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
 import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 import { TimePicker } from "../TimePicker";
-import theme from "../theme";
 import { getDuration } from "../TimeRange/TimeRange.utils";
 
 const DEFAULT_LABEL = "Date Range";
 
-const StyledStartTime = styled(TimePicker)({
+const StyledStartTime = styled(TimePicker)(({ theme }) => ({
   marginLeft: theme.space.x1
-});
+}));
 
-const StyledEndTime = styled(TimePicker)({
+const StyledEndTime = styled(TimePicker)(({ theme }) => ({
   marginRight: theme.space.x1
-});
+}));
 
 const DateRange = ({
   dateFormat,

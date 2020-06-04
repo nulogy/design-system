@@ -1,14 +1,13 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 import PropTypes from "prop-types";
 import ReactModal from "react-modal";
 import { transparentize } from "polished";
 import { SectionTitle } from "../Type";
 import { CloseButton } from "../Button";
-import theme from "../theme";
 import { PreventBodyElementScrolling } from "../utils";
 
-const ModalContent = styled.div(({ hasFooter }) => ({
+const ModalContent = styled.div(({ hasFooter, theme }) => ({
   marginTop: "-64px",
   marginBottom: hasFooter ? "-72px" : 0,
   overflow: "auto",
@@ -18,11 +17,11 @@ const ModalContent = styled.div(({ hasFooter }) => ({
   paddingRight: theme.space.x3
 }));
 
-const getHeaderPaddingRight = closeButtonIncluded => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
+const getHeaderPaddingRight = (closeButtonIncluded, theme) => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
 
-const ModalHeader = styled.div(({ hasCloseButton }) => ({
+const ModalHeader = styled.div(({ hasCloseButton, theme }) => ({
   position: "relative",
-  padding: `${theme.space.x2} ${getHeaderPaddingRight(hasCloseButton)} ${theme.space.x2} ${theme.space.x3}`,
+  padding: `${theme.space.x2} ${getHeaderPaddingRight(hasCloseButton, theme)} ${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: 2,
   borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
@@ -38,7 +37,7 @@ const ModalHeader = styled.div(({ hasCloseButton }) => ({
   }
 }));
 
-const ModalFooter = styled.div({
+const ModalFooter = styled.div(({ theme }) => ({
   position: "relative",
   padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
@@ -54,20 +53,33 @@ const ModalFooter = styled.div({
     margin: "0 auto",
     borderBottom: `solid 1px ${theme.colors.lightGrey}`
   }
-});
+}));
 
-const ModalCloseButton = styled(CloseButton)({
+const ModalCloseButton = styled(CloseButton)(({ theme }) => ({
   position: "absolute",
   top: "12px",
   right: theme.space.x2,
   zIndex: 3
+}));
+
+const overlayStyle = theme => ({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: transparentize(0.5, theme.colors.blackBlue),
+  zIndex: theme.zIndex.overlay
 });
 
 const StyledReactModal = styled(ReactModal)(
   ({ maxWidth }) => ({
     maxWidth
   }),
-  {
+  ({ theme }) => ({
     ":focus": {
       outline: "none"
     },
@@ -103,21 +115,8 @@ const StyledReactModal = styled(ReactModal)(
     lineHeight: theme.lineHeights.base,
     WebkitFontSmoothing: "antialiased",
     MozOsxFontSmoothing: "grayscale"
-  }
+  })
 );
-
-const overlayStyle = {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: transparentize(0.5, theme.colors.blackBlue),
-  zIndex: theme.zIndex.overlay
-};
 
 const Modal = ({
   isOpen,
@@ -142,6 +141,7 @@ const Modal = ({
   const modalHasHeader = () => {
     return onRequestClose || title;
   };
+  const themeContext = useContext(ThemeContext);
   return (
     <StyledReactModal
       maxWidth={maxWidth}
@@ -162,7 +162,7 @@ const Modal = ({
       shouldCloseOnOverlayClick
       shouldCloseOnEsc
       style={{
-        overlay: overlayStyle
+        overlay: overlayStyle(themeContext)
       }}
       appElement={appElement}
       ariaHideApp={ariaHideApp}
@@ -175,7 +175,7 @@ const Modal = ({
                 {title}
               </SectionTitle>
             ) : (
-              <div style={{ height: theme.space.x4 }} />
+              <div style={{ height: themeContext.space.x4 }} />
             )}
             {onRequestClose && <ModalCloseButton onClick={onRequestClose} aria-label={closeAriaLabel} />}
           </ModalHeader>

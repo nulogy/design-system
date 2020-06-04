@@ -8,8 +8,9 @@ exports[`Storyshots Link As a <button> 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      class="Link-sc-1lpx3d0-0 dpQmZf"
+      class="Link-sc-1lpx3d0-0 cLSnCY"
       color="blue"
+      font-size="medium"
     >
       Link
     </button>
@@ -17,7 +18,7 @@ exports[`Storyshots Link As a <button> 1`] = `
 </div>
 `;
 
-exports[`Storyshots Link Link 1`] = `
+exports[`Storyshots Link Link  1`] = `
 <div
   style="padding:24px"
 >
@@ -25,8 +26,9 @@ exports[`Storyshots Link Link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Link-sc-1lpx3d0-0 geMpSb"
+      class="Link-sc-1lpx3d0-0 gxbSxg"
       color="blue"
+      font-size="medium"
       href="http://nulogy.design"
     >
       Link
@@ -43,8 +45,9 @@ exports[`Storyshots Link With a different color 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Link-sc-1lpx3d0-0 hOpqxk"
+      class="Link-sc-1lpx3d0-0 cpcHzb"
       color="black"
+      font-size="medium"
       href="http://nulogy.design"
     >
       Link
@@ -61,8 +64,28 @@ exports[`Storyshots Link Without underline 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <a
-      class="Link-sc-1lpx3d0-0 hoHKDj"
+      class="Link-sc-1lpx3d0-0 clvBNI"
       color="blue"
+      font-size="medium"
+      href="http://nulogy.design"
+    >
+      Link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Link with custom font size 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <a
+      class="Link-sc-1lpx3d0-0 eELETS"
+      color="blue"
+      font-size="small"
       href="http://nulogy.design"
     >
       Link

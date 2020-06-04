@@ -1,6 +1,6 @@
 import React from "react";
-import { render } from "@testing-library/react";
 import { Toast } from ".";
+import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 
 describe("Toast", () => {
   describe("callbacks", () => {
@@ -8,7 +8,7 @@ describe("Toast", () => {
     const onShowHandler = jest.fn();
 
     it("calls onShow callback when triggered", () => {
-      render(
+      renderWithNDSProvider(
         <Toast triggered onShow={onShowHandler}>
           Saved
         </Toast>
@@ -17,7 +17,7 @@ describe("Toast", () => {
       expect(onHideHandler).not.toHaveBeenCalled();
     });
     it("calls onHide callback when dismissed", () => {
-      render(
+      renderWithNDSProvider(
         <Toast triggered={false} onHide={onHideHandler}>
           Saved
         </Toast>

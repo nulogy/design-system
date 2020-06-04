@@ -9,30 +9,23 @@ import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
-import theme from "../theme";
 
 const alertColours = {
   danger: {
-    borderColor: theme.colors.red,
-    backgroundColor: theme.colors.lightRed
+    borderColor: "red",
+    backgroundColor: "lightRed"
   },
   informative: {
-    borderColor: theme.colors.blue,
-    backgroundColor: theme.colors.lightBlue
+    borderColor: "blue",
+    backgroundColor: "lightBlue"
   },
   success: {
-    borderColor: theme.colors.green,
-    backgroundColor: theme.colors.lightGreen
+    borderColor: "green",
+    backgroundColor: "lightGreen"
   },
   warning: {
-    borderColor: theme.colors.yellow,
-    backgroundColor: theme.colors.lightYellow
-  }
-};
-
-const alertStyles = {
-  [`${Link}`]: {
-    color: theme.colors.black
+    borderColor: "yellow",
+    backgroundColor: "lightYellow"
   }
 };
 
@@ -67,8 +60,10 @@ const BaseAlert = ({ children, isCloseable, title, type, className, closeAriaLab
     <Flex
       bg={alertColours[type].backgroundColor}
       p="x2"
-      borderRadius={theme.radii.medium}
-      borderLeft={`${theme.space.half} solid ${alertColours[type].borderColor}`}
+      borderRadius="medium"
+      borderLeftWidth="half"
+      borderLeftColor={alertColours[type].borderColor}
+      borderLeftStyle="solid"
       role="alert"
       className={className}
       {...props}
@@ -103,6 +98,10 @@ BaseAlert.defaultProps = {
   type: "informative"
 };
 
-const Alert = styled(BaseAlert)(space, layout, alertStyles);
+const Alert = styled(BaseAlert)(space, layout, ({ theme }) => ({
+  [`${Link}`]: {
+    color: theme.colors.black
+  }
+}));
 
 export default Alert;

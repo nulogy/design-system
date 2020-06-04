@@ -41,7 +41,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
       Hover me
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+      class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
       id="random-id-37"
       open=""
       role="tooltip"
@@ -136,7 +136,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
          Button 
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 PnpgM  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 iBJJpr  nds-popper-pop-up"
         id="random-id-15"
         open=""
         role="tooltip"
@@ -193,8 +193,9 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Link-sc-1lpx3d0-0 geMpSb"
+      class="Link-sc-1lpx3d0-0 gxbSxg"
       color="blue"
+      font-size="medium"
       href="/"
     >
        Link 
@@ -206,7 +207,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-label="Open"
       class="Text-sc-1wu7vpu-0 fSZLdr"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Inline Text
     </span>
@@ -253,7 +254,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-16"
         open=""
         role="tooltip"
@@ -274,7 +275,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-17"
         open=""
         role="tooltip"
@@ -295,7 +296,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-18"
         open=""
         role="tooltip"
@@ -320,7 +321,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-19"
         open=""
         role="tooltip"
@@ -341,7 +342,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-20"
         open=""
         role="tooltip"
@@ -362,7 +363,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-21"
         open=""
         role="tooltip"
@@ -387,7 +388,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-22"
         open=""
         role="tooltip"
@@ -408,7 +409,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-23"
         open=""
         role="tooltip"
@@ -429,7 +430,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-24"
         open=""
         role="tooltip"
@@ -454,7 +455,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-25"
         open=""
         role="tooltip"
@@ -475,7 +476,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-26"
         open=""
         role="tooltip"
@@ -496,7 +497,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-27"
         open=""
         role="tooltip"
@@ -532,7 +533,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
          Button 
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 hrZgat  nds-popper-pop-up"
+        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
         id="random-id-14"
         open=""
         role="tooltip"

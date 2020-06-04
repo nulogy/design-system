@@ -12,7 +12,7 @@ exports[`Storyshots Table with everything 1`] = `
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
@@ -21,7 +21,7 @@ exports[`Storyshots Table with everything 1`] = `
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -30,7 +30,7 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="select all"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -102,7 +102,7 @@ exports[`Storyshots Table with everything 1`] = `
               <p
                 class="Text-sc-1wu7vpu-0 iHOIzo"
                 color="blackBlue"
-                font-size="16px"
+                font-size="medium"
                 font-weight="bold"
               >
                 ABC & XYZ Company
@@ -118,16 +118,16 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
               >
                 <input
                   aria-invalid="false"
-                  aria-label="Select row"
+                  aria-label="deselect item 12"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -219,7 +219,7 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -228,7 +228,7 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -298,7 +298,7 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -307,7 +307,7 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -377,7 +377,7 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -386,7 +386,7 @@ exports[`Storyshots Table with everything 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -453,7 +453,7 @@ exports[`Storyshots Table with everything 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -480,7 +480,7 @@ exports[`Storyshots Table with everything 1`] = `
           />
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -593,7 +593,7 @@ exports[`Storyshots Table with pagination 1`] = `
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"

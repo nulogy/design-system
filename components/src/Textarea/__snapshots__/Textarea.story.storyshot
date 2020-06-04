@@ -11,8 +11,8 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -20,7 +20,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Label
           </span>
@@ -28,7 +28,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 ctULiv"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 khvyNi"
           disabled=""
           rows="3"
         />
@@ -49,8 +49,8 @@ exports[`Storyshots Textarea Textarea 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -58,7 +58,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Label
           </span>
@@ -66,7 +66,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 ikvuwa"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
           rows="3"
         />
       </label>
@@ -86,8 +86,8 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -95,7 +95,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Label
           </span>
@@ -107,9 +107,9 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
             (Required)
           </span>
           <p
-            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
+            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             here's some help...
           </p>
@@ -117,7 +117,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="true"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 ikvuwa"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
           placeholder="Placeholder"
           required=""
           rows="3"
@@ -139,8 +139,8 @@ exports[`Storyshots Textarea With custom id 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -148,7 +148,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Label
           </span>
@@ -156,7 +156,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 ikvuwa"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
           id="my-custom-id"
           rows="3"
         />
@@ -177,8 +177,8 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -186,7 +186,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Label
           </span>
@@ -194,7 +194,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 ikvuwa"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
           rows="7"
         />
       </label>
@@ -215,8 +215,8 @@ exports[`Storyshots Textarea set to required 1`] = `
     >
       <h2
         class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="26px"
-        font-weight="500"
+        font-size="larger"
+        font-weight="medium"
       >
         Required field example
       </h2>
@@ -224,8 +224,8 @@ exports[`Storyshots Textarea set to required 1`] = `
         class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-          color="#011e38"
+          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          color="black"
           style="display:block"
         >
           <div
@@ -233,7 +233,7 @@ exports[`Storyshots Textarea set to required 1`] = `
             data-testid="field-label"
           >
             <span
-              style="font-size:14px;font-weight:600;line-height:1.71428571"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
             >
               Label
             </span>
@@ -241,7 +241,7 @@ exports[`Storyshots Textarea set to required 1`] = `
           <textarea
             aria-invalid="false"
             aria-required="true"
-            class="Textarea__StyledTextarea-sc-1tyrhr0-0 ikvuwa"
+            class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
             required=""
             rows="3"
           />
@@ -268,8 +268,8 @@ exports[`Storyshots Textarea with error list 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -277,7 +277,7 @@ exports[`Storyshots Textarea with error list 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Label
           </span>
@@ -285,13 +285,13 @@ exports[`Storyshots Textarea with error list 1`] = `
         <textarea
           aria-invalid="true"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 fzsSkt"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 glwRhU"
           rows="3"
         />
       </label>
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-        color="#cc1439"
+        color="red"
       >
         <svg
           aria-hidden="true"
@@ -310,12 +310,12 @@ exports[`Storyshots Textarea with error list 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
         >
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             Please fill this out
           </p>
@@ -354,8 +354,8 @@ exports[`Storyshots Textarea with error message 1`] = `
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-        color="#011e38"
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
         style="display:block"
       >
         <div
@@ -363,7 +363,7 @@ exports[`Storyshots Textarea with error message 1`] = `
           data-testid="field-label"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
           >
             Label
           </span>
@@ -371,13 +371,13 @@ exports[`Storyshots Textarea with error message 1`] = `
         <textarea
           aria-invalid="true"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 fzsSkt"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 glwRhU"
           rows="3"
         />
       </label>
       <div
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-        color="#cc1439"
+        color="red"
       >
         <svg
           aria-hidden="true"
@@ -396,12 +396,12 @@ exports[`Storyshots Textarea with error message 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
         >
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             Please fill this out
           </p>

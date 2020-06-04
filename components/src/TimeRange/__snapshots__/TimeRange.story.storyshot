@@ -8,8 +8,8 @@ exports[`Storyshots TimeRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -17,7 +17,7 @@ exports[`Storyshots TimeRange default 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Time range
         </span>
@@ -81,18 +81,18 @@ exports[`Storyshots TimeRange default 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -118,7 +118,7 @@ exports[`Storyshots TimeRange default 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -177,18 +177,18 @@ exports[`Storyshots TimeRange default 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -221,8 +221,8 @@ exports[`Storyshots TimeRange default selections 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -230,7 +230,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Time range
         </span>
@@ -259,7 +259,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     12:00 PM
                   </div>
@@ -294,18 +294,18 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -331,7 +331,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -355,7 +355,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     01:30 PM
                   </div>
@@ -390,18 +390,18 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -434,8 +434,8 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -443,7 +443,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Time range
         </span>
@@ -507,18 +507,18 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -544,7 +544,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -603,18 +603,18 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -647,8 +647,8 @@ exports[`Storyshots TimeRange with range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -656,7 +656,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Time range
         </span>
@@ -685,7 +685,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     12:00 PM
                   </div>
@@ -720,18 +720,18 @@ exports[`Storyshots TimeRange with range validation 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -757,7 +757,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -781,7 +781,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     03:30 AM
                   </div>
@@ -816,18 +816,18 @@ exports[`Storyshots TimeRange with range validation 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"

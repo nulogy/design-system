@@ -8,8 +8,8 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -17,7 +17,7 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Default label
         </span>
@@ -35,8 +35,8 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -44,19 +44,20 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Default label
         </span>
         <p
-          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           I am help text. I can be a string or a node that includes a 
           <a
-            class="Link-sc-1lpx3d0-0 geMpSb"
+            class="Link-sc-1lpx3d0-0 gxbSxg"
             color="blue"
+            font-size="medium"
             href="http://nulogy.design"
           >
             link
@@ -77,8 +78,8 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -86,7 +87,7 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Default label
         </span>
@@ -111,8 +112,8 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -120,7 +121,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Default label
         </span>
@@ -132,9 +133,9 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
           (Required)
         </span>
         <p
-          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           I am help text. I can give more details on the input below!
         </p>
@@ -152,8 +153,8 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -161,7 +162,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Default label
         </span>
@@ -173,9 +174,9 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
           (Required)
         </span>
         <p
-          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           I am help text. I can give more details on the input below!
         </p>
@@ -193,7 +194,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
               id="input1"
             />
           </div>

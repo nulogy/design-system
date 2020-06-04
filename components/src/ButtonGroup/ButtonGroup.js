@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 
 const alignments = {
   left: "flex-start",
@@ -8,7 +7,7 @@ const alignments = {
   right: "flex-end"
 };
 
-const buttonSpacings = {
+const buttonSpacings = theme => ({
   left: {
     "button:not(:last-child)": {
       marginRight: theme.space.x1
@@ -24,13 +23,13 @@ const buttonSpacings = {
       marginLeft: theme.space.x1
     }
   }
-};
+});
 
 const getAlignment = alignment => alignments[alignment] || alignments.left;
 
-const getButtonSpacing = alignment => buttonSpacings[alignment] || buttonSpacings.left;
+const getButtonSpacing = (alignment, theme) => buttonSpacings(theme)[alignment] || buttonSpacings(theme).left;
 
-const ButtonGroup = styled.div(({ alignment }) => ({
+const ButtonGroup = styled.div(({ alignment, theme }) => ({
   display: "flex",
   flexWrap: "wrap",
   marginBottom: `-${theme.space.x1}`,
@@ -38,7 +37,7 @@ const ButtonGroup = styled.div(({ alignment }) => ({
   button: {
     marginBottom: theme.space.x1
   },
-  ...getButtonSpacing(alignment)
+  ...getButtonSpacing(alignment, theme)
 }));
 
 ButtonGroup.propTypes = {

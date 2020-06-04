@@ -65,7 +65,7 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 kGwYaA"
+          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 eAbPwX"
         >
           Button
         </button>
@@ -112,7 +112,7 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 hHlnON"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             Button
           </p>

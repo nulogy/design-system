@@ -18,8 +18,9 @@ exports[`Storyshots NavBar NavBar 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -194,7 +195,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""
@@ -314,8 +315,9 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 eYTYYH"
+            class="Link-sc-1lpx3d0-0 egQWMc"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:56px"
           >
@@ -457,8 +459,9 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/portal"
             style="display:block;height:40px"
           >
@@ -589,8 +592,9 @@ exports[`Storyshots NavBar With branding only 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -668,8 +672,9 @@ exports[`Storyshots NavBar With custom link components 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -798,7 +803,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""
@@ -933,8 +938,9 @@ exports[`Storyshots NavBar With subtext 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 eYTYYH"
+            class="Link-sc-1lpx3d0-0 egQWMc"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:56px"
           >
@@ -1074,7 +1080,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""
@@ -1133,8 +1139,9 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -1261,8 +1268,9 @@ exports[`Storyshots NavBar Without search 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -1501,8 +1509,9 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -1642,8 +1651,9 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -1820,8 +1830,9 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -1996,7 +2007,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""

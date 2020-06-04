@@ -6,12 +6,12 @@ import PropTypes from "prop-types";
 import icons from "@nulogy/icons";
 
 import { Icon } from "../Icon";
-import theme from "../theme";
+import NDSTheme from "../theme";
 import { subPx } from "../utils";
 
 const iconNames = Object.keys(icons);
 
-const getSize = size => {
+const getSize = (size, theme) => {
   switch (size) {
     case "small":
       return {
@@ -42,7 +42,7 @@ const WrapperButton = styled.button(
   ({ fullWidth }) => ({
     width: fullWidth ? "100%" : "auto"
   }),
-  ({ disabled }) => ({
+  ({ disabled, theme }) => ({
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
@@ -76,8 +76,8 @@ const WrapperButton = styled.button(
       opacity: ".5"
     }
   }),
-  ({ size }) => ({
-    ...getSize(size)
+  ({ size, theme }) => ({
+    ...getSize(size, theme)
   }),
   space
 );
@@ -85,7 +85,7 @@ const WrapperButton = styled.button(
 const Button = React.forwardRef(({ children, iconSide, icon, className, asLink, ...props }, ref) => {
   const {
     lineHeights: { smallTextCompressed }
-  } = theme;
+  } = NDSTheme;
   return (
     <WrapperButton as={asLink ? "a" : undefined} ref={ref} className={className} {...props}>
       {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}

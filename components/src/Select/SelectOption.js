@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { components } from "react-windowed-select";
 
-import theme from "../theme";
+import { typography } from "styled-system";
 import { subPx } from "../utils";
 
-const StyledOption = styled.div(({ isSelected, isFocused }) => ({
+const StyledOption = styled.div(typography, ({ isSelected, isFocused, theme }) => ({
   "&:last-child": {
     borderBottomLeftRadius: theme.radii.medium,
     borderBottomRightRadius: theme.radii.medium
