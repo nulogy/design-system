@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 import { Pagination } from ".";
 import { getPageItemstoDisplay } from "./Pagination";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
