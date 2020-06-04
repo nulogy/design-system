@@ -5,20 +5,19 @@ import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import mapErrorsToList from "./mapErrorsToList";
-import theme from "../theme";
 
-const Wrapper = styled.div({
+const Wrapper = styled.div(({ theme }) => ({
   [`${Text}`]: {
     marginBottom: theme.space.x1
   },
   "> *:last-child": {
     marginBottom: 0
   }
-});
+}));
 
 const InlineValidation = ({ className, errorMessage, errorList, children, ...boxProps }) =>
   errorMessage || errorList ? (
-    <Flex className={className} color={theme.colors.red} {...boxProps}>
+    <Flex className={className} color="red" {...boxProps}>
       <Icon icon="error" mr="x1" />
       <Wrapper>
         {errorMessage && <Text>{errorMessage}</Text>}

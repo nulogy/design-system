@@ -4,7 +4,6 @@ import { color, space, typography } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
 import propTypes from "@styled-system/prop-types";
 import { darken } from "polished";
-import theme from "../theme";
 
 const resetButtonStyles = {
   background: "none",
@@ -32,7 +31,8 @@ Link.propTypes = {
   hover: PropTypes.string,
   ...propTypes.typography,
   ...propTypes.color,
-  ...propTypes.space
+  ...propTypes.space,
+  ...propTypes.typography
 };
 
 Link.defaultProps = {
@@ -40,7 +40,7 @@ Link.defaultProps = {
   underline: true,
   fontSize: "medium",
   color: "blue",
-  theme
+  fontSize: "medium"
 };
 
 export default Link;

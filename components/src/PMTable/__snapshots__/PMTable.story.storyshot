@@ -12,7 +12,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
@@ -21,7 +21,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -30,7 +30,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
                   aria-invalid="false"
                   aria-label="select all"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -109,7 +109,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -118,7 +118,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -182,7 +182,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 dQkcBn"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -191,7 +191,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
                   aria-invalid="false"
                   aria-label="Select row"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 dQkcBn"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
                   type="checkbox"
                 />
                 <div
@@ -250,7 +250,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -286,7 +286,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           />
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -404,7 +404,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -870,7 +870,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -906,7 +906,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           />
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -946,7 +946,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -1016,7 +1016,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             colspan="8"
           >
             <div
-              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 dpBjul nds-table__no-rows-content"
+              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 fEzznw nds-table__no-rows-content"
             >
               No records have been created for this table.
             </div>

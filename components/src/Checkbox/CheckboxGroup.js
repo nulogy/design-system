@@ -5,13 +5,6 @@ import Checkbox from "./Checkbox";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
-import theme from "../theme";
-
-const labelTextStyles = {
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase
-};
 
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
@@ -33,6 +26,16 @@ const getCheckboxButtons = props => {
   return checkboxButtons;
 };
 
+const LabelText = styled.span(({ theme }) => ({
+  fontSize: theme.fontSizes.small,
+  fontWeight: theme.fontWeights.bold,
+  lineHeight: theme.lineHeights.smallTextBase
+}));
+
+const Legend = styled.legend(({ theme }) => ({
+  marginBottom: theme.space.x1
+}));
+
 const BaseCheckboxGroup = ({
   className,
   id,
@@ -46,10 +49,10 @@ const BaseCheckboxGroup = ({
   const otherProps = { ...props, errorMessage, errorList };
   return (
     <Fieldset className={className} id={id} hasHelpText={!!helpText}>
-      <legend style={{ marginBottom: theme.space.x1 }}>
-        <span style={labelTextStyles}>{labelText}</span>
+      <Legend>
+        <LabelText>{labelText}</LabelText>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
-      </legend>
+      </Legend>
       {helpText && <HelpText>{helpText}</HelpText>}
       {getCheckboxButtons(otherProps)}
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />

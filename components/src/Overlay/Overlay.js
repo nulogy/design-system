@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { transparentize } from "polished";
-import theme from "../theme";
 import { Flex } from "../Flex";
 
-const Overlay = styled(Flex)(({ dark }) => ({
+const Overlay = styled(Flex)(({ dark, theme }) => ({
   top: 0,
   left: 0,
   right: 0,

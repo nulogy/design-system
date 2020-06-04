@@ -29,7 +29,7 @@ exports[`Storyshots Radio Controlled 1`] = `
         <span
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
            I am controlled and checked 
         </span>
@@ -55,7 +55,7 @@ exports[`Storyshots Radio Controlled 1`] = `
         <span
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
            I am controlled and unchecked 
         </span>
@@ -91,7 +91,7 @@ exports[`Storyshots Radio Radio 1`] = `
         <span
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
            I am a radio button 
         </span>
@@ -128,7 +128,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
         <span
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
            I am checked by default 
         </span>
@@ -168,7 +168,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
           class="Text-sc-1wu7vpu-0 hdrQgs"
           color="currentColor"
           disabled=""
-          font-size="16px"
+          font-size="medium"
         >
            I am disabled 
         </span>
@@ -200,7 +200,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
           class="Text-sc-1wu7vpu-0 hdrQgs"
           color="currentColor"
           disabled=""
-          font-size="16px"
+          font-size="medium"
         >
            I am disabled 
         </span>
@@ -236,7 +236,7 @@ exports[`Storyshots Radio Set to error 1`] = `
         <span
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
            I am error 
         </span>
@@ -262,7 +262,7 @@ exports[`Storyshots Radio Set to error 1`] = `
         <span
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
            I am error 
         </span>
@@ -299,7 +299,7 @@ exports[`Storyshots Radio Set to required 1`] = `
         <span
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
            I am a radio button 
         </span>

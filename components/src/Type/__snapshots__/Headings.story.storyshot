@@ -9,8 +9,8 @@ exports[`Storyshots Headings Section Title 1`] = `
   >
     <h2
       class="Text-sc-1wu7vpu-0-h2 heWDlS"
-      font-size="26px"
-      font-weight="500"
+      font-size="larger"
+      font-weight="medium"
     >
       Section Title
     </h2>
@@ -27,8 +27,8 @@ exports[`Storyshots Headings Subsection Title 1`] = `
   >
     <h3
       class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="20px"
-      font-weight="500"
+      font-size="large"
+      font-weight="medium"
     >
       SubsectionTitle
     </h3>
@@ -45,8 +45,8 @@ exports[`Storyshots Headings Title 1`] = `
   >
     <h1
       class="Text-sc-1wu7vpu-0-h1 VooJu"
-      font-size="46px"
-      font-weight="300"
+      font-size="largest"
+      font-weight="light"
     >
       Title
     </h1>
@@ -63,15 +63,15 @@ exports[`Storyshots Headings With a custom margin 1`] = `
   >
     <h1
       class="Text-sc-1wu7vpu-0-h1 fKaScO"
-      font-size="46px"
-      font-weight="300"
+      font-size="largest"
+      font-weight="light"
     >
       Title
     </h1>
     <p
       class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Lorem ipsum
     </p>

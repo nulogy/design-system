@@ -4,10 +4,9 @@ import { space } from "styled-system";
 import styled from "styled-components";
 import { Box } from "../Box";
 import { Text } from "../Type";
-import theme from "../theme";
 import { ClickInputLabel } from "../utils";
 
-const radioStyle = {
+const radioStyle = theme => ({
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
@@ -36,19 +35,20 @@ const radioStyle = {
       backgroundColor: theme.colors.white
     }
   }
-};
+});
 
 const getRadioStyle = (props, checked) => {
+  const radioStyleMap = radioStyle(props.theme);
   if (props.disabled) {
-    return radioStyle[checked].disabled;
+    return radioStyleMap[checked].disabled;
   }
   if (props.error) {
-    return radioStyle[checked].error;
+    return radioStyleMap[checked].error;
   }
-  return radioStyle[checked].default;
+  return radioStyleMap[checked].default;
 };
 
-const VisualRadio = styled.div(({ disabled }) => ({
+const VisualRadio = styled.div(({ disabled, theme }) => ({
   minWidth: theme.space.x2,
   height: theme.space.x2,
   marginRight: theme.space.x1,
@@ -77,7 +77,7 @@ const RadioInput = styled.input(props => ({
   height: "1px",
   width: "1px",
   [`&:focus + ${VisualRadio}`]: {
-    boxShadow: theme.shadows.focus
+    boxShadow: props.theme.shadows.focus
   },
   [`&:checked + ${VisualRadio}`]: {
     ...getRadioStyle(props, "checked"),
@@ -135,9 +135,9 @@ BaseRadio.defaultProps = {
 };
 
 const Radio = styled(BaseRadio)(
-  {
+  ({ theme }) => ({
     padding: `${theme.space.half} 0`
-  },
+  }),
   space
 );
 

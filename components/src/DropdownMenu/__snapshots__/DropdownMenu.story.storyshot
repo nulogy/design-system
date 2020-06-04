@@ -3614,25 +3614,25 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
       </svg>
     </button>
     <div
-      class="Box-sc-1qu1edy-0 DropdownMenuContainer-sc-3zczz8-0 iEeXjj  nds-popper-pop-up"
+      class="Box-sc-1qu1edy-0 DropdownMenuContainer-sc-3zczz8-0 fcJZzO  nds-popper-pop-up"
       open=""
       style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
     >
       <a
-        class="DropdownLink-sc-1myz2tl-0 djUWWZ"
+        class="DropdownLink-sc-1myz2tl-0 kCziCp"
         color="darkBlue"
         href="/"
       >
         Dropdown Link
       </a>
       <button
-        class="DropdownButton-sc-15i1gee-0 geknLw"
-        color="#00438f"
+        class="DropdownButton-sc-15i1gee-0 cGihZp"
+        color="darkBlue"
       >
         Dropdown Button
       </button>
       <div
-        class="DropdownItem-sc-17fo530-0 kUKetf"
+        class="DropdownItem-sc-17fo530-0 doIexv"
         color="darkBlue"
       >
         <a
@@ -3693,9 +3693,9 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <button
-      aria-expanded="false"
+      aria-expanded="true"
       aria-haspopup="true"
-      aria-label="open dropdown"
+      aria-label="close dropdown"
       class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
       type="button"
     >
@@ -3716,6 +3716,28 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
         />
       </svg>
     </button>
+    <div
+      class="Box-sc-1qu1edy-0 DropdownMenuContainer-sc-3zczz8-0 gCpwvi  nds-popper-pop-up"
+      open=""
+      style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+    >
+      <a
+        class="DropdownLink-sc-1myz2tl-0 fzJAwh"
+        color="white"
+        href="/"
+      >
+        Dropdown Link
+      </a>
+      <button
+        class="DropdownButton-sc-15i1gee-0 djNVKc"
+        color="white"
+      >
+        Dropdown Button
+      </button>
+      <div
+        class="PopperArrow-sc-1bcgj4w-0 duKylJ"
+      />
+    </div>
   </div>
 </div>
 `;

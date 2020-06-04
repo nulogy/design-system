@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../theme";
+import { color } from "styled-system";
 import { Box } from "../Box";
-
-const getThemeColor = color => (theme.colors[color] ? theme.colors[color] : color);
 
 const getMenuMargin = (placement, showArrow) => {
   const direction = String(placement).split("-")[0];
@@ -30,11 +28,10 @@ const getMenuMargin = (placement, showArrow) => {
   }
 };
 
-const DropdownMenuContainer = styled(Box)(({ dataPlacement, showArrow, backgroundColor }) => ({
-  backgroundColor: getThemeColor(backgroundColor),
+const DropdownMenuContainer = styled(Box)(color, ({ dataPlacement, showArrow, backgroundColor, theme }) => ({
   borderRadius: theme.radii.medium,
-  borderTop: `1px solid  ${getThemeColor(backgroundColor)}`,
-  borderBottom: `1px solid ${getThemeColor(backgroundColor)}`,
+  borderTop: `1px solid  ${theme.colors[backgroundColor]}`,
+  borderBottom: `1px solid ${theme.colors[backgroundColor]}`,
   boxShadow: theme.shadows.small,
   padding: "7px 0",
   zIndex: "100",

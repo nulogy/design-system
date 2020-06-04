@@ -104,7 +104,7 @@ export default () => (
           <InlineCode>space</InlineCode> props.
         </ListItem>
         <ListItem>
-          Text components (Text, Headings) also have access to{" "}
+          Text components (Text, Headings, Link) also have access to{" "}
           <InlineCode>typography</InlineCode> and{" "}
           <InlineCode>colour</InlineCode> props.
         </ListItem>

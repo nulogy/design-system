@@ -1,27 +1,28 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { themeGet } from "@styled-system/theme-get";
-import theme from "../theme";
 
-const DropdownLink = styled.a(props => ({
+const DropdownLink = styled.a(({ theme, bgHoverColor, hoverColor, color }) => ({
   display: "block",
   textDecoration: "none",
-  color: themeGet(`colors.${props.color}`, props.color)(props),
   borderColor: "transparent",
   backgroundColor: "transparent",
   lineHeight: theme.lineHeights.base,
   fontSize: theme.fontSizes.medium,
   transition: ".2s",
+  color: theme.colors[color],
   padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
   borderLeft: `${theme.space.half} solid transparent`,
   "&:hover": {
-    color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
-    backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props)
+    color: theme.colors[hoverColor],
+    backgroundColor: theme.colors[bgHoverColor]
+  },
+  "&:visited": {
+    color: theme.colors[color]
   },
   "&:focus": {
     outline: "none",
-    color: themeGet(`colors.${props.hoverColor}`, props.hoverColor)(props),
-    backgroundColor: themeGet(`colors.${props.bgHoverColor}`, props.bgHoverColor)(props),
+    color: theme.colors[hoverColor],
+    backgroundColor: theme.colors[bgHoverColor],
     borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`
   },
   "&:disabled": {

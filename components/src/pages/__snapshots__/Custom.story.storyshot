@@ -160,15 +160,15 @@ exports[`Storyshots Pages/Custom Default 1`] = `
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="46px"
-            font-weight="300"
+            font-size="largest"
+            font-weight="light"
           >
             I am title
           </h1>
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             I am main content.
           </p>
@@ -415,15 +415,15 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
           </div>
           <h1
             class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="46px"
-            font-weight="300"
+            font-size="largest"
+            font-weight="light"
           >
             I am title
           </h1>
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             I am main content.
           </p>
@@ -437,8 +437,8 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="26px"
-              font-weight="500"
+              font-size="larger"
+              font-weight="medium"
             >
               I am sidebar
             </h2>
@@ -466,7 +466,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             I am sidebar content.
           </p>
@@ -637,15 +637,15 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="46px"
-            font-weight="300"
+            font-size="largest"
+            font-weight="light"
           >
             I am title
           </h1>
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             I am main content.
           </p>
@@ -659,8 +659,8 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="26px"
-              font-weight="500"
+              font-size="larger"
+              font-weight="medium"
             >
               I am sidebar
             </h2>
@@ -688,7 +688,7 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 RbfMK"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             I am sidbar content.
           </p>

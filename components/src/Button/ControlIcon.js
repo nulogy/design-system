@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { Icon } from "../Icon";
-import theme from "../theme";
+import NDSTheme from "../theme";
 
-const getIconColorByState = ({ toggled, disabled }) => {
+const getIconColorByState = ({ toggled, disabled, theme }) => {
   if (toggled) {
     return theme.colors.darkBlue;
   }
@@ -17,14 +17,14 @@ const getIconColorByState = ({ toggled, disabled }) => {
 };
 
 const StyledButton = styled.button(
-  ({ toggled, disabled }) => ({
+  ({ toggled, disabled, theme }) => ({
     background: "transparent",
     border: "none",
     display: "flex",
     alignItems: "center",
     padding: theme.space.half,
     borderRadius: theme.radii.circle,
-    color: getIconColorByState({ toggled, disabled }),
+    color: getIconColorByState({ toggled, disabled, theme }),
     "&:focus": {
       outline: "none",
       boxShadow: theme.shadows.focus
@@ -59,7 +59,7 @@ ControlIcon.defaultProps = {
   onClick: null,
   toggled: false,
   disabled: false,
-  size: theme.space.x4,
+  size: NDSTheme.space.x4,
   type: "button"
 };
 export default ControlIcon;

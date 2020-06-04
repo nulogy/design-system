@@ -4,7 +4,7 @@ import { create } from "@storybook/theming";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
 import { withA11y } from "@storybook/addon-a11y";
-import { select, withKnobs } from "@storybook/addon-knobs";
+import { select } from "@storybook/addon-knobs";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce((obj, i) => {
@@ -61,8 +61,10 @@ addParameters({
   }
 });
 
-addDecorator(story => (
-  <div style={{ padding: theme.space.x3 }}>
-    <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
-  </div>
-));
+addDecorator(story => {
+  return (
+    <div style={{ padding: theme.space.x3 }}>
+      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
+    </div>
+  );
+});

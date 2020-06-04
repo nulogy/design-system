@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import WindowedSelect, { components as selectComponents } from "react-windowed-select";
 import { useTranslation } from "react-i18next";
+import { ThemeContext } from "styled-components";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -117,6 +118,7 @@ const ReactSelect = ({
   filterOption
 }) => {
   const { t } = useTranslation();
+  const themeContext = useContext(ThemeContext);
   return (
     <Field>
       <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -128,7 +130,7 @@ const ReactSelect = ({
           options={options}
           labelText={labelText}
           windowThreshold={windowThreshold}
-          styles={customStyles({ error, maxHeight, windowed: options.length > windowThreshold })}
+          styles={customStyles({ theme: themeContext, error, maxHeight, windowed: options.length > windowThreshold })}
           isDisabled={disabled}
           isSearchable={autocomplete}
           aria-required={required}
@@ -146,6 +148,7 @@ const ReactSelect = ({
           onMenuClose={onMenuClose}
           menuPosition={menuPosition}
           onInputChange={onInputChange}
+          theme={themeContext}
           components={{
             Option: SelectOption,
             Control,
