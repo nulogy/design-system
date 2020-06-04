@@ -2425,13 +2425,13 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@nulogy/components@^2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-2.5.2.tgz#df40cca9dd01a78b12fcf92f07df72233d140854"
-  integrity sha512-Fs13pA1HPAVMduDobzOZV7E/dCH90jnPWUborf/Bee/I83xNV7/9a3rQp/F4zuCqwJIEW96Qsb/PWoN9fwMTzA==
+"@nulogy/components@^2.13.0":
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/components/-/components-2.13.0.tgz#fa721eb51a34ee4ecf8fbebd6083daf923fe81c5"
+  integrity sha512-3HCHUbSoKQWDC0EyQ/oXTAK+LCmQgrU6xCIeAh9TPA00bdAOUV1mXDE9xQokuoGhgBoWxvxwaZLIe1j3q/7apw==
   dependencies:
-    "@nulogy/icons" "^2.3.0"
-    "@nulogy/tokens" "^2.0.0"
+    "@nulogy/icons" "^2.6.0"
+    "@nulogy/tokens" "^2.13.0"
     "@styled-system/prop-types" "^5.1.4"
     "@styled-system/theme-get" "^5.1.2"
     babel-eslint "^10.0.3"
@@ -18493,6 +18493,13 @@ resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.11.0, resolve@^1.12.
   version "1.15.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.15.1.tgz#27bdcdeffeaf2d6244b95bb0f9f4b4653451f3e8"
   integrity sha512-84oo6ZTtoTUpjgNEr5SJyzQhzL72gaRodsSfyxC/AXRvwu0Yse9H8eF9IpGo7b8YetZhlI6v7ZQ6bKBFV/6S7w==
+  dependencies:
+    path-parse "^1.0.6"
+
+resolve@^1.14.2:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz#b25941b54968231cc2d1bb76a79cb7f2c0bf8444"
+  integrity sha512-ic+7JYiV8Vi2yzQGFWOkiZD5Z9z7O2Zhm9XMaTxdJExKasieFCr+yXZ/WmXsckHiKl12ar0y6XiXDx3m4RHn1w==
   dependencies:
     path-parse "^1.0.6"
 
