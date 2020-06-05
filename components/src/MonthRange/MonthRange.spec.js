@@ -4,7 +4,7 @@ import { fireEvent } from "@testing-library/react";
 import { MonthRange } from ".";
 import { resetDate, mockDate } from "../testing/mockUtils/mockDates";
 import "../testing/matchers/toMatchDate";
-import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { render } from "../NDSProvider/render.spec-utils";
 
 describe("MonthRange", () => {
   describe("range selection", () => {
@@ -16,7 +16,7 @@ describe("MonthRange", () => {
     });
     test("returns the selected range when the range changes", () => {
       const onRangeChange = jest.fn();
-      const { container, getByLabelText } = renderWithNDSProvider(<MonthRange onRangeChange={onRangeChange} />);
+      const { container, getByLabelText } = render(<MonthRange onRangeChange={onRangeChange} />);
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-3")[0]);
@@ -31,7 +31,7 @@ describe("MonthRange", () => {
     });
     it("returns the selected range with an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
-      const { container, getByLabelText } = renderWithNDSProvider(<MonthRange onRangeChange={onRangeChange} />);
+      const { container, getByLabelText } = render(<MonthRange onRangeChange={onRangeChange} />);
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__month-5")[0]);
@@ -47,7 +47,7 @@ describe("MonthRange", () => {
     it("returns the start date when the start date changes", () => {
       const onStartDateChange = jest.fn();
       const onEndDateChange = jest.fn();
-      const { container, getByLabelText } = renderWithNDSProvider(
+      const { container, getByLabelText } = render(
         <MonthRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );
       const startDateInput = getByLabelText("Select a start date");
@@ -61,7 +61,7 @@ describe("MonthRange", () => {
     it("returns the end date when the end date changes", () => {
       const onStartDateChange = jest.fn();
       const onEndDateChange = jest.fn();
-      const { container, getByLabelText } = renderWithNDSProvider(
+      const { container, getByLabelText } = render(
         <MonthRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );
       const endDateInput = getByLabelText("Select an end date");

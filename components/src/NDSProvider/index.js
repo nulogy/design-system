@@ -1,2 +1,2 @@
 export { default as NDSProvider } from "./NDSProvider";
-export { renderWithNDSProvider } from "./renderWithNDSProvider.spec-utils";
+export { render } from "./render.spec-utils";

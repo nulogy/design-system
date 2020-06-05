@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 
 import { MonthPicker } from ".";
-import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { render } from "../NDSProvider/render.spec-utils";
 
 describe("MonthPicker", () => {
   describe("month selection", () => {
@@ -10,7 +10,7 @@ describe("MonthPicker", () => {
     const onInputChange = jest.fn();
 
     it("returns the selected date when the selection has changed", () => {
-      const { container, getByLabelText } = renderWithNDSProvider(
+      const { container, getByLabelText } = render(
         <MonthPicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onInputChange={onInputChange} />
       );
       const input = getByLabelText("select a date");
@@ -22,7 +22,7 @@ describe("MonthPicker", () => {
 
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Date";
-      const { getByLabelText } = renderWithNDSProvider(
+      const { getByLabelText } = render(
         <MonthPicker
           selected={new Date("Fri, 01 Jan 2019")}
           onChange={onChange}
