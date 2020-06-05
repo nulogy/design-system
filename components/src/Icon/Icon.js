@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import { space, color } from "styled-system";
 import icons from "@nulogy/icons";
 
-import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
+import { StyledSvg } from "./StyledSvg";
 
 const iconNames = Object.keys(icons);
 
@@ -21,12 +21,13 @@ const getPathElements = icon => (
 
 const Svg = React.forwardRef((props, ref) => {
   const { icon, className, title, size, color: fillColor, focusable } = props;
+  const theme = useContext(ThemeContext);
   if (icon === "loading") {
     return <LoadingIcon color={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor} {...props} />;
   }
   return (
     icons[icon] && (
-      <svg
+      <StyledSvg
         ref={ref}
         aria-hidden={title == null}
         width={size}
@@ -38,7 +39,7 @@ const Svg = React.forwardRef((props, ref) => {
         {...props}
       >
         {getPathElements(icons[icon])}
-      </svg>
+      </StyledSvg>
     )
   );
 });

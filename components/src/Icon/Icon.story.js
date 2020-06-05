@@ -59,7 +59,7 @@ storiesOf("Icon", module)
   ))
   .add("With a size", () => (
     <>
-      {[theme.space.x1, theme.space.x2, theme.space.x3].map(size => (
+      {["x1", "x2", "x3"].map(size => (
         <Box key={size}>
           {iconSubset.map(iconName => (
             <Icon icon={iconName} size={size} key={iconName} />
