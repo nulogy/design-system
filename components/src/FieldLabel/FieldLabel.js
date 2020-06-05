@@ -6,6 +6,7 @@ import { Box } from "../Box";
 import RequirementText from "./RequirementText";
 import HelpText from "./HelpText";
 import { FieldLabelProps, FieldLabelDefaultProps } from "./FieldLabel.type";
+import { LabelText } from "../Form";
 
 const Label = styled.label(space, color, () => ({
   display: "inline-block"
@@ -18,12 +19,6 @@ Label.propTypes = {
 Label.defaultProps = {
   color: "black"
 };
-
-const LabelText = styled.span(({ theme }) => ({
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase
-}));
 
 const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...props }) => (
   <Label style={{ display: "block" }} {...props}>

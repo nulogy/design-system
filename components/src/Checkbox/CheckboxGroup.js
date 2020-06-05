@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Checkbox from "./Checkbox";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
-import { Fieldset } from "../Form";
+import { Fieldset, Legend, LabelText } from "../Form";
 
 const getCheckboxButtons = props => {
   const checkboxButtons = React.Children.map(props.children, checkbox => {
@@ -25,16 +25,6 @@ const getCheckboxButtons = props => {
   });
   return checkboxButtons;
 };
-
-const LabelText = styled.span(({ theme }) => ({
-  fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase
-}));
-
-const Legend = styled.legend(({ theme }) => ({
-  marginBottom: theme.space.x1
-}));
 
 const BaseCheckboxGroup = ({
   className,
