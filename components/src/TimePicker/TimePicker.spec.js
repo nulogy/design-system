@@ -3,7 +3,7 @@ import { fireEvent } from "@testing-library/react";
 
 import { TimePicker } from ".";
 import { selectOption } from "../Select/Select.spec-utils";
-import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { render } from "../NDSProvider/render.spec-utils";
 
 describe("TimePicker", () => {
   describe("time selection", () => {
@@ -11,9 +11,7 @@ describe("TimePicker", () => {
     const onInputChange = jest.fn();
 
     it("returns the selected time when the selection has changed", () => {
-      const { container, queryByText } = renderWithNDSProvider(
-        <TimePicker onChange={onChange} onInputChange={onInputChange} />
-      );
+      const { container, queryByText } = render(<TimePicker onChange={onChange} onInputChange={onInputChange} />);
       selectOption("12:15 AM", container, queryByText);
 
       expect(onChange).toHaveBeenCalledWith("00:15");
@@ -21,7 +19,7 @@ describe("TimePicker", () => {
 
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Time";
-      const { getByLabelText } = renderWithNDSProvider(
+      const { getByLabelText } = render(
         <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
       );
       const value = "20:00";
