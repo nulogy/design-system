@@ -1,12 +1,11 @@
-import styled from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import icons from "@nulogy/icons";
 
 import { Icon } from "../Icon";
-import NDSTheme from "../theme";
 import { subPx } from "../utils";
 
 const iconNames = Object.keys(icons);
@@ -83,9 +82,10 @@ const WrapperButton = styled.button(
 );
 
 const Button = React.forwardRef(({ children, iconSide, icon, className, asLink, ...props }, ref) => {
+  const themeContext = useContext(ThemeContext);
   const {
     lineHeights: { smallTextCompressed }
-  } = NDSTheme;
+  } = themeContext;
   return (
     <WrapperButton as={asLink ? "a" : undefined} ref={ref} className={className} {...props}>
       {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}

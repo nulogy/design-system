@@ -10,7 +10,6 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
 import { InputFieldDefaultProps, InputFieldPropTypes } from "./InputField.type";
-import NDSTheme from "../theme";
 
 const inputStyles = theme => ({
   disabled: {
@@ -100,7 +99,7 @@ export const InputField = forwardRef(
         <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
         <Box position="relative" display="flex" flexGrow="1" ref={ref}>
           <StyledInput aria-invalid={error} aria-required={required} required={required} error={error} {...props} />
-          {icon && <StyledInputIcon icon={icon} size={NDSTheme.space.x2} />}
+          {icon && <StyledInputIcon icon={icon} size="x2" />}
         </Box>
         <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
       </Flex>

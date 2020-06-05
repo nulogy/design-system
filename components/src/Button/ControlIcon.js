@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { Icon } from "../Icon";
-import NDSTheme from "../theme";
 
 const getIconColorByState = ({ toggled, disabled, theme }) => {
   if (toggled) {
@@ -59,7 +58,7 @@ ControlIcon.defaultProps = {
   onClick: null,
   toggled: false,
   disabled: false,
-  size: NDSTheme.space.x4,
+  size: "x4",
   type: "button"
 };
 export default ControlIcon;

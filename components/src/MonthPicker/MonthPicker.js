@@ -8,7 +8,6 @@ import { format, isSameYear, isValid } from "date-fns";
 import { MonthPickerStyles } from "./MonthPickerStyles";
 import DatePickerInput from "../DatePicker/DatePickerInput";
 import { InlineValidation } from "../Validation";
-import NDStheme from "../theme";
 import { Field } from "../Form";
 import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
 import { Icon } from "../Icon";
@@ -118,8 +117,8 @@ class MonthPicker extends Component {
                   />
                 )
                 }
-                previousYearButtonLabel={<Icon icon="leftArrow" size={NDStheme.space.x4} />}
-                nextYearButtonLabel={<Icon icon="rightArrow" size={NDStheme.space.x4} />}
+                previousYearButtonLabel={<Icon icon="leftArrow" size="x4" />}
+                nextYearButtonLabel={<Icon icon="rightArrow" size="x4" />}
                 excludeDates={[selectedDate]}
                 disabledKeyboardNavigation
                 minDate={minDate}

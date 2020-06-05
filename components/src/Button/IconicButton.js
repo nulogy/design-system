@@ -9,7 +9,6 @@ import icons from "@nulogy/icons";
 
 import { Icon } from "../Icon";
 import { Text } from "../Type";
-import NDSTheme from "../theme";
 
 const HoverText = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
@@ -86,7 +85,7 @@ const BaseIconicButton = React.forwardRef(({ children, icon, labelHidden, classN
   return (
     <WrapperButton ref={forwardedRef} aria-label={children} className={className} {...props}>
       <Manager>
-        <Reference>{({ ref }) => <Icon ref={ref} size={NDSTheme.space.x4} icon={icon} p="half" />}</Reference>
+        <Reference>{({ ref }) => <Icon ref={ref} size="x4" icon={icon} p="half" />}</Reference>
         <Popper
           placement="bottom"
           modifiers={{
