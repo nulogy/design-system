@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.1](https://github.com/nulogy/design-system/compare/v2.13.0...v2.13.1) (2020-06-05)
+
+
+### Bug Fixes
+
+* typo in zIndex tokens ([#669](https://github.com/nulogy/design-system/issues/669)) ([71207a0](https://github.com/nulogy/design-system/commit/71207a0bb98d31b812a7c5320c8dfee11c78ff52))
+
+
+
+
+
 # [2.13.0](https://github.com/nulogy/design-system/compare/v2.12.1...v2.13.0) (2020-06-03)
 
 
