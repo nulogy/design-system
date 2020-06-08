@@ -52,7 +52,7 @@ const AnimatedBoxBottom = styled(Box)(({ visible }) => ({
   ...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES)
 }));
 
-export const Toast = ({ triggered, onHide, onShow, children, ...props }) => {
+export const Toast = ({ triggered, onHide, onShow, isCloseable, children, ...props }) => {
   const [visible, setVisible] = useState(triggered);
   const [timeoutID, setTimeoutID] = useState(undefined);
   const cancelHidingToast = () => {
@@ -60,6 +60,7 @@ export const Toast = ({ triggered, onHide, onShow, children, ...props }) => {
   };
   const hideToast = (delay = ANIMATION_DURATION) => {
     cancelHidingToast();
+
     setTimeoutID(
       setTimeout(() => {
         setVisible(false);
@@ -70,7 +71,9 @@ export const Toast = ({ triggered, onHide, onShow, children, ...props }) => {
   const triggerToast = () => {
     setVisible(true);
     onShow();
-    hideToast();
+    if (!isCloseable) {
+      hideToast();
+    }
   };
 
   useEffect(() => {
@@ -83,9 +86,17 @@ export const Toast = ({ triggered, onHide, onShow, children, ...props }) => {
   }, [triggered]);
 
   const onMouseIn = () => {
-    cancelHidingToast(timeoutID);
+    if (!isCloseable) {
+      cancelHidingToast(timeoutID);
+    }
   };
   const onMouseOut = () => {
+    if (!isCloseable) {
+      hideToast(ANIMATION_DURATION / 2);
+    }
+  };
+
+  const handleCloseButtonClick = () => {
     hideToast(ANIMATION_DURATION / 2);
   };
 
@@ -97,7 +108,7 @@ export const Toast = ({ triggered, onHide, onShow, children, ...props }) => {
       onMouseLeave={onMouseOut}
       onBlur={onMouseOut}
     >
-      <AnimatedAlert visible={visible} {...props}>
+      <AnimatedAlert visible={visible} isCloseable={isCloseable} onClose={handleCloseButtonClick} {...props}>
         {children}
       </AnimatedAlert>
     </AnimatedBoxBottom>
@@ -108,14 +119,16 @@ Toast.propTypes = {
   triggered: PropTypes.bool,
   onShow: PropTypes.func,
   onHide: PropTypes.func,
-  children: PropTypes.node
+  children: PropTypes.node,
+  isCloseable: PropTypes.bool
 };
 
 Toast.defaultProps = {
   triggered: false,
   onShow: () => {},
   onHide: () => {},
-  children: undefined
+  children: undefined,
+  isCloseable: false
 };
 
 export default Toast;

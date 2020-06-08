@@ -107,4 +107,24 @@ storiesOf("Toast", module)
       );
     };
     return <MultipleToastsExample />;
+  })
+  .add("with close button", () => {
+    const ToastWithTrigger = () => {
+      const [triggered, setTriggered] = useState(false);
+      const triggerToast = () => {
+        setTriggered(!triggered);
+      };
+      const onHideHandler = () => {
+        setTriggered(false);
+      };
+      return (
+        <>
+          <Button onClick={triggerToast}>Save Changes</Button>
+          <Toast triggered={triggered} onHide={onHideHandler} isCloseable>
+            Saved
+          </Toast>
+        </>
+      );
+    };
+    return <ToastWithTrigger />;
   });
