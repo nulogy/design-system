@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.2](https://github.com/nulogy/design-system/compare/v2.13.1...v2.13.2) (2020-06-08)
+
+
+### Bug Fixes
+
+* build tokens before building components ([#672](https://github.com/nulogy/design-system/issues/672)) ([a35da8b](https://github.com/nulogy/design-system/commit/a35da8b439bc897e2f77e3e7a6454d374963b286))
+
+
+
+
+
 ## [2.13.1](https://github.com/nulogy/design-system/compare/v2.13.0...v2.13.1) (2020-06-05)
 
 
