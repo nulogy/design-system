@@ -57,12 +57,24 @@ CloseButton.defaultProps = {
   "aria-label": undefined
 };
 
-const BaseAlert = ({ children, isCloseable, title, type, className, closeAriaLabel, onClose, ...props }) => {
+const BaseAlert = ({
+  children,
+  isCloseable,
+  title,
+  type,
+  className,
+  closeAriaLabel,
+  onClose,
+  controlled,
+  ...props
+}) => {
   const [isVisible, setIsVisible] = useState(true);
 
   const hideAlert = () => {
     onClose();
-    setIsVisible(false);
+    if (!controlled) {
+      setIsVisible(false);
+    }
   };
   return isVisible ? (
     <Flex
@@ -93,6 +105,7 @@ BaseAlert.propTypes = {
   title: PropTypes.string,
   type: PropTypes.oneOf(["danger", "informative", "success", "warning"]),
   onClose: PropTypes.func,
+  controlled: PropTypes.bool,
   ...propTypes.space,
   ...propTypes.layout
 };
@@ -103,6 +116,7 @@ BaseAlert.defaultProps = {
   closeAriaLabel: undefined,
   title: null,
   type: "informative",
+  controlled: false,
   onClose: () => {}
 };
 
