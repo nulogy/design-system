@@ -52,7 +52,7 @@ const AnimatedBoxBottom = styled(Box)(({ visible }) => ({
   ...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES)
 }));
 
-export const Toast = ({ triggered, onHide, onShow, isCloseable, children, ...props }) => {
+export const Toast = ({ triggered, onHide, onShow, isCloseable, children, showDuration, ...props }) => {
   const [visible, setVisible] = useState(triggered);
   const [timeoutID, setTimeoutID] = useState(undefined);
   const cancelHidingToast = () => {
@@ -72,7 +72,7 @@ export const Toast = ({ triggered, onHide, onShow, isCloseable, children, ...pro
     setVisible(true);
     onShow();
     if (!isCloseable) {
-      hideToast();
+      hideToast(showDuration);
     }
   };
 
@@ -120,7 +120,8 @@ Toast.propTypes = {
   onShow: PropTypes.func,
   onHide: PropTypes.func,
   children: PropTypes.node,
-  isCloseable: PropTypes.bool
+  isCloseable: PropTypes.bool,
+  showDuration: PropTypes.number
 };
 
 Toast.defaultProps = {
@@ -128,7 +129,8 @@ Toast.defaultProps = {
   onShow: () => {},
   onHide: () => {},
   children: undefined,
-  isCloseable: false
+  isCloseable: false,
+  showDuration: ANIMATION_DURATION
 };
 
 export default Toast;

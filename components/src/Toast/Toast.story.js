@@ -108,6 +108,26 @@ storiesOf("Toast", module)
     };
     return <MultipleToastsExample />;
   })
+  .add("customize length of time toast is visible", () => {
+    const ToastWithTrigger = () => {
+      const [triggered, setTriggered] = useState(false);
+      const triggerToast = () => {
+        setTriggered(!triggered);
+      };
+      const onHideHandler = () => {
+        setTriggered(false);
+      };
+      return (
+        <>
+          <Button onClick={triggerToast}>Save Changes</Button>
+          <Toast triggered={triggered} onHide={onHideHandler} showDuration={5000}>
+            Saved
+          </Toast>
+        </>
+      );
+    };
+    return <ToastWithTrigger />;
+  })
   .add("with close button", () => {
     const ToastWithTrigger = () => {
       const [triggered, setTriggered] = useState(false);
