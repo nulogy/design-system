@@ -31,12 +31,11 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 dkBAgY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="24px"
-            icon="rightArrow"
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -63,12 +62,11 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 dkBAgY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="24px"
-            icon="rightArrow"
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -114,12 +112,11 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 dkBAgY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="24px"
-            icon="rightArrow"
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -146,12 +143,11 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 dkBAgY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="24px"
-            icon="rightArrow"
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -177,12 +173,11 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 dkBAgY"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="24px"
-            icon="rightArrow"
             viewBox="0 0 24 24"
             width="24px"
           >

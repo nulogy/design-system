@@ -24,14 +24,13 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 dkBAgY"
+          class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 eycguF"
           color="currentColor"
           fill="currentColor"
           focusable="false"
-          height="24px"
-          icon="sortUp"
+          height="x3"
           viewBox="0 0 24 24"
-          width="24px"
+          width="x3"
         >
           <path
             d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"

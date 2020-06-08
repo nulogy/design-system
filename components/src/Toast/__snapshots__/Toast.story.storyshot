@@ -61,15 +61,13 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 cwKdbD"
+          class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
           color="currentColor"
           fill="currentColor"
           focusable="false"
-          height="32px"
-          icon="delete"
-          p="half"
+          height="x4"
           viewBox="0 0 24 24"
-          width="32px"
+          width="x4"
         >
           <path
             d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
@@ -93,13 +91,11 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 dqoulF"
+          class="StyledSvg-sc-1h19zm3-0 jszHsh Icon-fc7twp-0 dqoulF"
           color="green"
           fill="#008059"
           focusable="false"
           height="24px"
-          icon="check"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -123,13 +119,11 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 dqoulF"
+          class="StyledSvg-sc-1h19zm3-0 jszHsh Icon-fc7twp-0 dqoulF"
           color="green"
           fill="#008059"
           focusable="false"
           height="24px"
-          icon="check"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -153,13 +147,11 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 dqoulF"
+          class="StyledSvg-sc-1h19zm3-0 jszHsh Icon-fc7twp-0 dqoulF"
           color="green"
           fill="#008059"
           focusable="false"
           height="24px"
-          icon="check"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -183,13 +175,11 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 ewGQci"
+          class="StyledSvg-sc-1h19zm3-0 fveekS Icon-fc7twp-0 ewGQci"
           color="red"
           fill="#cc1439"
           focusable="false"
           height="24px"
-          icon="error"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >

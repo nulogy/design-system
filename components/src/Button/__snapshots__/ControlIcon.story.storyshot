@@ -14,14 +14,13 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 efirdb"
+        class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="32px"
-        icon="close"
+        height="x4"
         viewBox="0 0 24 24"
-        width="32px"
+        width="x4"
       >
         <path
           d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
@@ -47,14 +46,13 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 efirdb"
+        class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="32px"
-        icon="close"
+        height="x4"
         viewBox="0 0 24 24"
-        width="32px"
+        width="x4"
       >
         <path
           d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
@@ -79,14 +77,13 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 efirdb"
+        class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="32px"
-        icon="close"
+        height="x4"
         viewBox="0 0 24 24"
-        width="32px"
+        width="x4"
       >
         <path
           d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"

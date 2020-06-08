@@ -8,13 +8,13 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -113,13 +113,13 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -236,13 +236,13 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -343,13 +343,13 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -461,13 +461,13 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -560,13 +560,11 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="error"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -616,13 +614,13 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -715,13 +713,11 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="error"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >

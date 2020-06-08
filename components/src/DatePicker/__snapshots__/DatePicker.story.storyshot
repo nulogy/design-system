@@ -17,7 +17,7 @@ exports[`Storyshots DatePicker default 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="black"
             style="display:block"
           >
@@ -26,7 +26,7 @@ exports[`Storyshots DatePicker default 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="LabelText-sc-16fh5zk-0 lmVLTL"
               >
                 Expiry Date
               </span>
@@ -48,14 +48,13 @@ exports[`Storyshots DatePicker default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -88,7 +87,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="black"
             style="display:block"
           >
@@ -97,7 +96,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="LabelText-sc-16fh5zk-0 lmVLTL"
               >
                 Expiry Date
               </span>
@@ -119,14 +118,13 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -159,7 +157,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="black"
             style="display:block"
           >
@@ -168,7 +166,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="LabelText-sc-16fh5zk-0 lmVLTL"
               >
                 Expiry Date
               </span>
@@ -190,14 +188,13 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -230,7 +227,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="black"
             style="display:block"
           >
@@ -239,7 +236,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="LabelText-sc-16fh5zk-0 lmVLTL"
               >
                 Expiry Date
               </span>
@@ -261,14 +258,13 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -301,7 +297,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="black"
             style="display:block"
           >
@@ -310,7 +306,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="LabelText-sc-16fh5zk-0 lmVLTL"
               >
                 Expiry Date
               </span>
@@ -332,14 +328,13 @@ exports[`Storyshots DatePicker with error state 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -356,13 +351,11 @@ exports[`Storyshots DatePicker with error state 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="error"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -404,7 +397,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
           class="react-datepicker__input-container"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
             color="black"
             style="display:block"
           >
@@ -413,7 +406,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="LabelText-sc-16fh5zk-0 lmVLTL"
               >
                 Expiry Date
               </span>
@@ -435,14 +428,13 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"

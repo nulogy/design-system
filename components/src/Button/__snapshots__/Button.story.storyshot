@@ -126,13 +126,11 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 iVDunr"
+        class="StyledSvg-sc-1h19zm3-0 iJxiiG Icon-fc7twp-0 iVDunr"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="1.14285714em"
-        icon="add"
-        mr="half"
         viewBox="0 0 24 24"
         width="1.14285714em"
       >
@@ -148,13 +146,11 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
       Create project
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ffVnNY"
+        class="StyledSvg-sc-1h19zm3-0 hEuTvh Icon-fc7twp-0 ffVnNY"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="1.14285714em"
-        icon="add"
-        ml="half"
         viewBox="0 0 24 24"
         width="1.14285714em"
       >

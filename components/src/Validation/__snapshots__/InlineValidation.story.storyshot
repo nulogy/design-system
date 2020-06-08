@@ -13,13 +13,11 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="24px"
-        icon="error"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -56,13 +54,11 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="24px"
-        icon="error"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -129,13 +125,11 @@ exports[`Storyshots Inline Validation with list items 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="24px"
-        icon="error"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -189,13 +183,11 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="24px"
-        icon="error"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >

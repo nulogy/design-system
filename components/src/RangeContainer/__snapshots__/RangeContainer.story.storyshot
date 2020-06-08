@@ -8,7 +8,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -17,7 +17,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Range
         </span>

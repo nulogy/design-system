@@ -8,7 +8,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -17,7 +17,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -53,14 +53,13 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -108,14 +107,13 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -139,7 +137,7 @@ exports[`Storyshots DateRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -148,7 +146,7 @@ exports[`Storyshots DateRange default 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -184,14 +182,13 @@ exports[`Storyshots DateRange default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -239,14 +236,13 @@ exports[`Storyshots DateRange default 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -270,7 +266,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -279,7 +275,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -315,14 +311,13 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -370,14 +365,13 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -401,7 +395,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -410,7 +404,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -446,14 +440,13 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -501,14 +494,13 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -532,7 +524,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -541,7 +533,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -578,14 +570,13 @@ exports[`Storyshots DateRange individual input error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -601,13 +592,11 @@ exports[`Storyshots DateRange individual input error 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 QuoIa"
+            class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="24px"
-            icon="error"
-            mr="x1"
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -665,14 +654,13 @@ exports[`Storyshots DateRange individual input error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -696,7 +684,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -705,7 +693,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -741,14 +729,13 @@ exports[`Storyshots DateRange with custom error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -796,14 +783,13 @@ exports[`Storyshots DateRange with custom error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -821,13 +807,11 @@ exports[`Storyshots DateRange with custom error 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="24px"
-        icon="error"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -859,7 +843,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -868,7 +852,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -904,14 +888,13 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -987,12 +970,11 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1083,12 +1065,11 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1129,14 +1110,13 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -1160,7 +1140,7 @@ exports[`Storyshots DateRange with time error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -1169,7 +1149,7 @@ exports[`Storyshots DateRange with time error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -1205,14 +1185,13 @@ exports[`Storyshots DateRange with time error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -1288,12 +1267,11 @@ exports[`Storyshots DateRange with time error 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1384,12 +1362,11 @@ exports[`Storyshots DateRange with time error 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1430,14 +1407,13 @@ exports[`Storyshots DateRange with time error 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -1461,7 +1437,7 @@ exports[`Storyshots DateRange with times 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -1470,7 +1446,7 @@ exports[`Storyshots DateRange with times 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Date range
         </span>
@@ -1506,14 +1482,13 @@ exports[`Storyshots DateRange with times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
@@ -1589,12 +1564,11 @@ exports[`Storyshots DateRange with times 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1685,12 +1659,11 @@ exports[`Storyshots DateRange with times 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1731,14 +1704,13 @@ exports[`Storyshots DateRange with times 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 fqddVU"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="16px"
-                  icon="calendarToday"
+                  height="x2"
                   viewBox="0 0 24 24"
-                  width="16px"
+                  width="x2"
                 >
                   <path
                     d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"

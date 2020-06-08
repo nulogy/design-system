@@ -8,7 +8,7 @@ exports[`Storyshots TimeRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -17,7 +17,7 @@ exports[`Storyshots TimeRange default 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Time range
         </span>
@@ -92,12 +92,11 @@ exports[`Storyshots TimeRange default 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -188,12 +187,11 @@ exports[`Storyshots TimeRange default 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -221,7 +219,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -230,7 +228,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Time range
         </span>
@@ -305,12 +303,11 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -401,12 +398,11 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -434,7 +430,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -443,7 +439,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Time range
         </span>
@@ -518,12 +514,11 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -614,12 +609,11 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -647,7 +641,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
       color="black"
       style="display:block"
     >
@@ -656,7 +650,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Time range
         </span>
@@ -731,12 +725,11 @@ exports[`Storyshots TimeRange with range validation 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -827,12 +820,11 @@ exports[`Storyshots TimeRange with range validation 1`] = `
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      class="StyledSvg-sc-1h19zm3-0 kpDHXQ Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
                       height="22px"
-                      icon="queryBuilder"
                       viewBox="0 0 24 24"
                       width="22px"
                     >

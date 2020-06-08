@@ -147,14 +147,13 @@ exports[`Storyshots Table with everything 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="downArrow"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -193,15 +192,13 @@ exports[`Storyshots Table with everything 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 cwKdbD"
+                  class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="32px"
-                  icon="more"
-                  p="half"
+                  height="x4"
                   viewBox="0 0 24 24"
-                  width="32px"
+                  width="x4"
                 >
                   <path
                     d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
@@ -272,15 +269,13 @@ exports[`Storyshots Table with everything 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 cwKdbD"
+                  class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="32px"
-                  icon="more"
-                  p="half"
+                  height="x4"
                   viewBox="0 0 24 24"
-                  width="32px"
+                  width="x4"
                 >
                   <path
                     d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
@@ -351,15 +346,13 @@ exports[`Storyshots Table with everything 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 cwKdbD"
+                  class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="32px"
-                  icon="more"
-                  p="half"
+                  height="x4"
                   viewBox="0 0 24 24"
-                  width="32px"
+                  width="x4"
                 >
                   <path
                     d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
@@ -432,15 +425,13 @@ exports[`Storyshots Table with everything 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 cwKdbD"
+                  class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
-                  height="32px"
-                  icon="more"
-                  p="half"
+                  height="x4"
                   viewBox="0 0 24 24"
-                  width="32px"
+                  width="x4"
                 >
                   <path
                     d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
@@ -517,13 +508,11 @@ exports[`Storyshots Table with everything 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          class="StyledSvg-sc-1h19zm3-0 himFUY Icon-fc7twp-0 bLUmHQ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="leftArrow"
-          ml="-8px"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -561,13 +550,11 @@ exports[`Storyshots Table with everything 1`] = `
         Next 
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          class="StyledSvg-sc-1h19zm3-0 gEJFDT Icon-fc7twp-0 dEtgXr"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="rightArrow"
-          mr="-8px"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -655,13 +642,11 @@ exports[`Storyshots Table with pagination 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          class="StyledSvg-sc-1h19zm3-0 himFUY Icon-fc7twp-0 bLUmHQ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="leftArrow"
-          ml="-8px"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -727,13 +712,11 @@ exports[`Storyshots Table with pagination 1`] = `
         Next 
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          class="StyledSvg-sc-1h19zm3-0 gEJFDT Icon-fc7twp-0 dEtgXr"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="rightArrow"
-          mr="-8px"
           viewBox="0 0 24 24"
           width="24px"
         >

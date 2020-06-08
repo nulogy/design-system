@@ -18,13 +18,11 @@ exports[`Storyshots PM/PMPagination default 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          class="StyledSvg-sc-1h19zm3-0 himFUY Icon-fc7twp-0 bLUmHQ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="leftArrow"
-          ml="-8px"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -69,13 +67,11 @@ exports[`Storyshots PM/PMPagination default 1`] = `
         Next → 
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          class="StyledSvg-sc-1h19zm3-0 gEJFDT Icon-fc7twp-0 dEtgXr"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="rightArrow"
-          mr="-8px"
           viewBox="0 0 24 24"
           width="24px"
         >

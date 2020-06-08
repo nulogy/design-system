@@ -16,12 +16,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="accessTime"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -38,12 +37,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="add"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -57,12 +55,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="addCircleOutline"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -76,12 +73,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="arrowForward"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -95,12 +91,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="block"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -113,10 +108,9 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         class="Icon__IconContainer-fc7twp-2 jzPWAQ"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 dDksUU Icon__CenteredIcon-fc7twp-1 dKjNdn"
           focusable="false"
           height="1.25em"
-          icon="loading"
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -196,12 +190,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="accessTime"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -218,12 +211,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="add"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -237,12 +229,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="addCircleOutline"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -256,12 +247,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="arrowForward"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -275,12 +265,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="block"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -293,10 +282,9 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         class="Icon__IconContainer-fc7twp-2 jzPWAQ"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 dDksUU Icon__CenteredIcon-fc7twp-1 dKjNdn"
           focusable="false"
           height="1.25em"
-          icon="loading"
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -376,12 +364,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="accessTime"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -398,12 +385,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="add"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -417,12 +403,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="addCircleOutline"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -436,12 +421,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="arrowForward"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -455,12 +439,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="block"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -473,10 +456,9 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         class="Icon__IconContainer-fc7twp-2 jzPWAQ"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 dDksUU Icon__CenteredIcon-fc7twp-1 dKjNdn"
           focusable="false"
           height="1.25em"
-          icon="loading"
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -556,12 +538,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="accessTime"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -578,12 +559,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="add"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -597,12 +577,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="addCircleOutline"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -616,12 +595,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="arrowForward"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -635,12 +613,11 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 biVhYw Icon__CenteredIcon-fc7twp-1 dKjNdn"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="1.25em"
-          icon="block"
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -653,10 +630,9 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         class="Icon__IconContainer-fc7twp-2 jzPWAQ"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          class="StyledSvg-sc-1h19zm3-0 dDksUU Icon__CenteredIcon-fc7twp-1 dKjNdn"
           focusable="false"
           height="1.25em"
-          icon="loading"
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -743,12 +719,11 @@ exports[`Storyshots Icon With a color 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        class="StyledSvg-sc-1h19zm3-0 cnlNMo Icon-fc7twp-0 fjiVCY"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
         height="24px"
-        icon="accessTime"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -761,12 +736,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        class="StyledSvg-sc-1h19zm3-0 cnlNMo Icon-fc7twp-0 fjiVCY"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
         height="24px"
-        icon="add"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -776,12 +750,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        class="StyledSvg-sc-1h19zm3-0 cnlNMo Icon-fc7twp-0 fjiVCY"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
         height="24px"
-        icon="addCircleOutline"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -791,12 +764,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        class="StyledSvg-sc-1h19zm3-0 cnlNMo Icon-fc7twp-0 fjiVCY"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
         height="24px"
-        icon="arrowForward"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -806,12 +778,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        class="StyledSvg-sc-1h19zm3-0 cnlNMo Icon-fc7twp-0 fjiVCY"
         color="#cc1439"
         fill="#cc1439"
         focusable="false"
         height="24px"
-        icon="block"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -820,10 +791,9 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fjiVCY"
+        class="StyledSvg-sc-1h19zm3-0 ikqkgo Icon-fc7twp-0 fjiVCY"
         focusable="false"
         height="24px"
-        icon="loading"
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -898,12 +868,11 @@ exports[`Storyshots Icon With a color 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        class="StyledSvg-sc-1h19zm3-0 gQEiXL Icon-fc7twp-0 fGpDPz"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
         height="24px"
-        icon="accessTime"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -916,12 +885,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        class="StyledSvg-sc-1h19zm3-0 gQEiXL Icon-fc7twp-0 fGpDPz"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
         height="24px"
-        icon="add"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -931,12 +899,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        class="StyledSvg-sc-1h19zm3-0 gQEiXL Icon-fc7twp-0 fGpDPz"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
         height="24px"
-        icon="addCircleOutline"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -946,12 +913,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        class="StyledSvg-sc-1h19zm3-0 gQEiXL Icon-fc7twp-0 fGpDPz"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
         height="24px"
-        icon="arrowForward"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -961,12 +927,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        class="StyledSvg-sc-1h19zm3-0 gQEiXL Icon-fc7twp-0 fGpDPz"
         color="#ffbb00"
         fill="#ffbb00"
         focusable="false"
         height="24px"
-        icon="block"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -975,10 +940,9 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fGpDPz"
+        class="StyledSvg-sc-1h19zm3-0 ikqkgo Icon-fc7twp-0 fGpDPz"
         focusable="false"
         height="24px"
-        icon="loading"
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1053,12 +1017,11 @@ exports[`Storyshots Icon With a color 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        class="StyledSvg-sc-1h19zm3-0 iYGoXP Icon-fc7twp-0 fAXHND"
         color="#008059"
         fill="#008059"
         focusable="false"
         height="24px"
-        icon="accessTime"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1071,12 +1034,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        class="StyledSvg-sc-1h19zm3-0 iYGoXP Icon-fc7twp-0 fAXHND"
         color="#008059"
         fill="#008059"
         focusable="false"
         height="24px"
-        icon="add"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1086,12 +1048,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        class="StyledSvg-sc-1h19zm3-0 iYGoXP Icon-fc7twp-0 fAXHND"
         color="#008059"
         fill="#008059"
         focusable="false"
         height="24px"
-        icon="addCircleOutline"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1101,12 +1062,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        class="StyledSvg-sc-1h19zm3-0 iYGoXP Icon-fc7twp-0 fAXHND"
         color="#008059"
         fill="#008059"
         focusable="false"
         height="24px"
-        icon="arrowForward"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1116,12 +1076,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        class="StyledSvg-sc-1h19zm3-0 iYGoXP Icon-fc7twp-0 fAXHND"
         color="#008059"
         fill="#008059"
         focusable="false"
         height="24px"
-        icon="block"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1130,10 +1089,9 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fAXHND"
+        class="StyledSvg-sc-1h19zm3-0 ikqkgo Icon-fc7twp-0 fAXHND"
         focusable="false"
         height="24px"
-        icon="loading"
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1208,12 +1166,11 @@ exports[`Storyshots Icon With a color 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        class="StyledSvg-sc-1h19zm3-0 gEpZhn Icon-fc7twp-0 cQdNwL"
         color="#216beb"
         fill="#216beb"
         focusable="false"
         height="24px"
-        icon="accessTime"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1226,12 +1183,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        class="StyledSvg-sc-1h19zm3-0 gEpZhn Icon-fc7twp-0 cQdNwL"
         color="#216beb"
         fill="#216beb"
         focusable="false"
         height="24px"
-        icon="add"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1241,12 +1197,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        class="StyledSvg-sc-1h19zm3-0 gEpZhn Icon-fc7twp-0 cQdNwL"
         color="#216beb"
         fill="#216beb"
         focusable="false"
         height="24px"
-        icon="addCircleOutline"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1256,12 +1211,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        class="StyledSvg-sc-1h19zm3-0 gEpZhn Icon-fc7twp-0 cQdNwL"
         color="#216beb"
         fill="#216beb"
         focusable="false"
         height="24px"
-        icon="arrowForward"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1271,12 +1225,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        class="StyledSvg-sc-1h19zm3-0 gEpZhn Icon-fc7twp-0 cQdNwL"
         color="#216beb"
         fill="#216beb"
         focusable="false"
         height="24px"
-        icon="block"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1285,10 +1238,9 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 cQdNwL"
+        class="StyledSvg-sc-1h19zm3-0 ikqkgo Icon-fc7twp-0 cQdNwL"
         focusable="false"
         height="24px"
-        icon="loading"
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1363,12 +1315,11 @@ exports[`Storyshots Icon With a color 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        class="StyledSvg-sc-1h19zm3-0 ggKkHv Icon-fc7twp-0 ckNWkf"
         color="#122b47"
         fill="#122b47"
         focusable="false"
         height="24px"
-        icon="accessTime"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1381,12 +1332,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        class="StyledSvg-sc-1h19zm3-0 ggKkHv Icon-fc7twp-0 ckNWkf"
         color="#122b47"
         fill="#122b47"
         focusable="false"
         height="24px"
-        icon="add"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1396,12 +1346,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        class="StyledSvg-sc-1h19zm3-0 ggKkHv Icon-fc7twp-0 ckNWkf"
         color="#122b47"
         fill="#122b47"
         focusable="false"
         height="24px"
-        icon="addCircleOutline"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1411,12 +1360,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        class="StyledSvg-sc-1h19zm3-0 ggKkHv Icon-fc7twp-0 ckNWkf"
         color="#122b47"
         fill="#122b47"
         focusable="false"
         height="24px"
-        icon="arrowForward"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1426,12 +1374,11 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        class="StyledSvg-sc-1h19zm3-0 ggKkHv Icon-fc7twp-0 ckNWkf"
         color="#122b47"
         fill="#122b47"
         focusable="false"
         height="24px"
-        icon="block"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1440,10 +1387,9 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 ckNWkf"
+        class="StyledSvg-sc-1h19zm3-0 ikqkgo Icon-fc7twp-0 ckNWkf"
         focusable="false"
         height="24px"
-        icon="loading"
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1529,14 +1475,13 @@ exports[`Storyshots Icon With a size 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        class="StyledSvg-sc-1h19zm3-0 kJmnrQ Icon-fc7twp-0 cdvbdH"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="8px"
-        icon="accessTime"
+        height="x1"
         viewBox="0 0 24 24"
-        width="8px"
+        width="x1"
       >
         <path
           d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
@@ -1547,14 +1492,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        class="StyledSvg-sc-1h19zm3-0 kJmnrQ Icon-fc7twp-0 cdvbdH"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="8px"
-        icon="add"
+        height="x1"
         viewBox="0 0 24 24"
-        width="8px"
+        width="x1"
       >
         <path
           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
@@ -1562,14 +1506,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        class="StyledSvg-sc-1h19zm3-0 kJmnrQ Icon-fc7twp-0 cdvbdH"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="8px"
-        icon="addCircleOutline"
+        height="x1"
         viewBox="0 0 24 24"
-        width="8px"
+        width="x1"
       >
         <path
           d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
@@ -1577,14 +1520,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        class="StyledSvg-sc-1h19zm3-0 kJmnrQ Icon-fc7twp-0 cdvbdH"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="8px"
-        icon="arrowForward"
+        height="x1"
         viewBox="0 0 24 24"
-        width="8px"
+        width="x1"
       >
         <path
           d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
@@ -1592,26 +1534,24 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        class="StyledSvg-sc-1h19zm3-0 kJmnrQ Icon-fc7twp-0 cdvbdH"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="8px"
-        icon="block"
+        height="x1"
         viewBox="0 0 24 24"
-        width="8px"
+        width="x1"
       >
         <path
           d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 HAgHa"
+        class="StyledSvg-sc-1h19zm3-0 ksuAhA Icon-fc7twp-0 cdvbdH"
         focusable="false"
-        height="8px"
-        icon="loading"
+        height="x1"
         viewBox="0 0 38 38"
-        width="8px"
+        width="x1"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -1684,14 +1624,13 @@ exports[`Storyshots Icon With a size 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 iOmWvk"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="16px"
-        icon="accessTime"
+        height="x2"
         viewBox="0 0 24 24"
-        width="16px"
+        width="x2"
       >
         <path
           d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
@@ -1702,14 +1641,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 iOmWvk"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="16px"
-        icon="add"
+        height="x2"
         viewBox="0 0 24 24"
-        width="16px"
+        width="x2"
       >
         <path
           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
@@ -1717,14 +1655,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 iOmWvk"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="16px"
-        icon="addCircleOutline"
+        height="x2"
         viewBox="0 0 24 24"
-        width="16px"
+        width="x2"
       >
         <path
           d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
@@ -1732,14 +1669,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 iOmWvk"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="16px"
-        icon="arrowForward"
+        height="x2"
         viewBox="0 0 24 24"
-        width="16px"
+        width="x2"
       >
         <path
           d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
@@ -1747,26 +1683,24 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        class="StyledSvg-sc-1h19zm3-0 fjWnTA Icon-fc7twp-0 iOmWvk"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="16px"
-        icon="block"
+        height="x2"
         viewBox="0 0 24 24"
-        width="16px"
+        width="x2"
       >
         <path
           d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fvcdOB"
+        class="StyledSvg-sc-1h19zm3-0 hiKQaM Icon-fc7twp-0 iOmWvk"
         focusable="false"
-        height="16px"
-        icon="loading"
+        height="x2"
         viewBox="0 0 38 38"
-        width="16px"
+        width="x2"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -1839,14 +1773,13 @@ exports[`Storyshots Icon With a size 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 eycguF"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="24px"
-        icon="accessTime"
+        height="x3"
         viewBox="0 0 24 24"
-        width="24px"
+        width="x3"
       >
         <path
           d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
@@ -1857,14 +1790,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 eycguF"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="24px"
-        icon="add"
+        height="x3"
         viewBox="0 0 24 24"
-        width="24px"
+        width="x3"
       >
         <path
           d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
@@ -1872,14 +1804,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 eycguF"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="24px"
-        icon="addCircleOutline"
+        height="x3"
         viewBox="0 0 24 24"
-        width="24px"
+        width="x3"
       >
         <path
           d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
@@ -1887,14 +1818,13 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 eycguF"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="24px"
-        icon="arrowForward"
+        height="x3"
         viewBox="0 0 24 24"
-        width="24px"
+        width="x3"
       >
         <path
           d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
@@ -1902,26 +1832,24 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 eycguF"
         color="currentColor"
         fill="currentColor"
         focusable="false"
-        height="24px"
-        icon="block"
+        height="x3"
         viewBox="0 0 24 24"
-        width="24px"
+        width="x3"
       >
         <path
           d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ikqkgo Icon-fc7twp-0 eycguF"
         focusable="false"
-        height="24px"
-        icon="loading"
+        height="x3"
         viewBox="0 0 38 38"
-        width="24px"
+        width="x3"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
@@ -2005,12 +1933,11 @@ exports[`Storyshots Icon With accessibility title 1`] = `
     >
       <svg
         aria-hidden="false"
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 dkBAgY"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="24px"
-        icon="user"
         title="User account"
         viewBox="0 0 24 24"
         width="24px"
@@ -2026,12 +1953,11 @@ exports[`Storyshots Icon With accessibility title 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        class="StyledSvg-sc-1h19zm3-0 ezlJgg Icon-fc7twp-0 dkBAgY"
         color="currentColor"
         fill="currentColor"
         focusable="false"
         height="24px"
-        icon="user"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -2061,13 +1987,11 @@ exports[`Storyshots Icon With added margin 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 bCFepo"
+          class="StyledSvg-sc-1h19zm3-0 dgtmbk Icon-fc7twp-0 bCFepo"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="delete"
-          m="x2"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2082,13 +2006,11 @@ exports[`Storyshots Icon With added margin 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 hAhxEu"
+          class="StyledSvg-sc-1h19zm3-0 iKyrAG Icon-fc7twp-0 hAhxEu"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="delete"
-          mt="x2"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2103,13 +2025,11 @@ exports[`Storyshots Icon With added margin 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 gezant"
+          class="StyledSvg-sc-1h19zm3-0 gEdLNx Icon-fc7twp-0 gezant"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="delete"
-          mr="x2"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2124,13 +2044,11 @@ exports[`Storyshots Icon With added margin 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 iCRWbe"
+          class="StyledSvg-sc-1h19zm3-0 ljNjFa Icon-fc7twp-0 iCRWbe"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="delete"
-          mb="x2"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2145,13 +2063,11 @@ exports[`Storyshots Icon With added margin 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 ZEcAK"
+          class="StyledSvg-sc-1h19zm3-0 ggJnu Icon-fc7twp-0 ZEcAK"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="delete"
-          ml="x2"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2166,13 +2082,11 @@ exports[`Storyshots Icon With added margin 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 bdShWb"
+          class="StyledSvg-sc-1h19zm3-0 tUaRz Icon-fc7twp-0 bdShWb"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="delete"
-          mx="x2"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2187,13 +2101,11 @@ exports[`Storyshots Icon With added margin 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 iHUtzQ"
+          class="StyledSvg-sc-1h19zm3-0 FaUAI Icon-fc7twp-0 iHUtzQ"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="delete"
-          my="x2"
           viewBox="0 0 24 24"
           width="24px"
         >

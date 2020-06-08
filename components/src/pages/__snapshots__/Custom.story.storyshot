@@ -84,13 +84,11 @@ exports[`Storyshots Pages/Custom Default 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
                     height="20px"
-                    icon="downArrow"
-                    p="2px"
                     style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -130,13 +128,11 @@ exports[`Storyshots Pages/Custom Default 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
                       height="20px"
-                      icon="downArrow"
-                      p="2px"
                       style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -263,13 +259,11 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
                     height="20px"
-                    icon="downArrow"
-                    p="2px"
                     style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -309,13 +303,11 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
                       height="20px"
-                      icon="downArrow"
-                      p="2px"
                       style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -354,13 +346,11 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 fQFStW"
+                class="StyledSvg-sc-1h19zm3-0 jOtbLy Icon-fc7twp-0 fQFStW"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
                 height="20px"
-                icon="rightArrow"
-                mr="half"
                 viewBox="0 0 24 24"
                 width="20px"
               >
@@ -377,13 +367,11 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 fQFStW"
+                class="StyledSvg-sc-1h19zm3-0 jOtbLy Icon-fc7twp-0 fQFStW"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
                 height="20px"
-                icon="rightArrow"
-                mr="half"
                 viewBox="0 0 24 24"
                 width="20px"
               >
@@ -397,15 +385,13 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="more"
-                p="half"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
@@ -447,15 +433,13 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="close"
-                p="half"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
@@ -561,13 +545,11 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
                     height="20px"
-                    icon="downArrow"
-                    p="2px"
                     style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -607,13 +589,11 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
                       height="20px"
-                      icon="downArrow"
-                      p="2px"
                       style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -669,15 +649,13 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="close"
-                p="half"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"

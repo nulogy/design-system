@@ -83,14 +83,13 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="downArrow"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -151,14 +150,13 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="downArrow"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -219,14 +217,13 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="downArrow"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -386,14 +383,13 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="downArrow"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
@@ -454,14 +450,13 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="upArrow"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
@@ -542,14 +537,13 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                class="StyledSvg-sc-1h19zm3-0 bXTOZY Icon-fc7twp-0 jCbLQW"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="upArrow"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"

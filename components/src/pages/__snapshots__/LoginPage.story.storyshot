@@ -92,7 +92,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -101,7 +101,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Email
                   </span>
@@ -126,7 +126,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -135,7 +135,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Password
                   </span>
@@ -274,13 +274,11 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="Icon-fc7twp-0 ewGQci"
+              class="StyledSvg-sc-1h19zm3-0 fveekS Icon-fc7twp-0 ewGQci"
               color="red"
               fill="#cc1439"
               focusable="false"
               height="24px"
-              icon="error"
-              mr="x1"
               viewBox="0 0 24 24"
               width="24px"
             >
@@ -302,7 +300,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -311,7 +309,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Email
                   </span>
@@ -336,7 +334,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -345,7 +343,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Password
                   </span>
@@ -477,13 +475,11 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="Icon-fc7twp-0 ewGQci"
+              class="StyledSvg-sc-1h19zm3-0 fveekS Icon-fc7twp-0 ewGQci"
               color="red"
               fill="#cc1439"
               focusable="false"
               height="24px"
-              icon="error"
-              mr="x1"
               viewBox="0 0 24 24"
               width="24px"
             >
@@ -505,7 +501,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -514,7 +510,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Email
                   </span>
@@ -539,7 +535,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -548,7 +544,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Password
                   </span>
@@ -688,7 +684,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -697,7 +693,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Email
                   </span>
@@ -722,7 +718,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -731,7 +727,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Password
                   </span>
@@ -882,7 +878,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -891,7 +887,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Email
                   </span>
@@ -916,7 +912,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                 color="black"
                 style="display:block"
               >
@@ -925,7 +921,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Password
                   </span>

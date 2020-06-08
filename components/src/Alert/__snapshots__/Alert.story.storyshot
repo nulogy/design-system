@@ -13,13 +13,11 @@ exports[`Storyshots Alert Danger 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ewGQci"
+        class="StyledSvg-sc-1h19zm3-0 fveekS Icon-fc7twp-0 ewGQci"
         color="red"
         fill="#cc1439"
         focusable="false"
         height="24px"
-        icon="error"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -71,13 +69,11 @@ exports[`Storyshots Alert Success 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 dqoulF"
+        class="StyledSvg-sc-1h19zm3-0 jszHsh Icon-fc7twp-0 dqoulF"
         color="green"
         fill="#008059"
         focusable="false"
         height="24px"
-        icon="check"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -143,12 +139,11 @@ exports[`Storyshots Alert With a close button 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 gNwFhh"
+            class="StyledSvg-sc-1h19zm3-0 izUDCo Icon-fc7twp-0 gNwFhh"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="16"
-            icon="close"
             size="16"
             viewBox="0 0 24 24"
             width="16"
@@ -207,13 +202,11 @@ exports[`Storyshots Alert With a title 1`] = `
     >
       <svg
         aria-hidden="true"
-        class="Icon-fc7twp-0 ewGQci"
+        class="StyledSvg-sc-1h19zm3-0 fveekS Icon-fc7twp-0 ewGQci"
         color="red"
         fill="#cc1439"
         focusable="false"
         height="24px"
-        icon="error"
-        mr="x1"
         viewBox="0 0 24 24"
         width="24px"
       >

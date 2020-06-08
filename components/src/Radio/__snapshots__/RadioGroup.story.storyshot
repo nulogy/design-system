@@ -11,10 +11,10 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
     >
       <legend
-        style="margin-bottom:8px"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -118,10 +118,10 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
     >
       <legend
-        style="margin-bottom:8px"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -220,10 +220,10 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
     >
       <legend
-        style="margin-bottom:8px"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -340,10 +340,10 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
     >
       <legend
-        style="margin-bottom:8px"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -455,10 +455,10 @@ exports[`Storyshots RadioGroup with error list 1`] = `
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
     >
       <legend
-        style="margin-bottom:8px"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -548,13 +548,11 @@ exports[`Storyshots RadioGroup with error list 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="error"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -607,10 +605,10 @@ exports[`Storyshots RadioGroup with error message 1`] = `
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
     >
       <legend
-        style="margin-bottom:8px"
+        class="Legend-sc-12h2r7a-0 fqZhwH"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="LabelText-sc-16fh5zk-0 lmVLTL"
         >
           Setting Selection
         </span>
@@ -700,13 +698,11 @@ exports[`Storyshots RadioGroup with error message 1`] = `
       >
         <svg
           aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
           color="currentColor"
           fill="currentColor"
           focusable="false"
           height="24px"
-          icon="error"
-          mr="x1"
           viewBox="0 0 24 24"
           width="24px"
         >

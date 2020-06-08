@@ -17,7 +17,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Controlled Toggle
           </span>
@@ -104,7 +104,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Toggle
           </span>
@@ -152,7 +152,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Toggle
           </span>
@@ -199,7 +199,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Toggle
           </span>
@@ -259,7 +259,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Toggle
           </span>
@@ -329,7 +329,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Toggle
           </span>
@@ -384,7 +384,7 @@ exports[`Storyshots Toggle With long text 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Toggle
           </span>
@@ -439,7 +439,7 @@ exports[`Storyshots Toggle With text 1`] = `
           class="Box-sc-1qu1edy-0 ilQgHG"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            class="LabelText-sc-16fh5zk-0 lmVLTL"
           >
             Toggle
           </span>

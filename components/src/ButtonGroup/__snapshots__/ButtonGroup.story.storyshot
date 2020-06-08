@@ -74,15 +74,13 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 cwKdbD"
+            class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
             color="currentColor"
             fill="currentColor"
             focusable="false"
-            height="32px"
-            icon="menu"
-            p="half"
+            height="x4"
             viewBox="0 0 24 24"
-            width="32px"
+            width="x4"
           >
             <path
               d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
@@ -95,15 +93,13 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 cwKdbD"
+            class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
             color="currentColor"
             fill="currentColor"
             focusable="false"
-            height="32px"
-            icon="menu"
-            p="half"
+            height="x4"
             viewBox="0 0 24 24"
-            width="32px"
+            width="x4"
           >
             <path
               d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"

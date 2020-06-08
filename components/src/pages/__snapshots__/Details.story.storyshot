@@ -84,13 +84,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
                     height="20px"
-                    icon="downArrow"
-                    p="2px"
                     style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -130,13 +128,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
                       height="20px"
-                      icon="downArrow"
-                      p="2px"
                       style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -419,13 +415,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -468,13 +462,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -517,13 +509,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -566,13 +556,11 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -858,13 +846,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
                     height="20px"
-                    icon="downArrow"
-                    p="2px"
                     style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -904,13 +890,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
                       height="20px"
-                      icon="downArrow"
-                      p="2px"
                       style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -949,13 +933,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 fQFStW"
+                class="StyledSvg-sc-1h19zm3-0 jOtbLy Icon-fc7twp-0 fQFStW"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
                 height="20px"
-                icon="rightArrow"
-                mr="half"
                 viewBox="0 0 24 24"
                 width="20px"
               >
@@ -972,13 +954,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </a>
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 fQFStW"
+                class="StyledSvg-sc-1h19zm3-0 jOtbLy Icon-fc7twp-0 fQFStW"
                 color="darkGrey"
                 fill="#434d59"
                 focusable="false"
                 height="20px"
-                icon="rightArrow"
-                mr="half"
                 viewBox="0 0 24 24"
                 width="20px"
               >
@@ -992,15 +972,13 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="more"
-                p="half"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
@@ -1269,13 +1247,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -1318,13 +1294,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -1367,13 +1341,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -1416,13 +1388,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -1637,15 +1607,13 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="close"
-                p="half"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
@@ -1751,13 +1719,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   Dashboard
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                     color="#ffffff"
                     fill="#ffffff"
                     focusable="false"
                     height="20px"
-                    icon="downArrow"
-                    p="2px"
                     style="position:absolute;top:11px;right:8px"
                     viewBox="0 0 24 24"
                     width="20px"
@@ -1797,13 +1763,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     Settings
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      class="StyledSvg-sc-1h19zm3-0 eKQTPV Icon-fc7twp-0 hIxIEB"
                       color="#ffffff"
                       fill="#ffffff"
                       focusable="false"
                       height="20px"
-                      icon="downArrow"
-                      p="2px"
                       style="position:absolute;top:11px;right:8px"
                       viewBox="0 0 24 24"
                       width="20px"
@@ -2086,13 +2050,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -2135,13 +2097,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -2184,13 +2144,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -2233,13 +2191,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       >
                         <svg
                           aria-hidden="true"
-                          class="Icon-fc7twp-0 bKcUEK"
+                          class="StyledSvg-sc-1h19zm3-0 gUKvne Icon-fc7twp-0 bKcUEK"
                           color="red"
                           fill="#cc1439"
                           focusable="false"
                           height="24px"
-                          icon="error"
-                          mr="half"
                           viewBox="0 0 24 24"
                           width="24px"
                         >
@@ -2454,15 +2410,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             >
               <svg
                 aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                class="StyledSvg-sc-1h19zm3-0 SkXo Icon-fc7twp-0 hsWmjq"
                 color="currentColor"
                 fill="currentColor"
                 focusable="false"
-                height="32px"
-                icon="close"
-                p="half"
+                height="x4"
                 viewBox="0 0 24 24"
-                width="32px"
+                width="x4"
               >
                 <path
                   d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
@@ -2487,7 +2441,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2496,7 +2450,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Project
                     </span>
@@ -2523,7 +2477,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2532,7 +2486,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Project description
                     </span>
@@ -2572,7 +2526,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2581,7 +2535,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Project status
                     </span>
@@ -2669,7 +2623,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2678,7 +2632,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Item code
                     </span>
@@ -2706,13 +2660,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 QuoIa"
+                    class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
                     height="24px"
-                    icon="error"
-                    mr="x1"
                     viewBox="0 0 24 24"
                     width="24px"
                   >
@@ -2737,7 +2689,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2746,7 +2698,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Eaches expected on Job
                     </span>
@@ -2773,7 +2725,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2782,7 +2734,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Eaches remaining on Project
                     </span>
@@ -2810,7 +2762,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2819,7 +2771,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Scheduled start
                     </span>
@@ -2846,7 +2798,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -2855,7 +2807,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Scheduled end
                     </span>
@@ -2879,13 +2831,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <fieldset
-                class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+                class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-0 bpMmjl"
               >
                 <legend
-                  class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+                  class="Legend-sc-12h2r7a-0 fqZhwH"
                 >
                   <span
-                    class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Line Lead
                   </span>
@@ -3019,10 +2971,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 id="reconcile"
               >
                 <legend
-                  style="margin-bottom:8px"
+                  class="Legend-sc-12h2r7a-0 fqZhwH"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="LabelText-sc-16fh5zk-0 lmVLTL"
                   >
                     Reconcile
                   </span>
@@ -3116,13 +3068,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 QuoIa"
+                    class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
                     height="24px"
-                    icon="error"
-                    mr="x1"
                     viewBox="0 0 24 24"
                     width="24px"
                   >
@@ -3153,7 +3103,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Job Visibility
                     </span>
@@ -3202,7 +3152,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -3211,7 +3161,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Item
                     </span>
@@ -3239,13 +3189,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 >
                   <svg
                     aria-hidden="true"
-                    class="Icon-fc7twp-0 QuoIa"
+                    class="StyledSvg-sc-1h19zm3-0 jpOsNG Icon-fc7twp-0 QuoIa"
                     color="currentColor"
                     fill="currentColor"
                     focusable="false"
                     height="24px"
-                    icon="error"
-                    mr="x1"
                     viewBox="0 0 24 24"
                     width="24px"
                   >
@@ -3270,7 +3218,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
-                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                  class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-1 gjIfQG"
                   color="black"
                   style="display:block"
                 >
@@ -3279,7 +3227,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Quantity
                     </span>
@@ -3311,7 +3259,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     class="Box-sc-1qu1edy-0 ilQgHG"
                   >
                     <span
-                      style="font-size:14px;font-weight:600;line-height:1.71428571"
+                      class="LabelText-sc-16fh5zk-0 lmVLTL"
                     >
                       Reject visibility
                     </span>
