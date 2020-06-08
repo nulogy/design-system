@@ -52,9 +52,20 @@ const propsRows = [
     description: "callback that is called when the tooltip is shown"
   },
   {
-    name: "onHidden",
+    name: "onHide",
     type: "function",
     description: "callback that is called when the tooltip is hidden"
+  },
+  {
+    name: "showDuration",
+    type: "number",
+    description: "length of time in ms to display the Toast before hiding it"
+  },
+  {
+    name: "isCloseable",
+    type: "boolean",
+    description:
+      "displays a close button in the Toast when true, and the Toast must then by manually dismissed by clicking the close button"
   }
 ];
 
