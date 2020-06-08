@@ -97,7 +97,7 @@ export const Toast = ({ triggered, onHide, onShow, isCloseable, children, showDu
   };
 
   const handleCloseButtonClick = () => {
-    hideToast(ANIMATION_DURATION / 2);
+    hideToast(0);
   };
 
   return (
@@ -108,7 +108,7 @@ export const Toast = ({ triggered, onHide, onShow, isCloseable, children, showDu
       onMouseLeave={onMouseOut}
       onBlur={onMouseOut}
     >
-      <AnimatedAlert visible={visible} isCloseable={isCloseable} onClose={handleCloseButtonClick} {...props}>
+      <AnimatedAlert visible={visible} isCloseable={isCloseable} onClose={handleCloseButtonClick} controlled {...props}>
         {children}
       </AnimatedAlert>
     </AnimatedBoxBottom>

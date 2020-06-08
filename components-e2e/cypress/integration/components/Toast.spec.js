@@ -58,7 +58,7 @@ describe("Toast", () => {
       toast().should("have.css", "opacity", "1");
       cy.get(CLOSE_BTN_SELECTOR).click();
       cy.wait(4000);
-      toast().should("not.exist");
+      toast().should("have.css", "opacity", "0");
     });
   });
 });
