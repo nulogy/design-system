@@ -14,4 +14,9 @@ storiesOf("Link", module)
       Link
     </Link>
   ))
+  .add("With a different size", () => (
+    <Link color="black" fontSize="large" href="http://nulogy.design">
+      Link
+    </Link>
+  ))
   .add("As a <button>", () => <Link as="button">Link</Link>);

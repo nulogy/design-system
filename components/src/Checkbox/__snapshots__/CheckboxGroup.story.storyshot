@@ -589,13 +589,13 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 fGfFTP"
+              class="ListItem-qqenhw-0 gzsWDK"
               color="currentColor"
             >
               Error message 1
             </li>
             <li
-              class="ListItem-qqenhw-0 fGfFTP"
+              class="ListItem-qqenhw-0 gzsWDK"
               color="currentColor"
             >
               Error message 2

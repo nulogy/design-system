@@ -18,8 +18,9 @@ exports[`Storyshots Pages/Details page Default 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -791,8 +792,9 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >
@@ -939,7 +941,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               width="[object Object]"
             >
               <a
-                class="Link-sc-1lpx3d0-0 dNsOaA"
+                class="Link-sc-1lpx3d0-0 fEeoTP"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -962,7 +964,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 />
               </svg>
               <a
-                class="Link-sc-1lpx3d0-0 dNsOaA"
+                class="Link-sc-1lpx3d0-0 fEeoTP"
                 color="darkBlue"
                 font-size="smaller"
               >
@@ -1683,8 +1685,9 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 hoHKDj"
+            class="Link-sc-1lpx3d0-0 clvBNI"
             color="blue"
+            font-size="medium"
             href="/"
             style="display:block;height:40px"
           >

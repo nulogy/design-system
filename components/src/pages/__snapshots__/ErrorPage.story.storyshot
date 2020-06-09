@@ -311,8 +311,9 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
               </div>
             </div>
             <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
+              class="Link-sc-1lpx3d0-0 gxbSxg"
               color="blue"
+              font-size="medium"
               href="#"
             >
               Back to homepage

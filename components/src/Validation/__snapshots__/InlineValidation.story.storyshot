@@ -85,24 +85,25 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
           color="currentColor"
         >
           <li
-            class="ListItem-qqenhw-0 fGfFTP"
+            class="ListItem-qqenhw-0 gzsWDK"
             color="currentColor"
           >
             Entry must be at least 3 characters long.
           </li>
           <li
-            class="ListItem-qqenhw-0 fGfFTP"
+            class="ListItem-qqenhw-0 gzsWDK"
             color="currentColor"
           >
             Entry must contain a number
           </li>
           <li
-            class="ListItem-qqenhw-0 fGfFTP"
+            class="ListItem-qqenhw-0 gzsWDK"
             color="currentColor"
           >
             <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
+              class="Link-sc-1lpx3d0-0 gxbSxg"
               color="blue"
+              font-size="medium"
               href="https://nulogy.design/"
             >
               Custom Link
@@ -157,13 +158,13 @@ exports[`Storyshots Inline Validation with list items 1`] = `
           color="currentColor"
         >
           <li
-            class="ListItem-qqenhw-0 fGfFTP"
+            class="ListItem-qqenhw-0 gzsWDK"
             color="currentColor"
           >
             Entry must be at least 3 characters long.
           </li>
           <li
-            class="ListItem-qqenhw-0 fGfFTP"
+            class="ListItem-qqenhw-0 gzsWDK"
             color="currentColor"
           >
             Entry must contain a number.
@@ -210,13 +211,13 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
           color="currentColor"
         >
           <li
-            class="ListItem-qqenhw-0 fGfFTP"
+            class="ListItem-qqenhw-0 gzsWDK"
             color="currentColor"
           >
             Entry must be at least 3 characters long.
           </li>
           <li
-            class="ListItem-qqenhw-0 fGfFTP"
+            class="ListItem-qqenhw-0 gzsWDK"
             color="currentColor"
           >
             Entry must contain a number.

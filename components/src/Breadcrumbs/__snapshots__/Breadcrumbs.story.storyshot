@@ -17,8 +17,9 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
           class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dhHwFq"
         >
           <a
-            class="Link-sc-1lpx3d0-0 gJOWDu"
+            class="Link-sc-1lpx3d0-0 hcsgot"
             color="darkBlue"
+            font-size="medium"
             href="/"
           >
             Home
@@ -48,8 +49,9 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
           class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dhHwFq"
         >
           <a
-            class="Link-sc-1lpx3d0-0 gJOWDu"
+            class="Link-sc-1lpx3d0-0 hcsgot"
             color="darkBlue"
+            font-size="medium"
             href="/Tenants"
           >
             Tenants
@@ -98,8 +100,9 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
           class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dhHwFq"
         >
           <a
-            class="Link-sc-1lpx3d0-0 gJOWDu"
+            class="Link-sc-1lpx3d0-0 hcsgot"
             color="darkBlue"
+            font-size="medium"
             href="/"
           >
             Home
@@ -129,8 +132,9 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
           class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dhHwFq"
         >
           <a
-            class="Link-sc-1lpx3d0-0 gJOWDu"
+            class="Link-sc-1lpx3d0-0 hcsgot"
             color="darkBlue"
+            font-size="medium"
             href="/Tenants"
           >
             Tenants
