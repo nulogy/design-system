@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.3](https://github.com/nulogy/design-system/compare/v2.13.2...v2.13.3) (2020-06-09)
+
+
+### Bug Fixes
+
+* add typography props to ListItem and Link ([#676](https://github.com/nulogy/design-system/issues/676)) ([92e988e](https://github.com/nulogy/design-system/commit/92e988e4e103070d823aeccda683d2e207b50fee))
+
+
+
+
+
 ## [2.13.2](https://github.com/nulogy/design-system/compare/v2.13.1...v2.13.2) (2020-06-08)
 
 
