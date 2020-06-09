@@ -55,8 +55,9 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
         >
           I am help text. I can be a string or a node that includes a 
           <a
-            class="Link-sc-1lpx3d0-0 geMpSb"
+            class="Link-sc-1lpx3d0-0 gxbSxg"
             color="blue"
+            font-size="medium"
             href="http://nulogy.design"
           >
             link

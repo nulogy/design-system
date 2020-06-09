@@ -60,19 +60,19 @@ exports[`Storyshots Form Demo form 1`] = `
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 fGfFTP"
+              class="ListItem-qqenhw-0 gzsWDK"
               color="currentColor"
             >
               Affected field
             </li>
             <li
-              class="ListItem-qqenhw-0 fGfFTP"
+              class="ListItem-qqenhw-0 gzsWDK"
               color="currentColor"
             >
               Unmet criteria
             </li>
             <li
-              class="ListItem-qqenhw-0 fGfFTP"
+              class="ListItem-qqenhw-0 gzsWDK"
               color="currentColor"
             >
               <a

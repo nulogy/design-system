@@ -763,8 +763,9 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
             class="Box-sc-1qu1edy-0 csERpy"
           >
             <a
-              class="Link-sc-1lpx3d0-0 geMpSb"
+              class="Link-sc-1lpx3d0-0 gxbSxg"
               color="blue"
+              font-size="medium"
               href="/"
             >
               Forgot your password?

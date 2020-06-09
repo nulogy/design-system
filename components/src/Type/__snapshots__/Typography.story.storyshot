@@ -82,19 +82,19 @@ exports[`Storyshots Typography Article 1`] = `
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 fGfFTP"
+        class="ListItem-qqenhw-0 gzsWDK"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 fGfFTP"
+        class="ListItem-qqenhw-0 gzsWDK"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 fGfFTP"
+        class="ListItem-qqenhw-0 gzsWDK"
         color="currentColor"
       >
         List Item 3

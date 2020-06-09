@@ -137,8 +137,9 @@ exports[`Storyshots Alert With a close button 1`] = `
       >
         <button
           aria-label="Close"
-          class="Link-sc-1lpx3d0-0 iYMUBq"
+          class="Link-sc-1lpx3d0-0 eyTmUh"
           color="darkGrey"
+          font-size="medium"
         >
           <svg
             aria-hidden="true"
@@ -179,8 +180,9 @@ exports[`Storyshots Alert With a link 1`] = `
       >
         An alert with 
         <a
-          class="Link-sc-1lpx3d0-0 geMpSb"
+          class="Link-sc-1lpx3d0-0 gxbSxg"
           color="blue"
+          font-size="medium"
           href="/"
         >
           linked details

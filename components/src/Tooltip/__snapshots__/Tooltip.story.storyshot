@@ -193,8 +193,9 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
       aria-expanded="false"
       aria-haspopup="true"
       aria-label="Open"
-      class="Link-sc-1lpx3d0-0 geMpSb"
+      class="Link-sc-1lpx3d0-0 gxbSxg"
       color="blue"
+      font-size="medium"
       href="/"
     >
        Link 
