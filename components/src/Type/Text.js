@@ -6,13 +6,20 @@ import theme from "../theme";
 
 const getAttrs = inline => (inline ? { as: "span" } : null);
 
-const Text = styled.p.attrs(props => getAttrs(props.inline))(space, typography, color, ({ disabled }) => ({
-  opacity: disabled ? "0.3333" : null
-}));
+const Text = styled.p.attrs(props => getAttrs(props.inline))(
+  space,
+  typography,
+  color,
+  ({ disabled, textTransform }) => ({
+    textTransform,
+    opacity: disabled ? "0.3333" : null
+  })
+);
 
 Text.propTypes = {
   inline: PropTypes.bool,
   disabled: PropTypes.bool,
+  textTransform: PropTypes.string,
   ...propTypes.space,
   ...propTypes.color,
   ...propTypes.typography
@@ -25,6 +32,7 @@ Text.defaultProps = {
   mb: 0,
   fontSize: theme.fontSizes.medium,
   lineHeight: theme.lineHeights.base,
+  textTransform: undefined,
   color: "currentColor"
 };
 

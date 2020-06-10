@@ -51,6 +51,7 @@ ApplyMenuLinkStyles.defaultProps = {
 
 const MenuLink = styled.a(({ color, hoverColor, hoverBackground, theme }) => ({
   ...getSharedStyles(color, theme),
+  fontWeight: theme.fontWeights.bold,
   transition: ".2s",
   "&:hover, &:focus": {
     outline: "none",
@@ -67,7 +68,8 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground, theme }) => ({
 }));
 
 const MenuText = styled.div(({ textColor, theme }) => ({
-  ...getSharedStyles(textColor, theme)
+  ...getSharedStyles(textColor, theme),
+  fontWeight: theme.fontWeights.bold
 }));
 
 const Nav = styled.nav({

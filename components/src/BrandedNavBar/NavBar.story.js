@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { BrandedNavBar as NDSBrandedNavBar } from "../index";
-import { Icon } from "../Icon";
 
 const ResetStorybookView = styled.div({
   position: "absolute",
@@ -70,77 +69,6 @@ const primaryMenu = [
   { name: "Link", href: "/" }
 ];
 
-const primaryMenuCustomLinks = [
-  {
-    name: "Dashboard",
-    items: [
-      {
-        name: "Invoices",
-        items: [
-          {
-            name: "NormalLink",
-            href: "/"
-          },
-          {
-            name: "CustomLink",
-            render: () => <a href="/">CustomLink</a>
-          }
-        ]
-      },
-      {
-        name: "Projects",
-        href: "/"
-      },
-      {
-        name: "Customers",
-        render: () => <a href="/">Customers CustomLink</a>
-      }
-    ]
-  },
-  {
-    name: "Inspector",
-    href: "/"
-  },
-  {
-    name: "Custom Link",
-    render: () => <a href="/">Custom Link</a>
-  }
-];
-
-const primaryMenuText = [
-  {
-    name: "Dashboard",
-    items: [
-      {
-        name: "MenuTrigger",
-        items: [
-          {
-            name: "NormalLink",
-            href: "/"
-          },
-          {
-            name: "Just Text"
-          }
-        ]
-      },
-      {
-        name: "NormalLink",
-        href: "/"
-      },
-      {
-        name: "Just Text"
-      }
-    ]
-  },
-  {
-    name: "NormalLink",
-    href: "/"
-  },
-  {
-    name: "Just Text"
-  }
-];
-
 const secondaryMenu = [
   {
     name: "User@Nulogy.com",
@@ -152,42 +80,23 @@ const secondaryMenu = [
   }
 ];
 
-const secondaryMenuCustomLinks = [
-  {
-    name: "User@Nulogy.com",
-    items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
-  },
-  {
-    name: <Icon icon="settings" />,
-    ariaLabel: "Settings",
-    items: [{ name: "Permissions", href: "/" }, { name: "Manage account", href: "/" }]
-  }
-];
-
 const search = {
   onSubmit: () => {}
 };
 
 storiesOf("BrandedNavBar", module)
-  .add("BrandedNavBar", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu, search }} />)
-  .add("Without search", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />)
-  .add("Without secondary menu", () => <BrandedNavBar menuData={{ primaryMenu, search }} />)
-  .add("Without search and secondary menu", () => <BrandedNavBar menuData={{ primaryMenu }} />)
-  .add("Without search and primary menu", () => <BrandedNavBar menuData={{ secondaryMenu }} />)
-  .add("With branding only", () => <BrandedNavBar menuData={{}} />)
-  .add("In a training environment", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining />)
-  .add("With custom link components", () => (
+  .add("BrandedNavBar", () => (
     <BrandedNavBar
-      menuData={{ primaryMenu: primaryMenuCustomLinks, secondaryMenu: secondaryMenuCustomLinks, search }}
+      subtext="Quality Control"
+      menuData={{ primaryMenu, secondaryMenu }}
+      logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
     />
   ))
-  .add("With text in the menu", () => <BrandedNavBar menuData={{ primaryMenu: primaryMenuText }} />)
-  .add("With subtext", () => (
-    <BrandedNavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
+  .add("with search", () => (
+    <BrandedNavBar
+      subtext="Quality Control"
+      menuData={{ primaryMenu, secondaryMenu, search }}
+      logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
+    />
   ))
-  .add("With alternative branding link", () => (
-    <BrandedNavBar brandingLinkHref="/portal" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
-  ))
-  .add("With alternate themeColor", () => (
-    <BrandedNavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks }} themeColor="white" />
-  ));
+  .add("In a training environment", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining />);

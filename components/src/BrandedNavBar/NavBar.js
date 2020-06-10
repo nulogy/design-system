@@ -9,6 +9,7 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
+import { Text } from "../Type";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import DesktopMenu from "./DesktopMenu";
@@ -16,6 +17,7 @@ import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
+import NulogyLogo from "./NulogyLogo";
 
 const themeColorObject = {
   color: "darkBlue",
@@ -28,7 +30,10 @@ const themeColorObject = {
 
 const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   background: backgroundColor,
-  padding: `${theme.space.x2} ${theme.space.x3}`
+  padding: `${theme.space.x1} ${theme.space.x3}`,
+  boxShadow: theme.shadows.large,
+  alignItems: "center",
+  minHeight: "72px"
 }));
 
 const TrainingBar = () => (
@@ -39,6 +44,63 @@ const TrainingBar = () => (
   </Box>
 );
 
+const NulogyLogoContainer = ({ subText }) => (
+  <Flex
+    backgroundColor="whiteGrey"
+    borderRadius="small"
+    px="x1"
+    py="half"
+    ml="x2"
+    alignItems="flex-start"
+    flexDirection="column"
+  >
+    <Box width="133px" height="36px">
+      <NulogyLogo />
+    </Box>
+    {subText && (
+      <Text
+        fontSize="10px"
+        lineHeight="12px"
+        color="darkGrey"
+        fontWeight="medium"
+        textTransform="uppercase"
+        letterSpacing="1px"
+        mt="-5px"
+      >
+        {subText}
+      </Text>
+    )}
+  </Flex>
+);
+
+NulogyLogoContainer.propTypes = {
+  subText: PropTypes.string
+};
+
+NulogyLogoContainer.defaultProps = {
+  subText: undefined
+};
+
+const BrandLogoContainer = ({ logo, brandingLinkHref }) => {
+  return (
+    logo || (
+      <Link aria-label="Nulogy logo" underline={false} href={brandingLinkHref}>
+        <Branding logoColor="blue" />
+      </Link>
+    )
+  );
+};
+
+BrandLogoContainer.propTypes = {
+  logo: PropTypes.node,
+  brandingLinkHref: PropTypes.string
+};
+
+BrandLogoContainer.defaultProps = {
+  logo: undefined,
+  brandingLinkHref: undefined
+};
+
 const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, brandingLinkHref, ...props }) => {
   const { t } = useTranslation();
   return (
@@ -46,20 +108,8 @@ const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, brandingLin
       {showTraining && <TrainingBar />}
       <header {...props}>
         <NavBarBackground backgroundColor="white">
-          <Link
-            aria-label="Nulogy logo"
-            underline={false}
-            style={{ display: "block", height: subtext ? "56px" : "40px" }}
-            my={subtext ? "-8px" : null}
-            href={brandingLinkHref}
-          >
-            <Branding logoColor="blue" subtext={subtext} />
-          </Link>
-          <Flex
-            justifyContent="space-between"
-            alignContent="flex-end"
-            style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
-          >
+          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} />
+          <Flex justifyContent="space-between" alignContent="flex-end" flexGrow="1" ml="x3" alignItems="center">
             {menuData.primaryMenu && (
               <DesktopMenu
                 themeColorObject={themeColorObject}
@@ -68,7 +118,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, brandingLin
                 menuData={menuData.primaryMenu}
               />
             )}
-            <Flex style={{ float: "right" }}>
+            <Flex justifySelf="flex-end" alignItems="center">
               {menuData.search && (
                 <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
                   <NavBarSearch {...menuData.search} />
@@ -77,10 +127,12 @@ const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, brandingLin
               {menuData.secondaryMenu && (
                 <DesktopMenu
                   themeColorObject={themeColorObject}
-                  aria-label={t("secondary navigation")}
-                  menuData={menuData.secondaryMenu}
+                  style={{ paddingRight: theme.space.x3 }}
+                  aria-label={t("primary navigation")}
+                  menuData={menuData.primaryMenu}
                 />
               )}
+              <NulogyLogoContainer subText={subtext} />
             </Flex>
           </Flex>
         </NavBarBackground>
@@ -98,17 +150,16 @@ const MenuDataPropTypes = {
 };
 
 MediumNavBar.propTypes = {
+  ...BrandLogoContainer.propTypes,
   subtext: PropTypes.string,
-  brandingLinkHref: PropTypes.string,
-  menuData: PropTypes.shape(MenuDataPropTypes),
-  themeColor: PropTypes.oneOf(["blue", "white"])
+  menuData: PropTypes.shape(MenuDataPropTypes)
 };
 
 MediumNavBar.defaultProps = {
+  ...BrandLogoContainer.defaultProps,
   subtext: null,
   brandingLinkHref: "/",
-  menuData: null,
-  themeColor: undefined
+  menuData: null
 };
 
 const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground }) => ({
@@ -188,25 +239,14 @@ class SmallNavBarNoState extends React.Component {
       subtext,
       brandingLinkHref,
       showTraining,
+      logo,
       ...props
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
         {showTraining && <TrainingBar />}
         <NavBarBackground backgroundColor="white">
-          <Link
-            aria-label="Nulogy logo"
-            style={{ display: "block", height: subtext && !this.isSmallScreen() ? "56px" : "40px" }}
-            my={subtext && !this.isSmallScreen() ? "-8px" : null}
-            underline={false}
-            href={brandingLinkHref}
-          >
-            <Branding
-              logoColor="blue"
-              logoType={this.isSmallScreen() ? "lettermark" : "wordmark"}
-              subtext={this.isSmallScreen() ? null : subtext}
-            />
-          </Link>
+          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} />
           <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
             {menuData.search && (
               <Flex maxWidth="18em" alignItems="center" px="0">
@@ -238,6 +278,7 @@ class SmallNavBarNoState extends React.Component {
 /* eslint-enable react/destructuring-assignment */
 
 SmallNavBarNoState.propTypes = {
+  ...BrandLogoContainer.propTypes,
   menuState: PropTypes.shape({
     isOpen: PropTypes.bool,
     toggleMenu: PropTypes.func,
@@ -252,6 +293,7 @@ SmallNavBarNoState.propTypes = {
 };
 
 SmallNavBarNoState.defaultProps = {
+  ...BrandLogoContainer.defaultProps,
   menuData: null,
   subtext: null,
   brandingLinkHref: "/",
@@ -282,14 +324,16 @@ BaseNavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  showTraining: PropTypes.bool
+  showTraining: PropTypes.bool,
+  logo: PropTypes.node
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
   breakpointUpper: theme.breakpoints.medium,
-  showTraining: false
+  showTraining: false,
+  logo: undefined
 };
 
 const NavBar = styled(BaseNavBar)({});
