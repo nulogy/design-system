@@ -16,26 +16,14 @@ import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 
-const themeColors = {
-  blue: {
-    color: theme.colors.white,
-    hoverColor: theme.colors.lightBlue,
-    background: theme.colors.blackBlue,
-    hoverBackground: theme.colors.black,
-    textColor: theme.colors.grey,
-    logoColor: "white"
-  },
-  white: {
-    color: theme.colors.darkBlue,
-    hoverColor: theme.colors.blackBlue,
-    background: theme.colors.white,
-    hoverBackground: theme.colors.whiteGrey,
-    textColor: theme.colors.blackBlue,
-    logoColor: "blue"
-  }
+const themeColorObject = {
+  color: "darkBlue",
+  hoverColor: "blackBlue",
+  background: "white",
+  hoverBackground: "whiteGrey",
+  textColor: "blackBlue",
+  logoColor: "blue"
 };
-
-const getThemeColor = themeColor => themeColors[themeColor] || themeColors.blue;
 
 const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   background: backgroundColor,
@@ -46,7 +34,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
   const { t } = useTranslation();
   return (
     <header {...props}>
-      <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
+      <NavBarBackground backgroundColor="white">
         <Link
           aria-label="Nulogy logo"
           underline={false}
@@ -54,7 +42,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
           my={subtext ? "-8px" : null}
           href={brandingLinkHref}
         >
-          <Branding logoColor={getThemeColor(themeColor).logoColor} subtext={subtext} />
+          <Branding logoColor="blue" subtext={subtext} />
         </Link>
         <Flex
           justifyContent="space-between"
@@ -63,7 +51,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
         >
           {menuData.primaryMenu && (
             <DesktopMenu
-              themeColorObject={getThemeColor(themeColor)}
+              themeColorObject={themeColorObject}
               style={{ paddingRight: theme.space.x3 }}
               aria-label={t("primary navigation")}
               menuData={menuData.primaryMenu}
@@ -77,7 +65,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...prop
             )}
             {menuData.secondaryMenu && (
               <DesktopMenu
-                themeColorObject={getThemeColor(themeColor)}
+                themeColorObject={themeColorObject}
                 aria-label={t("secondary navigation")}
                 menuData={menuData.secondaryMenu}
               />
@@ -187,12 +175,11 @@ class SmallNavBarNoState extends React.Component {
       menuState: { isOpen, toggleMenu, closeMenu },
       subtext,
       brandingLinkHref,
-      themeColor,
       ...props
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-        <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
+        <NavBarBackground backgroundColor="white">
           <Link
             aria-label="Nulogy logo"
             style={{ display: "block", height: subtext && !this.isSmallScreen() ? "56px" : "40px" }}
@@ -201,7 +188,7 @@ class SmallNavBarNoState extends React.Component {
             href={brandingLinkHref}
           >
             <Branding
-              logoColor={getThemeColor(themeColor).logoColor}
+              logoColor="blue"
               logoType={this.isSmallScreen() ? "lettermark" : "wordmark"}
               subtext={this.isSmallScreen() ? null : subtext}
             />
@@ -213,11 +200,7 @@ class SmallNavBarNoState extends React.Component {
               </Flex>
             )}
             {(menuData.primaryMenu || menuData.secondaryMenu) && (
-              <MobileMenuTrigger
-                {...getThemeColor(themeColor)}
-                onClick={toggleMenu}
-                aria-expanded={isOpen ? true : null}
-              >
+              <MobileMenuTrigger {...themeColorObject} onClick={toggleMenu} aria-expanded={isOpen ? true : null}>
                 <MenuIcon isOpen={isOpen} />
               </MobileMenuTrigger>
             )}
@@ -226,7 +209,7 @@ class SmallNavBarNoState extends React.Component {
         {isOpen && (
           <PreventBodyElementScrolling>
             <MobileMenu
-              themeColorObject={getThemeColor(themeColor)}
+              themeColorObject={themeColorObject}
               subtext={subtext}
               includeSubtext={this.isSmallScreen()}
               menuData={menuData}
@@ -284,15 +267,13 @@ const BaseNavBar = props => (
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
-  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  themeColor: PropTypes.oneOf(["blue", "white"])
+  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
-  breakpointUpper: theme.breakpoints.medium,
-  themeColor: "blue"
+  breakpointUpper: theme.breakpoints.medium
 };
 
 const NavBar = styled(BaseNavBar)({});

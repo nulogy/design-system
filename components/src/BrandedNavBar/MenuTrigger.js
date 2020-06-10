@@ -2,17 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
-import theme from "../theme";
 import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
-const StyledButton = styled.button(({ color, hoverColor, hoverBackground }) => ({
+const StyledButton = styled.button(({ color, hoverColor, hoverBackground, theme }) => ({
   display: "flex",
   alignItems: "center",
   position: "relative",
-  color: themeGet(`colors.${color}`, color)(color),
+  color: theme.colors[color] || color,
   border: "none",
   backgroundColor: "transparent",
   textDecoration: "none",
@@ -23,8 +22,8 @@ const StyledButton = styled.button(({ color, hoverColor, hoverBackground }) => (
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+    color: theme.colors[hoverColor] || hoverColor,
+    backgroundColor: theme.colors[hoverBackground] || hoverBackground,
     cursor: "pointer"
   },
   "&:focus": {
@@ -42,9 +41,9 @@ StyledButton.propTypes = {
 };
 
 StyledButton.defaultProps = {
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black
+  color: "white",
+  hoverColor: "lightBlue",
+  hoverBackground: "black"
 };
 
 const MenuTriggerButton = React.forwardRef(({ name, color, hoverColor, hoverBackground, ...props }, ref) => (
@@ -68,9 +67,9 @@ MenuTriggerButton.propTypes = {
 };
 
 MenuTriggerButton.defaultProps = {
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black
+  color: "white",
+  hoverColor: "lightBlue",
+  hoverBackground: "black"
 };
 
 const MenuTrigger = props => {
@@ -131,9 +130,9 @@ MenuTrigger.propTypes = {
 MenuTrigger.defaultProps = {
   menuData: null,
   "aria-label": undefined,
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black
+  color: "white",
+  hoverColor: "lightBlue",
+  hoverBackground: "black"
 };
 
 export default MenuTrigger;
