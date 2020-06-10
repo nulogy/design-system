@@ -175,6 +175,7 @@ storiesOf("BrandedNavBar", module)
   .add("Without search and secondary menu", () => <BrandedNavBar menuData={{ primaryMenu }} />)
   .add("Without search and primary menu", () => <BrandedNavBar menuData={{ secondaryMenu }} />)
   .add("With branding only", () => <BrandedNavBar menuData={{}} />)
+  .add("In a training environment", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining />)
   .add("With custom link components", () => (
     <BrandedNavBar
       menuData={{ primaryMenu: primaryMenuCustomLinks, secondaryMenu: secondaryMenuCustomLinks, search }}

@@ -6,6 +6,7 @@ import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
+import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
@@ -30,50 +31,61 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   padding: `${theme.space.x2} ${theme.space.x3}`
 }));
 
-const MediumNavBar = ({ menuData, themeColor, subtext, brandingLinkHref, ...props }) => {
+const TrainingBar = () => (
+  <Box bg="darkBlue" textAlign="center">
+    <Text fontSize="10px" letterSpacing="0.5px" fontWeight="bold" color="white" textTransform="uppercase">
+      Training
+    </Text>
+  </Box>
+);
+
+const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, brandingLinkHref, ...props }) => {
   const { t } = useTranslation();
   return (
-    <header {...props}>
-      <NavBarBackground backgroundColor="white">
-        <Link
-          aria-label="Nulogy logo"
-          underline={false}
-          style={{ display: "block", height: subtext ? "56px" : "40px" }}
-          my={subtext ? "-8px" : null}
-          href={brandingLinkHref}
-        >
-          <Branding logoColor="blue" subtext={subtext} />
-        </Link>
-        <Flex
-          justifyContent="space-between"
-          alignContent="flex-end"
-          style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
-        >
-          {menuData.primaryMenu && (
-            <DesktopMenu
-              themeColorObject={themeColorObject}
-              style={{ paddingRight: theme.space.x3 }}
-              aria-label={t("primary navigation")}
-              menuData={menuData.primaryMenu}
-            />
-          )}
-          <Flex style={{ float: "right" }}>
-            {menuData.search && (
-              <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
-                <NavBarSearch {...menuData.search} />
-              </Box>
-            )}
-            {menuData.secondaryMenu && (
+    <>
+      {showTraining && <TrainingBar />}
+      <header {...props}>
+        <NavBarBackground backgroundColor="white">
+          <Link
+            aria-label="Nulogy logo"
+            underline={false}
+            style={{ display: "block", height: subtext ? "56px" : "40px" }}
+            my={subtext ? "-8px" : null}
+            href={brandingLinkHref}
+          >
+            <Branding logoColor="blue" subtext={subtext} />
+          </Link>
+          <Flex
+            justifyContent="space-between"
+            alignContent="flex-end"
+            style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
+          >
+            {menuData.primaryMenu && (
               <DesktopMenu
                 themeColorObject={themeColorObject}
-                aria-label={t("secondary navigation")}
-                menuData={menuData.secondaryMenu}
+                style={{ paddingRight: theme.space.x3 }}
+                aria-label={t("primary navigation")}
+                menuData={menuData.primaryMenu}
               />
             )}
+            <Flex style={{ float: "right" }}>
+              {menuData.search && (
+                <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
+                  <NavBarSearch {...menuData.search} />
+                </Box>
+              )}
+              {menuData.secondaryMenu && (
+                <DesktopMenu
+                  themeColorObject={themeColorObject}
+                  aria-label={t("secondary navigation")}
+                  menuData={menuData.secondaryMenu}
+                />
+              )}
+            </Flex>
           </Flex>
-        </Flex>
-      </NavBarBackground>
-    </header>
+        </NavBarBackground>
+      </header>
+    </>
   );
 };
 
@@ -175,10 +187,12 @@ class SmallNavBarNoState extends React.Component {
       menuState: { isOpen, toggleMenu, closeMenu },
       subtext,
       brandingLinkHref,
+      showTraining,
       ...props
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
+        {showTraining && <TrainingBar />}
         <NavBarBackground backgroundColor="white">
           <Link
             aria-label="Nulogy logo"
@@ -267,13 +281,15 @@ const BaseNavBar = props => (
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
-  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  showTraining: PropTypes.bool
 };
 
 BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
-  breakpointUpper: theme.breakpoints.medium
+  breakpointUpper: theme.breakpoints.medium,
+  showTraining: false
 };
 
 const NavBar = styled(BaseNavBar)({});
