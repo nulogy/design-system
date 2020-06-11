@@ -11,7 +11,7 @@ const StyledButton = styled.button(({ color, hoverColor, hoverBackground, theme 
   display: "flex",
   alignItems: "center",
   position: "relative",
-  fontWeight: theme.fontWeights.bold,
+  fontWeight: theme.fontWeights.medium,
   color: theme.colors[color] || color,
   border: "none",
   backgroundColor: "transparent",
