@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
+import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import { Text, SubsectionTitle } from "../Type";
+import { Box } from "../Box";
 import { BrandingText } from "../Branding";
 import theme from "../theme";
 
@@ -205,7 +207,7 @@ const Nav = styled.nav(
   }
 );
 
-const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeColorObject, ...props }) => (
+const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeColorObject, logo, ...props }) => (
   <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     {subtext && includeSubtext && (
       <BrandingWrap>
@@ -215,6 +217,11 @@ const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeCol
     <Menu>
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
       {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
+      {logo && (
+        <Box mt="x1" pl="x3" display="inline-block">
+          <NulogyLogoContainer subText={subtext} />
+        </Box>
+      )}
     </Menu>
   </Nav>
 );
@@ -227,7 +234,8 @@ BaseMobileMenu.propTypes = {
   subtext: PropTypes.string,
   includeSubtext: PropTypes.bool,
   closeMenu: PropTypes.func,
-  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes)
+  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes),
+  logo: PropTypes.node
 };
 
 BaseMobileMenu.defaultProps = {
@@ -235,7 +243,8 @@ BaseMobileMenu.defaultProps = {
   subtext: null,
   includeSubtext: false,
   closeMenu: () => {},
-  themeColorObject: undefined
+  themeColorObject: undefined,
+  logo: undefined
 };
 
 const MobileMenu = styled(BaseMobileMenu)(display);

@@ -13,10 +13,10 @@ import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
+import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import isValidMenuItem from "./isValidMenuItem";
 import theme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
-import NulogyLogo from "./NulogyLogo";
 
 const themeColorObject = {
   color: "darkBlue",
@@ -36,47 +36,11 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
 
 const TrainingBar = () => (
   <Box bg="darkBlue" textAlign="center">
-    <Text fontSize="10px" letterSpacing="0.5px" fontWeight="bold" color="white" textTransform="uppercase">
+    <Text fontSize="10px" letterSpacing="0.5px" fontWeight="bold" color="white" textTransform="uppercase" py="2px">
       Training
     </Text>
   </Box>
 );
-
-const NulogyLogoContainer = ({ subText }) => (
-  <Flex
-    boxShadow="small"
-    borderRadius="medium"
-    px="x1"
-    py="half"
-    alignItems="flex-start"
-    flexDirection="column"
-    minHeight="36px"
-  >
-    <Box width="76px" height="18px">
-      <NulogyLogo />
-    </Box>
-    {subText && (
-      <Text
-        fontSize="8px"
-        lineHeight="10px"
-        color="darkGrey"
-        fontWeight="medium"
-        textTransform="uppercase"
-        letterSpacing=".5px"
-      >
-        {subText}
-      </Text>
-    )}
-  </Flex>
-);
-
-NulogyLogoContainer.propTypes = {
-  subText: PropTypes.string
-};
-
-NulogyLogoContainer.defaultProps = {
-  subText: undefined
-};
 
 const BrandLogoContainer = ({ logo, brandingLinkHref }) => {
   return (
@@ -98,16 +62,7 @@ BrandLogoContainer.defaultProps = {
   brandingLinkHref: undefined
 };
 
-const MediumNavBar = ({
-  menuData,
-  themeColor,
-  subtext,
-  showTraining,
-  logo,
-  brandingLinkHref,
-  hideNulogyBranding,
-  ...props
-}) => {
+const MediumNavBar = ({ menuData, subtext, showTraining, logo, brandingLinkHref, ...props }) => {
   const { t } = useTranslation();
   return (
     <>
@@ -136,7 +91,7 @@ const MediumNavBar = ({
                   menuData={menuData.secondaryMenu}
                 />
               )}
-              {!hideNulogyBranding && (
+              {logo && (
                 <Box pl="x3">
                   <NulogyLogoContainer subText={subtext} />
                 </Box>
@@ -276,6 +231,7 @@ class SmallNavBarNoState extends React.Component {
               includeSubtext={this.isSmallScreen()}
               menuData={menuData}
               closeMenu={closeMenu}
+              logo={logo}
             />
           </PreventBodyElementScrolling>
         )}
@@ -333,8 +289,7 @@ BaseNavBar.propTypes = {
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   showTraining: PropTypes.bool,
-  logo: PropTypes.node,
-  hideNulogyBranding: PropTypes.bool
+  logo: PropTypes.node
 };
 
 BaseNavBar.defaultProps = {
@@ -342,8 +297,7 @@ BaseNavBar.defaultProps = {
   className: undefined,
   breakpointUpper: theme.breakpoints.medium,
   showTraining: false,
-  logo: undefined,
-  hideNulogyBranding: false
+  logo: undefined
 };
 
 const NavBar = styled(BaseNavBar)({});
