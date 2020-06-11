@@ -30,6 +30,10 @@ const getSharedStyles = ({ color, layer }) => ({
   marginBottom: theme.space.x1,
   "&:visited": {
     color: themeGet(`colors.${color}`, color)(color)
+  },
+  "&:hover": {
+    color: "#434d59", // darkGrey
+    background: "#f0f2f5" // whiteGrey
   }
 });
 
