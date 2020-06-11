@@ -31,8 +31,7 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   background: backgroundColor,
   padding: `${theme.space.x1} ${theme.space.x3}`,
   boxShadow: theme.shadows.large,
-  alignItems: "center",
-  minHeight: "72px"
+  alignItems: "center"
 }));
 
 const TrainingBar = () => (
@@ -44,27 +43,18 @@ const TrainingBar = () => (
 );
 
 const NulogyLogoContainer = ({ subText }) => (
-  <Flex
-    backgroundColor="whiteGrey"
-    borderRadius="small"
-    px="x1"
-    py="half"
-    ml="x2"
-    alignItems="flex-start"
-    flexDirection="column"
-  >
-    <Box width="133px" height="36px">
+  <Flex boxShadow="small" borderRadius="medium" px="x1" py="half" alignItems="flex-start" flexDirection="column">
+    <Box width="76px" height="18px">
       <NulogyLogo />
     </Box>
     {subText && (
       <Text
-        fontSize="10px"
-        lineHeight="12px"
+        fontSize="8px"
+        lineHeight="10px"
         color="darkGrey"
         fontWeight="medium"
         textTransform="uppercase"
-        letterSpacing="1px"
-        mt="-5px"
+        letterSpacing=".5px"
       >
         {subText}
       </Text>
