@@ -81,17 +81,26 @@ const secondaryMenu = [
 ];
 
 storiesOf("BrandedNavBar", module)
-  .add("BrandedNavBar", () => (
+  .add("BrandedNavBar", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />)
+  .add("With a company logo", () => (
     <BrandedNavBar
-      subtext="Quality Control"
       menuData={{ primaryMenu, secondaryMenu }}
       logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
     />
   ))
-  .add("Without a company logo", () => (
-    <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />
+  .add("With app name", () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />)
+  .add("With a company logo and app name", () => (
+    <BrandedNavBar
+      menuData={{ primaryMenu, secondaryMenu }}
+      subtext="Quality control"
+      logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
+    />
   ))
-  .add("in a training environment", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining />)
-  .add("without Nulogy branding on the right", () => (
-    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining hideNulogyBranding />
+  .add("In a training environment", () => (
+    <BrandedNavBar
+      menuData={{ primaryMenu, secondaryMenu }}
+      subtext="Quality control"
+      logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
+      showTraining
+    />
   ));
