@@ -11,8 +11,8 @@ export const NulogyLogoContainer = ({ subText }) => (
     borderRadius="medium"
     px="x1"
     py="half"
-    alignItems="flex-start"
-    flexDirection="column"
+    alignItems="center"
+    flexDirection={subText ? "column" : "row"}
     minHeight="36px"
   >
     <Box width="76px" height="18px">
