@@ -9,7 +9,6 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
-import { Text } from "../Type";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import DesktopMenu from "./DesktopMenu";
@@ -101,7 +100,7 @@ BrandLogoContainer.defaultProps = {
   brandingLinkHref: undefined
 };
 
-const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, brandingLinkHref, ...props }) => {
+const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, logo, brandingLinkHref, ...props }) => {
   const { t } = useTranslation();
   return (
     <>

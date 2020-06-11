@@ -27,7 +27,10 @@ const getSharedStyles = ({ color, layer }) => ({
   lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,
   padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
   paddingLeft: getPaddingLeft(layer),
-  marginBottom: theme.space.x1
+  marginBottom: theme.space.x1,
+  "&:visited": {
+    color: themeGet(`colors.${color}`, color)(color)
+  }
 });
 
 const ApplyMenuLinkStyles = styled.li(({ color, hoverColor, hoverBackground, layer }) => ({
