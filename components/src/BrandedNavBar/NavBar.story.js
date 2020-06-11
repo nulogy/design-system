@@ -88,7 +88,10 @@ storiesOf("BrandedNavBar", module)
       logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
     />
   ))
-  .add("without a company logo", () => (
+  .add("Without a company logo", () => (
     <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />
   ))
-  .add("In a training environment", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining />);
+  .add("in a training environment", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining />)
+  .add("without Nulogy branding on the right", () => (
+    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} showTraining hideNulogyBranding />
+  ));

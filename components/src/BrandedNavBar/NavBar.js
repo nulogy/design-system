@@ -90,7 +90,16 @@ BrandLogoContainer.defaultProps = {
   brandingLinkHref: undefined
 };
 
-const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, logo, brandingLinkHref, ...props }) => {
+const MediumNavBar = ({
+  menuData,
+  themeColor,
+  subtext,
+  showTraining,
+  logo,
+  brandingLinkHref,
+  hideNulogyBranding,
+  ...props
+}) => {
   const { t } = useTranslation();
   return (
     <>
@@ -121,7 +130,7 @@ const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, logo, brand
                   menuData={menuData.secondaryMenu}
                 />
               )}
-              <NulogyLogoContainer subText={subtext} />
+              {!hideNulogyBranding && <NulogyLogoContainer subText={subtext} />}
             </Flex>
           </Flex>
         </NavBarBackground>
@@ -314,7 +323,8 @@ BaseNavBar.propTypes = {
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   showTraining: PropTypes.bool,
-  logo: PropTypes.node
+  logo: PropTypes.node,
+  hideNulogyBranding: PropTypes.bool
 };
 
 BaseNavBar.defaultProps = {
@@ -322,7 +332,8 @@ BaseNavBar.defaultProps = {
   className: undefined,
   breakpointUpper: theme.breakpoints.medium,
   showTraining: false,
-  logo: undefined
+  logo: undefined,
+  hideNulogyBranding: false
 };
 
 const NavBar = styled(BaseNavBar)({});
