@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { themeGet } from "@styled-system/theme-get";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";
@@ -15,7 +14,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import isValidMenuItem from "./isValidMenuItem";
-import theme from "../theme";
+import NDSTheme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 
 const themeColorObject = {
@@ -27,7 +26,7 @@ const themeColorObject = {
   logoColor: "blue"
 };
 
-const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
+const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   background: backgroundColor,
   padding: `${theme.space.x1} ${theme.space.x3}`,
   boxShadow: theme.shadows.large,
@@ -126,8 +125,8 @@ MediumNavBar.defaultProps = {
   menuData: null
 };
 
-const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground }) => ({
-  color: themeGet(`colors.${color}`, color)(color),
+const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground, theme }) => ({
+  color: theme.colors[color] || color,
   background: "none",
   border: "none",
   padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
@@ -137,8 +136,8 @@ const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground })
   height: theme.space.x5,
   "&:hover, &:focus": {
     outline: "none",
-    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+    color: theme.colors[hoverColor] || hoverColor,
+    backgroundColor: theme.colors[hoverBackground] || hoverBackground,
     cursor: "pointer"
   },
   "&:focus": {
@@ -152,7 +151,7 @@ const SmallHeader = styled.header(({ isOpen }) =>
         position: "fixed",
         width: "100%",
         height: "100%",
-        zIndex: theme.zIndex.overlay,
+        zIndex: NDSTheme.zIndex.overlay,
         overflow: "scroll",
         top: "0",
         left: "0",
@@ -211,7 +210,7 @@ class SmallNavBarNoState extends React.Component {
         {showTraining && <TrainingBar />}
         <NavBarBackground backgroundColor="white">
           <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} subtext={subtext} />
-          <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
+          <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
             {menuData.search && (
               <Flex maxWidth="18em" alignItems="center" px="0">
                 <NavBarSearch {...menuData.search} />
@@ -262,7 +261,7 @@ SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
   brandingLinkHref: "/",
-  breakpointLower: theme.breakpoints.small,
+  breakpointLower: NDSTheme.breakpoints.small,
   width: undefined,
   themeColor: undefined
 };
@@ -296,7 +295,7 @@ BaseNavBar.propTypes = {
 BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
-  breakpointUpper: theme.breakpoints.medium,
+  breakpointUpper: NDSTheme.breakpoints.medium,
   showTraining: false,
   logo: undefined
 };

@@ -7,20 +7,19 @@ import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import { Text, SubsectionTitle } from "../Type";
 import { Box } from "../Box";
 import { BrandingText } from "../Branding";
-import theme from "../theme";
 
-const BrandingWrap = styled.div({
+const BrandingWrap = styled.div(({ theme }) => ({
   marginTop: `-${theme.space.x1}`,
   marginBottom: theme.space.x3,
   marginLeft: theme.space.x3,
   color: theme.colors.white
-});
+}));
 
 const getPaddingLeft = layer => `${24 * layer + 24}px`;
 
-const getSharedStyles = ({ color, layer }) => ({
+const getSharedStyles = ({ color, layer, theme }) => ({
   display: "block",
-  color: themeGet(`colors.${color}`, color)(color),
+  color: theme.colors[color] || color,
   textDecoration: "none",
   border: "none",
   backgroundColor: "transparent",
@@ -31,7 +30,7 @@ const getSharedStyles = ({ color, layer }) => ({
   paddingLeft: getPaddingLeft(layer),
   marginBottom: theme.space.x1,
   "&:visited": {
-    color: themeGet(`colors.${color}`, color)(color)
+    color: theme.colors[color] || color
   },
   "&:hover": {
     color: "#434d59", // darkGrey
@@ -39,15 +38,15 @@ const getSharedStyles = ({ color, layer }) => ({
   }
 });
 
-const ApplyMenuLinkStyles = styled.li(({ color, hoverColor, hoverBackground, layer }) => ({
+const ApplyMenuLinkStyles = styled.li(({ color, hoverColor, hoverBackground, layer, theme }) => ({
   display: "block",
   "*": {
-    ...getSharedStyles({ color, layer }),
+    ...getSharedStyles({ color, layer, theme }),
     textDecoration: "none",
     "&:hover, &:focus": {
       outline: "none",
-      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground)
+      color: theme.colors[hoverColor] || hoverColor,
+      backgroundColor: theme.colors[hoverBackground] || hoverBackground
     },
     "&:disabled": {
       opacity: ".5"
@@ -67,13 +66,13 @@ ApplyMenuLinkStyles.propTypes = {
 
 ApplyMenuLinkStyles.defaultProps = {
   layer: 0,
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black
+  color: "white",
+  hoverColor: "lightBlue",
+  hoverBackground: "black"
 };
 
-const MenuLink = styled.a(({ color, hoverColor, hoverBackground, layer }) => ({
-  ...getSharedStyles({ color, layer }),
+const MenuLink = styled.a(({ color, hoverColor, hoverBackground, layer, theme }) => ({
+  ...getSharedStyles({ color, layer, theme }),
   width: "100%",
   borderRadius: "0",
   transition: ".2s",
@@ -91,8 +90,8 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground, layer }) => ({
   }
 }));
 
-const MenuText = styled.li(({ textColor, layer }) => ({
-  ...getSharedStyles({ color: textColor, layer })
+const MenuText = styled.li(({ textColor, layer, theme }) => ({
+  ...getSharedStyles({ color: textColor, layer, theme })
 }));
 
 const SubMenuItemsList = styled.ul({
@@ -101,12 +100,17 @@ const SubMenuItemsList = styled.ul({
   margin: "0"
 });
 
+const StyledLi = styled.li(({ theme }) => ({
+  marginBottom: theme.space.x1,
+  display: "block"
+}));
+
 const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <li key={menuItem.name} style={{ display: "block", marginBottom: theme.space.x1 }}>
+  <StyledLi key={menuItem.name}>
     <MenuLink layer={layer} {...themeColorObject} onClick={linkOnClick} href={menuItem.href}>
       {menuItem.name}
     </MenuLink>
-  </li>
+  </StyledLi>
 );
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
@@ -150,11 +154,11 @@ const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
 
 const getSubMenuHeading = (layer, color, name) =>
   layer === 0 ? (
-    <SubsectionTitle mb={theme.space.x1} color={color}>
+    <SubsectionTitle mb="x1" color={color}>
       {name}
     </SubsectionTitle>
   ) : (
-    <Text mb={theme.space.x1} color={color} py={theme.space.x1} style={{ paddingLeft: getPaddingLeft(layer) }}>
+    <Text mb="x1" color={color} py="x1" style={{ paddingLeft: getPaddingLeft(layer) }}>
       {name}
     </Text>
   );
@@ -187,7 +191,7 @@ SubMenu.defaultProps = {
   themeColorObject: undefined
 };
 
-const Menu = styled.ul(() => ({
+const Menu = styled.ul(({ theme }) => ({
   margin: "0",
   padding: `${theme.space.x1} 0`,
   zIndex: theme.zIndex.content,
