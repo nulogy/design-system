@@ -119,7 +119,6 @@ const MediumNavBar = ({
             {menuData.primaryMenu && (
               <DesktopMenu
                 themeColorObject={themeColorObject}
-                style={{ paddingRight: theme.space.x3 }}
                 aria-label={t("primary navigation")}
                 menuData={menuData.primaryMenu}
               />
@@ -133,12 +132,15 @@ const MediumNavBar = ({
               {menuData.secondaryMenu && (
                 <DesktopMenu
                   themeColorObject={themeColorObject}
-                  style={{ paddingRight: theme.space.x3 }}
                   aria-label={t("secondary navigation")}
                   menuData={menuData.secondaryMenu}
                 />
               )}
-              {!hideNulogyBranding && <NulogyLogoContainer subText={subtext} />}
+              {!hideNulogyBranding && (
+                <Box pl="x3">
+                  <NulogyLogoContainer subText={subtext} />
+                </Box>
+              )}
             </Flex>
           </Flex>
         </NavBarBackground>
