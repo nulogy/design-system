@@ -44,11 +44,10 @@ const TrainingBar = () => (
 
 const BrandLogoContainer = ({ logo, brandingLinkHref, subtext }) => {
   return (
-    logo || (
-      <Link aria-label="Nulogy logo" underline={false} href={brandingLinkHref}>
-        <Branding logoColor="blue" subtext={subtext} />
-      </Link>
-    )
+    <Link aria-label="Nulogy logo" underline={false} href={brandingLinkHref}>
+      {logo && logo}
+      {!logo && <Branding logoColor="blue" subtext={subtext} />}
+    </Link>
   );
 };
 
