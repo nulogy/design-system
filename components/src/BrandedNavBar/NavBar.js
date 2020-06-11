@@ -43,7 +43,15 @@ const TrainingBar = () => (
 );
 
 const NulogyLogoContainer = ({ subText }) => (
-  <Flex boxShadow="small" borderRadius="medium" px="x1" py="half" alignItems="flex-start" flexDirection="column">
+  <Flex
+    boxShadow="small"
+    borderRadius="medium"
+    px="x1"
+    py="half"
+    alignItems="flex-start"
+    flexDirection="column"
+    minHeight="36px"
+  >
     <Box width="76px" height="18px">
       <NulogyLogo />
     </Box>
