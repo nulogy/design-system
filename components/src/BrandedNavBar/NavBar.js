@@ -42,11 +42,11 @@ const TrainingBar = () => (
   </Box>
 );
 
-const BrandLogoContainer = ({ logo, brandingLinkHref }) => {
+const BrandLogoContainer = ({ logo, brandingLinkHref, subtext }) => {
   return (
     logo || (
       <Link aria-label="Nulogy logo" underline={false} href={brandingLinkHref}>
-        <Branding logoColor="blue" />
+        <Branding logoColor="blue" subtext={subtext} />
       </Link>
     )
   );
@@ -54,12 +54,14 @@ const BrandLogoContainer = ({ logo, brandingLinkHref }) => {
 
 BrandLogoContainer.propTypes = {
   logo: PropTypes.node,
-  brandingLinkHref: PropTypes.string
+  brandingLinkHref: PropTypes.string,
+  subtext: PropTypes.string
 };
 
 BrandLogoContainer.defaultProps = {
   logo: undefined,
-  brandingLinkHref: undefined
+  brandingLinkHref: undefined,
+  subtext: undefined
 };
 
 const MediumNavBar = ({ menuData, subtext, showTraining, logo, brandingLinkHref, ...props }) => {
@@ -69,7 +71,7 @@ const MediumNavBar = ({ menuData, subtext, showTraining, logo, brandingLinkHref,
       {showTraining && <TrainingBar />}
       <header {...props}>
         <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} />
+          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} subtext={subtext} />
           <Flex justifyContent="space-between" alignContent="flex-end" flexGrow="1" ml="x3" alignItems="center">
             {menuData.primaryMenu && (
               <DesktopMenu
@@ -209,7 +211,7 @@ class SmallNavBarNoState extends React.Component {
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
         {showTraining && <TrainingBar />}
         <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} />
+          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} subtext={subtext} />
           <Flex justifyContent="flex-end" style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}>
             {menuData.search && (
               <Flex maxWidth="18em" alignItems="center" px="0">
