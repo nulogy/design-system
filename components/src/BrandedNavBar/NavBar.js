@@ -127,8 +127,8 @@ const MediumNavBar = ({ menuData, themeColor, subtext, showTraining, logo, brand
                 <DesktopMenu
                   themeColorObject={themeColorObject}
                   style={{ paddingRight: theme.space.x3 }}
-                  aria-label={t("primary navigation")}
-                  menuData={menuData.primaryMenu}
+                  aria-label={t("secondary navigation")}
+                  menuData={menuData.secondaryMenu}
                 />
               )}
               <NulogyLogoContainer subText={subtext} />
