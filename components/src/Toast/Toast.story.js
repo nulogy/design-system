@@ -147,4 +147,71 @@ storiesOf("Toast", module)
       );
     };
     return <ToastWithTrigger />;
+  })
+  .add("multiple closeable toasts example", () => {
+    const MultipleToastsExample = () => {
+      const [currentToasts, setCurrentToasts] = useState([]);
+      const triggerToast = toastName => {
+        setCurrentToasts([...currentToasts, toastName]);
+      };
+      const onHideHandler = toastName => {
+        setCurrentToasts(currentToasts.filter(toast => toast !== toastName));
+      };
+      const TOAST_ACTIONS = {
+        SAVE: "save",
+        RESET: "reset",
+        DELETE: "delete",
+        ERROR: "error"
+      };
+      const TOASTS = [
+        {
+          action: TOAST_ACTIONS.SAVE,
+          message: "Error saving all your changes"
+        },
+        {
+          action: TOAST_ACTIONS.RESET,
+          message: "Error: changes were reset"
+        },
+        {
+          action: TOAST_ACTIONS.DELETE,
+          message: "An error occurred, could not deleted"
+        },
+        {
+          action: TOAST_ACTIONS.ERROR,
+          message: "An error occurred, please retry"
+        }
+      ];
+      return (
+        <>
+          <Flex alignItems="center">
+            <PrimaryButton onClick={() => triggerToast(TOAST_ACTIONS.SAVE)} mr="x2">
+              Save Changes
+            </PrimaryButton>
+            <Button onClick={() => triggerToast(TOAST_ACTIONS.RESET)} mr="x2">
+              Reset
+            </Button>
+            <DangerButton onClick={() => triggerToast(TOAST_ACTIONS.ERROR)} mr="x2">
+              Trigger Error
+            </DangerButton>
+            <IconicButton icon="delete" onClick={() => triggerToast(TOAST_ACTIONS.DELETE)}>
+              Delete
+            </IconicButton>
+          </Flex>
+          {TOASTS.map(toast => {
+            return (
+              <Toast
+                triggered={currentToasts.includes(toast.action)}
+                onHide={() => onHideHandler(toast.action)}
+                type="danger"
+                key={toast.action}
+                isCloseable
+              >
+                {toast.message}
+              </Toast>
+            );
+          })}
+        </>
+      );
+    };
+    return <MultipleToastsExample />;
   });
