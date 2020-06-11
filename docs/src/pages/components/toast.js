@@ -54,7 +54,14 @@ const propsRows = [
   {
     name: "onHide",
     type: "function",
-    description: "callback that is called when the tooltip is hidden"
+    description:
+      "callback that is called when the tooltip is dismissed or begins to fade out"
+  },
+  {
+    name: "onHidden",
+    type: "function",
+    description:
+      "callback that is called when the tooltip has been completely hidden after the fade out animation is complete"
   },
   {
     name: "showDuration",

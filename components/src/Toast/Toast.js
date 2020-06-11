@@ -5,7 +5,8 @@ import theme from "../theme";
 import { Box } from "../Box";
 import { Alert } from "../Alert";
 
-const ANIMATION_DURATION = 2000; // in ms
+const SHOW_DURATION = 2000; // in ms
+const ANIMATE_OUT_DURATION = 1000;
 const TOAST_Y_MAX = "0px";
 const TOAST_Y_MIN = "-32px";
 const ACTIVE_Z_INDEX = 2;
@@ -20,7 +21,8 @@ const SLIDE_IN_STYLES = {
 const SLIDE_OUT_STYLES = {
   transform: `translateY(${TOAST_Y_MAX})`,
   transition: "transform 0.9s ease-in",
-  zIndex: INACTIVE_Z_INDEX
+  zIndex: INACTIVE_Z_INDEX,
+  pointerEvents: "none"
 };
 
 const FADE_IN_STYLES = {
@@ -52,19 +54,24 @@ const AnimatedBoxBottom = styled(Box)(({ visible }) => ({
   ...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES)
 }));
 
-export const Toast = ({ triggered, onHide, onShow, isCloseable, children, showDuration, ...props }) => {
+export const Toast = ({ triggered, onHide, onShow, isCloseable, children, showDuration, onHidden, ...props }) => {
   const [visible, setVisible] = useState(triggered);
   const [timeoutID, setTimeoutID] = useState(undefined);
   const cancelHidingToast = () => {
     clearTimeout(timeoutID);
   };
-  const hideToast = (delay = ANIMATION_DURATION) => {
+  const hideToast = (delay = SHOW_DURATION) => {
     cancelHidingToast();
 
     setTimeoutID(
       setTimeout(() => {
         setVisible(false);
         onHide();
+        setTimeoutID(
+          setTimeout(() => {
+            onHidden();
+          }, ANIMATE_OUT_DURATION)
+        );
       }, delay)
     );
   };
@@ -92,7 +99,7 @@ export const Toast = ({ triggered, onHide, onShow, isCloseable, children, showDu
   };
   const onMouseOut = () => {
     if (!isCloseable) {
-      hideToast(ANIMATION_DURATION / 2);
+      hideToast(SHOW_DURATION / 2);
     }
   };
 
@@ -121,7 +128,8 @@ Toast.propTypes = {
   onHide: PropTypes.func,
   children: PropTypes.node,
   isCloseable: PropTypes.bool,
-  showDuration: PropTypes.number
+  showDuration: PropTypes.number,
+  onHidden: PropTypes.func
 };
 
 Toast.defaultProps = {
@@ -130,7 +138,8 @@ Toast.defaultProps = {
   onHide: () => {},
   children: undefined,
   isCloseable: false,
-  showDuration: ANIMATION_DURATION
+  showDuration: SHOW_DURATION,
+  onHidden: () => {}
 };
 
 export default Toast;
