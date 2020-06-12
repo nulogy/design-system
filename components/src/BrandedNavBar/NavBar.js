@@ -47,11 +47,12 @@ const BrandLogoContainer = ({ logo, brandingLinkHref, subtext }) => {
       {logo && logo}
       {!logo && <Branding logoColor="blue" subtext={subtext} />}
     </Link>
+        {logo && <img src={logo} alt="" />}
   );
 };
 
 BrandLogoContainer.propTypes = {
-  logo: PropTypes.node,
+  logo: PropTypes.string,
   brandingLinkHref: PropTypes.string,
   subtext: PropTypes.string
 };

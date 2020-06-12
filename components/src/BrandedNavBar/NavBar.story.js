@@ -85,7 +85,7 @@ storiesOf("BrandedNavBar", module)
   .add("With a company logo", () => (
     <BrandedNavBar
       menuData={{ primaryMenu, secondaryMenu }}
-      logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
+      logo="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo"
     />
   ))
   .add("With app name", () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />)
@@ -93,14 +93,14 @@ storiesOf("BrandedNavBar", module)
     <BrandedNavBar
       menuData={{ primaryMenu, secondaryMenu }}
       subtext="Quality control"
-      logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
+      logo="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo"
     />
   ))
   .add("In a training environment", () => (
     <BrandedNavBar
       menuData={{ primaryMenu, secondaryMenu }}
       subtext="Quality control"
-      logo={<img src="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo" alt="company logo" />}
+      logo="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo"
       showTraining
     />
   ));
