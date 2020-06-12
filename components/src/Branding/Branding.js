@@ -81,6 +81,7 @@ const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor,
         <BrandingText
           logoColor={logoColor}
           style={{ marginLeft: alignment !== "left" && "4px", marginRight: alignment !== "right" && "4px" }}
+          size={size}
         >
           {subtext}
         </BrandingText>

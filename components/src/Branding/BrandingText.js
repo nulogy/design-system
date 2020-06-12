@@ -9,13 +9,13 @@ const logoColors = {
 
 const getLogoColor = logoColor => logoColors[logoColor] || logoColors.blue;
 
-const BrandingText = styled.span(({ logoColor }) => ({
+const BrandingText = styled.span(({ logoColor, size }) => ({
   color: getLogoColor(logoColor),
   textDecoration: "none",
   fontWeight: theme.fontWeights.medium,
   letterSpacing: "0.0333em",
   textTransform: "uppercase",
-  fontSize: "11px",
+  fontSize: size === "small" ? "10px" : "11px",
   lineHeight: "12px",
   whiteSpace: "nowrap",
   active: {
