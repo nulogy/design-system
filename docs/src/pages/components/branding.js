@@ -26,7 +26,7 @@ const propsRows = [
     name: "size",
     type: "String",
     defaultValue: "medium",
-    description: "Accepts medium or large to size the logo."
+    description: "Accepts small, medium or large."
   },
   {
     name: "logoColor",

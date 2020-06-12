@@ -6,6 +6,9 @@ storiesOf("Branding", module).add("Branding", () => (
   <>
     <Flex>
       <Box width={1 / 2} p="x2">
+        <Branding size="small" />
+        <br />
+        <br />
         <Branding />
         <br />
         <br />
