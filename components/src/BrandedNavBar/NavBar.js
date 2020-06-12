@@ -33,7 +33,7 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   background: backgroundColor,
   padding: `${theme.space.x1} ${theme.space.x3}`,
   boxShadow: theme.shadows.large,
-  alignItems: "end",
+  alignItems: "center",
   height: "56px"
 }));
 
@@ -48,7 +48,7 @@ const TrainingBar = () => (
 const BrandLogoContainer = ({ logo, brandingLinkHref, subtext }) => {
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
-      <Link aria-label="Home" underline={false} href={brandingLinkHref}>
+      <Link aria-label="Home" underline={false} href={brandingLinkHref} style={{ display: "block" }}>
         {logo && <img src={logo} alt="" />}
         {!logo && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
       </Link>
