@@ -55,8 +55,8 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground, theme }) => ({
   transition: ".2s",
   "&:hover, &:focus": {
     outline: "none",
-    color: theme.colors.hoverColor || hoverColor,
-    backgroundColor: theme.colors.hoverBackground || hoverBackground,
+    color: theme.colors[hoverColor] || hoverColor,
+    backgroundColor: theme.colors[hoverBackground] || hoverBackground,
     cursor: "pointer"
   },
   "&:disabled": {
