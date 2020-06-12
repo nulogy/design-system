@@ -17,6 +17,9 @@ import isValidMenuItem from "./isValidMenuItem";
 import NDSTheme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 
+const MAX_LOGO_WIDTH = "184px";
+const MAX_LOGO_HEIGHT = "36px";
+
 const themeColorObject = {
   color: "darkBlue",
   hoverColor: "blackBlue",
@@ -30,7 +33,8 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   background: backgroundColor,
   padding: `${theme.space.x1} ${theme.space.x3}`,
   boxShadow: theme.shadows.large,
-  alignItems: "center"
+  alignItems: "end",
+  height: "56px"
 }));
 
 const TrainingBar = () => (
@@ -43,11 +47,12 @@ const TrainingBar = () => (
 
 const BrandLogoContainer = ({ logo, brandingLinkHref, subtext }) => {
   return (
-    <Link aria-label="Nulogy logo" underline={false} href={brandingLinkHref}>
-      {logo && logo}
-      {!logo && <Branding logoColor="blue" subtext={subtext} />}
-    </Link>
+    <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
+      <Link aria-label="Home" underline={false} href={brandingLinkHref}>
         {logo && <img src={logo} alt="" />}
+        {!logo && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
+      </Link>
+    </Box>
   );
 };
 
