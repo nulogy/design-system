@@ -79,11 +79,6 @@ const MediumNavBar = ({ menuData, subtext, showTraining, logo, brandingLinkHref,
               />
             )}
             <Flex justifySelf="flex-end" alignItems="center">
-              {menuData.search && (
-                <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
-                  <NavBarSearch {...menuData.search} />
-                </Box>
-              )}
               {menuData.secondaryMenu && (
                 <DesktopMenu
                   themeColorObject={themeColorObject}
