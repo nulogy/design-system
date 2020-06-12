@@ -8,7 +8,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 ideIOb"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 lnHGsX"
     >
       <thead>
         <tr
@@ -400,7 +400,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </button>
     </nav>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 ideIOb"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 lnHGsX"
     >
       <thead>
         <tr
@@ -942,7 +942,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tfoot>
     </table>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 ideIOb"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 lnHGsX"
     >
       <thead>
         <tr

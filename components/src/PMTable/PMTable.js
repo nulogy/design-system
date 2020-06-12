@@ -10,8 +10,7 @@ const PMCss = {
   fontSize: "12px",
   ".nds-table__no-rows-content": {
     padding: 0,
-    fontSize: "12px",
-    color: "#aaa"
+    fontSize: "12px"
   },
   "thead tr": {
     borderBottom: "none"
