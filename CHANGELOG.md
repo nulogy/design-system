@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.14.0](https://github.com/nulogy/design-system/compare/v2.13.3...v2.14.0) (2020-06-12)
+
+
+### Features
+
+* make PMTable noRowsContent accessible ([#678](https://github.com/nulogy/design-system/issues/678)) ([6e30c35](https://github.com/nulogy/design-system/commit/6e30c3536a4fb7922d96569c6cbabf1d579a69ce))
+
+
+
+
+
 ## [2.13.3](https://github.com/nulogy/design-system/compare/v2.13.2...v2.13.3) (2020-06-09)
 
 
