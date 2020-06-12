@@ -6,6 +6,7 @@ import theme from "../src/theme";
 import { withA11y } from "@storybook/addon-a11y";
 import { select } from "@storybook/addon-knobs";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
+import { withPerformance } from "storybook-addon-performance";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce((obj, i) => {
   obj[`${i.label} "${i.value}"`] = i.value;
@@ -51,6 +52,7 @@ const newViewports = {
 };
 
 addDecorator(withA11y);
+addDecorator(withPerformance);
 
 addParameters({
   viewport: { viewports: newViewports },
