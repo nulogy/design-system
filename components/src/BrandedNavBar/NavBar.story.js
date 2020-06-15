@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { BrandedNavBar as NDSBrandedNavBar } from "../index";
 
+const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
+
 const ResetStorybookView = styled.div({
   position: "absolute",
   top: 0,
@@ -82,25 +84,11 @@ const secondaryMenu = [
 
 storiesOf("BrandedNavBar", module)
   .add("BrandedNavBar", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />)
-  .add("With a company logo", () => (
-    <BrandedNavBar
-      menuData={{ primaryMenu, secondaryMenu }}
-      logo="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo"
-    />
-  ))
+  .add("With a company logo", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logo={sampleLogo} />)
   .add("With app name", () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />)
   .add("With a company logo and app name", () => (
-    <BrandedNavBar
-      menuData={{ primaryMenu, secondaryMenu }}
-      subtext="Quality control"
-      logo="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo"
-    />
+    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logo={sampleLogo} />
   ))
   .add("In a training environment", () => (
-    <BrandedNavBar
-      menuData={{ primaryMenu, secondaryMenu }}
-      subtext="Quality control"
-      logo="https://via.placeholder.com/150x40/00438f/FFFFFF/?text=Company Logo"
-      showTraining
-    />
+    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logo={sampleLogo} showTraining />
   ));
