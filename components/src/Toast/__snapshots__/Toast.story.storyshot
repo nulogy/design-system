@@ -147,8 +147,9 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 iYMUBq"
+            class="Link-sc-1lpx3d0-0 eyTmUh"
             color="darkGrey"
+            font-size="medium"
           >
             <svg
               aria-hidden="true"
@@ -203,8 +204,9 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 iYMUBq"
+            class="Link-sc-1lpx3d0-0 eyTmUh"
             color="darkGrey"
+            font-size="medium"
           >
             <svg
               aria-hidden="true"
@@ -259,8 +261,9 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 iYMUBq"
+            class="Link-sc-1lpx3d0-0 eyTmUh"
             color="darkGrey"
+            font-size="medium"
           >
             <svg
               aria-hidden="true"
@@ -315,8 +318,9 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 iYMUBq"
+            class="Link-sc-1lpx3d0-0 eyTmUh"
             color="darkGrey"
+            font-size="medium"
           >
             <svg
               aria-hidden="true"
@@ -549,8 +553,9 @@ exports[`Storyshots Toast with close button 1`] = `
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 iYMUBq"
+            class="Link-sc-1lpx3d0-0 eyTmUh"
             color="darkGrey"
+            font-size="medium"
           >
             <svg
               aria-hidden="true"
