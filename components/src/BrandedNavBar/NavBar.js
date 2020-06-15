@@ -49,7 +49,7 @@ const BrandLogoContainer = ({ logo, brandingLinkHref, subtext }) => {
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
       <Link aria-label="Home" underline={false} href={brandingLinkHref} style={{ display: "block" }}>
-        {logo && <img src={logo} alt="" />}
+        {logo && <img src={logo} style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }} alt="" />}
         {!logo && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
       </Link>
     </Box>
