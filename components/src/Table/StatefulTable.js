@@ -169,7 +169,10 @@ class StatefulTable extends Component {
 
   getControlProps = () => {
     const { selectedRows, isHeaderSelected, currentPage, expandedRows } = this.state;
-    const { hasSelectableRows, hasExpandableRows } = this.props;
+    const { hasSelectableRows, hasExpandableRows, rowsPerPage } = this.props;
+    const pagedRowsConfig = {
+      rows: this.rowsByPageSelector(currentPage)
+    };
     const selectionConfig = {
       onSelectRow: this.onSelectRow,
       onSelectHeader: this.onSelectHeader,
@@ -182,7 +185,7 @@ class StatefulTable extends Component {
     };
     const props = {
       ...this.props,
-      rows: this.rowsByPageSelector(currentPage),
+      ...(rowsPerPage && pagedRowsConfig),
       ...(hasSelectableRows && selectionConfig),
       ...(hasExpandableRows && expandableConfig)
     };
