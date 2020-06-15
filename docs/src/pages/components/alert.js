@@ -26,12 +26,6 @@ import {
 
 const propsRows = [
   {
-    name: "isCloseable",
-    type: "boolean",
-    defaultValue: "false",
-    description: "Provides a close icon in the top right corner."
-  },
-  {
     name: "title",
     type: "string",
     defaultValue: "",
@@ -51,10 +45,23 @@ const propsRows = [
     description: "className passed to the alert component."
   },
   {
+    name: "isCloseable",
+    type: "boolean",
+    defaultValue: "false",
+    description: "Provides a close icon in the top right corner."
+  },
+  {
     name: "closeAriaLabel",
     type: "String",
     defaultValue: "close",
     description: "aria label for close button"
+  },
+  {
+    name: "controlled",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "If true, will allow the Alert's opened and closed state to be controlled through props rather than within the component's internal state"
   }
 ];
 
