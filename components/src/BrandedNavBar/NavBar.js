@@ -290,7 +290,7 @@ BaseNavBar.propTypes = {
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   showTraining: PropTypes.bool,
-  logoSrc: PropTypes.node
+  logoSrc: PropTypes.string
 };
 
 BaseNavBar.defaultProps = {
