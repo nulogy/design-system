@@ -84,11 +84,16 @@ const secondaryMenu = [
 
 storiesOf("BrandedNavBar", module)
   .add("BrandedNavBar", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />)
-  .add("With a company logo", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logo={sampleLogo} />)
+  .add("With a company logo", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />)
   .add("With app name", () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />)
   .add("With a company logo and app name", () => (
-    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logo={sampleLogo} />
+    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
   ))
   .add("In a training environment", () => (
-    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logo={sampleLogo} showTraining />
+    <BrandedNavBar
+      menuData={{ primaryMenu, secondaryMenu }}
+      subtext="Quality control"
+      logoSrc={sampleLogo}
+      showTraining
+    />
   ));

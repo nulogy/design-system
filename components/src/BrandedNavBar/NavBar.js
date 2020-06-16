@@ -45,37 +45,37 @@ const TrainingBar = () => (
   </Box>
 );
 
-const BrandLogoContainer = ({ logo, brandingLinkHref, subtext }) => {
+const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
       <Link aria-label="Home" underline={false} href={brandingLinkHref} style={{ display: "block" }}>
-        {logo && <img src={logo} style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }} alt="" />}
-        {!logo && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
+        {logoSrc && <img src={logoSrc} style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }} alt="" />}
+        {!logoSrc && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
       </Link>
     </Box>
   );
 };
 
 BrandLogoContainer.propTypes = {
-  logo: PropTypes.string,
+  logoSrc: PropTypes.string,
   brandingLinkHref: PropTypes.string,
   subtext: PropTypes.string
 };
 
 BrandLogoContainer.defaultProps = {
-  logo: undefined,
+  logoSrc: undefined,
   brandingLinkHref: undefined,
   subtext: undefined
 };
 
-const MediumNavBar = ({ menuData, subtext, showTraining, logo, brandingLinkHref, ...props }) => {
+const MediumNavBar = ({ menuData, subtext, showTraining, logoSrc, brandingLinkHref, ...props }) => {
   const { t } = useTranslation();
   return (
     <>
       {showTraining && <TrainingBar />}
       <header {...props}>
         <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} subtext={subtext} />
+          <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
           <Flex justifyContent="space-between" alignContent="flex-end" flexGrow="1" ml="x3" alignItems="center">
             {menuData.primaryMenu && (
               <DesktopMenu
@@ -92,7 +92,7 @@ const MediumNavBar = ({ menuData, subtext, showTraining, logo, brandingLinkHref,
                   menuData={menuData.secondaryMenu}
                 />
               )}
-              {logo && (
+              {logoSrc && (
                 <Box pl="x3">
                   <NulogyLogoContainer subText={subtext} />
                 </Box>
@@ -203,14 +203,14 @@ class SmallNavBarNoState extends React.Component {
       subtext,
       brandingLinkHref,
       showTraining,
-      logo,
+      logoSrc,
       ...props
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
         {showTraining && <TrainingBar />}
         <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer logo={logo} brandingLinkHref={brandingLinkHref} subtext={subtext} />
+          <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
           <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
             {menuData.search && (
               <Flex maxWidth="18em" alignItems="center" px="0">
@@ -232,7 +232,7 @@ class SmallNavBarNoState extends React.Component {
               includeSubtext={this.isSmallScreen()}
               menuData={menuData}
               closeMenu={closeMenu}
-              logo={logo}
+              logoSrc={logoSrc}
             />
           </PreventBodyElementScrolling>
         )}
@@ -290,7 +290,7 @@ BaseNavBar.propTypes = {
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   showTraining: PropTypes.bool,
-  logo: PropTypes.node
+  logoSrc: PropTypes.node
 };
 
 BaseNavBar.defaultProps = {
@@ -298,7 +298,7 @@ BaseNavBar.defaultProps = {
   className: undefined,
   breakpointUpper: NDSTheme.breakpoints.medium,
   showTraining: false,
-  logo: undefined
+  logoSrc: undefined
 };
 
 const NavBar = styled(BaseNavBar)({});
