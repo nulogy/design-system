@@ -32,6 +32,10 @@ export const menuData = [
         href: "/components/box"
       },
       {
+        name: "Branded NavBar",
+        href: "/components/branded-navbar"
+      },
+      {
         name: "Branding",
         href: "/components/branding"
       },

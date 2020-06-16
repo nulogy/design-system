@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const sizes = {
+  small: {
+    height: "24px",
+    width: "100px"
+  },
   medium: {
     height: "32px",
     width: "133px"
@@ -19,7 +23,7 @@ const WordmarkLogo = ({ size, logoFill, letterFill, ...props }) => (
     {...getSize(size)}
     {...props}
     viewBox="0 0 133 32"
-    style={{ display: "block", margin: size === "large" ? null : "2px 0" }}
+    style={{ display: "block", margin: size === "medium" ? "2px 0" : null }}
   >
     <path
       fill={letterFill}

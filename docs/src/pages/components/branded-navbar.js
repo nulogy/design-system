@@ -1,49 +1,28 @@
-/* eslint-disable no-unused-vars, quotes, react/self-closing-comp */
-
 import React from "react";
 import { Helmet } from "react-helmet";
-import Highlight from "react-highlight";
 import {
-  Alert,
   Box,
-  NavBar,
   SectionTitle,
   SubsectionTitle,
   Title,
   Link,
   List,
   ListItem,
-  Text
+  BrandedNavBar
 } from "@nulogy/components";
+import Highlight from "react-highlight";
 import {
+  DocText as Text,
   Layout,
   Intro,
   IntroText,
   DocSection,
   PropsTable,
-  KeyTable
+  KeyTable,
+  InlineCode
 } from "../../components";
 
-const primaryMenu = [
-  {
-    name: "Dashboard",
-    items: [{ name: "Customers", href: "/" }, { name: "Invoices", href: "/" }]
-  }
-];
-
-const secondaryMenu = [
-  {
-    name: "Settings",
-    items: [
-      { name: "Permissions", href: "/" },
-      { name: "Manage account", href: "/" }
-    ]
-  }
-];
-
-const search = {
-  onSubmit: () => {}
-};
+import sampleLogo from "../../images/loremipsum.svg";
 
 const propsRows = [
   {
@@ -51,19 +30,19 @@ const propsRows = [
     type: "object",
     defaultValue: "null",
     description:
-      "Data used to build link heirarchy and search functionality. See menuData Prop section below."
+      "Data used to build link heirarchy functionality. See menuData Prop section below."
   },
   {
     name: "subtext",
     type: "string",
     defaultValue: "null",
-    description: "The subtext under the logo."
+    description: "The subtext under the Nulogy logo."
   },
   {
     name: "brandingLinkHref",
     type: "string",
     defaultValue: "/",
-    description: "The link href for the logo."
+    description: "A custom link for the logo."
   },
   {
     name: "breakpointUpper",
@@ -73,17 +52,10 @@ const propsRows = [
       "Provides the breakpoint where menu items will be collapsed into a dropdown menu."
   },
   {
-    name: "breakpointLower",
-    type: "number",
-    defaultValue: "768",
-    description:
-      "Provides the breakpoint where the logo is collapsed from wordmark to lettermark."
-  },
-  {
-    name: "themeColor",
+    name: "logo",
     type: "string",
-    defaultValue: "blue",
-    description: 'Color themeing of NavBar component, either "blue" or "white".'
+    defaultValue: "undefined",
+    description: "A path to a logo file"
   }
 ];
 
@@ -99,11 +71,6 @@ const menuDataKeyRows = [
     type: "array of menu item objects",
     description:
       "Data to the secondary navigation menu, aligned to the right of the NavBar."
-  },
-  {
-    name: "search",
-    type: "object",
-    description: "Object's onSubmit key provides onSubmit to search."
   }
 ];
 
@@ -139,27 +106,40 @@ const menuItemKeyRows = [
   }
 ];
 
+const primaryMenu = [
+  {
+    name: "Dashboard",
+    items: [{ name: "Customers", href: "/" }, { name: "Invoices", href: "/" }]
+  }
+];
+
+const secondaryMenu = [
+  {
+    name: "Settings",
+    items: [
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" }
+    ]
+  }
+];
+
 export default () => (
   <Layout>
     <Helmet>
-      <title>Navbar</title>
+      <title>Branded NavBar</title>
     </Helmet>
     <Intro>
-      <Title>Navbar</Title>
+      <Title>Branded NavBar</Title>
       <IntroText>
-        The NavBar holds the navigation for Nulogy applications and a global
-        search.
+        A light navigation bar that can optionally support a customer's logo.
       </IntroText>
-      <Alert type="danger" title="This component is being deprecated" mt="x2">
-        We're replacing this component with{" "}
-        <Link href="../branded-navbar">BrandedNavBar.</Link> Please use that
-        instead. If you're currently using this version of the NavBar and need
-        assistance upgrading, reach out to the Design Ops team.
-      </Alert>
     </Intro>
 
     <DocSection>
-      <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />
+      <BrandedNavBar
+        menuData={{ primaryMenu, secondaryMenu }}
+        breakpointUpper={0}
+      />
       <Highlight className="js">
         {`import {NavBar} from "@nulogy/components";
 
@@ -184,38 +164,33 @@ const secondaryMenu = [
   },
 ];
 
-const search = {
-  onSubmit: () => {},
-};
-
-<NavBar menuData={ { primaryMenu, secondaryMenu, search } } />
+<BrandedNavBar menuData={ { primaryMenu, secondaryMenu } } />
 `}
       </Highlight>
     </DocSection>
 
     <DocSection>
       <SectionTitle>Variations</SectionTitle>
-      <Box mb="x6">
-        <SubsectionTitle>Primary menu only</SubsectionTitle>
-        <NavBar menuData={{ primaryMenu }} />
-        <Highlight className="js">
-          {`<NavBar menuData={ { primaryMenu } } />`}
-        </Highlight>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>With search</SubsectionTitle>
-        <NavBar menuData={{ primaryMenu, search }} />
-        <Highlight className="js">
-          {`<NavBar menuData={ { primaryMenu, search } } />`}
-        </Highlight>
-      </Box>
-      <Box mb="x6">
-        <SubsectionTitle>With secondary menu</SubsectionTitle>
-        <NavBar menuData={{ primaryMenu, search, secondaryMenu }} />
-        <Highlight className="js">
-          {`<NavBar menuData={ { primaryMenu, secondaryMenu, search } } />`}
-        </Highlight>
-      </Box>
+      <SubsectionTitle>With a customer logo</SubsectionTitle>
+      <Text>
+        Providing a path to a logo via the <InlineCode>logo</InlineCode> prop
+        will replace the logo on the left with a customer's, and add a Nulogy
+        tag to the right side of the menu.
+      </Text>
+      <BrandedNavBar
+        menuData={{ primaryMenu, secondaryMenu }}
+        breakpointUpper={0}
+        subtext="Quality control"
+        logo={sampleLogo}
+      />
+
+      <Highlight className="js">
+        {`<BrandedNavBar
+  menuData={{ primaryMenu, secondaryMenu }}
+  subtext="Quality control"
+  logo="../path-to-/sample-logo.png"
+/>`}
+      </Highlight>
     </DocSection>
 
     <DocSection>
@@ -227,24 +202,21 @@ const search = {
       <Box mb="x6">
         <SectionTitle>menuData Prop</SectionTitle>
         <Text>
-          The menuData prop is used to provide links to the NavBar, assemble
-          their heirarchy, and provide the search field's onSubmit handler. The
-          direct children in the menuData object are shown below:
+          The menuData prop is used to provide links to the NavBar and assemble
+          their heirarchy. The direct children in the menuData object are shown
+          below:
         </Text>
         <Highlight className="js">
           {`const menuData = {
   primaryMenu: [],
   secondaryMenu: [],
-  search: {
-    onSubmit: () => (),
-  },
 }
 `}
         </Highlight>
         <KeyTable keyRows={menuDataKeyRows} />
         <Text my="x2">
-          Not providing data for primaryMenu, secondaryMenu or search will
-          result in those components not being included.
+          Not providing data for primaryMenu, secondaryMenu will result in those
+          components not being included.
         </Text>
       </Box>
       <Box mb="x6">
@@ -284,7 +256,7 @@ const search = {
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/navbar--navbar">
+          <Link href="https://storybook.nulogy.design/?path=/story/brandednavbar--brandednavbar">
             View in Storybook
           </Link>
         </ListItem>

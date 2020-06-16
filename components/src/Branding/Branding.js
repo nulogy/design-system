@@ -43,7 +43,7 @@ const BrandingWrap = styled.div(
     alignItems: getAlignment(alignment)
   }),
   ({ size }) => ({
-    padding: size === "large" ? null : "2px 0"
+    padding: size === "medium" ? "2px 0" : null
   })
 );
 
@@ -62,6 +62,12 @@ const Line = styled.div(({ logoColor }) => ({
   }
 }));
 
+const BrandingBoxPaddings = {
+  small: 0,
+  medium: "2px",
+  large: "6px"
+};
+
 const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor, className, ...props }) => (
   <BrandingWrap size={size} alignment={alignment} className={className} {...props}>
     {logoType === "lettermark" ? (
@@ -70,11 +76,12 @@ const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor,
       <WordmarkLogo size={size} letterFill={getLogoColor(logoColor).letter} logoFill={getLogoColor(logoColor).logo} />
     )}
     {subtext && (
-      <Flex justifyContent={getAlignment(alignment)} width="100%" py={size === "large" ? "6px" : "2px"}>
+      <Flex justifyContent={getAlignment(alignment)} width="100%" py={BrandingBoxPaddings[size]}>
         {alignment !== "left" && withLine && <Line logoColor={logoColor} />}
         <BrandingText
           logoColor={logoColor}
           style={{ marginLeft: alignment !== "left" && "4px", marginRight: alignment !== "right" && "4px" }}
+          size={size}
         >
           {subtext}
         </BrandingText>
@@ -87,7 +94,7 @@ const BaseBranding = ({ logoType, subtext, size, alignment, withLine, logoColor,
 BaseBranding.propTypes = {
   logoType: PropTypes.oneOf(["wordmark", "lettermark"]),
   logoColor: PropTypes.oneOf(["blue", "white"]),
-  size: PropTypes.oneOf(["medium", "large"]),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   alignment: PropTypes.oneOf(["left", "center", "right"]),
   withLine: PropTypes.bool,
   subtext: PropTypes.string,

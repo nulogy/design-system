@@ -49,3 +49,5 @@ export { TruncatedText } from "./TruncatedText";
 export { Toast } from "./Toast";
 export { PMTable } from "./PMTable";
 export { PMPagination } from "./PMPagination";
+
+export { BrandedNavBar } from "./BrandedNavBar";
