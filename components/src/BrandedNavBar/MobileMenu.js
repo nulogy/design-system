@@ -211,17 +211,15 @@ const Nav = styled.nav(
   }
 );
 
-const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeColorObject, logo, ...props }) => (
+const BaseMobileMenu = ({ menuData, closeMenu, subtext, themeColorObject, logoSrc, ...props }) => (
   <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
-    {subtext && includeSubtext && (
-      <BrandingWrap>
-        <BrandingText logoColor={themeColorObject && themeColorObject.logoColor}>{subtext}</BrandingText>
-      </BrandingWrap>
-    )}
+    <BrandingWrap>
+      <BrandingText logoColor={themeColorObject && themeColorObject.logoColor} />
+    </BrandingWrap>
     <Menu>
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
       {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
-      {logo && (
+      {logoSrc && (
         <Box mt="x1" pl="x3" display="inline-block">
           <NulogyLogoContainer subText={subtext} />
         </Box>
@@ -236,19 +234,17 @@ BaseMobileMenu.propTypes = {
     secondaryMenu: PropTypes.arrayOf(PropTypes.shape({}))
   }),
   subtext: PropTypes.string,
-  includeSubtext: PropTypes.bool,
   closeMenu: PropTypes.func,
   themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes),
-  logo: PropTypes.node
+  logoSrc: PropTypes.string
 };
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
   subtext: null,
-  includeSubtext: false,
   closeMenu: () => {},
   themeColorObject: undefined,
-  logo: undefined
+  logoSrc: undefined
 };
 
 const MobileMenu = styled(BaseMobileMenu)(display);

@@ -229,7 +229,6 @@ class SmallNavBarNoState extends React.Component {
             <MobileMenu
               themeColorObject={themeColorObject}
               subtext={subtext}
-              includeSubtext={this.isSmallScreen()}
               menuData={menuData}
               closeMenu={closeMenu}
               logoSrc={logoSrc}
