@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.16.0](https://github.com/nulogy/design-system/compare/v2.15.0...v2.16.0) (2020-06-16)
+
+
+### Features
+
+* add BrandedNavBar which supports including a customer logo  ([#680](https://github.com/nulogy/design-system/issues/680)) ([81f051f](https://github.com/nulogy/design-system/commit/81f051f1e874b8f430a2acf7d71d836027f31fe6))
+
+
+
+
+
 # [2.15.0](https://github.com/nulogy/design-system/compare/v2.14.0...v2.15.0) (2020-06-15)
 
 
