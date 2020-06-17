@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -99,39 +99,38 @@ const TimePicker = ({
   ...props
 }) => {
   const [input, setInput] = useState("");
+  const { locale } = useContext(LocaleContext);
   const { t } = useTranslation();
+
+  const filteredOptions = () => {
+    const inputHasMinutes = /[:][0-9]/.test(standardizeTime(input));
+    const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
+    const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
+    const optionsList = inputHasMinutes ? optionsByMinute : optionsAtInterval;
+    return optionsList.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)));
+  };
+
+  const overrideInternalFiltering = () => true;
+  const visibleOptions = filteredOptions() || [];
 
   return (
     <>
       <TimePickerStyles />
-      <LocaleContext.Consumer>
-        {({ locale }) => {
-          const inputHasMinutes = /[:][0-9]/.test(standardizeTime(input));
-          const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
-          const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
-          const filteredOptions = () => {
-            const optionsList = inputHasMinutes ? optionsByMinute : optionsAtInterval;
-            return optionsList.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)));
-          };
-          return (
-            <Select
-              options={filteredOptions() || []}
-              filterOption={() => true}
-              defaultValue={defaultValue}
-              components={{ DropdownIndicator, Option: StyledSelectOption }}
-              aria-label={ariaLabel || t("select a time")}
-              onInputChange={(value, ...args) => {
-                setInput(value);
-                if (onInputChange) {
-                  onInputChange(value, ...args);
-                }
-              }}
-              {...props}
-              className={`nds-time-picker ${className || ""}`}
-            />
-          );
+      <Select
+        options={visibleOptions}
+        filterOption={overrideInternalFiltering}
+        defaultValue={defaultValue}
+        components={{ DropdownIndicator, Option: StyledSelectOption }}
+        aria-label={ariaLabel || t("select a time")}
+        onInputChange={(value, ...args) => {
+          setInput(value);
+          if (onInputChange) {
+            onInputChange(value, ...args);
+          }
         }}
-      </LocaleContext.Consumer>
+        {...props}
+        className={`nds-time-picker ${className || ""}`}
+      />
     </>
   );
 };
