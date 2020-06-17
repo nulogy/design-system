@@ -8,7 +8,7 @@ exports[`Storyshots Card Card 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
+      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
     >
       I am a card.
     </div>
@@ -27,17 +27,17 @@ exports[`Storyshots Card Cardset 1`] = `
       class="Box-sc-1qu1edy-0 jlPsmj CardSet-sc-143b99f-0 cmMRfh"
     >
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
       >
         I am a 1st card in a cardset.
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
       >
         I am a 2nd card in a cardset.
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 gCFvbM"
+        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
       >
         I am a 3rd card in a cardset.
       </div>
@@ -54,7 +54,7 @@ exports[`Storyshots Card Custom card 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 ftWbZx"
+      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 bdKSSm"
       color="white"
     >
       I am a custom card.

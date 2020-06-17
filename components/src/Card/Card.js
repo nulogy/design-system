@@ -13,7 +13,8 @@ Card.defaultProps = {
   borderRadius: "medium",
   boxShadow: "small",
   bg: "whiteGrey",
-  p: "x2",
+  py: "x2",
+  px: "x2",
   position: "relative"
 };
 
