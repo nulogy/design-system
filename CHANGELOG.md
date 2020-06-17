@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.16.1](https://github.com/nulogy/design-system/compare/v2.16.0...v2.16.1) (2020-06-17)
+
+
+### Bug Fixes
+
+* allows overriding px and py props in Card ([#681](https://github.com/nulogy/design-system/issues/681)) ([d5b8869](https://github.com/nulogy/design-system/commit/d5b8869c83764d15e020f477a1e42b1f5ccec084))
+
+
+
+
+
 # [2.16.0](https://github.com/nulogy/design-system/compare/v2.15.0...v2.16.0) (2020-06-16)
 
 
