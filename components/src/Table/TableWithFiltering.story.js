@@ -28,7 +28,7 @@ const transformColumn = (column, onChange) => {
 };
 
 const ColumnHeaderWithFilter = ({ onChange, label }) => (
-  <Input labelText={`Filter by ${label}`} onChange={onChange} name={`Filter by ${label}`} />
+  <Input labelText={`Filter by ${label}`} onChange={onChange} name={label} />
 );
 
 const TableWithFilters = ({ rowsPerPage }) => {
