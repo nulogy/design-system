@@ -36,6 +36,9 @@ const PMCss = {
     height: "34px",
     color: "#444"
   },
+  "tbody td:first-child": {
+    paddingLeft: 0
+  },
   nav: {
     backgroundColor: "#660099"
   },
