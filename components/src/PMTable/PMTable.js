@@ -27,7 +27,7 @@ const PMCss = {
       paddingLeft: "8px"
     }
   },
-  "tbody tr:nth-child(odd)": {
+  "tbody tr:nth-child(odd):not([data-test-id='expanded-table-row'])": {
     backgroundColor: "#f0f0f0"
   },
 
