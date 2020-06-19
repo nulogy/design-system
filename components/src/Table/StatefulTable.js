@@ -5,7 +5,7 @@ import { Pagination } from "../Pagination";
 import { addExpandableControl } from "./addExpandableControl";
 import { addSelectableControl } from "./addSelectableControl";
 
-const getAllRowKeys = (rows, keyField) => rows.map(row => row[keyField]);
+const getAllRowKeys = (rows = [], keyField) => rows.map(row => row[keyField]);
 
 const paginateRows = (rows, rowsPerPage) =>
   rowsPerPage
@@ -17,12 +17,26 @@ class StatefulTable extends Component {
     super(props);
     const { selectedRows, expandedRows, rowsPerPage, rows } = this.props;
     this.state = {
-      selectedRows,
+      selectedRows: selectedRows || [],
       expandedRows: expandedRows || [],
       isHeaderSelected: false,
       currentPage: 1,
       paginatedRows: paginateRows(rows, rowsPerPage)
     };
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { rows, rowsPerPage } = nextProps;
+    if (rowsPerPage) {
+      const paginatedRows = paginateRows(rows, rowsPerPage);
+      const { currentPage } = prevState;
+      // when the rows prop changes paginate the new rows and reset the current page
+      return {
+        paginatedRows,
+        currentPage: paginatedRows.length < currentPage ? paginatedRows.length || 1 : currentPage
+      };
+    }
+    return null;
   }
 
   onRowExpansionChangeHandler = () => {
@@ -182,7 +196,7 @@ class StatefulTable extends Component {
     };
     const props = {
       ...this.props,
-      rows: this.rowsByPageSelector(currentPage),
+      rows: this.rowsByPageSelector(currentPage) || [],
       ...(hasSelectableRows && selectionConfig),
       ...(hasExpandableRows && expandableConfig)
     };
@@ -205,7 +219,7 @@ class StatefulTable extends Component {
           <Pagination
             pt="x2"
             currentPage={currentPage}
-            totalPages={paginatedRows.length}
+            totalPages={paginatedRows.length || 1}
             onSelectPage={this.goToPage}
             onNext={this.goToNextPage}
             onPrevious={this.goToPrevPage}
@@ -238,7 +252,7 @@ StatefulTable.defaultProps = {
   hasSelectableRows: false,
   selectedRows: [],
   isHeaderSelected: false,
-  onRowExpansionChange: null,
+  onRowExpansionChange: () => {},
   selectAllAriaLabel: undefined,
   deselectAllAriaLabel: undefined,
   /* PM support only */

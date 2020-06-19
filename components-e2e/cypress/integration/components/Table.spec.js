@@ -168,4 +168,44 @@ describe("Table", () => {
       cy.get("[data-testid='table-body']").should("contain", "Expands!");
     });
   });
+  describe("with filtering and pagination", () => {
+    const filterIinput = () => cy.get('input[name="Name"]');
+    beforeEach(() => {
+      cy.renderFromStorybook(
+        "table--with-filtering-and-pagination-skipstoryshot"
+      );
+    });
+    it("filters down to fewer pages", () => {
+      paginationButtons(3).should("exist");
+      filterIinput().type("a");
+      paginationButtons(2).should("exist");
+      paginationButtons(3).should("not.exist");
+    });
+    it("changes the selected page when results are filtered", () => {
+      paginationButtons(3).click();
+      filterIinput().type("a");
+      cy.get("button")
+        .contains(2)
+        .should("be.disabled");
+      paginationButtons(3).should("not.exist");
+    });
+    it("filters down to to 1 page result", () => {
+      paginationButtons(3).click();
+      filterIinput().type("alb");
+      cy.get("button")
+        .contains(1)
+        .should("be.disabled");
+      paginationButtons(2).should("not.exist");
+    });
+    it("clearing the filter restores the page results", () => {
+      paginationButtons(3).click();
+      filterIinput().type("alb");
+      filterIinput().type("{backspace}{backspace}");
+      cy.get("button")
+        .contains(1)
+        .should("be.disabled");
+      paginationButtons(2).should("exist");
+      paginationButtons(3).should("not.exist");
+    });
+  });
 });

@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
 import { Link } from "../Link";
 import { PMTable } from ".";
+import { Box, Text } from "..";
 
 const columns = [
   { label: "ID", dataKey: "id" },
@@ -17,6 +18,14 @@ const columns = [
   { label: "Notes", dataKey: "notes" }
 ];
 
+const expandedContent = () => (
+  <Box bg="lightBlue" py="x1" px="x2">
+    <Text fontWeight="bold" color="blackBlue">
+      Expands!
+    </Text>
+  </Box>
+);
+
 const rowData = [
   {
     id: "1234454",
@@ -26,7 +35,8 @@ const rowData = [
     shipped: "No",
     expectedQuantity: "2,025 eaches",
     actualQuantity: "1,800 eaches",
-    notes: "--"
+    notes: "--",
+    expandedContent
   },
   {
     id: "1234455",
@@ -36,7 +46,8 @@ const rowData = [
     shipped: "Yes",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "2,250 eaches",
-    notes: "--"
+    notes: "--",
+    expandedContent
   },
   {
     id: "1234461",
@@ -46,7 +57,8 @@ const rowData = [
     shipped: "No",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,425 eaches",
-    notes: "--"
+    notes: "--",
+    expandedContent
   },
   {
     id: "1234424",
@@ -56,7 +68,8 @@ const rowData = [
     shipped: "No",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "675 eaches",
-    notes: "--"
+    notes: "--",
+    expandedContent
   },
   {
     id: "1234453",
@@ -66,7 +79,8 @@ const rowData = [
     shipped: "No",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,575 eaches",
-    notes: "--"
+    notes: "--",
+    expandedContent
   },
   {
     id: "1232221",
@@ -76,7 +90,8 @@ const rowData = [
     shipped: "No",
     expectedQuantity: "1,725 eaches",
     actualQuantity: "--",
-    notes: "--"
+    notes: "--",
+    expandedContent
   },
   {
     id: "1444453",
@@ -86,7 +101,8 @@ const rowData = [
     shipped: "Yes",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "--",
-    notes: "--"
+    notes: "--",
+    expandedContent
   },
   {
     id: "1224478",
@@ -96,7 +112,8 @@ const rowData = [
     shipped: "No",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "--",
-    notes: "--"
+    notes: "--",
+    expandedContent
   }
 ];
 
@@ -134,5 +151,31 @@ storiesOf("PM/PMTable", module)
         <PMTable columns={columnsWithLinks} rows={rowData} footerRows={footerRowData} />
         <PMTable columns={columnsWithLinks} rows={[]} />
       </>
+    );
+  })
+  .add("with expandable rows", () => {
+    const columnsWithLinks = columns.map((column, i) => {
+      if (i === 0) {
+        return {
+          ...column,
+          cellRenderer: ({ cellData }) => <Link href="/">{cellData}</Link>
+        };
+      }
+      return column;
+    });
+    return (
+      <PMTable
+        columns={columnsWithLinks}
+        rows={rowData}
+        footerRows={footerRowData}
+        // hasSelectableRows
+        hasExpandableRows
+        // onRowSelectionChange={action("row selection changed")}
+        rowsPerPage={2}
+        paginationProps={{
+          nextLabel: "Next \u2192",
+          previousLabel: "\u2190 Previous"
+        }}
+      />
     );
   });

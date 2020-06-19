@@ -27,9 +27,11 @@ const transformColumn = (column, onChange) => {
   };
 };
 
-const ColumnHeaderWithFilter = ({ onChange, label }) => <Input labelText={`Filter by ${label}`} onChange={onChange} />;
+const ColumnHeaderWithFilter = ({ onChange, label }) => (
+  <Input labelText={`Filter by ${label}`} onChange={onChange} name={label} />
+);
 
-const TableWithFilters = () => {
+const TableWithFilters = ({ rowsPerPage }) => {
   const [rows, setRows] = useState(ROWS);
   const [filter, setFilter] = useState({});
 
@@ -56,7 +58,9 @@ const TableWithFilters = () => {
     }));
   };
   const columns = COLUMNS.map(column => transformColumn(column, onFilterInputChange));
-  return <Table columns={columns} rows={rows} keyField="name" />;
+  return <Table columns={columns} rows={rows} keyField="name" rowsPerPage={rowsPerPage} />;
 };
 
-storiesOf("Table", module).add("with filtering (SkipStoryshot)", () => <TableWithFilters />);
+storiesOf("Table", module)
+  .add("with filtering (SkipStoryshot)", () => <TableWithFilters />)
+  .add("with filtering and pagination (SkipStoryshot)", () => <TableWithFilters rowsPerPage={4} />);

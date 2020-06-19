@@ -8,7 +8,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 lnHGsX"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
     >
       <thead>
         <tr
@@ -400,7 +400,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </button>
     </nav>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 lnHGsX"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
     >
       <thead>
         <tr
@@ -942,7 +942,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tfoot>
     </table>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 lnHGsX"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
     >
       <thead>
         <tr
@@ -1025,6 +1025,393 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tbody>
       <tfoot />
     </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PM/PMTable with expandable rows 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+  >
+    <table
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            data-testid="table-head"
+            scope="col"
+            width="30px"
+          />
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            ID
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Ship
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Customer
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Ship To
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Shipped
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Actual Quantity
+          </th>
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            data-testid="table-head"
+            scope="col"
+          >
+            Notes
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-fc7twp-0 efirdb"
+                color="currentColor"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                icon="downArrow"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 gxbSxg"
+              color="blue"
+              font-size="medium"
+              href="/"
+            >
+              1234454
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-01
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            National Widgets
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            99 Reactor Blvd., Springfield, SI
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,025 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,800 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-fc7twp-0 efirdb"
+                color="currentColor"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                icon="downArrow"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 gxbSxg"
+              color="blue"
+              font-size="medium"
+              href="/"
+            >
+              1234455
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-02
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            National Widgets
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7 New St., New York, NY
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            Yes
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,250 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            colspan="2"
+            scope="row"
+          >
+            Total
+          </th>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            18,000 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            7,725 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+        </tr>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
+        >
+          <th
+            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            colspan="2"
+            scope="row"
+          >
+            Attainment
+          </th>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            41.5%
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          />
+        </tr>
+      </tfoot>
+    </table>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         ← Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next → 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
   </div>
 </div>
 `;
