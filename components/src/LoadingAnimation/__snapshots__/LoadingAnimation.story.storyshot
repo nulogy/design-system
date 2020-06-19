@@ -500,19 +500,19 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eRyacc"
       >
         <button
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 jSTqPR IconicButton-sc-1u3dojp-2 gZASNp"
+          aria-label="Retry"
+          class="ControlIcon__StyledButton-sc-1h83lvi-0 jupSnY"
           disabled=""
-          label="Retry"
+          type="button"
         >
           <svg
             aria-hidden="true"
-            class="Icon-fc7twp-0 cwKdbD"
+            class="Icon-fc7twp-0 efirdb"
             color="currentColor"
             fill="currentColor"
             focusable="false"
             height="32px"
             icon="refresh"
-            p="half"
             viewBox="0 0 24 24"
             width="32px"
           >
