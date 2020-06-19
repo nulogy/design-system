@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "../Link";
-import { ControlIcon } from "../Button";
 import { Table } from "../Table";
 import { PMPaginationCss } from "../PMPagination/PMPagination";
 
