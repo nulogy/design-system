@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { LoadingAnimation } from ".";
-import { Overlay, Box, Flex, Text, ControlIcon, Alert } from "../index";
+import { Overlay, Box, Flex, Text, Alert, ControlIcon } from "../index";
 
 storiesOf("LoadingAnimation", module)
   .add("Active", () => <LoadingAnimation>Example</LoadingAnimation>)
