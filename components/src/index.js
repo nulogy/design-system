@@ -5,7 +5,7 @@ export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
 export { Text, Title, SectionTitle, SubsectionTitle } from "./Type";
 
-export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "./Button";
+export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton, ControlIcon } from "./Button";
 export { ButtonGroup } from "./ButtonGroup";
 export { Link } from "./Link";
 export { InlineValidation } from "./Validation";

@@ -1,7 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { LoadingAnimation } from ".";
-import { Overlay, Box, Flex, Text, ControlIcon, Alert } from "../index";
+import { Overlay, Box, Flex, Text, Alert, IconicButton } from "../index";
+import { ControlIcon } from "../Button";
 
 storiesOf("LoadingAnimation", module)
   .add("Active", () => <LoadingAnimation>Example</LoadingAnimation>)
@@ -20,7 +21,7 @@ storiesOf("LoadingAnimation", module)
         </Text>
       </Flex>
       <Flex justifyContent="center" mb="x1">
-        <ControlIcon icon="refresh" disabled mr="x1" label="Retry" />
+        <IconicButton icon="refresh" disabled mr="x1" label="Retry" />
         <ControlIcon icon="close" label="Abort" />
       </Flex>
     </Overlay>
