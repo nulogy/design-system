@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "../Link";
+import { ControlIcon } from "../Button";
 import { Table } from "../Table";
 import { PMPaginationCss } from "../PMPagination/PMPagination";
 
@@ -27,16 +28,19 @@ const PMCss = {
       paddingLeft: "8px"
     }
   },
-  "tbody tr:not([data-test-id='expanded-table-row']):nth-child(odd)": {
+  ".table-row--odd": {
     backgroundColor: "#f0f0f0"
   },
 
+  ".table-row--odd + [data-testid='expanded-table-row']": {
+    backgroundColor: "#f0f0f0"
+  },
   "tbody td, tfoot td": {
     padding: 0,
     height: "34px",
     color: "#444"
   },
-  "tbody td:first-child": {
+  "tr[data-testid='expanded-table-row'] > td:first-child": {
     paddingLeft: 0
   },
   nav: {
@@ -52,9 +56,25 @@ const PMCss = {
     "&:hover": {
       textDecoration: "underline"
     }
+  },
+  "button[class*='ControlIcon']": {
+    transform: "scale(0.7)"
   }
 };
 
-const PMTable = props => <Table css={PMCss} rowHovers={false} paginationCss={PMPaginationCss} {...props} />;
+const markRowsEvenOdd = rows => {
+  return rows.map((row, index) => {
+    const evenOddClassName = index % 2 === 0 ? "table-row--even" : "table-row--odd";
+    return {
+      ...row,
+      rowClassName: evenOddClassName
+    };
+  });
+};
+
+// eslint-disable-next-line react/prop-types
+const PMTable = ({ rows, ...props }) => (
+  <Table css={PMCss} rowHovers={false} paginationCss={PMPaginationCss} rows={markRowsEvenOdd(rows)} {...props} />
+);
 
 export default PMTable;
