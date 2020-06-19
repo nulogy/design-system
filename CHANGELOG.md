@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.1](https://github.com/nulogy/design-system/compare/v2.17.0...v2.17.1) (2020-06-19)
+
+
+### Bug Fixes
+
+* PM table icons and zebra striping styling ([#686](https://github.com/nulogy/design-system/issues/686)) ([652c6ed](https://github.com/nulogy/design-system/commit/652c6eded2849b688d5317f596b451bce6c46579))
+
+
+
+
+
 # [2.17.0](https://github.com/nulogy/design-system/compare/v2.16.1...v2.17.0) (2020-06-19)
 
 
