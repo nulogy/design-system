@@ -19,7 +19,7 @@ const columns = [
 ];
 
 const expandedContent = () => (
-  <Box bg="lightBlue" py="x1" px="x2">
+  <Box py="x1" px="x2">
     <Text fontWeight="bold" color="blackBlue">
       Expands!
     </Text>
@@ -168,10 +168,8 @@ storiesOf("PM/PMTable", module)
         columns={columnsWithLinks}
         rows={rowData}
         footerRows={footerRowData}
-        // hasSelectableRows
         hasExpandableRows
-        // onRowSelectionChange={action("row selection changed")}
-        rowsPerPage={2}
+        rowsPerPage={3}
         paginationProps={{
           nextLabel: "Next \u2192",
           previousLabel: "\u2190 Previous"

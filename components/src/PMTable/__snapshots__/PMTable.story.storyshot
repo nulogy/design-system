@@ -8,7 +8,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
     >
       <thead>
         <tr
@@ -102,7 +102,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
           data-testid="table-row"
         >
           <td
@@ -175,7 +175,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
           data-testid="table-row"
         >
           <td
@@ -400,7 +400,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </button>
     </nav>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
     >
       <thead>
         <tr
@@ -468,7 +468,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
           data-testid="table-row"
         >
           <td>
@@ -518,7 +518,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
           data-testid="table-row"
         >
           <td>
@@ -568,7 +568,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
           data-testid="table-row"
         >
           <td>
@@ -618,7 +618,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
           data-testid="table-row"
         >
           <td>
@@ -668,7 +668,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
           data-testid="table-row"
         >
           <td>
@@ -718,7 +718,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
           data-testid="table-row"
         >
           <td>
@@ -768,7 +768,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
           data-testid="table-row"
         >
           <td>
@@ -818,7 +818,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
           data-testid="table-row"
         >
           <td>
@@ -942,7 +942,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tfoot>
     </table>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
     >
       <thead>
         <tr
@@ -1037,7 +1037,7 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hZntFA"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
     >
       <thead>
         <tr
@@ -1111,7 +1111,7 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
           data-testid="table-row"
         >
           <td
@@ -1186,7 +1186,7 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv"
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
           data-testid="table-row"
         >
           <td
@@ -1253,6 +1253,81 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             2,250 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            --
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-fc7twp-0 efirdb"
+                color="currentColor"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                icon="downArrow"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td>
+            <a
+              class="Link-sc-1lpx3d0-0 gxbSxg"
+              color="blue"
+              font-size="medium"
+              href="/"
+            >
+              1234461
+            </a>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2019-10-03
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            LTS Corp
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            11 Peter St., Toronto, ON
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            No
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          >
+            1,425 eaches
           </td>
           <td
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
@@ -1381,13 +1456,6 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
         class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
       >
         3
-      </button>
-      <button
-        aria-current="false"
-        aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
-      >
-        4
       </button>
       <button
         aria-label="Go to next results"

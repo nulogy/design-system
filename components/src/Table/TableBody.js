@@ -28,20 +28,21 @@ const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact) 
         keyField={keyField}
         rowHovers={rowHovers}
         compact={compact}
+        rowClassName={row.rowClassName}
       />
     ))
   ) : (
     <TableMessageContainer colSpan={columns.length}>{noRowsContent}</TableMessageContainer>
   );
 
-const TableBodyRow = ({ row, columns, rowHovers, compact }) => {
+const TableBodyRow = ({ row, columns, rowHovers, compact, rowClassName }) => {
   const renderAllCells = () =>
     columns.map(column => (
       <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} compact={compact} />
     ));
   return (
     <>
-      <StyledTr rowHovers={rowHovers} data-testid="table-row">
+      <StyledTr rowHovers={rowHovers} data-testid="table-row" className={rowClassName}>
         {row.heading ? (
           <TableCell row={row} colSpan={columns.length} cellData={row.heading} compact={compact} />
         ) : (
@@ -61,7 +62,12 @@ TableBodyRow.propTypes = {
   row: rowPropType.isRequired,
   columns: columnsPropType.isRequired,
   rowHovers: PropTypes.bool.isRequired,
-  compact: PropTypes.bool.isRequired
+  compact: PropTypes.bool.isRequired,
+  rowClassName: PropTypes.string
+};
+
+TableBodyRow.defaultProps = {
+  rowClassName: undefined
 };
 
 const TableMessageContainer = ({ colSpan, children }) => (
