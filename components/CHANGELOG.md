@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.17.2](https://github.com/nulogy/design-system/compare/v2.17.1...v2.17.2) (2020-06-22)
+
+
+### Bug Fixes
+
+* even and odd striping in PMTable ([#687](https://github.com/nulogy/design-system/issues/687)) ([b94161c](https://github.com/nulogy/design-system/commit/b94161c5ecc43368a2eb4ca1de70f194738b4f26))
+
+
+
+
+
 ## [2.17.1](https://github.com/nulogy/design-system/compare/v2.17.0...v2.17.1) (2020-06-19)
 
 
