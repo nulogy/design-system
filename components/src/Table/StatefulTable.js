@@ -27,16 +27,13 @@ class StatefulTable extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     const { rows, rowsPerPage } = nextProps;
-    if (rowsPerPage) {
-      const paginatedRows = paginateRows(rows, rowsPerPage);
-      const { currentPage } = prevState;
-      // when the rows prop changes paginate the new rows and reset the current page
-      return {
-        paginatedRows,
-        currentPage: paginatedRows.length < currentPage ? paginatedRows.length || 1 : currentPage
-      };
-    }
-    return null;
+    const paginatedRows = paginateRows(rows, rowsPerPage);
+    const { currentPage } = prevState;
+    // when the rows prop changes paginate the new rows and reset the current page
+    return {
+      paginatedRows,
+      currentPage: paginatedRows.length < currentPage ? paginatedRows.length || 1 : currentPage
+    };
   }
 
   onRowExpansionChangeHandler = () => {
