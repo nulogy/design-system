@@ -28,6 +28,14 @@ Add [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans:300,400,500,
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
 ```
 
+If your application supports Simplified Chinese, you'll also need to load [Noto Sans SC](https://fonts.google.com/specimen/Noto+Sans+SC).
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+```
+
+Note that loading fonts from Google API is just an example and not the most performant way to load fonts for your application. You'll most likely want to include the font's inside your existing asset pipeline.
+
 ### 2. Wrap your appliction in our theme provider
 
 Wrap your application in the NDSProvider component to access Nulogy's theme values and add typographic defaults.

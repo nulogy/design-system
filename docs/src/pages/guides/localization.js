@@ -68,6 +68,16 @@ export default () => (
         ]}
         rows={ALL_NDS_LOCALES}
       />
+      <Text mt="x2">
+        Note that if your application supports Simplified Chinese, you'll also
+        need to load the{" "}
+        <Link href="https://www.google.com/get/noto/">Noto Sans SC</Link> font.
+        For more information, see the{" "}
+        <Link href="https://github.com/nulogy/design-system/blob/master/components/README.md#2-add-fontsd">
+          README
+        </Link>
+        .
+      </Text>
     </DocSection>
   </Layout>
 );
