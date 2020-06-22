@@ -5,7 +5,7 @@ exports[`Storyshots Card Card 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
@@ -21,7 +21,7 @@ exports[`Storyshots Card Cardset 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj CardSet-sc-143b99f-0 hByntb"
@@ -51,7 +51,7 @@ exports[`Storyshots Card Custom card 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 bdKSSm"

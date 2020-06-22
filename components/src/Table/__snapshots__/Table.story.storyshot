@@ -5,7 +5,7 @@ exports[`Storyshots Table with everything 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub Table"
@@ -586,7 +586,7 @@ exports[`Storyshots Table with pagination 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub Table"

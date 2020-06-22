@@ -5,7 +5,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
@@ -48,7 +48,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
@@ -121,7 +121,7 @@ exports[`Storyshots Inline Validation with list items 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
@@ -181,7 +181,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"

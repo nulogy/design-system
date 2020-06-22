@@ -5,7 +5,7 @@ exports[`Storyshots Modal Modal 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -15,7 +15,7 @@ exports[`Storyshots Modal example controlled modal 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div>
       <button
@@ -33,7 +33,7 @@ exports[`Storyshots Modal with close button 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -43,7 +43,7 @@ exports[`Storyshots Modal with custom maxWidth 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -53,7 +53,7 @@ exports[`Storyshots Modal with no footerContent 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -63,7 +63,7 @@ exports[`Storyshots Modal with no title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -73,7 +73,7 @@ exports[`Storyshots Modal with scrolling content 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -83,7 +83,7 @@ exports[`Storyshots Modal with scrolling content without footer content 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -93,7 +93,7 @@ exports[`Storyshots Modal with select 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;
@@ -103,7 +103,7 @@ exports[`Storyshots Modal with select and scrolling content 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   />
 </div>
 `;

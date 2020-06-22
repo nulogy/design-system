@@ -5,7 +5,7 @@ exports[`Storyshots Alert Danger 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
@@ -42,7 +42,7 @@ exports[`Storyshots Alert Informative 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
@@ -63,7 +63,7 @@ exports[`Storyshots Alert Success 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 kjZZUq"
@@ -100,7 +100,7 @@ exports[`Storyshots Alert Warning 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iZHNxR Alert-u8lbe-0 kjZZUq"
@@ -121,7 +121,7 @@ exports[`Storyshots Alert With a close button 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
@@ -169,7 +169,7 @@ exports[`Storyshots Alert With a link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
@@ -199,7 +199,7 @@ exports[`Storyshots Alert With a title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"

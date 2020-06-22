@@ -5,7 +5,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -195,7 +195,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                            class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""
@@ -302,7 +302,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -446,7 +446,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -579,7 +579,7 @@ exports[`Storyshots NavBar With branding only 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -659,7 +659,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -803,7 +803,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                            class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""
@@ -925,7 +925,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -1080,7 +1080,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                            class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""
@@ -1126,7 +1126,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -1255,7 +1255,7 @@ exports[`Storyshots NavBar Without search 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -1496,7 +1496,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -1638,7 +1638,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -1817,7 +1817,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-hsfjc-0 jahzXr"
@@ -2007,7 +2007,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
                             aria-invalid="false"
                             aria-labelledby="global-search"
                             aria-required="true"
-                            class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                            class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                             id="navbar-search"
                             placeholder="Search Nulogy..."
                             required=""

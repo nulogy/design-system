@@ -5,7 +5,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
@@ -745,7 +745,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ktRBsI"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 iFCkfA"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
@@ -779,7 +779,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
@@ -1595,7 +1595,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ktRBsI"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 iFCkfA"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
@@ -1672,7 +1672,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
@@ -2412,7 +2412,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   <textarea
                     aria-invalid="false"
                     aria-required="false"
-                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 ktRBsI"
+                    class="Textarea__StyledTextarea-sc-1tyrhr0-0 iFCkfA"
                     placeholder="Leave a comment..."
                     rows="4"
                   />
@@ -2511,7 +2511,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                        class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                         id="project"
                         placeholder="Project 128703"
                       />
@@ -2561,7 +2561,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                        class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                         id="project-description"
                       />
                     </div>
@@ -2596,7 +2596,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         data-testid="select-control"
                       >
                         <div
-                          class=" css-1liu8yu-Control"
+                          class=" css-16f1mi0-Control"
                         >
                           <div
                             class=" css-7zc8my"
@@ -2693,7 +2693,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="true"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                        class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                         id="item-code"
                         value="WS2SB6"
                       />
@@ -2761,7 +2761,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                        class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                         id="eaches-expected"
                         placeholder="2 000"
                       />
@@ -2797,7 +2797,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 fdcdYd"
+                        class="InputField__StyledInput-sc-6cu4mg-0 fDEwvB"
                         disabled=""
                         id="eaches-remaining"
                         value="18 000"
@@ -2834,7 +2834,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                        class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                         id="scheduled-start"
                         placeholder="MMM-DD-YYYY"
                       />
@@ -2870,7 +2870,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                        class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                         id="scheduled-end"
                         placeholder="MMM-DD-YYYY"
                       />
@@ -3226,7 +3226,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="true"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                        class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                         id="items"
                         value="235432"
                       />
@@ -3294,7 +3294,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                       <input
                         aria-invalid="false"
                         aria-required="false"
-                        class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                        class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                         id="quantity"
                       />
                     </div>

@@ -5,7 +5,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 duXuoY"
@@ -52,7 +52,7 @@ exports[`Storyshots Text Set to inline 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <span
       class="Text-sc-1wu7vpu-0 ipzFTA"
@@ -77,7 +77,7 @@ exports[`Storyshots Text Text 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="Text-sc-1wu7vpu-0 RbfMK"
@@ -95,7 +95,7 @@ exports[`Storyshots Text With a color 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="Text-sc-1wu7vpu-0 dXhWql"
@@ -113,7 +113,7 @@ exports[`Storyshots Text With a custom margin 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
@@ -138,7 +138,7 @@ exports[`Storyshots Text With a size 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 eBHmui"

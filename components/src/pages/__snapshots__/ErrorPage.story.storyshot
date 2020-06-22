@@ -5,7 +5,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
@@ -123,7 +123,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
@@ -217,7 +217,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"

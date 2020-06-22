@@ -5,7 +5,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 izRVrz"
@@ -29,7 +29,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-describedby="random-id-37"
@@ -61,7 +61,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-describedby="random-id-29"
@@ -81,7 +81,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-describedby="random-id-28"
@@ -101,7 +101,7 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-describedby="random-id-31"
@@ -121,7 +121,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 izRVrz"
@@ -157,7 +157,7 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-describedby="random-id-30"
@@ -177,7 +177,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-describedby="random-id-32"
@@ -239,7 +239,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dxTGaz"
@@ -518,7 +518,7 @@ exports[`Storyshots Tooltip with wrapped text 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 izRVrz"

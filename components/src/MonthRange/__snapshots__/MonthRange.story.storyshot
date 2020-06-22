@@ -5,7 +5,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -48,7 +48,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="From (Mon YYYY)"
                   value=""
                 />
@@ -104,7 +104,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="To (Mon YYYY)"
                   value=""
                 />
@@ -138,7 +138,7 @@ exports[`Storyshots MonthRange default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -181,7 +181,7 @@ exports[`Storyshots MonthRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value=""
                 />
@@ -237,7 +237,7 @@ exports[`Storyshots MonthRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value=""
                 />
@@ -271,7 +271,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -314,7 +314,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Jul 2019"
                 />
@@ -370,7 +370,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />
@@ -404,7 +404,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -447,7 +447,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />
@@ -503,7 +503,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Jul 2019"
                 />
@@ -537,7 +537,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -580,7 +580,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                   aria-invalid="true"
                   aria-label="Select a start date"
                   aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                   placeholder="Mon YYYY"
                   required=""
                   value=""
@@ -669,7 +669,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />
@@ -703,7 +703,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -746,7 +746,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Jul 2019"
                 />
@@ -802,7 +802,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />

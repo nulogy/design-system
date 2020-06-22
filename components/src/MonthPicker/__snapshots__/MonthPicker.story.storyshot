@@ -5,7 +5,7 @@ exports[`Storyshots MonthPicker default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
@@ -43,7 +43,7 @@ exports[`Storyshots MonthPicker default 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Jan 2019"
                 />
@@ -77,7 +77,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
@@ -115,7 +115,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Mon YYYY"
                   value="Jul 2019"
                 />
@@ -149,7 +149,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
@@ -187,7 +187,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Month, year"
                   value=""
                 />
@@ -221,7 +221,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
@@ -259,7 +259,7 @@ exports[`Storyshots MonthPicker with error state 1`] = `
                   aria-invalid="true"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                   placeholder="yyyy MMM"
                   value=""
                 />

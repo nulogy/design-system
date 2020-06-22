@@ -5,7 +5,7 @@ exports[`Storyshots Radio Controlled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
@@ -70,7 +70,7 @@ exports[`Storyshots Radio Radio 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
@@ -106,7 +106,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
@@ -143,7 +143,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
@@ -215,7 +215,7 @@ exports[`Storyshots Radio Set to error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
@@ -277,7 +277,7 @@ exports[`Storyshots Radio Set to required 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"

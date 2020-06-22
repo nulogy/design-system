@@ -5,7 +5,7 @@ exports[`Storyshots Select Select 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -35,7 +35,7 @@ exports[`Storyshots Select Select 1`] = `
               data-testid="select-control"
             >
               <div
-                class="SelectTest__control css-1liu8yu-Control"
+                class="SelectTest__control css-16f1mi0-Control"
               >
                 <div
                   class="SelectTest__value-container css-7zc8my"
@@ -113,7 +113,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -143,7 +143,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-w42fll-Control"
+                class=" css-1uraztj-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -265,7 +265,7 @@ exports[`Storyshots Select set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -295,7 +295,7 @@ exports[`Storyshots Select set to disabled 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1aojeu-Control"
+                class=" css-1j9qfsz-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -374,7 +374,7 @@ exports[`Storyshots Select set to required 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form>
       <div
@@ -390,7 +390,7 @@ exports[`Storyshots Select set to required 1`] = `
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               placeholder="Please select inventory status"
             />
           </div>
@@ -431,7 +431,7 @@ exports[`Storyshots Select set to required 1`] = `
                 data-testid="select-control"
               >
                 <div
-                  class=" css-1liu8yu-Control"
+                  class=" css-16f1mi0-Control"
                 >
                   <div
                     class=" css-7zc8my"
@@ -516,7 +516,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -546,7 +546,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -721,7 +721,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                 data-testid="select-control"
               >
                 <div
-                  class=" css-1liu8yu-Control"
+                  class=" css-16f1mi0-Control"
                 >
                   <div
                     class=" css-7zc8my"
@@ -1042,7 +1042,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                 data-testid="select-control"
               >
                 <div
-                  class=" css-1liu8yu-Control"
+                  class=" css-16f1mi0-Control"
                 >
                   <div
                     class=" css-7zc8my"
@@ -1340,7 +1340,7 @@ exports[`Storyshots Select with a blank value 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -1370,7 +1370,7 @@ exports[`Storyshots Select with a blank value 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1448,7 +1448,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -1478,7 +1478,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1556,7 +1556,7 @@ exports[`Storyshots Select with an option selected 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -1586,7 +1586,7 @@ exports[`Storyshots Select with an option selected 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1684,7 +1684,7 @@ exports[`Storyshots Select with an option selected 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-w42fll-Control"
+                class=" css-1uraztj-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1886,7 +1886,7 @@ exports[`Storyshots Select with custom id 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -1923,7 +1923,7 @@ exports[`Storyshots Select with custom id 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -2001,7 +2001,7 @@ exports[`Storyshots Select with error list 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -2031,7 +2031,7 @@ exports[`Storyshots Select with error list 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1j4q2ea-Control"
+                class=" css-1tfkzqo-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -2163,7 +2163,7 @@ exports[`Storyshots Select with error list 1`] = `
             data-testid="select-control"
           >
             <div
-              class=" css-1odmq7e-Control"
+              class=" css-1opglkk-Control"
             >
               <div
                 class=" css-7zc8my"
@@ -2413,7 +2413,7 @@ exports[`Storyshots Select with error message 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -2443,7 +2443,7 @@ exports[`Storyshots Select with error message 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1j4q2ea-Control"
+                class=" css-1tfkzqo-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -2558,7 +2558,7 @@ exports[`Storyshots Select with error message 1`] = `
             data-testid="select-control"
           >
             <div
-              class=" css-1odmq7e-Control"
+              class=" css-1opglkk-Control"
             >
               <div
                 class=" css-7zc8my"
@@ -2791,7 +2791,7 @@ exports[`Storyshots Select with fixed positioning 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 jlPsmj"
@@ -2825,7 +2825,7 @@ exports[`Storyshots Select with fixed positioning 1`] = `
                 data-testid="select-control"
               >
                 <div
-                  class=" css-1liu8yu-Control"
+                  class=" css-16f1mi0-Control"
                 >
                   <div
                     class=" css-7zc8my"
@@ -2904,7 +2904,7 @@ exports[`Storyshots Select with helpText 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -2941,7 +2941,7 @@ exports[`Storyshots Select with helpText 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -3019,7 +3019,7 @@ exports[`Storyshots Select with multiselect 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -3049,7 +3049,7 @@ exports[`Storyshots Select with multiselect 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -3201,7 +3201,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -3231,7 +3231,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-w42fll-Control"
+                class=" css-1uraztj-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -3433,7 +3433,7 @@ exports[`Storyshots Select with state 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -3463,7 +3463,7 @@ exports[`Storyshots Select with state 1`] = `
               data-testid="select-control"
             >
               <div
-                class="SelectTest__control css-1liu8yu-Control"
+                class="SelectTest__control css-16f1mi0-Control"
               >
                 <div
                   class="SelectTest__value-container css-7zc8my"

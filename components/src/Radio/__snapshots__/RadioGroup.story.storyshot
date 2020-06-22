@@ -5,7 +5,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <fieldset
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
@@ -112,7 +112,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <fieldset
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
@@ -214,7 +214,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <fieldset
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
@@ -334,7 +334,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <fieldset
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
@@ -449,7 +449,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <fieldset
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
@@ -601,7 +601,7 @@ exports[`Storyshots RadioGroup with error message 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <fieldset
       class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"

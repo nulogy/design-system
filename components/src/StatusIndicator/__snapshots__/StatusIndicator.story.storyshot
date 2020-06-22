@@ -5,7 +5,7 @@ exports[`Storyshots StatusIndicator All 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="StatusIndicator-t1vtrp-0 RKBBg"
@@ -58,7 +58,7 @@ exports[`Storyshots StatusIndicator Danger 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="StatusIndicator-t1vtrp-0 cXXUWf"
@@ -76,7 +76,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 dgqwRo"
@@ -195,7 +195,7 @@ exports[`Storyshots StatusIndicator Informative 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="StatusIndicator-t1vtrp-0 fhSGRP"
@@ -213,7 +213,7 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
@@ -314,7 +314,7 @@ exports[`Storyshots StatusIndicator Neutral 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="StatusIndicator-t1vtrp-0 buWDcg"
@@ -332,7 +332,7 @@ exports[`Storyshots StatusIndicator Quiet 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="StatusIndicator-t1vtrp-0 kMMSHk"
@@ -350,7 +350,7 @@ exports[`Storyshots StatusIndicator Success 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="StatusIndicator-t1vtrp-0 gyZmjr"
@@ -368,7 +368,7 @@ exports[`Storyshots StatusIndicator Warning 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="StatusIndicator-t1vtrp-0 jRRKcw"

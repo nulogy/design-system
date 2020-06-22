@@ -5,7 +5,7 @@ exports[`Storyshots TimeRange default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -40,7 +40,7 @@ exports[`Storyshots TimeRange default 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -136,7 +136,7 @@ exports[`Storyshots TimeRange default 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -218,7 +218,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -253,7 +253,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -349,7 +349,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -431,7 +431,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -466,7 +466,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -562,7 +562,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -644,7 +644,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -679,7 +679,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -775,7 +775,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"

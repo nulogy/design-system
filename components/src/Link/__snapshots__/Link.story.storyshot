@@ -5,7 +5,7 @@ exports[`Storyshots Link As a <button> 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Link-sc-1lpx3d0-0 cLSnCY"
@@ -23,7 +23,7 @@ exports[`Storyshots Link Link  1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <a
       class="Link-sc-1lpx3d0-0 gxbSxg"
@@ -42,7 +42,7 @@ exports[`Storyshots Link With a different color 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <a
       class="Link-sc-1lpx3d0-0 cpcHzb"
@@ -61,7 +61,7 @@ exports[`Storyshots Link With a different size 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <a
       class="Link-sc-1lpx3d0-0 jFBEBU"
@@ -80,7 +80,7 @@ exports[`Storyshots Link Without underline 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <a
       class="Link-sc-1lpx3d0-0 clvBNI"
@@ -99,7 +99,7 @@ exports[`Storyshots Link with custom font size 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <a
       class="Link-sc-1lpx3d0-0 eELETS"

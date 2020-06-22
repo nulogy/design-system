@@ -5,7 +5,7 @@ exports[`Storyshots Buttons As a link 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <a
       class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
@@ -22,7 +22,7 @@ exports[`Storyshots Buttons Button 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
@@ -38,7 +38,7 @@ exports[`Storyshots Buttons DangerButton 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 hkfOQr DangerButton-sc-1220u5k-0 ehzMsl"
@@ -54,7 +54,7 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
@@ -70,7 +70,7 @@ exports[`Storyshots Buttons QuietButton 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 eAbPwX"
@@ -86,7 +86,7 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 gfuNnn PrimaryButton-qz78sb-0 hcOEwE"
@@ -103,7 +103,7 @@ exports[`Storyshots Buttons Set to full width 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
@@ -119,7 +119,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
@@ -172,7 +172,7 @@ exports[`Storyshots Buttons With a selected size 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       class="Button__WrapperButton-sc-1omxup2-0 hSnlTw"

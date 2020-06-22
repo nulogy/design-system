@@ -5,7 +5,7 @@ exports[`Storyshots Form Demo form 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 laLzBn"
@@ -122,7 +122,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="project"
                   placeholder="Project 128703"
                 />
@@ -172,7 +172,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="project-description"
                 />
               </div>
@@ -207,7 +207,7 @@ exports[`Storyshots Form Demo form 1`] = `
                   data-testid="select-control"
                 >
                   <div
-                    class=" css-1liu8yu-Control"
+                    class=" css-16f1mi0-Control"
                   >
                     <div
                       class=" css-7zc8my"
@@ -304,7 +304,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="true"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                   id="item-code"
                   value="WS2SB6"
                 />
@@ -372,7 +372,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="eaches-expected"
                   placeholder="2 000"
                 />
@@ -408,7 +408,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 fdcdYd"
+                  class="InputField__StyledInput-sc-6cu4mg-0 fDEwvB"
                   disabled=""
                   id="eaches-remaining"
                   value="18 000"
@@ -445,7 +445,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="scheduled-start"
                   placeholder="MMM-DD-YYYY"
                 />
@@ -481,7 +481,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="scheduled-end"
                   placeholder="MMM-DD-YYYY"
                 />
@@ -837,7 +837,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="true"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                   id="items"
                   value="235432"
                 />
@@ -905,7 +905,7 @@ exports[`Storyshots Form Demo form 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="quantity"
                 />
               </div>
@@ -971,7 +971,7 @@ exports[`Storyshots Form Form 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 laLzBn"
@@ -1011,7 +1011,7 @@ exports[`Storyshots Form Form 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                 id="name"
               />
             </div>
@@ -1060,7 +1060,7 @@ exports[`Storyshots Form Form 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                 id="birthdate"
                 placeholder="DD-MM-YYYY"
               />
@@ -1103,7 +1103,7 @@ exports[`Storyshots Form Form 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                 id="birthplace"
               />
             </div>
@@ -1120,7 +1120,7 @@ exports[`Storyshots Form With form sections 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 laLzBn"
@@ -1170,7 +1170,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="name"
                 />
               </div>
@@ -1219,7 +1219,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="birthdate"
                   placeholder="DD-MM-YYYY"
                 />
@@ -1262,7 +1262,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="birthplace"
                 />
               </div>
@@ -1308,7 +1308,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="gender"
                 />
               </div>
@@ -1343,7 +1343,7 @@ exports[`Storyshots Form With form sections 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="occupation"
                 />
               </div>
@@ -1361,7 +1361,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 laLzBn"
@@ -1404,7 +1404,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="name"
                 />
               </div>
@@ -1453,7 +1453,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="birthdate"
                   placeholder="DD-MM-YYYY"
                 />
@@ -1496,7 +1496,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="birthplace"
                 />
               </div>
@@ -1535,7 +1535,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="gender"
                 />
               </div>
@@ -1570,7 +1570,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   id="occupation"
                 />
               </div>
@@ -1588,7 +1588,7 @@ exports[`Storyshots Form Without title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 ilQSyT"
@@ -1621,7 +1621,7 @@ exports[`Storyshots Form Without title 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                 id="name"
               />
             </div>
@@ -1670,7 +1670,7 @@ exports[`Storyshots Form Without title 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                 id="birthdate"
                 placeholder="DD-MM-YYYY"
               />
@@ -1713,7 +1713,7 @@ exports[`Storyshots Form Without title 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                 id="birthplace"
               />
             </div>

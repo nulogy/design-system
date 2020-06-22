@@ -5,7 +5,7 @@ exports[`Storyshots DatePicker default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
@@ -42,7 +42,7 @@ exports[`Storyshots DatePicker default 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="01 Jan 2019"
                 />
@@ -76,7 +76,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
@@ -113,7 +113,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="MMMM d, yyyy"
                   value="January 1, 2019"
                 />
@@ -147,7 +147,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
@@ -184,7 +184,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="10 Jul 2019"
                 />
@@ -218,7 +218,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
@@ -255,7 +255,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="Month day, year"
                   value=""
                 />
@@ -289,7 +289,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
@@ -326,7 +326,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
                   aria-invalid="true"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                   placeholder="MMMM d, yyyy"
                   value=""
                 />
@@ -392,7 +392,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
@@ -429,7 +429,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
                   aria-invalid="false"
                   aria-label="select a date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jan 2019"
                 />
