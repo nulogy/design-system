@@ -63,7 +63,7 @@ const PMCss = {
 
 const markRowsEvenOdd = rows => {
   return rows.map((row, index) => {
-    const evenOddClassName = index % 2 === 0 ? "table-row--even" : "table-row--odd";
+    const evenOddClassName = (index + 1) % 2 === 0 ? "table-row--even" : "table-row--odd";
     return {
       ...row,
       rowClassName: evenOddClassName
