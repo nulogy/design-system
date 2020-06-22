@@ -55,7 +55,8 @@ export default {
   },
   fonts: {
     base: tokens.font_family_base,
-    mono: tokens.font_family_mono
+    mono: tokens.font_family_mono,
+    sc: tokens.font_family_sc
   },
   borders: [],
   shadows: {

@@ -103,14 +103,10 @@ const StyledReactModal = styled(ReactModal)(
       width: "100%",
       maxWidth: "100%"
     },
-    button: {
-      fontFamily: theme.fonts.base
-    },
     "*": {
       boxSizing: "border-box"
     },
     color: theme.colors.black,
-    fontFamily: theme.fonts.base,
     fontSize: theme.fontSizes.medium,
     lineHeight: theme.lineHeights.base,
     WebkitFontSmoothing: "antialiased",

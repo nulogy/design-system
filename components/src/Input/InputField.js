@@ -46,7 +46,6 @@ const StyledInput = styled.input(
     borderRadius: theme.radii.medium,
     padding: subPx(theme.space.x1),
     fontSize: theme.fontSizes.medium,
-    fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
     margin: theme.space.none,
     minHeight: theme.space.x5,

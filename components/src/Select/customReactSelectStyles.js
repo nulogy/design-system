@@ -32,7 +32,6 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       minHeight: theme.space.x5,
       paddingLeft: theme.space.x1,
       position: "relative",
-      fontFamily: theme.fonts.base,
       width: "100%",
       fontSize: theme.fontSizes.medium,
       lineHeight: theme.lineHeights.base,
