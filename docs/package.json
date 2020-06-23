@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/docs",
-  "version": "2.17.4",
+  "version": "3.0.0",
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "dependencies": {
