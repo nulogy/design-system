@@ -9,11 +9,11 @@ import icons from "@nulogy/icons";
 
 import { Icon } from "../Icon";
 import { Text } from "../Type";
-import theme from "../theme";
+import NDSTheme from "../theme";
 
-const HoverText = styled.div({
+const HoverText = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
-  fontSize: theme.fontSizes.small,
+  ontSize: theme.fontSizes.small,
   lineHeight: theme.lineHeights.smallTextCompressed,
   color: theme.colors.whiteGrey,
   backgroundColor: transparentize(0.15, theme.colors.blackBlue),
@@ -21,10 +21,10 @@ const HoverText = styled.div({
   marginTop: theme.space.half,
   padding: `${theme.space.half} ${theme.space.x1}`,
   pointerEvents: "none"
-});
+}));
 
 const WrapperButton = styled.button(
-  ({ disabled }) => ({
+  ({ disabled, theme }) => ({
     background: "transparent",
     border: "none",
     position: "relative",
@@ -82,32 +82,34 @@ const WrapperButton = styled.button(
   space
 );
 
-const BaseIconicButton = React.forwardRef(({ children, icon, labelHidden, className, ...props }, forwardedRef) => (
-  <WrapperButton ref={forwardedRef} aria-label={children} className={className} {...props}>
-    <Manager>
-      <Reference>{({ ref }) => <Icon ref={ref} size={theme.space.x4} icon={icon} p="half" />}</Reference>
-      <Popper
-        placement="bottom"
-        modifiers={{
-          preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
-        }}
-      >
-        {({ ref, style, placement }) =>
-          labelHidden ? (
-            <HoverText ref={ref} style={style} placement={placement}>
-              {children}
-            </HoverText>
-          ) : null
-        }
-      </Popper>
-    </Manager>
-    {children && !labelHidden && (
-      <Text mr="half" ml="half">
-        {children}
-      </Text>
-    )}
-  </WrapperButton>
-));
+const BaseIconicButton = React.forwardRef(({ children, icon, labelHidden, className, ...props }, forwardedRef) => {
+  return (
+    <WrapperButton ref={forwardedRef} aria-label={children} className={className} {...props}>
+      <Manager>
+        <Reference>{({ ref }) => <Icon ref={ref} size={NDSTheme.space.x4} icon={icon} p="half" />}</Reference>
+        <Popper
+          placement="bottom"
+          modifiers={{
+            preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
+          }}
+        >
+          {({ ref, style, placement }) =>
+            labelHidden ? (
+              <HoverText ref={ref} style={style} placement={placement}>
+                {children}
+              </HoverText>
+            ) : null
+          }
+        </Popper>
+      </Manager>
+      {children && !labelHidden && (
+        <Text mr="half" ml="half">
+          {children}
+        </Text>
+      )}
+    </WrapperButton>
+  );
+});
 
 const IconicButton = styled(BaseIconicButton)({});
 

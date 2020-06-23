@@ -2,15 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { Box } from "../Box";
-import theme from "../theme";
 import { Popper } from "../Popper";
 import { generateId } from "../utils";
 
-const tooltipStyles = {
+const tooltipStyles = theme => ({
   backgroundColor: theme.colors.white,
   borderColor: theme.colors.grey,
   textColor: theme.colors.black
-};
+});
 
 const getTooltipMargin = placement => {
   const direction = String(placement).split("-")[0];
@@ -36,19 +35,19 @@ const getTooltipMargin = placement => {
 };
 
 const TooltipContainer = styled(Box)(
-  {
+  ({ theme }) => ({
     color: tooltipStyles.textColor,
     display: "flex",
     flexDirection: "column",
     fontSize: theme.fontSizes.small,
-    backgroundColor: tooltipStyles.backgroundColor,
+    backgroundColor: tooltipStyles(theme).backgroundColor,
     borderRadius: theme.radii.medium,
-    border: `1px solid ${tooltipStyles.borderColor}`,
+    border: `1px solid ${tooltipStyles(theme).borderColor}`,
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
     padding: theme.space.x1,
     transition: "opacity 0.3s",
     zIndex: theme.zIndex.content
-  },
+  }),
   ({ dataPlacement, open, position }) => ({
     ...getTooltipMargin(dataPlacement),
     ...position,

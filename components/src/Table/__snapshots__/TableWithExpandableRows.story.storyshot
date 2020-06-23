@@ -12,7 +12,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
@@ -315,7 +315,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
+          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
@@ -497,7 +497,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
               <p
                 class="Text-sc-1wu7vpu-0 iHOIzo"
                 color="blackBlue"
-                font-size="16px"
+                font-size="medium"
                 font-weight="bold"
               >
                 Expands!
@@ -585,7 +585,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
               <p
                 class="Text-sc-1wu7vpu-0 iHOIzo"
                 color="blackBlue"
-                font-size="16px"
+                font-size="medium"
                 font-weight="bold"
               >
                 Expands!

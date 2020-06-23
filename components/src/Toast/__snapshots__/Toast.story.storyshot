@@ -16,7 +16,7 @@ exports[`Storyshots Toast Toast 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bxjnP Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <div
@@ -46,7 +46,7 @@ exports[`Storyshots Toast customize length of time toast is visible 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bxjnP Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <div
@@ -108,7 +108,7 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 hHlnON"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           Delete
         </p>
@@ -118,13 +118,13 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 ewGQci"
-          color="#cc1439"
+          color="red"
           fill="#cc1439"
           focusable="false"
           height="24px"
@@ -175,13 +175,13 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 ewGQci"
-          color="#cc1439"
+          color="red"
           fill="#cc1439"
           focusable="false"
           height="24px"
@@ -232,13 +232,13 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 ewGQci"
-          color="#cc1439"
+          color="red"
           fill="#cc1439"
           focusable="false"
           height="24px"
@@ -289,13 +289,13 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 ewGQci"
-          color="#cc1439"
+          color="red"
           fill="#cc1439"
           focusable="false"
           height="24px"
@@ -394,7 +394,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 hHlnON"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           Delete
         </p>
@@ -404,13 +404,13 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 dqoulF"
-          color="#008059"
+          color="green"
           fill="#008059"
           focusable="false"
           height="24px"
@@ -434,13 +434,13 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 dqoulF"
-          color="#008059"
+          color="green"
           fill="#008059"
           focusable="false"
           height="24px"
@@ -464,13 +464,13 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jQknty Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 dqoulF"
-          color="#008059"
+          color="green"
           fill="#008059"
           focusable="false"
           height="24px"
@@ -494,13 +494,13 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
           aria-hidden="true"
           class="Icon-fc7twp-0 ewGQci"
-          color="#cc1439"
+          color="red"
           fill="#cc1439"
           focusable="false"
           height="24px"
@@ -540,7 +540,7 @@ exports[`Storyshots Toast with close button 1`] = `
       class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bxjnP Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 fbHKHW"
+        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <div

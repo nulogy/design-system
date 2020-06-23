@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import theme from "../theme";
 import { Box } from "../Box";
 import { Alert } from "../Alert";
 
@@ -34,7 +33,7 @@ const FADE_OUT_STYLES = {
   transition: "opacity 1s linear"
 };
 
-const AnimatedAlert = styled(Alert)(({ visible }) => ({
+const AnimatedAlert = styled(Alert)(({ visible, theme }) => ({
   boxShadow: theme.shadows.medium,
   minWidth: "200px",
   maxWidth: "600px",

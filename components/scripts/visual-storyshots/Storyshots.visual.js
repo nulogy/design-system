@@ -5,6 +5,6 @@ import * as path from "path";
 initStoryshots({
   suite: "Storyshots",
   test: imageSnapshot({
-    storybookUrl: `file://"${path.resolve("./storybook-static")}`
+    storybookUrl: `file://${path.resolve("./storybook-static")}`
   })
 });

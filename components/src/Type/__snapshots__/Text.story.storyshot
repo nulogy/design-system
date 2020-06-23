@@ -14,7 +14,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
         class="Text-sc-1wu7vpu-0 hdrQgs"
         color="currentColor"
         disabled=""
-        font-size="16px"
+        font-size="medium"
       >
         Disabled text
       </p>
@@ -26,7 +26,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
         class="Text-sc-1wu7vpu-0 kUDEbP"
         color="white"
         disabled=""
-        font-size="16px"
+        font-size="medium"
       >
         Disabled text
       </p>
@@ -38,7 +38,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
         class="Text-sc-1wu7vpu-0 kUDEbP"
         color="white"
         disabled=""
-        font-size="16px"
+        font-size="medium"
       >
         Disabled text
       </p>
@@ -57,14 +57,14 @@ exports[`Storyshots Text Set to inline 1`] = `
     <span
       class="Text-sc-1wu7vpu-0 ipzFTA"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Inline text
     </span>
     <span
       class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Inline text
     </span>
@@ -82,7 +82,7 @@ exports[`Storyshots Text Text 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Default text
     </p>
@@ -100,7 +100,7 @@ exports[`Storyshots Text With a color 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 dXhWql"
       color="blue"
-      font-size="16px"
+      font-size="medium"
     >
       Blue text
     </p>
@@ -118,14 +118,14 @@ exports[`Storyshots Text With a custom margin 1`] = `
     <p
       class="Text-sc-1wu7vpu-0 kLhDpw"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Text 24px bottom margin.
     </p>
     <p
       class="Text-sc-1wu7vpu-0 RbfMK"
       color="currentColor"
-      font-size="16px"
+      font-size="medium"
     >
       Text with default (0px) bottom margin.
     </p>
@@ -146,7 +146,7 @@ exports[`Storyshots Text With a size 1`] = `
       <p
         class="Text-sc-1wu7vpu-0 RbfMK"
         color="currentColor"
-        font-size="16px"
+        font-size="medium"
       >
         Default (16px/24px)
       </p>

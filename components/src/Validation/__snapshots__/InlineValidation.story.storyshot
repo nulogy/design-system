@@ -9,7 +9,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
-      color="#cc1439"
+      color="red"
     >
       <svg
         aria-hidden="true"
@@ -28,12 +28,12 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           Something has gone wrong
         </p>
@@ -52,7 +52,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
-      color="#cc1439"
+      color="red"
     >
       <svg
         aria-hidden="true"
@@ -71,12 +71,12 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           Something has gone wrong.
         </p>
@@ -125,7 +125,7 @@ exports[`Storyshots Inline Validation with list items 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
-      color="#cc1439"
+      color="red"
     >
       <svg
         aria-hidden="true"
@@ -144,12 +144,12 @@ exports[`Storyshots Inline Validation with list items 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           Something has gone wrong
         </p>
@@ -185,7 +185,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
-      color="#cc1439"
+      color="red"
     >
       <svg
         aria-hidden="true"
@@ -204,7 +204,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
       >
         <ul
           class="List-sc-1cqkmnl-0 diqcEx"

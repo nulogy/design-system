@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 import { columnPropType, rowPropType } from "./Table.types";
 
-const StyledTableCell = styled.td(({ align, compact }) => {
+const StyledTableCell = styled.td(({ align, compact, theme }) => {
   const padding = compact ? theme.space.x1 : theme.space.x2;
   return {
     paddingTop: padding,

@@ -2,10 +2,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import React from "react";
 import smoothscroll from "smoothscroll-polyfill";
-import theme from "../theme";
 import TabScrollIndicator from "./TabScrollIndicator";
 
-const TabScrollIndicatorContainer = styled.div(({ width }) => ({
+const TabScrollIndicatorContainer = styled.div(({ width, theme }) => ({
   position: "absolute",
   width,
   height: theme.space.x5

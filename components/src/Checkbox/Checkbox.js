@@ -5,11 +5,10 @@ import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { Text } from "../Type";
-import theme from "../theme";
 import { ClickInputLabel } from "../utils";
 import { conditionallyRequiredProp } from "../utils/conditionallyRequiredProp";
 
-const checkboxStyle = {
+const checkboxStyle = theme => ({
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
@@ -38,16 +37,17 @@ const checkboxStyle = {
       backgroundColor: theme.colors.white
     }
   }
-};
+});
 
 const getCheckboxStyle = (props, checked) => {
+  const checkboxStyleMap = checkboxStyle(props.theme);
   if (props.disabled) {
-    return checkboxStyle[checked].disabled;
+    return checkboxStyleMap[checked].disabled;
   }
   if (props.error) {
-    return checkboxStyle[checked].error;
+    return checkboxStyleMap[checked].error;
   }
-  return checkboxStyle[checked].default;
+  return checkboxStyleMap[checked].default;
 };
 const checkedStyles = {
   borderRadius: "1px",
@@ -60,7 +60,7 @@ const indeterminateStyles = {
   transform: "rotate(90deg) translateX(1px)",
   borderRadius: 0
 };
-const VisualCheckbox = styled.div(({ indeterminate }) => ({
+const VisualCheckbox = styled.div(({ indeterminate, theme }) => ({
   minWidth: theme.space.x2,
   height: theme.space.x2,
   borderRadius: theme.radii.small,
@@ -86,7 +86,7 @@ const CheckboxInput = styled.input(props => ({
   height: "1px",
   width: "1px",
   [`&:focus + ${VisualCheckbox}`]: {
-    boxShadow: theme.shadows.focus
+    boxShadow: props.theme.shadows.focus
   },
   [`&:checked + ${VisualCheckbox}`]: {
     ...getCheckboxStyle(props, "checked"),
@@ -127,14 +127,12 @@ const BaseCheckbox = props => {
 };
 
 const Checkbox = styled(BaseCheckbox)(
-  {
-    padding: `${theme.space.half} 0`
-  },
-  {
+  ({ theme }) => ({
+    padding: `${theme.space.half} 0`,
     [`& ${Text}`]: {
       marginLeft: theme.space.x1
     }
-  },
+  }),
   space
 );
 

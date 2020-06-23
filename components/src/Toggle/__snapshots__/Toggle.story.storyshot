@@ -8,7 +8,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Controlled Toggle-label"
@@ -26,7 +26,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
           class="ClickInputLabel-j2axnv-0 kemUmZ"
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -43,7 +43,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             off
           </p>
@@ -62,13 +62,13 @@ exports[`Storyshots Toggle Toggle 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         class="ClickInputLabel-j2axnv-0 kemUmZ"
       >
         <div
-          class="ToggleButton__Switch-asgrb8-1 irhlNv"
+          class="ToggleButton__Switch-asgrb8-1 hOMJxD"
         >
           <input
             aria-invalid="false"
@@ -95,7 +95,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
@@ -113,7 +113,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
           class="ClickInputLabel-j2axnv-0 kemUmZ"
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -143,7 +143,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
@@ -162,7 +162,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           disabled=""
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -182,7 +182,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             class="Text-sc-1wu7vpu-0 jVsGHh"
             color="currentColor"
             disabled=""
-            font-size="16px"
+            font-size="medium"
           >
             off
           </p>
@@ -190,7 +190,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
@@ -209,7 +209,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
           disabled=""
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -231,7 +231,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
             class="Text-sc-1wu7vpu-0 jVsGHh"
             color="currentColor"
             disabled=""
-            font-size="16px"
+            font-size="medium"
           >
             on
           </p>
@@ -250,7 +250,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
@@ -271,9 +271,9 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
             (Required)
           </span>
           <p
-            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 cHITTn"
+            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             Turns setting on/off
           </p>
@@ -282,7 +282,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
           class="ClickInputLabel-j2axnv-0 kemUmZ"
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -301,7 +301,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             on
           </p>
@@ -320,7 +320,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
@@ -338,7 +338,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
           class="ClickInputLabel-j2axnv-0 kemUmZ"
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -356,7 +356,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             off
           </p>
@@ -375,7 +375,7 @@ exports[`Storyshots Toggle With long text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
@@ -393,7 +393,7 @@ exports[`Storyshots Toggle With long text 1`] = `
           class="ClickInputLabel-j2axnv-0 kemUmZ"
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -411,7 +411,7 @@ exports[`Storyshots Toggle With long text 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             this state has a very long text label to explain it's state
           </p>
@@ -430,7 +430,7 @@ exports[`Storyshots Toggle With text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 dyORCK"
+      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
@@ -448,7 +448,7 @@ exports[`Storyshots Toggle With text 1`] = `
           class="ClickInputLabel-j2axnv-0 kemUmZ"
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 irhlNv"
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
           >
             <input
               aria-invalid="false"
@@ -465,7 +465,7 @@ exports[`Storyshots Toggle With text 1`] = `
           <p
             class="Text-sc-1wu7vpu-0 cOGezP"
             color="currentColor"
-            font-size="16px"
+            font-size="medium"
           >
             off
           </p>

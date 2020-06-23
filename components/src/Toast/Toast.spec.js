@@ -1,6 +1,7 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 import { Toast } from ".";
+import { render } from "../NDSProvider/render.spec-utils";
 
 describe("Toast", () => {
   describe("callbacks", () => {

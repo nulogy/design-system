@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "@testing-library/react";
 import { Select } from ".";
 import { selectOption } from "./Select.spec-utils";
+import { render } from "../NDSProvider/render.spec-utils";
 
 describe("select", () => {
   it("returns the selected item on change", () => {

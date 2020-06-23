@@ -92,8 +92,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -101,7 +101,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Email
                   </span>
@@ -116,7 +116,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                     />
                   </div>
                 </div>
@@ -126,8 +126,8 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -135,7 +135,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Password
                   </span>
@@ -150,7 +150,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                       type="password"
                     />
                   </div>
@@ -173,7 +173,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 fRSYFu"
           color="darkGrey"
-          font-size="16px"
+          font-size="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -268,14 +268,14 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
             Additional Text
           </p>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 crYWEA Alert-u8lbe-0 kqDQhF"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
             role="alert"
             style="width:100%"
           >
             <svg
               aria-hidden="true"
               class="Icon-fc7twp-0 ewGQci"
-              color="#cc1439"
+              color="red"
               fill="#cc1439"
               focusable="false"
               height="24px"
@@ -302,8 +302,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -311,7 +311,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Email
                   </span>
@@ -326,7 +326,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                     />
                   </div>
                 </div>
@@ -336,8 +336,8 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -345,7 +345,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Password
                   </span>
@@ -360,7 +360,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                       type="password"
                     />
                   </div>
@@ -383,7 +383,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 fRSYFu"
           color="darkGrey"
-          font-size="16px"
+          font-size="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -471,14 +471,14 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 crYWEA Alert-u8lbe-0 kqDQhF"
+            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
             role="alert"
             style="width:100%"
           >
             <svg
               aria-hidden="true"
               class="Icon-fc7twp-0 ewGQci"
-              color="#cc1439"
+              color="red"
               fill="#cc1439"
               focusable="false"
               height="24px"
@@ -505,8 +505,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -514,7 +514,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Email
                   </span>
@@ -529,7 +529,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                     />
                   </div>
                 </div>
@@ -539,8 +539,8 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -548,7 +548,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Password
                   </span>
@@ -563,7 +563,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                       type="password"
                     />
                   </div>
@@ -586,7 +586,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 fRSYFu"
           color="darkGrey"
-          font-size="16px"
+          font-size="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -688,8 +688,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -697,7 +697,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Email
                   </span>
@@ -712,7 +712,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                     />
                   </div>
                 </div>
@@ -722,8 +722,8 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -731,7 +731,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Password
                   </span>
@@ -746,7 +746,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                       type="password"
                     />
                   </div>
@@ -781,7 +781,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 fRSYFu"
           color="darkGrey"
-          font-size="16px"
+          font-size="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -882,8 +882,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -891,7 +891,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Email
                   </span>
@@ -906,7 +906,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 gnjdyw"
+                      class="InputField__StyledInput-sc-6cu4mg-0 YAPpz"
                     />
                   </div>
                 </div>
@@ -916,8 +916,8 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-                color="#011e38"
+                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                color="black"
                 style="display:block"
               >
                 <div
@@ -925,7 +925,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   data-testid="field-label"
                 >
                   <span
-                    style="font-size:14px;font-weight:600;line-height:1.71428571"
+                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
                   >
                     Password
                   </span>
@@ -940,7 +940,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                     <input
                       aria-invalid="false"
                       aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                       type="password"
                     />
                   </div>
@@ -948,7 +948,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 iGKkfw"
+              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 gnHfup"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -956,7 +956,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                 <input
                   aria-invalid="false"
                   aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 iGKkfw"
+                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 gnHfup"
                   type="checkbox"
                 />
                 <div
@@ -966,7 +966,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                 <p
                   class="Text-sc-1wu7vpu-0 RbfMK"
                   color="currentColor"
-                  font-size="16px"
+                  font-size="medium"
                 >
                   Remember me
                 </p>
@@ -988,7 +988,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 fRSYFu"
           color="darkGrey"
-          font-size="16px"
+          font-size="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>

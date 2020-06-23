@@ -1,7 +1,6 @@
 import { transparentize } from "polished";
-import theme from "../theme";
 
-const getBorderColor = ({ errored, disabled, isOpen, isFocused }) => {
+const getBorderColor = ({ errored, disabled, isOpen, isFocused, theme }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
 
   if (errored) return red;
@@ -11,7 +10,7 @@ const getBorderColor = ({ errored, disabled, isOpen, isFocused }) => {
   return grey;
 };
 
-const getShadow = ({ errored, isOpen }) => {
+const getShadow = ({ errored, isOpen, theme }) => {
   if (!isOpen) return null;
 
   const { focus, error } = theme.shadows;
@@ -23,7 +22,7 @@ const getShadow = ({ errored, isOpen }) => {
   }
 };
 
-const customStyles = ({ error, maxHeight, windowed }) => {
+const customStyles = ({ theme, error, maxHeight, windowed }) => {
   return {
     option: () => ({
       height: 38
@@ -43,10 +42,11 @@ const customStyles = ({ error, maxHeight, windowed }) => {
         errored: error,
         disabled: state.isDisabled,
         isOpen: state.selectProps.menuIsOpen,
-        isFocused: state.isFocused
+        isFocused: state.isFocused,
+        theme
       }),
       boxSizing: "border-box",
-      boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen }),
+      boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen, theme }),
       borderRadius: theme.radii.medium,
       borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
       borderBottomRightRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
@@ -55,13 +55,18 @@ const customStyles = ({ error, maxHeight, windowed }) => {
           errored: error,
           disabled: state.isDisabled,
           isOpen: state.selectProps.menuIsOpen,
-          isFocused: true
+          isFocused: true,
+          theme
         })
       }
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
       color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
+    }),
+    indicatorsContainer: provided => ({
+      ...provided,
+      color: theme.colors.grey
     }),
     input: () => ({}),
     valueContainer: provided => ({
@@ -82,13 +87,14 @@ const customStyles = ({ error, maxHeight, windowed }) => {
         errored: error,
         isOpen: true,
         disabled: state.isDisabled,
-        isFocused: false
+        isFocused: false,
+        theme
       }),
       borderBottomStyle: "solid",
       borderLeftStyle: "solid",
       borderRightStyle: "solid",
       borderRadius: `0 0 4px 4px`,
-      boxShadow: getShadow({ errored: error, isOpen: true })
+      boxShadow: getShadow({ errored: error, isOpen: true, theme })
     }),
     menuList: provided => ({
       ...provided,
@@ -136,7 +142,8 @@ const customStyles = ({ error, maxHeight, windowed }) => {
     }),
     indicatorSeparator: (provided, state) => ({
       ...provided,
-      display: state.isMulti && state.hasValue ? "block" : "none"
+      display: state.isMulti && state.hasValue ? "block" : "none",
+      borderLeft: `1px solid ${theme.colors.grey}`
     }),
     placeholder: (provided, state) => ({
       color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"

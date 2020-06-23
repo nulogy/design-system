@@ -1,7 +1,11 @@
 {
   "parser": "babel-eslint",
   "plugins": ["react", "jsx-a11y", "import", "prettier"],
-  "extends": ["airbnb", "plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
+  "extends": [
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
+  ],
   "rules": {
     "arrow-parens": ["error", "as-needed"],
     "func-names": ["error"],
@@ -19,7 +23,10 @@
     "max-len": ["off"],
     "no-else-return": ["off"],
     "no-underscore-dangle": ["off"],
-    "no-unused-vars": ["error", {"args": "after-used", "argsIgnorePattern": "^_"}],
+    "no-unused-vars": [
+      "error",
+      { "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
     "no-use-before-define": ["error", { "functions": false }],
     "quote-props": ["off"],
     "react/button-has-type": ["off"],
@@ -36,13 +43,6 @@
     "es6": true,
     "jest": true,
     "node": true
-  },
-  "settings": {
-    "import/resolver": {
-      "webpack": {
-        "config": "../webpack.config.js"
-      }
-    }
   },
   "parserOptions": {
     "ecmaFeatures": {

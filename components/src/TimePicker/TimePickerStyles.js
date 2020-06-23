@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-import theme from "../theme";
-
-export const TimePickerStyles = createGlobalStyle({
+export const TimePickerStyles = createGlobalStyle(({ theme }) => ({
   ".nds-time-picker": {
     width: "130px",
     "[class*='indicatorContainer']": {
@@ -17,4 +15,4 @@ export const TimePickerStyles = createGlobalStyle({
       }
     }
   }
-});
+}));

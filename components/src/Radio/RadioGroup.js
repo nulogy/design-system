@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { ThemeContext } from "styled-components";
+
 import Radio from "./Radio";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
-import theme from "../theme";
 
-const labelTextStyles = {
+const labelTextStyles = theme => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.smallTextBase
-};
+});
 
 const getRadioButtons = props => {
   const radioButtons = React.Children.map(props.children, radio => {
@@ -35,10 +35,12 @@ const getRadioButtons = props => {
 
 const BaseRadioGroup = ({ className, id, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
   const otherProps = { ...props, errorMessage, errorList };
+  const themeContext = useContext(ThemeContext);
+
   return (
     <Fieldset className={className} id={id} hasHelpText={!!helpText}>
-      <legend style={{ marginBottom: theme.space.x1 }}>
-        <span style={labelTextStyles}>{labelText}</span>
+      <legend style={{ marginBottom: themeContext.space.x1 }}>
+        <span style={labelTextStyles(themeContext)}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </legend>
       {helpText && <HelpText>{helpText}</HelpText>}
