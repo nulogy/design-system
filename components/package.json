@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
@@ -100,7 +100,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
-    "@nulogy/icons": "^3.0.0",
+    "@nulogy/icons": "^3.0.2",
     "@nulogy/tokens": "^2.13.1",
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
