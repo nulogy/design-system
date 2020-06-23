@@ -30,7 +30,7 @@
     "webpack": ">=2"
   },
   "dependencies": {
-    "@nulogy/components": "^2.17.4"
+    "@nulogy/components": "^3.0.1"
   },
   "babelMacros": {
     "styledComponents": {

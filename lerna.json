@@ -1,5 +1,5 @@
 {
-  "version": "2.17.4",
+  "version": "3.0.1",
   "npmClient": "yarn",
   "useWorkspaces": true,
   "command": {
@@ -16,9 +16,7 @@
     },
     "publish": {
       "conventionalCommits": true,
-      "allowBranch": [
-        "master"
-      ]
+      "allowBranch": ["master"]
     }
   }
 }
