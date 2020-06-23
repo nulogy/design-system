@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
-import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import { Text, SubsectionTitle } from "../Type";
-import { Box } from "../Box";
+import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
+import NulogyLogo from "./NulogyLogo";
+
+const borderStyle = "1px solid #e4e7eb";
 
 const BrandingWrap = styled.div(({ theme }) => ({
   marginTop: `-${theme.space.x1}`,
@@ -219,12 +221,24 @@ const BaseMobileMenu = ({ menuData, closeMenu, subtext, themeColorObject, logoSr
     <Menu>
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
       {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
-      {logoSrc && (
-        <Box mt="x1" pl="x3" display="inline-block">
-          <NulogyLogoContainer subText={subtext} />
-        </Box>
-      )}
     </Menu>
+    {logoSrc && (
+      <Flex textAlign="center" borderTop={borderStyle} height="40px" alignItems="center" justifyContent="center">
+        <NulogyLogo />
+        {subtext && (
+          <Text
+            fontSize="8px"
+            lineHeight="0"
+            color="darkGrey"
+            fontWeight="medium"
+            textTransform="uppercase"
+            letterSpacing=".5px"
+          >
+            {subtext}
+          </Text>
+        )}
+      </Flex>
+    )}
   </Nav>
 );
 
