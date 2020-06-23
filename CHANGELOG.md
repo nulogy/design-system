@@ -22,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### BREAKING CHANGES
 
-- Components must be wrapped <NDSProvider> to avoid errors, when testing they must also be wrapped in the provider. import the `render` function when
+- Components must be wrapped <NDSProvider> to avoid errors, when testing they must also be wrapped in the provider. If you use render from react-testing-library you can replace it with `render` from @nulogy/components. 
 
 ## [2.17.3](https://github.com/nulogy/design-system/compare/v2.17.2...v2.17.3) (2020-06-22)
 
