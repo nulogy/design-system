@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import Highlight from "react-highlight";
 import {
+  Alert,
   Box,
   Title,
   SectionTitle,
@@ -87,6 +88,29 @@ const CustomComponent = styled.div({
 
 <CustomComponent>Custom component</CustomComponent>`}
       </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Custom themes</SectionTitle>
+      <Text>
+        As of version 3.0, themes can be overriden at the NDSProvider level.
+        This allows changing all definitions of a property at once.{" "}
+      </Text>
+      <Text>
+        For example, if you were working in PackManager and wanted the "medium"
+        font size used in all components to be 14px instead of 16px:{" "}
+      </Text>
+      <Highlight className="js">
+        {`import { NDSProvider } from "@nulogy/components"
+
+<NDSProvider theme={fontSizes: {medium: "14px"}}>// app</NDSProvider>`}
+      </Highlight>
+      <Alert>
+        This is a powerful feature, but should be used sparingly. Please let
+        Design Ops know when you've overriden the theme for any reason, in case
+        there are systemic problems we could be solving in the system directly
+        instead.
+      </Alert>
     </DocSection>
 
     <DocSection>
