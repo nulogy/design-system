@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [3.0.1](https://github.com/nulogy/design-system/compare/v2.17.3...v2.17.4) (2020-06-23)
+## [3.0.1](https://github.com/nulogy/design-system/compare/v2.17.3...v3.0.1) (2020-06-23)
 
 ### Features
 
