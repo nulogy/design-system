@@ -13,7 +13,7 @@ exports[`Storyshots Table.Headers Sorting Header 1`] = `
       <p
         class="Text-sc-1wu7vpu-0 ipzFTA"
         color="currentColor"
-        font-size="16px"
+        font-size="medium"
       >
         Header Label
       </p>

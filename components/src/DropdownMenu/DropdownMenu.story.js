@@ -1,13 +1,12 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, Button, Card, Text } from "../index";
+import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, Button } from "../index";
 
 const customColors = {
   color: "white",
   hoverColor: "white",
   bgHoverColor: "black"
 };
-const cards = Array.from({ length: 100 }, (v, k) => k + 1);
 
 storiesOf("DropdownMenu", module)
   .add("DropdownMenu", () => (
@@ -27,7 +26,7 @@ storiesOf("DropdownMenu", module)
     </DropdownMenu>
   ))
   .add("with custom colors", () => (
-    <DropdownMenu backgroundColor="blackBlue" openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+    <DropdownMenu defaultOpen backgroundColor="blackBlue" openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
       <DropdownLink href="/" {...customColors}>
         Dropdown Link
       </DropdownLink>
@@ -64,17 +63,4 @@ storiesOf("DropdownMenu", module)
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     </DropdownMenu>
-  ))
-  .add("Many dropdowns", () => (
-    <>
-      {cards.map(i => (
-        <Card key={i}>
-          <Text>Card {i}</Text>
-          <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-            <DropdownLink href="/">Dropdown Link</DropdownLink>
-            <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-          </DropdownMenu>
-        </Card>
-      ))}
-    </>
   ));

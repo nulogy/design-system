@@ -54,7 +54,12 @@ const columnsWithEverything = [
 ];
 
 const rowData = [
-  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
+  {
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r1"
+  },
   { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
   { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
   { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
@@ -65,8 +70,20 @@ const rowData = [
 ];
 
 const rowDataWithEverything = [
-  { heading: "ABC & XYZ Company", cellRenderer: sectionRow, id: "r1" },
-  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r2", expandedContent },
+  {
+    heading: "ABC & XYZ Company",
+    cellRenderer: sectionRow,
+    id: "r1"
+  },
+  {
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r2",
+    expandedContent,
+    selectAriaLabel: "select item 12",
+    deselectAriaLabel: "deselect item 12"
+  },
   { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r3" },
   { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r4" },
   {

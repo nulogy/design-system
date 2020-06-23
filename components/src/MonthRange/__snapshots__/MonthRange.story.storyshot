@@ -8,8 +8,8 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -17,7 +17,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Month range
         </span>
@@ -48,13 +48,13 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="From (Mon YYYY)"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -78,7 +78,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -104,13 +104,13 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="To (Mon YYYY)"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -141,8 +141,8 @@ exports[`Storyshots MonthRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -150,7 +150,7 @@ exports[`Storyshots MonthRange default 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Month range
         </span>
@@ -181,13 +181,13 @@ exports[`Storyshots MonthRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -211,7 +211,7 @@ exports[`Storyshots MonthRange default 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -237,13 +237,13 @@ exports[`Storyshots MonthRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -274,8 +274,8 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -283,7 +283,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Month range
         </span>
@@ -314,13 +314,13 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value="Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -344,7 +344,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -370,13 +370,13 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -407,8 +407,8 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -416,7 +416,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Month range
         </span>
@@ -447,13 +447,13 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -477,7 +477,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -503,13 +503,13 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value="Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -540,8 +540,8 @@ exports[`Storyshots MonthRange individual input error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -549,7 +549,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Month range
         </span>
@@ -580,14 +580,14 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                   aria-invalid="true"
                   aria-label="Select a start date"
                   aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
+                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
                   placeholder="Mon YYYY"
                   required=""
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -606,7 +606,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         </div>
         <div
           class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-          color="#cc1439"
+          color="red"
         >
           <svg
             aria-hidden="true"
@@ -625,12 +625,12 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
           >
             <p
               class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
-              font-size="16px"
+              font-size="medium"
             >
               Start date is required
             </p>
@@ -643,7 +643,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -669,13 +669,13 @@ exports[`Storyshots MonthRange individual input error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -706,8 +706,8 @@ exports[`Storyshots MonthRange with custom error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -715,7 +715,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Month range
         </span>
@@ -746,13 +746,13 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value="Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -776,7 +776,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -802,13 +802,13 @@ exports[`Storyshots MonthRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="Mon YYYY"
                   value="Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -829,7 +829,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
     </div>
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
-      color="#cc1439"
+      color="red"
     >
       <svg
         aria-hidden="true"
@@ -848,12 +848,12 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           This range conflicts with another range
         </p>

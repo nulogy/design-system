@@ -2,10 +2,9 @@ import styled from "styled-components";
 import React from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
-import theme from "../theme";
 import { Icon } from "../Icon";
 
-const TabScrollIndicatorButton = styled.button(({ side, width }) => ({
+const TabScrollIndicatorButton = styled.button(({ side, width, theme }) => ({
   position: "absolute",
   color: theme.colors.black,
   top: 0,

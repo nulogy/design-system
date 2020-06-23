@@ -8,7 +8,16 @@
 
 ### 1. Add the package
 
-`yarn add @nulogy/components`
+## Peer dependencies
+
+@nulogy/components relies on React, ReactDOM and Styled Components. You will need to add these to your projects dependencies if they are not there already.
+
+To add Styled Components:
+`yarn add styled-components@^5.0.0`
+
+Please check that you are using versions that match the peerDependencies listed in the components/package.json.
+
+## Usage
 
 ### 2. Add fonts
 

@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { color, space, typography } from "styled-system";
 import propTypes from "@styled-system/prop-types";
-import theme from "../theme";
 
 const getAttrs = inline => (inline ? { as: "span" } : null);
 
@@ -30,8 +29,8 @@ Text.defaultProps = {
   disabled: false,
   mt: 0,
   mb: 0,
-  fontSize: theme.fontSizes.medium,
-  lineHeight: theme.lineHeights.base,
+  fontSize: "medium",
+  lineHeight: "base",
   textTransform: undefined,
   color: "currentColor"
 };

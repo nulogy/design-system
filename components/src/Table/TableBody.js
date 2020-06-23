@@ -1,18 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 import { Box } from "../Box";
 import { rowsPropType, columnsPropType, rowPropType } from "./Table.types";
 import TableCell from "./TableCell";
 
-const StyledMessageContainer = styled(Box)({
+const StyledMessageContainer = styled(Box)(({ theme }) => ({
   padding: `${theme.space.x3} 0`,
   fontSize: theme.fontSizes.small,
   color: theme.colors.darkGrey
-});
+}));
 
-const StyledTr = styled.tr(({ rowHovers }) => ({
+const StyledTr = styled.tr(({ rowHovers, theme }) => ({
   "&:hover": {
     backgroundColor: rowHovers ? theme.colors.whiteGrey : null
   }

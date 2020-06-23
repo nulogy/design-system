@@ -2,13 +2,13 @@ import React from "react";
 
 import { TimeRange } from ".";
 import { selectOption } from "../Select/Select.spec-utils";
-import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { render } from "../NDSProvider/render.spec-utils";
 
 describe("TimeRange", () => {
   describe("range selection", () => {
     it("returns the selected range when the range changes", () => {
       const onRangeChange = jest.fn();
-      const { container, queryByText } = renderWithNDSProvider(<TimeRange onRangeChange={onRangeChange} />);
+      const { container, queryByText } = render(<TimeRange onRangeChange={onRangeChange} />);
       selectOption("10:00 AM", container, queryByText);
       selectOption("11:15 AM", container, queryByText, 1);
       const onChangeCalls = onRangeChange.mock.calls;
@@ -19,7 +19,7 @@ describe("TimeRange", () => {
     });
     it("shows an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
-      const { queryByText } = renderWithNDSProvider(
+      const { queryByText } = render(
         <TimeRange onRangeChange={onRangeChange} defaultStartTime="12:00" defaultEndTime="05:00" />
       );
       expect(queryByText("end time is before start time")).not.toBeNull();
@@ -27,7 +27,7 @@ describe("TimeRange", () => {
     it("returns the start date when the start date changes", () => {
       const onStartTimeChange = jest.fn();
       const onEndTimeChange = jest.fn();
-      const { container, queryByText } = renderWithNDSProvider(
+      const { container, queryByText } = render(
         <TimeRange onStartTimeChange={onStartTimeChange} onEndTimeChange={onEndTimeChange} />
       );
       selectOption("10:00 AM", container, queryByText);
@@ -39,7 +39,7 @@ describe("TimeRange", () => {
     it("returns the end time when the end time changes", () => {
       const onStartTimeChange = jest.fn();
       const onEndTimeChange = jest.fn();
-      const { container, queryByText } = renderWithNDSProvider(
+      const { container, queryByText } = render(
         <TimeRange onStartTimeChange={onStartTimeChange} onEndTimeChange={onEndTimeChange} />
       );
       selectOption("11:00 AM", container, queryByText, 1);

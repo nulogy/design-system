@@ -2,9 +2,8 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space, typography, flexbox } from "styled-system";
 import propTypes from "@styled-system/prop-types";
-import theme from "../theme";
 
-const StatusIndicatorColours = {
+const StatusIndicatorColours = theme => ({
   neutral: {
     borderColor: theme.colors.lightGrey,
     backgroundColor: theme.colors.lightGrey,
@@ -35,24 +34,24 @@ const StatusIndicatorColours = {
     backgroundColor: theme.colors.yellow,
     color: theme.colors.darkGrey
   }
-};
+});
 
-const getStatusIndicatorColours = type => {
-  return StatusIndicatorColours[type];
+const getStatusIndicatorColours = (type, theme) => {
+  return StatusIndicatorColours(theme)[type];
 };
 
 const StatusIndicator = styled.p(
-  {
+  ({ theme }) => ({
     display: "inline-block",
     fontWeight: theme.fontWeights.bold,
     textTransform: "uppercase",
     letterSpacing: ".05em",
     borderRadius: theme.space.x1
-  },
+  }),
   space,
   typography,
   flexbox,
-  ({ type }) => getStatusIndicatorColours(type)
+  ({ type, theme }) => getStatusIndicatorColours(type, theme)
 );
 
 StatusIndicator.propTypes = {

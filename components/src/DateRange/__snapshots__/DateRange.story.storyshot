@@ -8,8 +8,8 @@ exports[`Storyshots DateRange customizing input props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -17,7 +17,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -47,13 +47,13 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="From (Mon YYYY)"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -77,7 +77,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -102,13 +102,13 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="To (Mon YYYY)"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -139,8 +139,8 @@ exports[`Storyshots DateRange default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -148,7 +148,7 @@ exports[`Storyshots DateRange default 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -178,13 +178,13 @@ exports[`Storyshots DateRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -208,7 +208,7 @@ exports[`Storyshots DateRange default 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -233,13 +233,13 @@ exports[`Storyshots DateRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -270,8 +270,8 @@ exports[`Storyshots DateRange default start and end date 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -279,7 +279,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -309,13 +309,13 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="01 Jan 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -339,7 +339,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -364,13 +364,13 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="05 Jan 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -401,8 +401,8 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -410,7 +410,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -440,13 +440,13 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -470,7 +470,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -495,13 +495,13 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -532,8 +532,8 @@ exports[`Storyshots DateRange individual input error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -541,7 +541,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -571,14 +571,14 @@ exports[`Storyshots DateRange individual input error 1`] = `
                   aria-invalid="true"
                   aria-label="Select a start date"
                   aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 kjmJXs"
+                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
                   placeholder="DD Mon YYYY"
                   required=""
                   value=""
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -597,7 +597,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
         </div>
         <div
           class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
-          color="#cc1439"
+          color="red"
         >
           <svg
             aria-hidden="true"
@@ -616,12 +616,12 @@ exports[`Storyshots DateRange individual input error 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
           >
             <p
               class="Text-sc-1wu7vpu-0 RbfMK"
               color="currentColor"
-              font-size="16px"
+              font-size="medium"
             >
               Start date is required
             </p>
@@ -634,7 +634,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -659,13 +659,13 @@ exports[`Storyshots DateRange individual input error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -696,8 +696,8 @@ exports[`Storyshots DateRange with custom error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -705,7 +705,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -735,13 +735,13 @@ exports[`Storyshots DateRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -765,7 +765,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -790,13 +790,13 @@ exports[`Storyshots DateRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -817,7 +817,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
     </div>
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
-      color="#cc1439"
+      color="red"
     >
       <svg
         aria-hidden="true"
@@ -836,12 +836,12 @@ exports[`Storyshots DateRange with custom error 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 nWrsV"
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           This range conflicts with another range
         </p>
@@ -859,8 +859,8 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -868,7 +868,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -898,13 +898,13 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -941,7 +941,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     03:30 AM
                   </div>
@@ -976,18 +976,18 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -1013,7 +1013,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -1037,7 +1037,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     01:30 PM
                   </div>
@@ -1072,18 +1072,18 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -1123,13 +1123,13 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1160,8 +1160,8 @@ exports[`Storyshots DateRange with time error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -1169,7 +1169,7 @@ exports[`Storyshots DateRange with time error 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -1199,13 +1199,13 @@ exports[`Storyshots DateRange with time error 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1242,7 +1242,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     01:30 PM
                   </div>
@@ -1277,18 +1277,18 @@ exports[`Storyshots DateRange with time error 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -1314,7 +1314,7 @@ exports[`Storyshots DateRange with time error 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -1338,7 +1338,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1uccc91-singleValue"
+                    class=" css-r447wv-singleValue"
                   >
                     10:30 AM
                   </div>
@@ -1373,18 +1373,18 @@ exports[`Storyshots DateRange with time error 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -1424,13 +1424,13 @@ exports[`Storyshots DateRange with time error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1461,8 +1461,8 @@ exports[`Storyshots DateRange with times 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 knzobv FieldLabel-sc-1t1cp4f-1 gjIfQG"
-      color="#011e38"
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
       style="display:block"
     >
       <div
@@ -1470,7 +1470,7 @@ exports[`Storyshots DateRange with times 1`] = `
         data-testid="field-label"
       >
         <span
-          style="font-size:14px;font-weight:600;line-height:1.71428571"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
         >
           Date range
         </span>
@@ -1500,13 +1500,13 @@ exports[`Storyshots DateRange with times 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="01 Jan 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"
@@ -1578,18 +1578,18 @@ exports[`Storyshots DateRange with times 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -1615,7 +1615,7 @@ exports[`Storyshots DateRange with times 1`] = `
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
           color="currentColor"
-          font-size="16px"
+          font-size="medium"
         >
           -
         </p>
@@ -1674,18 +1674,18 @@ exports[`Storyshots DateRange with times 1`] = `
                   </div>
                 </div>
                 <div
-                  class=" css-1hb7zxy-IndicatorsContainer"
+                  class=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-43ykx9-indicatorSeparator"
+                    class=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-1fi275-indicatorContainer"
+                    class=" css-19phze7-indicatorContainer"
                   >
                     <svg
                       aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 xXkma"
+                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
                       color="currentColor"
                       fill="currentColor"
                       focusable="false"
@@ -1725,13 +1725,13 @@ exports[`Storyshots DateRange with times 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 soqcT"
+                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
                   placeholder="DD Mon YYYY"
                   value="05 Jan 2019"
                 />
                 <svg
                   aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 iNLtPt"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
                   color="currentColor"
                   fill="currentColor"
                   focusable="false"

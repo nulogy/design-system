@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import { space } from "styled-system";
-import theme from "../theme";
+import { space, color, flexbox, layout } from "styled-system";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 
@@ -19,7 +18,7 @@ const insertSeparators = (items, className) => {
 };
 
 const StyledLi = styled.li(
-  () => ({
+  ({ theme }) => ({
     margin: 0,
     padding: 0,
     listStyle: "none",
@@ -30,7 +29,10 @@ const StyledLi = styled.li(
       color: theme.colors.darkBlue
     }
   }),
-  space
+  space,
+  layout,
+  color,
+  flexbox
 );
 
 const StyledOl = styled.ol(() => ({

@@ -1,16 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 import TableCell from "./TableCell";
 import StyledTh from "./StyledTh";
 import { columnsPropType, rowsPropType, rowPropType } from "./Table.types";
 
-const StyledFooterRow = styled.tr({
+const StyledFooterRow = styled.tr(({ theme }) => ({
   "&:first-of-type": {
     borderTop: `1px solid ${theme.colors.lightGrey}`
   }
-});
+}));
 
 const renderRows = (rows, columns, keyField, loading) =>
   rows.map(row => <TableFooterRow row={row} columns={columns} key={row[keyField]} loading={loading} />);

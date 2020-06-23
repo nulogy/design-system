@@ -1,10 +1,11 @@
 import React from "react";
-import { mount } from "enzyme";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 
 import { Pagination } from "../Pagination";
 import { Table } from ".";
 import { mockColumns, getMockRows, getMockColumns } from "./Table.mock-utils";
+import { render } from "../NDSProvider/render.spec-utils";
+import { mountWithNDSProvider } from "../NDSProvider/mountWithNDSProvider.spec-utils";
 
 describe("Table", () => {
   describe("row selections", () => {
@@ -100,7 +101,7 @@ describe("Table", () => {
     describe("onPageChange:", () => {
       it("called when a new page is selected", () => {
         const pageChangeCallback = jest.fn();
-        const wrapper = mount(
+        const wrapper = mountWithNDSProvider(
           <Table
             columns={mockColumns}
             rows={getMockRows(20)}
@@ -122,7 +123,7 @@ describe("Table", () => {
       });
       it("called when navigating to next page", () => {
         const pageChangeCallback = jest.fn();
-        const wrapper = mount(
+        const wrapper = mountWithNDSProvider(
           <Table
             columns={mockColumns}
             rows={getMockRows(20)}
@@ -143,7 +144,7 @@ describe("Table", () => {
       it("displays the correct number of rows", () => {
         const pageChangeCallback = jest.fn();
         const ROWS_PER_PAGE = 6;
-        const wrapper = mount(
+        const wrapper = mountWithNDSProvider(
           <Table
             columns={mockColumns}
             rows={getMockRows(20)}
@@ -157,7 +158,7 @@ describe("Table", () => {
         expect(rows.length).toEqual(ROWS_PER_PAGE);
       });
       it("renders the inner Pagination with correct props", () => {
-        const wrapper = mount(
+        const wrapper = mountWithNDSProvider(
           <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows keyField="c1" rowsPerPage={6} />
         );
         const pagination = wrapper.find(Pagination);
@@ -166,7 +167,9 @@ describe("Table", () => {
         expect(pagination.props().currentPage).toEqual(1);
       });
       it("does not display pagination when rowsPerPage is falsy", () => {
-        const wrapper = mount(<Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows keyField="c1" />);
+        const wrapper = mountWithNDSProvider(
+          <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows keyField="c1" />
+        );
         const pagination = wrapper.find(Pagination);
         const rows = wrapper.find("tbody tr");
         expect(pagination.length).toEqual(0);
@@ -176,7 +179,9 @@ describe("Table", () => {
   });
   describe("loading", () => {
     it("shows only loading text when loading", () => {
-      const wrapper = mount(<Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows loading />);
+      const wrapper = mountWithNDSProvider(
+        <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows loading />
+      );
       const rows = wrapper.find("tbody tr");
       const loadingCell = wrapper.find("tbody tr td");
       expect(loadingCell.text()).toEqual("Loading...");
@@ -184,7 +189,9 @@ describe("Table", () => {
     });
     it("shows rows when not loading", () => {
       const rowData = getMockRows(20);
-      const wrapper = mount(<Table columns={mockColumns} rows={rowData} hasSelectableRows loading={false} />);
+      const wrapper = mountWithNDSProvider(
+        <Table columns={mockColumns} rows={rowData} hasSelectableRows loading={false} />
+      );
       const rows = wrapper.find("tbody tr");
       const cell = wrapper.find("tbody tr td");
       expect(cell.at(0).text()).not.toEqual("Loading...");

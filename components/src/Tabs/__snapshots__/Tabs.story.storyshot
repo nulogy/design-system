@@ -12,7 +12,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
       width="0"
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+      class="Tabs__TabContainer-o5d5cd-0 giufLG"
       role="tablist"
     >
       <div />
@@ -89,7 +89,7 @@ exports[`Storyshots Tabs controlled 1`] = `
       width="0"
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+      class="Tabs__TabContainer-o5d5cd-0 giufLG"
       role="tablist"
     >
       <div />
@@ -171,7 +171,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
       width="0"
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+      class="Tabs__TabContainer-o5d5cd-0 giufLG"
       role="tablist"
     >
       <div />
@@ -248,7 +248,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
       width="0"
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+      class="Tabs__TabContainer-o5d5cd-0 giufLG"
       role="tablist"
     >
       <div />
@@ -367,7 +367,7 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
       width="0"
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+      class="Tabs__TabContainer-o5d5cd-0 giufLG"
       role="tablist"
     >
       <div />
@@ -404,7 +404,7 @@ exports[`Storyshots Tabs with inputs 1`] = `
       width="0"
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 jvCeCC"
+      class="Tabs__TabContainer-o5d5cd-0 giufLG"
       role="tablist"
     >
       <div />
@@ -457,7 +457,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
       width="0"
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 jvCeCC tab-container"
+      class="Tabs__TabContainer-o5d5cd-0 giufLG tab-container"
       role="tablist"
     >
       <div />

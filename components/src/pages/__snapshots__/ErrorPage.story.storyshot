@@ -65,13 +65,13 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
             class="Box-sc-1qu1edy-0 dKEgdE"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kLLvso Alert-u8lbe-0 eToTOV"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
               role="alert"
             >
               <svg
                 aria-hidden="true"
                 class="Icon-fc7twp-0 ewGQci"
-                color="#cc1439"
+                color="red"
                 fill="#cc1439"
                 focusable="false"
                 height="24px"
@@ -90,7 +90,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                 <p
                   class="Text-sc-1wu7vpu-0 dFPjNj"
                   color="currentColor"
-                  font-size="16px"
+                  font-size="medium"
                   font-weight="bold"
                 >
                   We're sorry, but something went wrong.
@@ -183,7 +183,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
             class="Box-sc-1qu1edy-0 dKEgdE"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bxjnP Alert-u8lbe-0 eToTOV"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
               role="alert"
             >
               <div
@@ -277,13 +277,13 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
             class="Box-sc-1qu1edy-0 dKEgdE"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 idCmba Alert-u8lbe-0 OiBBb"
+              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eMpWng Alert-u8lbe-0 yTvFo"
               role="alert"
             >
               <svg
                 aria-hidden="true"
                 class="Icon-fc7twp-0 ewGQci"
-                color="#cc1439"
+                color="red"
                 fill="#cc1439"
                 focusable="false"
                 height="24px"
@@ -302,7 +302,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                 <p
                   class="Text-sc-1wu7vpu-0 dFPjNj"
                   color="currentColor"
-                  font-size="16px"
+                  font-size="medium"
                   font-weight="bold"
                 >
                   We're sorry, but something went wrong.

@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../theme";
 
-const barStyles = {
+const barStyles = theme => ({
   expanded: {
     content: "''",
     backgroundColor: theme.colors.darkBlue,
@@ -26,22 +25,22 @@ const barStyles = {
     right: 0,
     zIndex: theme.zIndex.tabsBar
   }
-};
+});
 
-const getBarStyles = selected => (selected ? barStyles.expanded : barStyles.default);
+const getBarStyles = (selected, theme) => (selected ? barStyles(theme).expanded : barStyles(theme).default);
 
-const getBarHoverStyles = (selected, disabled) => {
+const getBarHoverStyles = (selected, disabled, theme) => {
   if (disabled || selected) {
     return null;
   } else {
     return {
-      ...barStyles.expanded,
+      ...barStyles(theme).expanded,
       backgroundColor: theme.colors.lightBlue
     };
   }
 };
 
-const TabButton = styled.button(({ selected, disabled, fullWidth }) => ({
+const TabButton = styled.button(({ selected, disabled, fullWidth, theme }) => ({
   width: fullWidth ? "100%" : undefined,
   fontWeight: theme.fontWeights.medium,
   textDecoration: "none",
@@ -64,11 +63,11 @@ const TabButton = styled.button(({ selected, disabled, fullWidth }) => ({
     opacity: ".5"
   },
   "&:before": {
-    ...getBarStyles(selected)
+    ...getBarStyles(selected, theme)
   },
   "&:hover": {
     "&:before": {
-      ...getBarHoverStyles(selected, disabled)
+      ...getBarHoverStyles(selected, disabled, theme)
     }
   }
 }));

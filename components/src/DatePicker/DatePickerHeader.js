@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import theme from "../theme";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import { ControlIcon } from "../Button";
@@ -25,7 +24,7 @@ const DatePickerHeader = ({
       />
       <Text
         fontWeight="bold"
-        color={theme.colors.blackBlue}
+        color="blackBlue"
         px="x1"
         ml="half"
         fontSize="large"
