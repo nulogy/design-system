@@ -9,7 +9,7 @@
   "scripts": {
     "storybook": "start-storybook -p 9000 -c .storybook -s ./src/",
     "watch": "node-sass-chokidar src/scss/ -o src/ --watch",
-    "build": "node-sass-chokidar --build --output-style compact src/scss/ -o dist/",
+    "build": "yarn workspace @nulogy/tokens build && node-sass-chokidar --build --output-style compact src/scss/ -o dist/",
     "start": "yarn run storybook & yarn run watch"
   },
   "repository": "https://github.com/nulogy/design-system",
