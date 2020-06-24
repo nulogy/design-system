@@ -1,5 +1,4 @@
 import initStoryshots, { multiSnapshotWithOptions } from "@storybook/addon-storyshots";
-import { render } from "enzyme";
 import { createSerializer } from "enzyme-to-json";
 import { styleSheetSerializer } from "jest-styled-components/serializer";
 import "jest-styled-components";
