@@ -10,15 +10,14 @@
         "**/**.spec.js",
         "**/**.story.js",
         "*.md",
+        "**/**.md",
         "./docs/*",
         "./components-e2e/*"
       ]
     },
     "publish": {
       "conventionalCommits": true,
-      "allowBranch": [
-        "master"
-      ]
+      "allowBranch": ["master"]
     }
   }
 }
