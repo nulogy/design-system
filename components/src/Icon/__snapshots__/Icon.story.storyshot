@@ -1,27 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Icon InlineIcon 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  position: absolute;
+  top: 0;
+}
+
+.c1 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 1.25em;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      style="font-size:1em"
+      style={
+        Object {
+          "fontSize": "1em",
+        }
+      }
     >
-      @1em:  
+      @
+      1
+      em:  
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="accessTime"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -34,16 +86,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="add"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -53,16 +107,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="addCircleOutline"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -72,16 +128,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="arrowForward"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -91,16 +149,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="block"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -110,13 +170,14 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
-          focusable="false"
+          className="c2"
+          focusable={false}
           height="1.25em"
           icon="loading"
+          title={null}
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -131,23 +192,23 @@ exports[`Storyshots Icon InlineIcon 1`] = `
             >
               <stop
                 offset="0%"
-                stop-color="currentColor"
-                stop-opacity="0"
+                stopColor="currentColor"
+                stopOpacity="0"
               />
               <stop
                 offset="63.146%"
-                stop-color="currentColor"
-                stop-opacity=".631"
+                stopColor="currentColor"
+                stopOpacity=".631"
               />
               <stop
                 offset="100%"
-                stop-color="currentColor"
+                stopColor="currentColor"
               />
             </linearGradient>
           </defs>
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               transform="translate(1 1)"
@@ -156,7 +217,7 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                 d="M36 18c0-9.94-8.06-18-18-18"
                 id="Oval-2"
                 stroke="url(#random-id-1)"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <animateTransform
                   attributeName="transform"
@@ -188,20 +249,28 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       </span>
     </p>
     <p
-      style="font-size:2em"
+      style={
+        Object {
+          "fontSize": "2em",
+        }
+      }
     >
-      @2em:  
+      @
+      2
+      em:  
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="accessTime"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -214,16 +283,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="add"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -233,16 +304,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="addCircleOutline"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -252,16 +325,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="arrowForward"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -271,16 +346,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="block"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -290,13 +367,14 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
-          focusable="false"
+          className="c2"
+          focusable={false}
           height="1.25em"
           icon="loading"
+          title={null}
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -311,23 +389,23 @@ exports[`Storyshots Icon InlineIcon 1`] = `
             >
               <stop
                 offset="0%"
-                stop-color="currentColor"
-                stop-opacity="0"
+                stopColor="currentColor"
+                stopOpacity="0"
               />
               <stop
                 offset="63.146%"
-                stop-color="currentColor"
-                stop-opacity=".631"
+                stopColor="currentColor"
+                stopOpacity=".631"
               />
               <stop
                 offset="100%"
-                stop-color="currentColor"
+                stopColor="currentColor"
               />
             </linearGradient>
           </defs>
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               transform="translate(1 1)"
@@ -336,7 +414,7 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                 d="M36 18c0-9.94-8.06-18-18-18"
                 id="Oval-2"
                 stroke="url(#random-id-2)"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <animateTransform
                   attributeName="transform"
@@ -368,20 +446,28 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       </span>
     </p>
     <p
-      style="font-size:3em"
+      style={
+        Object {
+          "fontSize": "3em",
+        }
+      }
     >
-      @3em:  
+      @
+      3
+      em:  
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="accessTime"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -394,16 +480,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="add"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -413,16 +501,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="addCircleOutline"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -432,16 +522,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="arrowForward"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -451,16 +543,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="block"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -470,13 +564,14 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
-          focusable="false"
+          className="c2"
+          focusable={false}
           height="1.25em"
           icon="loading"
+          title={null}
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -491,23 +586,23 @@ exports[`Storyshots Icon InlineIcon 1`] = `
             >
               <stop
                 offset="0%"
-                stop-color="currentColor"
-                stop-opacity="0"
+                stopColor="currentColor"
+                stopOpacity="0"
               />
               <stop
                 offset="63.146%"
-                stop-color="currentColor"
-                stop-opacity=".631"
+                stopColor="currentColor"
+                stopOpacity=".631"
               />
               <stop
                 offset="100%"
-                stop-color="currentColor"
+                stopColor="currentColor"
               />
             </linearGradient>
           </defs>
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               transform="translate(1 1)"
@@ -516,7 +611,7 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                 d="M36 18c0-9.94-8.06-18-18-18"
                 id="Oval-2"
                 stroke="url(#random-id-3)"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <animateTransform
                   attributeName="transform"
@@ -548,20 +643,28 @@ exports[`Storyshots Icon InlineIcon 1`] = `
       </span>
     </p>
     <p
-      style="font-size:4em"
+      style={
+        Object {
+          "fontSize": "4em",
+        }
+      }
     >
-      @4em:  
+      @
+      4
+      em:  
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="accessTime"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -574,16 +677,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="add"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -593,16 +698,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="addCircleOutline"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -612,16 +719,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="arrowForward"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -631,16 +740,18 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          aria-hidden="true"
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
+          aria-hidden={true}
+          className="c2"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="1.25em"
           icon="block"
+          size="1.25em"
+          title={null}
           viewBox="0 0 24 24"
           width="1.25em"
         >
@@ -650,13 +761,14 @@ exports[`Storyshots Icon InlineIcon 1`] = `
         </svg>
       </span>
       <span
-        class="Icon__IconContainer-fc7twp-2 jzPWAQ"
+        className="c1"
       >
         <svg
-          class="Icon__CenteredIcon-fc7twp-1 dKjNdn"
-          focusable="false"
+          className="c2"
+          focusable={false}
           height="1.25em"
           icon="loading"
+          title={null}
           viewBox="0 0 38 38"
           width="1.25em"
           xmlns="http://www.w3.org/2000/svg"
@@ -671,23 +783,23 @@ exports[`Storyshots Icon InlineIcon 1`] = `
             >
               <stop
                 offset="0%"
-                stop-color="currentColor"
-                stop-opacity="0"
+                stopColor="currentColor"
+                stopOpacity="0"
               />
               <stop
                 offset="63.146%"
-                stop-color="currentColor"
-                stop-opacity=".631"
+                stopColor="currentColor"
+                stopOpacity=".631"
               />
               <stop
                 offset="100%"
-                stop-color="currentColor"
+                stopColor="currentColor"
               />
             </linearGradient>
           </defs>
           <g
             fill="none"
-            fill-rule="evenodd"
+            fillRule="evenodd"
           >
             <g
               transform="translate(1 1)"
@@ -696,7 +808,7 @@ exports[`Storyshots Icon InlineIcon 1`] = `
                 d="M36 18c0-9.94-8.06-18-18-18"
                 id="Oval-2"
                 stroke="url(#random-id-4)"
-                stroke-width="2"
+                strokeWidth="2"
               >
                 <animateTransform
                   attributeName="transform"
@@ -732,23 +844,76 @@ exports[`Storyshots Icon InlineIcon 1`] = `
 `;
 
 exports[`Storyshots Icon With a color 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c2 {
+  color: #ffbb00;
+  min-width: 24px;
+}
+
+.c3 {
+  color: #008059;
+  min-width: 24px;
+}
+
+.c4 {
+  color: #216beb;
+  min-width: 24px;
+}
+
+.c5 {
+  color: #122b47;
+  min-width: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        aria-hidden={true}
+        className="c1"
         color="#cc1439"
         fill="#cc1439"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="accessTime"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -760,13 +925,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        aria-hidden={true}
+        className="c1"
         color="#cc1439"
         fill="#cc1439"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="add"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -775,13 +942,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        aria-hidden={true}
+        className="c1"
         color="#cc1439"
         fill="#cc1439"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="addCircleOutline"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -790,13 +959,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        aria-hidden={true}
+        className="c1"
         color="#cc1439"
         fill="#cc1439"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="arrowForward"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -805,13 +976,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fjiVCY"
+        aria-hidden={true}
+        className="c1"
         color="#cc1439"
         fill="#cc1439"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="block"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -820,10 +993,11 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fjiVCY"
-        focusable="false"
+        className="c1"
+        focusable={false}
         height="24px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -838,23 +1012,23 @@ exports[`Storyshots Icon With a color 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="#cc1439"
-              stop-opacity="0"
+              stopColor="#cc1439"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="#cc1439"
-              stop-opacity=".631"
+              stopColor="#cc1439"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="#cc1439"
+              stopColor="#cc1439"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -863,7 +1037,7 @@ exports[`Storyshots Icon With a color 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-5)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -894,16 +1068,18 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        aria-hidden={true}
+        className="c2"
         color="#ffbb00"
         fill="#ffbb00"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="accessTime"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -915,13 +1091,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        aria-hidden={true}
+        className="c2"
         color="#ffbb00"
         fill="#ffbb00"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="add"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -930,13 +1108,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        aria-hidden={true}
+        className="c2"
         color="#ffbb00"
         fill="#ffbb00"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="addCircleOutline"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -945,13 +1125,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        aria-hidden={true}
+        className="c2"
         color="#ffbb00"
         fill="#ffbb00"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="arrowForward"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -960,13 +1142,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fGpDPz"
+        aria-hidden={true}
+        className="c2"
         color="#ffbb00"
         fill="#ffbb00"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="block"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -975,10 +1159,11 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fGpDPz"
-        focusable="false"
+        className="c2"
+        focusable={false}
         height="24px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -993,23 +1178,23 @@ exports[`Storyshots Icon With a color 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="#ffbb00"
-              stop-opacity="0"
+              stopColor="#ffbb00"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="#ffbb00"
-              stop-opacity=".631"
+              stopColor="#ffbb00"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="#ffbb00"
+              stopColor="#ffbb00"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -1018,7 +1203,7 @@ exports[`Storyshots Icon With a color 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-6)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -1049,16 +1234,18 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        aria-hidden={true}
+        className="c3"
         color="#008059"
         fill="#008059"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="accessTime"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1070,13 +1257,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        aria-hidden={true}
+        className="c3"
         color="#008059"
         fill="#008059"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="add"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1085,13 +1274,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        aria-hidden={true}
+        className="c3"
         color="#008059"
         fill="#008059"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="addCircleOutline"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1100,13 +1291,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        aria-hidden={true}
+        className="c3"
         color="#008059"
         fill="#008059"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="arrowForward"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1115,13 +1308,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fAXHND"
+        aria-hidden={true}
+        className="c3"
         color="#008059"
         fill="#008059"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="block"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1130,10 +1325,11 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fAXHND"
-        focusable="false"
+        className="c3"
+        focusable={false}
         height="24px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1148,23 +1344,23 @@ exports[`Storyshots Icon With a color 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="#008059"
-              stop-opacity="0"
+              stopColor="#008059"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="#008059"
-              stop-opacity=".631"
+              stopColor="#008059"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="#008059"
+              stopColor="#008059"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -1173,7 +1369,7 @@ exports[`Storyshots Icon With a color 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-7)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -1204,16 +1400,18 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        aria-hidden={true}
+        className="c4"
         color="#216beb"
         fill="#216beb"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="accessTime"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1225,13 +1423,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        aria-hidden={true}
+        className="c4"
         color="#216beb"
         fill="#216beb"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="add"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1240,13 +1440,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        aria-hidden={true}
+        className="c4"
         color="#216beb"
         fill="#216beb"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="addCircleOutline"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1255,13 +1457,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        aria-hidden={true}
+        className="c4"
         color="#216beb"
         fill="#216beb"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="arrowForward"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1270,13 +1474,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cQdNwL"
+        aria-hidden={true}
+        className="c4"
         color="#216beb"
         fill="#216beb"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="block"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1285,10 +1491,11 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 cQdNwL"
-        focusable="false"
+        className="c4"
+        focusable={false}
         height="24px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1303,23 +1510,23 @@ exports[`Storyshots Icon With a color 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="#216beb"
-              stop-opacity="0"
+              stopColor="#216beb"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="#216beb"
-              stop-opacity=".631"
+              stopColor="#216beb"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="#216beb"
+              stopColor="#216beb"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -1328,7 +1535,7 @@ exports[`Storyshots Icon With a color 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-8)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -1359,16 +1566,18 @@ exports[`Storyshots Icon With a color 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        aria-hidden={true}
+        className="c5"
         color="#122b47"
         fill="#122b47"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="accessTime"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1380,13 +1589,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        aria-hidden={true}
+        className="c5"
         color="#122b47"
         fill="#122b47"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="add"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1395,13 +1606,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        aria-hidden={true}
+        className="c5"
         color="#122b47"
         fill="#122b47"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="addCircleOutline"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1410,13 +1623,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        aria-hidden={true}
+        className="c5"
         color="#122b47"
         fill="#122b47"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="arrowForward"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1425,13 +1640,15 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ckNWkf"
+        aria-hidden={true}
+        className="c5"
         color="#122b47"
         fill="#122b47"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="block"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1440,10 +1657,11 @@ exports[`Storyshots Icon With a color 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 ckNWkf"
-        focusable="false"
+        className="c5"
+        focusable={false}
         height="24px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1458,23 +1676,23 @@ exports[`Storyshots Icon With a color 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="#122b47"
-              stop-opacity="0"
+              stopColor="#122b47"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="#122b47"
-              stop-opacity=".631"
+              stopColor="#122b47"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="#122b47"
+              stopColor="#122b47"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -1483,7 +1701,7 @@ exports[`Storyshots Icon With a color 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-9)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -1518,23 +1736,66 @@ exports[`Storyshots Icon With a color 1`] = `
 `;
 
 exports[`Storyshots Icon With a size 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: currentColor;
+  min-width: 8px;
+}
+
+.c2 {
+  color: currentColor;
+  min-width: 16px;
+}
+
+.c3 {
+  color: currentColor;
+  min-width: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        aria-hidden={true}
+        className="c1"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="8px"
         icon="accessTime"
+        size="8px"
+        title={null}
         viewBox="0 0 24 24"
         width="8px"
       >
@@ -1546,13 +1807,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        aria-hidden={true}
+        className="c1"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="8px"
         icon="add"
+        size="8px"
+        title={null}
         viewBox="0 0 24 24"
         width="8px"
       >
@@ -1561,13 +1824,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        aria-hidden={true}
+        className="c1"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="8px"
         icon="addCircleOutline"
+        size="8px"
+        title={null}
         viewBox="0 0 24 24"
         width="8px"
       >
@@ -1576,13 +1841,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        aria-hidden={true}
+        className="c1"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="8px"
         icon="arrowForward"
+        size="8px"
+        title={null}
         viewBox="0 0 24 24"
         width="8px"
       >
@@ -1591,13 +1858,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 HAgHa"
+        aria-hidden={true}
+        className="c1"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="8px"
         icon="block"
+        size="8px"
+        title={null}
         viewBox="0 0 24 24"
         width="8px"
       >
@@ -1606,10 +1875,11 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 HAgHa"
-        focusable="false"
+        className="c1"
+        focusable={false}
         height="8px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="8px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1624,23 +1894,23 @@ exports[`Storyshots Icon With a size 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="currentColor"
-              stop-opacity="0"
+              stopColor="currentColor"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="currentColor"
-              stop-opacity=".631"
+              stopColor="currentColor"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="currentColor"
+              stopColor="currentColor"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -1649,7 +1919,7 @@ exports[`Storyshots Icon With a size 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-10)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -1680,16 +1950,18 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="16px"
         icon="accessTime"
+        size="16px"
+        title={null}
         viewBox="0 0 24 24"
         width="16px"
       >
@@ -1701,13 +1973,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="16px"
         icon="add"
+        size="16px"
+        title={null}
         viewBox="0 0 24 24"
         width="16px"
       >
@@ -1716,13 +1990,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="16px"
         icon="addCircleOutline"
+        size="16px"
+        title={null}
         viewBox="0 0 24 24"
         width="16px"
       >
@@ -1731,13 +2007,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="16px"
         icon="arrowForward"
+        size="16px"
+        title={null}
         viewBox="0 0 24 24"
         width="16px"
       >
@@ -1746,13 +2024,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 fvcdOB"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="16px"
         icon="block"
+        size="16px"
+        title={null}
         viewBox="0 0 24 24"
         width="16px"
       >
@@ -1761,10 +2041,11 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 fvcdOB"
-        focusable="false"
+        className="c2"
+        focusable={false}
         height="16px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="16px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1779,23 +2060,23 @@ exports[`Storyshots Icon With a size 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="currentColor"
-              stop-opacity="0"
+              stopColor="currentColor"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="currentColor"
-              stop-opacity=".631"
+              stopColor="currentColor"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="currentColor"
+              stopColor="currentColor"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -1804,7 +2085,7 @@ exports[`Storyshots Icon With a size 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-11)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -1835,16 +2116,18 @@ exports[`Storyshots Icon With a size 1`] = `
       </svg>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      className=""
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        aria-hidden={true}
+        className="c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="accessTime"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1856,13 +2139,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        aria-hidden={true}
+        className="c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="add"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1871,13 +2156,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        aria-hidden={true}
+        className="c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="addCircleOutline"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1886,13 +2173,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        aria-hidden={true}
+        className="c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="arrowForward"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1901,13 +2190,15 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        aria-hidden={true}
+        className="c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="block"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -1916,10 +2207,11 @@ exports[`Storyshots Icon With a size 1`] = `
         />
       </svg>
       <svg
-        class="Icon-fc7twp-0 dkBAgY"
-        focusable="false"
+        className="c3"
+        focusable={false}
         height="24px"
         icon="loading"
+        title={null}
         viewBox="0 0 38 38"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
@@ -1934,23 +2226,23 @@ exports[`Storyshots Icon With a size 1`] = `
           >
             <stop
               offset="0%"
-              stop-color="currentColor"
-              stop-opacity="0"
+              stopColor="currentColor"
+              stopOpacity="0"
             />
             <stop
               offset="63.146%"
-              stop-color="currentColor"
-              stop-opacity=".631"
+              stopColor="currentColor"
+              stopOpacity=".631"
             />
             <stop
               offset="100%"
-              stop-color="currentColor"
+              stopColor="currentColor"
             />
           </linearGradient>
         </defs>
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <g
             transform="translate(1 1)"
@@ -1959,7 +2251,7 @@ exports[`Storyshots Icon With a size 1`] = `
               d="M36 18c0-9.94-8.06-18-18-18"
               id="Oval-2"
               stroke="url(#random-id-12)"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <animateTransform
                 attributeName="transform"
@@ -1994,23 +2286,63 @@ exports[`Storyshots Icon With a size 1`] = `
 `;
 
 exports[`Storyshots Icon With accessibility title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  color: currentColor;
+  min-width: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 beovZS"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <svg
-        aria-hidden="false"
-        class="Icon-fc7twp-0 dkBAgY"
+        aria-hidden={false}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="user"
+        size="24px"
         title="User account"
         viewBox="0 0 24 24"
         width="24px"
@@ -2022,16 +2354,18 @@ exports[`Storyshots Icon With accessibility title 1`] = `
        This has a title attribute so it will be read by assistive devices.
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 beovZS"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 dkBAgY"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="user"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -2046,28 +2380,113 @@ exports[`Storyshots Icon With accessibility title 1`] = `
 `;
 
 exports[`Storyshots Icon With added margin 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin: 24px;
+}
+
+.c2 {
+  background-color: #e4e7eb;
+  margin: 24px;
+}
+
+.c3 {
+  margin: 16px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c4 {
+  margin-top: 16px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c5 {
+  margin-right: 16px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c6 {
+  margin-bottom: 16px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c7 {
+  margin-left: 16px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c8 {
+  margin-left: 16px;
+  margin-right: 16px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c9 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: currentColor;
+  min-width: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 bPFBWy"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 SsrzS"
-        style="display:inline-block"
+        className="c2"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bCFepo"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="delete"
           m="x2"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2077,18 +2496,24 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 SsrzS"
-        style="display:inline-block"
+        className="c2"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 hAhxEu"
+          aria-hidden={true}
+          className="c4"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="delete"
           mt="x2"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2098,18 +2523,24 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 SsrzS"
-        style="display:inline-block"
+        className="c2"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 gezant"
+          aria-hidden={true}
+          className="c5"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="delete"
           mr="x2"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2119,18 +2550,24 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 SsrzS"
-        style="display:inline-block"
+        className="c2"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 iCRWbe"
+          aria-hidden={true}
+          className="c6"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="delete"
           mb="x2"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2140,18 +2577,24 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 SsrzS"
-        style="display:inline-block"
+        className="c2"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 ZEcAK"
+          aria-hidden={true}
+          className="c7"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="delete"
           ml="x2"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2161,18 +2604,24 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 SsrzS"
-        style="display:inline-block"
+        className="c2"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bdShWb"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="delete"
           mx="x2"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -2182,18 +2631,24 @@ exports[`Storyshots Icon With added margin 1`] = `
         </svg>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 SsrzS"
-        style="display:inline-block"
+        className="c2"
+        style={
+          Object {
+            "display": "inline-block",
+          }
+        }
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 iHUtzQ"
+          aria-hidden={true}
+          className="c9"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="delete"
           my="x2"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >

@@ -1,26 +1,168 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Toast Toast 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  margin-right: auto;
+}
+
+.c3 {
+  background-color: #e1ebfa;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #216beb;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c4 {
+  box-shadow: 0px 1px 4px 0px rgba(1,30,56,0.15);
+  min-width: 200px;
+  max-width: 600px;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.c4 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-tranform: translateY(-32px);
+  tranform: translateY(-32px);
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.9s ease-in;
+  -webkit-transition: transform 0.9s ease-in;
+  transition: transform 0.9s ease-in;
+  z-index: 1;
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onClick={[Function]}
+      size="medium"
     >
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c2"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c3 Alert-u8lbe-0 c4"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c5"
         >
           Saved
         </div>
@@ -31,26 +173,168 @@ exports[`Storyshots Toast Toast 1`] = `
 `;
 
 exports[`Storyshots Toast customize length of time toast is visible 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  margin-right: auto;
+}
+
+.c3 {
+  background-color: #e1ebfa;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #216beb;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c4 {
+  box-shadow: 0px 1px 4px 0px rgba(1,30,56,0.15);
+  min-width: 200px;
+  max-width: 600px;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.c4 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-tranform: translateY(-32px);
+  tranform: translateY(-32px);
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.9s ease-in;
+  -webkit-transition: transform 0.9s ease-in;
+  transition: transform 0.9s ease-in;
+  z-index: 1;
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onClick={[Function]}
+      size="medium"
     >
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c2"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c3 Alert-u8lbe-0 c4"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c5"
         >
           Saved
         </div>
@@ -61,43 +345,362 @@ exports[`Storyshots Toast customize length of time toast is visible 1`] = `
 `;
 
 exports[`Storyshots Toast multiple closeable toasts example 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  margin-right: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  background-color: #fae6ea;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c13 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c17 {
+  color: currentColor;
+  min-width: 16;
+}
+
+.c9 {
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+  margin-right: 16px;
+}
+
+.c2:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c2:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
+.c3 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c3:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c3:focus:hover {
+  background-color: #1254c7;
+}
+
+.c4 {
+  color: #ffffff;
+  border-color: #cc1439;
+  background-color: #cc1439;
+}
+
+.c4:hover {
+  background-color: #9e0f2c;
+  border-color: #9e0f2c;
+}
+
+.c4:focus {
+  outline: none;
+  background-color: #cc1439;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c4:focus:hover {
+  background-color: #9e0f2c;
+}
+
+.c5 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c5 .c6 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c5 .c8 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c5 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c5:hover .c6 {
+  background-color: #e1ebfa;
+}
+
+.c5:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c5:active .c6 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c5:disabled {
+  opacity: .5;
+}
+
+.c5:disabled:hover .c6,
+.c5:disabled:active .c6 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:focus .c6 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c16 {
+  color: #434d59;
+  font-size: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c16:hover {
+  cursor: pointer;
+  color: #216beb;
+}
+
+.c12 {
+  box-shadow: 0px 1px 4px 0px rgba(1,30,56,0.15);
+  min-width: 200px;
+  max-width: 600px;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.c12 .c15 {
+  color: #011e38;
+}
+
+.c10 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-tranform: translateY(-32px);
+  tranform: translateY(-32px);
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.9s ease-in;
+  -webkit-transition: transform 0.9s ease-in;
+  transition: transform 0.9s ease-in;
+  z-index: 1;
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
+      className="c1"
     >
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW PrimaryButton-qz78sb-0 cGyyDq"
+        className="c2 c3"
+        disabled={false}
+        onClick={[Function]}
+        size="medium"
       >
         Save Changes
       </button>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW"
+        className="c2"
+        disabled={false}
+        onClick={[Function]}
+        size="medium"
       >
         Reset
       </button>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW DangerButton-sc-1220u5k-0 ehzMsl"
+        className="c2 c4"
+        disabled={false}
+        onClick={[Function]}
+        size="medium"
       >
         Trigger Error
       </button>
       <button
         aria-label="Delete"
-        class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+        className="c5 "
+        disabled={false}
+        onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 cwKdbD"
+          aria-hidden={true}
+          className="c6 c7"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="32px"
           icon="delete"
           p="half"
+          size="32px"
+          title={null}
           viewBox="0 0 24 24"
           width="32px"
         >
@@ -106,30 +709,37 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <p
-          class="Text-sc-1wu7vpu-0 hHlnON"
+          className="c8 c9"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           Delete
         </p>
       </button>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c11 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 ewGQci"
+          aria-hidden={true}
+          className="c6 c13"
           color="red"
           fill="#cc1439"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -138,28 +748,30 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           Error saving all your changes
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          className=""
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 eyTmUh"
+            className="c15 c16"
             color="darkGrey"
-            font-size="medium"
+            fontSize="medium"
+            onClick={[Function]}
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 gNwFhh"
+              aria-hidden={true}
+              className="c6 c17"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="16"
               icon="close"
               size="16"
+              title={null}
               viewBox="0 0 24 24"
               width="16"
             >
@@ -172,21 +784,27 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c11 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 ewGQci"
+          aria-hidden={true}
+          className="c6 c13"
           color="red"
           fill="#cc1439"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -195,28 +813,30 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           Error: changes were reset
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          className=""
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 eyTmUh"
+            className="c15 c16"
             color="darkGrey"
-            font-size="medium"
+            fontSize="medium"
+            onClick={[Function]}
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 gNwFhh"
+              aria-hidden={true}
+              className="c6 c17"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="16"
               icon="close"
               size="16"
+              title={null}
               viewBox="0 0 24 24"
               width="16"
             >
@@ -229,21 +849,27 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c11 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 ewGQci"
+          aria-hidden={true}
+          className="c6 c13"
           color="red"
           fill="#cc1439"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -252,28 +878,30 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           An error occurred, could not deleted
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          className=""
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 eyTmUh"
+            className="c15 c16"
             color="darkGrey"
-            font-size="medium"
+            fontSize="medium"
+            onClick={[Function]}
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 gNwFhh"
+              aria-hidden={true}
+              className="c6 c17"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="16"
               icon="close"
               size="16"
+              title={null}
               viewBox="0 0 24 24"
               width="16"
             >
@@ -286,21 +914,27 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c11 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 ewGQci"
+          aria-hidden={true}
+          className="c6 c13"
           color="red"
           fill="#cc1439"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -309,28 +943,30 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           An error occurred, please retry
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          className=""
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 eyTmUh"
+            className="c15 c16"
             color="darkGrey"
-            font-size="medium"
+            fontSize="medium"
+            onClick={[Function]}
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 gNwFhh"
+              aria-hidden={true}
+              className="c6 c17"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="16"
               icon="close"
               size="16"
+              title={null}
               viewBox="0 0 24 24"
               width="16"
             >
@@ -347,43 +983,361 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
 `;
 
 exports[`Storyshots Toast multiple toasts example 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  margin-right: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  background-color: #e9f7f2;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #008059;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c15 {
+  background-color: #fae6ea;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c13 {
+  margin-right: 8px;
+  color: #008059;
+  min-width: 24px;
+}
+
+.c16 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c9 {
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+  margin-right: 16px;
+}
+
+.c2:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c2:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
+.c3 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c3:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c3:focus:hover {
+  background-color: #1254c7;
+}
+
+.c4 {
+  color: #ffffff;
+  border-color: #cc1439;
+  background-color: #cc1439;
+}
+
+.c4:hover {
+  background-color: #9e0f2c;
+  border-color: #9e0f2c;
+}
+
+.c4:focus {
+  outline: none;
+  background-color: #cc1439;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c4:focus:hover {
+  background-color: #9e0f2c;
+}
+
+.c5 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c5 .c6 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c5 .c8 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c5 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c5:hover .c6 {
+  background-color: #e1ebfa;
+}
+
+.c5:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c5:active .c6 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c5:disabled {
+  opacity: .5;
+}
+
+.c5:disabled:hover .c6,
+.c5:disabled:active .c6 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:focus .c6 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c12 {
+  box-shadow: 0px 1px 4px 0px rgba(1,30,56,0.15);
+  min-width: 200px;
+  max-width: 600px;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.c12 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c10 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-tranform: translateY(-32px);
+  tranform: translateY(-32px);
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.9s ease-in;
+  -webkit-transition: transform 0.9s ease-in;
+  transition: transform 0.9s ease-in;
+  z-index: 1;
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
+      className="c1"
     >
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW PrimaryButton-qz78sb-0 cGyyDq"
+        className="c2 c3"
+        disabled={false}
+        onClick={[Function]}
+        size="medium"
       >
         Save Changes
       </button>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW"
+        className="c2"
+        disabled={false}
+        onClick={[Function]}
+        size="medium"
       >
         Reset
       </button>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 bclWrW DangerButton-sc-1220u5k-0 ehzMsl"
+        className="c2 c4"
+        disabled={false}
+        onClick={[Function]}
+        size="medium"
       >
         Trigger Error
       </button>
       <button
         aria-label="Delete"
-        class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+        className="c5 "
+        disabled={false}
+        onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 cwKdbD"
+          aria-hidden={true}
+          className="c6 c7"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="32px"
           icon="delete"
           p="half"
+          size="32px"
+          title={null}
           viewBox="0 0 24 24"
           width="32px"
         >
@@ -392,30 +1346,37 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <p
-          class="Text-sc-1wu7vpu-0 hHlnON"
+          className="c8 c9"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           Delete
         </p>
       </button>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c11 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dqoulF"
+          aria-hidden={true}
+          className="c6 c13"
           color="green"
           fill="#008059"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="check"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -424,28 +1385,34 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           Saved all your changes
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c11 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dqoulF"
+          aria-hidden={true}
+          className="c6 c13"
           color="green"
           fill="#008059"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="check"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -454,28 +1421,34 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           Reset all your changes
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c11 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dqoulF"
+          aria-hidden={true}
+          className="c6 c13"
           color="green"
           fill="#008059"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="check"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -484,28 +1457,34 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           Ok, it's deleted
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c10"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c15 Alert-u8lbe-0 c12"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 ewGQci"
+          aria-hidden={true}
+          className="c6 c16"
           color="red"
           fill="#cc1439"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -514,7 +1493,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c14"
         >
           An error occurred, please retry
         </div>
@@ -525,47 +1504,211 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
 `;
 
 exports[`Storyshots Toast with close button 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  margin-right: auto;
+}
+
+.c3 {
+  background-color: #e1ebfa;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #216beb;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c7 {
+  color: #434d59;
+  font-size: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c7:hover {
+  cursor: pointer;
+  color: #216beb;
+}
+
+.c4 {
+  box-shadow: 0px 1px 4px 0px rgba(1,30,56,0.15);
+  min-width: 200px;
+  max-width: 600px;
+  opacity: 0;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
+}
+
+.c4 .c6 {
+  color: #011e38;
+}
+
+.c2 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-tranform: translateY(-32px);
+  tranform: translateY(-32px);
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.9s ease-in;
+  -webkit-transition: transform 0.9s ease-in;
+  transition: transform 0.9s ease-in;
+  z-index: 1;
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onClick={[Function]}
+      size="medium"
     >
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      className="c2"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        className="c3 Alert-u8lbe-0 c4"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c5"
         >
           Saved
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          className=""
         >
           <button
             aria-label="Close"
-            class="Link-sc-1lpx3d0-0 eyTmUh"
+            className="c6 c7"
             color="darkGrey"
-            font-size="medium"
+            fontSize="medium"
+            onClick={[Function]}
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 gNwFhh"
+              aria-hidden={true}
+              className="c8"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="16"
               icon="close"
               size="16"
+              title={null}
               viewBox="0 0 24 24"
               width="16"
             >

@@ -1,50 +1,238 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots StatusIndicator All 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #e4e7eb;
+  background-color: #e4e7eb;
+  color: #434d59;
+}
+
+.c2 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #434d59;
+}
+
+.c3 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #216beb;
+  background-color: #216beb;
+  color: #ffffff;
+}
+
+.c4 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #008059;
+  background-color: #008059;
+  color: #ffffff;
+}
+
+.c5 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #ffbb00;
+  background-color: #ffbb00;
+  color: #434d59;
+}
+
+.c6 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #cc1439;
+  background-color: #cc1439;
+  color: #ffffff;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 RKBBg"
-      font-size="smaller"
+      className="c1"
+      fontSize="smaller"
       type="neutral"
     >
       Neutral
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 bRgec"
-      font-size="smaller"
+      className="c2"
+      fontSize="smaller"
       type="quiet"
     >
       Quiet
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 kcwFtD"
-      font-size="smaller"
+      className="c3"
+      fontSize="smaller"
       type="informative"
     >
       Informative
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 bgEnVn"
-      font-size="smaller"
+      className="c4"
+      fontSize="smaller"
       type="success"
     >
       Success
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 kskdzU"
-      font-size="smaller"
+      className="c5"
+      fontSize="smaller"
       type="warning"
     >
       Warning
     </p>
     <p
-      class="StatusIndicator-t1vtrp-0 cpshFT"
-      font-size="smaller"
+      className="c6"
+      fontSize="smaller"
       type="danger"
     >
       Danger
@@ -54,15 +242,68 @@ exports[`Storyshots StatusIndicator All 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Danger 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #cc1439;
+  background-color: #cc1439;
+  color: #ffffff;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 cXXUWf"
-      font-size="smaller"
+      className="c1"
+      fontSize="smaller"
       type="danger"
     >
       Danger
@@ -72,115 +313,221 @@ exports[`Storyshots StatusIndicator Danger 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Following text 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-bottom: 24px;
+}
+
+.c5 {
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c6 {
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c7 {
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.33333333;
+  color: currentColor;
+}
+
+.c2 {
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c4 {
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.c3 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #e4e7eb;
+  background-color: #e4e7eb;
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 dgqwRo"
+      className="c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0-h2 brpaKQ"
-        font-size="larger"
-        font-weight="medium"
+        className="c2"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 dgqwRo"
+      className="c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 MApIk"
-        font-size="large"
-        font-weight="medium"
+        className="-h3 c4"
+        fontSize="large"
+        fontWeight="medium"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 dgqwRo"
+      className="c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0 ipzFTA"
+        className="c5"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 dgqwRo"
+      className="c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0 gtpyno"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 dgqwRo"
+      className="c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0 emQXPB"
+        className="c7"
         color="currentColor"
-        font-size="smaller"
+        disabled={false}
+        fontSize="smaller"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 dgqwRo"
+      className="c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0 ipzFTA"
+        className="c5"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Long label Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in eleifend metus, in tempus sapien. Morbi eget felis est. Nunc facilisis vel nisi nec ornare. Ut blandit ullamcorper enim sed fringilla. Quisque malesuada pharetra tincidunt. Mauris mauris tortor, maximus vitae tempor ac, tincidunt pharetra augue. In eget suscipit est. Suspendisse feugiat risus urna
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
@@ -191,15 +538,68 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Informative 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #216beb;
+  background-color: #216beb;
+  color: #ffffff;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 fhSGRP"
-      font-size="smaller"
+      className="c1"
+      fontSize="smaller"
       type="informative"
     >
       Informative
@@ -209,97 +609,206 @@ exports[`Storyshots StatusIndicator Informative 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Inside flex 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  margin-right: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c6 {
+  margin-right: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c7 {
+  margin-right: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 1.33333333;
+  color: currentColor;
+}
+
+.c2 {
+  margin-right: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c4 {
+  margin-right: 8px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.c3 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #e4e7eb;
+  background-color: #e4e7eb;
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0-h2 beQSnH"
-        font-size="larger"
-        font-weight="medium"
+        className="c2"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 kekrzE"
-        font-size="large"
-        font-weight="medium"
+        className="-h3 c4"
+        fontSize="large"
+        fontWeight="medium"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0 kmQoAM"
+        className="c5"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0 icwHeY"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fjbNzW"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <span
-        class="Text-sc-1wu7vpu-0 gQrkYx"
+        className="c7"
         color="currentColor"
-        font-size="smaller"
+        disabled={false}
+        fontSize="smaller"
       >
         Label
       </span>
       <p
-        class="StatusIndicator-t1vtrp-0 buWDcg"
-        font-size="smaller"
+        className="c3"
+        fontSize="smaller"
         type="neutral"
       >
         Status
@@ -310,15 +819,68 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Neutral 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #e4e7eb;
+  background-color: #e4e7eb;
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 buWDcg"
-      font-size="smaller"
+      className="c1"
+      fontSize="smaller"
       type="neutral"
     >
       Neutral
@@ -328,15 +890,68 @@ exports[`Storyshots StatusIndicator Neutral 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Quiet 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 kMMSHk"
-      font-size="smaller"
+      className="c1"
+      fontSize="smaller"
       type="quiet"
     >
       Quiet
@@ -346,15 +961,68 @@ exports[`Storyshots StatusIndicator Quiet 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Success 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #008059;
+  background-color: #008059;
+  color: #ffffff;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 gyZmjr"
-      font-size="smaller"
+      className="c1"
+      fontSize="smaller"
       type="success"
     >
       Success
@@ -364,15 +1032,68 @@ exports[`Storyshots StatusIndicator Success 1`] = `
 `;
 
 exports[`Storyshots StatusIndicator Warning 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-letter-spacing: .05em;
+  -moz-letter-spacing: .05em;
+  -ms-letter-spacing: .05em;
+  letter-spacing: .05em;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 0;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 1.33333333;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-color: #ffbb00;
+  background-color: #ffbb00;
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="StatusIndicator-t1vtrp-0 jRRKcw"
-      font-size="smaller"
+      className="c1"
+      fontSize="smaller"
       type="warning"
     >
       Warning

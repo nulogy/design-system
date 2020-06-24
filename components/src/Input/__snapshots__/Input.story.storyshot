@@ -1,41 +1,162 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Input Input 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Input
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c5"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c6"
             display="flex"
           >
             <input
-              aria-invalid="false"
-              aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              aria-invalid={false}
+              aria-required={false}
+              className="c7"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={false}
             />
           </div>
         </div>
@@ -46,42 +167,162 @@ exports[`Storyshots Input Input 1`] = `
 `;
 
 exports[`Storyshots Input set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: rgba(1,30,56,0.3333);
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Set to disabled
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c5"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c6"
             display="flex"
           >
             <input
-              aria-invalid="false"
-              aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 fdcdYd"
-              disabled=""
+              aria-invalid={false}
+              aria-required={false}
+              className="c7"
+              disabled={true}
+              onBlur={[Function]}
+              required={false}
             />
           </div>
         </div>
@@ -92,59 +333,298 @@ exports[`Storyshots Input set to disabled 1`] = `
 `;
 
 exports[`Storyshots Input set to required 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c7 {
+  margin-bottom: 8px;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c12 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c12:hover {
+  background-color: #e1ebfa;
+}
+
+.c12:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c12:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c12:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c12:disabled {
+  opacity: .5;
+}
+
+.c13 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c13:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c13:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c13:focus:hover {
+  background-color: #1254c7;
+}
+
+.c6 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c8 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c5 {
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 .c2 {
+  margin-bottom: 48px;
+}
+
+.c1 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c1 .c4,
+.c1 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c1 .c4:last-child,
+.c1 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c1 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c11 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c11:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c11:focus ~ svg {
+  fill: #00438f;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c11::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 laLzBn"
+      className="c1"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Required field example
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4 c5"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c6 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c7"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c8"
             >
               Label
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c9"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c10"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="true"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
-                required=""
+                aria-invalid={false}
+                aria-required={true}
+                className="c11"
+                disabled={false}
+                onBlur={[Function]}
+                onChange={[Function]}
+                required={true}
               />
             </div>
           </div>
         </label>
       </div>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+        className="c12 c13"
+        disabled={false}
+        size="medium"
       >
         Send
       </button>
@@ -154,49 +634,286 @@ exports[`Storyshots Input set to required 1`] = `
 `;
 
 exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c11 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+}
+
+.c17 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  width: 360px;
+}
+
+.c18 {
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+}
+
+.c19 {
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  width: 360px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c13 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c20 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c7 {
+  width: 100%;
+}
+
+.c16 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.c5 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.c5 .c15 {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.c5 .c6,
+.c5 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c5 .c6:last-child,
+.c5 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.c14 .c15 {
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.c14 .c6,
+.c14 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c14 .c6:last-child,
+.c14 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  margin-bottom: 48px;
+  width: 100%;
+}
+
+.c1 .c2 {
+  margin-bottom: 48px;
+}
+
+.c1 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c1 .c6,
+.c1 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c1 .c6:last-child,
+.c1 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .c4 {
+  margin-bottom: 48px;
+}
+
+.c1 .c4:last-child {
+  margin-bottom: 0;
+}
+
+.c10 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c10:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c10:focus ~ svg {
+  fill: #00438f;
+}
+
+.c10::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c10::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c10:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c10::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 fuhEdK"
+      className="c1"
       mb="x6"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Suffix
       </h2>
       <fieldset
-        class="FormSection-sc-5yud6c-1 klMAvm"
+        className="c4 c5"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 gtRBwd"
+              className="c11"
+              width={null}
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Eaches
               </p>
@@ -204,28 +921,32 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 gtRBwd"
+              className="c11"
+              width={null}
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Pallets and boxes
               </p>
@@ -234,39 +955,42 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="FormSection-sc-5yud6c-1 cJYtnA"
+        className="c4 c14"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
-          font-weight="medium"
+          className="c12-h3 Headings__SubsectionTitle-igpciy-0 c15 c16"
+          fontSize="large"
+          fontWeight="medium"
         >
           With Custom Width
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 fehlWH"
+              className="c17"
               width="360px"
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Eaches
               </p>
@@ -274,29 +998,32 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 fehlWH"
+              className="c17"
               width="360px"
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Pallets and boxes
               </p>
@@ -306,215 +1033,235 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
       </fieldset>
     </form>
     <form
-      class="Form-n70q8u-0 fuhEdK"
+      className="c1"
       mb="x6"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Prefix
       </h2>
       <fieldset
-        class="FormSection-sc-5yud6c-1 klMAvm"
+        className="c4 c5"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 cujNNu"
+              className="c18"
+              width={null}
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Eaches
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 cujNNu"
+              className="c18"
+              width={null}
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Pallets and boxes
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
           </div>
         </div>
       </fieldset>
       <fieldset
-        class="FormSection-sc-5yud6c-1 cJYtnA"
+        className="c4 c14"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
-          font-weight="medium"
+          className="c12-h3 Headings__SubsectionTitle-igpciy-0 c15 c16"
+          fontSize="large"
+          fontWeight="medium"
         >
           With Custom Width
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              className="c19"
               width="360px"
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Eaches
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              className="c19"
               width="360px"
             >
               <p
-                class="Text-sc-1wu7vpu-0 eEDmVF"
+                className="c12 c13"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Pallets and boxes
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
           </div>
         </div>
       </fieldset>
       <fieldset
-        class="FormSection-sc-5yud6c-1 cJYtnA"
+        className="c4 c14"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
-          font-weight="medium"
+          className="c12-h3 Headings__SubsectionTitle-igpciy-0 c15 c16"
+          fontSize="large"
+          fontWeight="medium"
         >
           With right alignment
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              className="c19"
               width="360px"
             >
               <p
-                class="Text-sc-1wu7vpu-0 edyTXm"
+                className="c12 c20"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Eaches
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c8"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              className="c19"
               width="360px"
             >
               <p
-                class="Text-sc-1wu7vpu-0 edyTXm"
+                className="c12 c20"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Pallets and boxes
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c9"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c10"
+                disabled={false}
+                required={false}
               />
             </div>
           </div>
@@ -522,50 +1269,56 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
       </fieldset>
     </form>
     <form
-      class="Form-n70q8u-0 fuhEdK"
+      className="c1"
       mb="x6"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Prefix and Suffix
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c6 c7"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c8"
         >
           <div
-            class="Box-sc-1qu1edy-0 cujNNu"
+            className="c18"
+            width={null}
           >
             <p
-              class="Text-sc-1wu7vpu-0 eEDmVF"
+              className="c12 c13"
               color="currentColor"
-              font-size="medium"
+              disabled={false}
+              fontSize="medium"
             >
               Quantity
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c9"
             display="flex"
           >
             <input
-              aria-invalid="false"
-              aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              aria-invalid={false}
+              aria-required={false}
+              className="c10"
+              disabled={false}
+              required={false}
             />
           </div>
           <div
-            class="Box-sc-1qu1edy-0 gtRBwd"
+            className="c11"
+            width={null}
           >
             <p
-              class="Text-sc-1wu7vpu-0 eEDmVF"
+              className="c12 c13"
               color="currentColor"
-              font-size="medium"
+              disabled={false}
+              fontSize="medium"
             >
               Eaches
             </p>
@@ -578,57 +1331,202 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
 `;
 
 exports[`Storyshots Input with all props 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c5 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c6 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c9 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c9:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c9:focus ~ svg {
+  fill: #00438f;
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Input
           </span>
           <span
-            class="Text-sc-1wu7vpu-0 bphWXP"
+            className="c5"
             color="darkGrey"
-            font-size="12px"
+            disabled={false}
+            fontSize="12px"
           >
             Required
           </span>
           <p
-            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+            className="c6"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Additional help text
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c8"
             display="flex"
           >
             <input
-              aria-invalid="false"
-              aria-required="true"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              aria-invalid={false}
+              aria-required={true}
+              className="c9"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
               placeholder="Placeholder"
-              required=""
+              required={true}
             />
           </div>
         </div>
@@ -639,42 +1537,163 @@ exports[`Storyshots Input with all props 1`] = `
 `;
 
 exports[`Storyshots Input with custom ID 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c5"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c6"
             display="flex"
           >
             <input
-              aria-invalid="false"
-              aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              aria-invalid={false}
+              aria-required={false}
+              className="c7"
+              disabled={false}
               id="my-own-id"
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={false}
             />
           </div>
         </div>
@@ -685,58 +1704,231 @@ exports[`Storyshots Input with custom ID 1`] = `
 `;
 
 exports[`Storyshots Input with error list  1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c8 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c12 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c15 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c15:last-child {
+  margin-bottom: 0;
+}
+
+.c13 {
+  color: currentColor;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.c13 .c14 {
+  margin-bottom: 0;
+}
+
+.c10 .c11 {
+  margin-bottom: 8px;
+}
+
+.c10 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #cc1439;
+  border-color: #cc1439;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c5"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c6"
             display="flex"
           >
             <input
-              aria-invalid="true"
-              aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+              aria-invalid={true}
+              aria-required={false}
+              className="c7"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={false}
             />
           </div>
         </div>
       </label>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        className="c8"
         color="red"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          aria-hidden={true}
+          className="c9"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -745,27 +1937,28 @@ exports[`Storyshots Input with error list  1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+          className="c10"
         >
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c11 c12"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Error message
           </p>
           <ul
-            class="List-sc-1cqkmnl-0 diqcEx"
+            className="c13"
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c14 c15"
               color="currentColor"
             >
               Error message 1
             </li>
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c14 c15"
               color="currentColor"
             >
               Error message 2
@@ -779,58 +1972,212 @@ exports[`Storyshots Input with error list  1`] = `
 `;
 
 exports[`Storyshots Input with error message 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c8 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c12 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c10 .c11 {
+  margin-bottom: 8px;
+}
+
+.c10 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #cc1439;
+  border-color: #cc1439;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c5"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c6"
             display="flex"
           >
             <input
-              aria-invalid="true"
-              aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+              aria-invalid={true}
+              aria-required={false}
+              className="c7"
+              disabled={false}
+              onBlur={[Function]}
+              onChange={[Function]}
+              required={false}
             />
           </div>
         </div>
       </label>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        className="c8"
         color="red"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          aria-hidden={true}
+          className="c9"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -839,12 +2186,13 @@ exports[`Storyshots Input with error message 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+          className="c10"
         >
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c11 c12"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Error message
           </p>

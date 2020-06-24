@@ -1,14 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Card Card 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  position: relative;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
+      className="Box-sc-1qu1edy-0 c1"
     >
       I am a card.
     </div>
@@ -17,27 +54,72 @@ exports[`Storyshots Card Card 1`] = `
 `;
 
 exports[`Storyshots Card Cardset 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  background-color: #f0f2f5;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  position: relative;
+}
+
+.c1 .c2 {
+  margin-bottom: 8px;
+}
+
+.c1 .c2:last-child {
+  margin-bottom: 0px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj CardSet-sc-143b99f-0 hByntb"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
+        className="c2 c3"
       >
         I am a 1st card in a cardset.
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
+        className="c2 c3"
       >
         I am a 2nd card in a cardset.
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
+        className="c2 c3"
       >
         I am a 3rd card in a cardset.
       </div>
@@ -47,14 +129,53 @@ exports[`Storyshots Card Cardset 1`] = `
 `;
 
 exports[`Storyshots Card Custom card 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #011e38;
+  color: #ffffff;
+  padding: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  position: relative;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 bdKSSm"
+      className="Box-sc-1qu1edy-0 c1"
       color="white"
     >
       I am a custom card.

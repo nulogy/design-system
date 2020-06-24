@@ -1,16 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Headings Section Title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <h2
-      class="Text-sc-1wu7vpu-0-h2 heWDlS"
-      font-size="larger"
-      font-weight="medium"
+      className="c1"
+      fontSize="larger"
+      fontWeight="medium"
     >
       Section Title
     </h2>
@@ -19,16 +53,50 @@ exports[`Storyshots Headings Section Title 1`] = `
 `;
 
 exports[`Storyshots Headings Subsection Title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <h3
-      class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="large"
-      font-weight="medium"
+      className="Text-sc-1wu7vpu-0-h3 c1"
+      fontSize="large"
+      fontWeight="medium"
     >
       SubsectionTitle
     </h3>
@@ -37,16 +105,50 @@ exports[`Storyshots Headings Subsection Title 1`] = `
 `;
 
 exports[`Storyshots Headings Title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 48px;
+  font-size: 46px;
+  line-height: 1.04347826;
+  font-weight: 300;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <h1
-      class="Text-sc-1wu7vpu-0-h1 VooJu"
-      font-size="largest"
-      font-weight="light"
+      className="c1"
+      fontSize="largest"
+      fontWeight="light"
     >
       Title
     </h1>
@@ -55,23 +157,66 @@ exports[`Storyshots Headings Title 1`] = `
 `;
 
 exports[`Storyshots Headings With a custom margin 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  margin-bottom: 48px;
+  margin-top: 0;
+  font-size: 46px;
+  line-height: 1.04347826;
+  font-weight: 300;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <h1
-      class="Text-sc-1wu7vpu-0-h1 fKaScO"
-      font-size="largest"
-      font-weight="light"
+      className="c1"
+      fontSize="largest"
+      fontWeight="light"
     >
       Title
     </h1>
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Lorem ipsum
     </p>

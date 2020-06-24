@@ -1,16 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Link As a <button> 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Link-sc-1lpx3d0-0 cLSnCY"
+      className="c1"
       color="blue"
-      font-size="medium"
+      fontSize="medium"
     >
       Link
     </button>
@@ -19,16 +60,56 @@ exports[`Storyshots Link As a <button> 1`] = `
 `;
 
 exports[`Storyshots Link Link  1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <a
-      class="Link-sc-1lpx3d0-0 gxbSxg"
+      className="c1"
       color="blue"
-      font-size="medium"
+      fontSize="medium"
       href="http://nulogy.design"
     >
       Link
@@ -38,16 +119,56 @@ exports[`Storyshots Link Link  1`] = `
 `;
 
 exports[`Storyshots Link With a different color 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #011e38;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:hover {
+  cursor: pointer;
+  color: #cc1439;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <a
-      class="Link-sc-1lpx3d0-0 cpcHzb"
+      className="c1"
       color="black"
-      font-size="medium"
+      fontSize="medium"
       href="http://nulogy.design"
     >
       Link
@@ -57,16 +178,56 @@ exports[`Storyshots Link With a different color 1`] = `
 `;
 
 exports[`Storyshots Link With a different size 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #011e38;
+  font-size: 20px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:hover {
+  cursor: pointer;
+  color: #000306;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <a
-      class="Link-sc-1lpx3d0-0 jFBEBU"
+      className="c1"
       color="black"
-      font-size="large"
+      fontSize="large"
       href="http://nulogy.design"
     >
       Link
@@ -76,16 +237,56 @@ exports[`Storyshots Link With a different size 1`] = `
 `;
 
 exports[`Storyshots Link Without underline 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <a
-      class="Link-sc-1lpx3d0-0 clvBNI"
+      className="c1"
       color="blue"
-      font-size="medium"
+      fontSize="medium"
       href="http://nulogy.design"
     >
       Link
@@ -95,16 +296,56 @@ exports[`Storyshots Link Without underline 1`] = `
 `;
 
 exports[`Storyshots Link with custom font size 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #216beb;
+  font-size: 14px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c1:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <a
-      class="Link-sc-1lpx3d0-0 eELETS"
+      className="c1"
       color="blue"
-      font-size="small"
+      fontSize="small"
       href="http://nulogy.design"
     >
       Link

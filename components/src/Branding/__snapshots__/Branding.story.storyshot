@@ -1,25 +1,371 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Branding Branding 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  padding: 16px;
+  width: 50%;
+}
+
+.c9 {
+  background-color: #011e38;
+  padding: 16px;
+  width: 50%;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c8 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c12 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c14 {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c16 {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c18 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c20 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c6 {
+  color: #0E77D2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c6 active {
+  color: #0E77D2;
+}
+
+.c6 visited {
+  color: #0E77D2;
+}
+
+.c10 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c10 active {
+  color: #ffffff;
+}
+
+.c10 visited {
+  color: #ffffff;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+
+.c13 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.c15 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  padding: 2px 0;
+}
+
+.c17 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.c7 {
+  position: relative;
+  width: 100%;
+}
+
+.c7:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #e1ebfa;
+  background: #e1ebfa;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c11 {
+  position: relative;
+  width: 100%;
+}
+
+.c11:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #e4e7eb;
+  background: #e4e7eb;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 cqHFoz"
-        width="0.5"
+        className="c2"
+        width={0.5}
       >
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="small"
         >
           <svg
             height="24px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 133 32"
             width="100px"
           >
@@ -56,11 +402,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 133 32"
             width="133px"
           >
@@ -97,11 +449,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 37 32"
             width="37px"
           >
@@ -114,11 +472,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 133 32"
             width="133px"
           >
@@ -152,12 +516,18 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+            className="c5"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 TxcJr"
-              style="margin-left:;margin-right:4px"
+              className="c6"
+              size="medium"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
@@ -166,11 +536,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 133 32"
             width="133px"
           >
@@ -204,28 +580,40 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+            className="c5"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 TxcJr"
-              style="margin-left:;margin-right:4px"
+              className="c6"
+              size="medium"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 gfZuug"
+              className="c7"
             />
           </div>
         </div>
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 133 32"
             width="200px"
           >
@@ -262,11 +650,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 37 32"
             width="56px"
           >
@@ -279,11 +673,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 133 32"
             width="200px"
           >
@@ -317,12 +717,18 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 exzrEz"
+            className="c8"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 TxcJr"
-              style="margin-left:;margin-right:4px"
+              className="c6"
+              size="large"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
@@ -331,11 +737,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 133 32"
             width="200px"
           >
@@ -369,31 +781,43 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 exzrEz"
+            className="c8"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 TxcJr"
-              style="margin-left:;margin-right:4px"
+              className="c6"
+              size="large"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 gfZuug"
+              className="c7"
             />
           </div>
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 cNiTF"
-        width="0.5"
+        className="c9"
+        width={0.5}
       >
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 133 32"
             width="133px"
           >
@@ -430,11 +854,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 37 32"
             width="37px"
           >
@@ -447,11 +877,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 133 32"
             width="133px"
           >
@@ -485,12 +921,18 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+            className="c5"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 klrjtc"
-              style="margin-left:;margin-right:4px"
+              className="c10"
+              size="medium"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
@@ -499,11 +941,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+          className="c4 "
+          size="medium"
         >
           <svg
             height="32px"
-            style="display:block;margin:2px 0"
+            style={
+              Object {
+                "display": "block",
+                "margin": "2px 0",
+              }
+            }
             viewBox="0 0 133 32"
             width="133px"
           >
@@ -537,28 +985,40 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+            className="c5"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 klrjtc"
-              style="margin-left:;margin-right:4px"
+              className="c10"
+              size="medium"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 iooZEo"
+              className="c11"
             />
           </div>
         </div>
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 133 32"
             width="200px"
           >
@@ -595,11 +1055,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 37 32"
             width="56px"
           >
@@ -612,11 +1078,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 133 32"
             width="200px"
           >
@@ -650,12 +1122,18 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 exzrEz"
+            className="c8"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 klrjtc"
-              style="margin-left:;margin-right:4px"
+              className="c10"
+              size="large"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
@@ -664,11 +1142,17 @@ exports[`Storyshots Branding Branding 1`] = `
         <br />
         <br />
         <div
-          class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+          className="c3 "
+          size="large"
         >
           <svg
             height="48px"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+                "margin": null,
+              }
+            }
             viewBox="0 0 133 32"
             width="200px"
           >
@@ -702,31 +1186,43 @@ exports[`Storyshots Branding Branding 1`] = `
             </g>
           </svg>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 exzrEz"
+            className="c8"
             width="100%"
           >
             <span
-              class="BrandingText-nluvkd-0 klrjtc"
-              style="margin-left:;margin-right:4px"
+              className="c10"
+              size="large"
+              style={
+                Object {
+                  "marginLeft": false,
+                  "marginRight": "4px",
+                }
+              }
             >
               Logo Subtext
             </span>
             <div
-              class="Branding__Line-ranqri-1 iooZEo"
+              className="c11"
             />
           </div>
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iPsInh"
+      className="c12"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+        className="c4 "
+        size="medium"
       >
         <svg
           height="32px"
-          style="display:block;margin:2px 0"
+          style={
+            Object {
+              "display": "block",
+              "margin": "2px 0",
+            }
+          }
           viewBox="0 0 133 32"
           width="133px"
         >
@@ -760,23 +1256,35 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+          className="c5"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:;margin-right:4px"
+            className="c6"
+            size="medium"
+            style={
+              Object {
+                "marginLeft": false,
+                "marginRight": "4px",
+              }
+            }
           >
             Left Align
           </span>
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 heEDKn Branding-ranqri-2 kQRWHN"
+        className="c13 "
+        size="medium"
       >
         <svg
           height="32px"
-          style="display:block;margin:2px 0"
+          style={
+            Object {
+              "display": "block",
+              "margin": "2px 0",
+            }
+          }
           viewBox="0 0 133 32"
           width="133px"
         >
@@ -810,23 +1318,35 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 enlTuW"
+          className="c14"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:4px"
+            className="c6"
+            size="medium"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": "4px",
+              }
+            }
           >
             Center Align
           </span>
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 bOWbLF Branding-ranqri-2 kQRWHN"
+        className="c15 "
+        size="medium"
       >
         <svg
           height="32px"
-          style="display:block;margin:2px 0"
+          style={
+            Object {
+              "display": "block",
+              "margin": "2px 0",
+            }
+          }
           viewBox="0 0 133 32"
           width="133px"
         >
@@ -860,12 +1380,18 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iDtevk"
+          className="c16"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:"
+            className="c6"
+            size="medium"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": false,
+              }
+            }
           >
             Right Align
           </span>
@@ -873,14 +1399,20 @@ exports[`Storyshots Branding Branding 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iPsInh"
+      className="c12"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+        className="c4 "
+        size="medium"
       >
         <svg
           height="32px"
-          style="display:block;margin:2px 0"
+          style={
+            Object {
+              "display": "block",
+              "margin": "2px 0",
+            }
+          }
           viewBox="0 0 133 32"
           width="133px"
         >
@@ -914,26 +1446,38 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+          className="c5"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:;margin-right:4px"
+            className="c6"
+            size="medium"
+            style={
+              Object {
+                "marginLeft": false,
+                "marginRight": "4px",
+              }
+            }
           >
             Left Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 heEDKn Branding-ranqri-2 kQRWHN"
+        className="c13 "
+        size="medium"
       >
         <svg
           height="32px"
-          style="display:block;margin:2px 0"
+          style={
+            Object {
+              "display": "block",
+              "margin": "2px 0",
+            }
+          }
           viewBox="0 0 133 32"
           width="133px"
         >
@@ -967,29 +1511,41 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 enlTuW"
+          className="c14"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:4px"
+            className="c6"
+            size="medium"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": "4px",
+              }
+            }
           >
             Center Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 bOWbLF Branding-ranqri-2 kQRWHN"
+        className="c15 "
+        size="medium"
       >
         <svg
           height="32px"
-          style="display:block;margin:2px 0"
+          style={
+            Object {
+              "display": "block",
+              "margin": "2px 0",
+            }
+          }
           viewBox="0 0 133 32"
           width="133px"
         >
@@ -1023,15 +1579,21 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iDtevk"
+          className="c16"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:"
+            className="c6"
+            size="medium"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": false,
+              }
+            }
           >
             Right Align
           </span>
@@ -1039,14 +1601,20 @@ exports[`Storyshots Branding Branding 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iPsInh"
+      className="c12"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+        className="c3 "
+        size="large"
       >
         <svg
           height="48px"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+              "margin": null,
+            }
+          }
           viewBox="0 0 133 32"
           width="200px"
         >
@@ -1080,23 +1648,35 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 exzrEz"
+          className="c8"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:;margin-right:4px"
+            className="c6"
+            size="large"
+            style={
+              Object {
+                "marginLeft": false,
+                "marginRight": "4px",
+              }
+            }
           >
             Left Align
           </span>
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 yiUfZ Branding-ranqri-2 kQRWHN"
+        className="c17 "
+        size="large"
       >
         <svg
           height="48px"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+              "margin": null,
+            }
+          }
           viewBox="0 0 133 32"
           width="200px"
         >
@@ -1130,23 +1710,35 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+          className="c18"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:4px"
+            className="c6"
+            size="large"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": "4px",
+              }
+            }
           >
             Center Align
           </span>
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 jTTNBD Branding-ranqri-2 kQRWHN"
+        className="c19 "
+        size="large"
       >
         <svg
           height="48px"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+              "margin": null,
+            }
+          }
           viewBox="0 0 133 32"
           width="200px"
         >
@@ -1180,12 +1772,18 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eEHFdc"
+          className="c20"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:"
+            className="c6"
+            size="large"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": false,
+              }
+            }
           >
             Right Align
           </span>
@@ -1193,14 +1791,20 @@ exports[`Storyshots Branding Branding 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iPsInh"
+      className="c12"
     >
       <div
-        class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+        className="c3 "
+        size="large"
       >
         <svg
           height="48px"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+              "margin": null,
+            }
+          }
           viewBox="0 0 133 32"
           width="200px"
         >
@@ -1234,26 +1838,38 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 exzrEz"
+          className="c8"
           width="100%"
         >
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:;margin-right:4px"
+            className="c6"
+            size="large"
+            style={
+              Object {
+                "marginLeft": false,
+                "marginRight": "4px",
+              }
+            }
           >
             Left Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 yiUfZ Branding-ranqri-2 kQRWHN"
+        className="c17 "
+        size="large"
       >
         <svg
           height="48px"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+              "margin": null,
+            }
+          }
           viewBox="0 0 133 32"
           width="200px"
         >
@@ -1287,29 +1903,41 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+          className="c18"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:4px"
+            className="c6"
+            size="large"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": "4px",
+              }
+            }
           >
             Center Align
           </span>
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
         </div>
       </div>
       <div
-        class="Branding__BrandingWrap-ranqri-0 jTTNBD Branding-ranqri-2 kQRWHN"
+        className="c19 "
+        size="large"
       >
         <svg
           height="48px"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+              "margin": null,
+            }
+          }
           viewBox="0 0 133 32"
           width="200px"
         >
@@ -1343,15 +1971,21 @@ exports[`Storyshots Branding Branding 1`] = `
           </g>
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eEHFdc"
+          className="c20"
           width="100%"
         >
           <div
-            class="Branding__Line-ranqri-1 gfZuug"
+            className="c7"
           />
           <span
-            class="BrandingText-nluvkd-0 TxcJr"
-            style="margin-left:4px;margin-right:"
+            className="c6"
+            size="large"
+            style={
+              Object {
+                "marginLeft": "4px",
+                "marginRight": false,
+              }
+            }
           >
             Right Align
           </span>

@@ -1,43 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Flex Flex 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -47,52 +117,131 @@ exports[`Storyshots Flex Flex 1`] = `
 `;
 
 exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  height: 400px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hWMBMD"
+      className="c1"
       height="400px"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
     </div>
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       This solution involves using height instead min-height.
     </p>
@@ -101,55 +250,144 @@ exports[`Storyshots Flex IE11 minHeight solution 1 1`] = `
 `;
 
 exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eeiLmV"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
-        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+        className="c2"
+        style={
+          Object {
+            "background": "#f0f2f5",
+            "boxSizing": "content-box",
+            "minHeight": "400px",
+            "padding": "24px",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           5
         </div>
       </div>
     </div>
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       This solution involves wrapping Flex element with another Flex element with column direction..
     </p>
@@ -158,48 +396,148 @@ exports[`Storyshots Flex IE11 minHeight solution 2 1`] = `
 `;
 
 exports[`Storyshots Flex With custom order 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+
+.c3 {
+  -webkit-order: 3;
+  -ms-flex-order: 3;
+  order: 3;
+}
+
+.c4 {
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.c5 {
+  -webkit-order: 5;
+  -ms-flex-order: 5;
+  order: 5;
+}
+
+.c6 {
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jeXUhB"
+        className="c2"
         order="1"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jpYpSf"
+        className="c3"
         order="3"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 frZDCe"
+        className="c4"
         order="2"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jjupVN"
+        className="c5"
         order="5"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 flvDFM"
+        className="c6"
         order="4"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -209,43 +547,117 @@ exports[`Storyshots Flex With custom order 1`] = `
 `;
 
 exports[`Storyshots Flex alignItems set to center 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -255,43 +667,117 @@ exports[`Storyshots Flex alignItems set to center 1`] = `
 `;
 
 exports[`Storyshots Flex alignItems set to flex-end 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cPBChj"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -301,43 +787,117 @@ exports[`Storyshots Flex alignItems set to flex-end 1`] = `
 `;
 
 exports[`Storyshots Flex alignItems set to flex-start 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -347,43 +907,117 @@ exports[`Storyshots Flex alignItems set to flex-start 1`] = `
 `;
 
 exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fMZgiV"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -393,43 +1027,116 @@ exports[`Storyshots Flex alignItems set to stretch (default) 1`] = `
 `;
 
 exports[`Storyshots Flex flexDirection set to column 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eeiLmV"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -439,43 +1146,116 @@ exports[`Storyshots Flex flexDirection set to column 1`] = `
 `;
 
 exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jIvELE"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -485,43 +1265,116 @@ exports[`Storyshots Flex flexDirection set to column-reverse 1`] = `
 `;
 
 exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 YzlTQ"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -531,59 +1384,148 @@ exports[`Storyshots Flex flexDirection set to row-reverse 1`] = `
 `;
 
 exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: 500px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 hLZXXF"
-      width="500"
+      className="c1"
+      width={500}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cJTmbP"
-        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+        className="c2"
+        style={
+          Object {
+            "background": "#f0f2f5",
+            "boxSizing": "content-box",
+            "minHeight": "400px",
+            "padding": "24px",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           5
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           6
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           7
         </div>
@@ -594,59 +1536,148 @@ exports[`Storyshots Flex flexWrap set to no-wrap (default) 1`] = `
 `;
 
 exports[`Storyshots Flex flexWrap set to wrap 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: 500px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 hLZXXF"
-      width="500"
+      className="c1"
+      width={500}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kKfTwu"
-        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+        className="c2"
+        style={
+          Object {
+            "background": "#f0f2f5",
+            "boxSizing": "content-box",
+            "minHeight": "400px",
+            "padding": "24px",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           5
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           6
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           7
         </div>
@@ -657,59 +1688,148 @@ exports[`Storyshots Flex flexWrap set to wrap 1`] = `
 `;
 
 exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: 500px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 hLZXXF"
-      width="500"
+      className="c1"
+      width={500}
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbhWTT"
-        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+        className="c2"
+        style={
+          Object {
+            "background": "#f0f2f5",
+            "boxSizing": "content-box",
+            "minHeight": "400px",
+            "padding": "24px",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           1
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           2
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           3
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           4
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           5
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           6
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
-          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+          className=""
+          style={
+            Object {
+              "background": "#c0c8d1",
+              "outline": "2px dotted #434d59",
+              "padding": "48px",
+            }
+          }
         >
           7
         </div>
@@ -720,43 +1840,117 @@ exports[`Storyshots Flex flexWrap set to wrap-reverse 1`] = `
 `;
 
 exports[`Storyshots Flex justifyContent set to center 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iIgIah"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -766,43 +1960,117 @@ exports[`Storyshots Flex justifyContent set to center 1`] = `
 `;
 
 exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dTSZwr"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -812,43 +2080,117 @@ exports[`Storyshots Flex justifyContent set to flex-end 1`] = `
 `;
 
 exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dDCzDc"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -858,43 +2200,117 @@ exports[`Storyshots Flex justifyContent set to flex-start (default) 1`] = `
 `;
 
 exports[`Storyshots Flex justifyContent set to space-around 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCANLs"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -904,43 +2320,117 @@ exports[`Storyshots Flex justifyContent set to space-around 1`] = `
 `;
 
 exports[`Storyshots Flex justifyContent set to space-between 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hBnJSV"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>
@@ -950,43 +2440,117 @@ exports[`Storyshots Flex justifyContent set to space-between 1`] = `
 `;
 
 exports[`Storyshots Flex justifyContent set to space-evenly 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hVgYgW"
-      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      className="c1"
+      style={
+        Object {
+          "background": "#f0f2f5",
+          "boxSizing": "content-box",
+          "minHeight": "400px",
+          "padding": "24px",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         1
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         2
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         3
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         4
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
-        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        className=""
+        style={
+          Object {
+            "background": "#c0c8d1",
+            "outline": "2px dotted #434d59",
+            "padding": "48px",
+          }
+        }
       >
         5
       </div>

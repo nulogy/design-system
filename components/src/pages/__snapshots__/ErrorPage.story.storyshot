@@ -1,32 +1,219 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/ErrorPage Base 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c6 {
+  max-width: 432px;
+}
+
+.c10 {
+  margin-right: auto;
+}
+
+.c12 {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.c1 {
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  margin: 0 auto;
+  max-width: 672px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  background-color: #fae6ea;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c11 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c13 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c8 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+@media screen and (min-width:0px) {
+  .c4 {
+    margin-bottom: 40px;
+    margin-top: 16px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    margin-bottom: 32px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c4 {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
+      className="c1"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eUPAic"
+        className="c2"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bCieNK"
+          className="c3"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 eEgbxx"
+            className="c4"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+              className="c5 "
+              size="large"
             >
               <svg
                 height="48px"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": null,
+                  }
+                }
                 viewBox="0 0 133 32"
                 width="200px"
               >
@@ -62,21 +249,23 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dKEgdE"
+            className="c6"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+              className="c7 c8"
               role="alert"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 ewGQci"
+                aria-hidden={true}
+                className="c9"
                 color="red"
                 fill="#cc1439"
-                focusable="false"
+                focusable={false}
                 height="24px"
                 icon="error"
                 mr="x1"
+                size="24px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="24px"
               >
@@ -85,13 +274,14 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                 />
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 iDnpba"
+                className="c10"
               >
                 <p
-                  class="Text-sc-1wu7vpu-0 dFPjNj"
+                  className="c11"
                   color="currentColor"
-                  font-size="medium"
-                  font-weight="bold"
+                  disabled={false}
+                  fontSize="medium"
+                  fontWeight="bold"
                 >
                   We're sorry, but something went wrong.
                 </p>
@@ -102,13 +292,18 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eUEsHJ"
-        style="border-top:solid 1px #e4e7eb"
+        className="c12"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 keXslM"
+          className="c13"
           color="darkGrey"
-          font-size="small"
+          disabled={false}
+          fontSize="small"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -119,32 +314,204 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
 `;
 
 exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c6 {
+  max-width: 432px;
+}
+
+.c9 {
+  margin-right: auto;
+}
+
+.c10 {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.c1 {
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  margin: 0 auto;
+  max-width: 672px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  background-color: #e1ebfa;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #216beb;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c11 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c8 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+@media screen and (min-width:0px) {
+  .c4 {
+    margin-bottom: 40px;
+    margin-top: 16px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    margin-bottom: 32px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c4 {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
+      className="c1"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eUPAic"
+        className="c2"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bCieNK"
+          className="c3"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 eEgbxx"
+            className="c4"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+              className="c5 "
+              size="large"
             >
               <svg
                 height="48px"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": null,
+                  }
+                }
                 viewBox="0 0 133 32"
                 width="200px"
               >
@@ -180,14 +547,14 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dKEgdE"
+            className="c6"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+              className="c7 c8"
               role="alert"
             >
               <div
-                class="Box-sc-1qu1edy-0 iDnpba"
+                className="c9"
               >
                 We are currently adding new features to Nulogy Quality Control. We should be online shortly.
               </div>
@@ -196,13 +563,18 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eUEsHJ"
-        style="border-top:solid 1px #e4e7eb"
+        className="c10"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 keXslM"
+          className="c11"
           color="darkGrey"
-          font-size="small"
+          disabled={false}
+          fontSize="small"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -213,32 +585,238 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
 `;
 
 exports[`Storyshots Pages/ErrorPage With a link 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c6 {
+  max-width: 432px;
+}
+
+.c10 {
+  margin-right: auto;
+}
+
+.c14 {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.c1 {
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c2 {
+  margin: 0 auto;
+  max-width: 672px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  background-color: #fae6ea;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c11 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c15 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c13 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c13:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c8 {
+  margin-bottom: 16px;
+}
+
+.c8 .c12 {
+  color: #011e38;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+@media screen and (min-width:0px) {
+  .c4 {
+    margin-bottom: 40px;
+    margin-top: 16px;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c4 {
+    margin-bottom: 32px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c4 {
+    margin-bottom: 0;
+    margin-top: -32px;
+    margin-right: 24px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c3 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
+      className="c1"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eUPAic"
+        className="c2"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bCieNK"
+          className="c3"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 lokTmN"
+            className="c4"
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+              className="c5 "
+              size="large"
             >
               <svg
                 height="48px"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": null,
+                  }
+                }
                 viewBox="0 0 133 32"
                 width="200px"
               >
@@ -274,21 +852,23 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dKEgdE"
+            className="c6"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eMpWng Alert-u8lbe-0 yTvFo"
+              className="c7 c8"
               role="alert"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 ewGQci"
+                aria-hidden={true}
+                className="c9"
                 color="red"
                 fill="#cc1439"
-                focusable="false"
+                focusable={false}
                 height="24px"
                 icon="error"
                 mr="x1"
+                size="24px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="24px"
               >
@@ -297,13 +877,14 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                 />
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 iDnpba"
+                className="c10"
               >
                 <p
-                  class="Text-sc-1wu7vpu-0 dFPjNj"
+                  className="c11"
                   color="currentColor"
-                  font-size="medium"
-                  font-weight="bold"
+                  disabled={false}
+                  fontSize="medium"
+                  fontWeight="bold"
                 >
                   We're sorry, but something went wrong.
                 </p>
@@ -311,9 +892,9 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
               </div>
             </div>
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="#"
             >
               Back to homepage
@@ -322,13 +903,18 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eUEsHJ"
-        style="border-top:solid 1px #e4e7eb"
+        className="c14"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 keXslM"
+          className="c15"
           color="darkGrey"
-          font-size="small"
+          disabled={false}
+          fontSize="small"
         >
           © 2007-2019 Nulogy Corporation
         </p>

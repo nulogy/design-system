@@ -1,100 +1,252 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c5 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.c1 legend {
+  padding: 0;
+}
+
+.c8 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c8:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c6 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c6:focus + .c7 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6:checked + .c7 {
+  border-color: #00438f;
+  background-color: #00438f;
+}
+
+.c6:checked + .c7:before {
+  display: block;
+}
+
+.c6:not(:checked) + .c7 {
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+}
+
+.c4 {
+  padding: 4px 0;
+}
+
+.c4 .c9 {
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      className="c1 "
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        className="c2"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          className="c3"
         >
           Setting Selection
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={false}
+            className="c6 c4"
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="a"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option A
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={false}
+            className="c6 c4"
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="b"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option B
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={false}
+            className="c6 c4"
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="c"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option C
           </p>
@@ -106,118 +258,294 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
 `;
 
 exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c12 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c8 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c6 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c1 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.c1 legend {
+  padding: 0;
+}
+
+.c11 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c11:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c9 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c9:focus + .c10 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c9:checked + .c10 {
+  border-color: #00438f;
+  background-color: #00438f;
+}
+
+.c9:checked + .c10:before {
+  display: block;
+}
+
+.c9:not(:checked) + .c10 {
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+}
+
+.c7 {
+  padding: 4px 0;
+}
+
+.c7 .c4 {
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      className="c1 "
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        className="c2"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          className="c3"
         >
           Setting Selection
         </span>
         <span
-          class="Text-sc-1wu7vpu-0 bphWXP"
+          className="c4 c5"
           color="darkGrey"
-          font-size="12px"
+          disabled={false}
+          fontSize="12px"
         >
           (Required)
         </span>
       </legend>
       <p
-        class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+        className="c4 c6"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Select a setting from the menu below:
       </p>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c7"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c8"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="true"
-            checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={true}
+            className="c9 c7"
+            defaultChecked={true}
+            disabled={false}
+            id={null}
             name="settingSelection"
-            required=""
+            required={true}
             type="checkbox"
             value="a"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c10 c11"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c4 c12"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option A
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c7"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c8"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="true"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={true}
+            className="c9 c7"
+            defaultChecked={false}
+            disabled={false}
+            id={null}
             name="settingSelection"
-            required=""
+            required={true}
             type="checkbox"
             value="b"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c10 c11"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c4 c12"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option B
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c7"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c8"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="true"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={true}
+            className="c9 c7"
+            defaultChecked={false}
+            disabled={false}
+            id={null}
             name="settingSelection"
-            required=""
+            required={true}
             type="checkbox"
             value="c"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c10 c11"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c4 c12"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option C
           </p>
@@ -229,102 +557,261 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
 `;
 
 exports[`Storyshots CheckboxGroup Controlled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c5 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.c1 legend {
+  padding: 0;
+}
+
+.c8 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c8:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c6 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c6:focus + .c7 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6:checked + .c7 {
+  border-color: #00438f;
+  background-color: #00438f;
+}
+
+.c6:checked + .c7:before {
+  display: block;
+}
+
+.c6:not(:checked) + .c7 {
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+}
+
+.c4 {
+  padding: 4px 0;
+}
+
+.c4 .c9 {
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      className="c1 "
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        className="c2"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          className="c3"
         >
           Setting Selection
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={false}
+            checked={true}
+            className="c6 c4"
+            disabled={false}
+            id={null}
             name="settingSelection"
+            onChange={[Function]}
+            required={false}
             type="checkbox"
             value="a"
           />
           <div
-            checked=""
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            checked={true}
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option A
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={false}
+            checked={false}
+            className="c6 c4"
+            disabled={false}
+            id={null}
             name="settingSelection"
+            onChange={[Function]}
+            required={false}
             type="checkbox"
             value="b"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            checked={false}
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option B
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={false}
+            aria-required={false}
+            checked={false}
+            className="c6 c4"
+            disabled={false}
+            id={null}
             name="settingSelection"
+            onChange={[Function]}
+            required={false}
             type="checkbox"
             value="c"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            checked={false}
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option C
           </p>
@@ -336,113 +823,255 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
 `;
 
 exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  opacity: 0.3333;
+}
+
+.c5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.c1 legend {
+  padding: 0;
+}
+
+.c8 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c8:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c6 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c6:focus + .c7 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6:checked + .c7 {
+  border-color: #e4e7eb;
+  background-color: #e4e7eb;
+}
+
+.c6:checked + .c7:before {
+  display: block;
+}
+
+.c6:not(:checked) + .c7 {
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+}
+
+.c4 {
+  padding: 4px 0;
+}
+
+.c4 .c9 {
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      className="c1 "
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        className="c2"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          className="c3"
         >
           Setting Selection
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kjxgat"
-          disabled=""
+          className="c5"
+          disabled={true}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 eJJycu"
-            disabled=""
+            aria-invalid={false}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={true}
+            disabled={true}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="a"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
-            disabled=""
+            disabled={true}
           />
           <p
-            class="Text-sc-1wu7vpu-0 hdrQgs"
+            className="c9 c10"
             color="currentColor"
-            disabled=""
-            font-size="medium"
+            disabled={true}
+            fontSize="medium"
           >
             Option A
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kjxgat"
-          disabled=""
+          className="c5"
+          disabled={true}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 eJJycu"
-            disabled=""
+            aria-invalid={false}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={false}
+            disabled={true}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="b"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
-            disabled=""
+            disabled={true}
           />
           <p
-            class="Text-sc-1wu7vpu-0 hdrQgs"
+            className="c9 c10"
             color="currentColor"
-            disabled=""
-            font-size="medium"
+            disabled={true}
+            fontSize="medium"
           >
             Option B
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kjxgat"
-          disabled=""
+          className="c5"
+          disabled={true}
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 eJJycu"
-            disabled=""
+            aria-invalid={false}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={false}
+            disabled={true}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="c"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
-            disabled=""
+            disabled={true}
           />
           <p
-            class="Text-sc-1wu7vpu-0 hdrQgs"
+            className="c9 c10"
             color="currentColor"
-            disabled=""
-            font-size="medium"
+            disabled={true}
+            fontSize="medium"
           >
             Option C
           </p>
@@ -454,119 +1083,317 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
 `;
 
 exports[`Storyshots CheckboxGroup with error list 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c11 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c12 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c5 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c16 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c16:last-child {
+  margin-bottom: 0;
+}
+
+.c14 {
+  color: currentColor;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.c14 .c15 {
+  margin-bottom: 0;
+}
+
+.c13 .c9 {
+  margin-bottom: 8px;
+}
+
+.c13 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.c1 legend {
+  padding: 0;
+}
+
+.c8 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c8:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c6 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c6:focus + .c7 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6:checked + .c7 {
+  border-color: #cc1439;
+  background-color: #cc1439;
+}
+
+.c6:checked + .c7:before {
+  display: block;
+}
+
+.c6:not(:checked) + .c7 {
+  border-color: #cc1439;
+  background-color: #ffffff;
+}
+
+.c4 {
+  padding: 4px 0;
+}
+
+.c4 .c9 {
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      className="c1 "
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        className="c2"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          className="c3"
         >
           Setting Selection
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="true"
-            aria-required="false"
-            checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={true}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={true}
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="a"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option A
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="true"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={true}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={false}
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="b"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option B
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="true"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={true}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={false}
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="c"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option C
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        className="c11"
         color="red"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          aria-hidden={true}
+          className="c12"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -575,27 +1402,28 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+          className="c13"
         >
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Please select an option
           </p>
           <ul
-            class="List-sc-1cqkmnl-0 diqcEx"
+            className="c14"
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c15 c16"
               color="currentColor"
             >
               Error message 1
             </li>
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c15 c16"
               color="currentColor"
             >
               Error message 2
@@ -609,119 +1437,298 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
 `;
 
 exports[`Storyshots CheckboxGroup with error message 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c11 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c12 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c5 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c13 .c9 {
+  margin-bottom: 8px;
+}
+
+.c13 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.c1 legend {
+  padding: 0;
+}
+
+.c8 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c8:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c6 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c6:focus + .c7 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6:checked + .c7 {
+  border-color: #cc1439;
+  background-color: #cc1439;
+}
+
+.c6:checked + .c7:before {
+  display: block;
+}
+
+.c6:not(:checked) + .c7 {
+  border-color: #cc1439;
+  background-color: #ffffff;
+}
+
+.c4 {
+  padding: 4px 0;
+}
+
+.c4 .c9 {
+  margin-left: 8px;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <fieldset
-      class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+      className="c1 "
     >
       <legend
-        class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+        className="c2"
       >
         <span
-          class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+          className="c3"
         >
           Setting Selection
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="true"
-            aria-required="false"
-            checked=""
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={true}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={true}
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="a"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option A
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="true"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={true}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={false}
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="b"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option B
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        className="c4"
       >
         <label
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c5"
+          disabled={false}
         >
           <input
-            aria-invalid="true"
-            aria-required="false"
-            class="Checkbox__CheckboxInput-sc-1nm58f1-1 iWambR Checkbox-sc-1nm58f1-2 eJJycu"
+            aria-invalid={true}
+            aria-required={false}
+            className="c6 c4"
+            defaultChecked={false}
+            disabled={false}
+            id={null}
             name="settingSelection"
+            required={false}
             type="checkbox"
             value="c"
           />
           <div
-            class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+            className="c7 c8"
             data-testid="visual-checkbox"
+            disabled={false}
           />
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Option C
           </p>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        className="c11"
         color="red"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          aria-hidden={true}
+          className="c12"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -730,12 +1737,13 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+          className="c13"
         >
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Please select an option
           </p>

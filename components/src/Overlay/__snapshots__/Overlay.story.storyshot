@@ -1,29 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Overlay Dark 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 {
+  background-color: #f0f2f5;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  position: relative;
+}
+
+.c2 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(18,43,71,0.5);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c1"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Background content
     </p>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOYFJr"
+      className="Box-sc-1qu1edy-0 Flex-hrfu3s-0 c2"
     >
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
+        className="Box-sc-1qu1edy-0 c3"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c1"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           Overlay content
         </p>
@@ -34,21 +103,78 @@ exports[`Storyshots Overlay Dark 1`] = `
 `;
 
 exports[`Storyshots Overlay Light (default) 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(255,255,255,0.95);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c1"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Background content
     </p>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 jYvdrA"
+      className="Box-sc-1qu1edy-0 Flex-hrfu3s-0 c2"
     >
       Overlay content
     </div>

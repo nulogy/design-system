@@ -1,42 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c4 {
+  color: #00438f;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4:hover {
+  cursor: pointer;
+  color: #002b5c;
+}
+
+.c3 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  color: #434d59;
+}
+
+.c3 a:visited {
+  color: #00438f;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  color: #434d59;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.c5 a:visited {
+  color: #00438f;
+}
+
+.c2 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <nav
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <ol
-        class="Breadcrumbs__StyledOl-sc-1l75jcp-1 huaGZO"
+        className="c2"
       >
         <li
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dYpvAr"
+          className="c3"
         >
           <a
-            class="Link-sc-1lpx3d0-0 hcsgot"
+            className="c4"
             color="darkBlue"
-            font-size="medium"
+            fontSize="medium"
             href="/"
           >
             Home
           </a>
         </li>
         <li
-          aria-hidden="true"
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 cLdMxg seperator"
+          aria-hidden={true}
+          className="c5 seperator"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            aria-hidden={true}
+            className="c6"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="rightArrow"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -46,29 +147,31 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
           </svg>
         </li>
         <li
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dYpvAr"
+          className="c3"
         >
           <a
-            class="Link-sc-1lpx3d0-0 hcsgot"
+            className="c4"
             color="darkBlue"
-            font-size="medium"
+            fontSize="medium"
             href="/Tenants"
           >
             Tenants
           </a>
         </li>
         <li
-          aria-hidden="true"
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 cLdMxg seperator"
+          aria-hidden={true}
+          className="c5 seperator"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            aria-hidden={true}
+            className="c6"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="rightArrow"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -84,42 +187,151 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
 `;
 
 exports[`Storyshots Breadcrumbs without link 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c7 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #00438f;
+}
+
+.c4 {
+  color: #00438f;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c4:hover {
+  cursor: pointer;
+  color: #002b5c;
+}
+
+.c3 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  color: #434d59;
+}
+
+.c3 a:visited {
+  color: #00438f;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  color: #434d59;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.c5 a:visited {
+  color: #00438f;
+}
+
+.c2 {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <nav
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <ol
-        class="Breadcrumbs__StyledOl-sc-1l75jcp-1 huaGZO"
+        className="c2"
       >
         <li
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dYpvAr"
+          className="c3"
         >
           <a
-            class="Link-sc-1lpx3d0-0 hcsgot"
+            className="c4"
             color="darkBlue"
-            font-size="medium"
+            fontSize="medium"
             href="/"
           >
             Home
           </a>
         </li>
         <li
-          aria-hidden="true"
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 cLdMxg seperator"
+          aria-hidden={true}
+          className="c5 seperator"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            aria-hidden={true}
+            className="c6"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="rightArrow"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -129,29 +341,31 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
           </svg>
         </li>
         <li
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dYpvAr"
+          className="c3"
         >
           <a
-            class="Link-sc-1lpx3d0-0 hcsgot"
+            className="c4"
             color="darkBlue"
-            font-size="medium"
+            fontSize="medium"
             href="/Tenants"
           >
             Tenants
           </a>
         </li>
         <li
-          aria-hidden="true"
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 cLdMxg seperator"
+          aria-hidden={true}
+          className="c5 seperator"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            aria-hidden={true}
+            className="c6"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="rightArrow"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -161,28 +375,31 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
           </svg>
         </li>
         <li
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 dYpvAr"
+          className="c3"
         >
           <p
-            class="Text-sc-1wu7vpu-0 kNhVLU"
+            className="c7"
             color="darkBlue"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Current Tenant
           </p>
         </li>
         <li
-          aria-hidden="true"
-          class="Breadcrumbs__StyledLi-sc-1l75jcp-0 cLdMxg seperator"
+          aria-hidden={true}
+          className="c5 seperator"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 dkBAgY"
+            aria-hidden={true}
+            className="c6"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="rightArrow"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >

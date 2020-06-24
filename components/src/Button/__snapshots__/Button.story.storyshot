@@ -1,15 +1,122 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Buttons As a link 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c2:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c2:focus:hover {
+  background-color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <a
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+      className="c1 c2"
+      disabled={false}
       href="/"
+      size="medium"
     >
       Create project
     </a>
@@ -18,14 +125,99 @@ exports[`Storyshots Buttons As a link 1`] = `
 `;
 
 exports[`Storyshots Buttons Button 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      size="medium"
     >
       Create project
     </button>
@@ -34,14 +226,121 @@ exports[`Storyshots Buttons Button 1`] = `
 `;
 
 exports[`Storyshots Buttons DangerButton 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  color: #ffffff;
+  border-color: #cc1439;
+  background-color: #cc1439;
+}
+
+.c2:hover {
+  background-color: #9e0f2c;
+  border-color: #9e0f2c;
+}
+
+.c2:focus {
+  outline: none;
+  background-color: #cc1439;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2:focus:hover {
+  background-color: #9e0f2c;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr DangerButton-sc-1220u5k-0 ehzMsl"
+      className="c1 c2"
+      disabled={false}
+      size="medium"
     >
       Delete project
     </button>
@@ -50,14 +349,121 @@ exports[`Storyshots Buttons DangerButton 1`] = `
 `;
 
 exports[`Storyshots Buttons PrimaryButton 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c2:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c2:focus:hover {
+  background-color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+      className="c1 c2"
+      disabled={false}
+      size="medium"
     >
       Create project
     </button>
@@ -66,14 +472,105 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
 `;
 
 exports[`Storyshots Buttons QuietButton 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 eAbPwX"
+      className="c1 c2"
+      disabled={false}
+      size="medium"
     >
       Create project
     </button>
@@ -82,15 +579,112 @@ exports[`Storyshots Buttons QuietButton 1`] = `
 `;
 
 exports[`Storyshots Buttons Set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: default;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c2:focus:hover {
+  background-color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 gfuNnn PrimaryButton-qz78sb-0 hcOEwE"
-      disabled=""
+      className="c1 c2"
+      disabled={true}
+      size="medium"
     >
       Create project
     </button>
@@ -99,14 +693,121 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
 `;
 
 exports[`Storyshots Buttons Set to full width 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c2:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c2:focus:hover {
+  background-color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
+      className="c1 c2"
+      disabled={false}
+      size="medium"
     >
       Create project
     </button>
@@ -115,24 +816,123 @@ exports[`Storyshots Buttons Set to full width 1`] = `
 `;
 
 exports[`Storyshots Buttons With a selected Icon 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  margin-right: 4px;
+  color: currentColor;
+  min-width: 1.14285714em;
+}
+
+.c3 {
+  margin-left: 4px;
+  color: currentColor;
+  min-width: 1.14285714em;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      size="medium"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 iVDunr"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="1.14285714em"
         icon="add"
         mr="half"
+        size="1.14285714em"
+        title={null}
         viewBox="0 0 24 24"
         width="1.14285714em"
       >
@@ -143,18 +943,22 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
       Create project
     </button>
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      size="medium"
     >
       Create project
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ffVnNY"
+        aria-hidden={true}
+        className="c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="1.14285714em"
         icon="add"
         ml="half"
+        size="1.14285714em"
+        title={null}
         viewBox="0 0 24 24"
         width="1.14285714em"
       >
@@ -168,24 +972,229 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
 `;
 
 exports[`Storyshots Buttons With a selected size 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 14px;
+  line-height: 1.14285714;
+  padding: 3px 8px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c2:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c2:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
+.c3 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 20px;
+  line-height: 1.2;
+  padding: 15px 24px;
+}
+
+.c3:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c3:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hSnlTw"
+      className="c1"
+      disabled={false}
+      size="small"
     >
       Create project
     </button>
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c2"
+      disabled={false}
+      size="medium"
     >
       Create project
     </button>
     <button
-      class="Button__WrapperButton-sc-1omxup2-0 bDgRPA"
+      className="c3"
+      disabled={false}
+      size="large"
     >
       Create project
     </button>

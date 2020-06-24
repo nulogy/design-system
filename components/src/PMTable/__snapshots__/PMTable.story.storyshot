@@ -1,96 +1,509 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots PM/PMTable default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c15 {
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c18 {
+  margin-left: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c22 {
+  margin-right: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c6 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c13 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c13:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c9 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c9:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c7 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c7:focus + .c8 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:checked + .c8 {
+  border-color: #00438f;
+  background-color: #00438f;
+}
+
+.c7:checked + .c8:before {
+  display: block;
+}
+
+.c7:not(:checked) + .c8 {
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+}
+
+.c5 {
+  padding: 4px 0;
+}
+
+.c5 .Text-sc-1wu7vpu-0 {
+  margin-left: 8px;
+}
+
+.c4 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: 30px;
+}
+
+.c4:first-child {
+  padding-left: 16px;
+}
+
+.c10 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: auto;
+}
+
+.c10:first-child {
+  padding-left: 16px;
+}
+
+.c3 {
+  color: #434d59;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.c11 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.c11:first-child {
+  padding-left: 16px;
+}
+
+.c23 {
+  padding: 24px 0;
+  font-size: 14px;
+  color: #434d59;
+}
+
+.c14:first-of-type {
+  border-top: 1px solid #e4e7eb;
+}
+
+.c1 {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+}
+
+.c17 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #c0c8d1;
+  cursor: default;
+}
+
+.c17:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c17:hover {
+  background: inital;
+}
+
+.c21 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c21:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c21:hover {
+  background: #e4e7eb;
+}
+
+.c19 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #00438f;
+  color: #c0c8d1;
+  cursor: default;
+  background: #00438f;
+  color: #f0f2f5;
+}
+
+.c19:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c19:hover {
+  background: #00438f;
+}
+
+.c20 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+  background: transparent;
+  color: #011e38;
+}
+
+.c20:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c20:hover {
+  background: #e4e7eb;
+}
+
+.c16 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c16 button {
+  font-size: 12px;
+  padding: 0 4px;
+  min-width: 22px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.c16 button:not([disabled]) {
+  color: #3593d8;
+}
+
+.c16 button:not(:last-child) {
+  margin-right: 6px;
+}
+
+.c16 button[aria-current=true] {
+  background-color: #2E5C87;
+  font-weight: bold;
+}
+
+.c16 button svg {
+  display: none;
+}
+
+.c2 {
+  font-size: 12px;
+}
+
+.c2 .nds-table__no-rows-content {
+  padding: 0;
+  font-size: 12px;
+}
+
+.c2 thead tr {
+  border-bottom: none;
+}
+
+.c2 thead th,
+.c2 tfoot th,
+.c2 tfoot td {
+  font-weight: bold;
+  color: #222;
+  height: 34px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.c2 thead th:first-child,
+.c2 tfoot th:first-child,
+.c2 tbody td:first-child {
+  padding-left: 8px;
+}
+
+.c2 .table-row--odd {
+  background-color: #f0f0f0;
+}
+
+.c2 .table-row--odd + [data-testid='expanded-table-row'] {
+  background-color: #f0f0f0;
+}
+
+.c2 tbody td,
+.c2 tfoot td {
+  padding: 0;
+  height: 34px;
+  color: #444;
+}
+
+.c2 tr[data-testid='expanded-table-row'] > td:first-child {
+  padding-left: 0;
+}
+
+.c2 nav {
+  background-color: #660099;
+}
+
+.c2 .c12 {
+  font-size: 12px;
+  color: #3593d8;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 .c12:visited {
+  color: #660099;
+}
+
+.c2 .c12:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 button[class*='ControlIcon'] {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
+      className="c1 c2"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          className="c3"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            className="c4"
             data-testid="table-head"
             scope="col"
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              className="c5"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
+                className="c6"
+                disabled={false}
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="select all"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+                  aria-required={false}
+                  checked={false}
+                  className="c7 c5"
+                  disabled={false}
+                  id={null}
+                  onChange={[Function]}
+                  required={false}
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  checked={false}
+                  className="c8 c9"
                   data-testid="visual-checkbox"
+                  disabled={false}
                 />
               </label>
             </div>
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             ID
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Expected Ship
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Customer
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Ship To
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Shipped
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
@@ -102,147 +515,167 @@ exports[`Storyshots PM/PMTable default 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
+          className="table-row--odd"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              className="c5"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
+                className="c6"
+                disabled={false}
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+                  aria-required={false}
+                  checked={false}
+                  className="c7 c5"
+                  disabled={false}
+                  id={null}
+                  onChange={[Function]}
+                  required={false}
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  checked={false}
+                  className="c8 c9"
                   data-testid="visual-checkbox"
+                  disabled={false}
                 />
               </label>
             </div>
           </td>
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234454
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-01
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             National Widgets
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             99 Reactor Blvd., Springfield, SI
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,025 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             1,800 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
+          className="table-row--even"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              className="c5"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
+                className="c6"
+                disabled={false}
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select row"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+                  aria-required={false}
+                  checked={false}
+                  className="c7 c5"
+                  disabled={false}
+                  id={null}
+                  onChange={[Function]}
+                  required={false}
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  checked={false}
+                  className="c8 c9"
                   data-testid="visual-checkbox"
+                  disabled={false}
                 />
               </label>
             </div>
           </td>
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234455
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-02
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             National Widgets
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             7 New St., New York, NY
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             Yes
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,250 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
@@ -250,95 +683,120 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          className="c14"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
-            colspan="2"
+            className="c10"
+            colSpan={2}
             scope="row"
           >
             Total
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             18,000 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             7,725 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          className="c14"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
-            colspan="2"
+            className="c10"
+            colSpan={2}
             scope="row"
           >
             Attainment
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             41.5%
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
         </tr>
       </tfoot>
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
+      className="c15 c16"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
-        disabled=""
+        className="c17"
+        disabled={true}
+        onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c18"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -346,50 +804,64 @@ exports[`Storyshots PM/PMTable default 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         ← Previous
+         
+        ← Previous
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c19"
+        disabled={true}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c20"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c20"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c20"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c21"
+        disabled={false}
+        onClick={[Function]}
       >
-        Next → 
+        Next →
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c22"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -400,63 +872,63 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </button>
     </nav>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
+      className="c1 c2"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          className="c3"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             ID
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Expected Ship
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Customer
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Ship To
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Shipped
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
@@ -468,401 +940,417 @@ exports[`Storyshots PM/PMTable default 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
+          className="table-row--odd"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234454
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-01
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             National Widgets
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             99 Reactor Blvd., Springfield, SI
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,025 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             1,800 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
+          className="table-row--even"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234455
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-02
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             National Widgets
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             7 New St., New York, NY
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             Yes
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,250 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
+          className="table-row--odd"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234461
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-03
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             LTS Corp
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             11 Peter St., Toronto, ON
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             1,425 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
+          className="table-row--even"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234424
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-04
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             Neutron
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             5555 Hwy 6., Toronto, ON
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             675 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
+          className="table-row--odd"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234453
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-07
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             Scopewise
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             7 New St., New York, NY
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             1,575 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
+          className="table-row--even"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1232221
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-22
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             Scopewise
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             871 Husky St., Toronto, ON
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             1,725 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
+          className="table-row--odd"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1444453
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-23
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             Fresh Farm
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             7 New St., New York, NY
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             Yes
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
+          className="table-row--even"
           data-testid="table-row"
         >
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c12 c13"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1224478
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2019-10-24
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             LTS Corp
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             12345 Rodeo Ave., Los Angeles, CA
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             --
           </td>
@@ -870,135 +1358,157 @@ exports[`Storyshots PM/PMTable default 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          className="c14"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
-            colspan="1"
+            className="c10"
+            colSpan={1}
             scope="row"
           >
             Total
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             18,000 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             7,725 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          className="c14"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
-            colspan="1"
+            className="c10"
+            colSpan={1}
             scope="row"
           >
             Attainment
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c11"
           >
             41.5%
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c11"
+          >
+            
+          </td>
         </tr>
       </tfoot>
     </table>
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
+      className="c1 c2"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          className="c3"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             ID
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Expected Ship
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Customer
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Ship To
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Shipped
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c10"
             data-testid="table-head"
             scope="col"
           >
@@ -1013,10 +1523,10 @@ exports[`Storyshots PM/PMTable default 1`] = `
           data-testid="table-message-container"
         >
           <td
-            colspan="8"
+            colSpan={8}
           >
             <div
-              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 fEzznw nds-table__no-rows-content"
+              className="c23 nds-table__no-rows-content"
             >
               No records have been created for this table.
             </div>
@@ -1030,76 +1540,428 @@ exports[`Storyshots PM/PMTable default 1`] = `
 `;
 
 exports[`Storyshots PM/PMTable with expandable rows 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c12 {
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c15 {
+  margin-left: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c19 {
+  margin-right: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c7 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: #434d59;
+}
+
+.c7:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:hover:enabled {
+  cursor: pointer;
+  color: #122b47;
+  background-color: #e4e7eb;
+}
+
+.c10 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c10:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c4 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: 30px;
+}
+
+.c4:first-child {
+  padding-left: 16px;
+}
+
+.c5 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: auto;
+}
+
+.c5:first-child {
+  padding-left: 16px;
+}
+
+.c3 {
+  color: #434d59;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.c6 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.c6:first-child {
+  padding-left: 16px;
+}
+
+.c11:first-of-type {
+  border-top: 1px solid #e4e7eb;
+}
+
+.c1 {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+}
+
+.c14 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #c0c8d1;
+  cursor: default;
+}
+
+.c14:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c14:hover {
+  background: inital;
+}
+
+.c18 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c18:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c18:hover {
+  background: #e4e7eb;
+}
+
+.c16 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #00438f;
+  color: #c0c8d1;
+  cursor: default;
+  background: #00438f;
+  color: #f0f2f5;
+}
+
+.c16:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c16:hover {
+  background: #00438f;
+}
+
+.c17 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+  background: transparent;
+  color: #011e38;
+}
+
+.c17:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c17:hover {
+  background: #e4e7eb;
+}
+
+.c13 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c13 button {
+  font-size: 12px;
+  padding: 0 4px;
+  min-width: 22px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.c13 button:not([disabled]) {
+  color: #3593d8;
+}
+
+.c13 button:not(:last-child) {
+  margin-right: 6px;
+}
+
+.c13 button[aria-current=true] {
+  background-color: #2E5C87;
+  font-weight: bold;
+}
+
+.c13 button svg {
+  display: none;
+}
+
+.c2 {
+  font-size: 12px;
+}
+
+.c2 .nds-table__no-rows-content {
+  padding: 0;
+  font-size: 12px;
+}
+
+.c2 thead tr {
+  border-bottom: none;
+}
+
+.c2 thead th,
+.c2 tfoot th,
+.c2 tfoot td {
+  font-weight: bold;
+  color: #222;
+  height: 34px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.c2 thead th:first-child,
+.c2 tfoot th:first-child,
+.c2 tbody td:first-child {
+  padding-left: 8px;
+}
+
+.c2 .table-row--odd {
+  background-color: #f0f0f0;
+}
+
+.c2 .table-row--odd + [data-testid='expanded-table-row'] {
+  background-color: #f0f0f0;
+}
+
+.c2 tbody td,
+.c2 tfoot td {
+  padding: 0;
+  height: 34px;
+  color: #444;
+}
+
+.c2 tr[data-testid='expanded-table-row'] > td:first-child {
+  padding-left: 0;
+}
+
+.c2 nav {
+  background-color: #660099;
+}
+
+.c2 .c9 {
+  font-size: 12px;
+  color: #3593d8;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 .c9:visited {
+  color: #660099;
+}
+
+.c2 .c9:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2 button[class*='ControlIcon'] {
+  -webkit-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub PMTable___StyledTable-sc-1bray0a-0 hVNzGP"
+      className="c1 c2"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          className="c3"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            className="c4"
             data-testid="table-head"
             scope="col"
             width="30px"
           />
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
             ID
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
             Expected Ship
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
             Customer
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
             Ship To
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
             Shipped
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
             Actual Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c5"
             data-testid="table-head"
             scope="col"
           >
@@ -1111,25 +1973,29 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
+          className="table-row--odd"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="downArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -1139,72 +2005,78 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
               </svg>
             </button>
           </td>
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c9 c10"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234454
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-01
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             National Widgets
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             99 Reactor Blvd., Springfield, SI
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,025 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,800 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--even"
+          className="table-row--even"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="downArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -1214,72 +2086,78 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
               </svg>
             </button>
           </td>
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c9 c10"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234455
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-02
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             National Widgets
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             7 New St., New York, NY
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             Yes
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,250 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             --
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 guzDVv table-row--odd"
+          className="table-row--odd"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="downArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -1289,48 +2167,50 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
               </svg>
             </button>
           </td>
-          <td>
+          <td
+            colSpan={null}
+          >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c9 c10"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               1234461
             </a>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-03
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             LTS Corp
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             11 Peter St., Toronto, ON
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             No
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,425 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             --
           </td>
@@ -1338,95 +2218,120 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          className="c11"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
-            colspan="2"
+            className="c5"
+            colSpan={2}
             scope="row"
           >
             Total
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             18,000 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             7,725 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          className="c11"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
-            colspan="2"
+            className="c5"
+            colSpan={2}
             scope="row"
           >
             Attainment
           </th>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             41.5%
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          />
+            className="c6"
+          >
+            
+          </td>
         </tr>
       </tfoot>
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
+      className="Box-sc-1qu1edy-0 c12 c13"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
-        disabled=""
+        className="c14"
+        disabled={true}
+        onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c15"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -1434,43 +2339,55 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         ← Previous
+         
+        ← Previous
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c16"
+        disabled={true}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c17"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c17"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c18"
+        disabled={false}
+        onClick={[Function]}
       >
-        Next → 
+        Next →
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c19"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >

@@ -1,75 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Tabs Tabs 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c3:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.c2::-webkit-scrollbar {
+  display: none;
+}
+
+.c2:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
-      width="0"
+      className="c1"
+      width={0}
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 giufLG"
+      className="c2"
+      onScroll={[Function]}
       role="tablist"
     >
       <div />
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
+        aria-selected={false}
+        className="c3 Tab1"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="0"
+        selected={false}
+        tabIndex={0}
       >
         Tab 1
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
+        aria-selected={false}
+        className="c3 Tab2"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 2
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab3"
+        aria-selected={false}
+        className="c3 Tab3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 3
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab4"
+        aria-selected={false}
+        className="c3 Tab4"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 4
       </button>
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 1 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 2 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 3 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 4 Content
     </div>
@@ -78,157 +206,415 @@ exports[`Storyshots Tabs Tabs 1`] = `
 `;
 
 exports[`Storyshots Tabs controlled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c3:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.c2::-webkit-scrollbar {
+  display: none;
+}
+
+.c2:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
-      width="0"
+      className="c1"
+      width={0}
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 giufLG"
+      className="c2"
+      onScroll={[Function]}
       role="tablist"
     >
       <div />
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
+        aria-selected={false}
+        className="c3 Tab1"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="0"
+        selected={false}
+        tabIndex={0}
       >
         Tab 1
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
+        aria-selected={false}
+        className="c3 Tab2"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 2
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab3"
+        aria-selected={false}
+        className="c3 Tab3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 3
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab4"
+        aria-selected={false}
+        className="c3 Tab4"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 4
       </button>
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Uncontrolled Content: Tab 1
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Uncontrolled Content: Tab 2
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Uncontrolled Content: Tab 3
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Uncontrolled Content: Tab 4
     </div>
     <div
-      class="ControlledTabContent"
+      className="ControlledTabContent"
     >
-      Controlled Content: Tab 1
+      Controlled Content: Tab 
+      1
     </div>
   </div>
 </div>
 `;
 
 exports[`Storyshots Tabs set to fitted 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  width: 100%;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c3:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.c2::-webkit-scrollbar {
+  display: none;
+}
+
+.c2:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
-      width="0"
+      className="c1"
+      width={0}
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 giufLG"
+      className="c2"
+      onScroll={[Function]}
       role="tablist"
     >
       <div />
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="0"
+        selected={false}
+        tabIndex={0}
       >
         Tab 1
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 2
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 3
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 4
       </button>
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 1 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 2 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 3 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 4 Content
     </div>
@@ -237,76 +623,239 @@ exports[`Storyshots Tabs set to fitted 1`] = `
 `;
 
 exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #00438f;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c4 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c4:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c4:disabled {
+  opacity: .5;
+}
+
+.c4:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c4:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.c2::-webkit-scrollbar {
+  display: none;
+}
+
+.c2:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
-      width="0"
+      className="c1"
+      width={0}
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 giufLG"
+      className="c2"
+      onScroll={[Function]}
       role="tablist"
     >
       <div />
       <button
-        aria-selected="true"
-        class="Tab__TabButton-sc-69abpu-0 kfQsHL"
+        aria-selected={true}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        selected=""
-        tabindex="0"
+        selected={true}
+        tabIndex={0}
       >
         Tab 1
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c4"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 2
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c4"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 3
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c4"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 4
       </button>
     </div>
     <div
-      aria-hidden="false"
-      selected=""
+      aria-hidden={false}
+      hidden={false}
+      selected={true}
     >
       Tab 1 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 2 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 3 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 4 Content
     </div>
@@ -315,38 +864,220 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
 `;
 
 exports[`Storyshots Tabs with all tab states 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c1:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c1:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c2:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
+.c2:before {
+  content: '';
+  background-color: #00438f;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c3 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: default;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c4 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: default;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c4:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c4:disabled {
+  opacity: .5;
+}
+
+.c4:before {
+  content: '';
+  background-color: #00438f;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div>
       <button
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        className="c1"
         role="tab"
       >
         Tab
       </button>
       <button
-        class="Tab__TabButton-sc-69abpu-0 kfQsHL"
+        className="c2"
         role="tab"
-        selected=""
+        selected={true}
       >
         Tab
       </button>
       <button
-        class="Tab__TabButton-sc-69abpu-0 iQOraC"
-        disabled=""
+        className="c3"
+        disabled={true}
         role="tab"
       >
         Tab
       </button>
       <button
-        class="Tab__TabButton-sc-69abpu-0 kEPjFn"
-        disabled=""
+        className="c4"
+        disabled={true}
         role="tab"
-        selected=""
+        selected={true}
       >
         Tab
       </button>
@@ -356,34 +1087,150 @@ exports[`Storyshots Tabs with all tab states 1`] = `
 `;
 
 exports[`Storyshots Tabs with content loaded on selection 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c3:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.c2::-webkit-scrollbar {
+  display: none;
+}
+
+.c2:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
-      width="0"
+      className="c1"
+      width={0}
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 giufLG"
+      className="c2"
+      onScroll={[Function]}
       role="tablist"
     >
       <div />
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
+        aria-selected={false}
+        className="c3 Tab1"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="0"
+        selected={false}
+        tabIndex={0}
       >
         Tab 1
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
+        aria-selected={false}
+        className="c3 Tab2"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 2
       </button>
@@ -393,52 +1240,170 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
 `;
 
 exports[`Storyshots Tabs with inputs 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c3:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.c2::-webkit-scrollbar {
+  display: none;
+}
+
+.c2:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
-      width="0"
+      className="c1"
+      width={0}
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 giufLG"
+      className="c2"
+      onScroll={[Function]}
       role="tablist"
     >
       <div />
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
+        aria-selected={false}
+        className="c3 Tab1"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="0"
+        selected={false}
+        tabIndex={0}
       >
         Tab 1
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
+        aria-selected={false}
+        className="c3 Tab2"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 2
       </button>
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       <input
-        class="Input1"
+        className="Input1"
       />
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       <input
-        class="Input2"
+        className="Input2"
       />
     </div>
   </div>
@@ -446,187 +1411,355 @@ exports[`Storyshots Tabs with inputs 1`] = `
 `;
 
 exports[`Storyshots Tabs with scrolling tabs 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #00438f;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 8px 24px;
+  position: relative;
+}
+
+.c3:focus {
+  outline: none;
+  background-color: #e1ebfa;
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c3:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 210;
+}
+
+.c3:hover:before {
+  content: '';
+  background-color: #e1ebfa;
+  height: 3px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 2px 2px 0 0;
+}
+
+.c1 {
+  position: absolute;
+  width: 0;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.c2::-webkit-scrollbar {
+  display: none;
+}
+
+.c2:before {
+  content: '';
+  background-color: #c0c8d1;
+  height: 1px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
-      width="0"
+      className="c1"
+      width={0}
     />
     <div
-      class="Tabs__TabContainer-o5d5cd-0 giufLG tab-container"
+      className="c2 tab-container"
+      onScroll={[Function]}
       role="tablist"
     >
       <div />
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="0"
+        selected={false}
+        tabIndex={0}
       >
         Tab 1
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 2
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 3
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 4
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 5
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 6
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 7
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 8
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 9
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 10
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 11
       </button>
       <button
-        aria-selected="false"
-        class="Tab__TabButton-sc-69abpu-0 gcfVpD"
+        aria-selected={false}
+        className="c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
         role="tab"
-        tabindex="-1"
+        selected={false}
+        tabIndex={-1}
       >
         Tab 12
       </button>
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 1 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 2 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 3 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 4 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 5 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 6 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 7 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 8 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 9 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 10 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 11 Content
     </div>
     <div
-      aria-hidden="true"
-      hidden=""
+      aria-hidden={true}
+      hidden={true}
+      selected={false}
     >
       Tab 12 Content
     </div>

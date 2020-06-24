@@ -1,38 +1,266 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  max-width: 184px;
+  max-height: 36px;
+}
+
+.c6 {
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  padding: 2px;
+  color: #00438f;
+  min-width: 20px;
+}
+
+.c4 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  color: #00438f;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c9:hover,
+.c9:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c9:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c9:disabled {
+  opacity: .5;
+}
+
+.c11 {
+  display: block;
+  color: #00438f;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c11:hover,
+.c11:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c11:disabled {
+  opacity: .5;
+}
+
+.c11:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c2 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  padding: 8px 24px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56px;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
+      className="c1"
     >
       <header
-        class="NavBar-sc-1o0etgx-3 jwwFUB"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          className="c2"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            className="c3"
           >
             <a
               aria-label="Home"
-              class="Link-sc-1lpx3d0-0 clvBNI"
+              className="c4"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
             >
               <div
-                class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+                className="c5 "
+                size="medium"
               >
                 <svg
                   height="32px"
-                  style="display:block;margin:2px 0"
+                  style={
+                    Object {
+                      "display": "block",
+                      "margin": "2px 0",
+                    }
+                  }
                   viewBox="0 0 133 32"
                   width="133px"
                 >
@@ -69,31 +297,41 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            className="c6"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+              className="c7 c8"
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c9"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c10"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -105,23 +343,33 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c9"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Inspector
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c10"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -133,23 +381,33 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c9"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Operations
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c10"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -161,7 +419,7 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-sc-1a9mp43-1 fqBigT"
+                  className="c11"
                   color="darkBlue"
                   href="/"
                 >
@@ -170,31 +428,41 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              className="c12"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+                className="c7 c8"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c9"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     User@Nulogy.com
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c10"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -206,23 +474,33 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
                 </div>
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c9"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c10"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -243,78 +521,361 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
 `;
 
 exports[`Storyshots BrandedNavBar In a training environment 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  background-color: #00438f;
+  text-align: center;
+}
+
+.c5 {
+  max-width: 184px;
+  max-height: 36px;
+}
+
+.c14 {
+  padding-left: 24px;
+}
+
+.c16 {
+  width: 76px;
+  height: 18px;
+}
+
+.c7 {
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c15 {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-height: 36px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c11 {
+  padding: 2px;
+  color: #00438f;
+  min-width: 20px;
+}
+
+.c3 {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 10px;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.c17 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: 500;
+  -webkit-letter-spacing: .5px;
+  -moz-letter-spacing: .5px;
+  -ms-letter-spacing: .5px;
+  letter-spacing: .5px;
+  color: #434d59;
+  text-transform: uppercase;
+}
+
+.c6 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  color: #00438f;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c10:hover,
+.c10:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c10:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c10:disabled {
+  opacity: .5;
+}
+
+.c12 {
+  display: block;
+  color: #00438f;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c12:hover,
+.c12:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c12:disabled {
+  opacity: .5;
+}
+
+.c12:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c4 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  padding: 8px 24px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56px;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 eyTYtp"
+        className="c2"
       >
         <p
-          class="Text-sc-1wu7vpu-0 dUswLN"
+          className="c3"
           color="white"
-          font-size="10px"
-          font-weight="bold"
-          letter-spacing="0.5px"
+          disabled={false}
+          fontSize="10px"
+          fontWeight="bold"
+          letterSpacing="0.5px"
         >
           Training
         </p>
       </div>
       <header
-        class="NavBar-sc-1o0etgx-3 jwwFUB"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          className="c4"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            className="c5"
           >
             <a
               aria-label="Home"
-              class="Link-sc-1lpx3d0-0 clvBNI"
+              className="c6"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
             >
               <img
                 alt=""
                 src="http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg"
-                style="max-width:184px;max-height:36px"
+                style={
+                  Object {
+                    "maxHeight": "36px",
+                    "maxWidth": "184px",
+                  }
+                }
               />
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            className="c7"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+              className="c8 c9"
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c10"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c11"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -326,23 +887,33 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c10"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Inspector
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c11"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -354,23 +925,33 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c10"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Operations
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c11"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -382,7 +963,7 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-sc-1a9mp43-1 fqBigT"
+                  className="c12"
                   color="darkBlue"
                   href="/"
                 >
@@ -391,31 +972,41 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              className="c13"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+                className="c8 c9"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c10"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     User@Nulogy.com
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c11"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -427,23 +1018,33 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
                 </div>
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c10"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c11"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -455,13 +1056,13 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
                 </div>
               </nav>
               <div
-                class="Box-sc-1qu1edy-0 fsLsir"
+                className="c14"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 lfrZjs"
+                  className="c15"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 fBwUqO"
+                    className="c16"
                     height="18px"
                     width="76px"
                   >
@@ -472,10 +1073,10 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
                     >
                       <g
                         fill="none"
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         id="FInal"
                         stroke="none"
-                        stroke-width="1"
+                        strokeWidth="1"
                       >
                         <g
                           id="DQI"
@@ -535,11 +1136,12 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
                     </svg>
                   </div>
                   <p
-                    class="Text-sc-1wu7vpu-0 hqOtAf"
+                    className="c17"
                     color="darkGrey"
-                    font-size="8px"
-                    font-weight="medium"
-                    letter-spacing=".5px"
+                    disabled={false}
+                    fontSize="8px"
+                    fontWeight="medium"
+                    letterSpacing=".5px"
                   >
                     Quality control
                   </p>
@@ -555,65 +1157,312 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
 `;
 
 exports[`Storyshots BrandedNavBar With a company logo 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  max-width: 184px;
+  max-height: 36px;
+}
+
+.c12 {
+  padding-left: 24px;
+}
+
+.c14 {
+  width: 76px;
+  height: 18px;
+}
+
+.c5 {
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c13 {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-height: 36px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c9 {
+  padding: 2px;
+  color: #00438f;
+  min-width: 20px;
+}
+
+.c4 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  color: #00438f;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c8:hover,
+.c8:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c8:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c8:disabled {
+  opacity: .5;
+}
+
+.c10 {
+  display: block;
+  color: #00438f;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c10:hover,
+.c10:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c10:disabled {
+  opacity: .5;
+}
+
+.c10:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c2 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  padding: 8px 24px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56px;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
+      className="c1"
     >
       <header
-        class="NavBar-sc-1o0etgx-3 jwwFUB"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          className="c2"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            className="c3"
           >
             <a
               aria-label="Home"
-              class="Link-sc-1lpx3d0-0 clvBNI"
+              className="c4"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
             >
               <img
                 alt=""
                 src="http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg"
-                style="max-width:184px;max-height:36px"
+                style={
+                  Object {
+                    "maxHeight": "36px",
+                    "maxWidth": "184px",
+                  }
+                }
               />
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            className="c5"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+              className="c6 c7"
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c9"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -625,23 +1474,33 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Inspector
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c9"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -653,23 +1512,33 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Operations
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c9"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -681,7 +1550,7 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-sc-1a9mp43-1 fqBigT"
+                  className="c10"
                   color="darkBlue"
                   href="/"
                 >
@@ -690,31 +1559,41 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              className="c11"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+                className="c6 c7"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c8"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     User@Nulogy.com
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c9"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -726,23 +1605,33 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
                 </div>
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c8"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c9"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -754,13 +1643,13 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
                 </div>
               </nav>
               <div
-                class="Box-sc-1qu1edy-0 fsLsir"
+                className="c12"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fIQakI"
+                  className="c13"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 fBwUqO"
+                    className="c14"
                     height="18px"
                     width="76px"
                   >
@@ -771,10 +1660,10 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
                     >
                       <g
                         fill="none"
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         id="FInal"
                         stroke="none"
-                        stroke-width="1"
+                        strokeWidth="1"
                       >
                         <g
                           id="DQI"
@@ -845,65 +1734,326 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
 `;
 
 exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  max-width: 184px;
+  max-height: 36px;
+}
+
+.c12 {
+  padding-left: 24px;
+}
+
+.c14 {
+  width: 76px;
+  height: 18px;
+}
+
+.c5 {
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c13 {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  min-height: 36px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c9 {
+  padding: 2px;
+  color: #00438f;
+  min-width: 20px;
+}
+
+.c15 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 8px;
+  line-height: 10px;
+  font-weight: 500;
+  -webkit-letter-spacing: .5px;
+  -moz-letter-spacing: .5px;
+  -ms-letter-spacing: .5px;
+  letter-spacing: .5px;
+  color: #434d59;
+  text-transform: uppercase;
+}
+
+.c4 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  color: #00438f;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c8:hover,
+.c8:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c8:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c8:disabled {
+  opacity: .5;
+}
+
+.c10 {
+  display: block;
+  color: #00438f;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c10:hover,
+.c10:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c10:disabled {
+  opacity: .5;
+}
+
+.c10:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c2 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  padding: 8px 24px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56px;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
+      className="c1"
     >
       <header
-        class="NavBar-sc-1o0etgx-3 jwwFUB"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          className="c2"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            className="c3"
           >
             <a
               aria-label="Home"
-              class="Link-sc-1lpx3d0-0 clvBNI"
+              className="c4"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
             >
               <img
                 alt=""
                 src="http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg"
-                style="max-width:184px;max-height:36px"
+                style={
+                  Object {
+                    "maxHeight": "36px",
+                    "maxWidth": "184px",
+                  }
+                }
               />
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            className="c5"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+              className="c6 c7"
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c9"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -915,23 +2065,33 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Inspector
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c9"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -943,23 +2103,33 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Operations
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c9"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -971,7 +2141,7 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-sc-1a9mp43-1 fqBigT"
+                  className="c10"
                   color="darkBlue"
                   href="/"
                 >
@@ -980,31 +2150,41 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              className="c11"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+                className="c6 c7"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c8"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     User@Nulogy.com
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c9"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1016,23 +2196,33 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
                 </div>
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c8"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c9"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1044,13 +2234,13 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
                 </div>
               </nav>
               <div
-                class="Box-sc-1qu1edy-0 fsLsir"
+                className="c12"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 lfrZjs"
+                  className="c13"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 fBwUqO"
+                    className="c14"
                     height="18px"
                     width="76px"
                   >
@@ -1061,10 +2251,10 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
                     >
                       <g
                         fill="none"
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         id="FInal"
                         stroke="none"
-                        stroke-width="1"
+                        strokeWidth="1"
                       >
                         <g
                           id="DQI"
@@ -1124,11 +2314,12 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
                     </svg>
                   </div>
                   <p
-                    class="Text-sc-1wu7vpu-0 hqOtAf"
+                    className="c15"
                     color="darkGrey"
-                    font-size="8px"
-                    font-weight="medium"
-                    letter-spacing=".5px"
+                    disabled={false}
+                    fontSize="8px"
+                    fontWeight="medium"
+                    letterSpacing=".5px"
                   >
                     Quality control
                   </p>
@@ -1144,38 +2335,302 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
 `;
 
 exports[`Storyshots BrandedNavBar With app name 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  max-width: 184px;
+  max-height: 36px;
+}
+
+.c6 {
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c8 {
+  margin-left: 24px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-end;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  padding: 2px;
+  color: #00438f;
+  min-width: 20px;
+}
+
+.c4 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c7 {
+  color: #0E77D2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c7 active {
+  color: #0E77D2;
+}
+
+.c7 visited {
+  color: #0E77D2;
+}
+
+.c5 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-weight: 500;
+  color: #00438f;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c11:hover,
+.c11:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c11:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c11:disabled {
+  opacity: .5;
+}
+
+.c13 {
+  display: block;
+  color: #00438f;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c13:hover,
+.c13:focus {
+  outline: none;
+  color: #122b47;
+  background-color: #f0f2f5;
+  cursor: pointer;
+}
+
+.c13:disabled {
+  opacity: .5;
+}
+
+.c13:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c10 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c2 {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: white;
+  padding: 8px 24px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56px;
+}
+
+.c1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
+      className="c1"
     >
       <header
-        class="NavBar-sc-1o0etgx-3 jwwFUB"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          className="c2"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            className="c3"
           >
             <a
               aria-label="Home"
-              class="Link-sc-1lpx3d0-0 clvBNI"
+              className="c4"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                }
+              }
             >
               <div
-                class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
+                className="c5 "
+                size="small"
               >
                 <svg
                   height="24px"
-                  style="display:block"
+                  style={
+                    Object {
+                      "display": "block",
+                      "margin": null,
+                    }
+                  }
                   viewBox="0 0 133 32"
                   width="100px"
                 >
@@ -1209,12 +2664,18 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ctbZXD"
+                  className="c6"
                   width="100%"
                 >
                   <span
-                    class="BrandingText-nluvkd-0 cboEiS"
-                    style="margin-left:;margin-right:4px"
+                    className="c7"
+                    size="small"
+                    style={
+                      Object {
+                        "marginLeft": false,
+                        "marginRight": "4px",
+                      }
+                    }
                   >
                     Quality Control
                   </span>
@@ -1223,31 +2684,41 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            className="c8"
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+              className="c9 c10"
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c11"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c12"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1259,23 +2730,33 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c11"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Inspector
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c12"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1287,23 +2768,33 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
               </div>
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c11"
                   color="darkBlue"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Operations
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 ldBYos"
+                    aria-hidden={true}
+                    className="c12"
                     color="darkBlue"
                     fill="#00438f"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -1315,7 +2806,7 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-sc-1a9mp43-1 fqBigT"
+                  className="c13"
                   color="darkBlue"
                   href="/"
                 >
@@ -1324,31 +2815,41 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              className="c14"
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-sc-1a9mp43-3 jhGCqC DesktopMenu-sc-1a9mp43-4 jXTSCm"
+                className="c9 c10"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c11"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     User@Nulogy.com
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c12"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -1360,23 +2861,33 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
                 </div>
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sc-16wbhtr-0 ddFaFV"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c11"
                     color="darkBlue"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 ldBYos"
+                      aria-hidden={true}
+                      className="c12"
                       color="darkBlue"
                       fill="#00438f"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >

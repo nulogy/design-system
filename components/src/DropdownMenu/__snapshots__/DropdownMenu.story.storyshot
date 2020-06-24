@@ -1,28 +1,140 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-describedby={null}
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="open dropdown"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="more"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -36,29 +148,140 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
 `;
 
 exports[`Storyshots DropdownMenu Set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: default;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-describedby={null}
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="open dropdown"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 kezjjz IconicButton-sc-1u3dojp-2 gZASNp"
-      disabled=""
+      className="c1 "
+      disabled={true}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="more"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -72,28 +295,302 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
 `;
 
 exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c8 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  margin: 12px;
+  margin-top: -7px;
+  top: 0;
+}
+
+.c8:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c8:after {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c8:before {
+  border-color: transparent transparent #f0f2f5 transparent;
+  border-width: 0 8px 8px 8px;
+}
+
+.c8:after {
+  border-color: transparent transparent #f0f2f5 transparent;
+  border-width: 0 8px 8px 8px;
+  left: -4px;
+}
+
+.c8:before {
+  top: -2px;
+  left: -4px;
+}
+
+.c8:after {
+  left: -4px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c4 {
+  background-color: #f0f2f5;
+  background-color: #f0f2f5;
+  border-radius: 4px;
+  border-top: 1px solid #f0f2f5;
+  border-bottom: 1px solid #f0f2f5;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  padding: 7px 0;
+  z-index: 100;
+  margin-top: 4px;
+}
+
+.c6 {
+  color: #00438f;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  padding: 8px 16px 8px 12px;
+  border-left: 4px solid transparent;
+}
+
+.c6:hover {
+  color: #00438f;
+  background-color: #e4e7eb;
+}
+
+.c6:focus {
+  outline: none;
+  color: #00438f;
+  background-color: #e4e7eb;
+  border-left: 4px solid #216beb;
+}
+
+.c6:disabled {
+  opacity: .5;
+}
+
+.c5 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: transparent;
+  background-color: transparent;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #00438f;
+  padding: 8px 16px 8px 12px;
+  border-left: 4px solid transparent;
+}
+
+.c5:hover {
+  color: #00438f;
+  background-color: #e4e7eb;
+}
+
+.c5:visited {
+  color: #00438f;
+}
+
+.c5:focus {
+  outline: none;
+  color: #00438f;
+  background-color: #e4e7eb;
+  border-left: 4px solid #216beb;
+}
+
+.c5:disabled {
+  opacity: .5;
+}
+
+.c7 * {
+  color: #00438f;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  line-height: 1.5;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.c7 *:hover,
+.c7 *:focus {
+  outline: none;
+  color: #00438f;
+  background-color: #e4e7eb;
+}
+
+.c7 *:disabled {
+  opacity: .5;
+}
+
+.c7 *:visited {
+  color: #00438f;
+}
+
+.c7 *:active {
+  color: #00438f;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      aria-expanded="true"
-      aria-haspopup="true"
+      aria-describedby={null}
+      aria-expanded={true}
+      aria-haspopup={true}
       aria-label="close dropdown"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="more"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -103,36 +600,55 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
       </svg>
     </button>
     <div
-      class="Box-sc-1qu1edy-0 DropdownMenuContainer-sc-3zczz8-0 fcJZzO  nds-popper-pop-up"
-      open=""
-      style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      className="Box-sc-1qu1edy-0 c4  nds-popper-pop-up"
+      id={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      open={true}
+      style={
+        Object {
+          "left": 0,
+          "opacity": 0,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "top": 0,
+        }
+      }
     >
       <a
-        class="DropdownLink-sc-1myz2tl-0 kCziCp"
+        className="c5"
         color="darkBlue"
         href="/"
       >
         Dropdown Link
       </a>
       <button
-        class="DropdownButton-sc-15i1gee-0 cGihZp"
+        className="c6"
         color="darkBlue"
+        disabled={false}
+        onClick={[Function]}
       >
         Dropdown Button
       </button>
       <div
-        class="DropdownItem-sc-17fo530-0 doIexv"
+        className="c7"
         color="darkBlue"
       >
         <a
           href="/"
-          style="text-decoration:none"
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
         >
           Custom Link Component
         </a>
       </div>
       <div
-        class="PopperArrow-sc-1bcgj4w-0 dGhVUx"
+        className="c8"
+        style={Object {}}
       />
     </div>
   </div>
@@ -140,28 +656,140 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
 `;
 
 exports[`Storyshots DropdownMenu with button closing menu 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-describedby={null}
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="open dropdown"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="more"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -175,28 +803,268 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
 `;
 
 exports[`Storyshots DropdownMenu with custom colors 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c7 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  margin: 12px;
+  margin-top: -7px;
+  top: 0;
+}
+
+.c7:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c7:after {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c7:before {
+  border-color: transparent transparent #122b47 transparent;
+  border-width: 0 8px 8px 8px;
+}
+
+.c7:after {
+  border-color: transparent transparent #122b47 transparent;
+  border-width: 0 8px 8px 8px;
+  left: -4px;
+}
+
+.c7:before {
+  top: -2px;
+  left: -4px;
+}
+
+.c7:after {
+  left: -4px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c4 {
+  background-color: #122b47;
+  background-color: #122b47;
+  border-radius: 4px;
+  border-top: 1px solid #122b47;
+  border-bottom: 1px solid #122b47;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  padding: 7px 0;
+  z-index: 100;
+  margin-top: 4px;
+}
+
+.c6 {
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  padding: 8px 16px 8px 12px;
+  border-left: 4px solid transparent;
+}
+
+.c6:hover {
+  color: #ffffff;
+  background-color: #011e38;
+}
+
+.c6:focus {
+  outline: none;
+  color: #ffffff;
+  background-color: #011e38;
+  border-left: 4px solid #216beb;
+}
+
+.c6:disabled {
+  opacity: .5;
+}
+
+.c5 {
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: transparent;
+  background-color: transparent;
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: #ffffff;
+  padding: 8px 16px 8px 12px;
+  border-left: 4px solid transparent;
+}
+
+.c5:hover {
+  color: #ffffff;
+  background-color: #011e38;
+}
+
+.c5:visited {
+  color: #ffffff;
+}
+
+.c5:focus {
+  outline: none;
+  color: #ffffff;
+  background-color: #011e38;
+  border-left: 4px solid #216beb;
+}
+
+.c5:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      aria-expanded="true"
-      aria-haspopup="true"
+      aria-describedby={null}
+      aria-expanded={true}
+      aria-haspopup={true}
       aria-label="close dropdown"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="more"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -206,25 +1074,40 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
       </svg>
     </button>
     <div
-      class="Box-sc-1qu1edy-0 DropdownMenuContainer-sc-3zczz8-0 gCpwvi  nds-popper-pop-up"
-      open=""
-      style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      className="Box-sc-1qu1edy-0 c4  nds-popper-pop-up"
+      id={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      open={true}
+      style={
+        Object {
+          "left": 0,
+          "opacity": 0,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "top": 0,
+        }
+      }
     >
       <a
-        class="DropdownLink-sc-1myz2tl-0 fzJAwh"
+        className="c5"
         color="white"
         href="/"
       >
         Dropdown Link
       </a>
       <button
-        class="DropdownButton-sc-15i1gee-0 djNVKc"
+        className="c6"
         color="white"
+        disabled={false}
+        onClick={[Function]}
       >
         Dropdown Button
       </button>
       <div
-        class="PopperArrow-sc-1bcgj4w-0 duKylJ"
+        className="c7"
+        style={Object {}}
       />
     </div>
   </div>
@@ -232,28 +1115,140 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
 `;
 
 exports[`Storyshots DropdownMenu with custom item 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-describedby={null}
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="open dropdown"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="more"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -267,17 +1262,106 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
 `;
 
 exports[`Storyshots DropdownMenu with custom trigger 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-describedby={null}
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="open dropdown"
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={null}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      size="medium"
       type="button"
     >
       Custom Trigger

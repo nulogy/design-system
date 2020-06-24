@@ -1,35 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Table.Headers Sorting Header 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c2 {
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: #434d59;
+}
+
+.c3:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c3:hover:enabled {
+  cursor: pointer;
+  color: #122b47;
+  background-color: #e4e7eb;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <p
-        class="Text-sc-1wu7vpu-0 ipzFTA"
+        className="c2"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Header Label
       </p>
       <button
         aria-label="Sort ascending"
-        class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+        className="c3"
+        disabled={false}
+        onClick={[Function]}
         type="button"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dkBAgY"
+          aria-hidden={true}
+          className="c4"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="sortUp"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >

@@ -1,41 +1,150 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c7 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: #434d59;
+}
+
+.c7:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:hover:enabled {
+  cursor: pointer;
+  color: #122b47;
+  background-color: #e4e7eb;
+}
+
+.c3 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: 30px;
+}
+
+.c3:first-child {
+  padding-left: 16px;
+}
+
+.c4 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: auto;
+}
+
+.c4:first-child {
+  padding-left: 16px;
+}
+
+.c2 {
+  color: #434d59;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.c6 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.c6:first-child {
+  padding-left: 16px;
+}
+
+.c5:hover {
+  background-color: #f0f2f5;
+}
+
+.c1 {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+      className="c1"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          className="c2"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            className="c3"
             data-testid="table-head"
             scope="col"
             width="30px"
           />
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c4"
             data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c4"
             data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c4"
             data-testid="table-head"
             scope="col"
           >
@@ -47,48 +156,52 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-01
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,025 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,800 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="downArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -99,64 +212,68 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             </button>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-02
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,250 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-03
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,425 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="downArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -167,64 +284,68 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             </button>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-04
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             675 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-07
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,575 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="downArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -235,63 +356,63 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
             </button>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-22
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,725 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             -
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-23
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             -
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-24
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             -
           </td>
@@ -304,41 +425,167 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
 `;
 
 exports[`Storyshots Table/with expandable rows with rows expanded by default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c9 {
+  background-color: #e1ebfa;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #122b47;
+}
+
+.c7 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: #434d59;
+}
+
+.c7:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:hover:enabled {
+  cursor: pointer;
+  color: #122b47;
+  background-color: #e4e7eb;
+}
+
+.c3 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: 30px;
+}
+
+.c3:first-child {
+  padding-left: 16px;
+}
+
+.c4 {
+  font-weight: normal;
+  text-align: left;
+  padding: 16px 0;
+  padding-right: 16px;
+  color: #434d59;
+  width: auto;
+}
+
+.c4:first-child {
+  padding-left: 16px;
+}
+
+.c2 {
+  color: #434d59;
+  border-bottom: 1px solid #e4e7eb;
+}
+
+.c6 {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+}
+
+.c6:first-child {
+  padding-left: 16px;
+}
+
+.c5:hover {
+  background-color: #f0f2f5;
+}
+
+.c1 {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+      className="c1"
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          className="c2"
         >
           <th
-            class="StyledTh-sc-10nzyk9-0 kfgNsH"
+            className="c3"
             data-testid="table-head"
             scope="col"
             width="30px"
           />
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c4"
             data-testid="table-head"
             scope="col"
           >
             Date
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c4"
             data-testid="table-head"
             scope="col"
           >
             Expected Quantity
           </th>
           <th
-            class="StyledTh-sc-10nzyk9-0 sBlyT"
+            className="c4"
             data-testid="table-head"
             scope="col"
           >
@@ -350,48 +597,52 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
         data-testid="table-body"
       >
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-01
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,025 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,800 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Expand row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="downArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -402,64 +653,68 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             </button>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-02
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,250 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-03
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,425 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Collapse row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="upArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -470,17 +725,17 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             </button>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-04
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             675 eaches
           </td>
@@ -489,16 +744,17 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           data-testid="expanded-table-row"
         >
           <td
-            colspan="4"
+            colSpan={4}
           >
             <div
-              class="Box-sc-1qu1edy-0 kOlJoM"
+              className="c9"
             >
               <p
-                class="Text-sc-1wu7vpu-0 iHOIzo"
+                className="c10"
                 color="blackBlue"
-                font-size="medium"
-                font-weight="bold"
+                disabled={false}
+                fontSize="medium"
+                fontWeight="bold"
               >
                 Expands!
               </p>
@@ -506,48 +762,52 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-07
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,575 eaches
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             <button
               aria-label="Collapse row"
-              class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+              className="c7"
+              disabled={false}
+              onClick={[Function]}
               type="button"
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 efirdb"
+                aria-hidden={true}
+                className="c8"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="upArrow"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -558,17 +818,17 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
             </button>
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-22
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             1,725 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             -
           </td>
@@ -577,16 +837,17 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           data-testid="expanded-table-row"
         >
           <td
-            colspan="4"
+            colSpan={4}
           >
             <div
-              class="Box-sc-1qu1edy-0 kOlJoM"
+              className="c9"
             >
               <p
-                class="Text-sc-1wu7vpu-0 iHOIzo"
+                className="c10"
                 color="blackBlue"
-                font-size="medium"
-                font-weight="bold"
+                disabled={false}
+                fontSize="medium"
+                fontWeight="bold"
               >
                 Expands!
               </p>
@@ -594,47 +855,47 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-23
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             -
           </td>
         </tr>
         <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+          className="c5"
           data-testid="table-row"
         >
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           />
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2019-10-24
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             2,475 eaches
           </td>
           <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            className="c6"
           >
             -
           </td>

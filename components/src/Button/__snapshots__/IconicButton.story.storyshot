@@ -1,26 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots IconicButton set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c5 {
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: default;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .c4 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-label="Cancel"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 kezjjz IconicButton-sc-1u3dojp-2 gZASNp"
-      disabled=""
+      className="c1 "
+      disabled={true}
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="cancel"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -29,27 +146,30 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
         />
       </svg>
       <p
-        class="Text-sc-1wu7vpu-0 hHlnON"
+        className="c4 c5"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Cancel
       </p>
     </button>
     <button
       aria-label="Lock"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 kezjjz IconicButton-sc-1u3dojp-2 gZASNp"
-      disabled=""
+      className="c1 "
+      disabled={true}
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="lock"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -58,9 +178,10 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
         />
       </svg>
       <p
-        class="Text-sc-1wu7vpu-0 hHlnON"
+        className="c4 c5"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Lock
       </p>
@@ -70,25 +191,146 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
 `;
 
 exports[`Storyshots IconicButton with a hidden label 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c5 {
+  white-space: nowrap;
+  ont-size: 14px;
+  line-height: 1.14285714;
+  color: #f0f2f5;
+  background-color: rgba(18,43,71,0.85);
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 4px 8px;
+  pointer-events: none;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+  margin-left: 48px;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .c4 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .c4 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .c4 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-label="Hidden Label"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 kKACSq IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={false}
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="user"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -97,8 +339,16 @@ exports[`Storyshots IconicButton with a hidden label 1`] = `
         />
       </svg>
       <div
-        class="IconicButton__HoverText-sc-1u3dojp-0 hUWvcf"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        className="c4 c5"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
         Hidden Label
       </div>
@@ -108,25 +358,143 @@ exports[`Storyshots IconicButton with a hidden label 1`] = `
 `;
 
 exports[`Storyshots IconicButton with a long label 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c5 {
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .c4 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-label="I am an Iconic Button with a really really really long label"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={false}
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="user"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -135,9 +503,10 @@ exports[`Storyshots IconicButton with a long label 1`] = `
         />
       </svg>
       <p
-        class="Text-sc-1wu7vpu-0 hHlnON"
+        className="c4 c5"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         I am an Iconic Button with a really really really long label
       </p>
@@ -147,25 +516,143 @@ exports[`Storyshots IconicButton with a long label 1`] = `
 `;
 
 exports[`Storyshots IconicButton with label 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c5 {
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .c4 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-label="Delete"
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      className="c1 "
+      disabled={false}
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="delete"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -174,9 +661,10 @@ exports[`Storyshots IconicButton with label 1`] = `
         />
       </svg>
       <p
-        class="Text-sc-1wu7vpu-0 hHlnON"
+        className="c4 c5"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Delete
       </p>
@@ -186,24 +674,133 @@ exports[`Storyshots IconicButton with label 1`] = `
 `;
 
 exports[`Storyshots IconicButton without a label 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c1 .c2 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c1 .Text-sc-1wu7vpu-0 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c1 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c1:hover .c2 {
+  background-color: #e1ebfa;
+}
+
+.c1:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c1:active .c2 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c1:disabled:hover .c2,
+.c1:disabled:active .c2 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1:focus .c2 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
-      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      aria-label={null}
+      className="c1 "
+      disabled={false}
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 cwKdbD"
+        aria-hidden={true}
+        className="c2 c3"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="delete"
         p="half"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >

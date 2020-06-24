@@ -1,30 +1,181 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pagination Pagination 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-left: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c8 {
+  margin-right: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c6 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c2 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #c0c8d1;
+  cursor: default;
+}
+
+.c2:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c2:hover {
+  background: inital;
+}
+
+.c7 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c7:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c7:hover {
+  background: #e4e7eb;
+}
+
+.c4 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #00438f;
+  color: #c0c8d1;
+  cursor: default;
+  background: #00438f;
+  color: #f0f2f5;
+}
+
+.c4:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c4:hover {
+  background: #00438f;
+}
+
+.c5 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+  background: transparent;
+  color: #011e38;
+}
+
+.c5:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c5:hover {
+  background: #e4e7eb;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
-        disabled=""
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -32,71 +183,90 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         5
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={[Function]}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -108,21 +278,25 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -130,71 +304,90 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         5
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -206,21 +399,25 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -228,71 +425,90 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         5
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -304,21 +520,25 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -326,71 +546,90 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         5
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -402,21 +641,25 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -424,71 +667,90 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         5
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -500,21 +762,25 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -522,71 +788,90 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         5
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         6
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -598,21 +883,25 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -620,72 +909,90 @@ exports[`Storyshots Pagination Pagination 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         5
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         6
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         7
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
-        disabled=""
+        className="c2"
+        disabled={true}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -700,30 +1007,181 @@ exports[`Storyshots Pagination Pagination 1`] = `
 `;
 
 exports[`Storyshots Pagination on the first page 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-left: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c8 {
+  margin-right: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c6 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c2 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #c0c8d1;
+  cursor: default;
+}
+
+.c2:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c2:hover {
+  background: inital;
+}
+
+.c7 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c7:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c7:hover {
+  background: #e4e7eb;
+}
+
+.c4 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #00438f;
+  color: #c0c8d1;
+  cursor: default;
+  background: #00438f;
+  color: #f0f2f5;
+}
+
+.c4:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c4:hover {
+  background: #00438f;
+}
+
+.c5 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+  background: transparent;
+  color: #011e38;
+}
+
+.c5:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c5:hover {
+  background: #e4e7eb;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
-        disabled=""
+        className="c2"
+        disabled={true}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -731,71 +1189,90 @@ exports[`Storyshots Pagination on the first page 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c4"
+        disabled={true}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         5
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c6"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c5"
+        disabled={false}
+        onClick={[Function]}
       >
         10
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -810,29 +1287,181 @@ exports[`Storyshots Pagination on the first page 1`] = `
 `;
 
 exports[`Storyshots Pagination on the last page 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-left: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c8 {
+  margin-right: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c5 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c2 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c2:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c2:hover {
+  background: #e4e7eb;
+}
+
+.c7 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #c0c8d1;
+  cursor: default;
+}
+
+.c7:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c7:hover {
+  background: inital;
+}
+
+.c4 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+  background: transparent;
+  color: #011e38;
+}
+
+.c4:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c4:hover {
+  background: #e4e7eb;
+}
+
+.c6 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #00438f;
+  color: #c0c8d1;
+  cursor: default;
+  background: #00438f;
+  color: #f0f2f5;
+}
+
+.c6:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c6:hover {
+  background: #00438f;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c2"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -840,72 +1469,90 @@ exports[`Storyshots Pagination on the last page 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <p
-        class="Text-sc-1wu7vpu-0 dqAYor"
+        className="c5"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         ...
       </p>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         6
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         7
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         8
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         9
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c6"
+        disabled={true}
+        onClick={[Function]}
       >
         10
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
-        disabled=""
+        className="c7"
+        disabled={true}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -920,29 +1567,148 @@ exports[`Storyshots Pagination on the last page 1`] = `
 `;
 
 exports[`Storyshots Pagination with less than 5 pages 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-left: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c6 {
+  margin-right: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c2 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c2:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c2:hover {
+  background: #e4e7eb;
+}
+
+.c4 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+  background: transparent;
+  color: #011e38;
+}
+
+.c4:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c4:hover {
+  background: #e4e7eb;
+}
+
+.c5 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #00438f;
+  color: #c0c8d1;
+  cursor: default;
+  background: #00438f;
+  color: #f0f2f5;
+}
+
+.c5:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c5:hover {
+  background: #00438f;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c2"
+        disabled={false}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c3"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -950,50 +1716,64 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         Previous
+         
+        Previous
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c5"
+        disabled={true}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c4"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c2"
+        disabled={false}
+        onClick={null}
       >
-        Next 
+        Next
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c6"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >

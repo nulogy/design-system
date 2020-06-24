@@ -82,6 +82,7 @@
     "eslint-import-resolver-webpack": "^0.12.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.1.0",
+    "jest-specific-snapshot": "^3.0.0",
     "jest-styled-components": "7",
     "plop": "^2.4.0",
     "prop-types": "15.7.2",

@@ -1,31 +1,171 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ButtonGroup ButtonGroup 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 16px;
+  width: 500px;
+}
+
+.c3 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c3:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c3:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c4 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c4:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c4:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c4:focus:hover {
+  background-color: #1254c7;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 button {
+  margin-bottom: 8px;
+}
+
+.c2 button:not(:last-child) {
+  margin-right: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 kmQbtL"
+      className="c1"
       width="500px"
     >
       <div
-        class="ButtonGroup-xkz195-0 dtwRCO"
+        className="c2"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+          className="c3 c4"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
@@ -36,51 +176,314 @@ exports[`Storyshots ButtonGroup ButtonGroup 1`] = `
 `;
 
 exports[`Storyshots ButtonGroup more button types 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 16px;
+  width: 600px;
+}
+
+.c9 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c11 {
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c3:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c3:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c4 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c4:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c4:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c4:focus:hover {
+  background-color: #1254c7;
+}
+
+.c5 {
+  color: #ffffff;
+  border-color: #cc1439;
+  background-color: #cc1439;
+}
+
+.c5:hover {
+  background-color: #9e0f2c;
+  border-color: #9e0f2c;
+}
+
+.c5:focus {
+  outline: none;
+  background-color: #cc1439;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5:focus:hover {
+  background-color: #9e0f2c;
+}
+
+.c6 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c7 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c7 .c8 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c7 .c10 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c7 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c7:hover .c8 {
+  background-color: #e1ebfa;
+}
+
+.c7:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c7:active .c8 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c7:disabled {
+  opacity: .5;
+}
+
+.c7:disabled:hover .c8,
+.c7:disabled:active .c8 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c7:focus {
+  outline: none;
+}
+
+.c7:focus .c8 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 button {
+  margin-bottom: 8px;
+}
+
+.c2 button:not(:last-child) {
+  margin-right: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 aJDrU"
+      className="c1"
       width="600px"
     >
       <div
-        class="ButtonGroup-xkz195-0 dtwRCO"
+        className="c2"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+          className="c3 c4"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr DangerButton-sc-1220u5k-0 ehzMsl"
+          className="c3 c5"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr QuietButton-sc-1l5k8i4-0 eAbPwX"
+          className="c3 c6"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+          aria-label={null}
+          className="c7 "
+          disabled={false}
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 cwKdbD"
+            aria-hidden={true}
+            className="c8 c9"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="32px"
             icon="menu"
             p="half"
+            size="32px"
+            title={null}
             viewBox="0 0 24 24"
             width="32px"
           >
@@ -91,17 +494,20 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
         </button>
         <button
           aria-label="Button"
-          class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+          className="c7 "
+          disabled={false}
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 cwKdbD"
+            aria-hidden={true}
+            className="c8 c9"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="32px"
             icon="menu"
             p="half"
+            size="32px"
+            title={null}
             viewBox="0 0 24 24"
             width="32px"
           >
@@ -110,9 +516,10 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
             />
           </svg>
           <p
-            class="Text-sc-1wu7vpu-0 hHlnON"
+            className="c10 c11"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Button
           </p>
@@ -124,31 +531,171 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
 `;
 
 exports[`Storyshots ButtonGroup with alignment right 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 16px;
+  width: 500px;
+}
+
+.c3 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c3:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c3:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c4 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c4:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c4:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c4:focus:hover {
+  background-color: #1254c7;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c2 button {
+  margin-bottom: 8px;
+}
+
+.c2 button:not(:first-child) {
+  margin-left: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 kmQbtL"
+      className="c1"
       width="500px"
     >
       <div
-        class="ButtonGroup-xkz195-0 blsMJq"
+        className="c2"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+          className="c3 c4"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
@@ -159,26 +706,164 @@ exports[`Storyshots ButtonGroup with alignment right 1`] = `
 `;
 
 exports[`Storyshots ButtonGroup with alignment spaced 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 16px;
+  width: 500px;
+}
+
+.c3 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c3:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c3:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c4 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c4:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c4:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c4:focus:hover {
+  background-color: #1254c7;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 button {
+  margin-bottom: 8px;
+}
+
+.c2 button:not(:last-child) {
+  margin-right: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 kmQbtL"
+      className="c1"
       width="500px"
     >
       <div
-        class="ButtonGroup-xkz195-0 hCnVmX"
+        className="c2"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+          className="c3 c4"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
@@ -189,123 +874,303 @@ exports[`Storyshots ButtonGroup with alignment spaced 1`] = `
 `;
 
 exports[`Storyshots ButtonGroup wrapping buttons 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 16px;
+}
+
+.c4 {
+  background-color: #f0f2f5;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.c3 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c3:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c3:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c3:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c3:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 button {
+  margin-bottom: 8px;
+}
+
+.c2 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c5 button {
+  margin-bottom: 8px;
+}
+
+.c5 button:not(:first-child) {
+  margin-left: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 hkwtTx"
+      className="c1"
     >
       <div
-        class="ButtonGroup-xkz195-0 dtwRCO"
+        className="c2"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 uuGzP"
+      className="c4"
     >
       <div
-        class="ButtonGroup-xkz195-0 blsMJq"
+        className="c5"
       >
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>
         <button
-          class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+          className="c3"
+          disabled={false}
+          size="medium"
         >
           Button
         </button>

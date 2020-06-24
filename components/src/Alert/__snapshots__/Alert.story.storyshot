@@ -1,25 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Alert Danger 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c4 {
+  margin-right: auto;
+}
+
+.c1 {
+  background-color: #fae6ea;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c2 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+      className="c1 c2"
       role="alert"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ewGQci"
+        aria-hidden={true}
+        className="c3"
         color="red"
         fill="#cc1439"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -28,7 +83,7 @@ exports[`Storyshots Alert Danger 1`] = `
         />
       </svg>
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        className="c4"
       >
         Danger alert
       </div>
@@ -38,18 +93,65 @@ exports[`Storyshots Alert Danger 1`] = `
 `;
 
 exports[`Storyshots Alert Informative 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-right: auto;
+}
+
+.c1 {
+  background-color: #e1ebfa;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #216beb;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+      className="c1 c2"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        className="c3"
       >
         Informative alert
       </div>
@@ -59,25 +161,80 @@ exports[`Storyshots Alert Informative 1`] = `
 `;
 
 exports[`Storyshots Alert Success 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c4 {
+  margin-right: auto;
+}
+
+.c1 {
+  background-color: #e9f7f2;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #008059;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-right: 8px;
+  color: #008059;
+  min-width: 24px;
+}
+
+.c2 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 kjZZUq"
+      className="c1 c2"
       role="alert"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 dqoulF"
+        aria-hidden={true}
+        className="c3"
         color="green"
         fill="#008059"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="check"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -86,7 +243,7 @@ exports[`Storyshots Alert Success 1`] = `
         />
       </svg>
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        className="c4"
       >
         Success alert
       </div>
@@ -96,18 +253,65 @@ exports[`Storyshots Alert Success 1`] = `
 `;
 
 exports[`Storyshots Alert Warning 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-right: auto;
+}
+
+.c1 {
+  background-color: #fcf5e3;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #ffbb00;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iZHNxR Alert-u8lbe-0 kjZZUq"
+      className="c1 c2"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        className="c3"
       >
         Warning alert
       </div>
@@ -117,39 +321,108 @@ exports[`Storyshots Alert Warning 1`] = `
 `;
 
 exports[`Storyshots Alert With a close button 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-right: auto;
+}
+
+.c1 {
+  background-color: #e1ebfa;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #216beb;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c6 {
+  color: currentColor;
+  min-width: 16;
+}
+
+.c5 {
+  color: #434d59;
+  font-size: 16px;
+  background: none;
+  border: none;
+  padding: 0;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5:hover {
+  cursor: pointer;
+  color: #216beb;
+}
+
+.c2 .c4 {
+  color: #011e38;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+      className="c1 c2"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        className="c3"
       >
         Warning alert
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
       >
         <button
           aria-label="Close"
-          class="Link-sc-1lpx3d0-0 eyTmUh"
+          className="c4 c5"
           color="darkGrey"
-          font-size="medium"
+          fontSize="medium"
+          onClick={[Function]}
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 gNwFhh"
+            aria-hidden={true}
+            className="c6"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="16"
             icon="close"
             size="16"
+            title={null}
             viewBox="0 0 24 24"
             width="16"
           >
@@ -165,24 +438,85 @@ exports[`Storyshots Alert With a close button 1`] = `
 `;
 
 exports[`Storyshots Alert With a link 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-right: auto;
+}
+
+.c1 {
+  background-color: #e1ebfa;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #216beb;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c2 .c4 {
+  color: #011e38;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+      className="c1 c2"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        className="c3"
       >
         An alert with 
         <a
-          class="Link-sc-1lpx3d0-0 gxbSxg"
+          className="c4 c5"
           color="blue"
-          font-size="medium"
+          fontSize="medium"
           href="/"
         >
           linked details
@@ -195,25 +529,89 @@ exports[`Storyshots Alert With a link 1`] = `
 `;
 
 exports[`Storyshots Alert With a title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c4 {
+  margin-right: auto;
+}
+
+.c1 {
+  background-color: #fae6ea;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+      className="c1 c2"
       role="alert"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 ewGQci"
+        aria-hidden={true}
+        className="c3"
         color="red"
         fill="#cc1439"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -222,13 +620,14 @@ exports[`Storyshots Alert With a title 1`] = `
         />
       </svg>
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        className="c4"
       >
         <p
-          class="Text-sc-1wu7vpu-0 dFPjNj"
+          className="c5"
           color="currentColor"
-          font-size="medium"
-          font-weight="bold"
+          disabled={false}
+          fontSize="medium"
+          fontWeight="bold"
         >
           Danger title!
         </p>

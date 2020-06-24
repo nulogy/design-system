@@ -1,35 +1,272 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/Custom Default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c13 {
+  padding: 24px;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c12 {
+  background-color: #ffffff;
+  margin: 8px;
+  min-height: calc(100vh - 72px - 48px - 16px);
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c9 {
+  padding: 2px;
+  color: #ffffff;
+  min-width: 20px;
+}
+
+.c15 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c14 {
+  margin-bottom: 48px;
+  margin-top: 0;
+  font-size: 46px;
+  line-height: 1.04347826;
+  font-weight: 300;
+}
+
+.c3 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c8:hover,
+.c8:focus {
+  outline: none;
+  color: #e1ebfa;
+  background-color: #011e38;
+  cursor: pointer;
+}
+
+.c8:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c8:disabled {
+  opacity: .5;
+}
+
+.c10 {
+  display: block;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c10:hover,
+.c10:focus {
+  outline: none;
+  color: #e1ebfa;
+  background-color: #011e38;
+  cursor: pointer;
+}
+
+.c10:disabled {
+  opacity: .5;
+}
+
+.c10:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c2 {
+  background-color: #122b47;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #122b47;
+  padding: 16px 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      className="c1"
     >
       <header
-        class="NavBar-iayrjp-3 bwrKUV"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          className="c2"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 clvBNI"
+            className="c3"
             color="blue"
-            font-size="medium"
+            fontSize="medium"
             href="/"
-            style="display:block;height:40px"
+            style={
+              Object {
+                "display": "block",
+                "height": "40px",
+              }
+            }
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+              className="c4 "
+              size="medium"
             >
               <svg
                 height="32px"
-                style="display:block;margin:2px 0"
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "2px 0",
+                  }
+                }
                 viewBox="0 0 133 32"
                 width="133px"
               >
@@ -65,33 +302,52 @@ exports[`Storyshots Pages/Custom Default 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
-            style="flex-grow:1;margin:0 0 0 24px"
+            className="c5"
+            style={
+              Object {
+                "flexGrow": "1",
+                "margin": "0 0 0 24px",
+              }
+            }
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq DesktopMenu-e4dzdq-4 irbObu"
-              style="padding-right:24px"
+              className="c6 c7"
+              style={
+                Object {
+                  "paddingRight": "24px",
+                }
+              }
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="#ffffff"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    aria-hidden={true}
+                    className="c9"
                     color="#ffffff"
                     fill="#ffffff"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -103,7 +359,7 @@ exports[`Storyshots Pages/Custom Default 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
+                  className="c10"
                   color="#ffffff"
                   href="/"
                 >
@@ -112,32 +368,46 @@ exports[`Storyshots Pages/Custom Default 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
-              style="float:right"
+              className="c11"
+              style={
+                Object {
+                  "float": "right",
+                }
+              }
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq DesktopMenu-e4dzdq-4 irbObu"
+                className="c6 c7"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c8"
                     color="#ffffff"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      aria-hidden={true}
+                      className="c9"
                       color="#ffffff"
                       fill="#ffffff"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -153,22 +423,23 @@ exports[`Storyshots Pages/Custom Default 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        className="c12"
       >
         <div
-          class="Box-sc-1qu1edy-0 jXTIl"
+          className="c13"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
-            font-weight="light"
+            className="c14"
+            fontSize="largest"
+            fontWeight="light"
           >
             I am title
           </h1>
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c15"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             I am main content.
           </p>
@@ -180,35 +451,558 @@ exports[`Storyshots Pages/Custom Default 1`] = `
 `;
 
 exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  padding-top: 8px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+.c24 {
+  background-color: #ffffff;
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  border-radius: 4px;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  background-color: #ffffff;
+  margin: 8px;
+  min-height: calc(100vh - 72px - 48px - 16px);
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c15 {
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c16 {
+  padding-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c25 {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c10 {
+  padding: 2px;
+  color: #ffffff;
+  min-width: 20px;
+}
+
+.c18 {
+  margin-right: 4px;
+  color: #434d59;
+  min-width: 20px;
+}
+
+.c20 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c23 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c21 {
+  margin-bottom: 48px;
+  margin-top: 0;
+  font-size: 46px;
+  line-height: 1.04347826;
+  font-weight: 300;
+}
+
+.c26 {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c19 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.c19 .c9 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c19 .c22 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c19 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c19:hover .c9 {
+  background-color: #e1ebfa;
+}
+
+.c19:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c19:active .c9 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c19:disabled {
+  opacity: .5;
+}
+
+.c19:disabled:hover .c9,
+.c19:disabled:active .c9 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c19:focus {
+  outline: none;
+}
+
+.c19:focus .c9 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c19:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c27 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c27 .c9 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c27 .c22 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c27 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c27:hover .c9 {
+  background-color: #e1ebfa;
+}
+
+.c27:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c27:active .c9 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c27:disabled {
+  opacity: .5;
+}
+
+.c27:disabled:hover .c9,
+.c27:disabled:active .c9 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c27:focus {
+  outline: none;
+}
+
+.c27:focus .c9 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c27:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c3 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c17 {
+  color: #00438f;
+  margin-right: 4px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17:hover {
+  cursor: pointer;
+  color: #002b5c;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c8:hover,
+.c8:focus {
+  outline: none;
+  color: #e1ebfa;
+  background-color: #011e38;
+  cursor: pointer;
+}
+
+.c8:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c8:disabled {
+  opacity: .5;
+}
+
+.c11 {
+  display: block;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c11:hover,
+.c11:focus {
+  outline: none;
+  color: #e1ebfa;
+  background-color: #011e38;
+  cursor: pointer;
+}
+
+.c11:disabled {
+  opacity: .5;
+}
+
+.c11:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c2 {
+  background-color: #122b47;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #122b47;
+  padding: 16px 24px;
+}
+
+@media screen and (min-width:0px) {
+  .c24 {
+    width: calc(100vw - 48px - 16px);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c24 {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c24 {
+    width: 472px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c24 {
+    border-left: solid 1px #e4e7eb;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c24 {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c24 {
+    position: static;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c16 {
+    width: calc(100vw - 96px - 16px);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c16 {
+    width: auto;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      className="c1"
     >
       <header
-        class="NavBar-iayrjp-3 bwrKUV"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          className="c2"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 clvBNI"
+            className="c3"
             color="blue"
-            font-size="medium"
+            fontSize="medium"
             href="/"
-            style="display:block;height:40px"
+            style={
+              Object {
+                "display": "block",
+                "height": "40px",
+              }
+            }
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+              className="c4 "
+              size="medium"
             >
               <svg
                 height="32px"
-                style="display:block;margin:2px 0"
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "2px 0",
+                  }
+                }
                 viewBox="0 0 133 32"
                 width="133px"
               >
@@ -244,33 +1038,52 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
-            style="flex-grow:1;margin:0 0 0 24px"
+            className="c5"
+            style={
+              Object {
+                "flexGrow": "1",
+                "margin": "0 0 0 24px",
+              }
+            }
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq DesktopMenu-e4dzdq-4 irbObu"
-              style="padding-right:24px"
+              className="c6 c7"
+              style={
+                Object {
+                  "paddingRight": "24px",
+                }
+              }
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="#ffffff"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    aria-hidden={true}
+                    className="c9 c10"
                     color="#ffffff"
                     fill="#ffffff"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -282,7 +1095,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
+                  className="c11"
                   color="#ffffff"
                   href="/"
                 >
@@ -291,32 +1104,46 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
-              style="float:right"
+              className="c12"
+              style={
+                Object {
+                  "float": "right",
+                }
+              }
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq DesktopMenu-e4dzdq-4 irbObu"
+                className="c6 c7"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c8"
                     color="#ffffff"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      aria-hidden={true}
+                      className="c9 c10"
                       color="#ffffff"
                       fill="#ffffff"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -332,35 +1159,42 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        className="c13"
       >
         <div
-          class="Box-sc-1qu1edy-0 hkydKC"
+          className="c14"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 guWDrb"
+            className="c15"
             height="32px"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fvgzBv"
-              width="[object Object]"
+              className="c16"
+              width={
+                Object {
+                  "extraSmall": "calc(100vw - 96px - 16px)",
+                  "medium": "auto",
+                }
+              }
             >
               <a
-                class="Link-sc-1lpx3d0-0 fEeoTP"
+                className="c17"
                 color="darkBlue"
-                font-size="smaller"
+                fontSize="smaller"
               >
                 Breadcrumb
               </a>
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 fQFStW"
+                aria-hidden={true}
+                className="c9 c18"
                 color="darkGrey"
                 fill="#434d59"
-                focusable="false"
+                focusable={false}
                 height="20px"
                 icon="rightArrow"
                 mr="half"
+                size="20px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="20px"
               >
@@ -369,21 +1203,23 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
                 />
               </svg>
               <a
-                class="Link-sc-1lpx3d0-0 fEeoTP"
+                className="c17"
                 color="darkBlue"
-                font-size="smaller"
+                fontSize="smaller"
               >
                 Breadcrumb
               </a>
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 fQFStW"
+                aria-hidden={true}
+                className="c9 c18"
                 color="darkGrey"
                 fill="#434d59"
-                focusable="false"
+                focusable={false}
                 height="20px"
                 icon="rightArrow"
                 mr="half"
+                size="20px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="20px"
               >
@@ -393,17 +1229,21 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </svg>
             </div>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 dkgdQd IconicButton-sc-1u3dojp-2 gZASNp"
+              aria-label={null}
+              className="c19 "
+              disabled={false}
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                aria-hidden={true}
+                className="c9 c20"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="more"
                 p="half"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -414,46 +1254,57 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
-            font-weight="light"
+            className="c22-h1 c21"
+            fontSize="largest"
+            fontWeight="light"
           >
             I am title
           </h1>
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c22 c23"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             I am main content.
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 cTLuiE"
-          width="[object Object]"
+          className="c24"
+          width={
+            Object {
+              "extraSmall": "calc(100vw - 48px - 16px)",
+              "large": "472px",
+              "medium": "400px",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
+            className="c25"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="larger"
-              font-weight="medium"
+              className="c22-h2 c26"
+              fontSize="larger"
+              fontWeight="medium"
             >
               I am sidebar
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+              aria-label={null}
+              className="c27 "
+              disabled={false}
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                aria-hidden={true}
+                className="c9 c20"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="close"
                 p="half"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -464,9 +1315,10 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c22 c23"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             I am sidebar content.
           </p>
@@ -478,35 +1330,420 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
 `;
 
 exports[`Storyshots Pages/Custom With sidebar 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  padding: 24px;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+}
+
+.c18 {
+  background-color: #ffffff;
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  border-radius: 4px;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  background-color: #ffffff;
+  margin: 8px;
+  min-height: calc(100vh - 72px - 48px - 16px);
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c19 {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c10 {
+  padding: 2px;
+  color: #ffffff;
+  min-width: 20px;
+}
+
+.c22 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c17 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c15 {
+  margin-bottom: 48px;
+  margin-top: 0;
+  font-size: 46px;
+  line-height: 1.04347826;
+  font-weight: 300;
+}
+
+.c20 {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c21 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0px;
+  color: #00438f;
+  cursor: pointer;
+}
+
+.c21 .c9 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c21 .c16 {
+  display: block;
+  font-weight: 500;
+  text-align: left;
+}
+
+.c21 .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 0;
+}
+
+.c21:hover .c9 {
+  background-color: #e1ebfa;
+}
+
+.c21:hover .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c21:active .c9 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c21:disabled {
+  opacity: .5;
+}
+
+.c21:disabled:hover .c9,
+.c21:disabled:active .c9 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c21:focus {
+  outline: none;
+}
+
+.c21:focus .c9 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c21:focus .IconicButton__HoverText-sc-1u3dojp-0 {
+  opacity: 1;
+}
+
+.c3 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c3:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  padding: 2px 0;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  line-height: 1.5;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+  font-size: 16px;
+  padding: 8px 28px 8px 16px;
+  border-radius: 4px;
+}
+
+.c8:hover,
+.c8:focus {
+  outline: none;
+  color: #e1ebfa;
+  background-color: #011e38;
+  cursor: pointer;
+}
+
+.c8:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c8:disabled {
+  opacity: .5;
+}
+
+.c11 {
+  display: block;
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  line-height: 1.5;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c11:hover,
+.c11:focus {
+  outline: none;
+  color: #e1ebfa;
+  background-color: #011e38;
+  cursor: pointer;
+}
+
+.c11:disabled {
+  opacity: .5;
+}
+
+.c11:focus {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 div:not(:last-of-type) {
+  margin-right: 8px;
+}
+
+.c2 {
+  background-color: #122b47;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: #122b47;
+  padding: 16px 24px;
+}
+
+@media screen and (min-width:0px) {
+  .c18 {
+    width: calc(100vw - 48px - 16px);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c18 {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width:1360px) {
+  .c18 {
+    width: 472px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c18 {
+    border-left: solid 1px #e4e7eb;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c18 {
+    position: absolute;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c18 {
+    position: static;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      className="c1"
     >
       <header
-        class="NavBar-iayrjp-3 bwrKUV"
+        className=""
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          className="c2"
         >
           <a
             aria-label="Nulogy logo"
-            class="Link-sc-1lpx3d0-0 clvBNI"
+            className="c3"
             color="blue"
-            font-size="medium"
+            fontSize="medium"
             href="/"
-            style="display:block;height:40px"
+            style={
+              Object {
+                "display": "block",
+                "height": "40px",
+              }
+            }
           >
             <div
-              class="Branding__BrandingWrap-ranqri-0 gACiZG Branding-ranqri-2 kQRWHN"
+              className="c4 "
+              size="medium"
             >
               <svg
                 height="32px"
-                style="display:block;margin:2px 0"
+                style={
+                  Object {
+                    "display": "block",
+                    "margin": "2px 0",
+                  }
+                }
                 viewBox="0 0 133 32"
                 width="133px"
               >
@@ -542,33 +1779,52 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
-            style="flex-grow:1;margin:0 0 0 24px"
+            className="c5"
+            style={
+              Object {
+                "flexGrow": "1",
+                "margin": "0 0 0 24px",
+              }
+            }
           >
             <nav
               aria-label="Primary navigation"
-              class="DesktopMenu__Nav-e4dzdq-3 bWwdcq DesktopMenu-e4dzdq-4 irbObu"
-              style="padding-right:24px"
+              className="c6 c7"
+              style={
+                Object {
+                  "paddingRight": "24px",
+                }
+              }
             >
               <div>
                 <button
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                  aria-expanded={false}
+                  aria-haspopup={true}
+                  className="c8"
                   color="#ffffff"
+                  onBlur={[Function]}
+                  onClick={[Function]}
                   type="button"
                 >
                   Dashboard
                   <svg
-                    aria-hidden="true"
-                    class="Icon-fc7twp-0 hIxIEB"
+                    aria-hidden={true}
+                    className="c9 c10"
                     color="#ffffff"
                     fill="#ffffff"
-                    focusable="false"
+                    focusable={false}
                     height="20px"
                     icon="downArrow"
                     p="2px"
-                    style="position:absolute;top:11px;right:8px"
+                    size="20px"
+                    style={
+                      Object {
+                        "position": "absolute",
+                        "right": "8px",
+                        "top": "11px",
+                      }
+                    }
+                    title={null}
                     viewBox="0 0 24 24"
                     width="20px"
                   >
@@ -580,7 +1836,7 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
               </div>
               <div>
                 <a
-                  class="DesktopMenu__MenuLink-e4dzdq-1 kgAySz"
+                  className="c11"
                   color="#ffffff"
                   href="/"
                 >
@@ -589,32 +1845,46 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
-              style="float:right"
+              className="c12"
+              style={
+                Object {
+                  "float": "right",
+                }
+              }
             >
               <nav
                 aria-label="Secondary navigation"
-                class="DesktopMenu__Nav-e4dzdq-3 bWwdcq DesktopMenu-e4dzdq-4 irbObu"
+                className="c6 c7"
               >
                 <div>
                   <button
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    class="MenuTrigger__StyledButton-sm3xx0-0 cwxQnB"
+                    aria-expanded={false}
+                    aria-haspopup={true}
+                    className="c8"
                     color="#ffffff"
+                    onBlur={[Function]}
+                    onClick={[Function]}
                     type="button"
                   >
                     Settings
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 hIxIEB"
+                      aria-hidden={true}
+                      className="c9 c10"
                       color="#ffffff"
                       fill="#ffffff"
-                      focusable="false"
+                      focusable={false}
                       height="20px"
                       icon="downArrow"
                       p="2px"
-                      style="position:absolute;top:11px;right:8px"
+                      size="20px"
+                      style={
+                        Object {
+                          "position": "absolute",
+                          "right": "8px",
+                          "top": "11px",
+                        }
+                      }
+                      title={null}
                       viewBox="0 0 24 24"
                       width="20px"
                     >
@@ -630,52 +1900,63 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        className="c13"
       >
         <div
-          class="Box-sc-1qu1edy-0 jXTIl"
+          className="c14"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
-            font-weight="light"
+            className="c16-h1 c15"
+            fontSize="largest"
+            fontWeight="light"
           >
             I am title
           </h1>
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c16 c17"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             I am main content.
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 cTLuiE"
-          width="[object Object]"
+          className="c18"
+          width={
+            Object {
+              "extraSmall": "calc(100vw - 48px - 16px)",
+              "large": "472px",
+              "medium": "400px",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
+            className="c19"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="larger"
-              font-weight="medium"
+              className="c16-h2 c20"
+              fontSize="larger"
+              fontWeight="medium"
             >
               I am sidebar
             </h2>
             <button
-              class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+              aria-label={null}
+              className="c21 "
+              disabled={false}
             >
               <svg
-                aria-hidden="true"
-                class="Icon-fc7twp-0 cwKdbD"
+                aria-hidden={true}
+                className="c9 c22"
                 color="currentColor"
                 fill="currentColor"
-                focusable="false"
+                focusable={false}
                 height="32px"
                 icon="close"
                 p="half"
+                size="32px"
+                title={null}
                 viewBox="0 0 24 24"
                 width="32px"
               >
@@ -686,9 +1967,10 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
             </button>
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c16 c17"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             I am sidbar content.
           </p>

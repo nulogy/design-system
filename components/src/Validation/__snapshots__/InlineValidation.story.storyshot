@@ -1,25 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Inline Validation Inline Validation 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #cc1439;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 .c4 {
+  margin-bottom: 8px;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
+      className="Box-sc-1qu1edy-0 c1"
       color="red"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -28,12 +86,13 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+        className="c3"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c4 c5"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           Something has gone wrong
         </p>
@@ -44,25 +103,116 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
 `;
 
 exports[`Storyshots Inline Validation with custom content 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #cc1439;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c9 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c9:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c8 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c8:last-child {
+  margin-bottom: 0;
+}
+
+.c6 {
+  color: currentColor;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.c6 .c7 {
+  margin-bottom: 0;
+}
+
+.c3 .c4 {
+  margin-bottom: 8px;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
+      className="Box-sc-1qu1edy-0 c1"
       color="red"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -71,39 +221,40 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+        className="c3"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c4 c5"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           Something has gone wrong.
         </p>
         <ul
-          class="List-sc-1cqkmnl-0 diqcEx"
+          className="c6"
           color="currentColor"
         >
           <li
-            class="ListItem-qqenhw-0 gzsWDK"
+            className="c7 c8"
             color="currentColor"
           >
             Entry must be at least 3 characters long.
           </li>
           <li
-            class="ListItem-qqenhw-0 gzsWDK"
+            className="c7 c8"
             color="currentColor"
           >
             Entry must contain a number
           </li>
           <li
-            class="ListItem-qqenhw-0 gzsWDK"
+            className="c7 c8"
             color="currentColor"
           >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c9"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="https://nulogy.design/"
             >
               Custom Link
@@ -117,25 +268,102 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
 `;
 
 exports[`Storyshots Inline Validation with list items 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #cc1439;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c8 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c8:last-child {
+  margin-bottom: 0;
+}
+
+.c6 {
+  color: currentColor;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.c6 .c7 {
+  margin-bottom: 0;
+}
+
+.c3 .c4 {
+  margin-bottom: 8px;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
+      className="Box-sc-1qu1edy-0 c1"
       color="red"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -144,27 +372,28 @@ exports[`Storyshots Inline Validation with list items 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+        className="c3"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c4 c5"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           Something has gone wrong
         </p>
         <ul
-          class="List-sc-1cqkmnl-0 diqcEx"
+          className="c6"
           color="currentColor"
         >
           <li
-            class="ListItem-qqenhw-0 gzsWDK"
+            className="c7 c8"
             color="currentColor"
           >
             Entry must be at least 3 characters long.
           </li>
           <li
-            class="ListItem-qqenhw-0 gzsWDK"
+            className="c7 c8"
             color="currentColor"
           >
             Entry must contain a number.
@@ -177,25 +406,94 @@ exports[`Storyshots Inline Validation with list items 1`] = `
 `;
 
 exports[`Storyshots Inline Validation with only list items 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #cc1439;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c6 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c6:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  color: currentColor;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.c4 .c5 {
+  margin-bottom: 0;
+}
+
+.c3 .Text-sc-1wu7vpu-0 {
+  margin-bottom: 8px;
+}
+
+.c3 > *:last-child {
+  margin-bottom: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
+      className="Box-sc-1qu1edy-0 c1"
       color="red"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -204,20 +502,20 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+        className="c3"
       >
         <ul
-          class="List-sc-1cqkmnl-0 diqcEx"
+          className="c4"
           color="currentColor"
         >
           <li
-            class="ListItem-qqenhw-0 gzsWDK"
+            className="c5 c6"
             color="currentColor"
           >
             Entry must be at least 3 characters long.
           </li>
           <li
-            class="ListItem-qqenhw-0 gzsWDK"
+            className="c5 c6"
             color="currentColor"
           >
             Entry must contain a number.

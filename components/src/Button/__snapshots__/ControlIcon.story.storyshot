@@ -1,25 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots ControlIcon Control Icon 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: #434d59;
+}
+
+.c1:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:hover:enabled {
+  cursor: pointer;
+  color: #122b47;
+  background-color: #e4e7eb;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-label="close"
-      class="ControlIcon__StyledButton-sc-1h83lvi-0 cCdEvo"
+      className="c1"
+      disabled={false}
+      onClick={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 efirdb"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="close"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -33,26 +95,87 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
 `;
 
 exports[`Storyshots ControlIcon Disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: #c0c8d1;
+}
+
+.c1:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:hover:enabled {
+  cursor: pointer;
+  color: #122b47;
+  background-color: #e4e7eb;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-label="close"
-      class="ControlIcon__StyledButton-sc-1h83lvi-0 lkZGcS"
-      disabled=""
+      className="c1"
+      disabled={true}
+      onClick={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 efirdb"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="close"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >
@@ -66,25 +189,87 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
 `;
 
 exports[`Storyshots ControlIcon Toggled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c1 {
+  background: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+  color: #00438f;
+}
+
+.c1:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c1:hover:enabled {
+  cursor: pointer;
+  color: #122b47;
+  background-color: #e4e7eb;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-label="close"
-      class="ControlIcon__StyledButton-sc-1h83lvi-0 jjnZya"
+      className="c1"
+      disabled={false}
+      onClick={[Function]}
       type="button"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 efirdb"
+        aria-hidden={true}
+        className="c2"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="32px"
         icon="close"
+        size="32px"
+        title={null}
         viewBox="0 0 24 24"
         width="32px"
       >

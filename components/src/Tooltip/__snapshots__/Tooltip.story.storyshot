@@ -1,21 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Tooltip Tooltip 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 64px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c2:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c2:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 izRVrz"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-describedby="random-id-13"
-        aria-expanded="false"
-        aria-haspopup="true"
+        aria-expanded={false}
+        aria-haspopup={true}
         aria-label="Open"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
          Button 
       </button>
@@ -25,31 +122,224 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
 `;
 
 exports[`Storyshots Tooltip open by default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  margin: 12px;
+  margin-top: -7px;
+  top: 0;
+}
+
+.c3:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c3:after {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c3:before {
+  border-color: transparent transparent #c0c8d1 transparent;
+  border-width: 0 8px 8px 8px;
+}
+
+.c3:after {
+  border-color: transparent transparent #ffffff transparent;
+  border-width: 0 8px 8px 8px;
+  left: -4px;
+}
+
+.c3:before {
+  top: -2px;
+  left: -4px;
+}
+
+.c3:after {
+  left: -4px;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  max-width: 24em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #c0c8d1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  padding: 8px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 100;
+  margin-top: 4px;
+  top: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-describedby="random-id-37"
-      aria-expanded="true"
-      aria-haspopup="true"
+      aria-expanded={true}
+      aria-haspopup={true}
       aria-label="Close"
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size="medium"
     >
       Hover me
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+      className="Box-sc-1qu1edy-0 c2  nds-popper-pop-up"
       id="random-id-37"
-      open=""
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      open={true}
       role="tooltip"
-      style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      style={
+        Object {
+          "left": 0,
+          "opacity": 0,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "top": 0,
+        }
+      }
     >
-      I am an open Tooltip!
+      I
+       
+      a
+      m
+       
+      a
+      n
+       
+      o
+      p
+      e
+      n
+       
+      T
+      o
+      o
+      l
+      t
+      i
+      p
+      !
       <div
-        class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        className="c3"
+        style={Object {}}
       />
     </div>
   </div>
@@ -57,18 +347,107 @@ exports[`Storyshots Tooltip open by default 1`] = `
 `;
 
 exports[`Storyshots Tooltip with Button passed in 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-describedby="random-id-29"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size="medium"
     >
        Button 
     </button>
@@ -77,18 +456,107 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
 `;
 
 exports[`Storyshots Tooltip with Link passed in 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-describedby="random-id-28"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size="medium"
     >
        Button 
     </button>
@@ -97,18 +565,107 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
 `;
 
 exports[`Storyshots Tooltip with custom hideDelay 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-describedby="random-id-31"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size="medium"
     >
        Button 
     </button>
@@ -117,34 +674,322 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
 `;
 
 exports[`Storyshots Tooltip with custom maxWidth 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 64px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  margin: 12px;
+  margin-top: -7px;
+  top: 0;
+}
+
+.c4:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c4:after {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c4:before {
+  border-color: transparent transparent #c0c8d1 transparent;
+  border-width: 0 8px 8px 8px;
+}
+
+.c4:after {
+  border-color: transparent transparent #ffffff transparent;
+  border-width: 0 8px 8px 8px;
+  left: -4px;
+}
+
+.c4:before {
+  top: -2px;
+  left: -4px;
+}
+
+.c4:after {
+  left: -4px;
+}
+
+.c2 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c2:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c2:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
+.c3 {
+  max-width: 128px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #c0c8d1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  padding: 8px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 100;
+  margin-top: 4px;
+  top: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 izRVrz"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-describedby="random-id-15"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
          Button 
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 iBJJpr  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-15"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently.
+        I
+         
+        a
+        m
+         
+        a
+         
+        T
+        o
+        o
+        l
+        t
+        i
+        p
+        !
+         
+        I
+         
+        h
+        a
+        v
+        e
+         
+        v
+        e
+        r
+        y
+         
+        l
+        o
+        n
+        g
+         
+        t
+        e
+        x
+        t
+        ,
+         
+        b
+        u
+        t
+         
+        I
+         
+        h
+        a
+        v
+        e
+         
+        a
+         
+        s
+        m
+        a
+        l
+        l
+        e
+        r
+         
+        m
+        a
+        x
+        W
+        i
+        d
+        t
+        h
+         
+        p
+        r
+        o
+        p
+         
+        t
+        h
+        a
+        t
+         
+        c
+        a
+        u
+        s
+        e
+        s
+         
+        m
+        e
+         
+        t
+        o
+         
+        w
+        r
+        a
+        p
+         
+        f
+        r
+        e
+        q
+        u
+        e
+        n
+        t
+        l
+        y
+        .
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
     </div>
@@ -153,18 +998,107 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
 `;
 
 exports[`Storyshots Tooltip with custom showDelay 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-describedby="random-id-30"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size="medium"
     >
        Button 
     </button>
@@ -173,60 +1107,199 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
 `;
 
 exports[`Storyshots Tooltip with other focusable elements 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c4 {
+  background-color: #216beb;
+  width: 200px;
+}
+
+.c5 {
+  background-color: #216beb;
+}
+
+.c3 {
+  margin-right: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #216beb;
+  color: currentColor;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+.c2 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c2:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <button
       aria-describedby="random-id-32"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      className="c1"
+      disabled={false}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      size="medium"
     >
        Button 
     </button>
     <a
       aria-describedby="random-id-33"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Link-sc-1lpx3d0-0 gxbSxg"
+      className="c2"
       color="blue"
-      font-size="medium"
+      fontSize="medium"
       href="/"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
        Link 
     </a>
     <span
       aria-describedby="random-id-34"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Text-sc-1wu7vpu-0 fSZLdr"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       Inline Text
     </span>
     <div
       aria-describedby="random-id-35"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Box-sc-1qu1edy-0 hmICZS"
+      className="c4"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       width="200px"
     >
       Box width 200px
     </div>
     <div
       aria-describedby="random-id-36"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Box-sc-1qu1edy-0 fpEmqv"
+      className="c5"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       Box
     </div>
@@ -235,277 +1308,756 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
 `;
 
 exports[`Storyshots Tooltip with placement 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  margin-left: 64px;
+  margin-right: 64px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+}
+
+.c4 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  margin: 12px;
+  margin-top: -7px;
+  top: 0;
+}
+
+.c4:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c4:after {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c4:before {
+  border-color: transparent transparent #c0c8d1 transparent;
+  border-width: 0 8px 8px 8px;
+}
+
+.c4:after {
+  border-color: transparent transparent #ffffff transparent;
+  border-width: 0 8px 8px 8px;
+  left: -4px;
+}
+
+.c4:before {
+  top: -2px;
+  left: -4px;
+}
+
+.c4:after {
+  left: -4px;
+}
+
+.c2 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c2:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c2:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
+.c3 {
+  max-width: 24em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #c0c8d1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  padding: 8px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 100;
+  margin-top: 4px;
+  top: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dxTGaz"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-describedby="random-id-16"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-16"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        top-start
+        t
+        o
+        p
+        -
+        s
+        t
+        a
+        r
+        t
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-17"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-17"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        top
+        t
+        o
+        p
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-18"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-18"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        top-end
+        t
+        o
+        p
+        -
+        e
+        n
+        d
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dxTGaz"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-describedby="random-id-19"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-19"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        left-start
+        l
+        e
+        f
+        t
+        -
+        s
+        t
+        a
+        r
+        t
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-20"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-20"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        left
+        l
+        e
+        f
+        t
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-21"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-21"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        left-end
+        l
+        e
+        f
+        t
+        -
+        e
+        n
+        d
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dxTGaz"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-describedby="random-id-22"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-22"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        right-start
+        r
+        i
+        g
+        h
+        t
+        -
+        s
+        t
+        a
+        r
+        t
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-23"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-23"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        right
+        r
+        i
+        g
+        h
+        t
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-24"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-24"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        right-end
+        r
+        i
+        g
+        h
+        t
+        -
+        e
+        n
+        d
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 dxTGaz"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-describedby="random-id-25"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-25"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        bottom-start
+        b
+        o
+        t
+        t
+        o
+        m
+        -
+        s
+        t
+        a
+        r
+        t
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-26"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-26"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        bottom
+        b
+        o
+        t
+        t
+        o
+        m
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
       <button
         aria-describedby="random-id-27"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
         Tooltip trigger
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-27"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        bottom-end
+        b
+        o
+        t
+        t
+        o
+        m
+        -
+        e
+        n
+        d
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
     </div>
@@ -514,34 +2066,369 @@ exports[`Storyshots Tooltip with placement 1`] = `
 `;
 
 exports[`Storyshots Tooltip with wrapped text 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 64px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  margin: 12px;
+  margin-top: -7px;
+  top: 0;
+}
+
+.c4:before {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c4:after {
+  border-style: solid;
+  content: '';
+  display: block;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  width: 0;
+}
+
+.c4:before {
+  border-color: transparent transparent #c0c8d1 transparent;
+  border-width: 0 8px 8px 8px;
+}
+
+.c4:after {
+  border-color: transparent transparent #ffffff transparent;
+  border-width: 0 8px 8px 8px;
+  left: -4px;
+}
+
+.c4:before {
+  top: -2px;
+  left: -4px;
+}
+
+.c4:after {
+  left: -4px;
+}
+
+.c2 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c2:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c2:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c2:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c2:disabled {
+  opacity: .5;
+}
+
+.c3 {
+  max-width: 24em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #c0c8d1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+  padding: 8px;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 100;
+  margin-top: 4px;
+  top: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 izRVrz"
+      className="Box-sc-1qu1edy-0 c1"
     >
       <button
         aria-describedby="random-id-14"
-        aria-expanded="true"
-        aria-haspopup="true"
+        aria-expanded={true}
+        aria-haspopup={true}
         aria-label="Close"
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c2"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        size="medium"
       >
          Button 
       </button>
       <div
-        class="Box-sc-1qu1edy-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        className="Box-sc-1qu1edy-0 c3  nds-popper-pop-up"
         id="random-id-14"
-        open=""
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        open={true}
         role="tooltip"
-        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+        style={
+          Object {
+            "left": 0,
+            "opacity": 0,
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+          }
+        }
       >
-        I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters.
+        I
+         
+        a
+        m
+         
+        a
+         
+        T
+        o
+        o
+        l
+        t
+        i
+        p
+        !
+         
+        I
+         
+        h
+        a
+        v
+        e
+         
+        v
+        e
+        r
+        y
+         
+        l
+        o
+        n
+        g
+         
+        t
+        e
+        x
+        t
+        ,
+         
+        a
+        n
+        d
+         
+        m
+        y
+         
+        d
+        e
+        f
+        a
+        u
+        l
+        t
+         
+        m
+        a
+        x
+        -
+        w
+        i
+        d
+        t
+        h
+         
+        i
+        s
+         
+        2
+        4
+        e
+        m
+         
+        (
+        b
+        a
+        s
+        e
+        d
+         
+        o
+        n
+         
+        1
+        4
+        p
+        x
+         
+        f
+        o
+        n
+        t
+        -
+        s
+        i
+        z
+        e
+        )
+        ,
+         
+        w
+        h
+        i
+        c
+        h
+         
+        i
+        s
+         
+        e
+        q
+        u
+        a
+        l
+         
+        t
+        o
+         
+        3
+        3
+        6
+        p
+        x
+        ,
+         
+        o
+        r
+         
+        a
+        p
+        p
+        r
+        o
+        x
+        i
+        m
+        a
+        t
+        e
+        l
+        y
+         
+        4
+        5
+         
+        c
+        h
+        a
+        r
+        a
+        c
+        t
+        e
+        r
+        s
+        .
         <div
-          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+          className="c4"
+          style={Object {}}
         />
       </div>
     </div>

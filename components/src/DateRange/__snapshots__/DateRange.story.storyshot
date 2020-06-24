@@ -1,64 +1,228 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots DateRange customizing input props 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="From (Mon YYYY)"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -72,48 +236,56 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="To (Mon YYYY)"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -132,64 +304,228 @@ exports[`Storyshots DateRange customizing input props 1`] = `
 `;
 
 exports[`Storyshots DateRange default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -203,48 +539,56 @@ exports[`Storyshots DateRange default 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -263,64 +607,228 @@ exports[`Storyshots DateRange default 1`] = `
 `;
 
 exports[`Storyshots DateRange default start and end date 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="01 Jan 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -334,48 +842,56 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="05 Jan 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -394,64 +910,228 @@ exports[`Storyshots DateRange default start and end date 1`] = `
 `;
 
 exports[`Storyshots DateRange disabled range validation 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="10 Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -465,48 +1145,56 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="05 Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -525,65 +1213,296 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
 `;
 
 exports[`Storyshots DateRange individual input error 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c14 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c13 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c11 .c12 {
+  margin-bottom: 8px;
+}
+
+.c11 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #cc1439;
+  border-color: #cc1439;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c15:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c15:focus ~ svg {
+  fill: #00438f;
+}
+
+.c15::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="true"
+                  aria-invalid={true}
                   aria-label="Select a start date"
-                  aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  aria-required={true}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
-                  required=""
+                  required={true}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -596,18 +1515,20 @@ exports[`Storyshots DateRange individual input error 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+          className="c9"
           color="red"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 QuoIa"
+            aria-hidden={true}
+            className="c10"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="error"
             mr="x1"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -616,12 +1537,13 @@ exports[`Storyshots DateRange individual input error 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+            className="c11"
           >
             <p
-              class="Text-sc-1wu7vpu-0 RbfMK"
+              className="c12 c13"
               color="currentColor"
-              font-size="medium"
+              disabled={false}
+              fontSize="medium"
             >
               Start date is required
             </p>
@@ -629,48 +1551,56 @@ exports[`Storyshots DateRange individual input error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c14"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c12 c13"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c15"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="10 Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -689,64 +1619,250 @@ exports[`Storyshots DateRange individual input error 1`] = `
 `;
 
 exports[`Storyshots DateRange with custom error 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  color: #cc1439;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c11 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c14 .c10 {
+  margin-bottom: 8px;
+}
+
+.c14 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="05 Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -760,48 +1876,56 @@ exports[`Storyshots DateRange with custom error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10 c11"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="10 Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -816,18 +1940,20 @@ exports[`Storyshots DateRange with custom error 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
+      className="c12"
       color="red"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        aria-hidden={true}
+        className="c13"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -836,12 +1962,13 @@ exports[`Storyshots DateRange with custom error 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+        className="c14"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10 c11"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           This range conflicts with another range
         </p>
@@ -852,64 +1979,246 @@ exports[`Storyshots DateRange with custom error 1`] = `
 `;
 
 exports[`Storyshots DateRange with default start and end times 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c11 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
+.c10 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c10:hover {
+  color: #434d59;
+}
+
+.c9 {
+  margin-left: 8px;
+}
+
+.c13 {
+  margin-right: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="05 Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -923,25 +2232,28 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4"
       >
         <div
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
+            className="nds-time-picker c9 css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    className=" css-r447wv-singleValue"
                   >
                     03:30 AM
                   </div>
@@ -949,50 +2261,87 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a start time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
                           id="react-select-4-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c10"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1008,36 +2357,40 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c11"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c12"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4"
       >
         <div
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
+            className="nds-time-picker c13 css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    className=" css-r447wv-singleValue"
                   >
                     01:30 PM
                   </div>
@@ -1045,50 +2398,87 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select an end time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
                           id="react-select-5-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c10"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1104,37 +2494,44 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="10 Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -1153,64 +2550,246 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
 `;
 
 exports[`Storyshots DateRange with time error 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c11 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
+.c10 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c10:hover {
+  color: #434d59;
+}
+
+.c9 {
+  margin-left: 8px;
+}
+
+.c13 {
+  margin-right: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="05 Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -1224,25 +2803,28 @@ exports[`Storyshots DateRange with time error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4"
       >
         <div
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
+            className="nds-time-picker c9 css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    className=" css-r447wv-singleValue"
                   >
                     01:30 PM
                   </div>
@@ -1250,50 +2832,87 @@ exports[`Storyshots DateRange with time error 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a start time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
                           id="react-select-6-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c10"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1309,36 +2928,40 @@ exports[`Storyshots DateRange with time error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c11"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c12"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4"
       >
         <div
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
+            className="nds-time-picker c13 css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    className=" css-r447wv-singleValue"
                   >
                     10:30 AM
                   </div>
@@ -1346,50 +2969,87 @@ exports[`Storyshots DateRange with time error 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select an end time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
                           id="react-select-7-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c10"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1405,37 +3065,44 @@ exports[`Storyshots DateRange with time error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="05 Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -1454,64 +3121,246 @@ exports[`Storyshots DateRange with time error 1`] = `
 `;
 
 exports[`Storyshots DateRange with times 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c11 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
+.c10 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c10:hover {
+  color: #434d59;
+}
+
+.c9 {
+  margin-left: 8px;
+}
+
+.c13 {
+  margin-right: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Date range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="01 Jan 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -1525,25 +3374,28 @@ exports[`Storyshots DateRange with times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4"
       >
         <div
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
+            className="nds-time-picker c9 css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    className=" css-1yhx6vz-Placeholder"
                   >
                     HH:MM
                   </div>
@@ -1551,50 +3403,87 @@ exports[`Storyshots DateRange with times 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a start time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
                           id="react-select-2-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c10"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1610,36 +3499,40 @@ exports[`Storyshots DateRange with times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c11"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c12"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4"
       >
         <div
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
+            className="nds-time-picker c13 css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    className=" css-1yhx6vz-Placeholder"
                   >
                     HH:MM
                   </div>
@@ -1647,50 +3540,87 @@ exports[`Storyshots DateRange with times 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select an end time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
                           id="react-select-3-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c10"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -1706,37 +3636,44 @@ exports[`Storyshots DateRange with times 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+        className="c4  nds-date-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="DD Mon YYYY"
+                  required={false}
                   value="05 Jan 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >

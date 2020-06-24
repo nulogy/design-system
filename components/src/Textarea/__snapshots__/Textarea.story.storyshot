@@ -1,36 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Textarea Set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: rgba(1,30,56,0.3333);
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+}
+
+.c5:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <textarea
-          aria-invalid="false"
-          aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 khvyNi"
-          disabled=""
-          rows="3"
+          aria-invalid={false}
+          aria-required={false}
+          className="c5"
+          disabled={true}
+          id={null}
+          required={false}
+          rows={3}
         />
       </label>
     </div>
@@ -39,35 +129,127 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
 `;
 
 exports[`Storyshots Textarea Textarea 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c5:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <textarea
-          aria-invalid="false"
-          aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
-          rows="3"
+          aria-invalid={false}
+          aria-required={false}
+          className="c5"
+          disabled={false}
+          id={null}
+          onBlur={[Function]}
+          onChange={[Function]}
+          required={false}
+          rows={3}
         />
       </label>
     </div>
@@ -76,51 +258,167 @@ exports[`Storyshots Textarea Textarea 1`] = `
 `;
 
 exports[`Storyshots Textarea Textarea with all props 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c5 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c6 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
           <span
-            class="Text-sc-1wu7vpu-0 bphWXP"
+            className="c5"
             color="darkGrey"
-            font-size="12px"
+            disabled={false}
+            fontSize="12px"
           >
             (Required)
           </span>
           <p
-            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+            className="c6"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             here's some help...
           </p>
         </div>
         <textarea
-          aria-invalid="false"
-          aria-required="true"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
+          aria-invalid={false}
+          aria-required={true}
+          className="c7"
+          disabled={false}
+          id={null}
+          onBlur={[Function]}
+          onChange={[Function]}
           placeholder="Placeholder"
-          required=""
-          rows="3"
+          required={true}
+          rows={3}
         />
       </label>
     </div>
@@ -129,36 +427,127 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
 `;
 
 exports[`Storyshots Textarea With custom id 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c5:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <textarea
-          aria-invalid="false"
-          aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
+          aria-invalid={false}
+          aria-required={false}
+          className="c5"
+          disabled={false}
           id="my-custom-id"
-          rows="3"
+          onBlur={[Function]}
+          onChange={[Function]}
+          required={false}
+          rows={3}
         />
       </label>
     </div>
@@ -167,35 +556,127 @@ exports[`Storyshots Textarea With custom id 1`] = `
 `;
 
 exports[`Storyshots Textarea With custom number of rows 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c5:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <textarea
-          aria-invalid="false"
-          aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
-          rows="7"
+          aria-invalid={false}
+          aria-required={false}
+          className="c5"
+          disabled={false}
+          id={null}
+          onBlur={[Function]}
+          onChange={[Function]}
+          required={false}
+          rows={7}
         />
       </label>
     </div>
@@ -204,51 +685,261 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
 `;
 
 exports[`Storyshots Textarea set to required 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c7 {
+  margin-bottom: 8px;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c10 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c10:hover {
+  background-color: #e1ebfa;
+}
+
+.c10:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c10:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c10:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c10:disabled {
+  opacity: .5;
+}
+
+.c11 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c11:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c11:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c11:focus:hover {
+  background-color: #1254c7;
+}
+
+.c6 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c8 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c5 {
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 .c2 {
+  margin-bottom: 48px;
+}
+
+.c1 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c1 .c4,
+.c1 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c1 .c4:last-child,
+.c1 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c1 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c9:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 laLzBn"
+      className="c1"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Required field example
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4 c5"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c6 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c7"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c8"
             >
               Label
             </span>
           </div>
           <textarea
-            aria-invalid="false"
-            aria-required="true"
-            class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
-            required=""
-            rows="3"
+            aria-invalid={false}
+            aria-required={true}
+            className="c9"
+            disabled={false}
+            id={null}
+            onBlur={[Function]}
+            onChange={[Function]}
+            required={true}
+            rows={3}
           />
         </label>
       </div>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
+        className="c10 c11"
+        disabled={false}
+        size="medium"
       >
         Send
       </button>
@@ -258,50 +949,193 @@ exports[`Storyshots Textarea set to required 1`] = `
 `;
 
 exports[`Storyshots Textarea with error list 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c13 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c13:last-child {
+  margin-bottom: 0;
+}
+
+.c11 {
+  color: currentColor;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.c11 .c12 {
+  margin-bottom: 0;
+}
+
+.c8 .c9 {
+  margin-bottom: 8px;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: #cc1439;
+  border-color: #cc1439;
+}
+
+.c5:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <textarea
-          aria-invalid="true"
-          aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 glwRhU"
-          rows="3"
+          aria-invalid={true}
+          aria-required={false}
+          className="c5"
+          disabled={false}
+          id={null}
+          onChange={[Function]}
+          required={false}
+          rows={3}
         />
       </label>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        className="c6"
         color="red"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          aria-hidden={true}
+          className="c7"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -310,27 +1144,28 @@ exports[`Storyshots Textarea with error list 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+          className="c8"
         >
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Please fill this out
           </p>
           <ul
-            class="List-sc-1cqkmnl-0 diqcEx"
+            className="c11"
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c12 c13"
               color="currentColor"
             >
               Error message 1
             </li>
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c12 c13"
               color="currentColor"
             >
               Error message 2
@@ -344,50 +1179,175 @@ exports[`Storyshots Textarea with error list 1`] = `
 `;
 
 exports[`Storyshots Textarea with error message 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c8 .c9 {
+  margin-bottom: 8px;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  display: block;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  min-height: 40px;
+  min-width: 20em;
+  color: #cc1439;
+  border-color: #cc1439;
+}
+
+.c5:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c5::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c5::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Label
           </span>
         </div>
         <textarea
-          aria-invalid="true"
-          aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 glwRhU"
-          rows="3"
+          aria-invalid={true}
+          aria-required={false}
+          className="c5"
+          disabled={false}
+          id={null}
+          onBlur={[Function]}
+          onChange={[Function]}
+          required={false}
+          rows={3}
         />
       </label>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        className="c6"
         color="red"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 QuoIa"
+          aria-hidden={true}
+          className="c7"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -396,12 +1356,13 @@ exports[`Storyshots Textarea with error message 1`] = `
           />
         </svg>
         <div
-          class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+          className="c8"
         >
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Please fill this out
           </p>

@@ -1,30 +1,209 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots PM/PMPagination default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  margin-left: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c8 {
+  margin-right: -8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c3 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #c0c8d1;
+  cursor: default;
+}
+
+.c3:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c3:hover {
+  background: inital;
+}
+
+.c7 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c7:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c7:hover {
+  background: #e4e7eb;
+}
+
+.c5 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #00438f;
+  color: #c0c8d1;
+  cursor: default;
+  background: #00438f;
+  color: #f0f2f5;
+}
+
+.c5:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c5:hover {
+  background: #00438f;
+}
+
+.c6 {
+  font-size: 14px;
+  padding: 8px 16px;
+  line-height: 1.71428571;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #e4e7eb;
+  color: #011e38;
+  cursor: pointer;
+  background: transparent;
+  color: #011e38;
+}
+
+.c6:not(:last-child) {
+  margin-right: 16px;
+}
+
+.c6:hover {
+  background: #e4e7eb;
+}
+
+.c2 {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c2 button {
+  font-size: 12px;
+  padding: 0 4px;
+  min-width: 22px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.c2 button:not([disabled]) {
+  color: #3593d8;
+}
+
+.c2 button:not(:last-child) {
+  margin-right: 6px;
+}
+
+.c2 button[aria-current=true] {
+  background-color: #2E5C87;
+  font-weight: bold;
+}
+
+.c2 button svg {
+  display: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd PMPagination___StyledPagination-h94owo-0 hSgwGX"
+      className="Box-sc-1qu1edy-0 c1 c2"
     >
       <button
         aria-label="Go to previous results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
-        disabled=""
+        className="c3"
+        disabled={true}
+        onClick={null}
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 bLUmHQ"
+          aria-hidden={true}
+          className="c4"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="leftArrow"
           ml="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -32,50 +211,64 @@ exports[`Storyshots PM/PMPagination default 1`] = `
             d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
           />
         </svg>
-         ← Previous
+         
+        ← Previous
       </button>
       <button
-        aria-current="true"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
-        disabled=""
+        aria-current={true}
+        aria-label={null}
+        className="c5"
+        disabled={true}
+        onClick={[Function]}
       >
         1
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c6"
+        disabled={false}
+        onClick={[Function]}
       >
         2
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c6"
+        disabled={false}
+        onClick={[Function]}
       >
         3
       </button>
       <button
-        aria-current="false"
+        aria-current={false}
         aria-label="Go to page {{count}}"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+        className="c6"
+        disabled={false}
+        onClick={[Function]}
       >
         4
       </button>
       <button
         aria-label="Go to next results"
-        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+        className="c7"
+        disabled={false}
+        onClick={null}
       >
-        Next → 
+        Next →
+         
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 dEtgXr"
+          aria-hidden={true}
+          className="c8"
           color="currentColor"
           fill="currentColor"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="rightArrow"
           mr="-8px"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >

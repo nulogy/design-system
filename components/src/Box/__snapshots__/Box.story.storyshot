@@ -1,14 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Box Box 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 iuijxl"
+      className="c1"
     >
       Hello World
     </div>
@@ -17,14 +47,46 @@ exports[`Storyshots Box Box 1`] = `
 `;
 
 exports[`Storyshots Box With a background colour 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #ffffff;
+  background-color: #216beb;
+  padding: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 jamsbG"
+      className="c1"
       color="white"
     >
       Hello World
@@ -34,15 +96,70 @@ exports[`Storyshots Box With a background colour 1`] = `
 `;
 
 exports[`Storyshots Box With a responsive width 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 24px;
+}
+
+@media screen and (min-width:0px) {
+  .c1 {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .c1 {
+    width: 25%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 cxGsXU"
-      width="[object Object]"
+      className="c1"
+      width={
+        Object {
+          "extraSmall": 1,
+          "medium": 0.25,
+          "small": 0.5,
+        }
+      }
     >
       Full width on extra small screens, 1/2 width on small and 1/4 width on medium
     </div>
@@ -51,15 +168,47 @@ exports[`Storyshots Box With a responsive width 1`] = `
 `;
 
 exports[`Storyshots Box With a set width 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 24px;
+  width: 50%;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 clejNr"
-      width="0.5"
+      className="c1"
+      width={0.5}
     >
       Half Width
     </div>
@@ -68,24 +217,68 @@ exports[`Storyshots Box With a set width 1`] = `
 `;
 
 exports[`Storyshots Box With a shadow 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+}
+
+.c2 {
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0px 1px 4px 0px rgba(1,30,56,0.15);
+}
+
+.c3 {
+  padding: 48px;
+  margin-bottom: 16px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 bHmSeb"
+      className="c1"
     >
       Small shadow
     </div>
     <div
-      class="Box-sc-1qu1edy-0 eyfCVZ"
+      className="c2"
     >
       Medium shadow
     </div>
     <div
-      class="Box-sc-1qu1edy-0 bGaQQB"
+      className="c3"
     >
       Large shadow
     </div>
@@ -94,14 +287,45 @@ exports[`Storyshots Box With a shadow 1`] = `
 `;
 
 exports[`Storyshots Box With a text colour 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #216beb;
+  padding: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 dCMDFS"
+      className="c1"
       color="blue"
     >
       Hello World
@@ -111,47 +335,114 @@ exports[`Storyshots Box With a text colour 1`] = `
 `;
 
 exports[`Storyshots Box With margin 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 24px;
+}
+
+.c2 {
+  background-color: #f0f2f5;
+  margin: 24px;
+}
+
+.c3 {
+  background-color: #f0f2f5;
+  margin-top: 24px;
+}
+
+.c4 {
+  background-color: #f0f2f5;
+  margin-right: 24px;
+}
+
+.c5 {
+  background-color: #f0f2f5;
+  margin-bottom: 24px;
+}
+
+.c6 {
+  background-color: #f0f2f5;
+  margin-left: 24px;
+}
+
+.c7 {
+  background-color: #f0f2f5;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.c8 {
+  background-color: #f0f2f5;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 iuijxl"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 bIpQPr"
+        className="c2"
       >
         Margin
       </div>
       <div
-        class="Box-sc-1qu1edy-0 fNJCWd"
+        className="c3"
       >
         Margin top
       </div>
       <div
-        class="Box-sc-1qu1edy-0 cfKJLu"
+        className="c4"
       >
         Margin right
       </div>
       <div
-        class="Box-sc-1qu1edy-0 hSzfDt"
+        className="c5"
       >
         Margin bottom
       </div>
       <div
-        class="Box-sc-1qu1edy-0 dTezRN"
+        className="c6"
       >
         Margin left
       </div>
       <div
-        class="Box-sc-1qu1edy-0 cgLFQx"
+        className="c7"
       >
         Margin x
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iWmXdK"
+        className="c8"
       >
         Margin y
       </div>
@@ -161,47 +452,115 @@ exports[`Storyshots Box With margin 1`] = `
 `;
 
 exports[`Storyshots Box With padding 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  padding: 16px;
+}
+
+.c2 {
+  background-color: #f0f2f5;
+  margin: 8px;
+  padding: 24px;
+}
+
+.c3 {
+  background-color: #f0f2f5;
+  margin: 8px;
+  padding-right: 24px;
+}
+
+.c4 {
+  background-color: #f0f2f5;
+  margin: 8px;
+  padding-bottom: 24px;
+}
+
+.c5 {
+  background-color: #f0f2f5;
+  margin: 8px;
+  padding-left: 24px;
+}
+
+.c6 {
+  background-color: #f0f2f5;
+  margin: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c7 {
+  background-color: #f0f2f5;
+  margin: 8px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 kbDFVk"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 UfyFz"
+        className="c2"
       >
         Padding
       </div>
       <div
-        class="Box-sc-1qu1edy-0 UfyFz"
+        className="c2"
       >
         Padding top
       </div>
       <div
-        class="Box-sc-1qu1edy-0 dFirUG"
+        className="c3"
       >
         Padding right
       </div>
       <div
-        class="Box-sc-1qu1edy-0 kjVnmN"
+        className="c4"
       >
         Padding bottom
       </div>
       <div
-        class="Box-sc-1qu1edy-0 kYJNBN"
+        className="c5"
       >
         Padding left
       </div>
       <div
-        class="Box-sc-1qu1edy-0 qFcSW"
+        className="c6"
       >
         Padding x
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iDOULB"
+        className="c7"
       >
         Padding y
       </div>

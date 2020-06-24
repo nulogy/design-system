@@ -1,25 +1,428 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Modal Modal 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c7 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c7:hover {
+  background-color: #e1ebfa;
+}
+
+.c7:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c7:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c7:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c7:disabled {
+  opacity: .5;
+}
+
+.c8 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c8:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c8:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c8:focus:hover {
+  background-color: #1254c7;
+}
+
+.c9 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c6 button {
+  margin-bottom: 8px;
+}
+
+.c6 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c4 {
+  margin-top: -64px;
+  margin-bottom: -72px;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 24px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c5 {
+  position: relative;
+  padding: 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+}
+
+.c5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c1 {
+  max-width: 624px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Modal Title
+          </h2>
+        </div>
+        <div
+          className="c4"
+        >
+          Content Content Content
+        </div>
+        <div
+          className="c5"
+        >
+          <div
+            className="c6"
+          >
+            <button
+              className="c7 c8"
+              disabled={false}
+              size="medium"
+            >
+              Add job to line
+            </button>
+            <button
+              className="c7 c9"
+              disabled={false}
+              size="medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal example controlled modal 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c1:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c1:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c1:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c1:disabled {
+  opacity: .5;
+}
+
+@media only screen and (max-width:768px) {
+
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div>
       <button
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+        className="c1"
+        disabled={false}
+        onClick={[Function]}
+        size="medium"
       >
         Open Modal
       </button>
@@ -29,81 +432,3432 @@ exports[`Storyshots Modal example controlled modal 1`] = `
 `;
 
 exports[`Storyshots Modal with close button 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c7 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c3 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c11 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c11:hover {
+  background-color: #e1ebfa;
+}
+
+.c11:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c11:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c11:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c11:disabled {
+  opacity: .5;
+}
+
+.c12 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c12:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c12:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c12:focus:hover {
+  background-color: #1254c7;
+}
+
+.c13 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c4 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c4 .c6 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c4:hover .c6 {
+  background-color: #e4e7eb;
+}
+
+.c4:active .c6 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c4:disabled {
+  opacity: .5;
+}
+
+.c4:disabled:hover .c6,
+.c4:disabled:active .c6 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:focus .c6 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c10 button {
+  margin-bottom: 8px;
+}
+
+.c10 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c8 {
+  margin-top: -64px;
+  margin-bottom: -72px;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 64px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c9 {
+  position: relative;
+  padding: 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+}
+
+.c9:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c5 {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 3;
+}
+
+.c1 {
+  max-width: 624px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Modal Title
+          </h2>
+          <button
+            className="c4 CloseButton-sc-1xxxr4t-1 c5"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden={true}
+              className="c6 c7"
+              color="currentColor"
+              fill="currentColor"
+              focusable={false}
+              height="32px"
+              icon="close"
+              p="half"
+              size="32px"
+              title={null}
+              viewBox="0 0 24 24"
+              width="32px"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c8"
+        >
+          Content Content Content
+        </div>
+        <div
+          className="c9"
+        >
+          <div
+            className="c10"
+          >
+            <button
+              className="c11 c12"
+              disabled={false}
+              size="medium"
+            >
+              Add job to line
+            </button>
+            <button
+              className="c11 c13"
+              disabled={false}
+              size="medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal with custom maxWidth 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c7 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c7:hover {
+  background-color: #e1ebfa;
+}
+
+.c7:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c7:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c7:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c7:disabled {
+  opacity: .5;
+}
+
+.c8 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c8:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c8:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c8:focus:hover {
+  background-color: #1254c7;
+}
+
+.c9 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c6 button {
+  margin-bottom: 8px;
+}
+
+.c6 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c4 {
+  margin-top: -64px;
+  margin-bottom: -72px;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 24px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c5 {
+  position: relative;
+  padding: 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+}
+
+.c5:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c1 {
+  max-width: 1000px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Modal Title
+          </h2>
+        </div>
+        <div
+          className="c4"
+        >
+          Content Content Content
+        </div>
+        <div
+          className="c5"
+        >
+          <div
+            className="c6"
+          >
+            <button
+              className="c7 c8"
+              disabled={false}
+              size="medium"
+            >
+              Add job to line
+            </button>
+            <button
+              className="c7 c9"
+              disabled={false}
+              size="medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal with no footerContent 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c7 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c3 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c4 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c4 .c6 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c4:hover .c6 {
+  background-color: #e4e7eb;
+}
+
+.c4:active .c6 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c4:disabled {
+  opacity: .5;
+}
+
+.c4:disabled:hover .c6,
+.c4:disabled:active .c6 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c4:focus {
+  outline: none;
+}
+
+.c4:focus .c6 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c8 {
+  margin-top: -64px;
+  margin-bottom: 0;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 64px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c5 {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 3;
+}
+
+.c1 {
+  max-width: 624px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Without footerContent
+          </h2>
+          <button
+            className="c4 CloseButton-sc-1xxxr4t-1 c5"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden={true}
+              className="c6 c7"
+              color="currentColor"
+              fill="currentColor"
+              focusable={false}
+              height="32px"
+              icon="close"
+              p="half"
+              size="32px"
+              title={null}
+              viewBox="0 0 24 24"
+              width="32px"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c8"
+        >
+          Content Content Content
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal with no title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c5:hover {
+  background-color: #e1ebfa;
+}
+
+.c5:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c5:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c5:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c5:disabled {
+  opacity: .5;
+}
+
+.c6 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c6:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c6:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c6:focus:hover {
+  background-color: #1254c7;
+}
+
+.c7 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c4 button {
+  margin-bottom: 8px;
+}
+
+.c4 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c2 {
+  margin-top: -64px;
+  margin-bottom: -72px;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c3 {
+  position: relative;
+  padding: 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+}
+
+.c3:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c1 {
+  max-width: 624px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          Content Content Content
+        </div>
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+          >
+            <button
+              className="c5 c6"
+              disabled={false}
+              size="medium"
+            >
+              Add job to line
+            </button>
+            <button
+              className="c5 c7"
+              disabled={false}
+              size="medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal with scrolling content 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c8 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c8:hover {
+  background-color: #e1ebfa;
+}
+
+.c8:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c8:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c8:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c8:disabled {
+  opacity: .5;
+}
+
+.c9 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c9:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c9:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c9:focus:hover {
+  background-color: #1254c7;
+}
+
+.c10 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c7 button {
+  margin-bottom: 8px;
+}
+
+.c7 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c4 {
+  margin-top: -64px;
+  margin-bottom: -72px;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 24px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c6 {
+  position: relative;
+  padding: 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+}
+
+.c6:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c1 {
+  max-width: 624px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Modal Title
+          </h2>
+        </div>
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+        </div>
+        <div
+          className="c6"
+        >
+          <div
+            className="c7"
+          >
+            <button
+              className="c8 c9"
+              disabled={false}
+              size="medium"
+            >
+              Add job to line
+            </button>
+            <button
+              className="c8 c10"
+              disabled={false}
+              size="medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal with scrolling content without footer content 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c4 {
+  margin-top: -64px;
+  margin-bottom: 0;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 24px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c1 {
+  max-width: 624px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Modal Title
+          </h2>
+        </div>
+        <div
+          className="c4"
+        >
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+          <p
+            className="c5"
+            color="currentColor"
+            disabled={false}
+            fontSize="medium"
+          >
+            Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal with select 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  margin-bottom: 8px;
+}
+
+.c8 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c4 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c18 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c18:hover {
+  background-color: #e1ebfa;
+}
+
+.c18:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c18:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c18:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c18:disabled {
+  opacity: .5;
+}
+
+.c19 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c19:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c19:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c19:focus:hover {
+  background-color: #1254c7;
+}
+
+.c20 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c5 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c5 .c7 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c5:hover .c7 {
+  background-color: #e4e7eb;
+}
+
+.c5:active .c7 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c5:disabled {
+  opacity: .5;
+}
+
+.c5:disabled:hover .c7,
+.c5:disabled:active .c7 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:focus .c7 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c17 button {
+  margin-bottom: 8px;
+}
+
+.c17 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c13 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c15 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c12 {
+  width: 100%;
+}
+
+.c10 {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.c10 .c3 {
+  margin-bottom: 0;
+}
+
+.c10 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c10 .c11,
+.c10 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c10 .c11:last-child,
+.c10 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c10 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c10 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
+  margin-top: -64px;
+  margin-bottom: -72px;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 64px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c16 {
+  position: relative;
+  padding: 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+}
+
+.c16:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c6 {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 3;
+}
+
+.c1 {
+  max-width: 456px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3 c4"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Edit Profile
+          </h2>
+          <button
+            className="c5 CloseButton-sc-1xxxr4t-1 c6"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden={true}
+              className="c7 c8"
+              color="currentColor"
+              fill="currentColor"
+              focusable={false}
+              height="32px"
+              icon="close"
+              p="half"
+              size="32px"
+              title={null}
+              viewBox="0 0 24 24"
+              width="32px"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c9"
+        >
+          <form
+            className="c10"
+            id="myForm"
+            mb="x2"
+          >
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Inventory status
+                  </span>
+                </div>
+                <div
+                  data-testid="select-container"
+                >
+                  <div
+                    className=" css-2b097c-container"
+                    onKeyDown={[Function]}
+                  >
+                    <div
+                      data-testid="select-control"
+                    >
+                      <div
+                        className=" css-1liu8yu-Control"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
+                      >
+                        <div
+                          className=" css-7zc8my"
+                        >
+                          <div
+                            className=" css-1yhx6vz-Placeholder"
+                          >
+                            Please select inventory status
+                          </div>
+                          <div
+                            data-testid="select-input"
+                          >
+                            <div
+                              className="css-17yls17-Input"
+                            >
+                              <div
+                                className=""
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                  }
+                                }
+                              >
+                                <input
+                                  aria-autocomplete="list"
+                                  autoCapitalize="none"
+                                  autoComplete="off"
+                                  autoCorrect="off"
+                                  disabled={null}
+                                  id="react-select-9-input"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  spellCheck="false"
+                                  style={
+                                    Object {
+                                      "background": 0,
+                                      "border": 0,
+                                      "boxSizing": "content-box",
+                                      "color": "inherit",
+                                      "fontSize": "inherit",
+                                      "label": "input",
+                                      "opacity": 1,
+                                      "outline": 0,
+                                      "padding": 0,
+                                      "width": "1px",
+                                    }
+                                  }
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                />
+                                <div
+                                  style={
+                                    Object {
+                                      "height": 0,
+                                      "left": 0,
+                                      "overflow": "scroll",
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "visibility": "hidden",
+                                      "whiteSpace": "pre",
+                                    }
+                                  }
+                                >
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className=" css-173cxbq-IndicatorsContainer"
+                        >
+                          <span
+                            className=" css-4z5mi-indicatorSeparator"
+                          />
+                          <div
+                            aria-hidden="true"
+                            className=" css-19phze7-indicatorContainer"
+                            onMouseDown={[Function]}
+                            onTouchEnd={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="css-6q0nyr-Svg"
+                              focusable="false"
+                              height={20}
+                              viewBox="0 0 20 20"
+                              width={20}
+                            >
+                              <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div
+          className="c16"
+        >
+          <div
+            className="c17"
+          >
+            <button
+              className="c18 c19"
+              disabled={false}
+              size="medium"
+            >
+              Add job to line
+            </button>
+            <button
+              className="c18 c20"
+              disabled={false}
+              size="medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Modal with select and scrolling content 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  margin-bottom: 8px;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c8 {
+  padding: 4px;
+  color: currentColor;
+  min-width: 32px;
+}
+
+.c4 {
+  margin-bottom: 0px;
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c21 {
+  width: auto;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c21:hover {
+  background-color: #e1ebfa;
+}
+
+.c21:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c21:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c21:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c21:disabled {
+  opacity: .5;
+}
+
+.c22 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c22:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c22:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c22:focus:hover {
+  background-color: #1254c7;
+}
+
+.c23 {
+  color: #216beb;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.c5 {
+  background: transparent;
+  border: none;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0;
+  color: #011e38;
+  cursor: pointer;
+}
+
+.c5 .c7 {
+  border-radius: 50%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.c5:hover .c7 {
+  background-color: #e4e7eb;
+}
+
+.c5:active .c7 {
+  -webkit-transform: scale(0.875);
+  -ms-transform: scale(0.875);
+  transform: scale(0.875);
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.c5:disabled {
+  opacity: .5;
+}
+
+.c5:disabled:hover .c7,
+.c5:disabled:active .c7 {
+  background: none;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.c5:focus {
+  outline: none;
+}
+
+.c5:focus .c7 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -8px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c20 button {
+  margin-bottom: 8px;
+}
+
+.c20 button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.c13 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c15 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c12 {
+  width: 100%;
+}
+
+.c10 {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.c10 .c3 {
+  margin-bottom: 0;
+}
+
+.c10 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c10 .c11,
+.c10 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c10 .c11:last-child,
+.c10 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c10 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c10 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c18 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c18:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c18:focus ~ svg {
+  fill: #00438f;
+}
+
+.c18::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9 {
+  margin-top: -64px;
+  margin-bottom: -72px;
+  overflow: auto;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.c2 {
+  position: relative;
+  padding: 16px 64px 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 4px 4px 0 0;
+}
+
+.c2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c19 {
+  position: relative;
+  padding: 16px 24px;
+  background-color: rgba(255,255,255,0.9);
+  z-index: 2;
+  border-radius: 0 0 4px 4px;
+}
+
+.c19:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  display: block;
+  margin: 0 auto;
+  border-bottom: solid 1px #e4e7eb;
+}
+
+.c6 {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 3;
+}
+
+.c1 {
+  max-width: 456px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 3px 5px 0px rgba(1,30,56,0.1);
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
+  margin: 0px 16px;
+  padding: 0;
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c1:focus {
+  outline: none;
+}
+
+.c1 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c1 * {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width:768px) {
+  .c1 {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
-  />
+    className="c0"
+  >
+    <div
+      className="ReactModal__Overlay ReactModal__Overlay--after-open"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(18,43,71,0.5)",
+          "bottom": 0,
+          "display": "flex",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        aria-describedby={null}
+        aria-label={null}
+        aria-labelledby="modal-title"
+        className="ReactModal__Content ReactModal__Content--after-open c1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        role="dialog"
+        style={Object {}}
+        tabIndex="-1"
+      >
+        <div
+          className="c2"
+        >
+          <h2
+            className="c3 c4"
+            fontSize="larger"
+            fontWeight="medium"
+            id="modal-title"
+          >
+            Edit Profile
+          </h2>
+          <button
+            className="c5 CloseButton-sc-1xxxr4t-1 c6"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden={true}
+              className="c7 c8"
+              color="currentColor"
+              fill="currentColor"
+              focusable={false}
+              height="32px"
+              icon="close"
+              p="half"
+              size="32px"
+              title={null}
+              viewBox="0 0 24 24"
+              width="32px"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="c9"
+        >
+          <form
+            className="c10"
+            id="myForm"
+            mb="x2"
+          >
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Name
+                  </span>
+                </div>
+                <div
+                  className="c16"
+                >
+                  <div
+                    className="c17"
+                    display="flex"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      id="name"
+                      name="name"
+                      required={false}
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Age
+                  </span>
+                </div>
+                <div
+                  className="c16"
+                >
+                  <div
+                    className="c17"
+                    display="flex"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      id="age"
+                      name="age"
+                      required={false}
+                      type="number"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Name
+                  </span>
+                </div>
+                <div
+                  className="c16"
+                >
+                  <div
+                    className="c17"
+                    display="flex"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      id="name"
+                      name="name"
+                      required={false}
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Age
+                  </span>
+                </div>
+                <div
+                  className="c16"
+                >
+                  <div
+                    className="c17"
+                    display="flex"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      id="age"
+                      name="age"
+                      required={false}
+                      type="number"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Name
+                  </span>
+                </div>
+                <div
+                  className="c16"
+                >
+                  <div
+                    className="c17"
+                    display="flex"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      id="name"
+                      name="name"
+                      required={false}
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Age
+                  </span>
+                </div>
+                <div
+                  className="c16"
+                >
+                  <div
+                    className="c17"
+                    display="flex"
+                  >
+                    <input
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      id="age"
+                      name="age"
+                      required={false}
+                      type="number"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div
+              className="c11 c12"
+            >
+              <label
+                className="c13 "
+                color="black"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
+              >
+                <div
+                  className="c14"
+                  data-testid="field-label"
+                >
+                  <span
+                    className="c15"
+                  >
+                    Inventory status
+                  </span>
+                </div>
+                <div
+                  data-testid="select-container"
+                >
+                  <div
+                    className=" css-2b097c-container"
+                    onKeyDown={[Function]}
+                  >
+                    <div
+                      data-testid="select-control"
+                    >
+                      <div
+                        className=" css-1liu8yu-Control"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
+                      >
+                        <div
+                          className=" css-7zc8my"
+                        >
+                          <div
+                            className=" css-1yhx6vz-Placeholder"
+                          >
+                            Please select inventory status
+                          </div>
+                          <div
+                            data-testid="select-input"
+                          >
+                            <div
+                              className="css-17yls17-Input"
+                            >
+                              <div
+                                className=""
+                                style={
+                                  Object {
+                                    "display": "inline-block",
+                                  }
+                                }
+                              >
+                                <input
+                                  aria-autocomplete="list"
+                                  autoCapitalize="none"
+                                  autoComplete="off"
+                                  autoCorrect="off"
+                                  disabled={null}
+                                  id="react-select-10-input"
+                                  onBlur={[Function]}
+                                  onChange={[Function]}
+                                  onFocus={[Function]}
+                                  spellCheck="false"
+                                  style={
+                                    Object {
+                                      "background": 0,
+                                      "border": 0,
+                                      "boxSizing": "content-box",
+                                      "color": "inherit",
+                                      "fontSize": "inherit",
+                                      "label": "input",
+                                      "opacity": 1,
+                                      "outline": 0,
+                                      "padding": 0,
+                                      "width": "1px",
+                                    }
+                                  }
+                                  tabIndex="0"
+                                  type="text"
+                                  value=""
+                                />
+                                <div
+                                  style={
+                                    Object {
+                                      "height": 0,
+                                      "left": 0,
+                                      "overflow": "scroll",
+                                      "position": "absolute",
+                                      "top": 0,
+                                      "visibility": "hidden",
+                                      "whiteSpace": "pre",
+                                    }
+                                  }
+                                >
+                                  
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className=" css-173cxbq-IndicatorsContainer"
+                        >
+                          <span
+                            className=" css-4z5mi-indicatorSeparator"
+                          />
+                          <div
+                            aria-hidden="true"
+                            className=" css-19phze7-indicatorContainer"
+                            onMouseDown={[Function]}
+                            onTouchEnd={[Function]}
+                          >
+                            <svg
+                              aria-hidden="true"
+                              className="css-6q0nyr-Svg"
+                              focusable="false"
+                              height={20}
+                              viewBox="0 0 20 20"
+                              width={20}
+                            >
+                              <path
+                                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div
+          className="c19"
+        >
+          <div
+            className="c20"
+          >
+            <button
+              className="c21 c22"
+              disabled={false}
+              size="medium"
+            >
+              Add job to line
+            </button>
+            <button
+              className="c21 c23"
+              disabled={false}
+              size="medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 `;

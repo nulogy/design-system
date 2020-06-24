@@ -1,32 +1,503 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/LoginPage Base 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  margin-bottom: 8px;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c21 {
+  padding-top: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.c1 {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 384px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  max-width: 384px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  margin-bottom: 32px;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: #434d59;
+}
+
+.c22 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c19 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c19:hover {
+  background-color: #e1ebfa;
+}
+
+.c19:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c19:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c19:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c19:disabled {
+  opacity: .5;
+}
+
+.c20 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c20:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c20:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c20:focus:hover {
+  background-color: #1254c7;
+}
+
+.c7 {
+  color: #0E77D2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c7 active {
+  color: #0E77D2;
+}
+
+.c7 visited {
+  color: #0E77D2;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+}
+
+.c6:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #e1ebfa;
+  background: #e1ebfa;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c13 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c15 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c12 {
+  width: 100%;
+}
+
+.c10 {
+  width: 100%;
+}
+
+.c10 .c8-h2 {
+  margin-bottom: 0;
+}
+
+.c10 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c10 .c11,
+.c10 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c10 .c11:last-child,
+.c10 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c10 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c10 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c18 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c18:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c18:focus ~ svg {
+  fill: #00438f;
+}
+
+.c18::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+@media screen and (min-width:0px) {
+  .c21 {
+    width: calc(100% - 32px);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c21 {
+    width: calc(100% - 64px);
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c1 {
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    background-color: #f0f2f5;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    height: auto;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      className="c1"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        className="c2"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
-          height="[object Object]"
+          className="c3"
+          height={
+            Object {
+              "extraSmall": "100%",
+              "small": "auto",
+            }
+          }
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 yiUfZ Branding-ranqri-2 kQRWHN"
-            style="margin-bottom:16px"
+            className="c4 "
+            size="large"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
           >
             <svg
               height="48px"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                  "margin": null,
+                }
+              }
               viewBox="0 0 133 32"
               width="200px"
             >
@@ -60,97 +531,120 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              className="c5"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
               <span
-                class="BrandingText-nluvkd-0 TxcJr"
-                style="margin-left:4px;margin-right:4px"
+                className="c7"
+                size="large"
+                style={
+                  Object {
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                  }
+                }
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
             </div>
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 gcgjYT"
+            className="c8 c9"
             color="darkGrey"
-            font-size="small"
+            disabled={false}
+            fontSize="small"
           >
             Additional Text
           </p>
           <form
-            class="Form-n70q8u-0 ilQSyT"
-            style="width:100%"
+            className="c10"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c11 c12"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c13 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c14"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c15"
                   >
                     Email
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c16"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c17"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      required={false}
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c11 c12"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c13 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c14"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c15"
                   >
                     Password
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c16"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c17"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      required={false}
                       type="password"
                     />
                   </div>
@@ -158,7 +652,9 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
+              className="c19 c20"
+              disabled={false}
+              size="medium"
             >
               Sign In
             </button>
@@ -166,14 +662,24 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
-        style="border-top:solid 1px #e4e7eb"
-        width="[object Object]"
+        className="c21"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
+        width={
+          Object {
+            "extraSmall": "calc(100% - 32px)",
+            "small": "calc(100% - 64px)",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 fRSYFu"
+          className="c8 c22"
           color="darkGrey"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -184,32 +690,535 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
 `;
 
 exports[`Storyshots Pages/LoginPage with error 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  margin-right: auto;
+}
+
+.c19 {
+  margin-bottom: 8px;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c26 {
+  padding-top: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.c1 {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 384px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  max-width: 384px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c10 {
+  background-color: #fae6ea;
+  padding: 16px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c13 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c9 {
+  margin-bottom: 32px;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c27 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c24 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c24:hover {
+  background-color: #e1ebfa;
+}
+
+.c24:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c24:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c24:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c24:disabled {
+  opacity: .5;
+}
+
+.c25 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c25:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c25:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c25:focus:hover {
+  background-color: #1254c7;
+}
+
+.c12 {
+  margin-bottom: 32px;
+}
+
+.c12 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c7 {
+  color: #0E77D2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c7 active {
+  color: #0E77D2;
+}
+
+.c7 visited {
+  color: #0E77D2;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+}
+
+.c6:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #e1ebfa;
+  background: #e1ebfa;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c18 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c20 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c17 {
+  width: 100%;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c15 .c8-h2 {
+  margin-bottom: 0;
+}
+
+.c15 .c11 {
+  margin-bottom: 48px;
+}
+
+.c15 .c16,
+.c15 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c15 .c16:last-child,
+.c15 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c15 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c15 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c23 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c23:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c23:focus ~ svg {
+  fill: #00438f;
+}
+
+.c23::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c23::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c23:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c23::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+@media screen and (min-width:0px) {
+  .c26 {
+    width: calc(100% - 32px);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c26 {
+    width: calc(100% - 64px);
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c1 {
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    background-color: #f0f2f5;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    height: auto;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      className="c1"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        className="c2"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
-          height="[object Object]"
+          className="c3"
+          height={
+            Object {
+              "extraSmall": "100%",
+              "small": "auto",
+            }
+          }
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 yiUfZ Branding-ranqri-2 kQRWHN"
-            style="margin-bottom:16px"
+            className="c4 "
+            size="large"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
           >
             <svg
               height="48px"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                  "margin": null,
+                }
+              }
               viewBox="0 0 133 32"
               width="200px"
             >
@@ -243,44 +1252,57 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              className="c5"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
               <span
-                class="BrandingText-nluvkd-0 TxcJr"
-                style="margin-left:4px;margin-right:4px"
+                className="c7"
+                size="large"
+                style={
+                  Object {
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                  }
+                }
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
             </div>
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 hkGNDv"
+            className="c8 c9"
             color="currentColor"
-            font-size="small"
+            disabled={false}
+            fontSize="small"
           >
             Additional Text
           </p>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
+            className="c10 c11 c12"
             role="alert"
-            style="width:100%"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 ewGQci"
+              aria-hidden={true}
+              className="c13"
               color="red"
               fill="#cc1439"
-              focusable="false"
+              focusable={false}
               height="24px"
               icon="error"
               mr="x1"
+              size="24px"
+              title={null}
               viewBox="0 0 24 24"
               width="24px"
             >
@@ -289,78 +1311,94 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               />
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 iDnpba"
+              className="c14"
             >
               text
             </div>
           </div>
           <form
-            class="Form-n70q8u-0 ilQSyT"
-            style="width:100%"
+            className="c15"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c16 c17"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c18 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c19"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c20"
                   >
                     Email
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c21"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c22"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c23"
+                      disabled={false}
+                      required={false}
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c16 c17"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c18 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c19"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c20"
                   >
                     Password
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c21"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c22"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c23"
+                      disabled={false}
+                      required={false}
                       type="password"
                     />
                   </div>
@@ -368,7 +1406,9 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
+              className="c24 c25"
+              disabled={false}
+              size="medium"
             >
               Sign In
             </button>
@@ -376,14 +1416,24 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
-        style="border-top:solid 1px #e4e7eb"
-        width="[object Object]"
+        className="c26"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
+        width={
+          Object {
+            "extraSmall": "calc(100% - 32px)",
+            "small": "calc(100% - 64px)",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 fRSYFu"
+          className="c8 c27"
           color="darkGrey"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -394,32 +1444,527 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
 `;
 
 exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c12 {
+  margin-right: auto;
+}
+
+.c17 {
+  margin-bottom: 8px;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c24 {
+  padding-top: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.c1 {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 384px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  max-width: 384px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c8 {
+  background-color: #fae6ea;
+  padding: 16px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c11 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c26 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c22 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c22:hover {
+  background-color: #e1ebfa;
+}
+
+.c22:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c22:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c22:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c22:disabled {
+  opacity: .5;
+}
+
+.c23 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c23:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c23:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c23:focus:hover {
+  background-color: #1254c7;
+}
+
+.c10 {
+  margin-bottom: 32px;
+}
+
+.c10 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c7 {
+  color: #0E77D2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c7 active {
+  color: #0E77D2;
+}
+
+.c7 visited {
+  color: #0E77D2;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+}
+
+.c6:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #e1ebfa;
+  background: #e1ebfa;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c16 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c18 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c15 {
+  width: 100%;
+}
+
+.c13 {
+  width: 100%;
+}
+
+.c13 .c25-h2 {
+  margin-bottom: 0;
+}
+
+.c13 .c9 {
+  margin-bottom: 48px;
+}
+
+.c13 .c14,
+.c13 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c13 .c14:last-child,
+.c13 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c13 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c13 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c21 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c21:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c21:focus ~ svg {
+  fill: #00438f;
+}
+
+.c21::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c21::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c21:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c21::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+@media screen and (min-width:0px) {
+  .c24 {
+    width: calc(100% - 32px);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c24 {
+    width: calc(100% - 64px);
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c1 {
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    background-color: #f0f2f5;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    height: auto;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      className="c1"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        className="c2"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
-          height="[object Object]"
+          className="c3"
+          height={
+            Object {
+              "extraSmall": "100%",
+              "small": "auto",
+            }
+          }
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 yiUfZ Branding-ranqri-2 kQRWHN"
-            style="margin-bottom:32px"
+            className="c4 "
+            size="large"
+            style={
+              Object {
+                "marginBottom": "32px",
+              }
+            }
           >
             <svg
               height="48px"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                  "margin": null,
+                }
+              }
               viewBox="0 0 133 32"
               width="200px"
             >
@@ -453,37 +1998,49 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              className="c5"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
               <span
-                class="BrandingText-nluvkd-0 TxcJr"
-                style="margin-left:4px;margin-right:4px"
+                className="c7"
+                size="large"
+                style={
+                  Object {
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                  }
+                }
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
+            className="c8 c9 c10"
             role="alert"
-            style="width:100%"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 ewGQci"
+              aria-hidden={true}
+              className="c11"
               color="red"
               fill="#cc1439"
-              focusable="false"
+              focusable={false}
               height="24px"
               icon="error"
               mr="x1"
+              size="24px"
+              title={null}
               viewBox="0 0 24 24"
               width="24px"
             >
@@ -492,78 +2049,94 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               />
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 iDnpba"
+              className="c12"
             >
               text
             </div>
           </div>
           <form
-            class="Form-n70q8u-0 ilQSyT"
-            style="width:100%"
+            className="c13"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c14 c15"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c16 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c17"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c18"
                   >
                     Email
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c19"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c20"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c21"
+                      disabled={false}
+                      required={false}
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c14 c15"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c16 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c17"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c18"
                   >
                     Password
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c19"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c20"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c21"
+                      disabled={false}
+                      required={false}
                       type="password"
                     />
                   </div>
@@ -571,7 +2144,9 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
+              className="c22 c23"
+              disabled={false}
+              size="medium"
             >
               Sign In
             </button>
@@ -579,14 +2154,24 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
-        style="border-top:solid 1px #e4e7eb"
-        width="[object Object]"
+        className="c24"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
+        width={
+          Object {
+            "extraSmall": "calc(100% - 32px)",
+            "small": "calc(100% - 64px)",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 fRSYFu"
+          className="c25 c26"
           color="darkGrey"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -597,32 +2182,523 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
 `;
 
 exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c14 {
+  margin-bottom: 8px;
+}
+
+.c17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c21 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 8px;
+}
+
+.c23 {
+  padding-top: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.c1 {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 384px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  max-width: 384px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  margin-bottom: 32px;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: #434d59;
+}
+
+.c24 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c19 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c19:hover {
+  background-color: #e1ebfa;
+}
+
+.c19:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c19:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c19:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c19:disabled {
+  opacity: .5;
+}
+
+.c20 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c20:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c20:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c20:focus:hover {
+  background-color: #1254c7;
+}
+
+.c22 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c22:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c7 {
+  color: #0E77D2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c7 active {
+  color: #0E77D2;
+}
+
+.c7 visited {
+  color: #0E77D2;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+}
+
+.c6:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #e1ebfa;
+  background: #e1ebfa;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c13 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c15 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c12 {
+  width: 100%;
+}
+
+.c10 {
+  width: 100%;
+}
+
+.c10 .c8-h2 {
+  margin-bottom: 0;
+}
+
+.c10 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c10 .c11,
+.c10 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c10 .c11:last-child,
+.c10 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c10 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c10 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c18 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c18:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c18:focus ~ svg {
+  fill: #00438f;
+}
+
+.c18::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c18::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+@media screen and (min-width:0px) {
+  .c23 {
+    width: calc(100% - 32px);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c23 {
+    width: calc(100% - 64px);
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c1 {
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    background-color: #f0f2f5;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    height: auto;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      className="c1"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        className="c2"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
-          height="[object Object]"
+          className="c3"
+          height={
+            Object {
+              "extraSmall": "100%",
+              "small": "auto",
+            }
+          }
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 yiUfZ Branding-ranqri-2 kQRWHN"
-            style="margin-bottom:16px"
+            className="c4 "
+            size="large"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
           >
             <svg
               height="48px"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                  "margin": null,
+                }
+              }
               viewBox="0 0 133 32"
               width="200px"
             >
@@ -656,97 +2732,120 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              className="c5"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
               <span
-                class="BrandingText-nluvkd-0 TxcJr"
-                style="margin-left:4px;margin-right:4px"
+                className="c7"
+                size="large"
+                style={
+                  Object {
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                  }
+                }
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
             </div>
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 gcgjYT"
+            className="c8 c9"
             color="darkGrey"
-            font-size="small"
+            disabled={false}
+            fontSize="small"
           >
             Additional Text
           </p>
           <form
-            class="Form-n70q8u-0 ilQSyT"
-            style="width:100%"
+            className="c10"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c11 c12"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c13 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c14"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c15"
                   >
                     Email
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c16"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c17"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      required={false}
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c11 c12"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c13 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c14"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c15"
                   >
                     Password
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c16"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c17"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c18"
+                      disabled={false}
+                      required={false}
                       type="password"
                     />
                   </div>
@@ -754,18 +2853,20 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
+              className="c19 c20"
+              disabled={false}
+              size="medium"
             >
               Sign In
             </button>
           </form>
           <div
-            class="Box-sc-1qu1edy-0 csERpy"
+            className="c21"
           >
             <a
-              class="Link-sc-1lpx3d0-0 gxbSxg"
+              className="c22"
               color="blue"
-              font-size="medium"
+              fontSize="medium"
               href="/"
             >
               Forgot your password?
@@ -774,14 +2875,24 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
-        style="border-top:solid 1px #e4e7eb"
-        width="[object Object]"
+        className="c23"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
+        width={
+          Object {
+            "extraSmall": "calc(100% - 32px)",
+            "small": "calc(100% - 64px)",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 fRSYFu"
+          className="c8 c24"
           color="darkGrey"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>
@@ -792,32 +2903,607 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
 `;
 
 exports[`Storyshots Pages/LoginPage with remember me 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c12 {
+  margin-bottom: 8px;
+}
+
+.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c26 {
+  padding-top: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.c1 {
+  min-height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  width: 100%;
+  max-width: 384px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c3 {
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  max-width: 384px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  margin-bottom: 32px;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: #434d59;
+}
+
+.c23 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c27 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c19 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c24 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 1.5;
+  cursor: pointer;
+  color: #216beb;
+  background-color: #ffffff;
+  border: 1px solid #216beb;
+  border-radius: 4px;
+  margin: 0px;
+  -webkit-transition: background-color .2s,-webkit-transform .2s ease-in;
+  -webkit-transition: background-color .2s,transform .2s ease-in;
+  transition: background-color .2s,transform .2s ease-in;
+  font-size: 16px;
+  padding: 7px 16px;
+}
+
+.c24:hover {
+  background-color: #e1ebfa;
+}
+
+.c24:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #ffffff;
+}
+
+.c24:focus:hover {
+  background-color: #e1ebfa;
+}
+
+.c24:active {
+  -webkit-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  transform: scale(0.98);
+}
+
+.c24:disabled {
+  opacity: .5;
+}
+
+.c25 {
+  color: #ffffff;
+  border-color: #216beb;
+  background-color: #216beb;
+}
+
+.c25:hover {
+  background-color: #1254c7;
+  border-color: #1254c7;
+}
+
+.c25:focus {
+  outline: none;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+  background-color: #216beb;
+}
+
+.c25:focus:hover {
+  background-color: #1254c7;
+}
+
+.c7 {
+  color: #0E77D2;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-weight: 500;
+  -webkit-letter-spacing: 0.0333em;
+  -moz-letter-spacing: 0.0333em;
+  -ms-letter-spacing: 0.0333em;
+  letter-spacing: 0.0333em;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.c7 active {
+  color: #0E77D2;
+}
+
+.c7 visited {
+  color: #0E77D2;
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  position: relative;
+  width: 100%;
+}
+
+.c6:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #e1ebfa;
+  background: #e1ebfa;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.c11 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c13 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c10 {
+  width: 100%;
+}
+
+.c16 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  margin-bottom: 24px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c16:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c16:focus ~ svg {
+  fill: #00438f;
+}
+
+.c16::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c16::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c16:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c16::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c17 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c17:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c17:focus ~ svg {
+  fill: #00438f;
+}
+
+.c17::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c17::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c17:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c17::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c22 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c22:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c20 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c20:focus + .c21 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c20:checked + .c21 {
+  border-color: #00438f;
+  background-color: #00438f;
+}
+
+.c20:checked + .c21:before {
+  display: block;
+}
+
+.c20:not(:checked) + .c21 {
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+}
+
+.c18 {
+  padding: 4px 0;
+  margin-bottom: 24px;
+}
+
+.c18 .c8 {
+  margin-left: 8px;
+}
+
+@media screen and (min-width:0px) {
+  .c26 {
+    width: calc(100% - 32px);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c26 {
+    width: calc(100% - 64px);
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c1 {
+    background-color: #ffffff;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c1 {
+    background-color: #f0f2f5;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c3 {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    height: auto;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width:0px) {
+
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    box-shadow: 0px 0px 3px 0px rgba(1,30,56,0.2);
+  }
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      className="c1"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        className="c2"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
-          height="[object Object]"
+          className="c3"
+          height={
+            Object {
+              "extraSmall": "100%",
+              "small": "auto",
+            }
+          }
           width="100%"
         >
           <div
-            class="Branding__BrandingWrap-ranqri-0 yiUfZ Branding-ranqri-2 kQRWHN"
-            style="margin-bottom:16px"
+            className="c4 "
+            size="large"
+            style={
+              Object {
+                "marginBottom": "16px",
+              }
+            }
           >
             <svg
               height="48px"
-              style="display:block"
+              style={
+                Object {
+                  "display": "block",
+                  "margin": null,
+                }
+              }
               viewBox="0 0 133 32"
               width="200px"
             >
@@ -851,96 +3537,119 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              className="c5"
               width="100%"
             >
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
               <span
-                class="BrandingText-nluvkd-0 TxcJr"
-                style="margin-left:4px;margin-right:4px"
+                className="c7"
+                size="large"
+                style={
+                  Object {
+                    "marginLeft": "4px",
+                    "marginRight": "4px",
+                  }
+                }
               >
                 Logo Subtext
               </span>
               <div
-                class="Branding__Line-ranqri-1 gfZuug"
+                className="c6"
               />
             </div>
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 gcgjYT"
+            className="c8 c9"
             color="darkGrey"
-            font-size="small"
+            disabled={false}
+            fontSize="small"
           >
             Additional Text
           </p>
           <form
-            style="width:100%"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c10"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c11 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c12"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c13"
                   >
                     Email
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c14"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c15"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 YAPpz"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c16"
+                      disabled={false}
+                      required={false}
                     />
                   </div>
                 </div>
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              className="c10"
             >
               <label
-                class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+                className="c11 "
                 color="black"
-                style="display:block"
+                style={
+                  Object {
+                    "display": "block",
+                  }
+                }
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  className="c12"
                   data-testid="field-label"
                 >
                   <span
-                    class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                    className="c13"
                   >
                     Password
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  className="c14"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    className="c15"
                     display="flex"
                   >
                     <input
-                      aria-invalid="false"
-                      aria-required="false"
-                      class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                      aria-invalid={false}
+                      aria-required={false}
+                      className="c17"
+                      disabled={false}
+                      required={false}
                       type="password"
                     />
                   </div>
@@ -948,32 +3657,40 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 gnHfup"
+              className="c18"
             >
               <label
-                class="ClickInputLabel-j2axnv-0 kemUmZ"
+                className="c19"
+                disabled={false}
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 gnHfup"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c20 c18"
+                  disabled={false}
+                  id={null}
+                  required={false}
                   type="checkbox"
                 />
                 <div
-                  class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                  className="c21 c22"
                   data-testid="visual-checkbox"
+                  disabled={false}
                 />
                 <p
-                  class="Text-sc-1wu7vpu-0 RbfMK"
+                  className="c8 c23"
                   color="currentColor"
-                  font-size="medium"
+                  disabled={false}
+                  fontSize="medium"
                 >
                   Remember me
                 </p>
               </label>
             </div>
             <button
-              class="Button__WrapperButton-sc-1omxup2-0 bkRlmc PrimaryButton-qz78sb-0 cGyyDq"
+              className="c24 c25"
+              disabled={false}
+              size="medium"
             >
               Sign In
             </button>
@@ -981,14 +3698,24 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
-        style="border-top:solid 1px #e4e7eb"
-        width="[object Object]"
+        className="c26"
+        style={
+          Object {
+            "borderTop": "solid 1px #e4e7eb",
+          }
+        }
+        width={
+          Object {
+            "extraSmall": "calc(100% - 32px)",
+            "small": "calc(100% - 64px)",
+          }
+        }
       >
         <p
-          class="Text-sc-1wu7vpu-0 fRSYFu"
+          className="c8 c27"
           color="darkGrey"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           © 2007-2019 Nulogy Corporation
         </p>

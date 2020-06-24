@@ -1,44 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Text Set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #ffffff;
+  padding: 16px;
+  margin: 16px;
+}
+
+.c3 {
+  background-color: #00438f;
+  padding: 16px;
+  margin: 16px;
+}
+
+.c5 {
+  background-color: #011e38;
+  padding: 16px;
+  margin: 16px;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  opacity: 0.3333;
+}
+
+.c4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  opacity: 0.3333;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 duXuoY"
+      className="c1"
     >
       <p
-        class="Text-sc-1wu7vpu-0 hdrQgs"
+        className="c2"
         color="currentColor"
-        disabled=""
-        font-size="medium"
+        disabled={true}
+        fontSize="medium"
       >
         Disabled text
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 fXRdUR"
+      className="c3"
     >
       <p
-        class="Text-sc-1wu7vpu-0 kUDEbP"
+        className="c4"
         color="white"
-        disabled=""
-        font-size="medium"
+        disabled={true}
+        fontSize="medium"
       >
         Disabled text
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 ffhBHW"
+      className="c5"
     >
       <p
-        class="Text-sc-1wu7vpu-0 kUDEbP"
+        className="c4"
         color="white"
-        disabled=""
-        font-size="medium"
+        disabled={true}
+        fontSize="medium"
       >
         Disabled text
       </p>
@@ -48,23 +110,68 @@ exports[`Storyshots Text Set to disabled 1`] = `
 `;
 
 exports[`Storyshots Text Set to inline 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <span
-      class="Text-sc-1wu7vpu-0 ipzFTA"
+      className="c1"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Inline text
     </span>
     <span
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Inline text
     </span>
@@ -73,16 +180,51 @@ exports[`Storyshots Text Set to inline 1`] = `
 `;
 
 exports[`Storyshots Text Text 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c1"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Default text
     </p>
@@ -91,16 +233,51 @@ exports[`Storyshots Text Text 1`] = `
 `;
 
 exports[`Storyshots Text With a color 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #216beb;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="Text-sc-1wu7vpu-0 dXhWql"
+      className="c1"
       color="blue"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Blue text
     </p>
@@ -109,23 +286,67 @@ exports[`Storyshots Text With a color 1`] = `
 `;
 
 exports[`Storyshots Text With a custom margin 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-bottom: 24px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="Text-sc-1wu7vpu-0 kLhDpw"
+      className="c1"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Text 24px bottom margin.
     </p>
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK"
+      className="c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Text with default (0px) bottom margin.
     </p>
@@ -134,48 +355,116 @@ exports[`Storyshots Text With a custom margin 1`] = `
 `;
 
 exports[`Storyshots Text With a size 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  background-color: #f0f2f5;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.14285714;
+  color: currentColor;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.33333333;
+  color: currentColor;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 eBHmui"
+      className="c1"
     >
       <p
-        class="Text-sc-1wu7vpu-0 RbfMK"
+        className="c2"
         color="currentColor"
-        font-size="medium"
+        disabled={false}
+        fontSize="medium"
       >
         Default (16px/24px)
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 eBHmui"
+      className="c1"
     >
       <p
-        class="Text-sc-1wu7vpu-0 hsSevS"
+        className="c3"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         Small (14px/24px)
       </p>
       <p
-        class="Text-sc-1wu7vpu-0 gQDLhx"
+        className="c4"
         color="currentColor"
-        font-size="small"
+        disabled={false}
+        fontSize="small"
       >
         Small Compressed (14px/16px)
       </p>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 eBHmui"
+      className="c1"
     >
       <p
-        class="Text-sc-1wu7vpu-0 kLNwfz"
+        className="c5"
         color="currentColor"
-        font-size="smaller"
+        disabled={false}
+        fontSize="smaller"
       >
         Smaller (12px/16px)
       </p>

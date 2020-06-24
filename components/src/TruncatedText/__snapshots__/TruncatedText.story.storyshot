@@ -1,20 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots TruncatedText TruncatedText 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
       aria-describedby="random-id-38"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
+      className="c1 c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       Special instructions...
     </p>
@@ -23,20 +69,65 @@ exports[`Storyshots TruncatedText TruncatedText 1`] = `
 `;
 
 exports[`Storyshots TruncatedText as title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 48px;
+  font-size: 46px;
+  line-height: 1.04347826;
+  font-weight: 300;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <h1
       aria-describedby="random-id-41"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Text-sc-1wu7vpu-0-h1 VooJu TruncatedText__StyledWrapper-noy865-0 jYAXtT"
-      font-size="largest"
-      font-weight="light"
+      className="c1 c2"
+      fontSize="largest"
+      fontWeight="light"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       Special instructions...
     </h1>
@@ -45,16 +136,58 @@ exports[`Storyshots TruncatedText as title 1`] = `
 `;
 
 exports[`Storyshots TruncatedText under max characters 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: default;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
+      className="c1 c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Item is available
     </p>
@@ -63,20 +196,66 @@ exports[`Storyshots TruncatedText under max characters 1`] = `
 `;
 
 exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
       aria-describedby="random-id-40"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
+      className="c1 c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       Special instructions + 2...
     </p>
@@ -85,20 +264,66 @@ exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
 `;
 
 exports[`Storyshots TruncatedText with max characters 10 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
       aria-describedby="random-id-39"
-      aria-expanded="false"
-      aria-haspopup="true"
+      aria-expanded={false}
+      aria-haspopup={true}
       aria-label="Open"
-      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
+      className="c1 c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       Item is av...
     </p>
@@ -107,16 +332,58 @@ exports[`Storyshots TruncatedText with max characters 10 1`] = `
 `;
 
 exports[`Storyshots TruncatedText without tooltip 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: default;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <p
-      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
+      className="c1 c2"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Special instructions...
     </p>

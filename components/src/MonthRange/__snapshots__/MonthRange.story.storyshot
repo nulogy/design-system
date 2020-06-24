@@ -1,65 +1,229 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots MonthRange customizing input props 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Month range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="From (Mon YYYY)"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -73,49 +237,57 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="To (Mon YYYY)"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -134,65 +306,229 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
 `;
 
 exports[`Storyshots MonthRange default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Month range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -206,49 +542,57 @@ exports[`Storyshots MonthRange default 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -267,65 +611,229 @@ exports[`Storyshots MonthRange default 1`] = `
 `;
 
 exports[`Storyshots MonthRange default start and end date 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Month range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value="Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -339,49 +847,57 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value="Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -400,65 +916,229 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
 `;
 
 exports[`Storyshots MonthRange disabled range validation 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Month range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value="Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -472,49 +1152,57 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value="Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="Icon-fc7twp-0 c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -533,66 +1221,297 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
 `;
 
 exports[`Storyshots MonthRange individual input error 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c14 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c10 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c13 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c11 .c12 {
+  margin-bottom: 8px;
+}
+
+.c11 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #cc1439;
+  border-color: #cc1439;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c15:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c15:focus ~ svg {
+  fill: #00438f;
+}
+
+.c15::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Month range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="true"
+                  aria-invalid={true}
                   aria-label="Select a start date"
-                  aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  aria-required={true}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
-                  required=""
+                  required={true}
                   value=""
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -605,18 +1524,20 @@ exports[`Storyshots MonthRange individual input error 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+          className="c9"
           color="red"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 QuoIa"
+            aria-hidden={true}
+            className="c10"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="error"
             mr="x1"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -625,12 +1546,13 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+            className="c11"
           >
             <p
-              class="Text-sc-1wu7vpu-0 RbfMK"
+              className="c12 c13"
               color="currentColor"
-              font-size="medium"
+              disabled={false}
+              fontSize="medium"
             >
               Start date is required
             </p>
@@ -638,49 +1560,57 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c14"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c12 c13"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c15"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value="Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -699,65 +1629,251 @@ exports[`Storyshots MonthRange individual input error 1`] = `
 `;
 
 exports[`Storyshots MonthRange with custom error 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c9 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c12 {
+  color: #cc1439;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c11 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c14 .c10 {
+  margin-bottom: 8px;
+}
+
+.c14 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c7 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c7:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c7:focus ~ svg {
+  fill: #00438f;
+}
+
+.c7::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c7::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c8 {
+  color: currentColor;
+  min-width: 16px;
+  position: absolute;
+  right: 8px;
+  color: #434d59;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  pointer-events: none;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Month range
         </span>
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      className="c3"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select a start date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value="Jul 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -771,49 +1887,57 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c9"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10 c11"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        className="c4 nds-month-picker"
         data-testid="month-picker"
       >
         <div
-          class="react-datepicker-wrapper"
+          className="react-datepicker-wrapper"
         >
           <div
-            class="react-datepicker__input-container"
+            className="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c5"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c6"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-label="Select an end date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-required={false}
+                  className="c7"
+                  disabled={false}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
                   placeholder="Mon YYYY"
+                  required={false}
                   value="Sep 2019"
                 />
                 <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  aria-hidden={true}
+                  className="c8"
                   color="currentColor"
                   fill="currentColor"
-                  focusable="false"
+                  focusable={false}
                   height="16px"
                   icon="calendarToday"
+                  size="16px"
+                  title={null}
                   viewBox="0 0 24 24"
                   width="16px"
                 >
@@ -828,18 +1952,20 @@ exports[`Storyshots MonthRange with custom error 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
+      className="c12"
       color="red"
     >
       <svg
-        aria-hidden="true"
-        class="Icon-fc7twp-0 QuoIa"
+        aria-hidden={true}
+        className="c13"
         color="currentColor"
         fill="currentColor"
-        focusable="false"
+        focusable={false}
         height="24px"
         icon="error"
         mr="x1"
+        size="24px"
+        title={null}
         viewBox="0 0 24 24"
         width="24px"
       >
@@ -848,12 +1974,13 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         />
       </svg>
       <div
-        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+        className="c14"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c10 c11"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           This range conflicts with another range
         </p>

@@ -1,35 +1,803 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Form Demo form 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c8 {
+  margin-right: auto;
+}
+
+.c22 {
+  margin-bottom: 8px;
+}
+
+.c25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c4 {
+  background-color: #fae6ea;
+  padding: 16px;
+  border-radius: 4px;
+  border-left-width: half;
+  border-left-color: #cc1439;
+  border-left-style: solid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c24 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c30 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  margin-right: 8px;
+  color: #cc1439;
+  min-width: 24px;
+}
+
+.c31 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c11 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c27 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c45 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  opacity: 0.3333;
+}
+
+.c57 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c60 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  opacity: 0.3333;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c39 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c43 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c14 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c14:last-child {
+  margin-bottom: 0;
+}
+
+.c12 {
+  color: currentColor;
+  margin: 0;
+}
+
+.c12 .c13 {
+  margin-bottom: 0;
+}
+
+.c32 .c9 {
+  margin-bottom: 8px;
+}
+
+.c32 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c6 .Link-sc-1lpx3d0-0 {
+  color: #011e38;
+}
+
+.c28 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c28 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c21 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c23 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c20 {
+  width: 100%;
+}
+
+.c35 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.c35 legend {
+  padding: 0;
+}
+
+.c18 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.c16 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.c16 .c17 {
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.c16 .c19,
+.c16 .c34 {
+  margin-bottom: 24px;
+}
+
+.c16 .c19:last-child,
+.c16 .c34:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 .c2 {
+  margin-bottom: 48px;
+}
+
+.c1 .c5 {
+  margin-bottom: 48px;
+}
+
+.c1 .c19,
+.c1 .c34 {
+  margin-bottom: 24px;
+}
+
+.c1 .c19:last-child,
+.c1 .c34:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .c15 {
+  margin-bottom: 48px;
+}
+
+.c1 .c15:last-child {
+  margin-bottom: 0;
+}
+
+.c26 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c26:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c26:focus ~ svg {
+  fill: #00438f;
+}
+
+.c26::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c26::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c26:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c26::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c29 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #cc1439;
+  border-color: #cc1439;
+}
+
+.c29:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c29:focus ~ svg {
+  fill: #00438f;
+}
+
+.c29::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c29::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c29:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c29::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c33 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: rgba(1,30,56,0.3333);
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+}
+
+.c33:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c33:focus ~ svg {
+  fill: #00438f;
+}
+
+.c33::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c33::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c33:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c33::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c42 {
+  min-width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: solid 1px;
+  position: relative;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c42:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  width: 3px;
+  height: 9px;
+  border: solid #ffffff;
+  border-radius: 1px;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.c40 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c40:focus + .c41 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c40:checked + .c41 {
+  border-color: #00438f;
+  background-color: #00438f;
+}
+
+.c40:checked + .c41:before {
+  display: block;
+}
+
+.c40:not(:checked) + .c41 {
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+}
+
+.c44 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c44:focus + .c41 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c44:checked + .c41 {
+  border-color: #e4e7eb;
+  background-color: #e4e7eb;
+}
+
+.c44:checked + .c41:before {
+  display: block;
+}
+
+.c44:not(:checked) + .c41 {
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+}
+
+.c38 {
+  padding: 4px 0;
+}
+
+.c38 .c9 {
+  margin-left: 8px;
+}
+
+.c37 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c36 {
+  margin-bottom: 8px;
+}
+
+.c49 {
+  min-width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: solid 1px;
+  position: relative;
+  top: 4px;
+}
+
+.c49:before {
+  cursor: pointer;
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  top: 4px;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.c51 {
+  min-width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: solid 1px;
+  position: relative;
+  top: 4px;
+}
+
+.c51:before {
+  content: '';
+  display: none;
+  position: relative;
+  left: 4px;
+  top: 4px;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.c47 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c47:focus + .c48 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c47:checked + .c48 {
+  border-color: #cc1439;
+  background-color: #cc1439;
+}
+
+.c47:checked + .c48:before {
+  display: block;
+}
+
+.c47:not(:checked) + .c48 {
+  border-color: #cc1439;
+  background-color: #ffffff;
+}
+
+.c50 {
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
+}
+
+.c50:focus + .c48 {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c50:checked + .c48 {
+  border-color: #e4e7eb;
+  background-color: #e4e7eb;
+}
+
+.c50:checked + .c48:before {
+  display: block;
+}
+
+.c50:not(:checked) + .c48 {
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+}
+
+.c46 {
+  padding: 4px 0;
+}
+
+.c56 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c56:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c59 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c59:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c53 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c53 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c54:checked + .c55:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c54:checked + .c55 {
+  background-color: #e1ebfa;
+}
+
+.c54:focus + .c55:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c58:checked + .c55:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #e4e7eb;
+  border-color: #f0f2f5;
+}
+
+.c58:checked + .c55 {
+  background-color: #f0f2f5;
+}
+
+.c52 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 laLzBn"
+      className="c1"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         Job 324400
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+        className="c4 c5 c6"
         role="alert"
       >
         <svg
-          aria-hidden="true"
-          class="Icon-fc7twp-0 ewGQci"
+          aria-hidden={true}
+          className="c7"
           color="red"
           fill="#cc1439"
-          focusable="false"
+          focusable={false}
           height="24px"
           icon="error"
           mr="x1"
+          size="24px"
+          title={null}
           viewBox="0 0 24 24"
           width="24px"
         >
@@ -38,41 +806,43 @@ exports[`Storyshots Form Demo form 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          className="c8"
         >
           <p
-            class="Text-sc-1wu7vpu-0 dFPjNj"
+            className="c9 c10"
             color="currentColor"
-            font-size="medium"
-            font-weight="bold"
+            disabled={false}
+            fontSize="medium"
+            fontWeight="bold"
           >
             Errors have occured ...
           </p>
           <p
-            class="Text-sc-1wu7vpu-0 RbfMK"
+            className="c9 c11"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Instructions and description of errors
           </p>
           <ul
-            class="List-sc-1cqkmnl-0 gfYBVm"
+            className="c12"
             color="currentColor"
           >
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c13 c14"
               color="currentColor"
             >
               Affected field
             </li>
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c13 c14"
               color="currentColor"
             >
               Unmet criteria
             </li>
             <li
-              class="ListItem-qqenhw-0 gzsWDK"
+              className="c13 c14"
               color="currentColor"
             >
               <a
@@ -85,114 +855,132 @@ exports[`Storyshots Form Demo form 1`] = `
         </div>
       </div>
       <fieldset
-        class="FormSection-sc-5yud6c-1 cJYtnA"
+        className="c15 c16"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
-          font-weight="medium"
+          className="c9-h3 Headings__SubsectionTitle-igpciy-0 c17 c18"
+          fontSize="large"
+          fontWeight="medium"
         >
           Job Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Project
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c26"
+                  disabled={false}
                   id="project"
                   placeholder="Project 128703"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Project description
               </span>
               <span
-                class="Text-sc-1wu7vpu-0 bphWXP"
+                className="c9 c27"
                 color="darkGrey"
-                font-size="12px"
+                disabled={false}
+                fontSize="12px"
               >
                 (Optional)
               </span>
               <p
-                class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+                className="c9 c28"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Project description helps identify the project.
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c26"
+                  disabled={false}
                   id="project-description"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Project status
               </span>
@@ -201,19 +989,22 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="select-container"
             >
               <div
-                class=" css-2b097c-container"
+                className=" css-2b097c-container"
+                onKeyDown={[Function]}
               >
                 <div
                   data-testid="select-control"
                 >
                   <div
-                    class=" css-1liu8yu-Control"
+                    className=" css-1liu8yu-Control"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <div
-                      class=" css-7zc8my"
+                      className=" css-7zc8my"
                     >
                       <div
-                        class=" css-1yhx6vz-Placeholder"
+                        className=" css-1yhx6vz-Placeholder"
                       >
                         Select...
                       </div>
@@ -221,48 +1012,83 @@ exports[`Storyshots Form Demo form 1`] = `
                         data-testid="select-input"
                       >
                         <div
-                          class="css-17yls17-Input"
+                          className="css-17yls17-Input"
                         >
                           <div
-                            class=""
-                            style="display:inline-block"
+                            className=""
+                            style={
+                              Object {
+                                "display": "inline-block",
+                              }
+                            }
                           >
                             <input
                               aria-autocomplete="list"
-                              autocapitalize="none"
-                              autocomplete="off"
-                              autocorrect="off"
+                              autoCapitalize="none"
+                              autoComplete="off"
+                              autoCorrect="off"
+                              disabled={null}
                               id="project-status"
-                              spellcheck="false"
-                              style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                              tabindex="0"
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              spellCheck="false"
+                              style={
+                                Object {
+                                  "background": 0,
+                                  "border": 0,
+                                  "boxSizing": "content-box",
+                                  "color": "inherit",
+                                  "fontSize": "inherit",
+                                  "label": "input",
+                                  "opacity": 1,
+                                  "outline": 0,
+                                  "padding": 0,
+                                  "width": "1px",
+                                }
+                              }
+                              tabIndex="0"
                               type="text"
                               value=""
                             />
                             <div
-                              style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                            />
+                              style={
+                                Object {
+                                  "height": 0,
+                                  "left": 0,
+                                  "overflow": "scroll",
+                                  "position": "absolute",
+                                  "top": 0,
+                                  "visibility": "hidden",
+                                  "whiteSpace": "pre",
+                                }
+                              }
+                            >
+                              
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div
-                      class=" css-173cxbq-IndicatorsContainer"
+                      className=" css-173cxbq-IndicatorsContainer"
                     >
                       <span
-                        class=" css-4z5mi-indicatorSeparator"
+                        className=" css-4z5mi-indicatorSeparator"
                       />
                       <div
                         aria-hidden="true"
-                        class=" css-19phze7-indicatorContainer"
+                        className=" css-19phze7-indicatorContainer"
+                        onMouseDown={[Function]}
+                        onTouchEnd={[Function]}
                       >
                         <svg
                           aria-hidden="true"
-                          class="css-6q0nyr-Svg"
+                          className="css-6q0nyr-Svg"
                           focusable="false"
-                          height="20"
+                          height={20}
                           viewBox="0 0 20 20"
-                          width="20"
+                          width={20}
                         >
                           <path
                             d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
@@ -277,53 +1103,61 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Item code
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="true"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  aria-invalid={true}
+                  aria-required={false}
+                  className="c29"
+                  defaultValue="WS2SB6"
+                  disabled={false}
                   id="item-code"
-                  value="WS2SB6"
+                  required={false}
                 />
               </div>
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+            className="c30"
             color="red"
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 QuoIa"
+              aria-hidden={true}
+              className="c31"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="24px"
               icon="error"
               mr="x1"
+              size="24px"
+              title={null}
               viewBox="0 0 24 24"
               width="24px"
             >
@@ -332,12 +1166,13 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+              className="c32"
             >
               <p
-                class="Text-sc-1wu7vpu-0 RbfMK"
+                className="c9 c11"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Item WS2SB6 does not exist.
               </p>
@@ -345,280 +1180,320 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Eaches expected on Job
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c26"
+                  disabled={false}
                   id="eaches-expected"
                   placeholder="2 000"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Eaches remaining on Project
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 fdcdYd"
-                  disabled=""
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c33"
+                  defaultValue="18 000"
+                  disabled={true}
                   id="eaches-remaining"
-                  value="18 000"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Scheduled start
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c26"
+                  disabled={false}
                   id="scheduled-start"
                   placeholder="MMM-DD-YYYY"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Scheduled end
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c26"
+                  disabled={false}
                   id="scheduled-end"
                   placeholder="MMM-DD-YYYY"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <fieldset
-          class="Fieldset-sc-9aoml1-0 eiFgjk CheckboxGroup-sc-16y7xr8-2 bfgHHz"
+          className="c34 c35 "
         >
           <legend
-            class="CheckboxGroup__Legend-sc-16y7xr8-1 FZknE"
+            className="c36"
           >
             <span
-              class="CheckboxGroup__LabelText-sc-16y7xr8-0 srOjp"
+              className="c37"
             >
               Line Lead
             </span>
             <span
-              class="Text-sc-1wu7vpu-0 bphWXP"
+              className="c9 c27"
               color="darkGrey"
-              font-size="12px"
+              disabled={false}
+              fontSize="12px"
             >
               (Optional)
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            className="c38"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 kemUmZ"
+              className="c39"
+              disabled={false}
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+                aria-invalid={false}
+                aria-required={false}
+                className="c40 c38"
+                disabled={false}
+                id={null}
                 name="linelead"
+                required={false}
                 type="checkbox"
                 value="christiaan"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                className="c41 c42"
                 data-testid="visual-checkbox"
+                disabled={false}
               />
               <p
-                class="Text-sc-1wu7vpu-0 RbfMK"
+                className="c9 c11"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Christiaan Oostenbrug
               </p>
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            className="c38"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 kemUmZ"
+              className="c39"
+              disabled={false}
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+                aria-invalid={false}
+                aria-required={false}
+                className="c40 c38"
+                disabled={false}
+                id={null}
                 name="linelead"
+                required={false}
                 type="checkbox"
                 value="matt"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                className="c41 c42"
                 data-testid="visual-checkbox"
+                disabled={false}
               />
               <p
-                class="Text-sc-1wu7vpu-0 RbfMK"
+                className="c9 c11"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Matt Dunn
               </p>
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            className="c38"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 kjxgat"
-              disabled=""
+              className="c43"
+              disabled={true}
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 eJJycu"
-                disabled=""
+                aria-invalid={false}
+                aria-required={false}
+                className="c44 c38"
+                disabled={true}
+                id={null}
                 name="linelead"
+                required={false}
                 type="checkbox"
                 value="clemens"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                className="c41 c42"
                 data-testid="visual-checkbox"
-                disabled=""
+                disabled={true}
               />
               <p
-                class="Text-sc-1wu7vpu-0 hdrQgs"
+                className="c9 c45"
                 color="currentColor"
-                disabled=""
-                font-size="medium"
+                disabled={true}
+                fontSize="medium"
               >
                 Clemens Park
               </p>
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            className="c38"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 kjxgat"
-              disabled=""
+              className="c43"
+              disabled={true}
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="Checkbox__CheckboxInput-sc-1nm58f1-1 jdAeaf Checkbox-sc-1nm58f1-2 eJJycu"
-                disabled=""
+                aria-invalid={false}
+                aria-required={false}
+                className="c44 c38"
+                disabled={true}
+                id={null}
                 name="linelead"
+                required={false}
                 type="checkbox"
                 value="nikola"
               />
               <div
-                class="Checkbox__VisualCheckbox-sc-1nm58f1-0 kUStCo"
+                className="c41 c42"
                 data-testid="visual-checkbox"
-                disabled=""
+                disabled={true}
               />
               <p
-                class="Text-sc-1wu7vpu-0 hdrQgs"
+                className="c9 c45"
                 color="currentColor"
-                disabled=""
-                font-size="medium"
+                disabled={true}
+                fontSize="medium"
               >
                 Nikola Pejcic
               </p>
@@ -626,114 +1501,146 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <fieldset
-          class="Fieldset-sc-9aoml1-0 eiFgjk RadioGroup-pgv2w1-0 hFKzrk"
+          className="c34 c35 "
           id="reconcile"
         >
           <legend
-            style="margin-bottom:8px"
+            style={
+              Object {
+                "marginBottom": "8px",
+              }
+            }
           >
             <span
-              style="font-size:14px;font-weight:600;line-height:1.71428571"
+              style={
+                Object {
+                  "fontSize": "14px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.71428571",
+                }
+              }
             >
               Reconcile
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+            className="c46"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 kemUmZ"
+              className="c39"
+              disabled={false}
             >
               <input
-                aria-invalid="true"
-                aria-required="false"
-                checked=""
-                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh Radio-sc-82dpxx-2 jeIhWi"
+                aria-invalid={true}
+                aria-required={false}
+                className="c47 c46"
+                defaultChecked={true}
+                disabled={false}
+                id={null}
                 name="settingSelection"
+                required={false}
                 type="radio"
                 value="yes"
               />
               <div
-                class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+                className="c48 c49"
+                disabled={false}
               />
               <span
-                class="Text-sc-1wu7vpu-0 RbfMK"
+                className="c9 c11"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
-                 Yes 
+                 
+                Yes
+                 
               </span>
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+            className="c46"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 kemUmZ"
+              className="c39"
+              disabled={false}
             >
               <input
-                aria-invalid="true"
-                aria-required="false"
-                class="Radio__RadioInput-sc-82dpxx-1 iSoGgh Radio-sc-82dpxx-2 jeIhWi"
+                aria-invalid={true}
+                aria-required={false}
+                className="c47 c46"
+                disabled={false}
+                id={null}
                 name="settingSelection"
+                required={false}
                 type="radio"
                 value="no"
               />
               <div
-                class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+                className="c48 c49"
+                disabled={false}
               />
               <span
-                class="Text-sc-1wu7vpu-0 RbfMK"
+                className="c9 c11"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
-                 No 
+                 
+                No
+                 
               </span>
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+            className="c46"
           >
             <label
-              class="ClickInputLabel-j2axnv-0 kjxgat"
-              disabled=""
+              className="c43"
+              disabled={true}
             >
               <input
-                aria-invalid="true"
-                aria-required="false"
-                class="Radio__RadioInput-sc-82dpxx-1 hBtCEn Radio-sc-82dpxx-2 jeIhWi"
-                disabled=""
+                aria-invalid={true}
+                aria-required={false}
+                className="c50 c46"
+                disabled={true}
+                id={null}
                 name="settingSelection"
+                required={false}
                 type="radio"
                 value="maybe"
               />
               <div
-                class="Radio__VisualRadio-sc-82dpxx-0 bCyppR"
-                disabled=""
+                className="c48 c51"
+                disabled={true}
               />
               <span
-                class="Text-sc-1wu7vpu-0 hdrQgs"
+                className="c9 c45"
                 color="currentColor"
-                disabled=""
-                font-size="medium"
+                disabled={true}
+                fontSize="medium"
               >
-                 Maybe 
+                 
+                Maybe
+                 
               </span>
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+            className="c30"
             color="red"
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 QuoIa"
+              aria-hidden={true}
+              className="c31"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="24px"
               icon="error"
               mr="x1"
+              size="24px"
+              title={null}
               viewBox="0 0 24 24"
               width="24px"
             >
@@ -742,12 +1649,13 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+              className="c32"
             >
               <p
-                class="Text-sc-1wu7vpu-0 RbfMK"
+                className="c9 c11"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Only yes can be selected...
               </p>
@@ -755,43 +1663,57 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+          className="c19 c20 c52"
         >
           <div
             id="Job Visibility-label"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
             >
               <span
-                style="font-size:14px;font-weight:600;line-height:1.71428571"
+                style={
+                  Object {
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.71428571",
+                  }
+                }
               >
                 Job Visibility
               </span>
             </div>
             <div
-              class="ClickInputLabel-j2axnv-0 kemUmZ"
+              className="c39"
+              disabled={false}
+              onClick={[Function]}
             >
               <div
-                class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+                className="c53"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-labelledby="Job Visibility-label"
-                  aria-required="false"
-                  class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+                  aria-required={false}
+                  className="c54"
+                  disabled={false}
                   id="job-visibility"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  required={false}
                   type="checkbox"
                   value="on"
                 />
                 <span
-                  class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+                  className="c55 c56"
+                  disabled={false}
                 />
               </div>
               <p
-                class="Text-sc-1wu7vpu-0 cOGezP"
+                className="c9 c57"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Hidden
               </p>
@@ -800,63 +1722,71 @@ exports[`Storyshots Form Demo form 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="FormSection-sc-5yud6c-1 cJYtnA"
+        className="c15 c16"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
-          font-weight="medium"
+          className="c9-h3 Headings__SubsectionTitle-igpciy-0 c17 c18"
+          fontSize="large"
+          fontWeight="medium"
         >
           Rejects
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Item
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="true"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  aria-invalid={true}
+                  aria-required={false}
+                  className="c29"
+                  defaultValue="235432"
+                  disabled={false}
                   id="items"
-                  value="235432"
+                  required={false}
                 />
               </div>
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+            className="c30"
             color="red"
           >
             <svg
-              aria-hidden="true"
-              class="Icon-fc7twp-0 QuoIa"
+              aria-hidden={true}
+              className="c31"
               color="currentColor"
               fill="currentColor"
-              focusable="false"
+              focusable={false}
               height="24px"
               icon="error"
               mr="x1"
+              size="24px"
+              title={null}
               viewBox="0 0 24 24"
               width="24px"
             >
@@ -865,12 +1795,13 @@ exports[`Storyshots Form Demo form 1`] = `
               />
             </svg>
             <div
-              class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+              className="c32"
             >
               <p
-                class="Text-sc-1wu7vpu-0 RbfMK"
+                className="c9 c11"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Item 235432 is not a valid entry
               </p>
@@ -878,82 +1809,98 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c19 c20"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c21 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c23"
               >
                 Quantity
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c24"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c25"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c26"
+                  disabled={false}
                   id="quantity"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+          className="c19 c20 c52"
         >
           <div
             id="Reject visibility-label"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c22"
             >
               <span
-                style="font-size:14px;font-weight:600;line-height:1.71428571"
+                style={
+                  Object {
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.71428571",
+                  }
+                }
               >
                 Reject visibility
               </span>
             </div>
             <div
-              class="ClickInputLabel-j2axnv-0 kjxgat"
-              disabled=""
+              className="c43"
+              disabled={true}
+              onClick={[Function]}
             >
               <div
-                class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+                className="c53"
               >
                 <input
-                  aria-invalid="false"
+                  aria-invalid={false}
                   aria-labelledby="Reject visibility-label"
-                  aria-required="false"
-                  class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
-                  disabled=""
+                  aria-required={false}
+                  className="c58"
+                  disabled={true}
                   id="reject-visibility"
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  required={false}
                   type="checkbox"
                   value="on"
                 />
                 <span
-                  class="ToggleButton__Slider-asgrb8-0 bQpZex"
-                  disabled=""
+                  className="c55 c59"
+                  disabled={true}
                 />
               </div>
               <p
-                class="Text-sc-1wu7vpu-0 jVsGHh"
+                className="c9 c60"
                 color="currentColor"
-                disabled=""
-                font-size="medium"
+                disabled={true}
+                fontSize="medium"
               >
                 Hidden
               </p>
@@ -967,144 +1914,339 @@ exports[`Storyshots Form Demo form 1`] = `
 `;
 
 exports[`Storyshots Form Form 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c7 {
+  margin-bottom: 8px;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c13 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c14 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c14 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c6 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c8 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c5 {
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 .c2 {
+  margin-bottom: 48px;
+}
+
+.c1 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c1 .c4,
+.c1 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c1 .c4:last-child,
+.c1 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c1 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c11 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c11:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c11:focus ~ svg {
+  fill: #00438f;
+}
+
+.c11::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c11::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c11:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c11::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 laLzBn"
+      className="c1"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         New Profile
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4 c5"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c6 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c7"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c8"
             >
               Name
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c9"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c10"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c11"
+                disabled={false}
                 id="name"
+                required={false}
               />
             </div>
           </div>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4 c5"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c6 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c7"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c8"
             >
               Date of birth
             </span>
             <span
-              class="Text-sc-1wu7vpu-0 bphWXP"
+              className="c12 c13"
               color="darkGrey"
-              font-size="12px"
+              disabled={false}
+              fontSize="12px"
             >
               (Optional)
             </span>
             <p
-              class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+              className="c12 c14"
               color="currentColor"
-              font-size="medium"
+              disabled={false}
+              fontSize="medium"
             >
               Enter a date below
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c9"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c10"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c11"
+                disabled={false}
                 id="birthdate"
                 placeholder="DD-MM-YYYY"
+                required={false}
               />
             </div>
           </div>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c4 c5"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c6 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c7"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c8"
             >
               Place of birth
             </span>
             <span
-              class="Text-sc-1wu7vpu-0 bphWXP"
+              className="c12 c13"
               color="darkGrey"
-              font-size="12px"
+              disabled={false}
+              fontSize="12px"
             >
               (Optional)
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c9"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c10"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c11"
+                disabled={false}
                 id="birthplace"
+                required={false}
               />
             </div>
           </div>
@@ -1116,154 +2258,379 @@ exports[`Storyshots Form Form 1`] = `
 `;
 
 exports[`Storyshots Form With form sections 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c11 {
+  margin-bottom: 8px;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c17 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c18 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c18 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c10 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c12 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c7 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.c5 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.c5 .c6 {
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.c5 .c8,
+.c5 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c5 .c8:last-child,
+.c5 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 .c2 {
+  margin-bottom: 48px;
+}
+
+.c1 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c1 .c8,
+.c1 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c1 .c8:last-child,
+.c1 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .c4 {
+  margin-bottom: 48px;
+}
+
+.c1 .c4:last-child {
+  margin-bottom: 0;
+}
+
+.c15 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c15:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c15:focus ~ svg {
+  fill: #00438f;
+}
+
+.c15::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c15::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 laLzBn"
+      className="c1"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         New Profile
       </h2>
       <fieldset
-        class="FormSection-sc-5yud6c-1 cJYtnA"
+        className="c4 c5"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
-          font-weight="medium"
+          className="c16-h3 Headings__SubsectionTitle-igpciy-0 c6 c7"
+          fontSize="large"
+          fontWeight="medium"
         >
           Personal Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c8 c9"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c10 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c11"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c12"
               >
                 Name
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c13"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c14"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c15"
+                  disabled={false}
                   id="name"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c8 c9"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c10 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c11"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c12"
               >
                 Date of birth
               </span>
               <span
-                class="Text-sc-1wu7vpu-0 bphWXP"
+                className="c16 c17"
                 color="darkGrey"
-                font-size="12px"
+                disabled={false}
+                fontSize="12px"
               >
                 (Optional)
               </span>
               <p
-                class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+                className="c16 c18"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Enter a date below
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c13"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c14"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c15"
+                  disabled={false}
                   id="birthdate"
                   placeholder="DD-MM-YYYY"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c8 c9"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c10 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c11"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c12"
               >
                 Place of birth
               </span>
               <span
-                class="Text-sc-1wu7vpu-0 bphWXP"
+                className="c16 c17"
                 color="darkGrey"
-                font-size="12px"
+                disabled={false}
+                fontSize="12px"
               >
                 (Optional)
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c13"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c14"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c15"
+                  disabled={false}
                   id="birthplace"
+                  required={false}
                 />
               </div>
             </div>
@@ -1271,80 +2638,92 @@ exports[`Storyshots Form With form sections 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="FormSection-sc-5yud6c-1 cJYtnA"
+        className="c4 c5"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
-          font-weight="medium"
+          className="c16-h3 Headings__SubsectionTitle-igpciy-0 c6 c7"
+          fontSize="large"
+          fontWeight="medium"
         >
           General Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c8 c9"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c10 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c11"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c12"
               >
                 Gender
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c13"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c14"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c15"
+                  disabled={false}
                   id="gender"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c8 c9"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c10 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c11"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c12"
               >
                 Occupation
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c13"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c14"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c15"
+                  disabled={false}
                   id="occupation"
+                  required={false}
                 />
               </div>
             </div>
@@ -1357,147 +2736,364 @@ exports[`Storyshots Form With form sections 1`] = `
 `;
 
 exports[`Storyshots Form With form sections without titles 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c9 {
+  margin-bottom: 8px;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c15 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c16 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c16 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c8 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c10 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c7 {
+  width: 100%;
+}
+
+.c5 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.c5 .FormSection__FormSectionTitle-sc-5yud6c-0 {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.c5 .c6,
+.c5 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c5 .c6:last-child,
+.c5 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 .c2 {
+  margin-bottom: 48px;
+}
+
+.c1 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c1 .c6,
+.c1 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c1 .c6:last-child,
+.c1 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .c4 {
+  margin-bottom: 48px;
+}
+
+.c1 .c4:last-child {
+  margin-bottom: 0;
+}
+
+.c13 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c13:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c13:focus ~ svg {
+  fill: #00438f;
+}
+
+.c13::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c13::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c13:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c13::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 laLzBn"
+      className="c1"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        className="c2 c3"
+        fontSize="larger"
+        fontWeight="medium"
       >
         New Profile
       </h2>
       <fieldset
-        class="FormSection-sc-5yud6c-1 klMAvm"
+        className="c4 c5"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c8 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c9"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c10"
               >
                 Name
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c11"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c12"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c13"
+                  disabled={false}
                   id="name"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c8 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c9"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c10"
               >
                 Date of birth
               </span>
               <span
-                class="Text-sc-1wu7vpu-0 bphWXP"
+                className="c14 c15"
                 color="darkGrey"
-                font-size="12px"
+                disabled={false}
+                fontSize="12px"
               >
                 (Optional)
               </span>
               <p
-                class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+                className="c14 c16"
                 color="currentColor"
-                font-size="medium"
+                disabled={false}
+                fontSize="medium"
               >
                 Enter a date below
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c11"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c12"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c13"
+                  disabled={false}
                   id="birthdate"
                   placeholder="DD-MM-YYYY"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c8 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c9"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c10"
               >
                 Place of birth
               </span>
               <span
-                class="Text-sc-1wu7vpu-0 bphWXP"
+                className="c14 c15"
                 color="darkGrey"
-                font-size="12px"
+                disabled={false}
+                fontSize="12px"
               >
                 (Optional)
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c11"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c12"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c13"
+                  disabled={false}
                   id="birthplace"
+                  required={false}
                 />
               </div>
             </div>
@@ -1505,73 +3101,85 @@ exports[`Storyshots Form With form sections without titles 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="FormSection-sc-5yud6c-1 klMAvm"
+        className="c4 c5"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c8 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c9"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c10"
               >
                 Gender
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c11"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c12"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c13"
+                  disabled={false}
                   id="gender"
+                  required={false}
                 />
               </div>
             </div>
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          className="c6 c7"
         >
           <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            className="c8 "
             color="black"
-            style="display:block"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              className="c9"
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                className="c10"
               >
                 Occupation
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              className="c11"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                className="c12"
                 display="flex"
               >
                 <input
-                  aria-invalid="false"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  aria-invalid={false}
+                  aria-required={false}
+                  className="c13"
+                  disabled={false}
                   id="occupation"
+                  required={false}
                 />
               </div>
             </div>
@@ -1584,137 +3192,324 @@ exports[`Storyshots Form With form sections without titles 1`] = `
 `;
 
 exports[`Storyshots Form Without title 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  margin-bottom: 8px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c11 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c12 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c12 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c4 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c6 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c3 {
+  width: 100%;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c1 .c10-h2 {
+  margin-bottom: 0;
+}
+
+.c1 .Alert-u8lbe-0 {
+  margin-bottom: 48px;
+}
+
+.c1 .c2,
+.c1 .Fieldset-sc-9aoml1-0 {
+  margin-bottom: 24px;
+}
+
+.c1 .c2:last-child,
+.c1 .Fieldset-sc-9aoml1-0:last-child {
+  margin-bottom: 0;
+}
+
+.c1 .FormSection-sc-5yud6c-1 {
+  margin-bottom: 48px;
+}
+
+.c1 .FormSection-sc-5yud6c-1:last-child {
+  margin-bottom: 0;
+}
+
+.c9 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c9:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c9:focus ~ svg {
+  fill: #00438f;
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <form
-      class="Form-n70q8u-0 ilQSyT"
+      className="c1"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c2 c3"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c4 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c5"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c6"
             >
               Name
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c7"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c8"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c9"
+                disabled={false}
                 id="name"
+                required={false}
               />
             </div>
           </div>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c2 c3"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c4 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c5"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c6"
             >
               Date of birth
             </span>
             <span
-              class="Text-sc-1wu7vpu-0 bphWXP"
+              className="c10 c11"
               color="darkGrey"
-              font-size="12px"
+              disabled={false}
+              fontSize="12px"
             >
               (Optional)
             </span>
             <p
-              class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+              className="c10 c12"
               color="currentColor"
-              font-size="medium"
+              disabled={false}
+              fontSize="medium"
             >
               Enter a date below
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c7"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c8"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c9"
+                disabled={false}
                 id="birthdate"
                 placeholder="DD-MM-YYYY"
+                required={false}
               />
             </div>
           </div>
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c2 c3"
       >
         <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+          className="c4 "
           color="black"
-          style="display:block"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            className="c5"
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              className="c6"
             >
               Place of birth
             </span>
             <span
-              class="Text-sc-1wu7vpu-0 bphWXP"
+              className="c10 c11"
               color="darkGrey"
-              font-size="12px"
+              disabled={false}
+              fontSize="12px"
             >
               (Optional)
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            className="c7"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              className="c8"
               display="flex"
             >
               <input
-                aria-invalid="false"
-                aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                aria-invalid={false}
+                aria-required={false}
+                className="c9"
+                disabled={false}
                 id="birthplace"
+                required={false}
               />
             </div>
           </div>

@@ -1,23 +1,64 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots FieldLabel FieldLabel 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Default label
         </span>
@@ -28,36 +69,106 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
 `;
 
 exports[`Storyshots FieldLabel with HelpText 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c5 {
+  color: #216beb;
+  font-size: 16px;
+  background: none;
+  border: none;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5:hover {
+  cursor: pointer;
+  color: #1254c7;
+}
+
+.c3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c3 .c4 {
+  font-size: 14px;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Default label
         </span>
         <p
-          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+          className="Text-sc-1wu7vpu-0 c3"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           I am help text. I can be a string or a node that includes a 
           <a
-            class="Link-sc-1lpx3d0-0 gxbSxg"
+            className="c4 c5"
             color="blue"
-            font-size="medium"
+            fontSize="medium"
             href="http://nulogy.design"
           >
             link
@@ -71,30 +182,81 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
 `;
 
 exports[`Storyshots FieldLabel with RequirementText 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Default label
         </span>
         <span
-          class="Text-sc-1wu7vpu-0 bphWXP"
+          className="c3"
           color="darkGrey"
-          font-size="12px"
+          disabled={false}
+          fontSize="12px"
         >
           (Required)
         </span>
@@ -105,37 +267,103 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
 `;
 
 exports[`Storyshots FieldLabel with all additional text 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c4 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c2 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        className=""
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c2"
         >
           Default label
         </span>
         <span
-          class="Text-sc-1wu7vpu-0 bphWXP"
+          className="c3"
           color="darkGrey"
-          font-size="12px"
+          disabled={false}
+          fontSize="12px"
         >
           (Required)
         </span>
         <p
-          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+          className="c4"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           I am help text. I can give more details on the input below!
         </p>
@@ -146,56 +374,200 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
 `;
 
 exports[`Storyshots FieldLabel with associated custom input component 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  position: relative;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+.c4 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c5 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c6 {
+  width: 100%;
+}
+
+.c9 {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 16px;
+  font-family: 'IBM Plex Sans',sans-serif;
+  line-height: 1.5;
+  margin: 0px;
+  min-height: 40px;
+  color: #011e38;
+  border-color: #c0c8d1;
+}
+
+.c9:focus {
+  outline: none;
+  color: #011e38;
+  border-color: #216beb;
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c9:focus ~ svg {
+  fill: #00438f;
+}
+
+.c9::-webkit-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::-moz-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9:-ms-input-placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
+.c9::placeholder {
+  color: rgba(1,30,56,0.6);
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 ilQgHG"
+        className="c2"
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c3"
         >
           Default label
         </span>
         <span
-          class="Text-sc-1wu7vpu-0 bphWXP"
+          className="c4"
           color="darkGrey"
-          font-size="12px"
+          disabled={false}
+          fontSize="12px"
         >
           (Required)
         </span>
         <p
-          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+          className="c5"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           I am help text. I can give more details on the input below!
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        className="c6"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          className="c7"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            className="c8"
             display="flex"
           >
             <input
-              aria-invalid="false"
-              aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              aria-invalid={false}
+              aria-required={false}
+              className="c9"
+              disabled={false}
               id="input1"
+              required={false}
             />
           </div>
         </div>

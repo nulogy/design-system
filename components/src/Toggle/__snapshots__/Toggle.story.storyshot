@@ -1,49 +1,199 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Toggle Controlled Toggle 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c9 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c8 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c8:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c5 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c6:checked + .c7:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c6:checked + .c7 {
+  background-color: #e1ebfa;
+}
+
+.c6:focus + .c7:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Controlled Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Controlled Toggle
           </span>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c4"
+          disabled={false}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c5"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Controlled Toggle-label"
-              aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              aria-required={false}
+              checked={false}
+              className="c6"
+              disabled={false}
+              id={null}
+              onChange={[Function]}
+              onClick={[Function]}
+              required={false}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              className="c7 c8"
+              disabled={false}
             />
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 cOGezP"
+            className="c9"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             off
           </p>
@@ -55,30 +205,160 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
 `;
 
 exports[`Storyshots Toggle Toggle 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c7 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c7:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c4 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c5:checked + .c6:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c5:checked + .c6 {
+  background-color: #e1ebfa;
+}
+
+.c5:focus + .c6:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="Box-sc-1qu1edy-0 c1 c2"
     >
       <div
-        class="ClickInputLabel-j2axnv-0 kemUmZ"
+        className="c3"
+        disabled={false}
+        onClick={[Function]}
       >
         <div
-          class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          className="c4"
         >
           <input
-            aria-invalid="false"
-            aria-required="false"
-            class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+            aria-invalid={false}
+            aria-labelledby={null}
+            aria-required={false}
+            className="c5"
+            disabled={false}
+            id={null}
+            onChange={[Function]}
+            onClick={[Function]}
+            required={false}
             type="checkbox"
             value="on"
           />
           <span
-            class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+            className="c6 c7"
+            disabled={false}
           />
         </div>
       </div>
@@ -88,44 +368,183 @@ exports[`Storyshots Toggle Toggle 1`] = `
 `;
 
 exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c8 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c8:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c5 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c6:checked + .c7:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c6:checked + .c7 {
+  background-color: #e1ebfa;
+}
+
+.c6:focus + .c7:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Toggle
           </span>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c4"
+          disabled={false}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c5"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Toggle-label"
-              aria-required="false"
-              checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              aria-required={false}
+              checked={true}
+              className="c6"
+              disabled={false}
+              id={null}
+              onChange={[Function]}
+              onClick={[Function]}
+              required={false}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              className="c7 c8"
+              disabled={false}
             />
           </div>
         </div>
@@ -136,53 +555,193 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
 `;
 
 exports[`Storyshots Toggle Toggle set to disabled 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c9 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  opacity: 0.3333;
+}
+
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c8 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c8:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #e4e7eb;
+  background-color: #f0f2f5;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c5 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c6:checked + .c7:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #e4e7eb;
+  border-color: #f0f2f5;
+}
+
+.c6:checked + .c7 {
+  background-color: #f0f2f5;
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Toggle
           </span>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kjxgat"
-          disabled=""
+          className="c4"
+          disabled={true}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c5"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Toggle-label"
-              aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
-              disabled=""
+              aria-required={false}
+              className="c6"
+              disabled={true}
+              id={null}
+              onChange={[Function]}
+              onClick={[Function]}
+              required={false}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bQpZex"
-              disabled=""
+              className="c7 c8"
+              disabled={true}
             />
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 jVsGHh"
+            className="c9"
             color="currentColor"
-            disabled=""
-            font-size="medium"
+            disabled={true}
+            fontSize="medium"
           >
             off
           </p>
@@ -190,48 +749,58 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Toggle
           </span>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kjxgat"
-          disabled=""
+          className="c4"
+          disabled={true}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c5"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Toggle-label"
-              aria-required="false"
-              checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
-              disabled=""
+              aria-required={false}
+              checked={true}
+              className="c6"
+              disabled={true}
               id="toggle-2"
+              onChange={[Function]}
+              onClick={[Function]}
+              required={false}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bQpZex"
-              disabled=""
+              className="c7 c8"
+              disabled={true}
             />
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 jVsGHh"
+            className="c9"
             color="currentColor"
-            disabled=""
-            font-size="medium"
+            disabled={true}
+            fontSize="medium"
           >
             on
           </p>
@@ -243,65 +812,238 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
 `;
 
 exports[`Storyshots Toggle Toggle with all props 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c4 {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #434d59;
+}
+
+.c11 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c6 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c5 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+}
+
+.c5 .Link-sc-1lpx3d0-0 {
+  font-size: 14px;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c10 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c10:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c7 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c7 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c8:checked + .c9:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c8:checked + .c9 {
+  background-color: #e1ebfa;
+}
+
+.c8:focus + .c9:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Toggle
           </span>
           <span
-            class="Text-sc-1wu7vpu-0 bphWXP"
+            className="c4"
             color="darkGrey"
-            font-size="12px"
+            disabled={false}
+            fontSize="12px"
           >
             (Required)
           </span>
           <p
-            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+            className="c5"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             Turns setting on/off
           </p>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c6"
+          disabled={false}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c7"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Toggle-label"
-              aria-required="true"
-              checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
-              required=""
+              aria-required={true}
+              checked={true}
+              className="c8"
+              disabled={false}
+              id={null}
+              onChange={[Function]}
+              onClick={[Function]}
+              required={true}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              className="c9 c10"
+              disabled={false}
             />
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 cOGezP"
+            className="c11"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             on
           </p>
@@ -313,50 +1055,198 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
 `;
 
 exports[`Storyshots Toggle With custom id 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c9 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c8 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c8:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c5 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c6:checked + .c7:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c6:checked + .c7 {
+  background-color: #e1ebfa;
+}
+
+.c6:focus + .c7:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Toggle
           </span>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c4"
+          disabled={false}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c5"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Toggle-label"
-              aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              aria-required={false}
+              className="c6"
+              disabled={false}
               id="my-custom-id"
+              onChange={[Function]}
+              onClick={[Function]}
+              required={false}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              className="c7 c8"
+              disabled={false}
             />
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 cOGezP"
+            className="c9"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             off
           </p>
@@ -368,50 +1258,199 @@ exports[`Storyshots Toggle With custom id 1`] = `
 `;
 
 exports[`Storyshots Toggle With long text 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c9 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c8 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c8:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c5 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c6:checked + .c7:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c6:checked + .c7 {
+  background-color: #e1ebfa;
+}
+
+.c6:focus + .c7:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Toggle
           </span>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c4"
+          disabled={false}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c5"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Toggle-label"
-              aria-required="false"
-              checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              aria-required={false}
+              checked={true}
+              className="c6"
+              disabled={false}
+              id={null}
+              onChange={[Function]}
+              onClick={[Function]}
+              required={false}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              className="c7 c8"
+              disabled={false}
             />
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 cOGezP"
+            className="c9"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             this state has a very long text label to explain it's state
           </p>
@@ -423,49 +1462,198 @@ exports[`Storyshots Toggle With long text 1`] = `
 `;
 
 exports[`Storyshots Toggle With text 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c9 {
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c4 {
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: auto;
+  min-height: 24px;
+  vertical-align: top;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c8 {
+  position: absolute;
+  height: 24px;
+  width: 48px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e4e7eb;
+  border-radius: 12px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.c8:before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 0px;
+  top: 0px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: solid 1px;
+  border-color: #c0c8d1;
+  background-color: #ffffff;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.c5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  min-width: 48px;
+  min-height: 24px;
+}
+
+.c5 input {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.c6:checked + .c7:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: #00438f;
+  border-color: #00438f;
+}
+
+.c6:checked + .c7 {
+  background-color: #e1ebfa;
+}
+
+.c6:focus + .c7:before {
+  box-shadow: 0px 0px 5px 0px rgba(33,107,235,.9);
+}
+
+.c2 {
+  padding: 4px 0;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      className="c1 c2"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
         >
           <span
-            style="font-size:14px;font-weight:600;line-height:1.71428571"
+            style={
+              Object {
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.71428571",
+              }
+            }
           >
             Toggle
           </span>
         </div>
         <div
-          class="ClickInputLabel-j2axnv-0 kemUmZ"
+          className="c4"
+          disabled={false}
+          onClick={[Function]}
         >
           <div
-            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+            className="c5"
           >
             <input
-              aria-invalid="false"
+              aria-invalid={false}
               aria-labelledby="Toggle-label"
-              aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              aria-required={false}
+              className="c6"
+              disabled={false}
+              id={null}
+              onChange={[Function]}
+              onClick={[Function]}
+              required={false}
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              className="c7 c8"
+              disabled={false}
             />
           </div>
           <p
-            class="Text-sc-1wu7vpu-0 cOGezP"
+            className="c9"
             color="currentColor"
-            font-size="medium"
+            disabled={false}
+            fontSize="medium"
           >
             off
           </p>

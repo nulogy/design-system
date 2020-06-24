@@ -1,30 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots List List 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: currentColor;
+  margin: 0;
+}
+
+.c1 .c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <ul
-      class="List-sc-1cqkmnl-0 jrhpm"
+      className="c1"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 3
@@ -35,30 +79,74 @@ exports[`Storyshots List List 1`] = `
 `;
 
 exports[`Storyshots List With compact spacing 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: currentColor;
+  margin: 0;
+}
+
+.c1 .c2 {
+  margin-bottom: 0;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <ul
-      class="List-sc-1cqkmnl-0 gfYBVm"
+      className="c1"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 3
@@ -69,30 +157,74 @@ exports[`Storyshots List With compact spacing 1`] = `
 `;
 
 exports[`Storyshots List With custom colour 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: #cc1439;
+  margin: 0;
+}
+
+.c1 .c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <ul
-      class="List-sc-1cqkmnl-0 cIngjC"
+      className="c1"
       color="red"
     >
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 3
@@ -103,33 +235,89 @@ exports[`Storyshots List With custom colour 1`] = `
 `;
 
 exports[`Storyshots List With custom font size and line height 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c4 {
+  margin-bottom: 8px;
+  color: currentColor;
+  font-size: 20px;
+}
+
+.c4:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: currentColor;
+  font-size: 14px;
+  line-height: 1.71428571;
+  margin: 0;
+}
+
+.c1 .c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <ul
-      class="List-sc-1cqkmnl-0 dPxgHI"
+      className="c1"
       color="currentColor"
-      font-size="small"
+      fontSize="small"
     >
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 deWKnu"
+        className="c2 c4"
         color="currentColor"
-        font-size="large"
+        fontSize="large"
       >
         Larger List Item 3
       </li>
@@ -139,30 +327,75 @@ exports[`Storyshots List With custom font size and line height 1`] = `
 `;
 
 exports[`Storyshots List With left alignment 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c3:last-child {
+  margin-bottom: 0;
+}
+
+.c1 {
+  color: currentColor;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.c1 .c2 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <ul
-      class="List-sc-1cqkmnl-0 joVEnl"
+      className="c1"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c2 c3"
         color="currentColor"
       >
         List Item 3

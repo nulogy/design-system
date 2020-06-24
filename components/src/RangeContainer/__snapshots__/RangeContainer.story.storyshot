@@ -1,23 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots RangeContainer RangeContainer 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c2 {
+  margin-bottom: 8px;
+}
+
+.c4 {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.c5 {
+  padding-left: 4px;
+  padding-right: 4px;
+  max-height: 38px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c1 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c3 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <label
-      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      className="c1 "
       color="black"
-      style="display:block"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
       <div
-        class="Box-sc-1qu1edy-0 ilQgHG"
+        className="c2"
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          className="c3"
         >
           Range
         </span>
@@ -25,16 +101,17 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
       Example
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iTGQcd"
+      className="c4"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        className="c5"
       >
         <p
-          class="Text-sc-1wu7vpu-0 RbfMK"
+          className="c6"
           color="currentColor"
-          font-size="medium"
+          disabled={false}
+          fontSize="medium"
         >
           -
         </p>

@@ -1,26 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots TimePicker default 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c5:hover {
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Start Time
           </span>
@@ -29,19 +88,22 @@ exports[`Storyshots TimePicker default 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            className="nds-time-picker css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    className=" css-1yhx6vz-Placeholder"
                   >
                     HH:MM
                   </div>
@@ -49,50 +111,87 @@ exports[`Storyshots TimePicker default 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          id="react-select-30-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
+                          id="react-select-32-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c5"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -113,26 +212,85 @@ exports[`Storyshots TimePicker default 1`] = `
 `;
 
 exports[`Storyshots TimePicker with custom placeholder 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c5:hover {
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Duration
           </span>
@@ -141,19 +299,22 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            className="nds-time-picker css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    className=" css-1yhx6vz-Placeholder"
                   >
                     --:--
                   </div>
@@ -161,50 +322,87 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          id="react-select-33-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
+                          id="react-select-35-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c5"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -225,26 +423,85 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
 `;
 
 exports[`Storyshots TimePicker with custom time format 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c5:hover {
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Duration
           </span>
@@ -253,19 +510,22 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            className="nds-time-picker css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    className=" css-r447wv-singleValue"
                   >
                     03:30
                   </div>
@@ -273,50 +533,87 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          id="react-select-31-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
+                          id="react-select-33-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c5"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -337,26 +634,85 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
 `;
 
 exports[`Storyshots TimePicker with custom time interval 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c5:hover {
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             Duration
           </span>
@@ -365,19 +721,22 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            className="nds-time-picker css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    className=" css-r447wv-singleValue"
                   >
                     03:30
                   </div>
@@ -385,50 +744,87 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          id="react-select-32-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
+                          id="react-select-34-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c5"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -449,26 +845,116 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
 `;
 
 exports[`Storyshots TimePicker with error state 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c6 {
+  color: #cc1439;
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c7 {
+  margin-right: 8px;
+  color: currentColor;
+  min-width: 24px;
+}
+
+.c10 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c8 .c9 {
+  margin-bottom: 8px;
+}
+
+.c8 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c5:hover {
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             End Time
           </span>
@@ -477,19 +963,22 @@ exports[`Storyshots TimePicker with error state 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            className="nds-time-picker css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1j4q2ea-Control"
+                className=" css-1j4q2ea-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    className=" css-1yhx6vz-Placeholder"
                   >
                     HH:MM
                   </div>
@@ -497,50 +986,87 @@ exports[`Storyshots TimePicker with error state 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          id="react-select-34-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
+                          id="react-select-36-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="c5"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >
@@ -555,18 +1081,20 @@ exports[`Storyshots TimePicker with error state 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+          className="c6"
           color="red"
         >
           <svg
-            aria-hidden="true"
-            class="Icon-fc7twp-0 QuoIa"
+            aria-hidden={true}
+            className="c7"
             color="currentColor"
             fill="currentColor"
-            focusable="false"
+            focusable={false}
             height="24px"
             icon="error"
             mr="x1"
+            size="24px"
+            title={null}
             viewBox="0 0 24 24"
             width="24px"
           >
@@ -575,12 +1103,13 @@ exports[`Storyshots TimePicker with error state 1`] = `
             />
           </svg>
           <div
-            class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+            className="c8"
           >
             <p
-              class="Text-sc-1wu7vpu-0 RbfMK"
+              className="c9 c10"
               color="currentColor"
-              font-size="medium"
+              disabled={false}
+              fontSize="medium"
             >
               This time is invalid
             </p>
@@ -593,26 +1122,85 @@ exports[`Storyshots TimePicker with error state 1`] = `
 `;
 
 exports[`Storyshots TimePicker with min and max time 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 8px;
+}
+
+.c2 {
+  color: #011e38;
+  display: inline-block;
+}
+
+.c4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.71428571;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c5 {
+  color: currentColor;
+  min-width: 22px;
+  color: #434d59;
+}
+
+.c5:hover {
+  color: #434d59;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      className="c1"
     >
       <label
-        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        className="c2 "
         color="black"
-        style="display:block"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          className="c3"
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            className="c4"
           >
             End Time
           </span>
@@ -621,19 +1209,22 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            className="nds-time-picker css-2b097c-container"
+            onKeyDown={[Function]}
           >
             <div
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                className=" css-1liu8yu-Control"
+                onMouseDown={[Function]}
+                onTouchEnd={[Function]}
               >
                 <div
-                  class=" css-7zc8my"
+                  className=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    className=" css-1yhx6vz-Placeholder"
                   >
                     HH:MM
                   </div>
@@ -641,50 +1232,87 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                     data-testid="select-input"
                   >
                     <div
-                      class="css-17yls17-Input"
+                      className="css-17yls17-Input"
                     >
                       <div
-                        class=""
-                        style="display:inline-block"
+                        className=""
+                        style={
+                          Object {
+                            "display": "inline-block",
+                          }
+                        }
                       >
                         <input
                           aria-autocomplete="list"
                           aria-label="Select a time"
-                          autocapitalize="none"
-                          autocomplete="off"
-                          autocorrect="off"
-                          id="react-select-35-input"
-                          spellcheck="false"
-                          style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
-                          tabindex="0"
+                          autoCapitalize="none"
+                          autoComplete="off"
+                          autoCorrect="off"
+                          disabled={null}
+                          id="react-select-37-input"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onFocus={[Function]}
+                          spellCheck="false"
+                          style={
+                            Object {
+                              "background": 0,
+                              "border": 0,
+                              "boxSizing": "content-box",
+                              "color": "inherit",
+                              "fontSize": "inherit",
+                              "label": "input",
+                              "opacity": 1,
+                              "outline": 0,
+                              "padding": 0,
+                              "width": "1px",
+                            }
+                          }
+                          tabIndex="0"
                           type="text"
                           value=""
                         />
                         <div
-                          style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
-                        />
+                          style={
+                            Object {
+                              "height": 0,
+                              "left": 0,
+                              "overflow": "scroll",
+                              "position": "absolute",
+                              "top": 0,
+                              "visibility": "hidden",
+                              "whiteSpace": "pre",
+                            }
+                          }
+                        >
+                          
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div
-                  class=" css-173cxbq-IndicatorsContainer"
+                  className=" css-173cxbq-IndicatorsContainer"
                 >
                   <span
-                    class=" css-4z5mi-indicatorSeparator"
+                    className=" css-4z5mi-indicatorSeparator"
                   />
                   <div
                     aria-hidden="true"
-                    class=" css-19phze7-indicatorContainer"
+                    className=" css-19phze7-indicatorContainer"
+                    onMouseDown={[Function]}
+                    onTouchEnd={[Function]}
                   >
                     <svg
-                      aria-hidden="true"
-                      class="Icon-fc7twp-0 TimePicker__StyledTimeIcon-sc-1r3kwxy-0 dyveZl"
+                      aria-hidden={true}
+                      className="Icon-fc7twp-0 c5"
                       color="currentColor"
                       fill="currentColor"
-                      focusable="false"
+                      focusable={false}
                       height="22px"
                       icon="queryBuilder"
+                      size="22px"
+                      title={null}
                       viewBox="0 0 24 24"
                       width="22px"
                     >

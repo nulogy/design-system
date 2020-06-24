@@ -1,144 +1,244 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Typography Article 1`] = `
+.c0 {
+  color: #011e38;
+  font-family: 'IBM Plex Sans',sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.c0 button {
+  font-family: 'IBM Plex Sans',sans-serif;
+}
+
+.c0 * {
+  box-sizing: border-box;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c3 {
+  margin-bottom: 24px;
+  margin-top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: currentColor;
+}
+
+.c8 {
+  margin-bottom: 24px;
+  margin-top: 0;
+  font-size: 0;
+  line-height: 1.71428571;
+  color: currentColor;
+}
+
+.c9 {
+  margin-bottom: 24px;
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 1.14285714;
+  color: currentColor;
+}
+
+.c1 {
+  margin-top: 0;
+  margin-bottom: 48px;
+  font-size: 46px;
+  line-height: 1.04347826;
+  font-weight: 300;
+}
+
+.c2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23076923;
+}
+
+.c4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.c7 {
+  margin-bottom: 8px;
+  color: currentColor;
+}
+
+.c7:last-child {
+  margin-bottom: 0;
+}
+
+.c5 {
+  color: currentColor;
+  margin: 0;
+}
+
+.c5 .c6 {
+  margin-bottom: 8px;
+}
+
 <div
-  style="padding:24px"
+  style={
+    Object {
+      "padding": "24px",
+    }
+  }
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    className="c0"
   >
     <h1
-      class="Text-sc-1wu7vpu-0-h1 VooJu"
-      font-size="largest"
-      font-weight="light"
+      className="c1"
+      fontSize="largest"
+      fontWeight="light"
     >
       Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
     </h1>
     <h2
-      class="Text-sc-1wu7vpu-0-h2 heWDlS"
-      font-size="larger"
-      font-weight="medium"
+      className="c2"
+      fontSize="larger"
+      fontWeight="medium"
     >
       Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
     </h2>
     <p
-      class="Text-sc-1wu7vpu-0 kLhDpw"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="large"
-      font-weight="medium"
+      className="-h3 c4"
+      fontSize="large"
+      fontWeight="medium"
     >
       Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?
     </h3>
     <p
-      class="Text-sc-1wu7vpu-0 kLhDpw"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
     </p>
     <h2
-      class="Text-sc-1wu7vpu-0-h2 heWDlS"
-      font-size="larger"
-      font-weight="medium"
+      className="c2"
+      fontSize="larger"
+      fontWeight="medium"
     >
       Donec leo felis
     </h2>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="large"
-      font-weight="medium"
+      className="-h3 c4"
+      fontSize="large"
+      fontWeight="medium"
     >
       Two pargraphs and moderatly long title
     </h3>
     <p
-      class="Text-sc-1wu7vpu-0 kLhDpw"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="large"
-      font-weight="medium"
+      className="-h3 c4"
+      fontSize="large"
+      fontWeight="medium"
     >
       Two pargraphs with List
     </h3>
     <p
-      class="Text-sc-1wu7vpu-0 kLhDpw"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <ul
-      class="List-sc-1cqkmnl-0 jrhpm"
+      className="c5"
       color="currentColor"
     >
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c6 c7"
         color="currentColor"
       >
         List Item 1
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c6 c7"
         color="currentColor"
       >
         List Item 2 that is really really really really really really really really really long
       </li>
       <li
-        class="ListItem-qqenhw-0 gzsWDK"
+        className="c6 c7"
         color="currentColor"
       >
         List Item 3
       </li>
     </ul>
     <p
-      class="Text-sc-1wu7vpu-0 kLhDpw"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <p
-      class="Text-sc-1wu7vpu-0 kLhDpw"
+      className="c3"
       color="currentColor"
-      font-size="medium"
+      disabled={false}
+      fontSize="medium"
     >
       Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="large"
-      font-weight="medium"
+      className="-h3 c4"
+      fontSize="large"
+      fontWeight="medium"
     >
       This is small text (14px) with medium(default) line height (24px).
     </h3>
     <p
-      class="Text-sc-1wu7vpu-0 dbKbDF"
+      className="c8"
       color="currentColor"
-      font-size="0"
+      disabled={false}
+      fontSize={0}
     >
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 hTTFeG"
-      font-size="large"
-      font-weight="medium"
+      className="-h3 c4"
+      fontSize="large"
+      fontWeight="medium"
     >
       This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...
     </h3>
     <p
-      class="Text-sc-1wu7vpu-0 gNBXdH"
+      className="c9"
       color="currentColor"
-      font-size="small"
+      disabled={false}
+      fontSize="small"
     >
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
     </p>
