@@ -5,7 +5,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.0.3](https://github.com/nulogy/design-system/compare/v3.0.2...v3.0.3) (2020-06-24)
 
-**Note:** Version bump only for package @nulogy/nds
+### Chores
+- Convert TimePicker to use hooks ([#691](https://github.com/nulogy/design-system/issues/691))
 
 
 
