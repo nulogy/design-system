@@ -14,7 +14,7 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
             class="Box-sc-1qu1edy-0 cRMmlC"
@@ -269,7 +269,7 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
             class="Box-sc-1qu1edy-0 cRMmlC"
@@ -458,7 +458,8 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
                 class="Box-sc-1qu1edy-0 fsLsir"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 lfrZjs"
+                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jnVPKY"
+                  height="56px"
                 >
                   <div
                     class="Box-sc-1qu1edy-0 fBwUqO"
@@ -568,7 +569,7 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
             class="Box-sc-1qu1edy-0 cRMmlC"
@@ -757,7 +758,8 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
                 class="Box-sc-1qu1edy-0 fsLsir"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fIQakI"
+                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jJSlPQ"
+                  height="56px"
                 >
                   <div
                     class="Box-sc-1qu1edy-0 fBwUqO"
@@ -858,7 +860,7 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
             class="Box-sc-1qu1edy-0 cRMmlC"
@@ -1047,7 +1049,8 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
                 class="Box-sc-1qu1edy-0 fsLsir"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 lfrZjs"
+                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jnVPKY"
+                  height="56px"
                 >
                   <div
                     class="Box-sc-1qu1edy-0 fBwUqO"
@@ -1157,7 +1160,7 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 eRLIKf"
+          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
             class="Box-sc-1qu1edy-0 cRMmlC"
