@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/nulogy/design-system/compare/v3.1.0...v3.1.1) (2020-06-25)
+
+
+### Bug Fixes
+
+* add missing BrandedNavbar showTraining prop documentation ([#694](https://github.com/nulogy/design-system/issues/694)) ([2e2d304](https://github.com/nulogy/design-system/commit/2e2d30406dbc89187d13be845e1d8203c0ce31a9))
+
+
+
+
+
 # [3.1.0](https://github.com/nulogy/design-system/compare/v3.0.4...v3.1.0) (2020-06-25)
 
 
