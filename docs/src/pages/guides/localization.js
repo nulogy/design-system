@@ -73,7 +73,7 @@ export default () => (
         need to load the{" "}
         <Link href="https://www.google.com/get/noto/">Noto Sans SC</Link> font.
         For more information, see the{" "}
-        <Link href="https://github.com/nulogy/design-system/blob/master/components/README.md#2-add-fontsd">
+        <Link href="https://github.com/nulogy/design-system/blob/master/components/README.md#2-add-fonts">
           README
         </Link>
         .
