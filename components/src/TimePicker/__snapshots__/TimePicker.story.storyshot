@@ -5,7 +5,7 @@ exports[`Storyshots TimePicker default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -35,7 +35,7 @@ exports[`Storyshots TimePicker default 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -117,7 +117,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -147,7 +147,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -229,7 +229,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -259,7 +259,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -341,7 +341,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -371,7 +371,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -453,7 +453,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -483,7 +483,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1j4q2ea-Control"
+                class=" css-1tfkzqo-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -597,7 +597,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -627,7 +627,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"

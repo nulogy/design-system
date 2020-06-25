@@ -5,7 +5,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-expanded="false"
@@ -40,7 +40,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-expanded="false"
@@ -76,7 +76,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-expanded="true"
@@ -144,7 +144,7 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-expanded="false"
@@ -179,7 +179,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-expanded="true"
@@ -236,7 +236,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-expanded="false"
@@ -271,7 +271,7 @@ exports[`Storyshots DropdownMenu with custom trigger 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-expanded="false"

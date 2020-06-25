@@ -5,7 +5,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
@@ -82,7 +82,7 @@ exports[`Storyshots Tabs controlled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
@@ -164,7 +164,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
@@ -241,7 +241,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
@@ -319,7 +319,7 @@ exports[`Storyshots Tabs with all tab states 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div>
       <button
@@ -360,7 +360,7 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
@@ -397,7 +397,7 @@ exports[`Storyshots Tabs with inputs 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"
@@ -450,7 +450,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="TabScrollIndicators__TabScrollIndicatorContainer-sc-1cljxwo-0 gsIAKI"

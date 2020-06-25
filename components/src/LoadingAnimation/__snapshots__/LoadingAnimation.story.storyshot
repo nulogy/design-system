@@ -5,7 +5,7 @@ exports[`Storyshots LoadingAnimation Active 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <svg
       height="24px"
@@ -163,7 +163,7 @@ exports[`Storyshots LoadingAnimation Inactive 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <svg
       height="24px"
@@ -321,7 +321,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"
@@ -553,7 +553,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"

@@ -5,7 +5,7 @@ exports[`Storyshots Table  with data 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub Table"
@@ -212,7 +212,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -419,7 +419,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -824,7 +824,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -1066,7 +1066,7 @@ exports[`Storyshots Table with a footer 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -1314,7 +1314,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -1521,7 +1521,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -1762,7 +1762,7 @@ exports[`Storyshots Table with full width section 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -1970,7 +1970,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
@@ -8819,7 +8819,7 @@ exports[`Storyshots Table with no data 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
       class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"

@@ -5,7 +5,7 @@ exports[`Storyshots TruncatedText TruncatedText 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       aria-describedby="random-id-38"
@@ -27,7 +27,7 @@ exports[`Storyshots TruncatedText as title 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <h1
       aria-describedby="random-id-41"
@@ -49,7 +49,7 @@ exports[`Storyshots TruncatedText under max characters 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
@@ -67,7 +67,7 @@ exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       aria-describedby="random-id-40"
@@ -89,7 +89,7 @@ exports[`Storyshots TruncatedText with max characters 10 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       aria-describedby="random-id-39"
@@ -111,7 +111,7 @@ exports[`Storyshots TruncatedText without tooltip 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <p
       class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"

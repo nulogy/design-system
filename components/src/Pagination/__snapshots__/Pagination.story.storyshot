@@ -5,7 +5,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <nav
       aria-label="Pagination navigation"
@@ -704,7 +704,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <nav
       aria-label="Pagination navigation"
@@ -814,7 +814,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <nav
       aria-label="Pagination navigation"
@@ -924,7 +924,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <nav
       aria-label="Pagination navigation"

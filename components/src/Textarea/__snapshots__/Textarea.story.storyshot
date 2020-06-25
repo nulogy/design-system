@@ -5,7 +5,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -28,7 +28,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 khvyNi"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 dMPRMO"
           disabled=""
           rows="3"
         />
@@ -43,7 +43,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -66,7 +66,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 icWfOD"
           rows="3"
         />
       </label>
@@ -80,7 +80,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -117,7 +117,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="true"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 icWfOD"
           placeholder="Placeholder"
           required=""
           rows="3"
@@ -133,7 +133,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -156,7 +156,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 icWfOD"
           id="my-custom-id"
           rows="3"
         />
@@ -171,7 +171,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -194,7 +194,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
         <textarea
           aria-invalid="false"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 icWfOD"
           rows="7"
         />
       </label>
@@ -208,7 +208,7 @@ exports[`Storyshots Textarea set to required 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 laLzBn"
@@ -241,7 +241,7 @@ exports[`Storyshots Textarea set to required 1`] = `
           <textarea
             aria-invalid="false"
             aria-required="true"
-            class="Textarea__StyledTextarea-sc-1tyrhr0-0 JjIln"
+            class="Textarea__StyledTextarea-sc-1tyrhr0-0 icWfOD"
             required=""
             rows="3"
           />
@@ -262,7 +262,7 @@ exports[`Storyshots Textarea with error list 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -285,7 +285,7 @@ exports[`Storyshots Textarea with error list 1`] = `
         <textarea
           aria-invalid="true"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 glwRhU"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 iCQPNY"
           rows="3"
         />
       </label>
@@ -348,7 +348,7 @@ exports[`Storyshots Textarea with error message 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -371,7 +371,7 @@ exports[`Storyshots Textarea with error message 1`] = `
         <textarea
           aria-invalid="true"
           aria-required="false"
-          class="Textarea__StyledTextarea-sc-1tyrhr0-0 glwRhU"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 iCQPNY"
           rows="3"
         />
       </label>

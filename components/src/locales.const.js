@@ -1,5 +1,5 @@
 /* These locales are exported for use in the docs site and storybook */
-import { enUS, de, fr, es, ptBR, ro, pl, nl } from "date-fns/locale";
+import { enUS, de, fr, es, ptBR, ro, pl, nl, zhCN } from "date-fns/locale";
 
 export const NDS_TO_DATE_FN_LOCALES_MAP = {
   de_DE: de,
@@ -9,7 +9,8 @@ export const NDS_TO_DATE_FN_LOCALES_MAP = {
   nl_NL: nl,
   pl_PL: pl,
   pt_BR: ptBR,
-  ro_RO: ro
+  ro_RO: ro,
+  zh_CN: zhCN
 };
 
 export const ALL_NDS_LOCALES = [
@@ -52,5 +53,10 @@ export const ALL_NDS_LOCALES = [
     label: "Romanian (Romania)",
     value: "ro_RO",
     dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.ro_RO
+  },
+  {
+    label: "Simplified Chinese (China)",
+    value: "zh_CN",
+    dateFnsValue: NDS_TO_DATE_FN_LOCALES_MAP.zh_CN
   }
 ];

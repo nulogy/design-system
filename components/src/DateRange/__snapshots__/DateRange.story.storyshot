@@ -5,7 +5,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -47,7 +47,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="From (Mon YYYY)"
                   value=""
                 />
@@ -102,7 +102,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="To (Mon YYYY)"
                   value=""
                 />
@@ -136,7 +136,7 @@ exports[`Storyshots DateRange default 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -178,7 +178,7 @@ exports[`Storyshots DateRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value=""
                 />
@@ -233,7 +233,7 @@ exports[`Storyshots DateRange default 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value=""
                 />
@@ -267,7 +267,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -309,7 +309,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="01 Jan 2019"
                 />
@@ -364,7 +364,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jan 2019"
                 />
@@ -398,7 +398,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -440,7 +440,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
@@ -495,7 +495,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
@@ -529,7 +529,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -571,7 +571,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
                   aria-invalid="true"
                   aria-label="Select a start date"
                   aria-required="true"
-                  class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+                  class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
                   placeholder="DD Mon YYYY"
                   required=""
                   value=""
@@ -659,7 +659,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
@@ -693,7 +693,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -735,7 +735,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
@@ -790,7 +790,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
@@ -856,7 +856,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -898,7 +898,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
@@ -935,7 +935,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1031,7 +1031,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1123,7 +1123,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="10 Sep 2019"
                 />
@@ -1157,7 +1157,7 @@ exports[`Storyshots DateRange with time error 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1199,7 +1199,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
@@ -1236,7 +1236,7 @@ exports[`Storyshots DateRange with time error 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1332,7 +1332,7 @@ exports[`Storyshots DateRange with time error 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1424,7 +1424,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jul 2019"
                 />
@@ -1458,7 +1458,7 @@ exports[`Storyshots DateRange with times 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <label
       class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1500,7 +1500,7 @@ exports[`Storyshots DateRange with times 1`] = `
                   aria-invalid="false"
                   aria-label="Select a start date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="01 Jan 2019"
                 />
@@ -1537,7 +1537,7 @@ exports[`Storyshots DateRange with times 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1633,7 +1633,7 @@ exports[`Storyshots DateRange with times 1`] = `
               data-testid="select-control"
             >
               <div
-                class=" css-1liu8yu-Control"
+                class=" css-16f1mi0-Control"
               >
                 <div
                   class=" css-7zc8my"
@@ -1725,7 +1725,7 @@ exports[`Storyshots DateRange with times 1`] = `
                   aria-invalid="false"
                   aria-label="Select an end date"
                   aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
                   value="05 Jan 2019"
                 />

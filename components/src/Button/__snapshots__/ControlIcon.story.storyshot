@@ -5,7 +5,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-label="close"
@@ -37,7 +37,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-label="close"
@@ -70,7 +70,7 @@ exports[`Storyshots ControlIcon Toggled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <button
       aria-label="close"

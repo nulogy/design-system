@@ -45,7 +45,6 @@ const StyledTextarea = styled.textarea(
     borderRadius: theme.radii.medium,
     padding: subPx(theme.space.x1),
     fontSize: theme.fontSizes.medium,
-    fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
     minHeight: theme.space.x5,
     minWidth: "20em",

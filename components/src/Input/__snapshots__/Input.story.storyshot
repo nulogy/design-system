@@ -5,7 +5,7 @@ exports[`Storyshots Input Input 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -35,7 +35,7 @@ exports[`Storyshots Input Input 1`] = `
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
             />
           </div>
         </div>
@@ -50,7 +50,7 @@ exports[`Storyshots Input set to disabled 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -80,7 +80,7 @@ exports[`Storyshots Input set to disabled 1`] = `
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 fdcdYd"
+              class="InputField__StyledInput-sc-6cu4mg-0 fDEwvB"
               disabled=""
             />
           </div>
@@ -96,7 +96,7 @@ exports[`Storyshots Input set to required 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 laLzBn"
@@ -136,7 +136,7 @@ exports[`Storyshots Input set to required 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="true"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                 required=""
               />
             </div>
@@ -158,7 +158,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <form
       class="Form-n70q8u-0 fuhEdK"
@@ -187,7 +187,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
             <div
@@ -216,7 +216,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
             <div
@@ -256,7 +256,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
             <div
@@ -286,7 +286,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
             <div
@@ -343,7 +343,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
           </div>
@@ -372,7 +372,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
           </div>
@@ -413,7 +413,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
           </div>
@@ -443,7 +443,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
           </div>
@@ -484,7 +484,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
           </div>
@@ -514,7 +514,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               <input
                 aria-invalid="false"
                 aria-required="false"
-                class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+                class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               />
             </div>
           </div>
@@ -556,7 +556,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
             />
           </div>
           <div
@@ -582,7 +582,7 @@ exports[`Storyshots Input with all props 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -626,7 +626,7 @@ exports[`Storyshots Input with all props 1`] = `
             <input
               aria-invalid="false"
               aria-required="true"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               placeholder="Placeholder"
               required=""
             />
@@ -643,7 +643,7 @@ exports[`Storyshots Input with custom ID 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -673,7 +673,7 @@ exports[`Storyshots Input with custom ID 1`] = `
             <input
               aria-invalid="false"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 cMrwRk"
+              class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
               id="my-own-id"
             />
           </div>
@@ -689,7 +689,7 @@ exports[`Storyshots Input with error list  1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -719,7 +719,7 @@ exports[`Storyshots Input with error list  1`] = `
             <input
               aria-invalid="true"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+              class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
             />
           </div>
         </div>
@@ -783,7 +783,7 @@ exports[`Storyshots Input with error message 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
@@ -813,7 +813,7 @@ exports[`Storyshots Input with error message 1`] = `
             <input
               aria-invalid="true"
               aria-required="false"
-              class="InputField__StyledInput-sc-6cu4mg-0 jMjRjb"
+              class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
             />
           </div>
         </div>

@@ -5,7 +5,7 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
@@ -247,7 +247,7 @@ exports[`Storyshots BrandedNavBar In a training environment 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
@@ -560,7 +560,7 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
@@ -851,7 +851,7 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
@@ -1151,7 +1151,7 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
   style="padding:24px"
 >
   <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 cQWJEM"
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
       class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
