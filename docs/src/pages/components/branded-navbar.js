@@ -39,6 +39,12 @@ const propsRows = [
     description: "The subtext under the Nulogy logo."
   },
   {
+    name: "showTraining",
+    type: "boolean",
+    defaultValue: "false",
+    description: "Whether or not to show the blue 'Training' bar"
+  },
+  {
     name: "brandingLinkHref",
     type: "string",
     defaultValue: "/",
