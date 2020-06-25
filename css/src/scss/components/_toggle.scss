@@ -27,11 +27,12 @@ $toggle-width: 48px;
 
 .Toggle__slider {
   cursor: pointer;
-  background-color: $color-base-light-grey;
+  background-color: $color-base-dark-grey;
   transition: 0.2s ease;
   width: $toggle-width;
   height: $toggle-height;
   border-radius: $toggle-height/2;
+  position: relative;
 }
 
 .Toggle__slider:before {
@@ -39,18 +40,15 @@ $toggle-width: 48px;
   content: "";
   height: $toggle-height - 2;
   width: $toggle-height - 2;
-  border: 1px solid $color-base-grey;
+  left: 1px;
+  top: 1px;
   background-color: $color-base-white;
   transition: 0.2s ease;
   border-radius: 50%;
 }
 
 .Toggle__input:checked + .Toggle__slider {
-  background-color: $color-base-light-blue;
-  &:before {
-    background: $color-base-dark-blue;
-    border: 1px solid $color-base-dark-blue;
-  }
+  background-color: $color-base-dark-blue;
 }
 
 .Toggle__input:checked + .Toggle__slider:before {
@@ -73,20 +71,18 @@ $toggle-width: 48px;
   }
   & + .Toggle__slider {
     cursor: default;
-    background-color: $color-base-light-grey;
+    background-color: $color-base-grey;
     &:before {
       background-color: $color-base-white-grey;
-      border-color: $color-base-light-grey;
     }
   }
 }
 
 .Toggle__input:disabled:checked {
   & + .Toggle__slider {
-    background-color: $color-base-white-grey;
+    background-color: $color-base-grey;
     &:before {
-      background-color: $color-base-light-grey;
-      border-color: $color-base-white-grey;
+      background-color: $color-base-white-grey;
     }
   }
 }
