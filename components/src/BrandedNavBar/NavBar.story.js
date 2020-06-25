@@ -89,11 +89,11 @@ storiesOf("BrandedNavBar", module)
   .add("With a company logo and app name", () => (
     <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
   ))
-  .add("In a training environment", () => (
+  .add("with environment banner", () => (
     <BrandedNavBar
       menuData={{ primaryMenu, secondaryMenu }}
       subtext="Quality control"
       logoSrc={sampleLogo}
-      showTraining
+      environment="training"
     />
   ));

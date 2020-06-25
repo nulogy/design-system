@@ -38,13 +38,21 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   height: NAVBAR_HEIGHT
 }));
 
-const TrainingBar = () => (
+const EnvironmentBanner = ({ children }) => (
   <Box bg="darkBlue" textAlign="center">
     <Text fontSize="10px" letterSpacing="0.5px" fontWeight="bold" color="white" textTransform="uppercase" py="2px">
-      Training
+      {children}
     </Text>
   </Box>
 );
+
+EnvironmentBanner.propTypes = {
+  children: PropTypes.node
+};
+
+EnvironmentBanner.defaultProps = {
+  children: undefined
+};
 
 const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
   return (
@@ -69,11 +77,11 @@ BrandLogoContainer.defaultProps = {
   subtext: undefined
 };
 
-const MediumNavBar = ({ menuData, subtext, showTraining, logoSrc, brandingLinkHref, ...props }) => {
+const MediumNavBar = ({ menuData, subtext, environment, logoSrc, brandingLinkHref, ...props }) => {
   const { t } = useTranslation();
   return (
     <>
-      {showTraining && <TrainingBar />}
+      {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
       <header {...props}>
         <NavBarBackground backgroundColor="white">
           <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
@@ -203,13 +211,13 @@ class SmallNavBarNoState extends React.Component {
       menuState: { isOpen, toggleMenu, closeMenu },
       subtext,
       brandingLinkHref,
-      showTraining,
+      environment,
       logoSrc,
       ...props
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-        {showTraining && <TrainingBar />}
+        {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
         <NavBarBackground backgroundColor="white">
           <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
           <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
@@ -289,7 +297,7 @@ BaseNavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  showTraining: PropTypes.bool,
+  environment: PropTypes.oneOf(["training", "development", undefined]),
   logoSrc: PropTypes.string
 };
 
@@ -297,7 +305,7 @@ BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
   breakpointUpper: NDSTheme.breakpoints.medium,
-  showTraining: false,
+  environment: undefined,
   logoSrc: undefined
 };
 
