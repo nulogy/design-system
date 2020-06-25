@@ -5,15 +5,19 @@ import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Text } from "../Type";
 
-export const NulogyLogoContainer = ({ subText }) => (
+const borderStyle = "1px solid #e4e7eb";
+
+export const NulogyLogoContainer = ({ subText, height }) => (
   <Flex
-    boxShadow="small"
-    borderRadius="medium"
     px="x1"
     py="half"
     alignItems="center"
+    // boxShadow="small"
+    justifyContent="center"
     flexDirection={subText ? "column" : "row"}
-    minHeight="36px"
+    height={height}
+    borderLeft={borderStyle}
+    borderRight={borderStyle}
   >
     <Box width="76px" height="18px">
       <NulogyLogo />
@@ -34,7 +38,8 @@ export const NulogyLogoContainer = ({ subText }) => (
 );
 
 NulogyLogoContainer.propTypes = {
-  subText: PropTypes.string
+  subText: PropTypes.string,
+  height: PropTypes.string.isRequired
 };
 
 NulogyLogoContainer.defaultProps = {

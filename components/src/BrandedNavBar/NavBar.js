@@ -19,6 +19,7 @@ import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
+const NAVBAR_HEIGHT = "56px";
 
 const themeColorObject = {
   color: "darkBlue",
@@ -31,10 +32,10 @@ const themeColorObject = {
 
 const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   background: backgroundColor,
-  padding: `${theme.space.x1} ${theme.space.x3}`,
+  padding: `0 ${theme.space.x3}`,
   boxShadow: theme.shadows.large,
   alignItems: "center",
-  height: "56px"
+  height: NAVBAR_HEIGHT
 }));
 
 const TrainingBar = () => (
@@ -94,7 +95,7 @@ const MediumNavBar = ({ menuData, subtext, showTraining, logoSrc, brandingLinkHr
               )}
               {logoSrc && (
                 <Box pl="x3">
-                  <NulogyLogoContainer subText={subtext} />
+                  <NulogyLogoContainer height={NAVBAR_HEIGHT} subText={subtext} />
                 </Box>
               )}
             </Flex>
