@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.4](https://github.com/nulogy/design-system/compare/v3.0.3...v3.0.4) (2020-06-25)
+
+
+### Bug Fixes
+
+* removes button-ish styling from logo in BrandedNavBar ([#690](https://github.com/nulogy/design-system/issues/690)) ([c920f78](https://github.com/nulogy/design-system/commit/c920f78e018ee579da2770050955be35e25b828c))
+
+
+
+
+
 ## [3.0.3](https://github.com/nulogy/design-system/compare/v3.0.2...v3.0.3) (2020-06-24)
 
 **Note:** Version bump only for package @nulogy/components
