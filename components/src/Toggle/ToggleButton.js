@@ -10,21 +10,19 @@ const Slider = styled.span(({ disabled, theme }) => ({
   right: "0",
   bottom: "0",
   left: "0",
-  backgroundColor: theme.colors.lightGrey,
+  backgroundColor: disabled ? theme.colors.grey : theme.colors.darkGrey,
   borderRadius: "12px",
   transition: ".2s ease",
   cursor: disabled ? null : "pointer",
   "&:before": {
     content: "''",
     position: "absolute",
-    height: theme.space.x3,
-    width: theme.space.x3,
-    left: "0px",
-    top: "0px",
+    height: "22px",
+    width: "22px",
+    left: "1px",
+    top: "1px",
     borderRadius: theme.radii.circle,
     boxSizing: "border-box",
-    border: "solid 1px",
-    borderColor: disabled ? theme.colors.lightGrey : theme.colors.grey,
     backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.white,
     transition: ".2s ease"
   }
@@ -44,12 +42,10 @@ const Switch = styled.div(({ theme }) => ({
 
 const ToggleInput = styled.input(({ disabled, theme }) => ({
   [`&:checked + ${Slider}:before`]: {
-    transform: "translateX(24px)",
-    backgroundColor: disabled ? theme.colors.lightGrey : theme.colors.darkBlue,
-    borderColor: disabled ? theme.colors.whiteGrey : theme.colors.darkBlue
+    transform: "translateX(24px)"
   },
   [`&:checked + ${Slider}`]: {
-    backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.lightBlue
+    backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue
   },
   [`&:focus + ${Slider}:before`]: {
     boxShadow: disabled ? null : theme.shadows.focus

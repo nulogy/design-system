@@ -32,12 +32,12 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
               aria-invalid="false"
               aria-labelledby="Controlled Toggle-label"
               aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
             />
           </div>
           <p
@@ -73,12 +73,12 @@ exports[`Storyshots Toggle Toggle 1`] = `
           <input
             aria-invalid="false"
             aria-required="false"
-            class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+            class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
             type="checkbox"
             value="on"
           />
           <span
-            class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+            class="ToggleButton__Slider-asgrb8-0 kEtIPM"
           />
         </div>
       </div>
@@ -120,12 +120,12 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
               aria-labelledby="Toggle-label"
               aria-required="false"
               checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
             />
           </div>
         </div>
@@ -168,13 +168,13 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
               aria-invalid="false"
               aria-labelledby="Toggle-label"
               aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
+              class="ToggleButton__ToggleInput-asgrb8-2 kbFCui"
               disabled=""
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bQpZex"
+              class="ToggleButton__Slider-asgrb8-0 jXzDwv"
               disabled=""
             />
           </div>
@@ -216,14 +216,14 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
               aria-labelledby="Toggle-label"
               aria-required="false"
               checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
+              class="ToggleButton__ToggleInput-asgrb8-2 kbFCui"
               disabled=""
               id="toggle-2"
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bQpZex"
+              class="ToggleButton__Slider-asgrb8-0 jXzDwv"
               disabled=""
             />
           </div>
@@ -289,13 +289,13 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
               aria-labelledby="Toggle-label"
               aria-required="true"
               checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
               required=""
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
             />
           </div>
           <p
@@ -344,13 +344,13 @@ exports[`Storyshots Toggle With custom id 1`] = `
               aria-invalid="false"
               aria-labelledby="Toggle-label"
               aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
               id="my-custom-id"
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
             />
           </div>
           <p
@@ -400,12 +400,12 @@ exports[`Storyshots Toggle With long text 1`] = `
               aria-labelledby="Toggle-label"
               aria-required="false"
               checked=""
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
             />
           </div>
           <p
@@ -454,12 +454,12 @@ exports[`Storyshots Toggle With text 1`] = `
               aria-invalid="false"
               aria-labelledby="Toggle-label"
               aria-required="false"
-              class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
               type="checkbox"
               value="on"
             />
             <span
-              class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
             />
           </div>
           <p
