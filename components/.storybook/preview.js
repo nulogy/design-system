@@ -52,7 +52,6 @@ const newViewports = {
 };
 
 addDecorator(withA11y);
-addDecorator(withPerformance);
 
 addParameters({
   viewport: { viewports: newViewports },
@@ -70,3 +69,6 @@ addDecorator(story => {
     </div>
   );
 });
+
+// withPerformance must come after the Story wrapper or variables from the provider will be undefined
+addDecorator(withPerformance);
