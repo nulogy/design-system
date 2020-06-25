@@ -131,7 +131,7 @@
       "\\.(css|sass)$": "identity-obj-proxy"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!@nulogy)"
+      "node_modules/(?!(@nulogy|storybook-addon-performance))"
     ],
     "testRegex": ".*spec\\.js$",
     "setupFiles": [
