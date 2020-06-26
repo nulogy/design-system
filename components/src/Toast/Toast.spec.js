@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { Toast } from ".";
-import { render } from "../NDSProvider/render.spec-utils";
+import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 
 describe("Toast", () => {
   describe("callbacks", () => {
@@ -10,7 +10,7 @@ describe("Toast", () => {
     const onCloseHandler = jest.fn();
 
     it("calls onShow callback when triggered", () => {
-      render(
+      renderWithNDSProvider(
         <Toast triggered onShow={onShowHandler}>
           Saved
         </Toast>
@@ -19,7 +19,7 @@ describe("Toast", () => {
       expect(onHideHandler).not.toHaveBeenCalled();
     });
     it("calls onHide callback when dismissed", () => {
-      render(
+      renderWithNDSProvider(
         <Toast triggered={false} onHide={onHideHandler}>
           Saved
         </Toast>
@@ -28,7 +28,7 @@ describe("Toast", () => {
     });
     describe("closeable toast", () => {
       it("calls onClose callback when dismissed with a close button", () => {
-        const { getByLabelText } = render(
+        const { getByLabelText } = renderWithNDSProvider(
           <Toast triggered onClose={onCloseHandler} isCloseable>
             Saved
           </Toast>

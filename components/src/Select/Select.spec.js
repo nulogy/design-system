@@ -1,7 +1,7 @@
 import React from "react";
 import { Select } from ".";
 import { selectOption } from "./Select.spec-utils";
-import { render } from "../NDSProvider/render.spec-utils";
+import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 
 describe("select", () => {
   it("returns the selected item on change", () => {
@@ -13,7 +13,9 @@ describe("select", () => {
 
     const callback = jest.fn();
 
-    const { container, queryByText } = render(<Select options={options} name="multiselect" onChange={callback} />);
+    const { container, queryByText } = renderWithNDSProvider(
+      <Select options={options} name="multiselect" onChange={callback} />
+    );
 
     selectOption("Two", container, queryByText);
 
@@ -27,7 +29,7 @@ describe("select", () => {
       { label: "Three", value: "three" }
     ];
 
-    const { container, queryByText } = render(<Select options={options} defaultValue="two" />);
+    const { container, queryByText } = renderWithNDSProvider(<Select options={options} defaultValue="two" />);
 
     expect(container).toHaveTextContent("Two");
     selectOption("Three", container, queryByText);
@@ -45,7 +47,9 @@ describe("multi select", () => {
 
     const callback = jest.fn();
 
-    const { container, queryByText } = render(<Select options={options} multiselect onChange={callback} />);
+    const { container, queryByText } = renderWithNDSProvider(
+      <Select options={options} multiselect onChange={callback} />
+    );
 
     selectOption("Three", container, queryByText);
     selectOption("Two", container, queryByText);
@@ -60,7 +64,7 @@ describe("multi select", () => {
       { label: "Three", value: "three" }
     ];
 
-    const { container } = render(<Select options={options} multiselect defaultValue={["one", "two"]} />);
+    const { container } = renderWithNDSProvider(<Select options={options} multiselect defaultValue={["one", "two"]} />);
 
     expect(container).toHaveTextContent("One");
     expect(container).toHaveTextContent("Two");

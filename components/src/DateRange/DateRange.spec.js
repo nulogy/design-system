@@ -5,7 +5,7 @@ import { DateRange } from ".";
 import { resetDate, mockDate } from "../testing/mockUtils/mockDates";
 import "../testing/matchers/toMatchDate";
 import { selectOption } from "../Select/Select.spec-utils";
-import { render } from "../NDSProvider/render.spec-utils";
+import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 
 describe("DateRange", () => {
   describe("range selection", () => {
@@ -17,7 +17,7 @@ describe("DateRange", () => {
     });
     it("returns the selected range when the range changes", () => {
       const onRangeChange = jest.fn();
-      const { container, getByLabelText } = render(<DateRange onRangeChange={onRangeChange} />);
+      const { container, getByLabelText } = renderWithNDSProvider(<DateRange onRangeChange={onRangeChange} />);
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__day--001")[0]);
@@ -32,7 +32,9 @@ describe("DateRange", () => {
     });
     it("returns the selected range when the time changes", () => {
       const onRangeChange = jest.fn();
-      const { container, queryByText, getByLabelText } = render(<DateRange onRangeChange={onRangeChange} showTimes />);
+      const { container, queryByText, getByLabelText } = renderWithNDSProvider(
+        <DateRange onRangeChange={onRangeChange} showTimes />
+      );
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       selectOption("11:00 PM", container, queryByText, 1);
@@ -51,7 +53,7 @@ describe("DateRange", () => {
     });
     it("returns the selected range with an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
-      const { container, getByLabelText } = render(<DateRange onRangeChange={onRangeChange} />);
+      const { container, getByLabelText } = renderWithNDSProvider(<DateRange onRangeChange={onRangeChange} />);
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__day--005")[0]);
@@ -66,7 +68,9 @@ describe("DateRange", () => {
     });
     it("returns the selected range with an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
-      const { container, queryByText, getByLabelText } = render(<DateRange showTimes onRangeChange={onRangeChange} />);
+      const { container, queryByText, getByLabelText } = renderWithNDSProvider(
+        <DateRange showTimes onRangeChange={onRangeChange} />
+      );
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(container.querySelectorAll(".react-datepicker__day--005")[0]);
@@ -86,7 +90,7 @@ describe("DateRange", () => {
     it("returns the start date when the start date changes", () => {
       const onStartDateChange = jest.fn();
       const onEndDateChange = jest.fn();
-      const { container, getByLabelText } = render(
+      const { container, getByLabelText } = renderWithNDSProvider(
         <DateRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );
       const startDateInput = getByLabelText("Select a start date");
@@ -100,7 +104,7 @@ describe("DateRange", () => {
     it("returns the end date when the end date changes", () => {
       const onStartDateChange = jest.fn();
       const onEndDateChange = jest.fn();
-      const { container, getByLabelText } = render(
+      const { container, getByLabelText } = renderWithNDSProvider(
         <DateRange onStartDateChange={onStartDateChange} onEndDateChange={onEndDateChange} />
       );
       const endDateInput = getByLabelText("Select an end date");
