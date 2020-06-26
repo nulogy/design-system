@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
 import { Toast } from ".";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 
@@ -28,7 +28,7 @@ describe("Toast", () => {
     });
     describe("closeable toast", () => {
       it("calls onClose callback when dismissed with a close button", () => {
-        const { getByLabelText } = render(
+        const { getByLabelText } = renderWithNDSProvider(
           <Toast triggered onClose={onCloseHandler} isCloseable>
             Saved
           </Toast>
