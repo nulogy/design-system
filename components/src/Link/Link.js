@@ -39,7 +39,8 @@ Link.defaultProps = {
   className: undefined,
   underline: true,
   fontSize: "medium",
-  color: "blue"
+  color: "blue",
+  fontSize: "medium"
 };
 
 export default Link;

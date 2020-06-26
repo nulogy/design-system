@@ -1041,7 +1041,7 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
     >
       <thead>
         <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          class="TableHead__StyledHeaderRow-msr3t5-0 jbkNdg"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 kfgNsH"
@@ -1338,7 +1338,7 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
       </tbody>
       <tfoot>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"
@@ -1374,7 +1374,7 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
           />
         </tr>
         <tr
-          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 gVNRxT"
+          class="TableFoot__StyledFooterRow-sc-1q56pdo-0 mxGTg"
         >
           <th
             class="StyledTh-sc-10nzyk9-0 sBlyT"

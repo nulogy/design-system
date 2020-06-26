@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { Pagination } from ".";
 import { getPageItemstoDisplay } from "./Pagination";
-import { render } from "../NDSProvider/render.spec-utils";
+import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 
 describe("Pagination", () => {
   describe("truncation", () => {
@@ -32,7 +32,7 @@ describe("Pagination", () => {
     const onPreviousCallback = jest.fn();
 
     it("onSelectPage: returns current page when a page is selected", () => {
-      const { getAllByLabelText } = render(
+      const { getAllByLabelText } = renderWithNDSProvider(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -50,7 +50,7 @@ describe("Pagination", () => {
       expect(onSelectPageCallback).toHaveBeenCalledWith(5);
     });
     it("onPrevious: prev button is disabled when current page is 1", () => {
-      const { getByLabelText } = render(
+      const { getByLabelText } = renderWithNDSProvider(
         <Pagination
           currentPage={1}
           totalPages={5}
@@ -67,7 +67,7 @@ describe("Pagination", () => {
       expect(onPreviousCallback).not.toHaveBeenCalled();
     });
     it("onPrevious: calls previous page handler when previous button is clicked", () => {
-      const { getByLabelText } = render(
+      const { getByLabelText } = renderWithNDSProvider(
         <Pagination
           currentPage={2}
           totalPages={5}
@@ -84,7 +84,7 @@ describe("Pagination", () => {
       expect(onPreviousCallback).toHaveBeenCalled();
     });
     it("onNext: calls next page handler when next button is clicked", () => {
-      const { getByLabelText } = render(
+      const { getByLabelText } = renderWithNDSProvider(
         <Pagination
           currentPage={1}
           totalPages={5}

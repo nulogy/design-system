@@ -4,7 +4,7 @@ import { fireEvent } from "@testing-library/react";
 import { Pagination } from "../Pagination";
 import { Table } from ".";
 import { mockColumns, getMockRows, getMockColumns } from "./Table.mock-utils";
-import { render } from "../NDSProvider/render.spec-utils";
+import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { mountWithNDSProvider } from "../NDSProvider/mountWithNDSProvider.spec-utils";
 
 describe("Table", () => {
@@ -15,7 +15,7 @@ describe("Table", () => {
         const rowData = [{ c1: "r1c1" }, { c1: "r2c1" }];
         const callback = jest.fn();
 
-        const { container } = render(
+        const { container } = renderWithNDSProvider(
           <Table columns={columns} rows={rowData} hasSelectableRows keyField="c1" onRowSelectionChange={callback} />
         );
 
@@ -28,7 +28,7 @@ describe("Table", () => {
         const rowData = [{ c1: "r1c1" }, { c1: "r2c1" }];
         const callback = jest.fn();
 
-        const { container } = render(
+        const { container } = renderWithNDSProvider(
           <Table columns={columns} rows={rowData} hasSelectableRows keyField="c1" onRowSelectionChange={callback} />
         );
 
@@ -58,7 +58,7 @@ describe("Table", () => {
         ];
         const callback = jest.fn();
 
-        const { container } = render(
+        const { container } = renderWithNDSProvider(
           <Table columns={getMockColumns(3)} rows={rowData} hasExpandableRows onRowExpansionChange={callback} />
         );
 
@@ -83,7 +83,7 @@ describe("Table", () => {
         ];
         const callback = jest.fn();
 
-        const { container } = render(
+        const { container } = renderWithNDSProvider(
           <Table columns={getMockColumns(3)} rows={rowData} hasExpandableRows onRowExpansionChange={callback} />
         );
 
