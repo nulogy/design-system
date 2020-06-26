@@ -6,6 +6,6 @@ module.exports = {
     "@storybook/addon-storysource",
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
-    "my/design-addon"
+    "./addons/register.js"
   ]
 };
