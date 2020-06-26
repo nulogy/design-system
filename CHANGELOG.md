@@ -5,53 +5,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.1.1](https://github.com/nulogy/design-system/compare/v3.1.0...v3.1.1) (2020-06-25)
 
-
 ### Bug Fixes
 
-* add missing BrandedNavbar showTraining prop documentation ([#694](https://github.com/nulogy/design-system/issues/694)) ([2e2d304](https://github.com/nulogy/design-system/commit/2e2d30406dbc89187d13be845e1d8203c0ce31a9))
-
-
-
-
+- add missing BrandedNavbar showTraining prop documentation ([#694](https://github.com/nulogy/design-system/issues/694)) ([2e2d304](https://github.com/nulogy/design-system/commit/2e2d30406dbc89187d13be845e1d8203c0ce31a9))
 
 # [3.1.0](https://github.com/nulogy/design-system/compare/v3.0.4...v3.1.0) (2020-06-25)
 
-
 ### Features
 
-* add support for Simplified Chinese ([#688](https://github.com/nulogy/design-system/issues/688)) ([4a46f83](https://github.com/nulogy/design-system/commit/4a46f830c48db8ccbe3995da67d9b881e1e555d2))
-
-
-
-
+- add support for Simplified Chinese ([#688](https://github.com/nulogy/design-system/issues/688)) ([4a46f83](https://github.com/nulogy/design-system/commit/4a46f830c48db8ccbe3995da67d9b881e1e555d2))
 
 ## [3.0.4](https://github.com/nulogy/design-system/compare/v3.0.3...v3.0.4) (2020-06-25)
 
-
 ### Bug Fixes
 
-* removes button-ish styling from logo in BrandedNavBar ([#690](https://github.com/nulogy/design-system/issues/690)) ([c920f78](https://github.com/nulogy/design-system/commit/c920f78e018ee579da2770050955be35e25b828c))
-
-
-
-
+- removes button-ish styling from logo in BrandedNavBar ([#690](https://github.com/nulogy/design-system/issues/690)) ([c920f78](https://github.com/nulogy/design-system/commit/c920f78e018ee579da2770050955be35e25b828c))
 
 ## [3.0.3](https://github.com/nulogy/design-system/compare/v3.0.2...v3.0.3) (2020-06-24)
 
 ### Chores
+
 - Convert TimePicker to use hooks ([#691](https://github.com/nulogy/design-system/issues/691))
-
-
-
-
 
 ## [3.0.2](https://github.com/nulogy/design-system/compare/v3.0.1...v3.0.2) (2020-06-23)
 
 **Note:** Version bump only for package @nulogy/nds
-
-
-
-
 
 ## [3.0.1](https://github.com/nulogy/design-system/compare/v2.17.3...v3.0.1) (2020-06-23)
 
@@ -65,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### BREAKING CHANGES
 
 - Styled-components must be installed as a dependency when using @nulogy/components
-- Components must be wrapped <NDSProvider> to avoid errors, when testing they must also be wrapped in the provider. If you use render from react-testing-library you can replace it with `render` from @nulogy/components.
+- Components must be wrapped <NDSProvider> to avoid errors, when testing they must also be wrapped in the provider.
 
 ## [2.17.3](https://github.com/nulogy/design-system/compare/v2.17.2...v2.17.3) (2020-06-22)
 

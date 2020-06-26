@@ -1,4 +1,4 @@
-export { NDSProvider, render } from "./NDSProvider";
+export { NDSProvider } from "./NDSProvider";
 export { default as theme } from "./theme";
 export { Box } from "./Box";
 export { Flex } from "./Flex";
