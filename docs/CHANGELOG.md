@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/nulogy/design-system/compare/v3.1.1...v3.2.0) (2020-06-26)
+
+
+### Features
+
+* Adds info on chinese font to typography page ([#697](https://github.com/nulogy/design-system/issues/697)) ([b9fe16e](https://github.com/nulogy/design-system/commit/b9fe16e0b801c64618c0601b8a8bcc28c10367d7))
+
+
+
+
+
 ## [3.1.1](https://github.com/nulogy/design-system/compare/v3.1.0...v3.1.1) (2020-06-25)
 
 

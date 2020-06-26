@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/nulogy/design-system/compare/v3.1.1...v3.2.0) (2020-06-26)
+
+
+### Bug Fixes
+
+* remove render testing-library util from exports ([#698](https://github.com/nulogy/design-system/issues/698)) ([45fe043](https://github.com/nulogy/design-system/commit/45fe04323ef2fa11627d3c260a53bd6848756d8e))
+
+
+
+
+
 # [3.1.0](https://github.com/nulogy/design-system/compare/v3.0.4...v3.1.0) (2020-06-25)
 
 

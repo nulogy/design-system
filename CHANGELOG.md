@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://github.com/nulogy/design-system/compare/v3.1.1...v3.2.0) (2020-06-26)
+
+
+### Bug Fixes
+
+* remove render testing-library util from exports ([#698](https://github.com/nulogy/design-system/issues/698)) ([45fe043](https://github.com/nulogy/design-system/commit/45fe04323ef2fa11627d3c260a53bd6848756d8e))
+
+
+### Features
+
+* Adds info on chinese font to typography page ([#697](https://github.com/nulogy/design-system/issues/697)) ([b9fe16e](https://github.com/nulogy/design-system/commit/b9fe16e0b801c64618c0601b8a8bcc28c10367d7))
+
+
+
+
+
 ## [3.1.1](https://github.com/nulogy/design-system/compare/v3.1.0...v3.1.1) (2020-06-25)
 
 ### Bug Fixes
