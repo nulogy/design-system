@@ -16,6 +16,7 @@ import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import isValidMenuItem from "./isValidMenuItem";
 import NDSTheme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
+import { deprecatedProp } from "../utils/deprecatedProp";
 
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
@@ -287,16 +288,20 @@ const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...prop
   }
 };
 
-const BaseNavBar = props => (
-  <ReactResizeDetector handleWidth>
-    <SelectNavBarBasedOnWidth {...props} />
-  </ReactResizeDetector>
-);
+const BaseNavBar = props => {
+  const environment = props.showTraining ? "training" : props.environment;
+  return (
+    <ReactResizeDetector handleWidth>
+      <SelectNavBarBasedOnWidth {...props} environment={environment} />
+    </ReactResizeDetector>
+  );
+};
 
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  showTraining: deprecatedProp(PropTypes.bool, "environment"),
   environment: PropTypes.oneOf(["training", "development", undefined]),
   logoSrc: PropTypes.string
 };
