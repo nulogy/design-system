@@ -6,10 +6,15 @@ import { Text } from "../Type";
 
 storiesOf("Breadcrumbs", module)
   .add("Breadcrumbs", () => (
-    <Breadcrumbs>
-      <Link href="/">Home</Link>
-      <Link href="/Tenants">Tenants</Link>
-    </Breadcrumbs>
+    <>
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+      </Breadcrumbs>
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/Tenants">Tenants</Link>
+      </Breadcrumbs>
+    </>
   ))
   .add("without link", () => (
     <Breadcrumbs>

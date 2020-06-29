@@ -42,7 +42,8 @@ const StyledOl = styled.ol(() => ({
 }));
 
 const Breadcrumbs = ({ children, as }) => {
-  const allItems = [...children].map((child, index) => {
+  const childrenArr = Array.isArray(children) ? children : [children];
+  const allItems = [...childrenArr].map((child, index) => {
     return (
       // eslint-disable-next-line react/no-array-index-key
       <StyledLi key={`child-${index}`}>
