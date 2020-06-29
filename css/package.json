@@ -6,6 +6,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "storybook": "start-storybook -p 9000 -c .storybook -s ./src/",
     "watch": "node-sass-chokidar src/scss/ -o src/ --watch",
