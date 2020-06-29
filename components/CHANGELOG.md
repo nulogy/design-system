@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://github.com/nulogy/design-system/compare/v3.4.0...v3.5.0) (2020-06-29)
+
+
+### Features
+
+* replace 'showTraining' prop with 'environment' in BrandedNavBar  ([#696](https://github.com/nulogy/design-system/issues/696)) ([33a53af](https://github.com/nulogy/design-system/commit/33a53af93af4ee1b7e1b83902eda4ec06f90544e))
+
+
+
+
+
 # [3.4.0](https://github.com/nulogy/design-system/compare/v3.3.1...v3.4.0) (2020-06-29)
 
 
