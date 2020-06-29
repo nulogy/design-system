@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.3.1](https://github.com/nulogy/design-system/compare/v3.3.0...v3.3.1) (2020-06-29)
+
+
+### Bug Fixes
+
+* allow single breadcrumb in Breadcrumbs ([#704](https://github.com/nulogy/design-system/issues/704)) ([c8007bc](https://github.com/nulogy/design-system/commit/c8007bce965b2de0a08a49332e883b8b4198dad8))
+
+
+
+
+
 # [3.3.0](https://github.com/nulogy/design-system/compare/v3.2.3...v3.3.0) (2020-06-29)
 
 
