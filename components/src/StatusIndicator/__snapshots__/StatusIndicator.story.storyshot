@@ -15,6 +15,13 @@ exports[`Storyshots StatusIndicator All 1`] = `
       Neutral
     </p>
     <p
+      class="StatusIndicator-t1vtrp-0 eqLsmz"
+      font-size="smaller"
+      type="dark"
+    >
+      Dark
+    </p>
+    <p
       class="StatusIndicator-t1vtrp-0 bRgec"
       font-size="smaller"
       type="quiet"
@@ -66,6 +73,24 @@ exports[`Storyshots StatusIndicator Danger 1`] = `
       type="danger"
     >
       Danger
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots StatusIndicator Dark 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      class="StatusIndicator-t1vtrp-0 jCXXav"
+      font-size="smaller"
+      type="dark"
+    >
+      Dark
     </p>
   </div>
 </div>
