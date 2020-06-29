@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs";
-import { BrandedNavBar as NDSBrandedNavBar } from "../index";
+import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 

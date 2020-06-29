@@ -289,10 +289,11 @@ const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...prop
 };
 
 const BaseNavBar = props => {
-  const environment = props.showTraining ? "training" : props.environment;
+  const { showTraining, environment, ...rest } = props;
+  const environmentValue = showTraining ? "training" : environment;
   return (
     <ReactResizeDetector handleWidth>
-      <SelectNavBarBasedOnWidth {...props} environment={environment} />
+      <SelectNavBarBasedOnWidth {...rest} environment={environmentValue} />
     </ReactResizeDetector>
   );
 };
@@ -311,6 +312,7 @@ BaseNavBar.defaultProps = {
   className: undefined,
   breakpointUpper: NDSTheme.breakpoints.medium,
   environment: undefined,
+  showTraining: false,
   logoSrc: undefined
 };
 
