@@ -29,7 +29,7 @@ const propsRows = [
     type: "string",
     defaultValue: "neutral",
     description:
-      "The type of Status Indicator. Accepts neutral, informative, danger, warning, success, and quiet."
+      "The type of Status Indicator. Accepts neutral, dark, informative, danger, warning, success, and quiet."
   }
 ];
 
@@ -84,6 +84,19 @@ export default () => (
         <StatusIndicator>In progress</StatusIndicator>
         <Highlight className="js">
           {`<StatusIndicator>In progress</StatusIndicator>`}
+        </Highlight>
+      </Box>
+
+      <Box mb="x6">
+        <SubsectionTitle>Dark</SubsectionTitle>
+        <Text mb="x3">
+          A dark neutral state, which can be used for things like a state being
+          completed, finished or closed. Use when there's no need to signify
+          success or failure.
+        </Text>
+        <StatusIndicator type="dark">Completed</StatusIndicator>
+        <Highlight className="js">
+          {`<StatusIndicator type="dark">Completed</StatusIndicator>`}
         </Highlight>
       </Box>
 

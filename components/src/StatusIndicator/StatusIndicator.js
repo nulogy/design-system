@@ -9,6 +9,11 @@ const StatusIndicatorColours = theme => ({
     backgroundColor: theme.colors.lightGrey,
     color: theme.colors.darkGrey
   },
+  dark: {
+    borderColor: theme.colors.blackBlue,
+    backgroundColor: theme.colors.blackBlue,
+    color: theme.colors.white
+  },
   quiet: {
     borderColor: theme.colors.white,
     backgroundColor: theme.colors.white,
@@ -55,7 +60,7 @@ const StatusIndicator = styled.p(
 );
 
 StatusIndicator.propTypes = {
-  type: PropTypes.oneOf(["neutral", "danger", "informative", "success", "warning", "quiet"]),
+  type: PropTypes.oneOf(["neutral", "dark", "danger", "informative", "success", "warning", "quiet"]),
   ...propTypes.space,
   ...propTypes.typography,
   ...propTypes.flexbox
