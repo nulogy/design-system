@@ -39,10 +39,11 @@ const propsRows = [
     description: "The subtext under the Nulogy logo."
   },
   {
-    name: "showTraining",
-    type: "boolean",
-    defaultValue: "false",
-    description: "Whether or not to show the blue 'Training' bar"
+    name: "environment",
+    type: "string enum 'training'| 'development'",
+    defaultValue: "undefined",
+    description:
+      "If defined, shows a blue banner above the navbar which indicates the set environment"
   },
   {
     name: "brandingLinkHref",

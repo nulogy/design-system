@@ -16,6 +16,7 @@ import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import isValidMenuItem from "./isValidMenuItem";
 import NDSTheme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
+import { deprecatedProp } from "../utils/deprecatedProp";
 
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
@@ -38,13 +39,21 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   height: NAVBAR_HEIGHT
 }));
 
-const TrainingBar = () => (
+const EnvironmentBanner = ({ children }) => (
   <Box bg="darkBlue" textAlign="center">
     <Text fontSize="10px" letterSpacing="0.5px" fontWeight="bold" color="white" textTransform="uppercase" py="2px">
-      Training
+      {children}
     </Text>
   </Box>
 );
+
+EnvironmentBanner.propTypes = {
+  children: PropTypes.node
+};
+
+EnvironmentBanner.defaultProps = {
+  children: undefined
+};
 
 const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
   return (
@@ -69,11 +78,11 @@ BrandLogoContainer.defaultProps = {
   subtext: undefined
 };
 
-const MediumNavBar = ({ menuData, subtext, showTraining, logoSrc, brandingLinkHref, ...props }) => {
+const MediumNavBar = ({ menuData, subtext, environment, logoSrc, brandingLinkHref, ...props }) => {
   const { t } = useTranslation();
   return (
     <>
-      {showTraining && <TrainingBar />}
+      {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
       <header {...props}>
         <NavBarBackground backgroundColor="white">
           <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
@@ -203,13 +212,13 @@ class SmallNavBarNoState extends React.Component {
       menuState: { isOpen, toggleMenu, closeMenu },
       subtext,
       brandingLinkHref,
-      showTraining,
+      environment,
       logoSrc,
       ...props
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-        {showTraining && <TrainingBar />}
+        {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
         <NavBarBackground backgroundColor="white">
           <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
           <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
@@ -279,17 +288,22 @@ const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...prop
   }
 };
 
-const BaseNavBar = props => (
-  <ReactResizeDetector handleWidth>
-    <SelectNavBarBasedOnWidth {...props} />
-  </ReactResizeDetector>
-);
+const BaseNavBar = props => {
+  const { showTraining, environment, ...rest } = props;
+  const environmentValue = showTraining ? "training" : environment;
+  return (
+    <ReactResizeDetector handleWidth>
+      <SelectNavBarBasedOnWidth {...rest} environment={environmentValue} />
+    </ReactResizeDetector>
+  );
+};
 
 BaseNavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  showTraining: PropTypes.bool,
+  showTraining: deprecatedProp(PropTypes.bool, "environment"),
+  environment: PropTypes.oneOf(["training", "development", undefined]),
   logoSrc: PropTypes.string
 };
 
@@ -297,6 +311,7 @@ BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
   breakpointUpper: NDSTheme.breakpoints.medium,
+  environment: undefined,
   showTraining: false,
   logoSrc: undefined
 };

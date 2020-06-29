@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { BrandedNavBar as NDSBrandedNavBar } from "../index";
+import { select } from "@storybook/addon-knobs";
+import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
@@ -89,11 +90,11 @@ storiesOf("BrandedNavBar", module)
   .add("With a company logo and app name", () => (
     <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
   ))
-  .add("In a training environment", () => (
+  .add("with environment banner", () => (
     <BrandedNavBar
       menuData={{ primaryMenu, secondaryMenu }}
       subtext="Quality control"
       logoSrc={sampleLogo}
-      showTraining
+      environment={select("environment", ["training", "development"], "training")}
     />
   ));
