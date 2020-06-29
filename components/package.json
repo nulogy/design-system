@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "3.2.2",
+  "version": "3.3.0",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
@@ -93,8 +93,8 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-replace": "^2.2.0",
-    "styled-components": "^5.0.0",
     "storybook-addon-performance": "^0.11.0",
+    "styled-components": "^5.0.0",
     "svgi": "^1.1.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://github.com/nulogy/design-system/compare/v3.2.3...v3.3.0) (2020-06-29)
+
+
+### Features
+
+* Adds storybook-addon-performance ([#679](https://github.com/nulogy/design-system/issues/679)) ([a115226](https://github.com/nulogy/design-system/commit/a115226f1c5ff43dc36dd6aa80cfcb568ce25239))
+
+
+
+
+
 ## [3.2.3](https://github.com/nulogy/design-system/compare/v3.2.2...v3.2.3) (2020-06-29)
 
 
