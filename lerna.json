@@ -12,14 +12,13 @@
         "*.md",
         "**/**.md",
         "./docs/*",
-        "./components-e2e/*"
+        "./components-e2e/*",
+        "./components/.storybook/*"
       ]
     },
     "publish": {
       "conventionalCommits": true,
-      "allowBranch": [
-        "master"
-      ]
+      "allowBranch": ["master"]
     }
   }
 }

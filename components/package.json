@@ -94,6 +94,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-replace": "^2.2.0",
     "styled-components": "^5.0.0",
+    "storybook-addon-performance": "^0.11.0",
     "svgi": "^1.1.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
@@ -130,7 +131,7 @@
       "\\.(css|sass)$": "identity-obj-proxy"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!@nulogy)"
+      "node_modules/(?!(@nulogy|storybook-addon-performance))"
     ],
     "testRegex": ".*spec\\.js$",
     "setupFiles": [
