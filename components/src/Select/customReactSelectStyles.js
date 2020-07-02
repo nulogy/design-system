@@ -100,7 +100,8 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       minWidth: "fit-content",
       padding: 0,
       maxHeight: parseInt(maxHeight, 10),
-      borderRadius: theme.radii.medium,
+      borderBottomLeftRadius: theme.radii.medium,
+      borderBottomRightRadius: theme.radii.medium,
       marginTop: windowed ? "-4px" : 0,
       marginBottom: windowed ? "-4px" : 0
     }),
