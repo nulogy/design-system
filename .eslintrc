@@ -1,10 +1,11 @@
 {
   "parser": "babel-eslint",
-  "plugins": ["react", "jsx-a11y", "import", "prettier"],
+  "plugins": ["react", "jsx-a11y", "import", "prettier", "@typescript-eslint"],
   "extends": [
     "airbnb",
     "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "rules": {
     "arrow-parens": ["error", "as-needed"],
