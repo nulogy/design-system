@@ -99,7 +99,7 @@ const TimePicker = ({
   "aria-label": ariaLabel,
   ...props
 }) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(defaultValue || "");
   const { locale } = useContext(LocaleContext);
   const { t } = useTranslation();
 
@@ -108,7 +108,12 @@ const TimePicker = ({
     const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
     const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
     const optionsList = inputHasMinutes ? optionsByMinute : optionsAtInterval;
-    return optionsList.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)));
+    const matchingOptions = optionsList.filter(
+      ({ label, value }) =>
+        standardizeTime(label).includes(standardizeTime(input)) ||
+        standardizeTime(value).includes(standardizeTime(input))
+    );
+    return matchingOptions;
   };
 
   const overrideInternalFiltering = () => true;
@@ -120,7 +125,7 @@ const TimePicker = ({
       <Select
         options={visibleOptions}
         filterOption={overrideInternalFiltering}
-        defaultValue={defaultValue}
+        defaultValue={visibleOptions.length && defaultValue ? visibleOptions[0].value : undefined}
         components={{ DropdownIndicator, Option: StyledSelectOption }}
         aria-label={ariaLabel || t("select a time")}
         onInputChange={(value, ...args) => {

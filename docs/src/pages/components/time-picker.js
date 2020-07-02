@@ -44,6 +44,12 @@ const propsRows = [
     defaultValue: "undefined",
     description: "The latest time that can be selected."
   },
+  {
+    name: "defaultValue",
+    type: "24 hour time string or the time in the set timeFormat",
+    defaultValue: "undefined",
+    description: "The default value to be shown before selecting a value"
+  },
   ...selectProps.filter(prop => prop.name !== "options")
 ];
 

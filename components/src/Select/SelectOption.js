@@ -10,10 +10,12 @@ const StyledOption = styled.div(typography, ({ isSelected, isFocused, theme }) =
     borderBottomLeftRadius: theme.radii.medium,
     borderBottomRightRadius: theme.radii.medium
   },
+  // eslint-disable-next-line no-nested-ternary
+  background: isSelected ? theme.colors.darkBlue : isFocused ? theme.colors.lightBlue : null,
   div: {
     padding: subPx(theme.space.x1),
     fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
-    background: isFocused ? theme.colors.lightBlue : null,
+    color: isSelected ? theme.colors.white : theme.colors.black,
     minHeight: theme.space.x4,
     minWidth: "max-content",
     whiteSpace: "nowrap",
