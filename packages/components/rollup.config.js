@@ -2,7 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
-import typescript from "@rollup/plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 
 import packageJson from "./package.json";
 
@@ -16,6 +16,8 @@ const GLOBALS = {
 };
 
 const externals = Object.keys(GLOBALS);
+
+const EXTENSIONS = [".js", ".jsx", "ts", ".tsx"];
 
 const CORE_PLUGINS = [
   /* typescript: see tsconfig.json for settings */
@@ -40,7 +42,7 @@ const CORE_PLUGINS = [
     /* exclude: globs to exclude */
     exclude: ["./node_modules/**/*", "../node_modules/**/*"],
     /* exclude: files to be transpiled by babel */
-    extensions: [".js", ".jsx", "ts", ".tsx"]
+    extensions: EXTENSIONS
   }),
   /* replace: replaces strings when bundling */
   replace({
@@ -83,7 +85,7 @@ const mainBundles = {
       /* modulesOnly: inspect resolved files are es2015 modules */
       modulesOnly: true,
       /* extensions: specifies the file extensions to accept as imports */
-      extensions: [".js", ".jsx", "ts", ".tsx"]
+      extensions: EXTENSIONS
     }),
     ...CORE_PLUGINS
   ]
