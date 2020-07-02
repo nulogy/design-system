@@ -215,7 +215,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                 class=" css-1l502d3-Menu"
               >
                 <div
-                  class=" css-famnlw-MenuList"
+                  class=" css-13potcx-MenuList"
                 >
                   <div
                     class="SelectOption__StyledOption-sc-3ujurn-0 diHOOn"
@@ -1756,7 +1756,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                 class=" css-1l502d3-Menu"
               >
                 <div
-                  class=" css-famnlw-MenuList"
+                  class=" css-13potcx-MenuList"
                 >
                   <div
                     class="SelectOption__StyledOption-sc-3ujurn-0 endSvB"
@@ -2235,7 +2235,7 @@ exports[`Storyshots Select with error list 1`] = `
               class=" css-6mfljk-Menu"
             >
               <div
-                class=" css-famnlw-MenuList"
+                class=" css-13potcx-MenuList"
               >
                 <div
                   class="SelectOption__StyledOption-sc-3ujurn-0 diHOOn"
@@ -2630,7 +2630,7 @@ exports[`Storyshots Select with error message 1`] = `
               class=" css-6mfljk-Menu"
             >
               <div
-                class=" css-famnlw-MenuList"
+                class=" css-13potcx-MenuList"
               >
                 <div
                   class="SelectOption__StyledOption-sc-3ujurn-0 diHOOn"
@@ -3303,7 +3303,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                 class=" css-1l502d3-Menu"
               >
                 <div
-                  class=" css-1hz449x-MenuList"
+                  class=" css-hb4twc-MenuList"
                 >
                   <div
                     class="SelectOption__StyledOption-sc-3ujurn-0 endSvB"
