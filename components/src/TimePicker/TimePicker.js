@@ -27,13 +27,26 @@ const StyledTimeIcon = styled(Icon)(({ theme }) => ({
   }
 }));
 
-const StyledSelectOption = styled(SelectOption)(({ isSelected, theme }) => {
+const StyledSelectOption = styled(SelectOption)(({ isSelected, theme, options }) => {
   return {
     background: isSelected ? theme.colors.darkBlue : null,
     color: isSelected ? theme.colors.white : null,
     fontWeight: theme.fontWeights.normal,
     "&:hover": {
       background: isSelected ? theme.colors.darkBlue : null
+    }
+  };
+});
+
+const StyledSelect = styled(Select)(({ options, value }) => {
+  const hideMenu = options.length === 1 && value === options[0].label;
+  return {
+    "[class*='-Control']": {
+      borderBottomLeftRadius: "4px",
+      borderBottomRightRadius: "4px"
+    },
+    "[class*='-Menu']": {
+      display: hideMenu ? "none" : "block"
     }
   };
 });
@@ -96,6 +109,7 @@ const TimePicker = ({
   maxTime,
   defaultValue,
   onInputChange,
+  onChange,
   "aria-label": ariaLabel,
   ...props
 }) => {
@@ -108,10 +122,8 @@ const TimePicker = ({
     const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
     const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
     const optionsList = inputHasMinutes ? optionsByMinute : optionsAtInterval;
-    const matchingOptions = optionsList.filter(
-      ({ label, value }) =>
-        standardizeTime(label).includes(standardizeTime(input)) ||
-        standardizeTime(value).includes(standardizeTime(input))
+    const matchingOptions = optionsList.filter(({ label, value }) =>
+      standardizeTime(label).includes(standardizeTime(input))
     );
     return matchingOptions;
   };
@@ -122,16 +134,26 @@ const TimePicker = ({
   return (
     <>
       <TimePickerStyles />
-      <Select
+      <StyledSelect
         options={visibleOptions}
         filterOption={overrideInternalFiltering}
+        value={input}
         defaultValue={visibleOptions.length && defaultValue ? visibleOptions[0].value : undefined}
         components={{ DropdownIndicator, Option: StyledSelectOption }}
         aria-label={ariaLabel || t("select a time")}
-        onInputChange={(value, ...args) => {
-          setInput(value);
+        onInputChange={(value, data) => {
+          if (data.action === "input-change") {
+            setInput(value);
+          }
           if (onInputChange) {
-            onInputChange(value, ...args);
+            onInputChange(value, data);
+          }
+        }}
+        onChange={value => {
+          setInput(value);
+
+          if (onChange) {
+            onChange(value);
           }
         }}
         {...props}
