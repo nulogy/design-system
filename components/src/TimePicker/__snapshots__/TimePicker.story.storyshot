@@ -29,7 +29,7 @@ exports[`Storyshots TimePicker default 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -141,7 +141,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -253,7 +253,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 jCoHxL nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -365,7 +365,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 jCoHxL nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -477,7 +477,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -621,7 +621,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -733,7 +733,7 @@ exports[`Storyshots TimePicker with set default value 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 jCoHxL nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"

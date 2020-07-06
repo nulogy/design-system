@@ -34,7 +34,7 @@ exports[`Storyshots TimeRange default 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -130,7 +130,7 @@ exports[`Storyshots TimeRange default 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -247,7 +247,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -261,7 +261,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   <div
                     class=" css-r447wv-singleValue"
                   >
-                    12:00 AM
+                    12:00 PM
                   </div>
                   <div
                     data-testid="select-input"
@@ -343,7 +343,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -355,9 +355,9 @@ exports[`Storyshots TimeRange default selections 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    class=" css-1yhx6vz-Placeholder"
                   >
-                    01:30 PM
+                    HH:MM
                   </div>
                   <div
                     data-testid="select-input"
@@ -460,7 +460,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -556,7 +556,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -673,7 +673,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -687,7 +687,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
                   <div
                     class=" css-r447wv-singleValue"
                   >
-                    12:00 AM
+                    12:00 PM
                   </div>
                   <div
                     data-testid="select-input"
@@ -769,7 +769,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker css-2b097c-container"
           >
             <div
               data-testid="select-control"

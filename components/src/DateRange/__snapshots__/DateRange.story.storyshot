@@ -929,7 +929,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -1025,7 +1025,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -1037,9 +1037,9 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    class=" css-1yhx6vz-Placeholder"
                   >
-                    01:30 PM
+                    HH:MM
                   </div>
                   <div
                     data-testid="select-input"
@@ -1230,7 +1230,7 @@ exports[`Storyshots DateRange with time error 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -1242,9 +1242,9 @@ exports[`Storyshots DateRange with time error 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-r447wv-singleValue"
+                    class=" css-1yhx6vz-Placeholder"
                   >
-                    01:30 PM
+                    HH:MM
                   </div>
                   <div
                     data-testid="select-input"
@@ -1326,7 +1326,7 @@ exports[`Storyshots DateRange with time error 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -1531,7 +1531,7 @@ exports[`Storyshots DateRange with times 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq css-2b097c-container"
           >
             <div
               data-testid="select-control"
@@ -1627,7 +1627,7 @@ exports[`Storyshots DateRange with times 1`] = `
           data-testid="select-container"
         >
           <div
-            class="nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
+            class="TimePicker__StyledSelect-sc-1r3kwxy-2 eudUkx nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf css-2b097c-container"
           >
             <div
               data-testid="select-control"
