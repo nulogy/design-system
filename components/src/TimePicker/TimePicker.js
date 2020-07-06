@@ -40,15 +40,17 @@ const StyledSelectOption = styled(SelectOption)(({ isSelected, theme, options })
 
 const StyledSelect = styled(Select)(({ options, value }) => {
   const hideMenu = options.length === 1 && value === options[0].label;
-  return {
-    "[class*='-Control']": {
-      borderBottomLeftRadius: "4px",
-      borderBottomRightRadius: "4px"
-    },
-    "[class*='-Menu']": {
-      display: hideMenu ? "none" : "block"
-    }
-  };
+  if (hideMenu) {
+    return {
+      "[class*='-Control']": {
+        borderBottomLeftRadius: "4px",
+        borderBottomRightRadius: "4px"
+      },
+      "[class*='-Menu']": {
+        display: "none"
+      }
+    };
+  }
 });
 
 const DropdownIndicator = props => {
