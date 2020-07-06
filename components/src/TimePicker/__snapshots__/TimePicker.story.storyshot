@@ -41,7 +41,7 @@ exports[`Storyshots TimePicker default 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
@@ -153,7 +153,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     --:--
                   </div>
@@ -489,7 +489,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
@@ -633,7 +633,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
