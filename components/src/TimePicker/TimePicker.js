@@ -27,7 +27,7 @@ const StyledTimeIcon = styled(Icon)(({ theme }) => ({
   }
 }));
 
-const StyledSelectOption = styled(SelectOption)(({ isSelected, theme, options }) => {
+const StyledSelectOption = styled(SelectOption)(({ isSelected, theme }) => {
   return {
     background: isSelected ? theme.colors.darkBlue : null,
     color: isSelected ? theme.colors.white : null,
@@ -51,6 +51,7 @@ const StyledSelect = styled(Select)(({ options, value }) => {
       }
     };
   }
+  return {};
 });
 
 const DropdownIndicator = props => {
@@ -124,9 +125,7 @@ const TimePicker = ({
     const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
     const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
     const optionsList = inputHasMinutes ? optionsByMinute : optionsAtInterval;
-    const matchingOptions = optionsList.filter(({ label, value }) =>
-      standardizeTime(label).includes(standardizeTime(input))
-    );
+    const matchingOptions = optionsList.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)));
     return matchingOptions;
   };
 
