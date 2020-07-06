@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.6.0](https://github.com/nulogy/design-system/compare/v3.5.0...v3.6.0) (2020-06-30)
+
+
+### Features
+
+* accessible toggle colours ([#695](https://github.com/nulogy/design-system/issues/695)) ([2249ef3](https://github.com/nulogy/design-system/commit/2249ef3f50722623d78947f1245e2fd4810c9736))
+
+
+
+
+
 # [3.5.0](https://github.com/nulogy/design-system/compare/v3.4.0...v3.5.0) (2020-06-29)
 
 

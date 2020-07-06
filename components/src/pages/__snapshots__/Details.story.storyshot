@@ -3168,13 +3168,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         aria-invalid="false"
                         aria-labelledby="Job Visibility-label"
                         aria-required="false"
-                        class="ToggleButton__ToggleInput-asgrb8-2 lcDvtB"
+                        class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
                         id="job-visibility"
                         type="checkbox"
                         value="on"
                       />
                       <span
-                        class="ToggleButton__Slider-asgrb8-0 bLvWmF"
+                        class="ToggleButton__Slider-asgrb8-0 kEtIPM"
                       />
                     </div>
                     <p
@@ -3327,14 +3327,14 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                         aria-invalid="false"
                         aria-labelledby="Reject visibility-label"
                         aria-required="false"
-                        class="ToggleButton__ToggleInput-asgrb8-2 gajnWZ"
+                        class="ToggleButton__ToggleInput-asgrb8-2 kbFCui"
                         disabled=""
                         id="reject-visibility"
                         type="checkbox"
                         value="on"
                       />
                       <span
-                        class="ToggleButton__Slider-asgrb8-0 bQpZex"
+                        class="ToggleButton__Slider-asgrb8-0 jXzDwv"
                         disabled=""
                       />
                     </div>
