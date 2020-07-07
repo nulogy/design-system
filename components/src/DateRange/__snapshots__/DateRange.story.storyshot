@@ -1037,7 +1037,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
@@ -1242,7 +1242,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
