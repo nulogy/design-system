@@ -3,6 +3,82 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.6.1 (2020-07-07)
+
+
+
+# 3.6.0 (2020-06-30)
+
+
+
+# 3.5.0 (2020-06-29)
+
+
+
+# 3.4.0 (2020-06-29)
+
+
+
+## 3.3.1 (2020-06-29)
+
+
+
+# 3.3.0 (2020-06-29)
+
+
+
+## 3.2.2 (2020-06-26)
+
+
+
+## 3.2.1 (2020-06-26)
+
+
+
+# 3.2.0 (2020-06-26)
+
+
+
+# 3.1.0 (2020-06-25)
+
+
+
+## 3.0.4 (2020-06-25)
+
+
+
+## 3.0.3 (2020-06-24)
+
+
+
+## 3.0.2 (2020-06-23)
+
+
+
+## 3.0.1 (2020-06-23)
+
+
+
+## 2.17.4 (2020-06-23)
+
+
+
+## 2.17.3 (2020-06-22)
+
+
+
+## 2.17.2 (2020-06-22)
+
+
+
+## 2.17.1 (2020-06-19)
+
+**Note:** Version bump only for package @nulogy/components-e2e
+
+
+
+
+
 # [3.6.0](https://github.com/nulogy/design-system/compare/v3.5.0...v3.6.0) (2020-06-30)
 
 **Note:** Version bump only for package @nulogy/components-e2e

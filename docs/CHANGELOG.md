@@ -3,6 +3,109 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.7.0 (2020-07-07)
+
+
+
+# 3.6.0 (2020-06-30)
+
+
+
+# 3.5.0 (2020-06-29)
+
+
+### Features
+
+* replace 'showTraining' prop with 'environment' in BrandedNavBar  ([#696](https://github.com/nulogy/design-system/issues/696)) ([33a53af](https://github.com/nulogy/design-system/commit/33a53af93af4ee1b7e1b83902eda4ec06f90544e))
+
+
+
+# 3.4.0 (2020-06-29)
+
+
+### Features
+
+* Add a new "dark" type to StatusIndicator ([#705](https://github.com/nulogy/design-system/issues/705)) ([0149fb1](https://github.com/nulogy/design-system/commit/0149fb13fe4b365209d832e7b448b2817e2f4b55))
+
+
+
+## 3.3.1 (2020-06-29)
+
+
+
+# 3.3.0 (2020-06-29)
+
+
+
+## 3.2.2 (2020-06-26)
+
+
+
+## 3.2.1 (2020-06-26)
+
+
+
+# 3.2.0 (2020-06-26)
+
+
+### Features
+
+* Adds info on chinese font to typography page ([#697](https://github.com/nulogy/design-system/issues/697)) ([b9fe16e](https://github.com/nulogy/design-system/commit/b9fe16e0b801c64618c0601b8a8bcc28c10367d7))
+
+
+
+## 3.1.1 (2020-06-25)
+
+
+### Bug Fixes
+
+* add missing BrandedNavbar showTraining prop documentation ([#694](https://github.com/nulogy/design-system/issues/694)) ([2e2d304](https://github.com/nulogy/design-system/commit/2e2d30406dbc89187d13be845e1d8203c0ce31a9))
+
+
+
+# 3.1.0 (2020-06-25)
+
+
+### Features
+
+* add support for Simplified Chinese ([#688](https://github.com/nulogy/design-system/issues/688)) ([4a46f83](https://github.com/nulogy/design-system/commit/4a46f830c48db8ccbe3995da67d9b881e1e555d2))
+
+
+
+## 3.0.4 (2020-06-25)
+
+
+
+## 3.0.3 (2020-06-24)
+
+
+
+## 3.0.2 (2020-06-23)
+
+
+
+## 3.0.1 (2020-06-23)
+
+
+
+## 2.17.4 (2020-06-23)
+
+
+
+## 2.17.3 (2020-06-22)
+
+
+
+## 2.17.2 (2020-06-22)
+
+
+
+## 2.17.1 (2020-06-19)
+
+
+
+
+
 # [3.6.0](https://github.com/nulogy/design-system/compare/v3.5.0...v3.6.0) (2020-06-30)
 
 **Note:** Version bump only for package @nulogy/docs

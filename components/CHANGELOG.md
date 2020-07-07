@@ -3,6 +3,135 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.7.0 (2020-07-07)
+
+
+### Bug Fixes
+
+* bug where cursor shown after placeholder text in Select ([#709](https://github.com/nulogy/design-system/issues/709)) ([3e62e8e](https://github.com/nulogy/design-system/commit/3e62e8efb8de68187762ad46da27f572da024c98))
+
+
+
+# 3.6.0 (2020-06-30)
+
+
+### Features
+
+* accessible toggle colours ([#695](https://github.com/nulogy/design-system/issues/695)) ([2249ef3](https://github.com/nulogy/design-system/commit/2249ef3f50722623d78947f1245e2fd4810c9736))
+
+
+
+# 3.5.0 (2020-06-29)
+
+
+### Features
+
+* replace 'showTraining' prop with 'environment' in BrandedNavBar  ([#696](https://github.com/nulogy/design-system/issues/696)) ([33a53af](https://github.com/nulogy/design-system/commit/33a53af93af4ee1b7e1b83902eda4ec06f90544e))
+
+
+
+# 3.4.0 (2020-06-29)
+
+
+### Features
+
+* Add a new "dark" type to StatusIndicator ([#705](https://github.com/nulogy/design-system/issues/705)) ([0149fb1](https://github.com/nulogy/design-system/commit/0149fb13fe4b365209d832e7b448b2817e2f4b55))
+
+
+
+## 3.3.1 (2020-06-29)
+
+
+### Bug Fixes
+
+* allow single breadcrumb in Breadcrumbs ([#704](https://github.com/nulogy/design-system/issues/704)) ([c8007bc](https://github.com/nulogy/design-system/commit/c8007bce965b2de0a08a49332e883b8b4198dad8))
+
+
+
+# 3.3.0 (2020-06-29)
+
+
+### Features
+
+* Adds storybook-addon-performance ([#679](https://github.com/nulogy/design-system/issues/679)) ([a115226](https://github.com/nulogy/design-system/commit/a115226f1c5ff43dc36dd6aa80cfcb568ce25239))
+
+
+
+## 3.2.2 (2020-06-26)
+
+
+
+## 3.2.1 (2020-06-26)
+
+
+
+# 3.2.0 (2020-06-26)
+
+
+### Bug Fixes
+
+* remove render testing-library util from exports ([#698](https://github.com/nulogy/design-system/issues/698)) ([45fe043](https://github.com/nulogy/design-system/commit/45fe04323ef2fa11627d3c260a53bd6848756d8e))
+
+
+
+# 3.1.0 (2020-06-25)
+
+
+### Features
+
+* add support for Simplified Chinese ([#688](https://github.com/nulogy/design-system/issues/688)) ([4a46f83](https://github.com/nulogy/design-system/commit/4a46f830c48db8ccbe3995da67d9b881e1e555d2))
+
+
+
+## 3.0.4 (2020-06-25)
+
+
+### Bug Fixes
+
+* removes button-ish styling from logo in BrandedNavBar ([#690](https://github.com/nulogy/design-system/issues/690)) ([c920f78](https://github.com/nulogy/design-system/commit/c920f78e018ee579da2770050955be35e25b828c))
+
+
+
+## 3.0.3 (2020-06-24)
+
+
+
+## 3.0.2 (2020-06-23)
+
+
+
+## 3.0.1 (2020-06-23)
+
+
+
+## 2.17.4 (2020-06-23)
+
+
+
+## 2.17.3 (2020-06-22)
+
+
+
+## 2.17.2 (2020-06-22)
+
+
+### Bug Fixes
+
+* even and odd striping in PMTable ([#687](https://github.com/nulogy/design-system/issues/687)) ([b94161c](https://github.com/nulogy/design-system/commit/b94161c5ecc43368a2eb4ca1de70f194738b4f26))
+
+
+
+## 2.17.1 (2020-06-19)
+
+
+### Bug Fixes
+
+* PM table icons and zebra striping styling ([#686](https://github.com/nulogy/design-system/issues/686)) ([652c6ed](https://github.com/nulogy/design-system/commit/652c6eded2849b688d5317f596b451bce6c46579))
+
+
+
+
+
 # [3.6.0](https://github.com/nulogy/design-system/compare/v3.5.0...v3.6.0) (2020-06-30)
 
 
