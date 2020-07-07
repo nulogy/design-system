@@ -145,6 +145,7 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       borderLeft: `1px solid ${theme.colors.grey}`
     }),
     placeholder: (provided, state) => ({
+      ...provided,
       color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
     })
   };

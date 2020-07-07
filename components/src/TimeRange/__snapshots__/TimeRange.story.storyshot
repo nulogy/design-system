@@ -46,7 +46,7 @@ exports[`Storyshots TimeRange default 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
@@ -142,7 +142,7 @@ exports[`Storyshots TimeRange default 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
@@ -472,7 +472,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>
@@ -568,7 +568,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     HH:MM
                   </div>

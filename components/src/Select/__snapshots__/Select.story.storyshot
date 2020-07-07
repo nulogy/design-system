@@ -41,7 +41,7 @@ exports[`Storyshots Select Select 1`] = `
                   class="SelectTest__value-container css-7zc8my"
                 >
                   <div
-                    class="SelectTest__placeholder css-1yhx6vz-Placeholder"
+                    class="SelectTest__placeholder css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -149,7 +149,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -301,7 +301,7 @@ exports[`Storyshots Select set to disabled 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-b1k6bm-Placeholder"
+                    class=" css-1uswkev-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -437,7 +437,7 @@ exports[`Storyshots Select set to required 1`] = `
                     class=" css-7zc8my"
                   >
                     <div
-                      class=" css-1yhx6vz-Placeholder"
+                      class=" css-1n91s4n-placeholder"
                     >
                       Please select inventory status
                     </div>
@@ -1376,7 +1376,7 @@ exports[`Storyshots Select with a blank value 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -1929,7 +1929,7 @@ exports[`Storyshots Select with custom id 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -2037,7 +2037,7 @@ exports[`Storyshots Select with error list 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -2169,7 +2169,7 @@ exports[`Storyshots Select with error list 1`] = `
                 class=" css-7zc8my"
               >
                 <div
-                  class=" css-1yhx6vz-Placeholder"
+                  class=" css-1n91s4n-placeholder"
                 >
                   Please select inventory status
                 </div>
@@ -2449,7 +2449,7 @@ exports[`Storyshots Select with error message 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -2564,7 +2564,7 @@ exports[`Storyshots Select with error message 1`] = `
                 class=" css-7zc8my"
               >
                 <div
-                  class=" css-1yhx6vz-Placeholder"
+                  class=" css-1n91s4n-placeholder"
                 >
                   Please select inventory status
                 </div>
@@ -2947,7 +2947,7 @@ exports[`Storyshots Select with helpText 1`] = `
                   class=" css-7zc8my"
                 >
                   <div
-                    class=" css-1yhx6vz-Placeholder"
+                    class=" css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
@@ -3469,7 +3469,7 @@ exports[`Storyshots Select with state 1`] = `
                   class="SelectTest__value-container css-7zc8my"
                 >
                   <div
-                    class="SelectTest__placeholder css-1yhx6vz-Placeholder"
+                    class="SelectTest__placeholder css-1n91s4n-placeholder"
                   >
                     Please select inventory status
                   </div>
