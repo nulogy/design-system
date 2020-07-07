@@ -12,7 +12,8 @@ const GLOBALS = {
   react: "React",
   "react-dom": "ReactDOM",
   "prop-types": "PropTypes",
-  "styled-components": "styled"
+  "styled-components": "styled",
+  "react-windowed-select": "components"
 };
 
 const externals = Object.keys(GLOBALS);
