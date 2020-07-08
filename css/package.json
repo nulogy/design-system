@@ -12,7 +12,7 @@
   "scripts": {
     "storybook": "start-storybook -p 9000 -c .storybook -s ./src/",
     "watch": "node-sass-chokidar src/scss/ -o src/ --watch",
-    "build": "yarn workspace @nulogy/tokens build && node-sass-chokidar --build --output-style compact src/scss/ -o dist/",
+    "build": "yarn workspace @nulogy/tokens build && node-sass-chokidar --build --output-style compact src/scss/ -o dist/ && copyfiles -u 1 \"src/scss/**/*.scss\" dist",
     "start": "yarn run storybook & yarn run watch"
   },
   "repository": "https://github.com/nulogy/design-system",
@@ -24,6 +24,7 @@
     "@storybook/html": "^5.2.4",
     "babel-loader": "^8.0.4",
     "babel-runtime": "^6.26.0",
+    "copyfiles": "^2.3.0",
     "node-sass-chokidar": "^1.3.5"
   },
   "dependencies": {
