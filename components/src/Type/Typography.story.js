@@ -1,13 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { List, ListItem, Text, Title, SectionTitle, SubsectionTitle } from "../index";
+import { List, ListItem, Text, Heading1, Heading2, Heading3 } from "../index";
 
 import theme from "../theme";
 
 storiesOf("Typography", module).add("Article", () => (
   <>
-    <Title>Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Title>
-    <SectionTitle>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</SectionTitle>
+    <Heading1>Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Heading1>
+    <Heading2>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Heading2>
     <Text mb="x3">
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum.
       Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique
@@ -15,16 +15,14 @@ storiesOf("Typography", module).add("Article", () => (
       lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis
       rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </Text>
-    <SubsectionTitle>
-      Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?
-    </SubsectionTitle>
+    <Heading3>Long Titile that Hopefully wraps. Maybe now? How About Now? Now? Now? Now? Now? Now? Now?</Heading3>
     <Text mb="x3">
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque
       purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim
       congue velit.
     </Text>
-    <SectionTitle>Donec leo felis</SectionTitle>
-    <SubsectionTitle>Two pargraphs and moderatly long title</SubsectionTitle>
+    <Heading2>Donec leo felis</Heading2>
+    <Heading3>Two pargraphs and moderatly long title</Heading3>
     <Text mb="x3">
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum.
       Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique
@@ -32,7 +30,7 @@ storiesOf("Typography", module).add("Article", () => (
       lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis
       rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </Text>
-    <SubsectionTitle>Two pargraphs with List</SubsectionTitle>
+    <Heading3>Two pargraphs with List</Heading3>
     <Text mb="x3">
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum.
       Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique
@@ -55,7 +53,7 @@ storiesOf("Typography", module).add("Article", () => (
       nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor
       mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </Text>
-    <SubsectionTitle>This is small text (14px) with medium(default) line height (24px).</SubsectionTitle>
+    <Heading3>This is small text (14px) with medium(default) line height (24px).</Heading3>
     <Text mb="x3" fontSize={0} lineHeight={theme.lineHeights.smallTextBase}>
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque
       purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim
@@ -63,9 +61,7 @@ storiesOf("Typography", module).add("Article", () => (
       dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam
       vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </Text>
-    <SubsectionTitle>
-      This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...
-    </SubsectionTitle>
+    <Heading3>This is small text (14px) with small line height (16px). Reserved for buttons, inputs ...</Heading3>
     <Text mb="x3" fontSize="small" lineHeight={theme.lineHeights.smallTextCompressed}>
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque
       purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim

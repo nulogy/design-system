@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { StatusIndicator } from ".";
-import { Text, SectionTitle, SubsectionTitle } from "../Type";
+import { Text, Heading2, Heading3 } from "../Type";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 
@@ -42,15 +42,15 @@ storiesOf("StatusIndicator", module)
   .add("Following text", () => (
     <>
       <Box mb="x3">
-        <SectionTitle inline mr="x1">
+        <Heading2 inline mr="x1">
           Label
-        </SectionTitle>
+        </Heading2>
         <StatusIndicator>Status</StatusIndicator>
       </Box>
       <Box mb="x3">
-        <SubsectionTitle inline mr="x1">
+        <Heading3 inline mr="x1">
           Label
-        </SubsectionTitle>
+        </Heading3>
         <StatusIndicator>Status</StatusIndicator>
       </Box>
       <Box mb="x3">
@@ -85,15 +85,15 @@ storiesOf("StatusIndicator", module)
   .add("Inside flex", () => (
     <>
       <Flex mb="x3">
-        <SectionTitle inline mr="x1" mb="0">
+        <Heading2 inline mr="x1" mb="0">
           Label
-        </SectionTitle>
+        </Heading2>
         <StatusIndicator>Status</StatusIndicator>
       </Flex>
       <Flex mb="x3">
-        <SubsectionTitle inline mr="x1" mb="0">
+        <Heading3 inline mr="x1" mb="0">
           Label
-        </SubsectionTitle>
+        </Heading3>
         <StatusIndicator>Status</StatusIndicator>
       </Flex>
       <Flex mb="x3">

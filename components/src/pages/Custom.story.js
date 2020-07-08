@@ -3,7 +3,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import theme from "../theme";
-import { Box, Flex, Title, SectionTitle, Text, NavBar, IconicButton, Link, Icon } from "../index";
+import { Box, Flex, Heading1, Heading2, Text, NavBar, IconicButton, Link, Icon } from "../index";
 
 const primaryMenu = [
   {
@@ -31,7 +31,7 @@ storiesOf("Pages/Custom", module)
         <NavBar menuData={{ primaryMenu, secondaryMenu }} />
         <Flex m="x1" bg="white" boxShadow="large" borderRadius="medium" minHeight={StorybookContentHeight}>
           <Box p="x3" flexGrow="2">
-            <Title mb="x6">I am title</Title>
+            <Heading1 mb="x6">I am title</Heading1>
             <Text>I am main content.</Text>
           </Box>
         </Flex>
@@ -44,7 +44,7 @@ storiesOf("Pages/Custom", module)
         <NavBar menuData={{ primaryMenu, secondaryMenu }} />
         <Flex m="x1" bg="white" boxShadow="large" borderRadius="medium" minHeight={StorybookContentHeight}>
           <Box p="x3" flexGrow="2">
-            <Title mb="x6">I am title</Title>
+            <Heading1 mb="x6">I am title</Heading1>
             <Text>I am main content.</Text>
           </Box>
           <Box
@@ -59,7 +59,7 @@ storiesOf("Pages/Custom", module)
             borderRadius="medium"
           >
             <Flex justifyContent="space-between" alignItems="flex-start" mb="x4">
-              <SectionTitle mt="half">I am sidebar</SectionTitle>
+              <Heading2 mt="half">I am sidebar</Heading2>
               <IconicButton icon="close" />
             </Flex>
             <Text>I am sidbar content.</Text>
@@ -87,7 +87,7 @@ storiesOf("Pages/Custom", module)
               </Flex>
               <IconicButton icon="more" mt="x2" />
             </Flex>
-            <Title mb="x6">I am title</Title>
+            <Heading1 mb="x6">I am title</Heading1>
             <Text>I am main content.</Text>
           </Box>
           <Box
@@ -102,7 +102,7 @@ storiesOf("Pages/Custom", module)
             borderRadius="medium"
           >
             <Flex justifyContent="space-between" alignItems="flex-start" mb="x4">
-              <SectionTitle mt="half">I am sidebar</SectionTitle>
+              <Heading2 mt="half">I am sidebar</Heading2>
               <IconicButton icon="close" />
             </Flex>
             <Text>I am sidebar content.</Text>

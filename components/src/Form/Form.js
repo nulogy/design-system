@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import PropTypes from "prop-types";
-import { SectionTitle } from "../Type";
+import { Heading2 } from "../Type";
 import Field from "./Field";
 import { Alert } from "../Alert";
 import Fieldset from "./Fieldset";
@@ -11,14 +11,14 @@ import FormSection from "./FormSection";
 
 const BaseForm = ({ title, children, ...props }) => (
   <form {...props}>
-    {title && <SectionTitle>{title}</SectionTitle>}
+    {title && <Heading2>{title}</Heading2>}
     {children}
   </form>
 );
 
 const Form = styled(BaseForm)(space, ({ title, theme }) => ({
   width: "100%",
-  [`${SectionTitle}`]: {
+  [`${Heading2}`]: {
     marginBottom: title ? theme.space.x6 : 0
   },
   [`${Alert}`]: {

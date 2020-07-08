@@ -3,7 +3,7 @@ import styled, { ThemeContext } from "styled-components";
 import PropTypes from "prop-types";
 import ReactModal from "react-modal";
 import { transparentize } from "polished";
-import { SectionTitle } from "../Type";
+import { Heading2 } from "../Type";
 import { CloseButton } from "../Button";
 import { PreventBodyElementScrolling } from "../utils";
 
@@ -167,9 +167,9 @@ const Modal = ({
         {modalHasHeader(onRequestClose, title) && (
           <ModalHeader hasCloseButton={onRequestClose}>
             {title ? (
-              <SectionTitle id="modal-title" mb="none">
+              <Heading2 id="modal-title" mb="none">
                 {title}
-              </SectionTitle>
+              </Heading2>
             ) : (
               <div style={{ height: themeContext.space.x4 }} />
             )}
