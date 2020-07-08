@@ -38,6 +38,15 @@
   margin-right: $size-base-x-1;
 }
 
+.Alert__close-button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 20px;
+  padding: 0;
+}
+
 // Variations
 
 .Alert--danger {
