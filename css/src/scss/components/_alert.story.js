@@ -45,4 +45,18 @@ storiesOf("Components|Alerts", module)
     </div>
   </div>
   `
+  )
+  .add(
+    "Alert--closeable",
+    () => `
+  <div class="Alert nds-flex"">
+    <div class="Alert__content nds-flex--row nds-flex-grow-1">
+      <p class="Alert__title">Important information</p>
+      <p class="Alert__message">Details about important information</p>
+    </div>
+    <button class="Alert__close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  </div>
+  `
   );
