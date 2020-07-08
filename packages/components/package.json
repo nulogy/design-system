@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "yarn run eslint",
-    "eslint": "eslint --config ./.eslintrc './**/*.js'",
+    "eslint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
     "eslint:fix": "yarn run eslint --fix",
     "start": "yarn workspace @nulogy/tokens build && concurrently \"yarn build:watch\" \"start-storybook -p 8080\"",
     "build": "rollup -c",
@@ -79,7 +79,8 @@
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
     "@types/styled-system": "^5.1.9",
-    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-jest": "24.1.0",
     "babel-loader": "8.0.6",
@@ -118,11 +119,8 @@
     "storybook-addon-performance": "^0.11.0",
     "styled-components": "^5.0.0",
     "svgi": "^1.1.0",
-<<<<<<< HEAD:packages/components/package.json
     "wait-on": "3.2.0",
-=======
-    "ts-loader": "^7.0.5",
->>>>>>> Set up typescript:components/package.json
+    "typescript-eslint": "^0.0.1-alpha.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
   },
