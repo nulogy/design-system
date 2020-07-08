@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.7.1](https://github.com/nulogy/design-system/compare/v3.6.0...v3.7.1) (2020-07-08)
+
+
+### Bug Fixes
+
+* bug where cursor shown after placeholder text in Select ([#709](https://github.com/nulogy/design-system/issues/709)) ([3e62e8e](https://github.com/nulogy/design-system/commit/3e62e8efb8de68187762ad46da27f572da024c98))
+
+
+
+
+
 # [3.6.0](https://github.com/nulogy/design-system/compare/v3.5.0...v3.6.0) (2020-06-30)
 
 
