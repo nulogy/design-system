@@ -1,8 +1,8 @@
 import Text from "./Text";
 
-const Title = Text.withComponent("h1");
+const Heading1 = Text.withComponent("h1");
 
-Title.defaultProps = {
+Heading1.defaultProps = {
   fontSize: "heading1",
   lineHeight: "heading1",
   fontWeight: "light",
@@ -10,9 +10,9 @@ Title.defaultProps = {
   mb: "x6"
 };
 
-const SectionTitle = Text.withComponent("h2");
+const Heading2 = Text.withComponent("h2");
 
-SectionTitle.defaultProps = {
+Heading2.defaultProps = {
   fontSize: "heading2",
   lineHeight: "heading2",
   fontWeight: "normal",
@@ -20,9 +20,9 @@ SectionTitle.defaultProps = {
   mb: "x2"
 };
 
-const SubsectionTitle = Text.withComponent("h3");
+const Heading3 = Text.withComponent("h3");
 
-SubsectionTitle.defaultProps = {
+Heading3.defaultProps = {
   fontSize: "heading3",
   lineHeight: "heading3",
   fontWeight: "medium",
@@ -30,4 +30,4 @@ SubsectionTitle.defaultProps = {
   mb: "x1"
 };
 
-export { Title, SectionTitle, SubsectionTitle };
+export { Heading1, Heading2, Heading3 };
