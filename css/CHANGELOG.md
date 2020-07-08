@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.8.0](https://github.com/nulogy/design-system/compare/v3.7.1...v3.8.0) (2020-07-08)
+
+
+### Features
+
+* Add close button to Alert css ([#713](https://github.com/nulogy/design-system/issues/713)) ([2bda3eb](https://github.com/nulogy/design-system/commit/2bda3eb01605747d20475984661f1d7f44a8b2da))
+
+
+
+
+
 ## [3.7.1](https://github.com/nulogy/design-system/compare/v3.6.0...v3.7.1) (2020-07-08)
 
 **Note:** Version bump only for package @nulogy/css
