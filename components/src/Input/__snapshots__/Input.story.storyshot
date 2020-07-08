@@ -102,9 +102,9 @@ exports[`Storyshots Input set to required 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         Required field example
       </h2>
@@ -165,9 +165,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
       mb="x6"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         Suffix
       </h2>
@@ -237,8 +237,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          font-size="heading3"
           font-weight="medium"
         >
           With Custom Width
@@ -310,9 +310,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
       mb="x6"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         Prefix
       </h2>
@@ -382,8 +382,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          font-size="heading3"
           font-weight="medium"
         >
           With Custom Width
@@ -453,8 +453,8 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          font-size="heading3"
           font-weight="medium"
         >
           With right alignment
@@ -526,9 +526,9 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
       mb="x6"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         Prefix and Suffix
       </h2>

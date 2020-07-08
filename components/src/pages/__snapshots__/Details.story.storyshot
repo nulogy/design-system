@@ -159,8 +159,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
           class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
+            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            font-size="heading1"
             font-weight="light"
           >
             I am title
@@ -208,9 +208,9 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 hKxFww"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fZffbF"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Details
               </h2>
@@ -348,9 +348,9 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Milestone Performance
               </h2>
@@ -603,9 +603,9 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Production Records
               </h2>
@@ -730,8 +730,8 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 fKBIog"
-                font-size="large"
+                class="Text-sc-1wu7vpu-0-h3 ejAgjT"
+                font-size="heading3"
                 font-weight="medium"
               >
                 Comments
@@ -1009,8 +1009,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
+            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            font-size="heading1"
             font-weight="light"
           >
             I am title
@@ -1058,9 +1058,9 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 hKxFww"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fZffbF"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Details
               </h2>
@@ -1198,9 +1198,9 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Milestone Performance
               </h2>
@@ -1453,9 +1453,9 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Production Records
               </h2>
@@ -1580,8 +1580,8 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 fKBIog"
-                font-size="large"
+                class="Text-sc-1wu7vpu-0-h3 ejAgjT"
+                font-size="heading3"
                 font-weight="medium"
               >
                 Comments
@@ -1626,9 +1626,9 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="larger"
-              font-weight="medium"
+              class="Text-sc-1wu7vpu-0-h2 iSVwmz"
+              font-size="heading2"
+              font-weight="normal"
             >
               I am sidebar
             </h2>
@@ -1826,8 +1826,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
           class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
+            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            font-size="heading1"
             font-weight="light"
           >
             I am title
@@ -1875,9 +1875,9 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 hKxFww"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fZffbF"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Details
               </h2>
@@ -2015,9 +2015,9 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Milestone Performance
               </h2>
@@ -2270,9 +2270,9 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 jBTFWi"
-                font-size="larger"
-                font-weight="medium"
+                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                font-size="heading2"
+                font-weight="normal"
               >
                 Production Records
               </h2>
@@ -2397,8 +2397,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 fKBIog"
-                font-size="large"
+                class="Text-sc-1wu7vpu-0-h3 ejAgjT"
+                font-size="heading3"
                 font-weight="medium"
               >
                 Comments
@@ -2443,9 +2443,9 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="larger"
-              font-weight="medium"
+              class="Text-sc-1wu7vpu-0-h2 iSVwmz"
+              font-size="heading2"
+              font-weight="normal"
             >
               Job 324400
             </h2>
@@ -2477,8 +2477,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="FormSection-sc-5yud6c-1 cJYtnA"
             >
               <legend
-                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-                font-size="large"
+                class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+                font-size="heading3"
                 font-weight="medium"
               >
                 Job Information
@@ -3192,8 +3192,8 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="FormSection-sc-5yud6c-1 cJYtnA"
             >
               <legend
-                class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-                font-size="large"
+                class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+                font-size="heading3"
                 font-weight="medium"
               >
                 Rejects

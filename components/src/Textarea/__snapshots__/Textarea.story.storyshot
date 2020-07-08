@@ -214,9 +214,9 @@ exports[`Storyshots Textarea set to required 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         Required field example
       </h2>

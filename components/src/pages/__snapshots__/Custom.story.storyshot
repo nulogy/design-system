@@ -159,8 +159,8 @@ exports[`Storyshots Pages/Custom Default 1`] = `
           class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
+            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            font-size="heading1"
             font-weight="light"
           >
             I am title
@@ -414,8 +414,8 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
+            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            font-size="heading1"
             font-weight="light"
           >
             I am title
@@ -436,9 +436,9 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="larger"
-              font-weight="medium"
+              class="Text-sc-1wu7vpu-0-h2 iSVwmz"
+              font-size="heading2"
+              font-weight="normal"
             >
               I am sidebar
             </h2>
@@ -636,8 +636,8 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
           class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 fKaScO"
-            font-size="largest"
+            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            font-size="heading1"
             font-weight="light"
           >
             I am title
@@ -658,9 +658,9 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
             class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 flYnRO"
-              font-size="larger"
-              font-weight="medium"
+              class="Text-sc-1wu7vpu-0-h2 iSVwmz"
+              font-size="heading2"
+              font-weight="normal"
             >
               I am sidebar
             </h2>

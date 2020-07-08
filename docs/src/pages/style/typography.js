@@ -47,19 +47,19 @@ export default () => (
       <SectionTitle>Headings</SectionTitle>
       <Box mb="x4">
         <Text color="darkGrey" fontSize="small" mb="half">
-          Title (46px/48px)
+          Title (38px/40px)
         </Text>
         <Title>The quick brown fox jumps over the lazy dog</Title>
       </Box>
       <Box mb="x4">
         <Text color="darkGrey" fontSize="small" mb="half">
-          SectionTitle (26px/32px)
+          SectionTitle (30px/40px)
         </Text>
         <SectionTitle>The quick brown fox jumps over the lazy dog</SectionTitle>
       </Box>
       <Box mb="x4">
         <Text color="darkGrey" fontSize="small" mb="half">
-          SubsectionTitle (18px/24px)
+          SubsectionTitle (24px/32px)
         </Text>
         <SubsectionTitle>
           The quick brown fox jumps over the lazy dog

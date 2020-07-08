@@ -1,18 +1,19 @@
 {
-    "size": {
-      "font": {
-        "smaller" : { "value": "12" },        
-        "small" : { "value": "14" },
-        "medium": { "value": "16" },
-        "large" : { "value": "20" },
-        "larger" : { "value": "26" },
-        "largest" : { "value": "46" },                
-        "base"  : { "value": "{size.font.medium.value}" },
-        "pageTitle"  : { "value": "{size.font.largest.value}" },
-        "sectionTitle"  : { "value": "{size.font.larger.value}" },
-        "subsectionTitle"  : { "value": "{size.font.large.value}" }
-      }
+  "size": {
+    "font": {
+      "smaller": { "value": "12" },
+      "small": { "value": "14" },
+      "medium": { "value": "16" },
+      "large": { "value": "24" },
+      "larger": { "value": "30" },
+      "largest": { "value": "38" },
+      "base": { "value": "{size.font.medium.value}" },
+      "heading1": { "value": "{size.font.largest.value}" },
+      "heading2": { "value": "{size.font.larger.value}" },
+      "heading3": { "value": "{size.font.large.value}" },
+      "title": { "value": "{size.font.heading1" },
+      "sectionTitle": { "value": "{size.font.heading2" },
+      "subsectionTitle": { "value": "{size.font.heading3" }
     }
   }
-
-
+}

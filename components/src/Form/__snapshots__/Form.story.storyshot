@@ -11,9 +11,9 @@ exports[`Storyshots Form Demo form 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         Job 324400
       </h2>
@@ -88,8 +88,8 @@ exports[`Storyshots Form Demo form 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          font-size="heading3"
           font-weight="medium"
         >
           Job Information
@@ -803,8 +803,8 @@ exports[`Storyshots Form Demo form 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          font-size="heading3"
           font-weight="medium"
         >
           Rejects
@@ -977,9 +977,9 @@ exports[`Storyshots Form Form 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         New Profile
       </h2>
@@ -1126,9 +1126,9 @@ exports[`Storyshots Form With form sections 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         New Profile
       </h2>
@@ -1136,8 +1136,8 @@ exports[`Storyshots Form With form sections 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          font-size="heading3"
           font-weight="medium"
         >
           Personal Information
@@ -1274,8 +1274,8 @@ exports[`Storyshots Form With form sections 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 Headings__SubsectionTitle-igpciy-0 FormSection__FormSectionTitle-sc-5yud6c-0 gaHdwg"
-          font-size="large"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          font-size="heading3"
           font-weight="medium"
         >
           General Information
@@ -1367,9 +1367,9 @@ exports[`Storyshots Form With form sections without titles 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 heWDlS"
-        font-size="larger"
-        font-weight="medium"
+        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        font-size="heading2"
+        font-weight="normal"
       >
         New Profile
       </h2>
