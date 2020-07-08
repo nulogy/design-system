@@ -30,4 +30,14 @@ Heading3.defaultProps = {
   mb: "x1"
 };
 
-export { Heading1, Heading2, Heading3 };
+const Heading4 = Text.withComponent("h4");
+
+Heading4.defaultProps = {
+  fontSize: "heading4",
+  lineHeight: "heading4",
+  fontWeight: "bold",
+  mt: 0,
+  mb: "x1"
+};
+
+export { Heading1, Heading2, Heading3, Heading4 };

@@ -9,8 +9,10 @@ import {
   Link,
   List,
   ListItem,
-  SectionTitle,
-  SubsectionTitle
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4
 } from "@nulogy/components";
 import { Layout, Intro, IntroText, DocSection } from "../../components";
 
@@ -27,55 +29,59 @@ export default () => (
         and scannable for our users. Below are all the sizes and line heights
         available to use for Nulogy applications.
       </IntroText>
-      <SectionTitle mt="x4">Typeface</SectionTitle>
+      <Heading2 mt="x4">Typeface</Heading2>
       <Flex flexDirection={{ extraSmall: "column", small: "row" }}>
         <Box
           width={{ extraSmall: 1, medium: 1 / 2 }}
           mb={{ extraSmall: "x3", small: 0 }}
         >
-          <SubsectionTitle>IBM Plex Sans</SubsectionTitle>
+          <Heading3>IBM Plex Sans</Heading3>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>
         <Box width={{ extraSmall: 1, medium: 1 / 2 }}>
-          <SubsectionTitle fontFamily="mono">IBM Plex Mono</SubsectionTitle>
+          <Heading3 fontFamily="mono">IBM Plex Mono</Heading3>
           <a href="https://www.ibm.com/plex/">https://www.ibm.com/plex/</a>
         </Box>
       </Flex>
     </Intro>
 
     <DocSection>
-      <SectionTitle>Headings</SectionTitle>
+      <Heading2>Headings</Heading2>
       <Box mb="x4">
         <Text color="darkGrey" fontSize="small" mb="half">
-          Title (38px/40px)
+          Heading 1 (38px/40px)
         </Text>
-        <Title>The quick brown fox jumps over the lazy dog</Title>
+        <Heading1>The quick brown fox jumps over the lazy dog</Heading1>
       </Box>
       <Box mb="x4">
         <Text color="darkGrey" fontSize="small" mb="half">
-          SectionTitle (30px/40px)
+          Heading 2 (30px/40px)
         </Text>
-        <SectionTitle>The quick brown fox jumps over the lazy dog</SectionTitle>
+        <Heading2>The quick brown fox jumps over the lazy dog</Heading2>
       </Box>
       <Box mb="x4">
         <Text color="darkGrey" fontSize="small" mb="half">
-          SubsectionTitle (24px/32px)
+          Heading 3 (24px/32px)
         </Text>
-        <SubsectionTitle>
-          The quick brown fox jumps over the lazy dog
-        </SubsectionTitle>
+        <Heading3>The quick brown fox jumps over the lazy dog</Heading3>
+      </Box>
+      <Box mb="x4">
+        <Text color="darkGrey" fontSize="small" mb="half">
+          Heading 4 (18px/24px)
+        </Text>
+        <Heading4>The quick brown fox jumps over the lazy dog</Heading4>
       </Box>
     </DocSection>
 
     <DocSection mb="x8">
-      <SectionTitle>Interface text</SectionTitle>
+      <Heading2>Interface text</Heading2>
       <Text>
         Standard text should set at 16px for most cases, but 14px or 12px is
         also available.
       </Text>
     </DocSection>
     <DocSection mb="x8">
-      <SectionTitle>Usage</SectionTitle>
+      <Heading2>Usage</Heading2>
       <Text>
         Plex can be loaded in your application through whichever method you
         prefer to load fonts. An example of loading through Google fonts is
@@ -99,7 +105,7 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Related links</SectionTitle>
+      <Heading2>Related links</Heading2>
       <List>
         <ListItem>
           <Link href="/theme/">NDS theme</Link>

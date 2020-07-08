@@ -6,6 +6,7 @@ import {
   Heading1,
   Heading2,
   Heading3,
+  Heading4,
   Link,
   List,
   ListItem
@@ -37,7 +38,7 @@ export default () => (
     <Intro>
       <Heading1>Headings</Heading1>
       <IntroText>
-        There are three level of headings available to provide hierarchy in an
+        There are four level of headings available to provide hierarchy in an
         application.
       </IntroText>
     </Intro>
@@ -47,11 +48,12 @@ export default () => (
       <Heading2>Heading 2</Heading2>
       <Heading3>Heading 1</Heading3>
       <Highlight className="js">
-        {`import { Heading1, Heading2, Heading3 } from "@nulogy/components";
+        {`import { Heading1, Heading2, Heading4 } from "@nulogy/components";
 
 <Heading1>Heading 1</Heading1>
 <Heading2>Heading 2</Heading2>
-<Heading3>Heading 1</Heading3>
+<Heading3>Heading 3</Heading3>
+<Heading4>Heading 4</Heading4>
 `}
       </Highlight>
       <Alert type="warning">

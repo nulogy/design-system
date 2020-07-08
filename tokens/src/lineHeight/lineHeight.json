@@ -4,9 +4,10 @@
     "small-text-base": { "value": "1.71428571" },
     "small-text-compressed": { "value": "1.14285714" },
     "smallerText": { "value": "1.33333333" },
-    "heading1": { "value": "1.05263" },
-    "heading2": { "value": "1.333" },
-    "heading3": { "value": "1.333" },
+    "heading1": { "value": "1.05" },
+    "heading2": { "value": "1.33" },
+    "heading3": { "value": "1.33" },
+    "heading4": { "value": "1.33" },
     "title": { "value": "{size.lineHeight.heading1" },
     "sectionTitle": { "value": "{size.lineHeight.heading2" },
     "subsectionTitle": { "value": "{size.lineHeight.heading3" }

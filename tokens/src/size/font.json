@@ -11,6 +11,7 @@
       "heading1": { "value": "{size.font.largest.value}" },
       "heading2": { "value": "{size.font.larger.value}" },
       "heading3": { "value": "{size.font.large.value}" },
+      "heading4": { "value": "18" },
       "title": { "value": "{size.font.heading1" },
       "sectionTitle": { "value": "{size.font.heading2" },
       "subsectionTitle": { "value": "{size.font.heading3" }

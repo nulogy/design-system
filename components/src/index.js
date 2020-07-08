@@ -3,7 +3,7 @@ export { default as theme } from "./theme";
 export { Box } from "./Box";
 export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
-export { Text, Title, SectionTitle, SubsectionTitle, Heading1, Heading2, Heading3 } from "./Type";
+export { Text, Title, SectionTitle, SubsectionTitle, Heading1, Heading2, Heading3, Heading4 } from "./Type";
 
 export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton, ControlIcon } from "./Button";
 export { ButtonGroup } from "./ButtonGroup";

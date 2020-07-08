@@ -26,9 +26,10 @@ export default {
     large: tokens.size_font_large,
     larger: tokens.size_font_larger,
     largest: tokens.size_font_largest,
-    heading3: tokens.size_font_heading_3,
+    heading1: tokens.size_font_heading_1,
     heading2: tokens.size_font_heading_2,
-    heading1: tokens.size_font_heading_1
+    heading3: tokens.size_font_heading_3,
+    heading4: tokens.size_font_heading_4
   },
   lineHeights: {
     base: tokens.line_height_base,
@@ -38,6 +39,7 @@ export default {
     heading1: tokens.line_height_heading_1,
     heading2: tokens.line_height_heading_2,
     heading3: tokens.line_height_heading_3,
+    heading4: tokens.line_height_heading_4,
     title: tokens.line_height_heading_1,
     sectionTitle: tokens.line_height_heading_2,
     subsectionTitle: tokens.line_height_heading_3
