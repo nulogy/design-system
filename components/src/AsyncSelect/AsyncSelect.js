@@ -6,73 +6,10 @@ import { ThemeContext } from "styled-components";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
-import customStyles from "./customReactSelectStyles";
+import customStyles from "../Select/customReactSelectStyles";
 import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
-import SelectOption from "./SelectOption";
-
-const Control = props => {
-  // eslint-disable-next-line react/prop-types
-  const { isFocused } = props;
-  return (
-    <div data-testid="select-control">
-      <selectComponents.Control className={isFocused ? "nds-select--is-focused" : null} {...props} />
-    </div>
-  );
-};
-
-const MultiValue = props => {
-  return (
-    <div data-testid="select-multivalue">
-      <selectComponents.MultiValue {...props} />
-    </div>
-  );
-};
-
-const ClearIndicator = props => {
-  return (
-    <div data-testid="select-clear">
-      <selectComponents.ClearIndicator {...props} />
-    </div>
-  );
-};
-
-const Menu = props => {
-  return (
-    <div data-testid="select-dropdown">
-      <selectComponents.Menu {...props} />
-    </div>
-  );
-};
-
-const SelectContainer = props => {
-  return (
-    <div data-testid="select-container">
-      <selectComponents.SelectContainer {...props} />
-    </div>
-  );
-};
-
-const Input = props => {
-  return (
-    <div data-testid="select-input">
-      <selectComponents.Input {...props} />
-    </div>
-  );
-};
-
-const getOption = (options, value) => {
-  if (value == null || value === "") return value;
-
-  return options.find(o => o.value === value);
-};
-
-const getReactSelectValue = (options, input) => {
-  if (Array.isArray(input)) {
-    return input.map(i => getOption(options, i));
-  }
-
-  return getOption(options, input);
-};
+import { SelectOption } from "./SelectOption";
+import { Control, MultiValue, ClearIndicator, SelectContainer, Menu, Input } from "../Select/SelectComponents";
 
 const extractValue = (options, isMulti) => {
   if (options == null) return options;
@@ -135,6 +72,7 @@ const AsyncSelect = ({
           isDisabled={disabled}
           isSearchable={autocomplete}
           aria-required={required}
+          required={required}
           aria-invalid={error}
           defaultMenuIsOpen={initialIsOpen}
           inputId={id}
