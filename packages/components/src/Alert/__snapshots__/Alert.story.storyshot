@@ -8,7 +8,7 @@ exports[`Storyshots Alert Danger 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
       role="alert"
     >
       <svg
@@ -28,7 +28,7 @@ exports[`Storyshots Alert Danger 1`] = `
         />
       </svg>
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        class="Box-xda4ls-0 hoMyit"
       >
         Danger alert
       </div>
@@ -45,11 +45,11 @@ exports[`Storyshots Alert Informative 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        class="Box-xda4ls-0 hoMyit"
       >
         Informative alert
       </div>
@@ -66,7 +66,7 @@ exports[`Storyshots Alert Success 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 kjZZUq"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 kjZZUq"
       role="alert"
     >
       <svg
@@ -86,7 +86,7 @@ exports[`Storyshots Alert Success 1`] = `
         />
       </svg>
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        class="Box-xda4ls-0 hoMyit"
       >
         Success alert
       </div>
@@ -103,11 +103,11 @@ exports[`Storyshots Alert Warning 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iZHNxR Alert-u8lbe-0 kjZZUq"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iZHNxR Alert-u8lbe-0 kjZZUq"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        class="Box-xda4ls-0 hoMyit"
       >
         Warning alert
       </div>
@@ -124,16 +124,16 @@ exports[`Storyshots Alert With a close button 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        class="Box-xda4ls-0 hoMyit"
       >
         Warning alert
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
       >
         <button
           aria-label="Close"
@@ -172,11 +172,11 @@ exports[`Storyshots Alert With a link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
       role="alert"
     >
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        class="Box-xda4ls-0 hoMyit"
       >
         An alert with 
         <a
@@ -202,7 +202,7 @@ exports[`Storyshots Alert With a title 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
       role="alert"
     >
       <svg
@@ -222,7 +222,7 @@ exports[`Storyshots Alert With a title 1`] = `
         />
       </svg>
       <div
-        class="Box-sc-1qu1edy-0 iDnpba"
+        class="Box-xda4ls-0 hoMyit"
       >
         <p
           class="Text-sc-1wu7vpu-0 dFPjNj"

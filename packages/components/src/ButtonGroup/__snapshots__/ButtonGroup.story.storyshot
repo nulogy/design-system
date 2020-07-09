@@ -8,7 +8,7 @@ exports[`Storyshots ButtonGroup ButtonGroup 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 kmQbtL"
+      class="Box-xda4ls-0 dWusHY"
       width="500px"
     >
       <div
@@ -43,7 +43,7 @@ exports[`Storyshots ButtonGroup more button types 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 aJDrU"
+      class="Box-xda4ls-0 knQcdP"
       width="600px"
     >
       <div
@@ -131,7 +131,7 @@ exports[`Storyshots ButtonGroup with alignment right 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 kmQbtL"
+      class="Box-xda4ls-0 dWusHY"
       width="500px"
     >
       <div
@@ -166,7 +166,7 @@ exports[`Storyshots ButtonGroup with alignment spaced 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 kmQbtL"
+      class="Box-xda4ls-0 dWusHY"
       width="500px"
     >
       <div
@@ -196,7 +196,7 @@ exports[`Storyshots ButtonGroup wrapping buttons 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 hkwtTx"
+      class="Box-xda4ls-0 bmMRvO"
     >
       <div
         class="ButtonGroup-xkz195-0 dtwRCO"
@@ -254,7 +254,7 @@ exports[`Storyshots ButtonGroup wrapping buttons 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 uuGzP"
+      class="Box-xda4ls-0 ymOFE"
     >
       <div
         class="ButtonGroup-xkz195-0 blsMJq"

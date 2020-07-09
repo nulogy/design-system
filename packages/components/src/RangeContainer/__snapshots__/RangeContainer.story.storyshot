@@ -13,7 +13,7 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 ilQgHG"
+        class="Box-xda4ls-0 biCpIl"
         data-testid="field-label"
       >
         <span
@@ -25,11 +25,11 @@ exports[`Storyshots RangeContainer RangeContainer 1`] = `
       Example
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iTGQcd"
+      class="Box-xda4ls-0 teipq"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"

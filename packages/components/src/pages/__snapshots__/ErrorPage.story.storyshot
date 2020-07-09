@@ -8,18 +8,18 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 eNuWpu"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eUPAic"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eUPAic"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bCieNK"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 bCieNK"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 eEgbxx"
+            class="Box-xda4ls-0 jmKJi"
           >
             <div
               class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
@@ -62,10 +62,10 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dKEgdE"
+            class="Box-xda4ls-0 kinCn"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
               role="alert"
             >
               <svg
@@ -85,7 +85,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
                 />
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 iDnpba"
+                class="Box-xda4ls-0 hoMyit"
               >
                 <p
                   class="Text-sc-1wu7vpu-0 dFPjNj"
@@ -102,7 +102,7 @@ exports[`Storyshots Pages/ErrorPage Base 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eUEsHJ"
+        class="Box-xda4ls-0 kpBvLm"
         style="border-top:solid 1px #e4e7eb"
       >
         <p
@@ -126,18 +126,18 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 eNuWpu"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eUPAic"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eUPAic"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bCieNK"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 bCieNK"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 eEgbxx"
+            class="Box-xda4ls-0 jmKJi"
           >
             <div
               class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
@@ -180,14 +180,14 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dKEgdE"
+            class="Box-xda4ls-0 kinCn"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 kjZZUq"
               role="alert"
             >
               <div
-                class="Box-sc-1qu1edy-0 iDnpba"
+                class="Box-xda4ls-0 hoMyit"
               >
                 We are currently adding new features to Nulogy Quality Control. We should be online shortly.
               </div>
@@ -196,7 +196,7 @@ exports[`Storyshots Pages/ErrorPage Maintenance 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eUEsHJ"
+        class="Box-xda4ls-0 kpBvLm"
         style="border-top:solid 1px #e4e7eb"
       >
         <p
@@ -220,18 +220,18 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eNuWpu"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 eNuWpu"
       height="100vh"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eUPAic"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eUPAic"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bCieNK"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 bCieNK"
           width="100%"
         >
           <div
-            class="Box-sc-1qu1edy-0 lokTmN"
+            class="Box-xda4ls-0 kvlHDC"
           >
             <div
               class="Branding__BrandingWrap-ranqri-0 kLCNLY Branding-ranqri-2 kQRWHN"
@@ -274,10 +274,10 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 dKEgdE"
+            class="Box-xda4ls-0 kinCn"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eMpWng Alert-u8lbe-0 yTvFo"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 eMpWng Alert-u8lbe-0 yTvFo"
               role="alert"
             >
               <svg
@@ -297,7 +297,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
                 />
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 iDnpba"
+                class="Box-xda4ls-0 hoMyit"
               >
                 <p
                   class="Text-sc-1wu7vpu-0 dFPjNj"
@@ -322,7 +322,7 @@ exports[`Storyshots Pages/ErrorPage With a link 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 eUEsHJ"
+        class="Box-xda4ls-0 kpBvLm"
         style="border-top:solid 1px #e4e7eb"
       >
         <p

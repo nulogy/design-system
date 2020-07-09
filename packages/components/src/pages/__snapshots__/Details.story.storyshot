@@ -8,13 +8,13 @@ exports[`Storyshots Pages/Details page Default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 irqwJg"
     >
       <header
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -65,7 +65,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -112,7 +112,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -153,10 +153,10 @@ exports[`Storyshots Pages/Details page Default 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jKfurj"
       >
         <div
-          class="Box-sc-1qu1edy-0 jXTIl"
+          class="Box-xda4ls-0 iNHNFy"
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fJjfOe"
@@ -205,7 +205,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             selected=""
           >
             <div
-              class="Box-sc-1qu1edy-0 EBPVx"
+              class="Box-xda4ls-0 dNpxsS"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 enMeMy"
@@ -215,10 +215,10 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cOjpeh"
+                class="Box-xda4ls-0 Flex-hrfu3s-0 cOjpeh"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 kppLzh"
+                  class="Box-xda4ls-0 crisWC"
                   width="0.3333333333333333"
                 >
                   <p
@@ -238,7 +238,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 iNeoFr"
+                  class="Box-xda4ls-0 fXfNnw"
                   width="0.3333333333333333"
                 >
                   <p
@@ -258,7 +258,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgRzAy"
+                  class="Box-xda4ls-0 ekeRft"
                   width="0.3333333333333333"
                 >
                   <p
@@ -278,7 +278,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 kppLzh"
+                  class="Box-xda4ls-0 crisWC"
                   width="0.3333333333333333"
                 >
                   <p
@@ -298,7 +298,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 iNeoFr"
+                  class="Box-xda4ls-0 fXfNnw"
                   width="0.3333333333333333"
                 >
                   <p
@@ -318,7 +318,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgRzAy"
+                  class="Box-xda4ls-0 ekeRft"
                   width="0.3333333333333333"
                 >
                   <p
@@ -345,7 +345,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 cSRExr"
+              class="Box-xda4ls-0 gsaYfM"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jglqIU"
@@ -415,7 +415,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -464,7 +464,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -513,7 +513,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -562,7 +562,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -600,7 +600,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 EBPVx"
+              class="Box-xda4ls-0 dNpxsS"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jglqIU"
@@ -727,7 +727,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               </table>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 cEnpFJ"
+              class="Box-xda4ls-0 jWcgzu"
             >
               <h3
                 class="Text-sc-1wu7vpu-0-h3 dECdjU"
@@ -740,7 +740,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 class="Form-n70q8u-0 ilQSyT"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                  class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
                 >
                   <textarea
                     aria-invalid="false"
@@ -751,7 +751,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                   />
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj"
+                  class="Box-xda4ls-0 hQvIAg"
                 >
                   <button
                     class="Button__WrapperButton-sc-1omxup2-0 kFmWUd PrimaryButton-qz78sb-0 cGyyDq"
@@ -782,13 +782,13 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 irqwJg"
     >
       <header
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -839,7 +839,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -886,7 +886,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -927,17 +927,17 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jKfurj"
       >
         <div
-          class="Box-sc-1qu1edy-0 hkydKC"
+          class="Box-xda4ls-0 iAJzmR"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 guWDrb"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 guWDrb"
             height="32px"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fvgzBv"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fvgzBv"
               width="[object Object]"
             >
               <a
@@ -1055,7 +1055,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             selected=""
           >
             <div
-              class="Box-sc-1qu1edy-0 EBPVx"
+              class="Box-xda4ls-0 dNpxsS"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 enMeMy"
@@ -1065,10 +1065,10 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cOjpeh"
+                class="Box-xda4ls-0 Flex-hrfu3s-0 cOjpeh"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 kppLzh"
+                  class="Box-xda4ls-0 crisWC"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1088,7 +1088,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 iNeoFr"
+                  class="Box-xda4ls-0 fXfNnw"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1108,7 +1108,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgRzAy"
+                  class="Box-xda4ls-0 ekeRft"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1128,7 +1128,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 kppLzh"
+                  class="Box-xda4ls-0 crisWC"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1148,7 +1148,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 iNeoFr"
+                  class="Box-xda4ls-0 fXfNnw"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1168,7 +1168,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgRzAy"
+                  class="Box-xda4ls-0 ekeRft"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1195,7 +1195,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 cSRExr"
+              class="Box-xda4ls-0 gsaYfM"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jglqIU"
@@ -1265,7 +1265,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -1314,7 +1314,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -1363,7 +1363,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -1412,7 +1412,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -1450,7 +1450,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 EBPVx"
+              class="Box-xda4ls-0 dNpxsS"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jglqIU"
@@ -1577,7 +1577,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               </table>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 cEnpFJ"
+              class="Box-xda4ls-0 jWcgzu"
             >
               <h3
                 class="Text-sc-1wu7vpu-0-h3 dECdjU"
@@ -1590,7 +1590,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 class="Form-n70q8u-0 ilQSyT"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                  class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
                 >
                   <textarea
                     aria-invalid="false"
@@ -1601,7 +1601,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                   />
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj"
+                  class="Box-xda4ls-0 hQvIAg"
                 >
                   <button
                     class="Button__WrapperButton-sc-1omxup2-0 kFmWUd PrimaryButton-qz78sb-0 cGyyDq"
@@ -1619,11 +1619,11 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 cTLuiE"
+          class="Box-xda4ls-0 fvhRrf"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 fVXpPw"
@@ -1675,13 +1675,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 irqwJg"
     >
       <header
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -1732,7 +1732,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -1779,7 +1779,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -1820,10 +1820,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jKfurj"
       >
         <div
-          class="Box-sc-1qu1edy-0 jXTIl"
+          class="Box-xda4ls-0 iNHNFy"
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fJjfOe"
@@ -1872,7 +1872,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             selected=""
           >
             <div
-              class="Box-sc-1qu1edy-0 EBPVx"
+              class="Box-xda4ls-0 dNpxsS"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 enMeMy"
@@ -1882,10 +1882,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 Details
               </h2>
               <div
-                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cOjpeh"
+                class="Box-xda4ls-0 Flex-hrfu3s-0 cOjpeh"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 kppLzh"
+                  class="Box-xda4ls-0 crisWC"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1905,7 +1905,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 iNeoFr"
+                  class="Box-xda4ls-0 fXfNnw"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1925,7 +1925,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgRzAy"
+                  class="Box-xda4ls-0 ekeRft"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1945,7 +1945,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 kppLzh"
+                  class="Box-xda4ls-0 crisWC"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1965,7 +1965,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 iNeoFr"
+                  class="Box-xda4ls-0 fXfNnw"
                   width="0.3333333333333333"
                 >
                   <p
@@ -1985,7 +1985,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </p>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jgRzAy"
+                  class="Box-xda4ls-0 ekeRft"
                   width="0.3333333333333333"
                 >
                   <p
@@ -2012,7 +2012,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 cSRExr"
+              class="Box-xda4ls-0 gsaYfM"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jglqIU"
@@ -2082,7 +2082,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -2131,7 +2131,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -2180,7 +2180,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -2229,7 +2229,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </td>
                     <td>
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                       >
                         <svg
                           aria-hidden="true"
@@ -2267,7 +2267,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             hidden=""
           >
             <div
-              class="Box-sc-1qu1edy-0 EBPVx"
+              class="Box-xda4ls-0 dNpxsS"
             >
               <h2
                 class="Text-sc-1wu7vpu-0-h2 jglqIU"
@@ -2394,7 +2394,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               </table>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 cEnpFJ"
+              class="Box-xda4ls-0 jWcgzu"
             >
               <h3
                 class="Text-sc-1wu7vpu-0-h3 dECdjU"
@@ -2407,7 +2407,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 class="Form-n70q8u-0 ilQSyT"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                  class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
                 >
                   <textarea
                     aria-invalid="false"
@@ -2418,7 +2418,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   />
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj"
+                  class="Box-xda4ls-0 hQvIAg"
                 >
                   <button
                     class="Button__WrapperButton-sc-1omxup2-0 kFmWUd PrimaryButton-qz78sb-0 cGyyDq"
@@ -2436,11 +2436,11 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 cTLuiE"
+          class="Box-xda4ls-0 fvhRrf"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 fVXpPw"
@@ -2484,7 +2484,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 Job Information
               </legend>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2492,7 +2492,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2502,10 +2502,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -2520,7 +2520,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2528,7 +2528,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2552,10 +2552,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </p>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -2569,7 +2569,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2577,7 +2577,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2666,7 +2666,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2674,7 +2674,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2684,10 +2684,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -2701,7 +2701,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </div>
                 </label>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
                   color="red"
                 >
                   <svg
@@ -2734,7 +2734,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2742,7 +2742,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2752,10 +2752,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -2770,7 +2770,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2778,7 +2778,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2788,10 +2788,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -2807,7 +2807,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2815,7 +2815,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2825,10 +2825,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -2843,7 +2843,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2851,7 +2851,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -2861,10 +2861,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -2898,7 +2898,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </span>
                 </legend>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+                  class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2925,7 +2925,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+                  class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -2952,7 +2952,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+                  class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -2983,7 +2983,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+                  class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -3028,7 +3028,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </span>
                 </legend>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+                  class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3055,7 +3055,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+                  class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -3081,7 +3081,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+                  class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
                 >
                   <label
                     class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -3111,7 +3111,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </label>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
                   color="red"
                 >
                   <svg
@@ -3144,13 +3144,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </fieldset>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
               >
                 <div
                   id="Job Visibility-label"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -3199,7 +3199,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 Rejects
               </legend>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -3207,7 +3207,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -3217,10 +3217,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -3234,7 +3234,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   </div>
                 </label>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
                   color="red"
                 >
                   <svg
@@ -3267,7 +3267,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </div>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
               >
                 <label
                   class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -3275,7 +3275,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                   style="display:block"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                     data-testid="field-label"
                   >
                     <span
@@ -3285,10 +3285,10 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     </span>
                   </div>
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 hxUhcg"
+                      class="Box-xda4ls-0 erhvLv"
                       display="flex"
                     >
                       <input
@@ -3302,13 +3302,13 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 </label>
               </div>
               <div
-                class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+                class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
               >
                 <div
                   id="Reject visibility-label"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 ilQgHG"
+                    class="Box-xda4ls-0 biCpIl"
                   >
                     <span
                       style="font-size:14px;font-weight:600;line-height:1.71428571"

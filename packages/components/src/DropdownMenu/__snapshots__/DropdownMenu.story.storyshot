@@ -103,7 +103,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
       </svg>
     </button>
     <div
-      class="Box-sc-1qu1edy-0 DropdownMenuContainer-sc-3zczz8-0 fcJZzO  nds-popper-pop-up"
+      class="Box-xda4ls-0 DropdownMenuContainer-sc-3zczz8-0 fcJZzO  nds-popper-pop-up"
       open=""
       style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
     >
@@ -206,7 +206,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
       </svg>
     </button>
     <div
-      class="Box-sc-1qu1edy-0 DropdownMenuContainer-sc-3zczz8-0 gCpwvi  nds-popper-pop-up"
+      class="Box-xda4ls-0 DropdownMenuContainer-sc-3zczz8-0 gCpwvi  nds-popper-pop-up"
       open=""
       style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
     >

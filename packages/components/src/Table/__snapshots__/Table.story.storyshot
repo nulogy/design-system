@@ -21,7 +21,7 @@ exports[`Storyshots Table with everything 1`] = `
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -97,7 +97,7 @@ exports[`Storyshots Table with everything 1`] = `
             colspan="7"
           >
             <div
-              class="Box-sc-1qu1edy-0 kOlJoM"
+              class="Box-xda4ls-0 JzMyz"
             >
               <p
                 class="Text-sc-1wu7vpu-0 iHOIzo"
@@ -118,7 +118,7 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -182,7 +182,7 @@ exports[`Storyshots Table with everything 1`] = `
           />
           <td>
             <div
-              class="Box-sc-1qu1edy-0 gqpebI"
+              class="Box-xda4ls-0 dyCXpf"
             >
               <button
                 aria-expanded="false"
@@ -219,7 +219,7 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -261,7 +261,7 @@ exports[`Storyshots Table with everything 1`] = `
           />
           <td>
             <div
-              class="Box-sc-1qu1edy-0 gqpebI"
+              class="Box-xda4ls-0 dyCXpf"
             >
               <button
                 aria-expanded="false"
@@ -298,7 +298,7 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -340,7 +340,7 @@ exports[`Storyshots Table with everything 1`] = `
           />
           <td>
             <div
-              class="Box-sc-1qu1edy-0 gqpebI"
+              class="Box-xda4ls-0 dyCXpf"
             >
               <button
                 aria-expanded="false"
@@ -377,7 +377,7 @@ exports[`Storyshots Table with everything 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -421,7 +421,7 @@ exports[`Storyshots Table with everything 1`] = `
           </td>
           <td>
             <div
-              class="Box-sc-1qu1edy-0 gqpebI"
+              class="Box-xda4ls-0 dyCXpf"
             >
               <button
                 aria-expanded="false"
@@ -508,7 +508,7 @@ exports[`Storyshots Table with everything 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
     >
       <button
         aria-label="Go to previous results"
@@ -646,7 +646,7 @@ exports[`Storyshots Table with pagination 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
     >
       <button
         aria-label="Go to previous results"

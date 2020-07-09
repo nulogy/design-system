@@ -20,7 +20,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -47,7 +47,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -74,7 +74,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -139,7 +139,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
         Select a setting from the menu below:
       </p>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -168,7 +168,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -196,7 +196,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -248,7 +248,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -277,7 +277,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -304,7 +304,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -355,7 +355,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -387,7 +387,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -418,7 +418,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -473,7 +473,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -501,7 +501,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -528,7 +528,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -555,7 +555,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
         color="red"
       >
         <svg
@@ -628,7 +628,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </span>
       </legend>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -656,7 +656,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -683,7 +683,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+        class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
       >
         <label
           class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -710,7 +710,7 @@ exports[`Storyshots CheckboxGroup with error message 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
         color="red"
       >
         <svg

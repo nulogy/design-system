@@ -8,13 +8,13 @@ exports[`Storyshots Pages/Custom Default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 irqwJg"
     >
       <header
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -65,7 +65,7 @@ exports[`Storyshots Pages/Custom Default 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -112,7 +112,7 @@ exports[`Storyshots Pages/Custom Default 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -153,10 +153,10 @@ exports[`Storyshots Pages/Custom Default 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jKfurj"
       >
         <div
-          class="Box-sc-1qu1edy-0 jXTIl"
+          class="Box-xda4ls-0 iNHNFy"
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fJjfOe"
@@ -187,13 +187,13 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 irqwJg"
     >
       <header
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -244,7 +244,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -291,7 +291,7 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -332,17 +332,17 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jKfurj"
       >
         <div
-          class="Box-sc-1qu1edy-0 hkydKC"
+          class="Box-xda4ls-0 iAJzmR"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 guWDrb"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 guWDrb"
             height="32px"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fvgzBv"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fvgzBv"
               width="[object Object]"
             >
               <a
@@ -429,11 +429,11 @@ exports[`Storyshots Pages/Custom With breadcrumbs and actions 1`] = `
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 cTLuiE"
+          class="Box-xda4ls-0 fvhRrf"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 fVXpPw"
@@ -485,13 +485,13 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 irqwJg"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 irqwJg"
     >
       <header
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -542,7 +542,7 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -589,7 +589,7 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -630,10 +630,10 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
         </div>
       </header>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jKfurj"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jKfurj"
       >
         <div
-          class="Box-sc-1qu1edy-0 jXTIl"
+          class="Box-xda4ls-0 iNHNFy"
         >
           <h1
             class="Text-sc-1wu7vpu-0-h1 fJjfOe"
@@ -651,11 +651,11 @@ exports[`Storyshots Pages/Custom With sidebar 1`] = `
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 cTLuiE"
+          class="Box-xda4ls-0 fvhRrf"
           width="[object Object]"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
               class="Text-sc-1wu7vpu-0-h2 fVXpPw"

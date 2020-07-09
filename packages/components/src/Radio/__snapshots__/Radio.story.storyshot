@@ -8,7 +8,7 @@ exports[`Storyshots Radio Controlled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -36,7 +36,7 @@ exports[`Storyshots Radio Controlled 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -73,7 +73,7 @@ exports[`Storyshots Radio Radio 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -109,7 +109,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -146,7 +146,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -175,7 +175,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -218,7 +218,7 @@ exports[`Storyshots Radio Set to error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -243,7 +243,7 @@ exports[`Storyshots Radio Set to error 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -280,7 +280,7 @@ exports[`Storyshots Radio Set to required 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"

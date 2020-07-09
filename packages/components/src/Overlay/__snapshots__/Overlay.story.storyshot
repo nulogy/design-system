@@ -15,10 +15,10 @@ exports[`Storyshots Overlay Dark 1`] = `
       Background content
     </p>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOYFJr"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOYFJr"
     >
       <div
-        class="Box-sc-1qu1edy-0 Card-sc-1vyc3zz-0 lfpbjM"
+        class="Box-xda4ls-0 Card-sc-1vyc3zz-0 lfpbjM"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -48,7 +48,7 @@ exports[`Storyshots Overlay Light (default) 1`] = `
       Background content
     </p>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 jYvdrA"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 Overlay-spdky8-0 jYvdrA"
     >
       Overlay content
     </div>

@@ -8,15 +8,15 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iQpQtI"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hHfqqr"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 hAwusC"
           height="[object Object]"
           width="100%"
         >
@@ -60,7 +60,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 kBVTzS"
               width="100%"
             >
               <div
@@ -89,7 +89,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -97,7 +97,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -107,10 +107,10 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -123,7 +123,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -131,7 +131,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -141,10 +141,10 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -166,7 +166,7 @@ exports[`Storyshots Pages/LoginPage Base 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
+        class="Box-xda4ls-0 cXItgw"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
@@ -191,15 +191,15 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iQpQtI"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hHfqqr"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 hAwusC"
           height="[object Object]"
           width="100%"
         >
@@ -243,7 +243,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 kBVTzS"
               width="100%"
             >
               <div
@@ -268,7 +268,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
             Additional Text
           </p>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
             role="alert"
             style="width:100%"
           >
@@ -289,7 +289,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               />
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 iDnpba"
+              class="Box-xda4ls-0 hoMyit"
             >
               text
             </div>
@@ -299,7 +299,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -307,7 +307,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -317,10 +317,10 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -333,7 +333,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -341,7 +341,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -351,10 +351,10 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -376,7 +376,7 @@ exports[`Storyshots Pages/LoginPage with error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
+        class="Box-xda4ls-0 cXItgw"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
@@ -401,15 +401,15 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iQpQtI"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hHfqqr"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 hAwusC"
           height="[object Object]"
           width="100%"
         >
@@ -453,7 +453,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 kBVTzS"
               width="100%"
             >
               <div
@@ -471,7 +471,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
             </div>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fzQnVq Alert-u8lbe-0 lbMrhW"
             role="alert"
             style="width:100%"
           >
@@ -492,7 +492,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               />
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 iDnpba"
+              class="Box-xda4ls-0 hoMyit"
             >
               text
             </div>
@@ -502,7 +502,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -510,7 +510,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -520,10 +520,10 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -536,7 +536,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -544,7 +544,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -554,10 +554,10 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -579,7 +579,7 @@ exports[`Storyshots Pages/LoginPage with error and no additional text 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
+        class="Box-xda4ls-0 cXItgw"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
@@ -604,15 +604,15 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iQpQtI"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hHfqqr"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 hAwusC"
           height="[object Object]"
           width="100%"
         >
@@ -656,7 +656,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 kBVTzS"
               width="100%"
             >
               <div
@@ -685,7 +685,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -693,7 +693,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -703,10 +703,10 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -719,7 +719,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -727,7 +727,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -737,10 +737,10 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -760,7 +760,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
             </button>
           </form>
           <div
-            class="Box-sc-1qu1edy-0 csERpy"
+            class="Box-xda4ls-0 iwMjsl"
           >
             <a
               class="Link-sc-1lpx3d0-0 gxbSxg"
@@ -774,7 +774,7 @@ exports[`Storyshots Pages/LoginPage with forgot password link 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
+        class="Box-xda4ls-0 cXItgw"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >
@@ -799,15 +799,15 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iQpQtI"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iQpQtI"
       width="100%"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hHfqqr"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hHfqqr"
         width="100%"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hAwusC"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 hAwusC"
           height="[object Object]"
           width="100%"
         >
@@ -851,7 +851,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </g>
             </svg>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 kBVTzS"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 kBVTzS"
               width="100%"
             >
               <div
@@ -879,7 +879,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
             style="width:100%"
           >
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -887,7 +887,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -897,10 +897,10 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -913,7 +913,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+              class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
             >
               <label
                 class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -921,7 +921,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                 style="display:block"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 ilQgHG"
+                  class="Box-xda4ls-0 biCpIl"
                   data-testid="field-label"
                 >
                   <span
@@ -931,10 +931,10 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
                   </span>
                 </div>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 hxUhcg"
+                    class="Box-xda4ls-0 erhvLv"
                     display="flex"
                   >
                     <input
@@ -948,7 +948,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
               </label>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 gnHfup"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 gnHfup"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -981,7 +981,7 @@ exports[`Storyshots Pages/LoginPage with remember me 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iZcQLf"
+        class="Box-xda4ls-0 cXItgw"
         style="border-top:solid 1px #e4e7eb"
         width="[object Object]"
       >

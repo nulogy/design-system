@@ -9,7 +9,7 @@ exports[`Storyshots PM/PMPagination default 1`] = `
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd PMPagination___StyledPagination-h94owo-0 hSgwGX"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd PMPagination___StyledPagination-h94owo-0 hSgwGX"
     >
       <button
         aria-label="Go to previous results"
