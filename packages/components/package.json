@@ -119,7 +119,8 @@
     "storybook-addon-performance": "^0.11.0",
     "styled-components": "^5.0.0",
     "svgi": "^1.1.0",
-    "wait-on": "3.2.0",
+    "ts-jest": "^26.1.1",
+    "ts-loader": "^7.0.5",
     "typescript-eslint": "^0.0.1-alpha.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^3.1.0"
@@ -151,7 +152,13 @@
   },
   "jest": {
     "transform": {
-      "^.+\\.jsx?$": "babel-jest"
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.js?$": "babel-jest",
+      "^.+\\.ts?$": "babel-jest",
+      "^.+\\.tsx?$": "babel-jest"
+    },
+    "compilerOptions": {
+      "module": "commonjs"
     },
     "moduleNameMapper": {
       "\\.(css|sass)$": "identity-obj-proxy"
