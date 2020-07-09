@@ -8,7 +8,8 @@ import {
   Select,
   Link,
   ListItem,
-  List
+  List,
+  Text
 } from "@nulogy/components";
 import Highlight from "react-highlight";
 import {
@@ -25,7 +26,16 @@ const options = [
   { value: "assigned", label: "Assigned to a line" }
 ];
 
-const propsRows = selectProps;
+const propsRows = [
+  ...selectProps,
+  {
+    name: "windowThreshold",
+    type: "number",
+    defaultValue: "300",
+    description:
+      "The number of option at which to use virtualization to improve performance of the select"
+  }
+];
 
 export default () => (
   <Layout>
@@ -37,6 +47,11 @@ export default () => (
       <IntroText>
         For making one selection from a large list of options.
       </IntroText>
+      <Text>
+        If you need to fetch options for the select as the interacts with the
+        select, please use the{" "}
+        <Link href="/components/async-select">Async Select</Link>.
+      </Text>
     </Intro>
     <DocSection>
       <Select
@@ -152,6 +167,9 @@ const options = [
       <List>
         <ListItem>
           <Link href="/components/form">Form</Link>
+        </ListItem>
+        <ListItem>
+          <Link href="/components/async-select">Async Select</Link>
         </ListItem>
       </List>
     </DocSection>

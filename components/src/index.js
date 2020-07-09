@@ -50,3 +50,4 @@ export { PMTable } from "./PMTable";
 export { PMPagination } from "./PMPagination";
 
 export { BrandedNavBar } from "./BrandedNavBar";
+export { AsyncSelect } from "./AsyncSelect";
