@@ -2,7 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Button, Input, PrimaryButton, Select } from "../index";
+import styled from "styled-components";
+import { Button, Input, PrimaryButton, Select, SelectOption } from "../index";
 import { Box } from "../Box";
 
 const errorList = ["Error message 1", "Error message 2"];
@@ -368,4 +369,42 @@ storiesOf("Select", module)
       <SelectWithManyOptions labelText="Select from many options:" />
       <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
     </Box>
-  ));
+  ))
+  .add("with custom option component", () => {
+    const Indicator = styled.span(() => ({
+      borderRadius: "25%",
+      background: "green",
+      lineHeight: "0",
+      display: "inline-block",
+      width: "10px",
+      height: "10px",
+      marginRight: "5px"
+    }));
+    const CustomOption = ({ children, ...props }) => {
+      const newChildren = (
+        <>
+          <Indicator />
+          {children}
+        </>
+      );
+      return <SelectOption {...props}>{newChildren}</SelectOption>;
+    };
+    return (
+      <>
+        <Box style={{ position: "relative", overflow: "hidden", width: "300px", height: "600px" }}>
+          <Select
+            defaultValue={["accepted"]}
+            noOptionsMessage={() => "No options"}
+            placeholder="Please select inventory status"
+            options={options}
+            components={{
+              Option: CustomOption
+            }}
+            multiselect
+            labelText="Inventory status"
+            menuPosition="fixed"
+          />
+        </Box>
+      </>
+    );
+  });

@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 import { Select } from "../Select";
 import { TimePickerStyles } from "./TimePickerStyles";
 import { Icon } from "../Icon";
-import SelectOption from "../Select/SelectOption";
+import { SelectOption } from "../Select/SelectOption";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { localizedFormat } from "../utils/localized-date-fns";
 

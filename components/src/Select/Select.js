@@ -7,7 +7,7 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "./customReactSelectStyles";
 import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
-import SelectOption from "./SelectOption";
+import { SelectOption } from "./SelectOption";
 
 const Control = props => {
   // eslint-disable-next-line react/prop-types
