@@ -7,7 +7,7 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
-import { SelectOption } from "./SelectOption";
+import { SelectOption } from "../Select/SelectOption";
 import { Control, MultiValue, ClearIndicator, SelectContainer, Menu, Input } from "../Select/SelectComponents";
 
 const extractValue = (options, isMulti) => {
