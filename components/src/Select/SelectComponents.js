@@ -18,7 +18,6 @@ export const Control = props => {
 export const MultiValue = props => {
   return (
     <div data-testid="select-multivalue">
-      <span>hi!</span>
       <selectComponents.MultiValue {...props} />
     </div>
   );

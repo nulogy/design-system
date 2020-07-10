@@ -107,7 +107,7 @@ const ReactSelect = ({
             ClearIndicator,
             SelectContainer,
             Menu,
-            Input: Input({ required }),
+            Input,
             ...components
           }}
           aria-label={ariaLabel}
