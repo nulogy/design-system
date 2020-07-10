@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.9.0](https://github.com/nulogy/design-system/compare/v3.8.0...v3.9.0) (2020-07-10)
+
+
+### Features
+
+* export SelectOption component for customizing options in the Select ([#714](https://github.com/nulogy/design-system/issues/714)) ([3230401](https://github.com/nulogy/design-system/commit/32304012846775f6deae5d3e3533bf023ff111ef))
+
+
+
+
+
 # 3.7.0 (2020-07-07)
 
 

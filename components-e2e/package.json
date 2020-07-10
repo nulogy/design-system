@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components-e2e",
-  "version": "3.6.1",
+  "version": "3.9.0",
   "description": "browser tests for components",
   "main": "index.js",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "webpack": ">=2"
   },
   "dependencies": {
-    "@nulogy/components": "^3.7.0"
+    "@nulogy/components": "^3.9.0"
   },
   "babelMacros": {
     "styledComponents": {
