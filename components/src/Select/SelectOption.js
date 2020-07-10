@@ -24,10 +24,10 @@ const StyledOption = styled.div(typography, ({ isSelected, isFocused, theme }) =
   }
 }));
 
-const SelectOption = props => (
-  <StyledOption {...props} cx={null} data-testid="select-option">
-    <components.Option {...props} />
-  </StyledOption>
-);
-
-export default SelectOption;
+export const SelectOption = props => {
+  return (
+    <StyledOption {...props} cx={null} data-testid="select-option">
+      <components.Option {...props} />
+    </StyledOption>
+  );
+};
