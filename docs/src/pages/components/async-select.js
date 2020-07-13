@@ -56,10 +56,10 @@ const propsRows = [
 export default () => (
   <Layout>
     <Helmet>
-      <title>Select</title>
+      <title>Async Select</title>
     </Helmet>
     <Intro>
-      <Title>Select</Title>
+      <Title>Async Select</Title>
       <IntroText>
         For making one selection from a large list of options and fetching new
         options as the user types.
@@ -68,7 +68,7 @@ export default () => (
     <DocSection>
       <AsyncSelect loadOptions={loadMatchingCountries} labelText="Country" />
       <Highlight className="js">
-        {`import { Select } from "@nulogy/components";
+        {`import { AsyncSelect } from "@nulogy/components";
 
 const loadMatchingCountries = async inputValue => {
   const data = await fetch('https://restcountries.eu/rest/v2/name/inputValue');
@@ -114,7 +114,7 @@ const loadMatchingCountries = async inputValue => {
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/select--select">
+          <Link href="https://storybook.nulogy.design/?path=/story/asyncselect--default">
             View in Storybook
           </Link>
         </ListItem>
