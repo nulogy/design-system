@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.10.0](https://github.com/nulogy/design-system/compare/v3.9.0...v3.10.0) (2020-07-13)
+
+
+### Features
+
+* add an async select component ([#715](https://github.com/nulogy/design-system/issues/715)) ([b66c010](https://github.com/nulogy/design-system/commit/b66c0100e3327d0fa2296ddc41f548205a49000a))
+
+
+
+
+
 # [3.9.0](https://github.com/nulogy/design-system/compare/v3.8.0...v3.9.0) (2020-07-10)
 
 **Note:** Version bump only for package @nulogy/docs
