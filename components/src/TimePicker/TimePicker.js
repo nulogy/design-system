@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 import { components } from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 
-import { Select } from "../Select";
-import { TimePickerStyles } from "./TimePickerStyles";
 import { Icon } from "../Icon";
+import { Input } from "../Input";
+import { List, ListItem } from "../List";
 import { SelectOption } from "../Select/SelectOption";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { localizedFormat } from "../utils/localized-date-fns";
@@ -96,7 +96,12 @@ const TimePicker = ({
   maxTime,
   defaultValue,
   onInputChange,
-  "aria-label": ariaLabel,
+  onBlur,
+  errorMessage,
+  errorList,
+  labelText,
+  // defaultValue,
+  // "aria-label": ariaLabel,
   ...props
 }) => {
   const [input, setInput] = useState("");
@@ -111,27 +116,29 @@ const TimePicker = ({
     return optionsList.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)));
   };
 
-  const overrideInternalFiltering = () => true;
   const visibleOptions = filteredOptions() || [];
 
   return (
     <>
-      <TimePickerStyles />
-      <Select
-        options={visibleOptions}
-        filterOption={overrideInternalFiltering}
-        defaultValue={defaultValue}
-        components={{ DropdownIndicator, Option: StyledSelectOption }}
-        aria-label={ariaLabel || t("select a time")}
-        onInputChange={(value, ...args) => {
+      <Input
+        labelText={labelText}
+        errorMessage={errorMessage}
+        errorList={errorList}
+        onChange={(value, ...args) => {
           setInput(value);
           if (onInputChange) {
             onInputChange(value, ...args);
           }
         }}
-        {...props}
+        onBlur={onBlur}
+        defaultValue={defaultValue}
         className={`nds-time-picker ${className || ""}`}
       />
+      <List listStyle="none" p={0}>
+        {visibleOptions.map(({ label }) => (
+          <ListItem>{label}</ListItem>
+        ))}
+      </List>
     </>
   );
 };
