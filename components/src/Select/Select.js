@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
+import PropTypes from "prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -119,8 +120,17 @@ const ReactSelect = ({
   );
 };
 
-ReactSelect.propTypes = SelectPropTypes;
+ReactSelect.propTypes = {
+  ...SelectPropTypes,
+  options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  windowThreshold: PropTypes.number,
+  filterOption: PropTypes.func
+};
 
-ReactSelect.defaultProps = SelectDefaultProps;
+ReactSelect.defaultProps = {
+  ...SelectDefaultProps,
+  windowThreshold: 300,
+  filterOption: undefined
+};
 
 export default ReactSelect;

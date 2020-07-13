@@ -9,7 +9,6 @@ const valueType = PropTypes.oneOfType([
 
 export const SelectPropTypes = {
   autocomplete: PropTypes.bool,
-  options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   errorMessage: PropTypes.string,
@@ -36,9 +35,7 @@ export const SelectPropTypes = {
   onMenuOpen: PropTypes.func,
   onMenuClose: PropTypes.func,
   onInputChange: PropTypes.func,
-  components: PropTypes.object,
-  windowThreshold: PropTypes.number,
-  filterOption: PropTypes.func
+  components: PropTypes.object
 };
 
 export const SelectDefaultProps = {
@@ -69,7 +66,5 @@ export const SelectDefaultProps = {
   onMenuOpen: undefined,
   onMenuClose: undefined,
   onInputChange: undefined,
-  components: undefined,
-  windowThreshold: 300,
-  filterOption: undefined
+  components: undefined
 };
