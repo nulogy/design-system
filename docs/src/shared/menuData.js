@@ -28,6 +28,10 @@ export const menuData = [
         href: "/components/alert"
       },
       {
+        name: "Async Select",
+        href: "/components/async-select"
+      },
+      {
         name: "Box",
         href: "/components/box"
       },

@@ -1,29 +1,15 @@
 import React, { useContext } from "react";
-import WindowedSelect from "react-windowed-select";
+import AsyncReactSelect from "react-select/async";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
 import PropTypes from "prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
-import customStyles from "./customReactSelectStyles";
-import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
-import { SelectOption } from "./SelectOption";
-import { Control, MultiValue, ClearIndicator, SelectContainer, Menu, Input } from "./SelectComponents";
-
-export const getOption = (options, value) => {
-  if (value == null || value === "") return value;
-
-  return options.find(o => o.value === value);
-};
-
-const getReactSelectValue = (options, input) => {
-  if (Array.isArray(input)) {
-    return input.map(i => getOption(options, i));
-  }
-
-  return getOption(options, input);
-};
+import customStyles from "../Select/customReactSelectStyles";
+import { SelectOption } from "../Select/SelectOption";
+import { Control, MultiValue, ClearIndicator, SelectContainer, Menu, Input } from "../Select/SelectComponents";
+import { SelectDefaultProps, SelectPropTypes } from "../Select/Select.type";
 
 const extractValue = (options, isMulti) => {
   if (options == null) return options;
@@ -35,9 +21,8 @@ const extractValue = (options, isMulti) => {
   }
 };
 
-const ReactSelect = ({
+const AsyncSelect = ({
   autocomplete,
-  options,
   labelText,
   required,
   requirementText,
@@ -66,33 +51,33 @@ const ReactSelect = ({
   onInputChange,
   components,
   "aria-label": ariaLabel,
-  windowThreshold,
-  filterOption
+  cacheOptions,
+  defaultOptions,
+  loadOptions
 }) => {
   const { t } = useTranslation();
   const themeContext = useContext(ThemeContext);
   return (
     <Field>
       <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-        <WindowedSelect
+        <AsyncReactSelect
           className={className}
           classNamePrefix={classNamePrefix}
           noOptionsMessage={noOptionsMessage}
+          inputValue={value}
+          defaultInputValue={defaultValue}
           placeholder={placeholder || t("select ...")}
-          options={options}
           labelText={labelText}
-          windowThreshold={windowThreshold}
-          styles={customStyles({ theme: themeContext, error, maxHeight, windowed: options.length > windowThreshold })}
+          styles={customStyles({ theme: themeContext, error, maxHeight, windowed: false })}
           isDisabled={disabled}
           isSearchable={autocomplete}
           aria-required={required}
+          required={required}
           aria-invalid={error}
           defaultMenuIsOpen={initialIsOpen}
           inputId={id}
           onBlur={onBlur}
           onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
-          defaultValue={getReactSelectValue(options, defaultValue)}
-          value={getReactSelectValue(options, value)}
           name={name}
           isMulti={multiselect}
           menuIsOpen={menuIsOpen}
@@ -112,7 +97,9 @@ const ReactSelect = ({
             ...components
           }}
           aria-label={ariaLabel}
-          filterOption={filterOption}
+          cacheOptions={cacheOptions}
+          defaultOptions={defaultOptions}
+          loadOptions={loadOptions}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </MaybeFieldLabel>
@@ -120,17 +107,17 @@ const ReactSelect = ({
   );
 };
 
-ReactSelect.propTypes = {
+AsyncSelect.propTypes = {
   ...SelectPropTypes,
-  options: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  windowThreshold: PropTypes.number,
-  filterOption: PropTypes.func
+  cacheOptions: PropTypes.bool,
+  defaultOptions: PropTypes.arrayOf(PropTypes.shape({})),
+  loadOptions: PropTypes.func.isRequired
 };
 
-ReactSelect.defaultProps = {
+AsyncSelect.defaultProps = {
   ...SelectDefaultProps,
-  windowThreshold: 300,
-  filterOption: undefined
+  cacheOptions: false,
+  defaultOptions: undefined
 };
 
-export default ReactSelect;
+export default AsyncSelect;

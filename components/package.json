@@ -88,6 +88,7 @@
     "puppeteer": "^3.3.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-select": "^3.1.0",
     "react-test-renderer": "^16.10",
     "rollup": "^2.7.3",
     "rollup-plugin-babel": "^4.4.0",

@@ -47,8 +47,9 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       boxSizing: "border-box",
       boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen, theme }),
       borderRadius: theme.radii.medium,
-      borderBottomLeftRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
-      borderBottomRightRadius: state.selectProps.menuIsOpen ? 0 : theme.radii.medium,
+      borderBottomLeftRadius: state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
+      borderBottomRightRadius:
+        state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
       "&:hover, &:focus": {
         borderColor: getBorderColor({
           errored: error,
