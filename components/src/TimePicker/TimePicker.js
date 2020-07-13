@@ -6,7 +6,10 @@ import { components } from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 
 import { Icon } from "../Icon";
-import { Input } from "../Input";
+import { Box } from "../Box";
+import { Field } from "../Form";
+import { InputField } from "../Input/InputField";
+import { InlineValidation } from "../Validation";
 import { List, ListItem } from "../List";
 import { SelectOption } from "../Select/SelectOption";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
@@ -88,6 +91,33 @@ const standardizeTime = input => {
   return fourDigitTime;
 };
 
+const TimePickerInput = styled(InputField)(({ theme }) => {
+  return {
+    "input:focus": {
+      borderBottomLeftRadius: "0px",
+      borderBottomRightRadius: "0px"
+    }
+  };
+});
+
+const TimePickerDropdown = styled(List)(({ theme }) => {
+  return {
+    position: "absolute",
+    top: "70px",
+    width: "100%",
+    background: theme.colors.white
+  };
+});
+
+const TimePickerOption = styled(ListItem)(({ theme }) => {
+  return {
+    padding: theme.space.x1,
+    "&:hover": {
+      background: theme.colors.lightBlue
+    }
+  };
+});
+
 const TimePicker = ({
   timeFormat,
   interval,
@@ -97,6 +127,7 @@ const TimePicker = ({
   defaultValue,
   onInputChange,
   onBlur,
+  onFocus,
   errorMessage,
   errorList,
   labelText,
@@ -105,6 +136,7 @@ const TimePicker = ({
   ...props
 }) => {
   const [input, setInput] = useState("");
+  const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const { locale } = useContext(LocaleContext);
   const { t } = useTranslation();
 
@@ -118,28 +150,53 @@ const TimePicker = ({
 
   const visibleOptions = filteredOptions() || [];
 
+  const hasError = !!(errorMessage || errorList);
+
+  const handleBlur = e => {
+    setDropdownIsOpen(false);
+    onBlur(e);
+  };
+
+  const handleFocus = e => {
+    setDropdownIsOpen(true);
+    onFocus(e);
+  };
+
   return (
-    <>
-      <Input
+    <Field className={`nds-time-picker ${className || ""}`} position="relative">
+      <TimePickerInput
         labelText={labelText}
-        errorMessage={errorMessage}
-        errorList={errorList}
+        error={hasError}
         onChange={(value, ...args) => {
           setInput(value);
           if (onInputChange) {
             onInputChange(value, ...args);
           }
         }}
-        onBlur={onBlur}
+        onBlur={handleBlur}
+        onFocus={handleFocus}
         defaultValue={defaultValue}
-        className={`nds-time-picker ${className || ""}`}
       />
-      <List listStyle="none" p={0}>
-        {visibleOptions.map(({ label }) => (
-          <ListItem>{label}</ListItem>
-        ))}
-      </List>
-    </>
+      {dropdownIsOpen && (
+        <TimePickerDropdown
+          listStyle="none"
+          p={0}
+          maxHeight="150px"
+          overflow="auto"
+          boxShadow="focus"
+          border="1px solid"
+          borderColor="blue"
+          borderBottomLeftRadius="medium"
+          borderBottomRightRadius="medium"
+          postion="absolute"
+        >
+          {visibleOptions.map(({ label }) => (
+            <TimePickerOption>{label}</TimePickerOption>
+          ))}
+        </TimePickerDropdown>
+      )}
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Field>
   );
 };
 
@@ -154,7 +211,9 @@ TimePicker.propTypes = {
   maxTime: PropTypes.string,
   defaultValue: PropTypes.string,
   locale: PropTypes.string,
-  "aria-label": PropTypes.string
+  "aria-label": PropTypes.string,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func
 };
 
 TimePicker.defaultProps = {
@@ -168,7 +227,9 @@ TimePicker.defaultProps = {
   maxTime: undefined,
   defaultValue: undefined,
   locale: undefined,
-  "aria-label": undefined
+  "aria-label": undefined,
+  onBlur: () => {},
+  onFocus: () => {}
 };
 
 export default TimePicker;
