@@ -20,7 +20,7 @@ const ZERO_DATE = new Date(Date.UTC(0));
 
 const getIntervalFromTime = (time, interval) => {
   if (time && interval) {
-    const timeArray = time.split(":").map(i => Number(i));
+    const timeArray = time.includes(":") ? time.split(":").map(i => Number(i)) : [Number(time), 0];
     const hours = timeArray[0];
     const minutes = timeArray[1];
     return (hours * 60) / interval + minutes / interval;
@@ -100,6 +100,10 @@ const TimePickerOption = styled.li(({ theme, isSelected }) => {
     color: isSelected ? theme.colors.white : theme.colors.black,
     "&:hover": {
       background: !isSelected && theme.colors.lightBlue
+    },
+    "&:focus": {
+      background: !isSelected && theme.colors.lightBlue,
+      outline: "none"
     }
   };
 });
@@ -147,7 +151,7 @@ const TimePicker = ({
   const hasError = !!(errorMessage || errorList);
 
   const handleBlur = e => {
-    setDropdownIsOpen(false);
+    setDropdownIsOpen(true);
     onBlur(e);
   };
 
@@ -172,6 +176,12 @@ const TimePicker = ({
     }
   }, []);
 
+  const handleKeyDown = (event, option) => {
+    if (event.keyCode === 13) {
+      handleOptionSelection(option);
+    }
+  };
+
   return (
     <Field className={`nds-time-picker ${className || ""}`} position="relative">
       <TimePickerInput
@@ -186,18 +196,24 @@ const TimePicker = ({
         }}
         onBlur={handleBlur}
         onFocus={handleFocus}
-        defaultValue={defaultValue}
         value={input}
         placeholder={placeholder}
         icon="queryBuilder"
         onClick={onClick}
       />
-      <TimePickerDropdown isOpen={dropdownIsOpen}>
+      <TimePickerDropdown isOpen={dropdownIsOpen} aria-expanded={dropdownIsOpen} role="list">
         {visibleOptions.map((option, i) => (
           <TimePickerOption
             ref={isClosestTime({ index: i }) ? onRefChange : undefined}
             isSelected={option.label === input}
-            onClick={() => handleOptionSelection(option)}
+            key={option.label}
+            data-name={option.label}
+            data-value={option.value}
+            tabIndex="0"
+            onClick={() => {
+              handleOptionSelection(option);
+            }}
+            onKeyDown={e => handleKeyDown(e, option)}
           >
             {option.label}
           </TimePickerOption>
