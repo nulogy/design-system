@@ -1,17 +1,12 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { components } from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 
-import { Icon } from "../Icon";
-import { Box } from "../Box";
 import { Field } from "../Form";
 import { InputField } from "../Input/InputField";
 import { InlineValidation } from "../Validation";
-import { List, ListItem } from "../List";
-import { SelectOption } from "../Select/SelectOption";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { localizedFormat } from "../utils/localized-date-fns";
 
@@ -22,32 +17,6 @@ const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 
 const ZERO_DATE = new Date(Date.UTC(0));
-
-const StyledTimeIcon = styled(Icon)(({ theme }) => ({
-  color: theme.colors.darkGrey,
-  "&:hover": {
-    color: theme.colors.darkGrey
-  }
-}));
-
-const StyledSelectOption = styled(SelectOption)(({ isSelected, theme }) => {
-  return {
-    background: isSelected ? theme.colors.darkBlue : null,
-    color: isSelected ? theme.colors.white : null,
-    fontWeight: theme.fontWeights.normal,
-    "&:hover": {
-      background: isSelected ? theme.colors.darkBlue : null
-    }
-  };
-});
-
-const DropdownIndicator = props => {
-  return (
-    <components.DropdownIndicator {...props}>
-      <StyledTimeIcon icon="queryBuilder" size="22px" />
-    </components.DropdownIndicator>
-  );
-};
 
 const getIntervalFromTime = (time, interval) => {
   const timeArray = time.split(":").map(i => Number(i));
@@ -100,18 +69,30 @@ const TimePickerInput = styled(InputField)(({ theme }) => {
   };
 });
 
-const TimePickerDropdown = styled(List)(({ theme }) => {
+const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
   return {
     position: "absolute",
     top: "70px",
     width: "100%",
-    background: theme.colors.white
+    background: theme.colors.white,
+    listStyle: "none",
+    margin: "0px",
+    padding: "0px",
+    maxHeight: "150px",
+    overflow: "auto",
+    boxShadow: theme.shadows.focus,
+    border: "1px solid",
+    borderColor: theme.colors.blue,
+    borderBottomLeftRadius: theme.radii.medium,
+    borderBottomRightRadius: theme.radii.medium,
+    display: isOpen ? "block" : "none"
   };
 });
 
-const TimePickerOption = styled(ListItem)(({ theme }) => {
+const TimePickerOption = styled.li(({ theme }) => {
   return {
     padding: theme.space.x1,
+    marginBottom: "0px",
     "&:hover": {
       background: theme.colors.lightBlue
     }
@@ -131,21 +112,31 @@ const TimePicker = ({
   errorMessage,
   errorList,
   labelText,
+  // value,
+  placeholder,
+  onClick,
   // defaultValue,
   // "aria-label": ariaLabel,
   ...props
 }) => {
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState(defaultValue);
+  const [scrollRef, setScrollRef] = useState(null);
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const { locale } = useContext(LocaleContext);
   const { t } = useTranslation();
 
+  useEffect(() => {
+    if (scrollRef && dropdownIsOpen) {
+      scrollRef.scrollIntoView({
+        behaviour: "smooth",
+        block: "center"
+      });
+    }
+  }, [scrollRef, dropdownIsOpen]);
+
   const filteredOptions = () => {
-    const inputHasMinutes = /[:][0-9]/.test(standardizeTime(input));
     const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
-    const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale) || [];
-    const optionsList = inputHasMinutes ? optionsByMinute : optionsAtInterval;
-    return optionsList.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)));
+    return optionsAtInterval;
   };
 
   const visibleOptions = filteredOptions() || [];
@@ -153,7 +144,7 @@ const TimePicker = ({
   const hasError = !!(errorMessage || errorList);
 
   const handleBlur = e => {
-    setDropdownIsOpen(false);
+    setDropdownIsOpen(true);
     onBlur(e);
   };
 
@@ -162,39 +153,51 @@ const TimePicker = ({
     onFocus(e);
   };
 
+  const handleOptionSelection = option => {
+    setInput(option.label);
+    setDropdownIsOpen(false);
+  };
+
+  const isClosestTime = ({ index }) => {
+    return getIntervalFromTime(input, interval) === index;
+  };
+
+  const onRefChange = React.useCallback(node => {
+    if (node) {
+      setScrollRef(node);
+    }
+  }, []);
+
   return (
     <Field className={`nds-time-picker ${className || ""}`} position="relative">
       <TimePickerInput
         labelText={labelText}
         error={hasError}
-        onChange={(value, ...args) => {
-          setInput(value);
+        onChange={e => {
+          const inputValue = e.currentTarget.value;
+          setInput(inputValue);
           if (onInputChange) {
-            onInputChange(value, ...args);
+            onInputChange(e);
           }
         }}
         onBlur={handleBlur}
         onFocus={handleFocus}
         defaultValue={defaultValue}
+        value={input}
+        placeholder={placeholder}
+        icon="queryBuilder"
+        onClick={onClick}
       />
-      {dropdownIsOpen && (
-        <TimePickerDropdown
-          listStyle="none"
-          p={0}
-          maxHeight="150px"
-          overflow="auto"
-          boxShadow="focus"
-          border="1px solid"
-          borderColor="blue"
-          borderBottomLeftRadius="medium"
-          borderBottomRightRadius="medium"
-          postion="absolute"
-        >
-          {visibleOptions.map(({ label }) => (
-            <TimePickerOption>{label}</TimePickerOption>
-          ))}
-        </TimePickerDropdown>
-      )}
+      <TimePickerDropdown isOpen={dropdownIsOpen}>
+        {visibleOptions.map((option, i) => (
+          <TimePickerOption
+            ref={isClosestTime({ index: i }) ? onRefChange : undefined}
+            onClick={() => handleOptionSelection(option)}
+          >
+            {option.label}
+          </TimePickerOption>
+        ))}
+      </TimePickerDropdown>
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </Field>
   );
@@ -213,7 +216,9 @@ TimePicker.propTypes = {
   locale: PropTypes.string,
   "aria-label": PropTypes.string,
   onBlur: PropTypes.func,
-  onFocus: PropTypes.func
+  onFocus: PropTypes.func,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.node
 };
 
 TimePicker.defaultProps = {
@@ -228,6 +233,8 @@ TimePicker.defaultProps = {
   defaultValue: undefined,
   locale: undefined,
   "aria-label": undefined,
+  errorMessage: undefined,
+  errorList: undefined,
   onBlur: () => {},
   onFocus: () => {}
 };
