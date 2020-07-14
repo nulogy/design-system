@@ -4,11 +4,12 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 
-import { Field } from "../Form";
 import { InputField } from "../Input/InputField";
 import { InlineValidation } from "../Validation";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { localizedFormat } from "../utils/localized-date-fns";
+import { DetectOutsideClick } from "../utils";
+import { Box } from "../Box";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 
@@ -67,7 +68,7 @@ const standardizeTime = input => {
   return input;
 };
 
-const TimePickerInput = styled(InputField)(({ theme }) => {
+const TimePickerInput = styled(InputField)(() => {
   return {
     "input:focus": {
       borderBottomLeftRadius: "0px",
@@ -131,19 +132,20 @@ const TimePicker = ({
   "aria-label": ariaLabel
 }) => {
   const [input, setInput] = useState(defaultValue);
-  const [scrollRef, setScrollRef] = useState(null);
+  const [currentOptionRef, setCurrentOptionRef] = useState(null);
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const { locale } = useContext(LocaleContext);
+  const [ref, setRef] = useState(null);
   const { t } = useTranslation();
 
   useEffect(() => {
-    if (scrollRef && dropdownIsOpen) {
-      scrollRef.scrollIntoView({
+    if (currentOptionRef && dropdownIsOpen) {
+      currentOptionRef.scrollIntoView({
         behaviour: "smooth",
         block: "center"
       });
     }
-  }, [scrollRef, dropdownIsOpen]);
+  }, [currentOptionRef, dropdownIsOpen]);
 
   const filteredOptions = () => {
     const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
@@ -164,8 +166,12 @@ const TimePicker = ({
   };
 
   const handleFocus = e => {
-    setDropdownIsOpen(true);
     onFocus(e);
+  };
+
+  const handleClickInput = e => {
+    onClick(e);
+    setDropdownIsOpen(true);
   };
 
   const handleOptionSelection = option => {
@@ -178,38 +184,59 @@ const TimePicker = ({
     return getIntervalFromTime(input, interval, minTime) === index;
   };
 
-  const onRefChange = React.useCallback(node => {
+  const onCurrentOptionRefChange = React.useCallback(node => {
     if (node) {
-      setScrollRef(node);
+      setCurrentOptionRef(node);
     }
   }, []);
+
+  const onRefChange = React.useCallback(node => {
+    if (node) {
+      setRef(node);
+    }
+  }, []);
+
+  const handleKeyDown = (event, option) => {
+    if (event.keyCode === 40) {
+      // key down
+      setDropdownIsOpen(true);
+    } else if (event.keyCode === 13) {
+      // enter
+      handleOptionSelection(option);
+    } else if (event.keyCode === 9) {
+      // tab
+      handleBlur(event);
+    }
+  };
 
   const handleInputChange = e => {
     const inputValue = e.currentTarget.value;
     setInput(inputValue);
     if (onInputChange) {
-      onInputChange(e);
+      onInputChange(inputValue);
     }
   };
 
   return (
-    <Field className={`nds-time-picker ${className || ""}`} position="relative">
+    <Box className={`nds-time-picker ${className || ""}`} position="relative" ref={onRefChange} width="130px">
       <TimePickerInput
         labelText={labelText}
         error={hasError}
         onChange={handleInputChange}
-        onBlur={handleBlur}
         onFocus={handleFocus}
         value={input}
         placeholder={placeholder}
         icon="queryBuilder"
-        onClick={onClick}
-        aria-label={ariaLabel || t("select a time")}
+        onClick={handleClickInput}
+        onKeyDown={e => handleKeyDown(e)}
+        aria-label={ariaLabel || t("Select a time")}
+        inputWidth="130px"
+        iconSize="20px"
       />
-      <TimePickerDropdown isOpen={dropdownIsOpen} aria-expanded={dropdownIsOpen} role="list">
+      <TimePickerDropdown isOpen={dropdownIsOpen} aria-expanded={dropdownIsOpen} role="listbox">
         {visibleOptions.map((option, i) => (
           <TimePickerOption
-            ref={isClosestTime({ index: i }) ? onRefChange : undefined}
+            ref={isClosestTime({ index: i }) ? onCurrentOptionRefChange : undefined}
             isSelected={standardizeTime(option.label) === standardizeTime(input)}
             key={option.label}
             data-name={option.label}
@@ -217,13 +244,15 @@ const TimePicker = ({
             onClick={() => {
               handleOptionSelection(option);
             }}
+            role="option"
           >
             {option.label}
           </TimePickerOption>
         ))}
       </TimePickerDropdown>
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-    </Field>
+      <DetectOutsideClick onClick={handleBlur} clickRef={[ref]} />
+    </Box>
   );
 };
 
@@ -237,7 +266,6 @@ TimePicker.propTypes = {
   minTime: PropTypes.string,
   maxTime: PropTypes.string,
   defaultValue: PropTypes.string,
-  locale: PropTypes.string,
   "aria-label": PropTypes.string,
   errorMessage: PropTypes.string,
   errorList: PropTypes.node,
@@ -257,7 +285,6 @@ TimePicker.defaultProps = {
   minTime: undefined,
   maxTime: undefined,
   defaultValue: undefined,
-  locale: undefined,
   "aria-label": undefined,
   errorMessage: undefined,
   errorList: undefined,
