@@ -68,19 +68,17 @@ const standardizeTime = input => {
   return input;
 };
 
-const TimePickerInput = styled(InputField)(() => {
-  return {
-    "input:focus": {
-      borderBottomLeftRadius: "0px",
-      borderBottomRightRadius: "0px"
-    }
-  };
-});
+const TimePickerInput = styled(InputField)(({ dropdownIsOpen }) => ({
+  ...(dropdownIsOpen && {
+    borderBottomLeftRadius: "0px",
+    borderBottomRightRadius: "0px"
+  })
+}));
 
 const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
   return {
     position: "absolute",
-    top: "70px",
+    top: "72px",
     width: "100%",
     background: theme.colors.white,
     listStyle: "none",
@@ -222,6 +220,7 @@ const TimePicker = ({
       <TimePickerInput
         labelText={labelText}
         error={hasError}
+        dropdownIsOpen={dropdownIsOpen}
         onChange={handleInputChange}
         onFocus={handleFocus}
         value={input}
