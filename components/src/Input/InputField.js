@@ -97,8 +97,15 @@ export const InputField = forwardRef(
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Flex alignItems="flex-start">
         <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
-        <Box position="relative" display="flex" flexGrow="1" ref={ref}>
-          <StyledInput aria-invalid={error} aria-required={required} required={required} error={error} {...props} />
+        <Box position="relative" display="flex" flexGrow="1">
+          <StyledInput
+            aria-invalid={error}
+            aria-required={required}
+            required={required}
+            error={error}
+            ref={ref}
+            {...props}
+          />
           {icon && <StyledInputIcon icon={icon} size={NDSTheme.space.x2} />}
         </Box>
         <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
