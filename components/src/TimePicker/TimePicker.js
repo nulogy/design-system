@@ -19,10 +19,13 @@ const MILITARY_TIME_FORMAT = "HH:mm";
 const ZERO_DATE = new Date(Date.UTC(0));
 
 const getIntervalFromTime = (time, interval) => {
-  const timeArray = time.split(":").map(i => Number(i));
-  const hours = timeArray[0];
-  const minutes = timeArray[1];
-  return (hours * 60) / interval + minutes / interval;
+  if (time && interval) {
+    const timeArray = time.split(":").map(i => Number(i));
+    const hours = timeArray[0];
+    const minutes = timeArray[1];
+    return (hours * 60) / interval + minutes / interval;
+  }
+  return null;
 };
 
 const getTimeIntervals = interval => {
