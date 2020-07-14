@@ -57,10 +57,13 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
 };
 
 const standardizeTime = input => {
-  const standardizedInput = input.toUpperCase().replace(/ /g, "");
-  const oneDigitHourRe = /^[0-9][:]/;
-  const fourDigitTime = oneDigitHourRe.test(standardizedInput) ? `0${standardizedInput}` : standardizedInput;
-  return fourDigitTime;
+  if (input) {
+    const standardizedInput = input.toUpperCase().replace(/ /g, "");
+    const oneDigitHourRe = /^[0-9][:]/;
+    const fourDigitTime = oneDigitHourRe.test(standardizedInput) ? `0${standardizedInput}` : standardizedInput;
+    return fourDigitTime;
+  }
+  return input;
 };
 
 const TimePickerInput = styled(InputField)(({ theme }) => {
@@ -205,7 +208,7 @@ const TimePicker = ({
         {visibleOptions.map((option, i) => (
           <TimePickerOption
             ref={isClosestTime({ index: i }) ? onRefChange : undefined}
-            isSelected={option.label === input}
+            isSelected={standardizeTime(option.label) === standardizeTime(input)}
             key={option.label}
             data-name={option.label}
             data-value={option.value}
