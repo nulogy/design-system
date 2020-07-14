@@ -78,7 +78,7 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
     listStyle: "none",
     margin: "0px",
     padding: "0px",
-    maxHeight: "150px",
+    maxHeight: "200px",
     overflow: "auto",
     boxShadow: theme.shadows.focus,
     border: "1px solid",
@@ -89,12 +89,14 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
   };
 });
 
-const TimePickerOption = styled.li(({ theme }) => {
+const TimePickerOption = styled.li(({ theme, isSelected }) => {
   return {
     padding: theme.space.x1,
     marginBottom: "0px",
+    background: isSelected ? theme.colors.darkBlue : theme.colors.white,
+    color: isSelected ? theme.colors.white : theme.colors.black,
     "&:hover": {
-      background: theme.colors.lightBlue
+      background: !isSelected && theme.colors.lightBlue
     }
   };
 });
@@ -112,11 +114,9 @@ const TimePicker = ({
   errorMessage,
   errorList,
   labelText,
-  // value,
   placeholder,
   onClick,
-  // defaultValue,
-  // "aria-label": ariaLabel,
+  onSelect,
   ...props
 }) => {
   const [input, setInput] = useState(defaultValue);
@@ -144,7 +144,7 @@ const TimePicker = ({
   const hasError = !!(errorMessage || errorList);
 
   const handleBlur = e => {
-    setDropdownIsOpen(true);
+    setDropdownIsOpen(false);
     onBlur(e);
   };
 
@@ -156,6 +156,7 @@ const TimePicker = ({
   const handleOptionSelection = option => {
     setInput(option.label);
     setDropdownIsOpen(false);
+    onSelect(option);
   };
 
   const isClosestTime = ({ index }) => {
@@ -192,6 +193,7 @@ const TimePicker = ({
         {visibleOptions.map((option, i) => (
           <TimePickerOption
             ref={isClosestTime({ index: i }) ? onRefChange : undefined}
+            isSelected={option.label === input}
             onClick={() => handleOptionSelection(option)}
           >
             {option.label}
@@ -215,10 +217,13 @@ TimePicker.propTypes = {
   defaultValue: PropTypes.string,
   locale: PropTypes.string,
   "aria-label": PropTypes.string,
+  errorMessage: PropTypes.string,
+  errorList: PropTypes.node,
+  labelText: PropTypes.string,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  errorMessage: PropTypes.string,
-  errorList: PropTypes.node
+  onClick: PropTypes.func,
+  onSelect: PropTypes.func
 };
 
 TimePicker.defaultProps = {
@@ -235,6 +240,9 @@ TimePicker.defaultProps = {
   "aria-label": undefined,
   errorMessage: undefined,
   errorList: undefined,
+  labelText: undefined,
+  onClick: () => {},
+  onSelect: () => {},
   onBlur: () => {},
   onFocus: () => {}
 };
