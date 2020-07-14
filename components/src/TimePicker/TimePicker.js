@@ -18,12 +18,13 @@ const MILITARY_TIME_FORMAT = "HH:mm";
 
 const ZERO_DATE = new Date(Date.UTC(0));
 
-const getIntervalFromTime = (time, interval) => {
+const getIntervalFromTime = (time, interval, minTime) => {
+  const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
   if (time && interval) {
     const timeArray = time.includes(":") ? time.split(":").map(i => Number(i)) : [Number(time), 0];
     const hours = timeArray[0];
     const minutes = timeArray[1];
-    return (hours * 60) / interval + minutes / interval;
+    return Math.round((hours * 60) / interval + minutes / interval) - minInterval;
   }
   return null;
 };
@@ -95,7 +96,7 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
   };
 });
 
-const TimePickerOption = styled.li(({ theme, isSelected }) => {
+const TimePickerOption = styled.li(({ theme, isSelected, isFocused }) => {
   return {
     padding: theme.space.x1,
     marginBottom: "0px",
@@ -104,10 +105,10 @@ const TimePickerOption = styled.li(({ theme, isSelected }) => {
     "&:hover": {
       background: !isSelected && theme.colors.lightBlue
     },
-    "&:focus": {
+    ...(isFocused && {
       background: !isSelected && theme.colors.lightBlue,
       outline: "none"
-    }
+    })
   };
 });
 
@@ -126,8 +127,8 @@ const TimePicker = ({
   labelText,
   placeholder,
   onClick,
-  onSelect,
-  ...props
+  onChange,
+  "aria-label": ariaLabel
 }) => {
   const [input, setInput] = useState(defaultValue);
   const [scrollRef, setScrollRef] = useState(null);
@@ -154,8 +155,12 @@ const TimePicker = ({
   const hasError = !!(errorMessage || errorList);
 
   const handleBlur = e => {
-    setDropdownIsOpen(true);
     onBlur(e);
+    setDropdownIsOpen(false);
+    const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale);
+    if (optionsByMinute.filter) {
+      setInput(optionsByMinute.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)))[0].label);
+    }
   };
 
   const handleFocus = e => {
@@ -166,11 +171,11 @@ const TimePicker = ({
   const handleOptionSelection = option => {
     setInput(option.label);
     setDropdownIsOpen(false);
-    onSelect(option);
+    onChange(option);
   };
 
   const isClosestTime = ({ index }) => {
-    return getIntervalFromTime(input, interval) === index;
+    return getIntervalFromTime(input, interval, minTime) === index;
   };
 
   const onRefChange = React.useCallback(node => {
@@ -179,9 +184,11 @@ const TimePicker = ({
     }
   }, []);
 
-  const handleKeyDown = (event, option) => {
-    if (event.keyCode === 13) {
-      handleOptionSelection(option);
+  const handleInputChange = e => {
+    const inputValue = e.currentTarget.value;
+    setInput(inputValue);
+    if (onInputChange) {
+      onInputChange(e);
     }
   };
 
@@ -190,19 +197,14 @@ const TimePicker = ({
       <TimePickerInput
         labelText={labelText}
         error={hasError}
-        onChange={e => {
-          const inputValue = e.currentTarget.value;
-          setInput(inputValue);
-          if (onInputChange) {
-            onInputChange(e);
-          }
-        }}
+        onChange={handleInputChange}
         onBlur={handleBlur}
         onFocus={handleFocus}
         value={input}
         placeholder={placeholder}
         icon="queryBuilder"
         onClick={onClick}
+        aria-label={ariaLabel || t("select a time")}
       />
       <TimePickerDropdown isOpen={dropdownIsOpen} aria-expanded={dropdownIsOpen} role="list">
         {visibleOptions.map((option, i) => (
@@ -212,11 +214,9 @@ const TimePicker = ({
             key={option.label}
             data-name={option.label}
             data-value={option.value}
-            tabIndex="0"
             onClick={() => {
               handleOptionSelection(option);
             }}
-            onKeyDown={e => handleKeyDown(e, option)}
           >
             {option.label}
           </TimePickerOption>
@@ -244,8 +244,7 @@ TimePicker.propTypes = {
   labelText: PropTypes.string,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
-  onClick: PropTypes.func,
-  onSelect: PropTypes.func
+  onClick: PropTypes.func
 };
 
 TimePicker.defaultProps = {
@@ -264,7 +263,6 @@ TimePicker.defaultProps = {
   errorList: undefined,
   labelText: undefined,
   onClick: () => {},
-  onSelect: () => {},
   onBlur: () => {},
   onFocus: () => {}
 };
