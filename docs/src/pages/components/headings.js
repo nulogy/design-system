@@ -46,9 +46,10 @@ export default () => (
     <DocSection>
       <Heading1>Heading 1</Heading1>
       <Heading2>Heading 2</Heading2>
-      <Heading3>Heading 1</Heading3>
+      <Heading3>Heading 3</Heading3>
+      <Heading3>Heading 4</Heading3>
       <Highlight className="js">
-        {`import { Heading1, Heading2, Heading4 } from "@nulogy/components";
+        {`import { Heading1, Heading2, Heading3, Heading4 } from "@nulogy/components";
 
 <Heading1>Heading 1</Heading1>
 <Heading2>Heading 2</Heading2>
