@@ -22,7 +22,6 @@ const ZERO_DATE = new Date(Date.UTC(0));
 const getIntervalFromTime = (time, interval, minTime) => {
   const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
   if (time && interval) {
-    console.log(time);
     const timeArray = time.includes(":") ? time.split(":").map(i => Number(i)) : [Number(time), 0];
     const hours = timeArray[0];
     const minutes = timeArray[1];
@@ -165,13 +164,17 @@ const TimePicker = ({
     onBlur(e);
     setDropdownIsOpen(false);
     const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale);
-    const matchingTimes = optionsByMinute.filter(({ label }) =>
-      standardizeTime(label).includes(standardizeTime(input))
+    const matchingTimes = optionsByMinute.filter(
+      ({ label, value }) =>
+        standardizeTime(label).includes(standardizeTime(input)) ||
+        standardizeTime(value).includes(standardizeTime(input))
     );
     if (matchingTimes.length) {
       setInput(matchingTimes[0].label);
-    } else {
+    } else if (dropdownOptions[matchingIndex]) {
       setInput(dropdownOptions[matchingIndex].label);
+    } else {
+      setInput(dropdownOptions[0].label);
     }
   };
 

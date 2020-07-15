@@ -44,6 +44,7 @@ describe("Timepicker", () => {
         getDropdownComponent().should("not.be.visible");
       });
     });
+
     describe("scrolls to current time", () => {
       it("shows matching times by interval", () => {
         getInput().click();
@@ -87,6 +88,8 @@ describe("Timepicker", () => {
           .contains("04:45 AM")
           .should("not.be.visible");
       });
+    });
+    describe("allows typing in a time", () => {
       it("sets the input to the exact time that was entered", () => {
         getInput().click();
         cy.focused().type("3:18 PM");
@@ -106,6 +109,18 @@ describe("Timepicker", () => {
         cy.focused().tab();
         getInput().should("have.value", "11:16 PM");
       });
+      it("uses first value when time in invalid", () => {
+        getInput().click();
+        cy.focused().type("ssss");
+        cy.focused().tab();
+        getInput().should("have.value", "12:00 AM");
+      });
+      it("converts 24 hour time", () => {
+        getInput().click();
+        cy.focused().type("23:31");
+        cy.focused().tab();
+        getInput().should("have.value", "11:31 PM");
+      });
     });
   });
 
@@ -113,7 +128,7 @@ describe("Timepicker", () => {
     beforeEach(() => {
       cy.renderFromStorybook("timepicker--with-custom-time-format");
     });
-    describe("suggests times", () => {
+    describe("scrolls to closest times", () => {
       it("shows matching times by interval", () => {
         getInput().click();
         cy.focused().type(
@@ -154,11 +169,40 @@ describe("Timepicker", () => {
     });
   });
 
+  describe("30 minute time interval", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("timepicker--with-custom-time-interval");
+    });
+    describe("scrolls to closest times", () => {
+      it("shows matching times by interval", () => {
+        getInput().click();
+        cy.focused().type(
+          "{backspace}{backspace}{backspace}{backspace}{backspace}5:"
+        );
+        getDropdownOptions()
+          .contains("04:00")
+          .should("be.visible");
+        getDropdownOptions()
+          .contains("04:30")
+          .should("be.visible");
+        getDropdownOptions()
+          .contains("05:00")
+          .should("be.visible");
+        getDropdownOptions()
+          .contains("05:30")
+          .should("be.visible");
+        getDropdownOptions()
+          .contains("06:00")
+          .should("be.visible");
+      });
+    });
+  });
+
   describe("min and max times", () => {
     beforeEach(() => {
       cy.renderFromStorybook("timepicker--with-min-and-max-time");
     });
-    describe("suggests times within the min and max time", () => {
+    describe("scrolls to closest times within the min and max time", () => {
       it("shows only options after the min time", () => {
         getInput().click();
         cy.focused().type("8:");
@@ -191,6 +235,32 @@ describe("Timepicker", () => {
         getDropdownOptions()
           .contains("09:45 AM")
           .should("be.visible");
+      });
+    });
+    describe("allows typing in a time", () => {
+      it("ignores spaces in the time input", () => {
+        getInput().click();
+        cy.focused().type("3 : 2");
+        cy.focused().tab();
+        getInput().should("have.value", "03:20 PM");
+      });
+      it("uses min value when time is invalid", () => {
+        getInput().click();
+        cy.focused().type("ssss");
+        cy.focused().tab();
+        getInput().should("have.value", "09:00 AM");
+      });
+      it("uses min value when time is out of bounds", () => {
+        getInput().click();
+        cy.focused().type("23:31");
+        cy.focused().tab();
+        getInput().should("have.value", "09:00 AM");
+      });
+      it("can type in max time", () => {
+        getInput().click();
+        cy.focused().type("9:00 PM");
+        cy.focused().tab();
+        getInput().should("have.value", "09:00 PM");
       });
     });
   });
