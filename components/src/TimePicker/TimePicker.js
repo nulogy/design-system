@@ -25,8 +25,12 @@ const getIntervalFromTime = (time, interval, minTime) => {
     const timeArray = time.includes(":") ? time.split(":").map(i => Number(i)) : [Number(time), 0];
     const hours = timeArray[0];
     const minutes = timeArray[1];
-    return Math.round((hours * 60) / interval + minutes / interval) - minInterval;
+    const nearestIntervalAM = Math.round((hours * 60) / interval + minutes / interval) - minInterval;
+    const nearestIntervalPM = Math.round(((hours + 12) * 60) / interval + minutes / interval) - minInterval;
+    // eslint-disable-next-line no-nested-ternary
+    return nearestIntervalAM >= 0 ? nearestIntervalAM : nearestIntervalPM >= 0 ? nearestIntervalPM : 0;
   }
+
   return null;
 };
 
@@ -178,10 +182,6 @@ const TimePicker = ({
     onChange(option);
   };
 
-  const isClosestTime = ({ index }) => {
-    return getIntervalFromTime(input, interval, minTime) === index;
-  };
-
   const onCurrentOptionRefChange = React.useCallback(node => {
     if (node) {
       setCurrentOptionRef(node);
@@ -215,8 +215,16 @@ const TimePicker = ({
     }
   };
 
+  const matchingIndex = getIntervalFromTime(input, interval, minTime);
+
   return (
-    <Box className={`nds-time-picker ${className || ""}`} position="relative" ref={onRefChange} width="130px">
+    <Box
+      className={`nds-time-picker ${className || ""}`}
+      position="relative"
+      ref={onRefChange}
+      width="130px"
+      data-testid="select-container"
+    >
       <TimePickerInput
         labelText={labelText}
         error={hasError}
@@ -231,11 +239,17 @@ const TimePicker = ({
         aria-label={ariaLabel || t("Select a time")}
         inputWidth="130px"
         iconSize="20px"
+        data-testid="select-input"
       />
-      <TimePickerDropdown isOpen={dropdownIsOpen} aria-expanded={dropdownIsOpen} role="listbox">
+      <TimePickerDropdown
+        isOpen={dropdownIsOpen}
+        aria-expanded={dropdownIsOpen}
+        role="listbox"
+        data-testid="select-dropdown"
+      >
         {visibleOptions.map((option, i) => (
           <TimePickerOption
-            ref={isClosestTime({ index: i }) ? onCurrentOptionRefChange : undefined}
+            ref={matchingIndex === i ? onCurrentOptionRefChange : undefined}
             isSelected={standardizeTime(option.label) === standardizeTime(input)}
             key={option.label}
             data-name={option.label}
@@ -244,6 +258,7 @@ const TimePicker = ({
               handleOptionSelection(option);
             }}
             role="option"
+            data-testid="select-option"
           >
             {option.label}
           </TimePickerOption>

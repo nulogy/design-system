@@ -101,7 +101,7 @@ class SelectWithState extends React.Component {
 storiesOf("Select", module)
   .add("Select", () => (
     <Select
-      placeholder="Please select inventory status"
+      placeholder={" "}
       onChange={action("selection changed")}
       onBlur={action("blurred")}
       className="Select"
