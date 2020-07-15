@@ -22,6 +22,7 @@ const ZERO_DATE = new Date(Date.UTC(0));
 const getIntervalFromTime = (time, interval, minTime) => {
   const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
   if (time && interval) {
+    console.log(time);
     const timeArray = time.includes(":") ? time.split(":").map(i => Number(i)) : [Number(time), 0];
     const hours = timeArray[0];
     const minutes = timeArray[1];
@@ -149,12 +150,14 @@ const TimePicker = ({
     }
   }, [currentOptionRef, dropdownIsOpen]);
 
-  const filteredOptions = () => {
+  const matchingIndex = getIntervalFromTime(input, interval, minTime);
+
+  const getDropdownOptions = () => {
     const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
     return optionsAtInterval;
   };
 
-  const visibleOptions = filteredOptions() || [];
+  const dropdownOptions = getDropdownOptions() || [];
 
   const hasError = !!(errorMessage || errorList);
 
@@ -162,8 +165,13 @@ const TimePicker = ({
     onBlur(e);
     setDropdownIsOpen(false);
     const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale);
-    if (optionsByMinute.filter) {
-      setInput(optionsByMinute.filter(({ label }) => standardizeTime(label).includes(standardizeTime(input)))[0].label);
+    const matchingTimes = optionsByMinute.filter(({ label }) =>
+      standardizeTime(label).includes(standardizeTime(input))
+    );
+    if (matchingTimes.length) {
+      setInput(matchingTimes[0].label);
+    } else {
+      setInput(dropdownOptions[matchingIndex].label);
     }
   };
 
@@ -194,13 +202,10 @@ const TimePicker = ({
     }
   }, []);
 
-  const handleKeyDown = (event, option) => {
+  const handleKeyDown = event => {
     if (event.keyCode === 40) {
       // key down
       setDropdownIsOpen(true);
-    } else if (event.keyCode === 13) {
-      // enter
-      handleOptionSelection(option);
     } else if (event.keyCode === 9) {
       // tab
       handleBlur(event);
@@ -214,8 +219,6 @@ const TimePicker = ({
       onInputChange(inputValue);
     }
   };
-
-  const matchingIndex = getIntervalFromTime(input, interval, minTime);
 
   return (
     <Box
@@ -247,7 +250,7 @@ const TimePicker = ({
         role="listbox"
         data-testid="select-dropdown"
       >
-        {visibleOptions.map((option, i) => (
+        {dropdownOptions.map((option, i) => (
           <TimePickerOption
             ref={matchingIndex === i ? onCurrentOptionRefChange : undefined}
             isSelected={standardizeTime(option.label) === standardizeTime(input)}
