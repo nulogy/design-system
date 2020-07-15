@@ -19,12 +19,6 @@ describe("Timepicker", () => {
           .first()
           .should("be.visible");
       });
-
-      // it("can close the dropdown on click outside", () => {
-      //   getInput().click();
-      //   cy.clickOutsideElement();
-      //   getDropdownOptions().should("not.be.visible");
-      // });
     });
 
     describe("selects a time", () => {

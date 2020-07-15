@@ -10,6 +10,7 @@ import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { localizedFormat } from "../utils/localized-date-fns";
 import { DetectOutsideClick } from "../utils";
 import { Box } from "../Box";
+import { keyCodes } from "../constants";
 
 const DEFAULT_TIME_FORMAT = "hh:mm aa";
 
@@ -206,10 +207,10 @@ const TimePicker = ({
   }, []);
 
   const handleKeyDown = event => {
-    if (event.keyCode === 40) {
+    if (event.keyCode === keyCodes.DOWN) {
       // key down
       setDropdownIsOpen(true);
-    } else if (event.keyCode === 9) {
+    } else if (event.keyCode === keyCodes.TAB) {
       // tab
       handleBlur(event);
     }
