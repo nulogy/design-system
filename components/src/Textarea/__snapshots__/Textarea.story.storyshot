@@ -20,7 +20,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Label
           </span>
@@ -58,7 +58,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Label
           </span>
@@ -95,7 +95,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Label
           </span>
@@ -148,7 +148,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Label
           </span>
@@ -186,7 +186,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Label
           </span>
@@ -214,7 +214,7 @@ exports[`Storyshots Textarea set to required 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        class="Text-sc-1wu7vpu-0-h2 kkbjnI"
         font-size="heading2"
         font-weight="normal"
       >
@@ -233,7 +233,7 @@ exports[`Storyshots Textarea set to required 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Label
             </span>
@@ -277,7 +277,7 @@ exports[`Storyshots Textarea with error list 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Label
           </span>
@@ -363,7 +363,7 @@ exports[`Storyshots Textarea with error message 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Label
           </span>

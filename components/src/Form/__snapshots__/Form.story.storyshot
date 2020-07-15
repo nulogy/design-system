@@ -11,7 +11,7 @@ exports[`Storyshots Form Demo form 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        class="Text-sc-1wu7vpu-0-h2 kkbjnI"
         font-size="heading2"
         font-weight="normal"
       >
@@ -88,7 +88,7 @@ exports[`Storyshots Form Demo form 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 gmYEa"
           font-size="heading3"
           font-weight="medium"
         >
@@ -107,7 +107,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Project
               </span>
@@ -143,7 +143,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Project description
               </span>
@@ -192,7 +192,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Project status
               </span>
@@ -289,7 +289,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Item code
               </span>
@@ -357,7 +357,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Eaches expected on Job
               </span>
@@ -393,7 +393,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Eaches remaining on Project
               </span>
@@ -430,7 +430,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Scheduled start
               </span>
@@ -466,7 +466,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Scheduled end
               </span>
@@ -803,7 +803,7 @@ exports[`Storyshots Form Demo form 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 gmYEa"
           font-size="heading3"
           font-weight="medium"
         >
@@ -822,7 +822,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Item
               </span>
@@ -890,7 +890,7 @@ exports[`Storyshots Form Demo form 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Quantity
               </span>
@@ -977,7 +977,7 @@ exports[`Storyshots Form Form 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        class="Text-sc-1wu7vpu-0-h2 kkbjnI"
         font-size="heading2"
         font-weight="normal"
       >
@@ -996,7 +996,7 @@ exports[`Storyshots Form Form 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Name
             </span>
@@ -1031,7 +1031,7 @@ exports[`Storyshots Form Form 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Date of birth
             </span>
@@ -1081,7 +1081,7 @@ exports[`Storyshots Form Form 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Place of birth
             </span>
@@ -1126,7 +1126,7 @@ exports[`Storyshots Form With form sections 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        class="Text-sc-1wu7vpu-0-h2 kkbjnI"
         font-size="heading2"
         font-weight="normal"
       >
@@ -1136,7 +1136,7 @@ exports[`Storyshots Form With form sections 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 gmYEa"
           font-size="heading3"
           font-weight="medium"
         >
@@ -1155,7 +1155,7 @@ exports[`Storyshots Form With form sections 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Name
               </span>
@@ -1190,7 +1190,7 @@ exports[`Storyshots Form With form sections 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Date of birth
               </span>
@@ -1240,7 +1240,7 @@ exports[`Storyshots Form With form sections 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Place of birth
               </span>
@@ -1274,7 +1274,7 @@ exports[`Storyshots Form With form sections 1`] = `
         class="FormSection-sc-5yud6c-1 cJYtnA"
       >
         <legend
-          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+          class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 gmYEa"
           font-size="heading3"
           font-weight="medium"
         >
@@ -1293,7 +1293,7 @@ exports[`Storyshots Form With form sections 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Gender
               </span>
@@ -1328,7 +1328,7 @@ exports[`Storyshots Form With form sections 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Occupation
               </span>
@@ -1367,7 +1367,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
       class="Form-n70q8u-0 laLzBn"
     >
       <h2
-        class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+        class="Text-sc-1wu7vpu-0-h2 kkbjnI"
         font-size="heading2"
         font-weight="normal"
       >
@@ -1389,7 +1389,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Name
               </span>
@@ -1424,7 +1424,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Date of birth
               </span>
@@ -1474,7 +1474,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Place of birth
               </span>
@@ -1520,7 +1520,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Gender
               </span>
@@ -1555,7 +1555,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Occupation
               </span>
@@ -1606,7 +1606,7 @@ exports[`Storyshots Form Without title 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Name
             </span>
@@ -1641,7 +1641,7 @@ exports[`Storyshots Form Without title 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Date of birth
             </span>
@@ -1691,7 +1691,7 @@ exports[`Storyshots Form Without title 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Place of birth
             </span>

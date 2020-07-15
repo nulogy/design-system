@@ -159,7 +159,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
           class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            class="Text-sc-1wu7vpu-0-h1 fJjfOe"
             font-size="heading1"
             font-weight="light"
           >
@@ -208,7 +208,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fZffbF"
+                class="Text-sc-1wu7vpu-0-h2 enMeMy"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -348,7 +348,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                class="Text-sc-1wu7vpu-0-h2 jglqIU"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -603,7 +603,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                class="Text-sc-1wu7vpu-0-h2 jglqIU"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -730,7 +730,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="Text-sc-1wu7vpu-0-h3 ejAgjT"
+                class="Text-sc-1wu7vpu-0-h3 dECdjU"
                 font-size="heading3"
                 font-weight="medium"
               >
@@ -1009,7 +1009,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             </button>
           </div>
           <h1
-            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            class="Text-sc-1wu7vpu-0-h1 fJjfOe"
             font-size="heading1"
             font-weight="light"
           >
@@ -1058,7 +1058,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fZffbF"
+                class="Text-sc-1wu7vpu-0-h2 enMeMy"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -1198,7 +1198,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                class="Text-sc-1wu7vpu-0-h2 jglqIU"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -1453,7 +1453,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                class="Text-sc-1wu7vpu-0-h2 jglqIU"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -1580,7 +1580,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="Text-sc-1wu7vpu-0-h3 ejAgjT"
+                class="Text-sc-1wu7vpu-0-h3 dECdjU"
                 font-size="heading3"
                 font-weight="medium"
               >
@@ -1626,7 +1626,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
             class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 iSVwmz"
+              class="Text-sc-1wu7vpu-0-h2 fVXpPw"
               font-size="heading2"
               font-weight="normal"
             >
@@ -1826,7 +1826,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
           class="Box-sc-1qu1edy-0 jXTIl"
         >
           <h1
-            class="Text-sc-1wu7vpu-0-h1 qNyVx"
+            class="Text-sc-1wu7vpu-0-h1 fJjfOe"
             font-size="heading1"
             font-weight="light"
           >
@@ -1875,7 +1875,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fZffbF"
+                class="Text-sc-1wu7vpu-0-h2 enMeMy"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -2015,7 +2015,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 cSRExr"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                class="Text-sc-1wu7vpu-0-h2 jglqIU"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -2270,7 +2270,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 EBPVx"
             >
               <h2
-                class="Text-sc-1wu7vpu-0-h2 fXwaFz"
+                class="Text-sc-1wu7vpu-0-h2 jglqIU"
                 font-size="heading2"
                 font-weight="normal"
               >
@@ -2397,7 +2397,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Box-sc-1qu1edy-0 cEnpFJ"
             >
               <h3
-                class="Text-sc-1wu7vpu-0-h3 ejAgjT"
+                class="Text-sc-1wu7vpu-0-h3 dECdjU"
                 font-size="heading3"
                 font-weight="medium"
               >
@@ -2443,7 +2443,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
             class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ixsBzc"
           >
             <h2
-              class="Text-sc-1wu7vpu-0-h2 iSVwmz"
+              class="Text-sc-1wu7vpu-0-h2 fVXpPw"
               font-size="heading2"
               font-weight="normal"
             >
@@ -2477,7 +2477,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="FormSection-sc-5yud6c-1 cJYtnA"
             >
               <legend
-                class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+                class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 gmYEa"
                 font-size="heading3"
                 font-weight="medium"
               >
@@ -2496,7 +2496,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Project
                     </span>
@@ -2532,7 +2532,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Project description
                     </span>
@@ -2581,7 +2581,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Project status
                     </span>
@@ -2678,7 +2678,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Item code
                     </span>
@@ -2746,7 +2746,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Eaches expected on Job
                     </span>
@@ -2782,7 +2782,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Eaches remaining on Project
                     </span>
@@ -2819,7 +2819,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Scheduled start
                     </span>
@@ -2855,7 +2855,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Scheduled end
                     </span>
@@ -3192,7 +3192,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="FormSection-sc-5yud6c-1 cJYtnA"
             >
               <legend
-                class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 dFjnEd"
+                class="Text-sc-1wu7vpu-0-h3 FormSection__FormSectionTitle-sc-5yud6c-0 gmYEa"
                 font-size="heading3"
                 font-weight="medium"
               >
@@ -3211,7 +3211,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Item
                     </span>
@@ -3279,7 +3279,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                     data-testid="field-label"
                   >
                     <span
-                      class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                      class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
                     >
                       Quantity
                     </span>

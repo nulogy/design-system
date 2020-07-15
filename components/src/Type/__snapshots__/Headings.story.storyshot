@@ -1,42 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Headings Section Title 1`] = `
-<div
-  style="padding:24px"
->
-  <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
-  >
-    <h2
-      class="Text-sc-1wu7vpu-0-h2 iOWJKL"
-      font-size="heading2"
-      font-weight="normal"
-    >
-      Section Title
-    </h2>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Headings Subsection Title 1`] = `
-<div
-  style="padding:24px"
->
-  <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
-  >
-    <h3
-      class="Text-sc-1wu7vpu-0-h3 ehIfZt"
-      font-size="heading3"
-      font-weight="medium"
-    >
-      SubsectionTitle
-    </h3>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Headings Title 1`] = `
+exports[`Storyshots Headings Heading1 1`] = `
 <div
   style="padding:24px"
 >
@@ -44,12 +8,66 @@ exports[`Storyshots Headings Title 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <h1
-      class="Text-sc-1wu7vpu-0-h1 kYDQJN"
+      class="Text-sc-1wu7vpu-0-h1 dBDZi"
       font-size="heading1"
       font-weight="light"
     >
-      Title
+      Heading 1
     </h1>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Headings Heading2 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <h2
+      class="Text-sc-1wu7vpu-0-h2 kkbjnI"
+      font-size="heading2"
+      font-weight="normal"
+    >
+      Heading 2
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Headings Heading3 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <h3
+      class="Text-sc-1wu7vpu-0-h3 jRMWJq"
+      font-size="heading3"
+      font-weight="medium"
+    >
+      Heading 3
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Headings Heading4 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <h4
+      class="Text-sc-1wu7vpu-0-h4 ktBPTt"
+      font-size="heading4"
+      font-weight="bold"
+    >
+      Heading 4
+    </h4>
   </div>
 </div>
 `;
@@ -62,11 +80,11 @@ exports[`Storyshots Headings With a custom margin 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <h1
-      class="Text-sc-1wu7vpu-0-h1 qNyVx"
+      class="Text-sc-1wu7vpu-0-h1 fJjfOe"
       font-size="heading1"
       font-weight="light"
     >
-      Title
+      Heading1
     </h1>
     <p
       class="Text-sc-1wu7vpu-0 RbfMK"

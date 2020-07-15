@@ -20,7 +20,7 @@ exports[`Storyshots TimePicker default 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Start Time
           </span>
@@ -132,7 +132,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Duration
           </span>
@@ -244,7 +244,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Duration
           </span>
@@ -356,7 +356,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Duration
           </span>
@@ -468,7 +468,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             End Time
           </span>
@@ -612,7 +612,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             End Time
           </span>

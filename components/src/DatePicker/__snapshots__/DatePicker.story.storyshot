@@ -26,7 +26,7 @@ exports[`Storyshots DatePicker default 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Expiry Date
               </span>
@@ -97,7 +97,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Expiry Date
               </span>
@@ -168,7 +168,7 @@ exports[`Storyshots DatePicker with custom locale 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Expiry Date
               </span>
@@ -239,7 +239,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Expiry Date
               </span>
@@ -310,7 +310,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Expiry Date
               </span>
@@ -413,7 +413,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
               data-testid="field-label"
             >
               <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
               >
                 Expiry Date
               </span>

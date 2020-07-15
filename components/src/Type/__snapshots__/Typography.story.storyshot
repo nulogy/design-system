@@ -8,14 +8,14 @@ exports[`Storyshots Typography Article 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <h1
-      class="Text-sc-1wu7vpu-0-h1 kYDQJN"
+      class="Text-sc-1wu7vpu-0-h1 dBDZi"
       font-size="heading1"
       font-weight="light"
     >
       Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum
     </h1>
     <h2
-      class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+      class="Text-sc-1wu7vpu-0-h2 kkbjnI"
       font-size="heading2"
       font-weight="normal"
     >
@@ -29,7 +29,7 @@ exports[`Storyshots Typography Article 1`] = `
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 ehIfZt"
+      class="Text-sc-1wu7vpu-0-h3 jRMWJq"
       font-size="heading3"
       font-weight="medium"
     >
@@ -43,14 +43,14 @@ exports[`Storyshots Typography Article 1`] = `
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit.
     </p>
     <h2
-      class="Text-sc-1wu7vpu-0-h2 iOWJKL"
+      class="Text-sc-1wu7vpu-0-h2 kkbjnI"
       font-size="heading2"
       font-weight="normal"
     >
       Donec leo felis
     </h2>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 ehIfZt"
+      class="Text-sc-1wu7vpu-0-h3 jRMWJq"
       font-size="heading3"
       font-weight="medium"
     >
@@ -64,7 +64,7 @@ exports[`Storyshots Typography Article 1`] = `
       Nunc tempor eget mauris id facilisis. Morbi convallis mauris at fermentum gravida. Nunc lacinia a odio eu rutrum. Etiam in libero vestibulum, lobortis mi fermentum, pharetra lacus. Aliquam commodo molestie dolor, vel tristique orci efficitur eu. Nullam eleifend malesuada. Nam luctus blandit dignissim. Mauris eu odio tristique, lorem quis, lobortis nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis lacus felis. Ut convallis rhoncus orci. Maecenas sit amet leo dui. Integer semper porta dignissim.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 ehIfZt"
+      class="Text-sc-1wu7vpu-0-h3 jRMWJq"
       font-size="heading3"
       font-weight="medium"
     >
@@ -115,7 +115,7 @@ exports[`Storyshots Typography Article 1`] = `
       Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 ehIfZt"
+      class="Text-sc-1wu7vpu-0-h3 jRMWJq"
       font-size="heading3"
       font-weight="medium"
     >
@@ -129,7 +129,7 @@ exports[`Storyshots Typography Article 1`] = `
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc, consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper fringilla in, dignissim congue velit. Nunc id arcu sagittis, volutpat sit amet, accumsan diam. Pellentesque luctus, nulla a ornare semper, dui mollis nisi, vel lacinia neque velit eget sapien. Etiam sodales dolor, vel dictum libero cursus ac. Nam vulputate tempor mauris vel. Nam tristique metus et dignissim pretium. Aliquam erat volutpat.
     </p>
     <h3
-      class="Text-sc-1wu7vpu-0-h3 ehIfZt"
+      class="Text-sc-1wu7vpu-0-h3 jRMWJq"
       font-size="heading3"
       font-weight="medium"
     >
