@@ -148,7 +148,7 @@ const TimePicker = ({
         block: "center"
       });
     }
-  }, [currentOptionRef, dropdownIsOpen]);
+  }, [currentOptionRef, dropdownIsOpen, input]);
 
   const matchingIndex = getIntervalFromTime(input, interval, minTime);
 
