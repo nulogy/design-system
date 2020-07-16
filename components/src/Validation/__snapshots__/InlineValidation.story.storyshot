@@ -81,7 +81,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
           Something has gone wrong.
         </p>
         <ul
-          class="List-sc-1cqkmnl-0 diqcEx"
+          class="List-sc-1cqkmnl-0 iEviVa"
           color="currentColor"
         >
           <li
@@ -154,7 +154,7 @@ exports[`Storyshots Inline Validation with list items 1`] = `
           Something has gone wrong
         </p>
         <ul
-          class="List-sc-1cqkmnl-0 diqcEx"
+          class="List-sc-1cqkmnl-0 iEviVa"
           color="currentColor"
         >
           <li
@@ -207,7 +207,7 @@ exports[`Storyshots Inline Validation with only list items 1`] = `
         class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
       >
         <ul
-          class="List-sc-1cqkmnl-0 diqcEx"
+          class="List-sc-1cqkmnl-0 iEviVa"
           color="currentColor"
         >
           <li

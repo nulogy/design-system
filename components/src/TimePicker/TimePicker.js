@@ -238,7 +238,7 @@ const TimePicker = ({
         dropdownIsOpen={dropdownIsOpen}
         onChange={handleInputChange}
         onFocus={handleFocus}
-        value={input}
+        value={input || ""}
         placeholder={placeholder}
         icon="queryBuilder"
         onClick={handleClickInput}
@@ -247,6 +247,7 @@ const TimePicker = ({
         inputWidth="130px"
         iconSize="20px"
         data-testid="select-input"
+        type="text"
       />
       <TimePickerDropdown
         isOpen={dropdownIsOpen}
@@ -305,7 +306,7 @@ TimePicker.defaultProps = {
   onInputChange: undefined,
   minTime: undefined,
   maxTime: undefined,
-  defaultValue: undefined,
+  defaultValue: "",
   "aria-label": undefined,
   errorMessage: undefined,
   errorList: undefined,

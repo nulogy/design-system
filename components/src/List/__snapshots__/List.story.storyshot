@@ -8,7 +8,7 @@ exports[`Storyshots List List 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <ul
-      class="List-sc-1cqkmnl-0 jrhpm"
+      class="List-sc-1cqkmnl-0 eFTVVp"
       color="currentColor"
     >
       <li
@@ -42,7 +42,7 @@ exports[`Storyshots List With compact spacing 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <ul
-      class="List-sc-1cqkmnl-0 gfYBVm"
+      class="List-sc-1cqkmnl-0 cqNEnh"
       color="currentColor"
     >
       <li
@@ -76,7 +76,7 @@ exports[`Storyshots List With custom colour 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <ul
-      class="List-sc-1cqkmnl-0 cIngjC"
+      class="List-sc-1cqkmnl-0 CPPJN"
       color="red"
     >
       <li
@@ -110,7 +110,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <ul
-      class="List-sc-1cqkmnl-0 dPxgHI"
+      class="List-sc-1cqkmnl-0 dazrpz"
       color="currentColor"
       font-size="small"
     >
@@ -146,7 +146,7 @@ exports[`Storyshots List With left alignment 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <ul
-      class="List-sc-1cqkmnl-0 joVEnl"
+      class="List-sc-1cqkmnl-0 hgrjeS"
       color="currentColor"
     >
       <li

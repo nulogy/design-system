@@ -43,7 +43,7 @@ exports[`Storyshots Select Select 1`] = `
                   <div
                     class="SelectTest__placeholder css-1n91s4n-placeholder"
                   >
-                    Please select inventory status
+                     
                   </div>
                   <div
                     data-testid="select-input"
@@ -60,7 +60,7 @@ exports[`Storyshots Select Select 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-9-input"
+                          id="react-select-3-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -168,7 +168,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-24-input"
+                          id="react-select-18-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -227,7 +227,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-24-option-0"
+                      id="react-select-18-option-0"
                       tabindex="-1"
                     >
                       Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring
@@ -243,7 +243,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-24-option-1"
+                      id="react-select-18-option-1"
                       tabindex="-1"
                     >
                       Many words many words many words many words many words many words many words many words many words many words many words many words many words
@@ -321,7 +321,7 @@ exports[`Storyshots Select set to disabled 1`] = `
                           autocomplete="off"
                           autocorrect="off"
                           disabled=""
-                          id="react-select-15-input"
+                          id="react-select-9-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -456,7 +456,7 @@ exports[`Storyshots Select set to required 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-20-input"
+                            id="react-select-14-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -624,7 +624,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-26-input"
+                          id="react-select-20-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -944,7 +944,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-27-input"
+                            id="react-select-21-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -1265,7 +1265,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-28-input"
+                            id="react-select-22-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -1395,7 +1395,7 @@ exports[`Storyshots Select with a blank value 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-11-input"
+                          id="react-select-5-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1503,7 +1503,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-10-input"
+                          id="react-select-4-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1611,7 +1611,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-12-input"
+                          id="react-select-6-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1709,7 +1709,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-13-input"
+                          id="react-select-7-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -1768,7 +1768,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-13-option-0"
+                      id="react-select-7-option-0"
                       tabindex="-1"
                     >
                       Accepted
@@ -1784,7 +1784,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-13-option-1"
+                      id="react-select-7-option-1"
                       tabindex="-1"
                     >
                       Assigned to a line
@@ -1800,7 +1800,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-13-option-2"
+                      id="react-select-7-option-2"
                       tabindex="-1"
                     >
                       On hold
@@ -1816,7 +1816,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-13-option-3"
+                      id="react-select-7-option-3"
                       tabindex="-1"
                     >
                       Rejected
@@ -1832,7 +1832,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-13-option-4"
+                      id="react-select-7-option-4"
                       tabindex="-1"
                     >
                       Open
@@ -1848,7 +1848,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-13-option-5"
+                      id="react-select-7-option-5"
                       tabindex="-1"
                     >
                       In progress
@@ -1864,7 +1864,7 @@ exports[`Storyshots Select with an option selected 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-13-option-6"
+                      id="react-select-7-option-6"
                       tabindex="-1"
                     >
                       In quarantine
@@ -2084,7 +2084,7 @@ exports[`Storyshots Select with custom option component 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-30-input"
+                            id="react-select-24-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -2214,7 +2214,7 @@ exports[`Storyshots Select with error list 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-18-input"
+                          id="react-select-12-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -2287,7 +2287,7 @@ exports[`Storyshots Select with error list 1`] = `
               Please select an inventory status
             </p>
             <ul
-              class="List-sc-1cqkmnl-0 diqcEx"
+              class="List-sc-1cqkmnl-0 iEviVa"
               color="currentColor"
             >
               <li
@@ -2346,7 +2346,7 @@ exports[`Storyshots Select with error list 1`] = `
                         autocapitalize="none"
                         autocomplete="off"
                         autocorrect="off"
-                        id="react-select-19-input"
+                        id="react-select-13-input"
                         spellcheck="false"
                         style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                         tabindex="0"
@@ -2405,7 +2405,7 @@ exports[`Storyshots Select with error list 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-19-option-0"
+                    id="react-select-13-option-0"
                     tabindex="-1"
                   >
                     Accepted
@@ -2421,7 +2421,7 @@ exports[`Storyshots Select with error list 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-19-option-1"
+                    id="react-select-13-option-1"
                     tabindex="-1"
                   >
                     Assigned to a line
@@ -2437,7 +2437,7 @@ exports[`Storyshots Select with error list 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-19-option-2"
+                    id="react-select-13-option-2"
                     tabindex="-1"
                   >
                     On hold
@@ -2453,7 +2453,7 @@ exports[`Storyshots Select with error list 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-19-option-3"
+                    id="react-select-13-option-3"
                     tabindex="-1"
                   >
                     Rejected
@@ -2469,7 +2469,7 @@ exports[`Storyshots Select with error list 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-19-option-4"
+                    id="react-select-13-option-4"
                     tabindex="-1"
                   >
                     Open
@@ -2485,7 +2485,7 @@ exports[`Storyshots Select with error list 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-19-option-5"
+                    id="react-select-13-option-5"
                     tabindex="-1"
                   >
                     In progress
@@ -2501,7 +2501,7 @@ exports[`Storyshots Select with error list 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-19-option-6"
+                    id="react-select-13-option-6"
                     tabindex="-1"
                   >
                     In quarantine
@@ -2543,7 +2543,7 @@ exports[`Storyshots Select with error list 1`] = `
             Please select an inventory status
           </p>
           <ul
-            class="List-sc-1cqkmnl-0 diqcEx"
+            class="List-sc-1cqkmnl-0 iEviVa"
             color="currentColor"
           >
             <li
@@ -2626,7 +2626,7 @@ exports[`Storyshots Select with error message 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-16-input"
+                          id="react-select-10-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -2741,7 +2741,7 @@ exports[`Storyshots Select with error message 1`] = `
                         autocapitalize="none"
                         autocomplete="off"
                         autocorrect="off"
-                        id="react-select-17-input"
+                        id="react-select-11-input"
                         spellcheck="false"
                         style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                         tabindex="0"
@@ -2800,7 +2800,7 @@ exports[`Storyshots Select with error message 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-17-option-0"
+                    id="react-select-11-option-0"
                     tabindex="-1"
                   >
                     Accepted
@@ -2816,7 +2816,7 @@ exports[`Storyshots Select with error message 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-17-option-1"
+                    id="react-select-11-option-1"
                     tabindex="-1"
                   >
                     Assigned to a line
@@ -2832,7 +2832,7 @@ exports[`Storyshots Select with error message 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-17-option-2"
+                    id="react-select-11-option-2"
                     tabindex="-1"
                   >
                     On hold
@@ -2848,7 +2848,7 @@ exports[`Storyshots Select with error message 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-17-option-3"
+                    id="react-select-11-option-3"
                     tabindex="-1"
                   >
                     Rejected
@@ -2864,7 +2864,7 @@ exports[`Storyshots Select with error message 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-17-option-4"
+                    id="react-select-11-option-4"
                     tabindex="-1"
                   >
                     Open
@@ -2880,7 +2880,7 @@ exports[`Storyshots Select with error message 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-17-option-5"
+                    id="react-select-11-option-5"
                     tabindex="-1"
                   >
                     In progress
@@ -2896,7 +2896,7 @@ exports[`Storyshots Select with error message 1`] = `
                 >
                   <div
                     class=" css-5aymxm-Option"
-                    id="react-select-17-option-6"
+                    id="react-select-11-option-6"
                     tabindex="-1"
                   >
                     In quarantine
@@ -3008,7 +3008,7 @@ exports[`Storyshots Select with fixed positioning 1`] = `
                             autocapitalize="none"
                             autocomplete="off"
                             autocorrect="off"
-                            id="react-select-29-input"
+                            id="react-select-23-input"
                             spellcheck="false"
                             style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                             tabindex="0"
@@ -3124,7 +3124,7 @@ exports[`Storyshots Select with helpText 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-21-input"
+                          id="react-select-15-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -3285,7 +3285,7 @@ exports[`Storyshots Select with multiselect 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-25-input"
+                          id="react-select-19-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -3414,7 +3414,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-23-input"
+                          id="react-select-17-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
@@ -3473,7 +3473,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-23-option-0"
+                      id="react-select-17-option-0"
                       tabindex="-1"
                     >
                       Accepted
@@ -3489,7 +3489,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-23-option-1"
+                      id="react-select-17-option-1"
                       tabindex="-1"
                     >
                       Assigned to a line
@@ -3505,7 +3505,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-23-option-2"
+                      id="react-select-17-option-2"
                       tabindex="-1"
                     >
                       On hold
@@ -3521,7 +3521,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-23-option-3"
+                      id="react-select-17-option-3"
                       tabindex="-1"
                     >
                       Rejected
@@ -3537,7 +3537,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-23-option-4"
+                      id="react-select-17-option-4"
                       tabindex="-1"
                     >
                       Open
@@ -3553,7 +3553,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-23-option-5"
+                      id="react-select-17-option-5"
                       tabindex="-1"
                     >
                       In progress
@@ -3569,7 +3569,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
                   >
                     <div
                       class=" css-5aymxm-Option"
-                      id="react-select-23-option-6"
+                      id="react-select-17-option-6"
                       tabindex="-1"
                     >
                       In quarantine
@@ -3646,7 +3646,7 @@ exports[`Storyshots Select with state 1`] = `
                           autocapitalize="none"
                           autocomplete="off"
                           autocorrect="off"
-                          id="react-select-14-input"
+                          id="react-select-8-input"
                           spellcheck="false"
                           style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
                           tabindex="0"
