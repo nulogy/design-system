@@ -2020,7 +2020,7 @@ exports[`Storyshots Select with custom option component 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Inventory status
             </span>

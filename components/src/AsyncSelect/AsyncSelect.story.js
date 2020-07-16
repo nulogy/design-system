@@ -29,7 +29,7 @@ const loadMatchingCountries = async inputValue => {
 };
 
 storiesOf("AsyncSelect", module)
-  .add("default", () => (
+  .add("default (SkipStoryshot)", () => (
     <AsyncSelect
       placeholder="Please select a country"
       onChange={action("selection changed")}
@@ -41,7 +41,7 @@ storiesOf("AsyncSelect", module)
       loadOptions={loadMatchingCountries}
     />
   ))
-  .add("With default options", () => (
+  .add("With default options (SkipStoryshot)", () => (
     <AsyncSelect
       placeholder="Filter Countries"
       onChange={action("selection changed")}
@@ -54,7 +54,7 @@ storiesOf("AsyncSelect", module)
       loadOptions={loadMatchingCountries}
     />
   ))
-  .add("With a default value", () => (
+  .add("With a default value (SkipStoryshot)", () => (
     <AsyncSelect
       placeholder="Please select a country"
       onChange={action("selection changed")}
@@ -67,7 +67,7 @@ storiesOf("AsyncSelect", module)
       loadOptions={loadMatchingCountries}
     />
   ))
-  .add("Multiselect", () => (
+  .add("Multiselect (SkipStoryshot)", () => (
     <AsyncSelect
       placeholder="Please select a countries"
       onChange={action("selection changed")}
