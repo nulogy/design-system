@@ -924,7 +924,8 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 gSHowq nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq"
-        data-testid="select-container"
+        data-testid="daterange-start-time"
+        selected=""
         width="130px"
       >
         <div
@@ -964,7 +965,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </div>
         <ul
           aria-expanded="false"
-          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
           data-testid="select-dropdown"
           role="listbox"
         >
@@ -1847,7 +1848,8 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 gSHowq nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf"
-        data-testid="select-container"
+        data-testid="daterange-end-time"
+        selected=""
         width="130px"
       >
         <div
@@ -1887,7 +1889,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         </div>
         <ul
           aria-expanded="false"
-          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
           data-testid="select-dropdown"
           role="listbox"
         >
@@ -2879,7 +2881,8 @@ exports[`Storyshots DateRange with time error 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 gSHowq nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq"
-        data-testid="select-container"
+        data-testid="daterange-start-time"
+        selected=""
         width="130px"
       >
         <div
@@ -2919,7 +2922,7 @@ exports[`Storyshots DateRange with time error 1`] = `
         </div>
         <ul
           aria-expanded="false"
-          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
           data-testid="select-dropdown"
           role="listbox"
         >
@@ -3802,7 +3805,8 @@ exports[`Storyshots DateRange with time error 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 gSHowq nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf"
-        data-testid="select-container"
+        data-testid="daterange-end-time"
+        selected=""
         width="130px"
       >
         <div
@@ -3842,7 +3846,7 @@ exports[`Storyshots DateRange with time error 1`] = `
         </div>
         <ul
           aria-expanded="false"
-          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
           data-testid="select-dropdown"
           role="listbox"
         >
@@ -4834,7 +4838,7 @@ exports[`Storyshots DateRange with times 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 gSHowq nds-time-picker DateRange__StyledStartTime-sc-1m2eund-0 bMhikq"
-        data-testid="select-container"
+        data-testid="daterange-start-time"
         width="130px"
       >
         <div
@@ -4874,7 +4878,7 @@ exports[`Storyshots DateRange with times 1`] = `
         </div>
         <ul
           aria-expanded="false"
-          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
           data-testid="select-dropdown"
           role="listbox"
         >
@@ -5757,7 +5761,7 @@ exports[`Storyshots DateRange with times 1`] = `
       </div>
       <div
         class="Box-sc-1qu1edy-0 gSHowq nds-time-picker DateRange__StyledEndTime-sc-1m2eund-1 clTvEf"
-        data-testid="select-container"
+        data-testid="daterange-end-time"
         width="130px"
       >
         <div
@@ -5797,7 +5801,7 @@ exports[`Storyshots DateRange with times 1`] = `
         </div>
         <ul
           aria-expanded="false"
-          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+          class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
           data-testid="select-dropdown"
           role="listbox"
         >

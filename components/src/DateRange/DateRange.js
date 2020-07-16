@@ -132,6 +132,7 @@ const DateRange = ({
           interval={interval}
           onChange={changeStartTimeHandler}
           locale={locale}
+          data-testid="daterange-start-time"
         />
       )}
     </>
@@ -150,6 +151,7 @@ const DateRange = ({
           onChange={changeEndTimeHandler}
           locale={locale}
           aria-label={t("select an end time")}
+          data-testid="daterange-end-time"
         />
       )}
       <DatePicker

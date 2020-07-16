@@ -83,7 +83,6 @@ const TimePickerInput = styled(InputField)(({ dropdownIsOpen }) => ({
 const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
   return {
     position: "absolute",
-    top: "72px",
     width: "100%",
     background: theme.colors.white,
     listStyle: "none",
@@ -132,7 +131,8 @@ const TimePicker = ({
   placeholder,
   onClick,
   onChange,
-  "aria-label": ariaLabel
+  "aria-label": ariaLabel,
+  ...props
 }) => {
   const [input, setInput] = useState(defaultValue);
   const [currentOptionRef, setCurrentOptionRef] = useState(null);
@@ -164,18 +164,20 @@ const TimePicker = ({
   const handleBlur = e => {
     onBlur(e);
     setDropdownIsOpen(false);
-    const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale);
-    const matchingTimes = optionsByMinute.filter(
-      ({ label, value }) =>
-        standardizeTime(label).includes(standardizeTime(input)) ||
-        standardizeTime(value).includes(standardizeTime(input))
-    );
-    if (matchingTimes.length) {
-      setInput(matchingTimes[0].label);
-    } else if (dropdownOptions[matchingIndex]) {
-      setInput(dropdownOptions[matchingIndex].label);
-    } else {
-      setInput(dropdownOptions[0].label);
+    if (input) {
+      const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale);
+      const matchingTimes = optionsByMinute.filter(
+        ({ label, value }) =>
+          standardizeTime(label).includes(standardizeTime(input)) ||
+          standardizeTime(value).includes(standardizeTime(input))
+      );
+      if (matchingTimes.length) {
+        setInput(matchingTimes[0].label);
+      } else if (dropdownOptions[matchingIndex]) {
+        setInput(dropdownOptions[matchingIndex].label);
+      } else {
+        setInput(dropdownOptions[0].label);
+      }
     }
   };
 
@@ -225,56 +227,59 @@ const TimePicker = ({
   };
 
   return (
-    <Box
-      className={`nds-time-picker ${className || ""}`}
-      position="relative"
-      ref={onRefChange}
-      width="130px"
-      data-testid="select-container"
-    >
-      <TimePickerInput
-        labelText={labelText}
-        error={hasError}
-        dropdownIsOpen={dropdownIsOpen}
-        onChange={handleInputChange}
-        onFocus={handleFocus}
-        value={input || ""}
-        placeholder={placeholder}
-        icon="queryBuilder"
-        onClick={handleClickInput}
-        onKeyDown={e => handleKeyDown(e)}
-        aria-label={ariaLabel || t("Select a time")}
-        inputWidth="130px"
-        iconSize="20px"
-        data-testid="select-input"
-        type="text"
-      />
-      <TimePickerDropdown
-        isOpen={dropdownIsOpen}
-        aria-expanded={dropdownIsOpen}
-        role="listbox"
-        data-testid="select-dropdown"
+    <>
+      <Box
+        className={`nds-time-picker ${className || ""}`}
+        position="relative"
+        ref={onRefChange}
+        width="130px"
+        data-testid="select-container"
+        {...props}
       >
-        {dropdownOptions.map((option, i) => (
-          <TimePickerOption
-            ref={matchingIndex === i ? onCurrentOptionRefChange : undefined}
-            isSelected={standardizeTime(option.label) === standardizeTime(input)}
-            key={option.label}
-            data-name={option.label}
-            data-value={option.value}
-            onClick={() => {
-              handleOptionSelection(option);
-            }}
-            role="option"
-            data-testid="select-option"
-          >
-            {option.label}
-          </TimePickerOption>
-        ))}
-      </TimePickerDropdown>
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+        <TimePickerInput
+          labelText={labelText}
+          error={hasError}
+          dropdownIsOpen={dropdownIsOpen}
+          onChange={handleInputChange}
+          onFocus={handleFocus}
+          value={input || ""}
+          placeholder={placeholder}
+          icon="queryBuilder"
+          onClick={handleClickInput}
+          onKeyDown={e => handleKeyDown(e)}
+          aria-label={ariaLabel || t("Select a time")}
+          inputWidth="130px"
+          iconSize="20px"
+          data-testid="select-input"
+          type="text"
+        />
+        <TimePickerDropdown
+          isOpen={dropdownIsOpen}
+          aria-expanded={dropdownIsOpen}
+          role="listbox"
+          data-testid="select-dropdown"
+        >
+          {dropdownOptions.map((option, i) => (
+            <TimePickerOption
+              ref={matchingIndex === i ? onCurrentOptionRefChange : undefined}
+              isSelected={standardizeTime(option.label) === standardizeTime(input)}
+              key={option.label}
+              data-name={option.label}
+              data-value={option.value}
+              onClick={() => {
+                handleOptionSelection(option);
+              }}
+              role="option"
+              data-testid="select-option"
+            >
+              {option.label}
+            </TimePickerOption>
+          ))}
+        </TimePickerDropdown>
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      </Box>
       <DetectOutsideClick onClick={handleBlur} clickRef={[ref]} />
-    </Box>
+    </>
   );
 };
 

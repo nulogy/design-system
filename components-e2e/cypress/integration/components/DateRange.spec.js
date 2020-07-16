@@ -43,8 +43,14 @@ describe("Date Range", () => {
       cy.get("[aria-label='Select a start time']");
     const getEndTimeInputComponent = () =>
       cy.get("[aria-label='Select an end time']");
-    const TIME_OPTION_SELECTOR = "[data-testid='select-option']";
-    const getDropdownOptions = () => cy.get(TIME_OPTION_SELECTOR);
+    const getEndTimeOptions = () =>
+      cy
+        .get("[data-testid='daterange-end-time']")
+        .find("[data-testid='select-option']");
+    const getStartTimeOptions = () =>
+      cy
+        .get("[data-testid='daterange-start-time']")
+        .find("[data-testid='select-option']");
     beforeEach(() => {
       cy.renderFromStorybook("daterange--with-times");
     });
@@ -54,11 +60,11 @@ describe("Date Range", () => {
         .first()
         .click();
       getStartTimeInputComponent().click();
-      getDropdownOptions()
+      getStartTimeOptions()
         .eq(6)
         .click();
       getEndTimeInputComponent().click();
-      getDropdownOptions()
+      getEndTimeOptions()
         .eq(3)
         .click();
       getEndInputComponent().click();

@@ -65,7 +65,7 @@ exports[`Storyshots TimePicker default 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
         data-testid="select-dropdown"
         role="listbox"
       >
@@ -1004,7 +1004,7 @@ exports[`Storyshots TimePicker with custom default 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
         data-testid="select-dropdown"
         role="listbox"
       >
@@ -1943,7 +1943,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
         data-testid="select-dropdown"
         role="listbox"
       >
@@ -2882,7 +2882,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
         data-testid="select-dropdown"
         role="listbox"
       >
@@ -3821,7 +3821,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
         data-testid="select-dropdown"
         role="listbox"
       >
@@ -4328,7 +4328,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
         data-testid="select-dropdown"
         role="listbox"
       >
@@ -5299,7 +5299,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dOYcnU"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
         data-testid="select-dropdown"
         role="listbox"
       >

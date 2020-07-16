@@ -72,6 +72,7 @@ const TimeRange = ({
       maxTime={endTime || maxTime}
       interval={interval}
       aria-label={startAriaLabel || t("select a start time")}
+      data-testid="timerange-start-time"
     />
   );
 
@@ -85,6 +86,7 @@ const TimeRange = ({
       minTime={startTime || minTime}
       interval={interval}
       aria-label={endAriaLabel || t("select an end time")}
+      data-testid="timerange-end-time"
     />
   );
 
