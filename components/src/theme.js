@@ -25,16 +25,24 @@ export default {
     medium: tokens.size_font_medium,
     large: tokens.size_font_large,
     larger: tokens.size_font_larger,
-    largest: tokens.size_font_largest
+    largest: tokens.size_font_largest,
+    heading1: tokens.size_font_heading_1,
+    heading2: tokens.size_font_heading_2,
+    heading3: tokens.size_font_heading_3,
+    heading4: tokens.size_font_heading_4
   },
   lineHeights: {
     base: tokens.line_height_base,
-    title: tokens.line_height_title,
-    sectionTitle: tokens.line_height_section_title,
-    subsectionTitle: tokens.line_height_subsection_title,
     smallTextBase: tokens.line_height_small_text_base,
     smallTextCompressed: tokens.line_height_small_text_compressed,
-    smallerText: tokens.line_height_smaller_text
+    smallerText: tokens.line_height_smaller_text,
+    heading1: tokens.line_height_heading_1,
+    heading2: tokens.line_height_heading_2,
+    heading3: tokens.line_height_heading_3,
+    heading4: tokens.line_height_heading_4,
+    title: tokens.line_height_heading_1,
+    sectionTitle: tokens.line_height_heading_2,
+    subsectionTitle: tokens.line_height_heading_3
   },
   fontWeights: {
     light: tokens.weight_font_light,

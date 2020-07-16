@@ -17,7 +17,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Month range
         </span>
@@ -150,7 +150,7 @@ exports[`Storyshots MonthRange default 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Month range
         </span>
@@ -283,7 +283,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Month range
         </span>
@@ -416,7 +416,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Month range
         </span>
@@ -549,7 +549,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Month range
         </span>
@@ -715,7 +715,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Month range
         </span>

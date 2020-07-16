@@ -2,9 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import Highlight from "react-highlight";
 import {
-  SectionTitle,
-  SubsectionTitle,
-  Title,
+  Alert,
+  Heading1,
+  Heading2,
+  Heading3,
   Link,
   List,
   ListItem
@@ -34,29 +35,36 @@ export default () => (
       <title>Headings</title>
     </Helmet>
     <Intro>
-      <Title>Headings</Title>
+      <Heading1>Headings</Heading1>
       <IntroText>
-        There are three level of headings available to provide hierarchy in an
+        There are four level of headings available to provide hierarchy in an
         application.
       </IntroText>
     </Intro>
 
     <DocSection>
-      <Title>Title</Title>
-      <SectionTitle>SectionTitle</SectionTitle>
-      <SubsectionTitle>SubsectionTitle</SubsectionTitle>
+      <Heading1>Heading 1</Heading1>
+      <Heading2>Heading 2</Heading2>
+      <Heading3>Heading 3</Heading3>
+      <Heading3>Heading 4</Heading3>
       <Highlight className="js">
-        {`import { Title, SectionTitle, SubsectionTitle } from "@nulogy/components";
+        {`import { Heading1, Heading2, Heading3, Heading4 } from "@nulogy/components";
 
-<Title>Title</Title>
-<SectionTitle>SectionTitle</SectionTitle>
-<SubsectionTitle>SubsectionTitle</SubsectionTitle>
+<Heading1>Heading 1</Heading1>
+<Heading2>Heading 2</Heading2>
+<Heading3>Heading 3</Heading3>
+<Heading4>Heading 4</Heading4>
 `}
       </Highlight>
+      <Alert type="warning">
+        The Title, SectionTitle, and SubsectionTitle naming convention has been
+        replaced with Headings 1-3. The old names are currently deprecated and
+        will be removed from a future version of @nulogy/components.
+      </Alert>
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Props</SectionTitle>
+      <Heading2>Props</Heading2>
       <PropsTable propsRows={propsRows} />
       <Text mt="x3">
         Heading components extend <Link href="/components/Text">Text</Link>, and
@@ -69,7 +77,7 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Related components</SectionTitle>
+      <Heading2>Related components</Heading2>
       <List>
         <ListItem>
           <Link href="/components/text">Text</Link>
@@ -78,7 +86,7 @@ export default () => (
     </DocSection>
 
     <DocSection>
-      <SectionTitle>Resources</SectionTitle>
+      <Heading2>Resources</Heading2>
       <List>
         <ListItem>
           <Link href="/theme/">NDS theme</Link>

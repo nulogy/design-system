@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { SubsectionTitle } from "../Type";
+import { Heading3 } from "../Type";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
 
-const FormSectionTitle = styled(SubsectionTitle).attrs({
+const FormSectionTitle = styled(Heading3).attrs({
   as: "legend"
 })({});
 

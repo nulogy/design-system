@@ -17,7 +17,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -148,7 +148,7 @@ exports[`Storyshots DateRange default 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -279,7 +279,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -410,7 +410,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -541,7 +541,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -705,7 +705,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -868,7 +868,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -1169,7 +1169,7 @@ exports[`Storyshots DateRange with time error 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>
@@ -1470,7 +1470,7 @@ exports[`Storyshots DateRange with times 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Date range
         </span>

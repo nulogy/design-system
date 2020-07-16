@@ -22,7 +22,7 @@ Label.defaultProps = {
 const LabelText = styled.span(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase
+  lineHeight: theme.lineHeights.smallTextCompressed
 }));
 
 const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...props }) => (

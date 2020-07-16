@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
-import { Text, SubsectionTitle } from "../Type";
+import { Text, Heading3 } from "../Type";
 import { BrandingText } from "../Branding";
 import theme from "../theme";
 
@@ -24,7 +24,7 @@ const getSharedStyles = ({ color, layer }) => ({
   backgroundColor: "transparent",
   borderRadius: theme.radii.medium,
   fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
-  lineHeight: layer === 0 ? theme.lineHeights.subsectionTitle : theme.lineHeights.base,
+  lineHeight: layer === 0 ? theme.lineHeights.heading3 : theme.lineHeights.base,
   padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
   paddingLeft: getPaddingLeft(layer),
   marginBottom: theme.space.x1
@@ -141,9 +141,9 @@ const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
 
 const getSubMenuHeading = (layer, color, name) =>
   layer === 0 ? (
-    <SubsectionTitle mb={theme.space.x1} color={color}>
+    <Heading3 mb={theme.space.x1} color={color}>
       {name}
-    </SubsectionTitle>
+    </Heading3>
   ) : (
     <Text mb={theme.space.x1} color={color} py={theme.space.x1} style={{ paddingLeft: getPaddingLeft(layer) }}>
       {name}
@@ -184,7 +184,7 @@ const Menu = styled.ul(() => ({
   zIndex: theme.zIndex.content,
   width: "100%",
   color: theme.colors.white,
-  [`${SubsectionTitle}`]: {
+  [`${Heading3}`]: {
     padding: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x3}`
   }
 }));

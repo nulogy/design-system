@@ -17,7 +17,7 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Default label
         </span>
@@ -44,7 +44,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Default label
         </span>
@@ -87,7 +87,7 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Default label
         </span>
@@ -121,7 +121,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Default label
         </span>
@@ -162,7 +162,7 @@ exports[`Storyshots FieldLabel with associated custom input component 1`] = `
         data-testid="field-label"
       >
         <span
-          class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
         >
           Default label
         </span>

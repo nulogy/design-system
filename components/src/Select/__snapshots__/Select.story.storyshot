@@ -20,7 +20,7 @@ exports[`Storyshots Select Select 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -128,7 +128,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -280,7 +280,7 @@ exports[`Storyshots Select set to disabled 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -409,7 +409,7 @@ exports[`Storyshots Select set to required 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Inventory status
             </span>
@@ -531,7 +531,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -706,7 +706,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               PCN
             </span>
@@ -1027,7 +1027,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Inventory status
             </span>
@@ -1355,7 +1355,7 @@ exports[`Storyshots Select with a blank value 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -1463,7 +1463,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -1571,7 +1571,7 @@ exports[`Storyshots Select with an option selected 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -1669,7 +1669,7 @@ exports[`Storyshots Select with an option selected 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -1901,7 +1901,7 @@ exports[`Storyshots Select with custom id 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -2020,7 +2020,7 @@ exports[`Storyshots Select with custom option component 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Inventory status
             </span>
@@ -2174,7 +2174,7 @@ exports[`Storyshots Select with error list 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -2586,7 +2586,7 @@ exports[`Storyshots Select with error message 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -2968,7 +2968,7 @@ exports[`Storyshots Select with fixed positioning 1`] = `
             data-testid="field-label"
           >
             <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
             >
               Inventory status
             </span>
@@ -3077,7 +3077,7 @@ exports[`Storyshots Select with helpText 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -3192,7 +3192,7 @@ exports[`Storyshots Select with multiselect 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Select PCN
           </span>
@@ -3374,7 +3374,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>
@@ -3606,7 +3606,7 @@ exports[`Storyshots Select with state 1`] = `
           data-testid="field-label"
         >
           <span
-            class="FieldLabel__LabelText-sc-1t1cp4f-1 efLeRi"
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
             Inventory status
           </span>

@@ -1,36 +1,43 @@
-import styled from "styled-components";
 import Text from "./Text";
 
-const Title = Text.withComponent("h1");
+const Heading1 = Text.withComponent("h1");
 
-Title.defaultProps = {
-  fontSize: "largest",
-  lineHeight: "title",
+Heading1.defaultProps = {
+  fontSize: "heading1",
+  lineHeight: "heading1",
   fontWeight: "light",
   mt: 0,
   mb: "x6"
 };
 
-const SectionTitle = Text.withComponent("h2");
+const Heading2 = Text.withComponent("h2");
 
-SectionTitle.defaultProps = {
-  fontWeight: "medium",
-  fontSize: "larger",
-  lineHeight: "sectionTitle",
+Heading2.defaultProps = {
+  fontSize: "heading2",
+  lineHeight: "heading2",
+  fontWeight: "normal",
   mt: 0,
   mb: "x2"
 };
 
-const SubsectionTitleBase = Text.withComponent("h3");
+const Heading3 = Text.withComponent("h3");
 
-const SubsectionTitle = styled(SubsectionTitleBase)({});
-
-SubsectionTitle.defaultProps = {
+Heading3.defaultProps = {
+  fontSize: "heading3",
+  lineHeight: "heading3",
   fontWeight: "medium",
-  fontSize: "large",
-  lineHeight: "subsectionTitle",
   mt: 0,
   mb: "x1"
 };
 
-export { Title, SectionTitle, SubsectionTitle };
+const Heading4 = Text.withComponent("h4");
+
+Heading4.defaultProps = {
+  fontSize: "heading4",
+  lineHeight: "heading4",
+  fontWeight: "bold",
+  mt: 0,
+  mb: "x1"
+};
+
+export { Heading1, Heading2, Heading3, Heading4 };

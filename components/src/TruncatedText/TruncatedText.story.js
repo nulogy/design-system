@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { Title } from "../Type";
+import { Heading1 } from "../Type";
 import { TruncatedText } from ".";
 
 storiesOf("TruncatedText", module)
@@ -14,5 +14,5 @@ storiesOf("TruncatedText", module)
     <TruncatedText indicator=" + 2...">Special instructions are provided for the shipment</TruncatedText>
   ))
   .add("as title", () => (
-    <TruncatedText element={<Title />}>Special instructions are provided for the shipment</TruncatedText>
+    <TruncatedText element={<Heading1 />}>Special instructions are provided for the shipment</TruncatedText>
   ));

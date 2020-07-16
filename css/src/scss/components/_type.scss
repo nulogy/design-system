@@ -2,19 +2,39 @@
     ## Typography
 ----------------------------------------- */
 
-.Title {
-  font-size: $size-font-page-title;
+.Heading1 {
+  font-size: $size-font-heading-1;
+  line-height: $line-height-heading-1;
   font-weight: $weight-font-light;
   margin-top: 0;
   margin-bottom: $size-base-x-6;
 }
 
-.SectionTitle {
-  font-size: $size-font-section-title;
+.Heading2 {
+  font-size: $size-font-heading-2;
+  line-height: $line-height-heading-2;
+  font-weight: $weight-font-normal;
+}
+
+.Heading3 {
+  font-size: $size-font-heading-3;
+  line-height: $line-height-heading-3;
+  font-weight: $weight-font-medium;
+}
+
+.Heading4 {
+  font-size: $size-font-heading-4;
+  line-height: $line-height-heading-4;
   font-weight: $weight-font-bold;
 }
 
+// Deprecated names
+.Title {
+  @extend .Heading1;
+}
+.SectionTitle {
+  @extend .Heading2;
+}
 .SubsectionTitle {
-  font-size: $size-font-subsection-title;
-  font-weight: $weight-font-bold;
+  @extend .Heading3;
 }
