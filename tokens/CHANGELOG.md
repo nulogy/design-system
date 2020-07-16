@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.11.0](https://github.com/nulogy/design-system/compare/v3.10.0...v3.11.0) (2020-07-16)
+
+
+### Features
+
+* Updates to typography styles, replaced Title, SectionTitle and SubSectionTitle with Heading1, Heading2 and Heading3 components ([#717](https://github.com/nulogy/design-system/issues/717)) ([4291444](https://github.com/nulogy/design-system/commit/42914446ce4c42c8f8273c4e500e35ad49f117c8))
+
+
+
+
+
 # [3.1.0](https://github.com/nulogy/design-system/compare/v3.0.4...v3.1.0) (2020-06-25)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/css",
-  "version": "3.8.0",
+  "version": "3.11.0",
   "description": "CSS for Nulogy Design System",
   "private": false,
   "publishConfig": {
@@ -28,6 +28,6 @@
     "node-sass-chokidar": "^1.3.5"
   },
   "dependencies": {
-    "@nulogy/tokens": "^3.1.0"
+    "@nulogy/tokens": "^3.11.0"
   }
 }
