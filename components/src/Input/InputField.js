@@ -39,7 +39,7 @@ const getInputStyle = ({ disabled, error, theme }) => {
 };
 
 const StyledInput = styled.input(
-  ({ theme }) => ({
+  ({ theme, width }) => ({
     display: "block",
     flexGrow: "1",
     border: "1px solid",
@@ -49,6 +49,7 @@ const StyledInput = styled.input(
     lineHeight: theme.lineHeights.base,
     margin: theme.space.none,
     minHeight: theme.space.x5,
+    width,
     "&:focus": {
       outline: "none",
       color: theme.colors.black,
@@ -90,6 +91,8 @@ export const InputField = forwardRef(
       suffix,
       suffixAlignment,
       suffixWidth,
+      inputWidth,
+      iconSize,
       ...props
     },
     ref
@@ -97,9 +100,17 @@ export const InputField = forwardRef(
     <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Flex alignItems="flex-start">
         <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
-        <Box position="relative" display="flex" flexGrow="1" ref={ref}>
-          <StyledInput aria-invalid={error} aria-required={required} required={required} error={error} {...props} />
-          {icon && <StyledInputIcon icon={icon} size={NDSTheme.space.x2} />}
+        <Box position="relative" display="flex" flexGrow="1">
+          <StyledInput
+            aria-invalid={error}
+            aria-required={required}
+            required={required}
+            error={error}
+            ref={ref}
+            width={inputWidth}
+            {...props}
+          />
+          {icon && <StyledInputIcon icon={icon} size={iconSize || NDSTheme.space.x2} />}
         </Box>
         <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
       </Flex>

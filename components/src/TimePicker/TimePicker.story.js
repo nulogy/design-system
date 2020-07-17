@@ -53,4 +53,12 @@ storiesOf("TimePicker", module)
       minTime="09:00"
       maxTime="21:00"
     />
+  ))
+  .add("with custom default", () => (
+    <TimePicker
+      onChange={action("time changed")}
+      onInputChange={action("input changed")}
+      labelText="End Time"
+      defaultValue="12:38 PM"
+    />
   ));

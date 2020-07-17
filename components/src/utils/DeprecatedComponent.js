@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useEffect } from "react";
 
 export const Deprecated = (Component, message = "") => props => {
