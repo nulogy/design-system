@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/nulogy/design-system/compare/v3.11.0...v4.0.0) (2020-07-17)
+
+
+### Features
+
+* timepicker time dropdown should scroll to nearest options ([#716](https://github.com/nulogy/design-system/issues/716)) ([0647616](https://github.com/nulogy/design-system/commit/0647616f01e6923c9245ac6321706c8a386c39ce))
+
+
+### BREAKING CHANGES
+
+* TimePicker was redesigned, the api remains the same but some tests may need to be updated due to the underlying changes in implementation, ie times are now scrolled to and not filtered and removed from the DOM.
+
+
+
+
+
 # [3.11.0](https://github.com/nulogy/design-system/compare/v3.10.0...v3.11.0) (2020-07-16)
 
 
