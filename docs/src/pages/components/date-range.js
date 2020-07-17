@@ -144,6 +144,13 @@ const propsRows = [
     type: "Number",
     defaultValue: "15",
     description: "The time difference in minutes between the time options"
+  },
+  {
+    name: "disableFlipping",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "Disables the calendar from opening in a direction other than bottom when there isn't space"
   }
 ];
 
