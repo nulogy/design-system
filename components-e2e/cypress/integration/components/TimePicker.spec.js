@@ -87,7 +87,7 @@ describe("Timepicker", () => {
       it("sets the input to the exact time that was entered", () => {
         getInput().click();
         cy.focused().type("3:18 PM");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "03:18 PM");
       });
       it("ignores spaces in the time input", () => {
@@ -100,19 +100,19 @@ describe("Timepicker", () => {
       it("ignores lack of spaces in time input", () => {
         getInput().click();
         cy.focused().type("11:16PM");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "11:16 PM");
       });
       it("uses first value when time in invalid", () => {
         getInput().click();
         cy.focused().type("ssss");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "12:00 AM");
       });
       it("converts 24 hour time", () => {
         getInput().click();
         cy.focused().type("23:31");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "11:31 PM");
       });
     });
@@ -235,25 +235,25 @@ describe("Timepicker", () => {
       it("ignores spaces in the time input", () => {
         getInput().click();
         cy.focused().type("3 : 2");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "03:20 PM");
       });
       it("uses min value when time is invalid", () => {
         getInput().click();
         cy.focused().type("ssss");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "09:00 AM");
       });
       it("uses min value when time is out of bounds", () => {
         getInput().click();
         cy.focused().type("23:31");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "09:00 AM");
       });
       it("can type in max time", () => {
         getInput().click();
         cy.focused().type("9:00 PM");
-        cy.focused().tab();
+        cy.clickOutsideElement();
         getInput().should("have.value", "09:00 PM");
       });
     });
