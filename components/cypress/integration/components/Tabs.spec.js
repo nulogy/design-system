@@ -144,25 +144,13 @@ describe("Tabs", () => {
     it("shows the content for each tab on click", () => {
       getTab(1).click();
 
-      cy.get("[aria-hidden=false]").should(
-        "have.text",
-        "Uncontrolled Content: Tab 1"
-      );
-      cy.get(".ControlledTabContent").should(
-        "have.text",
-        "Controlled Content: Tab 1"
-      );
+      cy.get("[aria-hidden=false]").should("have.text", "Uncontrolled Content: Tab 1");
+      cy.get(".ControlledTabContent").should("have.text", "Controlled Content: Tab 1");
 
       getTab(2).click();
 
-      cy.get("[aria-hidden=false]").should(
-        "have.text",
-        "Uncontrolled Content: Tab 2"
-      );
-      cy.get(".ControlledTabContent").should(
-        "have.text",
-        "Controlled Content: Tab 2"
-      );
+      cy.get("[aria-hidden=false]").should("have.text", "Uncontrolled Content: Tab 2");
+      cy.get(".ControlledTabContent").should("have.text", "Controlled Content: Tab 2");
     });
   });
 });

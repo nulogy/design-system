@@ -30,9 +30,7 @@ describe("Monthpicker", () => {
 
       it("displays the selected date in the calendar", () => {
         getMonthInputComponent().click();
-        cy.get(
-          ".react-datepicker__month-0.react-datepicker__month--selected"
-        ).should("exist");
+        cy.get(".react-datepicker__month-0.react-datepicker__month--selected").should("exist");
         cy.get(".react-datepicker__header").contains("2019");
       });
     });
@@ -65,17 +63,12 @@ describe("Monthpicker", () => {
           .first()
           .click();
         getMonthInputComponent().click();
-        cy.get(
-          ".react-datepicker__month-1.react-datepicker__month--selected"
-        ).should("not.exist");
-        cy.get(
-          ".react-datepicker__month-2.react-datepicker__month--selected"
-        ).should("exist");
+        cy.get(".react-datepicker__month-1.react-datepicker__month--selected").should("not.exist");
+        cy.get(".react-datepicker__month-2.react-datepicker__month--selected").should("exist");
       });
 
       it("allows the user to select a date in a earlier year", () => {
-        const getPreviousMonthButton = () =>
-          cy.get(".react-datepicker__navigation--previous");
+        const getPreviousMonthButton = () => cy.get(".react-datepicker__navigation--previous");
 
         getMonthInputComponent().click();
         getPreviousMonthButton().click();
@@ -83,8 +76,7 @@ describe("Monthpicker", () => {
       });
 
       it("allows the user to select a date in a later year", () => {
-        const getNextMonthButton = () =>
-          cy.get(".react-datepicker__navigation--next");
+        const getNextMonthButton = () => cy.get(".react-datepicker__navigation--next");
 
         getMonthInputComponent().click();
         getNextMonthButton().click();
@@ -109,18 +101,14 @@ describe("Monthpicker", () => {
         getMonthInputComponent()
           .clear()
           .type("Apr");
-        cy.get(
-          ".react-datepicker__month-3.react-datepicker__month--selected"
-        ).should("exist");
+        cy.get(".react-datepicker__month-3.react-datepicker__month--selected").should("exist");
         getMonthInputComponent().should("have.value", "Apr 2019");
       });
       it("auto-completes when typing characters that ignore case", () => {
         getMonthInputComponent()
           .clear()
           .type("mar");
-        cy.get(
-          ".react-datepicker__month-2.react-datepicker__month--selected"
-        ).should("exist");
+        cy.get(".react-datepicker__month-2.react-datepicker__month--selected").should("exist");
         getMonthInputComponent().should("have.value", "Mar 2019");
       });
       it("uses the last selected year to fill in the year", () => {
@@ -128,9 +116,7 @@ describe("Monthpicker", () => {
         getMonthInputComponent()
           .clear()
           .type("aug");
-        cy.get(
-          ".react-datepicker__month-7.react-datepicker__month--selected"
-        ).should("exist");
+        cy.get(".react-datepicker__month-7.react-datepicker__month--selected").should("exist");
         getMonthInputComponent().should("have.value", "Aug 2030");
       });
     });
@@ -155,8 +141,7 @@ describe("Monthpicker", () => {
         getMonthInputComponent().should("have.value", "Jul 2019");
       });
       it("does not a allow selecting a date after the max date", () => {
-        const getNextMonthButton = () =>
-          cy.get("button.react-datepicker__navigation--next");
+        const getNextMonthButton = () => cy.get("button.react-datepicker__navigation--next");
 
         getMonthInputComponent().click();
         getNextMonthButton().should("not.exist");
@@ -173,18 +158,14 @@ describe("Monthpicker", () => {
         getMonthInputComponent()
           .clear()
           .type("jul");
-        cy.get(
-          ".react-datepicker__month-6.react-datepicker__month--selected"
-        ).should("exist");
+        cy.get(".react-datepicker__month-6.react-datepicker__month--selected").should("exist");
         getMonthInputComponent().should("have.value", "Jul 2019");
       });
       it("auto-completes when month is within range", () => {
         getMonthInputComponent()
           .clear()
           .type("SEP");
-        cy.get(
-          ".react-datepicker__month-8.react-datepicker__month--selected"
-        ).should("exist");
+        cy.get(".react-datepicker__month-8.react-datepicker__month--selected").should("exist");
         getMonthInputComponent().should("have.value", "Sep 2019");
       });
     });

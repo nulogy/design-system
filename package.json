@@ -5,7 +5,6 @@
   "private": true,
   "workspaces": [
     "components",
-    "components-e2e",
     "css",
     "docs",
     "icons",
@@ -13,7 +12,7 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components-e2e test && yarn workspace @nulogy/docs test",
+    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test && yarn workspace @nulogy/docs test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish",
     "precommit": "pretty-quick --staged"
   },
