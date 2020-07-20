@@ -9,10 +9,10 @@ import {
   SectionTitle,
   List,
   ListItem,
-  Link
+  Link,
+  theme
 } from "@nulogy/components";
 import { Layout, Intro, IntroText, DocSection } from "../../components";
-import theme from "../../../../components/src/theme";
 import anatomy from "../../images/spacing-anatomy.png";
 
 const SpacingExample = props => {

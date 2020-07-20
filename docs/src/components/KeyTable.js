@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-import theme from "../../../components/src/theme";
+import { theme } from "@nulogy/components";
 
 const Table = styled.table({
   border: 0,

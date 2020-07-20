@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import theme from "../../../components/src/theme";
+import { theme } from "@nulogy/components";
 
 const HighlightStyles = createGlobalStyle`
 

@@ -7,10 +7,10 @@ import {
   Link,
   SectionTitle,
   Title,
-  Text
+  Text,
+  theme
 } from "@nulogy/components";
 import { Layout, Intro, IntroText, DocSection } from "../../components";
-import theme from "../../../../components/src/theme";
 
 export default () => (
   <Layout>
