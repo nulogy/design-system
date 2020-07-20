@@ -4,11 +4,11 @@
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "workspaces": [
-    "components",
-    "css",
+    "packages/components",
+    "packages/css",
     "docs",
-    "icons",
-    "tokens"
+    "packages/icons",
+    "packages/tokens"
   ],
   "scripts": {
     "build": "lerna run build",

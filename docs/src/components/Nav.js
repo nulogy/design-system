@@ -8,9 +8,9 @@ import {
   Icon,
   IconicButton,
   List,
-  Branding
+  Branding,
+  theme
 } from "@nulogy/components";
-import theme from "../../../components/src/theme";
 import { menuData } from "../shared/menuData";
 
 const LockBody = createGlobalStyle(({ isOpen }) => ({

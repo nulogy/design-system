@@ -7,85 +7,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @nulogy/tokens
 
-
-
-
-
 # [3.11.0](https://github.com/nulogy/design-system/compare/v3.10.0...v3.11.0) (2020-07-16)
-
 
 ### Features
 
-* Updates to typography styles, replaced Title, SectionTitle and SubSectionTitle with Heading1, Heading2 and Heading3 components ([#717](https://github.com/nulogy/design-system/issues/717)) ([4291444](https://github.com/nulogy/design-system/commit/42914446ce4c42c8f8273c4e500e35ad49f117c8))
-
-
-
-
+- Updates to typography styles, replaced Title, SectionTitle and SubSectionTitle with Heading1, Heading2 and Heading3 components ([#717](https://github.com/nulogy/design-system/issues/717)) ([4291444](https://github.com/nulogy/design-system/commit/42914446ce4c42c8f8273c4e500e35ad49f117c8))
 
 # [3.1.0](https://github.com/nulogy/design-system/compare/v3.0.4...v3.1.0) (2020-06-25)
 
-
 ### Features
 
-* add support for Simplified Chinese ([#688](https://github.com/nulogy/design-system/issues/688)) ([4a46f83](https://github.com/nulogy/design-system/commit/4a46f830c48db8ccbe3995da67d9b881e1e555d2))
-
-
-
-
+- add support for Simplified Chinese ([#688](https://github.com/nulogy/design-system/issues/688)) ([4a46f83](https://github.com/nulogy/design-system/commit/4a46f830c48db8ccbe3995da67d9b881e1e555d2))
 
 ## [3.0.2](https://github.com/nulogy/design-system/compare/v3.0.1...v3.0.2) (2020-06-23)
 
 **Note:** Version bump only for package @nulogy/tokens
 
-
-
-
-
 ## [2.13.1](https://github.com/nulogy/design-system/compare/v2.13.0...v2.13.1) (2020-06-05)
-
 
 ### Bug Fixes
 
-* typo in zIndex tokens ([#669](https://github.com/nulogy/design-system/issues/669)) ([71207a0](https://github.com/nulogy/design-system/commit/71207a0bb98d31b812a7c5320c8dfee11c78ff52))
-
-
-
-
+- typo in zIndex tokens ([#669](https://github.com/nulogy/design-system/issues/669)) ([71207a0](https://github.com/nulogy/design-system/commit/71207a0bb98d31b812a7c5320c8dfee11c78ff52))
 
 # [2.13.0](https://github.com/nulogy/design-system/compare/v2.12.1...v2.13.0) (2020-06-03)
 
-
 ### Features
 
-* add overlay css component ([#666](https://github.com/nulogy/design-system/issues/666)) ([1cf892a](https://github.com/nulogy/design-system/commit/1cf892a85798c40702aad86ee6d5f34037307c8e))
-
-
-
-
+- add overlay css component ([#666](https://github.com/nulogy/design-system/issues/666)) ([1cf892a](https://github.com/nulogy/design-system/commit/1cf892a85798c40702aad86ee6d5f34037307c8e))
 
 # [2.0.0](https://github.com/nulogy/design-system/compare/v1.6.1...v2.0.0) (2020-03-25)
 
 **Note:** Version bump only for package @nulogy/tokens
 
-
-
-
-
 # [1.0.0](https://github.com/nulogy/design-system/compare/v0.24.3...v1.0.0) (2020-02-19)
 
 **Note:** Version bump only for package @nulogy/tokens
 
-
-
-
-
 # [0.24.0](https://github.com/nulogy/design-system/compare/v0.23.0...v0.24.0) (2020-02-13)
 
 **Note:** Version bump only for package @nulogy/tokens
-
-
-
-
 
 # [0.23.0](https://github.com/nulogy/design-system/compare/v0.22.1...v0.23.0) (2020-02-11)
 
