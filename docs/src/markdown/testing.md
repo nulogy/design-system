@@ -12,9 +12,9 @@ Unit tests check if small pieces of our code do what they are supposed to do, e.
 
 ## End-to-end Tests
 
-End-to-end tests are how we check our components are behaving correctly e.g: “When a user clicks a button does that open a dropdown menu?” We write these with [Cypress](https://www.cypress.io/) in our [components-e2e](https://github.com/nulogy/design-system/tree/master/components-e2e) package.
+End-to-end tests are how we check our components are behaving correctly e.g: “When a user clicks a button does that open a dropdown menu?” We write these with [Cypress](https://www.cypress.io/) in our [components-e2e](https://github.com/nulogy/design-system/tree/master/components/components-e2e) package.
 
-- [e2e testing example](https://github.com/nulogy/design-system/blob/master/components-e2e/cypress/integration/components/Select.spec.js)
+- [e2e testing example](https://github.com/nulogy/design-system/blob/master/components/components-e2e/cypress/integration/components/Select.spec.js)
 
 ## Selector Priority
 

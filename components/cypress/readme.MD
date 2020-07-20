@@ -20,11 +20,14 @@ cypress works by running against an existing server. Unlike application developm
 
 Stories within any component folder can be tested and additional stories just for testing purposes can be found in `components/src/StoriesForTests`.
 
-# How do I run specs?
+# How do I run e2e specs?
 
 To test in the cypress runner (to see the tests run):
 - `yarn cypress:open`
   - Then run whichever file you want.
 
 CLI:
-- `yarn test`
+- `yarn e2e:test`
+
+IN BROWSER:
+- `yarn e2e:start`

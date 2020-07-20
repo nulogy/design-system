@@ -1,25 +1,17 @@
 describe("Table", () => {
-  const headerCheckboxSelector =
-    "[data-testid='table-head'] [data-testid='visual-checkbox']";
-  const headerCheckboxInputSelector =
-    "[data-testid='table-head'] [type='checkbox']";
-  const rowCheckboxSelector =
-    "[data-testid='table-body'] [data-testid='visual-checkbox']";
-  const rowCheckboxInputSelector =
-    "[data-testid='table-body'] [type='checkbox']";
-  const rowExpandButtonSelector =
-    "[data-testid='table-body'] [aria-label='Expand row']";
-  const rowCollapseButtonSelector =
-    "[data-testid='table-body'] [aria-label='Collapse row']";
+  const headerCheckboxSelector = "[data-testid='table-head'] [data-testid='visual-checkbox']";
+  const headerCheckboxInputSelector = "[data-testid='table-head'] [type='checkbox']";
+  const rowCheckboxSelector = "[data-testid='table-body'] [data-testid='visual-checkbox']";
+  const rowCheckboxInputSelector = "[data-testid='table-body'] [type='checkbox']";
+  const rowExpandButtonSelector = "[data-testid='table-body'] [aria-label='Expand row']";
+  const rowCollapseButtonSelector = "[data-testid='table-body'] [aria-label='Collapse row']";
   const getNextPageButton = () => cy.get("[aria-label='Go to next results']");
-  const getPreviousPageButton = () =>
-    cy.get("[aria-label='Go to previous results']");
+  const getPreviousPageButton = () => cy.get("[aria-label='Go to previous results']");
   const selectAll = () => cy.get(headerCheckboxSelector);
   const selectAllInput = () => cy.get(headerCheckboxInputSelector);
   const rowCheckboxes = () => cy.get(rowCheckboxSelector);
   const rowCheckboxesInput = () => cy.get(rowCheckboxInputSelector);
-  const paginationButtons = pageNumber =>
-    cy.get(`[aria-label='Go to page ${pageNumber}']`);
+  const paginationButtons = pageNumber => cy.get(`[aria-label='Go to page ${pageNumber}']`);
   const expandButtons = () => cy.get(rowExpandButtonSelector);
   const collapseButtons = () => cy.get(rowCollapseButtonSelector);
 
@@ -136,10 +128,7 @@ describe("Table", () => {
       selectAll().click();
       selectAll().click();
 
-      cy.get("[data-testid='table-body']").should(
-        "contain",
-        "Thu, 24 Oct 2019"
-      );
+      cy.get("[data-testid='table-body']").should("contain", "Thu, 24 Oct 2019");
       selectAllInput().should("not.be.checked");
       rowCheckboxesInput().should("not.be.checked");
 
@@ -171,9 +160,7 @@ describe("Table", () => {
   describe("with filtering and pagination", () => {
     const filterIinput = () => cy.get('input[name="Name"]');
     beforeEach(() => {
-      cy.renderFromStorybook(
-        "table--with-filtering-and-pagination-skipstoryshot"
-      );
+      cy.renderFromStorybook("table--with-filtering-and-pagination-skipstoryshot");
     });
     it("filters down to fewer pages", () => {
       paginationButtons(3).should("exist");

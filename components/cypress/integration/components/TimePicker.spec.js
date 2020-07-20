@@ -125,9 +125,7 @@ describe("Timepicker", () => {
     describe("scrolls to closest times", () => {
       it("shows matching times by interval", () => {
         getInput().click();
-        cy.focused().type(
-          "{backspace}{backspace}{backspace}{backspace}{backspace}5:"
-        );
+        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}5:");
         getDropdownOptions()
           .contains("04:45")
           .should("be.visible");
@@ -143,9 +141,7 @@ describe("Timepicker", () => {
       });
       it("shows times by minute when minutes are added", () => {
         getInput().click();
-        cy.focused().type(
-          "{backspace}{backspace}{backspace}{backspace}{backspace}23:"
-        );
+        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}23:");
         cy.focused().type("1");
         getDropdownOptions()
           .contains("22:45")
@@ -170,9 +166,7 @@ describe("Timepicker", () => {
     describe("scrolls to closest times", () => {
       it("shows matching times by interval", () => {
         getInput().click();
-        cy.focused().type(
-          "{backspace}{backspace}{backspace}{backspace}{backspace}5:"
-        );
+        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}5:");
         getDropdownOptions()
           .contains("04:00")
           .should("be.visible");
