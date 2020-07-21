@@ -10,7 +10,7 @@
     "packages/tokens"
   ],
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build && cd docs && yarn build",
     "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test && yarn workspace @nulogy/docs test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish",
     "precommit": "pretty-quick --staged"
