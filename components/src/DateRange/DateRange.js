@@ -47,6 +47,7 @@ const DateRange = ({
   onEndTimeChange,
   timeFormat,
   interval,
+  disableFlipping,
   locale
 }) => {
   const [startDate, setStartDate] = useState(defaultStartDate);
@@ -120,6 +121,7 @@ const DateRange = ({
         maxDate={maxDate}
         highlightDates={highlightDates(startDate, endDate)}
         locale={locale}
+        disableFlipping={disableFlipping}
       />
       {showTimes && (
         <StyledStartTime
@@ -167,6 +169,7 @@ const DateRange = ({
         maxDate={maxDate}
         highlightDates={highlightDates(startDate, endDate)}
         locale={locale}
+        disableFlipping={disableFlipping}
       />
     </>
   );
@@ -216,7 +219,8 @@ DateRange.propTypes = {
   onEndTimeChange: PropTypes.func,
   timeFormat: PropTypes.string,
   interval: PropTypes.number,
-  locale: PropTypes.string
+  locale: PropTypes.string,
+  disableFlipping: PropTypes.bool
 };
 
 DateRange.defaultProps = {
@@ -247,7 +251,8 @@ DateRange.defaultProps = {
   onEndTimeChange: null,
   timeFormat: undefined,
   interval: undefined,
-  locale: undefined
+  locale: undefined,
+  disableFlipping: false
 };
 
 export default DateRange;

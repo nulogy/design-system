@@ -70,6 +70,13 @@ const propsRows = [
     description: "The latest date that can be selected"
   },
   {
+    name: "disableFlipping",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "If true, always opens the calendar below the input rather than automatically flipping upward if there is not enough space below the input"
+  },
+  {
     name: "className",
     type: "string",
     defaultValue: "undefined"

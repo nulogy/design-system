@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, select } from "@storybook/addon-knobs";
+import { withKnobs, select, boolean } from "@storybook/addon-knobs";
 
 import { DatePicker } from ".";
 
@@ -63,5 +63,14 @@ storiesOf("DatePicker", module)
       onChange={action("date changed")}
       onInputChange={action("input changed")}
       inputProps={{ labelText: "Expiry Date" }}
+    />
+  ))
+  .add("disable flipping", () => (
+    <DatePicker
+      selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+      onChange={action("date changed")}
+      onInputChange={action("input changed")}
+      inputProps={{ labelText: "Expiry Date" }}
+      disableFlipping={boolean("disableFlipping", true)}
     />
   ));
