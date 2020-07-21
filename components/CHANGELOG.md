@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/nulogy/design-system/compare/v4.0.0...v4.1.0) (2020-07-21)
+
+
+### Features
+
+* disable flipping in Datepicker ([#718](https://github.com/nulogy/design-system/issues/718)) ([c5db11b](https://github.com/nulogy/design-system/commit/c5db11b334beb8359e0a021891aa8fd157fe87be))
+
+
+
+
+
 # [4.0.0](https://github.com/nulogy/design-system/compare/v3.11.0...v4.0.0) (2020-07-17)
 
 
