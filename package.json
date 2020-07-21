@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "lerna run build && cd docs && yarn build",
-    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test && yarn workspace @nulogy/docs test",
+    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test && cd docs && yarn test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish",
     "precommit": "pretty-quick --staged"
   },
