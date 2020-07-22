@@ -11,7 +11,6 @@
         "**/**.story.js",
         "*.md",
         "**/**.md",
-        "./docs/*",
         "./components/.storybook/*"
       ]
     },
