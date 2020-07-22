@@ -62,11 +62,11 @@ _Coming soon_
 ## Testing
 
 - To run everything:
-  - `cd components; yarn test`
+  - `cd packages/components; yarn test`
 - To run just storyshots:
-  - `cd components; yarn run storyshots`
+  - `cd packages/components; yarn run storyshots`
 - To update storyshot snapshots because they were intended changes:
-  - `cd components; yarn run storyshots:update`
+  - `cd packages/components; yarn run storyshots:update`
 
 ## Documentation
 

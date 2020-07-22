@@ -70,7 +70,6 @@ typings/
 **/dist/
 **/storybook-static
 **/public/
-/.cache
 
 # misc
 .DS_Store
@@ -85,8 +84,7 @@ yarn-error.log*
 
 **/__image_snapshots__
 
-**/cypress/screenshots
-**/cypress/videos
+**/cypress/
 
 # RubyMine settings
 .idea
