@@ -70,6 +70,7 @@ typings/
 **/dist/
 **/storybook-static
 **/public/
+/.cache
 
 # misc
 .DS_Store
