@@ -10,10 +10,17 @@
     "packages/tokens"
   ],
   "scripts": {
-    "build": "lerna run build && cd docs && yarn build",
+    "build": "lerna run build && yarn docs:build",
     "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test && cd docs && yarn test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "lint": "yarn run eslint",
+    "eslint": "eslint --config ./.eslintrc './**/*.js'",
+    "eslint:fix": "yarn run eslint --fix",
+    "docs:build": "gatsby build",
+    "docs:develop": "yarn workspace @nulogy/components build && gatsby develop",
+    "serve": "yarn build && gatsby serve",
+    "docs:start": "yarn docs:develop"
   },
   "main": "index.js",
   "license": "MIT",
