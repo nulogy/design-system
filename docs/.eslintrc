@@ -1,7 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": ["../.eslintrc"],
+  "extends": [
+    "eslint:recommended"
+  ],
   "rules": {
-    "react/no-unescaped-entities": ["off"],
+    "react/no-unescaped-entities": [
+      "off"
+    ],
   }
 }
