@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "eslint:recommended"
+    "../../.eslintrc"
   ],
   "rules": {
     "jsx-a11y/label-has-associated-control": [
