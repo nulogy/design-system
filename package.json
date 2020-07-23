@@ -19,7 +19,7 @@
     "eslint:fix": "yarn run eslint --fix",
     "docs:build": "gatsby build",
     "docs:develop": "yarn workspace @nulogy/components build && gatsby develop",
-    "serve": "yarn build && gatsby serve",
+    "docs:serve": "yarn docs:build && gatsby serve",
     "docs:start": "yarn docs:develop"
   },
   "main": "index.js",
