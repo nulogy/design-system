@@ -52,7 +52,8 @@
     "prettier": "1.17.0",
     "pretty-quick": "2.0.1",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "wait-for-expect": "^3.0.2"
   },
   "resolutions": {
     "**/svgi/js-yaml": "^3.13.1"
@@ -88,6 +89,7 @@
     "react-helmet": "^5.2.0",
     "react-highlight": "^0.12.0",
     "styled-components": "^=5.0.0",
-    "styled-system": "3.2.1"
+    "styled-system": "3.2.1",
+    "warning": "^4.0.3"
   }
 }
