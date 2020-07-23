@@ -20,7 +20,7 @@
     "storyshots:visual": "yarn build-storybook && jest --testRegex='scripts/.+spec.js' scripts/visual-storyshots/Storyshots.visual.js",
     "storyshots:visual:against-master": "git checkout master && yarn run storyshots:visual:initial && git checkout - && yarn run storyshots:visual",
     "e2e:start": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:8080 && cypress open\"",
-    "e2e": "yarn build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ./storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run\"",
+    "e2e": "yarn build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ./storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run --record --parallel\"",
     "test": "yarn lint && yarn jest",
     "new": "plop"
   },
