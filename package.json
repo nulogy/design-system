@@ -4,18 +4,23 @@
   "description": "Modern Enterprise Design for the Industrial Environment - http://nulogy.design",
   "private": true,
   "workspaces": [
-    "components",
-    "components-e2e",
-    "css",
-    "docs",
-    "icons",
-    "tokens"
+    "packages/components",
+    "packages/css",
+    "packages/icons",
+    "packages/tokens"
   ],
   "scripts": {
-    "build": "lerna run build",
-    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components-e2e test && yarn workspace @nulogy/docs test",
+    "build": "lerna run build && yarn docs:build",
+    "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "lint": "yarn run eslint",
+    "eslint": "eslint --config ./.eslintrc './**/*.js'",
+    "eslint:fix": "yarn run eslint --fix",
+    "docs:build": "gatsby build",
+    "docs:develop": "yarn workspace @nulogy/components build && gatsby develop",
+    "docs:serve": "yarn docs:build && gatsby serve",
+    "docs:start": "yarn docs:develop"
   },
   "main": "index.js",
   "license": "MIT",
@@ -32,6 +37,7 @@
     "yarn": "^1.17.3"
   },
   "devDependencies": {
+    "@storybook/react": "^5.3.19",
     "babel-eslint": "^10.0.3",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "5.16.0",
@@ -55,5 +61,33 @@
     "hooks": {
       "pre-commit": "yarn run precommit"
     }
+  },
+  "dependencies": {
+    "@nulogy/components": "^4.0.0",
+    "@nulogy/icons": "^4.0.0",
+    "@nulogy/tokens": "^4.0.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.24.8",
+    "gatsby-image": "^2.2.29",
+    "gatsby-link": "^2.4.13",
+    "gatsby-plugin-gtag": "^1.0.12",
+    "gatsby-plugin-manifest": "^2.2.23",
+    "gatsby-plugin-netlify": "2.1.22",
+    "gatsby-plugin-offline": "^3.0.16",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-plugin-sharp": "^2.2.32",
+    "gatsby-plugin-styled-components": "^3.1.11",
+    "gatsby-react-router-scroll": "^3.0.12",
+    "gatsby-remark-copy-linked-files": "^2.1.28",
+    "gatsby-remark-images": "^3.1.28",
+    "gatsby-source-filesystem": "^2.3.21",
+    "gatsby-transformer-remark": "^2.6.30",
+    "gatsby-transformer-sharp": "^2.2.23",
+    "prop-types": "^15.6.2",
+    "react-helmet": "^5.2.0",
+    "react-highlight": "^0.12.0",
+    "styled-components": "^=5.0.0",
+    "styled-system": "3.2.1"
   }
 }

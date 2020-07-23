@@ -1,7 +1,0 @@
-{
-  "parser": "babel-eslint",
-  "extends": ["../.eslintrc"],
-  "rules": {
-    "react/no-unescaped-entities": ["off"],
-  }
-}
