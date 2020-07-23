@@ -1,0 +1,148 @@
+{
+  "name": "@nulogy/components",
+  "version": "4.1.1",
+  "description": "Component library for the Nulogy Design System - http://nulogy.design",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "yarn run eslint",
+    "eslint": "eslint --config .eslintrc './**/*.js'",
+    "eslint:fix": "yarn run eslint --fix",
+    "start": "yarn workspace @nulogy/tokens build && concurrently \"yarn build:watch\" \"start-storybook -p 8080\"",
+    "build": "yarn workspace @nulogy/tokens build && rollup -c",
+    "build:watch": "yarn build --watch",
+    "build-storybook": "build-storybook",
+    "storyshots": "yarn workspace @nulogy/tokens build && jest --testPathPattern='Storyshots.spec.js'",
+    "storyshots:update": "yarn storyshots -u",
+    "storyshots:visual:initial": "rm -rf scripts/visual-storyshots/__image_snapshots__ && yarn run storyshots:visual",
+    "storyshots:visual": "yarn build-storybook && jest --testRegex='scripts/.+spec.js' scripts/visual-storyshots/Storyshots.visual.js",
+    "storyshots:visual:against-master": "git checkout master && yarn run storyshots:visual:initial && git checkout - && yarn run storyshots:visual",
+    "test": "yarn lint && yarn jest",
+    "new": "plop"
+  },
+  "license": "MIT",
+  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
+  "homepage": "http://nulogy.design",
+  "repository": "https://github.com/nulogy/design-system",
+  "bugs": {
+    "url": "https://github.com/nulogy/design-system/issues"
+  },
+  "keywords": [
+    "nulogy",
+    "design system",
+    "NDS",
+    "react",
+    "components",
+    "component library"
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "main": "dist/main.js",
+  "module": "dist/main.module.js",
+  "files": [
+    "/dist"
+  ],
+  "peerDependencies": {
+    "react": ">=16.10.2",
+    "react-dom": ">=16.10.2",
+    "styled-components": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "7.3.1",
+    "@rollup/plugin-babel": "^5.0.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@storybook/addon-a11y": "^5.2.4",
+    "@storybook/addon-actions": "^5.2.5",
+    "@storybook/addon-info": "^5.2.4",
+    "@storybook/addon-knobs": "^5.2.5",
+    "@storybook/addon-storyshots": "^5.2.4",
+    "@storybook/addon-storyshots-puppeteer": "^5.2.4",
+    "@storybook/addon-storysource": "^5.2.4",
+    "@storybook/addon-viewport": "^5.2.4",
+    "@storybook/react": "^5.2.1",
+    "@storybook/theming": "^5.2.1",
+    "@testing-library/jest-dom": "5.1.1",
+    "@testing-library/react": "^10.0.0",
+    "babel-jest": "24.1.0",
+    "babel-loader": "8.0.6",
+    "babel-plugin-inline-json-import": "^0.3.2",
+    "babel-plugin-require-context-hook": "1.0.0",
+    "babel-plugin-styled-components": "1.10.7",
+    "babel-preset-react": "6.24.1",
+    "concurrently": "^5.2.0",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "enzyme-to-json": "3.4.4",
+    "eslint": "5.3.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "24.1.0",
+    "jest-styled-components": "7",
+    "plop": "^2.4.0",
+    "prop-types": "15.7.2",
+    "puppeteer": "^3.3.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-select": "^3.1.0",
+    "react-test-renderer": "^16.10",
+    "rollup": "^2.7.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "storybook-addon-performance": "^0.11.0",
+    "styled-components": "^5.0.0",
+    "svgi": "^1.1.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.6",
+    "@nulogy/icons": "^4.1.1",
+    "@nulogy/tokens": "^4.1.1",
+    "@styled-system/prop-types": "^5.1.4",
+    "@styled-system/theme-get": "^5.1.2",
+    "babel-eslint": "^10.0.3",
+    "date-fns": "2.9.0",
+    "debounce": "^1.2.0",
+    "gatsby-plugin-gtag": "^1.0.12",
+    "i18next": "^19.3.1",
+    "lerna": "^3.16.4",
+    "mockdate": "^2.0.5",
+    "polished": "3.4.4",
+    "react-datepicker": "^2.10.1",
+    "react-i18next": "^11.3.3",
+    "react-modal": "^3.10.1",
+    "react-popper": "^1.3.3",
+    "react-resize-detector": "^4.2.0",
+    "react-windowed-select": "^2.0.2",
+    "smoothscroll-polyfill": "^0.4.4",
+    "styled-system": "^5.1.4",
+    "svg-sprite-loader": "^3.8.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|sass)$": "identity-obj-proxy"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@nulogy|storybook-addon-performance))"
+    ],
+    "testRegex": ".*spec\\.js$",
+    "setupFiles": [
+      "<rootDir>/spec/support/registerContext.js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/spec/support/specHelper.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
+}
