@@ -81,17 +81,7 @@ class DatePicker extends Component {
   };
 
   render() {
-    const {
-      dateFormat,
-      errorMessage,
-      errorList,
-      inputProps,
-      minDate,
-      maxDate,
-      highlightDates,
-      disableFlipping,
-      className
-    } = this.props;
+    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, highlightDates, className } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
@@ -131,9 +121,6 @@ class DatePicker extends Component {
               ref={r => {
                 this.datepickerRef = r;
               }}
-              popperModifiers={{
-                flip: { enabled: !disableFlipping }
-              }}
             />
           )}
         </LocaleContext.Consumer>
@@ -154,7 +141,6 @@ DatePicker.propTypes = {
   minDate: PropTypes.instanceOf(Date),
   maxDate: PropTypes.instanceOf(Date),
   highlightDates: PropTypes.arrayOf(PropTypes.shape({})),
-  disableFlipping: PropTypes.bool,
   className: PropTypes.string
 };
 
@@ -169,7 +155,6 @@ DatePicker.defaultProps = {
   minDate: undefined,
   maxDate: undefined,
   highlightDates: undefined,
-  disableFlipping: false,
   className: ""
 };
 

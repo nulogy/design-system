@@ -144,13 +144,6 @@ const propsRows = [
     type: "Number",
     defaultValue: "15",
     description: "The time difference in minutes between the time options"
-  },
-  {
-    name: "disableFlipping",
-    type: "boolean",
-    defaultValue: "false",
-    description:
-      "If true, always opens the calendar below the input rather than automatically flipping upward if there is not enough space below the input"
   }
 ];
 
