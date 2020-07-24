@@ -69,7 +69,18 @@ const selectProps = [
     defaultValue: "absolute",
     description: "The CSS position value of the menu. ex: 'fixed'"
   },
-  ...inputProps
+  ...inputProps.map(prop => {
+    if (prop.name === "required") {
+      return {
+        name: "required",
+        type: "boolean",
+        defaultValue: "false",
+        description:
+          "adds requirement text and asterisk to the label, NOTE: this does not behave like a required html input that blocks form submission when no value is entered, you must check the value of the select manually when submitting"
+      };
+    }
+    return prop;
+  })
 ];
 
 export default selectProps;
