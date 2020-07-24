@@ -2004,11 +2004,11 @@ exports[`Storyshots Select with custom option component 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      class="Box-xda4ls-0 hQvIAg"
       style="position:relative;overflow:hidden;width:300px;height:600px"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2016,7 +2016,7 @@ exports[`Storyshots Select with custom option component 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span

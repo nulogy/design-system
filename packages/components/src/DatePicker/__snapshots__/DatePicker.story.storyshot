@@ -32,10 +32,10 @@ exports[`Storyshots DatePicker default 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -79,7 +79,7 @@ exports[`Storyshots DatePicker disable flipping 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
     >
       <div
         class="react-datepicker-wrapper"
@@ -93,7 +93,7 @@ exports[`Storyshots DatePicker disable flipping 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span

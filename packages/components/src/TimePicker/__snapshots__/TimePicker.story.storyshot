@@ -8,7 +8,7 @@ exports[`Storyshots TimePicker default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+      class="Box-xda4ls-0 eIwoSp nds-time-picker "
       data-testid="select-container"
       width="130px"
     >
@@ -18,7 +18,7 @@ exports[`Storyshots TimePicker default 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -28,10 +28,10 @@ exports[`Storyshots TimePicker default 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -947,7 +947,7 @@ exports[`Storyshots TimePicker with custom default 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+      class="Box-xda4ls-0 eIwoSp nds-time-picker "
       data-testid="select-container"
       width="130px"
     >
@@ -957,7 +957,7 @@ exports[`Storyshots TimePicker with custom default 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -967,10 +967,10 @@ exports[`Storyshots TimePicker with custom default 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -1886,7 +1886,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+      class="Box-xda4ls-0 eIwoSp nds-time-picker "
       data-testid="select-container"
       width="130px"
     >
@@ -1896,7 +1896,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -1906,10 +1906,10 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -2825,7 +2825,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+      class="Box-xda4ls-0 eIwoSp nds-time-picker "
       data-testid="select-container"
       width="130px"
     >
@@ -2835,7 +2835,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -2845,10 +2845,10 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -3764,7 +3764,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+      class="Box-xda4ls-0 eIwoSp nds-time-picker "
       data-testid="select-container"
       width="130px"
     >
@@ -3774,7 +3774,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -3784,10 +3784,10 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -4271,7 +4271,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+      class="Box-xda4ls-0 eIwoSp nds-time-picker "
       data-testid="select-container"
       width="130px"
     >
@@ -4281,7 +4281,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -4291,10 +4291,10 @@ exports[`Storyshots TimePicker with error state 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -5198,7 +5198,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
         </li>
       </ul>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
         color="red"
       >
         <svg
@@ -5242,7 +5242,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+      class="Box-xda4ls-0 eIwoSp nds-time-picker "
       data-testid="select-container"
       width="130px"
     >
@@ -5252,7 +5252,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -5262,10 +5262,10 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input

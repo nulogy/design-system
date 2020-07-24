@@ -13,7 +13,7 @@ exports[`Storyshots TimeRange default 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -24,19 +24,19 @@ exports[`Storyshots TimeRange default 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-start-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -940,7 +940,7 @@ exports[`Storyshots TimeRange default 1`] = `
         </ul>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -951,15 +951,15 @@ exports[`Storyshots TimeRange default 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-end-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -1880,7 +1880,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -1891,19 +1891,19 @@ exports[`Storyshots TimeRange default selections 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-start-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -2807,7 +2807,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
         </ul>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -2818,15 +2818,15 @@ exports[`Storyshots TimeRange default selections 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-end-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -3747,7 +3747,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -3758,19 +3758,19 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-start-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -4161,7 +4161,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         </ul>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -4172,15 +4172,15 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-end-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -4588,7 +4588,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -4599,19 +4599,19 @@ exports[`Storyshots TimeRange with range validation 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-start-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -5515,7 +5515,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         </ul>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -5526,15 +5526,15 @@ exports[`Storyshots TimeRange with range validation 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 gSHowq nds-time-picker "
+        class="Box-xda4ls-0 eIwoSp nds-time-picker "
         data-testid="timerange-end-time"
         width="130px"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
