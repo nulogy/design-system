@@ -13,7 +13,7 @@ module.exports = {
       test: /\.(ts|tsx)$/,
       use: [
         {
-          loader: require.resolve("ts-loader")
+          loader: require.resolve("babel-loader")
         },
         // Optional
         {
