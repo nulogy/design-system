@@ -6,14 +6,14 @@
 
 ## 📦 Packages
 
-This is a monorepo consisting of several packages, the most popular of which is [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components). If you're looking for a specific package, see below.
+This is a monorepo consisting of several packages, the most popular of which is [@nulogy/components](https://github.com/nulogy/design-system/tree/master/packages/components). If you're looking for a specific package, see below.
 
 | Package                                                                              | Description                                                                        |                                                                                                                                             |
 | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [@nulogy/components](https://github.com/nulogy/design-system/tree/master/components) | React components that take advantage of the Nulogy Design System                   | [![Components on NPM](https://img.shields.io/npm/v/@nulogy/components?style=flat-square)](https://www.npmjs.com/package/@nulogy/components) |
-| [@nulogy/css](https://github.com/nulogy/design-system/tree/master/css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
-| [@nulogy/icons](https://github.com/nulogy/design-system/tree/master/icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
-| [@nulogy/tokens](https://github.com/nulogy/design-system/tree/master/tokens)         | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens)             |
+| [@nulogy/components](https://github.com/nulogy/design-system/tree/master/packages/components) | React components that take advantage of the Nulogy Design System                   | [![Components on NPM](https://img.shields.io/npm/v/@nulogy/components?style=flat-square)](https://www.npmjs.com/package/@nulogy/components) |
+| [@nulogy/css](https://github.com/nulogy/design-system/tree/master/packages/css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
+| [@nulogy/icons](https://github.com/nulogy/design-system/tree/master/packages/icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
+| [@nulogy/tokens](https://github.com/nulogy/design-system/tree/master/packages/tokens)         | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens)             |
 
 ## 🎨 UI Kit
 
