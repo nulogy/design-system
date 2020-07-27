@@ -67,6 +67,7 @@
     "@nulogy/icons": "^4.0.0",
     "@nulogy/tokens": "^4.0.0",
     "babel-plugin-styled-components": "^1.10.0",
+    "core-js": "3",
     "gatsby": "^2.24.8",
     "gatsby-image": "^2.2.29",
     "gatsby-link": "^2.4.13",
