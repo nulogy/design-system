@@ -41,7 +41,7 @@ const StyledOl = styled.ol(() => ({
   display: "flex"
 }));
 
-const Breadcrumbs = ({ children, as }) => {
+const Breadcrumbs = ({ children, as, ...props }) => {
   const childrenArr = Array.isArray(children) ? children : [children];
   const allItems = [...childrenArr].map((child, index) => {
     return (
@@ -55,7 +55,7 @@ const Breadcrumbs = ({ children, as }) => {
   });
 
   return (
-    <Flex as={as}>
+    <Flex as={as} {...props}>
       <StyledOl>{insertSeparators(allItems, "seperator")}</StyledOl>
     </Flex>
   );
