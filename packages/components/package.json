@@ -11,7 +11,7 @@
     "eslint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
     "eslint:fix": "yarn run eslint --fix",
     "start": "yarn workspace @nulogy/tokens build && concurrently \"yarn build:watch\" \"start-storybook -p 8080\"",
-    "build": "yarn workspace @nulogy/tokens build && rollup -c",
+    "build": "rollup -c",
     "build:watch": "yarn build --watch",
     "build-storybook": "build-storybook",
     "storyshots": "yarn workspace @nulogy/tokens build && jest --testPathPattern='Storyshots.spec.js'",
