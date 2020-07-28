@@ -132,6 +132,7 @@
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
     "babel-eslint": "^10.0.3",
+    "core-js": "3",
     "date-fns": "2.9.0",
     "debounce": "^1.2.0",
     "gatsby-plugin-gtag": "^1.0.12",
