@@ -14,7 +14,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -65,7 +65,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -168,27 +168,27 @@ exports[`Storyshots NavBar NavBar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <div
-                class="Box-sc-1qu1edy-0 eBpgUm"
+                class="Box-xda4ls-0 eUAOSd"
               >
                 <form
                   class="NavBarSearch-sc-1aq0npd-0 lfszCe"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                     role="search"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
                     >
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                       >
                         <div
-                          class="Box-sc-1qu1edy-0 hxUhcg"
+                          class="Box-xda4ls-0 erhvLv"
                           display="flex"
                         >
                           <input
@@ -311,7 +311,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hHesXB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 hHesXB"
         >
           <a
             aria-label="Nulogy logo"
@@ -360,7 +360,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
                 </g>
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+                class="Box-xda4ls-0 Flex-hrfu3s-0 hfSUkz"
                 width="100%"
               >
                 <span
@@ -373,7 +373,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -430,7 +430,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             />
           </div>
@@ -455,7 +455,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -506,7 +506,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -563,7 +563,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             />
           </div>
@@ -588,7 +588,7 @@ exports[`Storyshots NavBar With branding only 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -639,11 +639,11 @@ exports[`Storyshots NavBar With branding only 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             />
           </div>
@@ -668,7 +668,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -719,7 +719,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -776,27 +776,27 @@ exports[`Storyshots NavBar With custom link components 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <div
-                class="Box-sc-1qu1edy-0 eBpgUm"
+                class="Box-xda4ls-0 eUAOSd"
               >
                 <form
                   class="NavBarSearch-sc-1aq0npd-0 lfszCe"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                     role="search"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
                     >
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                       >
                         <div
-                          class="Box-sc-1qu1edy-0 hxUhcg"
+                          class="Box-xda4ls-0 erhvLv"
                           display="flex"
                         >
                           <input
@@ -934,7 +934,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -983,7 +983,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
                 </g>
               </svg>
               <div
-                class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hfSUkz"
+                class="Box-xda4ls-0 Flex-hrfu3s-0 hfSUkz"
                 width="100%"
               >
                 <span
@@ -996,7 +996,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -1053,27 +1053,27 @@ exports[`Storyshots NavBar With subtext 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <div
-                class="Box-sc-1qu1edy-0 iByNwK"
+                class="Box-xda4ls-0 iUKvuB"
               >
                 <form
                   class="NavBarSearch-sc-1aq0npd-0 lfszCe"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                     role="search"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
                     >
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                       >
                         <div
-                          class="Box-sc-1qu1edy-0 hxUhcg"
+                          class="Box-xda4ls-0 erhvLv"
                           display="flex"
                         >
                           <input
@@ -1135,7 +1135,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -1186,7 +1186,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -1239,7 +1239,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             />
           </div>
@@ -1264,7 +1264,7 @@ exports[`Storyshots NavBar Without search 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -1315,7 +1315,7 @@ exports[`Storyshots NavBar Without search 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -1418,7 +1418,7 @@ exports[`Storyshots NavBar Without search 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -1505,7 +1505,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -1556,11 +1556,11 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <nav
@@ -1647,7 +1647,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -1698,7 +1698,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -1801,7 +1801,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             />
           </div>
@@ -1826,7 +1826,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
         class="NavBar-iayrjp-3 bwrKUV"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-iayrjp-0 btupnB"
         >
           <a
             aria-label="Nulogy logo"
@@ -1877,7 +1877,7 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
             </div>
           </a>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 cDPANM"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 cDPANM"
             style="flex-grow:1;margin:0 0 0 24px"
           >
             <nav
@@ -1980,27 +1980,27 @@ exports[`Storyshots NavBar Without secondary menu 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
               style="float:right"
             >
               <div
-                class="Box-sc-1qu1edy-0 iByNwK"
+                class="Box-xda4ls-0 iUKvuB"
               >
                 <form
                   class="NavBarSearch-sc-1aq0npd-0 lfszCe"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+                    class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
                     role="search"
                   >
                     <div
-                      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+                      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
                     >
                       <div
-                        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+                        class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
                       >
                         <div
-                          class="Box-sc-1qu1edy-0 hxUhcg"
+                          class="Box-xda4ls-0 erhvLv"
                           display="flex"
                         >
                           <input

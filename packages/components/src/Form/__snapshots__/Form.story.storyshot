@@ -18,7 +18,7 @@ exports[`Storyshots Form Demo form 1`] = `
         Job 324400
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 kjZZUq"
         role="alert"
       >
         <svg
@@ -38,7 +38,7 @@ exports[`Storyshots Form Demo form 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           <p
             class="Text-sc-1wu7vpu-0 dFPjNj"
@@ -95,7 +95,7 @@ exports[`Storyshots Form Demo form 1`] = `
           Job Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -103,7 +103,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -113,10 +113,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -131,7 +131,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -139,7 +139,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -163,10 +163,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -180,7 +180,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -188,7 +188,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -277,7 +277,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -285,7 +285,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -295,10 +295,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -312,7 +312,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
             color="red"
           >
             <svg
@@ -345,7 +345,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -353,7 +353,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -363,10 +363,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -381,7 +381,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -389,7 +389,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -399,10 +399,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -418,7 +418,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -426,7 +426,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -436,10 +436,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -454,7 +454,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -462,7 +462,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -472,10 +472,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -509,7 +509,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -536,7 +536,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -563,7 +563,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -594,7 +594,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -639,7 +639,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </span>
           </legend>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+            class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -666,7 +666,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+            class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -692,7 +692,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 jlPsmj Radio-sc-82dpxx-2 jeIhWi"
+            class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
           >
             <label
               class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -722,7 +722,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </label>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
             color="red"
           >
             <svg
@@ -755,13 +755,13 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </fieldset>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
         >
           <div
             id="Job Visibility-label"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -810,7 +810,7 @@ exports[`Storyshots Form Demo form 1`] = `
           Rejects
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -818,7 +818,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -828,10 +828,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -845,7 +845,7 @@ exports[`Storyshots Form Demo form 1`] = `
             </div>
           </label>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
             color="red"
           >
             <svg
@@ -878,7 +878,7 @@ exports[`Storyshots Form Demo form 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -886,7 +886,7 @@ exports[`Storyshots Form Demo form 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -896,10 +896,10 @@ exports[`Storyshots Form Demo form 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -913,13 +913,13 @@ exports[`Storyshots Form Demo form 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
         >
           <div
             id="Reject visibility-label"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
             >
               <span
                 style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -984,7 +984,7 @@ exports[`Storyshots Form Form 1`] = `
         New Profile
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -992,7 +992,7 @@ exports[`Storyshots Form Form 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1002,10 +1002,10 @@ exports[`Storyshots Form Form 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -1019,7 +1019,7 @@ exports[`Storyshots Form Form 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1027,7 +1027,7 @@ exports[`Storyshots Form Form 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1051,10 +1051,10 @@ exports[`Storyshots Form Form 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -1069,7 +1069,7 @@ exports[`Storyshots Form Form 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1077,7 +1077,7 @@ exports[`Storyshots Form Form 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1094,10 +1094,10 @@ exports[`Storyshots Form Form 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -1143,7 +1143,7 @@ exports[`Storyshots Form With form sections 1`] = `
           Personal Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1151,7 +1151,7 @@ exports[`Storyshots Form With form sections 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1161,10 +1161,10 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1178,7 +1178,7 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1186,7 +1186,7 @@ exports[`Storyshots Form With form sections 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1210,10 +1210,10 @@ exports[`Storyshots Form With form sections 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1228,7 +1228,7 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1236,7 +1236,7 @@ exports[`Storyshots Form With form sections 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1253,10 +1253,10 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1281,7 +1281,7 @@ exports[`Storyshots Form With form sections 1`] = `
           General Information
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1289,7 +1289,7 @@ exports[`Storyshots Form With form sections 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1299,10 +1299,10 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1316,7 +1316,7 @@ exports[`Storyshots Form With form sections 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1324,7 +1324,7 @@ exports[`Storyshots Form With form sections 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1334,10 +1334,10 @@ exports[`Storyshots Form With form sections 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1377,7 +1377,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
         class="FormSection-sc-5yud6c-1 klMAvm"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1385,7 +1385,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1395,10 +1395,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1412,7 +1412,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1420,7 +1420,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1444,10 +1444,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1462,7 +1462,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1470,7 +1470,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1487,10 +1487,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1508,7 +1508,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
         class="FormSection-sc-5yud6c-1 klMAvm"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1516,7 +1516,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1526,10 +1526,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1543,7 +1543,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
           </label>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <label
             class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1551,7 +1551,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
             style="display:block"
           >
             <div
-              class="Box-sc-1qu1edy-0 ilQgHG"
+              class="Box-xda4ls-0 biCpIl"
               data-testid="field-label"
             >
               <span
@@ -1561,10 +1561,10 @@ exports[`Storyshots Form With form sections without titles 1`] = `
               </span>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -1594,7 +1594,7 @@ exports[`Storyshots Form Without title 1`] = `
       class="Form-n70q8u-0 ilQSyT"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1602,7 +1602,7 @@ exports[`Storyshots Form Without title 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1612,10 +1612,10 @@ exports[`Storyshots Form Without title 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -1629,7 +1629,7 @@ exports[`Storyshots Form Without title 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1637,7 +1637,7 @@ exports[`Storyshots Form Without title 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1661,10 +1661,10 @@ exports[`Storyshots Form Without title 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -1679,7 +1679,7 @@ exports[`Storyshots Form Without title 1`] = `
         </label>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1687,7 +1687,7 @@ exports[`Storyshots Form Without title 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1704,10 +1704,10 @@ exports[`Storyshots Form Without title 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input

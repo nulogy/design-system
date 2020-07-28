@@ -9,7 +9,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -108,7 +108,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -206,7 +206,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -304,7 +304,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -402,7 +402,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -500,7 +500,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -598,7 +598,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
     </nav>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -708,7 +708,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -818,7 +818,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"
@@ -928,7 +928,7 @@ exports[`Storyshots Pagination with less than 5 pages 1`] = `
   >
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <button
         aria-label="Go to previous results"

@@ -324,10 +324,10 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gsptzN"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gsptzN"
       >
         <p
           class="Text-sc-1wu7vpu-0 kyRgWL"
@@ -338,7 +338,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
           1/4
         </p>
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <svg
             height="24px"
@@ -497,7 +497,7 @@ exports[`Storyshots LoadingAnimation Page example - active 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eRyacc"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eRyacc"
       >
         <button
           aria-label="Retry"
@@ -556,10 +556,10 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOwUiE"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gsptzN"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gsptzN"
       >
         <p
           class="Text-sc-1wu7vpu-0 gfZztd"
@@ -570,7 +570,7 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
           1/4
         </p>
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <svg
             height="24px"
@@ -729,17 +729,17 @@ exports[`Storyshots LoadingAnimation Page example - inactive 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bOrzAg Alert-u8lbe-0 yTvFo"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 bOrzAg Alert-u8lbe-0 yTvFo"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           This action takes longer than expected. Try again...
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eRyacc"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eRyacc"
       >
         <button
           aria-label="Retry"

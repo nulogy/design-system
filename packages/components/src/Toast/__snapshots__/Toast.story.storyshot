@@ -13,14 +13,14 @@ exports[`Storyshots Toast Toast 1`] = `
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Saved
         </div>
@@ -43,14 +43,14 @@ exports[`Storyshots Toast customize length of time toast is visible 1`] = `
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Saved
         </div>
@@ -68,7 +68,7 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 geyRYt"
     >
       <button
         class="Button__WrapperButton-sc-1omxup2-0 bclWrW PrimaryButton-qz78sb-0 cGyyDq"
@@ -115,10 +115,10 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       </button>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -138,12 +138,12 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Error saving all your changes
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          class="Box-xda4ls-0 hQvIAg"
         >
           <button
             aria-label="Close"
@@ -172,10 +172,10 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -195,12 +195,12 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Error: changes were reset
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          class="Box-xda4ls-0 hQvIAg"
         >
           <button
             aria-label="Close"
@@ -229,10 +229,10 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -252,12 +252,12 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           An error occurred, could not deleted
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          class="Box-xda4ls-0 hQvIAg"
         >
           <button
             aria-label="Close"
@@ -286,10 +286,10 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -309,12 +309,12 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           An error occurred, please retry
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          class="Box-xda4ls-0 hQvIAg"
         >
           <button
             aria-label="Close"
@@ -354,7 +354,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 geyRYt"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 geyRYt"
     >
       <button
         class="Button__WrapperButton-sc-1omxup2-0 bclWrW PrimaryButton-qz78sb-0 cGyyDq"
@@ -401,10 +401,10 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
       </button>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -424,17 +424,17 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Saved all your changes
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -454,17 +454,17 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Reset all your changes
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 jumLLM Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -484,17 +484,17 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Ok, it's deleted
         </div>
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 gjRpuy Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <svg
@@ -514,7 +514,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
           />
         </svg>
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           An error occurred, please retry
         </div>
@@ -537,19 +537,19 @@ exports[`Storyshots Toast with close button 1`] = `
       Save Changes
     </button>
     <div
-      class="Box-sc-1qu1edy-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1gp7eev-1 kVXqtj"
     >
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 eBpEPp Alert-u8lbe-0 Toast__AnimatedAlert-sc-1gp7eev-0 bHKHgD"
         role="alert"
       >
         <div
-          class="Box-sc-1qu1edy-0 iDnpba"
+          class="Box-xda4ls-0 hoMyit"
         >
           Saved
         </div>
         <div
-          class="Box-sc-1qu1edy-0 jlPsmj"
+          class="Box-xda4ls-0 hQvIAg"
         >
           <button
             aria-label="Close"

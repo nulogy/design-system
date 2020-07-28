@@ -8,7 +8,7 @@ exports[`Storyshots Select Select 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -16,7 +16,7 @@ exports[`Storyshots Select Select 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -116,7 +116,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -124,7 +124,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -268,7 +268,7 @@ exports[`Storyshots Select set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -276,7 +276,7 @@ exports[`Storyshots Select set to disabled 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -378,13 +378,13 @@ exports[`Storyshots Select set to required 1`] = `
   >
     <form>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -397,7 +397,7 @@ exports[`Storyshots Select set to required 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -405,7 +405,7 @@ exports[`Storyshots Select set to required 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -519,7 +519,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -527,7 +527,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -690,11 +690,11 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 kxBKkD"
+      class="Box-xda4ls-0 eKares"
       width="300px"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -702,7 +702,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1011,11 +1011,11 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 gzPQPo"
+      class="Box-xda4ls-0 cluACf"
       width="400px"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1023,7 +1023,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -1343,7 +1343,7 @@ exports[`Storyshots Select with a blank value 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1351,7 +1351,7 @@ exports[`Storyshots Select with a blank value 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -1451,7 +1451,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1459,7 +1459,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -1559,7 +1559,7 @@ exports[`Storyshots Select with an option selected 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1567,7 +1567,7 @@ exports[`Storyshots Select with an option selected 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -1657,7 +1657,7 @@ exports[`Storyshots Select with an option selected 1`] = `
     </div>
     <br />
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1665,7 +1665,7 @@ exports[`Storyshots Select with an option selected 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -1889,7 +1889,7 @@ exports[`Storyshots Select with custom id 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -1897,7 +1897,7 @@ exports[`Storyshots Select with custom id 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -2004,11 +2004,11 @@ exports[`Storyshots Select with custom option component 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      class="Box-xda4ls-0 hQvIAg"
       style="position:relative;overflow:hidden;width:300px;height:600px"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2016,7 +2016,7 @@ exports[`Storyshots Select with custom option component 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -2162,7 +2162,7 @@ exports[`Storyshots Select with error list 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2170,7 +2170,7 @@ exports[`Storyshots Select with error list 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -2257,7 +2257,7 @@ exports[`Storyshots Select with error list 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
           color="red"
         >
           <svg
@@ -2309,7 +2309,7 @@ exports[`Storyshots Select with error list 1`] = `
     </div>
     <br />
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <div
         data-testid="select-container"
@@ -2513,7 +2513,7 @@ exports[`Storyshots Select with error list 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
         color="red"
       >
         <svg
@@ -2574,7 +2574,7 @@ exports[`Storyshots Select with error message 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2582,7 +2582,7 @@ exports[`Storyshots Select with error message 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -2669,7 +2669,7 @@ exports[`Storyshots Select with error message 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
           color="red"
         >
           <svg
@@ -2704,7 +2704,7 @@ exports[`Storyshots Select with error message 1`] = `
     </div>
     <br />
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <div
         data-testid="select-container"
@@ -2908,7 +2908,7 @@ exports[`Storyshots Select with error message 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
         color="red"
       >
         <svg
@@ -2952,11 +2952,11 @@ exports[`Storyshots Select with fixed positioning 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj"
+      class="Box-xda4ls-0 hQvIAg"
       style="position:relative;overflow:hidden;width:300px;height:100px"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -2964,7 +2964,7 @@ exports[`Storyshots Select with fixed positioning 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -3065,7 +3065,7 @@ exports[`Storyshots Select with helpText 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -3073,7 +3073,7 @@ exports[`Storyshots Select with helpText 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -3180,7 +3180,7 @@ exports[`Storyshots Select with multiselect 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -3188,7 +3188,7 @@ exports[`Storyshots Select with multiselect 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -3362,7 +3362,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -3370,7 +3370,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -3594,7 +3594,7 @@ exports[`Storyshots Select with state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -3602,7 +3602,7 @@ exports[`Storyshots Select with state 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span

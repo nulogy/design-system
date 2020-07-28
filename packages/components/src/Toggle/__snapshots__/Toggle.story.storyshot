@@ -8,13 +8,13 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Controlled Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -62,7 +62,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -95,13 +95,13 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -143,13 +143,13 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -190,13 +190,13 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -250,13 +250,13 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -320,13 +320,13 @@ exports[`Storyshots Toggle With custom id 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -375,13 +375,13 @@ exports[`Storyshots Toggle With long text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"
@@ -430,13 +430,13 @@ exports[`Storyshots Toggle With text 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
     >
       <div
         id="Toggle-label"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
         >
           <span
             style="font-size:14px;font-weight:600;line-height:1.71428571"

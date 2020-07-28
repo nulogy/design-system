@@ -8,7 +8,7 @@ exports[`Storyshots Box Box 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 iuijxl"
+      class="Box-xda4ls-0 Mnxhu"
     >
       Hello World
     </div>
@@ -24,7 +24,7 @@ exports[`Storyshots Box With a background colour 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jamsbG"
+      class="Box-xda4ls-0 jYaTOZ"
       color="white"
     >
       Hello World
@@ -41,7 +41,7 @@ exports[`Storyshots Box With a responsive width 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 cxGsXU"
+      class="Box-xda4ls-0 cVrkKf"
       width="[object Object]"
     >
       Full width on extra small screens, 1/2 width on small and 1/4 width on medium
@@ -58,7 +58,7 @@ exports[`Storyshots Box With a set width 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 clejNr"
+      class="Box-xda4ls-0 hiKEOA"
       width="0.5"
     >
       Half Width
@@ -75,17 +75,17 @@ exports[`Storyshots Box With a shadow 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 bHmSeb"
+      class="Box-xda4ls-0 bzzyzs"
     >
       Small shadow
     </div>
     <div
-      class="Box-sc-1qu1edy-0 eyfCVZ"
+      class="Box-xda4ls-0 fHtBbK"
     >
       Medium shadow
     </div>
     <div
-      class="Box-sc-1qu1edy-0 bGaQQB"
+      class="Box-xda4ls-0 gsGvcC"
     >
       Large shadow
     </div>
@@ -101,7 +101,7 @@ exports[`Storyshots Box With a text colour 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 dCMDFS"
+      class="Box-xda4ls-0 eibqQx"
       color="blue"
     >
       Hello World
@@ -118,40 +118,40 @@ exports[`Storyshots Box With margin 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 iuijxl"
+      class="Box-xda4ls-0 Mnxhu"
     >
       <div
-        class="Box-sc-1qu1edy-0 bIpQPr"
+        class="Box-xda4ls-0 hmPCOY"
       >
         Margin
       </div>
       <div
-        class="Box-sc-1qu1edy-0 fNJCWd"
+        class="Box-xda4ls-0 bvOEoC"
       >
         Margin top
       </div>
       <div
-        class="Box-sc-1qu1edy-0 cfKJLu"
+        class="Box-xda4ls-0 dZPsrl"
       >
         Margin right
       </div>
       <div
-        class="Box-sc-1qu1edy-0 hSzfDt"
+        class="Box-xda4ls-0 chfBUO"
       >
         Margin bottom
       </div>
       <div
-        class="Box-sc-1qu1edy-0 dTezRN"
+        class="Box-xda4ls-0 ceNuIC"
       >
         Margin left
       </div>
       <div
-        class="Box-sc-1qu1edy-0 cgLFQx"
+        class="Box-xda4ls-0 blQBEq"
       >
         Margin x
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iWmXdK"
+        class="Box-xda4ls-0 dvXNkp"
       >
         Margin y
       </div>
@@ -168,40 +168,40 @@ exports[`Storyshots Box With padding 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 kbDFVk"
+      class="Box-xda4ls-0 ljpTaH"
     >
       <div
-        class="Box-sc-1qu1edy-0 UfyFz"
+        class="Box-xda4ls-0 dFFNSY"
       >
         Padding
       </div>
       <div
-        class="Box-sc-1qu1edy-0 UfyFz"
+        class="Box-xda4ls-0 dFFNSY"
       >
         Padding top
       </div>
       <div
-        class="Box-sc-1qu1edy-0 dFirUG"
+        class="Box-xda4ls-0 elupLl"
       >
         Padding right
       </div>
       <div
-        class="Box-sc-1qu1edy-0 kjVnmN"
+        class="Box-xda4ls-0 fZEgaq"
       >
         Padding bottom
       </div>
       <div
-        class="Box-sc-1qu1edy-0 kYJNBN"
+        class="Box-xda4ls-0 fVSdDW"
       >
         Padding left
       </div>
       <div
-        class="Box-sc-1qu1edy-0 qFcSW"
+        class="Box-xda4ls-0 fpDmIV"
       >
         Padding x
       </div>
       <div
-        class="Box-sc-1qu1edy-0 iDOULB"
+        class="Box-xda4ls-0 gwltxm"
       >
         Padding y
       </div>

@@ -14,10 +14,10 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            class="Box-xda4ls-0 hzZA-DR"
           >
             <a
               aria-label="Home"
@@ -69,7 +69,7 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 csbfff"
           >
             <nav
               aria-label="Primary navigation"
@@ -170,7 +170,7 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 bqzqvC"
             >
               <nav
                 aria-label="Secondary navigation"
@@ -256,10 +256,10 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            class="Box-xda4ls-0 hzZA-DR"
           >
             <a
               aria-label="Home"
@@ -277,7 +277,7 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 csbfff"
           >
             <nav
               aria-label="Primary navigation"
@@ -378,7 +378,7 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 bqzqvC"
             >
               <nav
                 aria-label="Secondary navigation"
@@ -442,14 +442,14 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
                 </div>
               </nav>
               <div
-                class="Box-sc-1qu1edy-0 fsLsir"
+                class="Box-xda4ls-0 kCGuxA"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jJSlPQ"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 jJSlPQ"
                   height="56px"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 fBwUqO"
+                    class="Box-xda4ls-0 hdgkld"
                     height="18px"
                     width="76px"
                   >
@@ -547,10 +547,10 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            class="Box-xda4ls-0 hzZA-DR"
           >
             <a
               aria-label="Home"
@@ -568,7 +568,7 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 csbfff"
           >
             <nav
               aria-label="Primary navigation"
@@ -669,7 +669,7 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 bqzqvC"
             >
               <nav
                 aria-label="Secondary navigation"
@@ -733,14 +733,14 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
                 </div>
               </nav>
               <div
-                class="Box-sc-1qu1edy-0 fsLsir"
+                class="Box-xda4ls-0 kCGuxA"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jnVPKY"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 jnVPKY"
                   height="56px"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 fBwUqO"
+                    class="Box-xda4ls-0 hdgkld"
                     height="18px"
                     width="76px"
                   >
@@ -847,10 +847,10 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            class="Box-xda4ls-0 hzZA-DR"
           >
             <a
               aria-label="Home"
@@ -899,7 +899,7 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
                   </g>
                 </svg>
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ctbZXD"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 ctbZXD"
                   width="100%"
                 >
                   <span
@@ -913,7 +913,7 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 csbfff"
           >
             <nav
               aria-label="Primary navigation"
@@ -1014,7 +1014,7 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 bqzqvC"
             >
               <nav
                 aria-label="Secondary navigation"
@@ -1097,7 +1097,7 @@ exports[`Storyshots BrandedNavBar with environment banner 1`] = `
       class="NavBarstory__ResetStorybookView-sc-1a6ght2-0 bqKXCt"
     >
       <div
-        class="Box-sc-1qu1edy-0 eyTYtp"
+        class="Box-xda4ls-0 bZkQsu"
       >
         <p
           class="Text-sc-1wu7vpu-0 dUswLN"
@@ -1113,10 +1113,10 @@ exports[`Storyshots BrandedNavBar with environment banner 1`] = `
         class="NavBar-sc-1o0etgx-3 jwwFUB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 NavBar__NavBarBackground-sc-1o0etgx-0 bnIcXH"
         >
           <div
-            class="Box-sc-1qu1edy-0 cRMmlC"
+            class="Box-xda4ls-0 hzZA-DR"
           >
             <a
               aria-label="Home"
@@ -1134,7 +1134,7 @@ exports[`Storyshots BrandedNavBar with environment banner 1`] = `
             </a>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 csbfff"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 csbfff"
           >
             <nav
               aria-label="Primary navigation"
@@ -1235,7 +1235,7 @@ exports[`Storyshots BrandedNavBar with environment banner 1`] = `
               </div>
             </nav>
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bqzqvC"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 bqzqvC"
             >
               <nav
                 aria-label="Secondary navigation"
@@ -1299,14 +1299,14 @@ exports[`Storyshots BrandedNavBar with environment banner 1`] = `
                 </div>
               </nav>
               <div
-                class="Box-sc-1qu1edy-0 fsLsir"
+                class="Box-xda4ls-0 kCGuxA"
               >
                 <div
-                  class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 jnVPKY"
+                  class="Box-xda4ls-0 Flex-hrfu3s-0 jnVPKY"
                   height="56px"
                 >
                   <div
-                    class="Box-sc-1qu1edy-0 fBwUqO"
+                    class="Box-xda4ls-0 hdgkld"
                     height="18px"
                     width="76px"
                   >

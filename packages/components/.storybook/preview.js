@@ -1,17 +1,20 @@
 import React from "react";
 import { addDecorator, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
-import NDSProvider from "../src/NDSProvider/NDSProvider";
-import theme from "../src/theme";
 import { withA11y } from "@storybook/addon-a11y";
 import { select } from "@storybook/addon-knobs";
-import { ALL_NDS_LOCALES } from "../src/locales.const";
 import { withPerformance } from "storybook-addon-performance";
+import NDSProvider from "../src/NDSProvider/NDSProvider";
+import theme from "../src/theme";
+import { ALL_NDS_LOCALES } from "../src/locales.const";
 
-const localeKnobOptions = ALL_NDS_LOCALES.reduce((obj, i) => {
-  obj[`${i.label} "${i.value}"`] = i.value;
-  return obj;
-}, {});
+const localeKnobOptions = ALL_NDS_LOCALES.reduce(
+  (obj, i) => ({
+    ...obj,
+    [`${i.label} "${i.value}"`]: i.value
+  }),
+  {}
+);
 
 const newViewports = {
   extraSmall: {

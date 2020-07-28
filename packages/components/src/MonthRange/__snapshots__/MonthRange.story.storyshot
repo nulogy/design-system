@@ -13,7 +13,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -24,11 +24,11 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -38,10 +38,10 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -73,7 +73,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -84,7 +84,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -94,10 +94,10 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -146,7 +146,7 @@ exports[`Storyshots MonthRange default 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -157,11 +157,11 @@ exports[`Storyshots MonthRange default 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -171,10 +171,10 @@ exports[`Storyshots MonthRange default 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -206,7 +206,7 @@ exports[`Storyshots MonthRange default 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -217,7 +217,7 @@ exports[`Storyshots MonthRange default 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -227,10 +227,10 @@ exports[`Storyshots MonthRange default 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -279,7 +279,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -290,11 +290,11 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -304,10 +304,10 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -339,7 +339,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -350,7 +350,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -360,10 +360,10 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -412,7 +412,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -423,11 +423,11 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -437,10 +437,10 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -472,7 +472,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -483,7 +483,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -493,10 +493,10 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -545,7 +545,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -556,11 +556,11 @@ exports[`Storyshots MonthRange individual input error 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -570,10 +570,10 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -605,7 +605,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
           color="red"
         >
           <svg
@@ -638,7 +638,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -649,7 +649,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -659,10 +659,10 @@ exports[`Storyshots MonthRange individual input error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -711,7 +711,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
       style="display:block"
     >
       <div
-        class="Box-sc-1qu1edy-0 jlPsmj"
+        class="Box-xda4ls-0 hQvIAg"
         data-testid="field-label"
       >
         <span
@@ -722,11 +722,11 @@ exports[`Storyshots MonthRange with custom error 1`] = `
       </div>
     </label>
     <div
-      class="Box-sc-1qu1edy-0 iyjdMT"
+      class="Box-xda4ls-0 iCWnHE"
       display="inline-flex"
     >
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -736,10 +736,10 @@ exports[`Storyshots MonthRange with custom error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -771,7 +771,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         </div>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 hYUuLW"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
       >
         <p
           class="Text-sc-1wu7vpu-0 RbfMK"
@@ -782,7 +782,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
         </p>
       </div>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
         data-testid="month-picker"
       >
         <div
@@ -792,10 +792,10 @@ exports[`Storyshots MonthRange with custom error 1`] = `
             class="react-datepicker__input-container"
           >
             <div
-              class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
             >
               <div
-                class="Box-sc-1qu1edy-0 hxUhcg"
+                class="Box-xda4ls-0 erhvLv"
                 display="flex"
               >
                 <input
@@ -828,7 +828,7 @@ exports[`Storyshots MonthRange with custom error 1`] = `
       </div>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 bXREHd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 bXREHd"
       color="red"
     >
       <svg

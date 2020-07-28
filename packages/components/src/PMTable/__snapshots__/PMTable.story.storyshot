@@ -21,7 +21,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             width="30px"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -109,7 +109,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -182,7 +182,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
           >
             <div
-              class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
             >
               <label
                 class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -323,7 +323,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
     >
       <button
         aria-label="Go to previous results"
@@ -1016,7 +1016,7 @@ exports[`Storyshots PM/PMTable default 1`] = `
             colspan="8"
           >
             <div
-              class="Box-sc-1qu1edy-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 fEzznw nds-table__no-rows-content"
+              class="Box-xda4ls-0 TableBody__StyledMessageContainer-sc-1amzhx8-0 fEzznw nds-table__no-rows-content"
             >
               No records have been created for this table.
             </div>
@@ -1411,7 +1411,7 @@ exports[`Storyshots PM/PMTable with expandable rows 1`] = `
     </table>
     <nav
       aria-label="Pagination navigation"
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iCmkqG StatefulTable___StyledPagination-sc-196ra2t-0 hJdjBx"
     >
       <button
         aria-label="Go to previous results"

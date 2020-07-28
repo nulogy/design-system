@@ -8,7 +8,7 @@ exports[`Storyshots Input Input 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -16,7 +16,7 @@ exports[`Storyshots Input Input 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -26,10 +26,10 @@ exports[`Storyshots Input Input 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -53,7 +53,7 @@ exports[`Storyshots Input set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -61,7 +61,7 @@ exports[`Storyshots Input set to disabled 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -71,10 +71,10 @@ exports[`Storyshots Input set to disabled 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -109,7 +109,7 @@ exports[`Storyshots Input set to required 1`] = `
         Required field example
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <label
           class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -117,7 +117,7 @@ exports[`Storyshots Input set to required 1`] = `
           style="display:block"
         >
           <div
-            class="Box-sc-1qu1edy-0 ilQgHG"
+            class="Box-xda4ls-0 biCpIl"
             data-testid="field-label"
           >
             <span
@@ -127,10 +127,10 @@ exports[`Storyshots Input set to required 1`] = `
             </span>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -175,13 +175,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         class="FormSection-sc-5yud6c-1 klMAvm"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -191,7 +191,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 gtRBwd"
+              class="Box-xda4ls-0 iDBEwK"
             >
               <p
                 class="Text-sc-1wu7vpu-0 eEDmVF"
@@ -204,13 +204,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -220,7 +220,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 gtRBwd"
+              class="Box-xda4ls-0 iDBEwK"
             >
               <p
                 class="Text-sc-1wu7vpu-0 eEDmVF"
@@ -244,13 +244,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           With Custom Width
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -260,7 +260,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 fehlWH"
+              class="Box-xda4ls-0 bmVtbc"
               width="360px"
             >
               <p
@@ -274,13 +274,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -290,7 +290,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               />
             </div>
             <div
-              class="Box-sc-1qu1edy-0 fehlWH"
+              class="Box-xda4ls-0 bmVtbc"
               width="360px"
             >
               <p
@@ -320,13 +320,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         class="FormSection-sc-5yud6c-1 klMAvm"
       >
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 cujNNu"
+              class="Box-xda4ls-0 bGCJLt"
             >
               <p
                 class="Text-sc-1wu7vpu-0 eEDmVF"
@@ -337,7 +337,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -349,13 +349,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 cujNNu"
+              class="Box-xda4ls-0 bGCJLt"
             >
               <p
                 class="Text-sc-1wu7vpu-0 eEDmVF"
@@ -366,7 +366,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -389,13 +389,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           With Custom Width
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              class="Box-xda4ls-0 bYOXDj"
               width="360px"
             >
               <p
@@ -407,7 +407,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -419,13 +419,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              class="Box-xda4ls-0 bYOXDj"
               width="360px"
             >
               <p
@@ -437,7 +437,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -460,13 +460,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           With right alignment
         </legend>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              class="Box-xda4ls-0 bYOXDj"
               width="360px"
             >
               <p
@@ -478,7 +478,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -490,13 +490,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
           </div>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+          class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
         >
           <div
-            class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+            class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
           >
             <div
-              class="Box-sc-1qu1edy-0 hEsaBU"
+              class="Box-xda4ls-0 bYOXDj"
               width="360px"
             >
               <p
@@ -508,7 +508,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
               </p>
             </div>
             <div
-              class="Box-sc-1qu1edy-0 hxUhcg"
+              class="Box-xda4ls-0 erhvLv"
               display="flex"
             >
               <input
@@ -533,13 +533,13 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
         Prefix and Suffix
       </h2>
       <div
-        class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
       >
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 cujNNu"
+            class="Box-xda4ls-0 bGCJLt"
           >
             <p
               class="Text-sc-1wu7vpu-0 eEDmVF"
@@ -550,7 +550,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
             </p>
           </div>
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -560,7 +560,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
             />
           </div>
           <div
-            class="Box-sc-1qu1edy-0 gtRBwd"
+            class="Box-xda4ls-0 iDBEwK"
           >
             <p
               class="Text-sc-1wu7vpu-0 eEDmVF"
@@ -585,7 +585,7 @@ exports[`Storyshots Input with all props 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -593,7 +593,7 @@ exports[`Storyshots Input with all props 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -617,10 +617,10 @@ exports[`Storyshots Input with all props 1`] = `
           </p>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -646,7 +646,7 @@ exports[`Storyshots Input with custom ID 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -654,7 +654,7 @@ exports[`Storyshots Input with custom ID 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -664,10 +664,10 @@ exports[`Storyshots Input with custom ID 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -692,7 +692,7 @@ exports[`Storyshots Input with error list  1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -700,7 +700,7 @@ exports[`Storyshots Input with error list  1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -710,10 +710,10 @@ exports[`Storyshots Input with error list  1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -725,7 +725,7 @@ exports[`Storyshots Input with error list  1`] = `
         </div>
       </label>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
         color="red"
       >
         <svg
@@ -786,7 +786,7 @@ exports[`Storyshots Input with error message 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 Field-sc-1lebjra-0 erVIOB"
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
       <label
         class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
@@ -794,7 +794,7 @@ exports[`Storyshots Input with error message 1`] = `
         style="display:block"
       >
         <div
-          class="Box-sc-1qu1edy-0 ilQgHG"
+          class="Box-xda4ls-0 biCpIl"
           data-testid="field-label"
         >
           <span
@@ -804,10 +804,10 @@ exports[`Storyshots Input with error message 1`] = `
           </span>
         </div>
         <div
-          class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 fbOeeQ"
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
         >
           <div
-            class="Box-sc-1qu1edy-0 hxUhcg"
+            class="Box-xda4ls-0 erhvLv"
             display="flex"
           >
             <input
@@ -819,7 +819,7 @@ exports[`Storyshots Input with error message 1`] = `
         </div>
       </label>
       <div
-        class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 ycNbA"
+        class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
         color="red"
       >
         <svg

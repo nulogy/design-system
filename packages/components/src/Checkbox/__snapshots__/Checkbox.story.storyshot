@@ -8,7 +8,7 @@ exports[`Storyshots Checkbox Checkbox 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -45,7 +45,7 @@ exports[`Storyshots Checkbox Checkbox with no label 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -74,7 +74,7 @@ exports[`Storyshots Checkbox Set to defaultChecked 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -112,7 +112,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -142,7 +142,7 @@ exports[`Storyshots Checkbox Set to disabled 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kjxgat"
@@ -185,7 +185,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -211,7 +211,7 @@ exports[`Storyshots Checkbox Set to error 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -249,7 +249,7 @@ exports[`Storyshots Checkbox Set to required 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -287,7 +287,7 @@ exports[`Storyshots Checkbox With state 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -313,7 +313,7 @@ exports[`Storyshots Checkbox With state 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -350,7 +350,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -379,7 +379,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -406,7 +406,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kemUmZ"
@@ -435,7 +435,7 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
       </label>
     </div>
     <div
-      class="Box-sc-1qu1edy-0 jlPsmj Checkbox-sc-1nm58f1-2 eJJycu"
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
     >
       <label
         class="ClickInputLabel-j2axnv-0 kjxgat"

@@ -8,7 +8,7 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <nav
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <ol
         class="Breadcrumbs__StyledOl-sc-1l75jcp-1 huaGZO"
@@ -48,7 +48,7 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
       </ol>
     </nav>
     <nav
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <ol
         class="Breadcrumbs__StyledOl-sc-1l75jcp-1 huaGZO"
@@ -131,7 +131,7 @@ exports[`Storyshots Breadcrumbs without link 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <nav
-      class="Box-sc-1qu1edy-0 Flex-hrfu3s-0 iHUNrd"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
     >
       <ol
         class="Breadcrumbs__StyledOl-sc-1l75jcp-1 huaGZO"
