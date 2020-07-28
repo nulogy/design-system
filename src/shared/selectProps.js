@@ -69,6 +69,13 @@ const selectProps = [
     defaultValue: "absolute",
     description: "The CSS position value of the menu. ex: 'fixed'"
   },
+  {
+    name: "components",
+    type: "Object<ComponentName: ReactNode>",
+    defaultValue: "undefined",
+    description:
+      "Pass in an object with the keys of the component you would like to replace"
+  },
   ...inputProps.map(prop => {
     if (prop.name === "required") {
       return {

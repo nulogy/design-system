@@ -9,7 +9,14 @@ import { InlineValidation } from "../Validation";
 import customStyles from "./customReactSelectStyles";
 import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
 import { SelectOption } from "./SelectOption";
-import { Control, MultiValue, ClearIndicator, SelectContainer, Menu, Input } from "./SelectComponents";
+import {
+  SelectControl,
+  SelectMultiValue,
+  SelectClearIndicator,
+  SelectContainer,
+  SelectMenu,
+  SelectInput
+} from "./SelectComponents";
 
 export const getOption = (options, value) => {
   if (value == null || value === "") return value;
@@ -103,12 +110,12 @@ const ReactSelect = ({
           theme={themeContext}
           components={{
             Option: SelectOption,
-            Control,
-            MultiValue,
-            ClearIndicator,
-            SelectContainer,
-            Menu,
-            Input,
+            Control: SelectControl,
+            MultiValue: SelectMultiValue,
+            ClearIndicator: SelectClearIndicator,
+            SelectContainer: SelectContainer,
+            Menu: SelectMenu,
+            Input: SelectInput,
             ...components
           }}
           aria-label={ariaLabel}

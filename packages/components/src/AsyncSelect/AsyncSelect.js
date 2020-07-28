@@ -8,7 +8,14 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
 import { SelectOption } from "../Select/SelectOption";
-import { Control, MultiValue, ClearIndicator, SelectContainer, Menu, Input } from "../Select/SelectComponents";
+import {
+  SelectControl,
+  SelectMultiValue,
+  SelectClearIndicator,
+  SelectContainer,
+  SelectMenu,
+  SelectInput
+} from "../Select/SelectComponents";
 import { SelectDefaultProps, SelectPropTypes } from "../Select/Select.type";
 
 const extractValue = (options, isMulti) => {
@@ -88,12 +95,12 @@ const AsyncSelect = ({
           theme={themeContext}
           components={{
             Option: SelectOption,
-            Control,
-            MultiValue,
-            ClearIndicator,
-            SelectContainer,
-            Menu,
-            Input,
+            Control: SelectControl,
+            MultiValue: SelectMultiValue,
+            ClearIndicator: SelectClearIndicator,
+            SelectContainer: SelectContainer,
+            Menu: SelectMenu,
+            Input: SelectInput,
             ...components
           }}
           aria-label={ariaLabel}
