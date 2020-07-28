@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.4](https://github.com/nulogy/design-system/compare/v4.1.3...v4.1.4) (2020-07-28)
+
+
+### Bug Fixes
+
+* missing props on breadcrumbs component ([#726](https://github.com/nulogy/design-system/issues/726)) ([f28961c](https://github.com/nulogy/design-system/commit/f28961cfb66962f4bf6dfd3bdb16dc68d8fa609e))
+* Update package links in README.md ([#724](https://github.com/nulogy/design-system/issues/724)) ([6b0064f](https://github.com/nulogy/design-system/commit/6b0064f62bf3b809889441674b031cb796d25d6c))
+
+
+
+
+
 ## [4.1.3](https://github.com/nulogy/design-system/compare/v4.1.2...v4.1.3) (2020-07-23)
 
 **Note:** Version bump only for package @nulogy/nds
