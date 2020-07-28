@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://github.com/nulogy/design-system/compare/v4.1.4...v4.2.0) (2020-07-28)
+
+
+### Features
+
+* support using typescript for components ([#707](https://github.com/nulogy/design-system/issues/707)) ([6d84129](https://github.com/nulogy/design-system/commit/6d84129b1e1a54f5b2618ed93acc5d3efdb3cacc))
+
+
+
+
+
 ## [4.1.3](https://github.com/nulogy/design-system/compare/v4.1.2...v4.1.3) (2020-07-23)
 
 **Note:** Version bump only for package @nulogy/css

@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/css",
-  "version": "4.1.3",
+  "version": "4.2.0",
   "description": "CSS for Nulogy Design System",
   "private": false,
   "publishConfig": {
