@@ -9,21 +9,63 @@ import {
   Link,
   ListItem,
   List,
-  Text
+  Table,
+  Text,
+  SelectOption
 } from "@nulogy/components";
+import styled from "styled-components";
 import Highlight from "react-highlight";
 import {
   Layout,
   Intro,
   IntroText,
   DocSection,
-  PropsTable
+  PropsTable,
+  InlineCode
 } from "../../components";
 import selectProps from "../../shared/selectProps";
 
 const options = [
   { value: "accepted", label: "Accepted" },
   { value: "assigned", label: "Assigned to a line" }
+];
+
+const customSelectComponents = [
+  {
+    keyName: "Option",
+    import: "SelectOption",
+    description: "Individual options in the select's dropdown"
+  },
+  {
+    keyName: "Control",
+    import: "Control",
+    description: "Wraps the select field"
+  },
+  {
+    keyName: "MultiValue",
+    import: "SelectMultiValue",
+    description: "The selected options in a muliselect select"
+  },
+  {
+    keyName: "ClearIndicator",
+    import: "SelectClearIndicator",
+    description: "The clear button in the multiselect"
+  },
+  {
+    keyName: "SelectContainer",
+    import: "SelectContainer",
+    description: "The wrapper around the whole field and dropdown"
+  },
+  {
+    keyName: "Menu",
+    import: "SelectMenu",
+    description: "The wrapper around the dropdown options"
+  },
+  {
+    keyName: "Input",
+    import: "SelectInput",
+    description: "The typeable input in the select"
+  }
 ];
 
 const propsRows = [
@@ -36,6 +78,25 @@ const propsRows = [
       "The number of option at which to use virtualization to improve performance of the select"
   }
 ];
+
+const Indicator = styled.span(() => ({
+  borderRadius: "25%",
+  background: "green",
+  lineHeight: "0",
+  display: "inline-block",
+  width: "10px",
+  height: "10px",
+  marginRight: "5px"
+}));
+const CustomOption = ({ children, ...props }) => {
+  const newChildren = (
+    <>
+      <Indicator />
+      {children}
+    </>
+  );
+  return <SelectOption {...props}>{newChildren}</SelectOption>;
+};
 
 export default () => (
   <Layout>
@@ -160,6 +221,75 @@ const options = [
     <DocSection>
       <SectionTitle>Props</SectionTitle>
       <PropsTable propsRows={propsRows} />
+    </DocSection>
+
+    <DocSection>
+      <SubsectionTitle>Replacing Inner Components</SubsectionTitle>
+      <Text mb="x2">
+        Using the <InlineCode>components</InlineCode> prop you can augment the
+        inner components of the select. See the following example of adding a
+        component to each option in the dropdown:
+      </Text>
+      <Select
+        defaultValue={["accepted"]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={options}
+        components={{
+          Option: CustomOption
+        }}
+        multiselect
+        labelText="Inventory status"
+        menuPosition="fixed"
+      />
+      <Highlight className="js">
+        {`
+import { SelectOption } from "@nulogy/components";
+        
+const Indicator = styled.span(() => ({
+            borderRadius: "25%",
+            background: "green",
+            lineHeight: "0",
+            display: "inline-block",
+            width: "10px",
+            height: "10px",
+            marginRight: "5px"
+          }));
+
+const CustomOption = ({ children, ...props }) => {
+        const newChildren = (
+          <>
+            <Indicator />
+            {children}
+          </>
+        );
+        return <SelectOption {...props}>{newChildren}</SelectOption>;
+      };
+  
+    return (
+      <Select
+            defaultValue={["accepted"]}
+            noOptionsMessage={() => "No options"}
+            placeholder="Please select inventory status"
+            options={options}
+            components={{
+              Option: CustomOption
+            }}
+            multiselect
+            labelText="Inventory status"
+            menuPosition="fixed"
+          />
+    );`}
+      </Highlight>
+
+      <Table
+        columns={[
+          { label: "Object Key", dataKey: "keyName" },
+          { label: "Component Name", dataKey: "import" },
+          { label: "Description", dataKey: "description" }
+        ]}
+        rows={customSelectComponents}
+      />
     </DocSection>
 
     <DocSection>

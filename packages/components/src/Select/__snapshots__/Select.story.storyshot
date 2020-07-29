@@ -2004,8 +2004,10 @@ exports[`Storyshots Select with custom option component 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <div
-      class="Box-xda4ls-0 hQvIAg"
-      style="position:relative;overflow:hidden;width:300px;height:600px"
+      class="Box-xda4ls-0 hxiRnv"
+      height="600px"
+      overflow="hidden"
+      width="300px"
     >
       <div
         class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
