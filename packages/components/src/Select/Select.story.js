@@ -391,7 +391,7 @@ storiesOf("Select", module)
     };
     return (
       <>
-        <Box style={{ position: "relative", overflow: "hidden", width: "300px", height: "600px" }}>
+        <Box position="relative" overflow="hidden" width="300px" height="600px">
           <Select
             defaultValue={["accepted"]}
             noOptionsMessage={() => "No options"}

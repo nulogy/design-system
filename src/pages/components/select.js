@@ -267,9 +267,7 @@ const CustomOption = ({ children, ...props }) => {
       };
   
     return (
-      <>
-        <Box style={{ position: "relative", overflow: "hidden", width: "300px", height: "600px" }}>
-          <Select
+      <Select
             defaultValue={["accepted"]}
             noOptionsMessage={() => "No options"}
             placeholder="Please select inventory status"
@@ -281,8 +279,6 @@ const CustomOption = ({ children, ...props }) => {
             labelText="Inventory status"
             menuPosition="fixed"
           />
-        </Box>
-      </>
     );`}
       </Highlight>
 
