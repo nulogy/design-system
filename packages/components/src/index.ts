@@ -19,7 +19,16 @@ export { NavBar } from "./NavBar";
 export { Checkbox, CheckboxGroup } from "./Checkbox";
 export { Radio, RadioGroup } from "./Radio";
 export { Toggle } from "./Toggle";
-export { Select, SelectOption } from "./Select";
+export {
+  Select,
+  SelectOption,
+  SelectControl,
+  SelectMultiValue,
+  SelectClearIndicator,
+  SelectContainer,
+  SelectMenu,
+  SelectInput
+} from "./Select";
 export { Field, Fieldset, Form, FormSection } from "./Form";
 export { ListItem, List } from "./List";
 export { Textarea } from "./Textarea";

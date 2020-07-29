@@ -15,7 +15,7 @@ import {
   SelectContainer,
   SelectMenu,
   SelectInput
-} from "../Select/SelectComponents";
+} from "../Select";
 import { SelectDefaultProps, SelectPropTypes } from "../Select/Select.type";
 
 const extractValue = (options, isMulti) => {
