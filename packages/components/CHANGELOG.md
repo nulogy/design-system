@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://github.com/nulogy/design-system/compare/v4.2.0...v4.3.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* remove js barrel file ([#729](https://github.com/nulogy/design-system/issues/729)) ([daf84aa](https://github.com/nulogy/design-system/commit/daf84aa80ecad012de32606f0875e4c6589fe689))
+
+
+### Features
+
+* export select inner components for more customization ([#728](https://github.com/nulogy/design-system/issues/728)) ([5d19831](https://github.com/nulogy/design-system/commit/5d1983194223e78a231d334aeb30463dc829e48e))
+
+
+
+
+
 # [4.2.0](https://github.com/nulogy/design-system/compare/v4.1.4...v4.2.0) (2020-07-28)
 
 
