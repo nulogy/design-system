@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.3](https://github.com/nulogy/design-system/compare/v4.3.2...v4.3.3) (2020-07-30)
+
+
+### Bug Fixes
+
+* move lerna to dev dependency ([#734](https://github.com/nulogy/design-system/issues/734)) ([5c55ed7](https://github.com/nulogy/design-system/commit/5c55ed7af47acdd989f4b2e9a98706c48504c9b4))
+
+
+
+
+
 ## [4.3.2](https://github.com/nulogy/design-system/compare/v4.3.1...v4.3.2) (2020-07-30)
 
 
