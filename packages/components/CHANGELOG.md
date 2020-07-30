@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.1](https://github.com/nulogy/design-system/compare/v4.3.0...v4.3.1) (2020-07-30)
+
+
+### Bug Fixes
+
+* remove PMTable and PMPagination that were moved to PackManager ([#731](https://github.com/nulogy/design-system/issues/731)) ([5f10f41](https://github.com/nulogy/design-system/commit/5f10f41730578d0f1814aa97d16178a8e3a43477))
+
+
+
+
+
 # [4.3.0](https://github.com/nulogy/design-system/compare/v4.2.0...v4.3.0) (2020-07-29)
 
 
