@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { space } from "styled-system";
@@ -99,7 +99,7 @@ const CheckboxInput = styled.input(props => ({
   }
 }));
 
-const BaseCheckbox = props => {
+const BaseCheckbox = forwardRef((props, ref) => {
   // disabled react prop types as they are defined in Checkbox
   // eslint-disable-next-line react/prop-types
   const { className, labelText, disabled, checked, required, error, indeterminate } = props;
@@ -112,6 +112,7 @@ const BaseCheckbox = props => {
           aria-required={required}
           aria-invalid={error}
           indeterminate={indeterminate}
+          ref={ref}
           {...props}
         />
         <VisualCheckbox
@@ -124,7 +125,7 @@ const BaseCheckbox = props => {
       </ClickInputLabel>
     </Box>
   );
-};
+});
 
 const Checkbox = styled(BaseCheckbox)(
   ({ theme }) => ({

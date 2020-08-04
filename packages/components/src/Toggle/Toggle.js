@@ -45,11 +45,6 @@ MaybeToggleTitle.defaultProps = {
 };
 
 class BaseToggle extends React.Component {
-  constructor() {
-    super();
-    this.inputRef = React.createRef();
-  }
-
   handleClick = e => {
     const { onClick } = this.props;
     onClick(e);
@@ -82,7 +77,7 @@ class BaseToggle extends React.Component {
           <ClickInputLabel
             as="div"
             onClick={() => {
-              this.inputRef.current.click();
+              this.props.innerRef.current.click();
             }}
             disabled={disabled}
           >
@@ -99,7 +94,7 @@ class BaseToggle extends React.Component {
                 this.handleClick(e);
               }}
               {...props}
-              ref={this.inputRef}
+              ref={this.props.innerRef}
             />
             {(onText || offText) && (
               <Text disabled={disabled} mb="none" ml="x1">
@@ -186,4 +181,4 @@ Toggle.defaultProps = {
   ...BaseToggle.defaultProps
 };
 
-export default Toggle;
+export default React.forwardRef((props, ref) => <Toggle innerRef={ref} {...props} />);

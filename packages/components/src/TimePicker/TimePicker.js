@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, forwardRef } from "react";
 import { setMinutes } from "date-fns";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -116,7 +116,7 @@ const TimePickerOption = styled.li(({ theme, isSelected, isFocused }) => {
   };
 });
 
-const TimePicker = ({
+const TimePicker = forwardRef(({
   timeFormat,
   interval,
   className,
@@ -135,7 +135,7 @@ const TimePicker = ({
   "aria-label": ariaLabel,
   value,
   ...props
-}) => {
+}, inputRef) => {
   const [input, setInput] = useState(defaultValue);
   const [currentOptionRef, setCurrentOptionRef] = useState(null);
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
@@ -256,6 +256,7 @@ const TimePicker = ({
           iconSize="20px"
           data-testid="select-input"
           type="text"
+          ref={inputRef}
         />
         <TimePickerDropdown
           isOpen={dropdownIsOpen}
@@ -285,7 +286,7 @@ const TimePicker = ({
       <DetectOutsideClick onClick={handleBlur} clickRef={[ref]} />
     </>
   );
-};
+});
 
 TimePicker.propTypes = {
   timeFormat: PropTypes.string,
@@ -320,9 +321,9 @@ TimePicker.defaultProps = {
   errorMessage: undefined,
   errorList: undefined,
   labelText: undefined,
-  onClick: () => {},
-  onBlur: () => {},
-  onFocus: () => {}
+  onClick: () => { },
+  onBlur: () => { },
+  onFocus: () => { }
 };
 
 export default TimePicker;

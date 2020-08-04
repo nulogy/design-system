@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import PropTypes from "prop-types";
 import { space } from "styled-system";
 import styled from "styled-components";
@@ -90,13 +90,14 @@ const RadioInput = styled.input(props => ({
   }
 }));
 
-const BaseRadio = props => {
+const BaseRadio = forwardRef((props, ref) => {
   const { className, labelText, disabled, checked, required, error } = props;
   return (
     <Box className={className}>
       <ClickInputLabel disabled={disabled}>
         <RadioInput
           type="radio"
+          ref={ref}
           aria-checked={checked}
           {...props}
           required={required}
@@ -111,7 +112,7 @@ const BaseRadio = props => {
       </ClickInputLabel>
     </Box>
   );
-};
+});
 
 BaseRadio.propTypes = {
   labelText: PropTypes.string.isRequired,

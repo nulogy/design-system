@@ -20,7 +20,6 @@ class DatePicker extends Component {
   constructor(props) {
     super(props);
     this.state = { selectedDate: props.selected };
-    this.datepickerRef = React.createRef();
     registerDatePickerLocales();
   }
 
@@ -72,8 +71,8 @@ class DatePicker extends Component {
   };
 
   handleEnterKey = () => {
-    const isOpen = this.datepickerRef.isCalendarOpen();
-    this.datepickerRef.setOpen(!isOpen);
+    const isOpen = this.props.innerRef.isCalendarOpen();
+    this.props.innerRef.setOpen(!isOpen);
   };
 
   renderHeader = ({ locale }) => {
@@ -90,7 +89,8 @@ class DatePicker extends Component {
       maxDate,
       highlightDates,
       disableFlipping,
-      className
+      className,
+      ...props
     } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
@@ -128,9 +128,7 @@ class DatePicker extends Component {
               maxDate={maxDate}
               highlightDates={highlightDates}
               locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
-              ref={r => {
-                this.datepickerRef = r;
-              }}
+              ref={this.props.innerRef}
               popperModifiers={{
                 flip: { enabled: !disableFlipping }
               }}
@@ -173,4 +171,4 @@ DatePicker.defaultProps = {
   className: ""
 };
 
-export default DatePicker;
+export default React.forwardRef((props, ref) => <DatePicker innerRef={ref} {...props} />);

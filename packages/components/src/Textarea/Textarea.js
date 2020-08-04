@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { transparentize } from "polished";
@@ -61,35 +61,41 @@ const StyledTextarea = styled.textarea(
   props => getTextareaStyle(props)
 );
 
-const Textarea = ({
-  errorMessage,
-  errorList,
-  error = !!(errorMessage || errorList),
-  required,
-  labelText,
-  requirementText,
-  helpText,
-  id,
-  className,
-  rows,
-  ...props
-}) => (
-  <Field className={className}>
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <StyledTextarea
-        aria-invalid={error}
-        aria-required={required}
-        required={required}
-        id={id}
-        errorMessage={errorMessage}
-        errorList={errorList}
-        error={error}
-        rows={rows}
-        {...props}
-      />
-    </MaybeFieldLabel>
-    <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-  </Field>
+const Textarea = forwardRef(
+  (
+    {
+      errorMessage,
+      errorList,
+      error = !!(errorMessage || errorList),
+      required,
+      labelText,
+      requirementText,
+      helpText,
+      id,
+      className,
+      rows,
+      ...props
+    },
+    ref
+  ) => (
+    <Field className={className}>
+      <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+        <StyledTextarea
+          aria-invalid={error}
+          aria-required={required}
+          required={required}
+          id={id}
+          ref={ref}
+          errorMessage={errorMessage}
+          errorList={errorList}
+          error={error}
+          rows={rows}
+          {...props}
+        />
+      </MaybeFieldLabel>
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Field>
+  )
 );
 
 Textarea.propTypes = {

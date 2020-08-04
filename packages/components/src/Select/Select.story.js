@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
@@ -425,6 +425,28 @@ storiesOf("Select", module)
             menuPosition="fixed"
           />
         </Box>
+      </>
+    );
+  })
+  .add("using ref to control focus", () => {
+    const multiSelectRef = useRef(null);
+    const handleClick = () => {
+      multiSelectRef.current.focus();
+    };
+
+    return (
+      <>
+        <Select
+          defaultValue={["accepted"]}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={options}
+          ref={multiSelectRef}
+          multiselect
+          labelText="Inventory status"
+          menuPosition="fixed"
+        />
+        <Button onClick={handleClick}>Focus the Input</Button>
       </>
     );
   });

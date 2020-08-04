@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
 
 import DateRange from "./DateRange";
+import { Button, Box, Flex, PrimaryButton } from "../";
 
 storiesOf("DateRange", module)
   .addDecorator(withKnobs)
@@ -95,4 +96,49 @@ storiesOf("DateRange", module)
       defaultStartTime="13:30"
       defaultEndTime="10:30"
     />
-  ));
+  ))
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const focusStartDate = () => {
+      ref.current.dateRef1.focus();
+    };
+    const focusEndDate = () => {
+      ref.current.dateRef2.focus();
+    };
+    const focusStartTime = () => {
+      ref.current.timeRef1.focus();
+    };
+    const focusEndTime = () => {
+      ref.current.timeRef2.focus();
+    };
+
+    return (
+      <Flex flexDirection="column">
+        <Box>
+          <DateRange
+            onRangeChange={action("range changed")}
+            onStartDateChange={action("start date changed")}
+            onEndDateChange={action("end date changed")}
+            defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
+            defaultEndDate={new Date("2019-09-10T05:00:00.000Z")}
+            showTimes
+            defaultStartTime="03:30"
+            defaultEndTime="13:30"
+            ref={ref}
+          />
+        </Box>
+        <Flex>
+          <Button onClick={focusStartDate}>Focus Start Date</Button>
+          <PrimaryButton onClick={focusStartTime} ml="x2">
+            Focus Start Time
+          </PrimaryButton>
+          <Button onClick={focusEndTime} ml="x2">
+            Focus End Time
+          </Button>
+          <PrimaryButton onClick={focusEndDate} ml="x2">
+            Focus End Date
+          </PrimaryButton>
+        </Flex>
+      </Flex>
+    );
+  });

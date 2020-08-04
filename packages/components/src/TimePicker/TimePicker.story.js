@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import { TimePicker } from ".";
+import { TimePicker, Button } from "../index";
 
 storiesOf("TimePicker", module)
   .addDecorator(withKnobs)
@@ -65,4 +65,22 @@ storiesOf("TimePicker", module)
   .add("with value", () => {
     const [value, setValue] = useState("13:43");
     return <TimePicker onChange={setValue} onInputChange={setValue} labelText="End Time" value={value} />;
+  })
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
+
+    return (
+      <>
+        <TimePicker
+          onChange={action("time changed")}
+          onInputChange={action("input changed")}
+          labelText="Duration"
+          ref={ref}
+        />
+        <Button onClick={handleClick}>Focus the Toggle</Button>
+      </>
+    );
   });

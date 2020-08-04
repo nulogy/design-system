@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean } from "@storybook/addon-knobs";
-import { Toggle } from "../index";
+import { Toggle, Button } from "../index";
 
 storiesOf("Toggle", module)
   .add("Toggle", () => <Toggle />)
@@ -56,4 +56,24 @@ storiesOf("Toggle", module)
       offText="off"
       onChange={action("on change")}
     />
-  ));
+  ))
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
+
+    return (
+      <>
+        <Toggle
+          id="my-custom-id"
+          labelText="Toggle"
+          onText="on"
+          offText="off"
+          onChange={action("on change")}
+          ref={ref}
+        />
+        <Button onClick={handleClick}>Focus the Toggle</Button>
+      </>
+    );
+  });
