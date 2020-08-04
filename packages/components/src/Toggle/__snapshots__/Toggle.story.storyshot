@@ -475,3 +475,63 @@ exports[`Storyshots Toggle With text 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Toggle using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              id="my-custom-id"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 cOGezP"
+            color="currentColor"
+            font-size="medium"
+          >
+            off
+          </p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Toggle
+    </button>
+  </div>
+</div>
+`;

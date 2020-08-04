@@ -153,6 +153,57 @@ exports[`Storyshots Input set to required 1`] = `
 </div>
 `;
 
+exports[`Storyshots Input using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
+    >
+      <label
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+          >
+            Label
+          </span>
+        </div>
+        <div
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+        >
+          <div
+            class="Box-xda4ls-0 erhvLv"
+            display="flex"
+          >
+            <input
+              aria-invalid="false"
+              aria-required="false"
+              class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+              id="my-own-id"
+            />
+          </div>
+        </div>
+      </label>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Input
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
 <div
   style="padding:24px"
