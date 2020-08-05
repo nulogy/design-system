@@ -44,7 +44,7 @@
   },
   "main": "dist/main.js",
   "module": "dist/main.module.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/src/index.d.ts",
   "files": [
     "/dist"
   ],
