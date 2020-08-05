@@ -44,7 +44,7 @@ exports[`Storyshots DatePicker default 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="01 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -115,7 +115,7 @@ exports[`Storyshots DatePicker disable flipping 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="01 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -262,7 +262,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="MMMM d, yyyy"
-                  value="January 1, 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -507,7 +507,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"

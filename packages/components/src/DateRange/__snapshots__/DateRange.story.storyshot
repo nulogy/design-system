@@ -311,7 +311,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="01 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -366,7 +366,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -442,7 +442,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="10 Sep 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -497,7 +497,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jul 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -661,7 +661,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="10 Sep 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -743,7 +743,7 @@ exports[`Storyshots DateRange using ref to control focus 1`] = `
                       aria-required="false"
                       class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                       placeholder="DD Mon YYYY"
-                      value="05 Jul 2019"
+                      value=""
                     />
                     <svg
                       aria-hidden="true"
@@ -2624,7 +2624,7 @@ exports[`Storyshots DateRange using ref to control focus 1`] = `
                       aria-required="false"
                       class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                       placeholder="DD Mon YYYY"
-                      value="10 Sep 2019"
+                      value=""
                     />
                     <svg
                       aria-hidden="true"
@@ -2726,7 +2726,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jul 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -2781,7 +2781,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="10 Sep 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -2889,7 +2889,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jul 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -4770,7 +4770,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="10 Sep 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -4846,7 +4846,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jul 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -6727,7 +6727,7 @@ exports[`Storyshots DateRange with time error 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jul 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -6803,7 +6803,7 @@ exports[`Storyshots DateRange with times 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="01 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -8682,7 +8682,7 @@ exports[`Storyshots DateRange with times 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
