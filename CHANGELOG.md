@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.4](https://github.com/nulogy/design-system/compare/v4.3.3...v4.3.4) (2020-08-05)
+
+
+### Bug Fixes
+
+* error in typings path ([#736](https://github.com/nulogy/design-system/issues/736)) ([3017a8c](https://github.com/nulogy/design-system/commit/3017a8c998853639278ef0b91ff0779b9aa76438))
+
+
+
+
+
 ## [4.3.3](https://github.com/nulogy/design-system/compare/v4.3.2...v4.3.3) (2020-07-30)
 
 
