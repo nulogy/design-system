@@ -71,8 +71,8 @@ class DatePicker extends Component {
   };
 
   handleEnterKey = () => {
-    const isOpen = this.props.innerRef.isCalendarOpen();
-    this.props.innerRef.setOpen(!isOpen);
+    const isOpen = this.props.innerRef.current.isCalendarOpen();
+    this.props.innerRef.current.setOpen(!isOpen);
   };
 
   renderHeader = ({ locale }) => {
