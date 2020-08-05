@@ -1,5 +1,5 @@
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
-import React, { Component } from "react";
+import React, { useEffect, useState, forwardRef, useRef } from "react";
 import PropTypes from "prop-types";
 import ReactDatePicker from "react-datepicker";
 
@@ -16,71 +16,9 @@ import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
 
-class DatePicker extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { selectedDate: props.selected };
-    registerDatePickerLocales();
-  }
-
-  componentDidUpdate(prevProps) {
-    const { selected } = this.props;
-    if (prevProps.selected !== selected) {
-      this.setSelectedDate(selected);
-    }
-  }
-
-  setSelectedDate = date => {
-    this.setState({
-      selectedDate: date
-    });
-  };
-
-  handleInputChange = event => {
-    const { value } = event.target;
-    const { onInputChange } = this.props;
-    if (onInputChange) {
-      onInputChange(value);
-    }
-  };
-
-  handleSelectedDateChange = date => {
-    const { onChange } = this.props;
-    if (onChange) {
-      onChange(date);
-    }
-    this.setSelectedDate(date);
-  };
-
-  handleDownKey = () => {
-    const { selectedDate } = this.state;
-    const { minDate } = this.props;
-    const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
-    if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
-      this.handleSelectedDateChange(newSelectedDate);
-    }
-  };
-
-  handleUpKey = () => {
-    const { selectedDate } = this.state;
-    const { maxDate } = this.props;
-    const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
-    if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
-      this.handleSelectedDateChange(newSelectedDate);
-    }
-  };
-
-  handleEnterKey = () => {
-    const isOpen = this.props.innerRef.current.isCalendarOpen();
-    this.props.innerRef.current.setOpen(!isOpen);
-  };
-
-  renderHeader = ({ locale }) => {
-    return props => <DatePickerHeader locale={locale} {...props} />;
-  };
-
-  render() {
-    const {
+const DatePicker = forwardRef(
+  (
+    {
       dateFormat,
       errorMessage,
       errorList,
@@ -90,9 +28,67 @@ class DatePicker extends Component {
       highlightDates,
       disableFlipping,
       className,
+      onInputChange,
+      onChange,
+      selected,
       ...props
-    } = this.props;
-    const { selectedDate } = this.state;
+    },
+    datePickerRef
+  ) => {
+    const [selectedDate, setSelectedDate] = useState(props.selected);
+    const [ref, setRef] = useState(null);
+
+    useEffect(() => {
+      registerDatePickerLocales();
+    });
+
+    useEffect(() => {
+      setSelectedDate(selected);
+    }, [selected]);
+
+    const onRefChange = React.useCallback(node => {
+      if (node) {
+        setRef(node);
+      }
+    }, []);
+
+    const handleInputChange = event => {
+      const { value } = event.target;
+      if (onInputChange) {
+        onInputChange(value);
+      }
+    };
+
+    const handleSelectedDateChange = date => {
+      if (onChange) {
+        onChange(date);
+      }
+      setSelectedDate(date);
+    };
+
+    const handleDownKey = () => {
+      const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
+      if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
+        handleSelectedDateChange(newSelectedDate);
+      }
+    };
+
+    const handleUpKey = () => {
+      const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
+      if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
+        handleSelectedDateChange(newSelectedDate);
+      }
+    };
+
+    const handleEnterKey = () => {
+      const isOpen = ref.isCalendarOpen();
+      ref.setOpen(!isOpen);
+    };
+
+    const renderHeader = ({ locale }) => {
+      return props => <DatePickerHeader locale={locale} {...props} />;
+    };
+
     const customInputProps = {
       ...inputProps,
       error: !!(errorMessage || errorList),
@@ -103,10 +99,10 @@ class DatePicker extends Component {
       <DatePickerInput
         inputProps={customInputProps}
         dateFormat={dateFormat}
-        onInputChange={this.handleInputChange}
-        onUpKeyPress={this.handleUpKey}
-        onDownKeyPress={this.handleDownKey}
-        onEnterKeyPress={this.handleEnterKey}
+        onInputChange={handleInputChange}
+        onUpKeyPress={handleUpKey}
+        onDownKeyPress={handleDownKey}
+        onEnterKeyPress={handleEnterKey}
       />
     );
 
@@ -119,16 +115,19 @@ class DatePicker extends Component {
               selected={selectedDate}
               openToDate={selectedDate}
               dateFormat={dateFormat}
-              onChange={this.handleSelectedDateChange}
+              onChange={handleSelectedDateChange}
               customInput={customInput}
-              renderCustomHeader={this.renderHeader({ locale })}
+              renderCustomHeader={renderHeader({ locale })}
               disabledKeyboardNavigation
               strictParsing
               minDate={minDate}
               maxDate={maxDate}
               highlightDates={highlightDates}
               locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
-              ref={this.props.innerRef}
+              ref={r => {
+                datePickerRef.current = r;
+                onRefChange(r);
+              }}
               popperModifiers={{
                 flip: { enabled: !disableFlipping }
               }}
@@ -139,7 +138,7 @@ class DatePicker extends Component {
       </Field>
     );
   }
-}
+);
 
 DatePicker.propTypes = {
   selected: PropTypes.instanceOf(Date),
@@ -171,4 +170,4 @@ DatePicker.defaultProps = {
   className: ""
 };
 
-export default React.forwardRef((props, ref) => <DatePicker innerRef={ref} {...props} />);
+export default DatePicker;
