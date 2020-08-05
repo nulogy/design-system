@@ -240,6 +240,10 @@ export const menuData = [
       {
         name: "Testing",
         href: "/guides/testing"
+      },
+      {
+        name: "Using NDS in Ops Core",
+        href: "/guides/ops-core"
       }
     ]
   },
@@ -257,10 +261,6 @@ export const menuData = [
       {
         name: "Theme",
         href: "/theme"
-      },
-      {
-        name: "Reading list",
-        href: "/guides/reading-list"
       }
     ]
   }
