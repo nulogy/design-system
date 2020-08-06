@@ -125,7 +125,9 @@ const DatePicker = forwardRef(
               highlightDates={highlightDates}
               locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
               ref={r => {
-                datePickerRef.current = r;
+                if (datePickerRef) {
+                  datePickerRef["current"] = r;
+                }
                 onRefChange(r);
               }}
               popperModifiers={{
