@@ -95,7 +95,8 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
     borderColor: theme.colors.blue,
     borderBottomLeftRadius: theme.radii.medium,
     borderBottomRightRadius: theme.radii.medium,
-    display: isOpen ? "block" : "none"
+    display: isOpen ? "block" : "none",
+    zIndex: theme.zIndex.content
   };
 });
 
