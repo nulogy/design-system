@@ -61,4 +61,12 @@ storiesOf("TimePicker", module)
       labelText="End Time"
       defaultValue="12:38 PM"
     />
+  ))
+  .add("with value", () => (
+    <TimePicker
+      onChange={action("time changed")}
+      onInputChange={action("input changed")}
+      labelText="End Time"
+      value="3:43 PM"
+    />
   ));
