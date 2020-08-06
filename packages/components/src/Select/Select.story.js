@@ -309,7 +309,7 @@ storiesOf("Select", module)
       />
     );
   })
-  .add("with multiselect, and closeMenuOnSelect turned off", () => {
+  .add("with closeMenuOnSelect turned off", () => {
     const PCNList = [
       { value: "2", label: "PCN2" },
       { value: "4", label: "PCN4" },
