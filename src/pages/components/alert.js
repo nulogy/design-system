@@ -51,6 +51,12 @@ const propsRows = [
     description: "Provides a close icon in the top right corner."
   },
   {
+    name: "onClose",
+    type: "function",
+    defaultValue: "() => {}",
+    description: "Callback function invoked when the Alert is closed." 
+  },
+  {
     name: "closeAriaLabel",
     type: "String",
     defaultValue: "close",
