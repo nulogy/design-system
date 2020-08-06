@@ -78,7 +78,7 @@ const inputProps = [
     name: "errorMessage",
     type: "String",
     defaultValue: "null",
-    description: "Displays list of error messages and applies red style"
+    description: "Displays an error message and applies red style"
   },
   {
     name: "errorList",
