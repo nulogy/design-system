@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://github.com/nulogy/design-system/compare/v4.3.4...v4.4.0) (2020-08-06)
+
+
+### Features
+
+* Expose react-select prop closeMenuOnSelect for multiselect input ([#737](https://github.com/nulogy/design-system/issues/737)) ([ae95a5e](https://github.com/nulogy/design-system/commit/ae95a5ee2404bbd17586477d0bc5ace6b83fb77c))
+
+
+
+
+
 ## [4.3.4](https://github.com/nulogy/design-system/compare/v4.3.3...v4.3.4) (2020-08-05)
 
 
