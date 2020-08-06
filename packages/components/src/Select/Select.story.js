@@ -309,6 +309,26 @@ storiesOf("Select", module)
       />
     );
   })
+  .add("with multiselect, and closeMenuOnSelect turned off", () => {
+    const PCNList = [
+      { value: "2", label: "PCN2" },
+      { value: "4", label: "PCN4" },
+      { value: "1", label: "PCN1" },
+      { value: "9", label: "PCN9" }
+    ];
+    return (
+      <Select
+        defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={PCNList}
+        labelText="Select PCN"
+        className="Select"
+        multiselect
+        closeMenuOnSelect={false}
+      />
+    );
+  })
   .add("test multiselect overflow", () => (
     <>
       <Select
