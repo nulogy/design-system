@@ -74,7 +74,8 @@ const ReactSelect = ({
   components,
   "aria-label": ariaLabel,
   windowThreshold,
-  filterOption
+  filterOption,
+  closeMenuOnSelect
 }) => {
   const { t } = useTranslation();
   const themeContext = useContext(ThemeContext);
@@ -120,6 +121,7 @@ const ReactSelect = ({
           }}
           aria-label={ariaLabel}
           filterOption={filterOption}
+          closeMenuOnSelect={closeMenuOnSelect}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </MaybeFieldLabel>
