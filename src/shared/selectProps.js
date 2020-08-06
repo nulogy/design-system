@@ -76,6 +76,12 @@ const selectProps = [
     description:
       "Pass in an object with the keys of the component you would like to replace"
   },
+  {
+    name: "closeMenuOnSelect",
+    type: "Boolean",
+    defaultValue: "true",
+    description: "Close the select menu when the user selects an option"
+  },
   ...inputProps.map(prop => {
     if (prop.name === "required") {
       return {
