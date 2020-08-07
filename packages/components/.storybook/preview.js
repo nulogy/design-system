@@ -7,6 +7,7 @@ import { withPerformance } from "storybook-addon-performance";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import theme from "../src/theme";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
+import withMyAddon from "../addons/index";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce(
   (obj, i) => ({
@@ -65,13 +66,7 @@ addParameters({
   }
 });
 
-addDecorator(story => {
-  return (
-    <div style={{ padding: theme.space.x3 }}>
-      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
-    </div>
-  );
-});
-
 // withPerformance must come after the Story wrapper or variables from the provider will be undefined
 addDecorator(withPerformance);
+
+addDecorator(withMyAddon);
