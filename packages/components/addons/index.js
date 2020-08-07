@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import addons, { makeDecorator } from "@storybook/addons";
-import { NDSProvider } from "../src";
+import { NDSProvider, theme as NDSTheme } from "@nulogy/components";
 
 export default makeDecorator({
   name: "withMyAddon",
@@ -9,17 +9,26 @@ export default makeDecorator({
   skipIfNoParametersOrOptions: false,
   wrapper: (getStory, context, { parameters }) => {
     const channel = addons.getChannel();
+    const [theme, setTheme] = useState(NDSTheme);
 
-    // Our API above sets the notes parameter to a string,
-    // which we send to the channel
-    channel.emit("my/customEvent", parameters);
-
-    console.log(getStory(context));
-    // we can also add subscriptions here using channel.on('eventName', callback);
+    useEffect(() => {
+      channel.on("theme-update", data => {
+        const themeGroup = Object.keys(data)[0];
+        const key = Object.keys(data[themeGroup])[0];
+        const newValue = data[themeGroup][key];
+        setTheme({
+          ...theme,
+          [themeGroup]: {
+            ...theme[themeGroup],
+            ...(newValue && data[themeGroup])
+          }
+        });
+      });
+    }, []);
 
     return (
       <div style={{ padding: "24px" }}>
-        <NDSProvider>{getStory(context)}</NDSProvider>
+        <NDSProvider theme={theme || NDSTheme}>{getStory(context)}</NDSProvider>
       </div>
     );
   }
