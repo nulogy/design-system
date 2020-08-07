@@ -42,10 +42,10 @@ const MyPanel = () => {
 };
 
 // Register the addon with a unique name.
-addons.register("my/addon", api => {
+addons.register("ndstheme/addon", api => {
   // Also need to set a unique name to the panel.
-  addons.addPanel("my/addon/panel", {
-    title: "My Addon",
+  addons.addPanel("ndstheme/addon/panel", {
+    title: "Custom Theme",
     render: ({ active, key }) => (
       <AddonPanel key={key} active={active}>
         <MyPanel />

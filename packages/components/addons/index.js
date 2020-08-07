@@ -3,8 +3,7 @@ import addons, { makeDecorator } from "@storybook/addons";
 import { NDSProvider, theme as NDSTheme } from "@nulogy/components";
 
 export default makeDecorator({
-  name: "withMyAddon",
-  parameterName: "myParameter",
+  name: "withNDSTheme",
   // This means don't run this decorator if the notes decorator is not set
   skipIfNoParametersOrOptions: false,
   wrapper: (getStory, context, { parameters }) => {
