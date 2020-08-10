@@ -24,8 +24,8 @@ describe("TimeRange", () => {
       selectTimeOption("11:15 AM", container, queryAllByText, 1);
       const onChangeCalls = onRangeChange.mock.calls;
       const latestCall = onChangeCalls[onChangeCalls.length - 1][0];
-      expect(latestCall.startTime).toBe("10:00 AM");
-      expect(latestCall.endTime).toBe("11:15 AM");
+      expect(latestCall.startTime).toBe("10:00");
+      expect(latestCall.endTime).toBe("11:15");
       expect(latestCall.error).toBeUndefined();
     });
     it("shows an error if the range is invalid", () => {
