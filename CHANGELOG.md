@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.4.1](https://github.com/nulogy/design-system/compare/v4.4.0...v4.4.1) (2020-08-10)
+
+
+### Bug Fixes
+
+* Fix issue where custom 'value' was not being applied to TimePicker ([#740](https://github.com/nulogy/design-system/issues/740)) ([60d8389](https://github.com/nulogy/design-system/commit/60d8389f050609202f455a2808ed5a95b7640302))
+
+
+
+
+
 # [4.4.0](https://github.com/nulogy/design-system/compare/v4.3.4...v4.4.0) (2020-08-06)
 
 
