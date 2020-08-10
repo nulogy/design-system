@@ -44,7 +44,7 @@ describe("TimeRange", () => {
       selectTimeOption("10:00 AM", container, queryAllByText);
       const onChangeCalls = onStartTimeChange.mock.calls;
       const latestCall = onChangeCalls[onChangeCalls.length - 1][0];
-      expect(latestCall).toBe("10:00");
+      expect(latestCall).toBe("10:00 AM");
       expect(onEndTimeChange).not.toHaveBeenCalled();
     });
     it("returns the end time when the end time changes", () => {
@@ -56,7 +56,7 @@ describe("TimeRange", () => {
       selectTimeOption("11:00 AM", container, queryAllByText, 1);
       const onChangeCalls = onEndTimeChange.mock.calls;
       const latestCall = onChangeCalls[onChangeCalls.length - 1][0];
-      expect(latestCall).toBe("11:00");
+      expect(latestCall).toBe("11:00 AM");
       expect(onStartTimeChange).not.toHaveBeenCalled();
     });
   });

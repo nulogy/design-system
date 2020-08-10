@@ -17,8 +17,8 @@ storiesOf("TimeRange", module)
   .add("default selections", () => (
     <TimeRange
       onRangeChange={action("range changed")}
-      defaultStartTime="12:00"
-      defaultEndTime="13:30"
+      defaultStartTime="12:00 AM"
+      defaultEndTime="01:30 PM"
       onStartTimeChange={action("start date changed")}
       onEndTimeChange={action("end date changed")}
     />
@@ -26,8 +26,8 @@ storiesOf("TimeRange", module)
   .add("with range validation", () => (
     <TimeRange
       onRangeChange={action("range changed")}
-      defaultStartTime="12:00"
-      defaultEndTime="03:30"
+      defaultStartTime="12:00 AM"
+      defaultEndTime="03:30 AM"
       onStartTimeChange={action("start date changed")}
       onEndTimeChange={action("end date changed")}
     />

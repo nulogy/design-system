@@ -59,6 +59,8 @@ _Coming soon_
 4. Post a link to the PR in #design-system
 5. Somebody from design ops will take a look and be in touch
 
+Note: NDS follows the [Conventional Commits](https://www.conventionalcommits.org) specification. PRs with only one commit should have the appropriate prefix (ex. 'fix:'). PRs with multiple commits should have the prefix in the PR title.
+
 ## Testing
 
 - To run everything:

@@ -1914,7 +1914,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
               data-testid="select-input"
               placeholder="HH:MM"
               type="text"
-              value="12:00"
+              value="12:00 AM"
               width="130px"
             />
             <svg
@@ -1941,7 +1941,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
           role="listbox"
         >
           <li
-            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gQxuLu"
+            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gYOFvt"
             data-name="12:00 AM"
             data-testid="select-option"
             data-value="00:00"
@@ -2837,7 +2837,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
               data-testid="select-input"
               placeholder="HH:MM"
               type="text"
-              value="13:30"
+              value="01:30 PM"
               width="130px"
             />
             <svg
@@ -3350,7 +3350,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
             01:15 PM
           </li>
           <li
-            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gQxuLu"
+            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gYOFvt"
             data-name="01:30 PM"
             data-testid="select-option"
             data-value="13:30"
@@ -4622,7 +4622,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
               data-testid="select-input"
               placeholder="HH:MM"
               type="text"
-              value="12:00"
+              value="12:00 AM"
               width="130px"
             />
             <svg
@@ -4649,7 +4649,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
           role="listbox"
         >
           <li
-            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gQxuLu"
+            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gYOFvt"
             data-name="12:00 AM"
             data-testid="select-option"
             data-value="00:00"
@@ -5545,7 +5545,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
               data-testid="select-input"
               placeholder="HH:MM"
               type="text"
-              value="03:30"
+              value="03:30 AM"
               width="130px"
             />
             <svg
@@ -5698,7 +5698,7 @@ exports[`Storyshots TimeRange with range validation 1`] = `
             03:15 AM
           </li>
           <li
-            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gQxuLu"
+            class="TimePicker__TimePickerOption-sc-1r3kwxy-2 gYOFvt"
             data-name="03:30 AM"
             data-testid="select-option"
             data-value="03:30"

@@ -133,6 +133,7 @@ const TimePicker = ({
   onClick,
   onChange,
   "aria-label": ariaLabel,
+  value,
   ...props
 }) => {
   const [input, setInput] = useState(defaultValue);
@@ -194,7 +195,7 @@ const TimePicker = ({
   const handleOptionSelection = option => {
     setInput(option.label);
     setDropdownIsOpen(false);
-    onChange(option.value);
+    onChange(option.label, option.value);
   };
 
   const onCurrentOptionRefChange = React.useCallback(node => {
@@ -227,6 +228,8 @@ const TimePicker = ({
     }
   };
 
+  const displayValue = value ? value : input || "";
+
   return (
     <>
       <Box
@@ -243,7 +246,7 @@ const TimePicker = ({
           dropdownIsOpen={dropdownIsOpen}
           onChange={handleInputChange}
           onFocus={handleFocus}
-          value={input || ""}
+          value={displayValue}
           placeholder={placeholder}
           icon="queryBuilder"
           onClick={handleClickInput}
