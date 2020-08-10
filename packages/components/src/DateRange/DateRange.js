@@ -71,16 +71,16 @@ const DateRange = ({
     }
   };
 
-  const changeStartTimeHandler = time => {
-    setStartTime(time);
+  const changeStartTimeHandler = (label, value) => {
+    setStartTime(value);
     if (onStartTimeChange) {
-      onEndDateChange(time);
+      onStartTimeChange(label, value);
     }
   };
-  const changeEndTimeHandler = time => {
-    setEndTime(time);
+  const changeEndTimeHandler = (label, value) => {
+    setEndTime(value);
     if (onEndTimeChange) {
-      onEndDateChange(time);
+      onEndTimeChange(label, value);
     }
   };
 

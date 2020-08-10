@@ -26,7 +26,7 @@ describe("TimePicker", () => {
       );
       selectOption("12:15 AM", container, queryByText);
 
-      expect(onChange).toHaveBeenCalledWith("00:15");
+      expect(onChange).toHaveBeenCalledWith("12:15 AM", "00:15");
     });
 
     it("returns the value of the input when it is typed into", () => {
