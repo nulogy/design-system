@@ -133,6 +133,7 @@ const TimePicker = ({
   onClick,
   onChange,
   "aria-label": ariaLabel,
+  value,
   ...props
 }) => {
   const [input, setInput] = useState(defaultValue);
@@ -243,7 +244,7 @@ const TimePicker = ({
           dropdownIsOpen={dropdownIsOpen}
           onChange={handleInputChange}
           onFocus={handleFocus}
-          value={input || ""}
+          value={input || value || ""}
           placeholder={placeholder}
           icon="queryBuilder"
           onClick={handleClickInput}
