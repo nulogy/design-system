@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
@@ -62,11 +62,9 @@ storiesOf("TimePicker", module)
       defaultValue="12:38 PM"
     />
   ))
-  .add("with value", () => (
-    <TimePicker
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="End Time"
-      value="3:43 PM"
-    />
-  ));
+  .add("with value", () => {
+    const [value, setValue] = useState("13:43");
+    return (
+      <TimePicker onChange={evt => setValue(evt.label)} onInputChange={setValue} labelText="End Time" value={value} />
+    );
+  });

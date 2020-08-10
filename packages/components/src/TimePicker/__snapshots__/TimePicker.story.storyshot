@@ -5792,7 +5792,7 @@ exports[`Storyshots TimePicker with value 1`] = `
               data-testid="select-input"
               placeholder="HH:MM"
               type="text"
-              value="3:43 PM"
+              value="13:43"
               width="130px"
             />
             <svg
