@@ -62,7 +62,7 @@ export default () => (
         {`import { TimePicker } from "@nulogy/components";
 
 <TimePicker
-  onChange={(val) => val.label}
+  onChange={(val) => val}
   onInputChange={(val) => val}
 />
 `}

@@ -195,7 +195,7 @@ const TimePicker = ({
   const handleOptionSelection = option => {
     setInput(option.label);
     setDropdownIsOpen(false);
-    onChange(option);
+    onChange(option.label);
   };
 
   const onCurrentOptionRefChange = React.useCallback(node => {

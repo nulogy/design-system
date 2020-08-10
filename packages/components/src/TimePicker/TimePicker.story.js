@@ -64,7 +64,5 @@ storiesOf("TimePicker", module)
   ))
   .add("with value", () => {
     const [value, setValue] = useState("13:43");
-    return (
-      <TimePicker onChange={evt => setValue(evt.label)} onInputChange={setValue} labelText="End Time" value={value} />
-    );
+    return <TimePicker onChange={setValue} onInputChange={setValue} labelText="End Time" value={value} />;
   });
