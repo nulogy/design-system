@@ -30,16 +30,16 @@ const TimeRange = ({
 
   const { t } = useTranslation();
 
-  const changeStartTimeHandler = date => {
-    setStartTime(date);
+  const changeStartTimeHandler = (label, value) => {
+    setStartTime(value);
     if (onStartTimeChange) {
-      onStartTimeChange(date);
+      onStartTimeChange(label);
     }
   };
-  const changeEndTimeHandler = date => {
-    setEndTime(date);
+  const changeEndTimeHandler = (label, value) => {
+    setEndTime(value);
     if (onEndTimeChange) {
-      onEndTimeChange(date);
+      onEndTimeChange(label);
     }
   };
   const validateTimeRange = () => {
