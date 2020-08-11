@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
 
 import TimeRange from "./TimeRange";
+import { Button, PrimaryButton } from "../";
 
 storiesOf("TimeRange", module)
   .addDecorator(withKnobs)
@@ -40,4 +41,30 @@ storiesOf("TimeRange", module)
       onStartTimeChange={action("start date changed")}
       onEndTimeChange={action("end date changed")}
     />
-  ));
+  ))
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.inputRef1.focus();
+    };
+    const handleClick2 = () => {
+      ref.current.inputRef2.focus();
+    };
+
+    return (
+      <>
+        <TimeRange
+          onRangeChange={action("range changed")}
+          onStartTimeChange={action("start date changed")}
+          onEndTimeChange={action("end date changed")}
+          ref={ref}
+        />
+        <Button onClick={handleClick} ml="x2">
+          Focus the First Input
+        </Button>
+        <PrimaryButton onClick={handleClick2} ml="x2">
+          Focus the Second Input
+        </PrimaryButton>
+      </>
+    );
+  });

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
-import { Checkbox } from "../index";
+import { Checkbox, Button } from "../index";
 
 class CheckboxWithState extends React.Component {
   constructor(props) {
@@ -90,4 +90,23 @@ storiesOf("Checkbox", module)
       />
     </>
   ))
-  .add("With state", () => <CheckboxWithState />);
+  .add("With state", () => <CheckboxWithState />)
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
+
+    return (
+      <>
+        <Checkbox
+          ref={ref}
+          labelText="I am a unchecked indeterminate checkbox"
+          readOnly
+          checked={false}
+          indeterminate
+        />
+        <Button onClick={handleClick}>Focus the Input</Button>
+      </>
+    );
+  });

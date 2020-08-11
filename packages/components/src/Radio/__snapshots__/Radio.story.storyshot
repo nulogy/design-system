@@ -308,3 +308,46 @@ exports[`Storyshots Radio Set to required 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Radio using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-checked="true"
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf Radio-sc-82dpxx-2 jeIhWi"
+          type="radio"
+        />
+        <div
+          checked=""
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am controlled and checked 
+        </span>
+      </label>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Input
+    </button>
+  </div>
+</div>
+`;

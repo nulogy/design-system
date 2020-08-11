@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Radio } from "../index";
+import { Radio, Button } from "../index";
 
 storiesOf("Radio", module)
   .add("Radio", () => (
@@ -36,4 +36,17 @@ storiesOf("Radio", module)
       <Radio id="radio-1" checked onChange={action("onChange")} labelText="I am controlled and checked" />
       <Radio id="radio-2" checked={false} onChange={action("onChange")} labelText="I am controlled and unchecked" />
     </>
-  ));
+  ))
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
+
+    return (
+      <>
+        <Radio ref={ref} checked onChange={action("onChange")} labelText="I am controlled and checked" />
+        <Button onClick={handleClick}>Focus the Input</Button>
+      </>
+    );
+  });

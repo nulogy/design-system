@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { TimePicker } from "../TimePicker";
@@ -8,25 +8,41 @@ import { getDuration } from "./TimeRange.utils";
 
 const DEFAULT_LABEL = "Time Range";
 
-const TimeRange = ({
-  timeFormat,
-  onRangeChange,
-  onStartTimeChange,
-  onEndTimeChange,
-  errorMessage,
-  defaultStartTime,
-  defaultEndTime,
-  disableRangeValidation,
-  labelProps,
-  minTime,
-  maxTime,
-  interval,
-  startAriaLabel,
-  endAriaLabel
-}) => {
+const TimeRange = forwardRef((
+  {
+    timeFormat,
+    onRangeChange,
+    onStartTimeChange,
+    onEndTimeChange,
+    errorMessage,
+    defaultStartTime,
+    defaultEndTime,
+    disableRangeValidation,
+    labelProps,
+    minTime,
+    maxTime,
+    interval,
+    startAriaLabel,
+    endAriaLabel
+  },
+  ref
+) => {
   const [startTime, setStartTime] = useState();
   const [endTime, setEndTime] = useState();
   const [rangeError, setRangeError] = useState();
+  const inputRef1 = useRef();
+  const inputRef2 = useRef();
+
+  useImperativeHandle(ref, () => ({
+    inputRef1: {
+      ...inputRef1,
+      focus: () => inputRef1.current.focus()
+    },
+    inputRef2: {
+      ...inputRef2,
+      focus: () => inputRef2.current.focus()
+    }
+  }));
 
   const { t } = useTranslation();
 
@@ -73,6 +89,7 @@ const TimeRange = ({
       interval={interval}
       aria-label={startAriaLabel || t("select a start time")}
       data-testid="timerange-start-time"
+      ref={inputRef1}
     />
   );
 
@@ -87,6 +104,7 @@ const TimeRange = ({
       interval={interval}
       aria-label={endAriaLabel || t("select an end time")}
       data-testid="timerange-end-time"
+      ref={inputRef2}
     />
   );
 
@@ -106,7 +124,7 @@ const TimeRange = ({
       errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
     />
   );
-};
+});
 
 TimeRange.propTypes = {
   timeFormat: PropTypes.string,

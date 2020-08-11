@@ -470,3 +470,45 @@ exports[`Storyshots Checkbox indeterminate 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Checkbox using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-1nm58f1-2 eJJycu"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-1nm58f1-1 ejYTGD Checkbox-sc-1nm58f1-2 eJJycu"
+          readonly=""
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-1nm58f1-0 vVWOc"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am a unchecked indeterminate checkbox
+        </p>
+      </label>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Input
+    </button>
+  </div>
+</div>
+`;

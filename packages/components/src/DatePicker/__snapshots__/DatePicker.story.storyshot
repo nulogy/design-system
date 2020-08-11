@@ -44,7 +44,7 @@ exports[`Storyshots DatePicker default 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="01 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -115,7 +115,7 @@ exports[`Storyshots DatePicker disable flipping 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="01 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -138,6 +138,82 @@ exports[`Storyshots DatePicker disable flipping 1`] = `
         </div>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots DatePicker using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
+    >
+      <div
+        class="react-datepicker-wrapper"
+      >
+        <div
+          class="react-datepicker__input-container"
+        >
+          <label
+            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+              >
+                Expiry Date
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="select a date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="MMMM d, yyyy"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Toggle
+    </button>
   </div>
 </div>
 `;
@@ -186,78 +262,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="MMMM d, yyyy"
-                  value="January 1, 2019"
-                />
-                <svg
-                  aria-hidden="true"
-                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
-                  color="currentColor"
-                  fill="currentColor"
-                  focusable="false"
-                  height="16px"
-                  icon="calendarToday"
-                  viewBox="0 0 24 24"
-                  width="16px"
-                >
-                  <path
-                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
-                  />
-                </svg>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots DatePicker with custom locale 1`] = `
-<div
-  style="padding:24px"
->
-  <div
-    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
-  >
-    <div
-      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB  nds-date-picker"
-    >
-      <div
-        class="react-datepicker-wrapper"
-      >
-        <div
-          class="react-datepicker__input-container"
-        >
-          <label
-            class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
-            color="black"
-            style="display:block"
-          >
-            <div
-              class="Box-xda4ls-0 biCpIl"
-              data-testid="field-label"
-            >
-              <span
-                class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
-              >
-                Expiry Date
-              </span>
-            </div>
-            <div
-              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
-            >
-              <div
-                class="Box-xda4ls-0 erhvLv"
-                display="flex"
-              >
-                <input
-                  aria-invalid="false"
-                  aria-label="select a date"
-                  aria-required="false"
-                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
-                  placeholder="DD Mon YYYY"
-                  value="10 Jul 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -502,7 +507,7 @@ exports[`Storyshots DatePicker with min and max date 1`] = `
                   aria-required="false"
                   class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
                   placeholder="DD Mon YYYY"
-                  value="05 Jan 2019"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"

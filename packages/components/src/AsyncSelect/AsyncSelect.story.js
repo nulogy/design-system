@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { AsyncSelect } from "../index";
+import { AsyncSelect, Button } from "../index";
 
 const northAmericanCountries = [
   {
@@ -79,4 +79,28 @@ storiesOf("AsyncSelect", module)
       onInputChange={action("typed input value changed")}
       loadOptions={loadMatchingCountries}
     />
-  ));
+  ))
+  .add("using ref to control focus (SkipStoryshot)", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
+
+    return (
+      <>
+        <AsyncSelect
+          ref={ref}
+          placeholder="Please select a country"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          className="Select"
+          classNamePrefix="SelectTest"
+          labelText="Country"
+          defaultValue="Can"
+          onInputChange={action("typed input value changed")}
+          loadOptions={loadMatchingCountries}
+        />
+        <Button onClick={handleClick}>Focus the Input</Button>
+      </>
+    );
+  });

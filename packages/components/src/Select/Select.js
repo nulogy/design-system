@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, forwardRef } from "react";
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
@@ -42,92 +42,97 @@ const extractValue = (options, isMulti) => {
   }
 };
 
-const ReactSelect = ({
-  autocomplete,
-  options,
-  labelText,
-  required,
-  requirementText,
-  helpText,
-  noOptionsMessage,
-  disabled,
-  errorMessage,
-  errorList,
-  error = !!(errorMessage || errorList),
-  id,
-  initialIsOpen,
-  maxHeight,
-  menuPosition,
-  multiselect,
-  name,
-  onChange,
-  placeholder,
-  value,
-  defaultValue,
-  className,
-  classNamePrefix,
-  onBlur,
-  menuIsOpen,
-  onMenuOpen,
-  onMenuClose,
-  onInputChange,
-  components,
-  "aria-label": ariaLabel,
-  windowThreshold,
-  filterOption,
-  closeMenuOnSelect
-}) => {
-  const { t } = useTranslation();
-  const themeContext = useContext(ThemeContext);
-  return (
-    <Field>
-      <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-        <WindowedSelect
-          className={className}
-          classNamePrefix={classNamePrefix}
-          noOptionsMessage={noOptionsMessage}
-          placeholder={placeholder || t("select ...")}
-          options={options}
-          labelText={labelText}
-          windowThreshold={windowThreshold}
-          styles={customStyles({ theme: themeContext, error, maxHeight, windowed: options.length > windowThreshold })}
-          isDisabled={disabled}
-          isSearchable={autocomplete}
-          aria-required={required}
-          aria-invalid={error}
-          defaultMenuIsOpen={initialIsOpen}
-          inputId={id}
-          onBlur={onBlur}
-          onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
-          defaultValue={getReactSelectValue(options, defaultValue)}
-          value={getReactSelectValue(options, value)}
-          name={name}
-          isMulti={multiselect}
-          menuIsOpen={menuIsOpen}
-          onMenuOpen={onMenuOpen}
-          onMenuClose={onMenuClose}
-          menuPosition={menuPosition}
-          onInputChange={onInputChange}
-          theme={themeContext}
-          components={{
-            Option: SelectOption,
-            Control: SelectControl,
-            MultiValue: SelectMultiValue,
-            ClearIndicator: SelectClearIndicator,
-            SelectContainer: SelectContainer,
-            Menu: SelectMenu,
-            Input: SelectInput,
-            ...components
-          }}
-          aria-label={ariaLabel}
-          filterOption={filterOption}
-          closeMenuOnSelect={closeMenuOnSelect}
-        />
-        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-      </MaybeFieldLabel>
-    </Field>
-  );
-};
+const ReactSelect = forwardRef(
+  (
+    {
+      autocomplete,
+      options,
+      labelText,
+      required,
+      requirementText,
+      helpText,
+      noOptionsMessage,
+      disabled,
+      errorMessage,
+      errorList,
+      error = !!(errorMessage || errorList),
+      id,
+      initialIsOpen,
+      maxHeight,
+      menuPosition,
+      multiselect,
+      name,
+      onChange,
+      placeholder,
+      value,
+      defaultValue,
+      className,
+      classNamePrefix,
+      onBlur,
+      menuIsOpen,
+      onMenuOpen,
+      onMenuClose,
+      onInputChange,
+      components,
+      "aria-label": ariaLabel,
+      windowThreshold,
+      filterOption,
+      closeMenuOnSelect
+    },
+    ref
+  ) => {
+    const { t } = useTranslation();
+    const themeContext = useContext(ThemeContext);
+    return (
+      <Field>
+        <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+          <WindowedSelect
+            ref={ref}
+            className={className}
+            classNamePrefix={classNamePrefix}
+            noOptionsMessage={noOptionsMessage}
+            placeholder={placeholder || t("select ...")}
+            options={options}
+            labelText={labelText}
+            windowThreshold={windowThreshold}
+            styles={customStyles({ theme: themeContext, error, maxHeight, windowed: options.length > windowThreshold })}
+            isDisabled={disabled}
+            isSearchable={autocomplete}
+            aria-required={required}
+            aria-invalid={error}
+            defaultMenuIsOpen={initialIsOpen}
+            inputId={id}
+            onBlur={onBlur}
+            onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
+            defaultValue={getReactSelectValue(options, defaultValue)}
+            value={getReactSelectValue(options, value)}
+            name={name}
+            isMulti={multiselect}
+            menuIsOpen={menuIsOpen}
+            onMenuOpen={onMenuOpen}
+            onMenuClose={onMenuClose}
+            menuPosition={menuPosition}
+            onInputChange={onInputChange}
+            theme={themeContext}
+            components={{
+              Option: SelectOption,
+              Control: SelectControl,
+              MultiValue: SelectMultiValue,
+              ClearIndicator: SelectClearIndicator,
+              SelectContainer: SelectContainer,
+              Menu: SelectMenu,
+              Input: SelectInput,
+              ...components
+            }}
+            aria-label={ariaLabel}
+            filterOption={filterOption}
+          />
+          <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+        </MaybeFieldLabel>
+      </Field>
+    );
+  }
+);
 
 ReactSelect.propTypes = {
   ...SelectPropTypes,

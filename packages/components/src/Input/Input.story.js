@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Input, Form, FormSection, PrimaryButton } from "../index";
+import { Input, Form, FormSection, PrimaryButton, Button } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -77,4 +77,23 @@ storiesOf("Input", module)
         <Input prefix="Quantity" suffix="Eaches" />
       </Form>
     </>
-  ));
+  ))
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
+
+    return (
+      <>
+        <Input
+          id="my-own-id"
+          ref={ref}
+          labelText="Label"
+          onChange={action("value changed")}
+          onBlur={action("blurred")}
+        />
+        <Button onClick={handleClick}>Focus the Input</Button>
+      </>
+    );
+  });

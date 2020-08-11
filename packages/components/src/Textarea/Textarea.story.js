@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { Textarea, Form, PrimaryButton } from "../index";
+import { Textarea, Form, PrimaryButton, Button } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -41,11 +41,16 @@ storiesOf("Textarea", module)
   .add("With custom id", () => (
     <Textarea id="my-custom-id" labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
   ))
-  .add("set to required", () => (
-    <>
-      <Form title="Required field example">
-        <Textarea required labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
-        <PrimaryButton>Send</PrimaryButton>
-      </Form>
-    </>
-  ));
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.focus();
+    };
+
+    return (
+      <>
+        <Textarea ref={ref} labelText="Label" rows={7} onChange={action("value changed")} onBlur={action("blurred")} />
+        <Button onClick={handleClick}>Focus the Input</Button>
+      </>
+    );
+  });

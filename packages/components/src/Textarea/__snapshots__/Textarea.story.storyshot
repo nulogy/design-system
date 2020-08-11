@@ -203,56 +203,44 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea set to required 1`] = `
+exports[`Storyshots Textarea using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
   <div
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
-    <form
-      class="Form-n70q8u-0 laLzBn"
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
     >
-      <h2
-        class="Text-sc-1wu7vpu-0-h2 kkbjnI"
-        font-size="heading2"
-        font-weight="normal"
+      <label
+        class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+        color="black"
+        style="display:block"
       >
-        Required field example
-      </h2>
-      <div
-        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
-      >
-        <label
-          class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
-          color="black"
-          style="display:block"
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
         >
-          <div
-            class="Box-xda4ls-0 biCpIl"
-            data-testid="field-label"
+          <span
+            class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
           >
-            <span
-              class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
-            >
-              Label
-            </span>
-          </div>
-          <textarea
-            aria-invalid="false"
-            aria-required="true"
-            class="Textarea__StyledTextarea-sc-1tyrhr0-0 icWfOD"
-            required=""
-            rows="3"
-          />
-        </label>
-      </div>
-      <button
-        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr PrimaryButton-qz78sb-0 cGyyDq"
-      >
-        Send
-      </button>
-    </form>
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="false"
+          aria-required="false"
+          class="Textarea__StyledTextarea-sc-1tyrhr0-0 icWfOD"
+          rows="7"
+        />
+      </label>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Input
+    </button>
   </div>
 </div>
 `;

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, select, boolean } from "@storybook/addon-knobs";
 
-import { DatePicker } from ".";
+import { DatePicker, Button } from "../index";
 
 const selectedDateExamples = [
   new Date("2019-01-01T05:00:00.000Z"),
@@ -57,14 +57,6 @@ storiesOf("DatePicker", module)
       inputProps={{ labelText: "Expiry Date" }}
     />
   ))
-  .add("with custom locale", () => (
-    <DatePicker
-      selected={new Date("2019-07-10T05:00:00.000Z")}
-      onChange={action("date changed")}
-      onInputChange={action("input changed")}
-      inputProps={{ labelText: "Expiry Date" }}
-    />
-  ))
   .add("disable flipping", () => (
     <DatePicker
       selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
@@ -73,4 +65,23 @@ storiesOf("DatePicker", module)
       inputProps={{ labelText: "Expiry Date" }}
       disableFlipping={boolean("disableFlipping", true)}
     />
-  ));
+  ))
+  .add("using ref to control focus", () => {
+    const ref = useRef(null);
+    const handleClick = () => {
+      ref.current.setFocus();
+    };
+
+    return (
+      <>
+        <DatePicker
+          dateFormat="MMMM d, yyyy"
+          onChange={action("date changed")}
+          onInputChange={action("input changed")}
+          inputProps={{ labelText: "Expiry Date" }}
+          ref={ref}
+        />
+        <Button onClick={handleClick}>Focus the Toggle</Button>
+      </>
+    );
+  });

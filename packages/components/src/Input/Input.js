@@ -6,8 +6,8 @@ import { InlineValidation } from "../Validation";
 import { InputFieldDefaultProps, InputFieldPropTypes } from "./InputField.type";
 
 const Input = forwardRef(({ errorMessage, errorList, className, ...props }, ref) => (
-  <Field className={className} ref={ref}>
-    <InputField {...props} error={!!(errorMessage || errorList)} />
+  <Field className={className}>
+    <InputField {...props} error={!!(errorMessage || errorList)} ref={ref} />
     <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
   </Field>
 ));
