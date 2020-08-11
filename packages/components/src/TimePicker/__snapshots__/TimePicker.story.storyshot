@@ -1004,7 +1004,7 @@ exports[`Storyshots TimePicker using ref to control focus 1`] = `
       </label>
       <ul
         aria-expanded="false"
-        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
+        class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dcgWGm"
         data-testid="select-dropdown"
         role="listbox"
       >

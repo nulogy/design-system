@@ -808,7 +808,7 @@ exports[`Storyshots DateRange using ref to control focus 1`] = `
             </div>
             <ul
               aria-expanded="false"
-              class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
+              class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dcgWGm"
               data-testid="select-dropdown"
               role="listbox"
             >
@@ -1732,7 +1732,7 @@ exports[`Storyshots DateRange using ref to control focus 1`] = `
             </div>
             <ul
               aria-expanded="false"
-              class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 kAvmAT"
+              class="TimePicker__TimePickerDropdown-sc-1r3kwxy-1 dcgWGm"
               data-testid="select-dropdown"
               role="listbox"
             >
