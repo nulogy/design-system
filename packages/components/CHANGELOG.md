@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.5.0](https://github.com/nulogy/design-system/compare/v4.4.1...v4.5.0) (2020-08-11)
+
+
+### Features
+
+* add refs and autofocus examples to all focusable inputs ([#735](https://github.com/nulogy/design-system/issues/735)) ([2b29330](https://github.com/nulogy/design-system/commit/2b29330314c841338e74514126ef29380f28c711))
+
+
+
+
+
 ## [4.4.1](https://github.com/nulogy/design-system/compare/v4.4.0...v4.4.1) (2020-08-10)
 
 
