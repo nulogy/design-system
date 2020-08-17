@@ -1,7 +1,7 @@
 import React, { useContext, forwardRef } from "react";
 import AsyncReactSelect from "react-select/async";
 import { useTranslation } from "react-i18next";
-import { ThemeContext } from "styled-components";
+import styled, { ThemeContext } from "styled-components";
 import PropTypes from "prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -27,6 +27,12 @@ const extractValue = (options, isMulti) => {
     return options.value;
   }
 };
+
+const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
+  "[class*='indicatorContainer'] svg": {
+    display: showArrow ? "block" : "none"
+  }
+}));
 
 const AsyncSelect = forwardRef(
   (
@@ -71,7 +77,7 @@ const AsyncSelect = forwardRef(
     return (
       <Field>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-          <AsyncReactSelect
+          <StyledAsyncReactSelect
             className={className}
             classNamePrefix={classNamePrefix}
             noOptionsMessage={noOptionsMessage}
@@ -108,6 +114,7 @@ const AsyncSelect = forwardRef(
               Input: SelectInput,
               ...components
             }}
+            showArrow={defaultOptions}
             aria-label={ariaLabel}
             cacheOptions={cacheOptions}
             defaultOptions={defaultOptions}
