@@ -64,6 +64,7 @@ class BaseToggle extends React.Component {
       requirementText,
       helpText,
       toggled,
+      onClick,
       ...props
     } = this.props;
     return (
@@ -74,13 +75,7 @@ class BaseToggle extends React.Component {
           requirementText={requirementText}
           helpText={helpText}
         >
-          <ClickInputLabel
-            as="div"
-            onClick={() => {
-              this.props.innerRef.current.click();
-            }}
-            disabled={disabled}
-          >
+          <ClickInputLabel as="div" onClick={onClick} disabled={disabled}>
             <ToggleButton
               id={id}
               checked={toggled}
