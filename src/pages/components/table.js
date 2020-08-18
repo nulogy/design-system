@@ -175,6 +175,12 @@ const propsRows = [
       "The name of the key to use as a unique identifier for individual rows"
   },
   {
+    name: "sticky",
+    type: "boolean",
+    defaultValue: "false",
+    description: "sets the table header to sticky"
+  },
+  {
     name: "hasSelectableRows",
     type: "boolean",
     defaultValue: "false",
