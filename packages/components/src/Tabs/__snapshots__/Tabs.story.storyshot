@@ -21,6 +21,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
         role="tab"
         tabindex="0"
+        type="button"
       >
         Tab 1
       </button>
@@ -29,6 +30,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 2
       </button>
@@ -37,6 +39,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab3"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 3
       </button>
@@ -45,6 +48,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab4"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 4
       </button>
@@ -98,6 +102,7 @@ exports[`Storyshots Tabs controlled 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
         role="tab"
         tabindex="0"
+        type="button"
       >
         Tab 1
       </button>
@@ -106,6 +111,7 @@ exports[`Storyshots Tabs controlled 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 2
       </button>
@@ -114,6 +120,7 @@ exports[`Storyshots Tabs controlled 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab3"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 3
       </button>
@@ -122,6 +129,7 @@ exports[`Storyshots Tabs controlled 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab4"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 4
       </button>
@@ -180,6 +188,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
         class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
         role="tab"
         tabindex="0"
+        type="button"
       >
         Tab 1
       </button>
@@ -188,6 +197,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
         class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 2
       </button>
@@ -196,6 +206,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
         class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 3
       </button>
@@ -204,6 +215,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
         class="Tab__TabButton-sc-69abpu-0 bJxQOQ"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 4
       </button>
@@ -258,6 +270,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
         role="tab"
         selected=""
         tabindex="0"
+        type="button"
       >
         Tab 1
       </button>
@@ -266,6 +279,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 2
       </button>
@@ -274,6 +288,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 3
       </button>
@@ -282,6 +297,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 4
       </button>
@@ -325,6 +341,7 @@ exports[`Storyshots Tabs with all tab states 1`] = `
       <button
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
+        type="button"
       >
         Tab
       </button>
@@ -332,6 +349,7 @@ exports[`Storyshots Tabs with all tab states 1`] = `
         class="Tab__TabButton-sc-69abpu-0 kfQsHL"
         role="tab"
         selected=""
+        type="button"
       >
         Tab
       </button>
@@ -339,6 +357,7 @@ exports[`Storyshots Tabs with all tab states 1`] = `
         class="Tab__TabButton-sc-69abpu-0 iQOraC"
         disabled=""
         role="tab"
+        type="button"
       >
         Tab
       </button>
@@ -347,6 +366,7 @@ exports[`Storyshots Tabs with all tab states 1`] = `
         disabled=""
         role="tab"
         selected=""
+        type="button"
       >
         Tab
       </button>
@@ -376,6 +396,7 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
         role="tab"
         tabindex="0"
+        type="button"
       >
         Tab 1
       </button>
@@ -384,6 +405,7 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 2
       </button>
@@ -413,6 +435,7 @@ exports[`Storyshots Tabs with inputs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab1"
         role="tab"
         tabindex="0"
+        type="button"
       >
         Tab 1
       </button>
@@ -421,6 +444,7 @@ exports[`Storyshots Tabs with inputs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD Tab2"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 2
       </button>
@@ -466,6 +490,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="0"
+        type="button"
       >
         Tab 1
       </button>
@@ -474,6 +499,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 2
       </button>
@@ -482,6 +508,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 3
       </button>
@@ -490,6 +517,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 4
       </button>
@@ -498,6 +526,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 5
       </button>
@@ -506,6 +535,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 6
       </button>
@@ -514,6 +544,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 7
       </button>
@@ -522,6 +553,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 8
       </button>
@@ -530,6 +562,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 9
       </button>
@@ -538,6 +571,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 10
       </button>
@@ -546,6 +580,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 11
       </button>
@@ -554,6 +589,7 @@ exports[`Storyshots Tabs with scrolling tabs 1`] = `
         class="Tab__TabButton-sc-69abpu-0 gcfVpD"
         role="tab"
         tabindex="-1"
+        type="button"
       >
         Tab 12
       </button>

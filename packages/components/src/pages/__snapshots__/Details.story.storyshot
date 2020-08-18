@@ -180,6 +180,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               role="tab"
               selected=""
               tabindex="0"
+              type="button"
             >
               Details
             </button>
@@ -188,6 +189,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
+              type="button"
             >
               Milestones
             </button>
@@ -196,6 +198,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
               class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
+              type="button"
             >
               Production Records
             </button>
@@ -1030,6 +1033,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               role="tab"
               selected=""
               tabindex="0"
+              type="button"
             >
               Details
             </button>
@@ -1038,6 +1042,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
+              type="button"
             >
               Milestones
             </button>
@@ -1046,6 +1051,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
               class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
+              type="button"
             >
               Production Records
             </button>
@@ -1847,6 +1853,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               role="tab"
               selected=""
               tabindex="0"
+              type="button"
             >
               Details
             </button>
@@ -1855,6 +1862,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
+              type="button"
             >
               Milestones
             </button>
@@ -1863,6 +1871,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
               class="Tab__TabButton-sc-69abpu-0 gcfVpD"
               role="tab"
               tabindex="-1"
+              type="button"
             >
               Production Records
             </button>
