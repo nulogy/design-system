@@ -8881,202 +8881,206 @@ exports[`Storyshots Table with sticky header 1`] = `
   <div
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
-    <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE Table"
+    <div
+      class="Box-xda4ls-0 imTYhY"
     >
-      <thead>
-        <tr
-          class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
-        >
-          <th
-            class="StyledTh-sc-10nzyk9-0 dMKfDV"
-            data-testid="table-head"
-            scope="col"
-          >
-            Date
-          </th>
-          <th
-            class="StyledTh-sc-10nzyk9-0 dMKfDV"
-            data-testid="table-head"
-            scope="col"
-          >
-            Expected Quantity
-          </th>
-          <th
-            class="StyledTh-sc-10nzyk9-0 dMKfDV"
-            data-testid="table-head"
-            scope="col"
-          >
-            Actual Quantity
-          </th>
-        </tr>
-      </thead>
-      <tbody
-        data-testid="table-body"
+      <table
+        class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE Table"
       >
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
+        <thead>
+          <tr
+            class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
+          >
+            <th
+              class="StyledTh-sc-10nzyk9-0 dMKfDV"
+              data-testid="table-head"
+              scope="col"
+            >
+              Date
+            </th>
+            <th
+              class="StyledTh-sc-10nzyk9-0 dMKfDV"
+              data-testid="table-head"
+              scope="col"
+            >
+              Expected Quantity
+            </th>
+            <th
+              class="StyledTh-sc-10nzyk9-0 dMKfDV"
+              data-testid="table-head"
+              scope="col"
+            >
+              Actual Quantity
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          data-testid="table-body"
         >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            2019-10-01
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-01
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,025 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              1,800 eaches
+            </td>
+          </tr>
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            2,025 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-02
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,475 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,250 eaches
+            </td>
+          </tr>
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            1,800 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-03
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,475 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              1,425 eaches
+            </td>
+          </tr>
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            2019-10-02
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-04
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,475 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              675 eaches
+            </td>
+          </tr>
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-07
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,475 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              1,575 eaches
+            </td>
+          </tr>
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            2,250 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-22
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              1,725 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            2019-10-03
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-23
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,475 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              -
+            </td>
+          </tr>
+          <tr
+            class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
+            data-testid="table-row"
           >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            1,425 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2019-10-04
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            675 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2019-10-07
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            1,575 eaches
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2019-10-22
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            1,725 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            -
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2019-10-23
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            -
-          </td>
-        </tr>
-        <tr
-          class="TableBody__StyledTr-sc-1amzhx8-1 jsrSxq"
-          data-testid="table-row"
-        >
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2019-10-24
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            2,475 eaches
-          </td>
-          <td
-            class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
-          >
-            -
-          </td>
-        </tr>
-      </tbody>
-      <tfoot />
-    </table>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2019-10-24
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              2,475 eaches
+            </td>
+            <td
+              class="TableCell__StyledTableCell-sc-1t826om-0 cMUUMq"
+            >
+              -
+            </td>
+          </tr>
+        </tbody>
+        <tfoot />
+      </table>
+    </div>
   </div>
 </div>
 `;
