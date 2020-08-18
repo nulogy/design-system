@@ -355,7 +355,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 Milestone Performance
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
               >
                 <thead>
                   <tr
@@ -610,7 +610,7 @@ exports[`Storyshots Pages/Details page Default 1`] = `
                 Production Records
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
               >
                 <thead>
                   <tr
@@ -1205,7 +1205,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 Milestone Performance
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
               >
                 <thead>
                   <tr
@@ -1460,7 +1460,7 @@ exports[`Storyshots Pages/Details page With breadcrumbs and actions 1`] = `
                 Production Records
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
               >
                 <thead>
                   <tr
@@ -2022,7 +2022,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 Milestone Performance
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
               >
                 <thead>
                   <tr
@@ -2277,7 +2277,7 @@ exports[`Storyshots Pages/Details page With sidebar 1`] = `
                 Production Records
               </h2>
               <table
-                class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+                class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
               >
                 <thead>
                   <tr

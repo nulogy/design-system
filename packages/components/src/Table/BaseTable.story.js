@@ -134,6 +134,19 @@ storiesOf("Table", module)
       loading={boolean("Show loading state", false)}
     />
   ))
+  .add("with sticky header", () => (
+    <Box mt="x4">
+      <Table
+        columns={columns}
+        rows={rowData}
+        rowHovers={boolean("Show row hovers", true)}
+        compact={boolean("Show with compact styling", false)}
+        loading={boolean("Show loading state", false)}
+        className="Table"
+        sticky
+      />
+    </Box>
+  ))
   .add("with lots of rows and columns", () => (
     <Table
       columns={mockColumns}
