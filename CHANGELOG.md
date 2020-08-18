@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.5.1](https://github.com/nulogy/design-system/compare/v4.5.0...v4.5.1) (2020-08-18)
+
+
+### Bug Fixes
+
+* toggle should switch when clicked when toggled prop is not passed ([#742](https://github.com/nulogy/design-system/issues/742)) ([585e76c](https://github.com/nulogy/design-system/commit/585e76c3a05b20437f1773f514df90e1e8ceb9cd))
+
+
+
+
+
 # [4.5.0](https://github.com/nulogy/design-system/compare/v4.4.1...v4.5.0) (2020-08-11)
 
 
