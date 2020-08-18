@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.5.2](https://github.com/nulogy/design-system/compare/v4.5.1...v4.5.2) (2020-08-18)
+
+
+### Bug Fixes
+
+* adds type="button" to Tab component ([#744](https://github.com/nulogy/design-system/issues/744)) ([8e51796](https://github.com/nulogy/design-system/commit/8e517964918266bafda5bcc12b1a42fb7345469b))
+
+
+
+
+
 ## [4.5.1](https://github.com/nulogy/design-system/compare/v4.5.0...v4.5.1) (2020-08-18)
 
 
