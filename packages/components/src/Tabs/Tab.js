@@ -73,7 +73,7 @@ const TabButton = styled.button(({ selected, disabled, fullWidth, theme }) => ({
 }));
 
 const Tab = React.forwardRef(({ label, ...props }, ref) => (
-  <TabButton role="tab" ref={ref} {...props}>
+  <TabButton role="tab" type="button" ref={ref} {...props}>
     {label}
   </TabButton>
 ));
