@@ -25,10 +25,10 @@ const BaseTable = ({
   rowHovers,
   compact,
   className,
-  sticky
+  stickyHeader
 }) => (
   <StyledTable id={id} className={className}>
-    <TableHead columns={columns} compact={compact} sticky={sticky} />
+    <TableHead columns={columns} compact={compact} sticky={stickyHeader} />
     <TableBody
       columns={columns}
       rows={rows}
@@ -65,7 +65,7 @@ BaseTable.defaultProps = {
   rowHovers: true,
   compact: false,
   className: undefined,
-  sticky: false
+  stickyHeader: false
 };
 
 export default BaseTable;
