@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.1](https://github.com/nulogy/design-system/compare/v4.6.0...v4.6.1) (2020-08-20)
+
+
+### Bug Fixes
+
+* hide arrow in AsyncSelect no default options are passed ([#743](https://github.com/nulogy/design-system/issues/743)) ([f8ffc08](https://github.com/nulogy/design-system/commit/f8ffc0858f8a167e7b28a18b26a5a26e136916ca))
+
+
+
+
+
 # [4.6.0](https://github.com/nulogy/design-system/compare/v4.5.3...v4.6.0) (2020-08-20)
 
 
