@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.6.0](https://github.com/nulogy/design-system/compare/v4.5.3...v4.6.0) (2020-08-20)
+
+
+### Features
+
+* add prop stickyHeader to Table ([#745](https://github.com/nulogy/design-system/issues/745)) ([01921a0](https://github.com/nulogy/design-system/commit/01921a0220f5128c9badebe28ac86bbb6a6b54e2))
+
+
+
+
+
 ## [4.5.3](https://github.com/nulogy/design-system/compare/v4.5.2...v4.5.3) (2020-08-20)
 
 
