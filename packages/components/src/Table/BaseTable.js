@@ -10,7 +10,8 @@ import { columnsPropType, rowsPropType } from "./Table.types";
 const StyledTable = styled.table({
   borderCollapse: "collapse",
   width: "100%",
-  background: "white"
+  background: "white",
+  position: "relative"
 });
 
 const BaseTable = ({
@@ -23,10 +24,11 @@ const BaseTable = ({
   footerRows,
   rowHovers,
   compact,
-  className
+  className,
+  stickyHeader
 }) => (
   <StyledTable id={id} className={className}>
-    <TableHead columns={columns} compact={compact} />
+    <TableHead columns={columns} compact={compact} sticky={stickyHeader} />
     <TableBody
       columns={columns}
       rows={rows}
@@ -50,7 +52,8 @@ BaseTable.propTypes = {
   footerRows: rowsPropType,
   rowHovers: PropTypes.bool,
   compact: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
+  sticky: PropTypes.bool
 };
 
 BaseTable.defaultProps = {
@@ -61,7 +64,8 @@ BaseTable.defaultProps = {
   footerRows: [],
   rowHovers: true,
   compact: false,
-  className: undefined
+  className: undefined,
+  stickyHeader: false
 };
 
 export default BaseTable;

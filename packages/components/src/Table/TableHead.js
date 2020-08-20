@@ -12,10 +12,17 @@ const defaultheaderFormatter = ({ label }) => label;
 
 const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...column }) => headerFormatter(column);
 
-const TableHead = ({ columns, compact }) => {
+const TableHead = ({ columns, compact, sticky }) => {
   const renderColumns = allColumns =>
     allColumns.map(column => (
-      <StyledTh scope="col" key={column.dataKey} width={column.width} compact={compact} data-testid="table-head">
+      <StyledTh
+        scope="col"
+        key={column.dataKey}
+        width={column.width}
+        compact={compact}
+        data-testid="table-head"
+        sticky={sticky}
+      >
         {renderHeaderCellContent(column)}
       </StyledTh>
     ));
@@ -37,7 +44,12 @@ TableHead.propTypes = {
       headerFormatter: PropTypes.func
     })
   ).isRequired,
-  compact: PropTypes.bool.isRequired
+  compact: PropTypes.bool.isRequired,
+  sticky: PropTypes.bool
+};
+
+TableHead.defaultProps = {
+  sticky: false
 };
 
 export default TableHead;

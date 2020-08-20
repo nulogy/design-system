@@ -8,7 +8,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
     >
       <thead>
         <tr
@@ -311,7 +311,7 @@ exports[`Storyshots Table/with expandable rows with rows expanded by default 1`]
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE"
     >
       <thead>
         <tr
