@@ -8892,21 +8892,21 @@ exports[`Storyshots Table with sticky header 1`] = `
             class="TableHead__StyledHeaderRow-msr3t5-0 eqrvph"
           >
             <th
-              class="StyledTh-sc-10nzyk9-0 dMKfDV"
+              class="StyledTh-sc-10nzyk9-0 sBlyT"
               data-testid="table-head"
               scope="col"
             >
               Date
             </th>
             <th
-              class="StyledTh-sc-10nzyk9-0 dMKfDV"
+              class="StyledTh-sc-10nzyk9-0 sBlyT"
               data-testid="table-head"
               scope="col"
             >
               Expected Quantity
             </th>
             <th
-              class="StyledTh-sc-10nzyk9-0 dMKfDV"
+              class="StyledTh-sc-10nzyk9-0 sBlyT"
               data-testid="table-head"
               scope="col"
             >
