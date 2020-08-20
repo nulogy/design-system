@@ -1,0 +1,968 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Pagination Pagination 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 jfvOZs"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        6
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        6
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 jfvOZs"
+        disabled=""
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Pagination on the first page 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 jfvOZs"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        10
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Pagination on the last page 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        6
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        7
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        8
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        9
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        10
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 jfvOZs"
+        disabled=""
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Pagination with less than 5 pages 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;

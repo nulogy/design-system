@@ -1,0 +1,514 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Checkbox Checkbox 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am a checkbox
+        </p>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Checkbox with no label 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Set to defaultChecked 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am checked by default
+        </p>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Set to disabled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cDeIIW"
+        disabled=""
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 kjKKUT Checkbox-sc-14jj5ns-2 jnRDQb"
+          disabled=""
+          id="checkbox-1"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+          disabled=""
+        />
+        <p
+          class="Text-sc-15glbbx-0 kEBDnw"
+          color="currentColor"
+          disabled=""
+          font-size="medium"
+        >
+          I am disabled
+        </p>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cDeIIW"
+        disabled=""
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 kjKKUT Checkbox-sc-14jj5ns-2 jnRDQb"
+          disabled=""
+          id="checkbox-2"
+          type="checkbox"
+        />
+        <div
+          checked=""
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+          disabled=""
+        />
+        <p
+          class="Text-sc-15glbbx-0 kEBDnw"
+          color="currentColor"
+          disabled=""
+          font-size="medium"
+        >
+          I am disabled
+        </p>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Set to error 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="true"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 hagrVd Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am error
+        </p>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="true"
+          aria-required="false"
+          checked=""
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 hagrVd Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am error
+        </p>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox Set to required 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="true"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          required=""
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am a checkbox
+        </p>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox With state 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox-1"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am controlled and checked
+        </p>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox-2"
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am controlled and unchecked
+        </p>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox indeterminate 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          readonly=""
+          type="checkbox"
+        />
+        <div
+          checked=""
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 gFwQKx"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am an indeterminate checkbox
+        </p>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          readonly=""
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 gFwQKx"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am a unchecked indeterminate checkbox
+        </p>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="true"
+          aria-required="false"
+          checked=""
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 hagrVd Checkbox-sc-14jj5ns-2 jnRDQb"
+          id="checkbox"
+          readonly=""
+          type="checkbox"
+        />
+        <div
+          checked=""
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 gFwQKx"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am an indeterminate checkbox with an error
+        </p>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cDeIIW"
+        disabled=""
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 kjKKUT Checkbox-sc-14jj5ns-2 jnRDQb"
+          disabled=""
+          id="checkbox"
+          readonly=""
+          type="checkbox"
+        />
+        <div
+          checked=""
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 gFwQKx"
+          data-testid="visual-checkbox"
+          disabled=""
+        />
+        <p
+          class="Text-sc-15glbbx-0 kEBDnw"
+          color="currentColor"
+          disabled=""
+          font-size="medium"
+        >
+          I am a disabled indeterminate checkbox
+        </p>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Checkbox using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+    >
+      <label
+        class="ClickInputLabel-zdnqd7-0 cdVzeO"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+          readonly=""
+          type="checkbox"
+        />
+        <div
+          class="Checkbox__VisualCheckbox-sc-14jj5ns-0 gFwQKx"
+          data-testid="visual-checkbox"
+        />
+        <p
+          class="Text-sc-15glbbx-0 gSNEe"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am a unchecked indeterminate checkbox
+        </p>
+      </label>
+    </div>
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Focus the Input
+    </button>
+  </div>
+</div>
+`;

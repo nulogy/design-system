@@ -1,0 +1,635 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Table/with expandable rows with expandable rows 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <table
+      class="BaseTable__StyledTable-sc-14k7sl6-0 hyvduj"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-sc-42m5f2-0 kSyezw"
+        >
+          <th
+            class="StyledTh-sc-14sor85-0 kZgIGb"
+            data-testid="table-head"
+            scope="col"
+            width="30px"
+          />
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Date
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Actual Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-01
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,025 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,800 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1dwqlsv-0 cilMYH"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-sc-150w9kl-0 SSzNW nds-icon--downArrow"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-02
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,250 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-03
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,425 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1dwqlsv-0 cilMYH"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-sc-150w9kl-0 SSzNW nds-icon--downArrow"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-04
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            675 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-07
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,575 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1dwqlsv-0 cilMYH"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-sc-150w9kl-0 SSzNW nds-icon--downArrow"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-22
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,725 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-23
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-24
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            -
+          </td>
+        </tr>
+      </tbody>
+      <tfoot />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Table/with expandable rows with rows expanded by default 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <table
+      class="BaseTable__StyledTable-sc-14k7sl6-0 hyvduj"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-sc-42m5f2-0 kSyezw"
+        >
+          <th
+            class="StyledTh-sc-14sor85-0 kZgIGb"
+            data-testid="table-head"
+            scope="col"
+            width="30px"
+          />
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Date
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Actual Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-01
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,025 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,800 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1dwqlsv-0 cilMYH"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-sc-150w9kl-0 SSzNW nds-icon--downArrow"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-02
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,250 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-03
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,425 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <button
+              aria-label="Collapse row"
+              class="ControlIcon__StyledButton-sc-1dwqlsv-0 cilMYH"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-sc-150w9kl-0 SSzNW nds-icon--upArrow"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-04
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            675 eaches
+          </td>
+        </tr>
+        <tr
+          data-testid="expanded-table-row"
+        >
+          <td
+            colspan="4"
+          >
+            <div
+              class="Box-xda4ls-0 JzMyz"
+            >
+              <p
+                class="Text-sc-15glbbx-0 dzOeKs"
+                color="blackBlue"
+                font-size="medium"
+                font-weight="bold"
+              >
+                Expands!
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-07
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,575 eaches
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <button
+              aria-label="Collapse row"
+              class="ControlIcon__StyledButton-sc-1dwqlsv-0 cilMYH"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-sc-150w9kl-0 SSzNW nds-icon--upArrow"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-22
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,725 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          data-testid="expanded-table-row"
+        >
+          <td
+            colspan="4"
+          >
+            <div
+              class="Box-xda4ls-0 JzMyz"
+            >
+              <p
+                class="Text-sc-15glbbx-0 dzOeKs"
+                color="blackBlue"
+                font-size="medium"
+                font-weight="bold"
+              >
+                Expands!
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-23
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            -
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-24
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            -
+          </td>
+        </tr>
+      </tbody>
+      <tfoot />
+    </table>
+  </div>
+</div>
+`;

@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Headings Heading1 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <h1
+      class="Text-sc-15glbbx-0-h1 bsBJQC"
+      font-size="heading1"
+      font-weight="light"
+    >
+      Heading 1
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Headings Heading2 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <h2
+      class="Text-sc-15glbbx-0-h2 bbYEaw"
+      font-size="heading2"
+      font-weight="normal"
+    >
+      Heading 2
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Headings Heading3 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <h3
+      class="Text-sc-15glbbx-0-h3 ibhSyS"
+      font-size="heading3"
+      font-weight="medium"
+    >
+      Heading 3
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Headings Heading4 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <h4
+      class="Text-sc-15glbbx-0-h4 dTezBB"
+      font-size="heading4"
+      font-weight="bold"
+    >
+      Heading 4
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Headings With a custom margin 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <h1
+      class="Text-sc-15glbbx-0-h1 fuHCPa"
+      font-size="heading1"
+      font-weight="light"
+    >
+      Heading1
+    </h1>
+    <p
+      class="Text-sc-15glbbx-0 gSNEe"
+      color="currentColor"
+      font-size="medium"
+    >
+      Lorem ipsum
+    </p>
+  </div>
+</div>
+`;

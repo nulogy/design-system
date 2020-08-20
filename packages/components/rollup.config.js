@@ -13,12 +13,31 @@ const GLOBALS = {
   "react-dom": "ReactDOM",
   "prop-types": "PropTypes",
   "styled-components": "styled",
-  "react-windowed-select": "components"
+  "react-windowed-select": "components",
+  "@babel/runtime/helpers/typeof": "typeof",
+  "@babel/runtime/helpers/defineProperty": "defineProperty",
+  "@babel/runtime/helpers/classCallCheck": "classCallCheck",
+  "@babel/runtime/helpers/createClass": "createClass",
+  "@babel/runtime/helpers/slicedToArray": "slicedToArray",
+  "@babel/runtime/helpers/objectWithoutProperties": "objectWithoutProperties",
+  "object-assign": "assign",
+  "@babel/runtime/helpers/objectWithoutPropertiesLoose": "objectWithoutPropertiesLoose",
+  "@babel/runtime/helpers/extends": "extends",
+  "@babel/runtime/helpers/assertThisInitialized": "assertThisInitialized",
+  "@babel/runtime/helpers/inheritsLoose": "inheritsLoose",
+  "deep-equal": "deep-equal",
+  "create-react-context": "createContext",
+  warning: "warning",
+  exenv: "exenv",
+  classnames: "t",
+  "react-input-autosize": "AutosizeInput",
+  "html-parse-stringify2": "HTML",
+  "smoothscroll-polyfill": "smoothscroll"
 };
 
 const externals = Object.keys(GLOBALS);
 
-const EXTENSIONS = [".js", ".jsx", "ts", ".tsx"];
+const EXTENSIONS = [".js", ".jsx", "ts", ".tsx", ".mjs"];
 
 const CORE_PLUGINS = [
   /* typescript: see tsconfig.json for settings */

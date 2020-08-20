@@ -16,18 +16,25 @@ import {
   TextAlignProps,
   OrderProps,
   FlexGrowProps,
-  PositionProps
+  PositionProps,
+  BorderProps,
+  FlexboxProps
 } from "styled-system";
-import theme from "../theme";
+import { HTMLAttributes } from "react";
 
-type BoxProps = ColorProps &
+export type BoxProps = ColorProps &
   SpaceProps &
   LayoutProps &
   BoxShadowProps &
   TextAlignProps &
   OrderProps &
   FlexGrowProps &
-  PositionProps;
+  PositionProps &
+  BorderProps &
+  FlexboxProps &
+  React.ComponentPropsWithRef<"div"> & {
+    as?: string;
+  };
 
 const Box: React.SFC<BoxProps> = styled.div(
   color,
