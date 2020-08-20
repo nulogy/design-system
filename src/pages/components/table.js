@@ -179,7 +179,7 @@ const propsRows = [
     type: "boolean",
     defaultValue: "false",
     description:
-      "Sets the table header to sticky. NOTE: the vertical position of the sticky header is aligned to the top of the Table, if you have padding on an element wrapping the Table you will see that the header is offset according to the top padding."
+      "Sets the table header to sticky. NOTE: the vertical position of the sticky header is aligned to the top of the Table. If there is padding on an element wrapping the Table you will see that the header is offset according to the top padding."
   },
   {
     name: "hasSelectableRows",
