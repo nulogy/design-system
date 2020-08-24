@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
+    "@nulogy/nulogy",
     "../../.eslintrc"
   ],
   "rules": {

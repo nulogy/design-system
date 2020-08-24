@@ -1,8 +1,5 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": [
-    "@nulogy/nulogy"
-  ],
   "env": {
     "browser": true,
     "es6": true,
