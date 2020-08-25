@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|List", module).add(
+storiesOf("Components/List", module).add(
   "List",
   () => `
     <ul class="List">

@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Breadcrumbs", module).add(
+storiesOf("Components/Breadcrumbs", module).add(
   "Breadcrumbs",
   () => `
     <nav class="Breadcrumbs">

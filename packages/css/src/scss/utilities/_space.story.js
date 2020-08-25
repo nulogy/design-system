@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Utilities|Space", module)
+storiesOf("Utilities/Space", module)
   .add(
     "Padding",
     () => `

@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Checkbox", module)
+storiesOf("Components/Checkbox", module)
   .add(
     "Checkbox",
     () => `

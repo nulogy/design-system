@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Type", module).add(
+storiesOf("Components/Type", module).add(
   "Headings",
   () => `
     <h1 class="Heading1">.Heading1</h1>

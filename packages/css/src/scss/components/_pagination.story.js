@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Pagination", module).add(
+storiesOf("Components/Pagination", module).add(
   "Pagination",
   () => `
     <nav class="Pagination">
