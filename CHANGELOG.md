@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.2](https://github.com/nulogy/design-system/compare/v4.6.1...v4.6.2) (2020-08-25)
+
+
+### Bug Fixes
+
+* use breadcrumb in custom page story ([#749](https://github.com/nulogy/design-system/issues/749)) ([8cca185](https://github.com/nulogy/design-system/commit/8cca1850539c88a1ea7b0bc22731e1679b8a137d))
+
+
+
+
+
 ## [4.6.1](https://github.com/nulogy/design-system/compare/v4.6.0...v4.6.1) (2020-08-20)
 
 
