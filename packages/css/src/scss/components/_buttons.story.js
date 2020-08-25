@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Buttons", module).add(
+storiesOf("Components/Buttons", module).add(
   "All Buttons",
   () => `
     <div style="padding: 24px">

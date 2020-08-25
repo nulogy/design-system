@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Overlay", module)
+storiesOf("Components/Overlay", module)
   .add(
     "Overlay",
     () => `

@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Utilities|Type", module)
+storiesOf("Utilities/Type", module)
   .add(
     "Font size",
     () => `

@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Form", module)
+storiesOf("Components/Form", module)
   .add(
     "Form",
     () => `
