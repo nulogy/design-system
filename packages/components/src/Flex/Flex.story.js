@@ -20,7 +20,7 @@ const boxStyles = {
   outline: `2px dotted ${theme.colors.darkGrey}`
 };
 
-storiesOf("Flex", module)
+storiesOf("Components/Flex", module)
   .add("Flex", () => (
     <Flex style={modernFlexWrapperStyles}>
       <Box style={boxStyles}>1</Box>

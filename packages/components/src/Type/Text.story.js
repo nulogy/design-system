@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { Text } from ".";
 import { Box } from "../Box";
 
-storiesOf("Text", module)
+storiesOf("Components/Text", module)
   .add("Text", () => <Text>Default text</Text>)
   .add("With a color", () => <Text color="blue">Blue text</Text>)
   .add("With a size", () => (

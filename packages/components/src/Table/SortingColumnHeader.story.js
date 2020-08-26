@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { Table } from "../index";
 
-storiesOf("Table.Headers", module)
+storiesOf("Components/Table/Headers", module)
   .addDecorator(withKnobs)
   .add("Sorting Header", () => (
     <Table.SortingHeader

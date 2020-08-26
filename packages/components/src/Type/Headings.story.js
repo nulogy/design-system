@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Text, Heading1, Heading2, Heading3, Heading4 } from "../index";
 
-storiesOf("Headings", module)
+storiesOf("Components/Headings", module)
   .add("Heading1", () => <Heading1>Heading 1</Heading1>)
   .add("Heading2", () => <Heading2>Heading 2</Heading2>)
   .add("Heading3", () => <Heading3>Heading 3</Heading3>)

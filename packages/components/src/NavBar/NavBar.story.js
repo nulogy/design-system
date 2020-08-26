@@ -168,7 +168,7 @@ const search = {
   onSubmit: () => {}
 };
 
-storiesOf("NavBar", module)
+storiesOf("Components/NavBar", module)
   .add("NavBar", () => <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />)
   .add("Without search", () => <NavBar menuData={{ primaryMenu, secondaryMenu }} />)
   .add("Without secondary menu", () => <NavBar menuData={{ primaryMenu, search }} />)

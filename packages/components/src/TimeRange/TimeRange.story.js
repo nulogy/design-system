@@ -6,7 +6,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 import TimeRange from "./TimeRange";
 import { Button, PrimaryButton } from "../";
 
-storiesOf("TimeRange", module)
+storiesOf("Components/imeRange", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <TimeRange

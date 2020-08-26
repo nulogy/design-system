@@ -8,7 +8,7 @@ const customColors = {
   bgHoverColor: "black"
 };
 
-storiesOf("DropdownMenu", module)
+storiesOf("Components/DropdownMenu", module)
   .add("DropdownMenu", () => (
     <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
       <DropdownLink href="/">Dropdown Link</DropdownLink>

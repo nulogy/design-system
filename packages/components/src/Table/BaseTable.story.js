@@ -114,7 +114,7 @@ const rowDataWithSections = [
   { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
-storiesOf("Table", module)
+storiesOf("Components/Table", module)
   .addDecorator(withKnobs)
   .add(" with data", () => (
     <Table

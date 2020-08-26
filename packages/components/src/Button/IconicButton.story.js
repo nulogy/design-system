@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { IconicButton } from "../index";
 
-storiesOf("IconicButton", module)
+storiesOf("Components/IconicButton", module)
   .add("without a label", () => <IconicButton icon="delete" />)
   .add("with label", () => <IconicButton icon="delete">Delete</IconicButton>)
   .add("with a long label", () => (

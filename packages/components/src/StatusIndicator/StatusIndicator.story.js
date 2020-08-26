@@ -5,7 +5,7 @@ import { Text, Heading2, Heading3 } from "../Type";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 
-storiesOf("StatusIndicator", module)
+storiesOf("Components/StatusIndicator", module)
   .add("All", () => (
     <>
       <StatusIndicator type="neutral" mr="half">

@@ -40,7 +40,7 @@ class ControlledTabs extends React.Component {
   }
 }
 
-storiesOf("Tabs", module)
+storiesOf("Components/Tabs", module)
   .add("Tabs", () => (
     <Tabs>
       <Tab className="Tab1" label="Tab 1">

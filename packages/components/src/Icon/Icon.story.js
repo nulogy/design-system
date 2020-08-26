@@ -21,7 +21,7 @@ IconCode.propTypes = {
   icon: PropTypes.string.isRequired
 };
 
-storiesOf("Icon", module)
+storiesOf("Components/Icon", module)
   .add("Icon (SkipStoryshot)", () => (
     <>
       {iconNames.map(iconName => (

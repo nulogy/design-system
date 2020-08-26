@@ -4,7 +4,7 @@ import { Breadcrumbs } from "./index";
 import { Link } from "../Link";
 import { Text } from "../Type";
 
-storiesOf("Breadcrumbs", module)
+storiesOf("Components/Breadcrumbs", module)
   .add("Breadcrumbs", () => (
     <>
       <Breadcrumbs>

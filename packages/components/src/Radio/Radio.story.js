@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { Radio, Button } from "../index";
 
-storiesOf("Radio", module)
+storiesOf("Components/Radio", module)
   .add("Radio", () => (
     <>
       <Radio id="radio" labelText="I am a radio button" />

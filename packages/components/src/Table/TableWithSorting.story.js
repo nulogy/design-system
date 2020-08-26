@@ -67,4 +67,4 @@ const TableWithSorting = () => {
   return <Table columns={columns} rows={rows} keyField="name" />;
 };
 
-storiesOf("Table", module).add("with sorting (SkipStoryshot)", () => <TableWithSorting />);
+storiesOf("Components/Table", module).add("with sorting (SkipStoryshot)", () => <TableWithSorting />);

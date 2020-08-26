@@ -106,7 +106,7 @@ const footerRowData = [
   { date: "Attainment", expectedQuantity: "", actualQuantity: "41.5%", id: "f2" }
 ];
 
-storiesOf("Table", module)
+storiesOf("Components/Table", module)
   .addDecorator(withKnobs)
   .add("with pagination", () => (
     <Table

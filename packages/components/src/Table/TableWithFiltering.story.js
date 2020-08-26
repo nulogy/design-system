@@ -61,6 +61,6 @@ const TableWithFilters = ({ rowsPerPage }) => {
   return <Table columns={columns} rows={rows} keyField="name" rowsPerPage={rowsPerPage} />;
 };
 
-storiesOf("Table", module)
+storiesOf("Components/Table", module)
   .add("with filtering (SkipStoryshot)", () => <TableWithFilters />)
   .add("with filtering and pagination (SkipStoryshot)", () => <TableWithFilters rowsPerPage={4} />);

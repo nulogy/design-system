@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { Heading1 } from "../Type";
 import { TruncatedText } from ".";
 
-storiesOf("TruncatedText", module)
+storiesOf("Components/TruncatedText", module)
   .add("TruncatedText", () => <TruncatedText>Special instructions are provided for the shipment</TruncatedText>)
   .add("without tooltip", () => (
     <TruncatedText showTooltip={false}>Special instructions are provided for the shipment</TruncatedText>
