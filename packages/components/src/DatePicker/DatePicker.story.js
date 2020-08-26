@@ -12,7 +12,6 @@ const selectedDateExamples = [
 ];
 
 storiesOf("Components/DatePicker", module)
-  .addDecorator(withKnobs)
   .add("default", () => (
     <DatePicker
       selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}

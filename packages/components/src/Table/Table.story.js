@@ -107,7 +107,6 @@ const footerRowData = [
 ];
 
 storiesOf("Components/Table", module)
-  .addDecorator(withKnobs)
   .add("with pagination", () => (
     <Table
       columns={columns}
