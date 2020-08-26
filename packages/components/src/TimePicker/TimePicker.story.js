@@ -6,7 +6,6 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { TimePicker, Button } from "../index";
 
 storiesOf("Components/TimePicker", module)
-  .addDecorator(withKnobs)
   .add("default", () => (
     <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
   ))

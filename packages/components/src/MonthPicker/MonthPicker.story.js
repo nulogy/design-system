@@ -6,7 +6,6 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { MonthPicker } from ".";
 
 storiesOf("Components/MonthPicker", module)
-  .addDecorator(withKnobs)
   .add("default", () => (
     <MonthPicker
       selected={new Date("2019-01-01T05:00:00.000Z")}

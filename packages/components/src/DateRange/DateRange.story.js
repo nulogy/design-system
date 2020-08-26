@@ -7,7 +7,6 @@ import DateRange from "./DateRange";
 import { Button, Box, Flex, PrimaryButton } from "../";
 
 storiesOf("Components/DateRange", module)
-  .addDecorator(withKnobs)
   .add("default", () => (
     <DateRange
       onRangeChange={action("range changed")}

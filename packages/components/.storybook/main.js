@@ -14,10 +14,6 @@ module.exports = {
       use: [
         {
           loader: require.resolve("babel-loader")
-        },
-        // Optional
-        {
-          loader: require.resolve("react-docgen-typescript-loader")
         }
       ]
     });

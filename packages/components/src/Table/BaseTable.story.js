@@ -115,7 +115,6 @@ const rowDataWithSections = [
 ];
 
 storiesOf("Components/Table", module)
-  .addDecorator(withKnobs)
   .add(" with data", () => (
     <Table
       columns={columns}

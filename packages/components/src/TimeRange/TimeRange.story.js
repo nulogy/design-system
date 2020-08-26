@@ -7,7 +7,6 @@ import TimeRange from "./TimeRange";
 import { Button, PrimaryButton } from "../";
 
 storiesOf("Components/imeRange", module)
-  .addDecorator(withKnobs)
   .add("default", () => (
     <TimeRange
       onRangeChange={action("range changed")}
