@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Box, Flex, Branding } from "../index";
 
-storiesOf("Branding", module).add("Branding", () => (
+storiesOf("Components/Branding", module).add("Branding", () => (
   <>
     <Flex>
       <Box width={1 / 2} p="x2">

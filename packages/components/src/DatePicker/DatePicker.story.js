@@ -11,7 +11,7 @@ const selectedDateExamples = [
   new Date("2019-03-07T05:00:00.000Z")
 ];
 
-storiesOf("DatePicker", module)
+storiesOf("Components/DatePicker", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <DatePicker

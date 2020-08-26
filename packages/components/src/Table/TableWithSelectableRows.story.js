@@ -21,7 +21,7 @@ const rowData = [
   { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r9" }
 ];
 
-storiesOf("Table/with selectable rows", module)
+storiesOf("Components/Table/with selectable rows", module)
   .add("with selectable rows", () => (
     <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
   ))

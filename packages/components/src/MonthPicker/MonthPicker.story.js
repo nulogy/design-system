@@ -5,7 +5,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 
 import { MonthPicker } from ".";
 
-storiesOf("MonthPicker", module)
+storiesOf("Components/MonthPicker", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <MonthPicker

@@ -6,7 +6,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 import DateRange from "./DateRange";
 import { Button, Box, Flex, PrimaryButton } from "../";
 
-storiesOf("DateRange", module)
+storiesOf("Components/DateRange", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <DateRange

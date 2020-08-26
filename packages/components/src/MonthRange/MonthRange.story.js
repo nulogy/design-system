@@ -5,7 +5,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 
 import MonthRange from "./MonthRange";
 
-storiesOf("MonthRange", module)
+storiesOf("Components/MonthRange", module)
   .addDecorator(withKnobs)
   .add("default", () => (
     <MonthRange

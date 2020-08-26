@@ -4,7 +4,7 @@ import { List, ListItem, Text, Heading1, Heading2, Heading3 } from "../index";
 
 import theme from "../theme";
 
-storiesOf("Typography", module).add("Article", () => (
+storiesOf("Components/Typography", module).add("Article", () => (
   <>
     <Heading1>Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Heading1>
     <Heading2>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Heading2>

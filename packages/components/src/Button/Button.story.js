@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Button, PrimaryButton, DangerButton, QuietButton } from ".";
 
-storiesOf("Buttons", module)
+storiesOf("Components/Buttons", module)
   .add("Button", () => <Button>Create project</Button>)
   .add("PrimaryButton", () => <PrimaryButton>Create project</PrimaryButton>)
   .add("DangerButton", () => <DangerButton>Delete project</DangerButton>)

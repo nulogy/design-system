@@ -5,7 +5,7 @@ import { Input, Form, FormSection, PrimaryButton, Button } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
-storiesOf("Input", module)
+storiesOf("Components/Input", module)
   .add("Input", () => <Input labelText="Input" onChange={action("value changed")} onBlur={action("blurred")} />)
   .add("with all props", () => (
     <Input

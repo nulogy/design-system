@@ -98,7 +98,7 @@ class SelectWithState extends React.Component {
   }
 }
 
-storiesOf("Select", module)
+storiesOf("Components/Select", module)
   .add("Select", () => (
     <Select
       placeholder={" "}

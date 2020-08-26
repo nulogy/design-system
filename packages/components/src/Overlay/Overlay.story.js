@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { Overlay } from ".";
 import { Text, Card } from "../index";
 
-storiesOf("Overlay", module)
+storiesOf("Components/Overlay", module)
   .add("Light (default)", () => (
     <>
       <Text>Background content</Text>

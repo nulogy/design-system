@@ -92,7 +92,7 @@ const modalButtons = (
   </ButtonGroup>
 );
 
-storiesOf("Modal", module)
+storiesOf("Components/Modal", module)
   .add("Modal", () => (
     <Modal footerContent={modalButtons} title="Modal Title">
       Content Content Content

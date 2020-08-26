@@ -11,7 +11,7 @@ const helpTextWithLink = (
   </>
 );
 
-storiesOf("FieldLabel", module)
+storiesOf("Components/FieldLabel", module)
   .add("FieldLabel", () => <FieldLabel labelText="Default label" />)
   .add("with HelpText", () => <FieldLabel labelText="Default label" helpText={helpTextWithLink} />)
   .add("with RequirementText", () => <FieldLabel labelText="Default label" requirementText="(Required)" />)
