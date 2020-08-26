@@ -28,6 +28,7 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const propsRows = [
   {
@@ -331,7 +332,7 @@ class ModalExample extends React.Component {
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/modal--modal">
+          <Link href={`${STORYBOOK_COMPONENT_URL}modal--modal`}>
             View in Storybook
           </Link>
         </ListItem>

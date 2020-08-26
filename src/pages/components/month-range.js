@@ -18,6 +18,7 @@ import {
 } from "../../components";
 import { inputFieldProps } from "../../shared/inputProps";
 import fieldLabelProps from "../../shared/fieldLabelProps";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const propsRows = [
   {
@@ -162,7 +163,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/monthrange--default">
+          <Link href={`${STORYBOOK_COMPONENT_URL}monthrange--default`}>
             View in Storybook
           </Link>
         </ListItem>

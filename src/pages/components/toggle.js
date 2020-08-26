@@ -18,6 +18,7 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const togglePropsRows = [
   {
@@ -183,7 +184,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/toggle--toggle">
+          <Link href={`${STORYBOOK_COMPONENT_URL}toggle--toggle`}>
             View in Storybook
           </Link>
         </ListItem>

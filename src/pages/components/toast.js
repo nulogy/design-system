@@ -20,6 +20,7 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const ToastExample = () => {
   const [triggered, setTriggered] = useState(false);
@@ -152,7 +153,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/?path=/story/toast--toast">
+        <Link href={`${STORYBOOK_COMPONENT_URL}toast--toast`}>
           View in Storybook
         </Link>
       </ListItem>

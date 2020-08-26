@@ -22,6 +22,7 @@ import {
   InlineCode,
   DocText as Text
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const columnKeys = [
   {
@@ -496,7 +497,10 @@ const rows = [
       <Text>
         Similarly headers can be customized using the{" "}
         <InlineCode>HeaderFormatter</InlineCode> function props. See{" "}
-        <Link href="https://storybook.nulogy.design/?path=/story/table--with-a-cell-formatter">
+        <Link
+          href={`${STORYBOOK_COMPONENT_URL}asyncselect--default`}
+          href="https://storybook.nulogy.design/?path=/story/table--with-a-cell-formatter"
+        >
           Storybook
         </Link>{" "}
         for other examples of implementing different custom components.
@@ -680,7 +684,10 @@ const footerRows = [
         <InlineCode>heading</InlineCode> The appearance of the heading can be
         customized by adding a <InlineCode>cellRenderer</InlineCode> to the row.
         See an example in{" "}
-        <Link href="https://storybook.nulogy.design/?path=/story/table--with-full-width-section">
+        <Link
+          href={`${STORYBOOK_COMPONENT_URL}asyncselect--default`}
+          href="https://storybook.nulogy.design/?path=/story/table--with-full-width-section"
+        >
           Storybook
         </Link>
         .
@@ -730,7 +737,9 @@ const footerRows = [
         and Table components can also be used together to support server-side
         pagination or other custom behaviour. An example of such an
         implementation can be found in{" "}
-        <Link href="https://storybook.nulogy.design/?path=/story/table--with-server-side-pagination-skipstoryshot">
+        <Link
+          href={`${STORYBOOK_COMPONENT_URL}table--with-server-side-pagination-skipstoryshot`}
+        >
           Storybook
         </Link>
         .
@@ -742,7 +751,9 @@ const footerRows = [
       <Text>
         Filtering can be implemented by passing filtered rows to the rows prop
         of the table. See an example of filtering in
-        <Link href="https://storybook.nulogy.design/?path=/story/table--with-filtering-skipstoryshot">
+        <Link
+          href={`${STORYBOOK_COMPONENT_URL}table--with-filtering-skipstoryshot`}
+        >
           Storybook
         </Link>
         .
@@ -753,12 +764,12 @@ const footerRows = [
       <SectionTitle>Sorting</SectionTitle>
       <Text>
         Sorting can be implemented using the headerFormatter to pass a{" "}
-        <Link href="https://storybook.nulogy.design/?path=/story/table-headers--sorting-header">
+        <Link href={`${STORYBOOK_COMPONENT_URL}table-headers--sorting-header`}>
           SortingHeader
         </Link>{" "}
         component or another custom header to the column that should be
         sortable. See an example of the complete implementation with table in
-        <Link href="https://storybook.nulogy.design/?path=/story/table--with-sorting">
+        <Link href={`${STORYBOOK_COMPONENT_URL}table--with-sorting`}>
           Storybook
         </Link>
         .
@@ -808,7 +819,7 @@ const footerRows = [
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/table--table-with-data">
+          <Link href={`${STORYBOOK_COMPONENT_URL}table--table-with-data`}>
             View in Storybook
           </Link>
         </ListItem>

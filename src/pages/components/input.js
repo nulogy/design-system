@@ -19,6 +19,7 @@ import {
   PropsTable
 } from "../../components";
 import inputProps from "../../shared/inputProps";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const prefixSuffixProps = [
   {
@@ -193,7 +194,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/input--input">
+          <Link href={`${STORYBOOK_COMPONENT_URL}input--input`}>
             View in Storybook
           </Link>
         </ListItem>
