@@ -24,6 +24,7 @@ import {
   InlineCode
 } from "../../components";
 import selectProps from "../../shared/selectProps";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const options = [
   { value: "accepted", label: "Accepted" },
@@ -308,7 +309,7 @@ const CustomOption = ({ children, ...props }) => {
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/select--select">
+          <Link href={`${STORYBOOK_COMPONENT_URL}select--select`}>
             View in Storybook
           </Link>
         </ListItem>

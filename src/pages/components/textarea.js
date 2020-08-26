@@ -19,6 +19,7 @@ import {
   PropsTable
 } from "../../components";
 import inputProps from "../../shared/inputProps";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const propsRows = [
   {
@@ -137,7 +138,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/textarea--textarea">
+          <Link href={`${STORYBOOK_COMPONENT_URL}textarea--textarea`}>
             View in Storybook
           </Link>
         </ListItem>

@@ -19,6 +19,7 @@ import {
   DocSection,
   DocSubsection
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 export default () => (
   <Layout>
@@ -519,13 +520,17 @@ export default () => (
       <List mb="x3">
         <ListItem>
           Substituting minHeight with height{" "}
-          <Link href="https://storybook.nulogy.design/?path=/story/flex--ie11-minheight-solution-1">
+          <Link
+            href={`${STORYBOOK_COMPONENT_URL}flex--ie11-minheight-solution-1`}
+          >
             (Example)
           </Link>
         </ListItem>
         <ListItem>
           Wrapping flex container with another flex container{" "}
-          <Link href="https://storybook.nulogy.design/?path=/story/flex--ie11-minheight-solution-2">
+          <Link
+            href={`${STORYBOOK_COMPONENT_URL}flex--ie11-minheight-solution-2`}
+          >
             (Example)
           </Link>
         </ListItem>

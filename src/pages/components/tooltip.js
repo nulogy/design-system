@@ -21,6 +21,7 @@ import {
   DocSection,
   PropsTable
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const propsRows = [
   {
@@ -210,7 +211,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/?path=/story/tooltip--tooltip">
+        <Link href={`${STORYBOOK_COMPONENT_URL}tooltip--tooltip`}>
           View in Storybook
         </Link>
       </ListItem>

@@ -19,6 +19,7 @@ import {
   PropsTable
 } from "../../components";
 import radioAndCheckboxProps from "../../shared/radioAndCheckboxProps";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const radioProps = [
   ...radioAndCheckboxProps,
@@ -128,7 +129,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/radio--radio">
+          <Link href={`${STORYBOOK_COMPONENT_URL}radio--radio`}>
             View in storybook
           </Link>
         </ListItem>

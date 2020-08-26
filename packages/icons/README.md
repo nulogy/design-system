@@ -22,7 +22,7 @@ We use a subset of "Outlined" Material icons at Nulogy. To find and add a new on
 4. Place svg in `/icons/assets/` folder
 5. In the `/icons` directory, run `yarn icons` to make the icon available to use
 6. In the `/components` directory run `yarn`
-7. Run `yarn start` and verify the icon was added correctly at [http://localhost:8080/?path=/story/icon--icon](http://localhost:8080/?path=/story/icon--icon)
+7. Run `yarn start` and verify the icon was added correctly at [http://localhost:8080/?path=/story/components-icon--icon-skipstoryshot](http://localhost:8080/?path=/story/components-icon--icon-skipstoryshot)
 8. After verifying the icon is there, update storyshots with `yarn storyshots:update`
 9. Submit PR
 

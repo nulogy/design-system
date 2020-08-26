@@ -23,6 +23,7 @@ import {
   PropsTable,
   KeyTable
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const primaryMenu = [
   {
@@ -284,7 +285,7 @@ const search = {
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/navbar--navbar">
+          <Link href={`${STORYBOOK_COMPONENT_URL}navbar--navbar`}>
             View in Storybook
           </Link>
         </ListItem>
