@@ -53,25 +53,21 @@ const newViewports = {
     }
   }
 };
-
-addDecorator(withA11y);
-
-addParameters({
+export const parameters = {
   viewport: { viewports: newViewports },
   options: {
     theme: create({
       gridCellSize: 8
     })
   }
-});
+};
 
-addDecorator(story => {
-  return (
-    <div style={{ padding: theme.space.x3 }}>
-      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>{story()}</NDSProvider>
+export const decorators = [
+  Story => (
+    <div style={{ padding: "24px" }}>
+      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>
+        <Story />
+      </NDSProvider>
     </div>
-  );
-});
-
-// withPerformance must come after the Story wrapper or variables from the provider will be undefined
-addDecorator(withPerformance);
+  )
+];
