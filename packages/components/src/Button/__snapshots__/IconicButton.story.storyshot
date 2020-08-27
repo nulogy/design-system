@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots IconicButton set to disabled 1`] = `
+exports[`Storyshots Components/IconicButton set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -69,7 +69,7 @@ exports[`Storyshots IconicButton set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots IconicButton with a hidden label 1`] = `
+exports[`Storyshots Components/IconicButton with a hidden label 1`] = `
 <div
   style="padding:24px"
 >
@@ -107,7 +107,7 @@ exports[`Storyshots IconicButton with a hidden label 1`] = `
 </div>
 `;
 
-exports[`Storyshots IconicButton with a long label 1`] = `
+exports[`Storyshots Components/IconicButton with a long label 1`] = `
 <div
   style="padding:24px"
 >
@@ -146,7 +146,7 @@ exports[`Storyshots IconicButton with a long label 1`] = `
 </div>
 `;
 
-exports[`Storyshots IconicButton with label 1`] = `
+exports[`Storyshots Components/IconicButton with label 1`] = `
 <div
   style="padding:24px"
 >
@@ -185,7 +185,7 @@ exports[`Storyshots IconicButton with label 1`] = `
 </div>
 `;
 
-exports[`Storyshots IconicButton without a label 1`] = `
+exports[`Storyshots Components/IconicButton without a label 1`] = `
 <div
   style="padding:24px"
 >

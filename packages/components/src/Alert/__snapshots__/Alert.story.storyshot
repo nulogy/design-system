@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Alert Danger 1`] = `
+exports[`Storyshots Components/Alert Danger 1`] = `
 <div
   style="padding:24px"
 >
@@ -37,7 +37,7 @@ exports[`Storyshots Alert Danger 1`] = `
 </div>
 `;
 
-exports[`Storyshots Alert Informative 1`] = `
+exports[`Storyshots Components/Alert Informative 1`] = `
 <div
   style="padding:24px"
 >
@@ -58,7 +58,7 @@ exports[`Storyshots Alert Informative 1`] = `
 </div>
 `;
 
-exports[`Storyshots Alert Success 1`] = `
+exports[`Storyshots Components/Alert Success 1`] = `
 <div
   style="padding:24px"
 >
@@ -95,7 +95,7 @@ exports[`Storyshots Alert Success 1`] = `
 </div>
 `;
 
-exports[`Storyshots Alert Warning 1`] = `
+exports[`Storyshots Components/Alert Warning 1`] = `
 <div
   style="padding:24px"
 >
@@ -116,7 +116,7 @@ exports[`Storyshots Alert Warning 1`] = `
 </div>
 `;
 
-exports[`Storyshots Alert With a close button 1`] = `
+exports[`Storyshots Components/Alert With a close button 1`] = `
 <div
   style="padding:24px"
 >
@@ -164,7 +164,7 @@ exports[`Storyshots Alert With a close button 1`] = `
 </div>
 `;
 
-exports[`Storyshots Alert With a link 1`] = `
+exports[`Storyshots Components/Alert With a link 1`] = `
 <div
   style="padding:24px"
 >
@@ -194,7 +194,7 @@ exports[`Storyshots Alert With a link 1`] = `
 </div>
 `;
 
-exports[`Storyshots Alert With a title 1`] = `
+exports[`Storyshots Components/Alert With a title 1`] = `
 <div
   style="padding:24px"
 >

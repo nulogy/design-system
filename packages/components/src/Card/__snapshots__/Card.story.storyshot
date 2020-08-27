@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Card Card 1`] = `
+exports[`Storyshots Components/Card Card 1`] = `
 <div
   style="padding:24px"
 >
@@ -16,7 +16,7 @@ exports[`Storyshots Card Card 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card Cardset 1`] = `
+exports[`Storyshots Components/Card Cardset 1`] = `
 <div
   style="padding:24px"
 >
@@ -46,7 +46,7 @@ exports[`Storyshots Card Cardset 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card Custom card 1`] = `
+exports[`Storyshots Components/Card Custom card 1`] = `
 <div
   style="padding:24px"
 >

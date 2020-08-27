@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots MonthRange customizing input props 1`] = `
+exports[`Storyshots Components/MonthRange customizing input props 1`] = `
 <div
   style="padding:24px"
 >
@@ -133,7 +133,7 @@ exports[`Storyshots MonthRange customizing input props 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthRange default 1`] = `
+exports[`Storyshots Components/MonthRange default 1`] = `
 <div
   style="padding:24px"
 >
@@ -266,7 +266,7 @@ exports[`Storyshots MonthRange default 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthRange default start and end date 1`] = `
+exports[`Storyshots Components/MonthRange default start and end date 1`] = `
 <div
   style="padding:24px"
 >
@@ -399,7 +399,7 @@ exports[`Storyshots MonthRange default start and end date 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthRange disabled range validation 1`] = `
+exports[`Storyshots Components/MonthRange disabled range validation 1`] = `
 <div
   style="padding:24px"
 >
@@ -532,7 +532,7 @@ exports[`Storyshots MonthRange disabled range validation 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthRange individual input error 1`] = `
+exports[`Storyshots Components/MonthRange individual input error 1`] = `
 <div
   style="padding:24px"
 >
@@ -698,7 +698,7 @@ exports[`Storyshots MonthRange individual input error 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthRange with custom error 1`] = `
+exports[`Storyshots Components/MonthRange with custom error 1`] = `
 <div
   style="padding:24px"
 >

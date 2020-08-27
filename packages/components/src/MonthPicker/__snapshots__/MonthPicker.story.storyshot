@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots MonthPicker default 1`] = `
+exports[`Storyshots Components/MonthPicker default 1`] = `
 <div
   style="padding:24px"
 >
@@ -72,7 +72,7 @@ exports[`Storyshots MonthPicker default 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthPicker with a min and max date 1`] = `
+exports[`Storyshots Components/MonthPicker with a min and max date 1`] = `
 <div
   style="padding:24px"
 >
@@ -144,7 +144,7 @@ exports[`Storyshots MonthPicker with a min and max date 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthPicker with custom placeholder 1`] = `
+exports[`Storyshots Components/MonthPicker with custom placeholder 1`] = `
 <div
   style="padding:24px"
 >
@@ -216,7 +216,7 @@ exports[`Storyshots MonthPicker with custom placeholder 1`] = `
 </div>
 `;
 
-exports[`Storyshots MonthPicker with error state 1`] = `
+exports[`Storyshots Components/MonthPicker with error state 1`] = `
 <div
   style="padding:24px"
 >

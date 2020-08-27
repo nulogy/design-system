@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots RadioGroup Controlled 1`] = `
+exports[`Storyshots Components/RadioGroup Controlled 1`] = `
 <div
   style="padding:24px"
 >
@@ -107,7 +107,7 @@ exports[`Storyshots RadioGroup Controlled 1`] = `
 </div>
 `;
 
-exports[`Storyshots RadioGroup RadioGroup 1`] = `
+exports[`Storyshots Components/RadioGroup RadioGroup 1`] = `
 <div
   style="padding:24px"
 >
@@ -209,7 +209,7 @@ exports[`Storyshots RadioGroup RadioGroup 1`] = `
 </div>
 `;
 
-exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
+exports[`Storyshots Components/RadioGroup RadioGroup with all props 1`] = `
 <div
   style="padding:24px"
 >
@@ -329,7 +329,7 @@ exports[`Storyshots RadioGroup RadioGroup with all props 1`] = `
 </div>
 `;
 
-exports[`Storyshots RadioGroup Set to disabled 1`] = `
+exports[`Storyshots Components/RadioGroup Set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -444,7 +444,7 @@ exports[`Storyshots RadioGroup Set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots RadioGroup with error list 1`] = `
+exports[`Storyshots Components/RadioGroup with error list 1`] = `
 <div
   style="padding:24px"
 >
@@ -596,7 +596,7 @@ exports[`Storyshots RadioGroup with error list 1`] = `
 </div>
 `;
 
-exports[`Storyshots RadioGroup with error message 1`] = `
+exports[`Storyshots Components/RadioGroup with error message 1`] = `
 <div
   style="padding:24px"
 >

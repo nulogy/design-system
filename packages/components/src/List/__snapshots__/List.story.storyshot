@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots List List 1`] = `
+exports[`Storyshots Components/List List 1`] = `
 <div
   style="padding:24px"
 >
@@ -34,7 +34,7 @@ exports[`Storyshots List List 1`] = `
 </div>
 `;
 
-exports[`Storyshots List With compact spacing 1`] = `
+exports[`Storyshots Components/List With compact spacing 1`] = `
 <div
   style="padding:24px"
 >
@@ -68,7 +68,7 @@ exports[`Storyshots List With compact spacing 1`] = `
 </div>
 `;
 
-exports[`Storyshots List With custom colour 1`] = `
+exports[`Storyshots Components/List With custom colour 1`] = `
 <div
   style="padding:24px"
 >
@@ -102,7 +102,7 @@ exports[`Storyshots List With custom colour 1`] = `
 </div>
 `;
 
-exports[`Storyshots List With custom font size and line height 1`] = `
+exports[`Storyshots Components/List With custom font size and line height 1`] = `
 <div
   style="padding:24px"
 >
@@ -138,7 +138,7 @@ exports[`Storyshots List With custom font size and line height 1`] = `
 </div>
 `;
 
-exports[`Storyshots List With left alignment 1`] = `
+exports[`Storyshots Components/List With left alignment 1`] = `
 <div
   style="padding:24px"
 >

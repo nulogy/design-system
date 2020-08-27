@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Table  with data 1`] = `
+exports[`Storyshots Components/Table  with data 1`] = `
 <div
   style="padding:24px"
 >
@@ -207,7 +207,7 @@ exports[`Storyshots Table  with data 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with a cell formatter 1`] = `
+exports[`Storyshots Components/Table with a cell formatter 1`] = `
 <div
   style="padding:24px"
 >
@@ -414,7 +414,7 @@ exports[`Storyshots Table with a cell formatter 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with a custom cell component 1`] = `
+exports[`Storyshots Components/Table with a custom cell component 1`] = `
 <div
   style="padding:24px"
 >
@@ -819,7 +819,7 @@ exports[`Storyshots Table with a custom cell component 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with a custom column label component 1`] = `
+exports[`Storyshots Components/Table with a custom column label component 1`] = `
 <div
   style="padding:24px"
 >
@@ -1061,7 +1061,7 @@ exports[`Storyshots Table with a custom column label component 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with a footer 1`] = `
+exports[`Storyshots Components/Table with a footer 1`] = `
 <div
   style="padding:24px"
 >
@@ -1309,7 +1309,7 @@ exports[`Storyshots Table with a footer 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with cell alignment 1`] = `
+exports[`Storyshots Components/Table with cell alignment 1`] = `
 <div
   style="padding:24px"
 >
@@ -1516,7 +1516,7 @@ exports[`Storyshots Table with cell alignment 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with custom column widths 1`] = `
+exports[`Storyshots Components/Table with custom column widths 1`] = `
 <div
   style="padding:24px"
 >
@@ -1757,7 +1757,7 @@ exports[`Storyshots Table with custom column widths 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with full width section 1`] = `
+exports[`Storyshots Components/Table with full width section 1`] = `
 <div
   style="padding:24px"
 >
@@ -1965,7 +1965,7 @@ exports[`Storyshots Table with full width section 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with lots of rows and columns 1`] = `
+exports[`Storyshots Components/Table with lots of rows and columns 1`] = `
 <div
   style="padding:24px"
 >
@@ -8814,7 +8814,7 @@ exports[`Storyshots Table with lots of rows and columns 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with no data 1`] = `
+exports[`Storyshots Components/Table with no data 1`] = `
 <div
   style="padding:24px"
 >
@@ -8874,7 +8874,7 @@ exports[`Storyshots Table with no data 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with sticky header 1`] = `
+exports[`Storyshots Components/Table with sticky header 1`] = `
 <div
   style="padding:24px"
 >

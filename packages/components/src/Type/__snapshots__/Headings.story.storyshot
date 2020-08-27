@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Headings Heading1 1`] = `
+exports[`Storyshots Components/Headings Heading1 1`] = `
 <div
   style="padding:24px"
 >
@@ -18,7 +18,7 @@ exports[`Storyshots Headings Heading1 1`] = `
 </div>
 `;
 
-exports[`Storyshots Headings Heading2 1`] = `
+exports[`Storyshots Components/Headings Heading2 1`] = `
 <div
   style="padding:24px"
 >
@@ -36,7 +36,7 @@ exports[`Storyshots Headings Heading2 1`] = `
 </div>
 `;
 
-exports[`Storyshots Headings Heading3 1`] = `
+exports[`Storyshots Components/Headings Heading3 1`] = `
 <div
   style="padding:24px"
 >
@@ -54,7 +54,7 @@ exports[`Storyshots Headings Heading3 1`] = `
 </div>
 `;
 
-exports[`Storyshots Headings Heading4 1`] = `
+exports[`Storyshots Components/Headings Heading4 1`] = `
 <div
   style="padding:24px"
 >
@@ -72,7 +72,7 @@ exports[`Storyshots Headings Heading4 1`] = `
 </div>
 `;
 
-exports[`Storyshots Headings With a custom margin 1`] = `
+exports[`Storyshots Components/Headings With a custom margin 1`] = `
 <div
   style="padding:24px"
 >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
+exports[`Storyshots Components/Table/with expandable rows with expandable rows 1`] = `
 <div
   style="padding:24px"
 >
@@ -303,7 +303,7 @@ exports[`Storyshots Table/with expandable rows with expandable rows 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table/with expandable rows with rows expanded by default 1`] = `
+exports[`Storyshots Components/Table/with expandable rows with rows expanded by default 1`] = `
 <div
   style="padding:24px"
 >

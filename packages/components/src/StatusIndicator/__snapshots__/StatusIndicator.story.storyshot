@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots StatusIndicator All 1`] = `
+exports[`Storyshots Components/StatusIndicator All 1`] = `
 <div
   style="padding:24px"
 >
@@ -60,7 +60,7 @@ exports[`Storyshots StatusIndicator All 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Danger 1`] = `
+exports[`Storyshots Components/StatusIndicator Danger 1`] = `
 <div
   style="padding:24px"
 >
@@ -78,7 +78,7 @@ exports[`Storyshots StatusIndicator Danger 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Dark 1`] = `
+exports[`Storyshots Components/StatusIndicator Dark 1`] = `
 <div
   style="padding:24px"
 >
@@ -96,7 +96,7 @@ exports[`Storyshots StatusIndicator Dark 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Following text 1`] = `
+exports[`Storyshots Components/StatusIndicator Following text 1`] = `
 <div
   style="padding:24px"
 >
@@ -215,7 +215,7 @@ exports[`Storyshots StatusIndicator Following text 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Informative 1`] = `
+exports[`Storyshots Components/StatusIndicator Informative 1`] = `
 <div
   style="padding:24px"
 >
@@ -233,7 +233,7 @@ exports[`Storyshots StatusIndicator Informative 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Inside flex 1`] = `
+exports[`Storyshots Components/StatusIndicator Inside flex 1`] = `
 <div
   style="padding:24px"
 >
@@ -334,7 +334,7 @@ exports[`Storyshots StatusIndicator Inside flex 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Neutral 1`] = `
+exports[`Storyshots Components/StatusIndicator Neutral 1`] = `
 <div
   style="padding:24px"
 >
@@ -352,7 +352,7 @@ exports[`Storyshots StatusIndicator Neutral 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Quiet 1`] = `
+exports[`Storyshots Components/StatusIndicator Quiet 1`] = `
 <div
   style="padding:24px"
 >
@@ -370,7 +370,7 @@ exports[`Storyshots StatusIndicator Quiet 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Success 1`] = `
+exports[`Storyshots Components/StatusIndicator Success 1`] = `
 <div
   style="padding:24px"
 >
@@ -388,7 +388,7 @@ exports[`Storyshots StatusIndicator Success 1`] = `
 </div>
 `;
 
-exports[`Storyshots StatusIndicator Warning 1`] = `
+exports[`Storyshots Components/StatusIndicator Warning 1`] = `
 <div
   style="padding:24px"
 >

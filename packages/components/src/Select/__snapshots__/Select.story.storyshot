@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Select Select 1`] = `
+exports[`Storyshots Components/Select Select 1`] = `
 <div
   style="padding:24px"
 >
@@ -108,7 +108,7 @@ exports[`Storyshots Select Select 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select With wrapping text 1`] = `
+exports[`Storyshots Components/Select With wrapping text 1`] = `
 <div
   style="padding:24px"
 >
@@ -260,7 +260,7 @@ exports[`Storyshots Select With wrapping text 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select set to disabled 1`] = `
+exports[`Storyshots Components/Select set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -369,7 +369,7 @@ exports[`Storyshots Select set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select set to required 1`] = `
+exports[`Storyshots Components/Select set to required 1`] = `
 <div
   style="padding:24px"
 >
@@ -511,7 +511,7 @@ exports[`Storyshots Select set to required 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select test multiselect overflow 1`] = `
+exports[`Storyshots Components/Select test multiselect overflow 1`] = `
 <div
   style="padding:24px"
 >
@@ -1335,7 +1335,7 @@ exports[`Storyshots Select test multiselect overflow 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select using ref to control focus 1`] = `
+exports[`Storyshots Components/Select using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
@@ -1493,7 +1493,7 @@ exports[`Storyshots Select using ref to control focus 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with a blank value 1`] = `
+exports[`Storyshots Components/Select with a blank value 1`] = `
 <div
   style="padding:24px"
 >
@@ -1601,7 +1601,7 @@ exports[`Storyshots Select with a blank value 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with a defaultValue 1`] = `
+exports[`Storyshots Components/Select with a defaultValue 1`] = `
 <div
   style="padding:24px"
 >
@@ -1709,7 +1709,7 @@ exports[`Storyshots Select with a defaultValue 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with an option selected 1`] = `
+exports[`Storyshots Components/Select with an option selected 1`] = `
 <div
   style="padding:24px"
 >
@@ -2039,7 +2039,7 @@ exports[`Storyshots Select with an option selected 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with closeMenuOnSelect turned off 1`] = `
+exports[`Storyshots Components/Select with closeMenuOnSelect turned off 1`] = `
 <div
   style="padding:24px"
 >
@@ -2221,7 +2221,7 @@ exports[`Storyshots Select with closeMenuOnSelect turned off 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with custom id 1`] = `
+exports[`Storyshots Components/Select with custom id 1`] = `
 <div
   style="padding:24px"
 >
@@ -2336,7 +2336,7 @@ exports[`Storyshots Select with custom id 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with custom option component 1`] = `
+exports[`Storyshots Components/Select with custom option component 1`] = `
 <div
   style="padding:24px"
 >
@@ -2496,7 +2496,7 @@ exports[`Storyshots Select with custom option component 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with error list 1`] = `
+exports[`Storyshots Components/Select with error list 1`] = `
 <div
   style="padding:24px"
 >
@@ -2908,7 +2908,7 @@ exports[`Storyshots Select with error list 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with error message 1`] = `
+exports[`Storyshots Components/Select with error message 1`] = `
 <div
   style="padding:24px"
 >
@@ -3286,7 +3286,7 @@ exports[`Storyshots Select with error message 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with fixed positioning 1`] = `
+exports[`Storyshots Components/Select with fixed positioning 1`] = `
 <div
   style="padding:24px"
 >
@@ -3399,7 +3399,7 @@ exports[`Storyshots Select with fixed positioning 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with helpText 1`] = `
+exports[`Storyshots Components/Select with helpText 1`] = `
 <div
   style="padding:24px"
 >
@@ -3514,7 +3514,7 @@ exports[`Storyshots Select with helpText 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with multiselect 1`] = `
+exports[`Storyshots Components/Select with multiselect 1`] = `
 <div
   style="padding:24px"
 >
@@ -3696,7 +3696,7 @@ exports[`Storyshots Select with multiselect 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with smaller maxHeight 1`] = `
+exports[`Storyshots Components/Select with smaller maxHeight 1`] = `
 <div
   style="padding:24px"
 >
@@ -3928,7 +3928,7 @@ exports[`Storyshots Select with smaller maxHeight 1`] = `
 </div>
 `;
 
-exports[`Storyshots Select with state 1`] = `
+exports[`Storyshots Components/Select with state 1`] = `
 <div
   style="padding:24px"
 >
