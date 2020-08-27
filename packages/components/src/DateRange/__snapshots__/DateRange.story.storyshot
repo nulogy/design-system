@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots DateRange customizing input props 1`] = `
+exports[`Storyshots Components/DateRange customizing input props 1`] = `
 <div
   style="padding:24px"
 >
@@ -131,7 +131,7 @@ exports[`Storyshots DateRange customizing input props 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange default 1`] = `
+exports[`Storyshots Components/DateRange default 1`] = `
 <div
   style="padding:24px"
 >
@@ -262,7 +262,7 @@ exports[`Storyshots DateRange default 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange default start and end date 1`] = `
+exports[`Storyshots Components/DateRange default start and end date 1`] = `
 <div
   style="padding:24px"
 >
@@ -393,7 +393,7 @@ exports[`Storyshots DateRange default start and end date 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange disabled range validation 1`] = `
+exports[`Storyshots Components/DateRange disabled range validation 1`] = `
 <div
   style="padding:24px"
 >
@@ -524,7 +524,7 @@ exports[`Storyshots DateRange disabled range validation 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange individual input error 1`] = `
+exports[`Storyshots Components/DateRange individual input error 1`] = `
 <div
   style="padding:24px"
 >
@@ -688,7 +688,7 @@ exports[`Storyshots DateRange individual input error 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange using ref to control focus 1`] = `
+exports[`Storyshots Components/DateRange using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
@@ -2677,7 +2677,7 @@ exports[`Storyshots DateRange using ref to control focus 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange with custom error 1`] = `
+exports[`Storyshots Components/DateRange with custom error 1`] = `
 <div
   style="padding:24px"
 >
@@ -2840,7 +2840,7 @@ exports[`Storyshots DateRange with custom error 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange with default start and end times 1`] = `
+exports[`Storyshots Components/DateRange with default start and end times 1`] = `
 <div
   style="padding:24px"
 >
@@ -4797,7 +4797,7 @@ exports[`Storyshots DateRange with default start and end times 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange with time error 1`] = `
+exports[`Storyshots Components/DateRange with time error 1`] = `
 <div
   style="padding:24px"
 >
@@ -6754,7 +6754,7 @@ exports[`Storyshots DateRange with time error 1`] = `
 </div>
 `;
 
-exports[`Storyshots DateRange with times 1`] = `
+exports[`Storyshots Components/DateRange with times 1`] = `
 <div
   style="padding:24px"
 >

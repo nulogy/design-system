@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Toggle Controlled Toggle 1`] = `
+exports[`Storyshots Components/Toggle Controlled Toggle 1`] = `
 <div
   style="padding:24px"
 >
@@ -54,7 +54,7 @@ exports[`Storyshots Toggle Controlled Toggle 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle Toggle 1`] = `
+exports[`Storyshots Components/Toggle Toggle 1`] = `
 <div
   style="padding:24px"
 >
@@ -87,7 +87,7 @@ exports[`Storyshots Toggle Toggle 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
+exports[`Storyshots Components/Toggle Toggle set to defaultToggled 1`] = `
 <div
   style="padding:24px"
 >
@@ -135,7 +135,7 @@ exports[`Storyshots Toggle Toggle set to defaultToggled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle Toggle set to disabled 1`] = `
+exports[`Storyshots Components/Toggle Toggle set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -242,7 +242,7 @@ exports[`Storyshots Toggle Toggle set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle Toggle with all props 1`] = `
+exports[`Storyshots Components/Toggle Toggle with all props 1`] = `
 <div
   style="padding:24px"
 >
@@ -312,7 +312,7 @@ exports[`Storyshots Toggle Toggle with all props 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle With custom id 1`] = `
+exports[`Storyshots Components/Toggle With custom id 1`] = `
 <div
   style="padding:24px"
 >
@@ -367,7 +367,7 @@ exports[`Storyshots Toggle With custom id 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle With long text 1`] = `
+exports[`Storyshots Components/Toggle With long text 1`] = `
 <div
   style="padding:24px"
 >
@@ -422,7 +422,7 @@ exports[`Storyshots Toggle With long text 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle With text 1`] = `
+exports[`Storyshots Components/Toggle With text 1`] = `
 <div
   style="padding:24px"
 >
@@ -476,7 +476,7 @@ exports[`Storyshots Toggle With text 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toggle using ref to control focus 1`] = `
+exports[`Storyshots Components/Toggle using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >

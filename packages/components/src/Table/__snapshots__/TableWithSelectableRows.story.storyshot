@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
+exports[`Storyshots Components/Table/with selectable rows with preselected rows 1`] = `
 <div
   style="padding:24px"
 >
@@ -419,7 +419,7 @@ exports[`Storyshots Table/with selectable rows with preselected rows 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table/with selectable rows with selectable rows 1`] = `
+exports[`Storyshots Components/Table/with selectable rows with selectable rows 1`] = `
 <div
   style="padding:24px"
 >

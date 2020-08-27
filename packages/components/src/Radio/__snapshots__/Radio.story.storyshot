@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Radio Controlled 1`] = `
+exports[`Storyshots Components/Radio Controlled 1`] = `
 <div
   style="padding:24px"
 >
@@ -65,7 +65,7 @@ exports[`Storyshots Radio Controlled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Radio Radio 1`] = `
+exports[`Storyshots Components/Radio Radio 1`] = `
 <div
   style="padding:24px"
 >
@@ -101,7 +101,7 @@ exports[`Storyshots Radio Radio 1`] = `
 </div>
 `;
 
-exports[`Storyshots Radio Set to defaultChecked 1`] = `
+exports[`Storyshots Components/Radio Set to defaultChecked 1`] = `
 <div
   style="padding:24px"
 >
@@ -138,7 +138,7 @@ exports[`Storyshots Radio Set to defaultChecked 1`] = `
 </div>
 `;
 
-exports[`Storyshots Radio Set to disabled 1`] = `
+exports[`Storyshots Components/Radio Set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -210,7 +210,7 @@ exports[`Storyshots Radio Set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Radio Set to error 1`] = `
+exports[`Storyshots Components/Radio Set to error 1`] = `
 <div
   style="padding:24px"
 >
@@ -272,7 +272,7 @@ exports[`Storyshots Radio Set to error 1`] = `
 </div>
 `;
 
-exports[`Storyshots Radio Set to required 1`] = `
+exports[`Storyshots Components/Radio Set to required 1`] = `
 <div
   style="padding:24px"
 >
@@ -309,7 +309,7 @@ exports[`Storyshots Radio Set to required 1`] = `
 </div>
 `;
 
-exports[`Storyshots Radio using ref to control focus 1`] = `
+exports[`Storyshots Components/Radio using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >

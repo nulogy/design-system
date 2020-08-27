@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
+exports[`Storyshots Components/DropdownMenu DropdownMenu 1`] = `
 <div
   style="padding:24px"
 >
@@ -35,7 +35,7 @@ exports[`Storyshots DropdownMenu DropdownMenu 1`] = `
 </div>
 `;
 
-exports[`Storyshots DropdownMenu Set to disabled 1`] = `
+exports[`Storyshots Components/DropdownMenu Set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -71,7 +71,7 @@ exports[`Storyshots DropdownMenu Set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
+exports[`Storyshots Components/DropdownMenu set to defaultOpen 1`] = `
 <div
   style="padding:24px"
 >
@@ -139,7 +139,7 @@ exports[`Storyshots DropdownMenu set to defaultOpen 1`] = `
 </div>
 `;
 
-exports[`Storyshots DropdownMenu with button closing menu 1`] = `
+exports[`Storyshots Components/DropdownMenu with button closing menu 1`] = `
 <div
   style="padding:24px"
 >
@@ -174,7 +174,7 @@ exports[`Storyshots DropdownMenu with button closing menu 1`] = `
 </div>
 `;
 
-exports[`Storyshots DropdownMenu with custom colors 1`] = `
+exports[`Storyshots Components/DropdownMenu with custom colors 1`] = `
 <div
   style="padding:24px"
 >
@@ -231,7 +231,7 @@ exports[`Storyshots DropdownMenu with custom colors 1`] = `
 </div>
 `;
 
-exports[`Storyshots DropdownMenu with custom item 1`] = `
+exports[`Storyshots Components/DropdownMenu with custom item 1`] = `
 <div
   style="padding:24px"
 >
@@ -266,7 +266,7 @@ exports[`Storyshots DropdownMenu with custom item 1`] = `
 </div>
 `;
 
-exports[`Storyshots DropdownMenu with custom trigger 1`] = `
+exports[`Storyshots Components/DropdownMenu with custom trigger 1`] = `
 <div
   style="padding:24px"
 >

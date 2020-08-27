@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
+exports[`Storyshots Components/BrandedNavBar BrandedNavBar 1`] = `
 <div
   style="padding:24px"
 >
@@ -242,7 +242,7 @@ exports[`Storyshots BrandedNavBar BrandedNavBar 1`] = `
 </div>
 `;
 
-exports[`Storyshots BrandedNavBar With a company logo 1`] = `
+exports[`Storyshots Components/BrandedNavBar With a company logo 1`] = `
 <div
   style="padding:24px"
 >
@@ -533,7 +533,7 @@ exports[`Storyshots BrandedNavBar With a company logo 1`] = `
 </div>
 `;
 
-exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
+exports[`Storyshots Components/BrandedNavBar With a company logo and app name 1`] = `
 <div
   style="padding:24px"
 >
@@ -833,7 +833,7 @@ exports[`Storyshots BrandedNavBar With a company logo and app name 1`] = `
 </div>
 `;
 
-exports[`Storyshots BrandedNavBar With app name 1`] = `
+exports[`Storyshots Components/BrandedNavBar With app name 1`] = `
 <div
   style="padding:24px"
 >
@@ -1086,7 +1086,7 @@ exports[`Storyshots BrandedNavBar With app name 1`] = `
 </div>
 `;
 
-exports[`Storyshots BrandedNavBar with environment banner 1`] = `
+exports[`Storyshots Components/BrandedNavBar with environment banner 1`] = `
 <div
   style="padding:24px"
 >

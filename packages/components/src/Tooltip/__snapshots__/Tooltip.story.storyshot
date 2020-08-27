@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Tooltip Tooltip 1`] = `
+exports[`Storyshots Components/Tooltip Tooltip 1`] = `
 <div
   style="padding:24px"
 >
@@ -24,7 +24,7 @@ exports[`Storyshots Tooltip Tooltip 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip open by default 1`] = `
+exports[`Storyshots Components/Tooltip open by default 1`] = `
 <div
   style="padding:24px"
 >
@@ -56,7 +56,7 @@ exports[`Storyshots Tooltip open by default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with Button passed in 1`] = `
+exports[`Storyshots Components/Tooltip with Button passed in 1`] = `
 <div
   style="padding:24px"
 >
@@ -76,7 +76,7 @@ exports[`Storyshots Tooltip with Button passed in 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with Link passed in 1`] = `
+exports[`Storyshots Components/Tooltip with Link passed in 1`] = `
 <div
   style="padding:24px"
 >
@@ -96,7 +96,7 @@ exports[`Storyshots Tooltip with Link passed in 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with custom hideDelay 1`] = `
+exports[`Storyshots Components/Tooltip with custom hideDelay 1`] = `
 <div
   style="padding:24px"
 >
@@ -116,7 +116,7 @@ exports[`Storyshots Tooltip with custom hideDelay 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with custom maxWidth 1`] = `
+exports[`Storyshots Components/Tooltip with custom maxWidth 1`] = `
 <div
   style="padding:24px"
 >
@@ -152,7 +152,7 @@ exports[`Storyshots Tooltip with custom maxWidth 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with custom showDelay 1`] = `
+exports[`Storyshots Components/Tooltip with custom showDelay 1`] = `
 <div
   style="padding:24px"
 >
@@ -172,7 +172,7 @@ exports[`Storyshots Tooltip with custom showDelay 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with other focusable elements 1`] = `
+exports[`Storyshots Components/Tooltip with other focusable elements 1`] = `
 <div
   style="padding:24px"
 >
@@ -234,7 +234,7 @@ exports[`Storyshots Tooltip with other focusable elements 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with placement 1`] = `
+exports[`Storyshots Components/Tooltip with placement 1`] = `
 <div
   style="padding:24px"
 >
@@ -513,7 +513,7 @@ exports[`Storyshots Tooltip with placement 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tooltip with wrapped text 1`] = `
+exports[`Storyshots Components/Tooltip with wrapped text 1`] = `
 <div
   style="padding:24px"
 >

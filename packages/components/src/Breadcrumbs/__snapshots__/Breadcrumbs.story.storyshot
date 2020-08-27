@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
+exports[`Storyshots Components/Breadcrumbs Breadcrumbs 1`] = `
 <div
   style="padding:24px"
 >
@@ -123,7 +123,7 @@ exports[`Storyshots Breadcrumbs Breadcrumbs 1`] = `
 </div>
 `;
 
-exports[`Storyshots Breadcrumbs without link 1`] = `
+exports[`Storyshots Components/Breadcrumbs without link 1`] = `
 <div
   style="padding:24px"
 >

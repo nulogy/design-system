@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Form Demo form 1`] = `
+exports[`Storyshots Components/Form Demo form 1`] = `
 <div
   style="padding:24px"
 >
@@ -966,7 +966,7 @@ exports[`Storyshots Form Demo form 1`] = `
 </div>
 `;
 
-exports[`Storyshots Form Form 1`] = `
+exports[`Storyshots Components/Form Form 1`] = `
 <div
   style="padding:24px"
 >
@@ -1115,7 +1115,7 @@ exports[`Storyshots Form Form 1`] = `
 </div>
 `;
 
-exports[`Storyshots Form With form sections 1`] = `
+exports[`Storyshots Components/Form With form sections 1`] = `
 <div
   style="padding:24px"
 >
@@ -1356,7 +1356,7 @@ exports[`Storyshots Form With form sections 1`] = `
 </div>
 `;
 
-exports[`Storyshots Form With form sections without titles 1`] = `
+exports[`Storyshots Components/Form With form sections without titles 1`] = `
 <div
   style="padding:24px"
 >
@@ -1583,7 +1583,7 @@ exports[`Storyshots Form With form sections without titles 1`] = `
 </div>
 `;
 
-exports[`Storyshots Form Without title 1`] = `
+exports[`Storyshots Components/Form Without title 1`] = `
 <div
   style="padding:24px"
 >

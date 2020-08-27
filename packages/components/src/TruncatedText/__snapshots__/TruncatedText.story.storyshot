@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots TruncatedText TruncatedText 1`] = `
+exports[`Storyshots Components/TruncatedText TruncatedText 1`] = `
 <div
   style="padding:24px"
 >
@@ -22,7 +22,7 @@ exports[`Storyshots TruncatedText TruncatedText 1`] = `
 </div>
 `;
 
-exports[`Storyshots TruncatedText as title 1`] = `
+exports[`Storyshots Components/TruncatedText as title 1`] = `
 <div
   style="padding:24px"
 >
@@ -44,7 +44,7 @@ exports[`Storyshots TruncatedText as title 1`] = `
 </div>
 `;
 
-exports[`Storyshots TruncatedText under max characters 1`] = `
+exports[`Storyshots Components/TruncatedText under max characters 1`] = `
 <div
   style="padding:24px"
 >
@@ -62,7 +62,7 @@ exports[`Storyshots TruncatedText under max characters 1`] = `
 </div>
 `;
 
-exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
+exports[`Storyshots Components/TruncatedText with custom truncation indicator 1`] = `
 <div
   style="padding:24px"
 >
@@ -84,7 +84,7 @@ exports[`Storyshots TruncatedText with custom truncation indicator 1`] = `
 </div>
 `;
 
-exports[`Storyshots TruncatedText with max characters 10 1`] = `
+exports[`Storyshots Components/TruncatedText with max characters 10 1`] = `
 <div
   style="padding:24px"
 >
@@ -106,7 +106,7 @@ exports[`Storyshots TruncatedText with max characters 10 1`] = `
 </div>
 `;
 
-exports[`Storyshots TruncatedText without tooltip 1`] = `
+exports[`Storyshots Components/TruncatedText without tooltip 1`] = `
 <div
   style="padding:24px"
 >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Pagination Pagination 1`] = `
+exports[`Storyshots Components/Pagination Pagination 1`] = `
 <div
   style="padding:24px"
 >
@@ -699,7 +699,7 @@ exports[`Storyshots Pagination Pagination 1`] = `
 </div>
 `;
 
-exports[`Storyshots Pagination on the first page 1`] = `
+exports[`Storyshots Components/Pagination on the first page 1`] = `
 <div
   style="padding:24px"
 >
@@ -809,7 +809,7 @@ exports[`Storyshots Pagination on the first page 1`] = `
 </div>
 `;
 
-exports[`Storyshots Pagination on the last page 1`] = `
+exports[`Storyshots Components/Pagination on the last page 1`] = `
 <div
   style="padding:24px"
 >
@@ -919,7 +919,7 @@ exports[`Storyshots Pagination on the last page 1`] = `
 </div>
 `;
 
-exports[`Storyshots Pagination with less than 5 pages 1`] = `
+exports[`Storyshots Components/Pagination with less than 5 pages 1`] = `
 <div
   style="padding:24px"
 >

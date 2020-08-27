@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots TimeRange default 1`] = `
+exports[`Storyshots Components/imeRange default 1`] = `
 <div
   style="padding:24px"
 >
@@ -1867,7 +1867,7 @@ exports[`Storyshots TimeRange default 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimeRange default selections 1`] = `
+exports[`Storyshots Components/imeRange default selections 1`] = `
 <div
   style="padding:24px"
 >
@@ -3734,7 +3734,7 @@ exports[`Storyshots TimeRange default selections 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimeRange using ref to control focus 1`] = `
+exports[`Storyshots Components/imeRange using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
@@ -5611,7 +5611,7 @@ exports[`Storyshots TimeRange using ref to control focus 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimeRange with min and max time range 1`] = `
+exports[`Storyshots Components/imeRange with min and max time range 1`] = `
 <div
   style="padding:24px"
 >
@@ -6452,7 +6452,7 @@ exports[`Storyshots TimeRange with min and max time range 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimeRange with range validation 1`] = `
+exports[`Storyshots Components/imeRange with range validation 1`] = `
 <div
   style="padding:24px"
 >
