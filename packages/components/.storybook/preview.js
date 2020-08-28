@@ -1,11 +1,7 @@
 import React from "react";
-import { addDecorator, addParameters } from "@storybook/react";
 import { create } from "@storybook/theming";
-import { withA11y } from "@storybook/addon-a11y";
 import { select } from "@storybook/addon-knobs";
-import { withPerformance } from "storybook-addon-performance";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
-import theme from "../src/theme";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce(
