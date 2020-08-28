@@ -3,6 +3,50 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.2](https://github.com/nulogy/design-system/compare/v4.6.1...v4.6.2) (2020-08-25)
+
+
+### Bug Fixes
+
+* use breadcrumb in custom page story ([#749](https://github.com/nulogy/design-system/issues/749)) ([8cca185](https://github.com/nulogy/design-system/commit/8cca1850539c88a1ea7b0bc22731e1679b8a137d))
+
+
+
+
+
+## [4.6.1](https://github.com/nulogy/design-system/compare/v4.6.0...v4.6.1) (2020-08-20)
+
+
+### Bug Fixes
+
+* hide arrow in AsyncSelect no default options are passed ([#743](https://github.com/nulogy/design-system/issues/743)) ([f8ffc08](https://github.com/nulogy/design-system/commit/f8ffc0858f8a167e7b28a18b26a5a26e136916ca))
+
+
+
+
+
+# [4.6.0](https://github.com/nulogy/design-system/compare/v4.5.3...v4.6.0) (2020-08-20)
+
+
+### Features
+
+* add prop stickyHeader to Table ([#745](https://github.com/nulogy/design-system/issues/745)) ([01921a0](https://github.com/nulogy/design-system/commit/01921a0220f5128c9badebe28ac86bbb6a6b54e2))
+
+
+
+
+
+## [4.5.3](https://github.com/nulogy/design-system/compare/v4.5.2...v4.5.3) (2020-08-20)
+
+
+### Bug Fixes
+
+* clean up dependencies ([#746](https://github.com/nulogy/design-system/issues/746)) ([ec21036](https://github.com/nulogy/design-system/commit/ec210362dde62d78adc41ce30f2868319f1641fc))
+
+
+
+
+
 ## [4.5.2](https://github.com/nulogy/design-system/compare/v4.5.1...v4.5.2) (2020-08-18)
 
 

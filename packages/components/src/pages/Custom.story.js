@@ -3,7 +3,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import theme from "../theme";
-import { Box, Flex, Heading1, Heading2, Text, NavBar, IconicButton, Link, Icon } from "../index";
+import { Box, Flex, Heading1, Heading2, Text, NavBar, IconicButton, Link, Breadcrumbs } from "../index";
 
 const primaryMenu = [
   {
@@ -74,17 +74,11 @@ storiesOf("Pages/Custom", module)
         <NavBar menuData={{ primaryMenu, secondaryMenu }} />
         <Flex m="x1" bg="white" boxShadow="large" borderRadius="medium" minHeight={StorybookContentHeight}>
           <Box pt="x1" pr="x3" pb="x3" pl="x3" flexGrow="2">
-            <Flex justifyContent="space-between" alignItems="flex-start" height="32px">
-              <Flex alignItems="center" pt="x1" width={{ extraSmall: StorybookMainWidth, medium: "auto" }}>
-                <Link fontSize="smaller" color="darkBlue" mr="half" underline={false}>
-                  Breadcrumb
-                </Link>
-                <Icon icon="rightArrow" size="20px" color="darkGrey" mr="half" />
-                <Link fontSize="smaller" color="darkBlue" mr="half" underline={false}>
-                  Breadcrumb
-                </Link>
-                <Icon icon="rightArrow" size="20px" color="darkGrey" mr="half" />
-              </Flex>
+            <Flex justifyContent="space-between" alignItems="flex-start">
+              <Breadcrumbs pt="half" my="x2">
+                <Link>Breadcrumb</Link>
+                <Link>Breadcrumb</Link>
+              </Breadcrumbs>
               <IconicButton icon="more" mt="x2" />
             </Flex>
             <Heading1 mb="x6">I am title</Heading1>

@@ -8,7 +8,7 @@ exports[`Storyshots Table with everything 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub Table"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE Table"
     >
       <thead>
         <tr
@@ -589,7 +589,7 @@ exports[`Storyshots Table with pagination 1`] = `
     class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
   >
     <table
-      class="BaseTable__StyledTable-sc-10lnp9m-0 cHvXub Table"
+      class="BaseTable__StyledTable-sc-10lnp9m-0 kfnyiE Table"
     >
       <thead>
         <tr

@@ -175,6 +175,13 @@ const propsRows = [
       "The name of the key to use as a unique identifier for individual rows"
   },
   {
+    name: "stickyHeader",
+    type: "boolean",
+    defaultValue: "false",
+    description:
+      "Sets the table header to sticky. NOTE: the vertical position of the sticky header is aligned to the top of the Table. If there is padding on an element wrapping the Table you will see that the header is offset according to the top padding."
+  },
+  {
     name: "hasSelectableRows",
     type: "boolean",
     defaultValue: "false",
@@ -597,6 +604,18 @@ const columnsWithCustomCells = [
       <Table columns={columns} rows={rows} compact />
       <Highlight className="js">
         {`<Table columns={columns} rows={rows} compact />`}
+      </Highlight>
+    </DocSection>
+
+    <DocSection>
+      <SectionTitle>Sticky Header</SectionTitle>
+      <Text>
+        The table header can remain fixed to the top of the table when scrolling
+        by setting the prop stickyHeader to true.
+      </Text>
+      <Table columns={columns} rows={rows} stickyHeader />
+      <Highlight className="js">
+        {`<Table columns={columns} rows={rows} stickyHeader />`}
       </Highlight>
     </DocSection>
 
