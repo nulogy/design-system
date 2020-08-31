@@ -42,7 +42,7 @@ const getSharedStyles = ({ color, layer, theme }) => ({
 
 const ApplyMenuLinkStyles = styled.li(({ color, hoverColor, hoverBackground, layer, theme }) => ({
   display: "block",
-  "*": {
+  "button, a": {
     ...getSharedStyles({ color, layer, theme }),
     textDecoration: "none",
     "&:hover, &:focus": {
