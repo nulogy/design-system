@@ -1,6 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
+    "@nulogy/nulogy",
     "../../.eslintrc"
   ],
   "rules": {
@@ -27,6 +28,16 @@
           "as"
         ]
       }
-    ]
+    ],
+    // rules below are to override nulogy config
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
   }
 }
