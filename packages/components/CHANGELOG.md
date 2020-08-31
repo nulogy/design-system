@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.4](https://github.com/nulogy/design-system/compare/v4.6.3...v4.6.4) (2020-08-31)
+
+
+### Bug Fixes
+
+* replace universal selector with button, a tag rule in BrandedNavBar ([#753](https://github.com/nulogy/design-system/issues/753)) ([361919f](https://github.com/nulogy/design-system/commit/361919f592bb25a5d54dc2be3730df711f34861a))
+
+
+
+
+
 ## [4.6.3](https://github.com/nulogy/design-system/compare/v4.6.2...v4.6.3) (2020-08-31)
 
 **Note:** Version bump only for package @nulogy/components
