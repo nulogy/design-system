@@ -19,7 +19,7 @@ const getSharedStyles = (color, theme) => {
 };
 
 const ApplyMenuLinkStyles = styled.div(({ color, hoverColor, hoverBackground, theme }) => ({
-  "*": {
+  "button, a": {
     ...getSharedStyles(color, theme),
     transition: ".2s",
     "&:hover, &:focus": {
