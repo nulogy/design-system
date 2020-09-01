@@ -3,6 +3,7 @@ module.exports = {
     [
       "@babel/preset-env",
       {
+        loose: true,
         targets: { browsers: "defaults" },
         useBuiltIns: "entry"
       }
