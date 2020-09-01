@@ -4673,7 +4673,7 @@
   dependencies:
     lodash "^4.17.15"
 
-"@storybook/html@^6.0.18":
+"@storybook/html@^6.0.21":
   version "6.0.21"
   resolved "https://registry.yarnpkg.com/@storybook/html/-/html-6.0.21.tgz#5a019c64256c06520ca8196c26ea1d401e5a8232"
   integrity sha512-pelDM6ZZ6yP5PtsfVU2yryTqC2EKTNET7YZZ+1rhu0fJL50pigqWAGYe/otIWAEfeLUSrlymhaOZNNf54vtIbQ==
@@ -4737,7 +4737,7 @@
     ts-dedent "^1.1.0"
     webpack "^4.33.0"
 
-"@storybook/react@^6.0.20":
+"@storybook/react@^6.0.21":
   version "6.0.21"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-6.0.21.tgz#68f8a318e9940305b06eb894896624a35a9868b0"
   integrity sha512-L3PcoBJq5aK1aTaJNfwsSJ8Kxgcyk0WknN4TDqhP7a+oXmuMY1YEi96hEvQVIm0TBCkQxs61K70/T7vlilEtHg==

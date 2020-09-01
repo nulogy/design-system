@@ -21,7 +21,7 @@
   "devDependencies": {
     "@babel/core": "7.3.4",
     "@storybook/addon-viewport": "^6.0.18",
-    "@storybook/html": "^6.0.18",
+    "@storybook/html": "^6.0.21",
     "babel-loader": "^8.0.4",
     "babel-runtime": "^6.26.0",
     "copyfiles": "^2.3.0",
