@@ -4,7 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { boolean } from "@storybook/addon-knobs";
 import { Toggle, Button } from "../index";
 
-storiesOf("Toggle", module)
+storiesOf("Components/Toggle", module)
   .add("Toggle", () => <Toggle />)
   .add("Toggle with all props", () => (
     <Toggle

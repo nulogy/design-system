@@ -4,7 +4,7 @@ import { Button, DangerButton, IconicButton, PrimaryButton } from "../Button";
 import { Flex } from "../Flex";
 import { Toast } from ".";
 
-storiesOf("Toast", module)
+storiesOf("Components/Toast", module)
   .add("Toast", () => {
     const ToastWithTrigger = () => {
       const [triggered, setTriggered] = useState(false);

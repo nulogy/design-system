@@ -19,6 +19,7 @@ import {
   InlineCode,
   DocText as Text
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const propsRows = [
   {
@@ -92,7 +93,7 @@ export default () => (
           <Link href="/theme/">NDS theme</Link>
         </ListItem>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/headings--title">
+          <Link href={`${STORYBOOK_COMPONENT_URL}headings--title`}>
             View in Storybook
           </Link>
         </ListItem>

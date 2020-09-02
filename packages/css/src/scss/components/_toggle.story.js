@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Toggle", module).add(
+storiesOf("Components/Toggle", module).add(
   "Toggle",
   () => `
   <label class="Toggle">

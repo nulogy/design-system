@@ -37,7 +37,7 @@ class CheckboxWithState extends React.Component {
   }
 }
 
-storiesOf("Checkbox", module)
+storiesOf("Components/Checkbox", module)
   .add("Checkbox", () => <Checkbox id="checkbox" labelText="I am a checkbox" />)
   .add("Set to defaultChecked", () => <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />)
   .add("Set to disabled", () => (

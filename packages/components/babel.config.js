@@ -3,6 +3,7 @@ module.exports = {
     [
       "@babel/preset-env",
       {
+        loose: true,
         targets: { browsers: "defaults" },
         useBuiltIns: "entry"
       }
@@ -12,7 +13,9 @@ module.exports = {
   ],
   plugins: [
     "babel-plugin-styled-components",
-    "@babel/plugin-proposal-class-properties",
+    ["@babel/plugin-proposal-class-properties", { loose: true }],
+    ["@babel/plugin-proposal-private-methods", { loose: true }],
+    ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
     "inline-json-import",
     "@babel/plugin-transform-runtime"
   ],

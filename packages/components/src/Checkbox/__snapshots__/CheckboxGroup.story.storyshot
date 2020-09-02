@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
+exports[`Storyshots Components/CheckboxGroup CheckboxGroup 1`] = `
 <div
   style="padding:24px"
 >
@@ -105,7 +105,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup 1`] = `
 </div>
 `;
 
-exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
+exports[`Storyshots Components/CheckboxGroup CheckboxGroup with all props 1`] = `
 <div
   style="padding:24px"
 >
@@ -228,7 +228,7 @@ exports[`Storyshots CheckboxGroup CheckboxGroup with all props 1`] = `
 </div>
 `;
 
-exports[`Storyshots CheckboxGroup Controlled 1`] = `
+exports[`Storyshots Components/CheckboxGroup Controlled 1`] = `
 <div
   style="padding:24px"
 >
@@ -335,7 +335,7 @@ exports[`Storyshots CheckboxGroup Controlled 1`] = `
 </div>
 `;
 
-exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
+exports[`Storyshots Components/CheckboxGroup Set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -453,7 +453,7 @@ exports[`Storyshots CheckboxGroup Set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots CheckboxGroup with error list 1`] = `
+exports[`Storyshots Components/CheckboxGroup with error list 1`] = `
 <div
   style="padding:24px"
 >
@@ -608,7 +608,7 @@ exports[`Storyshots CheckboxGroup with error list 1`] = `
 </div>
 `;
 
-exports[`Storyshots CheckboxGroup with error message 1`] = `
+exports[`Storyshots Components/CheckboxGroup with error message 1`] = `
 <div
   style="padding:24px"
 >

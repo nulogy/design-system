@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots NavBar NavBar 1`] = `
+exports[`Storyshots Components/NavBar NavBar 1`] = `
 <div
   style="padding:24px"
 >
@@ -297,7 +297,7 @@ exports[`Storyshots NavBar NavBar 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar With alternate themeColor 1`] = `
+exports[`Storyshots Components/NavBar With alternate themeColor 1`] = `
 <div
   style="padding:24px"
 >
@@ -441,7 +441,7 @@ exports[`Storyshots NavBar With alternate themeColor 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar With alternative branding link 1`] = `
+exports[`Storyshots Components/NavBar With alternative branding link 1`] = `
 <div
   style="padding:24px"
 >
@@ -574,7 +574,7 @@ exports[`Storyshots NavBar With alternative branding link 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar With branding only 1`] = `
+exports[`Storyshots Components/NavBar With branding only 1`] = `
 <div
   style="padding:24px"
 >
@@ -654,7 +654,7 @@ exports[`Storyshots NavBar With branding only 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar With custom link components 1`] = `
+exports[`Storyshots Components/NavBar With custom link components 1`] = `
 <div
   style="padding:24px"
 >
@@ -920,7 +920,7 @@ exports[`Storyshots NavBar With custom link components 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar With subtext 1`] = `
+exports[`Storyshots Components/NavBar With subtext 1`] = `
 <div
   style="padding:24px"
 >
@@ -1121,7 +1121,7 @@ exports[`Storyshots NavBar With subtext 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar With text in the menu 1`] = `
+exports[`Storyshots Components/NavBar With text in the menu 1`] = `
 <div
   style="padding:24px"
 >
@@ -1250,7 +1250,7 @@ exports[`Storyshots NavBar With text in the menu 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar Without search 1`] = `
+exports[`Storyshots Components/NavBar Without search 1`] = `
 <div
   style="padding:24px"
 >
@@ -1491,7 +1491,7 @@ exports[`Storyshots NavBar Without search 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar Without search and primary menu 1`] = `
+exports[`Storyshots Components/NavBar Without search and primary menu 1`] = `
 <div
   style="padding:24px"
 >
@@ -1633,7 +1633,7 @@ exports[`Storyshots NavBar Without search and primary menu 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar Without search and secondary menu 1`] = `
+exports[`Storyshots Components/NavBar Without search and secondary menu 1`] = `
 <div
   style="padding:24px"
 >
@@ -1812,7 +1812,7 @@ exports[`Storyshots NavBar Without search and secondary menu 1`] = `
 </div>
 `;
 
-exports[`Storyshots NavBar Without secondary menu 1`] = `
+exports[`Storyshots Components/NavBar Without secondary menu 1`] = `
 <div
   style="padding:24px"
 >

@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Box, ButtonGroup, Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "../index";
 
-storiesOf("ButtonGroup", module)
+storiesOf("Components/ButtonGroup", module)
   .add("ButtonGroup", () => (
     <Box bg="whiteGrey" p="x2" width="500px">
       <ButtonGroup>

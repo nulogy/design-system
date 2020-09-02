@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Textarea Set to disabled 1`] = `
+exports[`Storyshots Components/Textarea Set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -38,7 +38,7 @@ exports[`Storyshots Textarea Set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea Textarea 1`] = `
+exports[`Storyshots Components/Textarea Textarea 1`] = `
 <div
   style="padding:24px"
 >
@@ -75,7 +75,7 @@ exports[`Storyshots Textarea Textarea 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea Textarea with all props 1`] = `
+exports[`Storyshots Components/Textarea Textarea with all props 1`] = `
 <div
   style="padding:24px"
 >
@@ -128,7 +128,7 @@ exports[`Storyshots Textarea Textarea with all props 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea With custom id 1`] = `
+exports[`Storyshots Components/Textarea With custom id 1`] = `
 <div
   style="padding:24px"
 >
@@ -166,7 +166,7 @@ exports[`Storyshots Textarea With custom id 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea With custom number of rows 1`] = `
+exports[`Storyshots Components/Textarea With custom number of rows 1`] = `
 <div
   style="padding:24px"
 >
@@ -203,7 +203,7 @@ exports[`Storyshots Textarea With custom number of rows 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea using ref to control focus 1`] = `
+exports[`Storyshots Components/Textarea using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
@@ -245,7 +245,7 @@ exports[`Storyshots Textarea using ref to control focus 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea with error list 1`] = `
+exports[`Storyshots Components/Textarea with error list 1`] = `
 <div
   style="padding:24px"
 >
@@ -331,7 +331,7 @@ exports[`Storyshots Textarea with error list 1`] = `
 </div>
 `;
 
-exports[`Storyshots Textarea with error message 1`] = `
+exports[`Storyshots Components/Textarea with error message 1`] = `
 <div
   style="padding:24px"
 >

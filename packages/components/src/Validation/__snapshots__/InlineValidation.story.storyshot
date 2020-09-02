@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Inline Validation Inline Validation 1`] = `
+exports[`Storyshots Components/Inline Validation Inline Validation 1`] = `
 <div
   style="padding:24px"
 >
@@ -43,7 +43,7 @@ exports[`Storyshots Inline Validation Inline Validation 1`] = `
 </div>
 `;
 
-exports[`Storyshots Inline Validation with custom content 1`] = `
+exports[`Storyshots Components/Inline Validation with custom content 1`] = `
 <div
   style="padding:24px"
 >
@@ -116,7 +116,7 @@ exports[`Storyshots Inline Validation with custom content 1`] = `
 </div>
 `;
 
-exports[`Storyshots Inline Validation with list items 1`] = `
+exports[`Storyshots Components/Inline Validation with list items 1`] = `
 <div
   style="padding:24px"
 >
@@ -176,7 +176,7 @@ exports[`Storyshots Inline Validation with list items 1`] = `
 </div>
 `;
 
-exports[`Storyshots Inline Validation with only list items 1`] = `
+exports[`Storyshots Components/Inline Validation with only list items 1`] = `
 <div
   style="padding:24px"
 >

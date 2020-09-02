@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Toast Toast 1`] = `
+exports[`Storyshots Components/Toast Toast 1`] = `
 <div
   style="padding:24px"
 >
@@ -30,7 +30,7 @@ exports[`Storyshots Toast Toast 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toast customize length of time toast is visible 1`] = `
+exports[`Storyshots Components/Toast customize length of time toast is visible 1`] = `
 <div
   style="padding:24px"
 >
@@ -60,7 +60,7 @@ exports[`Storyshots Toast customize length of time toast is visible 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toast multiple closeable toasts example 1`] = `
+exports[`Storyshots Components/Toast multiple closeable toasts example 1`] = `
 <div
   style="padding:24px"
 >
@@ -346,7 +346,7 @@ exports[`Storyshots Toast multiple closeable toasts example 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toast multiple toasts example 1`] = `
+exports[`Storyshots Components/Toast multiple toasts example 1`] = `
 <div
   style="padding:24px"
 >
@@ -524,7 +524,7 @@ exports[`Storyshots Toast multiple toasts example 1`] = `
 </div>
 `;
 
-exports[`Storyshots Toast with close button 1`] = `
+exports[`Storyshots Components/Toast with close button 1`] = `
 <div
   style="padding:24px"
 >

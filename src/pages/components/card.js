@@ -16,6 +16,7 @@ import {
   IntroText,
   DocSection
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 export default () => (
   <Layout>
@@ -59,7 +60,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/card--card">
+          <Link href={`${STORYBOOK_COMPONENT_URL}card--card`}>
             View in Storybook
           </Link>
         </ListItem>

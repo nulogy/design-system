@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Box Box 1`] = `
+exports[`Storyshots Components/Box Box 1`] = `
 <div
   style="padding:24px"
 >
@@ -16,7 +16,7 @@ exports[`Storyshots Box Box 1`] = `
 </div>
 `;
 
-exports[`Storyshots Box With a background colour 1`] = `
+exports[`Storyshots Components/Box With a background colour 1`] = `
 <div
   style="padding:24px"
 >
@@ -33,7 +33,7 @@ exports[`Storyshots Box With a background colour 1`] = `
 </div>
 `;
 
-exports[`Storyshots Box With a responsive width 1`] = `
+exports[`Storyshots Components/Box With a responsive width 1`] = `
 <div
   style="padding:24px"
 >
@@ -50,7 +50,7 @@ exports[`Storyshots Box With a responsive width 1`] = `
 </div>
 `;
 
-exports[`Storyshots Box With a set width 1`] = `
+exports[`Storyshots Components/Box With a set width 1`] = `
 <div
   style="padding:24px"
 >
@@ -67,7 +67,7 @@ exports[`Storyshots Box With a set width 1`] = `
 </div>
 `;
 
-exports[`Storyshots Box With a shadow 1`] = `
+exports[`Storyshots Components/Box With a shadow 1`] = `
 <div
   style="padding:24px"
 >
@@ -93,7 +93,7 @@ exports[`Storyshots Box With a shadow 1`] = `
 </div>
 `;
 
-exports[`Storyshots Box With a text colour 1`] = `
+exports[`Storyshots Components/Box With a text colour 1`] = `
 <div
   style="padding:24px"
 >
@@ -110,7 +110,7 @@ exports[`Storyshots Box With a text colour 1`] = `
 </div>
 `;
 
-exports[`Storyshots Box With margin 1`] = `
+exports[`Storyshots Components/Box With margin 1`] = `
 <div
   style="padding:24px"
 >
@@ -160,7 +160,7 @@ exports[`Storyshots Box With margin 1`] = `
 </div>
 `;
 
-exports[`Storyshots Box With padding 1`] = `
+exports[`Storyshots Components/Box With padding 1`] = `
 <div
   style="padding:24px"
 >

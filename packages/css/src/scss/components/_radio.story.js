@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Radio", module)
+storiesOf("Components/Radio", module)
   .add(
     "Radio",
     () => `

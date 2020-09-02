@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Buttons As a link 1`] = `
+exports[`Storyshots Components/Buttons As a link 1`] = `
 <div
   style="padding:24px"
 >
@@ -17,7 +17,7 @@ exports[`Storyshots Buttons As a link 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons Button 1`] = `
+exports[`Storyshots Components/Buttons Button 1`] = `
 <div
   style="padding:24px"
 >
@@ -33,7 +33,7 @@ exports[`Storyshots Buttons Button 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons DangerButton 1`] = `
+exports[`Storyshots Components/Buttons DangerButton 1`] = `
 <div
   style="padding:24px"
 >
@@ -49,7 +49,7 @@ exports[`Storyshots Buttons DangerButton 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons PrimaryButton 1`] = `
+exports[`Storyshots Components/Buttons PrimaryButton 1`] = `
 <div
   style="padding:24px"
 >
@@ -65,7 +65,7 @@ exports[`Storyshots Buttons PrimaryButton 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons QuietButton 1`] = `
+exports[`Storyshots Components/Buttons QuietButton 1`] = `
 <div
   style="padding:24px"
 >
@@ -81,7 +81,7 @@ exports[`Storyshots Buttons QuietButton 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons Set to disabled 1`] = `
+exports[`Storyshots Components/Buttons Set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -98,7 +98,7 @@ exports[`Storyshots Buttons Set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons Set to full width 1`] = `
+exports[`Storyshots Components/Buttons Set to full width 1`] = `
 <div
   style="padding:24px"
 >
@@ -114,7 +114,7 @@ exports[`Storyshots Buttons Set to full width 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons With a selected Icon 1`] = `
+exports[`Storyshots Components/Buttons With a selected Icon 1`] = `
 <div
   style="padding:24px"
 >
@@ -167,7 +167,7 @@ exports[`Storyshots Buttons With a selected Icon 1`] = `
 </div>
 `;
 
-exports[`Storyshots Buttons With a selected size 1`] = `
+exports[`Storyshots Components/Buttons With a selected size 1`] = `
 <div
   style="padding:24px"
 >

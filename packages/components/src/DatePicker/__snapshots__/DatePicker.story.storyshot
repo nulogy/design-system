@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots DatePicker default 1`] = `
+exports[`Storyshots Components/DatePicker default 1`] = `
 <div
   style="padding:24px"
 >
@@ -71,7 +71,7 @@ exports[`Storyshots DatePicker default 1`] = `
 </div>
 `;
 
-exports[`Storyshots DatePicker disable flipping 1`] = `
+exports[`Storyshots Components/DatePicker disable flipping 1`] = `
 <div
   style="padding:24px"
 >
@@ -142,7 +142,7 @@ exports[`Storyshots DatePicker disable flipping 1`] = `
 </div>
 `;
 
-exports[`Storyshots DatePicker using ref to control focus 1`] = `
+exports[`Storyshots Components/DatePicker using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
@@ -218,7 +218,7 @@ exports[`Storyshots DatePicker using ref to control focus 1`] = `
 </div>
 `;
 
-exports[`Storyshots DatePicker with custom date format 1`] = `
+exports[`Storyshots Components/DatePicker with custom date format 1`] = `
 <div
   style="padding:24px"
 >
@@ -289,7 +289,7 @@ exports[`Storyshots DatePicker with custom date format 1`] = `
 </div>
 `;
 
-exports[`Storyshots DatePicker with custom placeholder 1`] = `
+exports[`Storyshots Components/DatePicker with custom placeholder 1`] = `
 <div
   style="padding:24px"
 >
@@ -360,7 +360,7 @@ exports[`Storyshots DatePicker with custom placeholder 1`] = `
 </div>
 `;
 
-exports[`Storyshots DatePicker with error state 1`] = `
+exports[`Storyshots Components/DatePicker with error state 1`] = `
 <div
   style="padding:24px"
 >
@@ -463,7 +463,7 @@ exports[`Storyshots DatePicker with error state 1`] = `
 </div>
 `;
 
-exports[`Storyshots DatePicker with min and max date 1`] = `
+exports[`Storyshots Components/DatePicker with min and max date 1`] = `
 <div
   style="padding:24px"
 >

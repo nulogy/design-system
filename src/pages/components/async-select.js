@@ -18,6 +18,7 @@ import {
   PropsTable
 } from "../../components";
 import selectProps from "../../shared/selectProps";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const loadMatchingCountries = async inputValue => {
   const data = await fetch(
@@ -114,7 +115,7 @@ const loadMatchingCountries = async inputValue => {
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/asyncselect--default">
+          <Link href={`${STORYBOOK_COMPONENT_URL}asyncselect--default`}>
             View in Storybook
           </Link>
         </ListItem>

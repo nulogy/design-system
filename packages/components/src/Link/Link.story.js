@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Link } from "../index";
 
-storiesOf("Link", module)
+storiesOf("Components/Link", module)
   .add("Link ", () => <Link href="http://nulogy.design">Link</Link>)
   .add("with custom font size", () => (
     <Link href="http://nulogy.design" fontSize="small">

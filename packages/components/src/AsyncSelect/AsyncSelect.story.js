@@ -28,7 +28,7 @@ const loadMatchingCountries = async inputValue => {
   }));
 };
 
-storiesOf("AsyncSelect", module)
+storiesOf("Components/AsyncSelect", module)
   .add("default (SkipStoryshot)", () => (
     <AsyncSelect
       placeholder="Please select a country"

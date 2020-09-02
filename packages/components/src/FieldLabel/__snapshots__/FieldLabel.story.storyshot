@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots FieldLabel FieldLabel 1`] = `
+exports[`Storyshots Components/FieldLabel FieldLabel 1`] = `
 <div
   style="padding:24px"
 >
@@ -27,7 +27,7 @@ exports[`Storyshots FieldLabel FieldLabel 1`] = `
 </div>
 `;
 
-exports[`Storyshots FieldLabel with HelpText 1`] = `
+exports[`Storyshots Components/FieldLabel with HelpText 1`] = `
 <div
   style="padding:24px"
 >
@@ -70,7 +70,7 @@ exports[`Storyshots FieldLabel with HelpText 1`] = `
 </div>
 `;
 
-exports[`Storyshots FieldLabel with RequirementText 1`] = `
+exports[`Storyshots Components/FieldLabel with RequirementText 1`] = `
 <div
   style="padding:24px"
 >
@@ -104,7 +104,7 @@ exports[`Storyshots FieldLabel with RequirementText 1`] = `
 </div>
 `;
 
-exports[`Storyshots FieldLabel with all additional text 1`] = `
+exports[`Storyshots Components/FieldLabel with all additional text 1`] = `
 <div
   style="padding:24px"
 >
@@ -145,7 +145,7 @@ exports[`Storyshots FieldLabel with all additional text 1`] = `
 </div>
 `;
 
-exports[`Storyshots FieldLabel with associated custom input component 1`] = `
+exports[`Storyshots Components/FieldLabel with associated custom input component 1`] = `
 <div
   style="padding:24px"
 >

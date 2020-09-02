@@ -21,6 +21,7 @@ import {
   KeyTable,
   InlineCode
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 import sampleLogo from "../../images/loremipsum.svg";
 
@@ -263,7 +264,7 @@ const secondaryMenu = [
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/brandednavbar--brandednavbar">
+          <Link href={`${STORYBOOK_COMPONENT_URL}brandednavbar--brandednavbar`}>
             View in Storybook
           </Link>
         </ListItem>

@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Utilities|Layout", module)
+storiesOf("Utilities/Layout", module)
   .add(
     "Floats",
     () => `

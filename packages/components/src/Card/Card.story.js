@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Card, CardSet } from "../index";
 
-storiesOf("Card", module)
+storiesOf("Components/Card", module)
   .add("Card", () => <Card>I am a card.</Card>)
   .add("Custom card", () => (
     <Card bg="black" color="white" borderRadius="small" p="x1">

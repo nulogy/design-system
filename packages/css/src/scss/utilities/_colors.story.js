@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Utilities|Color", module)
+storiesOf("Utilities/Color", module)
   .add(
     "Text",
     () => `

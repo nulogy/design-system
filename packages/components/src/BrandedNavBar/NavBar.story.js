@@ -83,7 +83,7 @@ const secondaryMenu = [
   }
 ];
 
-storiesOf("BrandedNavBar", module)
+storiesOf("Components/BrandedNavBar", module)
   .add("BrandedNavBar", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />)
   .add("With a company logo", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />)
   .add("With app name", () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />)

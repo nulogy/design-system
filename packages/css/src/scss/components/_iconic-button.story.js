@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|IconicButton", module).add(
+storiesOf("Components/IconicButton", module).add(
   "IconicButton",
   () => `
     <button class="IconicButton">

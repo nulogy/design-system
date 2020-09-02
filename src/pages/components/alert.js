@@ -23,6 +23,7 @@ import {
   PropsTable,
   InlineCode
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const propsRows = [
   {
@@ -54,7 +55,7 @@ const propsRows = [
     name: "onClose",
     type: "function",
     defaultValue: "() => {}",
-    description: "Callback function invoked when the Alert is closed." 
+    description: "Callback function invoked when the Alert is closed."
   },
   {
     name: "closeAriaLabel",
@@ -195,7 +196,7 @@ export default () => (
     <DocSection>
       <SectionTitle>Resources</SectionTitle>
       <ListItem>
-        <Link href="https://storybook.nulogy.design/?path=/story/alert--danger">
+        <Link href={`${STORYBOOK_COMPONENT_URL}alert--danger`}>
           View in Storybook
         </Link>
       </ListItem>

@@ -18,7 +18,7 @@ import {
 
 const options = [{ value: "planned", label: "Planned" }, { value: "booked", label: "Booked" }];
 
-storiesOf("Form", module)
+storiesOf("Components/Form", module)
   .add("Form", () => (
     <Form title="New Profile">
       <Input id="name" labelText="Name" />

@@ -5,7 +5,7 @@ import { Textarea, Form, PrimaryButton, Button } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
-storiesOf("Textarea", module)
+storiesOf("Components/Textarea", module)
   .add("Textarea", () => <Textarea labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />)
   .add("Textarea with all props", () => (
     <Textarea

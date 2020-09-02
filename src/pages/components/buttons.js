@@ -24,6 +24,7 @@ import {
   PropsTable,
   InlineCode
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 const propsRows = [
   {
@@ -247,7 +248,7 @@ export default () => (
       <SectionTitle>Resources</SectionTitle>
       <List>
         <ListItem>
-          <Link href="https://storybook.nulogy.design/?path=/story/buttons--button">
+          <Link href={`${STORYBOOK_COMPONENT_URL}buttons--button`}>
             View in Storybook
           </Link>
         </ListItem>

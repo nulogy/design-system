@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots TimePicker default 1`] = `
+exports[`Storyshots Components/TimePicker default 1`] = `
 <div
   style="padding:24px"
 >
@@ -939,7 +939,7 @@ exports[`Storyshots TimePicker default 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker using ref to control focus 1`] = `
+exports[`Storyshots Components/TimePicker using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
@@ -1883,7 +1883,7 @@ exports[`Storyshots TimePicker using ref to control focus 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker with custom default 1`] = `
+exports[`Storyshots Components/TimePicker with custom default 1`] = `
 <div
   style="padding:24px"
 >
@@ -2822,7 +2822,7 @@ exports[`Storyshots TimePicker with custom default 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker with custom placeholder 1`] = `
+exports[`Storyshots Components/TimePicker with custom placeholder 1`] = `
 <div
   style="padding:24px"
 >
@@ -3761,7 +3761,7 @@ exports[`Storyshots TimePicker with custom placeholder 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker with custom time format 1`] = `
+exports[`Storyshots Components/TimePicker with custom time format 1`] = `
 <div
   style="padding:24px"
 >
@@ -4700,7 +4700,7 @@ exports[`Storyshots TimePicker with custom time format 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker with custom time interval 1`] = `
+exports[`Storyshots Components/TimePicker with custom time interval 1`] = `
 <div
   style="padding:24px"
 >
@@ -5207,7 +5207,7 @@ exports[`Storyshots TimePicker with custom time interval 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker with error state 1`] = `
+exports[`Storyshots Components/TimePicker with error state 1`] = `
 <div
   style="padding:24px"
 >
@@ -6178,7 +6178,7 @@ exports[`Storyshots TimePicker with error state 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker with min and max time 1`] = `
+exports[`Storyshots Components/TimePicker with min and max time 1`] = `
 <div
   style="padding:24px"
 >
@@ -6694,7 +6694,7 @@ exports[`Storyshots TimePicker with min and max time 1`] = `
 </div>
 `;
 
-exports[`Storyshots TimePicker with value 1`] = `
+exports[`Storyshots Components/TimePicker with value 1`] = `
 <div
   style="padding:24px"
 >

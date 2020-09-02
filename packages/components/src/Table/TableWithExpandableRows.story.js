@@ -30,7 +30,7 @@ const rowDataWithExpandable = [
   { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
-storiesOf("Table/with expandable rows", module)
+storiesOf("Components/Table/with expandable rows", module)
   .add("with expandable rows", () => (
     <Table
       columns={columns}

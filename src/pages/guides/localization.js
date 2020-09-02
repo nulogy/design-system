@@ -15,6 +15,7 @@ import {
   IntroText,
   DocSection
 } from "../../components";
+import { STORYBOOK_COMPONENT_URL } from "../../shared/const";
 
 export default () => (
   <Layout>
@@ -46,7 +47,7 @@ export default () => (
       </Text>
       <Text>
         To see an example of a localized component, go to the{" "}
-        <Link href="https://storybook.nulogy.design/?path=/story/pagination--pagination">
+        <Link href={`${STORYBOOK_COMPONENT_URL}pagination--pagination`}>
           Pagination Component
         </Link>{" "}
         using the "Knobs" section you should be able to select an NDS Provider

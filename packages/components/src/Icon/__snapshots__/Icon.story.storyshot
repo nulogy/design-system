@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Icon InlineIcon 1`] = `
+exports[`Storyshots Components/Icon InlineIcon 1`] = `
 <div
   style="padding:24px"
 >
@@ -731,7 +731,7 @@ exports[`Storyshots Icon InlineIcon 1`] = `
 </div>
 `;
 
-exports[`Storyshots Icon With a color 1`] = `
+exports[`Storyshots Components/Icon With a color 1`] = `
 <div
   style="padding:24px"
 >
@@ -1517,7 +1517,7 @@ exports[`Storyshots Icon With a color 1`] = `
 </div>
 `;
 
-exports[`Storyshots Icon With a size 1`] = `
+exports[`Storyshots Components/Icon With a size 1`] = `
 <div
   style="padding:24px"
 >
@@ -1993,7 +1993,7 @@ exports[`Storyshots Icon With a size 1`] = `
 </div>
 `;
 
-exports[`Storyshots Icon With accessibility title 1`] = `
+exports[`Storyshots Components/Icon With accessibility title 1`] = `
 <div
   style="padding:24px"
 >
@@ -2045,7 +2045,7 @@ exports[`Storyshots Icon With accessibility title 1`] = `
 </div>
 `;
 
-exports[`Storyshots Icon With added margin 1`] = `
+exports[`Storyshots Components/Icon With added margin 1`] = `
 <div
   style="padding:24px"
 >

@@ -4,7 +4,7 @@ import { Radio, RadioGroup } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
-storiesOf("RadioGroup", module)
+storiesOf("Components/RadioGroup", module)
   .add("RadioGroup", () => (
     <RadioGroup labelText="Setting Selection" name="settingSelection">
       <Radio value="a" labelText="Option A" />

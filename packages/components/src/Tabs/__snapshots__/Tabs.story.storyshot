@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Tabs Tabs 1`] = `
+exports[`Storyshots Components/Tabs Tabs 1`] = `
 <div
   style="padding:24px"
 >
@@ -81,7 +81,7 @@ exports[`Storyshots Tabs Tabs 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tabs controlled 1`] = `
+exports[`Storyshots Components/Tabs controlled 1`] = `
 <div
   style="padding:24px"
 >
@@ -167,7 +167,7 @@ exports[`Storyshots Tabs controlled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tabs set to fitted 1`] = `
+exports[`Storyshots Components/Tabs set to fitted 1`] = `
 <div
   style="padding:24px"
 >
@@ -248,7 +248,7 @@ exports[`Storyshots Tabs set to fitted 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
+exports[`Storyshots Components/Tabs with a defaultSelectedIndex 1`] = `
 <div
   style="padding:24px"
 >
@@ -330,7 +330,7 @@ exports[`Storyshots Tabs with a defaultSelectedIndex 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tabs with all tab states 1`] = `
+exports[`Storyshots Components/Tabs with all tab states 1`] = `
 <div
   style="padding:24px"
 >
@@ -375,7 +375,7 @@ exports[`Storyshots Tabs with all tab states 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tabs with content loaded on selection 1`] = `
+exports[`Storyshots Components/Tabs with content loaded on selection 1`] = `
 <div
   style="padding:24px"
 >
@@ -414,7 +414,7 @@ exports[`Storyshots Tabs with content loaded on selection 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tabs with inputs 1`] = `
+exports[`Storyshots Components/Tabs with inputs 1`] = `
 <div
   style="padding:24px"
 >
@@ -469,7 +469,7 @@ exports[`Storyshots Tabs with inputs 1`] = `
 </div>
 `;
 
-exports[`Storyshots Tabs with scrolling tabs 1`] = `
+exports[`Storyshots Components/Tabs with scrolling tabs 1`] = `
 <div
   style="padding:24px"
 >

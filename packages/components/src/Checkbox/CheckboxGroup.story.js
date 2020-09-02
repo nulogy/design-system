@@ -4,7 +4,7 @@ import { Checkbox, CheckboxGroup } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
-storiesOf("CheckboxGroup", module)
+storiesOf("Components/CheckboxGroup", module)
   .add("CheckboxGroup", () => (
     <CheckboxGroup labelText="Setting Selection" name="settingSelection">
       <Checkbox value="a" labelText="Option A" />

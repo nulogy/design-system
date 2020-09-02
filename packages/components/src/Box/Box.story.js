@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { Box } from "../index";
 
-storiesOf("Box", module)
+storiesOf("Components/Box", module)
   .add("Box", () => <Box p="x3">Hello World</Box>)
   .add("With a text colour", () => (
     <Box p="x3" color="blue">

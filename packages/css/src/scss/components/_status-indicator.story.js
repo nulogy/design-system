@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|StatusIndicator", module).add(
+storiesOf("Components/StatusIndicator", module).add(
   "StatusIndicator",
   () => `
   <p class="StatusIndicator--neutral">

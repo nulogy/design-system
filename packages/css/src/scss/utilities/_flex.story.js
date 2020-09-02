@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Utilities|nds-flex", module)
+storiesOf("Utilities/nds-flex", module)
   .add(
     ".nds-flex",
     () => `

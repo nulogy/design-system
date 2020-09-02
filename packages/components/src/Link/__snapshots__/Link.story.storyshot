@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Link As a <button> 1`] = `
+exports[`Storyshots Components/Link As a <button> 1`] = `
 <div
   style="padding:24px"
 >
@@ -18,7 +18,7 @@ exports[`Storyshots Link As a <button> 1`] = `
 </div>
 `;
 
-exports[`Storyshots Link Link  1`] = `
+exports[`Storyshots Components/Link Link  1`] = `
 <div
   style="padding:24px"
 >
@@ -37,7 +37,7 @@ exports[`Storyshots Link Link  1`] = `
 </div>
 `;
 
-exports[`Storyshots Link With a different color 1`] = `
+exports[`Storyshots Components/Link With a different color 1`] = `
 <div
   style="padding:24px"
 >
@@ -56,7 +56,7 @@ exports[`Storyshots Link With a different color 1`] = `
 </div>
 `;
 
-exports[`Storyshots Link With a different size 1`] = `
+exports[`Storyshots Components/Link With a different size 1`] = `
 <div
   style="padding:24px"
 >
@@ -75,7 +75,7 @@ exports[`Storyshots Link With a different size 1`] = `
 </div>
 `;
 
-exports[`Storyshots Link Without underline 1`] = `
+exports[`Storyshots Components/Link Without underline 1`] = `
 <div
   style="padding:24px"
 >
@@ -94,7 +94,7 @@ exports[`Storyshots Link Without underline 1`] = `
 </div>
 `;
 
-exports[`Storyshots Link with custom font size 1`] = `
+exports[`Storyshots Components/Link with custom font size 1`] = `
 <div
   style="padding:24px"
 >

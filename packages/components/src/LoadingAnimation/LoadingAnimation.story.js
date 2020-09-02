@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { LoadingAnimation } from ".";
 import { Overlay, Box, Flex, Text, Alert, ControlIcon } from "../index";
 
-storiesOf("LoadingAnimation", module)
+storiesOf("Components/LoadingAnimation", module)
   .add("Active", () => <LoadingAnimation>Example</LoadingAnimation>)
   .add("Inactive", () => <LoadingAnimation inactive>Example</LoadingAnimation>)
   .add("Page example - active", () => (

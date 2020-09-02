@@ -1,7 +1,7 @@
 /* global document */
 import { storiesOf } from "@storybook/html";
 
-storiesOf("Components|Alerts", module)
+storiesOf("Components/Alerts", module)
   .add(
     "Alert",
     () => `

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Text Set to disabled 1`] = `
+exports[`Storyshots Components/Text Set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -47,7 +47,7 @@ exports[`Storyshots Text Set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Text Set to inline 1`] = `
+exports[`Storyshots Components/Text Set to inline 1`] = `
 <div
   style="padding:24px"
 >
@@ -72,7 +72,7 @@ exports[`Storyshots Text Set to inline 1`] = `
 </div>
 `;
 
-exports[`Storyshots Text Text 1`] = `
+exports[`Storyshots Components/Text Text 1`] = `
 <div
   style="padding:24px"
 >
@@ -90,7 +90,7 @@ exports[`Storyshots Text Text 1`] = `
 </div>
 `;
 
-exports[`Storyshots Text With a color 1`] = `
+exports[`Storyshots Components/Text With a color 1`] = `
 <div
   style="padding:24px"
 >
@@ -108,7 +108,7 @@ exports[`Storyshots Text With a color 1`] = `
 </div>
 `;
 
-exports[`Storyshots Text With a custom margin 1`] = `
+exports[`Storyshots Components/Text With a custom margin 1`] = `
 <div
   style="padding:24px"
 >
@@ -133,7 +133,7 @@ exports[`Storyshots Text With a custom margin 1`] = `
 </div>
 `;
 
-exports[`Storyshots Text With a size 1`] = `
+exports[`Storyshots Components/Text With a size 1`] = `
 <div
   style="padding:24px"
 >

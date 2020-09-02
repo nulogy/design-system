@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Table with everything 1`] = `
+exports[`Storyshots Components/Table with everything 1`] = `
 <div
   style="padding:24px"
 >
@@ -581,7 +581,7 @@ exports[`Storyshots Table with everything 1`] = `
 </div>
 `;
 
-exports[`Storyshots Table with pagination 1`] = `
+exports[`Storyshots Components/Table with pagination 1`] = `
 <div
   style="padding:24px"
 >

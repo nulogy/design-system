@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots ControlIcon Control Icon 1`] = `
+exports[`Storyshots Components/ControlIcon Control Icon 1`] = `
 <div
   style="padding:24px"
 >
@@ -32,7 +32,7 @@ exports[`Storyshots ControlIcon Control Icon 1`] = `
 </div>
 `;
 
-exports[`Storyshots ControlIcon Disabled 1`] = `
+exports[`Storyshots Components/ControlIcon Disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -65,7 +65,7 @@ exports[`Storyshots ControlIcon Disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots ControlIcon Toggled 1`] = `
+exports[`Storyshots Components/ControlIcon Toggled 1`] = `
 <div
   style="padding:24px"
 >

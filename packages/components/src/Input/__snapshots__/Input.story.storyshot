@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Input Input 1`] = `
+exports[`Storyshots Components/Input Input 1`] = `
 <div
   style="padding:24px"
 >
@@ -45,7 +45,7 @@ exports[`Storyshots Input Input 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input set to disabled 1`] = `
+exports[`Storyshots Components/Input set to disabled 1`] = `
 <div
   style="padding:24px"
 >
@@ -91,7 +91,7 @@ exports[`Storyshots Input set to disabled 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input set to required 1`] = `
+exports[`Storyshots Components/Input set to required 1`] = `
 <div
   style="padding:24px"
 >
@@ -153,7 +153,7 @@ exports[`Storyshots Input set to required 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input using ref to control focus 1`] = `
+exports[`Storyshots Components/Input using ref to control focus 1`] = `
 <div
   style="padding:24px"
 >
@@ -204,7 +204,7 @@ exports[`Storyshots Input using ref to control focus 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
+exports[`Storyshots Components/Input with a affix (prefix and suffix) 1`] = `
 <div
   style="padding:24px"
 >
@@ -628,7 +628,7 @@ exports[`Storyshots Input with a affix (prefix and suffix) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input with all props 1`] = `
+exports[`Storyshots Components/Input with all props 1`] = `
 <div
   style="padding:24px"
 >
@@ -689,7 +689,7 @@ exports[`Storyshots Input with all props 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input with custom ID 1`] = `
+exports[`Storyshots Components/Input with custom ID 1`] = `
 <div
   style="padding:24px"
 >
@@ -735,7 +735,7 @@ exports[`Storyshots Input with custom ID 1`] = `
 </div>
 `;
 
-exports[`Storyshots Input with error list  1`] = `
+exports[`Storyshots Components/Input with error list  1`] = `
 <div
   style="padding:24px"
 >
@@ -829,7 +829,7 @@ exports[`Storyshots Input with error list  1`] = `
 </div>
 `;
 
-exports[`Storyshots Input with error message 1`] = `
+exports[`Storyshots Components/Input with error message 1`] = `
 <div
   style="padding:24px"
 >

@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { Alert } from "../index";
 import { Link } from "../Link";
 
-storiesOf("Alert", module)
+storiesOf("Components/Alert", module)
   .add("Danger", () => <Alert type="danger">Danger alert</Alert>)
   .add("Informative", () => <Alert>Informative alert</Alert>)
   .add("Success", () => <Alert type="success">Success alert</Alert>)

@@ -10,7 +10,7 @@ import "../../pages/error.css";
 // use <a class="Link Link--ErrorPage" href="">Back to Homepage</a>
 // add the modifier "ErrorPage__logo--with-homepage-link" to `ErrorPage__logo`
 
-storiesOf("Pages|Error", module)
+storiesOf("Pages/Error", module)
   .add(
     "Error",
     () => `
