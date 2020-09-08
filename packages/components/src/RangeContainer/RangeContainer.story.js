@@ -1,5 +1,12 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { RangeContainer } from ".";
 
-storiesOf("Components/RangeContainer", module).add("RangeContainer", () => <RangeContainer>Example</RangeContainer>);
+export default {
+  title: "Components/RangeContainer"
+};
+
+export const _RangeContainer = () => <RangeContainer>Example</RangeContainer>;
+
+_RangeContainer.story = {
+  name: "RangeContainer"
+};

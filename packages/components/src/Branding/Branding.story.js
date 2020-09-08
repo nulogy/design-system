@@ -1,8 +1,11 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { Box, Flex, Branding } from "../index";
 
-storiesOf("Components/Branding", module).add("Branding", () => (
+export default {
+  title: "Components/Branding"
+};
+
+export const _Branding = () => (
   <>
     <Flex>
       <Box width={1 / 2} p="x2">
@@ -78,4 +81,4 @@ storiesOf("Components/Branding", module).add("Branding", () => (
       <Branding size="large" withLine subtext="Right Align" alignment="right" />
     </Flex>
   </>
-));
+);

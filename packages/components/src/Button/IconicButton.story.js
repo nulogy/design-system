@@ -1,25 +1,51 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { IconicButton } from "../index";
 
-storiesOf("Components/IconicButton", module)
-  .add("without a label", () => <IconicButton icon="delete" />)
-  .add("with label", () => <IconicButton icon="delete">Delete</IconicButton>)
-  .add("with a long label", () => (
-    <IconicButton icon="user">I am an Iconic Button with a really really really long label</IconicButton>
-  ))
-  .add("set to disabled", () => (
-    <>
-      <IconicButton icon="cancel" disabled>
-        Cancel
-      </IconicButton>
-      <IconicButton icon="lock" disabled>
-        Lock
-      </IconicButton>
-    </>
-  ))
-  .add("with a hidden label", () => (
-    <IconicButton ml="x6" labelHidden icon="user">
-      Hidden Label
+export default {
+  title: "Components/IconicButton"
+};
+
+export const WithoutALabel = () => <IconicButton icon="delete" />;
+
+WithoutALabel.story = {
+  name: "without a label"
+};
+
+export const WithLabel = () => <IconicButton icon="delete">Delete</IconicButton>;
+
+WithLabel.story = {
+  name: "with label"
+};
+
+export const WithALongLabel = () => (
+  <IconicButton icon="user">I am an Iconic Button with a really really really long label</IconicButton>
+);
+
+WithALongLabel.story = {
+  name: "with a long label"
+};
+
+export const SetToDisabled = () => (
+  <>
+    <IconicButton icon="cancel" disabled>
+      Cancel
     </IconicButton>
-  ));
+    <IconicButton icon="lock" disabled>
+      Lock
+    </IconicButton>
+  </>
+);
+
+SetToDisabled.story = {
+  name: "set to disabled"
+};
+
+export const WithAHiddenLabel = () => (
+  <IconicButton ml="x6" labelHidden icon="user">
+    Hidden Label
+  </IconicButton>
+);
+
+WithAHiddenLabel.story = {
+  name: "with a hidden label"
+};

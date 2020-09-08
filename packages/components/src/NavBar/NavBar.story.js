@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { storiesOf } from "@storybook/react";
 import { NavBar as NDSNavBar } from "../index";
 import { Icon } from "../Icon";
 
@@ -60,7 +59,10 @@ const primaryMenu = [
             name: "Projects",
             items: [{ name: "Cycle Counts", href: "/" }, { name: "Blind Counts", href: "/" }]
           },
-          { name: "Jobs", items: [{ name: "Job 1", href: "/" }, { name: "Job 2", href: "/" }] }
+          {
+            name: "Jobs",
+            items: [{ name: "Job 1", href: "/" }, { name: "Job 2", href: "/" }]
+          }
         ]
       },
       { name: "Item cart", href: "/" },
@@ -168,23 +170,86 @@ const search = {
   onSubmit: () => {}
 };
 
-storiesOf("Components/NavBar", module)
-  .add("NavBar", () => <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />)
-  .add("Without search", () => <NavBar menuData={{ primaryMenu, secondaryMenu }} />)
-  .add("Without secondary menu", () => <NavBar menuData={{ primaryMenu, search }} />)
-  .add("Without search and secondary menu", () => <NavBar menuData={{ primaryMenu }} />)
-  .add("Without search and primary menu", () => <NavBar menuData={{ secondaryMenu }} />)
-  .add("With branding only", () => <NavBar menuData={{}} />)
-  .add("With custom link components", () => (
-    <NavBar menuData={{ primaryMenu: primaryMenuCustomLinks, secondaryMenu: secondaryMenuCustomLinks, search }} />
-  ))
-  .add("With text in the menu", () => <NavBar menuData={{ primaryMenu: primaryMenuText }} />)
-  .add("With subtext", () => (
-    <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
-  ))
-  .add("With alternative branding link", () => (
-    <NavBar brandingLinkHref="/portal" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
-  ))
-  .add("With alternate themeColor", () => (
-    <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks }} themeColor="white" />
-  ));
+export default {
+  title: "Components/NavBar"
+};
+
+export const _NavBar = () => <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />;
+
+_NavBar.story = {
+  name: "NavBar"
+};
+
+export const WithoutSearch = () => <NavBar menuData={{ primaryMenu, secondaryMenu }} />;
+
+WithoutSearch.story = {
+  name: "Without search"
+};
+
+export const WithoutSecondaryMenu = () => <NavBar menuData={{ primaryMenu, search }} />;
+
+WithoutSecondaryMenu.story = {
+  name: "Without secondary menu"
+};
+
+export const WithoutSearchAndSecondaryMenu = () => <NavBar menuData={{ primaryMenu }} />;
+
+WithoutSearchAndSecondaryMenu.story = {
+  name: "Without search and secondary menu"
+};
+
+export const WithoutSearchAndPrimaryMenu = () => <NavBar menuData={{ secondaryMenu }} />;
+
+WithoutSearchAndPrimaryMenu.story = {
+  name: "Without search and primary menu"
+};
+
+export const WithBrandingOnly = () => <NavBar menuData={{}} />;
+
+WithBrandingOnly.story = {
+  name: "With branding only"
+};
+
+export const WithCustomLinkComponents = () => (
+  <NavBar
+    menuData={{
+      primaryMenu: primaryMenuCustomLinks,
+      secondaryMenu: secondaryMenuCustomLinks,
+      search
+    }}
+  />
+);
+
+WithCustomLinkComponents.story = {
+  name: "With custom link components"
+};
+
+export const WithTextInTheMenu = () => <NavBar menuData={{ primaryMenu: primaryMenuText }} />;
+
+WithTextInTheMenu.story = {
+  name: "With text in the menu"
+};
+
+export const WithSubtext = () => (
+  <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
+);
+
+WithSubtext.story = {
+  name: "With subtext"
+};
+
+export const WithAlternativeBrandingLink = () => (
+  <NavBar brandingLinkHref="/portal" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
+);
+
+WithAlternativeBrandingLink.story = {
+  name: "With alternative branding link"
+};
+
+export const WithAlternateThemeColor = () => (
+  <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks }} themeColor="white" />
+);
+
+WithAlternateThemeColor.story = {
+  name: "With alternate themeColor"
+};

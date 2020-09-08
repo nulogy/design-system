@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { withKnobs, boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import { Table } from ".";
@@ -47,19 +46,54 @@ const columnsWithWidths = [
   { label: "Note", dataKey: "note", width: "50%" }
 ];
 const rowData = [
-  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
-  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
-  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  {
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r1"
+  },
+  {
+    date: "2019-10-02",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "2,250 eaches",
+    id: "r2"
+  },
+  {
+    date: "2019-10-03",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,425 eaches",
+    id: "r3"
+  },
   { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
-  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  {
+    date: "2019-10-07",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,575 eaches",
+    id: "r5"
+  },
   { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r7" },
   { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" },
   { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r9" }
 ];
 const rowDataWithWidths = [
-  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
-  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
-  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  {
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r1"
+  },
+  {
+    date: "2019-10-02",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "2,250 eaches",
+    id: "r2"
+  },
+  {
+    date: "2019-10-03",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,425 eaches",
+    id: "r3"
+  },
   {
     date: "2019-10-04",
     expectedQuantity: "2,475 eaches",
@@ -67,7 +101,12 @@ const rowDataWithWidths = [
     note: "1c Other Plant-related issue, equipment issues",
     id: "r4"
   },
-  { date: "2019-10-07", expectedQuantity: "2,475 eaches", actualQuantity: "1,575 eaches", id: "r5" },
+  {
+    date: "2019-10-07",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,575 eaches",
+    id: "r5"
+  },
   { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
   { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
   { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
@@ -104,9 +143,24 @@ const footerRowData = [
 ];
 
 const rowDataWithSections = [
-  { date: "2019-10-01", expectedQuantity: "2,025 eaches", actualQuantity: "1,800 eaches", id: "r1" },
-  { date: "2019-10-02", expectedQuantity: "2,475 eaches", actualQuantity: "2,250 eaches", id: "r2" },
-  { date: "2019-10-03", expectedQuantity: "2,475 eaches", actualQuantity: "1,425 eaches", id: "r3" },
+  {
+    date: "2019-10-01",
+    expectedQuantity: "2,025 eaches",
+    actualQuantity: "1,800 eaches",
+    id: "r1"
+  },
+  {
+    date: "2019-10-02",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "2,250 eaches",
+    id: "r2"
+  },
+  {
+    date: "2019-10-03",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "1,425 eaches",
+    id: "r3"
+  },
   { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
   { heading: "ABC & XYZ Company", cellRenderer: sectionRow, id: "r5" },
   { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r6" },
@@ -114,8 +168,40 @@ const rowDataWithSections = [
   { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
 ];
 
-storiesOf("Components/Table", module)
-  .add(" with data", () => (
+export default {
+  title: "Components/Table"
+};
+
+export const WithData = () => (
+  <Table
+    columns={columns}
+    rows={rowData}
+    rowHovers={boolean("Show row hovers", true)}
+    compact={boolean("Show with compact styling", false)}
+    loading={boolean("Show loading state", false)}
+    className="Table"
+  />
+);
+
+WithData.story = {
+  name: " with data"
+};
+
+export const WithNoData = () => (
+  <Table
+    columns={columns}
+    rows={[]}
+    noRowsContent={text("Custom text", undefined)}
+    loading={boolean("Show loading state", false)}
+  />
+);
+
+WithNoData.story = {
+  name: "with no data"
+};
+
+export const WithStickyHeader = () => (
+  <Box mt="x4">
     <Table
       columns={columns}
       rows={rowData}
@@ -123,54 +209,79 @@ storiesOf("Components/Table", module)
       compact={boolean("Show with compact styling", false)}
       loading={boolean("Show loading state", false)}
       className="Table"
+      sticky
     />
-  ))
-  .add("with no data", () => (
-    <Table
-      columns={columns}
-      rows={[]}
-      noRowsContent={text("Custom text", undefined)}
-      loading={boolean("Show loading state", false)}
-    />
-  ))
-  .add("with sticky header", () => (
-    <Box mt="x4">
-      <Table
-        columns={columns}
-        rows={rowData}
-        rowHovers={boolean("Show row hovers", true)}
-        compact={boolean("Show with compact styling", false)}
-        loading={boolean("Show loading state", false)}
-        className="Table"
-        sticky
-      />
-    </Box>
-  ))
-  .add("with lots of rows and columns", () => (
-    <Table
-      columns={mockColumns}
-      rows={getMockRows(50)}
-      hasSelectableRows
-      onRowSelectionChange={action("row selection changed")}
-      loading={boolean("Show loading state", false)}
-    />
-  ))
-  .add("with custom column widths", () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />)
-  .add("with a custom cell component", () => (
-    <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
-  ))
-  .add("with cell alignment", () => <Table columns={columnsWithAlignment} rows={rowData} />)
-  .add("with a cell formatter", () => <Table columns={columnsWithFormatter} rows={rowData} />)
-  .add("with a custom column label component", () => (
-    <Table columns={getColumnsWithHeaderFormatter(buttonRenderer)} rows={rowData} />
-  ))
-  .add("with full width section", () => <Table columns={columns} rows={rowDataWithSections} />)
-  .add("with a footer", () => (
-    <Table
-      columns={columns}
-      keyField="date"
-      rows={rowData}
-      footerRows={footerRowData}
-      loading={boolean("Show loading state", false)}
-    />
-  ));
+  </Box>
+);
+
+WithStickyHeader.story = {
+  name: "with sticky header"
+};
+
+export const WithLotsOfRowsAndColumns = () => (
+  <Table
+    columns={mockColumns}
+    rows={getMockRows(50)}
+    hasSelectableRows
+    onRowSelectionChange={action("row selection changed")}
+    loading={boolean("Show loading state", false)}
+  />
+);
+
+WithLotsOfRowsAndColumns.story = {
+  name: "with lots of rows and columns"
+};
+
+export const WithCustomColumnWidths = () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />;
+
+WithCustomColumnWidths.story = {
+  name: "with custom column widths"
+};
+
+export const WithACustomCellComponent = () => (
+  <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
+);
+
+WithACustomCellComponent.story = {
+  name: "with a custom cell component"
+};
+
+export const WithCellAlignment = () => <Table columns={columnsWithAlignment} rows={rowData} />;
+
+WithCellAlignment.story = {
+  name: "with cell alignment"
+};
+
+export const WithACellFormatter = () => <Table columns={columnsWithFormatter} rows={rowData} />;
+
+WithACellFormatter.story = {
+  name: "with a cell formatter"
+};
+
+export const WithACustomColumnLabelComponent = () => (
+  <Table columns={getColumnsWithHeaderFormatter(buttonRenderer)} rows={rowData} />
+);
+
+WithACustomColumnLabelComponent.story = {
+  name: "with a custom column label component"
+};
+
+export const WithFullWidthSection = () => <Table columns={columns} rows={rowDataWithSections} />;
+
+WithFullWidthSection.story = {
+  name: "with full width section"
+};
+
+export const WithAFooter = () => (
+  <Table
+    columns={columns}
+    keyField="date"
+    rows={rowData}
+    footerRows={footerRowData}
+    loading={boolean("Show loading state", false)}
+  />
+);
+
+WithAFooter.story = {
+  name: "with a footer"
+};

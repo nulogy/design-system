@@ -1,21 +1,37 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { Alert } from "../index";
 import { Link } from "../Link";
 
-storiesOf("Components/Alert", module)
-  .add("Danger", () => <Alert type="danger">Danger alert</Alert>)
-  .add("Informative", () => <Alert>Informative alert</Alert>)
-  .add("Success", () => <Alert type="success">Success alert</Alert>)
-  .add("Warning", () => <Alert type="warning">Warning alert</Alert>)
-  .add("With a close button", () => <Alert isCloseable>Warning alert</Alert>)
-  .add("With a title", () => (
-    <Alert title="Danger title!" type="danger">
-      Danger alert
-    </Alert>
-  ))
-  .add("With a link", () => (
-    <Alert>
-      An alert with <Link href="/">linked details</Link>.
-    </Alert>
-  ));
+export default {
+  title: "Components/Alert"
+};
+
+export const Danger = () => <Alert type="danger">Danger alert</Alert>;
+export const Informative = () => <Alert>Informative alert</Alert>;
+export const Success = () => <Alert type="success">Success alert</Alert>;
+export const Warning = () => <Alert type="warning">Warning alert</Alert>;
+export const WithACloseButton = () => <Alert isCloseable>Warning alert</Alert>;
+
+WithACloseButton.story = {
+  name: "With a close button"
+};
+
+export const WithATitle = () => (
+  <Alert title="Danger title!" type="danger">
+    Danger alert
+  </Alert>
+);
+
+WithATitle.story = {
+  name: "With a title"
+};
+
+export const WithALink = () => (
+  <Alert>
+    An alert with <Link href="/">linked details</Link>.
+  </Alert>
+);
+
+WithALink.story = {
+  name: "With a link"
+};

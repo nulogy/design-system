@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useRef } from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { AsyncSelect, Button } from "../index";
 
@@ -28,79 +27,106 @@ const loadMatchingCountries = async inputValue => {
   }));
 };
 
-storiesOf("Components/AsyncSelect", module)
-  .add("default (SkipStoryshot)", () => (
-    <AsyncSelect
-      placeholder="Please select a country"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      className="Select"
-      classNamePrefix="SelectTest"
-      labelText="Country"
-      onInputChange={action("typed input value changed")}
-      loadOptions={loadMatchingCountries}
-    />
-  ))
-  .add("With default options (SkipStoryshot)", () => (
-    <AsyncSelect
-      placeholder="Filter Countries"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      className="Select"
-      classNamePrefix="SelectTest"
-      labelText="Country"
-      onInputChange={action("typed input value changed")}
-      defaultOptions={northAmericanCountries}
-      loadOptions={loadMatchingCountries}
-    />
-  ))
-  .add("With a default value (SkipStoryshot)", () => (
-    <AsyncSelect
-      placeholder="Please select a country"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      className="Select"
-      classNamePrefix="SelectTest"
-      labelText="Country"
-      defaultValue="Can"
-      onInputChange={action("typed input value changed")}
-      loadOptions={loadMatchingCountries}
-    />
-  ))
-  .add("Multiselect (SkipStoryshot)", () => (
-    <AsyncSelect
-      placeholder="Please select a countries"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      className="Select"
-      classNamePrefix="SelectTest"
-      labelText="Countries"
-      multiselect
-      onInputChange={action("typed input value changed")}
-      loadOptions={loadMatchingCountries}
-    />
-  ))
-  .add("using ref to control focus (SkipStoryshot)", () => {
-    const ref = useRef(null);
-    const handleClick = () => {
-      ref.current.focus();
-    };
+export default {
+  title: "Components/AsyncSelect"
+};
 
-    return (
-      <>
-        <AsyncSelect
-          ref={ref}
-          placeholder="Please select a country"
-          onChange={action("selection changed")}
-          onBlur={action("blurred")}
-          className="Select"
-          classNamePrefix="SelectTest"
-          labelText="Country"
-          defaultValue="Can"
-          onInputChange={action("typed input value changed")}
-          loadOptions={loadMatchingCountries}
-        />
-        <Button onClick={handleClick}>Focus the Input</Button>
-      </>
-    );
-  });
+export const DefaultSkipStoryshot = () => (
+  <AsyncSelect
+    placeholder="Please select a country"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    labelText="Country"
+    onInputChange={action("typed input value changed")}
+    loadOptions={loadMatchingCountries}
+  />
+);
+
+DefaultSkipStoryshot.story = {
+  name: "default (SkipStoryshot)"
+};
+
+export const WithDefaultOptionsSkipStoryshot = () => (
+  <AsyncSelect
+    placeholder="Filter Countries"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    labelText="Country"
+    onInputChange={action("typed input value changed")}
+    defaultOptions={northAmericanCountries}
+    loadOptions={loadMatchingCountries}
+  />
+);
+
+WithDefaultOptionsSkipStoryshot.story = {
+  name: "With default options (SkipStoryshot)"
+};
+
+export const WithADefaultValueSkipStoryshot = () => (
+  <AsyncSelect
+    placeholder="Please select a country"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    labelText="Country"
+    defaultValue="Can"
+    onInputChange={action("typed input value changed")}
+    loadOptions={loadMatchingCountries}
+  />
+);
+
+WithADefaultValueSkipStoryshot.story = {
+  name: "With a default value (SkipStoryshot)"
+};
+
+export const MultiselectSkipStoryshot = () => (
+  <AsyncSelect
+    placeholder="Please select a countries"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    labelText="Countries"
+    multiselect
+    onInputChange={action("typed input value changed")}
+    loadOptions={loadMatchingCountries}
+  />
+);
+
+MultiselectSkipStoryshot.story = {
+  name: "Multiselect (SkipStoryshot)"
+};
+
+export const UsingRefToControlFocusSkipStoryshot = () => {
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current.focus();
+  };
+
+  return (
+    <>
+      <AsyncSelect
+        ref={ref}
+        placeholder="Please select a country"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
+        className="Select"
+        classNamePrefix="SelectTest"
+        labelText="Country"
+        defaultValue="Can"
+        onInputChange={action("typed input value changed")}
+        loadOptions={loadMatchingCountries}
+      />
+      <Button onClick={handleClick}>Focus the Input</Button>
+    </>
+  );
+};
+
+UsingRefToControlFocusSkipStoryshot.story = {
+  name: "using ref to control focus (SkipStoryshot)"
+};
