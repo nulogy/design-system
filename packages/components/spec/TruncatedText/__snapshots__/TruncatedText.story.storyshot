@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/TruncatedText TruncatedText 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      aria-describedby="random-id-38"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
+      color="currentColor"
+      font-size="medium"
+    >
+      Special instructions...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TruncatedText as title 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <h1
+      aria-describedby="random-id-41"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Text-sc-1wu7vpu-0-h1 dBDZi TruncatedText__StyledWrapper-noy865-0 jYAXtT"
+      font-size="heading1"
+      font-weight="light"
+    >
+      Special instructions...
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TruncatedText under max characters 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
+      color="currentColor"
+      font-size="medium"
+    >
+      Item is available
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TruncatedText with custom truncation indicator 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      aria-describedby="random-id-40"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
+      color="currentColor"
+      font-size="medium"
+    >
+      Special instructions + 2...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TruncatedText with max characters 10 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      aria-describedby="random-id-39"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 jYAXtT"
+      color="currentColor"
+      font-size="medium"
+    >
+      Item is av...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/TruncatedText without tooltip 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      class="Text-sc-1wu7vpu-0 RbfMK TruncatedText__StyledWrapper-noy865-0 heuHsr"
+      color="currentColor"
+      font-size="medium"
+    >
+      Special instructions...
+    </p>
+  </div>
+</div>
+`;

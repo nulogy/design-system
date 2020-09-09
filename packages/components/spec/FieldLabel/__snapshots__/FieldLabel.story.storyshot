@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/FieldLabel FieldLabel 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Default label
+        </span>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/FieldLabel with HelpText 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Default label
+        </span>
+        <p
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am help text. I can be a string or a node that includes a 
+          <a
+            class="Link-sc-1lpx3d0-0 gxbSxg"
+            color="blue"
+            font-size="medium"
+            href="http://nulogy.design"
+          >
+            link
+          </a>
+          .
+        </p>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/FieldLabel with RequirementText 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Default label
+        </span>
+        <span
+          class="Text-sc-1wu7vpu-0 bphWXP"
+          color="darkGrey"
+          font-size="12px"
+        >
+          (Required)
+        </span>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/FieldLabel with all additional text 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Default label
+        </span>
+        <span
+          class="Text-sc-1wu7vpu-0 bphWXP"
+          color="darkGrey"
+          font-size="12px"
+        >
+          (Required)
+        </span>
+        <p
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am help text. I can give more details on the input below!
+        </p>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/FieldLabel with associated custom input component 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 biCpIl"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Default label
+        </span>
+        <span
+          class="Text-sc-1wu7vpu-0 bphWXP"
+          color="darkGrey"
+          font-size="12px"
+        >
+          (Required)
+        </span>
+        <p
+          class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+          color="currentColor"
+          font-size="medium"
+        >
+          I am help text. I can give more details on the input below!
+        </p>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB"
+      >
+        <div
+          class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+        >
+          <div
+            class="Box-xda4ls-0 erhvLv"
+            display="flex"
+          >
+            <input
+              aria-invalid="false"
+              aria-required="false"
+              class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+              id="input1"
+            />
+          </div>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;

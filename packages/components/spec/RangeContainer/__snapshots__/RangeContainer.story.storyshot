@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/RangeContainer RangeContainer 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 biCpIl"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Range
+        </span>
+      </div>
+      Example
+    </label>
+    <div
+      class="Box-xda4ls-0 teipq"
+      display="inline-flex"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          -
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

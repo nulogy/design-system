@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Box Box 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Mnxhu"
+    >
+      Hello World
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Box With a background colour 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 jYaTOZ"
+      color="white"
+    >
+      Hello World
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Box With a responsive width 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 cVrkKf"
+      width="[object Object]"
+    >
+      Full width on extra small screens, 1/2 width on small and 1/4 width on medium
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Box With a set width 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hiKEOA"
+      width="0.5"
+    >
+      Half Width
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Box With a shadow 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 bzzyzs"
+    >
+      Small shadow
+    </div>
+    <div
+      class="Box-xda4ls-0 fHtBbK"
+    >
+      Medium shadow
+    </div>
+    <div
+      class="Box-xda4ls-0 gsGvcC"
+    >
+      Large shadow
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Box With a text colour 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 eibqQx"
+      color="blue"
+    >
+      Hello World
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Box With margin 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Mnxhu"
+    >
+      <div
+        class="Box-xda4ls-0 hmPCOY"
+      >
+        Margin
+      </div>
+      <div
+        class="Box-xda4ls-0 bvOEoC"
+      >
+        Margin top
+      </div>
+      <div
+        class="Box-xda4ls-0 dZPsrl"
+      >
+        Margin right
+      </div>
+      <div
+        class="Box-xda4ls-0 chfBUO"
+      >
+        Margin bottom
+      </div>
+      <div
+        class="Box-xda4ls-0 ceNuIC"
+      >
+        Margin left
+      </div>
+      <div
+        class="Box-xda4ls-0 blQBEq"
+      >
+        Margin x
+      </div>
+      <div
+        class="Box-xda4ls-0 dvXNkp"
+      >
+        Margin y
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Box With padding 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 ljpTaH"
+    >
+      <div
+        class="Box-xda4ls-0 dFFNSY"
+      >
+        Padding
+      </div>
+      <div
+        class="Box-xda4ls-0 dFFNSY"
+      >
+        Padding top
+      </div>
+      <div
+        class="Box-xda4ls-0 elupLl"
+      >
+        Padding right
+      </div>
+      <div
+        class="Box-xda4ls-0 fZEgaq"
+      >
+        Padding bottom
+      </div>
+      <div
+        class="Box-xda4ls-0 fVSdDW"
+      >
+        Padding left
+      </div>
+      <div
+        class="Box-xda4ls-0 fpDmIV"
+      >
+        Padding x
+      </div>
+      <div
+        class="Box-xda4ls-0 gwltxm"
+      >
+        Padding y
+      </div>
+    </div>
+  </div>
+</div>
+`;

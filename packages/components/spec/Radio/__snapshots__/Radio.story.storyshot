@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Radio Controlled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-checked="true"
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf Radio-sc-82dpxx-2 jeIhWi"
+          id="radio-1"
+          type="radio"
+        />
+        <div
+          checked=""
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am controlled and checked 
+        </span>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-checked="false"
+          aria-invalid="false"
+          aria-required="false"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf Radio-sc-82dpxx-2 jeIhWi"
+          id="radio-2"
+          type="radio"
+        />
+        <div
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am controlled and unchecked 
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Radio Radio 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf Radio-sc-82dpxx-2 jeIhWi"
+          id="radio"
+          type="radio"
+        />
+        <div
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am a radio button 
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Radio Set to defaultChecked 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf Radio-sc-82dpxx-2 jeIhWi"
+          id="radio"
+          type="radio"
+        />
+        <div
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am checked by default 
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Radio Set to disabled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kjxgat"
+        disabled=""
+      >
+        <input
+          aria-invalid="false"
+          aria-required="false"
+          class="Radio__RadioInput-sc-82dpxx-1 hBtCEn Radio-sc-82dpxx-2 jeIhWi"
+          disabled=""
+          id="radio-1"
+          type="radio"
+        />
+        <div
+          class="Radio__VisualRadio-sc-82dpxx-0 bCyppR"
+          disabled=""
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 hdrQgs"
+          color="currentColor"
+          disabled=""
+          font-size="medium"
+        >
+           I am disabled 
+        </span>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kjxgat"
+        disabled=""
+      >
+        <input
+          aria-checked="true"
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Radio__RadioInput-sc-82dpxx-1 hBtCEn Radio-sc-82dpxx-2 jeIhWi"
+          disabled=""
+          id="radio-2"
+          type="radio"
+        />
+        <div
+          checked=""
+          class="Radio__VisualRadio-sc-82dpxx-0 bCyppR"
+          disabled=""
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 hdrQgs"
+          color="currentColor"
+          disabled=""
+          font-size="medium"
+        >
+           I am disabled 
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Radio Set to error 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-invalid="true"
+          aria-required="false"
+          class="Radio__RadioInput-sc-82dpxx-1 iSoGgh Radio-sc-82dpxx-2 jeIhWi"
+          id="radio"
+          type="radio"
+        />
+        <div
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am error 
+        </span>
+      </label>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-invalid="true"
+          aria-required="false"
+          checked=""
+          class="Radio__RadioInput-sc-82dpxx-1 iSoGgh Radio-sc-82dpxx-2 jeIhWi"
+          id="radio"
+          type="radio"
+        />
+        <div
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am error 
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Radio Set to required 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-invalid="false"
+          aria-required="true"
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf Radio-sc-82dpxx-2 jeIhWi"
+          id="radio"
+          required=""
+          type="radio"
+        />
+        <div
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am a radio button 
+        </span>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Radio using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg Radio-sc-82dpxx-2 jeIhWi"
+    >
+      <label
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <input
+          aria-checked="true"
+          aria-invalid="false"
+          aria-required="false"
+          checked=""
+          class="Radio__RadioInput-sc-82dpxx-1 lnYmAf Radio-sc-82dpxx-2 jeIhWi"
+          type="radio"
+        />
+        <div
+          checked=""
+          class="Radio__VisualRadio-sc-82dpxx-0 cMunLd"
+        />
+        <span
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+           I am controlled and checked 
+        </span>
+      </label>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Input
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,1008 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Pagination Pagination 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        5
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        6
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        5
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        6
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        7
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
+        disabled=""
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Pagination on the first page 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        10
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Pagination on the last page 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <p
+        class="Text-sc-1wu7vpu-0 dqAYor"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        6
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        7
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        8
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        9
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        10
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 kZsQns"
+        disabled=""
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Pagination with less than 5 pages 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-hrfu3s-0 iHUNrd"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 bLUmHQ"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="leftArrow"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        2
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 khkrHJ"
+        disabled=""
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 Pagination__PageNumber-sc-1fsx1pp-1 bpxFKh"
+      >
+        4
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-sc-1fsx1pp-0 iFOkT"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-fc7twp-0 dEtgXr"
+          color="currentColor"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          icon="rightArrow"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;

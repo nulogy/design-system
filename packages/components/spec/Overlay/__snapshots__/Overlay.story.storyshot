@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Overlay Dark 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      class="Text-sc-1wu7vpu-0 RbfMK"
+      color="currentColor"
+      font-size="medium"
+    >
+      Background content
+    </p>
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 Overlay-spdky8-0 eOYFJr"
+    >
+      <div
+        class="Box-xda4ls-0 Card-sc-1vyc3zz-0 lfpbjM"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          Overlay content
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Overlay Light (default) 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <p
+      class="Text-sc-1wu7vpu-0 RbfMK"
+      color="currentColor"
+      font-size="medium"
+    >
+      Background content
+    </p>
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 Overlay-spdky8-0 jYvdrA"
+    >
+      Overlay content
+    </div>
+  </div>
+</div>
+`;
