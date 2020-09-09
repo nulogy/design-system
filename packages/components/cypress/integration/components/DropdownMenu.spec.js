@@ -15,7 +15,7 @@ describe("DropdownMenu", () => {
 
   describe("default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("dropdownmenu--dropdownmenu");
+      cy.renderFromStorybook("dropdownmenu--dropdown-menu");
     });
     it("toggles the menu on click", () => {
       getOpenButton().click();

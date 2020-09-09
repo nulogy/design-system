@@ -1,5 +1,4 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { FieldLabel, Input } from "../index";
 import { Link } from "../Link";
 
@@ -11,23 +10,50 @@ const helpTextWithLink = (
   </>
 );
 
-storiesOf("Components/FieldLabel", module)
-  .add("FieldLabel", () => <FieldLabel labelText="Default label" />)
-  .add("with HelpText", () => <FieldLabel labelText="Default label" helpText={helpTextWithLink} />)
-  .add("with RequirementText", () => <FieldLabel labelText="Default label" requirementText="(Required)" />)
-  .add("with all additional text", () => (
-    <FieldLabel
-      labelText="Default label"
-      helpText="I am help text. I can give more details on the input below!"
-      requirementText="(Required)"
-    />
-  ))
-  .add("with associated custom input component", () => (
-    <FieldLabel
-      labelText="Default label"
-      helpText="I am help text. I can give more details on the input below!"
-      requirementText="(Required)"
-    >
-      <CustomInput id="input1" />
-    </FieldLabel>
-  ));
+export default {
+  title: "Components/FieldLabel"
+};
+
+export const _FieldLabel = () => <FieldLabel labelText="Default label" />;
+
+_FieldLabel.story = {
+  name: "FieldLabel"
+};
+
+export const WithHelpText = () => <FieldLabel labelText="Default label" helpText={helpTextWithLink} />;
+
+WithHelpText.story = {
+  name: "with HelpText"
+};
+
+export const WithRequirementText = () => <FieldLabel labelText="Default label" requirementText="(Required)" />;
+
+WithRequirementText.story = {
+  name: "with RequirementText"
+};
+
+export const WithAllAdditionalText = () => (
+  <FieldLabel
+    labelText="Default label"
+    helpText="I am help text. I can give more details on the input below!"
+    requirementText="(Required)"
+  />
+);
+
+WithAllAdditionalText.story = {
+  name: "with all additional text"
+};
+
+export const WithAssociatedCustomInputComponent = () => (
+  <FieldLabel
+    labelText="Default label"
+    helpText="I am help text. I can give more details on the input below!"
+    requirementText="(Required)"
+  >
+    <CustomInput id="input1" />
+  </FieldLabel>
+);
+
+WithAssociatedCustomInputComponent.story = {
+  name: "with associated custom input component"
+};

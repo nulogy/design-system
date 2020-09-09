@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
-import { storiesOf } from "@storybook/react";
 import { Table } from "..";
 
 const COLUMNS = [{ label: "Name", dataKey: "name" }, { label: "Population (x 1000)", dataKey: "population" }];
@@ -67,4 +66,12 @@ const TableWithSorting = () => {
   return <Table columns={columns} rows={rows} keyField="name" />;
 };
 
-storiesOf("Components/Table", module).add("with sorting (SkipStoryshot)", () => <TableWithSorting />);
+export default {
+  title: "Components/Table"
+};
+
+export const WithSortingSkipStoryshot = () => <TableWithSorting />;
+
+WithSortingSkipStoryshot.story = {
+  name: "with sorting (SkipStoryshot)"
+};

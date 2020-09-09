@@ -160,7 +160,7 @@ describe("Table", () => {
   describe("with filtering and pagination", () => {
     const filterIinput = () => cy.get('input[name="Name"]');
     beforeEach(() => {
-      cy.renderFromStorybook("table--with-filtering-and-pagination-skipstoryshot");
+      cy.renderFromStorybook("table--with-filtering-and-pagination-skip-storyshot");
     });
     it("filters down to fewer pages", () => {
       paginationButtons(3).should("exist");

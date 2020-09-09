@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from "react";
-import { storiesOf } from "@storybook/react";
 import { Table } from "..";
 import { Input } from "../Input";
 
@@ -61,6 +60,18 @@ const TableWithFilters = ({ rowsPerPage }) => {
   return <Table columns={columns} rows={rows} keyField="name" rowsPerPage={rowsPerPage} />;
 };
 
-storiesOf("Components/Table", module)
-  .add("with filtering (SkipStoryshot)", () => <TableWithFilters />)
-  .add("with filtering and pagination (SkipStoryshot)", () => <TableWithFilters rowsPerPage={4} />);
+export default {
+  title: "Components/Table"
+};
+
+export const WithFilteringSkipStoryshot = () => <TableWithFilters />;
+
+WithFilteringSkipStoryshot.story = {
+  name: "with filtering (SkipStoryshot)"
+};
+
+export const WithFilteringAndPaginationSkipStoryshot = () => <TableWithFilters rowsPerPage={4} />;
+
+WithFilteringAndPaginationSkipStoryshot.story = {
+  name: "with filtering and pagination (SkipStoryshot)"
+};

@@ -1,9 +1,11 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { ControlIcon } from "../index";
 
-storiesOf("Components/ControlIcon", module)
-  .add("Control Icon", () => <ControlIcon icon="close" label="close" onClick={action("clicked")} />)
-  .add("Disabled", () => <ControlIcon icon="close" label="close" disabled onClick={action("clicked")} />)
-  .add("Toggled", () => <ControlIcon icon="close" label="close" toggled onClick={action("clicked")} />);
+export default {
+  title: "Components/ControlIcon"
+};
+
+export const _ControlIcon = () => <ControlIcon icon="close" label="close" onClick={action("clicked")} />;
+export const Disabled = () => <ControlIcon icon="close" label="close" disabled onClick={action("clicked")} />;
+export const Toggled = () => <ControlIcon icon="close" label="close" toggled onClick={action("clicked")} />;

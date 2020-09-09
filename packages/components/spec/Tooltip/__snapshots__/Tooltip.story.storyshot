@@ -1,0 +1,550 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Tooltip Tooltip 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 izRVrz"
+    >
+      <button
+        aria-describedby="random-id-13"
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-label="Open"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+         Button 
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip open by default 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-describedby="random-id-37"
+      aria-expanded="true"
+      aria-haspopup="true"
+      aria-label="Close"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Hover me
+    </button>
+    <div
+      class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+      id="random-id-37"
+      open=""
+      role="tooltip"
+      style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+    >
+      I am an open Tooltip!
+      <div
+        class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with Button passed in 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-describedby="random-id-29"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+       Button 
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with Link passed in 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-describedby="random-id-28"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+       Button 
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with custom hideDelay 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-describedby="random-id-31"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+       Button 
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with custom maxWidth 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 izRVrz"
+    >
+      <button
+        aria-describedby="random-id-15"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+         Button 
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 iBJJpr  nds-popper-pop-up"
+        id="random-id-15"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently.
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with custom showDelay 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-describedby="random-id-30"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+       Button 
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with other focusable elements 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-describedby="random-id-32"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+       Button 
+    </button>
+    <a
+      aria-describedby="random-id-33"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Link-sc-1lpx3d0-0 gxbSxg"
+      color="blue"
+      font-size="medium"
+      href="/"
+    >
+       Link 
+    </a>
+    <span
+      aria-describedby="random-id-34"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Text-sc-1wu7vpu-0 fSZLdr"
+      color="currentColor"
+      font-size="medium"
+    >
+      Inline Text
+    </span>
+    <div
+      aria-describedby="random-id-35"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Box-xda4ls-0 ilusgh"
+      width="200px"
+    >
+      Box width 200px
+    </div>
+    <div
+      aria-describedby="random-id-36"
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="Open"
+      class="Box-xda4ls-0 cJhOJg"
+    >
+      Box
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with placement 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 dxTGaz"
+    >
+      <button
+        aria-describedby="random-id-16"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-16"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        top-start
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-17"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-17"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        top
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-18"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-18"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        top-end
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 dxTGaz"
+    >
+      <button
+        aria-describedby="random-id-19"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-19"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        left-start
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-20"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-20"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        left
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-21"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-21"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        left-end
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 dxTGaz"
+    >
+      <button
+        aria-describedby="random-id-22"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-22"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        right-start
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-23"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-23"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        right
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-24"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-24"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        right-end
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 dxTGaz"
+    >
+      <button
+        aria-describedby="random-id-25"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-25"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        bottom-start
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-26"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-26"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        bottom
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+      <button
+        aria-describedby="random-id-27"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Tooltip trigger
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-27"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        bottom-end
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Tooltip with wrapped text 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 izRVrz"
+    >
+      <button
+        aria-describedby="random-id-14"
+        aria-expanded="true"
+        aria-haspopup="true"
+        aria-label="Close"
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+         Button 
+      </button>
+      <div
+        class="Box-xda4ls-0 Tooltip__TooltipContainer-sc-1a42ebx-0 byNSVe  nds-popper-pop-up"
+        id="random-id-14"
+        open=""
+        role="tooltip"
+        style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+      >
+        I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters.
+        <div
+          class="PopperArrow-sc-1bcgj4w-0 dVKthg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 describe("NavBar", () => {
-  const BASE_STORY = "navbar--navbar";
+  const BASE_STORY = "navbar--nav-bar";
   const CUSTOM_COMPONENTS_STORY = "navbar--with-custom-link-components";
 
   context("when in desktop mode", () => {

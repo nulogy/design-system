@@ -12,7 +12,7 @@ describe("TruncatedText", () => {
   };
   describe("default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("truncatedtext--truncatedtext");
+      cy.renderFromStorybook("truncatedtext--truncated-text");
     });
     it("shows the truncated text", () => {
       assertText("Special instructions...");

@@ -1,0 +1,864 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/MonthRange customizing input props 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Month range
+        </span>
+      </div>
+    </label>
+    <div
+      class="Box-xda4ls-0 iCWnHE"
+      display="inline-flex"
+    >
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select a start date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="From (Mon YYYY)"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          -
+        </p>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select an end date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="To (Mon YYYY)"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/MonthRange default 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Month range
+        </span>
+      </div>
+    </label>
+    <div
+      class="Box-xda4ls-0 iCWnHE"
+      display="inline-flex"
+    >
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select a start date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          -
+        </p>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select an end date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/MonthRange default start and end date 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Month range
+        </span>
+      </div>
+    </label>
+    <div
+      class="Box-xda4ls-0 iCWnHE"
+      display="inline-flex"
+    >
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select a start date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value="Jul 2019"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          -
+        </p>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select an end date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value="Sep 2019"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/MonthRange disabled range validation 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Month range
+        </span>
+      </div>
+    </label>
+    <div
+      class="Box-xda4ls-0 iCWnHE"
+      display="inline-flex"
+    >
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select a start date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value="Sep 2019"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          -
+        </p>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select an end date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value="Jul 2019"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/MonthRange individual input error 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Month range
+        </span>
+      </div>
+    </label>
+    <div
+      class="Box-xda4ls-0 iCWnHE"
+      display="inline-flex"
+    >
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="true"
+                  aria-label="Select a start date"
+                  aria-required="true"
+                  class="InputField__StyledInput-sc-6cu4mg-0 xuqKr"
+                  placeholder="Mon YYYY"
+                  required=""
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Box-xda4ls-0 Flex-hrfu3s-0 ycNbA"
+          color="red"
+        >
+          <svg
+            aria-hidden="true"
+            class="Icon-fc7twp-0 QuoIa"
+            color="currentColor"
+            fill="currentColor"
+            focusable="false"
+            height="24px"
+            icon="error"
+            mr="x1"
+            viewBox="0 0 24 24"
+            width="24px"
+          >
+            <path
+              d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+            />
+          </svg>
+          <div
+            class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+          >
+            <p
+              class="Text-sc-1wu7vpu-0 RbfMK"
+              color="currentColor"
+              font-size="medium"
+            >
+              Start date is required
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          -
+        </p>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select an end date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value="Sep 2019"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/MonthRange with custom error 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <label
+      class="FieldLabel__Label-sc-1t1cp4f-0 dDzyZF FieldLabel-sc-1t1cp4f-2 dClnot"
+      color="black"
+      style="display:block"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        data-testid="field-label"
+      >
+        <span
+          class="FieldLabel__LabelText-sc-1t1cp4f-1 idDszt"
+        >
+          Month range
+        </span>
+      </div>
+    </label>
+    <div
+      class="Box-xda4ls-0 iCWnHE"
+      display="inline-flex"
+    >
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select a start date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value="Jul 2019"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Box-xda4ls-0 Flex-hrfu3s-0 hYUuLW"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          -
+        </p>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB nds-month-picker"
+        data-testid="month-picker"
+      >
+        <div
+          class="react-datepicker-wrapper"
+        >
+          <div
+            class="react-datepicker__input-container"
+          >
+            <div
+              class="Box-xda4ls-0 Flex-hrfu3s-0 fbOeeQ"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select an end date"
+                  aria-required="false"
+                  class="InputField__StyledInput-sc-6cu4mg-0 lawkjo"
+                  placeholder="Mon YYYY"
+                  value="Sep 2019"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="Icon-fc7twp-0 InputField__StyledInputIcon-sc-6cu4mg-1 gnzknl"
+                  color="currentColor"
+                  fill="currentColor"
+                  focusable="false"
+                  height="16px"
+                  icon="calendarToday"
+                  viewBox="0 0 24 24"
+                  width="16px"
+                >
+                  <path
+                    d="M22 3h-3V1h-2v2H7V1H5v2H2v20h20V3zm-2 18H4V8h16v13z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Flex-hrfu3s-0 bXREHd"
+      color="red"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-fc7twp-0 QuoIa"
+        color="currentColor"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        icon="error"
+        mr="x1"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+      </svg>
+      <div
+        class="InlineValidation__Wrapper-sc-1jic7dw-0 kqhCKM"
+      >
+        <p
+          class="Text-sc-1wu7vpu-0 RbfMK"
+          color="currentColor"
+          font-size="medium"
+        >
+          This range conflicts with another range
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

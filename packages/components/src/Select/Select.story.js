@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState, useRef } from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
 import { Button, Input, PrimaryButton, Select, SelectOption } from "../index";
@@ -98,177 +97,60 @@ class SelectWithState extends React.Component {
   }
 }
 
-storiesOf("Components/Select", module)
-  .add("Select", () => (
-    <Select
-      placeholder={" "}
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      className="Select"
-      classNamePrefix="SelectTest"
-      options={options}
-      labelText="Inventory status"
-      onInputChange={action("typed input value changed")}
-    />
-  ))
-  .add("with a defaultValue", () => (
-    <Select
-      defaultValue={options[0].value}
-      placeholder="Please select inventory status"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      options={options}
-      labelText="Inventory status"
-      onInputChange={action("typed input value changed")}
-    />
-  ))
-  .add("with a blank value", () => {
-    const optionsWithBlank = [{ value: null, label: "" }, ...options];
-    return (
-      <Select
-        placeholder="Please select inventory status"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        options={optionsWithBlank}
-        labelText="Inventory status"
-        onInputChange={action("typed input value changed")}
-      />
-    );
-  })
-  .add("with an option selected", () => (
-    <>
-      <Select
-        value={options[0].value}
-        placeholder="Please select inventory status"
-        options={options}
-        labelText="Inventory status"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        onInputChange={action("typed input value changed")}
-        loading
-      />
-      <br />
-      <Select
-        value={options[0].value}
-        placeholder="Please select inventory status"
-        options={options}
-        labelText="Inventory status"
-        initialIsOpen
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        onInputChange={action("typed input value changed")}
-      />
-    </>
-  ))
+export default {
+  title: "Components/Select"
+};
 
-  .add("with state", () => (
-    <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
-  ))
-  .add("set to disabled", () => (
+export const _Select = () => (
+  <Select
+    placeholder={" "}
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    options={options}
+    labelText="Inventory status"
+    onInputChange={action("typed input value changed")}
+  />
+);
+
+export const WithADefaultValue = () => (
+  <Select
+    defaultValue={options[0].value}
+    placeholder="Please select inventory status"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    options={options}
+    labelText="Inventory status"
+    onInputChange={action("typed input value changed")}
+  />
+);
+
+WithADefaultValue.story = {
+  name: "with a defaultValue"
+};
+
+export const WithABlankValue = () => {
+  const optionsWithBlank = [{ value: null, label: "" }, ...options];
+  return (
     <Select
       placeholder="Please select inventory status"
-      options={options}
       onChange={action("selection changed")}
       onBlur={action("blurred")}
-      disabled
+      options={optionsWithBlank}
       labelText="Inventory status"
       onInputChange={action("typed input value changed")}
     />
-  ))
-  .add("with error message", () => (
-    <>
-      <Select
-        placeholder="Please select inventory status"
-        options={options}
-        errorMessage="Please select an inventory status"
-        labelText="Inventory status"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        onInputChange={action("typed input value changed")}
-      />
-      <br />
-      <Select
-        placeholder="Please select inventory status"
-        options={options}
-        errorMessage="Please select an inventory status"
-        initialIsOpen
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        onInputChange={action("typed input value changed")}
-      />
-    </>
-  ))
-  .add("with error list", () => (
-    <>
-      <Select
-        placeholder="Please select inventory status"
-        options={options}
-        errorMessage="Please select an inventory status"
-        errorList={errorList}
-        labelText="Inventory status"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        onInputChange={action("typed input value changed")}
-      />
-      <br />
-      <Select
-        placeholder="Please select inventory status"
-        options={options}
-        errorMessage="Please select an inventory status"
-        errorList={errorList}
-        initialIsOpen
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        onInputChange={action("typed input value changed")}
-      />
-    </>
-  ))
-  .add("set to required", () => (
-    <form>
-      <Input placeholder="Please select inventory status" />
-      <Select
-        placeholder="Please select inventory status"
-        options={options}
-        required
-        requirementText="(Required)"
-        style={{ marginTop: "5px" }}
-        labelText="Inventory status"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        onInputChange={action("typed input value changed")}
-      />
-      <PrimaryButton mt="x1" type="submit">
-        Submit
-      </PrimaryButton>
-    </form>
-  ))
-  .add("with helpText", () => (
+  );
+};
+
+WithABlankValue.story = {
+  name: "with a blank value"
+};
+
+export const WithAnOptionSelected = () => (
+  <>
     <Select
-      placeholder="Please select inventory status"
-      options={options}
-      labelText="Inventory status"
-      helpText="Additional information about input"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      onInputChange={action("typed input value changed")}
-    />
-  ))
-  .add("with custom id", () => (
-    <Select
-      id="my-custom-id"
-      placeholder="Please select inventory status"
-      options={options}
-      labelText="Inventory status"
-      helpText="Additional information about input"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      onInputChange={action("typed input value changed")}
-    />
-  ))
-  .add("with smaller maxHeight", () => (
-    <Select
-      initialIsOpen
-      maxHeight="132px"
       value={options[0].value}
       placeholder="Please select inventory status"
       options={options}
@@ -276,177 +158,391 @@ storiesOf("Components/Select", module)
       onChange={action("selection changed")}
       onBlur={action("blurred")}
       onInputChange={action("typed input value changed")}
+      loading
     />
-  ))
-  .add("With wrapping text", () => (
+    <br />
     <Select
-      initialIsOpen
       value={options[0].value}
       placeholder="Please select inventory status"
-      options={wrappingOptions}
+      options={options}
+      labelText="Inventory status"
+      initialIsOpen
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
+    />
+  </>
+);
+
+WithAnOptionSelected.story = {
+  name: "with an option selected"
+};
+
+export const WithState = () => (
+  <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
+);
+
+WithState.story = {
+  name: "with state"
+};
+
+export const SetToDisabled = () => (
+  <Select
+    placeholder="Please select inventory status"
+    options={options}
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    disabled
+    labelText="Inventory status"
+    onInputChange={action("typed input value changed")}
+  />
+);
+
+SetToDisabled.story = {
+  name: "set to disabled"
+};
+
+export const WithErrorMessage = () => (
+  <>
+    <Select
+      placeholder="Please select inventory status"
+      options={options}
+      errorMessage="Please select an inventory status"
       labelText="Inventory status"
       onChange={action("selection changed")}
       onBlur={action("blurred")}
       onInputChange={action("typed input value changed")}
     />
-  ))
-  .add("with multiselect", () => {
-    const PCNList = [
-      { value: "2", label: "PCN2" },
-      { value: "4", label: "PCN4" },
-      { value: "1", label: "PCN1" },
-      { value: "9", label: "PCN9" }
-    ];
-    return (
+    <br />
+    <Select
+      placeholder="Please select inventory status"
+      options={options}
+      errorMessage="Please select an inventory status"
+      initialIsOpen
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
+    />
+  </>
+);
+
+WithErrorMessage.story = {
+  name: "with error message"
+};
+
+export const WithErrorList = () => (
+  <>
+    <Select
+      placeholder="Please select inventory status"
+      options={options}
+      errorMessage="Please select an inventory status"
+      errorList={errorList}
+      labelText="Inventory status"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
+    />
+    <br />
+    <Select
+      placeholder="Please select inventory status"
+      options={options}
+      errorMessage="Please select an inventory status"
+      errorList={errorList}
+      initialIsOpen
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
+    />
+  </>
+);
+
+WithErrorList.story = {
+  name: "with error list"
+};
+
+export const SetToRequired = () => (
+  <form>
+    <Input placeholder="Please select inventory status" />
+    <Select
+      placeholder="Please select inventory status"
+      options={options}
+      required
+      requirementText="(Required)"
+      style={{ marginTop: "5px" }}
+      labelText="Inventory status"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      onInputChange={action("typed input value changed")}
+    />
+    <PrimaryButton mt="x1" type="submit">
+      Submit
+    </PrimaryButton>
+  </form>
+);
+
+SetToRequired.story = {
+  name: "set to required"
+};
+
+export const WithHelpText = () => (
+  <Select
+    placeholder="Please select inventory status"
+    options={options}
+    labelText="Inventory status"
+    helpText="Additional information about input"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    onInputChange={action("typed input value changed")}
+  />
+);
+
+WithHelpText.story = {
+  name: "with helpText"
+};
+
+export const WithCustomId = () => (
+  <Select
+    id="my-custom-id"
+    placeholder="Please select inventory status"
+    options={options}
+    labelText="Inventory status"
+    helpText="Additional information about input"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    onInputChange={action("typed input value changed")}
+  />
+);
+
+WithCustomId.story = {
+  name: "with custom id"
+};
+
+export const WithSmallerMaxHeight = () => (
+  <Select
+    initialIsOpen
+    maxHeight="132px"
+    value={options[0].value}
+    placeholder="Please select inventory status"
+    options={options}
+    labelText="Inventory status"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    onInputChange={action("typed input value changed")}
+  />
+);
+
+WithSmallerMaxHeight.story = {
+  name: "with smaller maxHeight"
+};
+
+export const WithWrappingText = () => (
+  <Select
+    initialIsOpen
+    value={options[0].value}
+    placeholder="Please select inventory status"
+    options={wrappingOptions}
+    labelText="Inventory status"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    onInputChange={action("typed input value changed")}
+  />
+);
+
+WithWrappingText.story = {
+  name: "With wrapping text"
+};
+
+export const WithMultiselect = () => {
+  const PCNList = [
+    { value: "2", label: "PCN2" },
+    { value: "4", label: "PCN4" },
+    { value: "1", label: "PCN1" },
+    { value: "9", label: "PCN9" }
+  ];
+  return (
+    <Select
+      defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+      noOptionsMessage={() => "No options"}
+      placeholder="Please select inventory status"
+      options={PCNList}
+      labelText="Select PCN"
+      className="Select"
+      multiselect
+    />
+  );
+};
+
+WithMultiselect.story = {
+  name: "with multiselect"
+};
+
+export const WithCloseMenuOnSelectTurnedOff = () => {
+  const PCNList = [
+    { value: "2", label: "PCN2" },
+    { value: "4", label: "PCN4" },
+    { value: "1", label: "PCN1" },
+    { value: "9", label: "PCN9" }
+  ];
+  return (
+    <Select
+      defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+      noOptionsMessage={() => "No options"}
+      placeholder="Please select inventory status"
+      options={PCNList}
+      labelText="Select PCN"
+      className="Select"
+      multiselect
+      closeMenuOnSelect={false}
+    />
+  );
+};
+
+WithCloseMenuOnSelectTurnedOff.story = {
+  name: "with closeMenuOnSelect turned off"
+};
+
+export const TestMultiselectOverflow = () => (
+  <>
+    <Select
+      defaultValue={["accepted", "assigned"]}
+      noOptionsMessage={() => "No options"}
+      placeholder="Please select inventory status"
+      options={options}
+      labelText="Inventory status"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      multiselect
+      onInputChange={action("typed input value changed")}
+    />
+    <Box width="300px">
       <Select
-        defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+        defaultValue={partnerCompanyName.map(item => item.value)}
         noOptionsMessage={() => "No options"}
         placeholder="Please select inventory status"
-        options={PCNList}
-        labelText="Select PCN"
-        className="Select"
+        options={partnerCompanyName}
+        labelText="PCN"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
         multiselect
+        onInputChange={action("typed input value changed")}
       />
-    );
-  })
-  .add("with closeMenuOnSelect turned off", () => {
-    const PCNList = [
-      { value: "2", label: "PCN2" },
-      { value: "4", label: "PCN4" },
-      { value: "1", label: "PCN1" },
-      { value: "9", label: "PCN9" }
-    ];
-    return (
+    </Box>
+    <Box width="400px">
       <Select
-        defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+        defaultValue={options.map(item => item.value)}
         noOptionsMessage={() => "No options"}
         placeholder="Please select inventory status"
-        options={PCNList}
-        labelText="Select PCN"
-        className="Select"
+        options={options}
+        labelText="Inventory status"
+        onChange={action("selection changed")}
+        onBlur={action("blurred")}
         multiselect
-        closeMenuOnSelect={false}
+        onInputChange={action("typed input value changed")}
       />
-    );
-  })
-  .add("test multiselect overflow", () => (
-    <>
+    </Box>
+  </>
+);
+
+TestMultiselectOverflow.story = {
+  name: "test multiselect overflow"
+};
+
+export const WithFixedPositioning = () => (
+  <>
+    <Box style={{ position: "relative", overflow: "hidden", width: "300px", height: "100px" }}>
       <Select
         defaultValue={["accepted", "assigned"]}
         noOptionsMessage={() => "No options"}
         placeholder="Please select inventory status"
         options={options}
         labelText="Inventory status"
-        onChange={action("selection changed")}
-        onBlur={action("blurred")}
-        multiselect
-        onInputChange={action("typed input value changed")}
+        menuPosition="fixed"
       />
-      <Box width="300px">
-        <Select
-          defaultValue={partnerCompanyName.map(item => item.value)}
-          noOptionsMessage={() => "No options"}
-          placeholder="Please select inventory status"
-          options={partnerCompanyName}
-          labelText="PCN"
-          onChange={action("selection changed")}
-          onBlur={action("blurred")}
-          multiselect
-          onInputChange={action("typed input value changed")}
-        />
-      </Box>
-      <Box width="400px">
-        <Select
-          defaultValue={options.map(item => item.value)}
-          noOptionsMessage={() => "No options"}
-          placeholder="Please select inventory status"
-          options={options}
-          labelText="Inventory status"
-          onChange={action("selection changed")}
-          onBlur={action("blurred")}
-          multiselect
-          onInputChange={action("typed input value changed")}
-        />
-      </Box>
-    </>
-  ))
-  .add("with fixed positioning", () => (
-    <>
-      <Box style={{ position: "relative", overflow: "hidden", width: "300px", height: "100px" }}>
-        <Select
-          defaultValue={["accepted", "assigned"]}
-          noOptionsMessage={() => "No options"}
-          placeholder="Please select inventory status"
-          options={options}
-          labelText="Inventory status"
-          menuPosition="fixed"
-        />
-      </Box>
-    </>
-  ))
-  .add("with many options (SkipStoryshot)", () => (
-    <Box style={{ width: "300px" }}>
-      <SelectWithManyOptions labelText="Select from many options:" />
-      <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
     </Box>
-  ))
-  .add("with custom option component", () => {
-    const Indicator = styled.span(() => ({
-      borderRadius: "25%",
-      background: "green",
-      lineHeight: "0",
-      display: "inline-block",
-      width: "10px",
-      height: "10px",
-      marginRight: "5px"
-    }));
-    const CustomOption = ({ children, ...props }) => {
-      const newChildren = (
-        <>
-          <Indicator />
-          {children}
-        </>
-      );
-      return <SelectOption {...props}>{newChildren}</SelectOption>;
-    };
-    return (
+  </>
+);
+
+WithFixedPositioning.story = {
+  name: "with fixed positioning"
+};
+
+export const WithManyOptionsSkipStoryshot = () => (
+  <Box style={{ width: "300px" }}>
+    <SelectWithManyOptions labelText="Select from many options:" />
+    <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
+  </Box>
+);
+
+WithManyOptionsSkipStoryshot.story = {
+  name: "with many options (SkipStoryshot)"
+};
+
+export const WithCustomOptionComponent = () => {
+  const Indicator = styled.span(() => ({
+    borderRadius: "25%",
+    background: "green",
+    lineHeight: "0",
+    display: "inline-block",
+    width: "10px",
+    height: "10px",
+    marginRight: "5px"
+  }));
+  const CustomOption = ({ children, ...props }) => {
+    const newChildren = (
       <>
-        <Box position="relative" overflow="hidden" width="300px" height="600px">
-          <Select
-            defaultValue={["accepted"]}
-            noOptionsMessage={() => "No options"}
-            placeholder="Please select inventory status"
-            options={options}
-            components={{
-              Option: CustomOption
-            }}
-            multiselect
-            labelText="Inventory status"
-            menuPosition="fixed"
-          />
-        </Box>
+        <Indicator />
+        {children}
       </>
     );
-  })
-  .add("using ref to control focus", () => {
-    const multiSelectRef = useRef(null);
-    const handleClick = () => {
-      multiSelectRef.current.focus();
-    };
-
-    return (
-      <>
+    return <SelectOption {...props}>{newChildren}</SelectOption>;
+  };
+  return (
+    <>
+      <Box position="relative" overflow="hidden" width="300px" height="600px">
         <Select
           defaultValue={["accepted"]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
           options={options}
-          ref={multiSelectRef}
+          components={{
+            Option: CustomOption
+          }}
           multiselect
           labelText="Inventory status"
           menuPosition="fixed"
         />
-        <Button onClick={handleClick}>Focus the Input</Button>
-      </>
-    );
-  });
+      </Box>
+    </>
+  );
+};
+
+WithCustomOptionComponent.story = {
+  name: "with custom option component"
+};
+
+export const UsingRefToControlFocus = () => {
+  const multiSelectRef = useRef(null);
+  const handleClick = () => {
+    multiSelectRef.current.focus();
+  };
+
+  return (
+    <>
+      <Select
+        defaultValue={["accepted"]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={options}
+        ref={multiSelectRef}
+        multiselect
+        labelText="Inventory status"
+        menuPosition="fixed"
+      />
+      <Button onClick={handleClick}>Focus the Input</Button>
+    </>
+  );
+};
+
+UsingRefToControlFocus.story = {
+  name: "using ref to control focus"
+};

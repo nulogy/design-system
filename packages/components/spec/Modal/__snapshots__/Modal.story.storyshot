@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Modal Modal 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal example controlled modal 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div>
+      <button
+        class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      >
+        Open Modal
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Modal with close button 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal with custom maxWidth 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal with no footerContent 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal with no title 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal with scrolling content 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal with scrolling content without footer content 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal with select 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;
+
+exports[`Storyshots Components/Modal with select and scrolling content 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  />
+</div>
+`;

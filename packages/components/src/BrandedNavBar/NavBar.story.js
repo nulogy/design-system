@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
@@ -62,7 +61,10 @@ const primaryMenu = [
             name: "Projects",
             items: [{ name: "Cycle Counts", href: "/" }, { name: "Blind Counts", href: "/" }]
           },
-          { name: "Jobs", items: [{ name: "Job 1", href: "/" }, { name: "Job 2", href: "/" }] }
+          {
+            name: "Jobs",
+            items: [{ name: "Job 1", href: "/" }, { name: "Job 2", href: "/" }]
+          }
         ]
       },
       { name: "Item cart", href: "/" },
@@ -83,18 +85,45 @@ const secondaryMenu = [
   }
 ];
 
-storiesOf("Components/BrandedNavBar", module)
-  .add("BrandedNavBar", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />)
-  .add("With a company logo", () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />)
-  .add("With app name", () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />)
-  .add("With a company logo and app name", () => (
-    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
-  ))
-  .add("with environment banner", () => (
-    <BrandedNavBar
-      menuData={{ primaryMenu, secondaryMenu }}
-      subtext="Quality control"
-      logoSrc={sampleLogo}
-      environment={select("environment", ["training", "development"], "training")}
-    />
-  ));
+export default {
+  title: "Components/BrandedNavBar"
+};
+
+export const _BrandedNavBar = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
+
+_BrandedNavBar.story = {
+  name: "BrandedNavBar"
+};
+
+export const WithACompanyLogo = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />;
+
+WithACompanyLogo.story = {
+  name: "With a company logo"
+};
+
+export const WithAppName = () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />;
+
+WithAppName.story = {
+  name: "With app name"
+};
+
+export const WithACompanyLogoAndAppName = () => (
+  <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
+);
+
+WithACompanyLogoAndAppName.story = {
+  name: "With a company logo and app name"
+};
+
+export const WithEnvironmentBanner = () => (
+  <BrandedNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    subtext="Quality control"
+    logoSrc={sampleLogo}
+    environment={select("environment", ["training", "development"], "training")}
+  />
+);
+
+WithEnvironmentBanner.story = {
+  name: "with environment banner"
+};

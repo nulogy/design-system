@@ -1,85 +1,131 @@
 import React, { useState, useRef } from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
 
 import { TimePicker, Button } from "../index";
 
-storiesOf("Components/TimePicker", module)
-  .add("default", () => (
-    <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
-  ))
-  .add("with custom time format", () => (
-    <TimePicker
-      defaultValue="03:30"
-      timeFormat="HH:mm"
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="Duration"
-    />
-  ))
-  .add("with custom time interval", () => (
-    <TimePicker
-      defaultValue="03:30"
-      timeFormat="HH:mm"
-      interval={30}
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="Duration"
-    />
-  ))
-  .add("with custom placeholder", () => (
-    <TimePicker
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="Duration"
-      placeholder="--:--"
-    />
-  ))
-  .add("with error state", () => (
-    <TimePicker
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="End Time"
-      errorMessage="This time is invalid"
-    />
-  ))
-  .add("with min and max time", () => (
-    <TimePicker
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="End Time"
-      minTime="09:00"
-      maxTime="21:00"
-    />
-  ))
-  .add("with custom default", () => (
-    <TimePicker
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="End Time"
-      defaultValue="12:38 PM"
-    />
-  ))
-  .add("with value", () => {
-    const [value, setValue] = useState("13:43");
-    return <TimePicker onChange={setValue} onInputChange={setValue} labelText="End Time" value={value} />;
-  })
-  .add("using ref to control focus", () => {
-    const ref = useRef(null);
-    const handleClick = () => {
-      ref.current.focus();
-    };
+export default {
+  title: "Components/TimePicker"
+};
 
-    return (
-      <>
-        <TimePicker
-          onChange={action("time changed")}
-          onInputChange={action("input changed")}
-          labelText="Duration"
-          ref={ref}
-        />
-        <Button onClick={handleClick}>Focus the Toggle</Button>
-      </>
-    );
-  });
+export const Default = () => (
+  <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
+);
+
+Default.story = {
+  name: "default"
+};
+
+export const WithCustomTimeFormat = () => (
+  <TimePicker
+    defaultValue="03:30"
+    timeFormat="HH:mm"
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="Duration"
+  />
+);
+
+WithCustomTimeFormat.story = {
+  name: "with custom time format"
+};
+
+export const WithCustomTimeInterval = () => (
+  <TimePicker
+    defaultValue="03:30"
+    timeFormat="HH:mm"
+    interval={30}
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="Duration"
+  />
+);
+
+WithCustomTimeInterval.story = {
+  name: "with custom time interval"
+};
+
+export const WithCustomPlaceholder = () => (
+  <TimePicker
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="Duration"
+    placeholder="--:--"
+  />
+);
+
+WithCustomPlaceholder.story = {
+  name: "with custom placeholder"
+};
+
+export const WithErrorState = () => (
+  <TimePicker
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="End Time"
+    errorMessage="This time is invalid"
+  />
+);
+
+WithErrorState.story = {
+  name: "with error state"
+};
+
+export const WithMinAndMaxTime = () => (
+  <TimePicker
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="End Time"
+    minTime="09:00"
+    maxTime="21:00"
+  />
+);
+
+WithMinAndMaxTime.story = {
+  name: "with min and max time"
+};
+
+export const WithCustomDefault = () => (
+  <TimePicker
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="End Time"
+    defaultValue="12:38 PM"
+  />
+);
+
+WithCustomDefault.story = {
+  name: "with custom default"
+};
+
+export const WithValue = () => {
+  const [value, setValue] = useState("13:43");
+  return <TimePicker onChange={setValue} onInputChange={setValue} labelText="End Time" value={value} />;
+};
+
+WithValue.story = {
+  name: "with value"
+};
+
+export const UsingRefToControlFocus = () => {
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current.focus();
+  };
+
+  return (
+    <>
+      <TimePicker
+        onChange={action("time changed")}
+        onInputChange={action("input changed")}
+        labelText="Duration"
+        ref={ref}
+      />
+      <Button onClick={handleClick}>Focus the Toggle</Button>
+    </>
+  );
+};
+
+UsingRefToControlFocus.story = {
+  name: "using ref to control focus"
+};

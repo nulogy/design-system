@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Toggle Controlled Toggle 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Controlled Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Controlled Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Controlled Toggle-label"
+              aria-required="false"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 cOGezP"
+            color="currentColor"
+            font-size="medium"
+          >
+            off
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle Toggle 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        class="ClickInputLabel-j2axnv-0 kemUmZ"
+      >
+        <div
+          class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+        >
+          <input
+            aria-invalid="false"
+            aria-required="false"
+            class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+            type="checkbox"
+            value="on"
+          />
+          <span
+            class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle Toggle set to defaultToggled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              checked=""
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle Toggle set to disabled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kjxgat"
+          disabled=""
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              class="ToggleButton__ToggleInput-asgrb8-2 kbFCui"
+              disabled=""
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 jXzDwv"
+              disabled=""
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 jVsGHh"
+            color="currentColor"
+            disabled=""
+            font-size="medium"
+          >
+            off
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kjxgat"
+          disabled=""
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              checked=""
+              class="ToggleButton__ToggleInput-asgrb8-2 kbFCui"
+              disabled=""
+              id="toggle-2"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 jXzDwv"
+              disabled=""
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 jVsGHh"
+            color="currentColor"
+            disabled=""
+            font-size="medium"
+          >
+            on
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle Toggle with all props 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+          <span
+            class="Text-sc-1wu7vpu-0 bphWXP"
+            color="darkGrey"
+            font-size="12px"
+          >
+            (Required)
+          </span>
+          <p
+            class="Text-sc-1wu7vpu-0 HelpText__HelpTextContent-sc-1jzmq2g-0 feAJVX"
+            color="currentColor"
+            font-size="medium"
+          >
+            Turns setting on/off
+          </p>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="true"
+              checked=""
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              required=""
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 cOGezP"
+            color="currentColor"
+            font-size="medium"
+          >
+            on
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle With custom id 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              id="my-custom-id"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 cOGezP"
+            color="currentColor"
+            font-size="medium"
+          >
+            off
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle With long text 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              checked=""
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 cOGezP"
+            color="currentColor"
+            font-size="medium"
+          >
+            this state has a very long text label to explain it's state
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle With text 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 cOGezP"
+            color="currentColor"
+            font-size="medium"
+          >
+            off
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toggle using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1lebjra-0 erVIOB Toggle__StyledToggle-sc-1oqd206-0 tNttj"
+    >
+      <div
+        id="Toggle-label"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+        >
+          <span
+            style="font-size:14px;font-weight:600;line-height:1.71428571"
+          >
+            Toggle
+          </span>
+        </div>
+        <div
+          class="ClickInputLabel-j2axnv-0 kemUmZ"
+        >
+          <div
+            class="ToggleButton__Switch-asgrb8-1 hOMJxD"
+          >
+            <input
+              aria-invalid="false"
+              aria-labelledby="Toggle-label"
+              aria-required="false"
+              class="ToggleButton__ToggleInput-asgrb8-2 YjgQG"
+              id="my-custom-id"
+              type="checkbox"
+              value="on"
+            />
+            <span
+              class="ToggleButton__Slider-asgrb8-0 kEtIPM"
+            />
+          </div>
+          <p
+            class="Text-sc-1wu7vpu-0 cOGezP"
+            color="currentColor"
+            font-size="medium"
+          >
+            off
+          </p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+    >
+      Focus the Toggle
+    </button>
+  </div>
+</div>
+`;

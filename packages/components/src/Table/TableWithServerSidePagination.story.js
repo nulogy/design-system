@@ -1,5 +1,4 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { Table } from "..";
 import { Pagination } from "../Pagination";
 
@@ -36,7 +35,10 @@ class TableWithServerSidePagination extends React.Component {
         this.setState(
           {
             loading: false,
-            rows: json.map(({ completed, ...item }) => ({ ...item, completed: completed ? "Yes" : "-" }))
+            rows: json.map(({ completed, ...item }) => ({
+              ...item,
+              completed: completed ? "Yes" : "-"
+            }))
           },
           callback
         );
@@ -76,6 +78,12 @@ class TableWithServerSidePagination extends React.Component {
   }
 }
 
-storiesOf("Components/Table", module).add("with server-side pagination (SkipStoryshot)", () => (
-  <TableWithServerSidePagination />
-));
+export default {
+  title: "Components/Table"
+};
+
+export const WithServerSidePaginationSkipStoryshot = () => <TableWithServerSidePagination />;
+
+WithServerSidePaginationSkipStoryshot.story = {
+  name: "with server-side pagination (SkipStoryshot)"
+};

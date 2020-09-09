@@ -1,0 +1,287 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/DropdownMenu DropdownMenu 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="open dropdown"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-fc7twp-0 cwKdbD"
+        color="currentColor"
+        fill="currentColor"
+        focusable="false"
+        height="32px"
+        icon="more"
+        p="half"
+        viewBox="0 0 24 24"
+        width="32px"
+      >
+        <path
+          d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DropdownMenu Set to disabled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="open dropdown"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 kezjjz IconicButton-sc-1u3dojp-2 gZASNp"
+      disabled=""
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-fc7twp-0 cwKdbD"
+        color="currentColor"
+        fill="currentColor"
+        focusable="false"
+        height="32px"
+        icon="more"
+        p="half"
+        viewBox="0 0 24 24"
+        width="32px"
+      >
+        <path
+          d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DropdownMenu set to defaultOpen 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="true"
+      aria-label="close dropdown"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-fc7twp-0 cwKdbD"
+        color="currentColor"
+        fill="currentColor"
+        focusable="false"
+        height="32px"
+        icon="more"
+        p="half"
+        viewBox="0 0 24 24"
+        width="32px"
+      >
+        <path
+          d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+        />
+      </svg>
+    </button>
+    <div
+      class="Box-xda4ls-0 DropdownMenuContainer-sc-3zczz8-0 fcJZzO  nds-popper-pop-up"
+      open=""
+      style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+    >
+      <a
+        class="DropdownLink-sc-1myz2tl-0 kCziCp"
+        color="darkBlue"
+        href="/"
+      >
+        Dropdown Link
+      </a>
+      <button
+        class="DropdownButton-sc-15i1gee-0 cGihZp"
+        color="darkBlue"
+      >
+        Dropdown Button
+      </button>
+      <div
+        class="DropdownItem-sc-17fo530-0 doIexv"
+        color="darkBlue"
+      >
+        <a
+          href="/"
+          style="text-decoration:none"
+        >
+          Custom Link Component
+        </a>
+      </div>
+      <div
+        class="PopperArrow-sc-1bcgj4w-0 dGhVUx"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DropdownMenu with button closing menu 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="open dropdown"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-fc7twp-0 cwKdbD"
+        color="currentColor"
+        fill="currentColor"
+        focusable="false"
+        height="32px"
+        icon="more"
+        p="half"
+        viewBox="0 0 24 24"
+        width="32px"
+      >
+        <path
+          d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DropdownMenu with custom colors 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-expanded="true"
+      aria-haspopup="true"
+      aria-label="close dropdown"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-fc7twp-0 cwKdbD"
+        color="currentColor"
+        fill="currentColor"
+        focusable="false"
+        height="32px"
+        icon="more"
+        p="half"
+        viewBox="0 0 24 24"
+        width="32px"
+      >
+        <path
+          d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+        />
+      </svg>
+    </button>
+    <div
+      class="Box-xda4ls-0 DropdownMenuContainer-sc-3zczz8-0 gCpwvi  nds-popper-pop-up"
+      open=""
+      style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+    >
+      <a
+        class="DropdownLink-sc-1myz2tl-0 fzJAwh"
+        color="white"
+        href="/"
+      >
+        Dropdown Link
+      </a>
+      <button
+        class="DropdownButton-sc-15i1gee-0 djNVKc"
+        color="white"
+      >
+        Dropdown Button
+      </button>
+      <div
+        class="PopperArrow-sc-1bcgj4w-0 duKylJ"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DropdownMenu with custom item 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="open dropdown"
+      class="IconicButton__WrapperButton-sc-1u3dojp-1 UMPof IconicButton-sc-1u3dojp-2 gZASNp"
+      type="button"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-fc7twp-0 cwKdbD"
+        color="currentColor"
+        fill="currentColor"
+        focusable="false"
+        height="32px"
+        icon="more"
+        p="half"
+        viewBox="0 0 24 24"
+        width="32px"
+      >
+        <path
+          d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/DropdownMenu with custom trigger 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-f28eoq-0 gXOmnU"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="open dropdown"
+      class="Button__WrapperButton-sc-1omxup2-0 hkfOQr"
+      type="button"
+    >
+      Custom Trigger
+    </button>
+  </div>
+</div>
+`;

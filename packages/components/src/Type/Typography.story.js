@@ -1,10 +1,13 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { List, ListItem, Text, Heading1, Heading2, Heading3 } from "../index";
 
 import theme from "../theme";
 
-storiesOf("Components/Typography", module).add("Article", () => (
+export default {
+  title: "Components/Typography"
+};
+
+export const Article = () => (
   <>
     <Heading1>Nunc vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Heading1>
     <Heading2>Donec leo felis vitae nisl vestibulum vitae nisl vestibulum vitae nisl vestibulum</Heading2>
@@ -68,4 +71,4 @@ storiesOf("Components/Typography", module).add("Article", () => (
       congue velit.
     </Text>
   </>
-));
+);

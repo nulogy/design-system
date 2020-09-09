@@ -1,25 +1,32 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { Breadcrumbs } from "./index";
 import { Link } from "../Link";
 import { Text } from "../Type";
 
-storiesOf("Components/Breadcrumbs", module)
-  .add("Breadcrumbs", () => (
-    <>
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-      </Breadcrumbs>
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/Tenants">Tenants</Link>
-      </Breadcrumbs>
-    </>
-  ))
-  .add("without link", () => (
+export default {
+  title: "Components/Breadcrumbs"
+};
+
+export const _Breadcrumbs = () => (
+  <>
+    <Breadcrumbs>
+      <Link href="/">Home</Link>
+    </Breadcrumbs>
     <Breadcrumbs>
       <Link href="/">Home</Link>
       <Link href="/Tenants">Tenants</Link>
-      <Text>Current Tenant</Text>
     </Breadcrumbs>
-  ));
+  </>
+);
+
+export const WithoutLink = () => (
+  <Breadcrumbs>
+    <Link href="/">Home</Link>
+    <Link href="/Tenants">Tenants</Link>
+    <Text>Current Tenant</Text>
+  </Breadcrumbs>
+);
+
+WithoutLink.story = {
+  name: "without link"
+};

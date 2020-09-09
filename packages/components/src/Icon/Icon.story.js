@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { storiesOf } from "@storybook/react";
 import icons from "@nulogy/icons";
 
 import { Box, Flex, Icon, InlineIcon } from "../index";
@@ -21,87 +20,119 @@ IconCode.propTypes = {
   icon: PropTypes.string.isRequired
 };
 
-storiesOf("Components/Icon", module)
-  .add("Icon (SkipStoryshot)", () => (
-    <>
-      {iconNames.map(iconName => (
-        <Flex my="x2" key={iconName}>
-          <Icon mr="20px" icon={iconName} />
-          <IconCode icon={iconName} />
-        </Flex>
-      ))}
-    </>
-  ))
-  .add("InlineIcon", () => (
-    <>
-      {[1, 2, 3, 4].map(size => (
-        <p style={{ fontSize: `${size}em` }} key={size}>
-          @{size}em: &nbsp;
+export default {
+  title: "Components/Icon"
+};
+
+export const IconSkipStoryshot = () => (
+  <>
+    {iconNames.map(iconName => (
+      <Flex my="x2" key={iconName}>
+        <Icon mr="20px" icon={iconName} />
+        <IconCode icon={iconName} />
+      </Flex>
+    ))}
+  </>
+);
+
+IconSkipStoryshot.story = {
+  name: "Icon (SkipStoryshot)"
+};
+
+export const _InlineIcon = () => (
+  <>
+    {[1, 2, 3, 4].map(size => (
+      <p style={{ fontSize: `${size}em` }} key={size}>
+        @{size}em: &nbsp;
+        {iconSubset.map(iconName => (
+          <InlineIcon icon={iconName} key={iconName} />
+        ))}
+      </p>
+    ))}
+  </>
+);
+
+_InlineIcon.story = {
+  name: "InlineIcon"
+};
+
+export const WithAColor = () => (
+  <>
+    {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(
+      color => (
+        <Box key={color}>
           {iconSubset.map(iconName => (
-            <InlineIcon icon={iconName} key={iconName} />
-          ))}
-        </p>
-      ))}
-    </>
-  ))
-  .add("With a color", () => (
-    <>
-      {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(
-        color => (
-          <Box key={color}>
-            {iconSubset.map(iconName => (
-              <Icon icon={iconName} color={color} key={iconName} />
-            ))}
-          </Box>
-        )
-      )}
-    </>
-  ))
-  .add("With a size", () => (
-    <>
-      {[theme.space.x1, theme.space.x2, theme.space.x3].map(size => (
-        <Box key={size}>
-          {iconSubset.map(iconName => (
-            <Icon icon={iconName} size={size} key={iconName} />
+            <Icon icon={iconName} color={color} key={iconName} />
           ))}
         </Box>
-      ))}
-    </>
-  ))
-  .add("With added margin", () => (
-    <Box m="x3">
-      <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
-        <Icon m="x2" icon="delete" />
+      )
+    )}
+  </>
+);
+
+WithAColor.story = {
+  name: "With a color"
+};
+
+export const WithASize = () => (
+  <>
+    {[theme.space.x1, theme.space.x2, theme.space.x3].map(size => (
+      <Box key={size}>
+        {iconSubset.map(iconName => (
+          <Icon icon={iconName} size={size} key={iconName} />
+        ))}
       </Box>
-      <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
-        <Icon mt="x2" icon="delete" />
-      </Box>
-      <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
-        <Icon mr="x2" icon="delete" />
-      </Box>
-      <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
-        <Icon mb="x2" icon="delete" />
-      </Box>
-      <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
-        <Icon ml="x2" icon="delete" />
-      </Box>
-      <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
-        <Icon mx="x2" icon="delete" />
-      </Box>
-      <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
-        <Icon my="x2" icon="delete" />
-      </Box>
+    ))}
+  </>
+);
+
+WithASize.story = {
+  name: "With a size"
+};
+
+export const WithAddedMargin = () => (
+  <Box m="x3">
+    <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
+      <Icon m="x2" icon="delete" />
     </Box>
-  ))
-  .add("With accessibility title", () => (
-    <>
-      <Flex p="x2">
-        <Icon icon="user" title="User account" />
-        {" This has a title attribute so it will be read by assistive devices."}
-      </Flex>
-      <Flex p="x2">
-        <Icon icon="user" />
-        {" This doesn't have a title attribute, so it has aria-hidden set true instead."}
-      </Flex>
-    </>
-  ));
+    <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
+      <Icon mt="x2" icon="delete" />
+    </Box>
+    <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
+      <Icon mr="x2" icon="delete" />
+    </Box>
+    <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
+      <Icon mb="x2" icon="delete" />
+    </Box>
+    <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
+      <Icon ml="x2" icon="delete" />
+    </Box>
+    <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
+      <Icon mx="x2" icon="delete" />
+    </Box>
+    <Box style={{ display: "inline-block" }} m="x3" bg="lightGrey">
+      <Icon my="x2" icon="delete" />
+    </Box>
+  </Box>
+);
+
+WithAddedMargin.story = {
+  name: "With added margin"
+};
+
+export const WithAccessibilityTitle = () => (
+  <>
+    <Flex p="x2">
+      <Icon icon="user" title="User account" />
+      {" This has a title attribute so it will be read by assistive devices."}
+    </Flex>
+    <Flex p="x2">
+      <Icon icon="user" />
+      {" This doesn't have a title attribute, so it has aria-hidden set true instead."}
+    </Flex>
+  </>
+);
+
+WithAccessibilityTitle.story = {
+  name: "With accessibility title"
+};
