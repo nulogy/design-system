@@ -5,10 +5,11 @@ before_install:
 before_script:
   - yarn build
 after_success:
-  - npx chromatic --project-token $CHROMATIC_TOKEN
   - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
   - git checkout master
   - git pull origin master
+  - cd packages/components/
+  - npx chromatic --project-token $CHROMATIC_TOKEN
 branches:
   only:
     - master
