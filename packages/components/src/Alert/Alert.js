@@ -12,8 +12,8 @@ import { Text } from "../Type";
 
 const alertColours = {
   danger: {
-    borderColor: "red",
-    backgroundColor: "lightRed"
+    borderColor: "white",
+    backgroundColor: "black"
   },
   informative: {
     borderColor: "blue",
