@@ -22,7 +22,8 @@
     "e2e:start": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:8080 && cypress open\"",
     "e2e:test": "yarn build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ./storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run\"",
     "test": "yarn lint && yarn jest",
-    "new": "plop"
+    "new": "plop",
+    "chromatic": "npx chromatic --project-token q9kdyyrjd8a"
   },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
@@ -93,6 +94,7 @@
     "babel-plugin-require-context-hook": "1.0.0",
     "babel-plugin-styled-components": "1.10.7",
     "babel-preset-react": "6.24.1",
+    "chromatic": "^5.2.0",
     "concurrently": "^5.2.0",
     "cypress": "3.4.1",
     "cypress-plugin-tab": "^1.0.1",
