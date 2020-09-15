@@ -4,9 +4,9 @@ before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
 before_script:
   - yarn build
-after_success:
   - cd packages/components/
   - npx chromatic --project-token $CHROMATIC_TOKEN
+after_success:
   - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
   - git checkout master
   - git pull origin master
