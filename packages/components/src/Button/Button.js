@@ -53,7 +53,7 @@ const WrapperButton = styled.button(
     cursor: disabled ? "default" : "pointer",
     color: theme.colors.blue,
     backgroundColor: theme.colors.white,
-    border: `1px solid ${theme.colors.blue}`,
+    border: `1px solid ${theme.colors.red}`,
     borderRadius: theme.radii.medium,
     margin: theme.space.none,
     transition: "background-color .2s, transform .2s ease-in",
