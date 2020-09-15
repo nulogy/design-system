@@ -22,8 +22,7 @@
     "e2e:start": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:8080 && cypress open\"",
     "e2e:test": "yarn build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ./storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run\"",
     "test": "yarn lint && yarn jest",
-    "new": "plop",
-    "chromatic": "npx chromatic --project-token q9kdyyrjd8a"
+    "new": "plop"
   },
   "license": "MIT",
   "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
