@@ -10,9 +10,6 @@ after_success:
   - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
   - git checkout master
   - git pull origin master
-branches:
-  only:
-    - master
 cache:
   yarn: true
   directories:
