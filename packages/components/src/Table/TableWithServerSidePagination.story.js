@@ -82,8 +82,8 @@ export default {
   title: "Components/Table"
 };
 
-export const WithServerSidePaginationSkipStoryshot = () => <TableWithServerSidePagination />;
+export const WithServerSidePagination = () => <TableWithServerSidePagination />;
 
-WithServerSidePaginationSkipStoryshot.story = {
-  name: "with server-side pagination (SkipStoryshot)"
+WithServerSidePagination.story = {
+  name: "with server-side pagination"
 };

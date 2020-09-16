@@ -64,14 +64,14 @@ export default {
   title: "Components/Table"
 };
 
-export const WithFilteringSkipStoryshot = () => <TableWithFilters />;
+export const WithFiltering = () => <TableWithFilters />;
 
-WithFilteringSkipStoryshot.story = {
-  name: "with filtering (SkipStoryshot)"
+WithFiltering.story = {
+  name: "with filtering"
 };
 
-export const WithFilteringAndPaginationSkipStoryshot = () => <TableWithFilters rowsPerPage={4} />;
+export const WithFilteringAndPagination = () => <TableWithFilters rowsPerPage={4} />;
 
-WithFilteringAndPaginationSkipStoryshot.story = {
-  name: "with filtering and pagination (SkipStoryshot)"
+WithFilteringAndPagination.story = {
+  name: "with filtering and pagination"
 };

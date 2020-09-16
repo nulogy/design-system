@@ -70,8 +70,8 @@ export default {
   title: "Components/Table"
 };
 
-export const WithSortingSkipStoryshot = () => <TableWithSorting />;
+export const WithSorting = () => <TableWithSorting />;
 
-WithSortingSkipStoryshot.story = {
-  name: "with sorting (SkipStoryshot)"
+WithSorting.story = {
+  name: "with sorting"
 };
