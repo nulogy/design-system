@@ -65,10 +65,6 @@ Note: NDS follows the [Conventional Commits](https://www.conventionalcommits.org
 
 - To run everything:
   - `cd packages/components; yarn test`
-- To run just storyshots:
-  - `cd packages/components; yarn run storyshots`
-- To update storyshot snapshots because they were intended changes:
-  - `cd packages/components; yarn run storyshots:update`
 
 ## Documentation
 
