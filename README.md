@@ -8,8 +8,8 @@
 
 This is a monorepo consisting of several packages, the most popular of which is [@nulogy/components](https://github.com/nulogy/design-system/tree/master/packages/components). If you're looking for a specific package, see below.
 
-| Package                                                                              | Description                                                                        |                                                                                                                                             |
-| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Package                                                                                       | Description                                                                        |                                                                                                                                             |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | [@nulogy/components](https://github.com/nulogy/design-system/tree/master/packages/components) | React components that take advantage of the Nulogy Design System                   | [![Components on NPM](https://img.shields.io/npm/v/@nulogy/components?style=flat-square)](https://www.npmjs.com/package/@nulogy/components) |
 | [@nulogy/css](https://github.com/nulogy/design-system/tree/master/packages/css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
 | [@nulogy/icons](https://github.com/nulogy/design-system/tree/master/packages/icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
@@ -21,15 +21,7 @@ Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabst
 
 ## 📚 Documentation
 
-For component documentation and general usage guides, see [nulogy.design](http://nulogy.design).
-
-### Running Locally
-
-`yarn docs:start` will run a local copy of [Gatsby](https://gatsbyjs.org) documentation site at `http://localhost:8000`
-
-### Prod Build
-
-`yarn docs:build` will update the `/public` folder to deploy.
+Component documentation and usage guides are stored in the [github.com/nulogy/nulogy.design](https://github.com/nulogy/nulogy.design) repository.
 
 ## 🙌 Contributing
 
