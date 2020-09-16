@@ -466,15 +466,15 @@ WithFixedPositioning.story = {
   name: "with fixed positioning"
 };
 
-export const WithManyOptionsSkipStoryshot = () => (
+export const WithManyOptions = () => (
   <Box style={{ width: "300px" }}>
     <SelectWithManyOptions labelText="Select from many options:" />
     <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
   </Box>
 );
 
-WithManyOptionsSkipStoryshot.story = {
-  name: "with many options (SkipStoryshot)"
+WithManyOptions.story = {
+  name: "with many options "
 };
 
 export const WithCustomOptionComponent = () => {

@@ -2,7 +2,10 @@ import React from "react";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 
 export default {
-  title: "Components/Tooltip"
+  title: "Components/Tooltip",
+  parameters: {
+    chromatic: { diffThreshold: 0.8 }
+  }
 };
 
 export const _Tooltip = () => (

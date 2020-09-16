@@ -31,7 +31,7 @@ export default {
   title: "Components/AsyncSelect"
 };
 
-export const DefaultSkipStoryshot = () => (
+export const Default = () => (
   <AsyncSelect
     placeholder="Please select a country"
     onChange={action("selection changed")}
@@ -44,11 +44,11 @@ export const DefaultSkipStoryshot = () => (
   />
 );
 
-DefaultSkipStoryshot.story = {
-  name: "default (SkipStoryshot)"
+Default.story = {
+  name: "default"
 };
 
-export const WithDefaultOptionsSkipStoryshot = () => (
+export const WithDefaultOptions = () => (
   <AsyncSelect
     placeholder="Filter Countries"
     onChange={action("selection changed")}
@@ -62,11 +62,11 @@ export const WithDefaultOptionsSkipStoryshot = () => (
   />
 );
 
-WithDefaultOptionsSkipStoryshot.story = {
-  name: "With default options (SkipStoryshot)"
+WithDefaultOptions.story = {
+  name: "With default options"
 };
 
-export const WithADefaultValueSkipStoryshot = () => (
+export const WithADefaultValue = () => (
   <AsyncSelect
     placeholder="Please select a country"
     onChange={action("selection changed")}
@@ -80,11 +80,11 @@ export const WithADefaultValueSkipStoryshot = () => (
   />
 );
 
-WithADefaultValueSkipStoryshot.story = {
-  name: "With a default value (SkipStoryshot)"
+WithADefaultValue.story = {
+  name: "With a default value"
 };
 
-export const MultiselectSkipStoryshot = () => (
+export const Multiselect = () => (
   <AsyncSelect
     placeholder="Please select a countries"
     onChange={action("selection changed")}
@@ -98,11 +98,11 @@ export const MultiselectSkipStoryshot = () => (
   />
 );
 
-MultiselectSkipStoryshot.story = {
-  name: "Multiselect (SkipStoryshot)"
+Multiselect.story = {
+  name: "Multiselect"
 };
 
-export const UsingRefToControlFocusSkipStoryshot = () => {
+export const UsingRefToControlFocus = () => {
   const ref = useRef(null);
   const handleClick = () => {
     ref.current.focus();
@@ -127,6 +127,6 @@ export const UsingRefToControlFocusSkipStoryshot = () => {
   );
 };
 
-UsingRefToControlFocusSkipStoryshot.story = {
-  name: "using ref to control focus (SkipStoryshot)"
+UsingRefToControlFocus.story = {
+  name: "using ref to control focus"
 };

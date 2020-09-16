@@ -24,7 +24,7 @@ export default {
   title: "Components/Icon"
 };
 
-export const IconSkipStoryshot = () => (
+export const Icon = () => (
   <>
     {iconNames.map(iconName => (
       <Flex my="x2" key={iconName}>
@@ -35,8 +35,8 @@ export const IconSkipStoryshot = () => (
   </>
 );
 
-IconSkipStoryshot.story = {
-  name: "Icon (SkipStoryshot)"
+Icon.story = {
+  name: "Icon"
 };
 
 export const _InlineIcon = () => (

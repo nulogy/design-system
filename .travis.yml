@@ -5,14 +5,11 @@ before_install:
 before_script:
   - yarn build
   - cd packages/components/
-  - npx chromatic --project-token $CHROMATIC_TOKEN
+  - if [[ $TRAVIS_EVENT_TYPE != 'pull_request' ||  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]]; then npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes; fi
 after_success:
   - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
   - git checkout master
   - git pull origin master
-branches:
-  only:
-    - master
 cache:
   yarn: true
   directories:

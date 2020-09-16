@@ -16,7 +16,6 @@
 - [ ] Storybook updated with examples of new functionality
 - [ ] Storybook uses variable and realistic data (ex: short and long text)
 - [ ] Docs updated with correct props and examples
-- [ ] Updated and reviewed changes to storyshots
 - [ ] e2e tests added for component iterations
 - [ ] jest tests added for component API that may not be captured with storyshots (change handlers, renderers etc)
 - [ ] Accessibility (includes relevant tags, keyboard functionality, colour contrast)
