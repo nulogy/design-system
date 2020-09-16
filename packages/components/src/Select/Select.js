@@ -33,10 +33,12 @@ const getReactSelectValue = (options, input) => {
 };
 
 const extractValue = (options, isMulti) => {
-  if (options == null) return options;
-
   if (isMulti) {
-    return options.map(o => o.value);
+    return options && options.length ? options.map(o => o.value) : [];
+  }
+
+  if (options == null) {
+    return options;
   } else {
     return options.value;
   }
