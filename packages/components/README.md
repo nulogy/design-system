@@ -62,7 +62,7 @@ const SomeView = () => <Button>Click me</Button>;
 ## ✨ Usage
 
 - See [nulogy.design](http://nulogy.design) for instructions on how best to use each component
-- See the [Storybook](storybook.nulogy.design) for usage examples
+- See the [Storybook](https://master--5f60c6c285eaad0022dce67f.chromatic.com) for usage examples
 
 ## 🌎 Localization
 
