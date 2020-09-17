@@ -24,7 +24,7 @@ export default {
   title: "Components/Icon"
 };
 
-export const Icon = () => (
+export const BasicIcon = () => (
   <>
     {iconNames.map(iconName => (
       <Flex my="x2" key={iconName}>
@@ -35,7 +35,7 @@ export const Icon = () => (
   </>
 );
 
-Icon.story = {
+BasicIcon.story = {
   name: "Icon"
 };
 
