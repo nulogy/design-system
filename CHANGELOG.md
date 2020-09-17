@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.6.8](https://github.com/nulogy/design-system/compare/v4.6.7...v4.6.8) (2020-09-17)
+
+
+### Bug Fixes
+
+* Multiselect onChange should always return empty array [] when items are cleared ([#765](https://github.com/nulogy/design-system/issues/765)) ([eece944](https://github.com/nulogy/design-system/commit/eece94477d640ce06c4b2c9282fc65923f3a96f1))
+
+
+
+
+
 ## [4.6.7](https://github.com/nulogy/design-system/compare/v4.6.6...v4.6.7) (2020-09-16)
 
 **Note:** Version bump only for package @nulogy/nds
