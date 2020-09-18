@@ -4,7 +4,6 @@ before_install:
   - export PATH="$HOME/.yarn/bin:$PATH"
 before_script:
   - yarn build
-  - if [[ $TRAVIS_EVENT_TYPE != 'pull_request' ||  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]]; then yarn workspace @nulogy/components chromatic; fi
 after_success:
   - git remote set-url origin https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git
   - git checkout master
