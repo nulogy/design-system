@@ -13,6 +13,7 @@ addons.register(ADDON_ID, api => {
   addons.add(PANEL_ID, {
     type: types.PANEL,
     title: "My Addon",
+    skipIfNoParametersOrOptions: false,
     render: ({ active, key }) => (
       <AddonPanel active={active} key={key}>
         <MyPanel />
