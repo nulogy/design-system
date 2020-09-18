@@ -4,8 +4,10 @@ import React from "react";
 import { addons, types } from "@storybook/addons";
 import { AddonPanel } from "@storybook/components";
 import { useChannel, useAddonState } from "@storybook/api";
-import { Input, NDSProvider, Heading2, theme as NDSTheme, Box } from "@nulogy/components";
+import { Box, Flex, NDSProvider, Heading3, theme as NDSTheme } from "@nulogy/components";
 import { STORY_CHANGED } from "@storybook/core-events";
+import ThemeKey from "./ThemeKey";
+import ThemeInput from "./ThemeInput";
 
 const ADDON_ID = "ndsThemeAddon";
 const PANEL_ID = `${ADDON_ID}/panel`;
@@ -49,22 +51,19 @@ const MyPanel = () => {
 
   return (
     <NDSProvider>
-      <Box width="300px" px="x2">
-        {Object.keys(NDSTheme).map(group => (
-          <Box py="x2" key={group}>
-            <Heading2 textTransform="capitalize">{group}</Heading2>
-            {Object.keys(NDSTheme[group]).map(prop => (
-              <Input
-                labelText={prop}
-                onChange={onChange(group, prop)}
-                mb="x1"
-                key={prop}
-                defaultValue={NDSTheme[group][prop]}
-              />
-            ))}
-          </Box>
-        ))}
-      </Box>
+      {Object.keys(NDSTheme).map(group => (
+        <Box m="x3" key={group} maxWidth="500px">
+          <Heading3 fontWeight="light">{group}</Heading3>
+          {Object.keys(NDSTheme[group]).map(prop => (
+            <>
+              <Flex alignItems="center" mb="x2" key={prop}>
+                <ThemeKey>{prop}</ThemeKey>
+                <ThemeInput defaultValue={NDSTheme[group][prop]} onChange={onChange(group, prop)} />
+              </Flex>
+            </>
+          ))}
+        </Box>
+      ))}
     </NDSProvider>
   );
 };
