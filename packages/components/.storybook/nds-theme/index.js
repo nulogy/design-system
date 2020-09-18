@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import addons, { makeDecorator } from "@storybook/addons";
 import { NDSProvider, theme as NDSTheme } from "@nulogy/components";
+import { STORY_CHANGED } from "@storybook/core-events";
 
 export default makeDecorator({
   name: "withNDSTheme",
@@ -13,17 +14,11 @@ export default makeDecorator({
 
     useEffect(() => {
       channel.on("theme-update", data => {
-        const themeGroup = Object.keys(data)[0];
-        const key = Object.keys(data[themeGroup])[0];
-        const newValue = data[themeGroup][key];
-        const newTheme = {
-          ...theme,
-          [themeGroup]: {
-            ...theme[themeGroup],
-            ...(newValue && data[themeGroup])
-          }
-        };
-        setTheme(newTheme);
+        setTheme(data);
+      });
+      channel.on(STORY_CHANGED, data => {
+        console.log(data);
+        setTheme(data);
       });
     }, []);
 
