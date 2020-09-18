@@ -3,6 +3,7 @@ import { create } from "@storybook/theming";
 import { select } from "@storybook/addon-knobs";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
+import withNDSTheme from "./nds-theme";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce(
   (obj, i) => ({
@@ -58,12 +59,4 @@ export const parameters = {
   }
 };
 
-export const decorators = [
-  Story => (
-    <div style={{ padding: "24px" }}>
-      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}>
-        <Story />
-      </NDSProvider>
-    </div>
-  )
-];
+export const decorators = [withNDSTheme];
