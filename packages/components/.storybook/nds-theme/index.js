@@ -10,14 +10,10 @@ export default makeDecorator({
   skipIfNoParametersOrOptions: false,
   wrapper: (getStory, context, { parameters }) => {
     const channel = addons.getChannel();
-    const [theme, setTheme] = useState(NDSTheme);
+    const [theme, setTheme] = useState();
 
     useEffect(() => {
       channel.on("theme-update", data => {
-        setTheme(data);
-      });
-      channel.on(STORY_CHANGED, data => {
-        console.log(data);
         setTheme(data);
       });
     }, []);

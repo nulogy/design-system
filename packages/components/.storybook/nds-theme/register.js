@@ -1,6 +1,6 @@
 // .storybook/my-addon/register.js
 
-import React from "react";
+import React, { useEffect } from "react";
 import { addons, types } from "@storybook/addons";
 import { AddonPanel } from "@storybook/components";
 import { useChannel, useAddonState } from "@storybook/api";
@@ -28,10 +28,10 @@ const composeTheme = (data, theme) => {
 
 const MyPanel = () => {
   const [theme, setTheme] = useAddonState("ndsThemeAddon", NDSTheme);
-  const emit = useChannel({
-    [STORY_CHANGED]: () => {
-      emit("theme-update", theme);
-    }
+  const emit = useChannel({});
+
+  useEffect(() => {
+    emit("theme-update", theme);
   });
 
   const onChange = (group, prop) => e => {
