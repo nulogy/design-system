@@ -74,7 +74,7 @@ const ThemeAddonPanel = ({ active, key }) => (
 addons.register(ADDON_ID, () => {
   addons.add(PANEL_ID, {
     type: types.PANEL,
-    title: "ndsThemeAddon",
+    title: "Theme",
     skipIfNoParametersOrOptions: false,
     render: ThemeAddonPanel
   });
