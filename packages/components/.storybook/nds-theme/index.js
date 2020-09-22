@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name, react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
 import addons, { makeDecorator } from "@storybook/addons";
 import { theme as NDSTheme } from "@nulogy/components";
@@ -13,7 +14,7 @@ export default Component =>
     parameterName: "ndsThemeAddon",
     // This means don't run this decorator if the notes decorator is not set
     skipIfNoParametersOrOptions: false,
-    wrapper: (getStory, context, { parameters }) => {
+    wrapper: (getStory, context) => {
       const channel = addons.getChannel();
       const [theme, setTheme] = useState(NDSTheme);
       const [loading, setLoading] = useState(true);
@@ -28,7 +29,7 @@ export default Component =>
         channel.on(STORY_CHANGED, data => {
           setTheme(data);
         });
-      }, []);
+      }, [channel, loading]);
 
       const ThemeWrapper = withThemeWrapper(Component);
 
@@ -41,3 +42,4 @@ export default Component =>
       );
     }
   });
+/* eslint-enable */
