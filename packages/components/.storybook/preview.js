@@ -59,4 +59,8 @@ export const parameters = {
   }
 };
 
-export const decorators = [withNDSTheme];
+const ProviderWithLocale = props => (
+  <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} {...props} />
+);
+
+export const decorators = [withNDSTheme(ProviderWithLocale)];

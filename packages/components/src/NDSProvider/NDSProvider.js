@@ -61,7 +61,7 @@ const GlobalStyles = styled.div(({ theme, locale }) => {
   };
 });
 
-const NDSProvider = ({ theme, children, locale }) => {
+const NDSProvider = ({ theme, children, locale = "en_US" }) => {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
