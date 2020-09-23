@@ -13,6 +13,7 @@ module.exports = {
     },
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
-    "storybook-addon-performance"
+    "storybook-addon-performance",
+    "./nds-theme/register.js"
   ]
 };
