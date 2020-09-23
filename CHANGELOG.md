@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.7.0](https://github.com/nulogy/design-system/compare/v4.6.10...v4.7.0) (2020-09-23)
+
+
+### Features
+
+* adds ability to replace theme values in storybook ([#771](https://github.com/nulogy/design-system/issues/771)) ([6c34ee6](https://github.com/nulogy/design-system/commit/6c34ee6c698ab255b57aa406dbff7f803cffa3b5))
+
+
+
+
+
 ## [4.6.10](https://github.com/nulogy/design-system/compare/v4.6.9...v4.6.10) (2020-09-17)
 
 **Note:** Version bump only for package @nulogy/nds
