@@ -1,5 +1,8 @@
 name: "Chromatic"
-on: "push"
+on:
+  push:
+    paths:
+      - "packages/components/src/**"
 
 jobs:
   test:
