@@ -2,7 +2,7 @@ name: "Chromatic"
 on:
   push:
     paths:
-      - 'packages/components/src/**'
+      - "packages/components/src/**"
 
 jobs:
   test:
