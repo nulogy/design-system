@@ -17,7 +17,7 @@
     "lint": "yarn run eslint",
     "eslint": "eslint --config ./.eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix",
-    "build-chromatic-storybook": "yarn workspace @nulogy/components build-storybook"
+    "build-storybook": "yarn workspace @nulogy/components build-storybook"
   },
   "main": "index.js",
   "license": "MIT",
