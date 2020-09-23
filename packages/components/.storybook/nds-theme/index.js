@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import addons, { makeDecorator } from "@storybook/addons";
 import { theme as NDSTheme } from "@nulogy/components";
-import { STORY_CHANGED, NAVIGATE_URL } from "@storybook/core-events";
+import { STORY_CHANGED } from "@storybook/core-events";
 
 const withThemeWrapper = Component => ({ loading, theme, children }) => {
   return !loading && <Component theme={theme}>{children}</Component>;
@@ -21,7 +21,7 @@ export default Component =>
 
       useEffect(() => {
         setLoading(false);
-      })
+      });
 
       useEffect(() => {
         channel.on("theme-update", data => {
