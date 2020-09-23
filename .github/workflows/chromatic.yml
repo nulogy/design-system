@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          cd packages/components && yarn && yarn build && yarn build-storybook
+          yarn && cd packages/components && yarn build && yarn build-storybook
       - uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
