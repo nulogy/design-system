@@ -58,7 +58,7 @@ We don't actually host the CSS storybook anywhere at the moment. To see the full
 
 ```
 $ git clone https://github.com/nulogy/design-system.git
-$ cd design-system/css
+$ cd design-system/packages/css
 $ yarn
 $ yarn start
 ```
