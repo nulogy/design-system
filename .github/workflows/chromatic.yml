@@ -12,3 +12,4 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          buildScriptName: "build-chromatic-storybook"
