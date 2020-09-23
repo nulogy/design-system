@@ -43,7 +43,6 @@ const ThemePanel = () => {
       },
       theme
     );
-    console.log(nextTheme);
     setTheme(nextTheme);
     emit("theme-update", nextTheme);
   };
