@@ -1,9 +1,9 @@
 name: "Chromatic"
 on:
-  pull_request_review:
+  pull_request:
     branches:
       - master
-    types: [submitted]
+    types: [ready_for_review]
 jobs:
   test:
     runs-on: ubuntu-latest
