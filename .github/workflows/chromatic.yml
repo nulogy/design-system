@@ -1,9 +1,9 @@
 name: "Chromatic"
 on:
-  push:
-    paths:
-      - "packages/components/src/**"
-
+  pull_request_review:
+    branches:
+      - master
+    types: [submitted]
 jobs:
   test:
     runs-on: ubuntu-latest
