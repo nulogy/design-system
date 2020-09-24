@@ -4,8 +4,6 @@ import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
 import typescript from "rollup-plugin-typescript2";
 
-import packageJson from "./package.json";
-
 /* Rollup outputs module and main bundles for the @nulogy/components package */
 
 const GLOBALS = {
@@ -82,7 +80,7 @@ const mainBundles = {
   output: [
     // UMD format for compatibility with most script loaders
     {
-      file: packageJson.main,
+      dir: "dist",
       name: "NDSComponents",
       format: "umd",
       // globals: global variable names of external dependencies
@@ -90,7 +88,7 @@ const mainBundles = {
     },
     // ES module format for package.module field, auto-imports and optimal tree-shaking
     {
-      file: packageJson.module,
+      dir: "dist",
       format: "es",
       globals: GLOBALS
     }
