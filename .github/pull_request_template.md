@@ -22,5 +22,6 @@
 
 ## Before Merging
 
+- [ ] If a component was changed, the Chromatic check has run and been approved
 - [ ] Tested storybook deployment preview
 - [ ] Tested docs deployment preview

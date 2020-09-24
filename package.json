@@ -16,7 +16,8 @@
     "precommit": "pretty-quick --staged",
     "lint": "yarn run eslint",
     "eslint": "eslint --config ./.eslintrc './**/*.js'",
-    "eslint:fix": "yarn run eslint --fix"
+    "eslint:fix": "yarn run eslint --fix",
+    "build-storybook": "yarn workspace @nulogy/components build-storybook"
   },
   "main": "index.js",
   "license": "MIT",
@@ -33,7 +34,6 @@
     "yarn": "^1.17.3"
   },
   "devDependencies": {
-    "@storybook/react": "^5.3.19",
     "babel-eslint": "^10.0.0",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.0.0",
