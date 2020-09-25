@@ -1,6 +1,7 @@
 name: "Chromatic"
 on:
   push:
+    workflow_dispatch:
     branches:
       - master
 
