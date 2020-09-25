@@ -1,9 +1,10 @@
 name: "Chromatic"
 on:
-  pull_request:
-    branches:
+  workflow_dispatch:
+  push:
+    branch:
       - master
-    types: [ready_for_review]
+
 jobs:
   test:
     runs-on: ubuntu-latest
