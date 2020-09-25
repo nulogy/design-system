@@ -2,7 +2,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import babel from "@rollup/plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
-import typescript from "rollup-plugin-typescript2";
+import typescript from "@rollup/plugin-typescript";
 
 /* Rollup outputs module and main bundles for the @nulogy/components package */
 
