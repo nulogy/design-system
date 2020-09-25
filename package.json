@@ -51,7 +51,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn run precommit",
-      "pre-push": "yarn workspace @nulogy/components test"
+      "pre-push": "yarn workspace @nulogy/components lint"
     }
   }
 }
