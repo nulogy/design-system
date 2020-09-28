@@ -37,7 +37,7 @@ const getSize = (size: SizeType, theme: ThemeType) => {
       };
   }
 };
-const WrapperButton: React.SFC<any> = styled.button(
+const WrapperButton = styled.button<any>(
   ({ fullWidth }: any) => ({
     width: fullWidth ? "100%" : "auto"
   }),

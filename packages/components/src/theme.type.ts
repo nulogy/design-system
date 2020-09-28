@@ -1,6 +1,6 @@
 type Colors = {
   black: string;
-  blackblue: string;
+  blackBlue: string;
   darkBlue: string;
   blue: string;
   lightBlue: string;
@@ -101,10 +101,10 @@ type ZIndex = {
   overlay: string;
 };
 
-export type ThemeType: { [key: string]: string } = {
+export type ThemeType = {
   colors: Colors;
   fontSizes: FontSizes;
-  lineheights: LineHeights;
+  lineHeights: LineHeights;
   fontWeights: FontWeights;
   space: Space;
   fonts: Fonts;

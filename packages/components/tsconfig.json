@@ -2,13 +2,14 @@
   "compilerOptions": {
     "target": "ES2015",
     "declaration": true,
-    "declarationDir": "dist",
+    "outDir": "./dist",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
+    "strictNullChecks": false,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -18,5 +19,5 @@
     "jsx": "react"
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.story.js", "**/*.spec.js", "**/*.story.ts", "**/*.spec.ts"]
+  "exclude": ["node_modules", "./dist", "**/*.story.js", "**/*.spec.js", "**/*.story.ts", "**/*.spec.ts"]
 }

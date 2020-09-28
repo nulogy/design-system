@@ -15,7 +15,7 @@ import {
   SelectMenu,
   SelectInput
 } from "../Select";
-import { SelectDefaultProps, SelectPropTypes } from "../Select/Select.type";
+import { SelectDefaultProps } from "../Select/Select";
 const extractValue = (options, isMulti) => {
   if (options == null) return options;
   if (isMulti) {

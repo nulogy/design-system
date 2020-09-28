@@ -1,9 +1,8 @@
 import styled, { CSSObject } from "styled-components";
 import { color, space, typography, SpaceProps, TypographyProps, ColorProps } from "styled-system";
-import propTypes from "@styled-system/prop-types";
-const getAttrs = inline => (inline ? { as: "span" } : null);
+const getAttrs = (inline?: boolean) => (inline ? { as: "span" } : null);
 
-export type TextProps = {
+export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
   inline?: boolean;
   disabled?: boolean;
   textTransform?:
@@ -19,12 +18,12 @@ export type TextProps = {
     | "lowercase"
     | "uppercase"
     | undefined;
+  fontSize?: string;
 } & SpaceProps &
   TypographyProps &
-  ColorProps &
-  React.HTMLAttributes<HTMLParagraphElement>;
+  ColorProps;
 
-const Text = styled.p.attrs((props: TextProps) => getAttrs(props.inline))(
+const Text = styled.p.attrs<TextProps>((props: TextProps) => getAttrs(props.inline))<TextProps>(
   space,
   typography,
   color,

@@ -3,12 +3,14 @@ import { transparentize } from "polished";
 import { Flex } from "../Flex";
 import { FlexProps } from "../Flex/Flex";
 import { ThemeType } from "../theme.type";
+import CSSObject from "styled-components";
 
 type OverlayProps = FlexProps & {
   dark?: boolean;
   theme?: ThemeType;
 };
-const Overlay: React.SFC<OverlayProps> = styled(Flex)(({ dark, theme }: OverlayProps) => ({
+
+const Overlay: React.SFC<OverlayProps> = styled(Flex)<OverlayProps>(({ dark, theme }: OverlayProps) => ({
   top: 0,
   left: 0,
   right: 0,

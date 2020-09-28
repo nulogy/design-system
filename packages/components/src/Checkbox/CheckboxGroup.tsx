@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import Checkbox from "./Checkbox";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -23,7 +23,7 @@ const getCheckboxButtons = props => {
   });
   return checkboxButtons;
 };
-const LabelText = styled.span(({ theme }) => ({
+const LabelText = styled.span<any>(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.smallTextBase

@@ -1,19 +1,21 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
-import styled, { ThemeContext } from "styled-components";
+import styled, { CSSObject, ThemeContext } from "styled-components";
 
 import Radio from "./Radio";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
+import { ThemeType } from "../theme.type";
+import { errorMessage } from "../../dist/src/Select/Select.type";
 
-const labelTextStyles = theme => ({
+const labelTextStyles = (theme: ThemeType): CSSObject => ({
   fontSize: theme.fontSizes.small,
-  fontWeight: theme.fontWeights.bold,
+  fontWeight: Number(theme.fontWeights.bold),
   lineHeight: theme.lineHeights.smallTextBase
 });
 
-const getRadioButtons = props => {
+const getRadioButtons = (props: any) => {
   const radioButtons = React.Children.map(props.children, radio => {
     const { value, disabled, required, onChange, ...radioProps } = radio.props;
     return (
@@ -33,7 +35,26 @@ const getRadioButtons = props => {
   return radioButtons;
 };
 
-const BaseRadioGroup = ({ className, id, errorMessage, errorList, labelText, helpText, requirementText, ...props }) => {
+type BaseRadioGroupProps = {
+  className?: string;
+  id?: string;
+  errorMessage?: string;
+  errorList?: string[];
+  labelText?: string;
+  helpText?: string;
+  requirementText?: string;
+};
+
+const BaseRadioGroup = ({
+  className,
+  id,
+  errorMessage,
+  errorList,
+  labelText,
+  helpText,
+  requirementText,
+  ...props
+}: BaseRadioGroupProps) => {
   const otherProps = { ...props, errorMessage, errorList };
   const themeContext = useContext(ThemeContext);
 

@@ -1,4 +1,5 @@
 import Text from "./Text";
+import { TextProps } from "./Text";
 
 const Heading1 = Text.withComponent("h1");
 Heading1.defaultProps = {

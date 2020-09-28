@@ -49,17 +49,19 @@ type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
   name?: string;
   theme?: ThemeType;
 };
-const ToggleInput: React.SFC<any> = styled.input(({ disabled, theme }: ToggleInputProps) => ({
-  [`&:checked + ${Slider}:before`]: {
-    transform: "translateX(24px)"
-  },
-  [`&:checked + ${Slider}`]: {
-    backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue
-  },
-  [`&:focus + ${Slider}:before`]: {
-    boxShadow: disabled ? null : theme.shadows.focus
-  }
-}));
+const ToggleInput = styled.input(
+  ({ disabled, theme }: ToggleInputProps): CSSObject => ({
+    [`&:checked + ${Slider}:before`]: {
+      transform: "translateX(24px)"
+    },
+    [`&:checked + ${Slider}`]: {
+      backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue
+    },
+    [`&:focus + ${Slider}:before`]: {
+      boxShadow: disabled ? undefined : theme.shadows.focus
+    }
+  })
+);
 type ToggleButtonProps = ToggleInputProps & {
   defaultToggled?: boolean;
 };

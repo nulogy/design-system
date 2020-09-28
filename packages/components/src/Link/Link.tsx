@@ -23,7 +23,7 @@ type LinkProps = ColorProps &
   };
 
 const getHoverColor = (props: LinkProps) =>
-  props.hover ? props.theme.colors : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
+  props.hover ? props.color : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
 
 const Link = styled.a<LinkProps>(
   color,

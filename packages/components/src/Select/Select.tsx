@@ -6,7 +6,6 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "./customReactSelectStyles";
-import { SelectPropTypes, SelectDefaultProps } from "./Select.type";
 import { SelectOption } from "./SelectOption";
 import {
   SelectControl,
@@ -16,6 +15,39 @@ import {
   SelectMenu,
   SelectInput
 } from "./SelectComponents";
+
+export const SelectDefaultProps = {
+  autocomplete: true,
+  disabled: undefined,
+  defaultValue: undefined,
+  error: undefined,
+  errorMessage: undefined,
+  errorList: undefined,
+  labelText: undefined,
+  helpText: undefined,
+  noOptionsMessage: undefined,
+  requirementText: undefined,
+  id: undefined,
+  initialIsOpen: undefined,
+  maxHeight: "248px",
+  menuPosition: "absolute",
+  multiselect: false,
+  name: undefined,
+  onBlur: undefined,
+  onChange: undefined,
+  placeholder: undefined,
+  required: false,
+  value: undefined,
+  className: undefined,
+  classNamePrefix: undefined,
+  menuIsOpen: undefined,
+  onMenuOpen: undefined,
+  onMenuClose: undefined,
+  onInputChange: undefined,
+  components: undefined,
+  closeMenuOnSelect: true
+};
+
 export const getOption = (options, value) => {
   if (value == null || value === "") return value;
   return options.find(o => o.value === value);
