@@ -46,10 +46,10 @@ type LineHeights = {
 };
 
 type FontWeights = {
-  light: string;
-  normal: string;
-  medium: string;
-  bold: string;
+  light: number;
+  normal: number;
+  medium: number;
+  bold: number;
 };
 
 type Space = {
@@ -95,10 +95,10 @@ type Breakpoints = {
 };
 
 type ZIndex = {
-  content: string;
-  tabsScollIndicator: string;
-  tabsBar: string;
-  overlay: string;
+  content: number;
+  tabsScollIndicator: number;
+  tabsBar: number;
+  overlay: number;
 };
 
 export type ThemeType = {
