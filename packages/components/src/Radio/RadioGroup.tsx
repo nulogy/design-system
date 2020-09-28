@@ -7,7 +7,6 @@ import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
 import { ThemeType } from "../theme.type";
-import { errorMessage } from "../../dist/src/Select/Select.type";
 
 const labelTextStyles = (theme: ThemeType): CSSObject => ({
   fontSize: theme.fontSizes.small,
