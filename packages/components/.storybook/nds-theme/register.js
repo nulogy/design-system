@@ -75,8 +75,11 @@ const ThemePanel = () => {
           {Object.keys(NDSTheme[group]).map(prop => (
             <Flex alignItems="center" mb="x2" key={`${group}-${prop}`}>
               <ThemeKey>{prop}</ThemeKey>
-              { group === "colors" ? <ThemeColorInput color={NDSTheme[group][prop]} onChange={onChangeColor(group, prop)} /> : <ThemeInput defaultValue={NDSTheme[group][prop]} onChange={onChange(group, prop)} />}
-
+              {group === "colors" ? (
+                <ThemeColorInput color={NDSTheme[group][prop]} onChange={onChangeColor(group, prop)} />
+              ) : (
+                <ThemeInput defaultValue={NDSTheme[group][prop]} onChange={onChange(group, prop)} />
+              )}
             </Flex>
           ))}
         </Box>

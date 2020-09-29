@@ -5,16 +5,16 @@ import styled from "styled-components";
 import ThemeInput from "./ThemeInput";
 
 const Popover = styled.div({
-  position: 'absolute',
-  zIndex: '2'
+  position: "absolute",
+  zIndex: "2"
 });
 
 const CloseableArea = styled.div({
-  position: 'fixed',
-  top: '0px',
-  right: '0px',
-  bottom: '0px',
-  left: '100px'
+  position: "fixed",
+  top: "0px",
+  right: "0px",
+  bottom: "0px",
+  left: "100px"
 });
 
 const Swatch = styled.div(({ color }) => ({
@@ -25,18 +25,21 @@ const Swatch = styled.div(({ color }) => ({
   margin: "0 5px"
 }));
 
-
 const ThemeColorInput = ({ color, onChange }) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
-  const [value, setValue] = useState(color || "#000")
-  return <>
-    <Swatch color={value} />
-    <ThemeInput onClick={() => setDisplayColorPicker(true)} value={value} readOnly />
-    { displayColorPicker ? <Popover>
-      <CloseableArea onClick={() => setDisplayColorPicker(false)} />
-      <ChromePicker color={value} onChange={(e) => setValue(e.hex)} onChangeComplete={(e) => onChange(e)} />
-    </Popover> : null}
-  </>
+  const [value, setValue] = useState(color || "#000");
+  return (
+    <>
+      <Swatch color={value} />
+      <ThemeInput onClick={() => setDisplayColorPicker(true)} value={value} readOnly />
+      {displayColorPicker ? (
+        <Popover>
+          <CloseableArea onClick={() => setDisplayColorPicker(false)} />
+          <ChromePicker color={value} onChange={e => setValue(e.hex)} onChangeComplete={e => onChange(e)} />
+        </Popover>
+      ) : null}
+    </>
+  );
 };
 
 export default ThemeColorInput;
