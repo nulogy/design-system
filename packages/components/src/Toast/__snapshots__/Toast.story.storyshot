@@ -1,0 +1,547 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Toast Toast 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Save Changes
+    </button>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 jKA-DXi Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Saved
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toast customize length of time toast is visible 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Save Changes
+    </button>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 jKA-DXi Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Saved
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toast multiple closeable toasts example 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 gVRRsS"
+    >
+      <button
+        class="Button__WrapperButton-hxfi59-0 TaHjs PrimaryButton-sc-1btjl04-0 bLVAEH"
+      >
+        Save Changes
+      </button>
+      <button
+        class="Button__WrapperButton-hxfi59-0 TaHjs"
+      >
+        Reset
+      </button>
+      <button
+        class="Button__WrapperButton-hxfi59-0 TaHjs DangerButton-wmt3mt-0 bBjIVu"
+      >
+        Trigger Error
+      </button>
+      <button
+        aria-label="Delete"
+        class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cGgqBK nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="32px"
+          p="half"
+          viewBox="0 0 24 24"
+          width="32px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+        <p
+          class="Text-sc-15glbbx-0 cEhJdR"
+          color="currentColor"
+          font-size="medium"
+        >
+          Delete
+        </p>
+      </button>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 fjJeBB Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 ueLpv nds-icon--error"
+          fill="#cc1439"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Error saving all your changes
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+        >
+          <button
+            aria-label="Close"
+            class="Link-sc-1fcpbo4-0 jnEOQT"
+            color="darkGrey"
+            font-size="medium"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 kAZJys nds-icon--close"
+              fill="currentColor"
+              focusable="false"
+              height="16"
+              viewBox="0 0 24 24"
+              width="16"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 fjJeBB Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 ueLpv nds-icon--error"
+          fill="#cc1439"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Error: changes were reset
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+        >
+          <button
+            aria-label="Close"
+            class="Link-sc-1fcpbo4-0 jnEOQT"
+            color="darkGrey"
+            font-size="medium"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 kAZJys nds-icon--close"
+              fill="currentColor"
+              focusable="false"
+              height="16"
+              viewBox="0 0 24 24"
+              width="16"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 fjJeBB Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 ueLpv nds-icon--error"
+          fill="#cc1439"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          An error occurred, could not deleted
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+        >
+          <button
+            aria-label="Close"
+            class="Link-sc-1fcpbo4-0 jnEOQT"
+            color="darkGrey"
+            font-size="medium"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 kAZJys nds-icon--close"
+              fill="currentColor"
+              focusable="false"
+              height="16"
+              viewBox="0 0 24 24"
+              width="16"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 fjJeBB Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 ueLpv nds-icon--error"
+          fill="#cc1439"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          An error occurred, please retry
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+        >
+          <button
+            aria-label="Close"
+            class="Link-sc-1fcpbo4-0 jnEOQT"
+            color="darkGrey"
+            font-size="medium"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 kAZJys nds-icon--close"
+              fill="currentColor"
+              focusable="false"
+              height="16"
+              viewBox="0 0 24 24"
+              width="16"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toast multiple toasts example 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 gVRRsS"
+    >
+      <button
+        class="Button__WrapperButton-hxfi59-0 TaHjs PrimaryButton-sc-1btjl04-0 bLVAEH"
+      >
+        Save Changes
+      </button>
+      <button
+        class="Button__WrapperButton-hxfi59-0 TaHjs"
+      >
+        Reset
+      </button>
+      <button
+        class="Button__WrapperButton-hxfi59-0 TaHjs DangerButton-wmt3mt-0 bBjIVu"
+      >
+        Trigger Error
+      </button>
+      <button
+        aria-label="Delete"
+        class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cGgqBK nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="32px"
+          p="half"
+          viewBox="0 0 24 24"
+          width="32px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+        <p
+          class="Text-sc-15glbbx-0 cEhJdR"
+          color="currentColor"
+          font-size="medium"
+        >
+          Delete
+        </p>
+      </button>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 ThnFz Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 iOnHOk nds-icon--check"
+          fill="#008059"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Saved all your changes
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 ThnFz Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 iOnHOk nds-icon--check"
+          fill="#008059"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Reset all your changes
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 ThnFz Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 iOnHOk nds-icon--check"
+          fill="#008059"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Ok, it's deleted
+        </div>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 fjJeBB Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 ueLpv nds-icon--error"
+          fill="#cc1439"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          An error occurred, please retry
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Toast with close button 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Save Changes
+    </button>
+    <div
+      class="Box-xda4ls-0 Toast__AnimatedBoxBottom-sc-1cheg2k-1 erIvOt"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 jKA-DXi Alert-quomwu-0 Toast__AnimatedAlert-sc-1cheg2k-0 gLirge"
+        role="alert"
+      >
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          Saved
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+        >
+          <button
+            aria-label="Close"
+            class="Link-sc-1fcpbo4-0 jnEOQT"
+            color="darkGrey"
+            font-size="medium"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 kAZJys nds-icon--close"
+              fill="currentColor"
+              focusable="false"
+              height="16"
+              viewBox="0 0 24 24"
+              width="16"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

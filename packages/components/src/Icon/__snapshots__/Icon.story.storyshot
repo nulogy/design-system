@@ -1,0 +1,2045 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Icon InlineIcon 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <p
+      style="font-size:1em"
+    >
+      @1em:  
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--accessTime"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+          <path
+            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--add"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--addCircleOutline"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--arrowForward"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--block"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW"
+          height="1.25em"
+          viewBox="0 0 38 38"
+          width="1.25em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient
+              id="random-id-1"
+              x1="8.042%"
+              x2="65.682%"
+              y1="0%"
+              y2="23.865%"
+            >
+              <stop
+                offset="0%"
+                stop-color="currentColor"
+                stop-opacity="0"
+              />
+              <stop
+                offset="63.146%"
+                stop-color="currentColor"
+                stop-opacity=".631"
+              />
+              <stop
+                offset="100%"
+                stop-color="currentColor"
+              />
+            </linearGradient>
+          </defs>
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              transform="translate(1 1)"
+            >
+              <path
+                d="M36 18c0-9.94-8.06-18-18-18"
+                id="Oval-2"
+                stroke="url(#random-id-1)"
+                stroke-width="2"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </path>
+              <circle
+                cx="36"
+                cy="18"
+                fill="currentColor"
+                r="1"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </circle>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </p>
+    <p
+      style="font-size:2em"
+    >
+      @2em:  
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--accessTime"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+          <path
+            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--add"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--addCircleOutline"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--arrowForward"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--block"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW"
+          height="1.25em"
+          viewBox="0 0 38 38"
+          width="1.25em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient
+              id="random-id-2"
+              x1="8.042%"
+              x2="65.682%"
+              y1="0%"
+              y2="23.865%"
+            >
+              <stop
+                offset="0%"
+                stop-color="currentColor"
+                stop-opacity="0"
+              />
+              <stop
+                offset="63.146%"
+                stop-color="currentColor"
+                stop-opacity=".631"
+              />
+              <stop
+                offset="100%"
+                stop-color="currentColor"
+              />
+            </linearGradient>
+          </defs>
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              transform="translate(1 1)"
+            >
+              <path
+                d="M36 18c0-9.94-8.06-18-18-18"
+                id="Oval-2"
+                stroke="url(#random-id-2)"
+                stroke-width="2"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </path>
+              <circle
+                cx="36"
+                cy="18"
+                fill="currentColor"
+                r="1"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </circle>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </p>
+    <p
+      style="font-size:3em"
+    >
+      @3em:  
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--accessTime"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+          <path
+            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--add"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--addCircleOutline"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--arrowForward"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--block"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW"
+          height="1.25em"
+          viewBox="0 0 38 38"
+          width="1.25em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient
+              id="random-id-3"
+              x1="8.042%"
+              x2="65.682%"
+              y1="0%"
+              y2="23.865%"
+            >
+              <stop
+                offset="0%"
+                stop-color="currentColor"
+                stop-opacity="0"
+              />
+              <stop
+                offset="63.146%"
+                stop-color="currentColor"
+                stop-opacity=".631"
+              />
+              <stop
+                offset="100%"
+                stop-color="currentColor"
+              />
+            </linearGradient>
+          </defs>
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              transform="translate(1 1)"
+            >
+              <path
+                d="M36 18c0-9.94-8.06-18-18-18"
+                id="Oval-2"
+                stroke="url(#random-id-3)"
+                stroke-width="2"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </path>
+              <circle
+                cx="36"
+                cy="18"
+                fill="currentColor"
+                r="1"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </circle>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </p>
+    <p
+      style="font-size:4em"
+    >
+      @4em:  
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--accessTime"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+          <path
+            d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--add"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--addCircleOutline"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--arrowForward"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW nds-icon--block"
+          fill="currentColor"
+          focusable="false"
+          height="1.25em"
+          viewBox="0 0 24 24"
+          width="1.25em"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+          />
+        </svg>
+      </span>
+      <span
+        class="Icon__IconContainer-sc-150w9kl-2 kZyaHF"
+      >
+        <svg
+          class="Icon__CenteredIcon-sc-150w9kl-1 gXa-dMW"
+          height="1.25em"
+          viewBox="0 0 38 38"
+          width="1.25em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient
+              id="random-id-4"
+              x1="8.042%"
+              x2="65.682%"
+              y1="0%"
+              y2="23.865%"
+            >
+              <stop
+                offset="0%"
+                stop-color="currentColor"
+                stop-opacity="0"
+              />
+              <stop
+                offset="63.146%"
+                stop-color="currentColor"
+                stop-opacity=".631"
+              />
+              <stop
+                offset="100%"
+                stop-color="currentColor"
+              />
+            </linearGradient>
+          </defs>
+          <g
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              transform="translate(1 1)"
+            >
+              <path
+                d="M36 18c0-9.94-8.06-18-18-18"
+                id="Oval-2"
+                stroke="url(#random-id-4)"
+                stroke-width="2"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </path>
+              <circle
+                cx="36"
+                cy="18"
+                fill="currentColor"
+                r="1"
+              >
+                <animateTransform
+                  attributeName="transform"
+                  dur="0.9s"
+                  from="0 18 18"
+                  repeatCount="indefinite"
+                  to="360 18 18"
+                  type="rotate"
+                />
+              </circle>
+            </g>
+          </g>
+        </svg>
+      </span>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon With a color 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gTSJcB nds-icon--accessTime"
+        fill="#cc1439"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gTSJcB nds-icon--add"
+        fill="#cc1439"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gTSJcB nds-icon--addCircleOutline"
+        fill="#cc1439"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gTSJcB nds-icon--arrowForward"
+        fill="#cc1439"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gTSJcB nds-icon--block"
+        fill="#cc1439"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 gTSJcB"
+        height="24px"
+        viewBox="0 0 38 38"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-5"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#cc1439"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="#cc1439"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="#cc1439"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-5)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="#cc1439"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 loHilG nds-icon--accessTime"
+        fill="#ffbb00"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 loHilG nds-icon--add"
+        fill="#ffbb00"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 loHilG nds-icon--addCircleOutline"
+        fill="#ffbb00"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 loHilG nds-icon--arrowForward"
+        fill="#ffbb00"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 loHilG nds-icon--block"
+        fill="#ffbb00"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 loHilG"
+        height="24px"
+        viewBox="0 0 38 38"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-6"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#ffbb00"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="#ffbb00"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="#ffbb00"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-6)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="#ffbb00"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dvacGy nds-icon--accessTime"
+        fill="#008059"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dvacGy nds-icon--add"
+        fill="#008059"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dvacGy nds-icon--addCircleOutline"
+        fill="#008059"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dvacGy nds-icon--arrowForward"
+        fill="#008059"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dvacGy nds-icon--block"
+        fill="#008059"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 dvacGy"
+        height="24px"
+        viewBox="0 0 38 38"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-7"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#008059"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="#008059"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="#008059"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-7)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="#008059"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 fqMURq nds-icon--accessTime"
+        fill="#216beb"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 fqMURq nds-icon--add"
+        fill="#216beb"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 fqMURq nds-icon--addCircleOutline"
+        fill="#216beb"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 fqMURq nds-icon--arrowForward"
+        fill="#216beb"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 fqMURq nds-icon--block"
+        fill="#216beb"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 fqMURq"
+        height="24px"
+        viewBox="0 0 38 38"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-8"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#216beb"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="#216beb"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="#216beb"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-8)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="#216beb"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gAFYgu nds-icon--accessTime"
+        fill="#122b47"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gAFYgu nds-icon--add"
+        fill="#122b47"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gAFYgu nds-icon--addCircleOutline"
+        fill="#122b47"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gAFYgu nds-icon--arrowForward"
+        fill="#122b47"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 gAFYgu nds-icon--block"
+        fill="#122b47"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 gAFYgu"
+        height="24px"
+        viewBox="0 0 38 38"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-9"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="#122b47"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="#122b47"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="#122b47"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-9)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="#122b47"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon With a size 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dnEoSL nds-icon--accessTime"
+        fill="currentColor"
+        focusable="false"
+        height="8px"
+        viewBox="0 0 24 24"
+        width="8px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dnEoSL nds-icon--add"
+        fill="currentColor"
+        focusable="false"
+        height="8px"
+        viewBox="0 0 24 24"
+        width="8px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dnEoSL nds-icon--addCircleOutline"
+        fill="currentColor"
+        focusable="false"
+        height="8px"
+        viewBox="0 0 24 24"
+        width="8px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dnEoSL nds-icon--arrowForward"
+        fill="currentColor"
+        focusable="false"
+        height="8px"
+        viewBox="0 0 24 24"
+        width="8px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 dnEoSL nds-icon--block"
+        fill="currentColor"
+        focusable="false"
+        height="8px"
+        viewBox="0 0 24 24"
+        width="8px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 dnEoSL"
+        height="8px"
+        viewBox="0 0 38 38"
+        width="8px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-10"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="currentColor"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="currentColor"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="currentColor"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-10)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="currentColor"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ilPpMc nds-icon--accessTime"
+        fill="currentColor"
+        focusable="false"
+        height="16px"
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ilPpMc nds-icon--add"
+        fill="currentColor"
+        focusable="false"
+        height="16px"
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ilPpMc nds-icon--addCircleOutline"
+        fill="currentColor"
+        focusable="false"
+        height="16px"
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ilPpMc nds-icon--arrowForward"
+        fill="currentColor"
+        focusable="false"
+        height="16px"
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ilPpMc nds-icon--block"
+        fill="currentColor"
+        focusable="false"
+        height="16px"
+        viewBox="0 0 24 24"
+        width="16px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 ilPpMc"
+        height="16px"
+        viewBox="0 0 38 38"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-11"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="currentColor"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="currentColor"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="currentColor"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-11)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="currentColor"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div
+      class="Box-xda4ls-0 hQvIAg"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ghfVAt nds-icon--accessTime"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+        />
+        <path
+          d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ghfVAt nds-icon--add"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ghfVAt nds-icon--addCircleOutline"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ghfVAt nds-icon--arrowForward"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"
+        />
+      </svg>
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ghfVAt nds-icon--block"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"
+        />
+      </svg>
+      <svg
+        class="Icon-sc-150w9kl-0 ghfVAt"
+        height="24px"
+        viewBox="0 0 38 38"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <linearGradient
+            id="random-id-12"
+            x1="8.042%"
+            x2="65.682%"
+            y1="0%"
+            y2="23.865%"
+          >
+            <stop
+              offset="0%"
+              stop-color="currentColor"
+              stop-opacity="0"
+            />
+            <stop
+              offset="63.146%"
+              stop-color="currentColor"
+              stop-opacity=".631"
+            />
+            <stop
+              offset="100%"
+              stop-color="currentColor"
+            />
+          </linearGradient>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <g
+            transform="translate(1 1)"
+          >
+            <path
+              d="M36 18c0-9.94-8.06-18-18-18"
+              id="Oval-2"
+              stroke="url(#random-id-12)"
+              stroke-width="2"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </path>
+            <circle
+              cx="36"
+              cy="18"
+              fill="currentColor"
+              r="1"
+            >
+              <animateTransform
+                attributeName="transform"
+                dur="0.9s"
+                from="0 18 18"
+                repeatCount="indefinite"
+                to="360 18 18"
+                type="rotate"
+              />
+            </circle>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon With accessibility title 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 gyfWLZ"
+    >
+      <svg
+        aria-hidden="false"
+        class="Icon-sc-150w9kl-0 ghfVAt nds-icon--user"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+        />
+      </svg>
+       This has a title attribute so it will be read by assistive devices.
+    </div>
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 gyfWLZ"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 ghfVAt nds-icon--user"
+        fill="currentColor"
+        focusable="false"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+      >
+        <path
+          d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+        />
+      </svg>
+       This doesn't have a title attribute, so it has aria-hidden set true instead.
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Icon With added margin 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hvoFAN"
+    >
+      <div
+        class="Box-xda4ls-0 dXPUVB"
+        style="display:inline-block"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 bPgLcd nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          m="x2"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="Box-xda4ls-0 dXPUVB"
+        style="display:inline-block"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 fAGUST nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mt="x2"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="Box-xda4ls-0 dXPUVB"
+        style="display:inline-block"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 fOOrzY nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="x2"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="Box-xda4ls-0 dXPUVB"
+        style="display:inline-block"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 iKpyxn nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mb="x2"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="Box-xda4ls-0 dXPUVB"
+        style="display:inline-block"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 fCwAaT nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="x2"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="Box-xda4ls-0 dXPUVB"
+        style="display:inline-block"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 bmyhSW nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mx="x2"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="Box-xda4ls-0 dXPUVB"
+        style="display:inline-block"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 bGHXDB nds-icon--delete"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          my="x2"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+`;

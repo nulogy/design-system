@@ -1,0 +1,730 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Table with everything 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <table
+      class="BaseTable__StyledTable-sc-14k7sl6-0 hyvduj Table"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-sc-42m5f2-0 kSyezw"
+        >
+          <th
+            class="StyledTh-sc-14sor85-0 kZgIGb"
+            data-testid="table-head"
+            scope="col"
+            width="30px"
+          >
+            <div
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+            >
+              <label
+                class="ClickInputLabel-zdnqd7-0 cdVzeO"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="select all"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 kZgIGb"
+            data-testid="table-head"
+            scope="col"
+            width="30px"
+          />
+          <th
+            class="StyledTh-sc-14sor85-0 gFvVjN"
+            data-testid="table-head"
+            scope="col"
+            width="15%"
+          >
+            Date
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cRFVRH"
+            data-testid="table-head"
+            scope="col"
+            width="20%"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cRFVRH"
+            data-testid="table-head"
+            scope="col"
+            width="20%"
+          >
+            Actual Quantity
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 jKekiU"
+            data-testid="table-head"
+            scope="col"
+            width="45%"
+          >
+            Note
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 iTPYDw"
+            data-testid="table-head"
+            scope="col"
+            width="5%"
+          />
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            colspan="7"
+          >
+            <div
+              class="Box-xda4ls-0 JzMyz"
+            >
+              <p
+                class="Text-sc-15glbbx-0 dzOeKs"
+                color="blackBlue"
+                font-size="medium"
+                font-weight="bold"
+              >
+                ABC & XYZ Company
+              </p>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <div
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+            >
+              <label
+                class="ClickInputLabel-zdnqd7-0 cdVzeO"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="deselect item 12"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <button
+              aria-label="Expand row"
+              class="ControlIcon__StyledButton-sc-1dwqlsv-0 cilMYH"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="Icon-sc-150w9kl-0 SSzNW nds-icon--downArrow"
+                fill="currentColor"
+                focusable="false"
+                height="32px"
+                viewBox="0 0 24 24"
+                width="32px"
+              >
+                <path
+                  d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                />
+              </svg>
+            </button>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            Tue, 01 Oct 2019
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,025 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,800 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td>
+            <div
+              class="Box-xda4ls-0 dyCXpf"
+            >
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Open"
+                class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="Icon-sc-150w9kl-0 cGgqBK nds-icon--more"
+                  fill="currentColor"
+                  focusable="false"
+                  height="32px"
+                  p="half"
+                  viewBox="0 0 24 24"
+                  width="32px"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <div
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+            >
+              <label
+                class="ClickInputLabel-zdnqd7-0 cdVzeO"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            Wed, 02 Oct 2019
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,250 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td>
+            <div
+              class="Box-xda4ls-0 dyCXpf"
+            >
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Open"
+                class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="Icon-sc-150w9kl-0 cGgqBK nds-icon--more"
+                  fill="currentColor"
+                  focusable="false"
+                  height="32px"
+                  p="half"
+                  viewBox="0 0 24 24"
+                  width="32px"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <div
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+            >
+              <label
+                class="ClickInputLabel-zdnqd7-0 cdVzeO"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            Thu, 03 Oct 2019
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,425 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td>
+            <div
+              class="Box-xda4ls-0 dyCXpf"
+            >
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Open"
+                class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="Icon-sc-150w9kl-0 cGgqBK nds-icon--more"
+                  fill="currentColor"
+                  focusable="false"
+                  height="32px"
+                  p="half"
+                  viewBox="0 0 24 24"
+                  width="32px"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            <div
+              class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+            >
+              <label
+                class="ClickInputLabel-zdnqd7-0 cdVzeO"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-label="Select row"
+                  aria-required="false"
+                  class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+                  type="checkbox"
+                />
+                <div
+                  class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                  data-testid="visual-checkbox"
+                />
+              </label>
+            </div>
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            Fri, 04 Oct 2019
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,475 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            675 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1c Other Plant-related issue, equipment issues
+          </td>
+          <td>
+            <div
+              class="Box-xda4ls-0 dyCXpf"
+            >
+              <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Open"
+                class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="Icon-sc-150w9kl-0 cGgqBK nds-icon--more"
+                  fill="currentColor"
+                  focusable="false"
+                  height="32px"
+                  p="half"
+                  viewBox="0 0 24 24"
+                  width="32px"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-3dl4z6-0 cJryaY"
+        >
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            colspan="3"
+            scope="row"
+          >
+            Total
+          </th>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            18,000 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            7,725 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+        </tr>
+        <tr
+          class="TableFoot__StyledFooterRow-sc-3dl4z6-0 cJryaY"
+        >
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            colspan="3"
+            scope="row"
+          >
+            Attainment
+          </th>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            41.5%
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          />
+        </tr>
+      </tfoot>
+    </table>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 irUvPl StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 jfvOZs"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Table with pagination 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <table
+      class="BaseTable__StyledTable-sc-14k7sl6-0 hyvduj Table"
+    >
+      <thead>
+        <tr
+          class="TableHead__StyledHeaderRow-sc-42m5f2-0 kSyezw"
+        >
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Date
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Expected Quantity
+          </th>
+          <th
+            class="StyledTh-sc-14sor85-0 cUCUjX"
+            data-testid="table-head"
+            scope="col"
+          >
+            Actual Quantity
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        data-testid="table-body"
+      >
+        <tr
+          class="TableBody__StyledTr-b5sejq-1 eFTNJO"
+          data-testid="table-row"
+        >
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2019-10-01
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            2,025 eaches
+          </td>
+          <td
+            class="TableCell__StyledTableCell-q0c72j-0 ffzgMl"
+          >
+            1,800 eaches
+          </td>
+        </tr>
+      </tbody>
+      <tfoot />
+    </table>
+    <nav
+      aria-label="Pagination navigation"
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 irUvPl StatefulTable___StyledPagination-sc-196ra2t-0 dSyvuL"
+    >
+      <button
+        aria-label="Go to previous results"
+        class="Pagination__PaginationButton-mltk2d-0 jfvOZs"
+        disabled=""
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 cJubdZ nds-icon--leftArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          ml="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+          />
+        </svg>
+         Previous
+      </button>
+      <button
+        aria-current="true"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 evSaxZ"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        2
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        3
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        4
+      </button>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        5
+      </button>
+      <p
+        class="Text-sc-15glbbx-0 lcTnvv"
+        color="currentColor"
+        font-size="small"
+      >
+        ...
+      </p>
+      <button
+        aria-current="false"
+        aria-label="Go to page {{count}}"
+        class="Pagination__PaginationButton-mltk2d-0 Pagination__PageNumber-mltk2d-1 jBlPxd"
+      >
+        8
+      </button>
+      <button
+        aria-label="Go to next results"
+        class="Pagination__PaginationButton-mltk2d-0 fTvjnz"
+      >
+        Next 
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 kirerq nds-icon--rightArrow"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="-8px"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+          />
+        </svg>
+      </button>
+    </nav>
+  </div>
+</div>
+`;

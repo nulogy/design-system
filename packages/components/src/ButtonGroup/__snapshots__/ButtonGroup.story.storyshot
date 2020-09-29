@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/ButtonGroup ButtonGroup 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 dWusHY"
+      width="500px"
+    >
+      <div
+        class="ButtonGroup-sc-1aq6uy1-0 bsgBoJ"
+      >
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR PrimaryButton-sc-1btjl04-0 bLVAEH"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/ButtonGroup more button types 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 knQcdP"
+      width="600px"
+    >
+      <div
+        class="ButtonGroup-sc-1aq6uy1-0 bsgBoJ"
+      >
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR PrimaryButton-sc-1btjl04-0 bLVAEH"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR DangerButton-wmt3mt-0 bBjIVu"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR QuietButton-sc-9hn6d3-0 jhclsj"
+        >
+          Button
+        </button>
+        <button
+          class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+        >
+          <svg
+            aria-hidden="true"
+            class="Icon-sc-150w9kl-0 cGgqBK nds-icon--menu"
+            fill="currentColor"
+            focusable="false"
+            height="32px"
+            p="half"
+            viewBox="0 0 24 24"
+            width="32px"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+        </button>
+        <button
+          aria-label="Button"
+          class="IconicButton__WrapperButton-cimfyu-1 iHxHpW IconicButton-cimfyu-2 dBFLvz"
+        >
+          <svg
+            aria-hidden="true"
+            class="Icon-sc-150w9kl-0 cGgqBK nds-icon--menu"
+            fill="currentColor"
+            focusable="false"
+            height="32px"
+            p="half"
+            viewBox="0 0 24 24"
+            width="32px"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            />
+          </svg>
+          <p
+            class="Text-sc-15glbbx-0 cEhJdR"
+            color="currentColor"
+            font-size="medium"
+          >
+            Button
+          </p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/ButtonGroup with alignment right 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 dWusHY"
+      width="500px"
+    >
+      <div
+        class="ButtonGroup-sc-1aq6uy1-0 fcnJnB"
+      >
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR PrimaryButton-sc-1btjl04-0 bLVAEH"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/ButtonGroup with alignment spaced 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 dWusHY"
+      width="500px"
+    >
+      <div
+        class="ButtonGroup-sc-1aq6uy1-0 gjRDyI"
+      >
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR PrimaryButton-sc-1btjl04-0 bLVAEH"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/ButtonGroup wrapping buttons 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 bmMRvO"
+    >
+      <div
+        class="ButtonGroup-sc-1aq6uy1-0 bsgBoJ"
+      >
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+    <div
+      class="Box-xda4ls-0 ymOFE"
+    >
+      <div
+        class="ButtonGroup-sc-1aq6uy1-0 fcnJnB"
+      >
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+        <button
+          class="Button__WrapperButton-hxfi59-0 kXvjuR"
+        >
+          Button
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

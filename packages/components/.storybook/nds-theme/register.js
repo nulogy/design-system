@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { addons, types } from "@storybook/addons";
 import { AddonPanel } from "@storybook/components";
 import { useChannel, useAddonState } from "@storybook/api";
-import { Box, Flex, NDSProvider, Heading3, theme as NDSTheme } from "@nulogy/components";
+import { Box, Flex, NDSProvider, Heading3, theme as NDSTheme } from "../../src";
 import ThemeKey from "./ThemeKey";
 import ThemeInput from "./ThemeInput";
 

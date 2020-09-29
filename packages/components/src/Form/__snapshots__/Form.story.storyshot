@@ -1,0 +1,1693 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Form Demo form 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <form
+      class="Form-sc-1qb2xtx-0 fKgcEj"
+    >
+      <h2
+        class="Text-sc-15glbbx-0-h2 bbYEaw"
+        font-size="heading2"
+        font-weight="normal"
+      >
+        Job 324400
+      </h2>
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 fjJeBB Alert-quomwu-0 biTsD"
+        role="alert"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 ueLpv nds-icon--error"
+          fill="#cc1439"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="Box-xda4ls-0 hoMyit"
+        >
+          <p
+            class="Text-sc-15glbbx-0 bBrSaL"
+            color="currentColor"
+            font-size="medium"
+            font-weight="bold"
+          >
+            Errors have occured ...
+          </p>
+          <p
+            class="Text-sc-15glbbx-0 gSNEe"
+            color="currentColor"
+            font-size="medium"
+          >
+            Instructions and description of errors
+          </p>
+          <ul
+            class="List-sc-1ueqoqt-0 biKpmQ"
+            color="currentColor"
+          >
+            <li
+              class="ListItem-sc-3wr72f-0 fgjjlO"
+              color="currentColor"
+            >
+              Affected field
+            </li>
+            <li
+              class="ListItem-sc-3wr72f-0 fgjjlO"
+              color="currentColor"
+            >
+              Unmet criteria
+            </li>
+            <li
+              class="ListItem-sc-3wr72f-0 fgjjlO"
+              color="currentColor"
+            >
+              <a
+                href="https://nulogy.design/"
+              >
+                Affected field
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <fieldset
+        class="FormSection-v5comv-1 gfZIXf"
+      >
+        <legend
+          class="Text-sc-15glbbx-0-h3 FormSection__FormSectionTitle-v5comv-0 lRtmz"
+          font-size="heading3"
+          font-weight="medium"
+        >
+          Job Information
+        </legend>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Project
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="project"
+                  placeholder="Project 128703"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Project description
+              </span>
+              <span
+                class="Text-sc-15glbbx-0 lfjkof"
+                color="darkGrey"
+                font-size="12px"
+              >
+                (Optional)
+              </span>
+              <p
+                class="Text-sc-15glbbx-0 HelpText__HelpTextContent-sc-186o6oo-0 clUgZq"
+                color="currentColor"
+                font-size="medium"
+              >
+                Project description helps identify the project.
+              </p>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="project-description"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Project status
+              </span>
+            </div>
+            <div
+              data-testid="select-container"
+            >
+              <div
+                class=" css-2b097c-container"
+              >
+                <div
+                  data-testid="select-control"
+                >
+                  <div
+                    class=" css-16f1mi0-Control"
+                  >
+                    <div
+                      class=" css-7zc8my"
+                    >
+                      <div
+                        class=" css-1n91s4n-placeholder"
+                      >
+                        Select...
+                      </div>
+                      <div
+                        data-testid="select-input"
+                      >
+                        <div
+                          class="css-17yls17-Input"
+                        >
+                          <div
+                            class=""
+                            style="display:inline-block"
+                          >
+                            <input
+                              aria-autocomplete="list"
+                              autocapitalize="none"
+                              autocomplete="off"
+                              autocorrect="off"
+                              id="project-status"
+                              spellcheck="false"
+                              style="box-sizing:content-box;width:1px;label:input;background:0;border:0;font-size:inherit;opacity:1;outline:0;padding:0;color:inherit"
+                              tabindex="0"
+                              type="text"
+                              value=""
+                            />
+                            <div
+                              style="position:absolute;top:0;left:0;visibility:hidden;height:0;overflow:scroll;white-space:pre"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class=" css-173cxbq-IndicatorsContainer"
+                    >
+                      <span
+                        class=" css-4z5mi-indicatorSeparator"
+                      />
+                      <div
+                        aria-hidden="true"
+                        class=" css-19phze7-indicatorContainer"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          class="css-6q0nyr-Svg"
+                          focusable="false"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          width="20"
+                        >
+                          <path
+                            d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Item code
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="true"
+                  class="InputField__StyledInput-a97ghf-0 gAGDPa"
+                  id="item-code"
+                  value="WS2SB6"
+                />
+              </div>
+            </div>
+          </label>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 jHmnKr"
+            color="red"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 iGbfeP nds-icon--error"
+              fill="currentColor"
+              focusable="false"
+              height="24px"
+              mr="x1"
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <div
+              class="InlineValidation__Wrapper-sc-19uke1q-0 dFKyki"
+            >
+              <p
+                class="Text-sc-15glbbx-0 gSNEe"
+                color="currentColor"
+                font-size="medium"
+              >
+                Item WS2SB6 does not exist.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Eaches expected on Job
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="eaches-expected"
+                  placeholder="2 000"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Eaches remaining on Project
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 gKBZVE"
+                  disabled=""
+                  id="eaches-remaining"
+                  value="18 000"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Scheduled start
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="scheduled-start"
+                  placeholder="MMM-DD-YYYY"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Scheduled end
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="scheduled-end"
+                  placeholder="MMM-DD-YYYY"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <fieldset
+          class="Fieldset-sc-4eydyi-0 eWKTpP CheckboxGroup-ubmlt9-2 huwOBe"
+        >
+          <legend
+            class="CheckboxGroup__Legend-ubmlt9-1 iNZbZt"
+          >
+            <span
+              class="CheckboxGroup__LabelText-ubmlt9-0 fBMkHk"
+            >
+              Line Lead
+            </span>
+            <span
+              class="Text-sc-15glbbx-0 lfjkof"
+              color="darkGrey"
+              font-size="12px"
+            >
+              (Optional)
+            </span>
+          </legend>
+          <div
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+          >
+            <label
+              class="ClickInputLabel-zdnqd7-0 cdVzeO"
+            >
+              <input
+                aria-invalid="false"
+                aria-required="false"
+                class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+                name="linelead"
+                type="checkbox"
+                value="christiaan"
+              />
+              <div
+                class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                data-testid="visual-checkbox"
+              />
+              <p
+                class="Text-sc-15glbbx-0 gSNEe"
+                color="currentColor"
+                font-size="medium"
+              >
+                Christiaan Oostenbrug
+              </p>
+            </label>
+          </div>
+          <div
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+          >
+            <label
+              class="ClickInputLabel-zdnqd7-0 cdVzeO"
+            >
+              <input
+                aria-invalid="false"
+                aria-required="false"
+                class="Checkbox__CheckboxInput-sc-14jj5ns-1 gpNben Checkbox-sc-14jj5ns-2 jnRDQb"
+                name="linelead"
+                type="checkbox"
+                value="matt"
+              />
+              <div
+                class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                data-testid="visual-checkbox"
+              />
+              <p
+                class="Text-sc-15glbbx-0 gSNEe"
+                color="currentColor"
+                font-size="medium"
+              >
+                Matt Dunn
+              </p>
+            </label>
+          </div>
+          <div
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+          >
+            <label
+              class="ClickInputLabel-zdnqd7-0 cDeIIW"
+              disabled=""
+            >
+              <input
+                aria-invalid="false"
+                aria-required="false"
+                class="Checkbox__CheckboxInput-sc-14jj5ns-1 kjKKUT Checkbox-sc-14jj5ns-2 jnRDQb"
+                disabled=""
+                name="linelead"
+                type="checkbox"
+                value="clemens"
+              />
+              <div
+                class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                data-testid="visual-checkbox"
+                disabled=""
+              />
+              <p
+                class="Text-sc-15glbbx-0 kEBDnw"
+                color="currentColor"
+                disabled=""
+                font-size="medium"
+              >
+                Clemens Park
+              </p>
+            </label>
+          </div>
+          <div
+            class="Box-xda4ls-0 hQvIAg Checkbox-sc-14jj5ns-2 jnRDQb"
+          >
+            <label
+              class="ClickInputLabel-zdnqd7-0 cDeIIW"
+              disabled=""
+            >
+              <input
+                aria-invalid="false"
+                aria-required="false"
+                class="Checkbox__CheckboxInput-sc-14jj5ns-1 kjKKUT Checkbox-sc-14jj5ns-2 jnRDQb"
+                disabled=""
+                name="linelead"
+                type="checkbox"
+                value="nikola"
+              />
+              <div
+                class="Checkbox__VisualCheckbox-sc-14jj5ns-0 jgxrMd"
+                data-testid="visual-checkbox"
+                disabled=""
+              />
+              <p
+                class="Text-sc-15glbbx-0 kEBDnw"
+                color="currentColor"
+                disabled=""
+                font-size="medium"
+              >
+                Nikola Pejcic
+              </p>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset
+          class="Fieldset-sc-4eydyi-0 eWKTpP RadioGroup-pgv2w1-0 hFKzrk"
+          id="reconcile"
+        >
+          <legend
+            style="margin-bottom:8px"
+          >
+            <span
+              style="font-size:14px;font-weight:600;line-height:1.71428571"
+            >
+              Reconcile
+            </span>
+          </legend>
+          <div
+            class="Box-xda4ls-0 hQvIAg Radio-rhd32j-2 eaLglY"
+          >
+            <label
+              class="ClickInputLabel-zdnqd7-0 cdVzeO"
+            >
+              <input
+                aria-invalid="true"
+                aria-required="false"
+                checked=""
+                class="Radio__RadioInput-rhd32j-1 jvCqep Radio-rhd32j-2 eaLglY"
+                name="settingSelection"
+                type="radio"
+                value="yes"
+              />
+              <div
+                class="Radio__VisualRadio-rhd32j-0 jtAgjT"
+              />
+              <span
+                class="Text-sc-15glbbx-0 gSNEe"
+                color="currentColor"
+                font-size="medium"
+              >
+                 Yes 
+              </span>
+            </label>
+          </div>
+          <div
+            class="Box-xda4ls-0 hQvIAg Radio-rhd32j-2 eaLglY"
+          >
+            <label
+              class="ClickInputLabel-zdnqd7-0 cdVzeO"
+            >
+              <input
+                aria-invalid="true"
+                aria-required="false"
+                class="Radio__RadioInput-rhd32j-1 jvCqep Radio-rhd32j-2 eaLglY"
+                name="settingSelection"
+                type="radio"
+                value="no"
+              />
+              <div
+                class="Radio__VisualRadio-rhd32j-0 jtAgjT"
+              />
+              <span
+                class="Text-sc-15glbbx-0 gSNEe"
+                color="currentColor"
+                font-size="medium"
+              >
+                 No 
+              </span>
+            </label>
+          </div>
+          <div
+            class="Box-xda4ls-0 hQvIAg Radio-rhd32j-2 eaLglY"
+          >
+            <label
+              class="ClickInputLabel-zdnqd7-0 cDeIIW"
+              disabled=""
+            >
+              <input
+                aria-invalid="true"
+                aria-required="false"
+                class="Radio__RadioInput-rhd32j-1 ijGHIn Radio-rhd32j-2 eaLglY"
+                disabled=""
+                name="settingSelection"
+                type="radio"
+                value="maybe"
+              />
+              <div
+                class="Radio__VisualRadio-rhd32j-0 cKIgFL"
+                disabled=""
+              />
+              <span
+                class="Text-sc-15glbbx-0 kEBDnw"
+                color="currentColor"
+                disabled=""
+                font-size="medium"
+              >
+                 Maybe 
+              </span>
+            </label>
+          </div>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 jHmnKr"
+            color="red"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 iGbfeP nds-icon--error"
+              fill="currentColor"
+              focusable="false"
+              height="24px"
+              mr="x1"
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <div
+              class="InlineValidation__Wrapper-sc-19uke1q-0 dFKyki"
+            >
+              <p
+                class="Text-sc-15glbbx-0 gSNEe"
+                color="currentColor"
+                font-size="medium"
+              >
+                Only yes can be selected...
+              </p>
+            </div>
+          </div>
+        </fieldset>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih Toggle__StyledToggle-sc-1tq854q-0 kqNxA"
+        >
+          <div
+            id="Job Visibility-label"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+            >
+              <span
+                style="font-size:14px;font-weight:600;line-height:1.71428571"
+              >
+                Job Visibility
+              </span>
+            </div>
+            <div
+              class="ClickInputLabel-zdnqd7-0 cdVzeO"
+            >
+              <div
+                class="ToggleButton__Switch-t7wo9n-1 cKYWZm"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-labelledby="Job Visibility-label"
+                  aria-required="false"
+                  class="ToggleButton__ToggleInput-t7wo9n-2 qQGAa"
+                  id="job-visibility"
+                  type="checkbox"
+                  value="on"
+                />
+                <span
+                  class="ToggleButton__Slider-t7wo9n-0 fkKnqB"
+                />
+              </div>
+              <p
+                class="Text-sc-15glbbx-0 gbtGXP"
+                color="currentColor"
+                font-size="medium"
+              >
+                Hidden
+              </p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset
+        class="FormSection-v5comv-1 gfZIXf"
+      >
+        <legend
+          class="Text-sc-15glbbx-0-h3 FormSection__FormSectionTitle-v5comv-0 lRtmz"
+          font-size="heading3"
+          font-weight="medium"
+        >
+          Rejects
+        </legend>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Item
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="true"
+                  class="InputField__StyledInput-a97ghf-0 gAGDPa"
+                  id="items"
+                  value="235432"
+                />
+              </div>
+            </div>
+          </label>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 jHmnKr"
+            color="red"
+          >
+            <svg
+              aria-hidden="true"
+              class="Icon-sc-150w9kl-0 iGbfeP nds-icon--error"
+              fill="currentColor"
+              focusable="false"
+              height="24px"
+              mr="x1"
+              viewBox="0 0 24 24"
+              width="24px"
+            >
+              <path
+                d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+              />
+            </svg>
+            <div
+              class="InlineValidation__Wrapper-sc-19uke1q-0 dFKyki"
+            >
+              <p
+                class="Text-sc-15glbbx-0 gSNEe"
+                color="currentColor"
+                font-size="medium"
+              >
+                Item 235432 is not a valid entry
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Quantity
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="quantity"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih Toggle__StyledToggle-sc-1tq854q-0 kqNxA"
+        >
+          <div
+            id="Reject visibility-label"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+            >
+              <span
+                style="font-size:14px;font-weight:600;line-height:1.71428571"
+              >
+                Reject visibility
+              </span>
+            </div>
+            <div
+              class="ClickInputLabel-zdnqd7-0 cDeIIW"
+              disabled=""
+            >
+              <div
+                class="ToggleButton__Switch-t7wo9n-1 cKYWZm"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-labelledby="Reject visibility-label"
+                  aria-required="false"
+                  class="ToggleButton__ToggleInput-t7wo9n-2 cZtZve"
+                  disabled=""
+                  id="reject-visibility"
+                  type="checkbox"
+                  value="on"
+                />
+                <span
+                  class="ToggleButton__Slider-t7wo9n-0 elsUGm"
+                  disabled=""
+                />
+              </div>
+              <p
+                class="Text-sc-15glbbx-0 kDRcgd"
+                color="currentColor"
+                disabled=""
+                font-size="medium"
+              >
+                Hidden
+              </p>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Form Form 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <form
+      class="Form-sc-1qb2xtx-0 fKgcEj"
+    >
+      <h2
+        class="Text-sc-15glbbx-0-h2 bbYEaw"
+        font-size="heading2"
+        font-weight="normal"
+      >
+        New Profile
+      </h2>
+      <div
+        class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+      >
+        <label
+          class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+          color="black"
+          style="display:block"
+        >
+          <div
+            class="Box-xda4ls-0 biCpIl"
+            data-testid="field-label"
+          >
+            <span
+              class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+            >
+              Name
+            </span>
+          </div>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+          >
+            <div
+              class="Box-xda4ls-0 erhvLv"
+              display="flex"
+            >
+              <input
+                aria-invalid="false"
+                class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                id="name"
+              />
+            </div>
+          </div>
+        </label>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+      >
+        <label
+          class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+          color="black"
+          style="display:block"
+        >
+          <div
+            class="Box-xda4ls-0 biCpIl"
+            data-testid="field-label"
+          >
+            <span
+              class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+            >
+              Date of birth
+            </span>
+            <span
+              class="Text-sc-15glbbx-0 lfjkof"
+              color="darkGrey"
+              font-size="12px"
+            >
+              (Optional)
+            </span>
+            <p
+              class="Text-sc-15glbbx-0 HelpText__HelpTextContent-sc-186o6oo-0 clUgZq"
+              color="currentColor"
+              font-size="medium"
+            >
+              Enter a date below
+            </p>
+          </div>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+          >
+            <div
+              class="Box-xda4ls-0 erhvLv"
+              display="flex"
+            >
+              <input
+                aria-invalid="false"
+                class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                id="birthdate"
+                placeholder="DD-MM-YYYY"
+              />
+            </div>
+          </div>
+        </label>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+      >
+        <label
+          class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+          color="black"
+          style="display:block"
+        >
+          <div
+            class="Box-xda4ls-0 biCpIl"
+            data-testid="field-label"
+          >
+            <span
+              class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+            >
+              Place of birth
+            </span>
+            <span
+              class="Text-sc-15glbbx-0 lfjkof"
+              color="darkGrey"
+              font-size="12px"
+            >
+              (Optional)
+            </span>
+          </div>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+          >
+            <div
+              class="Box-xda4ls-0 erhvLv"
+              display="flex"
+            >
+              <input
+                aria-invalid="false"
+                class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                id="birthplace"
+              />
+            </div>
+          </div>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Form With form sections 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <form
+      class="Form-sc-1qb2xtx-0 fKgcEj"
+    >
+      <h2
+        class="Text-sc-15glbbx-0-h2 bbYEaw"
+        font-size="heading2"
+        font-weight="normal"
+      >
+        New Profile
+      </h2>
+      <fieldset
+        class="FormSection-v5comv-1 gfZIXf"
+      >
+        <legend
+          class="Text-sc-15glbbx-0-h3 FormSection__FormSectionTitle-v5comv-0 lRtmz"
+          font-size="heading3"
+          font-weight="medium"
+        >
+          Personal Information
+        </legend>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Name
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="name"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Date of birth
+              </span>
+              <span
+                class="Text-sc-15glbbx-0 lfjkof"
+                color="darkGrey"
+                font-size="12px"
+              >
+                (Optional)
+              </span>
+              <p
+                class="Text-sc-15glbbx-0 HelpText__HelpTextContent-sc-186o6oo-0 clUgZq"
+                color="currentColor"
+                font-size="medium"
+              >
+                Enter a date below
+              </p>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="birthdate"
+                  placeholder="DD-MM-YYYY"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Place of birth
+              </span>
+              <span
+                class="Text-sc-15glbbx-0 lfjkof"
+                color="darkGrey"
+                font-size="12px"
+              >
+                (Optional)
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="birthplace"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset
+        class="FormSection-v5comv-1 gfZIXf"
+      >
+        <legend
+          class="Text-sc-15glbbx-0-h3 FormSection__FormSectionTitle-v5comv-0 lRtmz"
+          font-size="heading3"
+          font-weight="medium"
+        >
+          General Information
+        </legend>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Gender
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="gender"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Occupation
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="occupation"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Form With form sections without titles 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <form
+      class="Form-sc-1qb2xtx-0 fKgcEj"
+    >
+      <h2
+        class="Text-sc-15glbbx-0-h2 bbYEaw"
+        font-size="heading2"
+        font-weight="normal"
+      >
+        New Profile
+      </h2>
+      <fieldset
+        class="FormSection-v5comv-1 BOgOh"
+      >
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Name
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="name"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Date of birth
+              </span>
+              <span
+                class="Text-sc-15glbbx-0 lfjkof"
+                color="darkGrey"
+                font-size="12px"
+              >
+                (Optional)
+              </span>
+              <p
+                class="Text-sc-15glbbx-0 HelpText__HelpTextContent-sc-186o6oo-0 clUgZq"
+                color="currentColor"
+                font-size="medium"
+              >
+                Enter a date below
+              </p>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="birthdate"
+                  placeholder="DD-MM-YYYY"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Place of birth
+              </span>
+              <span
+                class="Text-sc-15glbbx-0 lfjkof"
+                color="darkGrey"
+                font-size="12px"
+              >
+                (Optional)
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="birthplace"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset
+        class="FormSection-v5comv-1 BOgOh"
+      >
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Gender
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="gender"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+        <div
+          class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+        >
+          <label
+            class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+            color="black"
+            style="display:block"
+          >
+            <div
+              class="Box-xda4ls-0 biCpIl"
+              data-testid="field-label"
+            >
+              <span
+                class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+              >
+                Occupation
+              </span>
+            </div>
+            <div
+              class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+            >
+              <div
+                class="Box-xda4ls-0 erhvLv"
+                display="flex"
+              >
+                <input
+                  aria-invalid="false"
+                  class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                  id="occupation"
+                />
+              </div>
+            </div>
+          </label>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Form Without title 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <form
+      class="Form-sc-1qb2xtx-0 jOtgDr"
+    >
+      <div
+        class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+      >
+        <label
+          class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+          color="black"
+          style="display:block"
+        >
+          <div
+            class="Box-xda4ls-0 biCpIl"
+            data-testid="field-label"
+          >
+            <span
+              class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+            >
+              Name
+            </span>
+          </div>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+          >
+            <div
+              class="Box-xda4ls-0 erhvLv"
+              display="flex"
+            >
+              <input
+                aria-invalid="false"
+                class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                id="name"
+              />
+            </div>
+          </div>
+        </label>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+      >
+        <label
+          class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+          color="black"
+          style="display:block"
+        >
+          <div
+            class="Box-xda4ls-0 biCpIl"
+            data-testid="field-label"
+          >
+            <span
+              class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+            >
+              Date of birth
+            </span>
+            <span
+              class="Text-sc-15glbbx-0 lfjkof"
+              color="darkGrey"
+              font-size="12px"
+            >
+              (Optional)
+            </span>
+            <p
+              class="Text-sc-15glbbx-0 HelpText__HelpTextContent-sc-186o6oo-0 clUgZq"
+              color="currentColor"
+              font-size="medium"
+            >
+              Enter a date below
+            </p>
+          </div>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+          >
+            <div
+              class="Box-xda4ls-0 erhvLv"
+              display="flex"
+            >
+              <input
+                aria-invalid="false"
+                class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                id="birthdate"
+                placeholder="DD-MM-YYYY"
+              />
+            </div>
+          </div>
+        </label>
+      </div>
+      <div
+        class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+      >
+        <label
+          class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+          color="black"
+          style="display:block"
+        >
+          <div
+            class="Box-xda4ls-0 biCpIl"
+            data-testid="field-label"
+          >
+            <span
+              class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+            >
+              Place of birth
+            </span>
+            <span
+              class="Text-sc-15glbbx-0 lfjkof"
+              color="darkGrey"
+              font-size="12px"
+            >
+              (Optional)
+            </span>
+          </div>
+          <div
+            class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+          >
+            <div
+              class="Box-xda4ls-0 erhvLv"
+              display="flex"
+            >
+              <input
+                aria-invalid="false"
+                class="InputField__StyledInput-a97ghf-0 eSDvmh"
+                id="birthplace"
+              />
+            </div>
+          </div>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
+`;

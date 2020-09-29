@@ -13,7 +13,6 @@
     "build": "lerna run build",
     "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish",
-    "precommit": "pretty-quick --staged",
     "lint": "yarn run eslint",
     "eslint": "eslint --config ./.eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix",
@@ -40,7 +39,6 @@
     "husky": "2.2.0",
     "lerna": "^3.16.4",
     "prettier": "1.17.0",
-    "pretty-quick": "2.0.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "wait-for-expect": "^3.0.2"
@@ -50,7 +48,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run precommit",
       "pre-push": "yarn workspace @nulogy/components lint"
     }
   }

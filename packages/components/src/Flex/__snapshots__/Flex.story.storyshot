@@ -1,0 +1,996 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Flex Flex 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex IE11 minHeight solution 1 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 klhPUc"
+      height="400px"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+    <p
+      class="Text-sc-15glbbx-0 gSNEe"
+      color="currentColor"
+      font-size="medium"
+    >
+      This solution involves using height instead min-height.
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex IE11 minHeight solution 2 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 egOblu"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      >
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          1
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          2
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          3
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          4
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          5
+        </div>
+      </div>
+    </div>
+    <p
+      class="Text-sc-15glbbx-0 gSNEe"
+      color="currentColor"
+      font-size="medium"
+    >
+      This solution involves wrapping Flex element with another Flex element with column direction..
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex With custom order 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 YsrCi"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 jUylnC"
+        order="1"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 iTYGfU"
+        order="3"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 lhVZUl"
+        order="2"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 jQbPzq"
+        order="5"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 lbouMD"
+        order="4"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex alignItems set to center 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 gVRRsS"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex alignItems set to flex-end 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 bwoxeA"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex alignItems set to flex-start 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 eUTbMn"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex alignItems set to stretch (default) 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 UFZvS"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex flexDirection set to column 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 egOblu"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex flexDirection set to column-reverse 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 hhPdVr"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex flexDirection set to row-reverse 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 dBwbIz"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex flexWrap set to no-wrap (default) 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hINIvq"
+      width="500"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 fulaaY"
+        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      >
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          1
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          2
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          3
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          4
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          5
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          6
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          7
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex flexWrap set to wrap 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hINIvq"
+      width="500"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 cqTrMR"
+        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      >
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          1
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          2
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          3
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          4
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          5
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          6
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          7
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex flexWrap set to wrap-reverse 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 hINIvq"
+      width="500"
+    >
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 hLkbEw"
+        style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+      >
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          1
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          2
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          3
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          4
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          5
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          6
+        </div>
+        <div
+          class="Box-xda4ls-0 hQvIAg"
+          style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+        >
+          7
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex justifyContent set to center 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 ifidAq"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex justifyContent set to flex-end 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 XtCfs"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex justifyContent set to flex-start (default) 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 bQrpij"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex justifyContent set to space-around 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 iCsTlD"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex justifyContent set to space-between 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 cVyxgy"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Flex justifyContent set to space-evenly 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Flex-sc-1whlq91-0 kYbYWh"
+      style="box-sizing:content-box;padding:24px;background:#f0f2f5;min-height:400px"
+    >
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        1
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        2
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        3
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        4
+      </div>
+      <div
+        class="Box-xda4ls-0 hQvIAg"
+        style="padding:48px;background:#c0c8d1;outline:2px dotted #434d59"
+      >
+        5
+      </div>
+    </div>
+  </div>
+</div>
+`;

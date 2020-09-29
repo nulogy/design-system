@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name, react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
 import addons, { makeDecorator } from "@storybook/addons";
-import { theme as NDSTheme } from "@nulogy/components";
+import { theme as NDSTheme } from "../../src";
 import { STORY_CHANGED } from "@storybook/core-events";
 
 const withThemeWrapper = Component => ({ loading, theme, children }) => {

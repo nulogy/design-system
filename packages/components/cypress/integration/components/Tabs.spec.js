@@ -81,22 +81,22 @@ describe("Tabs", () => {
       cy.renderFromStorybook("tabs--with-scrolling-tabs");
     });
     it("only renders right scroll indicator when tabs are hidden on the right", () => {
-      cy.get("svg[icon=leftArrow]").should("not.exist");
-      cy.get("svg[icon=rightArrow]").should("exist");
+      cy.get("svg.nds-icon--leftArrow").should("not.exist");
+      cy.get("svg.nds-icon--rightArrow").should("exist");
     });
 
     it("only renders left scroll indicator when tabs are hidden on the left", () => {
       cy.get(".tab-container").scrollTo("right");
 
-      cy.get("svg[icon=leftArrow]").should("exist");
-      cy.get("svg[icon=rightArrow]").should("not.exist");
+      cy.get("svg.nds-icon--leftArrow").should("exist");
+      cy.get("svg.nds-icon--rightArrow").should("not.exist");
     });
 
     it("renders both scroll indicators when tabs are hidden on the left and right", () => {
       cy.get(".tab-container").scrollTo(50);
 
-      cy.get("svg[icon=leftArrow]").should("not.exist");
-      cy.get("svg[icon=rightArrow]").should("exist");
+      cy.get("svg.nds-icon--leftArrow").should("not.exist");
+      cy.get("svg.nds-icon--rightArrow").should("exist");
     });
   });
 

@@ -1,0 +1,397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Textarea Set to disabled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="false"
+          aria-required="false"
+          class="Textarea__StyledTextarea-ao4abt-0 htHItO"
+          disabled=""
+          rows="3"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Textarea Textarea 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="false"
+          aria-required="false"
+          class="Textarea__StyledTextarea-ao4abt-0 lbFhRn"
+          rows="3"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Textarea Textarea with all props 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+          <span
+            class="Text-sc-15glbbx-0 lfjkof"
+            color="darkGrey"
+            font-size="12px"
+          >
+            (Required)
+          </span>
+          <p
+            class="Text-sc-15glbbx-0 HelpText__HelpTextContent-sc-186o6oo-0 clUgZq"
+            color="currentColor"
+            font-size="medium"
+          >
+            here's some help...
+          </p>
+        </div>
+        <textarea
+          aria-invalid="false"
+          aria-required="true"
+          class="Textarea__StyledTextarea-ao4abt-0 lbFhRn"
+          placeholder="Placeholder"
+          required=""
+          rows="3"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Textarea With custom id 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="false"
+          aria-required="false"
+          class="Textarea__StyledTextarea-ao4abt-0 lbFhRn"
+          id="my-custom-id"
+          rows="3"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Textarea With custom number of rows 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="false"
+          aria-required="false"
+          class="Textarea__StyledTextarea-ao4abt-0 lbFhRn"
+          rows="7"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Textarea using ref to control focus 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="false"
+          aria-required="false"
+          class="Textarea__StyledTextarea-ao4abt-0 lbFhRn"
+          rows="7"
+        />
+      </label>
+    </div>
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Focus the Input
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Textarea with error list 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="true"
+          aria-required="false"
+          class="Textarea__StyledTextarea-ao4abt-0 ieUaGA"
+          rows="3"
+        />
+      </label>
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 jHmnKr"
+        color="red"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 iGbfeP nds-icon--error"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="InlineValidation__Wrapper-sc-19uke1q-0 dFKyki"
+        >
+          <p
+            class="Text-sc-15glbbx-0 gSNEe"
+            color="currentColor"
+            font-size="medium"
+          >
+            Please fill this out
+          </p>
+          <ul
+            class="List-sc-1ueqoqt-0 gtzCT"
+            color="currentColor"
+          >
+            <li
+              class="ListItem-sc-3wr72f-0 fgjjlO"
+              color="currentColor"
+            >
+              Error message 1
+            </li>
+            <li
+              class="ListItem-sc-3wr72f-0 fgjjlO"
+              color="currentColor"
+            >
+              Error message 2
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Textarea with error message 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <div
+      class="Box-xda4ls-0 Field-sc-1r2ui2p-0 edZDih"
+    >
+      <label
+        class="FieldLabel__Label-sc-1wkics-0 crAzuA FieldLabel-sc-1wkics-2 cBevrw"
+        color="black"
+        style="display:block"
+      >
+        <div
+          class="Box-xda4ls-0 biCpIl"
+          data-testid="field-label"
+        >
+          <span
+            class="FieldLabel__LabelText-sc-1wkics-1 kchUqg"
+          >
+            Label
+          </span>
+        </div>
+        <textarea
+          aria-invalid="true"
+          aria-required="false"
+          class="Textarea__StyledTextarea-ao4abt-0 ieUaGA"
+          rows="3"
+        />
+      </label>
+      <div
+        class="Box-xda4ls-0 Flex-sc-1whlq91-0 jHmnKr"
+        color="red"
+      >
+        <svg
+          aria-hidden="true"
+          class="Icon-sc-150w9kl-0 iGbfeP nds-icon--error"
+          fill="currentColor"
+          focusable="false"
+          height="24px"
+          mr="x1"
+          viewBox="0 0 24 24"
+          width="24px"
+        >
+          <path
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          />
+        </svg>
+        <div
+          class="InlineValidation__Wrapper-sc-19uke1q-0 dFKyki"
+        >
+          <p
+            class="Text-sc-15glbbx-0 gSNEe"
+            color="currentColor"
+            font-size="medium"
+          >
+            Please fill this out
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

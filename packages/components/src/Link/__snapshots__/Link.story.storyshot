@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Link As a <button> 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Link-sc-1fcpbo4-0 esLxTj"
+      color="blue"
+      font-size="medium"
+    >
+      Link
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Link Link  1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <a
+      class="Link-sc-1fcpbo4-0 dTHbTj"
+      color="blue"
+      font-size="medium"
+      href="http://nulogy.design"
+    >
+      Link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Link With a different color 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <a
+      class="Link-sc-1fcpbo4-0 cKffrm"
+      color="black"
+      font-size="medium"
+      href="http://nulogy.design"
+    >
+      Link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Link With a different size 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <a
+      class="Link-sc-1fcpbo4-0 jgvAer"
+      color="black"
+      font-size="large"
+      href="http://nulogy.design"
+    >
+      Link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Link Without underline 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <a
+      class="Link-sc-1fcpbo4-0 jjaxib"
+      color="blue"
+      font-size="medium"
+      href="http://nulogy.design"
+    >
+      Link
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Link with custom font size 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <a
+      class="Link-sc-1fcpbo4-0 gjGmKV"
+      color="blue"
+      font-size="small"
+      href="http://nulogy.design"
+    >
+      Link
+    </a>
+  </div>
+</div>
+`;

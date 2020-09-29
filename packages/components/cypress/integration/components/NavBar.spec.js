@@ -154,23 +154,23 @@ describe("NavBar", () => {
       it("opens the menu when the button is clicked", () => {
         cy.get("nav").should("not.exist");
 
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.get("nav").should("exist");
       });
 
       it("closes the menu when the button is clicked and menu is open", () => {
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.get("nav").should("exist");
 
-        cy.get("svg[icon='close']").click();
+        cy.get("svg.nds-icon--close").click();
 
         cy.get("nav").should("not.exist");
       });
 
       it("renders all nested menu links", () => {
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.contains("Operations").should("exist");
         cy.contains("Cycle Counts").should("exist");
@@ -179,7 +179,7 @@ describe("NavBar", () => {
       });
 
       it("closes the menu on escape key press", () => {
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.get("nav").should("exist");
 
@@ -189,7 +189,7 @@ describe("NavBar", () => {
       });
 
       it("closes the menu on escape key press", () => {
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.get("nav").should("exist");
 
@@ -199,12 +199,12 @@ describe("NavBar", () => {
       });
 
       it("resets the scroll position of the menu when closed and opened", () => {
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.get("header").scrollTo("bottom");
 
         cy.get("body").type("{esc}");
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.get("header").should("have.prop", "scrollTop", 0);
       });
@@ -220,14 +220,14 @@ describe("NavBar", () => {
       });
       it("renders custom components in top level", () => {
         cy.renderFromStorybook(CUSTOM_COMPONENTS_STORY);
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.contains("Custom Link").should("exist");
       });
 
       it("renders custom components in nested levels", () => {
         cy.renderFromStorybook(CUSTOM_COMPONENTS_STORY);
-        cy.get("svg[icon='menu']").click();
+        cy.get("svg.nds-icon--menu").click();
 
         cy.contains("Customers CustomLink").should("exist");
         cy.contains("CustomLink").should("exist");

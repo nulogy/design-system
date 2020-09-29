@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Text } from "@nulogy/components";
+import { Text } from "../../src";
 
 const ThemeKey = styled(Text)(({ theme }) => ({
   display: "inline-block",

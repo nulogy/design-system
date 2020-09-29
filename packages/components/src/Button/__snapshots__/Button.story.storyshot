@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Buttons As a link 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <a
+      class="Button__WrapperButton-hxfi59-0 kXvjuR PrimaryButton-sc-1btjl04-0 bLVAEH"
+      href="/"
+    >
+      Create project
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons Button 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Create project
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons DangerButton 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR DangerButton-wmt3mt-0 bBjIVu"
+    >
+      Delete project
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons PrimaryButton 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR PrimaryButton-sc-1btjl04-0 bLVAEH"
+    >
+      Create project
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons QuietButton 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR QuietButton-sc-9hn6d3-0 jhclsj"
+    >
+      Create project
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons Set to disabled 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 cEVyGZ PrimaryButton-sc-1btjl04-0 AFThF"
+      disabled=""
+    >
+      Create project
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons Set to full width 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 bSMnvC PrimaryButton-sc-1btjl04-0 bLVAEH"
+    >
+      Create project
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons With a selected Icon 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 doSLDa nds-icon--add"
+        fill="currentColor"
+        focusable="false"
+        height="1.14285714em"
+        mr="half"
+        viewBox="0 0 24 24"
+        width="1.14285714em"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+      Create project
+    </button>
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Create project
+      <svg
+        aria-hidden="true"
+        class="Icon-sc-150w9kl-0 JvuXB nds-icon--add"
+        fill="currentColor"
+        focusable="false"
+        height="1.14285714em"
+        ml="half"
+        viewBox="0 0 24 24"
+        width="1.14285714em"
+      >
+        <path
+          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Buttons With a selected size 1`] = `
+<div
+  style="padding:24px"
+>
+  <div
+    class="NDSProvider__GlobalStyles-sc-18srg6b-0 eGTiGd"
+  >
+    <button
+      class="Button__WrapperButton-hxfi59-0 ixIWkW"
+    >
+      Create project
+    </button>
+    <button
+      class="Button__WrapperButton-hxfi59-0 kXvjuR"
+    >
+      Create project
+    </button>
+    <button
+      class="Button__WrapperButton-hxfi59-0 bsveBE"
+    >
+      Create project
+    </button>
+  </div>
+</div>
+`;

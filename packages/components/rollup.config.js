@@ -4,21 +4,39 @@ import commonjs from "rollup-plugin-commonjs";
 import replace from "rollup-plugin-replace";
 import typescript from "rollup-plugin-typescript2";
 
-import packageJson from "./package.json";
-
 /* Rollup outputs module and main bundles for the @nulogy/components package */
+import packageJson from "./package.json";
 
 const GLOBALS = {
   react: "React",
   "react-dom": "ReactDOM",
   "prop-types": "PropTypes",
   "styled-components": "styled",
-  "react-windowed-select": "components"
+  "react-windowed-select": "components",
+  "@babel/runtime/helpers/typeof": "typeof",
+  "@babel/runtime/helpers/defineProperty": "defineProperty",
+  "@babel/runtime/helpers/classCallCheck": "classCallCheck",
+  "@babel/runtime/helpers/createClass": "createClass",
+  "@babel/runtime/helpers/slicedToArray": "slicedToArray",
+  "@babel/runtime/helpers/objectWithoutProperties": "objectWithoutProperties",
+  "object-assign": "assign",
+  "@babel/runtime/helpers/objectWithoutPropertiesLoose": "objectWithoutPropertiesLoose",
+  "@babel/runtime/helpers/extends": "extends",
+  "@babel/runtime/helpers/assertThisInitialized": "assertThisInitialized",
+  "@babel/runtime/helpers/inheritsLoose": "inheritsLoose",
+  "deep-equal": "deep-equal",
+  "create-react-context": "createContext",
+  warning: "warning",
+  exenv: "exenv",
+  classnames: "t",
+  "react-input-autosize": "AutosizeInput",
+  "html-parse-stringify2": "HTML",
+  "smoothscroll-polyfill": "smoothscroll",
 };
 
 const externals = Object.keys(GLOBALS);
 
-const EXTENSIONS = [".js", ".jsx", "ts", ".tsx"];
+const EXTENSIONS = [".js", ".jsx", "ts", ".tsx", ".mjs"];
 
 const CORE_PLUGINS = [
   /* typescript: see tsconfig.json for settings */
@@ -33,8 +51,8 @@ const CORE_PLUGINS = [
     in those cases, it needs to be added as ["package-name"]: "exportName" here */
     namedExports: {
       debounce: ["debounce"],
-      "react-windowed-select": ["components"]
-    }
+      "react-windowed-select": ["components"],
+    },
   }),
   /* babel: transiles the bundle according to babel.config */
   babel({
@@ -43,14 +61,14 @@ const CORE_PLUGINS = [
     /* exclude: globs to exclude */
     exclude: ["./node_modules/**/*", "../node_modules/**/*"],
     /* exclude: files to be transpiled by babel */
-    extensions: EXTENSIONS
+    extensions: EXTENSIONS,
   }),
   /* replace: replaces strings when bundling */
   replace({
     exclude: /node_modules/,
     /* ENV is replaced by environment setting */
-    ENV: JSON.stringify(process.env.NODE_ENV || "development")
-  })
+    ENV: JSON.stringify(process.env.NODE_ENV || "development"),
+  }),
 ];
 
 const ENTRY_FILE = "src/index.ts";
@@ -67,14 +85,14 @@ const mainBundles = {
       name: "NDSComponents",
       format: "umd",
       // globals: global variable names of external dependencies
-      globals: GLOBALS
+      globals: GLOBALS,
     },
     // ES module format for package.module field, auto-imports and optimal tree-shaking
     {
       file: packageJson.module,
       format: "es",
-      globals: GLOBALS
-    }
+      globals: GLOBALS,
+    },
   ],
   plugins: [
     // resolve: resolves node_modules imports
@@ -86,10 +104,10 @@ const mainBundles = {
       /* modulesOnly: inspect resolved files are es2015 modules */
       modulesOnly: true,
       /* extensions: specifies the file extensions to accept as imports */
-      extensions: EXTENSIONS
+      extensions: EXTENSIONS,
     }),
-    ...CORE_PLUGINS
-  ]
+    ...CORE_PLUGINS,
+  ],
 };
 
 export default [mainBundles];

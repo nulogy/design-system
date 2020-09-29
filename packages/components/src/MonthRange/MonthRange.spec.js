@@ -27,7 +27,7 @@ describe("MonthRange", () => {
       const latestCall = onChangeCalls[onChangeCalls.length - 1][0];
       expect(latestCall.startDate).toMatchDate(new Date("2020-04-01T04:00:00.000Z"));
       expect(latestCall.endDate).toMatchDate(new Date("2020-06-01T04:00:00.000Z"));
-      expect(latestCall.error).toBeUndefined();
+      expect(latestCall.error).toBe("");
     });
     it("returns the selected range with an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
