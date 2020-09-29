@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.8.0](https://github.com/nulogy/design-system/compare/v4.7.0...v4.8.0) (2020-09-29)
+
+
+### Features
+
+* convert our components to typescript ([#748](https://github.com/nulogy/design-system/issues/748)) ([2a24ef5](https://github.com/nulogy/design-system/commit/2a24ef53b9f250b03492b8d9976dd709c2077d22))
+
+
+
+
+
 # [4.7.0](https://github.com/nulogy/design-system/compare/v4.6.10...v4.7.0) (2020-09-23)
 
 
