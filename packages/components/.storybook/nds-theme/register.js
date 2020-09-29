@@ -27,10 +27,13 @@ const composeTheme = (data, theme) => {
 
 const ThemePanel = () => {
   const [theme, setTheme] = useAddonState("ndsThemeAddon", NDSTheme);
+  const channel = addons.getChannel();
   const emit = useChannel({});
 
   useEffect(() => {
-    emit("theme-update", theme);
+    channel.on(STORY_CHANGED, () => {
+      emit("theme-update", theme);
+    });
   });
 
   const onChange = (group, prop) => e => {
