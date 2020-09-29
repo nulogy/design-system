@@ -13,7 +13,6 @@
     "build": "lerna run build",
     "test": "yarn workspace @nulogy/components test && yarn workspace @nulogy/components e2e:test",
     "publish-packages": "yarn install && yarn build && yarn lerna publish",
-    "precommit": "pretty-quick --staged",
     "lint": "yarn run eslint",
     "eslint": "eslint --config ./.eslintrc './**/*.js'",
     "eslint:fix": "yarn run eslint --fix",
@@ -50,7 +49,6 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run precommit",
       "pre-push": "yarn workspace @nulogy/components lint"
     }
   }

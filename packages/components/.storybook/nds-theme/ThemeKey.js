@@ -6,7 +6,7 @@ const ThemeKey = styled(Text)(({ theme }) => ({
   width: "250px",
   fontSize: theme.fontSizes.small,
   fontFamily: `${theme.fonts.mono} !important`,
-  marginRight: theme.space.x3,
+  marginRight: theme.space.x3
 }));
 
 export default ThemeKey;

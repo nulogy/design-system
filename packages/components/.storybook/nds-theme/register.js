@@ -19,8 +19,8 @@ const composeTheme = (data, theme) => {
     ...theme,
     [themeGroup]: {
       ...theme[themeGroup],
-      ...(newValue && data[themeGroup]),
-    },
+      ...(newValue && data[themeGroup])
+    }
   };
   return newTheme;
 };
@@ -33,13 +33,13 @@ const ThemePanel = () => {
     emit("theme-update", theme);
   });
 
-  const onChange = (group, prop) => (e) => {
+  const onChange = (group, prop) => e => {
     const value = e.target.value;
     const nextTheme = composeTheme(
       {
         [group]: {
-          [prop]: value,
-        },
+          [prop]: value
+        }
       },
       theme
     );
@@ -49,10 +49,10 @@ const ThemePanel = () => {
 
   return (
     <NDSProvider>
-      {Object.keys(NDSTheme).map((group) => (
+      {Object.keys(NDSTheme).map(group => (
         <Box m="x3" key={group} maxWidth="500px">
           <Heading3 fontWeight="light">{group}</Heading3>
-          {Object.keys(NDSTheme[group]).map((prop) => (
+          {Object.keys(NDSTheme[group]).map(prop => (
             <Flex alignItems="center" mb="x2" key={`${group}-${prop}`}>
               <ThemeKey>{prop}</ThemeKey>
               <ThemeInput defaultValue={NDSTheme[group][prop]} onChange={onChange(group, prop)} />
@@ -75,6 +75,6 @@ addons.register(ADDON_ID, () => {
     type: types.PANEL,
     title: "Theme",
     skipIfNoParametersOrOptions: false,
-    render: ThemeAddonPanel,
+    render: ThemeAddonPanel
   });
 });
