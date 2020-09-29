@@ -4,9 +4,12 @@ import React, { useEffect } from "react";
 import { addons, types } from "@storybook/addons";
 import { AddonPanel } from "@storybook/components";
 import { useChannel, useAddonState } from "@storybook/api";
+import { STORY_CHANGED } from "@storybook/core-events";
+
 import { Box, Flex, NDSProvider, Heading3, theme as NDSTheme } from "../../src";
 import ThemeKey from "./ThemeKey";
 import ThemeInput from "./ThemeInput";
+import ThemeColorInput from "./ThemeColorInput";
 
 const ADDON_ID = "ndsThemeAddon";
 const PANEL_ID = `${ADDON_ID}/panel`;
@@ -50,6 +53,20 @@ const ThemePanel = () => {
     emit("theme-update", nextTheme);
   };
 
+  const onChangeColor = (group, prop) => e => {
+    const value = e.hex;
+    const nextTheme = composeTheme(
+      {
+        [group]: {
+          [prop]: value
+        }
+      },
+      theme
+    );
+    setTheme(nextTheme);
+    emit("theme-update", nextTheme);
+  };
+
   return (
     <NDSProvider>
       {Object.keys(NDSTheme).map(group => (
@@ -58,7 +75,8 @@ const ThemePanel = () => {
           {Object.keys(NDSTheme[group]).map(prop => (
             <Flex alignItems="center" mb="x2" key={`${group}-${prop}`}>
               <ThemeKey>{prop}</ThemeKey>
-              <ThemeInput defaultValue={NDSTheme[group][prop]} onChange={onChange(group, prop)} />
+              { group === "colors" ? <ThemeColorInput color={NDSTheme[group][prop]} onChange={onChangeColor(group, prop)} /> : <ThemeInput defaultValue={NDSTheme[group][prop]} onChange={onChange(group, prop)} />}
+
             </Flex>
           ))}
         </Box>
