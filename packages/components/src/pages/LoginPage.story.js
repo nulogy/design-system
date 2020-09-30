@@ -46,18 +46,6 @@ export const Base = () => (
         </Form>
       </Flex>
     </Flex>
-    <Box
-      width={{
-        extraSmall: `calc(100% - ${theme.space.x4})`,
-        small: `calc(100% - ${theme.space.x8})`
-      }}
-      pt="x2"
-      mb="x4"
-      textAlign="center"
-      style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}
-    >
-      <Text color="darkGrey">© 2007-2019 Nulogy Corporation</Text>
-    </Box>
   </Flex>
 );
 
@@ -102,18 +90,6 @@ export const WithRememberMe = () => (
         </form>
       </Flex>
     </Flex>
-    <Box
-      width={{
-        extraSmall: `calc(100% - ${theme.space.x4})`,
-        small: `calc(100% - ${theme.space.x8})`
-      }}
-      pt="x2"
-      mb="x4"
-      textAlign="center"
-      style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}
-    >
-      <Text color="darkGrey">© 2007-2019 Nulogy Corporation</Text>
-    </Box>
   </Flex>
 );
 
@@ -164,18 +140,6 @@ export const WithForgotPasswordLink = () => (
         </Box>
       </Flex>
     </Flex>
-    <Box
-      width={{
-        extraSmall: `calc(100% - ${theme.space.x4})`,
-        small: `calc(100% - ${theme.space.x8})`
-      }}
-      pt="x2"
-      mb="x4"
-      textAlign="center"
-      style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}
-    >
-      <Text color="darkGrey">© 2007-2019 Nulogy Corporation</Text>
-    </Box>
   </Flex>
 );
 
@@ -226,18 +190,6 @@ export const WithError = () => (
         </Form>
       </Flex>
     </Flex>
-    <Box
-      width={{
-        extraSmall: `calc(100% - ${theme.space.x4})`,
-        small: `calc(100% - ${theme.space.x8})`
-      }}
-      pt="x2"
-      mb="x4"
-      textAlign="center"
-      style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}
-    >
-      <Text color="darkGrey">© 2007-2019 Nulogy Corporation</Text>
-    </Box>
   </Flex>
 );
 
@@ -285,18 +237,6 @@ export const WithErrorAndNoAdditionalText = () => (
         </Form>
       </Flex>
     </Flex>
-    <Box
-      width={{
-        extraSmall: `calc(100% - ${theme.space.x4})`,
-        small: `calc(100% - ${theme.space.x8})`
-      }}
-      pt="x2"
-      mb="x4"
-      textAlign="center"
-      style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}
-    >
-      <Text color="darkGrey">© 2007-2019 Nulogy Corporation</Text>
-    </Box>
   </Flex>
 );
 

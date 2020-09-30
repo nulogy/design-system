@@ -29,11 +29,6 @@ export const Base = () => (
         </Box>
       </Flex>
     </Flex>
-    <Box pt="x2" textAlign="center" style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}>
-      <Text color="darkGrey" fontSize="small">
-        © 2007-2019 Nulogy Corporation
-      </Text>
-    </Box>
   </Flex>
 );
 
@@ -56,11 +51,6 @@ export const WithALink = () => (
         </Box>
       </Flex>
     </Flex>
-    <Box pt="x2" textAlign="center" style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}>
-      <Text color="darkGrey" fontSize="small">
-        © 2007-2019 Nulogy Corporation
-      </Text>
-    </Box>
   </Flex>
 );
 
@@ -84,10 +74,5 @@ export const Maintenance = () => (
         </Box>
       </Flex>
     </Flex>
-    <Box pt="x2" textAlign="center" style={{ borderTop: `solid 1px ${theme.colors.lightGrey}` }}>
-      <Text color="darkGrey" fontSize="small">
-        © 2007-2019 Nulogy Corporation
-      </Text>
-    </Box>
   </Flex>
 );
