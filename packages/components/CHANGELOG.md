@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.9.0](https://github.com/nulogy/design-system/compare/v4.8.1...v4.9.0) (2020-09-30)
+
+
+### Features
+
+* Add secondary colours ([#780](https://github.com/nulogy/design-system/issues/780)) ([058ec3a](https://github.com/nulogy/design-system/commit/058ec3a2f696cdd7af852d42ccedcfd34a79ba31))
+
+
+
+
+
 ## [4.8.1](https://github.com/nulogy/design-system/compare/v4.8.0...v4.8.1) (2020-09-30)
 
 **Note:** Version bump only for package @nulogy/components
