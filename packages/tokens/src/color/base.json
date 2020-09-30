@@ -16,7 +16,13 @@
       "red": { "value": "#CC1439" },
       "lightRed": { "value": "#FAE6EA" },
       "yellow": { "value": "#FFBB00" },
-      "lightYellow": { "value": "FCF5E3" }
+      "lightYellow": { "value": "FCF5E3" },
+      "aqua": { "value": "19C4E6" },
+      "purple": { "value": "8033CC" },
+      "pink": { "value": "E372D0" },
+      "turquoise": { "value": "55DDB0" },
+      "orange": { "value": "EE5513" },
+      "avocado": { "value": "D3D322" }
     }
   }
 }

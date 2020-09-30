@@ -15,6 +15,12 @@ type Colors = {
   lightGreen: string;
   red: string;
   lightRed: string;
+  categorical1: string;
+  categorical2: string;
+  categorical3: string;
+  categorical4: string;
+  categorical5: string;
+  categorical6: string;
 };
 type ColorsOptions = keyof Colors;
 

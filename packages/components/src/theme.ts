@@ -18,7 +18,13 @@ const Theme: ThemeType = {
     green: tokens.color_base_green,
     lightGreen: tokens.color_base_light_green,
     red: tokens.color_base_red,
-    lightRed: tokens.color_base_light_red
+    lightRed: tokens.color_base_light_red,
+    categorical1: tokens.color_base_aqua,
+    categorical2: tokens.color_base_purple,
+    categorical3: tokens.color_base_pink,
+    categorical4: tokens.color_base_turquoise,
+    categorical5: tokens.color_base_orange,
+    categorical6: tokens.color_base_avocado
   },
   fontSizes: {
     smaller: tokens.size_font_smaller,
