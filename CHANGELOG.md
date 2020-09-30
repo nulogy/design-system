@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.8.1](https://github.com/nulogy/design-system/compare/v4.8.0...v4.8.1) (2020-09-30)
+
+**Note:** Version bump only for package @nulogy/nds
+
+
+
+
+
 # [4.8.0](https://github.com/nulogy/design-system/compare/v4.7.0...v4.8.0) (2020-09-29)
 
 
