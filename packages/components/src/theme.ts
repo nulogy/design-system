@@ -19,12 +19,12 @@ const Theme: ThemeType = {
     lightGreen: tokens.color_base_light_green,
     red: tokens.color_base_red,
     lightRed: tokens.color_base_light_red,
-    categorical1: tokens.color_base_aqua,
-    categorical2: tokens.color_base_purple,
-    categorical3: tokens.color_base_pink,
-    categorical4: tokens.color_base_turquoise,
-    categorical5: tokens.color_base_orange,
-    categorical6: tokens.color_base_avocado
+    categorical1: tokens.color_base_categorical_1,
+    categorical2: tokens.color_base_categorical_2,
+    categorical3: tokens.color_base_categorical_3,
+    categorical4: tokens.color_base_categorical_4,
+    categorical5: tokens.color_base_categorical_5,
+    categorical6: tokens.color_base_categorical_6
   },
   fontSizes: {
     smaller: tokens.size_font_smaller,
