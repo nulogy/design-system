@@ -98,10 +98,12 @@ WithCustomDefault.story = {
   name: "with custom default"
 };
 
-export const WithValue = () => {
+const ControlledTimePicker = () => {
   const [value, setValue] = useState("13:43");
   return <TimePicker onChange={setValue} onInputChange={setValue} labelText="End Time" value={value} />;
-};
+}
+
+export const WithValue = () => <ControlledTimePicker />;
 
 WithValue.story = {
   name: "with value"
