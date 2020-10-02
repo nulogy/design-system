@@ -22,7 +22,13 @@
       "pink": { "value": "E372D0" },
       "turquoise": { "value": "55DDB0" },
       "orange": { "value": "EE5513" },
-      "avocado": { "value": "D3D322" }
+      "avocado": { "value": "D3D322" },
+      "categorical1": { "value": "{color.base.aqua.value}" },
+      "categorical2": { "value": "{color.base.purple.value}" },
+      "categorical3": { "value": "{color.base.pink.value}" },
+      "categorical4": { "value": "{color.base.turquoise.value}" },
+      "categorical5": { "value": "{color.base.orange.value}" },
+      "categorical6": { "value": "{color.base.avocado.value}" }
     }
   }
 }
