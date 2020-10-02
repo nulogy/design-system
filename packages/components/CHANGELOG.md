@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.9.1](https://github.com/nulogy/design-system/compare/v4.9.0...v4.9.1) (2020-10-02)
+
+
+### Bug Fixes
+
+* corrects categorical colour mapping ([#781](https://github.com/nulogy/design-system/issues/781)) ([4f968b7](https://github.com/nulogy/design-system/commit/4f968b78602c7391948f8ba70c288e50bfc68083))
+
+
+
+
+
 # [4.9.0](https://github.com/nulogy/design-system/compare/v4.8.1...v4.9.0) (2020-09-30)
 
 
