@@ -546,3 +546,23 @@ export const UsingRefToControlFocus = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus"
 };
+
+
+export const WithANullValue = () => {
+  const optionsWithBlank = [{ value: null, label: "Nullable" }, { value: null, label: "Other null" }, ...options];
+  return (
+    <Select
+      defaultValue={null}
+      placeholder="Please select inventory status"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      options={optionsWithBlank}
+      labelText="Inventory status"
+      onInputChange={action("typed input value changed")}
+    />
+  );
+};
+
+WithANullValue.story = {
+  name: "with a null value"
+};

@@ -1,4 +1,4 @@
-import React, { useContext, forwardRef } from "react";
+import React, { useContext, useEffect, forwardRef } from "react";
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
@@ -7,6 +7,7 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "./customReactSelectStyles";
 import { SelectOption } from "./SelectOption";
+
 import {
   SelectControl,
   SelectMultiValue,
@@ -48,10 +49,25 @@ export const SelectDefaultProps = {
   closeMenuOnSelect: true
 };
 
+const checkOptionsAreValid = (options) => {
+  if (options && process.env.NODE_ENV === "development") {
+    const uniq = (a) => Array.from(new Set(a));
+    const uniqueValues = uniq(options.map(({ value }) => value === null ? "_null_" : value));
+    if (uniqueValues.length < options.length) {
+      console.warn("NDS: The options prop passed to Select must have unique values for each option", options);
+    }
+  }
+}
+
 export const getOption = (options, value) => {
-  if (value == null || value === "") return value;
-  return options.find(o => o.value === value);
+  // allows an option with  a null value to be matched
+  if (options.length > 0 && value !== undefined ) {
+    const optionWithMatchingValue = options.find(o => o.value === value);
+    return optionWithMatchingValue
+  }
+  return value;
 };
+
 const getReactSelectValue = (options, input) => {
   if (Array.isArray(input)) {
     return input.map(i => getOption(options, i));
@@ -145,6 +161,11 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
   ) => {
     const { t } = useTranslation();
     const themeContext = useContext(ThemeContext);
+
+    useEffect(() => {
+      checkOptionsAreValid(options);
+    }, [options])
+
     return (
       <Field>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -193,6 +214,7 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
             }}
             aria-label={ariaLabel}
             filterOption={filterOption}
+            closeMenuOnSelect={closeMenuOnSelect}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
