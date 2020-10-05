@@ -62,6 +62,7 @@ type BaseToggleProps = {
   innerRef?: any;
   name?: string;
   theme?: ThemeType;
+  "data-testid": string;
 };
 
 const BaseToggle = ({
@@ -78,6 +79,7 @@ const BaseToggle = ({
   helpText,
   toggled,
   onClick,
+  "data-testid": dataTestId,
   ...props
 }: BaseToggleProps) => {
   const handleClick = e => {
@@ -91,7 +93,7 @@ const BaseToggle = ({
         requirementText={requirementText}
         helpText={helpText}
       >
-        <ClickInputLabel as="div" onClick={onClick} disabled={disabled}>
+        <ClickInputLabel as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
           <ToggleButton
             id={id}
             checked={toggled}
@@ -151,7 +153,7 @@ const StatefulToggle = ({ defaultToggled, onClick, ...props }: StatefulTogglePro
     if (onClick) onClick(e);
   };
 
-  return <StyledToggle toggled={toggled} onClick={handleClick} {...props} />;
+  return <StyledToggle toggled={toggled} onClick={handleClick} value={toggled ? "on" : "off"} {...props} />;
 };
 
 StatefulToggle.propTypes = {

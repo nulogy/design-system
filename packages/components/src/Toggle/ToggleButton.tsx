@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useImperativeHandle } from "react";
 import styled, { CSSObject } from "styled-components";
 import { ThemeType } from "../theme.type";
 type SliderProps = React.ComponentPropsWithRef<"span"> & {
@@ -64,12 +64,21 @@ const ToggleInput = styled.input(
 );
 type ToggleButtonProps = ToggleInputProps & {
   defaultToggled?: boolean;
+  disabled?: boolean;
 };
 const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef((props, ref) => {
   const { disabled, defaultToggled } = props;
+  const inputRef = useRef(null);
+  useImperativeHandle(ref, () => inputRef.current);
+  const handleClick = () => {
+    if (inputRef.current) {
+      // triggers the onChange event on a checkbox input
+      inputRef.current.click();
+    }
+  }
   return (
-    <Switch>
-      <ToggleInput ref={ref} type="checkbox" defaultChecked={defaultToggled} {...props} />
+    <Switch onClick={handleClick}>
+      <ToggleInput ref={inputRef} type="checkbox" defaultChecked={defaultToggled} {...props} />
       <Slider disabled={disabled} />
     </Switch>
   );
