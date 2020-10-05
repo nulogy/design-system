@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.9.2](https://github.com/nulogy/design-system/compare/v4.9.1...v4.9.2) (2020-10-05)
+
+
+### Bug Fixes
+
+* onChange should fire when Toggle is changed ([#785](https://github.com/nulogy/design-system/issues/785)) ([ca59fe3](https://github.com/nulogy/design-system/commit/ca59fe394814f0e6efd0d4b827f3cb4f9df9ccfd))
+* TruncatedText component should accept spaceProps ([#784](https://github.com/nulogy/design-system/issues/784)) ([0dbf701](https://github.com/nulogy/design-system/commit/0dbf701e3f4cca783c0d231e10c524e99bc57eef))
+
+
+
+
+
 ## [4.9.1](https://github.com/nulogy/design-system/compare/v4.9.0...v4.9.1) (2020-10-02)
 
 
