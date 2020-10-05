@@ -23,14 +23,14 @@ MaybeTooltip.defaultProps = {
   showTooltip: true
 };
 
-const TruncatedText = ({ children, element, indicator, maxCharacters, showTooltip, tooltipProps }) => {
+const TruncatedText = ({ children, element, indicator, maxCharacters, showTooltip, tooltipProps, ...props }) => {
   const innerText = children;
   const requiresTruncation = innerText.length > maxCharacters;
   const truncatedText = requiresTruncation ? innerText.slice(0, maxCharacters) + indicator : children;
   const hasTooltip = showTooltip && requiresTruncation;
   return (
     <MaybeTooltip showTooltip={hasTooltip} tooltip={innerText} {...tooltipProps}>
-      <StyledWrapper as={element.type} hoverable={hasTooltip} {...element.props}>
+      <StyledWrapper as={element.type} hoverable={hasTooltip} {...element.props} {...props}>
         {truncatedText}
       </StyledWrapper>
     </MaybeTooltip>
