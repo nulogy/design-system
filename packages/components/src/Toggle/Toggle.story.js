@@ -7,7 +7,7 @@ export default {
   title: "Components/Toggle"
 };
 
-export const _Toggle = () => <Toggle />;
+export const _Toggle = () => <Toggle data-testid="toggle-example" onChange={action("on change")} />;
 
 export const ToggleWithAllProps = () => (
   <Toggle
