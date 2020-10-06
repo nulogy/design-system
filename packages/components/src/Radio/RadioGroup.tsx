@@ -42,6 +42,8 @@ type BaseRadioGroupProps = {
   labelText?: string;
   helpText?: string;
   requirementText?: string;
+  children?: any;
+  name?: string;
 };
 
 const BaseRadioGroup = ({
@@ -68,30 +70,6 @@ const BaseRadioGroup = ({
       <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </Fieldset>
   );
-};
-
-BaseRadioGroup.propTypes = {
-  errorMessage: PropTypes.string,
-  errorList: PropTypes.arrayOf(PropTypes.string),
-  labelText: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.shape({
-      type: PropTypes.oneOf([Radio])
-    }),
-    PropTypes.arrayOf(
-      PropTypes.shape({
-        type: PropTypes.oneOf([Radio])
-      })
-    )
-  ]).isRequired,
-  defaultValue: PropTypes.string,
-  checkedValue: PropTypes.string,
-  onChange: PropTypes.func,
-  className: PropTypes.string,
-  id: PropTypes.string,
-  helpText: PropTypes.node,
-  requirementText: PropTypes.string
 };
 
 BaseRadioGroup.defaultProps = {

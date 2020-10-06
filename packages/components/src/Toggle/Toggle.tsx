@@ -62,7 +62,7 @@ type BaseToggleProps = {
   innerRef?: any;
   name?: string;
   theme?: ThemeType;
-  "data-testid": string;
+  "data-testid"?: string;
 };
 
 const BaseToggle = ({
