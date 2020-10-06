@@ -92,8 +92,8 @@ type ReactSelectProps = {
   onChange?: (...args: any[]) => any;
   placeholder?: string;
   required?: boolean;
-  value: any;
-  defaultValue: any;
+  value?: any;
+  defaultValue?: any;
   className?: string;
   classNamePrefix?: string;
   menuIsOpen?: boolean;
