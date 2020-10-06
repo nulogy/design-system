@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.9.3](https://github.com/nulogy/design-system/compare/v4.9.2...v4.9.3) (2020-10-06)
+
+
+### Bug Fixes
+
+* Radio, select and toggle types ([#786](https://github.com/nulogy/design-system/issues/786)) ([b219ead](https://github.com/nulogy/design-system/commit/b219ead184f19dd584462f3cbd07bf7030403457))
+
+
+
+
+
 ## [4.9.2](https://github.com/nulogy/design-system/compare/v4.9.1...v4.9.2) (2020-10-05)
 
 
