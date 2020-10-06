@@ -113,6 +113,7 @@ export type ThemeType = {
   lineHeights: LineHeights;
   fontWeights: FontWeights;
   space: Space;
+  sizes: Space;
   fonts: Fonts;
   borders: Borders;
   shadows: Shadows;
