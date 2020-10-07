@@ -1,6 +1,9 @@
 describe("Alert", () => {
+  before(() => {
+    cy.visitStorybook();
+  });
   beforeEach(() => {
-    cy.renderFromStorybook("alert--with-a-close-button");
+    cy.loadStory("Components/Alert", "With a close button");
   });
   it("shows an alert", () => {
     cy.get('[role="alert"]').should("be.visible");
