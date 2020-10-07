@@ -31,9 +31,6 @@ storiesOf("Pages/Error", module)
           </div>
         </main>
       </div>
-      <footer class="ErrorPage__footer">
-        © 2007-2019 Nulogy Corporation
-      </footer>
     </div>
   `
   )
@@ -58,9 +55,6 @@ storiesOf("Pages/Error", module)
           <a class="Link Link--ErrorPage" href="javascript:">Back to Homepage</a>
         </main>
       </div>
-      <footer class="ErrorPage__footer">
-        © 2007-2019 Nulogy Corporation
-      </footer>
     </div>
   `
   )
@@ -80,9 +74,6 @@ storiesOf("Pages/Error", module)
           </div>
         </main>
       </div>
-      <footer class="ErrorPage__footer">
-        © 2007-2019 Nulogy Corporation
-      </footer>
     </div>
   `
   );
