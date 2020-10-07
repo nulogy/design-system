@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.10.0](https://github.com/nulogy/design-system/compare/v4.9.3...v4.10.0) (2020-10-07)
+
+
+### Features
+
+* allow one of the select options to have a value of null and warn about duplicate values ([#783](https://github.com/nulogy/design-system/issues/783)) ([50a5658](https://github.com/nulogy/design-system/commit/50a5658df7565cfb38d45d9a729ca35150fc7998))
+
+
+
+
+
 ## [4.9.3](https://github.com/nulogy/design-system/compare/v4.9.2...v4.9.3) (2020-10-06)
 
 
