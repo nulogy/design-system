@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import PropTypes from "prop-types";
 import styled, { CSSObject, ThemeContext } from "styled-components";
 
 import Radio from "./Radio";
@@ -34,7 +33,7 @@ const getRadioButtons = (props: any) => {
   return radioButtons;
 };
 
-type BaseRadioGroupProps = {
+interface BaseRadioGroupProps {
   className?: string;
   id?: string;
   errorMessage?: string;
@@ -44,7 +43,8 @@ type BaseRadioGroupProps = {
   requirementText?: string;
   children?: any;
   name?: string;
-};
+  disabled?: boolean;
+}
 
 const BaseRadioGroup = ({
   className,
@@ -81,7 +81,8 @@ BaseRadioGroup.defaultProps = {
   className: undefined,
   id: undefined,
   helpText: null,
-  requirementText: null
+  requirementText: null,
+  default: false
 };
 
 const RadioGroup = styled(BaseRadioGroup)({});
