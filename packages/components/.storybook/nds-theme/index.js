@@ -21,7 +21,7 @@ export default Component =>
 
       useEffect(() => {
         setLoading(false);
-      });
+      }, [setLoading]);
 
       useEffect(() => {
         channel.on("theme-update", data => {

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import Checkbox from "./Checkbox";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -31,7 +31,7 @@ const LabelText = styled.span<any>(({ theme }) => ({
 const Legend = styled.legend(({ theme }) => ({
   marginBottom: theme.space.x1
 }));
-type BaseCheckboxGroupProps = {
+interface BaseCheckboxGroupProps {
   errorMessage?: string;
   errorList?: string[];
   labelText: string;
@@ -43,6 +43,7 @@ type BaseCheckboxGroupProps = {
   id?: string;
   helpText?: React.ReactNode;
   requirementText?: string;
+  disabled?: boolean;
 };
 const BaseCheckboxGroup: React.SFC<BaseCheckboxGroupProps> = ({
   className,
@@ -76,7 +77,8 @@ BaseCheckboxGroup.defaultProps = {
   className: undefined,
   id: undefined,
   helpText: undefined,
-  requirementText: undefined
+  requirementText: undefined,
+  disabled: false
 };
 const CheckboxGroup = styled(BaseCheckboxGroup)({});
 export default CheckboxGroup;
