@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.1](https://github.com/nulogy/design-system/compare/v4.10.0...v4.10.1) (2020-10-09)
+
+
+### Bug Fixes
+
+* Add disabled prop to group components ([#789](https://github.com/nulogy/design-system/issues/789)) ([0093726](https://github.com/nulogy/design-system/commit/0093726fc70cc03e02890aff633237422e30a53d))
+
+
+
+
+
 # [4.10.0](https://github.com/nulogy/design-system/compare/v4.9.3...v4.10.0) (2020-10-07)
 
 
