@@ -131,14 +131,3 @@ export const UsingRefToControlFocus = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus"
 };
-
-export const WithSpace = () => (
-  <TimePicker
-    onChange={action("time changed")}
-    onInputChange={action("input changed")}
-    labelText="End Time"
-    defaultValue="12:38 PM"
-    mt="x2"
-    p="x1"
-  />
-);

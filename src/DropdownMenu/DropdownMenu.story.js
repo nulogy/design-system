@@ -100,15 +100,3 @@ export const SetToDisabled = () => (
 SetToDisabled.story = {
   name: "Set to disabled"
 };
-
-export const WithSpace = () => (
-  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown" mt="x2" p="x1">
-    <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-    <DropdownItem>
-      <a href="/" style={{ textDecoration: "none" }}>
-        Custom Link Component
-      </a>
-    </DropdownItem>
-  </DropdownMenu>
-);

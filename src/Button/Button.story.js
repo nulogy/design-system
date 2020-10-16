@@ -72,13 +72,3 @@ export const AsALink = () => (
 AsALink.story = {
   name: "As a link"
 };
-
-export const WithSpace = () => (
-  <PrimaryButton mt="x2" p="x1">
-    Create project
-  </PrimaryButton>
-);
-
-WithSpace.story = {
-  name: "with space"
-};

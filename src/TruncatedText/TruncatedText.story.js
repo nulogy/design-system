@@ -47,9 +47,3 @@ export const AsTitle = () => (
 AsTitle.story = {
   name: "as title"
 };
-
-export const WithSpace = () => (
-  <TruncatedText mt="x2" p="x1">
-    Special instructions are provided for the shipment
-  </TruncatedText>
-);

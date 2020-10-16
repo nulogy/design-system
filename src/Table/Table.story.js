@@ -177,19 +177,3 @@ export const WithEverything = () => (
 WithEverything.story = {
   name: "with everything"
 };
-
-export const WithSpace = () => (
-  <Table
-    columns={columnsWithEverything}
-    rows={rowDataWithEverything}
-    footerRows={footerRowData}
-    rowsPerPage={number("Rows per page", 5)}
-    hasExpandableRows={boolean("Expandable", true)}
-    onRowExpansionChange={action("toggled expand")}
-    hasSelectableRows={boolean("Selectable", true)}
-    onRowSelectionChange={action("row selection changed")}
-    onPageChange={action("page changed")}
-    mt="x2"
-    p="x1"
-  />
-);

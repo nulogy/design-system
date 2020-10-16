@@ -78,10 +78,3 @@ export const UsingRefToControlFocus = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus"
 };
-
-export const WithSpace = () => (
-  <>
-    <Radio id="radio" error labelText="I am error" mt="x2" p="x1"/>
-    <Radio id="radio" defaultChecked error labelText="I am error" mt="x2" p="x1"/>
-  </>
-);

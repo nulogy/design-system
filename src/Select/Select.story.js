@@ -567,16 +567,3 @@ WithANullValue.story = {
   name: "with a null value"
 };
 
-export const WithSpace = () => (
-  <Select
-    defaultValue={options[0].value}
-    placeholder="Please select inventory status"
-    onChange={action("selection changed")}
-    onBlur={action("blurred")}
-    options={options}
-    labelText="Inventory status"
-    onInputChange={action("typed input value changed")}
-    mt="x2"
-    p="x1"
-  />
-);

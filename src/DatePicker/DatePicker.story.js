@@ -120,19 +120,3 @@ export const UsingRefToControlFocus = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus"
 };
-
-export const WithSpace = () => (
-  <DatePicker
-    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
-    onChange={action("date changed")}
-    onInputChange={action("input changed")}
-    inputProps={{ labelText: "Expiry Date" }}
-    disableFlipping={boolean("disableFlipping", true)}
-    mt="x2"
-    p="x1"
-  />
-);
-
-WithSpace.story = {
-  name: "with space"
-};

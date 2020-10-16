@@ -35,13 +35,3 @@ export const WithALink = () => (
 WithALink.story = {
   name: "With a link"
 };
-
-export const WithSpaceProps = () => (
-  <Alert mt="x2" p="x1">
-    An alert with <Link href="/">linked details</Link>.
-  </Alert>
-);
-
-WithSpaceProps.story = {
-  name: "With space props"
-};

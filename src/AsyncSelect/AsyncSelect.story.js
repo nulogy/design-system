@@ -130,23 +130,3 @@ export const UsingRefToControlFocus = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus"
 };
-
-export const WithSpaceOptions = () => (
-  <AsyncSelect
-    placeholder="Filter Countries"
-    onChange={action("selection changed")}
-    onBlur={action("blurred")}
-    className="Select"
-    classNamePrefix="SelectTest"
-    labelText="Country"
-    onInputChange={action("typed input value changed")}
-    defaultOptions={northAmericanCountries}
-    loadOptions={loadMatchingCountries}
-    mt="x5"
-    p="x1"
-  />
-);
-
-WithSpaceOptions.story = {
-  name: "With space options"
-};
