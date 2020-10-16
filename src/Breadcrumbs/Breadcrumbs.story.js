@@ -30,3 +30,15 @@ export const WithoutLink = () => (
 WithoutLink.story = {
   name: "without link"
 };
+
+export const WithSpaceProps = () => (
+  <Breadcrumbs p="x1" mt="x2">
+    <Link href="/">Home</Link>
+    <Link href="/Tenants">Tenants</Link>
+    <Text>Current Tenant</Text>
+  </Breadcrumbs>
+);
+
+WithSpaceProps.story = {
+  name: "with space props"
+};

@@ -57,3 +57,15 @@ export const WithAssociatedCustomInputComponent = () => (
 WithAssociatedCustomInputComponent.story = {
   name: "with associated custom input component"
 };
+
+export const WithSpace = () => (
+  <FieldLabel
+    labelText="Default label"
+    helpText="I am help text. I can give more details on the input below!"
+    requirementText="(Required)"
+    mt="x2"
+    p="x1"
+  >
+    <CustomInput id="input1" />
+  </FieldLabel>
+);

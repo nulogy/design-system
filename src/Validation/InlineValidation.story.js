@@ -35,3 +35,7 @@ export const WithCustomContent = () => (
 WithCustomContent.story = {
   name: "with custom content"
 };
+
+export const WithSpace = () => (
+  <InlineValidation errorMessage="Something has gone wrong" errorList={errorList} mt="x4" p="x1" />
+);

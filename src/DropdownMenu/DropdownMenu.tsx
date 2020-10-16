@@ -3,6 +3,8 @@ import React from "react";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
+import propTypes from '@styled-system/prop-types';
+import { getSubset, omitSubset } from "../utils/subset";
 const DEFAULT_POPPER_MODIFIERS = {
   preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
 };
@@ -53,35 +55,41 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef(
       showDelay,
       hideDelay,
       openAriaLabel,
-      closeAriaLabel
+      closeAriaLabel,
+      ...props
     },
     ref
-  ) => (
-    <Popper
-      trigger={React.cloneElement(trigger(), {
-        type: "button",
-        disabled: disabled ? true : null,
-        "aria-haspopup": true
-      })}
-      showDelay={showDelay}
-      hideDelay={hideDelay}
-      popperPlacement={placement}
-      defaultOpen={defaultOpen}
-      showArrow={showArrow}
-      openOnClick
-      ref={ref}
-      openOnHover={false}
-      modifiers={transformPropsToModifiers({ boundariesElement })}
-      backgroundColor={backgroundColor}
-      borderColor={backgroundColor}
-      openAriaLabel={openAriaLabel}
-      closeAriaLabel={closeAriaLabel}
-    >
-      <DropdownMenuContainer className={className} id={id} backgroundColor={backgroundColor} showArrow={showArrow}>
-        {children}
-      </DropdownMenuContainer>
-    </Popper>
-  )
+  ) => {
+    const spaceProps = getSubset(props, propTypes.space);
+    const restProps = omitSubset(props, propTypes.space);
+    return (
+      <Popper
+        trigger={React.cloneElement(trigger(), {
+          type: "button",
+          disabled: disabled ? true : null,
+          "aria-haspopup": true,
+          ...spaceProps
+        })}
+        showDelay={showDelay}
+        hideDelay={hideDelay}
+        popperPlacement={placement}
+        defaultOpen={defaultOpen}
+        showArrow={showArrow}
+        openOnClick
+        ref={ref}
+        openOnHover={false}
+        modifiers={transformPropsToModifiers({ boundariesElement })}
+        backgroundColor={backgroundColor}
+        borderColor={backgroundColor}
+        openAriaLabel={openAriaLabel}
+        closeAriaLabel={closeAriaLabel}
+      >
+        <DropdownMenuContainer className={className} id={id} backgroundColor={backgroundColor} showArrow={showArrow} {...restProps}>
+          {children}
+        </DropdownMenuContainer>
+      </Popper>
+    )
+  }
 );
 DropdownMenu.defaultProps = {
   disabled: false,

@@ -58,15 +58,13 @@ _InlineIcon.story = {
 
 export const WithAColor = () => (
   <>
-    {[theme.colors.red, theme.colors.yellow, theme.colors.green, theme.colors.blue, theme.colors.blackBlue].map(
-      color => (
-        <Box key={color}>
-          {iconSubset.map(iconName => (
-            <Icon icon={iconName} color={color} key={iconName} />
-          ))}
-        </Box>
-      )
-    )}
+    {["red", "yellow", "green", "blue", "blackBlue"].map(color => (
+      <Box key={color}>
+        {iconSubset.map(iconName => (
+          <Icon icon={iconName} color={color} key={iconName} />
+        ))}
+      </Box>
+    ))}
   </>
 );
 

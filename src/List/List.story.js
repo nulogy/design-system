@@ -60,3 +60,11 @@ export const WithLeftAlignment = () => (
 WithLeftAlignment.story = {
   name: "With left alignment"
 };
+
+export const WithSpace = () => (
+  <List leftAlign mt="x5" p="x1">
+    <ListItem>List Item 1</ListItem>
+    <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
+    <ListItem mt="x1">List Item 3</ListItem>
+  </List>
+);

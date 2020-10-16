@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { space } from "styled-system";
 const Fieldset: React.SFC<any> = styled.fieldset({
   padding: 0,
   border: 0,
@@ -7,5 +8,5 @@ const Fieldset: React.SFC<any> = styled.fieldset({
     padding: 0
   },
   width: "100%"
-});
+}, space);
 export default Fieldset;

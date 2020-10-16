@@ -65,7 +65,7 @@ class ModalExample extends React.Component {
     );
 
     return (
-      <div>
+      <>
         <Button onClick={this.openModal}>Open Modal</Button>
         <Modal
           title="Edit Profile"
@@ -79,7 +79,7 @@ class ModalExample extends React.Component {
             <Input type="number" name="age" id="age" labelText="Age" />
           </Form>
         </Modal>
-      </div>
+      </>
     );
   }
 }

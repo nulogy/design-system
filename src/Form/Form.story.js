@@ -159,3 +159,17 @@ export const DemoForm = () => (
 DemoForm.story = {
   name: "Demo form"
 };
+
+export const WithSpace = () => (
+  <Form mt="x2" p="x1">
+    <Input id="name" labelText="Name" />
+    <Input
+      id="birthdate"
+      placeholder="DD-MM-YYYY"
+      labelText="Date of birth"
+      requirementText="(Optional)"
+      helpText="Enter a date below"
+    />
+    <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
+  </Form>
+);

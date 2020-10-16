@@ -30,12 +30,6 @@ type ListProps = React.ComponentPropsWithRef<"ul"> &
     listStyle?: string;
   };
 const List: React.SFC<ListProps> = styled.ul(
-  space,
-  color,
-  typography,
-  layout,
-  boxShadow,
-  border,
   ({ compact, theme, leftAlign, listStyle }: ListProps) => ({
     margin: 0,
     paddingLeft: leftAlign ? "18px" : undefined,
@@ -43,7 +37,13 @@ const List: React.SFC<ListProps> = styled.ul(
     [`${ListItem}`]: {
       marginBottom: compact ? 0 : theme.space.x1
     }
-  })
+  }),
+  space,
+  color,
+  typography,
+  layout,
+  boxShadow,
+  border
 );
 List.defaultProps = {
   className: undefined,

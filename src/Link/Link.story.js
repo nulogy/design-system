@@ -56,3 +56,9 @@ export const AsAButton = () => <Link as="button">Link</Link>;
 AsAButton.story = {
   name: "As a <button>"
 };
+
+export const WithSpace = () => (
+  <Link as="button" mt="x2" p="x1">
+    Link
+  </Link>
+);

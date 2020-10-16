@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Flex } from "../Flex";
 const alignments = {
   left: "flex-start",
   spaced: "space-between",
@@ -27,8 +28,7 @@ type ButtonGroupProps = {
   alignment?: "left" | "spaced" | "right";
   className?: string;
 };
-const ButtonGroup: React.SFC<ButtonGroupProps> = styled.div(({ alignment, theme }: any) => ({
-  display: "flex",
+const ButtonGroup: React.SFC<ButtonGroupProps> = styled(Flex)(({ alignment, theme }: any) => ({
   flexWrap: "wrap",
   marginBottom: `-${theme.space.x1}`,
   justifyContent: getAlignment(alignment),

@@ -41,3 +41,5 @@ export const WithLessThan5Pages = () => <Pagination currentPage={3} totalPages={
 WithLessThan5Pages.story = {
   name: "with less than 5 pages"
 };
+
+export const WithSpace = () => <Pagination currentPage={3} totalPages={4} mt="x2" p="x1" />;

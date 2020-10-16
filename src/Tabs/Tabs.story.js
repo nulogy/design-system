@@ -156,3 +156,20 @@ export const WithContentLoadedOnSelection = () => (
 WithContentLoadedOnSelection.story = {
   name: "with content loaded on selection"
 };
+
+export const WithSpace = () => (
+  <Tabs mt="x2" p="x1">
+    <Tab className="Tab1" label="Tab 1">
+      Tab 1 Content
+    </Tab>
+    <Tab className="Tab2" label="Tab 2">
+      Tab 2 Content
+    </Tab>
+    <Tab className="Tab3" label="Tab 3">
+      Tab 3 Content
+    </Tab>
+    <Tab className="Tab4" label="Tab 4">
+      Tab 4 Content
+    </Tab>
+  </Tabs>
+);
