@@ -1,8 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "@nulogy/nulogy",
-    "../../.eslintrc"
+    "@nulogy/nulogy"
   ],
   "rules": {
     "jsx-a11y/label-has-associated-control": [
@@ -38,6 +37,6 @@
           ".jsx"
         ]
       }
-    ],
+    ]
   }
 }
