@@ -59,7 +59,7 @@ const CORE_PLUGINS = [
     /* babelHelpers: runtime tells babel to import from @babel/runtime instead of duplicated them */
     babelHelpers: "runtime",
     /* exclude: globs to exclude */
-    exclude: ["./node_modules/**/*", "../node_modules/**/*"],
+    exclude: ["./node_modules/**/*"],
     /* exclude: files to be transpiled by babel */
     extensions: EXTENSIONS,
   }),
