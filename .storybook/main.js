@@ -7,13 +7,13 @@ module.exports = {
       name: "@storybook/addon-storysource",
       options: {
         rule: {
-          test: [/\.story\.js?$/]
-        }
-      }
+          test: [/\.story\.js?$/],
+        },
+      },
     },
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
     "storybook-addon-performance",
-    "./nds-theme/register.js"
-  ]
+    "./nds-theme/register.js",
+  ],
 };

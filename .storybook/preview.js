@@ -8,7 +8,7 @@ import withNDSTheme from "./nds-theme";
 const localeKnobOptions = ALL_NDS_LOCALES.reduce(
   (obj, i) => ({
     ...obj,
-    [`${i.label} "${i.value}"`]: i.value
+    [`${i.label} "${i.value}"`]: i.value,
   }),
   {}
 );
@@ -18,48 +18,48 @@ const newViewports = {
     name: "Extra small",
     styles: {
       width: "320px",
-      height: "100%"
-    }
+      height: "100%",
+    },
   },
   small: {
     name: "Small",
     styles: {
       width: "768px",
-      height: "100%"
-    }
+      height: "100%",
+    },
   },
   medium: {
     name: "Medium",
     styles: {
       width: "1024px",
-      height: "100%"
-    }
+      height: "100%",
+    },
   },
   large: {
     name: "Large",
     styles: {
       width: "1360px",
-      height: "100%"
-    }
+      height: "100%",
+    },
   },
   extraLarge: {
     name: "Extra large",
     styles: {
       width: "1920px",
-      height: "100%"
-    }
-  }
+      height: "100%",
+    },
+  },
 };
 export const parameters = {
   viewport: { viewports: newViewports },
   options: {
     theme: create({
-      gridCellSize: 8
-    })
-  }
+      gridCellSize: 8,
+    }),
+  },
 };
 
-const ProviderWithLocale = props => (
+const ProviderWithLocale = (props) => (
   <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} {...props} />
 );
 

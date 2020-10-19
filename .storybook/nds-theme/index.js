@@ -1,14 +1,14 @@
 /* eslint-disable react/display-name, react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
 import addons, { makeDecorator } from "@storybook/addons";
-import { theme as NDSTheme } from "../../src";
 import { STORY_CHANGED } from "@storybook/core-events";
+import { theme as NDSTheme } from "../../src";
 
-const withThemeWrapper = Component => ({ loading, theme, children }) => {
+const withThemeWrapper = (Component) => ({ loading, theme, children }) => {
   return !loading && <Component theme={theme}>{children}</Component>;
 };
 
-export default Component =>
+export default (Component) =>
   makeDecorator({
     name: "withNDSTheme",
     parameterName: "ndsThemeAddon",
@@ -24,13 +24,13 @@ export default Component =>
       }, [setLoading]);
 
       useEffect(() => {
-        channel.on("theme-update", data => {
+        channel.on("theme-update", (data) => {
           setTheme(data);
           if (loading) {
             setLoading(false);
           }
         });
-        channel.on(STORY_CHANGED, data => {
+        channel.on(STORY_CHANGED, (data) => {
           setTheme(data);
         });
       }, [channel, loading]);
@@ -44,6 +44,6 @@ export default Component =>
           </ThemeWrapper>
         </div>
       );
-    }
+    },
   });
 /* eslint-enable */

@@ -10,9 +10,9 @@ const ThemeInput = styled.input(({ theme }) => ({
   transition: ".2s",
   "&:focus": {
     outline: "none",
-    boxShadow: "1px 1px 1px 0px rgba(0,0,0,1)"
+    boxShadow: "1px 1px 1px 0px rgba(0,0,0,1)",
   },
-  lineHeight: theme.lineHeights.base
+  lineHeight: theme.lineHeights.base,
 }));
 
 export default ThemeInput;

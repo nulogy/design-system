@@ -6,7 +6,7 @@ import ThemeInput from "./ThemeInput";
 
 const Popover = styled.div({
   position: "absolute",
-  zIndex: "2"
+  zIndex: "2",
 });
 
 const CloseableArea = styled.div({
@@ -14,7 +14,7 @@ const CloseableArea = styled.div({
   top: "0px",
   right: "0px",
   bottom: "0px",
-  left: "100px"
+  left: "100px",
 });
 
 const Swatch = styled.div(({ color }) => ({
@@ -22,7 +22,7 @@ const Swatch = styled.div(({ color }) => ({
   height: "15px",
   width: "23px",
   borderRadius: "3px",
-  margin: "0 5px"
+  margin: "0 5px",
 }));
 
 const ThemeColorInput = ({ color, onChange }) => {
@@ -35,7 +35,7 @@ const ThemeColorInput = ({ color, onChange }) => {
       {displayColorPicker ? (
         <Popover>
           <CloseableArea onClick={() => setDisplayColorPicker(false)} />
-          <ChromePicker color={value} onChange={e => setValue(e.hex)} onChangeComplete={e => onChange(e)} />
+          <ChromePicker color={value} onChange={(e) => setValue(e.hex)} onChangeComplete={(e) => onChange(e)} />
         </Popover>
       ) : null}
     </>
