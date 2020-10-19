@@ -36,7 +36,8 @@
     "component library"
   ],
   "engines": {
-    "node": "*"
+    "node": "^12.16.3",
+    "yarn": "^1.17.3"
   },
   "main": "dist/main.js",
   "module": "dist/main.module.js",
@@ -102,7 +103,6 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
     "http-server": "0.11.1",
-    "identity-obj-proxy": "3.0.0",
     "jest": "24.1.0",
     "jest-styled-components": "7",
     "jscodeshift": "^0.11.0",
@@ -124,7 +124,6 @@
     "storybook-addon-performance": "^0.12.0",
     "styled-components": "^5.0.0",
     "svg-sprite-loader": "^3.8.0",
-    "svgi": "^1.1.0",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.5",
     "typescript-eslint": "^0.0.1-alpha.0",
@@ -159,9 +158,6 @@
       "^.+\\.js?$": "babel-jest",
       "^.+\\.ts?$": "babel-jest",
       "^.+\\.tsx?$": "babel-jest"
-    },
-    "moduleNameMapper": {
-      "\\.(css|sass)$": "identity-obj-proxy"
     },
     "transformIgnorePatterns": [
       "node_modules/(?!(@nulogy|storybook-addon-performance))"
