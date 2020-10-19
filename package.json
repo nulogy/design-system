@@ -152,6 +152,11 @@
     "smoothscroll-polyfill": "^0.4.4",
     "styled-system": "^5.1.4"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint"
+    }
+  },
   "jest": {
     "transform": {
       "^.+\\.jsx?$": "babel-jest",
