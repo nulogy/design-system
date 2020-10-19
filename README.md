@@ -1,33 +1,77 @@
-# 🚚 Nulogy Design System
+# @nulogy/components
 
-> The Nulogy Design System is a collection of visual guidelines and UI components that enable our designers & developers to quickly create consistent experiences for our customers using established best practices.
+> Built with React, compononents make it easy to create interfaces that conform to the principles of the Nulogy Design System.
 
-![Build status](https://img.shields.io/travis/com/nulogy/design-system?style=flat-square) ![Documentation site status](https://img.shields.io/netlify/6acbd77f-3248-4c04-9a44-58bc1a841f31?style=flat-square) ![Slack channel](https://img.shields.io/static/v1?label=slack&message=%23design-system&color=e01563&style=flat-square)
+![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg)
 
-## 📦 Packages
+## 📦 Installation
 
-This is a monorepo consisting of several packages, the most popular of which is [@nulogy/components](https://github.com/nulogy/design-system/tree/master/packages/components). If you're looking for a specific package, see below.
+### 1. Add the package
 
-| Package                                                                                       | Description                                                                        |                                                                                                                                             |
-| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [@nulogy/components](https://github.com/nulogy/design-system/tree/master/packages/components) | React components that take advantage of the Nulogy Design System                   | [![Components on NPM](https://img.shields.io/npm/v/@nulogy/components?style=flat-square)](https://www.npmjs.com/package/@nulogy/components) |
-| [@nulogy/css](https://github.com/nulogy/design-system/tree/master/packages/css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
-| [@nulogy/icons](https://github.com/nulogy/design-system/tree/master/packages/icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
-| [@nulogy/tokens](https://github.com/nulogy/design-system/tree/master/packages/tokens)         | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens)             |
+## Peer dependencies
 
-## 🎨 UI Kit
+@nulogy/components relies on React, ReactDOM and Styled Components. You will need to add these to your projects dependencies if they are not there already.
 
-Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab). See the [Designers' Getting Started Guide](https://nulogy.design/guides/designers/) for more detail.
+To add Styled Components:
+`yarn add styled-components@^5.0.0`
 
-## 📚 Documentation
+Please check that you are using versions that match the peerDependencies listed in the components/package.json.
 
-Component documentation and usage guides are stored in the [github.com/nulogy/nulogy.design](https://github.com/nulogy/nulogy.design) repository.
+## Usage
 
-## 🙌 Contributing
+### 2. Add fonts
 
-Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md) if you work at Nulogy and would like to contribute.
+Add [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans:300,400,500,600) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Sans) to your application, however you prefer to load assets. An example using Google Fonts is shown below.
 
-## 🔗 Resources
+```html
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet" />
+```
 
-- [nulogy.design](http://nulogy.design)
+If your application supports Simplified Chinese, you'll also need to load [Noto Sans SC](https://fonts.google.com/specimen/Noto+Sans+SC).
+
+```html
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+```
+
+Note that loading fonts from Google API is just an example and not the most performant way to load fonts for your application. You'll most likely want to include the font's inside your existing asset pipeline.
+
+### 2. Wrap your appliction in our theme provider
+
+Wrap your application in the NDSProvider component to access Nulogy's theme values and add typographic defaults.
+
+```js
+import React from "react";
+import { NDSProvider } from "@nulogy/components";
+
+class App extends React.Component {
+  render() {
+    return <NDSProvider>// your application</NDSProvider>;
+  }
+}
+```
+
+### 3. Import desired components
+
+```js
+import { Button } from "@nulogy/components";
+
+const SomeView = () => <Button>Click me</Button>;
+```
+
+## ✨ Usage
+
+- See [nulogy.design](http://nulogy.design) for instructions on how best to use each component
+- See the [Storybook](https://master--5f60c6c285eaad0022dce67f.chromatic.com) for usage examples
+
+## 🌎 Localization
+
+A `locale` prop can be passed to `<NDSProvider />` to change the language of aria-labels and strings inside our components. See the [Localization Guide](https://nulogy.design/guides/localization) for the full list of supported languages and their codes.
+
+## ⚠️ Testing components
+
+- See the [Testing Guide](https://nulogy.design/guides/testing) for information on how to test NDS components inside of your application.
+
+## 💬 Questions
+
 - [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
