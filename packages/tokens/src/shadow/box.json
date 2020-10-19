@@ -1,9 +1,0 @@
-{
-  "shadow": {
-    "box": {
-      "small": { "value": "0px 0px 3px 0px rgba(1, 30, 56, 0.2)" },
-      "medium": { "value": "0px 1px 4px 0px rgba(1, 30, 56, 0.15)" },
-      "large": { "value": "0px 3px 5px 0px rgba(1, 30, 56, 0.1)" }
-    }
-  }
-}
