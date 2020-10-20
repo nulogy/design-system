@@ -63,9 +63,9 @@ export const getOption = (options, value) => {
   // allows an option with  a null value to be matched
   if (options.length > 0 && value !== undefined ) {
     const optionWithMatchingValue = options.find(o => o.value === value);
-    return optionWithMatchingValue
+    return optionWithMatchingValue || null;
   }
-  return value;
+  return value; 
 };
 
 const getReactSelectValue = (options, input) => {
