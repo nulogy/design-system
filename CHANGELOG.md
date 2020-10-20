@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.10.2](https://github.com/nulogy/design-system/compare/v4.10.1...v4.10.2) (2020-10-20)
+
+
+### Bug Fixes
+
+* fix to Select where the value could not be cleared by setting to null ([#791](https://github.com/nulogy/design-system/issues/791)) ([95a9e1f](https://github.com/nulogy/design-system/commit/95a9e1fb8eed05a346b2668b4a913967597e8053))
+
+
+
+
+
 ## [4.10.1](https://github.com/nulogy/design-system/compare/v4.10.0...v4.10.1) (2020-10-09)
 
 
