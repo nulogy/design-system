@@ -10,7 +10,7 @@
     "chromatic": "npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes",
     "lint": "yarn run eslint",
     "eslint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
-    "eslint:fix": "yarn run eslint --fix",
+    "lint:fix": "yarn run eslint --fix",
     "start": "concurrently \"yarn build:watch\" \"start-storybook -p 8080\"",
     "build": "rollup -c",
     "build:watch": "yarn build --watch",

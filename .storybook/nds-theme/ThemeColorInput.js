@@ -31,11 +31,19 @@ const ThemeColorInput = ({ color, onChange }) => {
   return (
     <>
       <Swatch color={value} />
-      <ThemeInput onClick={() => setDisplayColorPicker(true)} value={value} readOnly />
+      <ThemeInput
+        onClick={() => setDisplayColorPicker(true)}
+        value={value}
+        readOnly
+      />
       {displayColorPicker ? (
         <Popover>
           <CloseableArea onClick={() => setDisplayColorPicker(false)} />
-          <ChromePicker color={value} onChange={(e) => setValue(e.hex)} onChangeComplete={(e) => onChange(e)} />
+          <ChromePicker
+            color={value}
+            onChange={(e) => setValue(e.hex)}
+            onChangeComplete={(e) => onChange(e)}
+          />
         </Popover>
       ) : null}
     </>
