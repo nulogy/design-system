@@ -12,4 +12,4 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          storybookBuildDir: "packages/components/storybook-static"
+          storybookBuildDir: "storybook-static"
