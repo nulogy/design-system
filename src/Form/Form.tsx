@@ -9,7 +9,7 @@ import FormSection from "./FormSection";
 type BaseFormProps = React.ComponentPropsWithRef<"form"> &
   SpaceProps & {
     title?: string;
-  };
+};
 const BaseForm: React.SFC<BaseFormProps> = ({ title, children, ...props }) => (
   <form {...props}>
     {title && <Heading2>{title}</Heading2>}

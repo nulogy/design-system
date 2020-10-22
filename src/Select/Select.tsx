@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, forwardRef } from "react";
+import propTypes from '@styled-system/prop-types';
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
@@ -16,6 +17,7 @@ import {
   SelectMenu,
   SelectInput
 } from "./SelectComponents";
+import { getSubset } from "../utils/subset";
 
 export const SelectDefaultProps = {
   autocomplete: true,
@@ -155,19 +157,21 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
       "aria-label": ariaLabel,
       windowThreshold = 300,
       filterOption,
-      closeMenuOnSelect
+      closeMenuOnSelect,
+      ...props
     },
     ref
   ) => {
     const { t } = useTranslation();
     const themeContext = useContext(ThemeContext);
+    const spaceProps = getSubset(props, propTypes.space)
 
     useEffect(() => {
       checkOptionsAreValid(options);
     }, [options])
 
     return (
-      <Field>
+      <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
             ref={ref}

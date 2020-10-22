@@ -20,13 +20,11 @@ _ButtonGroup.story = {
 };
 
 export const WithAlignmentRight = () => (
-  <Box bg="whiteGrey" p="x2" width="500px">
-    <ButtonGroup alignment="right">
-      <PrimaryButton>Button</PrimaryButton>
-      <Button>Button</Button>
-      <Button>Button</Button>
-    </ButtonGroup>
-  </Box>
+  <ButtonGroup alignment="right" p="x2" bg="whiteGrey" width="500px">
+    <PrimaryButton>Button</PrimaryButton>
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </ButtonGroup>
 );
 
 WithAlignmentRight.story = {
@@ -34,12 +32,10 @@ WithAlignmentRight.story = {
 };
 
 export const WithAlignmentSpaced = () => (
-  <Box bg="whiteGrey" p="x2" width="500px">
-    <ButtonGroup alignment="spaced">
-      <PrimaryButton>Button</PrimaryButton>
-      <Button>Button</Button>
-    </ButtonGroup>
-  </Box>
+  <ButtonGroup alignment="spaced" bg="whiteGrey" p="x2" width="500px">
+    <PrimaryButton>Button</PrimaryButton>
+    <Button>Button</Button>
+  </ButtonGroup>
 );
 
 WithAlignmentSpaced.story = {
@@ -47,16 +43,15 @@ WithAlignmentSpaced.story = {
 };
 
 export const MoreButtonTypes = () => (
-  <Box bg="whiteGrey" p="x2" width="600px">
-    <ButtonGroup>
-      <PrimaryButton>Button</PrimaryButton>
-      <DangerButton>Button</DangerButton>
-      <Button>Button</Button>
-      <QuietButton>Button</QuietButton>
-      <IconicButton icon="menu" />
-      <IconicButton icon="menu">Button</IconicButton>
-    </ButtonGroup>
-  </Box>
+
+  <ButtonGroup bg="whiteGrey" p="x2" width="600px">
+    <PrimaryButton>Button</PrimaryButton>
+    <DangerButton>Button</DangerButton>
+    <Button>Button</Button>
+    <QuietButton>Button</QuietButton>
+    <IconicButton icon="menu" />
+    <IconicButton icon="menu">Button</IconicButton>
+  </ButtonGroup>
 );
 
 MoreButtonTypes.story = {
@@ -65,34 +60,30 @@ MoreButtonTypes.story = {
 
 export const WrappingButtons = () => (
   <>
-    <Box bg="whiteGrey" p="x2">
-      <ButtonGroup>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-      </ButtonGroup>
-    </Box>
-    <Box bg="whiteGrey" p="x2" mt="x2">
-      <ButtonGroup alignment="right">
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-        <Button>Button</Button>
-      </ButtonGroup>
-    </Box>
+    <ButtonGroup bg="whiteGrey" p="x2">
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+    </ButtonGroup>
+    <ButtonGroup alignment="right" bg="whiteGrey" p="x2" mt="x2">
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+      <Button>Button</Button>
+    </ButtonGroup>
   </>
 );
 

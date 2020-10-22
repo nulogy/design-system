@@ -108,9 +108,9 @@ type BaseRadioProps = VisualRadioProps &
   };
 
 const BaseRadio: React.SFC<BaseRadioProps> = forwardRef((props, ref) => {
-  const { className, labelText, disabled, checked, required, error } = props;
+  const { className, labelText, disabled, checked, required, error, ...restProps } = props;
   return (
-    <Box className={className}>
+    <Box className={className} {...restProps} >
       <ClickInputLabel disabled={disabled}>
         <RadioInput
           type="radio"

@@ -2,6 +2,7 @@ import React, { useContext, forwardRef } from "react";
 import AsyncReactSelect from "react-select/async";
 import { useTranslation } from "react-i18next";
 import styled, { ThemeContext } from "styled-components";
+import propTypes from '@styled-system/prop-types';
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -16,6 +17,8 @@ import {
   SelectInput
 } from "../Select";
 import { SelectDefaultProps } from "../Select/Select";
+import { getSubset } from "../utils/subset";
+
 const extractValue = (options, isMulti) => {
   if (options == null) return options;
   if (isMulti) {
@@ -65,14 +68,16 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
       "aria-label": ariaLabel,
       cacheOptions,
       defaultOptions,
-      loadOptions
+      loadOptions,
+      ...props
     },
     ref
   ) => {
     const { t } = useTranslation();
     const themeContext = useContext(ThemeContext);
+    const spaceProps = getSubset(props, propTypes.space); 
     return (
-      <Field>
+      <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <StyledAsyncReactSelect
             className={className}

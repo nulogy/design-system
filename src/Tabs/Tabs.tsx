@@ -1,10 +1,14 @@
 // @ts-nocheck
 import styled from "styled-components";
 import React from "react";
+import propTypes from '@styled-system/prop-types';
 import ReactResizeDetector from "react-resize-detector";
 import TabFocusManager from "./TabFocusManager";
 import TabScrollIndicators from "./TabScrollIndicators";
-const TabContainer = styled.div(({ theme }) => ({
+import { getSubset } from "../utils/subset";
+import { Box } from '../Box';
+
+const TabContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   whiteSpace: "nowrap",
   overflowX: "scroll",
@@ -111,13 +115,14 @@ class Tabs extends React.Component<TabsProps, TabsState> {
   }
   render() {
     const { className } = this.props;
+    const spaceProps = getSubset(this.props, propTypes.space)
     return (
       <>
         <TabFocusManager tabRefs={this.tabRefs}>
           {({ handleArrowNavigation, setFocusToTab, focusedIndex }) => (
             <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
               {({ handleScroll, handleResize }) => (
-                <TabContainer className={className} role="tablist" onScroll={handleScroll} ref={this.tabContainerRef}>
+                <TabContainer className={className} role="tablist" onScroll={handleScroll} ref={this.tabContainerRef} {...spaceProps}>
                   <ReactResizeDetector handleWidth onResize={handleResize} />
                   {this.getTabs(setFocusToTab, focusedIndex, handleArrowNavigation)}
                 </TabContainer>

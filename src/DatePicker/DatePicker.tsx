@@ -1,16 +1,18 @@
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
-import React, { useEffect, useState, forwardRef, useRef } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
 import { DatePickerStyles } from "./DatePickerStyles";
 import DatePickerInput from "./DatePickerInput";
 import DatePickerHeader from "./DatePickerHeader";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
-import { InputFieldPropTypes, InputFieldDefaultProps } from "../Input/InputField.type";
+import { InputFieldDefaultProps } from "../Input/InputField.type";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
-import { Reference } from "react-popper";
+import propTypes from '@styled-system/prop-types';
+import { getSubset } from "../utils/subset";
+
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
 type DatePickerProps = {
@@ -109,8 +111,9 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
         onEnterKeyPress={handleEnterKey}
       />
     );
+    const spaceProps = getSubset(props, propTypes.space);
     return (
-      <Field className={`${className} nds-date-picker`}>
+      <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
         <LocaleContext.Consumer>
           {({ locale }) => (
