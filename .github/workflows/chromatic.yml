@@ -7,9 +7,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          yarn && yarn build && cd packages/components && yarn build-storybook
+          yarn && yarn build-storybook
       - uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          storybookBuildDir: "packages/components/storybook-static"
+          storybookBuildDir: "storybook-static"

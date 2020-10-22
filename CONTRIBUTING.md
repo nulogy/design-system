@@ -13,39 +13,14 @@ This is a guide for Nulogy employees who wish to contribute to the Design System
 2. Run `yarn` to install dependencies
 3. Run `yarn build` to build the components for the first time
 
-You should now be ready to work in any package.
-
-## Adding tokens
-
-From the `/tokens/` directory:
-
-- Add or update tokens in the `/src/` folder
-- Run `yarn build` to use [Style Dictionary](https://amzn.github.io/style-dictionary) to convert those tokens into `_variables.scss` for Sass and `exports.js` for React usage
-
-New export formats can be added in `config.js`.
-
 ## Writing components
-
-From the `/components/` directory:
 
 - `yarn start` will run a storybook at [localhost:8080](localhost:8080) for local development.
 - `yarn build` will rebuild the package exports for production.
 
 To generate the files needed for a new component, you can use [Plop](https://plopjs.com/)
 
-- From the `components` directory, run `yarn new ComponentName` (make sure your name is in PascalCase)
-
-## Adding icons
-
-[How to add icons](https://github.com/nulogy/design-system/blob/master/components/icons/README.md)
-
-## Writing CSS
-
-Our CSS package provides a way to access our tokens
-From the `/css` directory:
-
-- `yarn start` will watch `*.scss` files, compile them to `nds.css` and launch a storybook dev environment at [http://localhost:8080](http://localhost:8080)
-- `yarn build` will rebuild nds.css.
+- Run `yarn new ComponentName` (make sure your name is in PascalCase)
 
 ## Coding standards
 
@@ -64,7 +39,7 @@ Note: NDS follows the [Conventional Commits](https://www.conventionalcommits.org
 ## Testing
 
 - To run everything:
-  - `cd packages/components; yarn test`
+  - `yarn test`
 
 ## Documentation
 
