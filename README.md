@@ -1,8 +1,10 @@
 # @nulogy/components
+![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg?style=flat-square)
+![Build](https://img.shields.io/github/workflow/status/nulogy/design-system/Release?style=flat-square)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md)
 
 > Built with React, compononents make it easy to create interfaces that conform to the principles of the Nulogy Design System.
 
-![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg)
 
 ## 📦 Installation
 
