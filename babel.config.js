@@ -1,3 +1,4 @@
+// loose mode setting added due to errors building storybook: https://github.com/babel/babel/issues/11622
 module.exports = {
   presets: [
     [
