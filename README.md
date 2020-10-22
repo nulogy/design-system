@@ -17,8 +17,6 @@ To add Styled Components:
 
 Please check that you are using versions that match the peerDependencies listed in the components/package.json.
 
-## Usage
-
 ### 2. Add fonts
 
 Add [IBM Plex Sans](https://fonts.google.com/specimen/IBM+Plex+Sans:300,400,500,600) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Sans) to your application, however you prefer to load assets. An example using Google Fonts is shown below.
@@ -72,6 +70,30 @@ A `locale` prop can be passed to `<NDSProvider />` to change the language of ari
 
 - See the [Testing Guide](https://nulogy.design/guides/testing) for information on how to test NDS components inside of your application.
 
+## 🎨 UI Kit
+
+Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab). See the [Designers' Getting Started Guide](https://nulogy.design/guides/designers/) for more detail.
+
+## 📚 Documentation
+
+Component documentation and usage guides are stored in the [github.com/nulogy/nulogy.design](https://github.com/nulogy/nulogy.design) repository.
+
+## 🙌 Contributing
+
+Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md) if you work at Nulogy and would like to contribute.
+
+
 ## 💬 Questions
 
 - [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
+
+
+## 📦 Related Packages
+
+The design-system is a collection of related packages. If you're looking for more packages, see below.
+
+| Package                                                                                       | Description                                                                        |                                                                                                                                             |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [@nulogy/css](https://github.com/nulogy/nds-css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
+| [@nulogy/icons](https://github.com/nulogy/nds-icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
+| [@nulogy/tokens](https://github.com/nulogy/nds-tokens)         | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens)             |
