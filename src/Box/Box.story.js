@@ -9,7 +9,7 @@ export const _Box = () => <Box p="x3">Hello World</Box>;
 
 export const WithATextColour = () => (
   <Box p="x3" color="blue">
-    Hello World
+    Hello World!
   </Box>
 );
 
