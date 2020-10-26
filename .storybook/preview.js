@@ -1,6 +1,7 @@
 import React from "react";
 import { create } from "@storybook/theming";
 import { select } from "@storybook/addon-knobs";
+import "cypress-storybook/react";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
 import withNDSTheme from "./nds-theme";
