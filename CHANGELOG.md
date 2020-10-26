@@ -1,3 +1,10 @@
+## [4.10.4](https://github.com/nulogy/design-system/compare/v4.10.3...v4.10.4) (2020-10-26)
+
+
+### Bug Fixes
+
+* replace div in TruncatedText with Text component ([#796](https://github.com/nulogy/design-system/issues/796)) ([1b93e83](https://github.com/nulogy/design-system/commit/1b93e831fdf5555a2ed559a5488ca4952a1b8ca5))
+
 ## [4.10.3](https://github.com/nulogy/design-system/compare/v4.10.2...v4.10.3) (2020-10-26)
 
 
