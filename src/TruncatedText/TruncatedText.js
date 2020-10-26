@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { Tooltip } from "../Tooltip";
 import { Text } from "../Type";
 
-const StyledWrapper = styled("div")(({ hoverable }) => ({
+const StyledWrapper = styled(Text)(({ hoverable }) => ({
   width: "fit-content",
-  cursor: hoverable ? "pointer" : "default"
+  cursor: hoverable ? "pointer" : "default",
 }));
 
 const MaybeTooltip = ({ children, showTooltip, ...props }) => {
@@ -15,22 +15,41 @@ const MaybeTooltip = ({ children, showTooltip, ...props }) => {
 
 MaybeTooltip.propTypes = {
   children: PropTypes.node,
-  showTooltip: PropTypes.bool
+  showTooltip: PropTypes.bool,
 };
 
 MaybeTooltip.defaultProps = {
   children: undefined,
-  showTooltip: true
+  showTooltip: true,
 };
 
-const TruncatedText = ({ children, element, indicator, maxCharacters, showTooltip, tooltipProps, ...props }) => {
+const TruncatedText = ({
+  children,
+  element,
+  indicator,
+  maxCharacters,
+  showTooltip,
+  tooltipProps,
+  ...props
+}) => {
   const innerText = children;
   const requiresTruncation = innerText.length > maxCharacters;
-  const truncatedText = requiresTruncation ? innerText.slice(0, maxCharacters) + indicator : children;
+  const truncatedText = requiresTruncation
+    ? innerText.slice(0, maxCharacters) + indicator
+    : children;
   const hasTooltip = showTooltip && requiresTruncation;
   return (
-    <MaybeTooltip showTooltip={hasTooltip} tooltip={innerText} {...tooltipProps}>
-      <StyledWrapper as={element.type} hoverable={hasTooltip} {...element.props} {...props}>
+    <MaybeTooltip
+      showTooltip={hasTooltip}
+      tooltip={innerText}
+      {...tooltipProps}
+    >
+      <StyledWrapper
+        as={element.type}
+        hoverable={hasTooltip}
+        {...element.props}
+        {...props}
+      >
         {truncatedText}
       </StyledWrapper>
     </MaybeTooltip>
@@ -43,7 +62,7 @@ TruncatedText.propTypes = {
   element: PropTypes.node,
   maxCharacters: PropTypes.number,
   showTooltip: PropTypes.bool,
-  tooltipProps: PropTypes.shape({})
+  tooltipProps: PropTypes.shape({}),
 };
 
 TruncatedText.defaultProps = {
@@ -52,7 +71,7 @@ TruncatedText.defaultProps = {
   element: <Text />,
   maxCharacters: 20,
   showTooltip: true,
-  tooltipProps: undefined
+  tooltipProps: undefined,
 };
 
 export default TruncatedText;
