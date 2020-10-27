@@ -1,4 +1,4 @@
-export const getMockRows = numRows => {
+export const getMockRows = (numRows) => {
   const rows = [];
 
   for (let i = 0; i < numRows; i += 1) {
@@ -24,7 +24,7 @@ export const getMockRows = numRows => {
       c18: "some data",
       c19: "some data",
       c20: "some data",
-      c21: "some data"
+      c21: "some data",
     };
 
     rows.push(row);
@@ -54,8 +54,11 @@ export const mockColumns = [
   { label: "Column 18", dataKey: "c18" },
   { label: "Column 19", dataKey: "c19" },
   { label: "Column 20", dataKey: "c20" },
-  { label: "Column 21", dataKey: "c21" }
+  { label: "Column 21", dataKey: "c21" },
 ];
 
-export const getMockColumns = n =>
-  Array.from({ length: n }, (_, i) => i + 1).map(item => ({ label: `Column ${item}`, dataKey: `c${item}` }));
+export const getMockColumns = (n) =>
+  Array.from({ length: n }, (_, i) => i + 1).map((item) => ({
+    label: `Column ${item}`,
+    dataKey: `c${item}`,
+  }));

@@ -17,17 +17,26 @@ const ZERO_DATE = new Date(Date.UTC(0));
 const getIntervalFromTime = (time, interval, minTime) => {
   const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
   if (time && interval) {
-    const timeArray = time.includes(":") ? time.split(":").map(i => Number(i)) : [Number(time), 0];
+    const timeArray = time.includes(":")
+      ? time.split(":").map((i) => Number(i))
+      : [Number(time), 0];
     const hours = timeArray[0];
     const minutes = timeArray[1];
-    const nearestIntervalAM = Math.round((hours * 60) / interval + minutes / interval) - minInterval;
-    const nearestIntervalPM = Math.round(((hours + 12) * 60) / interval + minutes / interval) - minInterval;
+    const nearestIntervalAM =
+      Math.round((hours * 60) / interval + minutes / interval) - minInterval;
+    const nearestIntervalPM =
+      Math.round(((hours + 12) * 60) / interval + minutes / interval) -
+      minInterval;
     // eslint-disable-next-line no-nested-ternary
-    return nearestIntervalAM >= 0 ? nearestIntervalAM : nearestIntervalPM >= 0 ? nearestIntervalPM : 0;
+    return nearestIntervalAM >= 0
+      ? nearestIntervalAM
+      : nearestIntervalPM >= 0
+      ? nearestIntervalPM
+      : 0;
   }
   return null;
 };
-const getTimeIntervals = interval => {
+const getTimeIntervals = (interval) => {
   const numberOfOptions = (24 * 60) / interval;
   const times = [];
   for (let i = 0; i < numberOfOptions; i += 1) {
@@ -46,18 +55,24 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
     finalInterval = getIntervalFromTime(maxTime, interval) + 1;
   }
   return allTimes
-    .map(date => ({
+    .map((date) => ({
       value: localizedFormat(date, MILITARY_TIME_FORMAT, locale),
-      label: localizedFormat(date, timeFormat, locale)
+      label: localizedFormat(date, timeFormat, locale),
     }))
-    .sort((a, b) => getIntervalFromTime(a.value, interval) - getIntervalFromTime(b.value, interval))
+    .sort(
+      (a, b) =>
+        getIntervalFromTime(a.value, interval) -
+        getIntervalFromTime(b.value, interval)
+    )
     .slice(startingInterval, finalInterval);
 };
-const standardizeTime = input => {
+const standardizeTime = (input) => {
   if (input) {
     const standardizedInput = input.toUpperCase().replace(/ /g, "");
     const oneDigitHourRe = /^[0-9][:]/;
-    const fourDigitTime = oneDigitHourRe.test(standardizedInput) ? `0${standardizedInput}` : standardizedInput;
+    const fourDigitTime = oneDigitHourRe.test(standardizedInput)
+      ? `0${standardizedInput}`
+      : standardizedInput;
     return fourDigitTime;
   }
   return input;
@@ -65,8 +80,8 @@ const standardizeTime = input => {
 const TimePickerInput = styled(InputField)(({ dropdownIsOpen }) => ({
   ...(dropdownIsOpen && {
     borderBottomLeftRadius: "0px",
-    borderBottomRightRadius: "0px"
-  })
+    borderBottomRightRadius: "0px",
+  }),
 }));
 const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
   return {
@@ -84,7 +99,7 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
     borderBottomLeftRadius: theme.radii.medium,
     borderBottomRightRadius: theme.radii.medium,
     display: isOpen ? "block" : "none",
-    zIndex: theme.zIndex.content
+    zIndex: theme.zIndex.content,
   };
 });
 const TimePickerOption = styled.li(({ theme, isSelected, isFocused }) => {
@@ -94,12 +109,12 @@ const TimePickerOption = styled.li(({ theme, isSelected, isFocused }) => {
     background: isSelected ? theme.colors.darkBlue : theme.colors.white,
     color: isSelected ? theme.colors.white : theme.colors.black,
     "&:hover": {
-      background: !isSelected && theme.colors.lightBlue
+      background: !isSelected && theme.colors.lightBlue,
     },
     ...(isFocused && {
       background: !isSelected && theme.colors.lightBlue,
-      outline: "none"
-    })
+      outline: "none",
+    }),
   };
 });
 type TimePickerProps = {
@@ -154,22 +169,29 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       if (currentOptionRef && dropdownIsOpen) {
         currentOptionRef.scrollIntoView({
           behaviour: "smooth",
-          block: "center"
+          block: "center",
         });
       }
     }, [currentOptionRef, dropdownIsOpen, input]);
     const matchingIndex = getIntervalFromTime(input, interval, minTime);
     const getDropdownOptions = () => {
-      const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
+      const optionsAtInterval =
+        getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
       return optionsAtInterval;
     };
     const dropdownOptions = getDropdownOptions() || [];
     const hasError = !!(errorMessage || errorList);
-    const handleBlur = e => {
+    const handleBlur = (e) => {
       onBlur(e);
       setDropdownIsOpen(false);
       if (input) {
-        const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale);
+        const optionsByMinute = getTimeOptions(
+          1,
+          timeFormat,
+          minTime,
+          maxTime,
+          locale
+        );
         const matchingTimes = optionsByMinute.filter(
           ({ label, value }) =>
             standardizeTime(label).includes(standardizeTime(input)) ||
@@ -184,29 +206,29 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
         }
       }
     };
-    const handleFocus = e => {
+    const handleFocus = (e) => {
       onFocus(e);
     };
-    const handleClickInput = e => {
+    const handleClickInput = (e) => {
       onClick(e);
       setDropdownIsOpen(true);
     };
-    const handleOptionSelection = option => {
+    const handleOptionSelection = (option) => {
       setInput(option.label);
       setDropdownIsOpen(false);
       onChange(option.label, option.value);
     };
-    const onCurrentOptionRefChange = React.useCallback(node => {
+    const onCurrentOptionRefChange = React.useCallback((node) => {
       if (node) {
         setCurrentOptionRef(node);
       }
     }, []);
-    const onRefChange = React.useCallback(node => {
+    const onRefChange = React.useCallback((node) => {
       if (node) {
         setRef(node);
       }
     }, []);
-    const handleKeyDown = event => {
+    const handleKeyDown = (event) => {
       if (event.keyCode === keyCodes.DOWN) {
         // key down
         setDropdownIsOpen(true);
@@ -215,7 +237,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
         handleBlur(event);
       }
     };
-    const handleInputChange = e => {
+    const handleInputChange = (e) => {
       const inputValue = e.currentTarget.value;
       setInput(inputValue);
       if (onInputChange) {
@@ -243,7 +265,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
             placeholder={placeholder}
             icon="queryBuilder"
             onClick={handleClickInput}
-            onKeyDown={e => handleKeyDown(e)}
+            onKeyDown={(e) => handleKeyDown(e)}
             aria-label={ariaLabel || t("Select a time")}
             inputWidth="130px"
             iconSize="20px"
@@ -260,7 +282,9 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
             {dropdownOptions.map((option, i) => (
               <TimePickerOption
                 ref={matchingIndex === i ? onCurrentOptionRefChange : undefined}
-                isSelected={standardizeTime(option.label) === standardizeTime(input)}
+                isSelected={
+                  standardizeTime(option.label) === standardizeTime(input)
+                }
                 key={option.label}
                 data-name={option.label}
                 data-value={option.value}
@@ -274,7 +298,11 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
               </TimePickerOption>
             ))}
           </TimePickerDropdown>
-          <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+          <InlineValidation
+            mt="x1"
+            errorMessage={errorMessage}
+            errorList={errorList}
+          />
         </Box>
         <DetectOutsideClick onClick={handleBlur} clickRef={[ref]} />
       </>
@@ -297,6 +325,6 @@ TimePicker.defaultProps = {
   labelText: undefined,
   onClick: () => {},
   onBlur: () => {},
-  onFocus: () => {}
+  onFocus: () => {},
 };
 export default TimePicker;

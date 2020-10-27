@@ -10,11 +10,11 @@ import { ThemeType } from "../theme.type";
 const labelTextStyles = (theme: ThemeType): CSSObject => ({
   fontSize: theme.fontSizes.small,
   fontWeight: Number(theme.fontWeights.bold),
-  lineHeight: theme.lineHeights.smallTextBase
+  lineHeight: theme.lineHeights.smallTextBase,
 });
 
 const getRadioButtons = (props: any) => {
-  const radioButtons = React.Children.map(props.children, radio => {
+  const radioButtons = React.Children.map(props.children, (radio) => {
     const { value, disabled, required, onChange, ...radioProps } = radio.props;
     return (
       <Radio
@@ -63,11 +63,17 @@ const BaseRadioGroup = ({
     <Fieldset className={className} id={id} hasHelpText={!!helpText}>
       <legend style={{ marginBottom: themeContext.space.x1 }}>
         <span style={labelTextStyles(themeContext)}>{labelText}</span>
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
+        {requirementText && (
+          <RequirementText>{requirementText}</RequirementText>
+        )}
       </legend>
       {helpText && <HelpText>{helpText}</HelpText>}
       {getRadioButtons(otherProps)}
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      <InlineValidation
+        mt="x1"
+        errorMessage={errorMessage}
+        errorList={errorList}
+      />
     </Fieldset>
   );
 };
@@ -82,7 +88,7 @@ BaseRadioGroup.defaultProps = {
   id: undefined,
   helpText: null,
   requirementText: null,
-  default: false
+  default: false,
 };
 
 const RadioGroup = styled(BaseRadioGroup)({});

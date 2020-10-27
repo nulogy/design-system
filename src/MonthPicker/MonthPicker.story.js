@@ -5,7 +5,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { MonthPicker } from ".";
 
 export default {
-  title: "Components/MonthPicker"
+  title: "Components/MonthPicker",
 };
 
 export const Default = () => (
@@ -18,7 +18,7 @@ export const Default = () => (
 );
 
 Default.story = {
-  name: "default"
+  name: "default",
 };
 
 export const WithCustomPlaceholder = () => (
@@ -30,7 +30,7 @@ export const WithCustomPlaceholder = () => (
 );
 
 WithCustomPlaceholder.story = {
-  name: "with custom placeholder"
+  name: "with custom placeholder",
 };
 
 export const WithErrorState = () => (
@@ -44,7 +44,7 @@ export const WithErrorState = () => (
 );
 
 WithErrorState.story = {
-  name: "with error state"
+  name: "with error state",
 };
 
 export const WithAMinAndMaxDate = () => (
@@ -59,5 +59,5 @@ export const WithAMinAndMaxDate = () => (
 );
 
 WithAMinAndMaxDate.story = {
-  name: "with a min and max date"
+  name: "with a min and max date",
 };

@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
-import styled, { createGlobalStyle, ThemeProvider, CSSObject } from "styled-components";
+import styled, {
+  createGlobalStyle,
+  ThemeProvider,
+  CSSObject,
+} from "styled-components";
 import { I18nextProvider } from "react-i18next";
 import NDSTheme from "../theme";
 import i18n from "../i18n";
@@ -9,27 +13,29 @@ import { ThemeType } from "../theme.type";
 const Reset = createGlobalStyle(() => {
   return {
     body: {
-      margin: 0
-    }
+      margin: 0,
+    },
   };
 });
-const ModalStyleOverride = createGlobalStyle(({ theme, locale }: NDSProviderProps) => {
-  const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
-  return {
-    ".ReactModal__Content": {
-      fontFamily,
-      button: {
-        fontFamily
+const ModalStyleOverride = createGlobalStyle(
+  ({ theme, locale }: NDSProviderProps) => {
+    const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
+    return {
+      ".ReactModal__Content": {
+        fontFamily,
+        button: {
+          fontFamily,
+        },
+        input: {
+          fontFamily,
+        },
+        textarea: {
+          fontFamily,
+        },
       },
-      input: {
-        fontFamily
-      },
-      textarea: {
-        fontFamily
-      }
-    }
-  };
-});
+    };
+  }
+);
 const GlobalStyles: React.SFC<NDSProviderProps> = styled.div(
   ({ theme, locale }: any): CSSObject => {
     const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
@@ -41,21 +47,21 @@ const GlobalStyles: React.SFC<NDSProviderProps> = styled.div(
       "-webkit-font-smoothing": "antialiased",
       "-moz-osx-font-smoothing": "grayscale",
       "*": {
-        boxSizing: "border-box"
+        boxSizing: "border-box",
       },
       img: {
         maxWidth: "100%",
-        height: "auto"
+        height: "auto",
       },
       button: {
-        fontFamily
+        fontFamily,
       },
       input: {
-        fontFamily
+        fontFamily,
       },
       textarea: {
-        fontFamily
-      }
+        fontFamily,
+      },
     };
   }
 );
@@ -63,7 +69,11 @@ type NDSProviderProps = {
   theme?: ThemeType;
   locale?: string;
 };
-const NDSProvider: React.SFC<NDSProviderProps> = ({ theme, children, locale = "en_US" }) => {
+const NDSProvider: React.SFC<NDSProviderProps> = ({
+  theme,
+  children,
+  locale = "en_US",
+}) => {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);

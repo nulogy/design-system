@@ -13,10 +13,10 @@ import { getDuration } from "../TimeRange/TimeRange.utils";
 import { forwardRef } from "react";
 const DEFAULT_LABEL = "Date Range";
 const StyledStartTime = styled(TimePicker)(({ theme }) => ({
-  marginLeft: theme.space.x1
+  marginLeft: theme.space.x1,
 }));
 const StyledEndTime = styled(TimePicker)(({ theme }) => ({
-  marginRight: theme.space.x1
+  marginRight: theme.space.x1,
 }));
 type DateRangeProps = {
   dateFormat?: string;
@@ -74,7 +74,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
       timeFormat,
       interval,
       disableFlipping,
-      locale
+      locale,
     },
     ref
   ) => {
@@ -90,20 +90,20 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
     useImperativeHandle(ref, () => ({
       dateRef1: {
         ...dateRef1,
-        focus: () => dateRef1.current.setFocus()
+        focus: () => dateRef1.current.setFocus(),
       },
       dateRef2: {
         ...dateRef2,
-        focus: () => dateRef2.current.setFocus()
+        focus: () => dateRef2.current.setFocus(),
       },
       timeRef1: {
         ...timeRef1,
-        focus: () => timeRef1.current.focus()
+        focus: () => timeRef1.current.focus(),
       },
       timeRef2: {
         ...timeRef2,
-        focus: () => timeRef2.current.focus()
-      }
+        focus: () => timeRef2.current.focus(),
+      },
     }));
     const { t } = useTranslation();
     const changeStartTimeHandler = (label, value) => {
@@ -118,13 +118,13 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
         onEndTimeChange(label, value);
       }
     };
-    const changeStartDateHandler = date => {
+    const changeStartDateHandler = (date) => {
       setStartDate(date);
       if (onStartDateChange) {
         onStartDateChange(date);
       }
     };
-    const changeEndDateHandler = date => {
+    const changeEndDateHandler = (date) => {
       setEndDate(date);
       if (onEndDateChange) {
         onEndDateChange(date);
@@ -150,7 +150,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
           endDate,
           startTime,
           endTime,
-          error
+          error,
         });
       }
     };
@@ -163,7 +163,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
           inputProps={{
             "aria-label": t("select a start date"),
             error: rangeError,
-            ...startDateInputProps
+            ...startDateInputProps,
           }}
           errorMessage={startDateErrorMessage}
           minDate={minDate}
@@ -213,7 +213,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
           onChange={changeEndDateHandler}
           inputProps={{
             "aria-label": t("select an end date"),
-            ...endDateInputProps
+            ...endDateInputProps,
           }}
           errorMessage={endDateErrorMessage}
           minDate={minDate}
@@ -234,11 +234,18 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
         <RangeContainer
           labelProps={{
             ...labelProps,
-            labelText: labelProps.labelText === DEFAULT_LABEL ? t("date range") : labelProps.labelText
+            labelText:
+              labelProps.labelText === DEFAULT_LABEL
+                ? t("date range")
+                : labelProps.labelText,
           }}
           startComponent={startDateInput}
           endComponent={endDateInput}
-          errorMessages={!disableRangeValidation ? [t(rangeError), errorMessage] : [errorMessage]}
+          errorMessages={
+            !disableRangeValidation
+              ? [t(rangeError), errorMessage]
+              : [errorMessage]
+          }
         />
       </>
     );
@@ -259,7 +266,7 @@ DateRange.defaultProps = {
   disableRangeValidation: false,
   labelProps: {
     ...FieldLabelDefaultProps,
-    labelText: DEFAULT_LABEL
+    labelText: DEFAULT_LABEL,
   },
   minDate: null,
   maxDate: null,
@@ -273,6 +280,6 @@ DateRange.defaultProps = {
   timeFormat: undefined,
   interval: undefined,
   locale: undefined,
-  disableFlipping: false
+  disableFlipping: false,
 };
 export default DateRange;

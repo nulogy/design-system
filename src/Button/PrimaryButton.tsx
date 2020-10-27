@@ -9,7 +9,7 @@ const PrimaryButton: React.SFC<any> = styled(Button)(
     backgroundColor: theme.colors.blue,
     "&:hover": {
       backgroundColor: disabled ? undefined : darken(0.1, theme.colors.blue),
-      borderColor: disabled ? undefined : darken(0.1, theme.colors.blue)
+      borderColor: disabled ? undefined : darken(0.1, theme.colors.blue),
     },
     "&:focus": {
       outline: "none",
@@ -17,9 +17,9 @@ const PrimaryButton: React.SFC<any> = styled(Button)(
       boxShadow: theme.shadows.focus,
       backgroundColor: theme.colors.blue,
       "&:hover": {
-        backgroundColor: darken(0.1, theme.colors.blue)
-      }
-    }
+        backgroundColor: darken(0.1, theme.colors.blue),
+      },
+    },
   })
 );
 export default PrimaryButton;

@@ -18,7 +18,7 @@ import {
   FlexGrowProps,
   PositionProps,
   BorderProps,
-  FlexboxProps
+  FlexboxProps,
 } from "styled-system";
 import { HTMLAttributes } from "react";
 

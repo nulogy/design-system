@@ -12,20 +12,20 @@ import Suffix from "./Suffix";
 import NDSTheme from "../theme";
 import { ThemeType } from "../theme.type";
 
-const inputStyles = theme => ({
+const inputStyles = (theme) => ({
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.whiteGrey
+    backgroundColor: theme.colors.whiteGrey,
   },
   error: {
     color: theme.colors.red,
-    borderColor: theme.colors.red
+    borderColor: theme.colors.red,
   },
   default: {
     color: theme.colors.black,
-    borderColor: theme.colors.grey
-  }
+    borderColor: theme.colors.grey,
+  },
 });
 
 type StyledInputProps = React.ComponentPropsWithRef<"input"> & {
@@ -64,12 +64,12 @@ const StyledInput: React.SFC<StyledInputProps> = styled.input(
       borderColor: theme.colors.blue,
       boxShadow: theme.shadows.focus,
       " ~ svg": {
-        fill: theme.colors.darkBlue
-      }
+        fill: theme.colors.darkBlue,
+      },
     },
     "::placeholder": {
-      color: transparentize(0.4, theme.colors.black)
-    }
+      color: transparentize(0.4, theme.colors.black),
+    },
   }),
   space,
   (props: StyledInputProps) => getInputStyle(props)
@@ -80,7 +80,7 @@ const StyledInputIcon = styled(Icon)(({ theme }) => ({
   color: theme.colors.darkGrey,
   bottom: "50%",
   transform: "translateY(50%)",
-  pointerEvents: "none"
+  pointerEvents: "none",
 }));
 export type InputFieldProps = React.ComponentPropsWithRef<"input"> & {
   icon?: string;
@@ -99,7 +99,10 @@ export type InputFieldProps = React.ComponentPropsWithRef<"input"> & {
   iconSize?: string;
   inputWidth?: string;
 };
-export const InputField: React.SFC<InputFieldProps> = forwardRef<HTMLInputElement, InputFieldProps>(
+export const InputField: React.SFC<InputFieldProps> = forwardRef<
+  HTMLInputElement,
+  InputFieldProps
+>(
   (
     {
       icon,
@@ -120,9 +123,17 @@ export const InputField: React.SFC<InputFieldProps> = forwardRef<HTMLInputElemen
     },
     ref
   ) => (
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+    <MaybeFieldLabel
+      labelText={labelText}
+      requirementText={requirementText}
+      helpText={helpText}
+    >
       <Flex alignItems="flex-start">
-        <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
+        <Prefix
+          prefix={prefix}
+          prefixWidth={prefixWidth}
+          textAlign={prefixAlignment}
+        />
         <Box position="relative" display="flex" flexGrow={1}>
           <StyledInput
             aria-invalid={error}
@@ -133,9 +144,15 @@ export const InputField: React.SFC<InputFieldProps> = forwardRef<HTMLInputElemen
             inputWidth={inputWidth}
             {...props}
           />
-          {icon && <StyledInputIcon icon={icon} size={iconSize || NDSTheme.space.x2} />}
+          {icon && (
+            <StyledInputIcon icon={icon} size={iconSize || NDSTheme.space.x2} />
+          )}
         </Box>
-        <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
+        <Suffix
+          suffix={suffix}
+          suffixWidth={suffixWidth}
+          textAlign={suffixAlignment}
+        />
       </Flex>
     </MaybeFieldLabel>
   )

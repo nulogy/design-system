@@ -1,12 +1,12 @@
 // @ts-nocheck
 import styled from "styled-components";
 import React from "react";
-import propTypes from '@styled-system/prop-types';
+import propTypes from "@styled-system/prop-types";
 import ReactResizeDetector from "react-resize-detector";
 import TabFocusManager from "./TabFocusManager";
 import TabScrollIndicators from "./TabScrollIndicators";
 import { getSubset } from "../utils/subset";
-import { Box } from '../Box';
+import { Box } from "../Box";
 
 const TabContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -15,7 +15,7 @@ const TabContainer = styled(Box)(({ theme }) => ({
   overflowY: "hidden",
   marginBottom: theme.space.x1,
   "::-webkit-scrollbar": {
-    display: "none"
+    display: "none",
   },
   position: "relative",
   "&:before": {
@@ -26,8 +26,8 @@ const TabContainer = styled(Box)(({ theme }) => ({
     position: "absolute",
     bottom: 0,
     left: 0,
-    right: 0
-  }
+    right: 0,
+  },
 }));
 type TabsProps = {
   className?: string;
@@ -46,7 +46,8 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     super(props);
     const { defaultSelectedIndex } = this.props;
     this.state = {
-      selectedIndex: defaultSelectedIndex === null ? null : defaultSelectedIndex
+      selectedIndex:
+        defaultSelectedIndex === null ? null : defaultSelectedIndex,
     };
     this.tabContent = [];
     this.tabContainerRef = React.createRef();
@@ -57,14 +58,16 @@ class Tabs extends React.Component<TabsProps, TabsState> {
   getSelectedIndex() {
     const { selectedIndex: controlledSelectedIndex } = this.props;
     const { selectedIndex: uncontrolledSelectedIndex } = this.state;
-    return controlledSelectedIndex === undefined ? uncontrolledSelectedIndex : controlledSelectedIndex;
+    return controlledSelectedIndex === undefined
+      ? uncontrolledSelectedIndex
+      : controlledSelectedIndex;
   }
   getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
     const { fitted, children, onTabClick } = this.props;
     const selectedIndex = this.getSelectedIndex();
     const tabs = React.Children.map(children, (tab, index) =>
       React.cloneElement(tab, {
-        onClick: e => {
+        onClick: (e) => {
           setFocusToTab(index);
           if (tab.props.onClick) {
             tab.props.onClick(e);
@@ -75,7 +78,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
             this.handleTabClick(index);
           }
         },
-        onFocus: e => {
+        onFocus: (e) => {
           e.stopPropagation();
         },
         onKeyDown: handleArrowNavigation,
@@ -84,9 +87,9 @@ class Tabs extends React.Component<TabsProps, TabsState> {
         selected: index === selectedIndex,
         "aria-selected": index === selectedIndex,
         fullWidth: fitted,
-        ref: ref => {
+        ref: (ref) => {
           this.tabRefs[index] = ref;
-        }
+        },
       })
     );
     return tabs;
@@ -110,21 +113,34 @@ class Tabs extends React.Component<TabsProps, TabsState> {
   }
   handleTabClick(index) {
     this.setState({
-      selectedIndex: index
+      selectedIndex: index,
     });
   }
   render() {
     const { className } = this.props;
-    const spaceProps = getSubset(this.props, propTypes.space)
+    const spaceProps = getSubset(this.props, propTypes.space);
     return (
       <>
         <TabFocusManager tabRefs={this.tabRefs}>
           {({ handleArrowNavigation, setFocusToTab, focusedIndex }) => (
-            <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
+            <TabScrollIndicators
+              tabRefs={this.tabRefs}
+              tabContainerRef={this.tabContainerRef}
+            >
               {({ handleScroll, handleResize }) => (
-                <TabContainer className={className} role="tablist" onScroll={handleScroll} ref={this.tabContainerRef} {...spaceProps}>
+                <TabContainer
+                  className={className}
+                  role="tablist"
+                  onScroll={handleScroll}
+                  ref={this.tabContainerRef}
+                  {...spaceProps}
+                >
                   <ReactResizeDetector handleWidth onResize={handleResize} />
-                  {this.getTabs(setFocusToTab, focusedIndex, handleArrowNavigation)}
+                  {this.getTabs(
+                    setFocusToTab,
+                    focusedIndex,
+                    handleArrowNavigation
+                  )}
                 </TabContainer>
               )}
             </TabScrollIndicators>
@@ -142,6 +158,6 @@ Tabs.defaultProps = {
   defaultSelectedIndex: null,
   renderTabContentOnlyWhenSelected: false,
   fitted: false,
-  onTabClick: undefined
+  onTabClick: undefined,
 };
 export default Tabs;

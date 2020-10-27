@@ -28,8 +28,8 @@ const Slider = styled.span(
       borderRadius: theme.radii.circle,
       boxSizing: "border-box",
       backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.white,
-      transition: ".2s ease"
-    }
+      transition: ".2s ease",
+    },
   })
 );
 const Switch = styled.div(({ theme }) => ({
@@ -40,8 +40,8 @@ const Switch = styled.div(({ theme }) => ({
   input: {
     opacity: "0",
     width: "1px",
-    height: "1px"
-  }
+    height: "1px",
+  },
 }));
 
 type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
@@ -52,39 +52,46 @@ type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
 const ToggleInput = styled.input(
   ({ disabled, theme }: ToggleInputProps): CSSObject => ({
     [`&:checked + ${Slider}:before`]: {
-      transform: "translateX(24px)"
+      transform: "translateX(24px)",
     },
     [`&:checked + ${Slider}`]: {
-      backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue
+      backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue,
     },
     [`&:focus + ${Slider}:before`]: {
-      boxShadow: disabled ? undefined : theme.shadows.focus
-    }
+      boxShadow: disabled ? undefined : theme.shadows.focus,
+    },
   })
 );
 type ToggleButtonProps = ToggleInputProps & {
   defaultToggled?: boolean;
   disabled?: boolean;
 };
-const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef((props, ref) => {
-  const { disabled, defaultToggled } = props;
-  const inputRef = useRef(null);
-  useImperativeHandle(ref, () => inputRef.current);
-  const handleClick = () => {
-    if (inputRef.current) {
-      // triggers the onChange event on a checkbox input
-      inputRef.current.click();
-    }
+const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef(
+  (props, ref) => {
+    const { disabled, defaultToggled } = props;
+    const inputRef = useRef(null);
+    useImperativeHandle(ref, () => inputRef.current);
+    const handleClick = () => {
+      if (inputRef.current) {
+        // triggers the onChange event on a checkbox input
+        inputRef.current.click();
+      }
+    };
+    return (
+      <Switch onClick={handleClick}>
+        <ToggleInput
+          ref={inputRef}
+          type="checkbox"
+          defaultChecked={defaultToggled}
+          {...props}
+        />
+        <Slider disabled={disabled} />
+      </Switch>
+    );
   }
-  return (
-    <Switch onClick={handleClick}>
-      <ToggleInput ref={inputRef} type="checkbox" defaultChecked={defaultToggled} {...props} />
-      <Slider disabled={disabled} />
-    </Switch>
-  );
-});
+);
 ToggleButton.defaultProps = {
   defaultToggled: undefined,
-  disabled: false
+  disabled: false,
 };
 export default ToggleButton;

@@ -1,9 +1,18 @@
 // @ts-nocheck
-import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+  useRef,
+} from "react";
 import { useTranslation } from "react-i18next";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
-import { FieldLabelDefaultProps, FieldLabelProps } from "../FieldLabel/FieldLabel.type";
+import {
+  FieldLabelDefaultProps,
+  FieldLabelProps,
+} from "../FieldLabel/FieldLabel.type";
 import { getDuration } from "./TimeRange.utils";
 const DEFAULT_LABEL = "Time Range";
 type TimeRangeProps = {
@@ -38,7 +47,7 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
       maxTime,
       interval,
       startAriaLabel,
-      endAriaLabel
+      endAriaLabel,
     },
     ref
   ) => {
@@ -50,12 +59,12 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
     useImperativeHandle(ref, () => ({
       inputRef1: {
         ...inputRef1,
-        focus: () => inputRef1.current.focus()
+        focus: () => inputRef1.current.focus(),
       },
       inputRef2: {
         ...inputRef2,
-        focus: () => inputRef2.current.focus()
-      }
+        focus: () => inputRef2.current.focus(),
+      },
     }));
     const { t } = useTranslation();
     const changeStartTimeHandler = (label, value) => {
@@ -85,7 +94,7 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
         onRangeChange({
           startTime,
           endTime,
-          error
+          error,
         });
       }
     };
@@ -124,12 +133,17 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
       <RangeContainer
         labelProps={{
           ...labelProps,
-          labelText: labelProps.labelText === DEFAULT_LABEL ? t("time range") : labelProps.labelText
+          labelText:
+            labelProps.labelText === DEFAULT_LABEL
+              ? t("time range")
+              : labelProps.labelText,
         }}
         startComponent={startInput}
         selected={endTime}
         endComponent={endInput}
-        errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+        errorMessages={
+          !disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]
+        }
       />
     );
   }
@@ -145,12 +159,12 @@ TimeRange.defaultProps = {
   disableRangeValidation: false,
   labelProps: {
     ...FieldLabelDefaultProps,
-    labelText: DEFAULT_LABEL
+    labelText: DEFAULT_LABEL,
   },
   minTime: null,
   maxTime: null,
   interval: undefined,
   startAriaLabel: undefined,
-  endAriaLabel: undefined
+  endAriaLabel: undefined,
 };
 export default TimeRange;

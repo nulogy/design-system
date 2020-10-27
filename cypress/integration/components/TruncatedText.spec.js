@@ -4,7 +4,7 @@ describe("TruncatedText", () => {
     cy.get(el).should("be.visible");
     cy.get(el).contains(text);
   };
-  const assertTooltip = text => {
+  const assertTooltip = (text) => {
     cy.get('[aria-haspopup="true"]').trigger("mouseover");
     cy.get('[role="tooltip"]').should("be.visible");
     cy.isInViewport('[role="tooltip"]');

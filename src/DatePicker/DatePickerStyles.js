@@ -5,23 +5,23 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
     ".react-datepicker__input-container": {
       width: "184px",
       input: {
-        position: "relative"
-      }
+        position: "relative",
+      },
     },
     ".react-datepicker__header": {
       backgroundColor: theme.colors.white,
       borderBottom: "none",
       borderTopLeftRadius: theme.radii.medium,
-      borderTopRightRadius: theme.radii.medium
+      borderTopRightRadius: theme.radii.medium,
     },
     ".react-datepicker__triangle": {
-      display: "none"
+      display: "none",
     },
     ".react-datepicker-popper": {
-      zIndex: 1
+      zIndex: 1,
     },
     ".react-datepicker-popper[data-placement^='bottom']": {
-      marginTop: "0"
+      marginTop: "0",
     },
     ".react-datepicker": {
       backgroundColor: theme.colors.white,
@@ -32,7 +32,7 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       display: "inline-block",
       position: "relative",
       padding: theme.space.x1,
-      paddingTop: theme.space.x2
+      paddingTop: theme.space.x2,
     },
     ".react-datepicker__day-names": {
       paddingTop: theme.space.x2,
@@ -42,8 +42,8 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
         display: "inline-block",
         width: theme.space.x5,
         color: theme.colors.darkGrey,
-        textAlign: "center"
-      }
+        textAlign: "center",
+      },
     },
     ".react-datepicker__day": {
       padding: theme.colors.x2,
@@ -59,33 +59,33 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       boxSizing: "content-box",
       "&:hover": {
         backgroundColor: theme.colors.lightBlue,
-        color: theme.colors.black
+        color: theme.colors.black,
       },
       "&--today": {
         fontWeight: theme.fontWeights.bold,
-        color: theme.colors.black
+        color: theme.colors.black,
       },
       "&--outside-month": {
         color: theme.colors.darkGrey,
-        fontSize: theme.fontSizes.smaller
+        fontSize: theme.fontSizes.smaller,
       },
       "&--disabled": {
         color: theme.colors.grey,
         "&:hover": {
-          color: theme.colors.grey
-        }
-      }
+          color: theme.colors.grey,
+        },
+      },
     },
     ".react-datepicker__day, .react-datepicker__month-text, .react-datepicker__quarter-text": {
       "&[aria-disabled='false']": {
-        cursor: "pointer"
-      }
+        cursor: "pointer",
+      },
     },
     ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover": {
-      backgroundColor: "transparent"
+      backgroundColor: "transparent",
     },
     ".react-datepicker__day-names, .react-datepicker__week": {
-      whiteSpace: "nowrap"
+      whiteSpace: "nowrap",
     },
     ".react-datepicker__day--selected": {
       color: theme.colors.white,
@@ -95,8 +95,8 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       cursor: "initial",
       "&:hover": {
         color: theme.colors.white,
-        background: theme.colors.darkBlue
-      }
-    }
-  }
+        background: theme.colors.darkBlue,
+      },
+    },
+  },
 }));

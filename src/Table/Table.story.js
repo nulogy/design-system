@@ -6,11 +6,7 @@ import { Table } from ".";
 import { Box, DropdownButton, DropdownMenu, Text } from "..";
 
 const dateToString = ({ cellData }) => {
-  return new Date(cellData)
-    .toUTCString()
-    .split(" ")
-    .splice(0, 4)
-    .join(" ");
+  return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");
 };
 
 const sectionRow = ({ cellData }) => (
@@ -41,7 +37,7 @@ const dropdownCellRenderer = ({ cellData }) => (
 const columns = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
-  { label: "Actual Quantity", dataKey: "actualQuantity" }
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
 ];
 
 const columnsWithEverything = [
@@ -49,7 +45,12 @@ const columnsWithEverything = [
   { label: "Expected Quantity", dataKey: "expectedQuantity", width: "20%" },
   { label: "Actual Quantity", dataKey: "actualQuantity", width: "20%" },
   { label: "Note", dataKey: "note", width: "45%" },
-  { label: "", dataKey: "actions", width: "5%", cellRenderer: dropdownCellRenderer }
+  {
+    label: "",
+    dataKey: "actions",
+    width: "5%",
+    cellRenderer: dropdownCellRenderer,
+  },
 ];
 
 const rowData = [
@@ -57,37 +58,57 @@ const rowData = [
     date: "2019-10-01",
     expectedQuantity: "2,025 eaches",
     actualQuantity: "1,800 eaches",
-    id: "r1"
+    id: "r1",
   },
   {
     date: "2019-10-02",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "2,250 eaches",
-    id: "r2"
+    id: "r2",
   },
   {
     date: "2019-10-03",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,425 eaches",
-    id: "r3"
+    id: "r3",
   },
-  { date: "2019-10-04", expectedQuantity: "2,475 eaches", actualQuantity: "675 eaches", id: "r4" },
+  {
+    date: "2019-10-04",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "675 eaches",
+    id: "r4",
+  },
   {
     date: "2019-10-07",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,575 eaches",
-    id: "r5"
+    id: "r5",
   },
-  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r7" },
-  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" },
-  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r9" }
+  {
+    date: "2019-10-22",
+    expectedQuantity: "1,725 eaches",
+    actualQuantity: "-",
+    id: "r7",
+  },
+  {
+    date: "2019-10-23",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r8",
+  },
+  {
+    date: "2019-10-24",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r9",
+  },
 ];
 
 const rowDataWithEverything = [
   {
     heading: "ABC & XYZ Company",
     cellRenderer: sectionRow,
-    id: "r1"
+    id: "r1",
   },
   {
     date: "2019-10-01",
@@ -96,53 +117,77 @@ const rowDataWithEverything = [
     id: "r2",
     expandedContent,
     selectAriaLabel: "select item 12",
-    deselectAriaLabel: "deselect item 12"
+    deselectAriaLabel: "deselect item 12",
   },
   {
     date: "2019-10-02",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "2,250 eaches",
-    id: "r3"
+    id: "r3",
   },
   {
     date: "2019-10-03",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,425 eaches",
-    id: "r4"
+    id: "r4",
   },
   {
     date: "2019-10-04",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "675 eaches",
     note: "1c Other Plant-related issue, equipment issues",
-    id: "r5"
+    id: "r5",
   },
   {
     date: "2019-10-07",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,575 eaches",
-    id: "r6"
+    id: "r6",
   },
-  { date: "2019-10-22", expectedQuantity: "1,725 eaches", actualQuantity: "-", id: "r7" },
+  {
+    date: "2019-10-22",
+    expectedQuantity: "1,725 eaches",
+    actualQuantity: "-",
+    id: "r7",
+  },
   { heading: "And Another Company", cellRenderer: sectionRow, id: "r8" },
   {
     date: "2019-10-23",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "-",
     id: "r9",
-    expandedContent
+    expandedContent,
   },
-  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r10" },
-  { date: "2020-01-24", expectedQuantity: { value: 2475, unit: "eaches" }, id: "r11" }
+  {
+    date: "2019-10-24",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r10",
+  },
+  {
+    date: "2020-01-24",
+    expectedQuantity: { value: 2475, unit: "eaches" },
+    id: "r11",
+  },
 ];
 
 const footerRowData = [
-  { date: "Total", expectedQuantity: "18,000 eaches", actualQuantity: "7,725 eaches", id: "f1" },
-  { date: "Attainment", expectedQuantity: "", actualQuantity: "41.5%", id: "f2" }
+  {
+    date: "Total",
+    expectedQuantity: "18,000 eaches",
+    actualQuantity: "7,725 eaches",
+    id: "f1",
+  },
+  {
+    date: "Attainment",
+    expectedQuantity: "",
+    actualQuantity: "41.5%",
+    id: "f2",
+  },
 ];
 
 export default {
-  title: "Components/Table"
+  title: "Components/Table",
 };
 
 export const WithPagination = () => (
@@ -156,7 +201,7 @@ export const WithPagination = () => (
 );
 
 WithPagination.story = {
-  name: "with pagination"
+  name: "with pagination",
 };
 
 export const WithEverything = () => (
@@ -175,5 +220,5 @@ export const WithEverything = () => (
 );
 
 WithEverything.story = {
-  name: "with everything"
+  name: "with everything",
 };

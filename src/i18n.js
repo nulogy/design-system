@@ -13,32 +13,32 @@ import zh_CN from "../locales/zh_CN.json";
 
 const resources = {
   de_DE: {
-    nds: de_DE
+    nds: de_DE,
   },
   en_US: {
-    nds: en_US
+    nds: en_US,
   },
   es_MX: {
-    nds: es_MX
+    nds: es_MX,
   },
   fr_FR: {
-    nds: fr_FR
+    nds: fr_FR,
   },
   nl_NL: {
-    nds: nl_NL
+    nds: nl_NL,
   },
   pl_PL: {
-    nds: pl_PL
+    nds: pl_PL,
   },
   pt_BR: {
-    nds: pt_BR
+    nds: pt_BR,
   },
   ro_RO: {
-    nds: ro_RO
+    nds: ro_RO,
   },
   zh_CN: {
-    nds: zh_CN
-  }
+    nds: zh_CN,
+  },
 };
 i18n.init({
   ns: ["nds"],
@@ -49,8 +49,8 @@ i18n.init({
   keySeparator: false, // we do not use keys in form messages.welcome
 
   interpolation: {
-    escapeValue: false // react already safes from xss
-  }
+    escapeValue: false, // react already safes from xss
+  },
 });
 
 export default i18n;

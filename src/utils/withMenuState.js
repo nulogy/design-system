@@ -9,7 +9,7 @@ class MenuState extends React.Component {
     const { defaultOpen } = this.props;
 
     this.state = {
-      isOpen: defaultOpen
+      isOpen: defaultOpen,
     };
 
     this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -44,7 +44,7 @@ class MenuState extends React.Component {
 
     this.clearScheduled();
     this.conditionallyApplyDelay(
-      () => this.setState(prevState => ({ isOpen: !prevState.isOpen })),
+      () => this.setState((prevState) => ({ isOpen: !prevState.isOpen })),
       isOpen ? hideDelay : showDelay,
       skipDelay
     );
@@ -89,7 +89,7 @@ class MenuState extends React.Component {
       toggleMenu: this.toggleMenu,
       handleMenuKeydown: this.handleKeyDown,
       openMenu: this.openMenu,
-      closeMenu: this.closeMenu
+      closeMenu: this.closeMenu,
     });
   }
 }
@@ -98,31 +98,42 @@ MenuState.propTypes = {
   children: PropTypes.func.isRequired,
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  defaultOpen: PropTypes.bool
+  defaultOpen: PropTypes.bool,
 };
 
 MenuState.defaultProps = {
   showDelay: 0,
   hideDelay: 0,
-  defaultOpen: false
+  defaultOpen: false,
 };
 
-const withMenuState = MenuComponent => {
-  const MenuComponentWithState = ({ showDelay, hideDelay, defaultOpen, ...props }) => (
-    <MenuState showDelay={showDelay} hideDelay={hideDelay} defaultOpen={defaultOpen}>
-      {menuComponentProps => <MenuComponent menuState={menuComponentProps} {...props} />}
+const withMenuState = (MenuComponent) => {
+  const MenuComponentWithState = ({
+    showDelay,
+    hideDelay,
+    defaultOpen,
+    ...props
+  }) => (
+    <MenuState
+      showDelay={showDelay}
+      hideDelay={hideDelay}
+      defaultOpen={defaultOpen}
+    >
+      {(menuComponentProps) => (
+        <MenuComponent menuState={menuComponentProps} {...props} />
+      )}
     </MenuState>
   );
   MenuComponentWithState.propTypes = {
     showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    defaultOpen: PropTypes.bool
+    defaultOpen: PropTypes.bool,
   };
 
   MenuComponentWithState.defaultProps = {
     showDelay: 0,
     hideDelay: 0,
-    defaultOpen: false
+    defaultOpen: false,
   };
 
   return MenuComponentWithState;

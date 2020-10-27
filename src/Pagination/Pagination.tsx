@@ -17,27 +17,40 @@ const getHoverBackground = (currentPage, disabled, theme) => {
   return theme.colors.lightGrey;
 };
 
-const PaginationButton = styled.button(({ theme, disabled, currentPage }: any) => ({
-  fontSize: theme.fontSizes.small,
-  padding: `${theme.space.x1} ${theme.space.x2}`,
-  lineHeight: theme.lineHeights.smallTextBase,
-  display: "flex",
-  borderRadius: theme.radii.medium,
-  border: `1px solid ${currentPage ? theme.colors.darkBlue : theme.colors.lightGrey}`,
-  color: disabled ? theme.colors.grey : theme.colors.black,
-  "&:not(:last-child)": {
-    marginRight: theme.space.x2
-  },
-  cursor: disabled ? "default" : "pointer",
-  "&:hover": {
-    background: getHoverBackground(currentPage, disabled, theme)
-  }
-}));
+const PaginationButton = styled.button(
+  ({ theme, disabled, currentPage }: any) => ({
+    fontSize: theme.fontSizes.small,
+    padding: `${theme.space.x1} ${theme.space.x2}`,
+    lineHeight: theme.lineHeights.smallTextBase,
+    display: "flex",
+    borderRadius: theme.radii.medium,
+    border: `1px solid ${
+      currentPage ? theme.colors.darkBlue : theme.colors.lightGrey
+    }`,
+    color: disabled ? theme.colors.grey : theme.colors.black,
+    "&:not(:last-child)": {
+      marginRight: theme.space.x2,
+    },
+    cursor: disabled ? "default" : "pointer",
+    "&:hover": {
+      background: getHoverBackground(currentPage, disabled, theme),
+    },
+  })
+);
 
-const PreviousButton = ({ disabled, onClick, label, "aria-label": ariaLabel }: any) => {
+const PreviousButton = ({
+  disabled,
+  onClick,
+  label,
+  "aria-label": ariaLabel,
+}: any) => {
   const { t } = useTranslation();
   return (
-    <PaginationButton disabled={disabled} onClick={onClick} aria-label={ariaLabel || t("go to previous results")}>
+    <PaginationButton
+      disabled={disabled}
+      onClick={onClick}
+      aria-label={ariaLabel || t("go to previous results")}
+    >
       <Icon icon="leftArrow" ml="-8px" /> {label || t("previous")}
     </PaginationButton>
   );
@@ -47,20 +60,24 @@ PreviousButton.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   label: PropTypes.node,
-  "aria-label": PropTypes.string
+  "aria-label": PropTypes.string,
 };
 
 PreviousButton.defaultProps = {
   disabled: false,
   onClick: null,
   label: undefined,
-  "aria-label": undefined
+  "aria-label": undefined,
 };
 
 const NextButton = ({ disabled, onClick, label, "aria-label": ariaLabel }) => {
   const { t } = useTranslation();
   return (
-    <PaginationButton disabled={disabled} onClick={onClick} aria-label={ariaLabel || t("go to next results")}>
+    <PaginationButton
+      disabled={disabled}
+      onClick={onClick}
+      aria-label={ariaLabel || t("go to next results")}
+    >
       {label || t("next")} <Icon icon="rightArrow" mr="-8px" />
     </PaginationButton>
   );
@@ -70,19 +87,19 @@ NextButton.propTypes = {
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   label: PropTypes.node,
-  "aria-label": PropTypes.string
+  "aria-label": PropTypes.string,
 };
 
 NextButton.defaultProps = {
   disabled: false,
   onClick: null,
   label: undefined,
-  "aria-label": undefined
+  "aria-label": undefined,
 };
 
 const PageNumber = styled(PaginationButton)(({ theme, currentPage }: any) => ({
   background: currentPage ? theme.colors.darkBlue : "transparent",
-  color: currentPage ? theme.colors.whiteGrey : theme.colors.black
+  color: currentPage ? theme.colors.whiteGrey : theme.colors.black,
 }));
 
 const SEPERATOR = "...";
@@ -97,10 +114,16 @@ export const getPageItemstoDisplay = (totalPages, currentPage) => {
   if (currentPage > totalPages - 5) {
     return [1, SEPERATOR, ...pages.slice(totalPages - 5)];
   }
-  return [1, SEPERATOR, ...pages.slice(currentPage - 2, currentPage + 2), SEPERATOR, totalPages];
+  return [
+    1,
+    SEPERATOR,
+    ...pages.slice(currentPage - 2, currentPage + 2),
+    SEPERATOR,
+    totalPages,
+  ];
 };
 
-const Pagination: React.SFC<any> = props => {
+const Pagination: React.SFC<any> = (props) => {
   const {
     currentPage,
     totalPages,
@@ -116,7 +139,11 @@ const Pagination: React.SFC<any> = props => {
   } = props;
   const { t } = useTranslation();
   return (
-    <Flex as="nav" aria-label={ariaLabel || t("pagination navigation")} {...restProps}>
+    <Flex
+      as="nav"
+      aria-label={ariaLabel || t("pagination navigation")}
+      {...restProps}
+    >
       <PreviousButton
         disabled={currentPage === 1}
         onClick={onPrevious}
@@ -129,7 +156,13 @@ const Pagination: React.SFC<any> = props => {
         if (page === SEPERATOR)
           return (
             // eslint-disable-next-line react/no-array-index-key
-            <Text key={`sep${index}`} py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
+            <Text
+              key={`sep${index}`}
+              py="x1"
+              mr="x2"
+              fontSize="small"
+              lineHeight="smallTextBase"
+            >
               {SEPERATOR}
             </Text>
           );
@@ -139,7 +172,9 @@ const Pagination: React.SFC<any> = props => {
               aria-current={isCurrentPage}
               currentPage={isCurrentPage}
               disabled={isCurrentPage}
-              aria-label={isCurrentPage ? null : t("go to page", { count: page })}
+              aria-label={
+                isCurrentPage ? null : t("go to page", { count: page })
+              }
               key={page}
               onClick={() => onSelectPage(page)}
             >
@@ -147,7 +182,12 @@ const Pagination: React.SFC<any> = props => {
             </PageNumber>
           );
       })}
-      <NextButton disabled={currentPage === totalPages} onClick={onNext} ariaLabel={nextAriaLabel} label={nextLabel} />
+      <NextButton
+        disabled={currentPage === totalPages}
+        onClick={onNext}
+        ariaLabel={nextAriaLabel}
+        label={nextLabel}
+      />
     </Flex>
   );
 };
@@ -162,7 +202,7 @@ Pagination.propTypes = {
   nextAriaLabel: PropTypes.string,
   previousLabel: PropTypes.node,
   previousAriaLabel: PropTypes.string,
-  "aria-label": PropTypes.string
+  "aria-label": PropTypes.string,
 };
 
 Pagination.defaultProps = {
@@ -173,7 +213,7 @@ Pagination.defaultProps = {
   nextAriaLabel: undefined,
   previousLabel: undefined,
   previousAriaLabel: undefined,
-  "aria-label": undefined
+  "aria-label": undefined,
 };
 
 export default Pagination;

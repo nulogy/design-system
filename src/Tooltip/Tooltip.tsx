@@ -5,30 +5,30 @@ import { Popper } from "../Popper";
 import { generateId } from "../utils";
 import { ThemeType } from "../theme.type";
 import { PositionProps } from "styled-system";
-const tooltipStyles = theme => ({
+const tooltipStyles = (theme) => ({
   backgroundColor: theme.colors.white,
   borderColor: theme.colors.grey,
-  textColor: theme.colors.black
+  textColor: theme.colors.black,
 });
-const getTooltipMargin = placement => {
+const getTooltipMargin = (placement) => {
   const direction = String(placement).split("-")[0];
   switch (direction) {
     case "top":
       return {
-        marginBottom: "4px"
+        marginBottom: "4px",
       };
     case "right":
       return {
-        marginLeft: "4px"
+        marginLeft: "4px",
       };
     case "left":
       return {
-        marginRight: "4px"
+        marginRight: "4px",
       };
     case "bottom":
     default:
       return {
-        marginTop: "4px"
+        marginTop: "4px",
       };
   }
 };
@@ -65,7 +65,7 @@ const TooltipContainer = styled(Box)(
     zIndex: theme.zIndex.content,
     ...getTooltipMargin(dataPlacement),
     position,
-    top: open ? 0 : "-9999px"
+    top: open ? 0 : "-9999px",
   })
 );
 type TooltipProps = {
@@ -90,7 +90,19 @@ type TooltipProps = {
   maxWidth?: string;
 };
 const Tooltip: React.SFC<TooltipProps> = React.forwardRef(
-  ({ className, tooltip, maxWidth, children, placement, showDelay, hideDelay, defaultOpen }, ref) => (
+  (
+    {
+      className,
+      tooltip,
+      maxWidth,
+      children,
+      placement,
+      showDelay,
+      hideDelay,
+      defaultOpen,
+    },
+    ref
+  ) => (
     <Popper
       ref={ref}
       popperPlacement={placement}
@@ -100,7 +112,11 @@ const Tooltip: React.SFC<TooltipProps> = React.forwardRef(
       trigger={children}
       id={generateId()}
     >
-      <TooltipContainer className={className} maxWidth={maxWidth} role="tooltip">
+      <TooltipContainer
+        className={className}
+        maxWidth={maxWidth}
+        role="tooltip"
+      >
         {tooltip}
       </TooltipContainer>
     </Popper>
@@ -112,6 +128,6 @@ Tooltip.defaultProps = {
   defaultOpen: false,
   className: undefined,
   placement: "bottom",
-  maxWidth: "24em"
+  maxWidth: "24em",
 };
 export default Tooltip;

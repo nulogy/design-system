@@ -7,13 +7,13 @@ expect.extend({
     if (pass) {
       return {
         message: () => `expected ${received} not to match ${date}`,
-        pass: true
+        pass: true,
       };
     } else {
       return {
         message: () => `expected ${received} to match ${date}`,
-        pass: false
+        pass: false,
       };
     }
-  }
+  },
 });

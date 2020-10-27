@@ -7,7 +7,7 @@ const StyledTable = styled.table({
   borderCollapse: "collapse",
   width: "100%",
   background: "white",
-  position: "relative"
+  position: "relative",
 });
 type BaseTableProps = {
   columns: any;
@@ -33,7 +33,7 @@ const BaseTable: React.SFC<BaseTableProps> = ({
   rowHovers,
   compact,
   className,
-  stickyHeader
+  stickyHeader,
 }) => (
   <StyledTable id={id} className={className}>
     <TableHead columns={columns} compact={compact} sticky={stickyHeader} />
@@ -46,7 +46,14 @@ const BaseTable: React.SFC<BaseTableProps> = ({
       rowHovers={rowHovers}
       compact={compact}
     />
-    {footerRows && <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} />}
+    {footerRows && (
+      <TableFoot
+        columns={columns}
+        rows={footerRows}
+        keyField={keyField}
+        loading={loading}
+      />
+    )}
   </StyledTable>
 );
 BaseTable.defaultProps = {
@@ -58,6 +65,6 @@ BaseTable.defaultProps = {
   rowHovers: true,
   compact: false,
   className: undefined,
-  stickyHeader: false
+  stickyHeader: false,
 };
 export default BaseTable;

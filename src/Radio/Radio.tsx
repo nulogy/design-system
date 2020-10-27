@@ -5,35 +5,35 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { ThemeType } from "../theme.type";
-const radioStyle = theme => ({
+const radioStyle = (theme) => ({
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.lightGrey
+      backgroundColor: theme.colors.lightGrey,
     },
     error: {
       borderColor: theme.colors.red,
-      backgroundColor: theme.colors.red
+      backgroundColor: theme.colors.red,
     },
     default: {
       borderColor: theme.colors.darkBlue,
-      backgroundColor: theme.colors.darkBlue
-    }
+      backgroundColor: theme.colors.darkBlue,
+    },
   },
   unchecked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.whiteGrey
+      backgroundColor: theme.colors.whiteGrey,
     },
     error: {
       borderColor: theme.colors.red,
-      backgroundColor: theme.colors.white
+      backgroundColor: theme.colors.white,
     },
     default: {
       borderColor: theme.colors.grey,
-      backgroundColor: theme.colors.white
-    }
-  }
+      backgroundColor: theme.colors.white,
+    },
+  },
 });
 const getRadioStyle = (props, checked) => {
   const radioStyleMap = radioStyle(props.theme);
@@ -71,27 +71,27 @@ const VisualRadio: React.SFC<VisualRadioProps> = styled.div(
       height: "2px",
       background: theme.colors.white,
       border: `2px solid ${theme.colors.white}`,
-      borderRadius: theme.radii.circle
-    }
+      borderRadius: theme.radii.circle,
+    },
   })
 );
-const RadioInput = styled.input(props => ({
+const RadioInput = styled.input((props) => ({
   position: "absolute",
   opacity: "0",
   height: "1px",
   width: "1px",
   [`&:focus + ${VisualRadio}`]: {
-    boxShadow: props.theme.shadows.focus
+    boxShadow: props.theme.shadows.focus,
   },
   [`&:checked + ${VisualRadio}`]: {
     ...getRadioStyle(props, "checked"),
     "&:before": {
-      display: "block"
-    }
+      display: "block",
+    },
   },
   [`&:not(:checked) + ${VisualRadio}`]: {
-    ...getRadioStyle(props, "unchecked")
-  }
+    ...getRadioStyle(props, "unchecked"),
+  },
 }));
 
 type BaseRadioProps = VisualRadioProps &
@@ -108,9 +108,17 @@ type BaseRadioProps = VisualRadioProps &
   };
 
 const BaseRadio: React.SFC<BaseRadioProps> = forwardRef((props, ref) => {
-  const { className, labelText, disabled, checked, required, error, ...restProps } = props;
+  const {
+    className,
+    labelText,
+    disabled,
+    checked,
+    required,
+    error,
+    ...restProps
+  } = props;
   return (
-    <Box className={className} {...restProps} >
+    <Box className={className} {...restProps}>
       <ClickInputLabel disabled={disabled}>
         <RadioInput
           type="radio"
@@ -137,11 +145,11 @@ BaseRadio.defaultProps = {
   error: false,
   id: undefined,
   className: undefined,
-  required: false
+  required: false,
 };
 const Radio = styled(BaseRadio)(
   ({ theme }) => ({
-    padding: `${theme.space.half} 0`
+    padding: `${theme.space.half} 0`,
   }),
   space
 );

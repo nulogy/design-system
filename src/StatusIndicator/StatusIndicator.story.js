@@ -5,7 +5,7 @@ import { Box } from "../Box";
 import { Flex } from "../Flex";
 
 export default {
-  title: "Components/StatusIndicator"
+  title: "Components/StatusIndicator",
 };
 
 export const All = () => (
@@ -34,13 +34,25 @@ export const All = () => (
   </>
 );
 
-export const Neutral = () => <StatusIndicator type="neutral">Neutral</StatusIndicator>;
+export const Neutral = () => (
+  <StatusIndicator type="neutral">Neutral</StatusIndicator>
+);
 export const Dark = () => <StatusIndicator type="dark">Dark</StatusIndicator>;
-export const Quiet = () => <StatusIndicator type="quiet">Quiet</StatusIndicator>;
-export const Informative = () => <StatusIndicator type="informative">Informative</StatusIndicator>;
-export const Success = () => <StatusIndicator type="success">Success</StatusIndicator>;
-export const Warning = () => <StatusIndicator type="warning">Warning</StatusIndicator>;
-export const Danger = () => <StatusIndicator type="danger">Danger</StatusIndicator>;
+export const Quiet = () => (
+  <StatusIndicator type="quiet">Quiet</StatusIndicator>
+);
+export const Informative = () => (
+  <StatusIndicator type="informative">Informative</StatusIndicator>
+);
+export const Success = () => (
+  <StatusIndicator type="success">Success</StatusIndicator>
+);
+export const Warning = () => (
+  <StatusIndicator type="warning">Warning</StatusIndicator>
+);
+export const Danger = () => (
+  <StatusIndicator type="danger">Danger</StatusIndicator>
+);
 
 export const FollowingText = () => (
   <>
@@ -76,10 +88,12 @@ export const FollowingText = () => (
     </Box>
     <Box mb="x3">
       <Text inline mr="x1">
-        Long label Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in eleifend metus, in tempus
-        sapien. Morbi eget felis est. Nunc facilisis vel nisi nec ornare. Ut blandit ullamcorper enim sed fringilla.
-        Quisque malesuada pharetra tincidunt. Mauris mauris tortor, maximus vitae tempor ac, tincidunt pharetra augue.
-        In eget suscipit est. Suspendisse feugiat risus urna
+        Long label Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus in eleifend metus, in tempus sapien. Morbi eget felis est.
+        Nunc facilisis vel nisi nec ornare. Ut blandit ullamcorper enim sed
+        fringilla. Quisque malesuada pharetra tincidunt. Mauris mauris tortor,
+        maximus vitae tempor ac, tincidunt pharetra augue. In eget suscipit est.
+        Suspendisse feugiat risus urna
       </Text>
       <StatusIndicator>Status</StatusIndicator>
     </Box>
@@ -87,7 +101,7 @@ export const FollowingText = () => (
 );
 
 FollowingText.story = {
-  name: "Following text"
+  name: "Following text",
 };
 
 export const InsideFlex = () => (
@@ -126,5 +140,5 @@ export const InsideFlex = () => (
 );
 
 InsideFlex.story = {
-  name: "Inside flex"
+  name: "Inside flex",
 };

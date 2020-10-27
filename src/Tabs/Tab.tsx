@@ -2,7 +2,7 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { ThemeType } from "../theme.type";
-const barStyles = theme => ({
+const barStyles = (theme) => ({
   expanded: {
     content: "''",
     backgroundColor: theme.colors.darkBlue,
@@ -12,7 +12,7 @@ const barStyles = theme => ({
     bottom: 0,
     left: 0,
     right: 0,
-    borderRadius: "2px 2px 0 0"
+    borderRadius: "2px 2px 0 0",
   },
   default: {
     content: "''",
@@ -23,17 +23,18 @@ const barStyles = theme => ({
     bottom: 0,
     left: 0,
     right: 0,
-    zIndex: theme.zIndex.tabsBar
-  }
+    zIndex: theme.zIndex.tabsBar,
+  },
 });
-const getBarStyles = (selected, theme) => (selected ? barStyles(theme).expanded : barStyles(theme).default);
+const getBarStyles = (selected, theme) =>
+  selected ? barStyles(theme).expanded : barStyles(theme).default;
 const getBarHoverStyles = (selected, disabled, theme) => {
   if (disabled || selected) {
     return null;
   } else {
     return {
       ...barStyles(theme).expanded,
-      backgroundColor: theme.colors.lightBlue
+      backgroundColor: theme.colors.lightBlue,
     };
   }
 };
@@ -61,31 +62,33 @@ const TabButton: React.SFC<TabButtonProps> = styled.button(
     "&:focus": {
       outline: "none",
       backgroundColor: theme.colors.lightBlue,
-      "&:hover": {}
+      "&:hover": {},
     },
     "&:active": {},
     "&:disabled": {
-      opacity: ".5"
+      opacity: ".5",
     },
     "&:before": {
-      ...getBarStyles(selected, theme)
+      ...getBarStyles(selected, theme),
     },
     "&:hover": {
       "&:before": {
-        ...getBarHoverStyles(selected, disabled, theme)
-      }
-    }
+        ...getBarHoverStyles(selected, disabled, theme),
+      },
+    },
   })
 );
 type TabProps = React.ComponentPropsWithRef<"button"> & {
   label?: React.ReactNode;
 };
-const Tab: React.SFC<TabProps> = React.forwardRef(({ label, ...props }, ref) => (
-  <TabButton role="tab" type="button" ref={ref} {...props}>
-    {label}
-  </TabButton>
-));
+const Tab: React.SFC<TabProps> = React.forwardRef(
+  ({ label, ...props }, ref) => (
+    <TabButton role="tab" type="button" ref={ref} {...props}>
+      {label}
+    </TabButton>
+  )
+);
 Tab.defaultProps = {
-  label: null
+  label: null,
 };
 export default Tab;

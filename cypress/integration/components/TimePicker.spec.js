@@ -15,26 +15,20 @@ describe("Timepicker", () => {
       it("can open a dropdown on click", () => {
         getDropdownComponent().should("not.be.visible");
         getInput().click();
-        getDropdownOptions()
-          .first()
-          .should("be.visible");
+        getDropdownOptions().first().should("be.visible");
       });
     });
 
     describe("selects a time", () => {
       it("allows the user to select a time by clicking", () => {
         getInput().click();
-        getDropdownOptions()
-          .first()
-          .click();
+        getDropdownOptions().first().click();
         getTimePickerSelect().contains("12:00 AM");
       });
 
       it("hides the calendar when a time is selected", () => {
         getInput().click();
-        getDropdownOptions()
-          .first()
-          .click();
+        getDropdownOptions().first().click();
         getDropdownComponent().should("not.be.visible");
       });
     });
@@ -44,43 +38,21 @@ describe("Timepicker", () => {
         getInput().click();
         cy.focused().type("11:");
         getDropdownOptions().should("have.length", 96);
-        getDropdownOptions()
-          .contains("10:30 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("10:45 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("11:00 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("11:15 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("11:30 AM")
-          .should("be.visible");
+        getDropdownOptions().contains("10:30 AM").should("be.visible");
+        getDropdownOptions().contains("10:45 AM").should("be.visible");
+        getDropdownOptions().contains("11:00 AM").should("be.visible");
+        getDropdownOptions().contains("11:15 AM").should("be.visible");
+        getDropdownOptions().contains("11:30 AM").should("be.visible");
       });
       it("shows first matching time intervals near time", () => {
         getInput().click();
         cy.focused().type("3:18");
-        getDropdownOptions()
-          .contains("02:45 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("03:00 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("03:15 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("03:30 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("03:45 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("04:45 AM")
-          .should("not.be.visible");
+        getDropdownOptions().contains("02:45 AM").should("be.visible");
+        getDropdownOptions().contains("03:00 AM").should("be.visible");
+        getDropdownOptions().contains("03:15 AM").should("be.visible");
+        getDropdownOptions().contains("03:30 AM").should("be.visible");
+        getDropdownOptions().contains("03:45 AM").should("be.visible");
+        getDropdownOptions().contains("04:45 AM").should("not.be.visible");
       });
     });
     describe("allows typing in a time", () => {
@@ -93,9 +65,7 @@ describe("Timepicker", () => {
       it("ignores spaces in the time input", () => {
         getInput().click();
         cy.focused().type("3 : 2");
-        getDropdownOptions()
-          .contains("03:15 AM")
-          .should("be.visible");
+        getDropdownOptions().contains("03:15 AM").should("be.visible");
       });
       it("ignores lack of spaces in time input", () => {
         getInput().click();
@@ -125,36 +95,24 @@ describe("Timepicker", () => {
     describe("scrolls to closest times", () => {
       it("shows matching times by interval", () => {
         getInput().click();
-        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}5:");
-        getDropdownOptions()
-          .contains("04:45")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("05:00")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("05:15")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("05:30")
-          .should("be.visible");
+        cy.focused().type(
+          "{backspace}{backspace}{backspace}{backspace}{backspace}5:"
+        );
+        getDropdownOptions().contains("04:45").should("be.visible");
+        getDropdownOptions().contains("05:00").should("be.visible");
+        getDropdownOptions().contains("05:15").should("be.visible");
+        getDropdownOptions().contains("05:30").should("be.visible");
       });
       it("shows times by minute when minutes are added", () => {
         getInput().click();
-        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}23:");
+        cy.focused().type(
+          "{backspace}{backspace}{backspace}{backspace}{backspace}23:"
+        );
         cy.focused().type("1");
-        getDropdownOptions()
-          .contains("22:45")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("23:00")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("23:15")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("23:30")
-          .should("be.visible");
+        getDropdownOptions().contains("22:45").should("be.visible");
+        getDropdownOptions().contains("23:00").should("be.visible");
+        getDropdownOptions().contains("23:15").should("be.visible");
+        getDropdownOptions().contains("23:30").should("be.visible");
       });
     });
   });
@@ -166,22 +124,14 @@ describe("Timepicker", () => {
     describe("scrolls to closest times", () => {
       it("shows matching times by interval", () => {
         getInput().click();
-        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}5:");
-        getDropdownOptions()
-          .contains("04:00")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("04:30")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("05:00")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("05:30")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("06:00")
-          .should("be.visible");
+        cy.focused().type(
+          "{backspace}{backspace}{backspace}{backspace}{backspace}5:"
+        );
+        getDropdownOptions().contains("04:00").should("be.visible");
+        getDropdownOptions().contains("04:30").should("be.visible");
+        getDropdownOptions().contains("05:00").should("be.visible");
+        getDropdownOptions().contains("05:30").should("be.visible");
+        getDropdownOptions().contains("06:00").should("be.visible");
       });
     });
   });
@@ -195,34 +145,18 @@ describe("Timepicker", () => {
         getInput().click();
         cy.focused().type("8:");
         cy.focused().type("1");
-        getDropdownOptions()
-          .contains("08:00 PM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("08:15 PM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("08:30 PM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("07:45 PM")
-          .should("be.visible");
+        getDropdownOptions().contains("08:00 PM").should("be.visible");
+        getDropdownOptions().contains("08:15 PM").should("be.visible");
+        getDropdownOptions().contains("08:30 PM").should("be.visible");
+        getDropdownOptions().contains("07:45 PM").should("be.visible");
       });
       it("shows only options before the max time", () => {
         getInput().click();
         cy.focused().type("10:");
-        getDropdownOptions()
-          .contains("10:00 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("10:15 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("10:30 AM")
-          .should("be.visible");
-        getDropdownOptions()
-          .contains("09:45 AM")
-          .should("be.visible");
+        getDropdownOptions().contains("10:00 AM").should("be.visible");
+        getDropdownOptions().contains("10:15 AM").should("be.visible");
+        getDropdownOptions().contains("10:30 AM").should("be.visible");
+        getDropdownOptions().contains("09:45 AM").should("be.visible");
       });
     });
     describe("allows typing in a time", () => {

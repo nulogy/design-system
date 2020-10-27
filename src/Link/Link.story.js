@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "../index";
 
 export default {
-  title: "Components/Link"
+  title: "Components/Link",
 };
 
 export const _Link = () => <Link href="http://nulogy.design">Link</Link>;
 
 _Link.story = {
-  name: "Link "
+  name: "Link ",
 };
 
 export const WithCustomFontSize = () => (
@@ -18,7 +18,7 @@ export const WithCustomFontSize = () => (
 );
 
 WithCustomFontSize.story = {
-  name: "with custom font size"
+  name: "with custom font size",
 };
 
 export const WithoutUnderline = () => (
@@ -28,7 +28,7 @@ export const WithoutUnderline = () => (
 );
 
 WithoutUnderline.story = {
-  name: "Without underline"
+  name: "Without underline",
 };
 
 export const WithADifferentColor = () => (
@@ -38,7 +38,7 @@ export const WithADifferentColor = () => (
 );
 
 WithADifferentColor.story = {
-  name: "With a different color"
+  name: "With a different color",
 };
 
 export const WithADifferentSize = () => (
@@ -48,11 +48,11 @@ export const WithADifferentSize = () => (
 );
 
 WithADifferentSize.story = {
-  name: "With a different size"
+  name: "With a different size",
 };
 
 export const AsAButton = () => <Link as="button">Link</Link>;
 
 AsAButton.story = {
-  name: "As a <button>"
+  name: "As a <button>",
 };

@@ -4,13 +4,13 @@ import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { useTranslation } from "react-i18next";
 import { PopperArrow } from "../utils";
 import { keyCodes } from "../constants";
-const makeArray = children => {
+const makeArray = (children) => {
   if (!Array.isArray(children)) {
     return [children];
   }
   return children;
 };
-const wrapInFunction = x => (typeof x === "function" ? x : () => x);
+const wrapInFunction = (x) => (typeof x === "function" ? x : () => x);
 type PopperProps = {
   ref: any;
   popperPlacement?: string;
@@ -45,7 +45,7 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
       borderColor,
       showArrow,
       openAriaLabel,
-      closeAriaLabel
+      closeAriaLabel,
     },
     popperRef
   ) => {
@@ -60,13 +60,17 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
     };
     const setPopUpState = (nextIsOpenState, skipDelay) => {
       clearTimeout(timeoutID);
-      conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
+      conditionallyApplyDelay(
+        () => setIsOpen(nextIsOpenState),
+        nextIsOpenState ? showDelay : hideDelay,
+        skipDelay
+      );
     };
-    const closePopUp = skipDelay => {
+    const closePopUp = (skipDelay) => {
       setPopUpState(false, skipDelay);
     };
     useEffect(() => {
-      const handleKeyDown = event => {
+      const handleKeyDown = (event) => {
         switch (event.keyCode) {
           case keyCodes.ESC:
             closePopUp();
@@ -82,7 +86,7 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
       };
       return cleanup;
     }, []);
-    const openPopUp = skipDelay => {
+    const openPopUp = (skipDelay) => {
       setPopUpState(true, skipDelay);
     };
     const onClickEventHandlers = openOnClick
@@ -93,13 +97,13 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
             } else {
               openPopUp(false);
             }
-          }
+          },
         }
       : null;
     const onHoverHandlers = openOnHover
       ? {
           onMouseEnter: () => openPopUp(false),
-          onMouseLeave: () => closePopUp(false)
+          onMouseLeave: () => closePopUp(false),
         }
       : null;
     const eventHandlers = {
@@ -108,28 +112,30 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
         closePopUp(false);
       },
       ...onHoverHandlers,
-      ...onClickEventHandlers
+      ...onClickEventHandlers,
     };
-    const transformInnerChildren = elements =>
+    const transformInnerChildren = (elements) =>
       makeArray(elements).map((element, i) => {
         const transformedElement = wrapInFunction(element)({
-          closeMenu: e => {
+          closeMenu: (e) => {
             closePopUp();
             e.stopPropagation();
           },
-          openMenu: e => {
+          openMenu: (e) => {
             openPopUp();
             e.stopPropagation();
-          }
+          },
         });
         return React.cloneElement(transformedElement, {
           // eslint-disable-next-line react/no-array-index-key
-          key: i
+          key: i,
         });
       });
     const renderInnerChildren = () => {
       const innerChildren = children.props.children;
-      return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
+      return typeof innerChildren !== "string"
+        ? transformInnerChildren(innerChildren)
+        : innerChildren;
     };
     const { t } = useTranslation();
     const openLabel = openAriaLabel || t("open");
@@ -144,7 +150,7 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
               "aria-describedby": id,
               "aria-label": isOpen ? closeLabel : openLabel,
               ...eventHandlers,
-              ref
+              ref,
             })
           }
         </Reference>
@@ -161,11 +167,13 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
                     style: {
                       position: "absolute",
                       ...(isOpen ? style : null),
-                      top: isOpen ? 0 : "-9999px"
+                      top: isOpen ? 0 : "-9999px",
                     },
                     dataPlacement: placement,
-                    className: `${children.props.className || ""} nds-popper-pop-up`,
-                    ...eventHandlers
+                    className: `${
+                      children.props.className || ""
+                    } nds-popper-pop-up`,
+                    ...eventHandlers,
                   },
                   [
                     ...renderInnerChildren(),
@@ -178,7 +186,7 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
                         backgroundColor={backgroundColor}
                         borderColor={borderColor}
                       />
-                    )
+                    ),
                   ]
                 )}
             </>
@@ -201,6 +209,6 @@ Popper.defaultProps = {
   borderColor: undefined,
   showArrow: true,
   openAriaLabel: undefined,
-  closeAriaLabel: undefined
+  closeAriaLabel: undefined,
 };
 export default Popper;

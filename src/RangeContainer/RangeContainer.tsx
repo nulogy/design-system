@@ -42,10 +42,10 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
 RangeContainer.defaultProps = {
   labelProps: {
     ...FieldLabelDefaultProps,
-    labelText: "Range"
+    labelText: "Range",
   },
   startComponent: null,
   endComponent: null,
-  errorMessages: []
+  errorMessages: [],
 };
 export default RangeContainer;

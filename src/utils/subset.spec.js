@@ -7,19 +7,19 @@ describe("getSubset", () => {
     readOnly: false,
     mt: "12px",
     pb: "33px",
-    label: "city"
+    label: "city",
   };
   it("returns the subset of props", () => {
     const propsIWant = {
       mt: "",
       label: "",
-      disabled: ""
+      disabled: "",
     };
     const actual = getSubset(testObject, propsIWant);
     const expected = {
       disabled: true,
       mt: "12px",
-      label: "city"
+      label: "city",
     };
     expect(actual).toEqual(expected);
   });
@@ -27,7 +27,7 @@ describe("getSubset", () => {
     const actual = getSubset(testObject, propTypes.space);
     const expected = {
       mt: "12px",
-      pb: "33px"
+      pb: "33px",
     };
     expect(actual).toEqual(expected);
   });
@@ -36,13 +36,13 @@ describe("getSubset", () => {
       mt: "",
       label: "",
       disabled: "",
-      nonExistent: ""
+      nonExistent: "",
     };
     const actual = getSubset(testObject, propsIWant);
     const expected = {
       disabled: true,
       mt: "12px",
-      label: "city"
+      label: "city",
     };
     expect(actual).toEqual(expected);
   });
@@ -54,18 +54,18 @@ describe("omitSubset", () => {
     readOnly: false,
     mt: "12px",
     pb: "33px",
-    label: "city"
+    label: "city",
   };
   it("returns the subset of props", () => {
     const propsIDontWant = {
       mt: "",
       label: "",
-      disabled: ""
+      disabled: "",
     };
     const actual = omitSubset(testObject, propsIDontWant);
     const expected = {
       readOnly: false,
-      pb: "33px"
+      pb: "33px",
     };
     expect(actual).toEqual(expected);
   });

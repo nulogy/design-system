@@ -5,8 +5,8 @@ export const mergeThemes = (theme, customTheme) =>
         ...mergedTheme,
         [group]: {
           ...mergedTheme[group],
-          ...customTheme[group]
-        }
+          ...customTheme[group],
+        },
       };
     }
     return mergedTheme;

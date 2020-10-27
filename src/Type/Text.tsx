@@ -1,5 +1,12 @@
 import styled, { CSSObject } from "styled-components";
-import { color, space, typography, SpaceProps, TypographyProps, ColorProps } from "styled-system";
+import {
+  color,
+  space,
+  typography,
+  SpaceProps,
+  TypographyProps,
+  ColorProps,
+} from "styled-system";
 const getAttrs = (inline?: boolean) => (inline ? { as: "span" } : null);
 
 export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
@@ -23,13 +30,15 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
   TypographyProps &
   ColorProps;
 
-const Text = styled.p.attrs<TextProps>((props: TextProps) => getAttrs(props.inline))<TextProps>(
+const Text = styled.p.attrs<TextProps>((props: TextProps) =>
+  getAttrs(props.inline)
+)<TextProps>(
   space,
   typography,
   color,
   ({ disabled, textTransform }: TextProps): CSSObject => ({
     textTransform,
-    opacity: disabled ? "0.3333" : undefined
+    opacity: disabled ? "0.3333" : undefined,
   })
 );
 Text.defaultProps = {
@@ -40,6 +49,6 @@ Text.defaultProps = {
   fontSize: "medium",
   lineHeight: "base",
   textTransform: undefined,
-  color: "currentColor"
+  color: "currentColor",
 };
 export default Text;

@@ -8,24 +8,30 @@ import HelpText from "./HelpText";
 import { FieldLabelProps, FieldLabelDefaultProps } from "./FieldLabel.type";
 
 const Label = styled.label(space, color, () => ({
-  display: "inline-block"
+  display: "inline-block",
 }));
 
 Label.propTypes = {
-  color: PropTypes.string
+  color: PropTypes.string,
 };
 
 Label.defaultProps = {
-  color: "black"
+  color: "black",
 };
 
 const LabelText = styled.span(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextCompressed
+  lineHeight: theme.lineHeights.smallTextCompressed,
 }));
 
-const BaseFieldLabel = ({ labelText, requirementText, helpText, children, ...props }) => (
+const BaseFieldLabel = ({
+  labelText,
+  requirementText,
+  helpText,
+  children,
+  ...props
+}) => (
   <Label style={{ display: "block" }} {...props}>
     <Box mb={children && "x1"} data-testid="field-label">
       <LabelText>{labelText}</LabelText>

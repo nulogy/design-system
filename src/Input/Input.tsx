@@ -15,7 +15,11 @@ const Input: React.SFC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
   ({ errorMessage, errorList, className, ...props }, ref) => (
     <Field className={className}>
       <InputField {...props} error={!!(errorMessage || errorList)} ref={ref} />
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      <InlineValidation
+        mt="x1"
+        errorMessage={errorMessage}
+        errorList={errorList}
+      />
     </Field>
   )
 );

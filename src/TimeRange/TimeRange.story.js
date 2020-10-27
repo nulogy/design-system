@@ -5,7 +5,7 @@ import TimeRange from "./TimeRange";
 import { Button, PrimaryButton } from "../";
 
 export default {
-  title: "Components/TimeRange"
+  title: "Components/TimeRange",
 };
 
 export const Default = () => (
@@ -17,7 +17,7 @@ export const Default = () => (
 );
 
 Default.story = {
-  name: "default"
+  name: "default",
 };
 
 export const DefaultSelections = () => (
@@ -31,7 +31,7 @@ export const DefaultSelections = () => (
 );
 
 DefaultSelections.story = {
-  name: "default selections"
+  name: "default selections",
 };
 
 export const WithRangeValidation = () => (
@@ -45,7 +45,7 @@ export const WithRangeValidation = () => (
 );
 
 WithRangeValidation.story = {
-  name: "with range validation"
+  name: "with range validation",
 };
 
 export const WithMinAndMaxTimeRange = () => (
@@ -59,7 +59,7 @@ export const WithMinAndMaxTimeRange = () => (
 );
 
 WithMinAndMaxTimeRange.story = {
-  name: "with min and max time range"
+  name: "with min and max time range",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -90,5 +90,5 @@ export const UsingRefToControlFocus = () => {
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };

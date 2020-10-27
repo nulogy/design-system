@@ -3,7 +3,6 @@ export const getSubset = (o, propObj) => {
   return pick(o, ...fields);
 };
 
-
 export const omitSubset = (o, propObj) => {
   const fields = Object.keys(propObj);
   const objectProps = Object.keys(o);

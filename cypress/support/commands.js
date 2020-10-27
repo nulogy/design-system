@@ -24,7 +24,7 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("renderFromStorybook", component => {
+Cypress.Commands.add("renderFromStorybook", (component) => {
   cy.visit(`/iframe.html?path=/story/components-${component}`);
 });
 
@@ -38,16 +38,16 @@ Cypress.Commands.add("clickOutsideElement", () => {
 
 /* VIEWPORT CHECKS: useful for checking if an element is in view, particularly useful since the "visible" check built into cypress checks the visibility according to the css propterty and will not catch elements that are visually moved off the screen but remain css visible for screenreaders or other purposes */
 
-Cypress.Commands.add("isInViewport", element => {
-  cy.get(element).then($el => {
+Cypress.Commands.add("isInViewport", (element) => {
+  cy.get(element).then(($el) => {
     const bottom = Cypress.$(cy.state("window")).height();
     const rect = $el[0].getBoundingClientRect();
 
     expect(rect.top).not.to.be.greaterThan(bottom);
   });
 });
-Cypress.Commands.add("isNotInViewport", element => {
-  cy.get(element).then($el => {
+Cypress.Commands.add("isNotInViewport", (element) => {
+  cy.get(element).then(($el) => {
     const rect = $el[0].getBoundingClientRect();
 
     expect(rect.top).to.be.lessThan(0 - rect.height);

@@ -1,5 +1,5 @@
 let realDate;
-export const mockDate = date => {
+export const mockDate = (date) => {
   const currentDate = new Date(date);
   realDate = Date;
   global.Date = class extends Date {

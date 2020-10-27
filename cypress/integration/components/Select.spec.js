@@ -43,15 +43,11 @@ describe("Select", () => {
       getMultiselect().contains("PCN1");
       getMultiselect().contains("PCN2");
       getMultiselect().contains("PCN4");
-      getMultiselect()
-        .contains("PCN9")
-        .should("not.exist");
+      getMultiselect().contains("PCN9").should("not.exist");
     });
 
     it("removes a selected item", () => {
-      getCloseButtons()
-        .first()
-        .click();
+      getCloseButtons().first().click();
 
       getMultiselect().contains("PCN1");
     });
@@ -69,13 +65,9 @@ describe("Select", () => {
     it("removes all selected items", () => {
       getSelectedItems().should("have.length", 2);
 
-      getCloseButtons()
-        .first()
-        .click();
+      getCloseButtons().first().click();
 
-      getCloseButtons()
-        .first()
-        .click();
+      getCloseButtons().first().click();
 
       getMultiselect().contains("Please select inventory status");
     });
@@ -104,9 +96,7 @@ describe("Select", () => {
 
       getSelectComponent().click();
 
-      getSelectComponent()
-        .contains("Assigned to a line")
-        .click();
+      getSelectComponent().contains("Assigned to a line").click();
 
       getValue().should("have.text", "Assigned to a line");
       assertDropDownIsClosed();
@@ -124,9 +114,7 @@ describe("Select", () => {
       // focus the select box
       getSelectComponent().click();
 
-      cy.focused()
-        .type("{downarrow}")
-        .type("{enter}");
+      cy.focused().type("{downarrow}").type("{enter}");
 
       assertDropDownIsClosed();
       getValue().should("have.text", "Assigned to a line");
@@ -149,9 +137,7 @@ describe("Select", () => {
       assertDropDownIsClosed();
 
       getSelectComponent().click();
-      getSelectComponent()
-        .contains("Assigned to a line")
-        .click();
+      getSelectComponent().contains("Assigned to a line").click();
 
       getValue().should("have.text", "Assigned to a line");
       assertDropDownIsClosed();

@@ -4,7 +4,7 @@ import { Checkbox, CheckboxGroup } from "../index";
 const errorList = ["Error message 1", "Error message 2"];
 
 export default {
-  title: "Components/CheckboxGroup"
+  title: "Components/CheckboxGroup",
 };
 
 export const _CheckboxGroup = () => (
@@ -16,7 +16,7 @@ export const _CheckboxGroup = () => (
 );
 
 _CheckboxGroup.story = {
-  name: "CheckboxGroup"
+  name: "CheckboxGroup",
 };
 
 export const CheckboxGroupWithAllProps = () => (
@@ -35,7 +35,7 @@ export const CheckboxGroupWithAllProps = () => (
 );
 
 CheckboxGroupWithAllProps.story = {
-  name: "CheckboxGroup with all props"
+  name: "CheckboxGroup with all props",
 };
 
 export const WithErrorMessage = () => (
@@ -52,7 +52,7 @@ export const WithErrorMessage = () => (
 );
 
 WithErrorMessage.story = {
-  name: "with error message"
+  name: "with error message",
 };
 
 export const WithErrorList = () => (
@@ -70,11 +70,16 @@ export const WithErrorList = () => (
 );
 
 WithErrorList.story = {
-  name: "with error list"
+  name: "with error list",
 };
 
 export const SetToDisabled = () => (
-  <CheckboxGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue={["a"]}>
+  <CheckboxGroup
+    disabled
+    labelText="Setting Selection"
+    name="settingSelection"
+    defaultValue={["a"]}
+  >
     <Checkbox value="a" labelText="Option A" />
     <Checkbox value="b" labelText="Option B" />
     <Checkbox value="c" labelText="Option C" />
@@ -82,11 +87,16 @@ export const SetToDisabled = () => (
 );
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };
 
 export const Controlled = () => (
-  <CheckboxGroup labelText="Setting Selection" name="settingSelection" checkedValue={["a"]} onChange={() => {}}>
+  <CheckboxGroup
+    labelText="Setting Selection"
+    name="settingSelection"
+    checkedValue={["a"]}
+    onChange={() => {}}
+  >
     <Checkbox value="a" labelText="Option A" />
     <Checkbox value="b" labelText="Option B" />
     <Checkbox value="c" labelText="Option C" />

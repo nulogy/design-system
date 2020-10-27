@@ -5,15 +5,19 @@ import { withKnobs } from "@storybook/addon-knobs";
 import { TimePicker, Button } from "../index";
 
 export default {
-  title: "Components/TimePicker"
+  title: "Components/TimePicker",
 };
 
 export const Default = () => (
-  <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
+  <TimePicker
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="Start Time"
+  />
 );
 
 Default.story = {
-  name: "default"
+  name: "default",
 };
 
 export const WithCustomTimeFormat = () => (
@@ -27,7 +31,7 @@ export const WithCustomTimeFormat = () => (
 );
 
 WithCustomTimeFormat.story = {
-  name: "with custom time format"
+  name: "with custom time format",
 };
 
 export const WithCustomTimeInterval = () => (
@@ -42,7 +46,7 @@ export const WithCustomTimeInterval = () => (
 );
 
 WithCustomTimeInterval.story = {
-  name: "with custom time interval"
+  name: "with custom time interval",
 };
 
 export const WithCustomPlaceholder = () => (
@@ -55,7 +59,7 @@ export const WithCustomPlaceholder = () => (
 );
 
 WithCustomPlaceholder.story = {
-  name: "with custom placeholder"
+  name: "with custom placeholder",
 };
 
 export const WithErrorState = () => (
@@ -68,7 +72,7 @@ export const WithErrorState = () => (
 );
 
 WithErrorState.story = {
-  name: "with error state"
+  name: "with error state",
 };
 
 export const WithMinAndMaxTime = () => (
@@ -82,7 +86,7 @@ export const WithMinAndMaxTime = () => (
 );
 
 WithMinAndMaxTime.story = {
-  name: "with min and max time"
+  name: "with min and max time",
 };
 
 export const WithCustomDefault = () => (
@@ -95,18 +99,25 @@ export const WithCustomDefault = () => (
 );
 
 WithCustomDefault.story = {
-  name: "with custom default"
+  name: "with custom default",
 };
 
 const ControlledTimePicker = () => {
   const [value, setValue] = useState("13:43");
-  return <TimePicker onChange={setValue} onInputChange={setValue} labelText="End Time" value={value} />;
-}
+  return (
+    <TimePicker
+      onChange={setValue}
+      onInputChange={setValue}
+      labelText="End Time"
+      value={value}
+    />
+  );
+};
 
 export const WithValue = () => <ControlledTimePicker />;
 
 WithValue.story = {
-  name: "with value"
+  name: "with value",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -129,5 +140,5 @@ export const UsingRefToControlFocus = () => {
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };

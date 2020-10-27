@@ -12,13 +12,16 @@ import {
   List,
   ListItem,
   Select,
-  Text
+  Text,
 } from "../index";
 
-const options = [{ value: "planned", label: "Planned" }, { value: "booked", label: "Booked" }];
+const options = [
+  { value: "planned", label: "Planned" },
+  { value: "booked", label: "Booked" },
+];
 
 export default {
-  title: "Components/Form"
+  title: "Components/Form",
 };
 
 export const _Form = () => (
@@ -31,7 +34,11 @@ export const _Form = () => (
       requirementText="(Optional)"
       helpText="Enter a date below"
     />
-    <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
+    <Input
+      id="birthplace"
+      labelText="Place of birth"
+      requirementText="(Optional)"
+    />
   </Form>
 );
 
@@ -45,12 +52,16 @@ export const WithoutTitle = () => (
       requirementText="(Optional)"
       helpText="Enter a date below"
     />
-    <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
+    <Input
+      id="birthplace"
+      labelText="Place of birth"
+      requirementText="(Optional)"
+    />
   </Form>
 );
 
 WithoutTitle.story = {
-  name: "Without title"
+  name: "Without title",
 };
 
 export const WithFormSections = () => (
@@ -64,7 +75,11 @@ export const WithFormSections = () => (
         requirementText="(Optional)"
         helpText="Enter a date below"
       />
-      <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
+      <Input
+        id="birthplace"
+        labelText="Place of birth"
+        requirementText="(Optional)"
+      />
     </FormSection>
     <FormSection title="General Information">
       <Input id="gender" labelText="Gender" />
@@ -74,7 +89,7 @@ export const WithFormSections = () => (
 );
 
 WithFormSections.story = {
-  name: "With form sections"
+  name: "With form sections",
 };
 
 export const WithFormSectionsWithoutTitles = () => (
@@ -88,7 +103,11 @@ export const WithFormSectionsWithoutTitles = () => (
         requirementText="(Optional)"
         helpText="Enter a date below"
       />
-      <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
+      <Input
+        id="birthplace"
+        labelText="Place of birth"
+        requirementText="(Optional)"
+      />
     </FormSection>
     <FormSection>
       <Input id="gender" labelText="Gender" />
@@ -98,7 +117,7 @@ export const WithFormSectionsWithoutTitles = () => (
 );
 
 WithFormSectionsWithoutTitles.story = {
-  name: "With form sections without titles"
+  name: "With form sections without titles",
 };
 
 export const DemoForm = () => (
@@ -122,13 +141,43 @@ export const DemoForm = () => (
           requirementText="(Optional)"
           helpText="Project description helps identify the project."
         />
-        <Select id="project-status" labelText="Project status" options={options} />
-        <Input id="item-code" labelText="Item code" defaultValue="WS2SB6" errorMessage="Item WS2SB6 does not exist." />
-        <Input id="eaches-expected" labelText="Eaches expected on Job" placeholder="2 000" />
-        <Input id="eaches-remaining" labelText="Eaches remaining on Project" defaultValue="18 000" disabled />
-        <Input id="scheduled-start" labelText="Scheduled start" placeholder="MMM-DD-YYYY" />
-        <Input id="scheduled-end" labelText="Scheduled end" placeholder="MMM-DD-YYYY" />
-        <CheckboxGroup labelText="Line Lead" name="linelead" requirementText="(Optional)">
+        <Select
+          id="project-status"
+          labelText="Project status"
+          options={options}
+        />
+        <Input
+          id="item-code"
+          labelText="Item code"
+          defaultValue="WS2SB6"
+          errorMessage="Item WS2SB6 does not exist."
+        />
+        <Input
+          id="eaches-expected"
+          labelText="Eaches expected on Job"
+          placeholder="2 000"
+        />
+        <Input
+          id="eaches-remaining"
+          labelText="Eaches remaining on Project"
+          defaultValue="18 000"
+          disabled
+        />
+        <Input
+          id="scheduled-start"
+          labelText="Scheduled start"
+          placeholder="MMM-DD-YYYY"
+        />
+        <Input
+          id="scheduled-end"
+          labelText="Scheduled end"
+          placeholder="MMM-DD-YYYY"
+        />
+        <CheckboxGroup
+          labelText="Line Lead"
+          name="linelead"
+          requirementText="(Optional)"
+        >
           <Checkbox value="christiaan" labelText="Christiaan Oostenbrug" />
           <Checkbox value="matt" labelText="Matt Dunn" />
           <Checkbox value="clemens" labelText="Clemens Park" disabled checked />
@@ -145,17 +194,33 @@ export const DemoForm = () => (
           <Radio value="no" labelText="No" />
           <Radio value="maybe" labelText="Maybe" disabled />
         </RadioGroup>
-        <Toggle id="job-visibility" labelText="Job Visibility" onText="Visible" offText="Hidden" />
+        <Toggle
+          id="job-visibility"
+          labelText="Job Visibility"
+          onText="Visible"
+          offText="Hidden"
+        />
       </FormSection>
       <FormSection title="Rejects">
-        <Input defaultValue="235432" id="items" labelText="Item" errorMessage="Item 235432 is not a valid entry" />
+        <Input
+          defaultValue="235432"
+          id="items"
+          labelText="Item"
+          errorMessage="Item 235432 is not a valid entry"
+        />
         <Input id="quantity" labelText="Quantity" />
-        <Toggle id="reject-visibility" labelText="Reject visibility" onText="Visible" offText="Hidden" disabled />
+        <Toggle
+          id="reject-visibility"
+          labelText="Reject visibility"
+          onText="Visible"
+          offText="Hidden"
+          disabled
+        />
       </FormSection>
     </Form>
   </>
 );
 
 DemoForm.story = {
-  name: "Demo form"
+  name: "Demo form",
 };

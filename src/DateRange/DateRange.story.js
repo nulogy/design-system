@@ -6,7 +6,7 @@ import DateRange from "./DateRange";
 import { Button, Box, Flex, PrimaryButton } from "../";
 
 export default {
-  title: "Components/DateRange"
+  title: "Components/DateRange",
 };
 
 export const Default = () => (
@@ -18,7 +18,7 @@ export const Default = () => (
 );
 
 Default.story = {
-  name: "default"
+  name: "default",
 };
 
 export const DefaultStartAndEndDate = () => (
@@ -32,7 +32,7 @@ export const DefaultStartAndEndDate = () => (
 );
 
 DefaultStartAndEndDate.story = {
-  name: "default start and end date"
+  name: "default start and end date",
 };
 
 export const DisabledRangeValidation = () => (
@@ -47,7 +47,7 @@ export const DisabledRangeValidation = () => (
 );
 
 DisabledRangeValidation.story = {
-  name: "disabled range validation"
+  name: "disabled range validation",
 };
 
 export const WithCustomError = () => (
@@ -62,7 +62,7 @@ export const WithCustomError = () => (
 );
 
 WithCustomError.story = {
-  name: "with custom error"
+  name: "with custom error",
 };
 
 export const CustomizingInputProps = () => (
@@ -76,7 +76,7 @@ export const CustomizingInputProps = () => (
 );
 
 CustomizingInputProps.story = {
-  name: "customizing input props"
+  name: "customizing input props",
 };
 
 export const IndividualInputError = () => (
@@ -91,7 +91,7 @@ export const IndividualInputError = () => (
 );
 
 IndividualInputError.story = {
-  name: "individual input error"
+  name: "individual input error",
 };
 
 export const WithTimes = () => (
@@ -106,7 +106,7 @@ export const WithTimes = () => (
 );
 
 WithTimes.story = {
-  name: "with times"
+  name: "with times",
 };
 
 export const WithDefaultStartAndEndTimes = () => (
@@ -123,7 +123,7 @@ export const WithDefaultStartAndEndTimes = () => (
 );
 
 WithDefaultStartAndEndTimes.story = {
-  name: "with default start and end times"
+  name: "with default start and end times",
 };
 
 export const WithTimeError = () => (
@@ -140,7 +140,7 @@ export const WithTimeError = () => (
 );
 
 WithTimeError.story = {
-  name: "with time error"
+  name: "with time error",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -190,5 +190,5 @@ export const UsingRefToControlFocus = () => {
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };

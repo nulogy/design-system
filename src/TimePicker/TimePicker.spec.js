@@ -6,7 +6,10 @@ import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec
 
 const openDropdown = (container, i = 0) => {
   fireEvent.focus(container.querySelectorAll("input")[i]);
-  fireEvent.keyDown(container.querySelectorAll("input")[i], { key: "ArrowDown", code: 40 });
+  fireEvent.keyDown(container.querySelectorAll("input")[i], {
+    key: "ArrowDown",
+    code: 40,
+  });
 };
 
 const selectOption = (optionText, container, queryByText, i) => {
@@ -32,10 +35,16 @@ describe("TimePicker", () => {
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Time";
       const { container } = renderWithNDSProvider(
-        <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
+        <TimePicker
+          onChange={onChange}
+          onInputChange={onInputChange}
+          labelText={labelText}
+        />
       );
       const value = "20:00";
-      fireEvent.change(container.querySelectorAll("input")[0], { target: { value } });
+      fireEvent.change(container.querySelectorAll("input")[0], {
+        target: { value },
+      });
 
       expect(onInputChange).toHaveBeenCalledWith(value);
     });

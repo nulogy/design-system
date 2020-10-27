@@ -4,7 +4,7 @@ import StatefulTable from "./StatefulTable";
 import BaseTable from "./BaseTable";
 import SortingColumnHeader from "./SortingColumnHeader";
 
-const Table = props => {
+const Table = (props) => {
   const { hasSelectableRows, rowsPerPage, hasExpandableRows } = props;
 
   return hasSelectableRows || rowsPerPage || hasExpandableRows ? (
@@ -18,12 +18,12 @@ Table.SortingHeader = SortingColumnHeader;
 
 Table.propTypes = {
   ...BaseTable.propTypes,
-  ...StatefulTable.propTypes
+  ...StatefulTable.propTypes,
 };
 
 Table.defaultProps = {
   ...BaseTable.defaultProps,
-  ...StatefulTable.defaultProps
+  ...StatefulTable.defaultProps,
 };
 
 export default Table;

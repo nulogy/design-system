@@ -3,17 +3,18 @@ import styled from "styled-components";
 import { select } from "@storybook/addon-knobs";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
-const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
+const sampleLogo =
+  "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
 const ResetStorybookView = styled.div({
   position: "absolute",
   top: 0,
   left: 0,
   width: "100vw",
-  height: "100vh"
+  height: "100vh",
 });
 
-const BrandedNavBar = props => (
+const BrandedNavBar = (props) => (
   <ResetStorybookView>
     <NDSBrandedNavBar {...props} />
   </ResetStorybookView>
@@ -28,8 +29,8 @@ const primaryMenu = [
       { name: "Projects", href: "/" },
       { name: "Items", href: "/" },
       { name: "Vendors", href: "/" },
-      { name: "Carriers", href: "/" }
-    ]
+      { name: "Carriers", href: "/" },
+    ],
   },
 
   {
@@ -47,8 +48,8 @@ const primaryMenu = [
       { name: "Blind Counts", href: "/" },
       { name: "Inbound Stock Transfer Orders", href: "/" },
       { name: "Inbound Stock Transfers", href: "/" },
-      { name: "Outbound Stock Transfers", href: "/" }
-    ]
+      { name: "Outbound Stock Transfers", href: "/" },
+    ],
   },
   {
     name: "Operations",
@@ -59,60 +60,89 @@ const primaryMenu = [
           { name: "Dashboard", href: "/" },
           {
             name: "Projects",
-            items: [{ name: "Cycle Counts", href: "/" }, { name: "Blind Counts", href: "/" }]
+            items: [
+              { name: "Cycle Counts", href: "/" },
+              { name: "Blind Counts", href: "/" },
+            ],
           },
           {
             name: "Jobs",
-            items: [{ name: "Job 1", href: "/" }, { name: "Job 2", href: "/" }]
-          }
-        ]
+            items: [
+              { name: "Job 1", href: "/" },
+              { name: "Job 2", href: "/" },
+            ],
+          },
+        ],
       },
       { name: "Item cart", href: "/" },
-      { name: "Inventory", href: "/" }
-    ]
+      { name: "Inventory", href: "/" },
+    ],
   },
-  { name: "Link", href: "/" }
+  { name: "Link", href: "/" },
 ];
 
 const secondaryMenu = [
   {
     name: "User@Nulogy.com",
-    items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
+    items: [
+      { name: "Profile", href: "/" },
+      { name: "Preferences", href: "/" },
+      { name: "Logout", href: "/" },
+    ],
   },
   {
     name: "Settings",
-    items: [{ name: "Permissions", href: "/" }, { name: "Manage account", href: "/" }]
-  }
+    items: [
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" },
+    ],
+  },
 ];
 
 export default {
-  title: "Components/BrandedNavBar"
+  title: "Components/BrandedNavBar",
 };
 
-export const _BrandedNavBar = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
+export const _BrandedNavBar = () => (
+  <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />
+);
 
 _BrandedNavBar.story = {
-  name: "BrandedNavBar"
+  name: "BrandedNavBar",
 };
 
-export const WithACompanyLogo = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />;
+export const WithACompanyLogo = () => (
+  <BrandedNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    logoSrc={sampleLogo}
+  />
+);
 
 WithACompanyLogo.story = {
-  name: "With a company logo"
+  name: "With a company logo",
 };
 
-export const WithAppName = () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />;
+export const WithAppName = () => (
+  <BrandedNavBar
+    subtext="Quality Control"
+    menuData={{ primaryMenu, secondaryMenu }}
+  />
+);
 
 WithAppName.story = {
-  name: "With app name"
+  name: "With app name",
 };
 
 export const WithACompanyLogoAndAppName = () => (
-  <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
+  <BrandedNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    subtext="Quality control"
+    logoSrc={sampleLogo}
+  />
 );
 
 WithACompanyLogoAndAppName.story = {
-  name: "With a company logo and app name"
+  name: "With a company logo and app name",
 };
 
 export const WithEnvironmentBanner = () => (
@@ -125,5 +155,5 @@ export const WithEnvironmentBanner = () => (
 );
 
 WithEnvironmentBanner.story = {
-  name: "with environment banner"
+  name: "with environment banner",
 };

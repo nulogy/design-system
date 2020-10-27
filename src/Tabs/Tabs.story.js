@@ -5,7 +5,7 @@ class ControlledTabs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndex: null
+      selectedIndex: null,
     };
 
     this.setSelectedTab = this.setSelectedTab.bind(this);
@@ -33,14 +33,16 @@ class ControlledTabs extends React.Component {
             Uncontrolled Content: Tab 4
           </Tab>
         </Tabs>
-        <div className="ControlledTabContent">Controlled Content: Tab {selectedIndex + 1}</div>
+        <div className="ControlledTabContent">
+          Controlled Content: Tab {selectedIndex + 1}
+        </div>
       </>
     );
   }
 }
 
 export default {
-  title: "Components/Tabs"
+  title: "Components/Tabs",
 };
 
 export const _Tabs = () => (
@@ -70,7 +72,7 @@ export const WithADefaultSelectedIndex = () => (
 );
 
 WithADefaultSelectedIndex.story = {
-  name: "with a defaultSelectedIndex"
+  name: "with a defaultSelectedIndex",
 };
 
 export const SetToFitted = () => (
@@ -83,7 +85,7 @@ export const SetToFitted = () => (
 );
 
 SetToFitted.story = {
-  name: "set to fitted"
+  name: "set to fitted",
 };
 
 export const WithAllTabStates = () => (
@@ -96,7 +98,7 @@ export const WithAllTabStates = () => (
 );
 
 WithAllTabStates.story = {
-  name: "with all tab states"
+  name: "with all tab states",
 };
 
 export const WithScrollingTabs = () => (
@@ -118,13 +120,13 @@ export const WithScrollingTabs = () => (
 
 WithScrollingTabs.story = {
   name: "with scrolling tabs",
-  parameters: { viewport: { defaultViewport: "extraSmall" } }
+  parameters: { viewport: { defaultViewport: "extraSmall" } },
 };
 
 export const Controlled = () => <ControlledTabs />;
 
 Controlled.story = {
-  name: "controlled"
+  name: "controlled",
 };
 
 export const WithInputs = () => (
@@ -139,7 +141,7 @@ export const WithInputs = () => (
 );
 
 WithInputs.story = {
-  name: "with inputs"
+  name: "with inputs",
 };
 
 export const WithContentLoadedOnSelection = () => (
@@ -154,5 +156,5 @@ export const WithContentLoadedOnSelection = () => (
 );
 
 WithContentLoadedOnSelection.story = {
-  name: "with content loaded on selection"
+  name: "with content loaded on selection",
 };

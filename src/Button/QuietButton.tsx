@@ -3,6 +3,6 @@ import Button from "./Button";
 const QuietButton: React.SFC<any> = styled(Button)(({ theme }) => ({
   color: theme.colors.blue,
   borderColor: "transparent",
-  backgroundColor: "transparent"
+  backgroundColor: "transparent",
 }));
 export default QuietButton;

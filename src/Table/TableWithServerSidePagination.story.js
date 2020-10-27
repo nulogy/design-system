@@ -5,7 +5,7 @@ import { Pagination } from "../Pagination";
 const COLUMNS = [
   { label: "Number", dataKey: "id" },
   { label: "Description", dataKey: "title" },
-  { label: "Completed", dataKey: "completed" }
+  { label: "Completed", dataKey: "completed" },
 ];
 
 class TableWithServerSidePagination extends React.Component {
@@ -15,7 +15,7 @@ class TableWithServerSidePagination extends React.Component {
     this.state = {
       rows: [],
       loading: true,
-      page: 1
+      page: 1,
     };
   }
 
@@ -30,22 +30,22 @@ class TableWithServerSidePagination extends React.Component {
     const url = `https://jsonplaceholder.typicode.com/todos?_start=${startingIndex}&_limit=${QUANTITY}`;
 
     fetch(url)
-      .then(response => response.json())
-      .then(json => {
+      .then((response) => response.json())
+      .then((json) => {
         this.setState(
           {
             loading: false,
             rows: json.map(({ completed, ...item }) => ({
               ...item,
-              completed: completed ? "Yes" : "-"
-            }))
+              completed: completed ? "Yes" : "-",
+            })),
           },
           callback
         );
       });
   };
 
-  onSelectPage = page => {
+  onSelectPage = (page) => {
     this.getData(page, () => this.setState({ page }));
   };
 
@@ -79,11 +79,11 @@ class TableWithServerSidePagination extends React.Component {
 }
 
 export default {
-  title: "Components/Table"
+  title: "Components/Table",
 };
 
 export const WithServerSidePagination = () => <TableWithServerSidePagination />;
 
 WithServerSidePagination.story = {
-  name: "with server-side pagination"
+  name: "with server-side pagination",
 };

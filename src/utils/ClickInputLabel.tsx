@@ -10,7 +10,7 @@ const ClickInputLabel: React.SFC<any> = styled.label(
     verticalAlign: "top",
     alignItems: "flex-start",
     userSelect: "none",
-    padding: `${theme.space.half} 0`
+    padding: `${theme.space.half} 0`,
   })
 );
 export default ClickInputLabel;

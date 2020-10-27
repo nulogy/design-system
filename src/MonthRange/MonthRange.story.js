@@ -5,7 +5,7 @@ import { withKnobs } from "@storybook/addon-knobs";
 import MonthRange from "./MonthRange";
 
 export default {
-  title: "Components/MonthRange"
+  title: "Components/MonthRange",
 };
 
 export const Default = () => (
@@ -17,7 +17,7 @@ export const Default = () => (
 );
 
 Default.story = {
-  name: "default"
+  name: "default",
 };
 
 export const DefaultStartAndEndDate = () => (
@@ -31,7 +31,7 @@ export const DefaultStartAndEndDate = () => (
 );
 
 DefaultStartAndEndDate.story = {
-  name: "default start and end date"
+  name: "default start and end date",
 };
 
 export const DisabledRangeValidation = () => (
@@ -46,7 +46,7 @@ export const DisabledRangeValidation = () => (
 );
 
 DisabledRangeValidation.story = {
-  name: "disabled range validation"
+  name: "disabled range validation",
 };
 
 export const WithCustomError = () => (
@@ -61,7 +61,7 @@ export const WithCustomError = () => (
 );
 
 WithCustomError.story = {
-  name: "with custom error"
+  name: "with custom error",
 };
 
 export const CustomizingInputProps = () => (
@@ -75,7 +75,7 @@ export const CustomizingInputProps = () => (
 );
 
 CustomizingInputProps.story = {
-  name: "customizing input props"
+  name: "customizing input props",
 };
 
 export const IndividualInputError = () => (
@@ -90,5 +90,5 @@ export const IndividualInputError = () => (
 );
 
 IndividualInputError.story = {
-  name: "individual input error"
+  name: "individual input error",
 };

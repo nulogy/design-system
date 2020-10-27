@@ -17,6 +17,6 @@ const Suffix = ({ suffix, suffixWidth, ...props }: SuffixProps) =>
 Suffix.defaultProps = {
   suffix: null,
   children: null,
-  suffixWidth: null
+  suffixWidth: null,
 };
 export default Suffix;

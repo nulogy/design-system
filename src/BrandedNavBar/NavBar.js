@@ -28,7 +28,7 @@ const themeColorObject = {
   background: "white",
   hoverBackground: "whiteGrey",
   textColor: "blackBlue",
-  logoColor: "blue"
+  logoColor: "blue",
 };
 
 const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
@@ -36,31 +36,55 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   padding: `0 ${theme.space.x3}`,
   boxShadow: theme.shadows.large,
   alignItems: "center",
-  height: NAVBAR_HEIGHT
+  height: NAVBAR_HEIGHT,
 }));
 
 const EnvironmentBanner = ({ children }) => (
   <Box bg="darkBlue" textAlign="center">
-    <Text fontSize="10px" letterSpacing="0.5px" fontWeight="bold" color="white" textTransform="uppercase" py="2px">
+    <Text
+      fontSize="10px"
+      letterSpacing="0.5px"
+      fontWeight="bold"
+      color="white"
+      textTransform="uppercase"
+      py="2px"
+    >
       {children}
     </Text>
   </Box>
 );
 
 EnvironmentBanner.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 EnvironmentBanner.defaultProps = {
-  children: undefined
+  children: undefined,
 };
 
 const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
-      <Link aria-label="Home" underline={false} href={brandingLinkHref} style={{ display: "block" }}>
-        {logoSrc && <img src={logoSrc} style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }} alt="" />}
-        {!logoSrc && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
+      <Link
+        aria-label="Home"
+        underline={false}
+        href={brandingLinkHref}
+        style={{ display: "block" }}
+      >
+        {logoSrc && (
+          <img
+            src={logoSrc}
+            style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }}
+            alt=""
+          />
+        )}
+        {!logoSrc && (
+          <Branding
+            size={subtext ? "small" : "medium"}
+            logoColor="blue"
+            subtext={subtext}
+          />
+        )}
       </Link>
     </Box>
   );
@@ -69,24 +93,41 @@ const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
 BrandLogoContainer.propTypes = {
   logoSrc: PropTypes.string,
   brandingLinkHref: PropTypes.string,
-  subtext: PropTypes.string
+  subtext: PropTypes.string,
 };
 
 BrandLogoContainer.defaultProps = {
   logoSrc: undefined,
   brandingLinkHref: undefined,
-  subtext: undefined
+  subtext: undefined,
 };
 
-const MediumNavBar = ({ menuData, subtext, environment, logoSrc, brandingLinkHref, ...props }) => {
+const MediumNavBar = ({
+  menuData,
+  subtext,
+  environment,
+  logoSrc,
+  brandingLinkHref,
+  ...props
+}) => {
   const { t } = useTranslation();
   return (
     <>
       {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
       <header {...props}>
         <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
-          <Flex justifyContent="space-between" alignContent="flex-end" flexGrow="1" ml="x3" alignItems="center">
+          <BrandLogoContainer
+            logoSrc={logoSrc}
+            brandingLinkHref={brandingLinkHref}
+            subtext={subtext}
+          />
+          <Flex
+            justifyContent="space-between"
+            alignContent="flex-end"
+            flexGrow="1"
+            ml="x3"
+            alignItems="center"
+          >
             {menuData.primaryMenu && (
               <DesktopMenu
                 themeColorObject={themeColorObject}
@@ -104,7 +145,10 @@ const MediumNavBar = ({ menuData, subtext, environment, logoSrc, brandingLinkHre
               )}
               {logoSrc && (
                 <Box pl="x3">
-                  <NulogyLogoContainer height={NAVBAR_HEIGHT} subText={subtext} />
+                  <NulogyLogoContainer
+                    height={NAVBAR_HEIGHT}
+                    subText={subtext}
+                  />
                 </Box>
               )}
             </Flex>
@@ -119,42 +163,44 @@ const MenuDataPropTypes = {
   primaryMenu: PropTypes.arrayOf(isValidMenuItem),
   secondaryMenu: PropTypes.arrayOf(isValidMenuItem),
   search: PropTypes.shape({
-    onSubmit: PropTypes.func
-  })
+    onSubmit: PropTypes.func,
+  }),
 };
 
 MediumNavBar.propTypes = {
   ...BrandLogoContainer.propTypes,
   subtext: PropTypes.string,
-  menuData: PropTypes.shape(MenuDataPropTypes)
+  menuData: PropTypes.shape(MenuDataPropTypes),
 };
 
 MediumNavBar.defaultProps = {
   ...BrandLogoContainer.defaultProps,
   subtext: null,
   brandingLinkHref: "/",
-  menuData: null
+  menuData: null,
 };
 
-const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground, theme }) => ({
-  color: theme.colors[color] || color,
-  background: "none",
-  border: "none",
-  padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
-  marginLeft: theme.space.x1,
-  borderRadius: theme.radii.medium,
-  transition: ".2s",
-  height: theme.space.x5,
-  "&:hover, &:focus": {
-    outline: "none",
-    color: theme.colors[hoverColor] || hoverColor,
-    backgroundColor: theme.colors[hoverBackground] || hoverBackground,
-    cursor: "pointer"
-  },
-  "&:focus": {
-    boxShadow: theme.shadows.focus
-  }
-}));
+const MobileMenuTrigger = styled.button(
+  ({ color, hoverColor, hoverBackground, theme }) => ({
+    color: theme.colors[color] || color,
+    background: "none",
+    border: "none",
+    padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
+    marginLeft: theme.space.x1,
+    borderRadius: theme.radii.medium,
+    transition: ".2s",
+    height: theme.space.x5,
+    "&:hover, &:focus": {
+      outline: "none",
+      color: theme.colors[hoverColor] || hoverColor,
+      backgroundColor: theme.colors[hoverBackground] || hoverBackground,
+      cursor: "pointer",
+    },
+    "&:focus": {
+      boxShadow: theme.shadows.focus,
+    },
+  })
+);
 
 const SmallHeader = styled.header(({ isOpen }) =>
   isOpen
@@ -167,12 +213,12 @@ const SmallHeader = styled.header(({ isOpen }) =>
         top: "0",
         left: "0",
         right: "0",
-        bottom: "0"
+        bottom: "0",
       }
     : null
 );
 
-const pixelDigitsFrom = pixelString => parseInt(pixelString, 10);
+const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
 
 const MenuIcon = ({ isOpen }) => {
   const { t } = useTranslation();
@@ -182,11 +228,11 @@ const MenuIcon = ({ isOpen }) => {
 };
 
 MenuIcon.propTypes = {
-  isOpen: PropTypes.bool
+  isOpen: PropTypes.bool,
 };
 
 MenuIcon.defaultProps = {
-  isOpen: false
+  isOpen: false,
 };
 
 /* eslint-disable react/destructuring-assignment */
@@ -197,7 +243,8 @@ class SmallNavBarNoState extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen) this.navRef.current.scrollTop = 0;
+    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen)
+      this.navRef.current.scrollTop = 0;
   }
 
   isSmallScreen() {
@@ -220,7 +267,11 @@ class SmallNavBarNoState extends React.Component {
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
         {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
         <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer logoSrc={logoSrc} brandingLinkHref={brandingLinkHref} subtext={subtext} />
+          <BrandLogoContainer
+            logoSrc={logoSrc}
+            brandingLinkHref={brandingLinkHref}
+            subtext={subtext}
+          />
           <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
             {menuData.search && (
               <Flex maxWidth="18em" alignItems="center" px="0">
@@ -228,7 +279,11 @@ class SmallNavBarNoState extends React.Component {
               </Flex>
             )}
             {(menuData.primaryMenu || menuData.secondaryMenu) && (
-              <MobileMenuTrigger {...themeColorObject} onClick={toggleMenu} aria-expanded={isOpen ? true : null}>
+              <MobileMenuTrigger
+                {...themeColorObject}
+                onClick={toggleMenu}
+                aria-expanded={isOpen ? true : null}
+              >
                 <MenuIcon isOpen={isOpen} />
               </MobileMenuTrigger>
             )}
@@ -256,14 +311,14 @@ SmallNavBarNoState.propTypes = {
   menuState: PropTypes.shape({
     isOpen: PropTypes.bool,
     toggleMenu: PropTypes.func,
-    closeMenu: PropTypes.func
+    closeMenu: PropTypes.func,
   }).isRequired,
   menuData: PropTypes.shape(MenuDataPropTypes),
   subtext: PropTypes.string,
   brandingLinkHref: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   width: PropTypes.number,
-  themeColor: PropTypes.oneOf(["blue", "white"])
+  themeColor: PropTypes.oneOf(["blue", "white"]),
 };
 
 SmallNavBarNoState.defaultProps = {
@@ -273,18 +328,26 @@ SmallNavBarNoState.defaultProps = {
   brandingLinkHref: "/",
   breakpointLower: NDSTheme.breakpoints.small,
   width: undefined,
-  themeColor: undefined
+  themeColor: undefined,
 };
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
-const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...props }) => {
-  const currentWidth = width || (typeof window !== "undefined" && window.innerWidth);
+const SelectNavBarBasedOnWidth = ({
+  width,
+  defaultOpen,
+  breakpointUpper,
+  ...props
+}) => {
+  const currentWidth =
+    width || (typeof window !== "undefined" && window.innerWidth);
 
   if (currentWidth >= pixelDigitsFrom(breakpointUpper)) {
     return <MediumNavBar {...props} />;
   } else {
-    return <SmallNavBar {...props} width={currentWidth} defaultOpen={defaultOpen} />;
+    return (
+      <SmallNavBar {...props} width={currentWidth} defaultOpen={defaultOpen} />
+    );
   }
 };
 
@@ -303,7 +366,7 @@ BaseNavBar.propTypes = {
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   showTraining: deprecatedProp(PropTypes.bool, "environment"),
   environment: PropTypes.oneOf(["training", "development", undefined]),
-  logoSrc: PropTypes.string
+  logoSrc: PropTypes.string,
 };
 
 BaseNavBar.defaultProps = {
@@ -312,7 +375,7 @@ BaseNavBar.defaultProps = {
   breakpointUpper: NDSTheme.breakpoints.medium,
   environment: undefined,
   showTraining: undefined,
-  logoSrc: undefined
+  logoSrc: undefined,
 };
 
 const NavBar = styled(BaseNavBar)({});

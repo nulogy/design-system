@@ -5,22 +5,22 @@ import theme from "../theme";
 const baseFlexWrapperStyles = {
   boxSizing: "content-box",
   padding: theme.space.x3,
-  background: theme.colors.whiteGrey
+  background: theme.colors.whiteGrey,
 };
 
 const modernFlexWrapperStyles = {
   ...baseFlexWrapperStyles,
-  minHeight: "400px"
+  minHeight: "400px",
 };
 
 const boxStyles = {
   padding: theme.space.x6,
   background: theme.colors.grey,
-  outline: `2px dotted ${theme.colors.darkGrey}`
+  outline: `2px dotted ${theme.colors.darkGrey}`,
 };
 
 export default {
-  title: "Components/Flex"
+  title: "Components/Flex",
 };
 
 export const _Flex = () => (
@@ -44,7 +44,7 @@ export const FlexDirectionSetToRowReverse = () => (
 );
 
 FlexDirectionSetToRowReverse.story = {
-  name: "flexDirection set to row-reverse"
+  name: "flexDirection set to row-reverse",
 };
 
 export const FlexDirectionSetToColumn = () => (
@@ -58,7 +58,7 @@ export const FlexDirectionSetToColumn = () => (
 );
 
 FlexDirectionSetToColumn.story = {
-  name: "flexDirection set to column"
+  name: "flexDirection set to column",
 };
 
 export const FlexDirectionSetToColumnReverse = () => (
@@ -72,7 +72,7 @@ export const FlexDirectionSetToColumnReverse = () => (
 );
 
 FlexDirectionSetToColumnReverse.story = {
-  name: "flexDirection set to column-reverse"
+  name: "flexDirection set to column-reverse",
 };
 
 export const FlexWrapSetToNoWrapDefault = () => (
@@ -90,7 +90,7 @@ export const FlexWrapSetToNoWrapDefault = () => (
 );
 
 FlexWrapSetToNoWrapDefault.story = {
-  name: "flexWrap set to no-wrap (default)"
+  name: "flexWrap set to no-wrap (default)",
 };
 
 export const FlexWrapSetToWrap = () => (
@@ -108,7 +108,7 @@ export const FlexWrapSetToWrap = () => (
 );
 
 FlexWrapSetToWrap.story = {
-  name: "flexWrap set to wrap"
+  name: "flexWrap set to wrap",
 };
 
 export const FlexWrapSetToWrapReverse = () => (
@@ -126,7 +126,7 @@ export const FlexWrapSetToWrapReverse = () => (
 );
 
 FlexWrapSetToWrapReverse.story = {
-  name: "flexWrap set to wrap-reverse"
+  name: "flexWrap set to wrap-reverse",
 };
 
 export const JustifyContentSetToFlexStartDefault = () => (
@@ -140,7 +140,7 @@ export const JustifyContentSetToFlexStartDefault = () => (
 );
 
 JustifyContentSetToFlexStartDefault.story = {
-  name: "justifyContent set to flex-start (default)"
+  name: "justifyContent set to flex-start (default)",
 };
 
 export const JustifyContentSetToFlexEnd = () => (
@@ -154,7 +154,7 @@ export const JustifyContentSetToFlexEnd = () => (
 );
 
 JustifyContentSetToFlexEnd.story = {
-  name: "justifyContent set to flex-end"
+  name: "justifyContent set to flex-end",
 };
 
 export const JustifyContentSetToCenter = () => (
@@ -168,7 +168,7 @@ export const JustifyContentSetToCenter = () => (
 );
 
 JustifyContentSetToCenter.story = {
-  name: "justifyContent set to center"
+  name: "justifyContent set to center",
 };
 
 export const JustifyContentSetToSpaceBetween = () => (
@@ -182,7 +182,7 @@ export const JustifyContentSetToSpaceBetween = () => (
 );
 
 JustifyContentSetToSpaceBetween.story = {
-  name: "justifyContent set to space-between"
+  name: "justifyContent set to space-between",
 };
 
 export const JustifyContentSetToSpaceAround = () => (
@@ -196,7 +196,7 @@ export const JustifyContentSetToSpaceAround = () => (
 );
 
 JustifyContentSetToSpaceAround.story = {
-  name: "justifyContent set to space-around"
+  name: "justifyContent set to space-around",
 };
 
 export const JustifyContentSetToSpaceEvenly = () => (
@@ -210,7 +210,7 @@ export const JustifyContentSetToSpaceEvenly = () => (
 );
 
 JustifyContentSetToSpaceEvenly.story = {
-  name: "justifyContent set to space-evenly"
+  name: "justifyContent set to space-evenly",
 };
 
 export const AlignItemsSetToStretchDefault = () => (
@@ -224,7 +224,7 @@ export const AlignItemsSetToStretchDefault = () => (
 );
 
 AlignItemsSetToStretchDefault.story = {
-  name: "alignItems set to stretch (default)"
+  name: "alignItems set to stretch (default)",
 };
 
 export const AlignItemsSetToFlexStart = () => (
@@ -238,7 +238,7 @@ export const AlignItemsSetToFlexStart = () => (
 );
 
 AlignItemsSetToFlexStart.story = {
-  name: "alignItems set to flex-start"
+  name: "alignItems set to flex-start",
 };
 
 export const AlignItemsSetToCenter = () => (
@@ -252,7 +252,7 @@ export const AlignItemsSetToCenter = () => (
 );
 
 AlignItemsSetToCenter.story = {
-  name: "alignItems set to center"
+  name: "alignItems set to center",
 };
 
 export const AlignItemsSetToFlexEnd = () => (
@@ -266,7 +266,7 @@ export const AlignItemsSetToFlexEnd = () => (
 );
 
 AlignItemsSetToFlexEnd.story = {
-  name: "alignItems set to flex-end"
+  name: "alignItems set to flex-end",
 };
 
 export const WithCustomOrder = () => (
@@ -290,7 +290,7 @@ export const WithCustomOrder = () => (
 );
 
 WithCustomOrder.story = {
-  name: "With custom order"
+  name: "With custom order",
 };
 
 export const Ie11MinHeightSolution1 = () => (
@@ -307,7 +307,7 @@ export const Ie11MinHeightSolution1 = () => (
 );
 
 Ie11MinHeightSolution1.story = {
-  name: "IE11 minHeight solution 1"
+  name: "IE11 minHeight solution 1",
 };
 
 export const Ie11MinHeightSolution2 = () => (
@@ -321,10 +321,13 @@ export const Ie11MinHeightSolution2 = () => (
         <Box style={boxStyles}>5</Box>
       </Flex>
     </Flex>
-    <Text my="x2">This solution involves wrapping Flex element with another Flex element with column direction..</Text>
+    <Text my="x2">
+      This solution involves wrapping Flex element with another Flex element
+      with column direction..
+    </Text>
   </>
 );
 
 Ie11MinHeightSolution2.story = {
-  name: "IE11 minHeight solution 2"
+  name: "IE11 minHeight solution 2",
 };

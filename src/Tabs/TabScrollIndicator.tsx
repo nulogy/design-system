@@ -27,15 +27,15 @@ const TabScrollIndicatorButton = styled.button(({ side, width, theme }) => ({
   margin: theme.space.none,
   cursor: "pointer",
   "&:hover": {
-    backgroundColor: theme.colors.lightBlue
+    backgroundColor: theme.colors.lightBlue,
   },
   "&:focus": {
-    outline: "none"
+    outline: "none",
   },
   "&:active": {},
   "&:disabled": {
-    opacity: ".5"
-  }
+    opacity: ".5",
+  },
 }));
 function preventFocusMovement(e) {
   e.preventDefault();
@@ -78,6 +78,6 @@ TabScrollIndicator.defaultProps = {
   side: "left",
   width: 40,
   ariaLabelLeft: undefined,
-  ariaLabelRight: undefined
+  ariaLabelRight: undefined,
 };
 export default TabScrollIndicator;

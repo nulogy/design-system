@@ -11,12 +11,18 @@ describe("DatePicker", () => {
 
     it("returns the selected date when the selection has changed", () => {
       const { container, getByLabelText } = renderWithNDSProvider(
-        <DatePicker selected={new Date("Fri, 01 Jan 2019")} onChange={onChange} onInputChange={onInputChange} />
+        <DatePicker
+          selected={new Date("Fri, 01 Jan 2019")}
+          onChange={onChange}
+          onInputChange={onInputChange}
+        />
       );
       const input = getByLabelText("select a date");
       const newDate = new Date("Sat, 02 Jan 2019");
       fireEvent.click(input);
-      fireEvent.click(container.querySelectorAll(".react-datepicker__day--002")[0]);
+      fireEvent.click(
+        container.querySelectorAll(".react-datepicker__day--002")[0]
+      );
 
       expect(onChange.mock.calls[0][0]).toEqual(newDate);
     });

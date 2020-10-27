@@ -3,14 +3,14 @@ import React from "react";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
-import propTypes from '@styled-system/prop-types';
+import propTypes from "@styled-system/prop-types";
 import { getSubset, omitSubset } from "../utils/subset";
 const DEFAULT_POPPER_MODIFIERS = {
-  preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" }
+  preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
 };
 const transformPropsToModifiers = ({ boundariesElement }) => ({
   ...DEFAULT_POPPER_MODIFIERS,
-  boundariesElement
+  boundariesElement,
 });
 type DropdownMenuProps = {
   className?: string;
@@ -68,7 +68,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef(
           type: "button",
           disabled: disabled ? true : null,
           "aria-haspopup": true,
-          ...spaceProps
+          ...spaceProps,
         })}
         showDelay={showDelay}
         hideDelay={hideDelay}
@@ -84,11 +84,17 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef(
         openAriaLabel={openAriaLabel}
         closeAriaLabel={closeAriaLabel}
       >
-        <DropdownMenuContainer className={className} id={id} backgroundColor={backgroundColor} showArrow={showArrow} {...restProps}>
+        <DropdownMenuContainer
+          className={className}
+          id={id}
+          backgroundColor={backgroundColor}
+          showArrow={showArrow}
+          {...restProps}
+        >
           {children}
         </DropdownMenuContainer>
       </Popper>
-    )
+    );
   }
 );
 DropdownMenu.defaultProps = {
@@ -104,6 +110,6 @@ DropdownMenu.defaultProps = {
   defaultOpen: false,
   boundariesElement: "viewport",
   openAriaLabel: undefined,
-  closeAriaLabel: undefined
+  closeAriaLabel: undefined,
 };
 export default DropdownMenu;

@@ -3,15 +3,23 @@ import { LoadingAnimation } from ".";
 import { Overlay, Box, Flex, Text, Alert, ControlIcon } from "../index";
 
 export default {
-  title: "Components/LoadingAnimation"
+  title: "Components/LoadingAnimation",
 };
 
 export const Active = () => <LoadingAnimation>Example</LoadingAnimation>;
-export const Inactive = () => <LoadingAnimation inactive>Example</LoadingAnimation>;
+export const Inactive = () => (
+  <LoadingAnimation inactive>Example</LoadingAnimation>
+);
 
 export const PageExampleActive = () => (
   <Overlay flexDirection="column" m={{ extraSmall: "x2", small: "x3" }}>
-    <Flex flexGrow="2" flexDirection="column" justifyContent="center" margin="auto" mb="x4">
+    <Flex
+      flexGrow="2"
+      flexDirection="column"
+      justifyContent="center"
+      margin="auto"
+      mb="x4"
+    >
       <Text mb="x2" fontWeight="medium" textAlign="right">
         1/4
       </Text>
@@ -30,12 +38,18 @@ export const PageExampleActive = () => (
 );
 
 PageExampleActive.story = {
-  name: "Page example - active"
+  name: "Page example - active",
 };
 
 export const PageExampleInactive = () => (
   <Overlay flexDirection="column" m={{ extraSmall: "x2", small: "x3" }}>
-    <Flex flexGrow="2" flexDirection="column" justifyContent="center" margin="auto" mb="x4">
+    <Flex
+      flexGrow="2"
+      flexDirection="column"
+      justifyContent="center"
+      margin="auto"
+      mb="x4"
+    >
       <Text mb="x2" fontWeight="medium" color="grey" textAlign="right">
         1/4
       </Text>
@@ -57,5 +71,5 @@ export const PageExampleInactive = () => (
 );
 
 PageExampleInactive.story = {
-  name: "Page example - inactive"
+  name: "Page example - inactive",
 };

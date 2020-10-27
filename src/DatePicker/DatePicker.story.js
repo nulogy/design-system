@@ -7,16 +7,21 @@ import { DatePicker, Button } from "../index";
 const selectedDateExamples = [
   new Date("2019-01-01T05:00:00.000Z"),
   new Date("2019-02-05T05:00:00.000Z"),
-  new Date("2019-03-07T05:00:00.000Z")
+  new Date("2019-03-07T05:00:00.000Z"),
 ];
 
 export default {
-  title: "Components/DatePicker"
+  title: "Components/DatePicker",
 };
 
 export const Default = () => (
   <DatePicker
-    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+    selected={select(
+      "selected",
+      selectedDateExamples,
+      selectedDateExamples[0],
+      "selected"
+    )}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
@@ -24,12 +29,17 @@ export const Default = () => (
 );
 
 Default.story = {
-  name: "default"
+  name: "default",
 };
 
 export const WithCustomDateFormat = () => (
   <DatePicker
-    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+    selected={select(
+      "selected",
+      selectedDateExamples,
+      selectedDateExamples[0],
+      "selected"
+    )}
     dateFormat="MMMM d, yyyy"
     onChange={action("date changed")}
     onInputChange={action("input changed")}
@@ -38,7 +48,7 @@ export const WithCustomDateFormat = () => (
 );
 
 WithCustomDateFormat.story = {
-  name: "with custom date format"
+  name: "with custom date format",
 };
 
 export const WithCustomPlaceholder = () => (
@@ -51,7 +61,7 @@ export const WithCustomPlaceholder = () => (
 );
 
 WithCustomPlaceholder.story = {
-  name: "with custom placeholder"
+  name: "with custom placeholder",
 };
 
 export const WithErrorState = () => (
@@ -65,7 +75,7 @@ export const WithErrorState = () => (
 );
 
 WithErrorState.story = {
-  name: "with error state"
+  name: "with error state",
 };
 
 export const WithMinAndMaxDate = () => (
@@ -80,12 +90,17 @@ export const WithMinAndMaxDate = () => (
 );
 
 WithMinAndMaxDate.story = {
-  name: "with min and max date"
+  name: "with min and max date",
 };
 
 export const DisableFlipping = () => (
   <DatePicker
-    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+    selected={select(
+      "selected",
+      selectedDateExamples,
+      selectedDateExamples[0],
+      "selected"
+    )}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
@@ -94,7 +109,7 @@ export const DisableFlipping = () => (
 );
 
 DisableFlipping.story = {
-  name: "disable flipping"
+  name: "disable flipping",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -118,5 +133,5 @@ export const UsingRefToControlFocus = () => {
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };
