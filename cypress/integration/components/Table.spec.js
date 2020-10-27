@@ -5,6 +5,8 @@ describe("Table", () => {
   const rowCheckboxInputSelector = "[data-testid='table-body'] [type='checkbox']";
   const rowExpandButtonSelector = "[data-testid='table-body'] [aria-label='Expand row']";
   const rowCollapseButtonSelector = "[data-testid='table-body'] [aria-label='Collapse row']";
+  const tableRowSelector = "[data-testid='table-row']";
+  const dropdownButtonSelector = "[type='button']";
   const getNextPageButton = () => cy.get("[aria-label='Go to next results']");
   const getPreviousPageButton = () => cy.get("[aria-label='Go to previous results']");
   const selectAll = () => cy.get(headerCheckboxSelector);
@@ -14,6 +16,8 @@ describe("Table", () => {
   const paginationButtons = pageNumber => cy.get(`[aria-label='Go to page ${pageNumber}']`);
   const expandButtons = () => cy.get(rowExpandButtonSelector);
   const collapseButtons = () => cy.get(rowCollapseButtonSelector);
+  const dropdownButtons = () => cy.get(dropdownButtonSelector);
+  const tableRows = () => cy.get(tableRowSelector);
 
   const selectableRowsTests = storyName => {
     beforeEach(() => {
@@ -193,6 +197,24 @@ describe("Table", () => {
         .should("be.disabled");
       paginationButtons(2).should("exist");
       paginationButtons(3).should("not.exist");
+    });
+  });
+  describe("hover actions", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("table--with-on-hover-actions");
+    });
+    it("shows the dropdown on hover", () => {
+      dropdownButtons().should("not.exist");
+      tableRows().first().should("not.have.descendants", dropdownButtonSelector);
+      tableRows().first().trigger('mouseover');
+      dropdownButtons().should("exist");
+    });
+    it("dropdown is shown on row that is hovered", () => {
+      tableRows().first().trigger('mouseover');
+      tableRows().first().find(dropdownButtonSelector).should("exist");
+      tableRows().eq(3).trigger('mouseover');
+      tableRows().first().find(dropdownButtonSelector).should("not.exist");
+      tableRows().eq(3).find(dropdownButtonSelector).should("exist");
     });
   });
 });
