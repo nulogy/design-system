@@ -1,3 +1,10 @@
+## [4.10.5](https://github.com/nulogy/design-system/compare/v4.10.4...v4.10.5) (2020-10-27)
+
+
+### Bug Fixes
+
+* @nulogy/icons upgraded to fix error "Can't resolve './assets/icons.json' in '{PATH}/node_modules/@nulogy/components/dist' ([#798](https://github.com/nulogy/design-system/issues/798)) ([ec97f6b](https://github.com/nulogy/design-system/commit/ec97f6b2eb111c59c23a54452d5843e9bccbe574))
+
 ## [4.10.4](https://github.com/nulogy/design-system/compare/v4.10.3...v4.10.4) (2020-10-26)
 
 
