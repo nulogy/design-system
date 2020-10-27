@@ -21,7 +21,7 @@ type BaseTableProps = React.ComponentProps<"table"> & {
   compact?: boolean;
   className?: string;
   stickyHeader?: boolean;
-  onRowMouseEnter?: an
+  onRowMouseEnter?: any;
   onRowMouseLeave?: any;
 };
 const BaseTable: React.SFC<BaseTableProps> = ({
