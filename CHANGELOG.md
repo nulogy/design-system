@@ -1,3 +1,10 @@
+# [4.11.0](https://github.com/nulogy/design-system/compare/v4.10.5...v4.11.0) (2020-10-27)
+
+
+### Features
+
+* add onRowMouseLeave onRowMouseEnter events to Table component ([#799](https://github.com/nulogy/design-system/issues/799)) ([0f4773e](https://github.com/nulogy/design-system/commit/0f4773e65e66cd97a76d2467979657b61c2f5224))
+
 ## [4.10.5](https://github.com/nulogy/design-system/compare/v4.10.4...v4.10.5) (2020-10-27)
 
 
