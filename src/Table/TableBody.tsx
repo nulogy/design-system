@@ -12,7 +12,7 @@ const StyledMessageContainer = styled(Box)(({ theme }) => ({
   color: theme.colors.darkGrey
 }));
 
-type StyledTrProps = {
+type StyledTrProps = React.ComponentProps<"tr"> & {
   rowHovers?: boolean;
   theme?: ThemeType;
   className?: string;
@@ -24,7 +24,7 @@ const StyledTr: React.SFC<StyledTrProps> = styled.tr(({ rowHovers, theme }: Styl
   }
 }));
 
-const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact) =>
+const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact, onRowMouseLeave, onRowMouseEnter) =>
   rows.length > 0 ? (
     rows.map(row => (
       <TableBodyRow
@@ -35,6 +35,8 @@ const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact) 
         rowHovers={rowHovers}
         compact={compact}
         rowClassName={row.rowClassName}
+        onMouseEnter={(e) => onRowMouseEnter({ row, e })}
+        onMouseLeave={(e) => onRowMouseLeave({row, e})}
       />
     ))
   ) : (
@@ -48,16 +50,18 @@ type TableBodyRowProps = {
   compact?: boolean;
   rowClassName?: string;
   keyField?: string;
+  onMouseEnter?: any;
+  onMouseLeave?: any;
 };
 
-const TableBodyRow = ({ row, columns, rowHovers, compact, rowClassName }: TableBodyRowProps) => {
+const TableBodyRow = ({ row, columns, rowHovers, compact, rowClassName, onMouseLeave, onMouseEnter }: TableBodyRowProps) => {
   const renderAllCells = () =>
     columns.map(column => (
       <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} compact={compact} />
     ));
   return (
     <>
-      <StyledTr rowHovers={rowHovers} data-testid="table-row" className={rowClassName}>
+      <StyledTr rowHovers={rowHovers} data-testid="table-row" className={rowClassName} onMouseLeave={onMouseLeave} onMouseEnter={onMouseEnter}>
         {row.heading ? (
           <TableCell row={row} colSpan={columns.length} cellData={row.heading} compact={compact} />
         ) : (
@@ -112,12 +116,14 @@ type TableBodyProps = {
   loading?: boolean;
   rowHovers?: boolean;
   compact?: boolean;
+  onRowMouseLeave?: any;
+  onRowMouseEnter?: any;
 };
 
-const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers, compact }: TableBodyProps) => (
+const TableBody = ({ rows, columns, keyField, noRowsContent, loading, rowHovers, compact, onRowMouseLeave, onRowMouseEnter }: TableBodyProps) => (
   <tbody data-testid="table-body">
     {!loading ? (
-      renderRows(rows, columns, keyField, noRowsContent, rowHovers, compact)
+      renderRows(rows, columns, keyField, noRowsContent, rowHovers, compact, onRowMouseLeave, onRowMouseEnter)
     ) : (
       <LoadingContent colSpan={columns.length} />
     )}
