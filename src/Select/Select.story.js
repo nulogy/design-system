@@ -125,7 +125,7 @@ export const _Select = () => (
     errorMessage={text("errorMessage", "")}
     labelText={text("labelText", "Inventory Status")}
     helpText={text("helpText", undefined)}
-    noOptionsMessage={text("noOptionsMessage", undefined)}
+    noOptionsMessage={() => text("noOptionsMessage", "new")}
     required={boolean("required", false)}
     requirementText={text("requirementText", undefined)}
     id={text("id", undefined)}
