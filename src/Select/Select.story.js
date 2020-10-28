@@ -2,7 +2,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
-import { Button, Input, PrimaryButton, Select, SelectOption } from "../index";
+import { text, boolean, select, string } from "@storybook/addon-knobs";
+import { Button, Select, SelectOption } from "../index";
 import { Box } from "../Box";
 
 const errorList = ["Error message 1", "Error message 2"];
@@ -109,14 +110,41 @@ export default {
 
 export const _Select = () => (
   <Select
-    placeholder={" "}
-    onChange={action("selection changed")}
-    onBlur={action("blurred")}
-    className="Select"
-    classNamePrefix="SelectTest"
     options={options}
-    labelText="Inventory status"
+    autocomplete={boolean("autocomplete", true)}
+    className={text("className", undefined)}
+    classNamePrefix={text("classNamePrefix", undefined)}
+    closeMenuOnSelect={boolean("closeMenuOnSelect", true)}
+    disabled={boolean("disabled", false)}
+    defaultValue={select(
+      "defaultValue",
+      [undefined, ...options.map(({ value }) => value)],
+      undefined
+    )}
+    error={boolean("error", false)}
+    errorMessage={text("errorMessage", "")}
+    labelText={text("labelText", "Inventory Status")}
+    helpText={text("helpText", undefined)}
+    noOptionsMessage={text("noOptionsMessage", undefined)}
+    required={boolean("required", false)}
+    requirementText={text("requirementText", undefined)}
+    id={text("id", undefined)}
+    maxHeight={text("maxHeight", "248px")}
+    menuPosition={select("menuPosition", ["absolute", "fixed"], "absolute")}
+    multiselect={boolean("multiselect", false)}
+    name={text("name", undefined)}
+    placeholder={text("placeholder", " ")}
+    value={select(
+      "value",
+      [undefined, ...options.map(({ value }) => value)],
+      undefined
+    )}
+    menuIsOpen={boolean("menuIsOpen", undefined)}
+    onMenuOpen={action("on menu open")}
+    onMenuClose={action("on menu close")}
+    onChange={action("selection changed")}
     onInputChange={action("typed input value changed")}
+    onBlur={action("blurred")}
   />
 );
 
@@ -266,27 +294,20 @@ WithErrorList.story = {
   name: "with error list",
 };
 
-export const SetToRequired = () => (
-  <form>
-    <Input placeholder="Please select inventory status" />
-    <Select
-      placeholder="Please select inventory status"
-      options={options}
-      required
-      requirementText="(Required)"
-      style={{ marginTop: "5px" }}
-      labelText="Inventory status"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      onInputChange={action("typed input value changed")}
-    />
-    <PrimaryButton mt="x1" type="submit">
-      Submit
-    </PrimaryButton>
-  </form>
+export const Required = () => (
+  <Select
+    placeholder="Please select inventory status"
+    options={options}
+    required
+    requirementText="(Required)"
+    style={{ marginTop: "5px" }}
+    labelText="Inventory status"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    onInputChange={action("typed input value changed")}
+  />
 );
-
-SetToRequired.story = {
+Required.story = {
   name: "set to required",
 };
 
@@ -374,6 +395,7 @@ export const WithMultiselect = () => {
       labelText="Select PCN"
       className="Select"
       multiselect
+      {...props}
     />
   );
 };
@@ -558,27 +580,4 @@ export const UsingRefToControlFocus = () => {
 
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
-};
-
-export const WithANullValue = () => {
-  const optionsWithBlank = [
-    { value: null, label: "Nullable" },
-    { value: null, label: "Other null" },
-    ...options,
-  ];
-  return (
-    <Select
-      defaultValue={null}
-      placeholder="Please select inventory status"
-      onChange={action("selection changed")}
-      onBlur={action("blurred")}
-      options={optionsWithBlank}
-      labelText="Inventory status"
-      onInputChange={action("typed input value changed")}
-    />
-  );
-};
-
-WithANullValue.story = {
-  name: "with a null value",
 };
