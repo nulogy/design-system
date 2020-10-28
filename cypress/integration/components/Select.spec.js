@@ -143,4 +143,22 @@ describe("Select", () => {
       assertDropDownIsClosed();
     });
   });
+  describe("with close menu after selection turned off", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("select--with-close-menu-on-select-turned-off");
+    });
+    it("does not close the menu after selecting an option", () => {
+      assertDropDownIsClosed();
+
+      getMultiselect().click();
+
+      cy.focused().type("{enter}");
+      
+      getMultiselect().contains("PCN1");
+      getMultiselect().contains("PCN2");
+      getMultiselect().contains("PCN4");
+
+      assertDropDownIsOpen();
+    });
+  });
 });

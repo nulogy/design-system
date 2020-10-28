@@ -1,11 +1,10 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
-import { selectOption, openDropdown } from "./Select.spec-utils";
+import { selectOption } from "./Select.spec-utils";
 import {
   UsingRefToControlFocus,
-  WithAnOptionSelected,
-  WithCloseMenuOnSelectTurnedOff,
+  WithMultiselect,
   WithState,
 } from "./Select.story";
 import { Select } from ".";
@@ -57,22 +56,16 @@ describe("select", () => {
 
 describe("multi select", () => {
   it("returns the selected items on change", () => {
-    const options = [
-      { label: "One", value: "one" },
-      { label: "Two", value: "two" },
-      { label: "Three", value: "three" },
-    ];
-
     const callback = jest.fn();
 
     const { container, queryByText } = renderWithNDSProvider(
-      <Select options={options} multiselect onChange={callback} />
+      <WithMultiselect onChange={callback} />
     );
 
-    selectOption("Three", container, queryByText);
-    selectOption("Two", container, queryByText);
+    selectOption("PCN4", container, queryByText);
+    selectOption("PCN9", container, queryByText);
 
-    expect(callback).toHaveBeenCalledWith(["three", "two"]);
+    expect(callback).toHaveBeenCalledWith(["2", "1", "4", "9"]);
   });
 
   it("selects the specified default values", () => {
@@ -93,16 +86,6 @@ describe("multi select", () => {
     it("can set the focus", () => {
       const { container, queryByText } = renderWithNDSProvider(
         <UsingRefToControlFocus />
-      );
-      expect(container.querySelectorAll("input")[0]).not.toHaveFocus();
-      fireEvent.click(queryByText("Focus the Input"));
-      expect(container.querySelectorAll("input")[0]).toHaveFocus();
-    });
-  });
-  describe("with close menu turned off", () => {
-    it("close menu stays open", () => {
-      const { container, queryByText } = renderWithNDSProvider(
-        <WithCloseMenuOnSelectTurnedOff />
       );
       expect(container.querySelectorAll("input")[0]).not.toHaveFocus();
       fireEvent.click(queryByText("Focus the Input"));
