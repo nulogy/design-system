@@ -153,7 +153,7 @@ describe("Select", () => {
       getMultiselect().click();
 
       cy.focused().type("{enter}");
-      
+
       getMultiselect().contains("PCN1");
       getMultiselect().contains("PCN2");
       getMultiselect().contains("PCN4");
@@ -161,4 +161,7 @@ describe("Select", () => {
       assertDropDownIsOpen();
     });
   });
+  describe("Knobs", () => {
+    
+  })
 });
