@@ -5,6 +5,7 @@ import { selectOption, openDropdown } from "./Select.spec-utils";
 import {
   UsingRefToControlFocus,
   WithAnOptionSelected,
+  WithCloseMenuOnSelectTurnedOff,
   WithState,
 } from "./Select.story";
 import { Select } from ".";
@@ -101,7 +102,7 @@ describe("multi select", () => {
   describe("with close menu turned off", () => {
     it("close menu stays open", () => {
       const { container, queryByText } = renderWithNDSProvider(
-        <UsingRefToControlFocus />
+        <WithCloseMenuOnSelectTurnedOff />
       );
       expect(container.querySelectorAll("input")[0]).not.toHaveFocus();
       fireEvent.click(queryByText("Focus the Input"));
