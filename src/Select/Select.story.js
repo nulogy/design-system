@@ -120,15 +120,11 @@ export const _Select = () => (
   />
 );
 
-export const WithADefaultValue = () => (
-  <Select
-    defaultValue={options[0].value}
+export const WithState = () => (
+  <SelectWithState
     placeholder="Please select inventory status"
-    onChange={action("selection changed")}
-    onBlur={action("blurred")}
     options={options}
     labelText="Inventory status"
-    onInputChange={action("typed input value changed")}
   />
 );
 
@@ -483,7 +479,7 @@ WithFixedPositioning.story = {
   name: "with fixed positioning",
 };
 
-export const WithManyOptions = () => (
+export const WithFetchedOptions = () => (
   <Box style={{ width: "300px" }}>
     <SelectWithManyOptions labelText="Select from many options:" />
     <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
