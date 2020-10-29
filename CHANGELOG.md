@@ -1,3 +1,10 @@
+## [4.11.1](https://github.com/nulogy/design-system/compare/v4.11.0...v4.11.1) (2020-10-29)
+
+
+### Bug Fixes
+
+* removes gap between `NavBar` menus and dropdowns ([#802](https://github.com/nulogy/design-system/issues/802)) ([e7217f8](https://github.com/nulogy/design-system/commit/e7217f8d5371a6ca261ee4b15e304594265c0a12))
+
 # [4.11.0](https://github.com/nulogy/design-system/compare/v4.10.5...v4.11.0) (2020-10-27)
 
 
