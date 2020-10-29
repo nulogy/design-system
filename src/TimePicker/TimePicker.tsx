@@ -14,6 +14,7 @@ const DEFAULT_TIME_FORMAT = "hh:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 const ZERO_DATE = new Date(Date.UTC(0));
+
 const getIntervalFromTime = (time, interval, minTime) => {
   const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
   if (time && interval) {
@@ -87,7 +88,7 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
     zIndex: theme.zIndex.content
   };
 });
-const TimePickerOption = styled.li(({ theme, isSelected, isFocused }) => {
+const TimePickerOption = styled.li(({ theme, isSelected, isFocused, isClosest}) => {
   return {
     padding: theme.space.x1,
     marginBottom: "0px",
@@ -96,7 +97,7 @@ const TimePickerOption = styled.li(({ theme, isSelected, isFocused }) => {
     "&:hover": {
       background: !isSelected && theme.colors.lightBlue
     },
-    ...(isFocused && {
+    ...(isFocused || isClosest && {
       background: !isSelected && theme.colors.lightBlue,
       outline: "none"
     })
@@ -261,6 +262,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
               <TimePickerOption
                 ref={matchingIndex === i ? onCurrentOptionRefChange : undefined}
                 isSelected={standardizeTime(option.label) === standardizeTime(input)}
+                isClosest={matchingIndex === i}
                 key={option.label}
                 data-name={option.label}
                 data-value={option.value}
