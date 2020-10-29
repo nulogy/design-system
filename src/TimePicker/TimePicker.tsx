@@ -15,20 +15,20 @@ const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 const ZERO_DATE = new Date(Date.UTC(0));
 
+const stripLetters = (x) => Number(x.replace(/\D/g,''));
+
 const convertTo24Hour = (time) => {
+  const timeArray = time.includes(":") ? time.split(":").map(i => stripLetters(i)) : [stripLetters(time), 0];
   if (time.includes("p") || time.includes("P")) {
-    const stripLetters = (x) => Number(x.replace(/\D/g,''));
-    const timeArray = time.includes(":") ? time.split(":").map(i => stripLetters(i)) : [stripLetters(time), 0];
     timeArray[0] += 12;
-    return timeArray.join(":")
   }
-  return time
+  return timeArray.length > 1 ? timeArray.join(":") : timeArray.join();
 }
 
 const getIntervalFromTime = (time, interval, minTime) => {
   const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
   if (time && interval) {
-    const timeArray = time.includes(":") ? time.split(":").map(i => Number(i)) : [Number(time), 0];
+    const timeArray = time.includes(":") ? time.split(":").map(i => stripLetters(i)) : [stripLetters(time), 0];
     const hours = timeArray[0];
     const minutes = timeArray[1];
     const nearestIntervalAM = Math.round((hours * 60) / interval + minutes / interval) - minInterval;
@@ -100,7 +100,7 @@ const TimePickerOption = styled.li(({ theme, isSelected, isFocused, isClosest}) 
   return {
     padding: theme.space.x1,
     marginBottom: "0px",
-    background: isSelected ? theme.colors.darkBlue : theme.colors.white,
+    backgroundColor: isSelected ? theme.colors.darkBlue : theme.colors.white,
     color: isSelected ? theme.colors.white : theme.colors.black,
     "&:hover": {
       background: !isSelected && theme.colors.lightBlue
