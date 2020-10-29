@@ -10,6 +10,7 @@ import { localizedFormat } from "../utils/localized-date-fns";
 import { DetectOutsideClick } from "../utils";
 import { Box } from "../Box";
 import { keyCodes } from "../constants";
+
 const DEFAULT_TIME_FORMAT = "h:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
@@ -25,13 +26,26 @@ const stripLettersFromMinutes = (x) => {
   return Number(minNoLetters);
 }
 
-export const convertTo24HourTimeArray = (time) => {
+const standardizeTime = input => {
+  if (input) {
+    const standardizedInput = input.toUpperCase().replace(/ /g, ""); // strip spaces
+    return standardizedInput;
+  }
+  return input;
+};
+
+export const convertTo24HourTimeArray = (timeInput) => {
+  const time = standardizeTime(timeInput);
   const timeArray = time.includes(":") ? time.split(":") : [time, 0];
   timeArray[0] = stripLetters(timeArray[0]);
   timeArray[1] = stripLettersFromMinutes(timeArray[1]);
 
-  if (time.includes("p") || time.includes("P")) {
-    timeArray[0] += 12;
+  if (time.includes("A") && timeArray[0] === 12) {
+    return [0, timeArray[1]];
+  }
+
+  if (time.includes("P")) {
+    return  [timeArray[0] += 12, timeArray[1]];
   }
   return timeArray;
 }
@@ -47,6 +61,12 @@ const getIntervalFromTime = (time, interval, minTime) => {
   }
   return null;
 };
+
+export const getBestMatchTime = ({ time, timeFormat, minTime, maxTime, locale, interval }) => {
+  const granularity = time.length >= 3 ? 1 : interval;
+  return getTimeOptions(granularity, timeFormat, minTime, maxTime, locale)[getIntervalFromTime(time, granularity, minTime)].label;
+};
+
 const getTimeIntervals = interval => {
   const numberOfOptions = (24 * 60) / interval;
   const times = [];
@@ -56,6 +76,7 @@ const getTimeIntervals = interval => {
   return times;
 };
 const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
+  console.log(locale);
   const allTimes = getTimeIntervals(interval);
   let startingInterval = 0;
   let finalInterval = allTimes.length;
@@ -72,13 +93,6 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
     }))
     .sort((a, b) => getIntervalFromTime(a.value, interval) - getIntervalFromTime(b.value, interval))
     .slice(startingInterval, finalInterval);
-};
-const standardizeTime = input => {
-  if (input) {
-    const standardizedInput = input.toUpperCase().replace(/ /g, ""); // strip spaces
-    return standardizedInput;
-  }
-  return input;
 };
 const TimePickerInput = styled(InputField)(({ dropdownIsOpen }) => ({
   ...(dropdownIsOpen && {
@@ -186,9 +200,14 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     const handleBlur = e => {
       onBlur(e);
       setDropdownIsOpen(false);
-      if (input) {
-        setInput(dropdownOptions[matchingIndex].label);
-      }
+      setInput(getBestMatchTime({
+        time: input,
+        timeFormat,
+        minTime,
+        maxTime,
+        locale,
+        interval,
+      }));
     };
     const handleFocus = e => {
       onFocus(e);
@@ -214,11 +233,13 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     }, []);
     const handleKeyDown = event => {
       if (event.keyCode === keyCodes.DOWN) {
-        // key down
         setDropdownIsOpen(true);
-      } else if (event.keyCode === keyCodes.TAB) {
-        // tab
+      }
+      if (event.keyCode === keyCodes.TAB) {
         handleBlur(event);
+      }
+     if (event.keyCode === keyCodes.RETURN) {
+        setInput(dropdownOptions[matchingIndex].label);
       }
     };
     const handleInputChange = e => {
