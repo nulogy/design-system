@@ -10,10 +10,20 @@ import { localizedFormat } from "../utils/localized-date-fns";
 import { DetectOutsideClick } from "../utils";
 import { Box } from "../Box";
 import { keyCodes } from "../constants";
-const DEFAULT_TIME_FORMAT = "hh:mm aa";
+const DEFAULT_TIME_FORMAT = "h:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 const ZERO_DATE = new Date(Date.UTC(0));
+
+const convertTo24Hour = (time) => {
+  if (time.includes("p") || time.includes("P")) {
+    const stripLetters = (x) => Number(x.replace(/\D/g,''));
+    const timeArray = time.includes(":") ? time.split(":").map(i => stripLetters(i)) : [stripLetters(time), 0];
+    timeArray[0] += 12;
+    return timeArray.join(":")
+  }
+  return time
+}
 
 const getIntervalFromTime = (time, interval, minTime) => {
   const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
@@ -56,10 +66,8 @@ const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
 };
 const standardizeTime = input => {
   if (input) {
-    const standardizedInput = input.toUpperCase().replace(/ /g, "");
-    const oneDigitHourRe = /^[0-9][:]/;
-    const fourDigitTime = oneDigitHourRe.test(standardizedInput) ? `0${standardizedInput}` : standardizedInput;
-    return fourDigitTime;
+    const standardizedInput = input.toUpperCase().replace(/ /g, ""); // strip spaces
+    return standardizedInput;
   }
   return input;
 };
@@ -159,7 +167,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
         });
       }
     }, [currentOptionRef, dropdownIsOpen, input]);
-    const matchingIndex = getIntervalFromTime(input, interval, minTime);
+    const matchingIndex = getIntervalFromTime(convertTo24Hour(input), interval, minTime);
     const getDropdownOptions = () => {
       const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
       return optionsAtInterval;
