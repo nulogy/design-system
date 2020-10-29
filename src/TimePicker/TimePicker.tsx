@@ -15,26 +15,35 @@ const DEFAULT_PLACEHOLDER = "HH:MM";
 const MILITARY_TIME_FORMAT = "HH:mm";
 const ZERO_DATE = new Date(Date.UTC(0));
 
-const stripLetters = (x) => Number(x.replace(/\D/g,''));
+const stripLetters = (x) => Number(x.replace(/\D/g, ''));
 
-const convertTo24Hour = (time) => {
-  const timeArray = time.includes(":") ? time.split(":").map(i => stripLetters(i)) : [stripLetters(time), 0];
+const stripLettersFromMinutes = (x) => {
+  let minNoLetters = String(x).replace(/\D/g, '');
+  if (minNoLetters.length < 2) {
+    minNoLetters = `${minNoLetters}0`;
+  }
+  return Number(minNoLetters);
+}
+
+export const convertTo24HourTimeArray = (time) => {
+  const timeArray = time.includes(":") ? time.split(":") : [time, 0];
+  timeArray[0] = stripLetters(timeArray[0]);
+  timeArray[1] = stripLettersFromMinutes(timeArray[1]);
+
   if (time.includes("p") || time.includes("P")) {
     timeArray[0] += 12;
   }
-  return timeArray.length > 1 ? timeArray.join(":") : timeArray.join();
+  return timeArray;
 }
 
 const getIntervalFromTime = (time, interval, minTime) => {
   const minInterval = minTime ? getIntervalFromTime(minTime, interval) : 0;
   if (time && interval) {
-    const timeArray = time.includes(":") ? time.split(":").map(i => stripLetters(i)) : [stripLetters(time), 0];
+    const timeArray = convertTo24HourTimeArray(time);
     const hours = timeArray[0];
     const minutes = timeArray[1];
-    const nearestIntervalAM = Math.round((hours * 60) / interval + minutes / interval) - minInterval;
-    const nearestIntervalPM = Math.round(((hours + 12) * 60) / interval + minutes / interval) - minInterval;
-    // eslint-disable-next-line no-nested-ternary
-    return nearestIntervalAM >= 0 ? nearestIntervalAM : nearestIntervalPM >= 0 ? nearestIntervalPM : 0;
+    const nearestInterval = Math.round((hours * 60) / interval + minutes / interval) - minInterval;
+    return nearestInterval;
   }
   return null;
 };
@@ -167,7 +176,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
         });
       }
     }, [currentOptionRef, dropdownIsOpen, input]);
-    const matchingIndex = getIntervalFromTime(convertTo24Hour(input), interval, minTime);
+    const matchingIndex = getIntervalFromTime(input, interval, minTime);
     const getDropdownOptions = () => {
       const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
       return optionsAtInterval;
@@ -178,19 +187,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       onBlur(e);
       setDropdownIsOpen(false);
       if (input) {
-        const optionsByMinute = getTimeOptions(1, timeFormat, minTime, maxTime, locale);
-        const matchingTimes = optionsByMinute.filter(
-          ({ label, value }) =>
-            standardizeTime(label).includes(standardizeTime(input)) ||
-            standardizeTime(value).includes(standardizeTime(input))
-        );
-        if (matchingTimes.length) {
-          setInput(matchingTimes[0].label);
-        } else if (dropdownOptions[matchingIndex]) {
-          setInput(dropdownOptions[matchingIndex].label);
-        } else {
-          setInput(dropdownOptions[0].label);
-        }
+        setInput(dropdownOptions[matchingIndex].label);
       }
     };
     const handleFocus = e => {
