@@ -11,10 +11,9 @@ import NulogyLogo from "./NulogyLogo";
 const borderStyle = "1px solid #e4e7eb";
 
 const BrandingWrap = styled.div(({ theme }) => ({
-  marginTop: `-${theme.space.x1}`,
-  marginBottom: theme.space.x3,
   marginLeft: theme.space.x3,
-  color: theme.colors.white
+  color: theme.colors.white,
+  marginBottom: theme.space.x1,
 }));
 
 const getPaddingLeft = layer => `${24 * layer + 24}px`;

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { select } from "@storybook/addon-knobs";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
+import { Heading1 } from "../Type";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
@@ -10,12 +11,13 @@ const ResetStorybookView = styled.div({
   top: 0,
   left: 0,
   width: "100vw",
-  height: "100vh"
+  height: "100vh",
 });
 
 const BrandedNavBar = props => (
   <ResetStorybookView>
     <NDSBrandedNavBar {...props} />
+    <Heading1 mt="x3" ml="x1">Some content</Heading1>
   </ResetStorybookView>
 );
 
