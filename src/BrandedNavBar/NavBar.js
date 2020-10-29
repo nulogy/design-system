@@ -156,18 +156,19 @@ const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground, t
   }
 }));
 
-const SmallHeader = styled.header(({ isOpen }) =>
+const SmallHeader = styled.header(({ isOpen, theme }) =>
   isOpen
     ? {
         position: "fixed",
         width: "100%",
         height: "100%",
-        zIndex: NDSTheme.zIndex.overlay,
+        zIndex: theme.zIndex.overlay,
         overflow: "scroll",
         top: "0",
         left: "0",
         right: "0",
-        bottom: "0"
+        bottom: "0",
+        backgroundColor: theme.colors.white,
       }
     : null
 );
