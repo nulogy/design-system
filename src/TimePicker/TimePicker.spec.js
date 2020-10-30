@@ -1,13 +1,20 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 
-import { TimePicker } from ".";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
-import { convertTo24HourTimeArray, getBestMatchTime } from './TimePicker';
+import {
+  convertTo24HourTimeArray,
+  getBestMatchTime,
+  getTimeOptions,
+} from "./TimePicker";
+import { TimePicker } from ".";
 
 const openDropdown = (container, i = 0) => {
   fireEvent.focus(container.querySelectorAll("input")[i]);
-  fireEvent.keyDown(container.querySelectorAll("input")[i], { key: "ArrowDown", code: 40 });
+  fireEvent.keyDown(container.querySelectorAll("input")[i], {
+    key: "ArrowDown",
+    code: 40,
+  });
 };
 
 const selectOption = (optionText, container, queryByText, i) => {
@@ -33,12 +40,91 @@ describe("TimePicker", () => {
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Time";
       const { container } = renderWithNDSProvider(
-        <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
+        <TimePicker
+          onChange={onChange}
+          onInputChange={onInputChange}
+          labelText={labelText}
+        />
       );
       const value = "20:00";
-      fireEvent.change(container.querySelectorAll("input")[0], { target: { value } });
+      fireEvent.change(container.querySelectorAll("input")[0], {
+        target: { value },
+      });
 
       expect(onInputChange).toHaveBeenCalledWith(value);
+    });
+
+    describe("selects value in dropdown", () => {
+      const SELECTED_TEST_ID =
+        "select-option closest-select-option selected-select-option";
+      it("for 3:15 PM", () => {
+        const labelText = "Expiry Time";
+        const { container, getByTestId } = renderWithNDSProvider(
+          <TimePicker
+            onChange={onChange}
+            onInputChange={onInputChange}
+            labelText={labelText}
+          />
+        );
+        const value = "3:15 PM";
+        fireEvent.change(container.querySelectorAll("input")[0], {
+          target: { value },
+        });
+
+        expect(getByTestId(SELECTED_TEST_ID)).toContainHTML("3:15 PM");
+      });
+    });
+
+    describe("finds the closest value", () => {
+      const CLOSEST_TEST_ID = "select-option closest-select-option";
+      it("for 3p", () => {
+        const labelText = "Expiry Time";
+        const { container, getByTestId } = renderWithNDSProvider(
+          <TimePicker
+            onChange={onChange}
+            onInputChange={onInputChange}
+            labelText={labelText}
+          />
+        );
+        const value = "3p";
+        fireEvent.change(container.querySelectorAll("input")[0], {
+          target: { value },
+        });
+
+        expect(getByTestId(CLOSEST_TEST_ID)).toContainHTML("3:00 PM");
+      });
+      it("for 3:1", () => {
+        const labelText = "Expiry Time";
+        const { container, getByTestId } = renderWithNDSProvider(
+          <TimePicker
+            onChange={onChange}
+            onInputChange={onInputChange}
+            labelText={labelText}
+          />
+        );
+        const value = "3:1";
+        fireEvent.change(container.querySelectorAll("input")[0], {
+          target: { value },
+        });
+
+        expect(getByTestId(CLOSEST_TEST_ID)).toContainHTML("3:15 AM");
+      });
+      it("for 3:12p", () => {
+        const labelText = "Expiry Time";
+        const { container, getByTestId } = renderWithNDSProvider(
+          <TimePicker
+            onChange={onChange}
+            onInputChange={onInputChange}
+            labelText={labelText}
+          />
+        );
+        const value = "3:12p";
+        fireEvent.change(container.querySelectorAll("input")[0], {
+          target: { value },
+        });
+
+        expect(getByTestId(CLOSEST_TEST_ID)).toContainHTML("3:15 PM");
+      });
     });
   });
 });
@@ -106,7 +192,10 @@ describe("gets best matching time", () => {
       locale: "en_US",
       interval: 10,
     });
-    const expected = "11:00 PM";
+    const expected = {
+      label: "11:00 PM",
+      value: "23:00",
+    };
     expect(actual).toEqual(expected);
   });
   it("returns the correct array for 11:11", () => {
@@ -118,7 +207,10 @@ describe("gets best matching time", () => {
       locale: "en_US",
       interval: 10,
     });
-    const expected = "11:11 AM";
+    const expected = {
+      label: "11:11 AM",
+      value: "11:11",
+    };
     expect(actual).toEqual(expected);
   });
   it("returns the correct array for 11:11 P", () => {
@@ -130,7 +222,10 @@ describe("gets best matching time", () => {
       locale: "en_US",
       interval: 10,
     });
-    const expected = "11:11 PM";
+    const expected = {
+      label: "11:11 PM",
+      value: "23:11",
+    };
     expect(actual).toEqual(expected);
   });
   it("returns the correct array for 20:2", () => {
@@ -142,7 +237,10 @@ describe("gets best matching time", () => {
       locale: "en_US",
       interval: 5,
     });
-    const expected = "8:20 PM";
+    const expected = {
+      label: "8:20 PM",
+      value: "20:20",
+    };
     expect(actual).toEqual(expected);
   });
   it("returns the correct array for 8:1p", () => {
@@ -154,7 +252,10 @@ describe("gets best matching time", () => {
       locale: "en_US",
       interval: 15,
     });
-    const expected = "8:10 PM";
+    const expected = {
+      label: "8:10 PM",
+      value: "20:10",
+    };
     expect(actual).toEqual(expected);
   });
   it("returns the correct array for 8:1p with 10 interval", () => {
@@ -166,8 +267,85 @@ describe("gets best matching time", () => {
       locale: "en_US",
       interval: 10,
     });
-    const expected = "8:10 PM";
+    const expected = {
+      label: "8:10 PM",
+      value: "20:10",
+    };
     expect(actual).toEqual(expected);
   });
 });
 
+describe("gets time options", () => {
+  it("returns an array of options every 15 min", () => {
+    const timeOptions = getTimeOptions(
+      15,
+      "h:mm aa",
+      undefined,
+      undefined,
+      "en_US"
+    );
+    expect(timeOptions[0]).toEqual({
+      value: "00:00",
+      label: "12:00 AM",
+    });
+    expect(timeOptions[timeOptions.length - 1]).toEqual({
+      value: "23:45",
+      label: "11:45 PM",
+    });
+    expect(timeOptions).toMatchSnapshot();
+  });
+  it("returns an array of options within min and max", () => {
+    const timeOptions = getTimeOptions(
+      10,
+      "h:mm aa",
+      "08:00",
+      "20:30",
+      "en_US"
+    );
+    expect(timeOptions[0]).toEqual({
+      value: "08:00",
+      label: "8:00 AM",
+    });
+    expect(timeOptions[timeOptions.length - 1]).toEqual({
+      value: "20:30",
+      label: "8:30 PM",
+    });
+    expect(timeOptions).toMatchSnapshot();
+  });
+  it("returns an array of options within min", () => {
+    const timeOptions = getTimeOptions(
+      10,
+      "h:mm aa",
+      "09:00",
+      undefined,
+      "en_US"
+    );
+    expect(timeOptions[0]).toEqual({
+      value: "09:00",
+      label: "9:00 AM",
+    });
+    expect(timeOptions[timeOptions.length - 1]).toEqual({
+      value: "23:50",
+      label: "11:50 PM",
+    });
+    expect(timeOptions).toMatchSnapshot();
+  });
+  it("returns an array of options within max", () => {
+    const timeOptions = getTimeOptions(
+      10,
+      "h:mm aa",
+      undefined,
+      "19:00",
+      "en_US"
+    );
+    expect(timeOptions[0]).toEqual({
+      value: "00:00",
+      label: "12:00 AM",
+    });
+    expect(timeOptions[timeOptions.length - 1]).toEqual({
+      value: "19:00",
+      label: "7:00 PM",
+    });
+    expect(timeOptions).toMatchSnapshot();
+  });
+});

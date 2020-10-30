@@ -64,7 +64,7 @@ const getIntervalFromTime = (time, interval, minTime) => {
 
 export const getBestMatchTime = ({ time, timeFormat, minTime, maxTime, locale, interval }) => {
   const granularity = time.length >= 3 ? 1 : interval;
-  return getTimeOptions(granularity, timeFormat, minTime, maxTime, locale)[getIntervalFromTime(time, granularity, minTime)].label;
+  return getTimeOptions(granularity, timeFormat, minTime, maxTime, locale)[getIntervalFromTime(time, granularity, minTime)];
 };
 
 const getTimeIntervals = interval => {
@@ -75,8 +75,7 @@ const getTimeIntervals = interval => {
   }
   return times;
 };
-const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
-  console.log(locale);
+export const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
   const allTimes = getTimeIntervals(interval);
   let startingInterval = 0;
   let finalInterval = allTimes.length;
@@ -197,10 +196,13 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     };
     const dropdownOptions = getDropdownOptions() || [];
     const hasError = !!(errorMessage || errorList);
+    const handleOptionSelection = (option, showDropdown = false) => {
+      setInput(option.label);
+      setDropdownIsOpen(showDropdown);
+      onChange(option.label, option.value);
+    };
     const handleBlur = e => {
-      onBlur(e);
-      setDropdownIsOpen(false);
-      setInput(getBestMatchTime({
+      handleOptionSelection(getBestMatchTime({
         time: input,
         timeFormat,
         minTime,
@@ -208,6 +210,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
         locale,
         interval,
       }));
+      onBlur(e);
     };
     const handleFocus = e => {
       onFocus(e);
@@ -215,11 +218,6 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     const handleClickInput = e => {
       onClick(e);
       setDropdownIsOpen(true);
-    };
-    const handleOptionSelection = option => {
-      setInput(option.label);
-      setDropdownIsOpen(false);
-      onChange(option.label, option.value);
     };
     const onCurrentOptionRefChange = React.useCallback(node => {
       if (node) {
@@ -284,11 +282,15 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
             role="listbox"
             data-testid="select-dropdown"
           >
-            {dropdownOptions.map((option, i) => (
-              <TimePickerOption
-                ref={matchingIndex === i ? onCurrentOptionRefChange : undefined}
-                isSelected={standardizeTime(option.label) === standardizeTime(input)}
-                isClosest={matchingIndex === i}
+            {dropdownOptions.map((option, i) => {
+              const isClosest = matchingIndex === i;
+              const isSelected = standardizeTime(option.label) === standardizeTime(input);
+              const closestTestId = isClosest ? 'closest-select-option' : '';
+              const selectedTestId = isSelected ? 'selected-select-option' : '';
+              return <TimePickerOption
+                ref={isClosest? onCurrentOptionRefChange : undefined}
+                isSelected={isSelected}
+                isClosest={isClosest}
                 key={option.label}
                 data-name={option.label}
                 data-value={option.value}
@@ -296,11 +298,11 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
                   handleOptionSelection(option);
                 }}
                 role="option"
-                data-testid="select-option"
+                data-testid={`select-option ${closestTestId} ${selectedTestId}`}
               >
                 {option.label}
               </TimePickerOption>
-            ))}
+            })}
           </TimePickerDropdown>
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </Box>
