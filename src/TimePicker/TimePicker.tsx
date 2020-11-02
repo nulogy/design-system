@@ -58,7 +58,7 @@ const getIntervalFromTime = (time, interval, minTime) => {
     const minutes = timeArray[1];
     const getInterval = (h, m) => Math.round((h * 60) / interval + m / interval);
     const currentTimeInterval = getInterval(hours, minutes);
-    const nearestInterval = currentTimeInterval > minInterval ? currentTimeInterval - minInterval : getInterval(hours + 12, minutes) - minInterval;
+    const nearestInterval = currentTimeInterval >= minInterval ? currentTimeInterval - minInterval : getInterval(hours + 12, minutes) - minInterval;
     return nearestInterval;
   }
   return 0;

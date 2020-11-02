@@ -53,6 +53,25 @@ describe("TimePicker", () => {
 
       expect(onInputChange).toHaveBeenCalledWith(value);
     });
+    it("calls onBlur", () => {
+      const labelText = "Expiry Time";
+      const onBlur = jest.fn();
+      const { container } = renderWithNDSProvider(
+        <TimePicker
+          onChange={onChange}
+          onInputChange={onInputChange}
+          onBlur={onBlur}
+          labelText={labelText}
+        />
+      );
+      const value = "20:00";
+      fireEvent.change(container.querySelectorAll("input")[0], {
+        target: { value },
+      });
+      fireEvent.blur(container.querySelectorAll("input")[0]);
+
+      expect(onBlur).toHaveBeenCalled();
+    });
 
     describe("selects value in dropdown", () => {
       const SELECTED_TEST_ID =
