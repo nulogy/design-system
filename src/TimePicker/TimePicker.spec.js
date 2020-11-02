@@ -8,6 +8,7 @@ import {
   getTimeOptions,
 } from "./TimePicker";
 import { TimePicker } from ".";
+import { Button } from "../Button";
 
 const openDropdown = (container, i = 0) => {
   fireEvent.focus(container.querySelectorAll("input")[i]);
@@ -56,20 +57,23 @@ describe("TimePicker", () => {
     it("calls onBlur", () => {
       const labelText = "Expiry Time";
       const onBlur = jest.fn();
-      const { container } = renderWithNDSProvider(
-        <TimePicker
-          onChange={onChange}
-          onInputChange={onInputChange}
-          onBlur={onBlur}
-          labelText={labelText}
-        />
+      const { container, getByTestId } = renderWithNDSProvider(
+        <>
+          <TimePicker
+            onChange={onChange}
+            onInputChange={onInputChange}
+            onBlur={onBlur}
+            labelText={labelText}
+          />
+          <Button>Submit</Button>
+        </>
       );
       const value = "20:00";
       fireEvent.change(container.querySelectorAll("input")[0], {
         target: { value },
       });
-      fireEvent.blur(container.querySelectorAll("input")[0]);
-
+      fireEvent.click(container.querySelectorAll("button")[0]);
+      expect(getByTestId("select-input")).toHaveValue("20:00");
       expect(onBlur).toHaveBeenCalled();
     });
 
@@ -89,7 +93,6 @@ describe("TimePicker", () => {
         fireEvent.change(container.querySelectorAll("input")[0], {
           target: { value },
         });
-
         expect(getByTestId(SELECTED_TEST_ID)).toContainHTML("3:15 PM");
       });
     });
