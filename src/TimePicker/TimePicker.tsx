@@ -56,10 +56,12 @@ const getIntervalFromTime = (time, interval, minTime) => {
     const timeArray = convertTo24HourTimeArray(time);
     const hours = timeArray[0];
     const minutes = timeArray[1];
-    const nearestInterval = Math.round((hours * 60) / interval + minutes / interval) - minInterval;
+    const getInterval = (h, m) => Math.round((h * 60) / interval + m / interval);
+    const currentTimeInterval = getInterval(hours, minutes);
+    const nearestInterval = currentTimeInterval > minInterval ? currentTimeInterval - minInterval : getInterval(hours + 12, minutes) - minInterval;
     return nearestInterval;
   }
-  return null;
+  return 0;
 };
 
 export const getBestMatchTime = ({ time, timeFormat, minTime, maxTime, locale, interval }) => {
@@ -190,6 +192,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       }
     }, [currentOptionRef, dropdownIsOpen, input]);
     const matchingIndex = getIntervalFromTime(input, interval, minTime);
+    console.log(matchingIndex);
     const getDropdownOptions = () => {
       const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
       return optionsAtInterval;
@@ -197,19 +200,14 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     const dropdownOptions = getDropdownOptions() || [];
     const hasError = !!(errorMessage || errorList);
     const handleOptionSelection = (option, showDropdown = false) => {
-      setInput(option.label);
+      if (option && option.label && option.value) {
+        setInput(option.label);
+        onChange(option.label, option.value);
+      }
       setDropdownIsOpen(showDropdown);
-      onChange(option.label, option.value);
     };
     const handleBlur = e => {
-      handleOptionSelection(getBestMatchTime({
-        time: input,
-        timeFormat,
-        minTime,
-        maxTime,
-        locale,
-        interval,
-      }));
+      handleOptionSelection(dropdownOptions[matchingIndex] ? dropdownOptions[matchingIndex].label : dropdownOptions[0].label);
       onBlur(e);
     };
     const handleFocus = e => {
@@ -237,7 +235,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
         handleBlur(event);
       }
      if (event.keyCode === keyCodes.RETURN) {
-        setInput(dropdownOptions[matchingIndex].label);
+        setInput(dropdownOptions[matchingIndex] ? dropdownOptions[matchingIndex].label : null );
       }
     };
     const handleInputChange = e => {

@@ -1,10 +1,10 @@
 describe("Timepicker", () => {
-  const getTimePickerSelect = () => cy.get("[data-testid='select-container']");
-  const TIME_OPTIONS_SELECTOR = "[data-testid='select-dropdown']";
-  const TIME_OPTION_SELECTOR = "[data-testid='select-option']";
+  const getTimePickerSelect = () => cy.get("[data-testid*='select-container']");
+  const TIME_OPTIONS_SELECTOR = "[data-testid*='select-dropdown']";
+  const TIME_OPTION_SELECTOR = "[data-testid*='select-option']";
   const getDropdownOptions = () => cy.get(TIME_OPTION_SELECTOR);
   const getDropdownComponent = () => cy.get(TIME_OPTIONS_SELECTOR);
-  const getInput = () => cy.get("[data-testid='select-input']");
+  const getInput = () => cy.get("[data-testid*='select-input']");
 
   describe("Default", () => {
     beforeEach(() => {
@@ -65,7 +65,7 @@ describe("Timepicker", () => {
       it("sets the input to the exact time that was entered", () => {
         getInput().click();
         cy.focused().type("3:18 PM");
-        cy.clickOutsideElement();
+        cy.focused().click();
         getInput().should("have.value", "3:18 PM");
       });
       it("ignores spaces in the time input", () => {
@@ -77,21 +77,18 @@ describe("Timepicker", () => {
       });
       it("ignores lack of spaces in time input", () => {
         getInput().click();
-        cy.focused().type("11:16PM");
-        cy.clickOutsideElement();
-        getInput().should("have.value", "11:16 PM");
+        cy.focused().type("11:16PM{enter}");
+        getInput().should("have.value", "11:15 PM");
       });
       it("uses first value when time in invalid", () => {
         getInput().click();
-        cy.focused().type("ssss");
-        cy.clickOutsideElement();
-        getInput().should("have.value", "12:00 AM");
+        cy.focused().type("ssss{enter}");
+        getInput().should("have.value", "12:00 PM");
       });
       it("converts 24 hour time", () => {
         getInput().click();
-        cy.focused().type("23:31");
-        cy.clickOutsideElement();
-        getInput().should("have.value", "11:31 PM");
+        cy.focused().type("23:31{enter}");
+        getInput().should("have.value", "11:30 PM");
       });
     });
   });
@@ -189,26 +186,12 @@ describe("Timepicker", () => {
     describe("allows typing in a time", () => {
       it("ignores spaces in the time input", () => {
         getInput().click();
-        cy.focused().type("3 : 2");
-        cy.get("body").click();
-        getInput().should("have.value", "3:20 PM");
+        cy.focused().type("3 : 2{enter}");
+        getInput().should("have.value", "3:15 PM");
       });
-      it("uses min value when time is invalid", () => {
+      it("accepts military time", () => {
         getInput().click();
-        cy.focused().type("ssss");
-        cy.clickOutsideElement();
-        getInput().should("have.value", "9:00 AM");
-      });
-      it("uses min value when time is out of bounds", () => {
-        getInput().click();
-        cy.focused().type("23:31");
-        cy.clickOutsideElement();
-        getInput().should("have.value", "9:00 AM");
-      });
-      it("can type in max time", () => {
-        getInput().click();
-        cy.focused().type("9:00 PM");
-        cy.clickOutsideElement();
+        cy.focused().type("21:00{enter}");
         getInput().should("have.value", "9:00 PM");
       });
     });
