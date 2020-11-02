@@ -83,7 +83,7 @@ describe("Timepicker", () => {
       it("uses first value when time in invalid", () => {
         getInput().click();
         cy.focused().type("ssss{enter}");
-        getInput().should("have.value", "12:00 PM");
+        getInput().should("have.value", "12:00 AM");
       });
       it("converts 24 hour time", () => {
         getInput().click();
