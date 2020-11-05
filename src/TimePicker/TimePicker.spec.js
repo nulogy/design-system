@@ -73,7 +73,7 @@ describe("TimePicker", () => {
         target: { value },
       });
       fireEvent.click(container.querySelectorAll("button")[0]);
-      expect(getByTestId("select-input")).toHaveValue("20:00");
+      expect(getByTestId("select-input")).toHaveValue("8:00 PM");
       expect(onBlur).toHaveBeenCalled();
     });
 

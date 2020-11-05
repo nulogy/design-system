@@ -64,9 +64,8 @@ const getIntervalFromTime = (time, interval, minTime) => {
   return 0;
 };
 
-export const getBestMatchTime = ({ time, timeFormat, minTime, maxTime, locale, interval }) => {
-  const granularity = time.length >= 3 ? 1 : interval;
-  return getTimeOptions(granularity, timeFormat, minTime, maxTime, locale)[getIntervalFromTime(time, granularity, minTime)];
+export const getBestMatchTime = ({ time, timeFormat, minTime, maxTime, locale }) => {
+  return getTimeOptions(1, timeFormat, minTime, maxTime, locale)[getIntervalFromTime(time, 1, minTime)];
 };
 
 const getTimeIntervals = interval => {
@@ -177,12 +176,13 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     },
     inputRef
   ) => {
-    const [input, setInput] = useState(defaultValue);
+    const [input, setInput] = useState(defaultValue ? defaultValue: "");
     const [currentOptionRef, setCurrentOptionRef] = useState(null);
     const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
     const { locale } = useContext(LocaleContext);
     const [ref, setRef] = useState(null);
     const { t } = useTranslation();
+
     useEffect(() => {
       if (currentOptionRef && dropdownIsOpen) {
         currentOptionRef.scrollIntoView({
@@ -192,7 +192,6 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       }
     }, [currentOptionRef, dropdownIsOpen, input]);
     const matchingIndex = getIntervalFromTime(input, interval, minTime);
-    console.log(matchingIndex);
     const getDropdownOptions = () => {
       const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
       return optionsAtInterval;
@@ -207,7 +206,10 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       setDropdownIsOpen(showDropdown);
     };
     const handleBlur = e => {
-      handleOptionSelection(dropdownOptions[matchingIndex] ? dropdownOptions[matchingIndex].label : dropdownOptions[0].label);
+      if (input) {
+        const option = getBestMatchTime({ time: input, timeFormat, minTime, maxTime, locale });
+        handleOptionSelection(option)
+      }
       onBlur(e);
     };
     const handleFocus = e => {
