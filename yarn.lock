@@ -1758,10 +1758,10 @@
     eslint-plugin-react-hooks "^4.0.4"
     prettier "^2.0.5"
 
-"@nulogy/icons@^4.10.5":
-  version "4.10.5"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.10.5.tgz#17729a9d76cb619db767e1554d95616f317ef0bb"
-  integrity sha512-UnUHubuAaxE8ZgCeYPFHWCbxWjHfZlvl994OexMV0NwJotoYR3Uh39biK7HbSrtmoluDZFKlSWl5QOHJAuvahQ==
+"@nulogy/icons@^4.11.0":
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.11.0.tgz#b7a45545bcda346b134f5b618d7734e743f73e33"
+  integrity sha512-D/TICkCs2Hri5MIuaXmlYO15BaYYPuJavDiDCtZSWsd1RkjYxaJhpwLjDsgMNeYajsRCR6yChqMx5AOhONo0Ww==
   dependencies:
     fs "^0.0.1-security"
     svgi "^1.1.0"
