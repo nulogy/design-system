@@ -1,3 +1,10 @@
+## [4.11.2](https://github.com/nulogy/design-system/compare/v4.11.1...v4.11.2) (2020-11-06)
+
+
+### Bug Fixes
+
+* removes node engine version requirement from package.json ([#805](https://github.com/nulogy/design-system/issues/805)) ([0a0c568](https://github.com/nulogy/design-system/commit/0a0c5686b90272da3b661ec8f666b6c472083aad))
+
 ## [4.11.1](https://github.com/nulogy/design-system/compare/v4.11.0...v4.11.1) (2020-10-29)
 
 
