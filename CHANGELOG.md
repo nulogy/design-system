@@ -1,3 +1,10 @@
+# [4.12.0](https://github.com/nulogy/design-system/compare/v4.11.2...v4.12.0) (2020-11-09)
+
+
+### Features
+
+* update @nulogy/icons ([4335332](https://github.com/nulogy/design-system/commit/43353323b8f57967d48aa53ea56926e418bc7f7e))
+
 ## [4.11.2](https://github.com/nulogy/design-system/compare/v4.11.1...v4.11.2) (2020-11-06)
 
 
