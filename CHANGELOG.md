@@ -1,3 +1,10 @@
+## [4.12.2](https://github.com/nulogy/design-system/compare/v4.12.1...v4.12.2) (2020-11-10)
+
+
+### Bug Fixes
+
+* add background css props to Box ([#807](https://github.com/nulogy/design-system/issues/807)) ([4fc654a](https://github.com/nulogy/design-system/commit/4fc654a0c0baf54dfc610454c0cfa92b7e904586))
+
 ## [4.12.1](https://github.com/nulogy/design-system/compare/v4.12.0...v4.12.1) (2020-11-10)
 
 
