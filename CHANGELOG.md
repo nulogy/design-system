@@ -1,3 +1,10 @@
+## [4.12.1](https://github.com/nulogy/design-system/compare/v4.12.0...v4.12.1) (2020-11-10)
+
+
+### Bug Fixes
+
+* improve timepicker UX ([#803](https://github.com/nulogy/design-system/issues/803)) ([f8c959d](https://github.com/nulogy/design-system/commit/f8c959db2a87ea22897fbbed9a99f25e5693a80a))
+
 # [4.12.0](https://github.com/nulogy/design-system/compare/v4.11.2...v4.12.0) (2020-11-09)
 
 
