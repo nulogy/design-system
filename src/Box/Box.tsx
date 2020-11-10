@@ -9,6 +9,7 @@ import {
   order,
   flexGrow,
   position,
+  background,
   ColorProps,
   SpaceProps,
   LayoutProps,
@@ -18,7 +19,9 @@ import {
   FlexGrowProps,
   PositionProps,
   BorderProps,
-  FlexboxProps
+  FlexboxProps,
+  BackgroundProps,
+
 } from "styled-system";
 import { HTMLAttributes } from "react";
 
@@ -32,6 +35,7 @@ export type BoxProps = ColorProps &
   PositionProps &
   BorderProps &
   FlexboxProps &
+  BackgroundProps &
   React.ComponentPropsWithRef<"div"> & {
     as?: string;
   };
@@ -45,7 +49,8 @@ const Box: React.SFC<BoxProps> = styled.div(
   textAlign,
   order,
   flexGrow,
-  position
+  position,
+  background
 );
 
 export default Box;
