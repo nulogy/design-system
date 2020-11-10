@@ -39,9 +39,9 @@ describe("Date Range", () => {
   describe("With times", () => {
     const getStartTimeInputComponent = () => cy.get("[aria-label='Select a start time']");
     const getEndTimeInputComponent = () => cy.get("[aria-label='Select an end time']");
-    const getEndTimeOptions = () => cy.get("[data-testid='daterange-end-time']").find("[data-testid='select-option']");
+    const getEndTimeOptions = () => cy.get("[data-testid='daterange-end-time']").find("[data-testid*='select-option']");
     const getStartTimeOptions = () =>
-      cy.get("[data-testid='daterange-start-time']").find("[data-testid='select-option']");
+      cy.get("[data-testid='daterange-start-time']").find("[data-testid*='select-option']");
     beforeEach(() => {
       cy.renderFromStorybook("daterange--with-times");
     });

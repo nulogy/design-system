@@ -94,7 +94,7 @@
     "babel-preset-react": "6.24.1",
     "chromatic": "^5.2.0",
     "concurrently": "^5.2.0",
-    "cypress": "3.4.1",
+    "cypress": "^4.0.0",
     "cypress-plugin-tab": "^1.0.1",
     "cypress-storybook": "^0.2.1",
     "enzyme": "3.11.0",
