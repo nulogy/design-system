@@ -2,6 +2,10 @@ describe("Timepicker", () => {
   const getTimePickerSelect = () => cy.get("[data-testid*='select-container']");
   const TIME_OPTIONS_SELECTOR = "[data-testid*='select-dropdown']";
   const TIME_OPTION_SELECTOR = "[data-testid*='select-option']";
+  const TIME_OPTION_SELECTED_SELECTOR = "[data-testid*='selected-select-option']";
+  const TIME_OPTION_CLOSEST_SELECTOR = "[data-testid*='closest-select-option']";
+  const getSelectedOption = () => cy.get(TIME_OPTION_SELECTED_SELECTOR);
+  const getClosestOption = () => cy.get(TIME_OPTION_CLOSEST_SELECTOR);
   const getDropdownOptions = () => cy.get(TIME_OPTION_SELECTOR);
   const getDropdownComponent = () => cy.get(TIME_OPTIONS_SELECTOR);
   const getInput = () => cy.get("[data-testid*='select-input']");
@@ -36,6 +40,21 @@ describe("Timepicker", () => {
           .first()
           .click();
         getDropdownComponent().should("not.be.visible");
+      });
+      it("when pressing the down arrow key selects the next time interval", () => {
+        getInput().type("{downArrow}");
+        getSelectedOption().should("have.text", "12:00 AM");
+        getInput().should("have.value", "12:00 AM");
+        getInput().type("{downArrow}");
+        getSelectedOption().should("have.text", "12:15 AM");
+        getInput().should("have.value", "12:15 AM");
+      });
+      it("when pressing the up arrow key selects the previous time interval", () => {
+        getInput().type("11p");
+        getClosestOption().should("have.text", "11:00 PM");
+        getInput().type("{upArrow}");
+        getSelectedOption().should("have.text", "10:45 PM");
+        getInput().should("have.value", "10:45 PM");
       });
     });
 
