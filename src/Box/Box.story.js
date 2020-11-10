@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "../index";
 
 export default {
-  title: "Components/Box"
+  title: "Components/Box",
 };
 
 export const _Box = () => <Box p="x3">Hello World</Box>;
@@ -14,7 +14,7 @@ export const WithATextColour = () => (
 );
 
 WithATextColour.story = {
-  name: "With a text colour"
+  name: "With a text colour",
 };
 
 export const WithABackgroundColour = () => (
@@ -24,7 +24,7 @@ export const WithABackgroundColour = () => (
 );
 
 WithABackgroundColour.story = {
-  name: "With a background colour"
+  name: "With a background colour",
 };
 
 export const WithASetWidth = () => (
@@ -34,17 +34,22 @@ export const WithASetWidth = () => (
 );
 
 WithASetWidth.story = {
-  name: "With a set width"
+  name: "With a set width",
 };
 
 export const WithAResponsiveWidth = () => (
-  <Box p="x3" width={{ extraSmall: 1, small: 1 / 2, medium: 1 / 4 }} bg="whiteGrey">
-    Full width on extra small screens, 1/2 width on small and 1/4 width on medium
+  <Box
+    p="x3"
+    width={{ extraSmall: 1, small: 1 / 2, medium: 1 / 4 }}
+    bg="whiteGrey"
+  >
+    Full width on extra small screens, 1/2 width on small and 1/4 width on
+    medium
   </Box>
 );
 
 WithAResponsiveWidth.story = {
-  name: "With a responsive width"
+  name: "With a responsive width",
 };
 
 export const WithPadding = () => (
@@ -74,7 +79,7 @@ export const WithPadding = () => (
 );
 
 WithPadding.story = {
-  name: "With padding"
+  name: "With padding",
 };
 
 export const WithMargin = () => (
@@ -104,7 +109,7 @@ export const WithMargin = () => (
 );
 
 WithMargin.story = {
-  name: "With margin"
+  name: "With margin",
 };
 
 export const WithAShadow = () => (
@@ -122,5 +127,15 @@ export const WithAShadow = () => (
 );
 
 WithAShadow.story = {
-  name: "With a shadow"
+  name: "With a shadow",
+};
+
+export const WithABackgroundImage = () => (
+  <Box p="x1" mb="x2" backgroundImage="linear-gradient(0deg, #E1EBFA, #216BEB)">
+    Gradient
+  </Box>
+);
+
+WithABackgroundImage.story = {
+  name: "With a background image",
 };
