@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button } from "../Button";
+import React from "react";
+import styled from "styled-components";
 import { Box } from "../index";
 
 export default {
@@ -140,26 +140,47 @@ export const WithABackgroundImage = () => (
 WithABackgroundImage.story = {
   name: "With a background image",
 };
+const HoverableBox = styled(Box)({
+  ":hover": {
+    backgroundColor: "blue",
+  },
+});
 
-export const WithTransition = () => {
-  const [slideOver, setSlideOver] = useState(false);
+export const WithHoverTransition = () => (
+  <HoverableBox
+    p="x1"
+    mb="x2"
+    bg="red"
+    marginLeft="50px"
+    mt="50px"
+    color="white"
+    height="40px"
+    width="200px"
+    transition="background-color 0.5s linear"
+  >
+    Transition
+  </HoverableBox>
+);
 
-  return (
-    <>
-      <Box
-        p="x1"
-        mb="x2"
-        bg="red"
-        transition="transform 0.5s linear"
-        transform={`translateX(${slideOver ? "50" : "0"}%)`}
-      >
-        Gradient
-      </Box>
-      <Button onClick={() => setSlideOver(!slideOver)}>Slide!</Button>
-    </>
-  );
+WithHoverTransition.story = {
+  name: "With hover transition",
 };
+export const WithTransform = () => (
+  <Box
+    p="x1"
+    mb="x2"
+    bg="red"
+    marginLeft="50px"
+    mt="50px"
+    color="white"
+    height="40px"
+    width="200px"
+    transform="rotate(90deg)"
+  >
+    Rotated
+  </Box>
+);
 
-WithTransition.story = {
-  name: "With transition",
+WithTransform.story = {
+  name: "with transform",
 };
