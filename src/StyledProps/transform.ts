@@ -1,7 +1,7 @@
 import { system } from "styled-system";
 
 export type TransformProps = {
-  transform: string
+  transform?: string
 }
 
 export const transform = system({
