@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Button } from "../Button";
 import { Box } from "../index";
 
 export default {
@@ -138,4 +139,27 @@ export const WithABackgroundImage = () => (
 
 WithABackgroundImage.story = {
   name: "With a background image",
+};
+
+export const WithTransition = () => {
+  const [slideOver, setSlideOver] = useState(false);
+
+  return (
+    <>
+      <Box
+        p="x1"
+        mb="x2"
+        bg="red"
+        transition="transform 0.5s linear"
+        transform={`translateX(${slideOver ? "50" : "0"}%)`}
+      >
+        Gradient
+      </Box>
+      <Button onClick={() => setSlideOver(!slideOver)}>Slide!</Button>
+    </>
+  );
+};
+
+WithTransition.story = {
+  name: "With transition",
 };

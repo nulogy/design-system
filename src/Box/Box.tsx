@@ -21,9 +21,11 @@ import {
   BorderProps,
   FlexboxProps,
   BackgroundProps,
+  system,
 
 } from "styled-system";
-import { HTMLAttributes } from "react";
+import { transition, TransitionProps } from '../StyledProps/transition';
+import { transform, TransformProps } from "../StyledProps/transform";
 
 export type BoxProps = ColorProps &
   SpaceProps &
@@ -36,6 +38,8 @@ export type BoxProps = ColorProps &
   BorderProps &
   FlexboxProps &
   BackgroundProps &
+  TransformProps &
+  TransitionProps &
   React.ComponentPropsWithRef<"div"> & {
     as?: string;
   };
@@ -50,7 +54,9 @@ const Box: React.SFC<BoxProps> = styled.div(
   order,
   flexGrow,
   position,
-  background
+  background,
+  transition,
+  transform,
 );
 
 export default Box;
