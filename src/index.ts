@@ -58,3 +58,4 @@ export { Toast } from "./Toast";
 
 export { BrandedNavBar } from "./BrandedNavBar";
 export { AsyncSelect } from "./AsyncSelect";
+export { useWindowDimensions }  from "./utils";
