@@ -1,5 +1,6 @@
 import React from "react";
 import { Heading1 } from "../Type";
+import { Box } from "../Box";
 import { TruncatedText } from ".";
 
 export default {
@@ -46,4 +47,16 @@ export const AsTitle = () => (
 
 AsTitle.story = {
   name: "as title"
+};
+
+export const FillWidth = () => (
+  <Box width="200px">
+    <TruncatedText fillWidth>
+      Special instructions are provided for the shipment
+    </TruncatedText>
+  </Box>
+);
+
+FillWidth.story = {
+  name: "fill width",
 };
