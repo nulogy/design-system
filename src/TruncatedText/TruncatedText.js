@@ -1,13 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import { Tooltip } from "../Tooltip";
-import { Text } from "../Type";
-
-const StyledWrapper = styled(Text)(({ hoverable }) => ({
-  width: "fit-content",
-  cursor: hoverable ? "pointer" : "default",
-}));
+import { Text } from "../Type";;
 
 const MaybeTooltip = ({ children, showTooltip, ...props }) => {
   return showTooltip ? <Tooltip {...props}>{children}</Tooltip> : children;
@@ -23,7 +17,46 @@ MaybeTooltip.defaultProps = {
   showTooltip: true,
 };
 
-const TruncatedText = ({
+const TruncatedTextFillWidth = ({
+  element,
+  showTooltip,
+  tooltipProps,
+  children,
+  ...props
+}) => {
+  const [hasOverflowText, setHasOverflowText] = useState(false);
+  const hasTooltip = showTooltip && hasOverflowText;
+  const updateOverflow = (e) => {
+    const { scrollWidth, clientWidth } = e.target;
+    if (!hasOverflowText && scrollWidth > clientWidth) {
+      setHasOverflowText(true);
+    }
+  };
+  return (
+    <MaybeTooltip
+      showTooltip={hasTooltip}
+      tooltip={children}
+      defaultOpen
+      {...tooltipProps}
+    >
+      <Text
+        as={element.type}
+        cursor={hasTooltip ? "pointer" : "default"}
+        onMouseEnter={updateOverflow}
+        width="100%"
+        whiteSpace="nowrap"
+        overflow="hidden"
+        textOverflow="ellipsis"
+        {...element.props}
+        {...props}
+      >
+        {children}
+      </Text>
+    </MaybeTooltip>
+  );
+};
+
+const TruncatedTextMaxCharacters = ({
   children,
   element,
   indicator,
@@ -44,17 +77,27 @@ const TruncatedText = ({
       tooltip={innerText}
       {...tooltipProps}
     >
-      <StyledWrapper
+      <Text
         as={element.type}
-        hoverable={hasTooltip}
+        cursor={hasTooltip ? "pointer" : "default"}
+        width="fit-content"
         {...element.props}
         {...props}
       >
         {truncatedText}
-      </StyledWrapper>
+      </Text>
     </MaybeTooltip>
   );
 };
+
+const TruncatedText = ({ fillWidth, children, ...props }) =>
+  fillWidth ? (
+    <TruncatedTextFillWidth {...props}>{children}</TruncatedTextFillWidth>
+  ) : (
+    <TruncatedTextMaxCharacters {...props}>
+      {children}
+    </TruncatedTextMaxCharacters>
+  );
 
 TruncatedText.propTypes = {
   children: PropTypes.string,
@@ -62,6 +105,7 @@ TruncatedText.propTypes = {
   element: PropTypes.node,
   maxCharacters: PropTypes.number,
   showTooltip: PropTypes.bool,
+  fillWidth: PropTypes.bool,
   tooltipProps: PropTypes.shape({}),
 };
 
@@ -70,6 +114,7 @@ TruncatedText.defaultProps = {
   indicator: "...",
   element: <Text />,
   maxCharacters: 20,
+  fillWidth: false,
   showTooltip: true,
   tooltipProps: undefined,
 };
