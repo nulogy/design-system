@@ -1,3 +1,13 @@
+# [4.13.0](https://github.com/nulogy/design-system/compare/v4.12.3...v4.13.0) (2020-11-13)
+
+
+### Features
+
+* Add cursor props to Box, Flex and Text components, you can now set cursor="pointer" to update the cursor ([7808de4](https://github.com/nulogy/design-system/commit/7808de4c12e09c5dd66f4bd76a09158362c9f236))
+* Add transition and transform styled props to Box ([18bdcd7](https://github.com/nulogy/design-system/commit/18bdcd7d1fd1fb5b8cddcc3c8284097b0c1ce2db))
+* Adds fillWidth option to TruncatedText to truncate based on element width rather than maxCharacters ([14acf76](https://github.com/nulogy/design-system/commit/14acf76c6c327719958be4fdd7b05c724f2a23ee))
+* adds useWindowDimensions hook for checking window size and  breakpoints ([d0e3cab](https://github.com/nulogy/design-system/commit/d0e3cab30178bcea1529bfa7cc2a43c2dcc910aa))
+
 ## [4.12.3](https://github.com/nulogy/design-system/compare/v4.12.2...v4.12.3) (2020-11-13)
 
 
