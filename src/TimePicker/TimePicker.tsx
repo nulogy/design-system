@@ -231,8 +231,17 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     }, []);
     const handleKeyDown = event => {
       if (event.keyCode === keyCodes.DOWN) {
+        setInput(dropdownOptions[matchingIndex] ? dropdownOptions[matchingIndex].label : null );
+        if (input) {
+          setInput(dropdownOptions[matchingIndex + 1] ? dropdownOptions[matchingIndex + 1].label : null );
+        }
         setDropdownIsOpen(true);
       }
+
+      if (event.keyCode === keyCodes.UP) {
+        setInput(dropdownOptions[matchingIndex - 1] ? dropdownOptions[matchingIndex - 1].label : null );
+      }
+
       if (event.keyCode === keyCodes.TAB) {
         handleBlur(event);
       }
