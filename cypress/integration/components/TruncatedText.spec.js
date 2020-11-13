@@ -84,7 +84,7 @@ describe("TruncatedText", () => {
     it("doesn't show a tooltip when there's no overflow", () => {
       cy.get("[data-testid='truncated-text']").eq(1).trigger('mouseover');
       cy.get('[role="tooltip"]').should("not.exist");
-      cy.get("[data-testid='truncated-text']").contains("Instructions fit here.");
+      cy.get("[data-testid='truncated-text']").eq(1).contains("Instructions fit here.");
     });
   });
 });
