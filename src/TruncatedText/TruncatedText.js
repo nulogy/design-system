@@ -22,6 +22,7 @@ const TruncatedTextFillWidth = ({
   showTooltip,
   tooltipProps,
   children,
+  "data-testid": testId,
   ...props
 }) => {
   const [hasOverflowText, setHasOverflowText] = useState(false);
@@ -47,6 +48,7 @@ const TruncatedTextFillWidth = ({
         whiteSpace="nowrap"
         overflow="hidden"
         textOverflow="ellipsis"
+        data-testid={testId}
         {...element.props}
         {...props}
       >
@@ -63,6 +65,7 @@ const TruncatedTextMaxCharacters = ({
   maxCharacters,
   showTooltip,
   tooltipProps,
+  "data-testid": testId,
   ...props
 }) => {
   const innerText = children;
@@ -81,6 +84,7 @@ const TruncatedTextMaxCharacters = ({
         as={element.type}
         cursor={hasTooltip ? "pointer" : "default"}
         width="fit-content"
+        data-testid={testId}
         {...element.props}
         {...props}
       >
@@ -106,6 +110,7 @@ TruncatedText.propTypes = {
   maxCharacters: PropTypes.number,
   showTooltip: PropTypes.bool,
   fillWidth: PropTypes.bool,
+  "data-testid": PropTypes.string,
   tooltipProps: PropTypes.shape({}),
 };
 
@@ -116,6 +121,7 @@ TruncatedText.defaultProps = {
   maxCharacters: 20,
   fillWidth: false,
   showTooltip: true,
+  "data-testid": "truncated-text",
   tooltipProps: undefined,
 };
 

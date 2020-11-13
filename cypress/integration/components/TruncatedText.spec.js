@@ -73,4 +73,18 @@ describe("TruncatedText", () => {
       assertText("Special instructions...", "h1");
     });
   });
+  describe("with fillWidth setting", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("truncatedtext--fill-width");
+    });
+    it("shows the tooltip when there is overflow", () => {
+      cy.get("[data-testid='truncated-text']").first().trigger('mouseover');
+      cy.get('[role="tooltip"]').contains("Special instructions are truncated because there is not enough space to show them.");
+    });
+    it("doesn't show a tooltip when there's no overflow", () => {
+      cy.get("[data-testid='truncated-text']").eq(1).trigger('mouseover');
+      cy.get('[role="tooltip"]').should("not.exist");
+      cy.get("[data-testid='truncated-text']").contains("Instructions fit here.");
+    });
+  });
 });
