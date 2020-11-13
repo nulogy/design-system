@@ -1,3 +1,10 @@
+## [4.12.3](https://github.com/nulogy/design-system/compare/v4.12.2...v4.12.3) (2020-11-13)
+
+
+### Bug Fixes
+
+* add time selection using up and down arrows in TimePicker ([#808](https://github.com/nulogy/design-system/issues/808)) ([0c639c9](https://github.com/nulogy/design-system/commit/0c639c9bcbaa52f72d4611755ca368d21b1ae4b5))
+
 ## [4.12.2](https://github.com/nulogy/design-system/compare/v4.12.1...v4.12.2) (2020-11-10)
 
 
