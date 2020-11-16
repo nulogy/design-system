@@ -63,16 +63,16 @@ AsTitle.story = {
   name: "as title",
 };
 
-export const FillWidth = () => (
+export const FullWidth = () => (
   <Box width="200px">
-    <TruncatedText fillWidth>
+    <TruncatedText fullWidth>
       Special instructions are truncated because there is not enough space to
       show them.
     </TruncatedText>
-    <TruncatedText fillWidth>Instructions fit here.</TruncatedText>
+    <TruncatedText fullWidth>Instructions fit here.</TruncatedText>
   </Box>
 );
 
-FillWidth.story = {
-  name: "fill width",
+FullWidth.story = {
+  name: "full width",
 };
