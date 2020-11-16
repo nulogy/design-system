@@ -94,8 +94,8 @@ const TruncatedTextMaxCharacters = ({
   );
 };
 
-const TruncatedText = ({ fillWidth, children, ...props }) =>
-  fillWidth ? (
+const TruncatedText = ({ fullWidth, children, ...props }) =>
+  fullWidth ? (
     <TruncatedTextFillWidth {...props}>{children}</TruncatedTextFillWidth>
   ) : (
     <TruncatedTextMaxCharacters {...props}>
