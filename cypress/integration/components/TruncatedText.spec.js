@@ -73,9 +73,9 @@ describe("TruncatedText", () => {
       assertText("Special instructions...", "h1");
     });
   });
-  describe("with fillWidth setting", () => {
+  describe("with fullWidth setting", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("truncatedtext--fill-width");
+      cy.renderFromStorybook("truncatedtext--full-width");
     });
     it("shows the tooltip when there is overflow", () => {
       cy.get("[data-testid='truncated-text']").first().trigger('mouseover');

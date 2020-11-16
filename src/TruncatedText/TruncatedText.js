@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Tooltip } from "../Tooltip";
-import { Text } from "../Type";;
+import { Text } from "../Type";
 
 const MaybeTooltip = ({ children, showTooltip, ...props }) => {
   return showTooltip ? <Tooltip {...props}>{children}</Tooltip> : children;
@@ -42,7 +42,7 @@ const TruncatedTextFillWidth = ({
     >
       <Text
         as={element.type}
-        cursor={hasTooltip ? "pointer" : "default"}
+        cursor={hasTooltip ? "pointer" : "initial"}
         onMouseEnter={updateOverflow}
         width="100%"
         whiteSpace="nowrap"
@@ -82,7 +82,7 @@ const TruncatedTextMaxCharacters = ({
     >
       <Text
         as={element.type}
-        cursor={hasTooltip ? "pointer" : "default"}
+        cursor={hasTooltip ? "pointer" : "initial"}
         width="fit-content"
         data-testid={testId}
         {...element.props}
@@ -109,7 +109,7 @@ TruncatedText.propTypes = {
   element: PropTypes.node,
   maxCharacters: PropTypes.number,
   showTooltip: PropTypes.bool,
-  fillWidth: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   "data-testid": PropTypes.string,
   tooltipProps: PropTypes.shape({}),
 };
@@ -119,7 +119,7 @@ TruncatedText.defaultProps = {
   indicator: "...",
   element: <Text />,
   maxCharacters: 20,
-  fillWidth: false,
+  fullWidth: false,
   showTooltip: true,
   "data-testid": "truncated-text",
   tooltipProps: undefined,
