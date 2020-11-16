@@ -1,3 +1,10 @@
+## [4.13.1](https://github.com/nulogy/design-system/compare/v4.13.0...v4.13.1) (2020-11-16)
+
+
+### Bug Fixes
+
+* change TruncatedText prop fillWidth to fullWidth ([2a15eaf](https://github.com/nulogy/design-system/commit/2a15eafe7bcc39ab1b6355ae7306406c57a3b29d))
+
 # [4.13.0](https://github.com/nulogy/design-system/compare/v4.12.3...v4.13.0) (2020-11-13)
 
 
