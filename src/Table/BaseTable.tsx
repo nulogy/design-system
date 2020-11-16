@@ -3,6 +3,9 @@ import styled from "styled-components";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
+import PropTypes from 'prop-types';
+import { columnsPropType, rowsPropType } from './Table.types';
+
 const StyledTable = styled.table<any>({
   borderCollapse: "collapse",
   width: "100%",
@@ -55,7 +58,24 @@ const BaseTable: React.SFC<BaseTableProps> = ({
     />
     {footerRows && <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} />}
   </StyledTable>
-);
+  );
+
+BaseTable.propTypes = {
+  columns: columnsPropType,
+  rows: rowsPropType,
+  noRowsContent: PropTypes.string,
+  keyField: PropTypes.string,
+  id: PropTypes.string,
+  loading: PropTypes.bool,
+  footerRows: rowsPropType,
+  rowHovers: PropTypes.bool,
+  compact: PropTypes.bool,
+  className: PropTypes.string,
+  stickyHeader: PropTypes.bool,
+  onRowMouseEnter: PropTypes.func,
+  onRowMouseLeave: PropTypes.func
+};
+
 BaseTable.defaultProps = {
   noRowsContent: "No records have been created for this table.",
   keyField: "id",
