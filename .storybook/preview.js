@@ -4,6 +4,7 @@ import { select } from "@storybook/addon-knobs";
 import "cypress-storybook/react";
 import NDSProvider from "../src/NDSProvider/NDSProvider";
 import { ALL_NDS_LOCALES } from "../src/locales.const";
+import { theme } from "../src";
 import withNDSTheme from "./nds-theme";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce(
@@ -18,35 +19,35 @@ const newViewports = {
   extraSmall: {
     name: "Extra small",
     styles: {
-      width: "320px",
+      width: theme.breakpoints.extraSmall,
       height: "100%",
     },
   },
   small: {
     name: "Small",
     styles: {
-      width: "768px",
+      width: theme.breakpoints.small,
       height: "100%",
     },
   },
   medium: {
     name: "Medium",
     styles: {
-      width: "1024px",
+      width: theme.breakpoints.medium,
       height: "100%",
     },
   },
   large: {
     name: "Large",
     styles: {
-      width: "1360px",
+      width: theme.breakpoints.large,
       height: "100%",
     },
   },
   extraLarge: {
-    name: "Extra large",
+    name: "Extra Large",
     styles: {
-      width: "1920px",
+      width: theme.breakpoints.extraLarge,
       height: "100%",
     },
   },
