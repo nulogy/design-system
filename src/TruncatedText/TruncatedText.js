@@ -104,7 +104,7 @@ const TruncatedText = ({ fullWidth, children, ...props }) =>
   );
 
 TruncatedText.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   indicator: PropTypes.string,
   element: PropTypes.node,
   maxCharacters: PropTypes.number,
