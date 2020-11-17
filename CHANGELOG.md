@@ -1,3 +1,11 @@
+## [4.13.2](https://github.com/nulogy/design-system/compare/v4.13.1...v4.13.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* **Table:** fixes unknown proptypes warnings in BaseTable when using expandable or selectable props (ex. onExpansionChange) ([45a6b67](https://github.com/nulogy/design-system/commit/45a6b678a78f6a6e19a33e354e8c9a84c87f02c8))
+* **TruncatedText:** update children proptype to accept strings or numbers ([c5154ae](https://github.com/nulogy/design-system/commit/c5154ae117bd55d724a89777040668a3b6ac1e36))
+
 ## [4.13.1](https://github.com/nulogy/design-system/compare/v4.13.0...v4.13.1) (2020-11-16)
 
 
