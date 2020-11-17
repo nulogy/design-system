@@ -14,39 +14,41 @@ const getSharedStyles = (color, theme) => {
     lineHeight: theme.lineHeights.base,
     fontSize: `${theme.fontSizes.medium}`,
     padding: `${theme.space.x1} ${theme.space.x2}`,
-    borderRadius: theme.radii.medium
+    borderRadius: theme.radii.medium,
   };
 };
 
-const ApplyMenuLinkStyles = styled.div(({ color, hoverColor, hoverBackground, theme }) => ({
-  "button, a": {
-    ...getSharedStyles(color, theme),
-    transition: ".2s",
-    "&:hover, &:focus": {
-      outline: "none",
-      color: theme.colors.hoverColor || hoverColor,
-      backgroundColor: theme.colors.hoverBackground || hoverBackground,
-      cursor: "pointer"
+const ApplyMenuLinkStyles = styled.div(
+  ({ color, hoverColor, hoverBackground, theme }) => ({
+    "button, a": {
+      ...getSharedStyles(color, theme),
+      transition: ".2s",
+      "&:hover, &:focus": {
+        outline: "none",
+        color: theme.colors.hoverColor || hoverColor,
+        backgroundColor: theme.colors.hoverBackground || hoverBackground,
+        cursor: "pointer",
+      },
+      "&:disabled": {
+        opacity: ".5",
+      },
+      "&:focus": {
+        boxShadow: theme.shadows.focus,
+      },
     },
-    "&:disabled": {
-      opacity: ".5"
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus
-    }
-  }
-}));
+  })
+);
 
 ApplyMenuLinkStyles.propTypes = {
   color: PropTypes.string,
   hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string
+  hoverBackground: PropTypes.string,
 };
 
 ApplyMenuLinkStyles.defaultProps = {
   color: "white",
   hoverColor: "lightBlue",
-  hoverBackground: "black"
+  hoverBackground: "black",
 };
 
 const MenuLink = styled.a(({ color, hoverColor, hoverBackground, theme }) => ({
@@ -57,28 +59,34 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground, theme }) => ({
     outline: "none",
     color: theme.colors[hoverColor] || hoverColor,
     backgroundColor: theme.colors[hoverBackground] || hoverBackground,
-    cursor: "pointer"
+    cursor: "pointer",
   },
   "&:disabled": {
-    opacity: ".5"
+    opacity: ".5",
   },
   "&:focus": {
-    boxShadow: theme.shadows.focus
-  }
+    boxShadow: theme.shadows.focus,
+  },
 }));
 
 const MenuText = styled.div(({ textColor, theme }) => ({
   ...getSharedStyles(textColor, theme),
-  fontWeight: theme.fontWeights.medium
+  fontWeight: theme.fontWeights.medium,
 }));
 
 const Nav = styled.nav({
-  display: "flex"
+  display: "flex",
+  alignItems: "center",
 });
 
 const renderMenuTrigger = (menuItem, themeColorObject) => (
   <div key={menuItem.name}>
-    <MenuTrigger name={menuItem.name} aria-label={menuItem.ariaLabel} menuData={menuItem.items} {...themeColorObject} />
+    <MenuTrigger
+      name={menuItem.name}
+      aria-label={menuItem.ariaLabel}
+      menuData={menuItem.items}
+      {...themeColorObject}
+    />
   </div>
 );
 
@@ -102,7 +110,7 @@ const renderText = (menuItem, themeColorObject) => (
   </MenuText>
 );
 
-const getRenderFunction = menuItem => {
+const getRenderFunction = (menuItem) => {
   if (menuItem.items) {
     return renderMenuTrigger;
   } else if (menuItem.href) {
@@ -114,28 +122,31 @@ const getRenderFunction = menuItem => {
   }
 };
 
-const renderMenuItem = (menuItem, themeColorObject) => getRenderFunction(menuItem)(menuItem, themeColorObject);
+const renderMenuItem = (menuItem, themeColorObject) =>
+  getRenderFunction(menuItem)(menuItem, themeColorObject);
 
 const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
-  <Nav {...props}>{menuData.map(menuItem => renderMenuItem(menuItem, themeColorObject))}</Nav>
+  <Nav {...props}>
+    {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}
+  </Nav>
 );
 
 BaseDesktopMenu.propTypes = {
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  themeColorObject: PropTypes.shape({})
+  themeColorObject: PropTypes.shape({}),
 };
 
 BaseDesktopMenu.defaultProps = {
   menuData: null,
-  themeColorObject: null
+  themeColorObject: null,
 };
 
 const DesktopMenu = styled(BaseDesktopMenu)({
   div: {
     ":not(:last-of-type)": {
-      marginRight: "8px"
-    }
-  }
+      marginRight: "8px",
+    },
+  },
 });
 
 export default DesktopMenu;
