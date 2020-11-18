@@ -116,6 +116,16 @@ const secondaryMenuWithIcon = [
   {
     name: <Icon icon="settings" />,
     ariaLabel: "Settings",
+    key: "Settings",
+    items: [
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" },
+    ],
+  },
+  {
+    name: <Icon icon="chatBubble" />,
+    ariaLabel: "chat",
+    key: "chat",
     items: [
       { name: "Permissions", href: "/" },
       { name: "Manage account", href: "/" },
