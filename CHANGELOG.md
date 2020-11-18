@@ -1,3 +1,10 @@
+## [4.13.4](https://github.com/nulogy/design-system/compare/v4.13.3...v4.13.4) (2020-11-18)
+
+
+### Bug Fixes
+
+* **BrandedNavBar:** add option to set the key on menuItems in case there are duplicate key errors ([#815](https://github.com/nulogy/design-system/issues/815)) ([b670da2](https://github.com/nulogy/design-system/commit/b670da276ca331ee4e4b7cee325c442712b5ca14))
+
 ## [4.13.3](https://github.com/nulogy/design-system/compare/v4.13.2...v4.13.3) (2020-11-18)
 
 
