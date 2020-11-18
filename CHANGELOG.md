@@ -1,3 +1,10 @@
+## [4.13.5](https://github.com/nulogy/design-system/compare/v4.13.4...v4.13.5) (2020-11-18)
+
+
+### Bug Fixes
+
+* downgrade react select packages due to downstream bug ([#816](https://github.com/nulogy/design-system/issues/816)) ([59d0330](https://github.com/nulogy/design-system/commit/59d0330f0778baa6d1804bb492acfbbcde5c01d2))
+
 ## [4.13.4](https://github.com/nulogy/design-system/compare/v4.13.3...v4.13.4) (2020-11-18)
 
 
