@@ -22,10 +22,10 @@ class PreventBodyElementScrolling extends React.Component {
 }
 
 PreventBodyElementScrolling.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 PreventBodyElementScrolling.defaultProps = {
-  children: null
+  children: null,
 };
 export default PreventBodyElementScrolling;

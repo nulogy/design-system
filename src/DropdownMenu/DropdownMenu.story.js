@@ -1,14 +1,20 @@
 import React from "react";
-import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, Button } from "../index";
+import {
+  DropdownMenu,
+  DropdownLink,
+  DropdownButton,
+  DropdownItem,
+  Button,
+} from "../index";
 
 const customColors = {
   color: "white",
   hoverColor: "white",
-  bgHoverColor: "black"
+  bgHoverColor: "black",
 };
 
 export default {
-  title: "Components/DropdownMenu"
+  title: "Components/DropdownMenu",
 };
 
 export const _DropdownMenu = () => (
@@ -19,7 +25,7 @@ export const _DropdownMenu = () => (
 );
 
 _DropdownMenu.story = {
-  name: "DropdownMenu"
+  name: "DropdownMenu",
 };
 
 export const WithCustomTrigger = () => (
@@ -34,11 +40,16 @@ export const WithCustomTrigger = () => (
 );
 
 WithCustomTrigger.story = {
-  name: "with custom trigger"
+  name: "with custom trigger",
 };
 
 export const WithCustomColors = () => (
-  <DropdownMenu defaultOpen backgroundColor="blackBlue" openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+  <DropdownMenu
+    defaultOpen
+    backgroundColor="blackBlue"
+    openAriaLabel="open dropdown"
+    closeAriaLabel="close dropdown"
+  >
     <DropdownLink href="/" {...customColors}>
       Dropdown Link
     </DropdownLink>
@@ -49,17 +60,19 @@ export const WithCustomColors = () => (
 );
 
 WithCustomColors.story = {
-  name: "with custom colors"
+  name: "with custom colors",
 };
 
 export const WithButtonClosingMenu = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-    {({ closeMenu }) => <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>}
+    {({ closeMenu }) => (
+      <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>
+    )}
   </DropdownMenu>
 );
 
 WithButtonClosingMenu.story = {
-  name: "with button closing menu"
+  name: "with button closing menu",
 };
 
 export const WithCustomItem = () => (
@@ -71,11 +84,15 @@ export const WithCustomItem = () => (
 );
 
 WithCustomItem.story = {
-  name: "with custom item"
+  name: "with custom item",
 };
 
 export const SetToDefaultOpen = () => (
-  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+  <DropdownMenu
+    defaultOpen
+    openAriaLabel="open dropdown"
+    closeAriaLabel="close dropdown"
+  >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     <DropdownItem>
@@ -87,16 +104,20 @@ export const SetToDefaultOpen = () => (
 );
 
 SetToDefaultOpen.story = {
-  name: "set to defaultOpen"
+  name: "set to defaultOpen",
 };
 
 export const SetToDisabled = () => (
-  <DropdownMenu disabled openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+  <DropdownMenu
+    disabled
+    openAriaLabel="open dropdown"
+    closeAriaLabel="close dropdown"
+  >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };

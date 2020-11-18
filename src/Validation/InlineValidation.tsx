@@ -8,11 +8,11 @@ import { SpaceProps } from "styled-system";
 
 const Wrapper = styled.div(({ theme }) => ({
   [`${Text}`]: {
-    marginBottom: theme.space.x1
+    marginBottom: theme.space.x1,
   },
   "> *:last-child": {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 }));
 
 type InlineValidationProps = SpaceProps & {
@@ -44,6 +44,6 @@ InlineValidation.defaultProps = {
   className: undefined,
   errorMessage: undefined,
   errorList: undefined,
-  children: undefined
+  children: undefined,
 };
 export default InlineValidation;

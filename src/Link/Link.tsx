@@ -1,12 +1,19 @@
 import styled, { CSSObject } from "styled-components";
-import { color, space, typography, ColorProps, SpaceProps, LayoutProps } from "styled-system";
+import {
+  color,
+  space,
+  typography,
+  ColorProps,
+  SpaceProps,
+  LayoutProps,
+} from "styled-system";
 import { darken } from "polished";
 import { ThemeType } from "../theme.type";
 import { themeGet } from "@styled-system/theme-get";
 
 const resetButtonStyles = {
   background: "none",
-  border: "none"
+  border: "none",
 };
 
 type LinkProps = ColorProps &
@@ -23,7 +30,9 @@ type LinkProps = ColorProps &
   };
 
 const getHoverColor = (props: LinkProps) =>
-  props.hover ? props.color : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
+  props.hover
+    ? props.color
+    : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
 
 const Link = styled.a<LinkProps>(
   color,
@@ -35,14 +44,14 @@ const Link = styled.a<LinkProps>(
     textDecoration: underline ? "underline" : "none",
     "&:hover": {
       cursor: "pointer",
-      color: getHoverColor(props)
-    }
+      color: getHoverColor(props),
+    },
   })
 );
 Link.defaultProps = {
   className: undefined,
   underline: true,
   fontSize: "medium",
-  color: "blue"
+  color: "blue",
 };
 export default Link;

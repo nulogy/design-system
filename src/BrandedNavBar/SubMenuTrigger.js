@@ -17,40 +17,48 @@ const StyledButton = styled.button(({ isOpen }) => ({
   border: "none",
   borderLeft: `${theme.space.half} solid transparent`,
   "&:hover": {
-    backgroundColor: theme.colors.lightGrey
+    backgroundColor: theme.colors.lightGrey,
   },
   "&:disabled": {
-    opacity: ".5"
+    opacity: ".5",
   },
   "&:focus": {
     outline: "none",
     color: theme.colors.darkBlue,
     backgroundColor: theme.colors.lightGrey,
-    borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`
+    borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`,
   },
   backgroundColor: isOpen ? theme.colors.lightGrey : "transparent",
   textDecoration: "none",
   textAlign: "left",
-  cursor: "pointer"
+  cursor: "pointer",
 }));
 
-const SubMenuTriggerButton = React.forwardRef(({ name, isOpen, ...props }, ref) => (
-  <StyledButton isOpen={isOpen} ref={ref} {...props}>
-    {name}
-    <Icon style={{ position: "absolute", top: "7px" }} icon="rightArrow" color="darkBlue" size="20px" p="2px" />
-  </StyledButton>
-));
+const SubMenuTriggerButton = React.forwardRef(
+  ({ name, isOpen, ...props }, ref) => (
+    <StyledButton isOpen={isOpen} ref={ref} {...props}>
+      {name}
+      <Icon
+        style={{ position: "absolute", top: "7px" }}
+        icon="rightArrow"
+        color="darkBlue"
+        size="20px"
+        p="2px"
+      />
+    </StyledButton>
+  )
+);
 
 SubMenuTriggerButton.propTypes = {
   name: PropTypes.string.isRequired,
-  isOpen: PropTypes.bool
+  isOpen: PropTypes.bool,
 };
 
 SubMenuTriggerButton.defaultProps = {
-  isOpen: false
+  isOpen: false,
 };
 
-const SubMenuTrigger = props => {
+const SubMenuTrigger = (props) => {
   const { menuData, name, onItemClick, ...otherProps } = props;
   return (
     <NavBarDropdownMenu
@@ -61,10 +69,15 @@ const SubMenuTrigger = props => {
       {...otherProps}
       dropdownMenuContainerEventHandlers={({ openMenu, closeMenu }) => ({
         onMouseEnter: openMenu,
-        onMouseLeave: closeMenu
+        onMouseLeave: closeMenu,
       })}
       trigger={({ closeMenu, openMenu, isOpen }) => (
-        <SubMenuTriggerButton isOpen={isOpen} name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
+        <SubMenuTriggerButton
+          isOpen={isOpen}
+          name={name}
+          onMouseEnter={openMenu}
+          onMouseLeave={closeMenu}
+        />
       )}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
@@ -77,12 +90,12 @@ const SubMenuTrigger = props => {
 SubMenuTrigger.propTypes = {
   name: PropTypes.string.isRequired,
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  onItemClick: PropTypes.func
+  onItemClick: PropTypes.func,
 };
 
 SubMenuTrigger.defaultProps = {
   menuData: null,
-  onItemClick: null
+  onItemClick: null,
 };
 
 export default SubMenuTrigger;

@@ -17,29 +17,29 @@ const getSize = (size: SizeType, theme: ThemeType) => {
       return {
         fontSize: `${theme.fontSizes.small}`,
         lineHeight: `${theme.lineHeights.smallTextCompressed}`,
-        padding: `${subPx(theme.space.half)} ${theme.space.x1}`
+        padding: `${subPx(theme.space.half)} ${theme.space.x1}`,
       };
     case "medium":
       return {
         fontSize: `${theme.fontSizes.medium}`,
-        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`
+        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
       };
     case "large":
       return {
         fontSize: `${theme.fontSizes.large}`,
         lineHeight: `${theme.lineHeights.subsectionTitle}`,
-        padding: `${subPx(theme.space.x2)} ${theme.space.x3}`
+        padding: `${subPx(theme.space.x2)} ${theme.space.x3}`,
       };
     default:
       return {
         fontSize: `${theme.fontSizes.medium}`,
-        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`
+        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
       };
   }
 };
 const WrapperButton = styled.button<any>(
   ({ fullWidth }: any) => ({
-    width: fullWidth ? "100%" : "auto"
+    width: fullWidth ? "100%" : "auto",
   }),
   ({ disabled, theme }) => ({
     display: "inline-flex",
@@ -57,7 +57,7 @@ const WrapperButton = styled.button<any>(
     margin: theme.space.none,
     transition: "background-color .2s, transform .2s ease-in",
     "&:hover": {
-      backgroundColor: disabled ? null : theme.colors.lightBlue
+      backgroundColor: disabled ? null : theme.colors.lightBlue,
     },
     "&:focus": {
       outline: "none",
@@ -65,18 +65,18 @@ const WrapperButton = styled.button<any>(
       boxShadow: theme.shadows.focus,
       backgroundColor: theme.colors.white,
       "&:hover": {
-        backgroundColor: theme.colors.lightBlue
-      }
+        backgroundColor: theme.colors.lightBlue,
+      },
     },
     "&:active": {
-      transform: "scale(0.98)"
+      transform: "scale(0.98)",
     },
     "&:disabled": {
-      opacity: ".5"
-    }
+      opacity: ".5",
+    },
   }),
   ({ size, theme }: any) => ({
-    ...getSize(size, theme)
+    ...getSize(size, theme),
   }),
   space
 );
@@ -95,13 +95,22 @@ export type ButtonProps = SpaceProps &
 const Button: React.SFC<ButtonProps> = React.forwardRef(
   ({ children, iconSide, icon, className, asLink, ...props }, ref) => {
     const {
-      lineHeights: { smallTextCompressed }
+      lineHeights: { smallTextCompressed },
     } = NDSTheme;
     return (
-      <WrapperButton as={asLink ? "a" : undefined} ref={ref} className={className} {...props}>
-        {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
+      <WrapperButton
+        as={asLink ? "a" : undefined}
+        ref={ref}
+        className={className}
+        {...props}
+      >
+        {icon && iconSide === "left" && (
+          <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />
+        )}
         {children}
-        {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
+        {icon && iconSide === "right" && (
+          <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />
+        )}
       </WrapperButton>
     );
   }
@@ -113,6 +122,6 @@ Button.defaultProps = {
   size: "medium",
   disabled: false,
   fullWidth: false,
-  asLink: false
+  asLink: false,
 };
 export default Button;

@@ -9,7 +9,12 @@ const insertSeparators = (items: any, className: any) => {
     return acc.concat(
       current,
       // eslint-disable-next-line react/no-array-index-key
-      <StyledLi aria-hidden key={`separator-${index}`} className={className} px="x1">
+      <StyledLi
+        aria-hidden
+        key={`separator-${index}`}
+        className={className}
+        px="x1"
+      >
         <Icon icon="rightArrow" />
       </StyledLi>
     );
@@ -24,8 +29,8 @@ const StyledLi: React.SFC<any> = styled.li(
     alignSelf: "center",
     color: theme.colors.darkGrey,
     "a:visited": {
-      color: theme.colors.darkBlue
-    }
+      color: theme.colors.darkBlue,
+    },
   }),
   space,
   layout,
@@ -36,21 +41,25 @@ const StyledLi: React.SFC<any> = styled.li(
 const StyledOl = styled.ol(() => ({
   margin: 0,
   padding: 0,
-  display: "flex"
+  display: "flex",
 }));
 
 type BreadcrumbsProps = {
   children: any;
   as?: string | undefined;
 };
-const Breadcrumbs: React.SFC<BreadcrumbsProps> = ({ children, as, ...props }) => {
+const Breadcrumbs: React.SFC<BreadcrumbsProps> = ({
+  children,
+  as,
+  ...props
+}) => {
   const childrenArr = Array.isArray(children) ? children : [children];
   const allItems = [...childrenArr].map((child, index) => {
     return (
       // eslint-disable-next-line react/no-array-index-key
       <StyledLi key={`child-${index}`}>
         {React.cloneElement(child, {
-          color: "darkBlue"
+          color: "darkBlue",
         })}
       </StyledLi>
     );
@@ -62,6 +71,6 @@ const Breadcrumbs: React.SFC<BreadcrumbsProps> = ({ children, as, ...props }) =>
   );
 };
 Breadcrumbs.defaultProps = {
-  as: "nav"
+  as: "nav",
 };
 export default Breadcrumbs;

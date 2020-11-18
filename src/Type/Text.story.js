@@ -3,14 +3,14 @@ import { Text } from ".";
 import { Box } from "../Box";
 
 export default {
-  title: "Components/Text"
+  title: "Components/Text",
 };
 
 export const _Text = () => <Text>Default text</Text>;
 export const WithAColor = () => <Text color="blue">Blue text</Text>;
 
 WithAColor.story = {
-  name: "With a color"
+  name: "With a color",
 };
 
 export const WithASize = () => (
@@ -35,7 +35,7 @@ export const WithASize = () => (
 );
 
 WithASize.story = {
-  name: "With a size"
+  name: "With a size",
 };
 
 export const WithACustomMargin = () => (
@@ -46,7 +46,7 @@ export const WithACustomMargin = () => (
 );
 
 WithACustomMargin.story = {
-  name: "With a custom margin"
+  name: "With a custom margin",
 };
 
 export const SetToInline = () => (
@@ -59,7 +59,7 @@ export const SetToInline = () => (
 );
 
 SetToInline.story = {
-  name: "Set to inline"
+  name: "Set to inline",
 };
 
 export const SetToDisabled = () => (
@@ -81,5 +81,5 @@ export const SetToDisabled = () => (
 );
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };

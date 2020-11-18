@@ -1,9 +1,9 @@
-import { system } from 'styled-system';
+import { system } from "styled-system";
 
 export type CursorProps = {
-  cursor?: "string"
+  cursor?: "string";
 };
 
 export const cursor = system({
-  cursor: true
+  cursor: true,
 });

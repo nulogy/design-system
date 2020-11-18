@@ -7,7 +7,7 @@ export const columnPropType = PropTypes.shape({
   cellFormatter: PropTypes.func,
   cellRenderer: PropTypes.func,
   headerRenderer: PropTypes.func,
-  width: PropTypes.string
+  width: PropTypes.string,
 });
 
 export const rowPropType = PropTypes.objectOf(
@@ -17,7 +17,7 @@ export const rowPropType = PropTypes.objectOf(
     PropTypes.bool,
     PropTypes.func,
     PropTypes.node,
-    PropTypes.shape({})
+    PropTypes.shape({}),
   ])
 );
 

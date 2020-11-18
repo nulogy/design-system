@@ -6,11 +6,11 @@ module.exports = {
       {
         loose: true,
         targets: { browsers: "defaults" },
-        useBuiltIns: "entry"
-      }
+        useBuiltIns: "entry",
+      },
     ],
     "@babel/preset-react",
-    "@babel/preset-typescript"
+    "@babel/preset-typescript",
   ],
   plugins: [
     "babel-plugin-styled-components",
@@ -18,11 +18,11 @@ module.exports = {
     ["@babel/plugin-proposal-private-methods", { loose: true }],
     ["@babel/plugin-proposal-private-property-in-object", { loose: true }],
     "inline-json-import",
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
   ],
   env: {
     test: {
-      plugins: ["babel-plugin-styled-components", "require-context-hook"]
-    }
-  }
+      plugins: ["babel-plugin-styled-components", "require-context-hook"],
+    },
+  },
 };

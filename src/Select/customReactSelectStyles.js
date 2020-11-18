@@ -25,7 +25,7 @@ const getShadow = ({ errored, isOpen, theme }) => {
 const customStyles = ({ theme, error, maxHeight, windowed }) => {
   return {
     option: () => ({
-      height: 38
+      height: 38,
     }),
     control: (provided, state) => ({
       display: "flex",
@@ -35,45 +35,56 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       width: "100%",
       fontSize: theme.fontSizes.medium,
       lineHeight: theme.lineHeights.base,
-      background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
+      background: state.isDisabled
+        ? theme.colors.whiteGrey
+        : theme.colors.white,
       border: `1px solid ${theme.colors.grey}`,
       borderColor: getBorderColor({
         errored: error,
         disabled: state.isDisabled,
         isOpen: state.selectProps.menuIsOpen,
         isFocused: state.isFocused,
-        theme
+        theme,
       }),
       boxSizing: "border-box",
-      boxShadow: getShadow({ errored: error, isOpen: state.selectProps.menuIsOpen, theme }),
+      boxShadow: getShadow({
+        errored: error,
+        isOpen: state.selectProps.menuIsOpen,
+        theme,
+      }),
       borderRadius: theme.radii.medium,
-      borderBottomLeftRadius: state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
+      borderBottomLeftRadius:
+        state.selectProps.menuIsOpen && state.selectProps.options.length
+          ? 0
+          : theme.radii.medium,
       borderBottomRightRadius:
-        state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
+        state.selectProps.menuIsOpen && state.selectProps.options.length
+          ? 0
+          : theme.radii.medium,
       "&:hover, &:focus": {
         borderColor: getBorderColor({
           errored: error,
           disabled: state.isDisabled,
           isOpen: state.selectProps.menuIsOpen,
           isFocused: true,
-          theme
-        })
-      }
+          theme,
+        }),
+      },
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
-      color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey
+      color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey,
     }),
-    indicatorsContainer: provided => ({
+    indicatorsContainer: (provided) => ({
       ...provided,
-      color: theme.colors.grey
+      color: theme.colors.grey,
     }),
     input: () => ({}),
-    valueContainer: provided => ({
+    valueContainer: (provided) => ({
       ...provided,
       padding: 0,
       overflow: "auto",
-      maxHeight: "150px"
+      maxHeight: "150px",
     }),
     menu: (provided, state) => ({
       marginTop: 0,
@@ -88,31 +99,31 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
         isOpen: true,
         disabled: state.isDisabled,
         isFocused: false,
-        theme
+        theme,
       }),
       borderBottomStyle: "solid",
       borderLeftStyle: "solid",
       borderRightStyle: "solid",
       borderRadius: `0 0 4px 4px`,
-      boxShadow: getShadow({ errored: error, isOpen: true, theme })
+      boxShadow: getShadow({ errored: error, isOpen: true, theme }),
     }),
-    menuList: provided => ({
+    menuList: (provided) => ({
       ...provided,
       minWidth: "fit-content",
       padding: 0,
       maxHeight: parseInt(maxHeight, 10),
       borderRadius: theme.radii.medium,
       marginTop: windowed ? "-4px" : 0,
-      marginBottom: windowed ? "-4px" : 0
+      marginBottom: windowed ? "-4px" : 0,
     }),
-    multiValue: provided => ({
+    multiValue: (provided) => ({
       ...provided,
       background: theme.colors.lightGrey,
       color: theme.colors.black,
       margin: `2px ${theme.space.x1} 2px 0`,
       "&:last-child": {
-        marginRight: theme.space.half
-      }
+        marginRight: theme.space.half,
+      },
     }),
     multiValueLabel: () => ({
       textOverflow: "ellipsis",
@@ -122,9 +133,9 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       borderRadius: theme.radii.small,
       fontSize: theme.fontSizes.small,
       padding: theme.space.half,
-      paddingLeft: theme.space.x1
+      paddingLeft: theme.space.x1,
     }),
-    multiValueRemove: provided => ({
+    multiValueRemove: (provided) => ({
       ...provided,
       svg: { fill: theme.colors.black },
       borderBottomLeftRadius: 0,
@@ -132,23 +143,25 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       "&:hover": {
         background: theme.colors.darkGrey,
         cursor: "pointer",
-        svg: { fill: theme.colors.white }
-      }
+        svg: { fill: theme.colors.white },
+      },
     }),
-    noOptionsMessage: provided => ({
+    noOptionsMessage: (provided) => ({
       ...provided,
       color: theme.colors.black,
-      fontSize: "14px"
+      fontSize: "14px",
     }),
     indicatorSeparator: (provided, state) => ({
       ...provided,
       display: state.isMulti && state.hasValue ? "block" : "none",
-      borderLeft: `1px solid ${theme.colors.grey}`
+      borderLeft: `1px solid ${theme.colors.grey}`,
     }),
     placeholder: (provided, state) => ({
       ...provided,
-      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)"
-    })
+      color: state.isDisabled
+        ? transparentize(0.6667, theme.colors.black)
+        : "hsl(0,0%,50%)",
+    }),
   };
 };
 

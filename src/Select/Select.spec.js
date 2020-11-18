@@ -8,7 +8,7 @@ describe("select", () => {
     const options = [
       { label: "One", value: "one" },
       { label: "Two", value: "two" },
-      { label: "Three", value: "three" }
+      { label: "Three", value: "three" },
     ];
 
     const callback = jest.fn();
@@ -26,10 +26,12 @@ describe("select", () => {
     const options = [
       { label: "One", value: "one" },
       { label: "Two", value: "two" },
-      { label: "Three", value: "three" }
+      { label: "Three", value: "three" },
     ];
 
-    const { container, queryByText } = renderWithNDSProvider(<Select options={options} defaultValue="two" />);
+    const { container, queryByText } = renderWithNDSProvider(
+      <Select options={options} defaultValue="two" />
+    );
 
     expect(container).toHaveTextContent("Two");
     selectOption("Three", container, queryByText);
@@ -42,7 +44,7 @@ describe("multi select", () => {
     const options = [
       { label: "One", value: "one" },
       { label: "Two", value: "two" },
-      { label: "Three", value: "three" }
+      { label: "Three", value: "three" },
     ];
 
     const callback = jest.fn();
@@ -61,10 +63,12 @@ describe("multi select", () => {
     const options = [
       { label: "One", value: "one" },
       { label: "Two", value: "two" },
-      { label: "Three", value: "three" }
+      { label: "Three", value: "three" },
     ];
 
-    const { container } = renderWithNDSProvider(<Select options={options} multiselect defaultValue={["one", "two"]} />);
+    const { container } = renderWithNDSProvider(
+      <Select options={options} multiselect defaultValue={["one", "two"]} />
+    );
 
     expect(container).toHaveTextContent("One");
     expect(container).toHaveTextContent("Two");

@@ -12,7 +12,7 @@ import { ThemeType } from "../theme.type";
 const labelTextStyles = (theme: ThemeType) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase
+  lineHeight: theme.lineHeights.smallTextBase,
 });
 
 type MaybeToggleTitleProps = React.ComponentPropsWithRef<"div"> & {
@@ -34,7 +34,9 @@ const MaybeToggleTitle: React.SFC<MaybeToggleTitleProps> = ({
     <div {...props}>
       <Box mb={children && "x1"}>
         <span style={labelTextStyles(themeContext)}>{labelText}</span>
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
+        {requirementText && (
+          <RequirementText>{requirementText}</RequirementText>
+        )}
         {helpText && <HelpText>{helpText}</HelpText>}
       </Box>
       {children}
@@ -82,7 +84,7 @@ const BaseToggle = ({
   "data-testid": dataTestId,
   ...props
 }: BaseToggleProps) => {
-  const handleClick = e => {
+  const handleClick = (e) => {
     if (onClick) onClick(e);
   };
   return (
@@ -93,7 +95,12 @@ const BaseToggle = ({
         requirementText={requirementText}
         helpText={helpText}
       >
-        <ClickInputLabel as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
+        <ClickInputLabel
+          as="div"
+          onClick={onClick}
+          disabled={disabled}
+          data-testid={dataTestId}
+        >
           <ToggleButton
             id={id}
             checked={toggled}
@@ -132,12 +139,12 @@ BaseToggle.defaultProps = {
   labelText: undefined,
   requirementText: undefined,
   error: false,
-  onClick: () => {}
+  onClick: () => {},
 };
 
 const StyledToggle = styled(BaseToggle)(({ theme }) => ({
   padding: `${theme.space.half} 0`,
-  alignItems: "flex-start"
+  alignItems: "flex-start",
 }));
 
 type StatefulToggleProps = BaseToggleProps & {
@@ -145,34 +152,50 @@ type StatefulToggleProps = BaseToggleProps & {
   onClick?: boolean;
 };
 
-const StatefulToggle = ({ defaultToggled, onClick, ...props }: StatefulToggleProps) => {
+const StatefulToggle = ({
+  defaultToggled,
+  onClick,
+  ...props
+}: StatefulToggleProps) => {
   const [toggled, setToggled] = useState(defaultToggled);
 
-  const handleClick = e => {
+  const handleClick = (e) => {
     setToggled(!toggled);
     if (onClick) onClick(e);
   };
 
-  return <StyledToggle toggled={toggled} onClick={handleClick} value={toggled ? "on" : "off"} {...props} />;
+  return (
+    <StyledToggle
+      toggled={toggled}
+      onClick={handleClick}
+      value={toggled ? "on" : "off"}
+      {...props}
+    />
+  );
 };
 
 StatefulToggle.propTypes = {
   defaultToggled: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 StatefulToggle.defaultProps = {
   defaultToggled: undefined,
-  onClick: () => {}
+  onClick: () => {},
 };
 
 type ToggleProps = StatefulToggleProps;
 
 const Toggle = ({ toggled, ...props }: ToggleProps) =>
-  toggled === undefined ? <StatefulToggle {...props} /> : <StyledToggle toggled={toggled} {...props} />;
+  toggled === undefined ? (
+    <StatefulToggle {...props} />
+  ) : (
+    <StyledToggle toggled={toggled} {...props} />
+  );
 
-const ToggleComponent = React.forwardRef<React.ComponentPropsWithRef<"input">, ToggleProps>((props, ref) => (
-  <Toggle innerRef={ref} {...props} />
-));
+const ToggleComponent = React.forwardRef<
+  React.ComponentPropsWithRef<"input">,
+  ToggleProps
+>((props, ref) => <Toggle innerRef={ref} {...props} />);
 
 export default ToggleComponent;

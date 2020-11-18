@@ -4,8 +4,8 @@ import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 export default {
   title: "Components/Tooltip",
   parameters: {
-    chromatic: { disable: true }
-  }
+    chromatic: { disable: true },
+  },
 };
 
 export const _Tooltip = () => (
@@ -29,7 +29,7 @@ export const WithWrappedText = () => (
 );
 
 WithWrappedText.story = {
-  name: "with wrapped text"
+  name: "with wrapped text",
 };
 
 export const WithCustomMaxWidth = () => (
@@ -46,7 +46,7 @@ export const WithCustomMaxWidth = () => (
 );
 
 WithCustomMaxWidth.story = {
-  name: "with custom maxWidth"
+  name: "with custom maxWidth",
 };
 
 export const WithPlacement = () => (
@@ -99,7 +99,7 @@ export const WithPlacement = () => (
 );
 
 WithPlacement.story = {
-  name: "with placement"
+  name: "with placement",
 };
 
 export const WithLinkPassedIn = () => (
@@ -109,7 +109,7 @@ export const WithLinkPassedIn = () => (
 );
 
 WithLinkPassedIn.story = {
-  name: "with Link passed in"
+  name: "with Link passed in",
 };
 
 export const WithButtonPassedIn = () => (
@@ -119,7 +119,7 @@ export const WithButtonPassedIn = () => (
 );
 
 WithButtonPassedIn.story = {
-  name: "with Button passed in"
+  name: "with Button passed in",
 };
 
 export const WithCustomShowDelay = () => (
@@ -129,7 +129,7 @@ export const WithCustomShowDelay = () => (
 );
 
 WithCustomShowDelay.story = {
-  name: "with custom showDelay"
+  name: "with custom showDelay",
 };
 
 export const WithCustomHideDelay = () => (
@@ -139,7 +139,7 @@ export const WithCustomHideDelay = () => (
 );
 
 WithCustomHideDelay.story = {
-  name: "with custom hideDelay"
+  name: "with custom hideDelay",
 };
 
 export const WithOtherFocusableElements = () => (
@@ -167,7 +167,7 @@ export const WithOtherFocusableElements = () => (
 );
 
 WithOtherFocusableElements.story = {
-  name: "with other focusable elements"
+  name: "with other focusable elements",
 };
 
 export const OpenByDefault = () => (
@@ -177,5 +177,5 @@ export const OpenByDefault = () => (
 );
 
 OpenByDefault.story = {
-  name: "open by default"
+  name: "open by default",
 };

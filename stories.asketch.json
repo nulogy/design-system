@@ -122,20 +122,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 20, "width": 29.53125, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 20,
+            "width": 29.53125,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 29.53125, "height": 20, "x": 0, "y": 0 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 29.53125,
+        "height": 20,
+        "x": 0,
+        "y": 0
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -247,20 +276,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 20, "width": 29.53125, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 20,
+            "width": 29.53125,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 29.53125, "height": 20, "x": 0, "y": 120 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 29.53125,
+        "height": 20,
+        "x": 0,
+        "y": 120
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -469,7 +527,13 @@
                       {
                         "_class": "border",
                         "isEnabled": true,
-                        "color": { "_class": "color", "red": 1, "green": 1, "blue": 1, "alpha": 1 },
+                        "color": {
+                          "_class": "color",
+                          "red": 1,
+                          "green": 1,
+                          "blue": 1,
+                          "alpha": 1
+                        },
                         "fillType": 0,
                         "position": 1,
                         "thickness": 0
@@ -480,7 +544,11 @@
                     "endDecorationType": 0,
                     "miterLimit": 10,
                     "startDecorationType": 0,
-                    "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                    "contextSettings": {
+                      "_class": "graphicsContextSettings",
+                      "blendMode": 0,
+                      "opacity": "1"
+                    }
                   },
                   "frame": {
                     "_class": "rect",
@@ -551,9 +619,20 @@
                 "endDecorationType": 0,
                 "miterLimit": 10,
                 "startDecorationType": 0,
-                "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                "contextSettings": {
+                  "_class": "graphicsContextSettings",
+                  "blendMode": 0,
+                  "opacity": "1"
+                }
               },
-              "frame": { "_class": "rect", "constrainProportions": false, "height": 92, "width": 320, "x": 0, "y": 0 },
+              "frame": {
+                "_class": "rect",
+                "constrainProportions": false,
+                "height": 92,
+                "width": 320,
+                "x": 0,
+                "y": 0
+              },
               "hasClickThrough": false,
               "windingRule": 1
             }
@@ -569,20 +648,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 92, "width": 320, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 92,
+            "width": 320,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 320, "height": 92, "x": 0, "y": 240 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 320,
+        "height": 92,
+        "x": 0,
+        "y": 240
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -769,7 +877,13 @@
                   {
                     "_class": "border",
                     "isEnabled": true,
-                    "color": { "_class": "color", "red": 0, "green": 0, "blue": 0, "alpha": 1 },
+                    "color": {
+                      "_class": "color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0,
+                      "alpha": 1
+                    },
                     "fillType": 0,
                     "position": 1,
                     "thickness": 0
@@ -780,9 +894,20 @@
                 "endDecorationType": 0,
                 "miterLimit": 10,
                 "startDecorationType": 0,
-                "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                "contextSettings": {
+                  "_class": "graphicsContextSettings",
+                  "blendMode": 0,
+                  "opacity": "1"
+                }
               },
-              "frame": { "_class": "rect", "constrainProportions": false, "height": 96, "width": 320, "x": 0, "y": 0 },
+              "frame": {
+                "_class": "rect",
+                "constrainProportions": false,
+                "height": 96,
+                "width": 320,
+                "x": 0,
+                "y": 0
+              },
               "hasClickThrough": false,
               "windingRule": 1
             },
@@ -963,7 +1088,13 @@
                           {
                             "_class": "border",
                             "isEnabled": true,
-                            "color": { "_class": "color", "red": 1, "green": 1, "blue": 1, "alpha": 1 },
+                            "color": {
+                              "_class": "color",
+                              "red": 1,
+                              "green": 1,
+                              "blue": 1,
+                              "alpha": 1
+                            },
                             "fillType": 0,
                             "position": 1,
                             "thickness": 0
@@ -974,7 +1105,11 @@
                         "endDecorationType": 0,
                         "miterLimit": 10,
                         "startDecorationType": 0,
-                        "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                        "contextSettings": {
+                          "_class": "graphicsContextSettings",
+                          "blendMode": 0,
+                          "opacity": "1"
+                        }
                       },
                       "frame": {
                         "_class": "rect",
@@ -999,7 +1134,11 @@
                     "endDecorationType": 0,
                     "miterLimit": 10,
                     "startDecorationType": 0,
-                    "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                    "contextSettings": {
+                      "_class": "graphicsContextSettings",
+                      "blendMode": 0,
+                      "opacity": "1"
+                    }
                   },
                   "frame": {
                     "_class": "rect",
@@ -1167,7 +1306,13 @@
                           {
                             "_class": "border",
                             "isEnabled": true,
-                            "color": { "_class": "color", "red": 0, "green": 0, "blue": 0, "alpha": 1 },
+                            "color": {
+                              "_class": "color",
+                              "red": 0,
+                              "green": 0,
+                              "blue": 0,
+                              "alpha": 1
+                            },
                             "fillType": 0,
                             "position": 1,
                             "thickness": 0
@@ -1178,7 +1323,11 @@
                         "endDecorationType": 0,
                         "miterLimit": 10,
                         "startDecorationType": 0,
-                        "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                        "contextSettings": {
+                          "_class": "graphicsContextSettings",
+                          "blendMode": 0,
+                          "opacity": "1"
+                        }
                       },
                       "frame": {
                         "_class": "rect",
@@ -1249,7 +1398,11 @@
                     "endDecorationType": 0,
                     "miterLimit": 10,
                     "startDecorationType": 0,
-                    "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                    "contextSettings": {
+                      "_class": "graphicsContextSettings",
+                      "blendMode": 0,
+                      "opacity": "1"
+                    }
                   },
                   "frame": {
                     "_class": "rect",
@@ -1274,9 +1427,20 @@
                 "endDecorationType": 0,
                 "miterLimit": 10,
                 "startDecorationType": 0,
-                "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                "contextSettings": {
+                  "_class": "graphicsContextSettings",
+                  "blendMode": 0,
+                  "opacity": "1"
+                }
               },
-              "frame": { "_class": "rect", "constrainProportions": false, "height": 96, "width": 320, "x": 0, "y": 0 },
+              "frame": {
+                "_class": "rect",
+                "constrainProportions": false,
+                "height": 96,
+                "width": 320,
+                "x": 0,
+                "y": 0
+              },
               "hasClickThrough": false,
               "windingRule": 1
             }
@@ -1292,20 +1456,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 96, "width": 320, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 96,
+            "width": 320,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 320, "height": 96, "x": 0, "y": 432 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 320,
+        "height": 96,
+        "x": 0,
+        "y": 432
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -1417,20 +1610,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 20, "width": 29.53125, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 20,
+            "width": 29.53125,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 29.53125, "height": 20, "x": 420, "y": 0 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 29.53125,
+        "height": 20,
+        "x": 420,
+        "y": 0
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -1542,20 +1764,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 20, "width": 29.53125, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 20,
+            "width": 29.53125,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 29.53125, "height": 20, "x": 420, "y": 120 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 29.53125,
+        "height": 20,
+        "x": 420,
+        "y": 120
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -1764,7 +2015,13 @@
                       {
                         "_class": "border",
                         "isEnabled": true,
-                        "color": { "_class": "color", "red": 1, "green": 1, "blue": 1, "alpha": 1 },
+                        "color": {
+                          "_class": "color",
+                          "red": 1,
+                          "green": 1,
+                          "blue": 1,
+                          "alpha": 1
+                        },
                         "fillType": 0,
                         "position": 1,
                         "thickness": 0
@@ -1775,7 +2032,11 @@
                     "endDecorationType": 0,
                     "miterLimit": 10,
                     "startDecorationType": 0,
-                    "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                    "contextSettings": {
+                      "_class": "graphicsContextSettings",
+                      "blendMode": 0,
+                      "opacity": "1"
+                    }
                   },
                   "frame": {
                     "_class": "rect",
@@ -1846,9 +2107,20 @@
                 "endDecorationType": 0,
                 "miterLimit": 10,
                 "startDecorationType": 0,
-                "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                "contextSettings": {
+                  "_class": "graphicsContextSettings",
+                  "blendMode": 0,
+                  "opacity": "1"
+                }
               },
-              "frame": { "_class": "rect", "constrainProportions": false, "height": 52, "width": 1920, "x": 0, "y": 0 },
+              "frame": {
+                "_class": "rect",
+                "constrainProportions": false,
+                "height": 52,
+                "width": 1920,
+                "x": 0,
+                "y": 0
+              },
               "hasClickThrough": false,
               "windingRule": 1
             }
@@ -1864,20 +2136,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 52, "width": 1920, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 52,
+            "width": 1920,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 1920, "height": 52, "x": 420, "y": 240 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 1920,
+        "height": 52,
+        "x": 420,
+        "y": 240
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -2064,7 +2365,13 @@
                   {
                     "_class": "border",
                     "isEnabled": true,
-                    "color": { "_class": "color", "red": 0, "green": 0, "blue": 0, "alpha": 1 },
+                    "color": {
+                      "_class": "color",
+                      "red": 0,
+                      "green": 0,
+                      "blue": 0,
+                      "alpha": 1
+                    },
                     "fillType": 0,
                     "position": 1,
                     "thickness": 0
@@ -2075,9 +2382,20 @@
                 "endDecorationType": 0,
                 "miterLimit": 10,
                 "startDecorationType": 0,
-                "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                "contextSettings": {
+                  "_class": "graphicsContextSettings",
+                  "blendMode": 0,
+                  "opacity": "1"
+                }
               },
-              "frame": { "_class": "rect", "constrainProportions": false, "height": 96, "width": 1040, "x": 0, "y": 0 },
+              "frame": {
+                "_class": "rect",
+                "constrainProportions": false,
+                "height": 96,
+                "width": 1040,
+                "x": 0,
+                "y": 0
+              },
               "hasClickThrough": false,
               "windingRule": 1
             },
@@ -2258,7 +2576,13 @@
                           {
                             "_class": "border",
                             "isEnabled": true,
-                            "color": { "_class": "color", "red": 1, "green": 1, "blue": 1, "alpha": 1 },
+                            "color": {
+                              "_class": "color",
+                              "red": 1,
+                              "green": 1,
+                              "blue": 1,
+                              "alpha": 1
+                            },
                             "fillType": 0,
                             "position": 1,
                             "thickness": 0
@@ -2269,7 +2593,11 @@
                         "endDecorationType": 0,
                         "miterLimit": 10,
                         "startDecorationType": 0,
-                        "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                        "contextSettings": {
+                          "_class": "graphicsContextSettings",
+                          "blendMode": 0,
+                          "opacity": "1"
+                        }
                       },
                       "frame": {
                         "_class": "rect",
@@ -2294,7 +2622,11 @@
                     "endDecorationType": 0,
                     "miterLimit": 10,
                     "startDecorationType": 0,
-                    "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                    "contextSettings": {
+                      "_class": "graphicsContextSettings",
+                      "blendMode": 0,
+                      "opacity": "1"
+                    }
                   },
                   "frame": {
                     "_class": "rect",
@@ -2462,7 +2794,13 @@
                           {
                             "_class": "border",
                             "isEnabled": true,
-                            "color": { "_class": "color", "red": 0, "green": 0, "blue": 0, "alpha": 1 },
+                            "color": {
+                              "_class": "color",
+                              "red": 0,
+                              "green": 0,
+                              "blue": 0,
+                              "alpha": 1
+                            },
                             "fillType": 0,
                             "position": 1,
                             "thickness": 0
@@ -2473,7 +2811,11 @@
                         "endDecorationType": 0,
                         "miterLimit": 10,
                         "startDecorationType": 0,
-                        "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                        "contextSettings": {
+                          "_class": "graphicsContextSettings",
+                          "blendMode": 0,
+                          "opacity": "1"
+                        }
                       },
                       "frame": {
                         "_class": "rect",
@@ -2544,7 +2886,11 @@
                     "endDecorationType": 0,
                     "miterLimit": 10,
                     "startDecorationType": 0,
-                    "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                    "contextSettings": {
+                      "_class": "graphicsContextSettings",
+                      "blendMode": 0,
+                      "opacity": "1"
+                    }
                   },
                   "frame": {
                     "_class": "rect",
@@ -2569,9 +2915,20 @@
                 "endDecorationType": 0,
                 "miterLimit": 10,
                 "startDecorationType": 0,
-                "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+                "contextSettings": {
+                  "_class": "graphicsContextSettings",
+                  "blendMode": 0,
+                  "opacity": "1"
+                }
               },
-              "frame": { "_class": "rect", "constrainProportions": false, "height": 96, "width": 1040, "x": 0, "y": 0 },
+              "frame": {
+                "_class": "rect",
+                "constrainProportions": false,
+                "height": 96,
+                "width": 1040,
+                "x": 0,
+                "y": 0
+              },
               "hasClickThrough": false,
               "windingRule": 1
             }
@@ -2587,20 +2944,49 @@
             "endDecorationType": 0,
             "miterLimit": 10,
             "startDecorationType": 0,
-            "contextSettings": { "_class": "graphicsContextSettings", "blendMode": 0, "opacity": "1" }
+            "contextSettings": {
+              "_class": "graphicsContextSettings",
+              "blendMode": 0,
+              "opacity": "1"
+            }
           },
-          "frame": { "_class": "rect", "constrainProportions": false, "height": 96, "width": 1040, "x": 0, "y": 0 },
+          "frame": {
+            "_class": "rect",
+            "constrainProportions": false,
+            "height": 96,
+            "width": 1040,
+            "x": 0,
+            "y": 0
+          },
           "hasClickThrough": false,
           "windingRule": 1
         }
       ],
       "clippingMaskMode": 0,
       "hasClippingMask": false,
-      "frame": { "_class": "rect", "constrainProportions": false, "width": 1040, "height": 96, "x": 420, "y": 432 },
-      "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+      "frame": {
+        "_class": "rect",
+        "constrainProportions": false,
+        "width": 1040,
+        "height": 96,
+        "x": 420,
+        "y": 432
+      },
+      "style": {
+        "_class": "style",
+        "endDecorationType": 0,
+        "miterLimit": 10,
+        "startDecorationType": 0
+      },
       "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
       "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
-      "backgroundColor": { "_class": "color", "alpha": 1, "blue": 1, "green": 1, "red": 1 },
+      "backgroundColor": {
+        "_class": "color",
+        "alpha": 1,
+        "blue": 1,
+        "green": 1,
+        "red": 1
+      },
       "hasClickThrough": true,
       "includeInCloudUpload": true,
       "hasBackgroundColor": false,
@@ -2613,8 +2999,20 @@
   ],
   "clippingMaskMode": 0,
   "hasClippingMask": false,
-  "frame": { "_class": "rect", "constrainProportions": false, "height": 5000, "width": 1920, "x": 0, "y": 0 },
-  "style": { "_class": "style", "endDecorationType": 0, "miterLimit": 10, "startDecorationType": 0 },
+  "frame": {
+    "_class": "rect",
+    "constrainProportions": false,
+    "height": 5000,
+    "width": 1920,
+    "x": 0,
+    "y": 0
+  },
+  "style": {
+    "_class": "style",
+    "endDecorationType": 0,
+    "miterLimit": 10,
+    "startDecorationType": 0
+  },
   "horizontalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
   "verticalRulerData": { "_class": "rulerData", "base": 0, "guides": [] },
   "hasClickThrough": true,

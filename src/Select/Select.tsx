@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, forwardRef } from "react";
-import propTypes from '@styled-system/prop-types';
+import propTypes from "@styled-system/prop-types";
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
@@ -15,7 +15,7 @@ import {
   SelectClearIndicator,
   SelectContainer,
   SelectMenu,
-  SelectInput
+  SelectInput,
 } from "./SelectComponents";
 import { getSubset } from "../utils/subset";
 
@@ -48,37 +48,42 @@ export const SelectDefaultProps = {
   onMenuClose: undefined,
   onInputChange: undefined,
   components: undefined,
-  closeMenuOnSelect: true
+  closeMenuOnSelect: true,
 };
 
 const checkOptionsAreValid = (options) => {
   if (options && process.env.NODE_ENV === "development") {
     const uniq = (a) => Array.from(new Set(a));
-    const uniqueValues = uniq(options.map(({ value }) => value === null ? "_null_" : value));
+    const uniqueValues = uniq(
+      options.map(({ value }) => (value === null ? "_null_" : value))
+    );
     if (uniqueValues.length < options.length) {
-      console.warn("NDS: The options prop passed to Select must have unique values for each option", options);
+      console.warn(
+        "NDS: The options prop passed to Select must have unique values for each option",
+        options
+      );
     }
   }
-}
+};
 
 export const getOption = (options, value) => {
   // allows an option with  a null value to be matched
-  if (options.length > 0 && value !== undefined ) {
-    const optionWithMatchingValue = options.find(o => o.value === value);
+  if (options.length > 0 && value !== undefined) {
+    const optionWithMatchingValue = options.find((o) => o.value === value);
     return optionWithMatchingValue || null;
   }
-  return value; 
+  return value;
 };
 
 const getReactSelectValue = (options, input) => {
   if (Array.isArray(input)) {
-    return input.map(i => getOption(options, i));
+    return input.map((i) => getOption(options, i));
   }
   return getOption(options, input);
 };
 const extractValue = (options, isMulti) => {
   if (isMulti) {
-    return options && options.length ? options.map(o => o.value) : [];
+    return options && options.length ? options.map((o) => o.value) : [];
   }
 
   if (options == null) {
@@ -164,15 +169,19 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
   ) => {
     const { t } = useTranslation();
     const themeContext = useContext(ThemeContext);
-    const spaceProps = getSubset(props, propTypes.space)
+    const spaceProps = getSubset(props, propTypes.space);
 
     useEffect(() => {
       checkOptionsAreValid(options);
-    }, [options])
+    }, [options]);
 
     return (
       <Field {...spaceProps}>
-        <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+        <MaybeFieldLabel
+          labelText={labelText}
+          requirementText={requirementText}
+          helpText={helpText}
+        >
           <WindowedSelect
             ref={ref}
             className={className}
@@ -186,7 +195,7 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
               theme: themeContext,
               error,
               maxHeight,
-              windowed: options.length > windowThreshold
+              windowed: options.length > windowThreshold,
             })}
             isDisabled={disabled}
             isSearchable={autocomplete}
@@ -195,7 +204,10 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
             onBlur={onBlur}
-            onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
+            onChange={
+              onChange &&
+              ((option) => onChange(extractValue(option, multiselect)))
+            }
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
             name={name}
@@ -214,13 +226,17 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
               Input: SelectInput,
-              ...components
+              ...components,
             }}
             aria-label={ariaLabel}
             filterOption={filterOption}
             closeMenuOnSelect={closeMenuOnSelect}
           />
-          <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+          <InlineValidation
+            mt="x1"
+            errorMessage={errorMessage}
+            errorList={errorList}
+          />
         </MaybeFieldLabel>
       </Field>
     );
@@ -229,6 +245,6 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
 ReactSelect.defaultProps = {
   ...SelectDefaultProps,
   windowThreshold: 300,
-  filterOption: undefined
+  filterOption: undefined,
 };
 export default ReactSelect;

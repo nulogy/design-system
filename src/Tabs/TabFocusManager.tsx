@@ -6,13 +6,18 @@ type TabFocusManagerProps = {
     focus?: (...args: any[]) => any;
   }[];
 };
-type TabFocusManagerState = { focusedIndex: any } & ((prevState: any) => { focusedIndex: number }) &
+type TabFocusManagerState = { focusedIndex: any } & ((
+  prevState: any
+) => { focusedIndex: number }) &
   ((prevState: any) => { focusedIndex: number }) & { focusedIndex: number };
-class TabFocusManager extends React.Component<TabFocusManagerProps, TabFocusManagerState> {
+class TabFocusManager extends React.Component<
+  TabFocusManagerProps,
+  TabFocusManagerState
+> {
   constructor(props) {
     super(props);
     this.state = {
-      focusedIndex: 0
+      focusedIndex: 0,
     };
     this.handleArrowNavigation = this.handleArrowNavigation.bind(this);
     this.focusNextTab = this.focusNextTab.bind(this);
@@ -27,7 +32,7 @@ class TabFocusManager extends React.Component<TabFocusManagerProps, TabFocusMana
   }
   setFocusToTab(index) {
     this.setState({
-      focusedIndex: index
+      focusedIndex: index,
     });
   }
   handleArrowNavigation(e) {
@@ -46,14 +51,15 @@ class TabFocusManager extends React.Component<TabFocusManagerProps, TabFocusMana
   }
   focusNextTab() {
     const { tabRefs } = this.props;
-    this.setState(prevState => ({
-      focusedIndex: (prevState.focusedIndex + 1) % tabRefs.length
+    this.setState((prevState) => ({
+      focusedIndex: (prevState.focusedIndex + 1) % tabRefs.length,
     }));
   }
   focusPreviousTab() {
     const { tabRefs } = this.props;
-    this.setState(prevState => ({
-      focusedIndex: (prevState.focusedIndex - 1 + tabRefs.length) % tabRefs.length
+    this.setState((prevState) => ({
+      focusedIndex:
+        (prevState.focusedIndex - 1 + tabRefs.length) % tabRefs.length,
     }));
   }
   updateFocusedTab() {
@@ -69,13 +75,13 @@ class TabFocusManager extends React.Component<TabFocusManagerProps, TabFocusMana
         {children({
           focusedIndex,
           handleArrowNavigation: this.handleArrowNavigation,
-          setFocusToTab: this.setFocusToTab
+          setFocusToTab: this.setFocusToTab,
         })}
       </>
     );
   }
 }
 TabFocusManager.defaultProps = {
-  tabRefs: undefined
+  tabRefs: undefined,
 };
 export default TabFocusManager;

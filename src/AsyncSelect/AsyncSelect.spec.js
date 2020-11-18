@@ -8,7 +8,7 @@ describe("select", () => {
     const options = [
       { label: "One", value: "one" },
       { label: "Two", value: "two" },
-      { label: "Three", value: "three" }
+      { label: "Three", value: "three" },
     ];
 
     const callback = jest.fn();

@@ -15,10 +15,14 @@ const ScrollIndicatorTop = () => (
       background: theme.colors.lightGrey,
       opacity: 0.8,
       borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
-      pointerEvents: "none"
+      pointerEvents: "none",
     }}
   >
-    <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="upArrow" />
+    <Icon
+      style={{ display: "block", margin: "0 auto" }}
+      color="darkGrey"
+      icon="upArrow"
+    />
   </div>
 );
 
@@ -34,10 +38,14 @@ const ScrollIndicatorBottom = () => (
       background: theme.colors.lightGrey,
       opacity: 0.8,
       borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
-      pointerEvents: "none"
+      pointerEvents: "none",
     }}
   >
-    <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="downArrow" />
+    <Icon
+      style={{ display: "block", margin: "0 auto" }}
+      color="darkGrey"
+      icon="downArrow"
+    />
   </div>
 );
 
@@ -46,7 +54,7 @@ class ScrollIndicators extends React.Component {
   constructor() {
     super();
     this.state = {
-      scrollTop: 0
+      scrollTop: 0,
     };
     this.menuRef = React.createRef();
     this.handleScroll = this.handleScroll.bind(this);
@@ -62,7 +70,7 @@ class ScrollIndicators extends React.Component {
   handleScroll() {
     if (this.menuRef.current) {
       this.setState({
-        scrollTop: this.menuRef.current.scrollTop
+        scrollTop: this.menuRef.current.scrollTop,
       });
     }
   }
@@ -81,7 +89,7 @@ class ScrollIndicators extends React.Component {
         {this.contentHiddenAbove() && <ScrollIndicatorTop />}
         {React.cloneElement(this.props.children, {
           ref: this.menuRef,
-          onScroll: this.handleScroll
+          onScroll: this.handleScroll,
         })}
         {this.contentHiddenBelow() && <ScrollIndicatorBottom />}
       </div>
@@ -91,7 +99,7 @@ class ScrollIndicators extends React.Component {
 /* eslint-enable react/destructuring-assignment */
 
 ScrollIndicators.propTypes = {
-  children: PropTypes.element.isRequired
+  children: PropTypes.element.isRequired,
 };
 
 export default ScrollIndicators;

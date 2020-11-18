@@ -11,6 +11,6 @@ const MaybeFieldLabel: React.SFC<any> = ({ labelText, children, ...props }) =>
   );
 MaybeFieldLabel.defaultProps = {
   labelText: null,
-  children: null
+  children: null,
 };
 export default MaybeFieldLabel;

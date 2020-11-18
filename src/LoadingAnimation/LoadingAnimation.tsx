@@ -16,7 +16,13 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
       preserveAspectRatio="xMidYMid"
     >
       <g transform="translate(4 5)">
-        <circle cx="0" cy="0" r="4" fill={color1} transform="scale(0.275039 0.275039)">
+        <circle
+          cx="0"
+          cy="0"
+          r="4"
+          fill={color1}
+          transform="scale(0.275039 0.275039)"
+        >
           <animateTransform
             attributeName="transform"
             type="scale"
@@ -31,7 +37,13 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
         </circle>
       </g>
       <g transform="translate(22.4 5)">
-        <circle cx="0" cy="0" r="4" fill={color2} transform="scale(0.0862935 0.0862935)">
+        <circle
+          cx="0"
+          cy="0"
+          r="4"
+          fill={color2}
+          transform="scale(0.0862935 0.0862935)"
+        >
           <animateTransform
             attributeName="transform"
             type="scale"
@@ -46,7 +58,13 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
         </circle>
       </g>
       <g transform="translate(40.0 5)">
-        <circle cx="0" cy="0" r="4" fill={color1} transform="scale(0.0000823166 0.0000823166)">
+        <circle
+          cx="0"
+          cy="0"
+          r="4"
+          fill={color1}
+          transform="scale(0.0000823166 0.0000823166)"
+        >
           <animateTransform
             attributeName="transform"
             type="scale"
@@ -61,7 +79,13 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
         </circle>
       </g>
       <g transform="translate(59.2 5)">
-        <circle cx="0" cy="0" r="4" fill={color2} transform="scale(0.0779504 0.0779504)">
+        <circle
+          cx="0"
+          cy="0"
+          r="4"
+          fill={color2}
+          transform="scale(0.0779504 0.0779504)"
+        >
           <animateTransform
             attributeName="transform"
             type="scale"
@@ -76,7 +100,13 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
         </circle>
       </g>
       <g transform="translate(77.6 5)">
-        <circle cx="0" cy="0" r="4" fill={color1} transform="scale(0.262719 0.262719)">
+        <circle
+          cx="0"
+          cy="0"
+          r="4"
+          fill={color1}
+          transform="scale(0.262719 0.262719)"
+        >
           <animateTransform
             attributeName="transform"
             type="scale"
@@ -91,7 +121,13 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
         </circle>
       </g>
       <g transform="translate(96 5)">
-        <circle cx="0" cy="0" r="4" fill={color2} transform="scale(0.49324 0.49324)">
+        <circle
+          cx="0"
+          cy="0"
+          r="4"
+          fill={color2}
+          transform="scale(0.49324 0.49324)"
+        >
           <animateTransform
             attributeName="transform"
             type="scale"
@@ -109,6 +145,6 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
   );
 };
 LoadingAnimation.defaultProps = {
-  inactive: false
+  inactive: false,
 };
 export default LoadingAnimation;

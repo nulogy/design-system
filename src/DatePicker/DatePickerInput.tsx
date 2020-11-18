@@ -26,17 +26,17 @@ const DatePickerInput: React.SFC<DatePickerInputProps> = forwardRef(
       onUpKeyPress,
       onDownKeyPress,
       onEnterKeyPress,
-      "aria-label": ariaLabel
+      "aria-label": ariaLabel,
     },
     ref
   ) => {
-    const handleChange = e => {
+    const handleChange = (e) => {
       onInputChange(e);
       if (onChange) {
         onChange(e);
       }
     };
-    const handleKeyDown = event => {
+    const handleKeyDown = (event) => {
       if (event.keyCode === 38) {
         if (onUpKeyPress) onUpKeyPress(event);
       } else if (event.keyCode === 40) {
@@ -70,6 +70,6 @@ DatePickerInput.defaultProps = {
   onSpaceKeyPress: undefined,
   value: undefined,
   inputProps: InputFieldDefaultProps,
-  "aria-label": undefined
+  "aria-label": undefined,
 };
 export default DatePickerInput;

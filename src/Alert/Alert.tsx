@@ -13,29 +13,38 @@ import { Text } from "../Type";
 const alertColours: any = {
   danger: {
     borderColor: "red",
-    backgroundColor: "lightRed"
+    backgroundColor: "lightRed",
   },
   informative: {
     borderColor: "blue",
-    backgroundColor: "lightBlue"
+    backgroundColor: "lightBlue",
   },
   success: {
     borderColor: "green",
-    backgroundColor: "lightGreen"
+    backgroundColor: "lightGreen",
   },
   warning: {
     borderColor: "yellow",
-    backgroundColor: "lightYellow"
-  }
+    backgroundColor: "lightYellow",
+  },
 };
 
 type CloseButtonProps = any;
 
-const CloseButton = ({ onClick, "aria-label": ariaLabel }: CloseButtonProps) => {
+const CloseButton = ({
+  onClick,
+  "aria-label": ariaLabel,
+}: CloseButtonProps) => {
   const { t } = useTranslation();
   return (
     <Box>
-      <Link as="button" color="darkGrey" hover="blue" onClick={onClick} aria-label={ariaLabel || t("close")}>
+      <Link
+        as="button"
+        color="darkGrey"
+        hover="blue"
+        onClick={onClick}
+        aria-label={ariaLabel || t("close")}
+      >
         <Icon icon="close" size="16" />
       </Link>
     </Box>
@@ -44,12 +53,12 @@ const CloseButton = ({ onClick, "aria-label": ariaLabel }: CloseButtonProps) => 
 
 CloseButton.propTypes = {
   onClick: PropTypes.func,
-  "aria-label": PropTypes.string
+  "aria-label": PropTypes.string,
 };
 
 CloseButton.defaultProps = {
   onClick: undefined,
-  "aria-label": undefined
+  "aria-label": undefined,
 };
 
 const BaseAlert = ({
@@ -83,13 +92,19 @@ const BaseAlert = ({
       className={className}
       {...props}
     >
-      {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
-      {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
+      {type === "danger" && (
+        <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />
+      )}
+      {type === "success" && (
+        <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />
+      )}
       <Box mr="auto">
         {title && <Text fontWeight="bold">{title}</Text>}
         {children}
       </Box>
-      {isCloseable && <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />}
+      {isCloseable && (
+        <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />
+      )}
     </Flex>
   ) : null;
 };
@@ -104,7 +119,7 @@ BaseAlert.propTypes = {
   onClose: PropTypes.func,
   controlled: PropTypes.bool,
   ...propTypes.space,
-  ...propTypes.layout
+  ...propTypes.layout,
 };
 
 BaseAlert.defaultProps = {
@@ -114,13 +129,13 @@ BaseAlert.defaultProps = {
   title: null,
   type: "informative",
   controlled: false,
-  onClose: () => {}
+  onClose: () => {},
 };
 
 const Alert = styled(BaseAlert)(space, layout, ({ theme }) => ({
   [`${Link}`]: {
-    color: theme.colors.black
-  }
+    color: theme.colors.black,
+  },
 }));
 
 export default Alert;

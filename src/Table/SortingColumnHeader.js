@@ -6,9 +6,17 @@ import { Flex } from "../Flex";
 import { ControlIcon } from "../Button";
 import NDStheme from "../theme";
 
-const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) => {
+const SortingColumnHeader = ({
+  onChange,
+  label,
+  ascending,
+  active,
+  ariaLabel,
+}) => {
   const { t } = useTranslation();
-  const defaultAriaLabel = ascending ? t("sort descending") : t("sort ascending");
+  const defaultAriaLabel = ascending
+    ? t("sort descending")
+    : t("sort ascending");
   return (
     <Flex alignItems="center">
       <Text mr="x1">{label}</Text>
@@ -28,14 +36,14 @@ SortingColumnHeader.propTypes = {
   ariaLabel: PropTypes.string,
   label: PropTypes.string,
   ascending: PropTypes.bool,
-  active: PropTypes.bool
+  active: PropTypes.bool,
 };
 
 SortingColumnHeader.defaultProps = {
   ariaLabel: null,
   label: null,
   ascending: false,
-  active: false
+  active: false,
 };
 
 export default SortingColumnHeader;

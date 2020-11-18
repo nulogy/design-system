@@ -5,7 +5,7 @@ import { themeGet } from "@styled-system/theme-get";
 import theme from "../theme";
 import MenuTrigger from "./MenuTrigger";
 
-const getSharedStyles = color => ({
+const getSharedStyles = (color) => ({
   display: "block",
   color: themeGet(`colors.${color}`, color)(color),
   textDecoration: "none",
@@ -15,38 +15,43 @@ const getSharedStyles = color => ({
   lineHeight: theme.lineHeights.base,
   fontSize: `${theme.fontSizes.medium}`,
   padding: `${theme.space.x1} ${theme.space.x2}`,
-  borderRadius: theme.radii.medium
+  borderRadius: theme.radii.medium,
 });
 
-const ApplyMenuLinkStyles = styled.div(({ color, hoverColor, hoverBackground }) => ({
-  "*": {
-    ...getSharedStyles(color),
-    transition: ".2s",
-    "&:hover, &:focus": {
-      outline: "none",
-      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
-      cursor: "pointer"
+const ApplyMenuLinkStyles = styled.div(
+  ({ color, hoverColor, hoverBackground }) => ({
+    "*": {
+      ...getSharedStyles(color),
+      transition: ".2s",
+      "&:hover, &:focus": {
+        outline: "none",
+        color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+        backgroundColor: themeGet(
+          `colors.${hoverBackground}`,
+          hoverBackground
+        )(hoverBackground),
+        cursor: "pointer",
+      },
+      "&:disabled": {
+        opacity: ".5",
+      },
+      "&:focus": {
+        boxShadow: theme.shadows.focus,
+      },
     },
-    "&:disabled": {
-      opacity: ".5"
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus
-    }
-  }
-}));
+  })
+);
 
 ApplyMenuLinkStyles.propTypes = {
   color: PropTypes.string,
   hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string
+  hoverBackground: PropTypes.string,
 };
 
 ApplyMenuLinkStyles.defaultProps = {
   color: theme.colors.white,
   hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black
+  hoverBackground: theme.colors.black,
 };
 
 const MenuLink = styled.a(({ color, hoverColor, hoverBackground }) => ({
@@ -55,28 +60,36 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground }) => ({
   "&:hover, &:focus": {
     outline: "none",
     color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
-    cursor: "pointer"
+    backgroundColor: themeGet(
+      `colors.${hoverBackground}`,
+      hoverBackground
+    )(hoverBackground),
+    cursor: "pointer",
   },
   "&:disabled": {
-    opacity: ".5"
+    opacity: ".5",
   },
   "&:focus": {
-    boxShadow: theme.shadows.focus
-  }
+    boxShadow: theme.shadows.focus,
+  },
 }));
 
 const MenuText = styled.div(({ textColor }) => ({
-  ...getSharedStyles(textColor)
+  ...getSharedStyles(textColor),
 }));
 
 const Nav = styled.nav({
-  display: "flex"
+  display: "flex",
 });
 
 const renderMenuTrigger = (menuItem, themeColorObject) => (
   <div key={menuItem.name}>
-    <MenuTrigger name={menuItem.name} aria-label={menuItem.ariaLabel} menuData={menuItem.items} {...themeColorObject} />
+    <MenuTrigger
+      name={menuItem.name}
+      aria-label={menuItem.ariaLabel}
+      menuData={menuItem.items}
+      {...themeColorObject}
+    />
   </div>
 );
 
@@ -100,7 +113,7 @@ const renderText = (menuItem, themeColorObject) => (
   </MenuText>
 );
 
-const getRenderFunction = menuItem => {
+const getRenderFunction = (menuItem) => {
   if (menuItem.items) {
     return renderMenuTrigger;
   } else if (menuItem.href) {
@@ -112,28 +125,31 @@ const getRenderFunction = menuItem => {
   }
 };
 
-const renderMenuItem = (menuItem, themeColorObject) => getRenderFunction(menuItem)(menuItem, themeColorObject);
+const renderMenuItem = (menuItem, themeColorObject) =>
+  getRenderFunction(menuItem)(menuItem, themeColorObject);
 
 const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
-  <Nav {...props}>{menuData.map(menuItem => renderMenuItem(menuItem, themeColorObject))}</Nav>
+  <Nav {...props}>
+    {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}
+  </Nav>
 );
 
 BaseDesktopMenu.propTypes = {
   menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  themeColorObject: PropTypes.shape({})
+  themeColorObject: PropTypes.shape({}),
 };
 
 BaseDesktopMenu.defaultProps = {
   menuData: null,
-  themeColorObject: null
+  themeColorObject: null,
 };
 
 const DesktopMenu = styled(BaseDesktopMenu)({
   div: {
     ":not(:last-of-type)": {
-      marginRight: theme.space.x1
-    }
-  }
+      marginRight: theme.space.x1,
+    },
+  },
 });
 
 export default DesktopMenu;

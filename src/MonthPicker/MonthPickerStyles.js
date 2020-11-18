@@ -5,8 +5,8 @@ export const MonthPickerStyles = createGlobalStyle(({ theme }) => ({
     ".react-datepicker__input-container": {
       width: "184px",
       input: {
-        position: "relative"
-      }
+        position: "relative",
+      },
     },
     ".react-datepicker__header": {
       backgroundColor: theme.colors.white,
@@ -19,7 +19,7 @@ export const MonthPickerStyles = createGlobalStyle(({ theme }) => ({
       left: "50%",
       transform: "translateX(-50%)",
       borderTopLeftRadius: theme.radii.medium,
-      borderTopRightRadius: theme.radii.medium
+      borderTopRightRadius: theme.radii.medium,
     },
     ".react-datepicker__navigation": {
       background: "transparent",
@@ -32,27 +32,27 @@ export const MonthPickerStyles = createGlobalStyle(({ theme }) => ({
       color: theme.colors.darkGrey,
       "&:focus": {
         outline: "none",
-        boxShadow: theme.shadows.focus
+        boxShadow: theme.shadows.focus,
       },
       "&:hover:enabled": {
         cursor: "pointer",
         color: theme.colors.blackBlue,
-        backgroundColor: theme.colors.lightGrey
+        backgroundColor: theme.colors.lightGrey,
       },
       "&--next": {
         position: "absolute",
-        right: theme.space.x1
+        right: theme.space.x1,
       },
       "&--previous": {
         position: "absolute",
-        left: theme.space.x1
-      }
+        left: theme.space.x1,
+      },
     },
     ".react-datepicker__triangle": {
-      display: "none"
+      display: "none",
     },
     ".react-datepicker-popper[data-placement^='bottom']": {
-      marginTop: "0"
+      marginTop: "0",
     },
     ".react-datepicker": {
       backgroundColor: theme.colors.white,
@@ -64,11 +64,11 @@ export const MonthPickerStyles = createGlobalStyle(({ theme }) => ({
       position: "relative",
       padding: theme.space.x1,
       paddingTop: theme.space.x2,
-      width: "184px"
+      width: "184px",
     },
     ".react-datepicker__month-wrapper": {
       display: "flex",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     ".react-datepicker__month": {
       marginTop: theme.space.x6,
@@ -85,16 +85,16 @@ export const MonthPickerStyles = createGlobalStyle(({ theme }) => ({
         cursor: "pointer",
         "&:hover": {
           backgroundColor: theme.colors.lightBlue,
-          color: theme.colors.black
-        }
+          color: theme.colors.black,
+        },
       },
       "&--disabled": {
         color: theme.colors.grey,
         cursor: "auto",
         "&:hover": {
           color: theme.colors.grey,
-          backgroundColor: "transparent"
-        }
+          backgroundColor: "transparent",
+        },
       },
       "&--selected": {
         color: theme.colors.white,
@@ -102,9 +102,9 @@ export const MonthPickerStyles = createGlobalStyle(({ theme }) => ({
         cursor: "initial",
         "&:hover": {
           color: theme.colors.white,
-          background: theme.colors.darkBlue
-        }
-      }
-    }
-  }
+          background: theme.colors.darkBlue,
+        },
+      },
+    },
+  },
 }));

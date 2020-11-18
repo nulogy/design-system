@@ -39,9 +39,9 @@ export const NulogyLogoContainer = ({ subText, height }) => (
 
 NulogyLogoContainer.propTypes = {
   subText: PropTypes.string,
-  height: PropTypes.string.isRequired
+  height: PropTypes.string.isRequired,
 };
 
 NulogyLogoContainer.defaultProps = {
-  subText: undefined
+  subText: undefined,
 };

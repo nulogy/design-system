@@ -24,7 +24,7 @@ const Theme: ThemeType = {
     categorical3: tokens.color_base_categorical_3,
     categorical4: tokens.color_base_categorical_4,
     categorical5: tokens.color_base_categorical_5,
-    categorical6: tokens.color_base_categorical_6
+    categorical6: tokens.color_base_categorical_6,
   },
   fontSizes: {
     smaller: tokens.size_font_smaller,
@@ -36,7 +36,7 @@ const Theme: ThemeType = {
     heading1: tokens.size_font_heading_1,
     heading2: tokens.size_font_heading_2,
     heading3: tokens.size_font_heading_3,
-    heading4: tokens.size_font_heading_4
+    heading4: tokens.size_font_heading_4,
   },
   lineHeights: {
     base: tokens.line_height_base,
@@ -49,13 +49,13 @@ const Theme: ThemeType = {
     heading4: tokens.line_height_heading_4,
     title: tokens.line_height_heading_1,
     sectionTitle: tokens.line_height_heading_2,
-    subsectionTitle: tokens.line_height_heading_3
+    subsectionTitle: tokens.line_height_heading_3,
   },
   fontWeights: {
     light: tokens.weight_font_light,
     normal: tokens.weight_font_normal,
     medium: tokens.weight_font_medium,
-    bold: tokens.weight_font_bold
+    bold: tokens.weight_font_bold,
   },
   space: {
     none: tokens.size_base_none,
@@ -66,7 +66,7 @@ const Theme: ThemeType = {
     x4: tokens.size_base_x_4,
     x5: tokens.size_base_x_5,
     x6: tokens.size_base_x_6,
-    x8: tokens.size_base_x_8
+    x8: tokens.size_base_x_8,
   },
   sizes: {
     none: tokens.size_base_none,
@@ -77,12 +77,12 @@ const Theme: ThemeType = {
     x4: tokens.size_base_x_4,
     x5: tokens.size_base_x_5,
     x6: tokens.size_base_x_6,
-    x8: tokens.size_base_x_8
+    x8: tokens.size_base_x_8,
   },
   fonts: {
     base: tokens.font_family_base,
     mono: tokens.font_family_mono,
-    sc: tokens.font_family_sc
+    sc: tokens.font_family_sc,
   },
   borders: [],
   shadows: {
@@ -90,26 +90,26 @@ const Theme: ThemeType = {
     medium: tokens.shadow_box_medium,
     large: tokens.shadow_box_large,
     focus: tokens.shadow_focus,
-    error: tokens.shadow_error
+    error: tokens.shadow_error,
   },
   radii: {
     small: tokens.radius_border_small,
     medium: tokens.radius_border_medium,
-    circle: tokens.radius_border_circle
+    circle: tokens.radius_border_circle,
   },
   breakpoints: {
     extraSmall: tokens.size_breakpoint_extra_small,
     small: tokens.size_breakpoint_small,
     medium: tokens.size_breakpoint_medium,
     large: tokens.size_breakpoint_large,
-    extraLarge: tokens.size_breakpoint_extra_large
+    extraLarge: tokens.size_breakpoint_extra_large,
   },
   zIndex: {
     content: tokens.z_index_content,
     tabsScollIndicator: tokens.z_index_tabs_scroll_indicator,
     tabsBar: tokens.z_index_tabs_bar,
-    overlay: tokens.z_index_overlay
-  }
+    overlay: tokens.z_index_overlay,
+  },
 };
 
 export default Theme;

@@ -4,9 +4,15 @@ import Checkbox from "./Checkbox";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
-const getCheckboxButtons = props => {
-  const checkboxButtons = React.Children.map(props.children, checkbox => {
-    const { value, disabled, required, onChange, ...checkboxProps } = checkbox.props;
+const getCheckboxButtons = (props) => {
+  const checkboxButtons = React.Children.map(props.children, (checkbox) => {
+    const {
+      value,
+      disabled,
+      required,
+      onChange,
+      ...checkboxProps
+    } = checkbox.props;
     return (
       <Checkbox
         {...checkboxProps}
@@ -15,8 +21,12 @@ const getCheckboxButtons = props => {
         error={!!(props.errorMessage || props.errorList)}
         required={props.required || required}
         name={props.name}
-        defaultChecked={props.defaultValue ? props.defaultValue.includes(value) : undefined}
-        checked={props.checkedValue ? props.checkedValue.includes(value) : undefined}
+        defaultChecked={
+          props.defaultValue ? props.defaultValue.includes(value) : undefined
+        }
+        checked={
+          props.checkedValue ? props.checkedValue.includes(value) : undefined
+        }
         onChange={props.onChange || onChange}
       />
     );
@@ -26,10 +36,10 @@ const getCheckboxButtons = props => {
 const LabelText = styled.span<any>(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
-  lineHeight: theme.lineHeights.smallTextBase
+  lineHeight: theme.lineHeights.smallTextBase,
 }));
 const Legend = styled.legend(({ theme }) => ({
-  marginBottom: theme.space.x1
+  marginBottom: theme.space.x1,
 }));
 interface BaseCheckboxGroupProps {
   errorMessage?: string;
@@ -44,7 +54,7 @@ interface BaseCheckboxGroupProps {
   helpText?: React.ReactNode;
   requirementText?: string;
   disabled?: boolean;
-};
+}
 const BaseCheckboxGroup: React.SFC<BaseCheckboxGroupProps> = ({
   className,
   id,
@@ -60,11 +70,17 @@ const BaseCheckboxGroup: React.SFC<BaseCheckboxGroupProps> = ({
     <Fieldset className={className} id={id} hasHelpText={!!helpText}>
       <Legend>
         <LabelText>{labelText}</LabelText>
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
+        {requirementText && (
+          <RequirementText>{requirementText}</RequirementText>
+        )}
       </Legend>
       {helpText && <HelpText>{helpText}</HelpText>}
       {getCheckboxButtons(otherProps)}
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      <InlineValidation
+        mt="x1"
+        errorMessage={errorMessage}
+        errorList={errorList}
+      />
     </Fieldset>
   );
 };
@@ -78,7 +94,7 @@ BaseCheckboxGroup.defaultProps = {
   id: undefined,
   helpText: undefined,
   requirementText: undefined,
-  disabled: false
+  disabled: false,
 };
 const CheckboxGroup = styled(BaseCheckboxGroup)({});
 export default CheckboxGroup;

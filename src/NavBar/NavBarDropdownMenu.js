@@ -25,7 +25,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
   menuTriggerEventHandlers() {
     return {
       onBlur: () => this.props.menuState.closeMenu(false),
-      onClick: () => this.handleTriggerClick(false)
+      onClick: () => this.handleTriggerClick(false),
     };
   }
 
@@ -33,7 +33,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
     return {
       onBlur: () => this.props.menuState.closeMenu(false),
       onFocus: () => this.props.menuState.openMenu(false),
-      onClick: () => this.props.menuState.openMenu(false)
+      onClick: () => this.props.menuState.openMenu(false),
     };
   }
 
@@ -57,9 +57,10 @@ class StatelessNavBarDropdownMenu extends React.Component {
       modifiers,
       showArrow,
       dropdownMenuContainerEventHandlers,
-      menuState: { isOpen, closeMenu, openMenu }
+      menuState: { isOpen, closeMenu, openMenu },
     } = this.props;
-    const childrenFnc = typeof children === "function" ? children : () => children;
+    const childrenFnc =
+      typeof children === "function" ? children : () => children;
     return (
       <Manager>
         <Reference>
@@ -68,39 +69,42 @@ class StatelessNavBarDropdownMenu extends React.Component {
               trigger({
                 closeMenu,
                 openMenu,
-                isOpen
+                isOpen,
               }),
               {
                 "aria-haspopup": true,
                 "aria-expanded": isOpen,
                 type: "button",
                 ...this.menuTriggerEventHandlers(),
-                ref: node => {
+                ref: (node) => {
                   ref(node);
                   this.setTriggerRef(node);
-                }
+                },
               }
             )
           }
         </Reference>
         {isOpen && (
           <Popper placement={placement} modifiers={modifiers}>
-            {popperProps => (
+            {(popperProps) => (
               <>
                 <DropdownMenuContainer
                   {...popperProps}
                   placement={placement}
                   showArrow={showArrow}
                   {...this.menuEventHandlers()}
-                  ref={node => {
+                  ref={(node) => {
                     popperProps.ref(node);
                     this.setMenuRef(node);
                   }}
-                  onMouseDown={e => {
+                  onMouseDown={(e) => {
                     e.preventDefault();
                     e.target.focus();
                   }}
-                  {...dropdownMenuContainerEventHandlers({ openMenu, closeMenu })}
+                  {...dropdownMenuContainerEventHandlers({
+                    openMenu,
+                    closeMenu,
+                  })}
                 >
                   <PopperArrow
                     {...popperProps.arrowProps}
@@ -109,10 +113,13 @@ class StatelessNavBarDropdownMenu extends React.Component {
                     backgroundColor="whiteGrey"
                     borderColor="whiteGrey"
                   />
-                  <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
+                  <DetectOutsideClick
+                    onClick={this.handleOutsideClick}
+                    clickRef={[this.menuRef, this.triggerRef]}
+                  />
                   {childrenFnc({
                     closeMenu,
-                    openMenu
+                    openMenu,
                   })}
                 </DropdownMenuContainer>
               </>
@@ -132,13 +139,13 @@ StatelessNavBarDropdownMenu.propTypes = {
     isOpen: PropTypes.bool,
     openMenu: PropTypes.func,
     closeMenu: PropTypes.func,
-    toggleMenu: PropTypes.func
+    toggleMenu: PropTypes.func,
   }).isRequired,
   showArrow: PropTypes.bool,
   placement: PropTypes.oneOf(["bottom-start", "right-start"]),
   modifiers: PropTypes.shape({}),
   triggerTogglesMenuState: PropTypes.bool,
-  dropdownMenuContainerEventHandlers: PropTypes.func
+  dropdownMenuContainerEventHandlers: PropTypes.func,
 };
 
 StatelessNavBarDropdownMenu.defaultProps = {
@@ -146,19 +153,19 @@ StatelessNavBarDropdownMenu.defaultProps = {
   placement: "bottom-start",
   modifiers: null,
   triggerTogglesMenuState: true,
-  dropdownMenuContainerEventHandlers: () => {}
+  dropdownMenuContainerEventHandlers: () => {},
 };
 
 const NavBarDropdownMenu = withMenuState(StatelessNavBarDropdownMenu);
 
 NavBarDropdownMenu.propTypes = {
   showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 NavBarDropdownMenu.defaultProps = {
   showDelay: "0",
-  hideDelay: "100"
+  hideDelay: "100",
 };
 
 export default NavBarDropdownMenu;

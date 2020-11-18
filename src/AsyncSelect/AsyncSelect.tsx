@@ -2,7 +2,7 @@ import React, { useContext, forwardRef } from "react";
 import AsyncReactSelect from "react-select/async";
 import { useTranslation } from "react-i18next";
 import styled, { ThemeContext } from "styled-components";
-import propTypes from '@styled-system/prop-types';
+import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
@@ -14,7 +14,7 @@ import {
   SelectClearIndicator,
   SelectContainer,
   SelectMenu,
-  SelectInput
+  SelectInput,
 } from "../Select";
 import { SelectDefaultProps } from "../Select/Select";
 import { getSubset } from "../utils/subset";
@@ -22,15 +22,15 @@ import { getSubset } from "../utils/subset";
 const extractValue = (options, isMulti) => {
   if (options == null) return options;
   if (isMulti) {
-    return options.map(o => o.value);
+    return options.map((o) => o.value);
   } else {
     return options.value;
   }
 };
 const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
   "[class*='indicatorContainer'] svg": {
-    display: showArrow ? "block" : "none"
-  }
+    display: showArrow ? "block" : "none",
+  },
 }));
 type AsyncSelectProps = any;
 
@@ -75,10 +75,14 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
   ) => {
     const { t } = useTranslation();
     const themeContext = useContext(ThemeContext);
-    const spaceProps = getSubset(props, propTypes.space); 
+    const spaceProps = getSubset(props, propTypes.space);
     return (
       <Field {...spaceProps}>
-        <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+        <MaybeFieldLabel
+          labelText={labelText}
+          requirementText={requirementText}
+          helpText={helpText}
+        >
           <StyledAsyncReactSelect
             className={className}
             classNamePrefix={classNamePrefix}
@@ -92,7 +96,7 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
               theme: themeContext,
               error,
               maxHeight,
-              windowed: false
+              windowed: false,
             })}
             isDisabled={disabled}
             isSearchable={autocomplete}
@@ -102,7 +106,10 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
             onBlur={onBlur}
-            onChange={onChange && (option => onChange(extractValue(option, multiselect)))}
+            onChange={
+              onChange &&
+              ((option) => onChange(extractValue(option, multiselect)))
+            }
             name={name}
             isMulti={multiselect}
             menuIsOpen={menuIsOpen}
@@ -119,7 +126,7 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
               Input: SelectInput,
-              ...components
+              ...components,
             }}
             showArrow={defaultOptions}
             aria-label={ariaLabel}
@@ -127,7 +134,11 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
             defaultOptions={defaultOptions}
             loadOptions={loadOptions}
           />
-          <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+          <InlineValidation
+            mt="x1"
+            errorMessage={errorMessage}
+            errorList={errorList}
+          />
         </MaybeFieldLabel>
       </Field>
     );
@@ -136,6 +147,6 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
 AsyncSelect.defaultProps = {
   ...SelectDefaultProps,
   cacheOptions: false,
-  defaultOptions: undefined
+  defaultOptions: undefined,
 };
 export default AsyncSelect;

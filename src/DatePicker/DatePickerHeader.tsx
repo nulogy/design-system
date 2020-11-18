@@ -17,7 +17,7 @@ const DatePickerHeader: React.SFC<DatePickerHeaderProps> = ({
   increaseMonth,
   prevMonthButtonDisabled,
   nextMonthButtonDisabled,
-  locale
+  locale,
 }) => {
   return (
     <Flex justifyContent="space-between" alignItems="center" py="half" px="x1">
@@ -47,6 +47,6 @@ const DatePickerHeader: React.SFC<DatePickerHeaderProps> = ({
   );
 };
 DatePickerHeader.defaultProps = {
-  locale: undefined
+  locale: undefined,
 };
 export default DatePickerHeader;

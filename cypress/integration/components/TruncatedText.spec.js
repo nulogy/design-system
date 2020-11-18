@@ -4,7 +4,7 @@ describe("TruncatedText", () => {
     cy.get(el).should("be.visible");
     cy.get(el).contains(text);
   };
-  const assertTooltip = text => {
+  const assertTooltip = (text) => {
     cy.get('[aria-haspopup="true"]').trigger("mouseover");
     cy.get('[role="tooltip"]').should("be.visible");
     cy.isInViewport('[role="tooltip"]');
@@ -78,13 +78,17 @@ describe("TruncatedText", () => {
       cy.renderFromStorybook("truncatedtext--full-width");
     });
     it("shows the tooltip when there is overflow", () => {
-      cy.get("[data-testid='truncated-text']").first().trigger('mouseover');
-      cy.get('[role="tooltip"]').contains("Special instructions are truncated because there is not enough space to show them.");
+      cy.get("[data-testid='truncated-text']").first().trigger("mouseover");
+      cy.get('[role="tooltip"]').contains(
+        "Special instructions are truncated because there is not enough space to show them."
+      );
     });
     it("doesn't show a tooltip when there's no overflow", () => {
-      cy.get("[data-testid='truncated-text']").eq(1).trigger('mouseover');
+      cy.get("[data-testid='truncated-text']").eq(1).trigger("mouseover");
       cy.get('[role="tooltip"]').should("not.exist");
-      cy.get("[data-testid='truncated-text']").eq(1).contains("Instructions fit here.");
+      cy.get("[data-testid='truncated-text']")
+        .eq(1)
+        .contains("Instructions fit here.");
     });
   });
 });

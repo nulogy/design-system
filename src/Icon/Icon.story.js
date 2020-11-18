@@ -17,16 +17,16 @@ const IconCode = ({ icon }) => (
 );
 
 IconCode.propTypes = {
-  icon: PropTypes.string.isRequired
+  icon: PropTypes.string.isRequired,
 };
 
 export default {
-  title: "Components/Icon"
+  title: "Components/Icon",
 };
 
 export const BasicIcon = () => (
   <>
-    {iconNames.map(iconName => (
+    {iconNames.map((iconName) => (
       <Flex my="x2" key={iconName}>
         <Icon mr="20px" icon={iconName} />
         <IconCode icon={iconName} />
@@ -36,15 +36,15 @@ export const BasicIcon = () => (
 );
 
 BasicIcon.story = {
-  name: "Icon"
+  name: "Icon",
 };
 
 export const _InlineIcon = () => (
   <>
-    {[1, 2, 3, 4].map(size => (
+    {[1, 2, 3, 4].map((size) => (
       <p style={{ fontSize: `${size}em` }} key={size}>
         @{size}em: &nbsp;
-        {iconSubset.map(iconName => (
+        {iconSubset.map((iconName) => (
           <InlineIcon icon={iconName} key={iconName} />
         ))}
       </p>
@@ -53,14 +53,14 @@ export const _InlineIcon = () => (
 );
 
 _InlineIcon.story = {
-  name: "InlineIcon"
+  name: "InlineIcon",
 };
 
 export const WithAColor = () => (
   <>
-    {["red", "yellow", "green", "blue", "blackBlue"].map(color => (
+    {["red", "yellow", "green", "blue", "blackBlue"].map((color) => (
       <Box key={color}>
-        {iconSubset.map(iconName => (
+        {iconSubset.map((iconName) => (
           <Icon icon={iconName} color={color} key={iconName} />
         ))}
       </Box>
@@ -69,14 +69,14 @@ export const WithAColor = () => (
 );
 
 WithAColor.story = {
-  name: "With a color"
+  name: "With a color",
 };
 
 export const WithASize = () => (
   <>
-    {[theme.space.x1, theme.space.x2, theme.space.x3].map(size => (
+    {[theme.space.x1, theme.space.x2, theme.space.x3].map((size) => (
       <Box key={size}>
-        {iconSubset.map(iconName => (
+        {iconSubset.map((iconName) => (
           <Icon icon={iconName} size={size} key={iconName} />
         ))}
       </Box>
@@ -85,7 +85,7 @@ export const WithASize = () => (
 );
 
 WithASize.story = {
-  name: "With a size"
+  name: "With a size",
 };
 
 export const WithAddedMargin = () => (
@@ -115,7 +115,7 @@ export const WithAddedMargin = () => (
 );
 
 WithAddedMargin.story = {
-  name: "With added margin"
+  name: "With added margin",
 };
 
 export const WithAccessibilityTitle = () => (
@@ -126,11 +126,13 @@ export const WithAccessibilityTitle = () => (
     </Flex>
     <Flex p="x2">
       <Icon icon="user" />
-      {" This doesn't have a title attribute, so it has aria-hidden set true instead."}
+      {
+        " This doesn't have a title attribute, so it has aria-hidden set true instead."
+      }
     </Flex>
   </>
 );
 
 WithAccessibilityTitle.story = {
-  name: "With accessibility title"
+  name: "With accessibility title",
 };

@@ -6,29 +6,31 @@ import { AsyncSelect, Button } from "../index";
 const northAmericanCountries = [
   {
     value: "Canada",
-    label: "Canada"
+    label: "Canada",
   },
   {
     value: "United States",
-    label: "United States"
+    label: "United States",
   },
   {
     value: "Mexico",
-    label: "Mexico"
-  }
+    label: "Mexico",
+  },
 ];
 
-const loadMatchingCountries = async inputValue => {
-  const data = await fetch(`https://restcountries.eu/rest/v2/name/${inputValue}`);
+const loadMatchingCountries = async (inputValue) => {
+  const data = await fetch(
+    `https://restcountries.eu/rest/v2/name/${inputValue}`
+  );
   const results = await data.json();
   return results.map(({ name }) => ({
     label: name,
-    value: name
+    value: name,
   }));
 };
 
 export default {
-  title: "Components/AsyncSelect"
+  title: "Components/AsyncSelect",
 };
 
 export const Default = () => (
@@ -45,7 +47,7 @@ export const Default = () => (
 );
 
 Default.story = {
-  name: "default"
+  name: "default",
 };
 
 export const WithDefaultOptions = () => (
@@ -63,7 +65,7 @@ export const WithDefaultOptions = () => (
 );
 
 WithDefaultOptions.story = {
-  name: "With default options"
+  name: "With default options",
 };
 
 export const WithADefaultValue = () => (
@@ -81,7 +83,7 @@ export const WithADefaultValue = () => (
 );
 
 WithADefaultValue.story = {
-  name: "With a default value"
+  name: "With a default value",
 };
 
 export const Multiselect = () => (
@@ -99,7 +101,7 @@ export const Multiselect = () => (
 );
 
 Multiselect.story = {
-  name: "Multiselect"
+  name: "Multiselect",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -128,5 +130,5 @@ export const UsingRefToControlFocus = () => {
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };
