@@ -1,27 +1,16 @@
 ## Description
 
-**Include what change you're making, why, and link to any relevant JIRA issues**
+**Describe the change you're making, the motiviations behind it, and any thing else a reviewer may need to know to approve this PR.**
 
 ## Changes include
 
-- [ ] Bugfix (non-breaking change that solves an issue)
-- [ ] New feature (non-breaking change that adds functionality)
-- [ ] Breaking change (change that is not backwards-compatible and/or changes current functionality)
-- [ ] Documentation only
+- [ ] breaking change: a change that is not backwards-compatible and/or changes current functionality
+- [ ] fix: a non-breaking change that solves an issue
+- [ ] feature: a non-breaking change that adds functionality
+- [ ] chore: contains no changes affecting the library, such as documentation or test updates
 
-## Checklist
+## Feature checklist
 
-**Please check all that apply.**
-
-- [ ] Storybook updated with examples of new functionality
-- [ ] Storybook uses variable and realistic data (ex: short and long text)
-- [ ] Docs updated with correct props and examples
-- [ ] e2e tests added for component iterations
-- [ ] jest tests added for component API that may not be captured with storyshots (change handlers, renderers etc)
-- [ ] Accessibility (includes relevant tags, keyboard functionality, colour contrast)
-
-## Before Merging
-
-- [ ] If a component was changed, the Chromatic check has run and been approved
-- [ ] Tested storybook deployment preview
-- [ ] Tested docs deployment preview
+- [ ] Appropriate tests have been added 
+- [ ] Documentation has been updated
+- [ ] Accessibility has been considered
