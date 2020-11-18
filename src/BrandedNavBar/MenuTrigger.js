@@ -62,7 +62,7 @@ const MenuTriggerButton = React.forwardRef(
       <Icon
         style={{
           position: "absolute",
-          top: "50%",
+          top: "52%",
           transform: "translateY(-50%)",
           right: "8px",
         }}
