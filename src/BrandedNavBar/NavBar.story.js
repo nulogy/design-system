@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { select } from "@storybook/addon-knobs";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 import { Heading1 } from "../Type";
+import { Icon } from "../Icon";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
@@ -87,6 +88,19 @@ const secondaryMenu = [
   }
 ];
 
+
+const secondaryMenuWithIcon = [
+  {
+    name: "Account Information: User@Nulogy.com",
+    items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
+  },
+  {
+    name: <Icon icon="settings" />,
+    ariaLabel: "Settings",
+    items: [{ name: "Permissions", href: "/" }, { name: "Manage account", href: "/" }]
+  }
+];
+
 export default {
   title: "Components/BrandedNavBar"
 };
@@ -128,4 +142,17 @@ export const WithEnvironmentBanner = () => (
 
 WithEnvironmentBanner.story = {
   name: "with environment banner"
+};
+
+export const WithIcon = () => (
+  <BrandedNavBar
+    menuData={{
+      primaryMenu: primaryMenu,
+      secondaryMenu: secondaryMenuWithIcon,
+    }}
+  />
+);
+
+WithIcon.story = {
+  name: "With icon",
 };
