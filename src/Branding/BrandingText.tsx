@@ -3,9 +3,9 @@ import theme from "../theme";
 import CSSObject from "styled-components";
 const logoColors = {
   white: theme.colors.white,
-  blue: "#0E77D2"
+  blue: "#0E77D2",
 };
-const getLogoColor = logoColor => logoColors[logoColor] || logoColors.blue;
+const getLogoColor = (logoColor) => logoColors[logoColor] || logoColors.blue;
 type BrandingTextProps = {
   logoColor?: "blue" | "white";
   size: any;
@@ -21,14 +21,14 @@ const BrandingText: React.SFC<any> = styled.span(
     lineHeight: "12px",
     whiteSpace: "nowrap",
     active: {
-      color: getLogoColor(logoColor)
+      color: getLogoColor(logoColor),
     },
     visited: {
-      color: getLogoColor(logoColor)
-    }
+      color: getLogoColor(logoColor),
+    },
   })
 );
 BrandingText.defaultProps = {
-  logoColor: "blue"
+  logoColor: "blue",
 };
 export default BrandingText;

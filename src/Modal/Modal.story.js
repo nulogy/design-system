@@ -8,7 +8,7 @@ import {
   Form,
   Input,
   Select,
-  Text
+  Text,
 } from "../index";
 
 const env = process.env.NODE_ENV;
@@ -16,10 +16,10 @@ const env = process.env.NODE_ENV;
 if (env !== "test") NDSModal.setAppElement("#root");
 
 const envProps = {
-  ariaHideApp: env === "test" ? false : undefined
+  ariaHideApp: env === "test" ? false : undefined,
 };
 
-const Modal = props => <NDSModal {...envProps} {...props} />;
+const Modal = (props) => <NDSModal {...envProps} {...props} />;
 
 const options = [
   { value: "accepted", label: "Accepted" },
@@ -28,7 +28,7 @@ const options = [
   { value: "rejected", label: "Rejected" },
   { value: "open", label: "Open" },
   { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" }
+  { value: "quarantine", label: "In quarantine" },
 ];
 
 // Modal.setAppElement("#root")
@@ -38,7 +38,7 @@ class ModalExample extends React.Component {
     super();
 
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
 
     this.openModal = this.openModal.bind(this);
@@ -92,7 +92,7 @@ const modalButtons = (
 );
 
 export default {
-  title: "Components/Modal"
+  title: "Components/Modal",
 };
 
 export const _Modal = () => (
@@ -102,97 +102,127 @@ export const _Modal = () => (
 );
 
 export const WithCloseButton = () => (
-  <Modal title="Modal Title" footerContent={modalButtons} onRequestClose={() => {}}>
+  <Modal
+    title="Modal Title"
+    footerContent={modalButtons}
+    onRequestClose={() => {}}
+  >
     Content Content Content
   </Modal>
 );
 
 WithCloseButton.story = {
-  name: "with close button"
+  name: "with close button",
 };
 
 export const WithScrollingContent = () => (
   <Modal title="Modal Title" footerContent={modalButtons}>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
   </Modal>
 );
 
 WithScrollingContent.story = {
-  name: "with scrolling content"
+  name: "with scrolling content",
 };
 
 export const WithScrollingContentWithoutFooterContent = () => (
   <Modal title="Modal Title">
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content
+      Content Content Content
     </Text>
   </Modal>
 );
 
 WithScrollingContentWithoutFooterContent.story = {
-  name: "with scrolling content without footer content"
+  name: "with scrolling content without footer content",
 };
 
-export const WithNoTitle = () => <Modal footerContent={modalButtons}>Content Content Content</Modal>;
+export const WithNoTitle = () => (
+  <Modal footerContent={modalButtons}>Content Content Content</Modal>
+);
 
 WithNoTitle.story = {
-  name: "with no title"
+  name: "with no title",
 };
 
 export const WithNoFooterContent = () => (
@@ -202,7 +232,7 @@ export const WithNoFooterContent = () => (
 );
 
 WithNoFooterContent.story = {
-  name: "with no footerContent"
+  name: "with no footerContent",
 };
 
 export const WithCustomMaxWidth = () => (
@@ -212,11 +242,16 @@ export const WithCustomMaxWidth = () => (
 );
 
 WithCustomMaxWidth.story = {
-  name: "with custom maxWidth"
+  name: "with custom maxWidth",
 };
 
 export const WithSelect = () => (
-  <Modal title="Edit Profile" footerContent={modalButtons} onRequestClose={() => {}} maxWidth="456px">
+  <Modal
+    title="Edit Profile"
+    footerContent={modalButtons}
+    onRequestClose={() => {}}
+    maxWidth="456px"
+  >
     <Form id="myForm" mb="x2">
       <Select
         maxHeight="96px"
@@ -229,11 +264,16 @@ export const WithSelect = () => (
 );
 
 WithSelect.story = {
-  name: "with select"
+  name: "with select",
 };
 
 export const WithSelectAndScrollingContent = () => (
-  <Modal title="Edit Profile" footerContent={modalButtons} onRequestClose={() => {}} maxWidth="456px">
+  <Modal
+    title="Edit Profile"
+    footerContent={modalButtons}
+    onRequestClose={() => {}}
+    maxWidth="456px"
+  >
     <Form id="myForm" mb="x2">
       <Input name="name" id="name" labelText="Name" />
       <Input type="number" name="age" id="age" labelText="Age" />
@@ -252,11 +292,11 @@ export const WithSelectAndScrollingContent = () => (
 );
 
 WithSelectAndScrollingContent.story = {
-  name: "with select and scrolling content"
+  name: "with select and scrolling content",
 };
 
 export const ExampleControlledModal = () => <ModalExample />;
 
 ExampleControlledModal.story = {
-  name: "example controlled modal"
+  name: "example controlled modal",
 };

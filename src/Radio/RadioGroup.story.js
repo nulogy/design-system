@@ -4,7 +4,7 @@ import { Radio, RadioGroup } from "../index";
 const errorList = ["Error message 1", "Error message 2"];
 
 export default {
-  title: "Components/RadioGroup"
+  title: "Components/RadioGroup",
 };
 
 export const _RadioGroup = () => (
@@ -16,7 +16,7 @@ export const _RadioGroup = () => (
 );
 
 _RadioGroup.story = {
-  name: "RadioGroup"
+  name: "RadioGroup",
 };
 
 export const RadioGroupWithAllProps = () => (
@@ -35,7 +35,7 @@ export const RadioGroupWithAllProps = () => (
 );
 
 RadioGroupWithAllProps.story = {
-  name: "RadioGroup with all props"
+  name: "RadioGroup with all props",
 };
 
 export const WithErrorMessage = () => (
@@ -52,7 +52,7 @@ export const WithErrorMessage = () => (
 );
 
 WithErrorMessage.story = {
-  name: "with error message"
+  name: "with error message",
 };
 
 export const WithErrorList = () => (
@@ -70,11 +70,16 @@ export const WithErrorList = () => (
 );
 
 WithErrorList.story = {
-  name: "with error list"
+  name: "with error list",
 };
 
 export const SetToDisabled = () => (
-  <RadioGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue="a">
+  <RadioGroup
+    disabled
+    labelText="Setting Selection"
+    name="settingSelection"
+    defaultValue="a"
+  >
     <Radio value="a" labelText="Option A" />
     <Radio value="b" labelText="Option B" />
     <Radio value="c" labelText="Option C" />
@@ -82,11 +87,16 @@ export const SetToDisabled = () => (
 );
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };
 
 export const Controlled = () => (
-  <RadioGroup labelText="Setting Selection" name="settingSelection" checkedValue="a" onChange={() => {}}>
+  <RadioGroup
+    labelText="Setting Selection"
+    name="settingSelection"
+    checkedValue="a"
+    onChange={() => {}}
+  >
     <Radio value="a" labelText="Option A" />
     <Radio value="b" labelText="Option B" />
     <Radio value="c" labelText="Option C" />

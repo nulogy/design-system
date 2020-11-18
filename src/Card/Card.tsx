@@ -10,6 +10,6 @@ Card.defaultProps = {
   bg: "whiteGrey",
   py: "x2",
   px: "x2",
-  position: "relative"
+  position: "relative",
 };
 export default Card;

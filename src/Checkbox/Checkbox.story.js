@@ -8,10 +8,10 @@ class CheckboxWithState extends React.Component {
     this.state = { checkbox1: false, checkbox2: false };
   }
 
-  handleChange = key => {
-    this.setState(state => ({
+  handleChange = (key) => {
+    this.setState((state) => ({
       ...state,
-      [key]: !state[key]
+      [key]: !state[key],
     }));
   };
 
@@ -37,14 +37,18 @@ class CheckboxWithState extends React.Component {
 }
 
 export default {
-  title: "Components/Checkbox"
+  title: "Components/Checkbox",
 };
 
-export const _Checkbox = () => <Checkbox id="checkbox" labelText="I am a checkbox" />;
-export const SetToDefaultChecked = () => <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />;
+export const _Checkbox = () => (
+  <Checkbox id="checkbox" labelText="I am a checkbox" />
+);
+export const SetToDefaultChecked = () => (
+  <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />
+);
 
 SetToDefaultChecked.story = {
-  name: "Set to defaultChecked"
+  name: "Set to defaultChecked",
 };
 
 export const SetToDisabled = () => (
@@ -55,7 +59,7 @@ export const SetToDisabled = () => (
 );
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };
 
 export const CheckboxWithNoLabel = () => (
@@ -65,7 +69,7 @@ export const CheckboxWithNoLabel = () => (
 );
 
 CheckboxWithNoLabel.story = {
-  name: "Checkbox with no label"
+  name: "Checkbox with no label",
 };
 
 export const SetToError = () => (
@@ -76,7 +80,7 @@ export const SetToError = () => (
 );
 
 SetToError.story = {
-  name: "Set to error"
+  name: "Set to error",
 };
 
 export const SetToRequired = () => (
@@ -86,12 +90,18 @@ export const SetToRequired = () => (
 );
 
 SetToRequired.story = {
-  name: "Set to required"
+  name: "Set to required",
 };
 
 export const Indeterminate = () => (
   <>
-    <Checkbox id="checkbox" labelText="I am an indeterminate checkbox" readOnly checked indeterminate />
+    <Checkbox
+      id="checkbox"
+      labelText="I am an indeterminate checkbox"
+      readOnly
+      checked
+      indeterminate
+    />
     <Checkbox
       id="checkbox"
       labelText="I am a unchecked indeterminate checkbox"
@@ -119,13 +129,13 @@ export const Indeterminate = () => (
 );
 
 Indeterminate.story = {
-  name: "indeterminate"
+  name: "indeterminate",
 };
 
 export const WithState = () => <CheckboxWithState />;
 
 WithState.story = {
-  name: "With state"
+  name: "With state",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -136,12 +146,18 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Checkbox ref={ref} labelText="I am a unchecked indeterminate checkbox" readOnly checked={false} indeterminate />
+      <Checkbox
+        ref={ref}
+        labelText="I am a unchecked indeterminate checkbox"
+        readOnly
+        checked={false}
+        indeterminate
+      />
       <Button onClick={handleClick}>Focus the Input</Button>
     </>
   );
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };

@@ -4,10 +4,12 @@ import { boolean } from "@storybook/addon-knobs";
 import { Toggle, Button } from "../index";
 
 export default {
-  title: "Components/Toggle"
+  title: "Components/Toggle",
 };
 
-export const _Toggle = () => <Toggle data-testid="toggle-example" onChange={action("on change")} />;
+export const _Toggle = () => (
+  <Toggle data-testid="toggle-example" onChange={action("on change")} />
+);
 
 export const ToggleWithAllProps = () => (
   <Toggle
@@ -23,7 +25,7 @@ export const ToggleWithAllProps = () => (
 );
 
 ToggleWithAllProps.story = {
-  name: "Toggle with all props"
+  name: "Toggle with all props",
 };
 
 export const ToggleSetToDefaultToggled = () => (
@@ -31,12 +33,18 @@ export const ToggleSetToDefaultToggled = () => (
 );
 
 ToggleSetToDefaultToggled.story = {
-  name: "Toggle set to defaultToggled"
+  name: "Toggle set to defaultToggled",
 };
 
 export const ToggleSetToDisabled = () => (
   <>
-    <Toggle labelText="Toggle" disabled onText="on" offText="off" onChange={action("on change")} />
+    <Toggle
+      labelText="Toggle"
+      disabled
+      onText="on"
+      offText="off"
+      onChange={action("on change")}
+    />
     <Toggle
       id="toggle-2"
       disabled
@@ -50,21 +58,34 @@ export const ToggleSetToDisabled = () => (
 );
 
 ToggleSetToDisabled.story = {
-  name: "Toggle set to disabled"
+  name: "Toggle set to disabled",
 };
 
 export const WithCustomId = () => (
-  <Toggle id="my-custom-id" labelText="Toggle" onText="on" offText="off" onChange={action("on change")} />
+  <Toggle
+    id="my-custom-id"
+    labelText="Toggle"
+    onText="on"
+    offText="off"
+    onChange={action("on change")}
+  />
 );
 
 WithCustomId.story = {
-  name: "With custom id"
+  name: "With custom id",
 };
 
-export const WithText = () => <Toggle labelText="Toggle" onText="on" offText="off" onChange={action("on change")} />;
+export const WithText = () => (
+  <Toggle
+    labelText="Toggle"
+    onText="on"
+    offText="off"
+    onChange={action("on change")}
+  />
+);
 
 WithText.story = {
-  name: "With text"
+  name: "With text",
 };
 
 export const WithLongText = () => (
@@ -78,7 +99,7 @@ export const WithLongText = () => (
 );
 
 WithLongText.story = {
-  name: "With long text"
+  name: "With long text",
 };
 
 export const ControlledToggle = () => (
@@ -99,12 +120,19 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Toggle id="my-custom-id" labelText="Toggle" onText="on" offText="off" onChange={action("on change")} ref={ref} />
+      <Toggle
+        id="my-custom-id"
+        labelText="Toggle"
+        onText="on"
+        offText="off"
+        onChange={action("on change")}
+        ref={ref}
+      />
       <Button onClick={handleClick}>Focus the Toggle</Button>
     </>
   );
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };

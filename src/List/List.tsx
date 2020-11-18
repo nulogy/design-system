@@ -11,7 +11,7 @@ import {
   boxShadow,
   BoxShadowProps,
   border,
-  BorderProps
+  BorderProps,
 } from "styled-system";
 import ListItem from "./ListItem";
 import { ThemeType } from "../theme.type";
@@ -35,8 +35,8 @@ const List: React.SFC<ListProps> = styled.ul(
     paddingLeft: leftAlign ? "18px" : undefined,
     listStyle,
     [`${ListItem}`]: {
-      marginBottom: compact ? 0 : theme.space.x1
-    }
+      marginBottom: compact ? 0 : theme.space.x1,
+    },
   }),
   space,
   color,
@@ -50,6 +50,6 @@ List.defaultProps = {
   compact: false,
   leftAlign: false,
   listStyle: undefined,
-  color: "currentColor"
+  color: "currentColor",
 };
 export default List;

@@ -4,7 +4,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 import { Table } from "../index";
 
 export default {
-  title: "Components/Table/Headers"
+  title: "Components/Table/Headers",
 };
 
 export const _SortingHeader = () => (

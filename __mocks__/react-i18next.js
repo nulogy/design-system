@@ -5,11 +5,13 @@ const reactI18next = require("react-i18next");
 const en_US = require("../locales/en_US.json");
 /* eslint-enable */
 
-const hasChildren = node => node && (node.children || (node.props && node.props.children));
+const hasChildren = (node) =>
+  node && (node.children || (node.props && node.props.children));
 
-const getChildren = node => (node && node.children ? node.children : node.props && node.props.children);
+const getChildren = (node) =>
+  node && node.children ? node.children : node.props && node.props.children;
 
-const renderNodes = reactNodes => {
+const renderNodes = (reactNodes) => {
   if (typeof reactNodes === "string") {
     return reactNodes;
   }
@@ -27,22 +29,27 @@ const renderNodes = reactNodes => {
       return React.cloneElement(child, { ...child.props, key: i }, inner);
     }
     if (typeof child === "object" && !isElement) {
-      return Object.keys(child).reduce((str, childKey) => `${str}${child[childKey]}`, "");
+      return Object.keys(child).reduce(
+        (str, childKey) => `${str}${child[childKey]}`,
+        ""
+      );
     }
 
     return child;
   });
 };
 
-const useMock = [k => k, {}];
-useMock.t = k => en_US[k] || k;
+const useMock = [(k) => k, {}];
+useMock.t = (k) => en_US[k] || k;
 useMock.i18n = {};
 
 module.exports = {
   // this mock makes sure any components using the translate HoC receive the t function as a prop
-  withTranslation: () => Component => props => <Component t={k => k} {...props} />,
+  withTranslation: () => (Component) => (props) => (
+    <Component t={(k) => k} {...props} />
+  ),
   Trans: ({ children }) => renderNodes(children),
-  Translation: ({ children }) => children(k => k, { i18n: {} }),
+  Translation: ({ children }) => children((k) => k, { i18n: {} }),
   useTranslation: () => useMock,
 
   // mock if needed
@@ -51,5 +58,5 @@ module.exports = {
   setDefaults: reactI18next.setDefaults,
   getDefaults: reactI18next.getDefaults,
   setI18n: reactI18next.setI18n,
-  getI18n: reactI18next.getI18n
+  getI18n: reactI18next.getI18n,
 };

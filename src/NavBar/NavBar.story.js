@@ -8,10 +8,10 @@ const ResetStorybookView = styled.div({
   top: 0,
   left: 0,
   width: "100vw",
-  height: "100vh"
+  height: "100vh",
 });
 
-const NavBar = props => (
+const NavBar = (props) => (
   <ResetStorybookView>
     <NDSNavBar {...props} />
   </ResetStorybookView>
@@ -26,8 +26,8 @@ const primaryMenu = [
       { name: "Projects", href: "/" },
       { name: "Items", href: "/" },
       { name: "Vendors", href: "/" },
-      { name: "Carriers", href: "/" }
-    ]
+      { name: "Carriers", href: "/" },
+    ],
   },
 
   {
@@ -45,8 +45,8 @@ const primaryMenu = [
       { name: "Blind Counts", href: "/" },
       { name: "Inbound Stock Transfer Orders", href: "/" },
       { name: "Inbound Stock Transfers", href: "/" },
-      { name: "Outbound Stock Transfers", href: "/" }
-    ]
+      { name: "Outbound Stock Transfers", href: "/" },
+    ],
   },
   {
     name: "Operations",
@@ -57,19 +57,25 @@ const primaryMenu = [
           { name: "Dashboard", href: "/" },
           {
             name: "Projects",
-            items: [{ name: "Cycle Counts", href: "/" }, { name: "Blind Counts", href: "/" }]
+            items: [
+              { name: "Cycle Counts", href: "/" },
+              { name: "Blind Counts", href: "/" },
+            ],
           },
           {
             name: "Jobs",
-            items: [{ name: "Job 1", href: "/" }, { name: "Job 2", href: "/" }]
-          }
-        ]
+            items: [
+              { name: "Job 1", href: "/" },
+              { name: "Job 2", href: "/" },
+            ],
+          },
+        ],
       },
       { name: "Item cart", href: "/" },
-      { name: "Inventory", href: "/" }
-    ]
+      { name: "Inventory", href: "/" },
+    ],
   },
-  { name: "Link", href: "/" }
+  { name: "Link", href: "/" },
 ];
 
 const primaryMenuCustomLinks = [
@@ -81,32 +87,32 @@ const primaryMenuCustomLinks = [
         items: [
           {
             name: "NormalLink",
-            href: "/"
+            href: "/",
           },
           {
             name: "CustomLink",
-            render: () => <a href="/">CustomLink</a>
-          }
-        ]
+            render: () => <a href="/">CustomLink</a>,
+          },
+        ],
       },
       {
         name: "Projects",
-        href: "/"
+        href: "/",
       },
       {
         name: "Customers",
-        render: () => <a href="/">Customers CustomLink</a>
-      }
-    ]
+        render: () => <a href="/">Customers CustomLink</a>,
+      },
+    ],
   },
   {
     name: "Inspector",
-    href: "/"
+    href: "/",
   },
   {
     name: "Custom Link",
-    render: () => <a href="/">Custom Link</a>
-  }
+    render: () => <a href="/">Custom Link</a>,
+  },
 ];
 
 const primaryMenuText = [
@@ -118,96 +124,120 @@ const primaryMenuText = [
         items: [
           {
             name: "NormalLink",
-            href: "/"
+            href: "/",
           },
           {
-            name: "Just Text"
-          }
-        ]
+            name: "Just Text",
+          },
+        ],
       },
       {
         name: "NormalLink",
-        href: "/"
+        href: "/",
       },
       {
-        name: "Just Text"
-      }
-    ]
+        name: "Just Text",
+      },
+    ],
   },
   {
     name: "NormalLink",
-    href: "/"
+    href: "/",
   },
   {
-    name: "Just Text"
-  }
+    name: "Just Text",
+  },
 ];
 
 const secondaryMenu = [
   {
     name: "User@Nulogy.com",
-    items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
+    items: [
+      { name: "Profile", href: "/" },
+      { name: "Preferences", href: "/" },
+      { name: "Logout", href: "/" },
+    ],
   },
   {
     name: "Settings",
-    items: [{ name: "Permissions", href: "/" }, { name: "Manage account", href: "/" }]
-  }
+    items: [
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" },
+    ],
+  },
 ];
 
 const secondaryMenuCustomLinks = [
   {
     name: "User@Nulogy.com",
-    items: [{ name: "Profile", href: "/" }, { name: "Preferences", href: "/" }, { name: "Logout", href: "/" }]
+    items: [
+      { name: "Profile", href: "/" },
+      { name: "Preferences", href: "/" },
+      { name: "Logout", href: "/" },
+    ],
   },
   {
     name: <Icon icon="settings" />,
     ariaLabel: "Settings",
-    items: [{ name: "Permissions", href: "/" }, { name: "Manage account", href: "/" }]
-  }
+    items: [
+      { name: "Permissions", href: "/" },
+      { name: "Manage account", href: "/" },
+    ],
+  },
 ];
 
 const search = {
-  onSubmit: () => {}
+  onSubmit: () => {},
 };
 
 export default {
-  title: "Components/NavBar"
+  title: "Components/NavBar",
 };
 
-export const _NavBar = () => <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />;
+export const _NavBar = () => (
+  <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />
+);
 
 _NavBar.story = {
-  name: "NavBar"
+  name: "NavBar",
 };
 
-export const WithoutSearch = () => <NavBar menuData={{ primaryMenu, secondaryMenu }} />;
+export const WithoutSearch = () => (
+  <NavBar menuData={{ primaryMenu, secondaryMenu }} />
+);
 
 WithoutSearch.story = {
-  name: "Without search"
+  name: "Without search",
 };
 
-export const WithoutSecondaryMenu = () => <NavBar menuData={{ primaryMenu, search }} />;
+export const WithoutSecondaryMenu = () => (
+  <NavBar menuData={{ primaryMenu, search }} />
+);
 
 WithoutSecondaryMenu.story = {
-  name: "Without secondary menu"
+  name: "Without secondary menu",
 };
 
-export const WithoutSearchAndSecondaryMenu = () => <NavBar menuData={{ primaryMenu }} />;
+export const WithoutSearchAndSecondaryMenu = () => (
+  <NavBar menuData={{ primaryMenu }} />
+);
 
 WithoutSearchAndSecondaryMenu.story = {
-  name: "Without search and secondary menu"
+  name: "Without search and secondary menu",
 };
 
-export const WithoutSearchAndPrimaryMenu = () => <NavBar menuData={{ secondaryMenu }} />;
+export const WithoutSearchAndPrimaryMenu = () => (
+  <NavBar menuData={{ secondaryMenu }} />
+);
 
 WithoutSearchAndPrimaryMenu.story = {
-  name: "Without search and primary menu"
+  name: "Without search and primary menu",
 };
 
 export const WithBrandingOnly = () => <NavBar menuData={{}} />;
 
 WithBrandingOnly.story = {
-  name: "With branding only"
+  name: "With branding only",
 };
 
 export const WithCustomLinkComponents = () => (
@@ -215,41 +245,53 @@ export const WithCustomLinkComponents = () => (
     menuData={{
       primaryMenu: primaryMenuCustomLinks,
       secondaryMenu: secondaryMenuCustomLinks,
-      search
+      search,
     }}
   />
 );
 
 WithCustomLinkComponents.story = {
-  name: "With custom link components"
+  name: "With custom link components",
 };
 
-export const WithTextInTheMenu = () => <NavBar menuData={{ primaryMenu: primaryMenuText }} />;
+export const WithTextInTheMenu = () => (
+  <NavBar menuData={{ primaryMenu: primaryMenuText }} />
+);
 
 WithTextInTheMenu.story = {
-  name: "With text in the menu"
+  name: "With text in the menu",
 };
 
 export const WithSubtext = () => (
-  <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
+  <NavBar
+    subtext="Logo Subtext"
+    menuData={{ primaryMenu: primaryMenuCustomLinks, search }}
+  />
 );
 
 WithSubtext.story = {
-  name: "With subtext"
+  name: "With subtext",
 };
 
 export const WithAlternativeBrandingLink = () => (
-  <NavBar brandingLinkHref="/portal" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
+  <NavBar
+    brandingLinkHref="/portal"
+    menuData={{ primaryMenu: primaryMenuCustomLinks }}
+  />
 );
 
 WithAlternativeBrandingLink.story = {
-  name: "With alternative branding link"
+  name: "With alternative branding link",
 };
 
 export const WithAlternateThemeColor = () => (
-  <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks }} themeColor="white" />
+  <NavBar
+    subtext="Logo Subtext"
+    menuData={{ primaryMenu: primaryMenuCustomLinks }}
+    themeColor="white"
+  />
 );
 
 WithAlternateThemeColor.story = {
-  name: "With alternate themeColor"
+  name: "With alternate themeColor",
 };

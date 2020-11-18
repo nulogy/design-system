@@ -17,8 +17,8 @@ const StyledTableCell: React.SFC<StyledTableCellProps> = styled.td(
       textAlign: align,
       paddingRight: padding,
       "&:first-child": {
-        paddingLeft: padding
-      }
+        paddingLeft: padding,
+      },
     };
   }
 );
@@ -29,13 +29,25 @@ type TableCellProps = {
   cellData?: object | React.ReactNode | boolean;
   compact?: boolean;
 };
-const TableCell: React.SFC<TableCellProps> = ({ row, column, colSpan, cellData, compact }) => {
+const TableCell: React.SFC<TableCellProps> = ({
+  row,
+  column,
+  colSpan,
+  cellData,
+  compact,
+}) => {
   const cellRenderer = row.cellRenderer || column.cellRenderer;
   const { cellFormatter } = column;
   const isCustomCell = Boolean(cellRenderer);
-  const cellContent = cellFormatter ? cellFormatter({ cellData, column, row }) : cellData;
+  const cellContent = cellFormatter
+    ? cellFormatter({ cellData, column, row })
+    : cellData;
   if (isCustomCell) {
-    return <td colSpan={colSpan}>{cellRenderer ? cellRenderer({ cellData, column, row }) : cellData}</td>;
+    return (
+      <td colSpan={colSpan}>
+        {cellRenderer ? cellRenderer({ cellData, column, row }) : cellData}
+      </td>
+    );
   }
   return (
     <StyledTableCell align={column.align} compact={compact}>
@@ -48,6 +60,6 @@ TableCell.defaultProps = {
   row: {},
   cellData: "",
   colSpan: undefined,
-  compact: false
+  compact: false,
 };
 export default TableCell;

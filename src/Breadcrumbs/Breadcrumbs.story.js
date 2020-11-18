@@ -4,7 +4,7 @@ import { Link } from "../Link";
 import { Text } from "../Type";
 
 export default {
-  title: "Components/Breadcrumbs"
+  title: "Components/Breadcrumbs",
 };
 
 export const _Breadcrumbs = () => (
@@ -28,5 +28,5 @@ export const WithoutLink = () => (
 );
 
 WithoutLink.story = {
-  name: "without link"
+  name: "without link",
 };

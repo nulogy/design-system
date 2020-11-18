@@ -6,11 +6,11 @@ const HelpTextContent = styled(Text)(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   lineHeight: theme.lineHeights.smallTextBase,
   [`${Link}`]: {
-    fontSize: theme.fontSizes.small
-  }
+    fontSize: theme.fontSizes.small,
+  },
 }));
-const HelpText: React.SFC<any> = props => <HelpTextContent {...props} />;
+const HelpText: React.SFC<any> = (props) => <HelpTextContent {...props} />;
 HelpText.defaultProps = {
-  children: null
+  children: null,
 };
 export default HelpText;

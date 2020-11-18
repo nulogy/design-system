@@ -11,7 +11,7 @@ const DropdownItem: React.SFC<DropdownItemProps> = styled.div(
     theme,
     color = "darkBlue",
     hoverColor = "darkBlue",
-    bgHoverColor = "lightGrey"
+    bgHoverColor = "lightGrey",
   }: DropdownItemProps): CSSObject => ({
     "*": {
       color: theme.colors[color],
@@ -28,18 +28,18 @@ const DropdownItem: React.SFC<DropdownItemProps> = styled.div(
       "&:hover, &:focus": {
         outline: "none",
         color: theme.colors[hoverColor],
-        backgroundColor: theme.colors[bgHoverColor]
+        backgroundColor: theme.colors[bgHoverColor],
       },
       "&:disabled": {
-        opacity: ".5"
+        opacity: ".5",
       },
       "&:visited": {
-        color: theme.colors[hoverColor]
+        color: theme.colors[hoverColor],
       },
       "&:active": {
-        color: theme.colors[hoverColor]
-      }
-    }
+        color: theme.colors[hoverColor],
+      },
+    },
   })
 );
 

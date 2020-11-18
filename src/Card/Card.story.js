@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardSet } from "../index";
 
 export default {
-  title: "Components/Card"
+  title: "Components/Card",
 };
 
 export const _Card = () => <Card>I am a card.</Card>;
@@ -14,7 +14,7 @@ export const CustomCard = () => (
 );
 
 CustomCard.story = {
-  name: "Custom card"
+  name: "Custom card",
 };
 
 export const Cardset = () => (

@@ -1,5 +1,5 @@
 describe("Tabs", () => {
-  const getTab = tabNumber => cy.contains(`Tab ${tabNumber}`);
+  const getTab = (tabNumber) => cy.contains(`Tab ${tabNumber}`);
   describe("default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("tabs--tabs");
@@ -28,9 +28,7 @@ describe("Tabs", () => {
     });
 
     it("selects a tab when enter is pressed on it", () => {
-      getTab(1)
-        .type("{enter}")
-        .should("have.attr", "aria-selected", "true");
+      getTab(1).type("{enter}").should("have.attr", "aria-selected", "true");
     });
 
     it("focuses the first tab by default", () => {
@@ -144,13 +142,25 @@ describe("Tabs", () => {
     it("shows the content for each tab on click", () => {
       getTab(1).click();
 
-      cy.get("[aria-hidden=false]").should("have.text", "Uncontrolled Content: Tab 1");
-      cy.get(".ControlledTabContent").should("have.text", "Controlled Content: Tab 1");
+      cy.get("[aria-hidden=false]").should(
+        "have.text",
+        "Uncontrolled Content: Tab 1"
+      );
+      cy.get(".ControlledTabContent").should(
+        "have.text",
+        "Controlled Content: Tab 1"
+      );
 
       getTab(2).click();
 
-      cy.get("[aria-hidden=false]").should("have.text", "Uncontrolled Content: Tab 2");
-      cy.get(".ControlledTabContent").should("have.text", "Controlled Content: Tab 2");
+      cy.get("[aria-hidden=false]").should(
+        "have.text",
+        "Uncontrolled Content: Tab 2"
+      );
+      cy.get(".ControlledTabContent").should(
+        "have.text",
+        "Controlled Content: Tab 2"
+      );
     });
   });
 });

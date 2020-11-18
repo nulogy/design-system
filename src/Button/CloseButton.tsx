@@ -15,34 +15,34 @@ const WrapperButton = styled.button(({ disabled }) => ({
   cursor: disabled ? "arrow" : "pointer",
   [`${Icon}`]: {
     borderRadius: theme.radii.circle,
-    transition: ".2s"
+    transition: ".2s",
   },
   "&:hover": {
     [`${Icon}`]: {
-      backgroundColor: theme.colors.lightGrey
-    }
+      backgroundColor: theme.colors.lightGrey,
+    },
   },
   "&:active": {
     [`${Icon}`]: {
       transform: "scale(0.875)",
-      transition: ".2s ease-in"
-    }
+      transition: ".2s ease-in",
+    },
   },
   "&:disabled": {
     opacity: ".5",
     "&:hover, &:active": {
       [`${Icon}`]: {
         background: "none",
-        transform: "none"
-      }
-    }
+        transform: "none",
+      },
+    },
   },
   "&:focus": {
     outline: "none",
     [`${Icon}`]: {
-      boxShadow: theme.shadows.focus
-    }
-  }
+      boxShadow: theme.shadows.focus,
+    },
+  },
 }));
 const BaseCloseButton = React.forwardRef(({ ...props }: any, ref) => {
   const { t } = useTranslation();

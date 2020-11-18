@@ -8,22 +8,22 @@ const getMenuMargin = (placement, showArrow) => {
   switch (direction) {
     case "top":
       return {
-        marginBottom: showArrow ? "4px" : null
+        marginBottom: showArrow ? "4px" : null,
       };
     case "right":
       return {
         marginLeft: showArrow ? "8px" : null,
-        marginTop: showArrow ? null : "-8px"
+        marginTop: showArrow ? null : "-8px",
       };
     case "left":
       return {
         marginRight: showArrow ? "8px" : null,
-        marginTop: showArrow ? null : "-8px"
+        marginTop: showArrow ? null : "-8px",
       };
     case "bottom":
     default:
       return {
-        marginTop: showArrow ? "4px" : null
+        marginTop: showArrow ? "4px" : null,
       };
   }
 };
@@ -34,9 +34,16 @@ type DropdownMenuContainerProps = {
   dataPlacement?: any;
   theme?: ThemeType;
 };
-const DropdownMenuContainer: React.SFC<DropdownMenuContainerProps> = styled(Box)(
+const DropdownMenuContainer: React.SFC<DropdownMenuContainerProps> = styled(
+  Box
+)(
   color,
-  ({ dataPlacement, showArrow = true, backgroundColor = "whiteGrey", theme }: DropdownMenuContainerProps): any => ({
+  ({
+    dataPlacement,
+    showArrow = true,
+    backgroundColor = "whiteGrey",
+    theme,
+  }: DropdownMenuContainerProps): any => ({
     borderRadius: theme.radii.medium,
     backgroundColor: theme.colors[backgroundColor],
     borderTop: `1px solid  ${theme.colors[backgroundColor]}`,
@@ -44,7 +51,7 @@ const DropdownMenuContainer: React.SFC<DropdownMenuContainerProps> = styled(Box)
     boxShadow: theme.shadows.small,
     padding: "7px 0",
     zIndex: "100",
-    ...getMenuMargin(dataPlacement, showArrow)
+    ...getMenuMargin(dataPlacement, showArrow),
   })
 );
 

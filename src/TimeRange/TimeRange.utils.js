@@ -1,4 +1,4 @@
-const convertTimeToMinutes = time => {
+const convertTimeToMinutes = (time) => {
   if (time) {
     const timeArr = time.split(":").map(Number);
     const hours = timeArr[0];

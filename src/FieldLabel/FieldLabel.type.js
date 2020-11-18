@@ -7,12 +7,12 @@ export const FieldLabelProps = {
   requirementText: PropTypes.string,
   helpText: PropTypes.node,
   id: PropTypes.string,
-  ...propTypes.space
+  ...propTypes.space,
 };
 
 export const FieldLabelDefaultProps = {
   children: null,
   requirementText: null,
   helpText: null,
-  id: undefined
+  id: undefined,
 };

@@ -10,8 +10,12 @@ describe("Toggle", () => {
     const onClick = jest.fn();
 
     it("returns the selected time when the selection has changed", () => {
-      const { container, queryByText } = renderWithNDSProvider(<Toggle onChange={onChange} onClick={onClick} data-testid="toggle" />);
-      fireEvent.click(container.querySelectorAll("[data-testid='toggle'] input")[0]);
+      const { container, queryByText } = renderWithNDSProvider(
+        <Toggle onChange={onChange} onClick={onClick} data-testid="toggle" />
+      );
+      fireEvent.click(
+        container.querySelectorAll("[data-testid='toggle'] input")[0]
+      );
 
       expect(onChange).toHaveBeenCalled();
       expect(onClick).toHaveBeenCalled();

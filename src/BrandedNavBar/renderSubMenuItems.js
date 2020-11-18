@@ -14,7 +14,7 @@ const getSharedStyles = () => ({
   backgroundColor: "transparent",
   lineHeight: theme.lineHeights.smallTextBase,
   fontSize: `${theme.fontSizes.small}`,
-  padding: `${theme.space.half} ${theme.space.x2}`
+  padding: `${theme.space.half} ${theme.space.x2}`,
 });
 
 const ApplySubMenuLinkStyles = styled.li({
@@ -26,31 +26,41 @@ const ApplySubMenuLinkStyles = styled.li({
     textDecoration: "none",
     "&:hover, &:focus": {
       outline: "none",
-      backgroundColor: theme.colors.lightGrey
+      backgroundColor: theme.colors.lightGrey,
     },
     "&:disabled": {
-      opacity: ".5"
+      opacity: ".5",
     },
     "&:focus": {
-      boxShadow: theme.shadows.focus
-    }
-  }
+      boxShadow: theme.shadows.focus,
+    },
+  },
 });
 
 const SubMenuText = styled.li({
   color: theme.colors.darkGrey,
-  ...getSharedStyles()
+  ...getSharedStyles(),
 });
 
 const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
   <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
-    <SubMenuTrigger onItemClick={onItemClick} name={subMenuItem.name} menuData={subMenuItem.items} />
+    <SubMenuTrigger
+      onItemClick={onItemClick}
+      name={subMenuItem.name}
+      menuData={subMenuItem.items}
+    />
   </li>
 );
 
 const renderSubMenuLink = (subMenuItem, onItemClick) => (
   <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
-    <SubMenuLink fontSize="small" lineHeight="smallTextBase" py="half" onClick={onItemClick} href={subMenuItem.href}>
+    <SubMenuLink
+      fontSize="small"
+      lineHeight="smallTextBase"
+      py="half"
+      onClick={onItemClick}
+      href={subMenuItem.href}
+    >
       {subMenuItem.name}
     </SubMenuLink>
   </li>
@@ -62,9 +72,11 @@ const renderCustom = (subMenuItem, onItemClick) => (
   </ApplySubMenuLinkStyles>
 );
 
-const renderText = subMenuItem => <SubMenuText key={subMenuItem.name}>{subMenuItem.name}</SubMenuText>;
+const renderText = (subMenuItem) => (
+  <SubMenuText key={subMenuItem.name}>{subMenuItem.name}</SubMenuText>
+);
 
-const getRenderFunction = subMenuItem => {
+const getRenderFunction = (subMenuItem) => {
   if (subMenuItem.items) {
     return renderSubMenuTrigger;
   } else if (subMenuItem.href) {
@@ -77,6 +89,8 @@ const getRenderFunction = subMenuItem => {
 };
 
 const renderSubMenuItems = (subMenuItems, onItemClick, SubMenuTrigger) =>
-  subMenuItems.map(subMenuItem => getRenderFunction(subMenuItem)(subMenuItem, onItemClick, SubMenuTrigger));
+  subMenuItems.map((subMenuItem) =>
+    getRenderFunction(subMenuItem)(subMenuItem, onItemClick, SubMenuTrigger)
+  );
 
 export default renderSubMenuItems;

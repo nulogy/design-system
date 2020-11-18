@@ -18,7 +18,7 @@ const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   borderRadius: theme.radii.medium,
   marginTop: theme.space.half,
   padding: `${theme.space.half} ${theme.space.x1}`,
-  pointerEvents: "none"
+  pointerEvents: "none",
 }));
 const WrapperButton: React.SFC<any> = styled.button(
   ({ disabled, theme }: any) => ({
@@ -32,48 +32,48 @@ const WrapperButton: React.SFC<any> = styled.button(
     cursor: disabled ? "default" : "pointer",
     [`${Icon}`]: {
       borderRadius: theme.radii.circle,
-      transition: ".2s"
+      transition: ".2s",
     },
     [`${Text}`]: {
       display: "block",
       fontWeight: theme.fontWeights.medium,
-      textAlign: "left"
+      textAlign: "left",
     },
     [`${HoverText}`]: {
-      opacity: "0"
+      opacity: "0",
     },
     "&:hover": {
       [`${Icon}`]: {
-        backgroundColor: theme.colors.lightBlue
+        backgroundColor: theme.colors.lightBlue,
       },
       [`${HoverText}`]: {
-        opacity: "1"
-      }
+        opacity: "1",
+      },
     },
     "&:active": {
       [`${Icon}`]: {
         transform: "scale(0.875)",
-        transition: ".2s ease-in"
-      }
+        transition: ".2s ease-in",
+      },
     },
     "&:disabled": {
       opacity: ".5",
       "&:hover, &:active": {
         [`${Icon}`]: {
           background: "none",
-          transform: "none"
-        }
-      }
+          transform: "none",
+        },
+      },
     },
     "&:focus": {
       outline: "none",
       [`${Icon}`]: {
-        boxShadow: theme.shadows.focus
+        boxShadow: theme.shadows.focus,
       },
       [`${HoverText}`]: {
-        opacity: "1"
-      }
-    }
+        opacity: "1",
+      },
+    },
   }),
   space
 );
@@ -88,17 +88,26 @@ type BaseIconicButtonProps = SpaceProps & {
 const BaseIconicButton: React.SFC<BaseIconicButtonProps> = React.forwardRef(
   ({ children, icon, labelHidden, className, ...props }, forwardedRef) => {
     return (
-      <WrapperButton ref={forwardedRef} aria-label={children} className={className} {...props}>
+      <WrapperButton
+        ref={forwardedRef}
+        aria-label={children}
+        className={className}
+        {...props}
+      >
         <Manager>
-          <Reference>{({ ref }) => <Icon ref={ref} size={NDSTheme.space.x4} icon={icon} p="half" />}</Reference>
+          <Reference>
+            {({ ref }) => (
+              <Icon ref={ref} size={NDSTheme.space.x4} icon={icon} p="half" />
+            )}
+          </Reference>
           <Popper
             placement="bottom"
             modifiers={{
               preventOverflow: {
                 enabled: true,
                 padding: 8,
-                boundariesElement: "viewport"
-              }
+                boundariesElement: "viewport",
+              },
             }}
           >
             {({ ref, style, placement }) =>
@@ -125,6 +134,6 @@ BaseIconicButton.defaultProps = {
   children: undefined,
   className: undefined,
   labelHidden: false,
-  disabled: false
+  disabled: false,
 };
 export default IconicButton;

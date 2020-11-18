@@ -13,6 +13,6 @@ const Sufix: React.SFC<any> = ({ sufix, sufixWidth, children, ...props }) =>
 Sufix.defaultProps = {
   sufix: null,
   children: null,
-  sufixWidth: null
+  sufixWidth: null,
 };
 export default Sufix;

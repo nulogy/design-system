@@ -1,4 +1,11 @@
-import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
+import {
+  subDays,
+  addDays,
+  isValid,
+  isAfter,
+  isBefore,
+  isSameDay,
+} from "date-fns";
 import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
 import { DatePickerStyles } from "./DatePickerStyles";
@@ -10,7 +17,7 @@ import { InputFieldDefaultProps } from "../Input/InputField.type";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
-import propTypes from '@styled-system/prop-types';
+import propTypes from "@styled-system/prop-types";
 import { getSubset } from "../utils/subset";
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
@@ -56,32 +63,44 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     useEffect(() => {
       setSelectedDate(selected);
     }, [selected]);
-    const onRefChange = React.useCallback(node => {
+    const onRefChange = React.useCallback((node) => {
       if (node) {
         setRef(node);
       }
     }, []);
-    const handleInputChange = event => {
+    const handleInputChange = (event) => {
       const { value } = event.target;
       if (onInputChange) {
         onInputChange(value);
       }
     };
-    const handleSelectedDateChange = date => {
+    const handleSelectedDateChange = (date) => {
       if (onChange) {
         onChange(date);
       }
       setSelectedDate(date);
     };
     const handleDownKey = () => {
-      const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
-      if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
+      const newSelectedDate = isValid(selectedDate)
+        ? subDays(selectedDate, 1)
+        : new Date();
+      if (
+        !minDate ||
+        isAfter(newSelectedDate, minDate) ||
+        isSameDay(newSelectedDate, minDate)
+      ) {
         handleSelectedDateChange(newSelectedDate);
       }
     };
     const handleUpKey = () => {
-      const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
-      if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
+      const newSelectedDate = isValid(selectedDate)
+        ? addDays(selectedDate, 1)
+        : new Date();
+      if (
+        !maxDate ||
+        isBefore(newSelectedDate, maxDate) ||
+        isSameDay(newSelectedDate, maxDate)
+      ) {
         handleSelectedDateChange(newSelectedDate);
       }
     };
@@ -94,12 +113,14 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
       }
     };
     const renderHeader = ({ locale }) => {
-      return props => <DatePickerHeader locale={locale} {...props} />;
+      return (props) => <DatePickerHeader locale={locale} {...props} />;
     };
     const customInputProps = {
       ...inputProps,
       error: !!(errorMessage || errorList),
-      placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
+      placeholder:
+        inputProps.placeholder ||
+        (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
     };
     const customInput = (
       <DatePickerInput
@@ -130,19 +151,23 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
               maxDate={maxDate}
               highlightDates={highlightDates}
               locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
-              ref={r => {
+              ref={(r) => {
                 if (datePickerRef) {
                   datePickerRef["current"] = r;
                 }
                 onRefChange(r);
               }}
               popperModifiers={{
-                flip: { enabled: !disableFlipping }
+                flip: { enabled: !disableFlipping },
               }}
             />
           )}
         </LocaleContext.Consumer>
-        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+        <InlineValidation
+          mt="x1"
+          errorMessage={errorMessage}
+          errorList={errorList}
+        />
       </Field>
     );
   }
@@ -159,6 +184,6 @@ DatePicker.defaultProps = {
   maxDate: undefined,
   highlightDates: undefined,
   disableFlipping: false,
-  className: ""
+  className: "",
 };
 export default DatePicker;

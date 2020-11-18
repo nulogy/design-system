@@ -1,8 +1,16 @@
 import React from "react";
-import { Box, ButtonGroup, Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "../index";
+import {
+  Box,
+  ButtonGroup,
+  Button,
+  PrimaryButton,
+  DangerButton,
+  QuietButton,
+  IconicButton,
+} from "../index";
 
 export default {
-  title: "Components/ButtonGroup"
+  title: "Components/ButtonGroup",
 };
 
 export const _ButtonGroup = () => (
@@ -16,7 +24,7 @@ export const _ButtonGroup = () => (
 );
 
 _ButtonGroup.story = {
-  name: "ButtonGroup"
+  name: "ButtonGroup",
 };
 
 export const WithAlignmentRight = () => (
@@ -28,7 +36,7 @@ export const WithAlignmentRight = () => (
 );
 
 WithAlignmentRight.story = {
-  name: "with alignment right"
+  name: "with alignment right",
 };
 
 export const WithAlignmentSpaced = () => (
@@ -39,11 +47,10 @@ export const WithAlignmentSpaced = () => (
 );
 
 WithAlignmentSpaced.story = {
-  name: "with alignment spaced"
+  name: "with alignment spaced",
 };
 
 export const MoreButtonTypes = () => (
-
   <ButtonGroup bg="whiteGrey" p="x2" width="600px">
     <PrimaryButton>Button</PrimaryButton>
     <DangerButton>Button</DangerButton>
@@ -55,7 +62,7 @@ export const MoreButtonTypes = () => (
 );
 
 MoreButtonTypes.story = {
-  name: "more button types"
+  name: "more button types",
 };
 
 export const WrappingButtons = () => (
@@ -89,5 +96,5 @@ export const WrappingButtons = () => (
 
 WrappingButtons.story = {
   name: "wrapping buttons",
-  parameters: { viewport: { defaultViewport: "extraSmall" } }
+  parameters: { viewport: { defaultViewport: "extraSmall" } },
 };

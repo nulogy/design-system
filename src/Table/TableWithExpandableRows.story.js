@@ -7,7 +7,7 @@ import { Box, Text } from "..";
 const columns = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
-  { label: "Actual Quantity", dataKey: "actualQuantity" }
+  { label: "Actual Quantity", dataKey: "actualQuantity" },
 ];
 
 const expandedContent = () => (
@@ -23,47 +23,57 @@ const rowDataWithExpandable = [
     date: "2019-10-01",
     expectedQuantity: "2,025 eaches",
     actualQuantity: "1,800 eaches",
-    id: "r1"
+    id: "r1",
   },
   {
     date: "2019-10-02",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "2,250 eaches",
     id: "r2",
-    expandedContent
+    expandedContent,
   },
   {
     date: "2019-10-03",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,425 eaches",
-    id: "r3"
+    id: "r3",
   },
   {
     date: "2019-10-04",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "675 eaches",
     id: "r4",
-    expandedContent
+    expandedContent,
   },
   {
     date: "2019-10-07",
     expectedQuantity: "2,475 eaches",
     actualQuantity: "1,575 eaches",
-    id: "r5"
+    id: "r5",
   },
   {
     date: "2019-10-22",
     expectedQuantity: "1,725 eaches",
     actualQuantity: "-",
     id: "r6",
-    expandedContent
+    expandedContent,
   },
-  { date: "2019-10-23", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r7" },
-  { date: "2019-10-24", expectedQuantity: "2,475 eaches", actualQuantity: "-", id: "r8" }
+  {
+    date: "2019-10-23",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r7",
+  },
+  {
+    date: "2019-10-24",
+    expectedQuantity: "2,475 eaches",
+    actualQuantity: "-",
+    id: "r8",
+  },
 ];
 
 export default {
-  title: "Components/Table/with expandable rows"
+  title: "Components/Table/with expandable rows",
 };
 
 export const WithExpandableRows = () => (
@@ -76,7 +86,7 @@ export const WithExpandableRows = () => (
 );
 
 WithExpandableRows.story = {
-  name: "with expandable rows"
+  name: "with expandable rows",
 };
 
 export const WithRowsExpandedByDefault = () => (
@@ -91,5 +101,5 @@ export const WithRowsExpandedByDefault = () => (
 );
 
 WithRowsExpandedByDefault.story = {
-  name: "with rows expanded by default"
+  name: "with rows expanded by default",
 };

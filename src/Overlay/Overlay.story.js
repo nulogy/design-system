@@ -3,7 +3,7 @@ import { Overlay } from ".";
 import { Text, Card } from "../index";
 
 export default {
-  title: "Components/Overlay"
+  title: "Components/Overlay",
 };
 
 export const LightDefault = () => (
@@ -14,7 +14,7 @@ export const LightDefault = () => (
 );
 
 LightDefault.story = {
-  name: "Light (default)"
+  name: "Light (default)",
 };
 
 export const Dark = () => (

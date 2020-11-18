@@ -22,11 +22,10 @@ import {
   FlexboxProps,
   BackgroundProps,
   system,
-
 } from "styled-system";
-import { transition, TransitionProps } from '../StyledProps/transition';
+import { transition, TransitionProps } from "../StyledProps/transition";
 import { transform, TransformProps } from "../StyledProps/transform";
-import { CursorProps, cursor } from '../StyledProps/cursor';
+import { CursorProps, cursor } from "../StyledProps/cursor";
 
 export type BoxProps = ColorProps &
   SpaceProps &
@@ -59,7 +58,7 @@ const Box: React.SFC<BoxProps> = styled.div(
   background,
   transition,
   transform,
-  cursor,
+  cursor
 );
 
 export default Box;

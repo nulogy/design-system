@@ -10,7 +10,7 @@ import theme from "../theme";
 import { subPx } from "../utils";
 
 const BaseNavBarSearch = ({ name, onSubmit, ...props }) => {
-  const handleOnSubmit = e => {
+  const handleOnSubmit = (e) => {
     e.preventDefault();
     onSubmit(e);
   };
@@ -18,7 +18,13 @@ const BaseNavBarSearch = ({ name, onSubmit, ...props }) => {
   return (
     <form {...props} onSubmit={handleOnSubmit}>
       <Flex role="search">
-        <Input id="navbar-search" type="search" aria-labelledby={name} required placeholder={t("search nulogy")} />
+        <Input
+          id="navbar-search"
+          type="search"
+          aria-labelledby={name}
+          required
+          placeholder={t("search nulogy")}
+        />
         <button id={name} aria-label={name}>
           <Icon icon="search" />
         </button>
@@ -45,11 +51,11 @@ const NavBarSearch = styled(BaseNavBarSearch)({
       background: darken(0.1, theme.colors.blue),
       border: `solid 1px ${theme.colors.lightBlue}`,
       outline: "none",
-      boxShadow: "none"
+      boxShadow: "none",
     },
     svg: {
-      display: "block"
-    }
+      display: "block",
+    },
   },
   Input: {
     color: theme.colors.blackBlue,
@@ -59,28 +65,28 @@ const NavBarSearch = styled(BaseNavBarSearch)({
     ":focus": {
       background: theme.colors.white,
       border: "solid 1px transparent",
-      boxShadow: "none"
+      boxShadow: "none",
     },
     "::placeholder": {
-      color: transparentize(0.4, theme.colors.black)
+      color: transparentize(0.4, theme.colors.black),
     },
     "&[type='search']": {
       "-webkit-appearance": "textfield",
       "::-webkit-search-decoration": {
-        "-webkit-appearance": "none"
-      }
-    }
-  }
+        "-webkit-appearance": "none",
+      },
+    },
+  },
 });
 
 BaseNavBarSearch.propTypes = {
   name: PropTypes.string,
-  onSubmit: PropTypes.func
+  onSubmit: PropTypes.func,
 };
 
 BaseNavBarSearch.defaultProps = {
   name: "global-search",
-  onSubmit: () => {}
+  onSubmit: () => {},
 };
 
 export default NavBarSearch;

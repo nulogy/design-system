@@ -5,35 +5,35 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 
-const checkboxStyle = theme => ({
+const checkboxStyle = (theme) => ({
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.lightGrey
+      backgroundColor: theme.colors.lightGrey,
     },
     error: {
       borderColor: theme.colors.red,
-      backgroundColor: theme.colors.red
+      backgroundColor: theme.colors.red,
     },
     default: {
       borderColor: theme.colors.darkBlue,
-      backgroundColor: theme.colors.darkBlue
-    }
+      backgroundColor: theme.colors.darkBlue,
+    },
   },
   unchecked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
-      backgroundColor: theme.colors.whiteGrey
+      backgroundColor: theme.colors.whiteGrey,
     },
     error: {
       borderColor: theme.colors.red,
-      backgroundColor: theme.colors.white
+      backgroundColor: theme.colors.white,
     },
     default: {
       borderColor: theme.colors.grey,
-      backgroundColor: theme.colors.white
-    }
-  }
+      backgroundColor: theme.colors.white,
+    },
+  },
 });
 const getCheckboxStyle = (props, checked) => {
   const checkboxStyleMap = checkboxStyle(props.theme);
@@ -48,12 +48,12 @@ const getCheckboxStyle = (props, checked) => {
 const checkedStyles = {
   borderRadius: "1px",
   borderWidth: "0 3px 3px 0",
-  transform: "rotate(45deg)"
+  transform: "rotate(45deg)",
 };
 const indeterminateStyles = {
   borderWidth: "0 3px 0 0",
   transform: "rotate(90deg) translateX(1px)",
-  borderRadius: 0
+  borderRadius: 0,
 };
 const VisualCheckbox: React.SFC<any> = styled.div(
   ({ indeterminate, theme }: any): CSSObject => ({
@@ -72,32 +72,40 @@ const VisualCheckbox: React.SFC<any> = styled.div(
       width: "3px",
       height: "9px",
       border: `solid ${theme.colors.white}`,
-      ...(indeterminate ? indeterminateStyles : checkedStyles)
-    }
+      ...(indeterminate ? indeterminateStyles : checkedStyles),
+    },
   })
 );
-const CheckboxInput = styled.input(props => ({
+const CheckboxInput = styled.input((props) => ({
   position: "absolute",
   opacity: "0",
   height: "1px",
   width: "1px",
   [`&:focus + ${VisualCheckbox}`]: {
-    boxShadow: props.theme.shadows.focus
+    boxShadow: props.theme.shadows.focus,
   },
   [`&:checked + ${VisualCheckbox}`]: {
     ...getCheckboxStyle(props, "checked"),
     "&:before": {
-      display: "block"
-    }
+      display: "block",
+    },
   },
   [`&:not(:checked) + ${VisualCheckbox}`]: {
-    ...getCheckboxStyle(props, "unchecked")
-  }
+    ...getCheckboxStyle(props, "unchecked"),
+  },
 }));
 const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
   // disabled react prop types as they are defined in Checkbox
   // eslint-disable-next-line react/prop-types
-  const { className, labelText, disabled, checked, required, error, indeterminate } = props;
+  const {
+    className,
+    labelText,
+    disabled,
+    checked,
+    required,
+    error,
+    indeterminate,
+  } = props;
   return (
     <Box className={className}>
       <ClickInputLabel disabled={disabled}>
@@ -136,8 +144,8 @@ const Checkbox: React.SFC<any> = styled(BaseCheckbox)(
   ({ theme }) => ({
     padding: `${theme.space.half} 0`,
     [`& ${Text}`]: {
-      marginLeft: theme.space.x1
-    }
+      marginLeft: theme.space.x1,
+    },
   }),
   space
 );
@@ -150,6 +158,6 @@ Checkbox.defaultProps = {
   id: undefined,
   className: undefined,
   required: false,
-  indeterminate: undefined
+  indeterminate: undefined,
 };
 export default Checkbox;

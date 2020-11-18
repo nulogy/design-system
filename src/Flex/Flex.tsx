@@ -7,7 +7,7 @@ export type FlexProps = BoxProps;
 
 const Flex: React.SFC<FlexProps> = styled(Box)(
   {
-    display: "flex"
+    display: "flex",
   },
   flexbox
 );

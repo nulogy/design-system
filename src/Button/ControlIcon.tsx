@@ -23,13 +23,13 @@ const StyledButton: React.SFC<any> = styled.button(
     color: getIconColorByState({ toggled, disabled, theme }),
     "&:focus": {
       outline: "none",
-      boxShadow: theme.shadows.focus
+      boxShadow: theme.shadows.focus,
     },
     "&:hover:enabled": {
       cursor: "pointer",
       color: theme.colors.blackBlue,
-      backgroundColor: theme.colors.lightGrey
-    }
+      backgroundColor: theme.colors.lightGrey,
+    },
   }),
   space
 );
@@ -43,8 +43,18 @@ type ControlIconProps = {
   type?: string;
 };
 const ControlIcon = React.forwardRef(
-  ({ icon, toggled, disabled, label, size, type, ...props }: ControlIconProps, ref) => (
-    <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} type={type} {...props}>
+  (
+    { icon, toggled, disabled, label, size, type, ...props }: ControlIconProps,
+    ref
+  ) => (
+    <StyledButton
+      aria-label={label}
+      ref={ref}
+      disabled={disabled}
+      toggled={toggled}
+      type={type}
+      {...props}
+    >
       <Icon size={size} icon={icon} />
     </StyledButton>
   )
@@ -54,6 +64,6 @@ ControlIcon.defaultProps = {
   toggled: false,
   disabled: false,
   size: NDSTheme.space.x4,
-  type: "button"
+  type: "button",
 };
 export default ControlIcon;

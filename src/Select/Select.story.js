@@ -14,7 +14,7 @@ const options = [
   { value: "rejected", label: "Rejected" },
   { value: "open", label: "Open" },
   { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" }
+  { value: "quarantine", label: "In quarantine" },
 ];
 
 const partnerCompanyName = [
@@ -24,20 +24,20 @@ const partnerCompanyName = [
   { value: "9", label: "PCN9 12387387484895884957848576867587685780" },
   { value: "7", label: "PCN7 12387387484895884957848576867587685780" },
   { value: "6", label: "PCN6 12387387484895884957848576867587685780" },
-  { value: "3", label: "PCN3 12387387484895884957848576867587685780e" }
+  { value: "3", label: "PCN3 12387387484895884957848576867587685780e" },
 ];
 
 const wrappingOptions = [
   {
     value: "onestring",
     label:
-      "Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring"
+      "Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring",
   },
   {
     value: "manywords",
     label:
-      "Many words many words many words many words many words many words many words many words many words many words many words many words many words"
-  }
+      "Many words many words many words many words many words many words many words many words many words many words many words many words many words",
+  },
 ];
 
 const SelectWithManyOptions = ({ multiselect, labelText }) => {
@@ -48,7 +48,7 @@ const SelectWithManyOptions = ({ multiselect, labelText }) => {
     const json = await data.json();
     const results = json.map(({ title, id }) => ({
       label: title,
-      value: id
+      value: id,
     }));
     return results;
   };
@@ -59,7 +59,13 @@ const SelectWithManyOptions = ({ multiselect, labelText }) => {
   useEffect(() => {
     setOptions();
   }, []);
-  return <Select multiselect={multiselect} options={photoList} labelText={labelText} />;
+  return (
+    <Select
+      multiselect={multiselect}
+      options={photoList}
+      labelText={labelText}
+    />
+  );
 };
 
 class SelectWithState extends React.Component {
@@ -98,7 +104,7 @@ class SelectWithState extends React.Component {
 }
 
 export default {
-  title: "Components/Select"
+  title: "Components/Select",
 };
 
 export const _Select = () => (
@@ -127,7 +133,7 @@ export const WithADefaultValue = () => (
 );
 
 WithADefaultValue.story = {
-  name: "with a defaultValue"
+  name: "with a defaultValue",
 };
 
 export const WithABlankValue = () => {
@@ -145,7 +151,7 @@ export const WithABlankValue = () => {
 };
 
 WithABlankValue.story = {
-  name: "with a blank value"
+  name: "with a blank value",
 };
 
 export const WithAnOptionSelected = () => (
@@ -175,15 +181,19 @@ export const WithAnOptionSelected = () => (
 );
 
 WithAnOptionSelected.story = {
-  name: "with an option selected"
+  name: "with an option selected",
 };
 
 export const WithState = () => (
-  <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
+  <SelectWithState
+    placeholder="Please select inventory status"
+    options={options}
+    labelText="Inventory status"
+  />
 );
 
 WithState.story = {
-  name: "with state"
+  name: "with state",
 };
 
 export const SetToDisabled = () => (
@@ -199,7 +209,7 @@ export const SetToDisabled = () => (
 );
 
 SetToDisabled.story = {
-  name: "set to disabled"
+  name: "set to disabled",
 };
 
 export const WithErrorMessage = () => (
@@ -227,7 +237,7 @@ export const WithErrorMessage = () => (
 );
 
 WithErrorMessage.story = {
-  name: "with error message"
+  name: "with error message",
 };
 
 export const WithErrorList = () => (
@@ -257,7 +267,7 @@ export const WithErrorList = () => (
 );
 
 WithErrorList.story = {
-  name: "with error list"
+  name: "with error list",
 };
 
 export const SetToRequired = () => (
@@ -281,7 +291,7 @@ export const SetToRequired = () => (
 );
 
 SetToRequired.story = {
-  name: "set to required"
+  name: "set to required",
 };
 
 export const WithHelpText = () => (
@@ -297,7 +307,7 @@ export const WithHelpText = () => (
 );
 
 WithHelpText.story = {
-  name: "with helpText"
+  name: "with helpText",
 };
 
 export const WithCustomId = () => (
@@ -314,7 +324,7 @@ export const WithCustomId = () => (
 );
 
 WithCustomId.story = {
-  name: "with custom id"
+  name: "with custom id",
 };
 
 export const WithSmallerMaxHeight = () => (
@@ -332,7 +342,7 @@ export const WithSmallerMaxHeight = () => (
 );
 
 WithSmallerMaxHeight.story = {
-  name: "with smaller maxHeight"
+  name: "with smaller maxHeight",
 };
 
 export const WithWrappingText = () => (
@@ -349,7 +359,7 @@ export const WithWrappingText = () => (
 );
 
 WithWrappingText.story = {
-  name: "With wrapping text"
+  name: "With wrapping text",
 };
 
 export const WithMultiselect = () => {
@@ -357,7 +367,7 @@ export const WithMultiselect = () => {
     { value: "2", label: "PCN2" },
     { value: "4", label: "PCN4" },
     { value: "1", label: "PCN1" },
-    { value: "9", label: "PCN9" }
+    { value: "9", label: "PCN9" },
   ];
   return (
     <Select
@@ -373,7 +383,7 @@ export const WithMultiselect = () => {
 };
 
 WithMultiselect.story = {
-  name: "with multiselect"
+  name: "with multiselect",
 };
 
 export const WithCloseMenuOnSelectTurnedOff = () => {
@@ -381,7 +391,7 @@ export const WithCloseMenuOnSelectTurnedOff = () => {
     { value: "2", label: "PCN2" },
     { value: "4", label: "PCN4" },
     { value: "1", label: "PCN1" },
-    { value: "9", label: "PCN9" }
+    { value: "9", label: "PCN9" },
   ];
   return (
     <Select
@@ -398,7 +408,7 @@ export const WithCloseMenuOnSelectTurnedOff = () => {
 };
 
 WithCloseMenuOnSelectTurnedOff.story = {
-  name: "with closeMenuOnSelect turned off"
+  name: "with closeMenuOnSelect turned off",
 };
 
 export const TestMultiselectOverflow = () => (
@@ -416,7 +426,7 @@ export const TestMultiselectOverflow = () => (
     />
     <Box width="300px">
       <Select
-        defaultValue={partnerCompanyName.map(item => item.value)}
+        defaultValue={partnerCompanyName.map((item) => item.value)}
         noOptionsMessage={() => "No options"}
         placeholder="Please select inventory status"
         options={partnerCompanyName}
@@ -429,7 +439,7 @@ export const TestMultiselectOverflow = () => (
     </Box>
     <Box width="400px">
       <Select
-        defaultValue={options.map(item => item.value)}
+        defaultValue={options.map((item) => item.value)}
         noOptionsMessage={() => "No options"}
         placeholder="Please select inventory status"
         options={options}
@@ -444,12 +454,19 @@ export const TestMultiselectOverflow = () => (
 );
 
 TestMultiselectOverflow.story = {
-  name: "test multiselect overflow"
+  name: "test multiselect overflow",
 };
 
 export const WithFixedPositioning = () => (
   <>
-    <Box style={{ position: "relative", overflow: "hidden", width: "300px", height: "100px" }}>
+    <Box
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        width: "300px",
+        height: "100px",
+      }}
+    >
       <Select
         defaultValue={["accepted", "assigned"]}
         noOptionsMessage={() => "No options"}
@@ -463,7 +480,7 @@ export const WithFixedPositioning = () => (
 );
 
 WithFixedPositioning.story = {
-  name: "with fixed positioning"
+  name: "with fixed positioning",
 };
 
 export const WithManyOptions = () => (
@@ -474,7 +491,7 @@ export const WithManyOptions = () => (
 );
 
 WithManyOptions.story = {
-  name: "with many options "
+  name: "with many options ",
 };
 
 export const WithCustomOptionComponent = () => {
@@ -485,7 +502,7 @@ export const WithCustomOptionComponent = () => {
     display: "inline-block",
     width: "10px",
     height: "10px",
-    marginRight: "5px"
+    marginRight: "5px",
   }));
   const CustomOption = ({ children, ...props }) => {
     const newChildren = (
@@ -505,7 +522,7 @@ export const WithCustomOptionComponent = () => {
           placeholder="Please select inventory status"
           options={options}
           components={{
-            Option: CustomOption
+            Option: CustomOption,
           }}
           multiselect
           labelText="Inventory status"
@@ -517,7 +534,7 @@ export const WithCustomOptionComponent = () => {
 };
 
 WithCustomOptionComponent.story = {
-  name: "with custom option component"
+  name: "with custom option component",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -544,12 +561,15 @@ export const UsingRefToControlFocus = () => {
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };
 
-
 export const WithANullValue = () => {
-  const optionsWithBlank = [{ value: null, label: "Nullable" }, { value: null, label: "Other null" }, ...options];
+  const optionsWithBlank = [
+    { value: null, label: "Nullable" },
+    { value: null, label: "Other null" },
+    ...options,
+  ];
   return (
     <Select
       defaultValue={null}
@@ -564,6 +584,5 @@ export const WithANullValue = () => {
 };
 
 WithANullValue.story = {
-  name: "with a null value"
+  name: "with a null value",
 };
-

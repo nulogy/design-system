@@ -2,34 +2,39 @@ import React from "react";
 import { FieldLabel, Input } from "../index";
 import { Link } from "../Link";
 
-const CustomInput = props => <Input {...props} />;
+const CustomInput = (props) => <Input {...props} />;
 
 const helpTextWithLink = (
   <>
-    I am help text. I can be a string or a node that includes a <Link href="http://nulogy.design">link</Link>.
+    I am help text. I can be a string or a node that includes a{" "}
+    <Link href="http://nulogy.design">link</Link>.
   </>
 );
 
 export default {
-  title: "Components/FieldLabel"
+  title: "Components/FieldLabel",
 };
 
 export const _FieldLabel = () => <FieldLabel labelText="Default label" />;
 
 _FieldLabel.story = {
-  name: "FieldLabel"
+  name: "FieldLabel",
 };
 
-export const WithHelpText = () => <FieldLabel labelText="Default label" helpText={helpTextWithLink} />;
+export const WithHelpText = () => (
+  <FieldLabel labelText="Default label" helpText={helpTextWithLink} />
+);
 
 WithHelpText.story = {
-  name: "with HelpText"
+  name: "with HelpText",
 };
 
-export const WithRequirementText = () => <FieldLabel labelText="Default label" requirementText="(Required)" />;
+export const WithRequirementText = () => (
+  <FieldLabel labelText="Default label" requirementText="(Required)" />
+);
 
 WithRequirementText.story = {
-  name: "with RequirementText"
+  name: "with RequirementText",
 };
 
 export const WithAllAdditionalText = () => (
@@ -41,7 +46,7 @@ export const WithAllAdditionalText = () => (
 );
 
 WithAllAdditionalText.story = {
-  name: "with all additional text"
+  name: "with all additional text",
 };
 
 export const WithAssociatedCustomInputComponent = () => (
@@ -55,5 +60,5 @@ export const WithAssociatedCustomInputComponent = () => (
 );
 
 WithAssociatedCustomInputComponent.story = {
-  name: "with associated custom input component"
+  name: "with associated custom input component",
 };

@@ -1,6 +1,12 @@
 import PropTypes from "prop-types";
 
-const isValidMenuItem = function validArrayItem(arr, idx, componentName, location, propFullName) {
+const isValidMenuItem = function validArrayItem(
+  arr,
+  idx,
+  componentName,
+  location,
+  propFullName
+) {
   const obj = arr[idx];
 
   if (typeof obj !== "object") {
@@ -15,7 +21,7 @@ const isValidMenuItem = function validArrayItem(arr, idx, componentName, locatio
       ariaLabel: PropTypes.string,
       href: PropTypes.string,
       items: PropTypes.arrayOf(isValidMenuItem),
-      render: PropTypes.func
+      render: PropTypes.func,
     },
     obj,
     propFullName,
@@ -33,9 +39,7 @@ const isValidMenuItem = function validArrayItem(arr, idx, componentName, locatio
 
   if (numberOfDefiningKeys > 1) {
     return new Error(
-      `Invalid set of keys for Menu Item with name \`${
-        obj.name
-      }\` supplied to \`${componentName}\`. Include a name key and optionally ONE of ${definingKeys}`
+      `Invalid set of keys for Menu Item with name \`${obj.name}\` supplied to \`${componentName}\`. Include a name key and optionally ONE of ${definingKeys}`
     );
   }
 

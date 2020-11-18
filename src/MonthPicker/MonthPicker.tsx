@@ -40,20 +40,20 @@ class MonthPicker extends Component<MonthPickerProps, MonthPickerState> {
     super(props);
     this.state = {
       selectedDate: props.selected,
-      calendarDate: props.selected ? props.selected : new Date()
+      calendarDate: props.selected ? props.selected : new Date(),
     };
     this.debounceAutocomplete = debounce(this.autoCompleteMonth, 400);
     registerDatePickerLocales();
   }
-  setSelectedDate = date => {
+  setSelectedDate = (date) => {
     this.setState({
-      selectedDate: date
+      selectedDate: date,
     });
   };
-  setCalendarDate = date => {
+  setCalendarDate = (date) => {
     if (date && isValid(date)) {
       this.setState({
-        calendarDate: date
+        calendarDate: date,
       });
     }
   };
@@ -63,13 +63,19 @@ class MonthPicker extends Component<MonthPickerProps, MonthPickerState> {
       const { minDate, maxDate } = this.props;
       const currentYear = Number(format(currentDate, "yyyy"));
       const months = eachMonthOfInterval({
-        start: isSameYear(currentDate, minDate) ? minDate : new Date(currentYear, 1),
-        end: isSameYear(currentDate, maxDate) ? maxDate : new Date(currentYear, 12)
-      }).map(date => ({
+        start: isSameYear(currentDate, minDate)
+          ? minDate
+          : new Date(currentYear, 1),
+        end: isSameYear(currentDate, maxDate)
+          ? maxDate
+          : new Date(currentYear, 12),
+      }).map((date) => ({
         label: localizedFormat(date, STANDALONE_MONTH_FORMAT, locale),
-        date
+        date,
       }));
-      const matchingMonth = months.filter(month => month.label.toLowerCase() === value.toLowerCase());
+      const matchingMonth = months.filter(
+        (month) => month.label.toLowerCase() === value.toLowerCase()
+      );
       if (matchingMonth.length) {
         this.handleSelectedDateChange(matchingMonth[0].date);
       }
@@ -86,7 +92,7 @@ class MonthPicker extends Component<MonthPickerProps, MonthPickerState> {
       onInputChange(value);
     }
   };
-  handleSelectedDateChange = date => {
+  handleSelectedDateChange = (date) => {
     const { onChange } = this.props;
     if (onChange) {
       onChange(date);
@@ -95,12 +101,22 @@ class MonthPicker extends Component<MonthPickerProps, MonthPickerState> {
     this.setCalendarDate(date);
   };
   render() {
-    const { dateFormat, errorMessage, errorList, inputProps, minDate, maxDate, "aria-label": ariaLabel } = this.props;
+    const {
+      dateFormat,
+      errorMessage,
+      errorList,
+      inputProps,
+      minDate,
+      maxDate,
+      "aria-label": ariaLabel,
+    } = this.props;
     const { selectedDate } = this.state;
     const customInputProps = {
       ...inputProps,
       error: !!(errorMessage || errorList),
-      placeholder: inputProps.placeholder || (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat)
+      placeholder:
+        inputProps.placeholder ||
+        (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
     };
     return (
       <Field className="nds-month-picker" data-testid="month-picker">
@@ -115,8 +131,12 @@ class MonthPicker extends Component<MonthPickerProps, MonthPickerState> {
                 onChange={this.handleSelectedDateChange}
                 // prettier-ignore
                 customInput={(<DatePickerInput aria-label={ariaLabel} inputProps={customInputProps} dateFormat={dateFormat} onInputChange={e => this.handleInputChange(e, locale)} />)}
-                previousYearButtonLabel={<Icon icon="leftArrow" size={NDStheme.space.x4} />}
-                nextYearButtonLabel={<Icon icon="rightArrow" size={NDStheme.space.x4} />}
+                previousYearButtonLabel={
+                  <Icon icon="leftArrow" size={NDStheme.space.x4} />
+                }
+                nextYearButtonLabel={
+                  <Icon icon="rightArrow" size={NDStheme.space.x4} />
+                }
                 excludeDates={[selectedDate]}
                 disabledKeyboardNavigation
                 minDate={minDate}
@@ -128,7 +148,11 @@ class MonthPicker extends Component<MonthPickerProps, MonthPickerState> {
             );
           }}
         </LocaleContext.Consumer>
-        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+        <InlineValidation
+          mt="x1"
+          errorMessage={errorMessage}
+          errorList={errorList}
+        />
       </Field>
     );
   }
@@ -144,6 +168,6 @@ MonthPicker.defaultProps = {
   minDate: undefined,
   maxDate: undefined,
   disableAutocomplete: false,
-  "aria-label": undefined
+  "aria-label": undefined,
 };
 export default MonthPicker;

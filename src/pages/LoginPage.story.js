@@ -1,9 +1,20 @@
 import React from "react";
 import theme from "../theme";
-import { Alert, Box, Branding, Checkbox, Flex, Form, Input, Link, PrimaryButton, Text } from "../index";
+import {
+  Alert,
+  Box,
+  Branding,
+  Checkbox,
+  Flex,
+  Form,
+  Input,
+  Link,
+  PrimaryButton,
+  Text,
+} from "../index";
 
 export default {
-  title: "Pages/LoginPage"
+  title: "Pages/LoginPage",
 };
 
 export const Base = () => (
@@ -15,7 +26,13 @@ export const Base = () => (
     bg={{ extraSmall: "white", small: "whiteGrey" }}
     width="100%"
   >
-    <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
+    <Flex
+      width="100%"
+      maxWidth="384px"
+      alignItems="center"
+      justifyContent="center"
+      flexGrow="1"
+    >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
         maxWidth="384px"
@@ -36,7 +53,12 @@ export const Base = () => (
           alignment="center"
           style={{ marginBottom: theme.space.x2 }}
         />
-        <Text color="darkGrey" fontSize="small" lineHeight="smallTextBase" mb="x4">
+        <Text
+          color="darkGrey"
+          fontSize="small"
+          lineHeight="smallTextBase"
+          mb="x4"
+        >
           Additional Text
         </Text>
         <Form style={{ width: "100%" }}>
@@ -58,7 +80,13 @@ export const WithRememberMe = () => (
     bg={{ extraSmall: "white", small: "whiteGrey" }}
     width="100%"
   >
-    <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
+    <Flex
+      width="100%"
+      maxWidth="384px"
+      alignItems="center"
+      justifyContent="center"
+      flexGrow="1"
+    >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
         maxWidth="384px"
@@ -79,7 +107,12 @@ export const WithRememberMe = () => (
           alignment="center"
           style={{ marginBottom: theme.space.x2 }}
         />
-        <Text color="darkGrey" fontSize="small" lineHeight="smallTextBase" mb="x4">
+        <Text
+          color="darkGrey"
+          fontSize="small"
+          lineHeight="smallTextBase"
+          mb="x4"
+        >
           Additional Text
         </Text>
         <form style={{ width: "100%" }}>
@@ -94,7 +127,7 @@ export const WithRememberMe = () => (
 );
 
 WithRememberMe.story = {
-  name: "with remember me"
+  name: "with remember me",
 };
 
 export const WithForgotPasswordLink = () => (
@@ -106,7 +139,13 @@ export const WithForgotPasswordLink = () => (
     bg={{ extraSmall: "white", small: "whiteGrey" }}
     width="100%"
   >
-    <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
+    <Flex
+      width="100%"
+      maxWidth="384px"
+      alignItems="center"
+      justifyContent="center"
+      flexGrow="1"
+    >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
         maxWidth="384px"
@@ -127,7 +166,12 @@ export const WithForgotPasswordLink = () => (
           alignment="center"
           style={{ marginBottom: theme.space.x2 }}
         />
-        <Text color="darkGrey" fontSize="small" lineHeight="smallTextBase" mb="x4">
+        <Text
+          color="darkGrey"
+          fontSize="small"
+          lineHeight="smallTextBase"
+          mb="x4"
+        >
           Additional Text
         </Text>
         <Form style={{ width: "100%" }}>
@@ -144,7 +188,7 @@ export const WithForgotPasswordLink = () => (
 );
 
 WithForgotPasswordLink.story = {
-  name: "with forgot password link"
+  name: "with forgot password link",
 };
 
 export const WithError = () => (
@@ -156,7 +200,13 @@ export const WithError = () => (
     bg={{ extraSmall: "white", small: "whiteGrey" }}
     width="100%"
   >
-    <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
+    <Flex
+      width="100%"
+      maxWidth="384px"
+      alignItems="center"
+      justifyContent="center"
+      flexGrow="1"
+    >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
         maxWidth="384px"
@@ -194,7 +244,7 @@ export const WithError = () => (
 );
 
 WithError.story = {
-  name: "with error"
+  name: "with error",
 };
 
 export const WithErrorAndNoAdditionalText = () => (
@@ -206,7 +256,13 @@ export const WithErrorAndNoAdditionalText = () => (
     bg={{ extraSmall: "white", small: "whiteGrey" }}
     width="100%"
   >
-    <Flex width="100%" maxWidth="384px" alignItems="center" justifyContent="center" flexGrow="1">
+    <Flex
+      width="100%"
+      maxWidth="384px"
+      alignItems="center"
+      justifyContent="center"
+      flexGrow="1"
+    >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
         maxWidth="384px"
@@ -241,5 +297,5 @@ export const WithErrorAndNoAdditionalText = () => (
 );
 
 WithErrorAndNoAdditionalText.story = {
-  name: "with error and no additional text"
+  name: "with error and no additional text",
 };

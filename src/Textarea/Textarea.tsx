@@ -8,22 +8,22 @@ import { InlineValidation } from "../Validation";
 import { subPx } from "../utils";
 import { ThemeType } from "../theme.type";
 
-const textareaStyles = theme => ({
+const textareaStyles = (theme) => ({
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
     borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.whiteGrey
+    backgroundColor: theme.colors.whiteGrey,
   },
   error: {
     color: theme.colors.red,
-    borderColor: theme.colors.red
+    borderColor: theme.colors.red,
   },
   default: {
     color: theme.colors.black,
-    borderColor: theme.colors.grey
-  }
+    borderColor: theme.colors.grey,
+  },
 });
-const getTextareaStyle = props => {
+const getTextareaStyle = (props) => {
   const textareaStyleMap = textareaStyles(props.theme);
   if (props.disabled) {
     return textareaStyleMap.disabled;
@@ -57,13 +57,13 @@ const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
       outline: "none",
       color: theme.colors.black,
       borderColor: theme.colors.blue,
-      boxShadow: theme.shadows.focus
+      boxShadow: theme.shadows.focus,
     },
     "::placeholder": {
-      color: transparentize(0.4, theme.colors.black)
-    }
+      color: transparentize(0.4, theme.colors.black),
+    },
   }),
-  props => getTextareaStyle(props)
+  (props) => getTextareaStyle(props)
 );
 type TextareaProps = StyledTextareaProps & {
   className?: string;
@@ -96,7 +96,11 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
     ref
   ) => (
     <Field className={className}>
-      <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+      <MaybeFieldLabel
+        labelText={labelText}
+        requirementText={requirementText}
+        helpText={helpText}
+      >
         <StyledTextarea
           aria-invalid={error}
           aria-required={required}
@@ -110,7 +114,11 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
           {...props}
         />
       </MaybeFieldLabel>
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+      <InlineValidation
+        mt="x1"
+        errorMessage={errorMessage}
+        errorList={errorList}
+      />
     </Field>
   )
 );
@@ -124,6 +132,6 @@ Textarea.defaultProps = {
   labelText: undefined,
   helpText: undefined,
   requirementText: undefined,
-  rows: 3
+  rows: 3,
 };
 export default Textarea;

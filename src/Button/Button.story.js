@@ -2,26 +2,28 @@ import React from "react";
 import { Button, PrimaryButton, DangerButton, QuietButton } from ".";
 
 export default {
-  title: "Components/Buttons"
+  title: "Components/Buttons",
 };
 
 export const _Button = () => <Button>Create project</Button>;
-export const _PrimaryButton = () => <PrimaryButton>Create project</PrimaryButton>;
+export const _PrimaryButton = () => (
+  <PrimaryButton>Create project</PrimaryButton>
+);
 
 _PrimaryButton.story = {
-  name: "PrimaryButton"
+  name: "PrimaryButton",
 };
 
 export const _DangerButton = () => <DangerButton>Delete project</DangerButton>;
 
 _DangerButton.story = {
-  name: "DangerButton"
+  name: "DangerButton",
 };
 
 export const _QuietButton = () => <QuietButton>Create project</QuietButton>;
 
 _QuietButton.story = {
-  name: "QuietButton"
+  name: "QuietButton",
 };
 
 export const WithASelectedSize = () => (
@@ -33,7 +35,7 @@ export const WithASelectedSize = () => (
 );
 
 WithASelectedSize.story = {
-  name: "With a selected size"
+  name: "With a selected size",
 };
 
 export const WithASelectedIcon = () => (
@@ -48,19 +50,23 @@ export const WithASelectedIcon = () => (
 );
 
 WithASelectedIcon.story = {
-  name: "With a selected Icon"
+  name: "With a selected Icon",
 };
 
-export const SetToFullWidth = () => <PrimaryButton fullWidth>Create project</PrimaryButton>;
+export const SetToFullWidth = () => (
+  <PrimaryButton fullWidth>Create project</PrimaryButton>
+);
 
 SetToFullWidth.story = {
-  name: "Set to full width"
+  name: "Set to full width",
 };
 
-export const SetToDisabled = () => <PrimaryButton disabled>Create project</PrimaryButton>;
+export const SetToDisabled = () => (
+  <PrimaryButton disabled>Create project</PrimaryButton>
+);
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };
 
 export const AsALink = () => (
@@ -70,5 +76,5 @@ export const AsALink = () => (
 );
 
 AsALink.story = {
-  name: "As a link"
+  name: "As a link",
 };

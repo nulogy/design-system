@@ -28,7 +28,18 @@ const getPathElements = (icon: any) => (
 /* eslint-enable react/no-array-index-key */
 
 const Svg = React.forwardRef<SVGSVGElement, SvgProps>(
-  ({ icon, size, focusable, className, color: fillColor, title, ...props }: SvgProps, ref) => {
+  (
+    {
+      icon,
+      size,
+      focusable,
+      className,
+      color: fillColor,
+      title,
+      ...props
+    }: SvgProps,
+    ref
+  ) => {
     if (icon === "loading") {
       return (
         <LoadingIcon
@@ -64,28 +75,28 @@ Svg.defaultProps = {
   className: undefined,
   title: undefined,
   size: "24px",
-  focusable: false
+  focusable: false,
 };
 
 const Icon = styled(Svg)<SvgProps>(
   space,
   color,
   ({ size }: SvgProps): CSSObject => ({
-    minWidth: size
+    minWidth: size,
   })
 );
 
 Icon.defaultProps = {
   color: "currentColor",
   title: undefined,
-  size: "24px"
+  size: "24px",
 };
 
 const iconSizeRatio = 1.25;
 
 const CenteredIcon = styled(Svg)(color, {
   position: "absolute",
-  top: 0
+  top: 0,
 });
 
 const IconContainer = styled.span(space, {
@@ -93,7 +104,7 @@ const IconContainer = styled.span(space, {
   alignSelf: "center",
   position: "relative",
   height: "1em",
-  width: `${iconSizeRatio}em`
+  width: `${iconSizeRatio}em`,
 });
 
 export const InlineIcon = (props: SvgProps) => (

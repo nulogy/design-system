@@ -15,7 +15,7 @@ export const InputFieldPropTypes = {
   suffixAlignment: PropTypes.string,
   prefixAlignment: PropTypes.string,
   iconSize: PropTypes.string,
-  inputWidth: PropTypes.string
+  inputWidth: PropTypes.string,
 };
 
 export const InputFieldDefaultProps = {
@@ -33,5 +33,5 @@ export const InputFieldDefaultProps = {
   prefixAlignment: "left",
   icon: undefined,
   iconSize: undefined,
-  inputWidth: undefined
+  inputWidth: undefined,
 };

@@ -10,7 +10,12 @@ type DropdownButtonProps = {
 };
 const DropdownButton: React.SFC<DropdownButtonProps> = styled.button(
   color,
-  ({ disabled = false, theme, hoverColor = "darkBlue", bgHoverColor = "lightGrey" }: DropdownButtonProps) => ({
+  ({
+    disabled = false,
+    theme,
+    hoverColor = "darkBlue",
+    bgHoverColor = "lightGrey",
+  }: DropdownButtonProps) => ({
     display: "block",
     width: "100%",
     cursor: disabled ? "default" : "pointer",
@@ -24,23 +29,23 @@ const DropdownButton: React.SFC<DropdownButtonProps> = styled.button(
     borderLeft: `${theme.space.half} solid transparent`,
     "&:hover": {
       color: theme.colors[hoverColor],
-      backgroundColor: disabled ? "transparent" : theme.colors[bgHoverColor]
+      backgroundColor: disabled ? "transparent" : theme.colors[bgHoverColor],
     },
     "&:focus": {
       outline: "none",
       color: theme.colors[hoverColor],
       backgroundColor: theme.colors[bgHoverColor],
-      borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`
+      borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`,
     },
     "&:disabled": {
-      opacity: ".5"
-    }
+      opacity: ".5",
+    },
   })
 );
 DropdownButton.defaultProps = {
   color: "darkBlue",
   disabled: false,
   hoverColor: "darkBlue",
-  bgHoverColor: "lightGrey"
+  bgHoverColor: "lightGrey",
 };
 export default DropdownButton;

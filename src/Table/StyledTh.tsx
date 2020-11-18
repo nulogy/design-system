@@ -5,7 +5,7 @@ const stickyStyles = (theme: ThemeType): CSSObject => ({
   top: 0,
   background: "white",
   boxShadow: "0px 1px 0px rgba(0,0,0,.1)",
-  zIndex: theme.zIndex.content
+  zIndex: theme.zIndex.content,
 });
 
 type StyledThProps = {
@@ -25,9 +25,9 @@ const StyledTh = styled.th(
       color: theme.colors.darkGrey,
       ...(sticky && stickyStyles(theme)),
       "&:first-child": {
-        paddingLeft: padding
+        paddingLeft: padding,
       },
-      width: width || "auto"
+      width: width || "auto",
     };
   }
 );

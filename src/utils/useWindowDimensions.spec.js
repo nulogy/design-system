@@ -1,16 +1,18 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
-import useWindowDimensions, { getWindowDimensionInfo } from "./useWindowDimensions";
+import useWindowDimensions, {
+  getWindowDimensionInfo,
+} from "./useWindowDimensions";
 import { act } from "react-dom/test-utils";
 
-// simulate window resize 
-const  fireResize = (width, height) => {
+// simulate window resize
+const fireResize = (width, height) => {
   act(() => {
     // Change the viewport to 500px.
     window.innerWidth = width;
     window.innerHeight = height;
-  })
-  fireEvent(window, new Event('resize'));
+  });
+  fireEvent(window, new Event("resize"));
 };
 
 const ComponentUsingDimensions = () => {
@@ -20,7 +22,7 @@ const ComponentUsingDimensions = () => {
 
 describe("updates dimensions on resize", () => {
   it("returns the new dimension info", () => {
-    const { container } = render(<ComponentUsingDimensions />)
+    const { container } = render(<ComponentUsingDimensions />);
     const span = container.firstChild;
     const width = 1024;
     const height = 768;

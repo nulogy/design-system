@@ -3,14 +3,14 @@ import styled from "styled-components";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-import PropTypes from 'prop-types';
-import { columnsPropType, rowsPropType } from './Table.types';
+import PropTypes from "prop-types";
+import { columnsPropType, rowsPropType } from "./Table.types";
 
 const StyledTable = styled.table<any>({
   borderCollapse: "collapse",
   width: "100%",
   background: "white",
-  position: "relative"
+  position: "relative",
 });
 type BaseTableProps = React.ComponentProps<"table"> & {
   columns: any;
@@ -56,9 +56,16 @@ const BaseTable: React.SFC<BaseTableProps> = ({
       onRowMouseLeave={onRowMouseLeave}
       onRowMouseEnter={onRowMouseEnter}
     />
-    {footerRows && <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} />}
+    {footerRows && (
+      <TableFoot
+        columns={columns}
+        rows={footerRows}
+        keyField={keyField}
+        loading={loading}
+      />
+    )}
   </StyledTable>
-  );
+);
 
 BaseTable.propTypes = {
   columns: columnsPropType,
@@ -73,7 +80,7 @@ BaseTable.propTypes = {
   className: PropTypes.string,
   stickyHeader: PropTypes.bool,
   onRowMouseEnter: PropTypes.func,
-  onRowMouseLeave: PropTypes.func
+  onRowMouseLeave: PropTypes.func,
 };
 
 BaseTable.defaultProps = {
@@ -86,7 +93,7 @@ BaseTable.defaultProps = {
   compact: false,
   className: undefined,
   stickyHeader: false,
-  onRowMouseEnter: () => { },
-  onRowMouseLeave: () => { },
+  onRowMouseEnter: () => {},
+  onRowMouseLeave: () => {},
 };
 export default BaseTable;

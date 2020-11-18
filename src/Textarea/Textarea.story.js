@@ -5,11 +5,15 @@ import { Textarea, Form, PrimaryButton, Button } from "../index";
 const errorList = ["Error message 1", "Error message 2"];
 
 export default {
-  title: "Components/Textarea"
+  title: "Components/Textarea",
 };
 
 export const _Textarea = () => (
-  <Textarea labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
+  <Textarea
+    labelText="Label"
+    onChange={action("value changed")}
+    onBlur={action("blurred")}
+  />
 );
 
 export const TextareaWithAllProps = () => (
@@ -25,13 +29,13 @@ export const TextareaWithAllProps = () => (
 );
 
 TextareaWithAllProps.story = {
-  name: "Textarea with all props"
+  name: "Textarea with all props",
 };
 
 export const SetToDisabled = () => <Textarea labelText="Label" disabled />;
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };
 
 export const WithErrorMessage = () => (
@@ -44,7 +48,7 @@ export const WithErrorMessage = () => (
 );
 
 WithErrorMessage.story = {
-  name: "with error message"
+  name: "with error message",
 };
 
 export const WithErrorList = () => (
@@ -57,23 +61,33 @@ export const WithErrorList = () => (
 );
 
 WithErrorList.story = {
-  name: "with error list"
+  name: "with error list",
 };
 
 export const WithCustomNumberOfRows = () => (
-  <Textarea labelText="Label" rows={7} onChange={action("value changed")} onBlur={action("blurred")} />
+  <Textarea
+    labelText="Label"
+    rows={7}
+    onChange={action("value changed")}
+    onBlur={action("blurred")}
+  />
 );
 
 WithCustomNumberOfRows.story = {
-  name: "With custom number of rows"
+  name: "With custom number of rows",
 };
 
 export const WithCustomId = () => (
-  <Textarea id="my-custom-id" labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
+  <Textarea
+    id="my-custom-id"
+    labelText="Label"
+    onChange={action("value changed")}
+    onBlur={action("blurred")}
+  />
 );
 
 WithCustomId.story = {
-  name: "With custom id"
+  name: "With custom id",
 };
 
 export const UsingRefToControlFocus = () => {
@@ -84,12 +98,18 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Textarea ref={ref} labelText="Label" rows={7} onChange={action("value changed")} onBlur={action("blurred")} />
+      <Textarea
+        ref={ref}
+        labelText="Label"
+        rows={7}
+        onChange={action("value changed")}
+        onBlur={action("blurred")}
+      />
       <Button onClick={handleClick}>Focus the Input</Button>
     </>
   );
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };

@@ -266,7 +266,6 @@ describe("Table", () => {
           />
         );
 
-
         fireEvent.mouseEnter(getAllByTestId("table-row")[1]);
 
         expect(callback).toHaveBeenCalled();

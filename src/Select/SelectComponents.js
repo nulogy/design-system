@@ -1,7 +1,7 @@
 import React from "react";
 import { components as selectComponents } from "react-windowed-select";
 
-export const SelectControl = props => {
+export const SelectControl = (props) => {
   // eslint-disable-next-line react/prop-types
   const { isFocused } = props;
   return (
@@ -15,7 +15,7 @@ export const SelectControl = props => {
   );
 };
 
-export const SelectMultiValue = props => {
+export const SelectMultiValue = (props) => {
   return (
     <div data-testid="select-multivalue">
       <selectComponents.MultiValue {...props} />
@@ -23,7 +23,7 @@ export const SelectMultiValue = props => {
   );
 };
 
-export const SelectClearIndicator = props => {
+export const SelectClearIndicator = (props) => {
   return (
     <div data-testid="select-clear">
       <selectComponents.ClearIndicator {...props} />
@@ -31,7 +31,7 @@ export const SelectClearIndicator = props => {
   );
 };
 
-export const SelectMenu = props => {
+export const SelectMenu = (props) => {
   return (
     <div data-testid="select-dropdown">
       <selectComponents.Menu {...props} />
@@ -39,7 +39,7 @@ export const SelectMenu = props => {
   );
 };
 
-export const SelectContainer = props => {
+export const SelectContainer = (props) => {
   return (
     <div data-testid="select-container">
       <selectComponents.SelectContainer {...props} />
@@ -47,7 +47,7 @@ export const SelectContainer = props => {
   );
 };
 
-export const SelectInput = props => {
+export const SelectInput = (props) => {
   return (
     <div data-testid="select-input">
       <selectComponents.Input {...props} />

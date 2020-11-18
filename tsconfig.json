@@ -19,5 +19,12 @@
     "jsx": "react"
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "./dist", "**/*.story.js", "**/*.spec.js", "**/*.story.ts", "**/*.spec.ts"]
+  "exclude": [
+    "node_modules",
+    "./dist",
+    "**/*.story.js",
+    "**/*.spec.js",
+    "**/*.story.ts",
+    "**/*.spec.ts"
+  ]
 }

@@ -8,7 +8,7 @@ import TabScrollIndicator from "./TabScrollIndicator";
 const TabScrollIndicatorContainer = styled.div(({ width, theme }) => ({
   position: "absolute",
   width,
-  height: theme.space.x5
+  height: theme.space.x5,
 }));
 
 class TabScrollIndicators extends React.Component {
@@ -17,11 +17,13 @@ class TabScrollIndicators extends React.Component {
 
     this.state = {
       contentHiddenLeft: this.contentHiddenLeft(),
-      contentHiddenRight: this.contentHiddenRight()
+      contentHiddenRight: this.contentHiddenRight(),
     };
 
     this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
-    this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(this);
+    this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(
+      this
+    );
     this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
     this.contentHiddenRight = this.contentHiddenRight.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
@@ -48,7 +50,8 @@ class TabScrollIndicators extends React.Component {
       return false;
     }
     return (
-      tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth < tabContainerRef.current.scrollWidth
+      tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth <
+      tabContainerRef.current.scrollWidth
     );
   }
 
@@ -65,7 +68,10 @@ class TabScrollIndicators extends React.Component {
 
   findLastVisibleTab() {
     const { tabContainerRef, tabRefs, indicatorWidth } = this.props;
-    const rightMarker = tabContainerRef.current.scrollLeft + tabContainerRef.current.offsetWidth - indicatorWidth;
+    const rightMarker =
+      tabContainerRef.current.scrollLeft +
+      tabContainerRef.current.offsetWidth -
+      indicatorWidth;
     let scrollLeftSum = 0;
 
     for (let i = 0; i < tabRefs.length; i += 1) {
@@ -98,7 +104,7 @@ class TabScrollIndicators extends React.Component {
   handleResize() {
     this.setState({
       contentHiddenLeft: this.contentHiddenLeft(),
-      contentHiddenRight: this.contentHiddenRight()
+      contentHiddenRight: this.contentHiddenRight(),
     });
   }
 
@@ -121,7 +127,8 @@ class TabScrollIndicators extends React.Component {
 
     if (side === "right") {
       const lastVisibleTab = this.findLastVisibleTab();
-      const scrollLeft = this.getScrollLeftValueByTabIndex(lastVisibleTab) - indicatorWidth;
+      const scrollLeft =
+        this.getScrollLeftValueByTabIndex(lastVisibleTab) - indicatorWidth;
       this.applyScrollLeft(scrollLeft);
     } else {
       const firstVisibleTab = this.findFirstVisibleTab();
@@ -145,15 +152,30 @@ class TabScrollIndicators extends React.Component {
 
     return (
       <>
-        <TabScrollIndicatorContainer width={tabContainerRef.current ? tabContainerRef.current.offsetWidth : 0}>
+        <TabScrollIndicatorContainer
+          width={
+            tabContainerRef.current ? tabContainerRef.current.offsetWidth : 0
+          }
+        >
           {contentHiddenLeft && (
-            <TabScrollIndicator width={indicatorWidth} side="left" onClick={this.handleIndicatorClick} />
+            <TabScrollIndicator
+              width={indicatorWidth}
+              side="left"
+              onClick={this.handleIndicatorClick}
+            />
           )}
           {contentHiddenRight && (
-            <TabScrollIndicator width={indicatorWidth} side="right" onClick={this.handleIndicatorClick} />
+            <TabScrollIndicator
+              width={indicatorWidth}
+              side="right"
+              onClick={this.handleIndicatorClick}
+            />
           )}
         </TabScrollIndicatorContainer>
-        {children({ handleScroll: this.handleScroll, handleResize: this.handleResize })}
+        {children({
+          handleScroll: this.handleScroll,
+          handleResize: this.handleResize,
+        })}
       </>
     );
   }
@@ -161,15 +183,17 @@ class TabScrollIndicators extends React.Component {
 
 TabScrollIndicators.propTypes = {
   children: PropTypes.func.isRequired,
-  tabRefs: PropTypes.arrayOf(PropTypes.shape({ offsetWidth: PropTypes.number })),
+  tabRefs: PropTypes.arrayOf(
+    PropTypes.shape({ offsetWidth: PropTypes.number })
+  ),
   tabContainerRef: PropTypes.shape({ current: PropTypes.object }),
-  indicatorWidth: PropTypes.number
+  indicatorWidth: PropTypes.number,
 };
 
 TabScrollIndicators.defaultProps = {
   tabRefs: undefined,
   tabContainerRef: undefined,
-  indicatorWidth: 40
+  indicatorWidth: 40,
 };
 
 export default TabScrollIndicators;

@@ -12,8 +12,8 @@ describe("mergedThemes", () => {
       fontSizes: {
         medium: "14px",
         small: "12px",
-        smaller: "12px"
-      }
+        smaller: "12px",
+      },
     });
     const expected = {
       ...NDSTheme,
@@ -21,8 +21,8 @@ describe("mergedThemes", () => {
         ...NDSTheme.fontSizes,
         medium: "14px",
         small: "12px",
-        smaller: "12px"
-      }
+        smaller: "12px",
+      },
     };
     expect(actual).toEqual(expected);
     expect(actual.fontSizes.large).toEqual(expected.fontSizes.large);
@@ -33,30 +33,30 @@ describe("mergedThemes", () => {
       fontSizes: {
         medium: "14px",
         small: "12px",
-        smaller: "12px"
+        smaller: "12px",
       },
       colors: {
-        black: "#FFF"
+        black: "#FFF",
       },
       space: {
-        x1: "6px"
-      }
+        x1: "6px",
+      },
     });
     const expected = {
       ...NDSTheme,
       fontSizes: {
         ...NDSTheme.fontSizes,
         medium: "14px",
-        small: "12px"
+        small: "12px",
       },
       colors: {
         ...NDSTheme.colors,
-        black: "#FFF"
+        black: "#FFF",
       },
       space: {
         ...NDSTheme.space,
-        x1: "6px"
-      }
+        x1: "6px",
+      },
     };
     expect(actual).toEqual(expected);
     expect(actual.fontSizes.large).toEqual(expected.fontSizes.large);

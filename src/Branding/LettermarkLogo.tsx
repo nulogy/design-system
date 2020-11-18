@@ -2,19 +2,23 @@ import React from "react";
 const sizes = {
   medium: {
     height: "32px",
-    width: "37px"
+    width: "37px",
   },
   large: {
     height: "48px",
-    width: "56px"
-  }
+    width: "56px",
+  },
 };
-const getSize = size => sizes[size] || sizes.medium;
+const getSize = (size) => sizes[size] || sizes.medium;
 type LettermarkLogoProps = {
   letterFill?: string;
   size?: string;
 };
-const LettermarkLogo: React.SFC<LettermarkLogoProps> = ({ size, letterFill, ...props }) => (
+const LettermarkLogo: React.SFC<LettermarkLogoProps> = ({
+  size,
+  letterFill,
+  ...props
+}) => (
   <svg
     {...getSize(size)}
     {...props}
@@ -29,6 +33,6 @@ const LettermarkLogo: React.SFC<LettermarkLogoProps> = ({ size, letterFill, ...p
 );
 LettermarkLogo.defaultProps = {
   letterFill: undefined,
-  size: undefined
+  size: undefined,
 };
 export default LettermarkLogo;

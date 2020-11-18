@@ -9,7 +9,7 @@ import FormSection from "./FormSection";
 type BaseFormProps = React.ComponentPropsWithRef<"form"> &
   SpaceProps & {
     title?: string;
-};
+  };
 const BaseForm: React.SFC<BaseFormProps> = ({ title, children, ...props }) => (
   <form {...props}>
     {title && <Heading2>{title}</Heading2>}
@@ -19,26 +19,26 @@ const BaseForm: React.SFC<BaseFormProps> = ({ title, children, ...props }) => (
 const Form = styled(BaseForm)(space, ({ title, theme }) => ({
   width: "100%",
   [`${Heading2}`]: {
-    marginBottom: title ? theme.space.x6 : 0
+    marginBottom: title ? theme.space.x6 : 0,
   },
   [`${Alert}`]: {
-    marginBottom: theme.space.x6
+    marginBottom: theme.space.x6,
   },
   [`${Field},${Fieldset}`]: {
     marginBottom: theme.space.x3,
     "&:last-child": {
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   },
   [`${FormSection}`]: {
     marginBottom: theme.space.x6,
     "&:last-child": {
-      marginBottom: 0
-    }
-  }
+      marginBottom: 0,
+    },
+  },
 }));
 BaseForm.defaultProps = {
   children: [],
-  title: undefined
+  title: undefined,
 };
 export default Form;

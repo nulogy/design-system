@@ -3,7 +3,7 @@ import { action } from "@storybook/addon-actions";
 import { Radio, Button } from "../index";
 
 export default {
-  title: "Components/Radio"
+  title: "Components/Radio",
 };
 
 export const _Radio = () => (
@@ -19,7 +19,7 @@ export const SetToDefaultChecked = () => (
 );
 
 SetToDefaultChecked.story = {
-  name: "Set to defaultChecked"
+  name: "Set to defaultChecked",
 };
 
 export const SetToDisabled = () => (
@@ -30,7 +30,7 @@ export const SetToDisabled = () => (
 );
 
 SetToDisabled.story = {
-  name: "Set to disabled"
+  name: "Set to disabled",
 };
 
 export const SetToError = () => (
@@ -41,7 +41,7 @@ export const SetToError = () => (
 );
 
 SetToError.story = {
-  name: "Set to error"
+  name: "Set to error",
 };
 
 export const SetToRequired = () => (
@@ -51,13 +51,23 @@ export const SetToRequired = () => (
 );
 
 SetToRequired.story = {
-  name: "Set to required"
+  name: "Set to required",
 };
 
 export const Controlled = () => (
   <>
-    <Radio id="radio-1" checked onChange={action("onChange")} labelText="I am controlled and checked" />
-    <Radio id="radio-2" checked={false} onChange={action("onChange")} labelText="I am controlled and unchecked" />
+    <Radio
+      id="radio-1"
+      checked
+      onChange={action("onChange")}
+      labelText="I am controlled and checked"
+    />
+    <Radio
+      id="radio-2"
+      checked={false}
+      onChange={action("onChange")}
+      labelText="I am controlled and unchecked"
+    />
   </>
 );
 
@@ -69,12 +79,17 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Radio ref={ref} checked onChange={action("onChange")} labelText="I am controlled and checked" />
+      <Radio
+        ref={ref}
+        checked
+        onChange={action("onChange")}
+        labelText="I am controlled and checked"
+      />
       <Button onClick={handleClick}>Focus the Input</Button>
     </>
   );
 };
 
 UsingRefToControlFocus.story = {
-  name: "using ref to control focus"
+  name: "using ref to control focus",
 };

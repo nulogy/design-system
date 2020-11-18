@@ -7,23 +7,34 @@ import { columnsPropType, rowsPropType, rowPropType } from "./Table.types";
 
 const StyledFooterRow = styled.tr(({ theme }) => ({
   "&:first-of-type": {
-    borderTop: `1px solid ${theme.colors.lightGrey}`
-  }
+    borderTop: `1px solid ${theme.colors.lightGrey}`,
+  },
 }));
 
 const renderRows = (rows, columns, keyField, loading) =>
-  rows.map(row => <TableFooterRow row={row} columns={columns} key={row[keyField]} loading={loading} />);
+  rows.map((row) => (
+    <TableFooterRow
+      row={row}
+      columns={columns}
+      key={row[keyField]}
+      loading={loading}
+    />
+  ));
 
 const TableFooterRow = ({ row, columns, loading }) => {
   const columnsWithoutControls = columns.filter(
-    column => column.dataKey !== "selected" && column.dataKey !== "expanded"
+    (column) => column.dataKey !== "selected" && column.dataKey !== "expanded"
   );
   const numberOfControlColumns = columns.length - columnsWithoutControls.length;
   return (
     <StyledFooterRow>
       {columnsWithoutControls.map((column, index) =>
         index === 0 ? (
-          <StyledTh key={column.dataKey} scope="row" colSpan={numberOfControlColumns + 1}>
+          <StyledTh
+            key={column.dataKey}
+            scope="row"
+            colSpan={numberOfControlColumns + 1}
+          >
             {row[column.dataKey]}
           </StyledTh>
         ) : (
@@ -44,7 +55,7 @@ const TableFooterRow = ({ row, columns, loading }) => {
 TableFooterRow.propTypes = {
   row: rowPropType.isRequired,
   columns: columnsPropType.isRequired,
-  loading: PropTypes.bool.isRequired
+  loading: PropTypes.bool.isRequired,
 };
 
 const TableFoot = ({ columns, rows, keyField, loading }) => (
@@ -55,12 +66,12 @@ TableFoot.propTypes = {
   columns: columnsPropType.isRequired,
   rows: rowsPropType.isRequired,
   keyField: PropTypes.string,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
 };
 
 TableFoot.defaultProps = {
   keyField: "id",
-  loading: false
+  loading: false,
 };
 
 export default TableFoot;
