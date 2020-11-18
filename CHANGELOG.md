@@ -1,3 +1,10 @@
+## [4.13.3](https://github.com/nulogy/design-system/compare/v4.13.2...v4.13.3) (2020-11-18)
+
+
+### Bug Fixes
+
+* Align dropdown menus to vertically center ([#812](https://github.com/nulogy/design-system/issues/812)) ([f1c7b8e](https://github.com/nulogy/design-system/commit/f1c7b8e2133617dfbd83c70ed779abebfce8103e))
+
 ## [4.13.2](https://github.com/nulogy/design-system/compare/v4.13.1...v4.13.2) (2020-11-17)
 
 
