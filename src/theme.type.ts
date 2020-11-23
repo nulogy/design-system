@@ -105,6 +105,7 @@ type ZIndex = {
   tabsScollIndicator: number;
   tabsBar: number;
   overlay: number;
+  tableHeader: number;
 };
 
 export type ThemeType = {

@@ -272,7 +272,7 @@ export const WithStickyHeader = () => (
       compact={boolean("Show with compact styling", false)}
       loading={boolean("Show loading state", false)}
       className="Table"
-      sticky
+      stickyHeader
     />
   </Box>
 );

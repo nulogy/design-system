@@ -109,6 +109,7 @@ const Theme: ThemeType = {
     tabsScollIndicator: tokens.z_index_tabs_scroll_indicator,
     tabsBar: tokens.z_index_tabs_bar,
     overlay: tokens.z_index_overlay,
+    tableHeader: tokens.z_index_table_header,
   },
 };
 

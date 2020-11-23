@@ -1792,10 +1792,10 @@
     fs "^0.0.1-security"
     svgi "^1.1.0"
 
-"@nulogy/tokens@^4.9.1":
-  version "4.9.1"
-  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-4.9.1.tgz#91e417b559e412e80661cb2d1e1ca90bacee87c3"
-  integrity sha512-r2waSBWinM+esV3fWaaTcY23YkJc8AepQp0BZjdrqdruzW8l+Cs3O23GG4fERIA1sS9DrcPY9JmBhLTZlnWZgA==
+"@nulogy/tokens@^4.11.0":
+  version "4.11.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-4.11.0.tgz#1ecd3403d54c5bd6ffb0a8c5f58710bac8704af3"
+  integrity sha512-HF6POl7agXbBg4RJRT07hUUCplB0DyW6wRSsjklcloKF6awmPKBo5ia5fqOAQWJaNk+PFXEQivrHMpRuGBzh0Q==
 
 "@octokit/auth-token@^2.4.0":
   version "2.4.2"
