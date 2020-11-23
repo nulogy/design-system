@@ -53,3 +53,13 @@ export const WithAHiddenLabel = () => (
 WithAHiddenLabel.story = {
   name: "with a hidden label",
 };
+
+export const WithACustomSize = () => (
+  <IconicButton icon="user" iconSize="50px" labelHidden>
+    I am an Iconic Button
+  </IconicButton>
+);
+
+WithACustomSize.story = {
+  name: "with a custom size",
+};
