@@ -1,3 +1,10 @@
+## [4.13.6](https://github.com/nulogy/design-system/compare/v4.13.5...v4.13.6) (2020-11-23)
+
+
+### Bug Fixes
+
+* **Table:** fix stickyHeader z-index so it does not overlap nav menu items ([#817](https://github.com/nulogy/design-system/issues/817)) ([0be4b92](https://github.com/nulogy/design-system/commit/0be4b92302adac9c2355ada2b7167a95b1c079de))
+
 ## [4.13.5](https://github.com/nulogy/design-system/compare/v4.13.4...v4.13.5) (2020-11-18)
 
 
