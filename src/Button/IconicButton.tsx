@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
-import propTypes from "@styled-system/prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { transparentize } from "polished";
 import icons from "@nulogy/icons";
@@ -83,10 +82,11 @@ type BaseIconicButtonProps = SpaceProps & {
   disabled?: boolean;
   onClick?: (...args: any[]) => any;
   icon?: any;
+  iconSize?: string;
   children?: any;
 };
 const BaseIconicButton: React.SFC<BaseIconicButtonProps> = React.forwardRef(
-  ({ children, icon, labelHidden, className, ...props }, forwardedRef) => {
+  ({ children, icon, labelHidden, className, iconSize, ...props }, forwardedRef) => {
     return (
       <WrapperButton
         ref={forwardedRef}
@@ -97,7 +97,7 @@ const BaseIconicButton: React.SFC<BaseIconicButtonProps> = React.forwardRef(
         <Manager>
           <Reference>
             {({ ref }) => (
-              <Icon ref={ref} size={NDSTheme.space.x4} icon={icon} p="half" />
+              <Icon ref={ref} size={iconSize || NDSTheme.space.x4} icon={icon} p="half" />
             )}
           </Reference>
           <Popper
