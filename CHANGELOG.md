@@ -1,3 +1,10 @@
+# [4.14.0](https://github.com/nulogy/design-system/compare/v4.13.6...v4.14.0) (2020-11-23)
+
+
+### Features
+
+* **IconicButton:** Adds ability to set a custom size with the iconSize prop ([#818](https://github.com/nulogy/design-system/issues/818)) ([e9d4cde](https://github.com/nulogy/design-system/commit/e9d4cde44d72d4a21e6d1f3f61102269e22f38ec))
+
 ## [4.13.6](https://github.com/nulogy/design-system/compare/v4.13.5...v4.13.6) (2020-11-23)
 
 
