@@ -5,7 +5,7 @@ const stickyStyles = (theme: ThemeType): CSSObject => ({
   top: 0,
   background: "white",
   boxShadow: "0px 1px 0px rgba(0,0,0,.1)",
-  zIndex: theme.zIndex.content,
+  zIndex: theme.zIndex.tableHeader,
 });
 
 type StyledThProps = {
