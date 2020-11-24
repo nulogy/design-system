@@ -1,3 +1,10 @@
+## [4.14.1](https://github.com/nulogy/design-system/compare/v4.14.0...v4.14.1) (2020-11-24)
+
+
+### Bug Fixes
+
+* **Typescript:** add missing types to TruncatedText and Table ([#819](https://github.com/nulogy/design-system/issues/819)) ([500ce34](https://github.com/nulogy/design-system/commit/500ce348c05182011275a49d1920b021da42c6e6))
+
 # [4.14.0](https://github.com/nulogy/design-system/compare/v4.13.6...v4.14.0) (2020-11-23)
 
 
