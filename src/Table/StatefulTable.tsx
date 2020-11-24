@@ -1,13 +1,29 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { Pagination } from "../Pagination";
 import { getSubset } from "../utils/subset";
-import BaseTable from "./BaseTable";
+import BaseTable, { BaseTableProps } from "./BaseTable";
 import { addExpandableControl } from "./addExpandableControl";
 import { addSelectableControl } from "./addSelectableControl";
 
-const getAllRowKeys = (rows = [], keyField) => rows.map((row) => row[keyField]);
+export type StatefulTableProps = BaseTableProps & {
+  selectedRows?: string[],
+  onRowSelectionChange?: (...args: any[]) => any,
+  onRowExpansionChange?: (...args: any[]) => any,
+  rowsPerPage?: number,
+  onPageChange?: (...args: any[]) => any,
+  selectAllAriaLabel?: string,
+  deselectAllAriaLabel?: string,
+  paginationCss?: any,
+  paginationProps?: any,
+  expandedRows?: any[],
+  hasSelectableRows?: boolean,
+  hasExpandableRows?: boolean,
+  onSelectRow?: (...args: any[]) => any,
+  onSelectHeader?: (...args: any[]) => any,
+  isHeaderSelected?: any
+};
 
+const getAllRowKeys = (rows = [], keyField) => rows.map(row => row[keyField]);
 const paginateRows = (rows, rowsPerPage) =>
   rowsPerPage
     ? rows.reduce(
@@ -17,7 +33,28 @@ const paginateRows = (rows, rowsPerPage) =>
       )
     : [rows];
 
-class StatefulTable extends Component {
+type StatefulTableState = {
+  selectedRows: any,
+  expandedRows: any,
+  isHeaderSelected: boolean,
+  currentPage: number,
+  paginatedRows: any
+};
+class StatefulTable extends Component<StatefulTableProps, StatefulTableState> {
+
+  static defaultProps = {
+    ...BaseTable.defaultProps,
+    hasSelectableRows: false,
+    selectedRows: [],
+    isHeaderSelected: false,
+    onRowExpansionChange: () => {},
+    selectAllAriaLabel: undefined,
+    deselectAllAriaLabel: undefined,
+    /* PM support only */
+    paginationCss: undefined,
+    paginationProps: {},
+  }
+
   constructor(props) {
     super(props);
     const { selectedRows, expandedRows, rowsPerPage, rows } = this.props;
@@ -26,10 +63,9 @@ class StatefulTable extends Component {
       expandedRows: expandedRows || [],
       isHeaderSelected: false,
       currentPage: 1,
-      paginatedRows: paginateRows(rows, rowsPerPage),
+      paginatedRows: paginateRows(rows, rowsPerPage)
     };
   }
-
   static getDerivedStateFromProps(nextProps, prevState) {
     const { rows, rowsPerPage } = nextProps;
     const paginatedRows = paginateRows(rows, rowsPerPage);
@@ -40,10 +76,9 @@ class StatefulTable extends Component {
       currentPage:
         paginatedRows.length < currentPage
           ? paginatedRows.length || 1
-          : currentPage,
+          : currentPage
     };
   }
-
   onRowExpansionChangeHandler = () => {
     const { onRowExpansionChange } = this.props;
     const { expandedRows, currentPage } = this.state;
@@ -53,8 +88,7 @@ class StatefulTable extends Component {
       );
     }
   };
-
-  onExpandRow = (row) => {
+  onExpandRow = row => {
     const { keyField, onRowExpansionChange } = this.props;
     const currentRowKey = row[keyField];
     const newExpandedRows = !row.expanded
@@ -62,22 +96,19 @@ class StatefulTable extends Component {
       : this.removeRowFromExpandedRows(currentRowKey);
     this.setState(
       {
-        expandedRows: newExpandedRows,
+        expandedRows: newExpandedRows
       },
       onRowExpansionChange(newExpandedRows)
     );
   };
-
-  removeRowFromExpandedRows = (rowKeyToRemove) => {
+  removeRowFromExpandedRows = rowKeyToRemove => {
     const { expandedRows } = this.state;
-    return expandedRows.filter((rowKey) => rowKey !== rowKeyToRemove);
+    return expandedRows.filter(rowKey => rowKey !== rowKeyToRemove);
   };
-
-  addRowToExpandedRows = (rowKeyToAdd) => {
+  addRowToExpandedRows = rowKeyToAdd => {
     const { expandedRows } = this.state;
     return [...expandedRows, rowKeyToAdd];
   };
-
   onRowSelectionChangeHandler = () => {
     const { onRowSelectionChange } = this.props;
     const { selectedRows, currentPage } = this.state;
@@ -87,8 +118,7 @@ class StatefulTable extends Component {
       );
     }
   };
-
-  onSelectRow = (row) => {
+  onSelectRow = row => {
     const { currentPage } = this.state;
     const { keyField } = this.props;
     const currentRowKey = row[keyField];
@@ -101,12 +131,11 @@ class StatefulTable extends Component {
         isHeaderSelected: this.areAllRowsSelectedOnPage(
           newRowSelections,
           currentPage
-        ),
+        )
       },
       this.onRowSelectionChangeHandler
     );
   };
-
   onSelectHeader = () => {
     const { isHeaderSelected, currentPage } = this.state;
     const { keyField } = this.props;
@@ -119,38 +148,32 @@ class StatefulTable extends Component {
         isHeaderSelected: !isHeaderSelected,
         selectedRows: isHeaderSelected
           ? this.removeRowsFromSelection(currentRowKeys)
-          : this.addRowsToSelection(currentRowKeys),
+          : this.addRowsToSelection(currentRowKeys)
       },
       this.onRowSelectionChangeHandler
     );
   };
-
-  removeRowFromSelection = (rowKeyToRemove) => {
+  removeRowFromSelection = rowKeyToRemove => {
     const { selectedRows } = this.state;
-    return selectedRows.filter((rowKey) => rowKey !== rowKeyToRemove);
+    return selectedRows.filter(rowKey => rowKey !== rowKeyToRemove);
   };
-
-  addRowToSelection = (rowKeyToAdd) => {
+  addRowToSelection = rowKeyToAdd => {
     const { selectedRows } = this.state;
     return [...selectedRows, rowKeyToAdd];
   };
-
-  addRowsToSelection = (rowsKeysToAdd) => {
+  addRowsToSelection = rowsKeysToAdd => {
     const { selectedRows } = this.state;
     return [...selectedRows, ...rowsKeysToAdd];
   };
-
-  removeRowsFromSelection = (rowKeysToRemove) => {
+  removeRowsFromSelection = rowKeysToRemove => {
     const { selectedRows } = this.state;
-    return selectedRows.filter((row) => !rowKeysToRemove.includes(row));
+    return selectedRows.filter(row => !rowKeysToRemove.includes(row));
   };
-
-  rowsByPageSelector = (pageNumber) => {
+  rowsByPageSelector = pageNumber => {
     const { paginatedRows } = this.state;
     return paginatedRows[pageNumber - 1];
   };
-
-  goToPage = (pageNumber) => {
+  goToPage = pageNumber => {
     const { selectedRows } = this.state;
     const { hasSelectableRows } = this.props;
     this.setState(
@@ -160,20 +183,18 @@ class StatefulTable extends Component {
           isHeaderSelected: this.areAllRowsSelectedOnPage(
             selectedRows,
             pageNumber
-          ),
-        }),
+          )
+        })
       },
       this.onPageSelectionChangeHandler
     );
   };
-
   currentRowsByPageSelector = (rows, pageNumber) => {
     const currentRows = this.rowsByPageSelector(pageNumber);
     const { keyField } = this.props;
     const allRowKeysOnPage = getAllRowKeys(currentRows, keyField);
-    return allRowKeysOnPage.filter((rowKey) => rows.includes(rowKey));
+    return allRowKeysOnPage.filter(rowKey => rows.includes(rowKey));
   };
-
   areAllRowsSelectedOnPage = (selectedRows, pageNumber) => {
     const { keyField } = this.props;
     const currentRows = this.rowsByPageSelector(pageNumber);
@@ -183,17 +204,14 @@ class StatefulTable extends Component {
       this.currentRowsByPageSelector(selectedRows, pageNumber).length
     );
   };
-
   goToPrevPage = () => {
     const { currentPage } = this.state;
     this.goToPage(currentPage - 1);
   };
-
   goToNextPage = () => {
     const { currentPage } = this.state;
     this.goToPage(currentPage + 1);
   };
-
   onPageSelectionChangeHandler = () => {
     const { onPageChange } = this.props;
     const { currentPage } = this.state;
@@ -201,32 +219,31 @@ class StatefulTable extends Component {
       onPageChange(currentPage);
     }
   };
-
   getControlProps = () => {
     const {
       selectedRows,
       isHeaderSelected,
       currentPage,
-      expandedRows,
+      expandedRows
     } = this.state;
     const { hasSelectableRows, hasExpandableRows } = this.props;
     const selectionConfig = {
       onSelectRow: this.onSelectRow,
       onSelectHeader: this.onSelectHeader,
       selectedRows: this.currentRowsByPageSelector(selectedRows, currentPage),
-      isHeaderSelected,
+      isHeaderSelected
     };
     const expandableConfig = {
       onRowExpansionChange: this.onExpandRow,
-      expandedRows,
+      expandedRows
     };
-    const props = {
+    const props: StatefulTableProps = {
       ...this.props,
       rows: this.rowsByPageSelector(currentPage) || [],
       ...(hasSelectableRows && selectionConfig),
-      ...(hasExpandableRows && expandableConfig),
+      ...(hasExpandableRows && expandableConfig)
     };
-    const selectableProps = { ...props, ...addSelectableControl(props) };
+    const selectableProps = { ...props, ...addSelectableControl(props as any) };
     const expandableProps = { ...props, ...addExpandableControl(props) };
     if (hasSelectableRows && hasExpandableRows)
       return { ...props, ...addExpandableControl(selectableProps) };
@@ -234,7 +251,6 @@ class StatefulTable extends Component {
     if (hasExpandableRows) return expandableProps;
     return props;
   };
-
   render() {
     const { paginatedRows, currentPage } = this.state;
     const { rowsPerPage, paginationProps, paginationCss } = this.props;
@@ -263,32 +279,5 @@ class StatefulTable extends Component {
     );
   }
 }
-
-StatefulTable.propTypes = {
-  ...BaseTable.propTypes,
-  selectedRows: PropTypes.arrayOf(PropTypes.string),
-  onRowSelectionChange: PropTypes.func,
-  onRowExpansionChange: PropTypes.func,
-  rowsPerPage: PropTypes.number,
-  onPageChange: PropTypes.func,
-  selectAllAriaLabel: PropTypes.string,
-  deselectAllAriaLabel: PropTypes.string,
-  /* PM support only */
-  paginationCss: PropTypes.shape({}),
-  paginationProps: PropTypes.shape({}),
-};
-
-StatefulTable.defaultProps = {
-  ...BaseTable.defaultProps,
-  hasSelectableRows: false,
-  selectedRows: [],
-  isHeaderSelected: false,
-  onRowExpansionChange: () => {},
-  selectAllAriaLabel: undefined,
-  deselectAllAriaLabel: undefined,
-  /* PM support only */
-  paginationCss: undefined,
-  paginationProps: {},
-};
 
 export default StatefulTable;
