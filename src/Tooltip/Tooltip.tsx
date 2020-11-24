@@ -68,12 +68,12 @@ const TooltipContainer = styled(Box)(
     top: open ? 0 : "-9999px",
   })
 );
-type TooltipProps = {
+export type TooltipProps = {
   showDelay?: string | number;
   hideDelay?: string | number;
   defaultOpen?: boolean;
   className?: string;
-  tooltip: React.ReactNode;
+  tooltip?: React.ReactNode;
   placement?:
     | "top"
     | "top-start"
@@ -88,6 +88,7 @@ type TooltipProps = {
     | "right-start"
     | "right-end";
   maxWidth?: string;
+  children?: React.ReactNode;
 };
 const Tooltip: React.SFC<TooltipProps> = React.forwardRef(
   (

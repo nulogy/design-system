@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { withKnobs, boolean, text } from "@storybook/addon-knobs";
+import { boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import { Table } from ".";
 import { Box, DropdownButton, DropdownMenu, Button, Text } from "..";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
+import { Table } from ".";
 
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");
@@ -362,3 +362,4 @@ export const WithAFooter = () => (
 WithAFooter.story = {
   name: "with a footer",
 };
+/* eslint-enable react/prop-types */

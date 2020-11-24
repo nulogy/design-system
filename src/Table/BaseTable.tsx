@@ -4,7 +4,7 @@ import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
 import PropTypes from "prop-types";
-import { columnsPropType, rowsPropType } from "./Table.types";
+import { rowsPropType, ColumnType, RowType } from './Table.types';
 
 const StyledTable = styled.table<any>({
   borderCollapse: "collapse",
@@ -12,20 +12,20 @@ const StyledTable = styled.table<any>({
   background: "white",
   position: "relative",
 });
-type BaseTableProps = React.ComponentProps<"table"> & {
-  columns: any;
-  rows: any;
-  noRowsContent?: string;
-  keyField?: string;
-  id?: string;
-  loading?: boolean;
-  footerRows?: any;
-  rowHovers?: boolean;
-  compact?: boolean;
-  className?: string;
-  stickyHeader?: boolean;
-  onRowMouseEnter?: any;
-  onRowMouseLeave?: any;
+export type BaseTableProps = HTMLTableElement & {
+  columns: ColumnType[],
+  rows: RowType[],
+  noRowsContent?: string,
+  keyField?: string,
+  id?: string,
+  loading?: boolean,
+  footerRows?: any,
+  rowHovers?: boolean,
+  compact?: boolean,
+  className?: string,
+  stickyHeader?: boolean,
+  onRowMouseEnter?: (...args: any[]) => any,
+  onRowMouseLeave?: (...args: any[]) => any,
 };
 const BaseTable: React.SFC<BaseTableProps> = ({
   columns,
@@ -68,8 +68,8 @@ const BaseTable: React.SFC<BaseTableProps> = ({
 );
 
 BaseTable.propTypes = {
-  columns: columnsPropType,
-  rows: rowsPropType,
+  columns: PropTypes.any,
+  rows: PropTypes.any,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
   id: PropTypes.string,
