@@ -2,9 +2,26 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Tooltip } from "../Tooltip";
 import { Text } from "../Type";
+import { TooltipProps } from '../Tooltip/Tooltip';
 
-const MaybeTooltip = ({ children, showTooltip, ...props }) => {
-  return showTooltip ? <Tooltip {...props}>{children}</Tooltip> : children;
+type TruncatedTextProps = {
+  children?: string;
+  indicator?: string;
+  element?: any;
+  maxCharacters?: number
+  showTooltip?: boolean,
+  fullWidth?: boolean,
+  "data-testid"?: string,
+  tooltipProps?: TooltipProps,
+};
+
+type MaybeTooltipProps = {
+  children?: React.ReactNode;
+  showTooltip?: boolean;
+}
+
+const MaybeTooltip = ({ children, showTooltip, ...props }: MaybeTooltipProps) => {
+  return showTooltip ? <Tooltip {...props}>{children}</Tooltip> : <>{children}</>;
 };
 
 MaybeTooltip.propTypes = {
@@ -13,7 +30,7 @@ MaybeTooltip.propTypes = {
 };
 
 MaybeTooltip.defaultProps = {
-  children: undefined,
+  children: "",
   showTooltip: true,
 };
 
@@ -24,7 +41,7 @@ const TruncatedTextFillWidth = ({
   children,
   "data-testid": testId,
   ...props
-}) => {
+}:TruncatedTextProps) => {
   const [hasOverflowText, setHasOverflowText] = useState(false);
   const hasTooltip = showTooltip && hasOverflowText;
   const updateOverflow = (e) => {
@@ -67,7 +84,7 @@ const TruncatedTextMaxCharacters = ({
   tooltipProps,
   "data-testid": testId,
   ...props
-}) => {
+}:TruncatedTextProps) => {
   const innerText = children;
   const requiresTruncation = innerText.length > maxCharacters;
   const truncatedText = requiresTruncation
@@ -94,7 +111,7 @@ const TruncatedTextMaxCharacters = ({
   );
 };
 
-const TruncatedText = ({ fullWidth, children, ...props }) =>
+const TruncatedText = ({ fullWidth, children, ...props }: TruncatedTextProps) =>
   fullWidth ? (
     <TruncatedTextFillWidth {...props}>{children}</TruncatedTextFillWidth>
   ) : (
