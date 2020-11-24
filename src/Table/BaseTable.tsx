@@ -4,7 +4,7 @@ import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
 import PropTypes from "prop-types";
-import { columnsPropType, rowsPropType, ColumnType, RowType } from './Table.types';
+import { rowsPropType, ColumnType, RowType } from './Table.types';
 
 const StyledTable = styled.table<any>({
   borderCollapse: "collapse",
@@ -68,8 +68,8 @@ const BaseTable: React.SFC<BaseTableProps> = ({
 );
 
 BaseTable.propTypes = {
-  columns: columnsPropType,
-  rows: rowsPropType,
+  columns: PropTypes.any,
+  rows: PropTypes.any,
   noRowsContent: PropTypes.string,
   keyField: PropTypes.string,
   id: PropTypes.string,
