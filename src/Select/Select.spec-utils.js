@@ -1,6 +1,6 @@
 import { fireEvent } from "@testing-library/react";
 
-const openDropdown = (container, i = 0) => {
+export const openDropdown = (container, i = 0) => {
   fireEvent.focus(container.querySelectorAll("input")[i]);
   fireEvent.keyDown(container.querySelectorAll("input")[i], {
     key: "ArrowDown",
