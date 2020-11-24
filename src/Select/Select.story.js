@@ -125,7 +125,7 @@ export const _Select = () => (
     errorMessage={text("errorMessage", "")}
     labelText={text("labelText", "Inventory Status")}
     helpText={text("helpText", undefined)}
-    noOptionsMessage={() => text("noOptionsMessage", "new")}
+    noOptionsMessage={text("noOptionsMessage", undefined)}
     required={boolean("required", false)}
     requirementText={text("requirementText", undefined)}
     id={text("id", undefined)}
@@ -147,18 +147,6 @@ export const _Select = () => (
     onBlur={action("blurred")}
   />
 );
-
-export const WithState = () => (
-  <SelectWithState
-    placeholder="Please select inventory status"
-    options={options}
-    labelText="Inventory status"
-  />
-);
-
-WithADefaultValue.story = {
-  name: "with a defaultValue",
-};
 
 export const WithABlankValue = () => {
   const optionsWithBlank = [{ value: null, label: "" }, ...options];
@@ -379,7 +367,7 @@ WithWrappingText.story = {
   name: "With wrapping text",
 };
 
-export const WithMultiselect = () => {
+export const WithMultiselect = (props) => {
   const PCNList = [
     { value: "2", label: "PCN2" },
     { value: "4", label: "PCN4" },
@@ -507,10 +495,6 @@ export const WithFetchedOptions = () => (
     <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
   </Box>
 );
-
-WithManyOptions.story = {
-  name: "with many options ",
-};
 
 export const WithCustomOptionComponent = () => {
   const Indicator = styled.span(() => ({
