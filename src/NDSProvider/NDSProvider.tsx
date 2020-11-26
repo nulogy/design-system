@@ -10,6 +10,13 @@ import i18n from "../i18n";
 import { LocaleContext } from "./LocaleContext";
 import { mergeThemes } from "./mergeThemes.util";
 import { ThemeType } from "../theme.type";
+
+type NDSProviderProps = {
+  theme?: ThemeType;
+  locale?: string;
+  children?: any;
+};
+
 const Reset = createGlobalStyle(() => {
   return {
     body: {
@@ -36,8 +43,8 @@ const ModalStyleOverride = createGlobalStyle(
     };
   }
 );
-const GlobalStyles: React.SFC<NDSProviderProps> = styled.div(
-  ({ theme, locale }: any): CSSObject => {
+const GlobalStyles = styled.div(
+  ({ theme, locale }: NDSProviderProps): CSSObject => {
     const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
     return {
       color: theme.colors.black,
@@ -65,15 +72,11 @@ const GlobalStyles: React.SFC<NDSProviderProps> = styled.div(
     };
   }
 );
-type NDSProviderProps = {
-  theme?: ThemeType;
-  locale?: string;
-};
-const NDSProvider: React.SFC<NDSProviderProps> = ({
+const NDSProvider = ({
   theme,
   children,
   locale = "en_US",
-}) => {
+}: NDSProviderProps) => {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
