@@ -1,5 +1,6 @@
 export { NDSProvider } from "./NDSProvider";
 export { default as theme } from "./theme";
+export * from "./theme.type";
 export { Box } from "./Box";
 export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
@@ -59,6 +60,7 @@ export { Modal } from "./Modal";
 export { Tab, Tabs } from "./Tabs";
 
 export { Table } from "./Table";
+export type { TableProps, TableColumnType, TableRowType } from "./Table";
 
 export { StatusIndicator } from "./StatusIndicator";
 export { Pagination } from "./Pagination";

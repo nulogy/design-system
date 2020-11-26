@@ -108,7 +108,7 @@ type ZIndex = {
   tableHeader: number;
 };
 
-export type ThemeType = {
+export type DefaultNDSThemeType = {
   colors: Colors;
   fontSizes: FontSizes;
   lineHeights: LineHeights;
@@ -122,3 +122,9 @@ export type ThemeType = {
   breakpoints: Breakpoints;
   zIndex: ZIndex;
 };
+
+type RecursivePartial<T> = {
+  [P in keyof T]?: RecursivePartial<T[P]>;
+};
+
+export type ThemeType = RecursivePartial<DefaultNDSThemeType>;
