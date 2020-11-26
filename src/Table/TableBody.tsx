@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import { rowsPropType, columnsPropType, rowPropType } from "./Table.types";
 import TableCell from "./TableCell";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const StyledMessageContainer = styled(Box)(({ theme }) => ({
   padding: `${theme.space.x3} 0`,
@@ -14,7 +14,7 @@ const StyledMessageContainer = styled(Box)(({ theme }) => ({
 
 type StyledTrProps = React.ComponentProps<"tr"> & {
   rowHovers?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   className?: string;
 };
 

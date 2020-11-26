@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { color } from "styled-system";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 type DropdownButtonProps = {
   color?: string;
   disabled?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   hoverColor?: string;
   bgHoverColor?: string;
 };

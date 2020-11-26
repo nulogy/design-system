@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { color } from "styled-system";
 import { Box } from "../Box";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const getMenuMargin = (placement, showArrow) => {
   const direction = String(placement).split("-")[0];
@@ -32,7 +32,7 @@ type DropdownMenuContainerProps = {
   backgroundColor?: string;
   showArrow?: boolean;
   dataPlacement?: any;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const DropdownMenuContainer: React.SFC<DropdownMenuContainerProps> = styled(
   Box

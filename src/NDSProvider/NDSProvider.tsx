@@ -9,10 +9,10 @@ import NDSTheme from "../theme";
 import i18n from "../i18n";
 import { LocaleContext } from "./LocaleContext";
 import { mergeThemes } from "./mergeThemes.util";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from '../theme.type';
 
 type NDSProviderProps = {
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   locale?: string;
   children?: any;
 };

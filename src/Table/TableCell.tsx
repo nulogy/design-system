@@ -1,12 +1,12 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { columnPropType, rowPropType } from "./Table.types";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 type StyledTableCellProps = {
   align?: any;
   compact?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const StyledTableCell: React.SFC<StyledTableCellProps> = styled.td(
   ({ align, compact, theme }: StyledTableCellProps): CSSObject => {

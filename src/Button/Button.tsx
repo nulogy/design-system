@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
-import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import NDSTheme from "../theme";
 import { subPx } from "../utils";
-import { ThemeType } from "../theme.type";
-
-const iconNames = Object.keys(icons);
+import { DefaultNDSThemeType } from '../theme.type';
 
 type SizeType = "small" | "medium" | "large" | undefined;
 
-const getSize = (size: SizeType, theme: ThemeType) => {
+const getSize = (size: SizeType, theme: DefaultNDSThemeType) => {
   switch (size) {
     case "small":
       return {
@@ -90,7 +87,7 @@ export type ButtonProps = SpaceProps &
     fullWidth?: boolean;
     asLink?: boolean;
     children?: React.ReactNode;
-    theme?: ThemeType;
+    theme?: DefaultNDSThemeType;
   };
 const Button: React.SFC<ButtonProps> = React.forwardRef(
   ({ children, iconSide, icon, className, asLink, ...props }, ref) => {

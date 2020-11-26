@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { darken } from "polished";
 import Button, { ButtonProps } from "./Button";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 type DangerButtonProps = ButtonProps & {
   disabled: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const DangerButton = styled(Button)(
   ({ disabled, theme }: DangerButtonProps) => ({

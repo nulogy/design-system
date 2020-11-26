@@ -5,11 +5,11 @@ import { transparentize } from "polished";
 import { Heading2 } from "../Type";
 import { CloseButton } from "../Button";
 import { PreventBodyElementScrolling } from "../utils";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 type ModalContentProps = React.ComponentPropsWithRef<"div"> & {
   hasFooter?: any;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 
 const ModalContent: React.SFC<ModalContentProps> = styled.div(
@@ -26,12 +26,12 @@ const ModalContent: React.SFC<ModalContentProps> = styled.div(
 
 const getHeaderPaddingRight = (
   closeButtonIncluded?: boolean,
-  theme?: ThemeType
+  theme?: DefaultNDSThemeType,
 ) => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
 
 type ModalHeaderProps = React.ComponentPropsWithRef<"div"> & {
   hasCloseButton?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const ModalHeader = styled.div(
   ({ hasCloseButton, theme }: ModalHeaderProps): CSSObject => ({

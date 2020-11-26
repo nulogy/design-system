@@ -1,7 +1,7 @@
 import styled, { CSSObject } from "styled-components";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 type DropdownItemProps = {
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   color?: string;
   hoverColor?: string;
   bgHoverColor?: string;

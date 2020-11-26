@@ -4,7 +4,7 @@ import styled, { CSSObject } from "styled-components";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 const radioStyle = (theme) => ({
   checked: {
     disabled: {
@@ -48,7 +48,7 @@ const getRadioStyle = (props, checked) => {
 
 type VisualRadioProps = {
   disabled?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 
 const VisualRadio: React.SFC<VisualRadioProps> = styled.div(

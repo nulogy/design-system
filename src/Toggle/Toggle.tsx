@@ -7,9 +7,9 @@ import { Field } from "../Form";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import ToggleButton from "./ToggleButton";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from '../theme.type';
 
-const labelTextStyles = (theme: ThemeType) => ({
+const labelTextStyles = (theme: DefaultNDSThemeType) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.smallTextBase,
@@ -63,7 +63,7 @@ type BaseToggleProps = {
   onClick?: (...args: any[]) => any;
   innerRef?: any;
   name?: string;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   "data-testid"?: string;
 };
 
