@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled, { CSSObject } from "styled-components";
 import { Box } from "../Box";
 import { Alert } from "../Alert";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 const SHOW_DURATION = 2000; // in ms
 const ANIMATE_OUT_DURATION = 1000;
 const TOAST_Y_MAX = "0px";
@@ -29,7 +29,7 @@ const FADE_OUT_STYLES = {
 };
 type AnimatedAlertProps = {
   visible?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const AnimatedAlert = styled(Alert)(
   ({ visible, theme }: AnimatedAlertProps) => ({

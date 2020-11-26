@@ -5,9 +5,9 @@ import Radio from "./Radio";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from '../theme.type';
 
-const labelTextStyles = (theme: ThemeType): CSSObject => ({
+const labelTextStyles = (theme: DefaultNDSThemeType): CSSObject => ({
   fontSize: theme.fontSizes.small,
   fontWeight: Number(theme.fontWeights.bold),
   lineHeight: theme.lineHeights.smallTextBase,

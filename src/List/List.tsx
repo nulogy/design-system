@@ -14,7 +14,7 @@ import {
   BorderProps,
 } from "styled-system";
 import ListItem from "./ListItem";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 type ListProps = React.ComponentPropsWithRef<"ul"> &
   SpaceProps &
@@ -23,7 +23,7 @@ type ListProps = React.ComponentPropsWithRef<"ul"> &
   LayoutProps &
   TypographyProps &
   BoxShadowProps & {
-    theme?: ThemeType;
+    theme?: DefaultNDSThemeType;
     className?: string;
     compact?: boolean;
     leftAlign?: boolean;

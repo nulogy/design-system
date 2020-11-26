@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 import styled, { CSSObject } from "styled-components";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 const barStyles = (theme) => ({
   expanded: {
     content: "''",
@@ -43,7 +43,7 @@ type TabButtonProps = React.ComponentPropsWithRef<"button"> & {
   selected?: boolean;
   disabled?: boolean;
   fullWidth?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const TabButton: React.SFC<TabButtonProps> = styled.button(
   ({ selected, disabled, fullWidth, theme }: TabButtonProps): any => ({

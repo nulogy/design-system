@@ -1,9 +1,9 @@
 import React, { useRef, useImperativeHandle } from "react";
 import styled, { CSSObject } from "styled-components";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 type SliderProps = React.ComponentPropsWithRef<"span"> & {
   disabled?: boolean;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const Slider = styled.span(
   ({ disabled, theme }: SliderProps): CSSObject => ({
@@ -47,7 +47,7 @@ const Switch = styled.div(({ theme }) => ({
 type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
   disabled?: boolean;
   name?: string;
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
 };
 const ToggleInput = styled.input(
   ({ disabled, theme }: ToggleInputProps): CSSObject => ({

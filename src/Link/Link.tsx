@@ -8,7 +8,7 @@ import {
   LayoutProps,
 } from "styled-system";
 import { darken } from "polished";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 import { themeGet } from "@styled-system/theme-get";
 
 const resetButtonStyles = {
@@ -25,7 +25,7 @@ type LinkProps = ColorProps &
     as?: React.ElementType;
     color?: string;
     fontSize?: string;
-    theme?: ThemeType;
+    theme?: DefaultNDSThemeType;
     "aria-label": string;
   };
 

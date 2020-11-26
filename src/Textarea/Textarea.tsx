@@ -6,7 +6,7 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { subPx } from "../utils";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const textareaStyles = (theme) => ({
   disabled: {
@@ -35,7 +35,7 @@ const getTextareaStyle = (props) => {
 };
 
 type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> & {
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   errorMessage?: string;
   errorList?: string[];
   error?: boolean;

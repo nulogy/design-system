@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const DropdownLink: React.SFC<any> = styled.a(
   ({ theme, bgHoverColor, hoverColor, color }: any) => ({

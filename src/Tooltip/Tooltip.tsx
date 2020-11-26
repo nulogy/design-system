@@ -3,7 +3,7 @@ import styled, { CSSObject } from "styled-components";
 import { Box } from "../Box";
 import { Popper } from "../Popper";
 import { generateId } from "../utils";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 import { PositionProps } from "styled-system";
 const tooltipStyles = (theme) => ({
   backgroundColor: theme.colors.white,
@@ -34,7 +34,7 @@ const getTooltipMargin = (placement) => {
 };
 
 type TooltipContainerProps = PositionProps & {
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   dataPlacement?: "top" | "bottom" | "left" | "right";
   open?: boolean;
   position?:

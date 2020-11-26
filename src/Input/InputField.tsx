@@ -10,7 +10,7 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
 import NDSTheme from "../theme";
-import { ThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const inputStyles = (theme) => ({
   disabled: {
@@ -29,7 +29,7 @@ const inputStyles = (theme) => ({
 });
 
 type StyledInputProps = React.ComponentPropsWithRef<"input"> & {
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   disabled?: boolean;
   error?: boolean;
   inputWidth?: string;
