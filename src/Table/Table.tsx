@@ -3,6 +3,11 @@ import StatefulTable from "./StatefulTable";
 import BaseTable from "./BaseTable";
 import SortingColumnHeader from "./SortingColumnHeader";
 import { StatefulTableProps } from './StatefulTable';
+import { ColumnType, RowType } from './Table.types';
+
+export type TableProps = StatefulTableProps;
+export type TableColumnType = ColumnType;
+export type TableRowType = RowType;
 
 const Table = ({
   hasSelectableRows,
@@ -17,7 +22,7 @@ const Table = ({
   paginationCss,
   paginationProps,
   ...props
-}: StatefulTableProps) =>
+}: TableProps) =>
   hasSelectableRows || rowsPerPage || hasExpandableRows ? (
     <StatefulTable
       hasExpandableRows={hasExpandableRows}

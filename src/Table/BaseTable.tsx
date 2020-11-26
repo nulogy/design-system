@@ -12,7 +12,7 @@ const StyledTable = styled.table<any>({
   background: "white",
   position: "relative",
 });
-export type BaseTableProps = HTMLTableElement & {
+export type BaseTableProps = {
   columns: ColumnType[],
   rows: RowType[],
   noRowsContent?: string,

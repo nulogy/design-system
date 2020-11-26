@@ -2,18 +2,26 @@ import PropTypes from "prop-types";
 
 type CellInfoType = {
   cellData: any,
-  column: ColumnType,
-  row: RowType,
+  column?: ColumnType,
+  row?: RowType,
+}
+
+
+type ColumnInfoType = {
+  align?: string;
+  label: string;
+  dataKey?: string;
+  width?: string;
 }
 
 export type ColumnType = {
   align?: string;
   label?: string;
-  dataKey: string;
-  cellFormatter?: (cell: CellInfoType) => React.ReactNode;
-  cellRenderer?: (cell: CellInfoType) => React.ReactNode;
-  headerRenderer?: (colimn: ColumnType) => React.ReactNode;
-  headerFormatter?: (colimn: ColumnType) => React.ReactNode;
+  dataKey?: string;
+  cellFormatter?: (cell: CellInfoType) => React.ReactNode | JSX.Element;
+  cellRenderer?: (cell: CellInfoType) => React.ReactNode | JSX.Element;
+  headerRenderer?: (column: ColumnInfoType) => React.ReactNode | JSX.Element;
+  headerFormatter?: (column: ColumnInfoType) => React.ReactNode | JSX.Element ;
   width?: string;
 }
 
