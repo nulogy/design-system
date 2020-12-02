@@ -9,10 +9,10 @@ import NDSTheme from "../theme";
 import i18n from "../i18n";
 import { LocaleContext } from "./LocaleContext";
 import { mergeThemes } from "./mergeThemes.util";
-import { DefaultNDSThemeType } from '../theme.type';
+import { ThemeType, DefaultNDSThemeType } from '../theme.type';
 
 type NDSProviderProps = {
-  theme?: DefaultNDSThemeType;
+  theme?: ThemeType;
   locale?: string;
   children?: any;
 };
@@ -24,8 +24,13 @@ const Reset = createGlobalStyle(() => {
     },
   };
 });
+type GlobalStylesProps = {
+  theme?: DefaultNDSThemeType;
+  locale?: string;
+}
+
 const ModalStyleOverride = createGlobalStyle(
-  ({ theme, locale }: NDSProviderProps) => {
+  ({ theme, locale }: GlobalStylesProps) => {
     const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
     return {
       ".ReactModal__Content": {
@@ -44,7 +49,7 @@ const ModalStyleOverride = createGlobalStyle(
   }
 );
 const GlobalStyles = styled.div(
-  ({ theme, locale }: NDSProviderProps): CSSObject => {
+  ({ theme, locale }: GlobalStylesProps): CSSObject => {
     const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
     return {
       color: theme.colors.black,
