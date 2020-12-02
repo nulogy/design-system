@@ -1,3 +1,10 @@
+## [4.14.3](https://github.com/nulogy/design-system/compare/v4.14.2...v4.14.3) (2020-12-02)
+
+
+### Bug Fixes
+
+* **Typescript:** fix required property errors when customizing the nds theme ([08ad1ff](https://github.com/nulogy/design-system/commit/08ad1ff1638734c0ec000c9a544b375045c30dc5))
+
 ## [4.14.2](https://github.com/nulogy/design-system/compare/v4.14.1...v4.14.2) (2020-12-02)
 
 
