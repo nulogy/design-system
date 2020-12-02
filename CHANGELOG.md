@@ -1,3 +1,10 @@
+## [4.14.4](https://github.com/nulogy/design-system/compare/v4.14.3...v4.14.4) (2020-12-02)
+
+
+### Bug Fixes
+
+* **AsyncSelect:** show clear button when items are selected ([407c24b](https://github.com/nulogy/design-system/commit/407c24bbb82f6629c2907e4d0687fd0524b20f26))
+
 ## [4.14.3](https://github.com/nulogy/design-system/compare/v4.14.2...v4.14.3) (2020-12-02)
 
 
