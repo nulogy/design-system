@@ -1,3 +1,11 @@
+## [4.14.2](https://github.com/nulogy/design-system/compare/v4.14.1...v4.14.2) (2020-12-02)
+
+
+### Bug Fixes
+
+* **Typescript:** clean up Table types for columns and render functions ([8662b84](https://github.com/nulogy/design-system/commit/8662b848d375cd17b25d9d9224fdaa250b752ba9))
+* **Typescript:** export ThemeType for use with theme prop on NDSProvider ([5a47115](https://github.com/nulogy/design-system/commit/5a47115e1d8830fae9c0d23406c8897ad6b9956a))
+
 ## [4.14.1](https://github.com/nulogy/design-system/compare/v4.14.0...v4.14.1) (2020-11-24)
 
 
