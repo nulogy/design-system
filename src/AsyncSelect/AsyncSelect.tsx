@@ -28,8 +28,8 @@ const extractValue = (options, isMulti) => {
   }
 };
 const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
-  "[class*='indicatorContainer'] svg": {
-    display: showArrow ? "block" : "none",
+  "[class*='dropdown-indicator'], [class*='indicator-separator']": {
+    display: showArrow ? "flex" : "none",
   },
 }));
 type AsyncSelectProps = any;
