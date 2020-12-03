@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
+import { useState } from "react";
 import { AsyncSelect, Button } from "../index";
 
 const northAmericanCountries = [
@@ -131,4 +131,30 @@ export const UsingRefToControlFocus = () => {
 
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
+};
+
+export const Controlled = () => {
+  const [value, setValue] = useState("");
+
+  const handleChange = (value) => {
+    setValue(value);
+  };
+  const handleClear = () => {
+    setValue(null);
+  };
+
+  return (
+    <>
+      <AsyncSelect
+        onChange={handleChange}
+        value={value}
+        labelText="Country"
+        loadOptions={loadMatchingCountries}
+      />
+      <Button onClick={handleClear}>Clear</Button>
+    </>
+  );
+};
+Controlled.story = {
+  name: "controlled",
 };
