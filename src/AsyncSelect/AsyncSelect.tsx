@@ -19,14 +19,6 @@ import {
 import { SelectDefaultProps } from "../Select/Select";
 import { getSubset } from "../utils/subset";
 
-const extractValue = (options, isMulti) => {
-  if (options == null) return options;
-  if (isMulti) {
-    return options.map((o) => o.value);
-  } else {
-    return options.value;
-  }
-};
 const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
   "[class*='dropdown-indicator'], [class*='indicator-separator']": {
     display: showArrow ? "flex" : "none",
@@ -87,7 +79,7 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
             className={className}
             classNamePrefix={classNamePrefix}
             noOptionsMessage={noOptionsMessage}
-            inputValue={value}
+            value={value}
             ref={ref}
             defaultInputValue={defaultValue}
             placeholder={placeholder || t("select ...")}
@@ -106,10 +98,7 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
             onBlur={onBlur}
-            onChange={
-              onChange &&
-              ((option) => onChange(extractValue(option, multiselect)))
-            }
+            onChange={onChange}
             name={name}
             isMulti={multiselect}
             menuIsOpen={menuIsOpen}
