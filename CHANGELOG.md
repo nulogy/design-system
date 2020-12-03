@@ -1,3 +1,10 @@
+## [4.14.5](https://github.com/nulogy/design-system/compare/v4.14.4...v4.14.5) (2020-12-03)
+
+
+### Bug Fixes
+
+* upgrade Popper to include a fix to the "modifiers" prop not upda… ([#823](https://github.com/nulogy/design-system/issues/823)) ([99d17f9](https://github.com/nulogy/design-system/commit/99d17f99c1ce6527e04d545f6b86910a4d0400ce))
+
 ## [4.14.4](https://github.com/nulogy/design-system/compare/v4.14.3...v4.14.4) (2020-12-02)
 
 
