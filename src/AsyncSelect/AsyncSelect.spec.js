@@ -1,7 +1,7 @@
 import React from "react";
-import { AsyncSelect } from ".";
 import { selectOption } from "../Select/Select.spec-utils";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { AsyncSelect } from ".";
 
 describe("select", () => {
   it("returns the selected item on change", () => {
@@ -19,6 +19,9 @@ describe("select", () => {
 
     selectOption("Two", container, queryByText);
 
-    expect(callback).toHaveBeenCalledWith("two");
+    expect(callback).toHaveBeenCalledWith(
+      { label: "Two", value: "two" },
+      { action: "select-option", name: undefined, option: undefined }
+    );
   });
 });
