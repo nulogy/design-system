@@ -1,7 +1,7 @@
 import React from "react";
 import { selectOption } from "../Select/Select.spec-utils";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
-import { AsyncSelect } from "./AsyncSelect";
+import { AsyncSelect } from ".";
 
 describe("select", () => {
   it("returns the selected item on change", () => {
