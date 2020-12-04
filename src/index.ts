@@ -1,6 +1,6 @@
 export { NDSProvider } from "./NDSProvider";
 export { default as theme } from "./theme";
-export * from "./theme.type";
+export type { ThemeType } from "./theme.type";
 export { Box } from "./Box";
 export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
