@@ -1,5 +1,33 @@
 # Migration Guide
 
+## Migrating from v4 to v5:
+
+### 1. Install styled-components
+
+@nulogy/icons is now a peerDependency so you will need to add it your projects dependencies:
+
+`yarn add @nulogy/icons`
+or
+`npm i @nulogy/icons`
+
+This was done to support using new icons without having to upgrade @nulogy/components.
+
+### 2. AsyncSelect onChange handler
+
+If you are using the AsyncSelect component in your project, please update the onChange handler if you are using it. `onChange` now returns the complete option object that is selected rather than just the string value.
+    ```
+    onChange = (value) => {}
+    
+    //becomes
+    
+    onChange = ({value, label}). => {}
+    ````
+If you needed to use the AsyncSelect as a controlled component, this was broken in previous verisons but now you can do so  by using the `onChange` and `value` prop.
+
+## Migrating from v3 to v4:
+
+Breaking changes are limited to the TimePicker component which was redesigned. The behaviour of that component was redesigned and may break some e2e tests, but otherwise there are no code changes to make.
+
 ## Migrating from v2 to v3:
 
 ### 1. Install styled-components
