@@ -1,10 +1,12 @@
 import React from "react";
+import propTypes from "@styled-system/prop-types";
 import { Text } from "../Type";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { FieldLabel } from "../FieldLabel";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
 import { InlineValidation } from "../Validation";
+import { getSubset, omitSubset } from "../utils/subset";
 type RangeContainerProps = {
   labelProps?: any;
   startComponent?: React.ReactNode;
@@ -17,9 +19,11 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
   endComponent,
   errorMessages = [],
   ...props
-}) => (
-  <>
-    <FieldLabel {...labelProps} {...props} />
+}) => {
+  const spaceProps = getSubset(props, propTypes.space);
+  const restProps = omitSubset(props, propTypes.space);
+  return <Box {...spaceProps}>
+    <FieldLabel {...labelProps} {...restProps} />
     <Box
       display="inline-flex"
       justifyContent="center"
@@ -37,8 +41,8 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
       // eslint-disable-next-line react/no-array-index-key
       <InlineValidation key={i} errorMessage={errorMessage} />
     ))}
-  </>
-);
+  </Box>
+};
 RangeContainer.defaultProps = {
   labelProps: {
     ...FieldLabelDefaultProps,

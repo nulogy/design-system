@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 
-import TimeRange from "./TimeRange";
 import { Button, PrimaryButton } from "../";
+import TimeRange from "./TimeRange";
 
 export default {
   title: "Components/TimeRange",
@@ -10,6 +10,7 @@ export default {
 
 export const Default = () => (
   <TimeRange
+    p="x3"
     onRangeChange={action("range changed")}
     onStartTimeChange={action("start date changed")}
     onEndTimeChange={action("end date changed")}

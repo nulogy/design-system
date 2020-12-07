@@ -19,6 +19,7 @@ export const _Input = () => (
 export const WithAllProps = () => (
   <Input
     placeholder="Placeholder"
+    p="x3"
     labelText="Input"
     helpText="Additional help text"
     requirementText="Required"

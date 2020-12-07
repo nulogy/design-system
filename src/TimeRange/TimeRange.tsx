@@ -7,11 +7,11 @@ import React, {
   useRef,
 } from "react";
 import { useTranslation } from "react-i18next";
+import propTypes from "@styled-system/prop-types";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
 import {
   FieldLabelDefaultProps,
-  FieldLabelProps,
 } from "../FieldLabel/FieldLabel.type";
 import { getDuration } from "./TimeRange.utils";
 const DEFAULT_LABEL = "Time Range";
@@ -48,6 +48,7 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
       interval,
       startAriaLabel,
       endAriaLabel,
+      ...props
     },
     ref
   ) => {
@@ -144,8 +145,9 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
         errorMessages={
           !disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]
         }
+        {...props}
       />
-    );
+  );
   }
 );
 TimeRange.defaultProps = {

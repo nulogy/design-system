@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import { TimePicker, Button } from "../index";
 
@@ -10,6 +9,7 @@ export default {
 
 export const Default = () => (
   <TimePicker
+    p="x3"
     onChange={action("time changed")}
     onInputChange={action("input changed")}
     labelText="Start Time"
