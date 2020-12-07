@@ -11,6 +11,7 @@ export default {
 
 export const Default = () => (
   <DateRange
+    p="x3"
     onRangeChange={action("range changed")}
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}

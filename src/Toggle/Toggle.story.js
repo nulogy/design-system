@@ -8,7 +8,7 @@ export default {
 };
 
 export const _Toggle = () => (
-  <Toggle data-testid="toggle-example" onChange={action("on change")} />
+  <Toggle pt="x3" data-testid="toggle-example" onChange={action("on change")} />
 );
 
 export const ToggleWithAllProps = () => (

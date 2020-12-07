@@ -8,7 +8,7 @@ export default {
 
 export const _Radio = () => (
   <>
-    <Radio id="radio" labelText="I am a radio button" />
+    <Radio p="x3" id="radio" labelText="I am a radio button" />
   </>
 );
 
