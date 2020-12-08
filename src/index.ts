@@ -66,8 +66,6 @@ export { StatusIndicator } from "./StatusIndicator";
 export { Pagination } from "./Pagination";
 export { DatePicker } from "./DatePicker";
 export { DateRange } from "./DateRange";
-export { MonthPicker } from "./MonthPicker";
-export { MonthRange } from "./MonthRange";
 export { TimePicker } from "./TimePicker";
 export { TimeRange } from "./TimeRange";
 export { RangeContainer } from "./RangeContainer";
