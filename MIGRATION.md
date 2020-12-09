@@ -24,6 +24,10 @@ If you are using the AsyncSelect component in your project, please update the on
     ````
 If you needed to use the AsyncSelect as a controlled component, this was broken in previous verisons but now you can do so  by using the `onChange` and `value` prop.
 
+### 3. MonthPicker and MonthRange components
+
+MonthPicker and MonthRange components were removed from this version. If you need these components or are planning to use them soon, please reach out to DesignOps.
+
 ## Migrating from v3 to v4:
 
 Breaking changes are limited to the TimePicker component which was redesigned. The behaviour of that component was redesigned and may break some e2e tests, but otherwise there are no code changes to make.
