@@ -4,9 +4,9 @@
 ### Bug Fixes
 
 * AsyncSelect can now be used as a controlled component by setting the `value` prop.([#827](https://github.com/nulogy/design-system/issues/827)) ([a3bcb06](https://github.com/nulogy/design-system/commit/a3bcb060dd452ddb228e2d0458cad68ce7cb7fbb))
+* Apply space props (ex: p=, mb=, pb=) to outer wrapper of Input, Checkbox, Toggle, TextArea, DatePicker, DateRange, TimePicker, TimeRange, Radio components
 
-
-### BREAKING CHANGES
+### BREAKING CHANGES 
 
 * `onChange` now returns the complete option object that is selected rather than just the string value.
 ```
@@ -16,6 +16,9 @@ onChange = (value) => {}
 
 onChange = ({value, label}). => {}
 ````
+* @nulogy/components is added as a peerDependency
+``` yarn add @nulogy/icons```
+* MonthPicker and MonthRange components are removed
 
 ## [4.14.5](https://github.com/nulogy/design-system/compare/v4.14.4...v4.14.5) (2020-12-03)
 
