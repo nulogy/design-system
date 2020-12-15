@@ -22,7 +22,7 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
 }) => {
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
-  return <Box {...spaceProps}>
+  return <Box {...spaceProps} display="inline-block">
     <FieldLabel {...labelProps} {...restProps} />
     <Box
       display="inline-flex"
