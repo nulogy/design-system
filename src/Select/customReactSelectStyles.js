@@ -35,6 +35,9 @@ const customStyles = ({ theme, error, maxHeight, windowed }) => {
       width: "100%",
       fontSize: theme.fontSizes.medium,
       lineHeight: theme.lineHeights.base,
+      color: state.isDisabled
+        ? transparentize(0.6667, theme.colors.black)
+        : theme.colors.black,
       background: state.isDisabled
         ? theme.colors.whiteGrey
         : theme.colors.white,
