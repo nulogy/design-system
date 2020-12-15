@@ -2,7 +2,7 @@
 
 ## Migrating from v4 to v5:
 
-### 1. Install styled-components
+### 1. Install @nulogy/icons
 
 @nulogy/icons is now a peerDependency so you will need to add it your projects dependencies:
 
