@@ -1,3 +1,10 @@
+## [5.0.1](https://github.com/nulogy/design-system/compare/v5.0.0...v5.0.1) (2020-12-16)
+
+
+### Bug Fixes
+
+* **Select:** text color when select is disabled and has a value ([65facbc](https://github.com/nulogy/design-system/commit/65facbc84bc8c2360eda7e90fc069df6b593b7b1))
+
 # [5.0.0](https://github.com/nulogy/design-system/compare/v4.14.5...v5.0.0) (2020-12-15)
 
 
