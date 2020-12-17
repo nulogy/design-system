@@ -41,7 +41,7 @@ const ModalHeader = styled.div(
       theme
     )} ${theme.space.x2} ${theme.space.x3}`,
     backgroundColor: transparentize(0.1, theme.colors.white),
-    zIndex: 2,
+    zIndex: theme.zIndex.modalHeaderAndFooter,
     borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
     ":after": {
       content: "''",
@@ -59,7 +59,7 @@ const ModalFooter = styled.div(({ theme }) => ({
   position: "relative",
   padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
-  zIndex: 2,
+  zIndex: theme.zIndex.modalHeaderAndFooter,
   borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   ":after": {
     content: "''",
@@ -76,7 +76,6 @@ const ModalCloseButton = styled(CloseButton)(({ theme }) => ({
   position: "absolute",
   top: "12px",
   right: theme.space.x2,
-  zIndex: 3,
 }));
 const overlayStyle = (theme) => ({
   position: "fixed",
@@ -202,8 +201,8 @@ const Modal: ReactModal = ({
                 {title}
               </Heading2>
             ) : (
-              <div style={{ height: themeContext.space.x4 }} />
-            )}
+                <div style={{ height: themeContext.space.x4 }} />
+              )}
             {onRequestClose && (
               <ModalCloseButton
                 onClick={onRequestClose}
