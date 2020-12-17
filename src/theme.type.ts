@@ -106,6 +106,8 @@ type ZIndex = {
   tabsBar: number;
   overlay: number;
   tableHeader: number;
+  modalHeaderAndFooter: number;
+  openControl: number;
 };
 
 export type DefaultNDSThemeType = {

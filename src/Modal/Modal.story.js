@@ -9,6 +9,7 @@ import {
   Input,
   Select,
   Text,
+  DatePicker
 } from "../index";
 
 const env = process.env.NODE_ENV;
@@ -77,6 +78,12 @@ class ModalExample extends React.Component {
           <Form id="myForm" mb="x2">
             <Input name="name" id="name" labelText="Name" />
             <Input type="number" name="age" id="age" labelText="Age" />
+            <DatePicker
+              selected={new Date("Fri, 01 Jan 2019")}
+              dateFormat="MMMM d, yyyy"
+              onChange={(val) => val}
+              onInputChange={(val) => val}
+            />
           </Form>
         </Modal>
       </>
@@ -105,7 +112,7 @@ export const WithCloseButton = () => (
   <Modal
     title="Modal Title"
     footerContent={modalButtons}
-    onRequestClose={() => {}}
+    onRequestClose={() => { }}
   >
     Content Content Content
   </Modal>
@@ -226,7 +233,7 @@ WithNoTitle.story = {
 };
 
 export const WithNoFooterContent = () => (
-  <Modal title="Without footerContent" onRequestClose={() => {}}>
+  <Modal title="Without footerContent" onRequestClose={() => { }}>
     Content Content Content
   </Modal>
 );
@@ -249,7 +256,7 @@ export const WithSelect = () => (
   <Modal
     title="Edit Profile"
     footerContent={modalButtons}
-    onRequestClose={() => {}}
+    onRequestClose={() => { }}
     maxWidth="456px"
   >
     <Form id="myForm" mb="x2">
@@ -271,7 +278,7 @@ export const WithSelectAndScrollingContent = () => (
   <Modal
     title="Edit Profile"
     footerContent={modalButtons}
-    onRequestClose={() => {}}
+    onRequestClose={() => { }}
     maxWidth="456px"
   >
     <Form id="myForm" mb="x2">
