@@ -10,6 +10,8 @@ import {
   Page,
   SideBar,
   Select,
+  Button,
+  Box,
 } from "..";
 
 const primaryMenu = [
@@ -95,10 +97,10 @@ const secondaryMenu = [
 ];
 
 export default {
-  title: "Components/Frame",
+  title: "Components/Layout",
 };
 
-export const _Frame = () => (
+export const _Layout = () => (
   <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page
       breadcrumbs={
@@ -143,8 +145,19 @@ const ExampleSideBar = ({ isOpen, onClose }) => (
 
 export const WithSideBar = () => {
   const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSideBar = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeSideBar = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+    <Frame
+      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+      overflowX="hidden"
+    >
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -153,13 +166,14 @@ export const WithSideBar = () => {
           </Breadcrumbs>
         }
         title="Materials Overview"
-        sideBar={
-          <ExampleSideBar isOpen={isOpen} onClose={() => setIsOpen(false)} />
-        }
+        sideBar={<ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />}
       >
         <>
           <Heading2>Overview</Heading2>
           <Text>I am main content.</Text>
+          <Box minWidth="300px">
+            <Button onClick={toggleSideBar}>Toggle SideBar</Button>
+          </Box>
         </>
       </Page>
     </Frame>

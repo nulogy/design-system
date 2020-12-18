@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, useCycle } from "framer-motion";
 import styled from "styled-components";
+import { Button } from "../Button";
 import { Box } from "../index";
+import { AnimatedBox } from "./Box";
 
 export default {
   title: "Components/Box",
@@ -183,4 +186,37 @@ export const WithTransform = () => (
 
 WithTransform.story = {
   name: "with transform",
+};
+
+export const WithAnimation = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
+  const handleClick = () => setIsOpen(!isOpen);
+  return (
+    <>
+      <Button onClick={handleClick}>Animate!</Button>
+      <AnimatedBox
+        p="x1"
+        mb="x2"
+        bg="red"
+        marginLeft="50px"
+        mt="50px"
+        color="white"
+        height="40px"
+        width="200px"
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        transition={{ duration: 2 }}
+      >
+        Animated
+      </AnimatedBox>
+    </>
+  );
+};
+
+WithAnimation.story = {
+  name: "with animation",
 };
