@@ -10,13 +10,13 @@ import { Icon } from "../Icon";
 import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
+import NDSTheme from "../theme";
+import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
+import { deprecatedProp } from "../utils/deprecatedProp";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import isValidMenuItem from "./isValidMenuItem";
-import NDSTheme from "../theme";
-import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
-import { deprecatedProp } from "../utils/deprecatedProp";
 
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
@@ -37,6 +37,8 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   boxShadow: theme.shadows.large,
   alignItems: "center",
   height: NAVBAR_HEIGHT,
+  zIndex: theme.zIndex.content,
+  position: "relative",
 }));
 
 const EnvironmentBanner = ({ children }) => (

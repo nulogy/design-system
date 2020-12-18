@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion, MotionProps } from "framer-motion";
 import {
   color,
   space,
@@ -10,6 +11,7 @@ import {
   flexGrow,
   position,
   background,
+  overflow,
   ColorProps,
   SpaceProps,
   LayoutProps,
@@ -21,13 +23,13 @@ import {
   BorderProps,
   FlexboxProps,
   BackgroundProps,
-  system,
+  OverflowProps,
 } from "styled-system";
 import { transition, TransitionProps } from "../StyledProps/transition";
 import { transform, TransformProps } from "../StyledProps/transform";
 import { CursorProps, cursor } from "../StyledProps/cursor";
 
-export type BoxProps = ColorProps &
+type SharedBoxProps = ColorProps &
   SpaceProps &
   LayoutProps &
   BoxShadowProps &
@@ -39,13 +41,10 @@ export type BoxProps = ColorProps &
   FlexboxProps &
   BackgroundProps &
   TransformProps &
-  TransitionProps &
   CursorProps &
-  React.ComponentPropsWithRef<"div"> & {
-    as?: string;
-  };
+  OverflowProps;
 
-const Box: React.SFC<BoxProps> = styled.div(
+const sharedStyledProps = {
   color,
   space,
   layout,
@@ -58,7 +57,65 @@ const Box: React.SFC<BoxProps> = styled.div(
   background,
   transition,
   transform,
-  cursor
+  cursor,
+  overflow,
+};
+
+export type BoxProps = SharedBoxProps &
+  TransitionProps &
+  React.ComponentPropsWithRef<"div"> & {
+    as?: string;
+  };
+
+const Box: React.FC<BoxProps> = styled.div(
+  color,
+  space,
+  layout,
+  border,
+  boxShadow,
+  textAlign,
+  order,
+  flexGrow,
+  position,
+  background,
+  transform,
+  cursor,
+  overflow,
+  transition
+);
+
+// TRANSITION PROPS NEED TO BE EXCLUDED OR SOMETHING
+
+export type AnimatedBoxProps = ColorProps &
+  SpaceProps &
+  LayoutProps &
+  BoxShadowProps &
+  TextAlignProps &
+  OrderProps &
+  FlexGrowProps &
+  PositionProps &
+  BorderProps &
+  FlexboxProps &
+  BackgroundProps &
+  TransformProps &
+  CursorProps &
+  OverflowProps &
+  MotionProps;
+
+export const AnimatedBox: React.FC<AnimatedBoxProps> = styled(motion.div)(
+  color,
+  space,
+  layout,
+  border,
+  boxShadow,
+  textAlign,
+  order,
+  flexGrow,
+  position,
+  background,
+  transform,
+  cursor,
+  overflow,
 );
 
 export default Box;
