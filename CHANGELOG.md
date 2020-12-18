@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/nulogy/design-system/compare/v5.0.1...v5.0.2) (2020-12-18)
+
+
+### Bug Fixes
+
+* Datepickers will no longer be overlapped by Modal headers ([8464d0f](https://github.com/nulogy/design-system/commit/8464d0ff9dd8790d08f658e383336e8c229e6638))
+
 ## [5.0.1](https://github.com/nulogy/design-system/compare/v5.0.0...v5.0.1) (2020-12-16)
 
 
