@@ -21,8 +21,34 @@ const SideBar = ({
   ...props
 }: SideBarProps) => {
   const variants = {
-    open: { x: 0 },
-    closed: { x: "100%" },
+    open: {
+      x: 0,
+      transition: {
+        duration: 0.25,
+        when: "beforeChildren",
+      },
+    },
+    closed: {
+      x: "100%",
+      transition: {
+        duration: 0.25,
+      },
+    },
+  };
+
+  const childVariants = {
+    open: {
+      opacity: 1,
+      transition: {
+        duration: 0.2,
+      },
+    },
+    closed: {
+      opacity: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
   };
   return (
     <AnimatedBox
@@ -30,7 +56,6 @@ const SideBar = ({
       top="0"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
-      transition={{ duration: 0.5 }}
       bg="white"
       right="0"
       height="100%"
@@ -45,7 +70,9 @@ const SideBar = ({
         {title && <Heading3>{title}</Heading3>}
         <IconicButton icon="close" onClick={onClose}></IconicButton>
       </Flex>
-      <Box>{children}</Box>
+      <AnimatedBox variants={childVariants}>
+        <Box>{children}</Box>
+      </AnimatedBox>
     </AnimatedBox>
   );
 };
