@@ -1,19 +1,7 @@
-import React from "react";
 import { create } from "@storybook/theming";
-import { select } from "@storybook/addon-knobs";
 import "cypress-storybook/react";
-import NDSProvider from "../src/NDSProvider/NDSProvider";
-import { ALL_NDS_LOCALES } from "../src/locales.const";
 import { theme } from "../src";
 import withNDSTheme from "./nds-theme";
-
-const localeKnobOptions = ALL_NDS_LOCALES.reduce(
-  (obj, i) => ({
-    ...obj,
-    [`${i.label} "${i.value}"`]: i.value,
-  }),
-  {}
-);
 
 const newViewports = {
   extraSmall: {
@@ -61,11 +49,4 @@ export const parameters = {
   },
 };
 
-const ProviderWithLocale = (props) => (
-  <NDSProvider
-    locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}
-    {...props}
-  />
-);
-
-export const decorators = [withNDSTheme(ProviderWithLocale)];
+export const decorators = [(Story) => withNDSTheme(Story())];
