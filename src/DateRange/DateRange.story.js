@@ -68,8 +68,8 @@ WithCustomError.story = {
 
 export const CustomizingInputProps = () => (
   <DateRange
-    startDateInputProps={{ placeholder: "From (Mon YYYY)" }}
-    endDateInputProps={{ placeholder: "To (Mon YYYY)" }}
+    startDateInputProps={{ placeholder: "From (Mon YYYY)", inputWidth: "160px" }}
+    endDateInputProps={{ placeholder: "To (Mon YYYY)", inputWidth: "140px" }}
     onRangeChange={action("range changed")}
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}
@@ -105,6 +105,21 @@ export const WithTimes = () => (
     showTimes
   />
 );
+
+export const CustomizingInputPropsWithTimes = () => (
+  <DateRange
+    startDateInputProps={{ placeholder: "From", inputWidth: "130px" }}
+    endDateInputProps={{ placeholder: "To", inputWidth: "130px"  }}
+    onRangeChange={action("range changed")}
+    onStartDateChange={action("start date changed")}
+    onEndDateChange={action("end date changed")}
+    showTimes
+  />
+);
+
+CustomizingInputPropsWithTimes.story = {
+  name: "customizing input props with times",
+};
 
 WithTimes.story = {
   name: "with times",

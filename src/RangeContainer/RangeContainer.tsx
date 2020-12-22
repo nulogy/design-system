@@ -22,26 +22,26 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
 }) => {
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
-  return <Box {...spaceProps} display="inline-block">
-    <FieldLabel {...labelProps} {...restProps} />
-    <Box
-      display="inline-flex"
-      justifyContent="center"
-      alignItems="flex-start"
-      mt="x1"
-      mb={errorMessages.length ? "x1" : "x3"}
-    >
-      {startComponent}
-      <Flex px="half" alignItems="center" maxHeight="38px">
-        <Text>-</Text>
+  return (
+    <Flex {...spaceProps} flexDirection="column">
+      <FieldLabel {...labelProps} {...restProps} />
+      <Flex
+        flexWrap="wrap"
+        mt="x1"
+        mb={errorMessages.length ? "x1" : "x3"}
+      >
+        {startComponent}
+        <Flex px="half" alignItems="center" maxHeight="38px">
+          <Text>-</Text>
+        </Flex>
+        {endComponent}
       </Flex>
-      {endComponent}
-    </Box>
-    {errorMessages.map((errorMessage, i) => (
-      // eslint-disable-next-line react/no-array-index-key
-      <InlineValidation key={i} errorMessage={errorMessage} />
-    ))}
-  </Box>
+      {errorMessages.map((errorMessage, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <InlineValidation key={i} errorMessage={errorMessage} />
+      ))}
+    </Flex>
+  );
 };
 RangeContainer.defaultProps = {
   labelProps: {
