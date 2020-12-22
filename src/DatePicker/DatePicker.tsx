@@ -19,10 +19,11 @@ import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 import propTypes from "@styled-system/prop-types";
 import { getSubset } from "../utils/subset";
+import { FieldProps } from '../Form/Field';
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
-type DatePickerProps = {
+type DatePickerProps = FieldProps & {
   selected?: any;
   dateFormat?: string;
   onChange?: (...args: any[]) => any;
@@ -39,7 +40,7 @@ type DatePickerProps = {
 const DatePicker: React.SFC<DatePickerProps> = forwardRef(
   (
     {
-      dateFormat,
+      dateFormat = DEFAULT_DATE_FORMAT,
       errorMessage,
       errorList,
       inputProps,
@@ -51,6 +52,7 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
       onInputChange,
       onChange,
       selected,
+      fitContent,
       ...props
     },
     datePickerRef
@@ -116,12 +118,14 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
       return (props) => <DatePickerHeader locale={locale} {...props} />;
     };
     const customInputProps = {
+      ...InputFieldDefaultProps,
       ...inputProps,
       error: !!(errorMessage || errorList),
       placeholder:
         inputProps.placeholder ||
         (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
     };
+
     const customInput = (
       <DatePickerInput
         inputProps={customInputProps}
@@ -134,7 +138,7 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     );
     const spaceProps = getSubset(props, propTypes.space);
     return (
-      <Field className={`${className} nds-date-picker`} {...spaceProps}>
+      <Field className={`${className} nds-date-picker`} fitContent={fitContent} {...spaceProps}>
         <DatePickerStyles />
         <LocaleContext.Consumer>
           {({ locale }) => (
@@ -172,18 +176,4 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     );
   }
 );
-DatePicker.defaultProps = {
-  selected: undefined,
-  dateFormat: DEFAULT_DATE_FORMAT,
-  onChange: undefined,
-  onInputChange: undefined,
-  inputProps: InputFieldDefaultProps,
-  errorMessage: undefined,
-  errorList: undefined,
-  minDate: undefined,
-  maxDate: undefined,
-  highlightDates: undefined,
-  disableFlipping: false,
-  className: "",
-};
 export default DatePicker;

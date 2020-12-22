@@ -57,6 +57,7 @@ const StyledInput: React.SFC<StyledInputProps> = styled.input(
     lineHeight: theme.lineHeights.base,
     margin: theme.space.none,
     minHeight: theme.space.x5,
+    maxWidth: inputWidth,
     width: inputWidth,
     "&:focus": {
       outline: "none",
@@ -134,7 +135,7 @@ export const InputField: React.SFC<InputFieldProps> = forwardRef<
           prefixWidth={prefixWidth}
           textAlign={prefixAlignment}
         />
-        <Box position="relative" display="flex" flexGrow={1}>
+        <Box position="relative" display="flex" flexGrow={1} maxWidth={inputWidth}>
           <StyledInput
             aria-invalid={error}
             aria-required={required}
