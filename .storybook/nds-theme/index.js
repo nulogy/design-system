@@ -1,49 +1,52 @@
 /* eslint-disable react/display-name, react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
-import addons, { makeDecorator } from "@storybook/addons";
+import addons from "@storybook/addons";
 import { STORY_CHANGED } from "@storybook/core-events";
-import { theme as NDSTheme } from "../../src";
+import { select } from "@storybook/addon-knobs";
+import { NDSProvider, theme as NDSTheme } from "../../src";
+import { ALL_NDS_LOCALES } from "../../src/locales.const";
 
-const withThemeWrapper = (Component) => ({ loading, theme, children }) => {
-  return !loading && <Component theme={theme}>{children}</Component>;
+const localeKnobOptions = ALL_NDS_LOCALES.reduce(
+  (obj, i) => ({
+    ...obj,
+    [`${i.label} "${i.value}"`]: i.value,
+  }),
+  {}
+);
+
+const withNDSProvider = (story) => {
+  const channel = addons.getChannel();
+  const [theme, setTheme] = useState(NDSTheme);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, [setLoading]);
+
+  useEffect(() => {
+    channel.on("theme-update", (data) => {
+      setTheme(data);
+      if (loading) {
+        setLoading(false);
+      }
+    });
+    channel.on(STORY_CHANGED, (data) => {
+      setTheme(data);
+    });
+  }, [setLoading, channel, loading]);
+
+  return (
+    <div style={{ padding: "24px" }}>
+      {!loading && (
+        <NDSProvider
+          locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}
+          theme={theme}
+        >
+          {story}
+        </NDSProvider>
+      )}
+    </div>
+  );
 };
 
-export default (Component) =>
-  makeDecorator({
-    name: "withNDSTheme",
-    parameterName: "ndsThemeAddon",
-    // This means don't run this decorator if the notes decorator is not set
-    skipIfNoParametersOrOptions: false,
-    wrapper: (getStory, context) => {
-      const channel = addons.getChannel();
-      const [theme, setTheme] = useState(NDSTheme);
-      const [loading, setLoading] = useState(true);
-
-      useEffect(() => {
-        setLoading(false);
-      }, [setLoading]);
-
-      useEffect(() => {
-        channel.on("theme-update", (data) => {
-          setTheme(data);
-          if (loading) {
-            setLoading(false);
-          }
-        });
-        channel.on(STORY_CHANGED, (data) => {
-          setTheme(data);
-        });
-      }, [channel, loading]);
-
-      const ThemeWrapper = withThemeWrapper(Component);
-
-      return (
-        <div style={{ padding: "24px" }}>
-          <ThemeWrapper theme={theme} loading={loading}>
-            {getStory(context)}
-          </ThemeWrapper>
-        </div>
-      );
-    },
-  });
+export default withNDSProvider;
 /* eslint-enable */
