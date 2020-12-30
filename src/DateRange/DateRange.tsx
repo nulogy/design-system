@@ -75,6 +75,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
       interval,
       disableFlipping,
       locale,
+      ...props
     },
     ref
   ) => {
@@ -246,6 +247,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
               ? [t(rangeError), errorMessage]
               : [errorMessage]
           }
+          {...props}
         />
       </>
     );

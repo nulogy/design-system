@@ -110,6 +110,8 @@ const Theme: DefaultNDSThemeType = {
     tabsBar: tokens.z_index_tabs_bar,
     overlay: tokens.z_index_overlay,
     tableHeader: tokens.z_index_table_header,
+    modalHeaderAndFooter: tokens.z_index_modal_header_and_footer,
+    openControl: tokens.z_index_open_control
   },
 };
 

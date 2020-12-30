@@ -1,6 +1,6 @@
 export { NDSProvider } from "./NDSProvider";
 export { default as theme } from "./theme";
-export * from "./theme.type";
+export type { ThemeType } from "./theme.type";
 export { Box } from "./Box";
 export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
@@ -66,8 +66,6 @@ export { StatusIndicator } from "./StatusIndicator";
 export { Pagination } from "./Pagination";
 export { DatePicker } from "./DatePicker";
 export { DateRange } from "./DateRange";
-export { MonthPicker } from "./MonthPicker";
-export { MonthRange } from "./MonthRange";
 export { TimePicker } from "./TimePicker";
 export { TimeRange } from "./TimeRange";
 export { RangeContainer } from "./RangeContainer";

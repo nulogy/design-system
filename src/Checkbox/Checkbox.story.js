@@ -41,7 +41,7 @@ export default {
 };
 
 export const _Checkbox = () => (
-  <Checkbox id="checkbox" labelText="I am a checkbox" />
+  <Checkbox p="x3" id="checkbox" labelText="I am a checkbox" />
 );
 export const SetToDefaultChecked = () => (
   <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />

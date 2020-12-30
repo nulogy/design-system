@@ -1,10 +1,12 @@
 import React, { forwardRef } from "react";
 import { space } from "styled-system";
 import styled, { CSSObject } from "styled-components";
+import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
+import { getSubset, omitSubset } from "../utils/subset";
 const radioStyle = (theme) => ({
   checked: {
     disabled: {
@@ -107,24 +109,25 @@ type BaseRadioProps = VisualRadioProps &
     value?: any;
   };
 
-const BaseRadio: React.SFC<BaseRadioProps> = forwardRef((props, ref) => {
-  const {
-    className,
-    labelText,
-    disabled,
-    checked,
-    required,
-    error,
-    ...restProps
-  } = props;
+const BaseRadio: React.SFC<BaseRadioProps> = forwardRef(({
+  className,
+  labelText,
+  disabled,
+  checked,
+  required,
+  error,
+  ...props
+}, ref) => {
+  const spaceProps = getSubset(props, propTypes.space);
+  const restProps = omitSubset(props, propTypes.space);
   return (
-    <Box className={className} {...restProps}>
+    <Box className={className} {...spaceProps}>
       <ClickInputLabel disabled={disabled}>
         <RadioInput
           type="radio"
           ref={ref}
           aria-checked={checked}
-          {...props}
+          {...restProps}
           required={required}
           aria-required={required}
           aria-invalid={error}

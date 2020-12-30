@@ -1,9 +1,12 @@
 import React, { forwardRef } from "react";
 import styled, { CSSObject } from "styled-components";
 import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
+import { getSubset, omitSubset } from "../utils/subset";
+import { DefaultNDSThemeType } from '../theme.type';
 
 const checkboxStyle = (theme) => ({
   checked: {
@@ -55,7 +58,22 @@ const indeterminateStyles = {
   transform: "rotate(90deg) translateX(1px)",
   borderRadius: 0,
 };
-const VisualCheckbox: React.SFC<any> = styled.div(
+
+type CheckboxProps = React.ComponentPropsWithRef<"input"> & {
+  labelText?: string;
+  checked?: any;
+  defaultChecked?: boolean;
+  disabled?: boolean;
+  error?: boolean;
+  id?: string;
+  className?: string;
+  required?: boolean;
+  indeterminate?: boolean;
+  theme?: DefaultNDSThemeType;
+  ref?: unknown;
+};
+
+const VisualCheckbox: React.FunctionComponent<any> = styled.div(
   ({ indeterminate, theme }: any): CSSObject => ({
     minWidth: theme.space.x2,
     height: theme.space.x2,
@@ -76,7 +94,7 @@ const VisualCheckbox: React.SFC<any> = styled.div(
     },
   })
 );
-const CheckboxInput = styled.input((props) => ({
+const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input((props) => ({
   position: "absolute",
   opacity: "0",
   height: "1px",
@@ -95,8 +113,6 @@ const CheckboxInput = styled.input((props) => ({
   },
 }));
 const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
-  // disabled react prop types as they are defined in Checkbox
-  // eslint-disable-next-line react/prop-types
   const {
     className,
     labelText,
@@ -106,8 +122,10 @@ const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
     error,
     indeterminate,
   } = props;
+  const spaceProps = getSubset(props, propTypes.space);
+  const restProps = omitSubset(props, propTypes.space);
   return (
-    <Box className={className}>
+    <Box className={className} {...spaceProps}>
       <ClickInputLabel disabled={disabled}>
         <CheckboxInput
           type="checkbox"
@@ -115,8 +133,8 @@ const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
           aria-required={required}
           aria-invalid={error}
           indeterminate={indeterminate}
-          ref={ref}
-          {...props}
+          ref={ref as any}
+          {...restProps}
         />
         <VisualCheckbox
           disabled={disabled}
@@ -129,18 +147,8 @@ const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
     </Box>
   );
 });
-type CheckboxProps = React.ComponentPropsWithRef<"input"> & {
-  labelText?: string;
-  checked?: any;
-  defaultChecked?: boolean;
-  disabled?: boolean;
-  error?: boolean;
-  id?: string;
-  className?: string;
-  required?: boolean;
-  indeterminate?: boolean;
-};
-const Checkbox: React.SFC<any> = styled(BaseCheckbox)(
+
+const Checkbox = styled(BaseCheckbox)(
   ({ theme }) => ({
     padding: `${theme.space.half} 0`,
     [`& ${Text}`]: {

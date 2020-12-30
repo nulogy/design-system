@@ -18,7 +18,7 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       display: "none",
     },
     ".react-datepicker-popper": {
-      zIndex: 1,
+      zIndex: theme.zIndex.openControl,
     },
     ".react-datepicker-popper[data-placement^='bottom']": {
       marginTop: "0",

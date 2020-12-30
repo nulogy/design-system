@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
+import propTypes from "@styled-system/prop-types";
 import { transparentize } from "polished";
 import { space } from "styled-system";
 import { Field } from "../Form";
@@ -7,6 +8,7 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { subPx } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
+import { getSubset, omitSubset } from "../utils/subset";
 
 const textareaStyles = (theme) => ({
   disabled: {
@@ -94,8 +96,10 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
       ...props
     },
     ref
-  ) => (
-    <Field className={className}>
+  ) => {
+    const spaceProps = getSubset(props, propTypes.space);
+    const restProps = omitSubset(props, propTypes.space);
+    return <Field className={className} {...spaceProps}>
       <MaybeFieldLabel
         labelText={labelText}
         requirementText={requirementText}
@@ -111,7 +115,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
           errorList={errorList}
           error={error}
           rows={rows}
-          {...props}
+          {...restProps}
         />
       </MaybeFieldLabel>
       <InlineValidation
@@ -120,7 +124,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
         errorList={errorList}
       />
     </Field>
-  )
+  }
 );
 Textarea.defaultProps = {
   className: undefined,

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import styled, { ThemeContext } from "styled-components";
+import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
@@ -8,6 +9,7 @@ import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import ToggleButton from "./ToggleButton";
 import { DefaultNDSThemeType } from '../theme.type';
+import { getSubset, omitSubset } from "../utils/subset";
 
 const labelTextStyles = (theme: DefaultNDSThemeType) => ({
   fontSize: theme.fontSizes.small,
@@ -87,8 +89,10 @@ const BaseToggle = ({
   const handleClick = (e) => {
     if (onClick) onClick(e);
   };
+  const spaceProps = getSubset(props, propTypes.space);
+  const restProps = omitSubset(props, propTypes.space);
   return (
-    <Field className={className}>
+    <Field className={className} alignItems="flex-start" py="half" {...spaceProps}>
       <MaybeToggleTitle
         id={labelText && `${labelText}-label`}
         labelText={labelText}
@@ -111,7 +115,7 @@ const BaseToggle = ({
             aria-invalid={error}
             aria-labelledby={labelText && `${labelText}-label`}
             onClick={handleClick}
-            {...props}
+            {...restProps}
             ref={props.innerRef}
           />
           {(onText || offText) && (
@@ -142,11 +146,6 @@ BaseToggle.defaultProps = {
   onClick: () => {},
 };
 
-const StyledToggle = styled(BaseToggle)(({ theme }) => ({
-  padding: `${theme.space.half} 0`,
-  alignItems: "flex-start",
-}));
-
 type StatefulToggleProps = BaseToggleProps & {
   defaultToggled?: boolean;
   onClick?: boolean;
@@ -165,7 +164,7 @@ const StatefulToggle = ({
   };
 
   return (
-    <StyledToggle
+    <BaseToggle
       toggled={toggled}
       onClick={handleClick}
       value={toggled ? "on" : "off"}
@@ -190,7 +189,7 @@ const Toggle = ({ toggled, ...props }: ToggleProps) =>
   toggled === undefined ? (
     <StatefulToggle {...props} />
   ) : (
-    <StyledToggle toggled={toggled} {...props} />
+    <BaseToggle toggled={toggled} {...props} />
   );
 
 const ToggleComponent = React.forwardRef<

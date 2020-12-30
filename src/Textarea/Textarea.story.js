@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { Textarea, Form, PrimaryButton, Button } from "../index";
+import { Textarea, Button } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -10,6 +10,7 @@ export default {
 
 export const _Textarea = () => (
   <Textarea
+    p="x3"
     labelText="Label"
     onChange={action("value changed")}
     onBlur={action("blurred")}
