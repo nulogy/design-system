@@ -56,6 +56,7 @@ const SideBar = ({
       top="0"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
+      initial="closed"
       bg="white"
       right="0"
       height="100%"
