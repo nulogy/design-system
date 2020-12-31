@@ -10,9 +10,10 @@ import {
   Page,
   SideBar,
   Select,
-  Button,
+  PrimaryButton,
   Box,
 } from "..";
+import { text } from '@storybook/addon-knobs';
 
 const primaryMenu = [
   {
@@ -91,14 +92,32 @@ const secondaryMenu = [
       { name: "Logout", href: "/" },
     ],
   },
-  {
-    name: <Icon icon="settings" color="darkBlue"></Icon>,
-  },
 ];
 
 export default {
   title: "Components/Layout",
 };
+
+export const _Frame = () => (
+  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  </Frame>
+);
+
+export const _Page = () => (
+  <Page
+    breadcrumbs={
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/">Materials</Link>
+      </Breadcrumbs>
+    }
+    title="Materials Overview"
+  >
+    <>
+      <Text fontFamily="mono" fontSize="small">// content</Text>
+    </>
+  </Page>
+);
 
 export const _Layout = () => (
   <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
@@ -112,8 +131,7 @@ export const _Layout = () => (
       title="Materials Overview"
     >
       <>
-        <Heading2>Overview</Heading2>
-        <Text>I am main content.</Text>
+        <Text fontFamily="mono" fontSize="small">// content</Text>
       </>
     </Page>
   </Frame>
@@ -129,6 +147,16 @@ export const NoPageTitle = () => (
         </Breadcrumbs>
       }
     >
+      <Text fontFamily="mono" fontSize="small">// content</Text>
+    </Page>
+  </Frame>
+);
+
+export const NoBreadcrumbs = () => (
+  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+    <Page
+      title='Materials Overview'
+    >
       <>
         <Heading2>Overview</Heading2>
         <Text>I am main content.</Text>
@@ -137,6 +165,7 @@ export const NoPageTitle = () => (
   </Frame>
 );
 
+
 const ExampleSideBar = ({ isOpen, onClose }) => (
   <SideBar isOpen={isOpen} title="Filters" onClose={onClose}>
     <Select options={[]} labelText="Delivery:" />
@@ -144,7 +173,7 @@ const ExampleSideBar = ({ isOpen, onClose }) => (
 );
 
 export const WithSideBar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleSideBar = () => {
     setIsOpen(!isOpen);
@@ -169,10 +198,8 @@ export const WithSideBar = () => {
         sideBar={<ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />}
       >
         <>
-          <Heading2>Overview</Heading2>
-          <Text>I am main content.</Text>
           <Box minWidth="300px">
-            <Button onClick={toggleSideBar}>Toggle SideBar</Button>
+            <PrimaryButton onClick={toggleSideBar}>Toggle SideBar</PrimaryButton>
           </Box>
         </>
       </Page>
