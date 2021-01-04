@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Box, Flex } from "../index";
-import { FlexProps } from "../Flex/Flex";
+import Box from "../Box/Box";
+import Flex, { FlexProps } from "../Flex/Flex";
 
 type FrameProps = FlexProps & {
   navBar: React.ReactNode;

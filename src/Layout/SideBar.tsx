@@ -1,6 +1,8 @@
 import React from "react";
 
-import { Box, Flex, IconicButton } from "../index";
+import { Box } from "../Box";
+import { Flex } from "../Flex";
+import { IconicButton } from "../Button";
 import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 
