@@ -1,13 +1,13 @@
 import React from "react"
 
-import { Flex } from "../index";
+import { Flex } from "../Flex";
 import { Heading1 } from "../Type";
 
 type PageProps = {
-  breadcrumbs: React.ReactNode,
-  title: string,
-  sideBar: React.ReactNode
-  children: React.ReactNode
+  breadcrumbs: React.ReactNode;
+  title: string;
+  sideBar: React.ReactNode;
+  children: React.ReactNode;
 }
 
 

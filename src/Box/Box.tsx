@@ -44,23 +44,6 @@ type SharedBoxProps = ColorProps &
   CursorProps &
   OverflowProps;
 
-const sharedStyledProps = {
-  color,
-  space,
-  layout,
-  border,
-  boxShadow,
-  textAlign,
-  order,
-  flexGrow,
-  position,
-  background,
-  transition,
-  transform,
-  cursor,
-  overflow,
-};
-
 export type BoxProps = SharedBoxProps &
   TransitionProps &
   React.ComponentPropsWithRef<"div"> & {
