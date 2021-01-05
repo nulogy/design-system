@@ -20,6 +20,7 @@ import { SelectDefaultProps } from "../Select/Select";
 import { getSubset } from "../utils/subset";
 
 const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
+  // These classes are only applied when classname prefix is set
   "[class*='dropdown-indicator'], [class*='indicator-separator']": {
     display: showArrow ? "flex" : "none",
   },
