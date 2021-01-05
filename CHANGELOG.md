@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/nulogy/design-system/compare/v5.0.2...v5.0.3) (2021-01-05)
+
+
+### Bug Fixes
+
+* **AsyncSelect:** fix bug where dropdown arrow is not hidden when no classname prefix is set ([bd3aef7](https://github.com/nulogy/design-system/commit/bd3aef7a6217da4d0d5eb6f94b386ea0102482ac))
+
 ## [5.0.2](https://github.com/nulogy/design-system/compare/v5.0.1...v5.0.2) (2020-12-18)
 
 
