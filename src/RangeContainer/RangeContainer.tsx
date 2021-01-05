@@ -30,11 +30,15 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
         mt="x1"
         mb={errorMessages.length ? "x1" : "x3"}
       >
-        {startComponent}
+        <Flex>
+          {startComponent}
+        </Flex>
         <Flex px="half" alignItems="center" maxHeight="38px">
           <Text>-</Text>
         </Flex>
-        {endComponent}
+        <Flex>
+          {endComponent}
+        </Flex>
       </Flex>
       {errorMessages.map((errorMessage, i) => (
         // eslint-disable-next-line react/no-array-index-key
