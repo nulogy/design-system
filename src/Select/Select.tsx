@@ -42,7 +42,7 @@ export const SelectDefaultProps = {
   required: false,
   value: undefined,
   className: undefined,
-  classNamePrefix: undefined,
+  classNamePrefix: "ndsSelect", // a prefix is required in react-select top put classes on all buttons to apply style overrides
   menuIsOpen: undefined,
   onMenuOpen: undefined,
   onMenuClose: undefined,
