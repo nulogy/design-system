@@ -8,18 +8,18 @@ import {
 } from "date-fns";
 import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
-import { DatePickerStyles } from "./DatePickerStyles";
-import DatePickerInput from "./DatePickerInput";
-import DatePickerHeader from "./DatePickerHeader";
+import propTypes from "@styled-system/prop-types";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
 import { InputFieldDefaultProps } from "../Input/InputField.type";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
-import propTypes from "@styled-system/prop-types";
 import { getSubset } from "../utils/subset";
-import { FieldProps } from '../Form/Field';
+import { FieldProps } from "../Form/Field";
+import DatePickerHeader from "./DatePickerHeader";
+import DatePickerInput from "./DatePickerInput";
+import { DatePickerStyles } from "./DatePickerStyles";
 
 const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
 const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
@@ -119,11 +119,11 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     };
     const customInputProps = {
       ...InputFieldDefaultProps,
-      inputWidth:"184px",
+      inputWidth: "184px",
       ...inputProps,
       error: !!(errorMessage || errorList),
       placeholder:
-        inputProps.placeholder ||
+        (inputProps && inputProps.placeholder) ||
         (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
     };
 
