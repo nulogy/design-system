@@ -119,6 +119,7 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     };
     const customInputProps = {
       ...InputFieldDefaultProps,
+      inputWidth:"184px",
       ...inputProps,
       error: !!(errorMessage || errorList),
       placeholder:
@@ -138,7 +139,11 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     );
     const spaceProps = getSubset(props, propTypes.space);
     return (
-      <Field className={`${className} nds-date-picker`} fitContent={fitContent} {...spaceProps}>
+      <Field
+        className={`${className} nds-date-picker`}
+        fitContent={fitContent}
+        {...spaceProps}
+      >
         <DatePickerStyles />
         <LocaleContext.Consumer>
           {({ locale }) => (
