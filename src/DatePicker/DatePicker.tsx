@@ -52,7 +52,6 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
       onInputChange,
       onChange,
       selected,
-      fitContent,
       ...props
     },
     datePickerRef
@@ -141,7 +140,6 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     return (
       <Field
         className={`${className} nds-date-picker`}
-        fitContent={fitContent}
         {...spaceProps}
       >
         <DatePickerStyles />
