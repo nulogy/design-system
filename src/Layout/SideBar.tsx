@@ -7,10 +7,11 @@ import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 
 type SideBarProps = AnimatedBoxProps & {
-  children: React.ReactNode;
-  onClose: (arg: any) => any;
-  title: string;
-  isOpen: boolean;
+  children?: React.ReactNode;
+  onClose?: (arg: any) => any;
+  title?: string;
+  isOpen?: boolean;
+  footer?: React.ReactNode;
 };
 
 const SideBar = ({
@@ -20,6 +21,7 @@ const SideBar = ({
   onClose,
   title,
   isOpen,
+  footer,
   ...props
 }: SideBarProps) => {
   const variants = {
@@ -67,15 +69,29 @@ const SideBar = ({
       borderLeftWidth="1px"
       borderLeftStyle="solid"
       borderLeftColor="lightGrey"
+      display="flex"
+      flexDirection="column"
       {...props}
     >
       <Flex justifyContent="space-between">
         {title && <Heading3>{title}</Heading3>}
         <IconicButton icon="close" onClick={onClose}></IconicButton>
       </Flex>
-      <AnimatedBox variants={childVariants}>
-        <Box>{children}</Box>
+      <AnimatedBox variants={childVariants} flexGrow={1}>
+        <Box overflowY="auto">{children}</Box>
       </AnimatedBox>
+      {footer && (
+        <Box position="sticky"
+          backgroundColor="white"
+          borderTopWidth="1px"
+          borderTopStyle="solid"
+          borderTopColor="lightGrey"
+          alignSelf="flex-end"
+          width="100%"
+          pt="x2">
+          {footer}
+        </Box>
+      )}
     </AnimatedBox>
   );
 };
