@@ -166,7 +166,6 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
             error: rangeError,
             ...startDateInputProps,
           }}
-          fitContent
           errorMessage={startDateErrorMessage}
           minDate={minDate}
           maxDate={maxDate}
@@ -217,7 +216,6 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
             "aria-label": t("select an end date"),
             ...endDateInputProps,
           }}
-          fitContent
           errorMessage={endDateErrorMessage}
           minDate={minDate}
           maxDate={maxDate}
