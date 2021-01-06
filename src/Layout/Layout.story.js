@@ -13,7 +13,6 @@ import {
   PrimaryButton,
   Box,
 } from "..";
-import { text } from '@storybook/addon-knobs';
 
 const primaryMenu = [
   {
@@ -99,8 +98,9 @@ export default {
 };
 
 export const _Frame = () => (
-  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
-  </Frame>
+  <Frame
+    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+  ></Frame>
 );
 
 export const _Page = () => (
@@ -114,7 +114,9 @@ export const _Page = () => (
     title="Materials Overview"
   >
     <>
-      <Text fontFamily="mono" fontSize="small">// content</Text>
+      <Text fontFamily="mono" fontSize="small">
+        // content
+      </Text>
     </>
   </Page>
 );
@@ -131,7 +133,9 @@ export const _Layout = () => (
       title="Materials Overview"
     >
       <>
-        <Text fontFamily="mono" fontSize="small">// content</Text>
+        <Text fontFamily="mono" fontSize="small">
+          // content
+        </Text>
       </>
     </Page>
   </Frame>
@@ -147,16 +151,16 @@ export const NoPageTitle = () => (
         </Breadcrumbs>
       }
     >
-      <Text fontFamily="mono" fontSize="small">// content</Text>
+      <Text fontFamily="mono" fontSize="small">
+        // content
+      </Text>
     </Page>
   </Frame>
 );
 
 export const NoBreadcrumbs = () => (
   <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
-    <Page
-      title='Materials Overview'
-    >
+    <Page title="Materials Overview">
       <>
         <Heading2>Overview</Heading2>
         <Text>I am main content.</Text>
@@ -165,9 +169,13 @@ export const NoBreadcrumbs = () => (
   </Frame>
 );
 
-
 const ExampleSideBar = ({ isOpen, onClose }) => (
-  <SideBar isOpen={isOpen} title="Filters" onClose={onClose}>
+  <SideBar
+    isOpen={isOpen}
+    title="Filters"
+    onClose={onClose}
+    footer={<PrimaryButton>Apply</PrimaryButton>}
+  >
     <Select options={[]} labelText="Delivery:" />
   </SideBar>
 );
@@ -199,7 +207,9 @@ export const WithSideBar = () => {
       >
         <>
           <Box minWidth="300px">
-            <PrimaryButton onClick={toggleSideBar}>Toggle SideBar</PrimaryButton>
+            <PrimaryButton onClick={toggleSideBar}>
+              Toggle SideBar
+            </PrimaryButton>
           </Box>
         </>
       </Page>
