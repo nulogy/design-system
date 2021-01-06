@@ -8,6 +8,7 @@ import {
   boxShadow,
   textAlign,
   order,
+  flexbox,
   flexGrow,
   position,
   background,
@@ -58,6 +59,7 @@ const Box: React.FC<BoxProps> = styled.div(
   boxShadow,
   textAlign,
   order,
+  flexbox,
   flexGrow,
   position,
   background,
@@ -93,12 +95,13 @@ export const AnimatedBox: React.FC<AnimatedBoxProps> = styled(motion.div)(
   boxShadow,
   textAlign,
   order,
+  flexbox,
   flexGrow,
   position,
   background,
   transform,
   cursor,
-  overflow,
+  overflow
 );
 
 export default Box;

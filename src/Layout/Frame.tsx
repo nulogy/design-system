@@ -9,7 +9,7 @@ type FrameProps = FlexProps & {
 };
 
 const Frame = ({ navBar, children, ...props }: FrameProps) => (
-  <Flex flexDirection="column" minHeight="100vh" border="1px solid blue" {...props}>
+  <Flex flexDirection="column" minHeight="100vh" {...props}>
     {navBar}
     <Box position="relative" flexGrow={1}>
       {children}
