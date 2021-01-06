@@ -37,8 +37,7 @@ onChange = (value) => {}
 
 onChange = ({value, label}). => {}
 ````
-* @nulogy/components is added as a peerDependency
-``` yarn add @nulogy/icons```
+* @nulogy/components is added as a peerDependency. Add it using ``` yarn add @nulogy/icons```
 * MonthPicker and MonthRange components are removed
 
 ## [4.14.5](https://github.com/nulogy/design-system/compare/v4.14.4...v4.14.5) (2020-12-03)
