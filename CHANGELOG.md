@@ -29,7 +29,7 @@
 
 ### BREAKING CHANGES 
 
-* `onChange` now returns the complete option object that is selected rather than just the string value.
+* ASyncSelect `onChange` now returns the complete option object that is selected rather than just the string value.
 ```
 onChange = (value) => {}
 
