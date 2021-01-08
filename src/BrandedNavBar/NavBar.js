@@ -37,7 +37,7 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   boxShadow: theme.shadows.large,
   alignItems: "center",
   height: NAVBAR_HEIGHT,
-  zIndex: theme.zIndex.content,
+  zIndex: theme.zIndex.navBar,
   position: "relative",
 }));
 
