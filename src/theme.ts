@@ -112,6 +112,7 @@ const Theme: DefaultNDSThemeType = {
     tableHeader: tokens.z_indices_table_header,
     modalHeaderAndFooter: tokens.z_indices_modal_header_and_footer,
     openControl: tokens.z_indices_open_control,
+    navBar: tokens.z_indices_nav_bar,
     sideBar: tokens.z_indices_side_bar,
   },
   zIndices: {
@@ -122,6 +123,7 @@ const Theme: DefaultNDSThemeType = {
     tableHeader: tokens.z_indices_table_header,
     modalHeaderAndFooter: tokens.z_indices_modal_header_and_footer,
     openControl: tokens.z_indices_open_control,
+    navBar: tokens.z_indices_nav_bar,
     sideBar: tokens.z_indices_side_bar,
   },
 };

@@ -22,7 +22,6 @@ type Colors = {
   categorical5: string;
   categorical6: string;
 };
-type ColorsOptions = keyof Colors;
 
 type FontSizes = {
   smaller: string;
@@ -109,6 +108,7 @@ type ZIndices = {
   modalHeaderAndFooter: number;
   openControl: number;
   sideBar: number;
+  navBar: number;
 };
 
 export type DefaultNDSThemeType = {
