@@ -71,9 +71,10 @@ const SideBar = ({
       borderLeftColor="lightGrey"
       display="flex"
       flexDirection="column"
+      zIndex="sideBar"
       {...props}
     >
-      <Flex justifyContent="space-between">
+      <Flex justifyContent="space-between" alignItems="flex-start">
         {title && <Heading3>{title}</Heading3>}
         <IconicButton icon="close" onClick={onClose}></IconicButton>
       </Flex>

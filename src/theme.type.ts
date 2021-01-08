@@ -100,7 +100,7 @@ type Breakpoints = {
   extraLarge: string;
 };
 
-type ZIndex = {
+type ZIndices = {
   content: number;
   tabsScollIndicator: number;
   tabsBar: number;
@@ -108,6 +108,7 @@ type ZIndex = {
   tableHeader: number;
   modalHeaderAndFooter: number;
   openControl: number;
+  sideBar: number;
 };
 
 export type DefaultNDSThemeType = {
@@ -122,7 +123,8 @@ export type DefaultNDSThemeType = {
   shadows: Shadows;
   radii: Radii;
   breakpoints: Breakpoints;
-  zIndex: ZIndex;
+  zIndex: ZIndices;
+  zIndices: ZIndices;
 };
 
 type RecursivePartial<T> = {
