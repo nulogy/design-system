@@ -57,21 +57,24 @@ const SideBar = ({
   return (
     <AnimatedBox
       p={p}
-      top="0"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
       initial="closed"
       bg="white"
-      right="0"
       height="100%"
-      position="absolute"
+      position="fixed"
+      top="0"
+      right="0"
       width={width}
       borderLeftWidth="1px"
       borderLeftStyle="solid"
       borderLeftColor="lightGrey"
+      boxShadow="large"
       display="flex"
       flexDirection="column"
       zIndex="sideBar"
+      overflow="scroll"
+      style={{ overflowBehaviour: "contain" }}
       {...props}
     >
       <Flex justifyContent="space-between" alignItems="flex-start">
