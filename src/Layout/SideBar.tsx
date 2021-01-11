@@ -72,7 +72,7 @@ const SideBar = ({
       top="0"
       right="0"
       width={width}
-      zIndex="sideBar"
+      zIndex="navBar"
       overflow="scroll"
       style={{ overflowBehaviour: "contain" }}
       {...props}
