@@ -177,6 +177,17 @@ const ExampleSideBar = ({ isOpen, onClose }) => (
     footer={<PrimaryButton>Apply</PrimaryButton>}
   >
     <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Delivery:" />
+    <Select options={[]} labelText="Last Delivery:" />
   </SideBar>
 );
 

@@ -56,7 +56,6 @@ const SideBar = ({
   };
   return (
     <AnimatedBox
-      p={p}
       bg="white"
       display="flex"
       flexDirection="column"
@@ -73,26 +72,36 @@ const SideBar = ({
       right="0"
       width={width}
       zIndex="navBar"
-      overflow="scroll"
-      style={{ overflowBehaviour: "contain" }}
       {...props}
     >
-      <Flex justifyContent="space-between" alignItems="flex-start">
-        {title && <Heading3>{title}</Heading3>}
-        <IconicButton icon="close" onClick={onClose}></IconicButton>
+      <Flex
+        p={p}
+        maxHeight="100%"
+        overflow="scroll"
+        flexGrow={1}
+        flexDirection="column"
+        style={{ overflowBehaviour: "contain" }}
+      >
+        <Flex justifyContent="space-between" alignItems="flex-start">
+          {title && <Heading3>{title}</Heading3>}
+          <IconicButton icon="close" onClick={onClose}></IconicButton>
+        </Flex>
+        <AnimatedBox variants={childVariants}>
+          <Box overflowY="auto">{children}</Box>
+        </AnimatedBox>
       </Flex>
-      <AnimatedBox variants={childVariants} flexGrow={1}>
-        <Box overflowY="auto">{children}</Box>
-      </AnimatedBox>
       {footer && (
-        <Box position="sticky"
+        <Box
+          position="sticky"
           backgroundColor="white"
           borderTopWidth="1px"
           borderTopStyle="solid"
           borderTopColor="lightGrey"
           alignSelf="flex-end"
           width="100%"
-          pt="x2">
+          p={p}
+          pt="x2"
+        >
           {footer}
         </Box>
       )}
