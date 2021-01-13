@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-  Frame,
+  ApplicationFrame,
   BrandedNavBar,
   Icon,
   Breadcrumbs,
@@ -97,10 +97,10 @@ export default {
   title: "Components/Layout",
 };
 
-export const _Frame = () => (
-  <Frame
+export const _ApplicationFrame = () => (
+  <ApplicationFrame
     navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-  ></Frame>
+  ></ApplicationFrame>
 );
 
 export const _Page = () => (
@@ -122,7 +122,7 @@ export const _Page = () => (
 );
 
 export const _Layout = () => (
-  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page
       breadcrumbs={
         <Breadcrumbs>
@@ -138,11 +138,11 @@ export const _Layout = () => (
         </Text>
       </>
     </Page>
-  </Frame>
+  </ApplicationFrame>
 );
 
 export const NoPageTitle = () => (
-  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page
       breadcrumbs={
         <Breadcrumbs>
@@ -155,18 +155,18 @@ export const NoPageTitle = () => (
         // content
       </Text>
     </Page>
-  </Frame>
+  </ApplicationFrame>
 );
 
 export const NoBreadcrumbs = () => (
-  <Frame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page title="Materials Overview">
       <>
         <Heading2>Overview</Heading2>
         <Text>I am main content.</Text>
       </>
     </Page>
-  </Frame>
+  </ApplicationFrame>
 );
 
 const ExampleSideBar = ({ isOpen, onClose }) => (
@@ -202,7 +202,7 @@ export const WithSideBar = () => {
   };
 
   return (
-    <Frame
+    <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
       // transform setting is for storybook display only
@@ -227,6 +227,6 @@ export const WithSideBar = () => {
           </Box>
         </>
       </Page>
-    </Frame>
+    </ApplicationFrame>
   );
 };
