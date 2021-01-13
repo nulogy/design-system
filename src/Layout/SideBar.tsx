@@ -70,10 +70,10 @@ const SideBar = ({
       variants={variants}
       initial="closed"
       position="fixed"
-      top="0"
+      top="56px"
       right="0"
       width={typeof width === 'string' ? { default: "100%", small: width} : width}
-      zIndex={"navBar" as any}
+      zIndex={"sideBar" as any}
       {...props}
     >
       <Flex
