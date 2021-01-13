@@ -17,6 +17,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import isValidMenuItem from "./isValidMenuItem";
+import EnvironmentBanner from './EnvironmentBanner';
 
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
@@ -41,28 +42,8 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   position: "relative",
 }));
 
-const EnvironmentBanner = ({ children }) => (
-  <Box bg="darkBlue" textAlign="center">
-    <Text
-      fontSize="10px"
-      letterSpacing="0.5px"
-      fontWeight="bold"
-      color="white"
-      textTransform="uppercase"
-      py="2px"
-    >
-      {children}
-    </Text>
-  </Box>
-);
 
-EnvironmentBanner.propTypes = {
-  children: PropTypes.node,
-};
 
-EnvironmentBanner.defaultProps = {
-  children: undefined,
-};
 
 const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
   return (
