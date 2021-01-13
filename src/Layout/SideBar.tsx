@@ -5,6 +5,7 @@ import { Flex } from "../Flex";
 import { IconicButton } from "../Button";
 import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
+import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 
 type SideBarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
@@ -70,7 +71,7 @@ const SideBar = ({
       variants={variants}
       initial="closed"
       position="fixed"
-      top="56px"
+      top={NAVBAR_HEIGHT}
       right="0"
       width={typeof width === 'string' ? { default: "100%", small: width} : width}
       zIndex={"sideBar" as any}

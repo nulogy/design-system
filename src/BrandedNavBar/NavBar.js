@@ -20,7 +20,7 @@ import isValidMenuItem from "./isValidMenuItem";
 
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
-const NAVBAR_HEIGHT = "56px";
+export const NAVBAR_HEIGHT = "56px";
 
 const themeColorObject = {
   color: "darkBlue",
