@@ -205,6 +205,8 @@ export const WithSideBar = () => {
     <Frame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
+      // transform setting is for storybook display only
+      transform="translateZ(0)"
     >
       <Page
         breadcrumbs={
