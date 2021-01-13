@@ -9,13 +9,12 @@ type EnvironmentBannerProps = {
 const EnvironmentBanner = ({ children }: EnvironmentBannerProps) => (
   <Box bg="darkBlue" textAlign="center">
     <Text
-      fontSize={`${FONT_SIZE}px`}
+      fontSize="10px"
       letterSpacing="0.5px"
       fontWeight="bold"
       color="white"
       textTransform="uppercase"
-      py={`${PADDING_Y}px`}
-    >
+      py="2px">
       {children}
     </Text>
   </Box>
