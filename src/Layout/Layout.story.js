@@ -223,6 +223,7 @@ export const WithSideBar = () => {
             <PrimaryButton onClick={toggleSideBar}>
               Toggle SideBar
             </PrimaryButton>
+            <Box height="3000px" width="100px" bg="red"></Box>
           </Box>
         </>
       </Page>
