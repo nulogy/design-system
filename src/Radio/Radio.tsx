@@ -127,6 +127,8 @@ const BaseRadio: React.SFC<BaseRadioProps> = forwardRef(({
           type="radio"
           ref={ref}
           aria-checked={checked}
+          checked={checked}
+          disabled={disabled}
           {...restProps}
           required={required}
           aria-required={required}
