@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/nulogy/design-system/compare/v5.0.3...v5.0.4) (2021-01-13)
+
+
+### Bug Fixes
+
+* **Radio:** checked prop not being passed ([3203d48](https://github.com/nulogy/design-system/commit/3203d48e4ddcd4db9ba6277c64953ac7a738927a))
+
 ## [5.0.3](https://github.com/nulogy/design-system/compare/v5.0.2...v5.0.3) (2021-01-05)
 
 
