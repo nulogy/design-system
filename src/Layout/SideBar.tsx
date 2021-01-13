@@ -12,6 +12,7 @@ type SideBarProps = AnimatedBoxProps & {
   title?: string;
   isOpen?: boolean;
   footer?: React.ReactNode;
+  closeButtonTestId?: string;
 };
 
 const SideBar = ({
@@ -22,6 +23,7 @@ const SideBar = ({
   title,
   isOpen,
   footer,
+  closeButtonTestId,
   ...props
 }: SideBarProps) => {
   const variants = {
@@ -70,24 +72,24 @@ const SideBar = ({
       position="fixed"
       top="0"
       right="0"
-      width={width}
-      zIndex="navBar"
+      width={typeof width === 'string' ? { default: "100%", small: width} : width}
+      zIndex={"navBar" as any}
       {...props}
     >
       <Flex
         p={p}
         maxHeight="100%"
-        overflow="scroll"
+        overflow="auto"
         flexGrow={1}
         flexDirection="column"
-        style={{ overflowBehaviour: "contain" }}
+        style={{ overflowBehaviour: "contain" } as any}
       >
         <Flex justifyContent="space-between" alignItems="flex-start">
-          {title && <Heading3>{title}</Heading3>}
-          <IconicButton icon="close" onClick={onClose}></IconicButton>
+          <Box>{title && <Heading3>{title}</Heading3>}</Box>
+          <Box><IconicButton icon="close" onClick={onClose} data-testid={closeButtonTestId}/></Box>
         </Flex>
-        <AnimatedBox variants={childVariants}>
-          <Box overflowY="auto">{children}</Box>
+        <AnimatedBox variants={childVariants} flexGrow={1}>
+          {children}
         </AnimatedBox>
       </Flex>
       {footer && (
@@ -110,3 +112,4 @@ const SideBar = ({
 };
 
 export default SideBar;
+
