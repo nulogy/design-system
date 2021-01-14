@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  StatusIndicator,
   ApplicationFrame,
   BrandedNavBar,
   Icon,
@@ -112,6 +113,7 @@ export const _Page = () => (
       </Breadcrumbs>
     }
     title="Materials Overview"
+    headerContent={<StatusIndicator type="informative" ml="x1">Beta</StatusIndicator>}
   >
     <>
       <Text fontFamily="mono" fontSize="small">
