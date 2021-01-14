@@ -216,16 +216,14 @@ export const WithSideBar = () => {
           </Breadcrumbs>
         }
         title="Materials Overview"
-        sideBar={<ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />}
       >
-        <>
-          <Box minWidth="300px">
-            <PrimaryButton onClick={toggleSideBar}>
-              Toggle SideBar
+        <Box minWidth="300px">
+          <PrimaryButton onClick={toggleSideBar}>
+            Toggle SideBar
             </PrimaryButton>
-            <Box height="3000px" width="100px" bg="red"></Box>
-          </Box>
-        </>
+          <Box height="3000px" width="100px" bg="red"></Box>
+        </Box>
+        <ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />
       </Page>
     </ApplicationFrame>
   );

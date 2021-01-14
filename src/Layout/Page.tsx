@@ -6,14 +6,12 @@ import { Heading1 } from "../Type";
 type PageProps = {
   breadcrumbs: React.ReactNode;
   title: string;
-  sideBar: React.ReactNode;
   children: React.ReactNode;
 };
 
 export const Page = ({
   breadcrumbs,
   title,
-  sideBar,
   children,
   ...props
 }: PageProps) => (
@@ -27,7 +25,6 @@ export const Page = ({
       )}
       {children}
     </Flex>
-    {sideBar}
   </>
 );
 
