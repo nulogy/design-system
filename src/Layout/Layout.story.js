@@ -113,7 +113,7 @@ export const _Page = () => (
       </Breadcrumbs>
     }
     title="Materials Overview"
-    headerContent={<StatusIndicator type="informative" ml="x1">Beta</StatusIndicator>}
+    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
   >
     <>
       <Text fontFamily="mono" fontSize="small">
