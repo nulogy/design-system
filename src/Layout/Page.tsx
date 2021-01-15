@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { Heading1 } from "../Type";
 
@@ -20,13 +21,17 @@ export const Page = ({
   <>
     <Flex flexDirection="column" py="x3" px="x3" {...props}>
       {breadcrumbs}
-      <Flex mb="x6" mt="x2">
+      <Flex alignItems="center">
         {title && (
-          <Heading1 mb="none" mt="none">
+          <Heading1 mb="x6" mt="x2">
             {title}
           </Heading1>
         )}
-        {headerContent}
+        {headerContent && (
+          <Box mb="x6" mt="x2" flexGrow={1} ml="x1">
+            {headerContent}
+          </Box>
+        )}
       </Flex>
       {children}
     </Flex>
