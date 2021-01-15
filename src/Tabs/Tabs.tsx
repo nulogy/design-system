@@ -120,7 +120,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     const { className } = this.props;
     const spaceProps = getSubset(this.props, propTypes.space);
     return (
-      <>
+      <Box position="relative">
         <TabFocusManager tabRefs={this.tabRefs}>
           {({ handleArrowNavigation, setFocusToTab, focusedIndex }) => (
             <TabScrollIndicators
@@ -147,7 +147,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
           )}
         </TabFocusManager>
         {this.getTabContent()}
-      </>
+      </Box>
     );
   }
 }
