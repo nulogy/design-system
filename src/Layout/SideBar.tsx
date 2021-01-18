@@ -6,7 +6,7 @@ import { IconicButton } from "../Button";
 import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
-import { visibility } from '../StyledProps/visibility';
+import { useTranslation } from "react-i18next";
 
 type SideBarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
@@ -31,17 +31,22 @@ const SideBar = ({
   ...props
 }: SideBarProps) => {
   const closeButton = useRef(null);
-  const [ shouldUpdateFocus, setShouldUpdateFocus ] = useState(false);
+  const [shouldUpdateFocus, setShouldUpdateFocus] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (closeButton.current && isOpen) {
       setShouldUpdateFocus(true)
-      closeButton.current.focus();
+      if (closeButton && closeButton.current) {
+        closeButton.current.focus();
+      }
     } else if (shouldUpdateFocus) {
       const focusable = document.querySelectorAll(
-        "button, a[href], select, textarea, input, *[tabindex]:not([tabindex='-1'])"
+        "button, a[href], select, textarea, input, [tabindex]:not([tabindex='-1'])"
       );
-      focusable[0].focus();
+      if (focusable && focusable[0]) {
+        (focusable[0] as HTMLElement).focus();
+      }
     }
   }, [isOpen]);
 
@@ -77,6 +82,7 @@ const SideBar = ({
   };
   return (
     <AnimatedBox
+      role="complementary"
       bg="white"
       display="flex"
       flexDirection="column"
@@ -106,7 +112,7 @@ const SideBar = ({
       >
       <Flex justifyContent="space-between" alignItems="flex-start">
           <Box>{title && <Heading3>{title}</Heading3>}</Box>
-          <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId}/></Box>
+          <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={t("close")}/></Box>
         </Flex>
         <AnimatedBox variants={childVariants} flexGrow={1}>
           {children}

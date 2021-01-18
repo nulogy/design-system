@@ -24,6 +24,11 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+
+// cypress-enter-plugin: fills in missing functionality in cypress so that enter can be used as click
+// The plugin overrides the type command and manually triggers a click 
+import "cypress-enter-plugin";
+
 Cypress.Commands.add("renderFromStorybook", (component) => {
   cy.visit(`/iframe.html?path=/story/components-${component}`);
 });
