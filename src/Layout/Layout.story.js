@@ -227,3 +227,39 @@ export const WithSideBar = () => {
     </ApplicationFrame>
   );
 };
+
+export const WithSideBarOpenByDefault = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleSideBar = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeSideBar = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <ApplicationFrame
+      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+      overflowX="hidden"
+    >
+      <Page
+        breadcrumbs={
+          <Breadcrumbs>
+            <Link href="/">Home</Link>
+            <Link href="/">Materials</Link>
+          </Breadcrumbs>
+        }
+        title="Materials Overview"
+      >
+        <Box minWidth="300px">
+          <PrimaryButton onClick={toggleSideBar}>
+            Toggle SideBar
+            </PrimaryButton>
+          <Box height="3000px" width="100px" bg="red"></Box>
+        </Box>
+        <ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />
+      </Page>
+    </ApplicationFrame>
+  );
+};

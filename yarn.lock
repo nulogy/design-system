@@ -6553,6 +6553,11 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
+cypress-enter-plugin@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/cypress-enter-plugin/-/cypress-enter-plugin-1.0.1.tgz#40dda5479a0c85ef28516a8d52cb16917721a4b9"
+  integrity sha512-qN8nVJ9kSnw9MelT8mf2MiX7cwno+bBIIaEudVg8yMlLRSvF2Gr8xL5cs+ftNTvMhU9ko9IbxzwfNGYEoSKBGw==
+
 cypress-plugin-tab@^1.0.1:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/cypress-plugin-tab/-/cypress-plugin-tab-1.0.5.tgz#a40714148104004bb05ed62b1bf46bb544f8eb4a"
