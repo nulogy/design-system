@@ -29,6 +29,7 @@ import {
 import { transition, TransitionProps } from "../StyledProps/transition";
 import { transform, TransformProps } from "../StyledProps/transform";
 import { CursorProps, cursor } from "../StyledProps/cursor";
+import { VisibilityProps, visibility } from "../StyledProps/visibility";
 
 type SharedBoxProps = ColorProps &
   SpaceProps &
@@ -43,6 +44,7 @@ type SharedBoxProps = ColorProps &
   BackgroundProps &
   TransformProps &
   CursorProps &
+  VisibilityProps &
   OverflowProps;
 
 export type BoxProps = SharedBoxProps &
@@ -66,26 +68,14 @@ const Box: React.FC<BoxProps> = styled.div(
   transform,
   cursor,
   overflow,
-  transition
+  transition,
+  visibility
 );
 
-// TRANSITION PROPS NEED TO BE EXCLUDED OR SOMETHING
-
-export type AnimatedBoxProps = ColorProps &
-  SpaceProps &
-  LayoutProps &
-  BoxShadowProps &
-  TextAlignProps &
-  OrderProps &
-  FlexGrowProps &
-  PositionProps &
-  BorderProps &
-  FlexboxProps &
-  BackgroundProps &
-  TransformProps &
-  CursorProps &
-  OverflowProps &
-  MotionProps;
+export type AnimatedBoxProps = SharedBoxProps &
+  MotionProps & {
+    role?: string;
+  };
 
 export const AnimatedBox: React.FC<AnimatedBoxProps> = styled(motion.div)(
   color,
@@ -101,7 +91,8 @@ export const AnimatedBox: React.FC<AnimatedBoxProps> = styled(motion.div)(
   background,
   transform,
   cursor,
-  overflow
+  overflow,
+  visibility
 );
 
 export default Box;

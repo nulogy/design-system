@@ -86,7 +86,10 @@ type BaseIconicButtonProps = SpaceProps & {
   children?: any;
 };
 const BaseIconicButton: React.SFC<BaseIconicButtonProps> = React.forwardRef(
-  ({ children, icon, labelHidden, className, iconSize, ...props }, forwardedRef) => {
+  (
+    { children, icon, labelHidden, className, iconSize, ...props },
+    forwardedRef
+  ) => {
     return (
       <WrapperButton
         ref={forwardedRef}
@@ -97,7 +100,12 @@ const BaseIconicButton: React.SFC<BaseIconicButtonProps> = React.forwardRef(
         <Manager>
           <Reference>
             {({ ref }) => (
-              <Icon ref={ref} size={iconSize || NDSTheme.space.x4} icon={icon} p="half" />
+              <Icon
+                ref={ref}
+                size={iconSize || NDSTheme.space.x4}
+                icon={icon}
+                p="half"
+              />
             )}
           </Reference>
           <Popper
