@@ -14,6 +14,7 @@ type SideBarProps = AnimatedBoxProps & {
   isOpen?: boolean;
   footer?: React.ReactNode;
   closeButtonTestId?: string;
+  offset?: string;
 };
 
 const SideBar = ({
@@ -25,6 +26,7 @@ const SideBar = ({
   isOpen,
   footer,
   closeButtonTestId,
+  offset = "0",
   ...props
 }: SideBarProps) => {
   const variants = {
@@ -72,7 +74,7 @@ const SideBar = ({
       initial="closed"
       position="fixed"
       top={NAVBAR_HEIGHT}
-      right="0"
+      right={offset}
       width={typeof width === 'string' ? { default: "100%", small: width} : width}
       zIndex={"sideBar" as any}
       {...props}
