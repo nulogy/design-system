@@ -1,3 +1,10 @@
+## [5.0.5](https://github.com/nulogy/design-system/compare/v5.0.4...v5.0.5) (2021-01-18)
+
+
+### Bug Fixes
+
+* **Tabs:** Add containing relative position  box around Tabs to correct positioning of scroll indicators ([9baa08b](https://github.com/nulogy/design-system/commit/9baa08b5698b46a231c129ac487a48c885cfa2a6))
+
 ## [5.0.4](https://github.com/nulogy/design-system/compare/v5.0.3...v5.0.4) (2021-01-13)
 
 
