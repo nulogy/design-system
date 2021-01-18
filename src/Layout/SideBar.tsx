@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -6,6 +6,7 @@ import { IconicButton } from "../Button";
 import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
+import { visibility } from '../StyledProps/visibility';
 
 type SideBarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
@@ -29,6 +30,21 @@ const SideBar = ({
   offset = "0",
   ...props
 }: SideBarProps) => {
+  const closeButton = useRef(null);
+  const [ shouldUpdateFocus, setShouldUpdateFocus ] = useState(false);
+
+  useEffect(() => {
+    if (closeButton.current && isOpen) {
+      setShouldUpdateFocus(true)
+      closeButton.current.focus();
+    } else if (shouldUpdateFocus) {
+      const focusable = document.querySelectorAll(
+        "button, a[href], select, textarea, input, *[tabindex]:not([tabindex='-1'])"
+      );
+      focusable[0].focus();
+    }
+  }, [isOpen]);
+
   const variants = {
     open: {
       x: 0,
@@ -77,6 +93,7 @@ const SideBar = ({
       right={offset}
       width={typeof width === 'string' ? { default: "100%", small: width} : width}
       zIndex={"sideBar" as any}
+      visibility={isOpen ? "visible" : "hidden"}
       {...props}
     >
       <Flex
@@ -87,9 +104,9 @@ const SideBar = ({
         flexDirection="column"
         style={{ overflowBehaviour: "contain" } as any}
       >
-        <Flex justifyContent="space-between" alignItems="flex-start">
+      <Flex justifyContent="space-between" alignItems="flex-start">
           <Box>{title && <Heading3>{title}</Heading3>}</Box>
-          <Box><IconicButton icon="close" onClick={onClose} data-testid={closeButtonTestId}/></Box>
+          <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId}/></Box>
         </Flex>
         <AnimatedBox variants={childVariants} flexGrow={1}>
           {children}

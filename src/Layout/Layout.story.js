@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  StatusIndicator,
   ApplicationFrame,
   BrandedNavBar,
   Icon,
@@ -207,8 +206,6 @@ export const WithSideBar = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
-      // transform setting is for storybook display only
-      transform="translateZ(0)"
     >
       <Page
         breadcrumbs={
