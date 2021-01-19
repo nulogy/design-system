@@ -3,8 +3,9 @@ import React from "react";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { Heading1 } from "../Type";
+import { FlexProps } from '../Flex/Flex';
 
-type PageProps = {
+type PageProps = FlexProps & {
   breadcrumbs?: React.ReactNode;
   title?: string;
   children?: React.ReactNode;

@@ -76,7 +76,7 @@ const WrapperButton: React.SFC<any> = styled.button(
   }),
   space
 );
-type BaseIconicButtonProps = SpaceProps & {
+type IconicButtonProps = SpaceProps & {
   className?: string;
   labelHidden?: boolean;
   disabled?: boolean;
@@ -85,7 +85,7 @@ type BaseIconicButtonProps = SpaceProps & {
   iconSize?: string;
   children?: any;
 };
-const BaseIconicButton: React.SFC<BaseIconicButtonProps> = React.forwardRef(
+const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
   (
     { children, icon, labelHidden, className, iconSize, ...props },
     forwardedRef
@@ -136,12 +136,6 @@ const BaseIconicButton: React.SFC<BaseIconicButtonProps> = React.forwardRef(
     );
   }
 );
-const IconicButton = styled(BaseIconicButton)({});
 export const iconNames = Object.keys(icons);
-BaseIconicButton.defaultProps = {
-  children: undefined,
-  className: undefined,
-  labelHidden: false,
-  disabled: false,
-};
+
 export default IconicButton;

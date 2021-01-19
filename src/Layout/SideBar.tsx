@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, RefObject } from "react";
 
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -16,7 +16,16 @@ type SideBarProps = AnimatedBoxProps & {
   footer?: React.ReactNode;
   closeButtonTestId?: string;
   offset?: string;
+  triggerRef?: RefObject<any>;
 };
+
+const focusFirstElement = () => {
+  const FOCUSABLE_EL_SELECTOR = "button, a[href], select, textarea, input, [tabindex]:not([tabindex='-1'])";
+  const focusable = document.querySelectorAll(FOCUSABLE_EL_SELECTOR);
+  if (focusable && focusable[0]) {
+    (focusable[0] as HTMLElement).focus();
+  }
+}
 
 const SideBar = ({
   p = "x3",
@@ -28,6 +37,7 @@ const SideBar = ({
   footer,
   closeButtonTestId,
   offset = "0",
+  triggerRef,
   ...props
 }: SideBarProps) => {
   const closeButton = useRef(null);
@@ -36,23 +46,24 @@ const SideBar = ({
 
   useEffect(() => {
     if (closeButton.current && isOpen) {
-      setShouldUpdateFocus(true)
       if (closeButton && closeButton.current) {
         closeButton.current.focus();
+        setShouldUpdateFocus(true);
+        return;
       }
     } else if (shouldUpdateFocus) {
-      const focusable = document.querySelectorAll(
-        "button, a[href], select, textarea, input, [tabindex]:not([tabindex='-1'])"
-      );
-      if (focusable && focusable[0]) {
-        (focusable[0] as HTMLElement).focus();
+      if (triggerRef) {
+        triggerRef.current.focus();
+      } else {
+        focusFirstElement();
       }
     }
-  }, [isOpen]);
+  }, [isOpen, setShouldUpdateFocus]); 
 
   const variants = {
     open: {
       x: 0,
+      visible: "visible",
       transition: {
         duration: 0.25,
         when: "beforeChildren",
@@ -60,6 +71,7 @@ const SideBar = ({
     },
     closed: {
       x: "100%",
+      visible: "hidden",
       transition: {
         duration: 0.25,
       },
@@ -99,7 +111,6 @@ const SideBar = ({
       right={offset}
       width={typeof width === 'string' ? { default: "100%", small: width} : width}
       zIndex={"sideBar" as any}
-      visibility={isOpen ? "visible" : "hidden"}
       {...props}
     >
       <Flex
@@ -114,7 +125,7 @@ const SideBar = ({
           <Box>{title && <Heading3>{title}</Heading3>}</Box>
           <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={t("close")}/></Box>
         </Flex>
-        <AnimatedBox variants={childVariants} flexGrow={1}>
+        <AnimatedBox variants={childVariants} animate={isOpen ? "open" : "closed"} flexGrow={1}>
           {children}
         </AnimatedBox>
       </Flex>

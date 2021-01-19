@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   ApplicationFrame,
   BrandedNavBar,
@@ -123,7 +123,9 @@ export const _Page = () => (
 );
 
 export const _Layout = () => (
-  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame
+    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+  >
     <Page
       breadcrumbs={
         <Breadcrumbs>
@@ -143,7 +145,9 @@ export const _Layout = () => (
 );
 
 export const NoPageTitle = () => (
-  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame
+    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+  >
     <Page
       breadcrumbs={
         <Breadcrumbs>
@@ -160,7 +164,9 @@ export const NoPageTitle = () => (
 );
 
 export const NoBreadcrumbs = () => (
-  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
+  <ApplicationFrame
+    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+  >
     <Page title="Materials Overview">
       <>
         <Heading2>Overview</Heading2>
@@ -170,12 +176,13 @@ export const NoBreadcrumbs = () => (
   </ApplicationFrame>
 );
 
-const ExampleSideBar = ({ isOpen, onClose }) => (
+const ExampleSideBar = ({ isOpen, onClose, ...props }) => (
   <SideBar
     isOpen={isOpen}
     title="Filters"
     onClose={onClose}
     footer={<PrimaryButton>Apply</PrimaryButton>}
+    {...props}
   >
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
@@ -194,6 +201,7 @@ const ExampleSideBar = ({ isOpen, onClose }) => (
 
 export const WithSideBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef(null);
 
   const toggleSideBar = () => {
     setIsOpen(!isOpen);
@@ -217,12 +225,16 @@ export const WithSideBar = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton onClick={toggleSideBar}>
+          <PrimaryButton onClick={toggleSideBar} ref={triggerRef}>
             Toggle SideBar
-            </PrimaryButton>
+          </PrimaryButton>
           <Box height="3000px" width="100px" bg="red"></Box>
         </Box>
-        <ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />
+        <ExampleSideBar
+          isOpen={isOpen}
+          onClose={closeSideBar}
+          triggerRef={triggerRef}
+        />
       </Page>
     </ApplicationFrame>
   );
@@ -253,9 +265,7 @@ export const WithSideBarOpenByDefault = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton onClick={toggleSideBar}>
-            Toggle SideBar
-            </PrimaryButton>
+          <PrimaryButton onClick={toggleSideBar}>Toggle SideBar</PrimaryButton>
           <Box height="3000px" width="100px" bg="red"></Box>
         </Box>
         <ExampleSideBar isOpen={isOpen} onClose={closeSideBar} />
