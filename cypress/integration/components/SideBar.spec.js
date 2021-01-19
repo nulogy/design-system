@@ -19,7 +19,7 @@ describe("SideBar", () => {
       sideBar().should("not.be.visible");
     });
   });
-  describe("accessibility", () => {
+  describe("Accessibility", () => {
     beforeEach(() => {
       cy.renderFromStorybook("layout--with-side-bar");
     });
@@ -28,8 +28,15 @@ describe("SideBar", () => {
       cy.focused().type("{enter}");
       sideBar().should("not.be.visible");
     });
+    it("focuses the trigger when closed", () => {
+      trigger().click();
+      cy.focused().type("{enter}");
+      sideBar().should("not.be.visible");
+      cy.focused().type("{enter}");
+      sideBar().should("be.visible");
+    });
   });
-  describe("open by default", () => {
+  describe("Open by default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("layout--with-side-bar-open-by-default");
     });
