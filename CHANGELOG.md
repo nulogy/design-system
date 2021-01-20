@@ -1,3 +1,10 @@
+# [5.1.0](https://github.com/nulogy/design-system/compare/v5.0.6...v5.1.0) (2021-01-20)
+
+
+### Features
+
+* adds ApplicationFrame, Page, Sidebar components ([cc96354](https://github.com/nulogy/design-system/commit/cc96354e59a2dccf97ec5baacfeb77a6b988b21a))
+
 ## [5.0.6](https://github.com/nulogy/design-system/compare/v5.0.5...v5.0.6) (2021-01-20)
 
 
