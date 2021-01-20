@@ -1,6 +1,7 @@
 import { create } from "@storybook/theming";
 import "cypress-storybook/react";
 import { theme } from "../src";
+import withNDSTheme from "./nds-theme";
 
 const newViewports = {
   extraSmall: {
