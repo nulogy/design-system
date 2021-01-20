@@ -15,7 +15,7 @@ This is a guide for Nulogy employees who wish to contribute to the Design System
 
 ## Writing components
 
-- `yarn start` will run a storybook at [localhost:8080](localhost:8080) for local development.
+- `yarn start` will run a storybook at [localhost:9999](localhost:9999) for local development.
 - `yarn build` will rebuild the package exports for production.
 
 To generate the files needed for a new component, you can use [Plop](https://plopjs.com/)

@@ -16,7 +16,7 @@
     "build:watch": "yarn build --watch",
     "build-storybook": "build-storybook",
     "e2e:start": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
-    "e2e:test": "yarn build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 8080 ./storybook-static\" \"yarn wait-on http://localhost:8080 && yarn cypress run\"",
+    "e2e:test": "yarn build-storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 9999 ./storybook-static\" \"yarn wait-on http://localhost:9999 && yarn cypress run\"",
     "test": "yarn lint && yarn jest && yarn e2e:test",
     "new": "plop"
   },
