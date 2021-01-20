@@ -1,3 +1,10 @@
+## [5.0.6](https://github.com/nulogy/design-system/compare/v5.0.5...v5.0.6) (2021-01-20)
+
+
+### Bug Fixes
+
+* remove react dependency from devDependencies to avoid multiple version errors in consuming apps ([115da69](https://github.com/nulogy/design-system/commit/115da697193d3c19dbf4c3eefb7d644fafa3ca99))
+
 ## [5.0.5](https://github.com/nulogy/design-system/compare/v5.0.4...v5.0.5) (2021-01-18)
 
 
