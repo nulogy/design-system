@@ -225,10 +225,16 @@ export const WithSideBar = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton onClick={toggleSideBar} ref={triggerRef} id="openSideBarTrigger">
+          <PrimaryButton
+            onClick={toggleSideBar}
+            ref={triggerRef}
+            id="openSideBarTrigger"
+          >
             Toggle SideBar
           </PrimaryButton>
-          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">Space for more content</Box>
+          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
+            Space for more content
+          </Box>
         </Box>
         <ExampleSideBar
           isOpen={isOpen}
@@ -267,10 +273,16 @@ export const WithSideBarOpenByDefault = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton onClick={toggleSideBar} ref={triggerRef} id="openSideBarTrigger">
+          <PrimaryButton
+            onClick={toggleSideBar}
+            ref={triggerRef}
+            id="openSideBarTrigger"
+          >
             Toggle SideBar
           </PrimaryButton>
-          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">Space for more content</Box>
+          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
+            Space for more content
+          </Box>
         </Box>
         <ExampleSideBar
           isOpen={isOpen}
