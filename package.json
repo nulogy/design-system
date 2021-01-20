@@ -1,6 +1,6 @@
 {
   "name": "@nulogy/components",
-  "version": "5.0.4-10-test",
+  "version": "0.0.0-development",
   "description": "Component library for the Nulogy Design System - http://nulogy.design",
   "private": false,
   "publishConfig": {
