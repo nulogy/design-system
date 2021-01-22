@@ -9,7 +9,7 @@ import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { useTranslation } from "react-i18next";
 import { visibility } from '../StyledProps/visibility';
 
-type SideBarProps = AnimatedBoxProps & {
+type SidebarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
   onClose?: (arg: any) => any;
   title?: string;
@@ -29,7 +29,7 @@ const focusFirstElement = () => {
   }
 }
 
-const SideBar = ({
+const Sidebar = ({
   p = "x3",
   width = "400px",
   children,
@@ -42,7 +42,7 @@ const SideBar = ({
   triggerRef,
   duration = 0.25,
   ...props
-}: SideBarProps) => {
+}: SidebarProps) => {
   const closeButton = useRef(null);
   const [shouldUpdateFocus, setShouldUpdateFocus] = useState(false);
   const { t } = useTranslation();
@@ -61,7 +61,7 @@ const SideBar = ({
         focusFirstElement();
       }
     }
-  }, [isOpen, setShouldUpdateFocus]); 
+  }, [isOpen, setShouldUpdateFocus]);
 
   const variants = {
     open: {
@@ -115,7 +115,7 @@ const SideBar = ({
       top={NAVBAR_HEIGHT}
       right={offset}
       width={typeof width === 'string' ? { default: "100%", small: width} : width}
-      zIndex={"sideBar" as any}
+      zIndex={"Sidebar" as any}
       {...props}
     >
       <Flex
@@ -153,5 +153,5 @@ const SideBar = ({
   );
 };
 
-export default SideBar;
+export default Sidebar;
 

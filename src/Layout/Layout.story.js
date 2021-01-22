@@ -9,7 +9,7 @@ import {
   Heading2,
   Text,
   Page,
-  SideBar,
+  Sidebar,
   Select,
   PrimaryButton,
   Box,
@@ -183,8 +183,8 @@ export const NoBreadcrumbs = () => (
   </ApplicationFrame>
 );
 
-const ExampleSideBar = ({ isOpen, onClose, ...props }) => (
-  <SideBar
+const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
+  <Sidebar
     isOpen={isOpen}
     title="Filters"
     onClose={onClose}
@@ -203,17 +203,17 @@ const ExampleSideBar = ({ isOpen, onClose, ...props }) => (
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Last Delivery:" />
-  </SideBar>
+  </Sidebar>
 );
 
-export const WithSideBar = () => {
+export const WithSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef(null);
 
-  const toggleSideBar = () => {
+  const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-  const closeSideBar = () => {
+  const closeSidebar = () => {
     setIsOpen(false);
   };
 
@@ -234,35 +234,35 @@ export const WithSideBar = () => {
       >
         <Box minWidth="300px">
           <PrimaryButton
-            onClick={toggleSideBar}
+            onClick={toggleSidebar}
             ref={triggerRef}
-            id="openSideBarTrigger"
+            id="openSidebarTrigger"
           >
-            Toggle SideBar
+            Toggle Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
           </Box>
         </Box>
-        <ExampleSideBar
+        <ExampleSidebar
           isOpen={isOpen}
-          onClose={closeSideBar}
+          onClose={closeSidebar}
           triggerRef={triggerRef}
-          aria-controls="openSideBarTrigger"
+          aria-controls="openSidebarTrigger"
         />
       </Page>
     </ApplicationFrame>
   );
 };
 
-export const WithSideBarOpenByDefault = () => {
+export const WithSidebarOpenByDefault = () => {
   const [isOpen, setIsOpen] = useState(true);
   const triggerRef = useRef(null);
 
-  const toggleSideBar = () => {
+  const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-  const closeSideBar = () => {
+  const closeSidebar = () => {
     setIsOpen(false);
   };
 
@@ -283,35 +283,35 @@ export const WithSideBarOpenByDefault = () => {
       >
         <Box minWidth="300px">
           <PrimaryButton
-            onClick={toggleSideBar}
+            onClick={toggleSidebar}
             ref={triggerRef}
-            id="openSideBarTrigger"
+            id="openSidebarTrigger"
           >
-            Toggle SideBar
+            Toggle Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
           </Box>
         </Box>
-        <ExampleSideBar
+        <ExampleSidebar
           isOpen={isOpen}
-          onClose={closeSideBar}
+          onClose={closeSidebar}
           triggerRef={triggerRef}
-          aria-controls="openSideBarTrigger"
+          aria-controls="openSidebarTrigger"
         />
       </Page>
     </ApplicationFrame>
   );
 };
 
-export const WithSideBarCustomOffset = () => {
+export const WithSidebarCustomOffset = () => {
   const [isOpen, setIsOpen] = useState(true);
   const triggerRef = useRef(null);
 
-  const toggleSideBar = () => {
+  const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-  const closeSideBar = () => {
+  const closeSidebar = () => {
     setIsOpen(false);
   };
 
@@ -332,21 +332,21 @@ export const WithSideBarCustomOffset = () => {
       >
         <Box minWidth="300px">
           <PrimaryButton
-            onClick={toggleSideBar}
+            onClick={toggleSidebar}
             ref={triggerRef}
-            id="openSideBarTrigger"
+            id="openSidebarTrigger"
           >
-            Toggle SideBar
+            Toggle Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
           </Box>
         </Box>
-        <ExampleSideBar
+        <ExampleSidebar
           isOpen={isOpen}
-          onClose={closeSideBar}
+          onClose={closeSidebar}
           triggerRef={triggerRef}
-          aria-controls="openSideBarTrigger"
+          aria-controls="openSidebarTrigger"
           offset={text("offset", "400px")}
           duration={text("duration", "0.5")}
         />

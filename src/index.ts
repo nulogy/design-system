@@ -79,5 +79,5 @@ export { Toast } from "./Toast";
 
 export { BrandedNavBar } from "./BrandedNavBar";
 export { AsyncSelect } from "./AsyncSelect";
-export { ApplicationFrame, Page, SideBar } from "./Layout";
+export { ApplicationFrame, Page, Sidebar } from "./Layout";
 export { useWindowDimensions } from "./utils";

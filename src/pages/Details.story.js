@@ -504,7 +504,7 @@ export const WithSidebar = () => (
 );
 
 WithSidebar.story = {
-  name: "With sidebar",
+  name: "With Sidebar",
 };
 
 export const WithBreadcrumbsAndActions = () => (
@@ -666,10 +666,10 @@ export const WithBreadcrumbsAndActions = () => (
           borderRadius="medium"
         >
           <Flex justifyContent="space-between" alignItems="flex-start" mb="x4">
-            <SectionTitle mt="half">I am sidebar</SectionTitle>
+            <SectionTitle mt="half">I am Sidebar</SectionTitle>
             <IconicButton icon="close" />
           </Flex>
-          <Text>I am sidebar content.</Text>
+          <Text>I am Sidebar content.</Text>
         </Box>
       </Flex>
     </Flex>
