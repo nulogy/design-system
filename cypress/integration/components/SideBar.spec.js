@@ -53,4 +53,22 @@ describe("SideBar", () => {
       sideBar().should("be.visible");
     });
   });
+  describe("Custom offset", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("layout--with-side-bar-custom-offset");
+    });
+    it("is shown", () => {
+      sideBar().should("be.visible");
+      sideBar().should("have.css", "right", "400px");
+    });
+    it("slides out when triggered", () => {
+      trigger().click();
+      sideBar().should("not.be.visible");
+      sideBar().should("have.css", "right", "0px");
+    });
+    it("updates offset", () => {
+    cy.changeKnob("offset", "35px");
+      sideBar().should("have.css", "right", "35px");
+    });
+  });
 });
