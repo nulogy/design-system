@@ -35,16 +35,14 @@ const withNDSProvider = (story) => {
   }, [setLoading, channel, loading]);
 
   return (
-    <div style={{ padding: "24px" }}>
-      {!loading && (
-        <NDSProvider
-          locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}
-          theme={theme}
-        >
-          {story}
-        </NDSProvider>
-      )}
-    </div>
+    !loading && (
+      <NDSProvider
+        locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}
+        theme={theme}
+      >
+        {story}
+      </NDSProvider>
+    )
   );
 };
 

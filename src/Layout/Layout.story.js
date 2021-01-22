@@ -96,11 +96,15 @@ const secondaryMenu = [
 
 export default {
   title: "Components/Layout",
+  parameters: {
+    layout: "fullscreen",
+  },
 };
 
 export const _ApplicationFrame = () => (
   <ApplicationFrame
     navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+    height="100vh"
   ></ApplicationFrame>
 );
 
@@ -126,6 +130,7 @@ export const _Page = () => (
 export const _Layout = () => (
   <ApplicationFrame
     navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+    height="100vh"
   >
     <Page
       breadcrumbs={
@@ -167,6 +172,7 @@ export const NoPageTitle = () => (
 export const NoBreadcrumbs = () => (
   <ApplicationFrame
     navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+    height="100vh"
   >
     <Page title="Materials Overview">
       <>
@@ -215,6 +221,7 @@ export const WithSideBar = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
+      height="100vh"
     >
       <Page
         breadcrumbs={
@@ -263,6 +270,7 @@ export const WithSideBarOpenByDefault = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
+      height="100vh"
     >
       <Page
         breadcrumbs={
@@ -311,6 +319,7 @@ export const WithSideBarCustomOffset = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
+      height="100vh"
     >
       <Page
         breadcrumbs={
@@ -345,4 +354,3 @@ export const WithSideBarCustomOffset = () => {
     </ApplicationFrame>
   );
 };
-
