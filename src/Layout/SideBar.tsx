@@ -7,6 +7,7 @@ import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { useTranslation } from "react-i18next";
+import { visibility } from '../StyledProps/visibility';
 
 type SideBarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
@@ -17,6 +18,7 @@ type SideBarProps = AnimatedBoxProps & {
   closeButtonTestId?: string;
   offset?: string;
   triggerRef?: RefObject<any>;
+  duration?: number;
 };
 
 const focusFirstElement = () => {
@@ -36,8 +38,9 @@ const SideBar = ({
   isOpen,
   footer,
   closeButtonTestId,
-  offset = "0",
+  offset = "0px",
   triggerRef,
+  duration = 0.25,
   ...props
 }: SideBarProps) => {
   const closeButton = useRef(null);
@@ -63,17 +66,19 @@ const SideBar = ({
   const variants = {
     open: {
       x: 0,
-      visible: "visible",
+      right: offset,
+      visiblility: "visible",
       transition: {
-        duration: 0.25,
+        duration: duration,
         when: "beforeChildren",
       },
     },
     closed: {
       x: "100%",
-      visible: "hidden",
+      right: "0px",
+      visiblility: "hidden",
       transition: {
-        duration: 0.25,
+        duration: duration,
       },
     },
   };
@@ -105,7 +110,7 @@ const SideBar = ({
       borderLeftColor="lightGrey"
       animate={isOpen ? "open" : "closed"}
       variants={variants}
-      initial="closed"
+      initial={isOpen ? "open" : "closed"}
       position="fixed"
       top={NAVBAR_HEIGHT}
       right={offset}

@@ -1,3 +1,4 @@
+import { text } from "@storybook/addon-knobs";
 import React, { useState, useRef } from "react";
 import {
   ApplicationFrame,
@@ -294,3 +295,54 @@ export const WithSideBarOpenByDefault = () => {
     </ApplicationFrame>
   );
 };
+
+export const WithSideBarCustomOffset = () => {
+  const [isOpen, setIsOpen] = useState(true);
+  const triggerRef = useRef(null);
+
+  const toggleSideBar = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeSideBar = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <ApplicationFrame
+      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+      overflowX="hidden"
+    >
+      <Page
+        breadcrumbs={
+          <Breadcrumbs>
+            <Link href="/">Home</Link>
+            <Link href="/">Materials</Link>
+          </Breadcrumbs>
+        }
+        title="Materials Overview"
+      >
+        <Box minWidth="300px">
+          <PrimaryButton
+            onClick={toggleSideBar}
+            ref={triggerRef}
+            id="openSideBarTrigger"
+          >
+            Toggle SideBar
+          </PrimaryButton>
+          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
+            Space for more content
+          </Box>
+        </Box>
+        <ExampleSideBar
+          isOpen={isOpen}
+          onClose={closeSideBar}
+          triggerRef={triggerRef}
+          aria-controls="openSideBarTrigger"
+          offset={text("offset", "400px")}
+          duration={text("duration", "0.5")}
+        />
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
