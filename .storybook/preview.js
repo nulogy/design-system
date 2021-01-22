@@ -42,6 +42,7 @@ const newViewports = {
 };
 export const parameters = {
   viewport: { viewports: newViewports },
+  layout: "padded",
   options: {
     theme: create({
       gridCellSize: 8,
