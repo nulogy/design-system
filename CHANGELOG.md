@@ -3,7 +3,7 @@
 
 ### Features
 
-* **SideBar:** add duration prop to change animation duration and add animation when offset  changes ([cef4eb7](https://github.com/nulogy/design-system/commit/cef4eb79ba725fc9ca17e2508e5532a35ecce90f))
+* **Sidebar:** add duration prop to change animation duration and add animation when offset  changes ([cef4eb7](https://github.com/nulogy/design-system/commit/cef4eb79ba725fc9ca17e2508e5532a35ecce90f))
 
 # [5.1.0](https://github.com/nulogy/design-system/compare/v5.0.6...v5.1.0) (2021-01-20)
 

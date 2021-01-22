@@ -107,7 +107,7 @@ type ZIndices = {
   tableHeader: number;
   modalHeaderAndFooter: number;
   openControl: number;
-  sideBar: number;
+  sidebar: number;
   navBar: number;
 };
 
