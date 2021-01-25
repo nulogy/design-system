@@ -26,7 +26,7 @@ module.exports = function (plop) {
       },
       {
         type: "modify",
-        path: "./src/index.js",
+        path: "./src/index.ts",
         pattern: /$/,
         templateFile: "./src/template/index-js-injection.txt",
       },
