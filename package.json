@@ -136,7 +136,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
-    "@nulogy/tokens": "^4.14.0",
+    "@nulogy/tokens": "^4.14.1",
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
     "core-js": "3",

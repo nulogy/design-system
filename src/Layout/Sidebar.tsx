@@ -120,7 +120,7 @@ const Sidebar = ({
       top={NAVBAR_HEIGHT}
       right={offset}
       width={typeof width === 'string' ? { default: "100%", small: width } : width}
-      zIndex={"Sidebar" as any}
+      zIndex={"sidebar" as any}
       ref={sideBarRef as any}
       {...props}
     >
