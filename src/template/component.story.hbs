@@ -1,6 +1,11 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { {{name}} } from ".";
 
-storiesOf("{{name}}", module).add("{{name}}", () => <{{name}}>Example</{{name}}>);
+export default {
+title: "Components/{{name}}",
+component: {{name}}
+};
 
+export const _{{name}} = () => (
+<{{name}}>😊</{{name}}>
+);

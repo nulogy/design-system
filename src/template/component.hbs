@@ -1,16 +1,12 @@
 import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import theme from "../theme";
+import {Box} from "../index";
 
-const {{name}} = styled.div({
+type {{name}}Props = {
+  children?: React.ReactNode
+}
 
-})
-
-{{name}}.propTypes = {
-};
-
-{{name}}.defaultProps = {
-};
+const {{name}} = ({children}) => (
+<Box bg="whiteGrey" p="x4">{children}</Box>
+)
 
 export default {{name}};
