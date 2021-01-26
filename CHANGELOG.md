@@ -1,3 +1,10 @@
+## [5.2.3](https://github.com/nulogy/design-system/compare/v5.2.2...v5.2.3) (2021-01-26)
+
+
+### Bug Fixes
+
+* upgrade tokens ([#843](https://github.com/nulogy/design-system/issues/843)) ([c366142](https://github.com/nulogy/design-system/commit/c3661423dfa83f4113d6601ab8ebd85a01ea0af3))
+
 ## [5.2.2](https://github.com/nulogy/design-system/compare/v5.2.1...v5.2.2) (2021-01-26)
 
 
