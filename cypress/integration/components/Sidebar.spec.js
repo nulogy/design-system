@@ -4,7 +4,7 @@ const trigger = () => cy.contains("Toggle Sidebar");
 describe("Sidebar", () => {
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-side-bar");
+      cy.renderFromStorybook("layout--with-sidebar");
     });
     it("is hidden", () => {
       Sidebar().should("not.be.visible");
@@ -21,7 +21,7 @@ describe("Sidebar", () => {
   });
   describe("Accessibility", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-side-bar");
+      cy.renderFromStorybook("layout--with-sidebar");
     });
     it("focuses the close button when opened", () => {
       trigger().click();
@@ -38,7 +38,7 @@ describe("Sidebar", () => {
   });
   describe("Open by default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-side-bar-open-by-default");
+      cy.renderFromStorybook("layout--with-sidebar-open-by-default");
     });
     it("is shown", () => {
       Sidebar().should("be.visible");
@@ -55,7 +55,7 @@ describe("Sidebar", () => {
   });
   describe("Custom offset", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-side-bar-custom-offset");
+      cy.renderFromStorybook("layout--with-sidebar-custom-offset");
     });
     it("is shown", () => {
       Sidebar().should("be.visible");
