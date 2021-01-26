@@ -1,3 +1,10 @@
+## [5.2.4](https://github.com/nulogy/design-system/compare/v5.2.3...v5.2.4) (2021-01-26)
+
+
+### Bug Fixes
+
+* **Sidebar:** fix ref check for components within sidebar ([#844](https://github.com/nulogy/design-system/issues/844)) ([5e65341](https://github.com/nulogy/design-system/commit/5e65341aff9d6a76c1f703d193427516687890f6))
+
 ## [5.2.3](https://github.com/nulogy/design-system/compare/v5.2.2...v5.2.3) (2021-01-26)
 
 
