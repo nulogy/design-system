@@ -1,3 +1,10 @@
+## [5.2.2](https://github.com/nulogy/design-system/compare/v5.2.1...v5.2.2) (2021-01-26)
+
+
+### Bug Fixes
+
+* **Sidebar:** add option to close on outside click ([#842](https://github.com/nulogy/design-system/issues/842)) ([3aa6200](https://github.com/nulogy/design-system/commit/3aa6200a9ebd42de21537e194fea9aef81a3b5d9))
+
 ## [5.2.1](https://github.com/nulogy/design-system/compare/v5.2.0...v5.2.1) (2021-01-26)
 
 
