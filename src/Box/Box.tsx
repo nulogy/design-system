@@ -30,6 +30,7 @@ import { transition, TransitionProps } from "../StyledProps/transition";
 import { transform, TransformProps } from "../StyledProps/transform";
 import { CursorProps, cursor } from "../StyledProps/cursor";
 import { VisibilityProps, visibility } from "../StyledProps/visibility";
+import { RefObject } from "react";
 
 type SharedBoxProps = ColorProps &
   SpaceProps &
@@ -75,6 +76,7 @@ const Box: React.FC<BoxProps> = styled.div(
 export type AnimatedBoxProps = SharedBoxProps &
   MotionProps & {
     role?: string;
+    ref?: any;
   };
 
 export const AnimatedBox: React.FC<AnimatedBoxProps> = styled(motion.div)(

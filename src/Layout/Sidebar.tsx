@@ -7,7 +7,7 @@ import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { useTranslation } from "react-i18next";
-import { visibility } from '../StyledProps/visibility';
+import { DetectOutsideClick } from "../utils";
 
 type SidebarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
@@ -16,9 +16,11 @@ type SidebarProps = AnimatedBoxProps & {
   isOpen?: boolean;
   footer?: React.ReactNode;
   closeButtonTestId?: string;
+  closeButtonAriaLabel?: string;
   offset?: string;
   triggerRef?: RefObject<any>;
   duration?: number;
+  closeOnOutsideClick?: boolean;
 };
 
 const focusFirstElement = () => {
@@ -37,15 +39,18 @@ const Sidebar = ({
   title,
   isOpen,
   footer,
-  closeButtonTestId,
+  closeButtonTestId = "sidebar-close-button",
+  closeButtonAriaLabel,
   offset = "0px",
   triggerRef,
   duration = 0.25,
+  closeOnOutsideClick,
   ...props
 }: SidebarProps) => {
   const closeButton = useRef(null);
   const [shouldUpdateFocus, setShouldUpdateFocus] = useState(false);
   const { t } = useTranslation();
+  const sideBarRef = useRef(null);
 
   useEffect(() => {
     if (closeButton.current && isOpen) {
@@ -114,8 +119,9 @@ const Sidebar = ({
       position="fixed"
       top={NAVBAR_HEIGHT}
       right={offset}
-      width={typeof width === 'string' ? { default: "100%", small: width} : width}
+      width={typeof width === 'string' ? { default: "100%", small: width } : width}
       zIndex={"Sidebar" as any}
+      ref={sideBarRef as any}
       {...props}
     >
       <Flex
@@ -128,7 +134,7 @@ const Sidebar = ({
       >
       <Flex justifyContent="space-between" alignItems="flex-start">
           <Box>{title && <Heading3>{title}</Heading3>}</Box>
-          <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={t("close")}/></Box>
+          <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={closeButtonAriaLabel || t("close")}/></Box>
         </Flex>
         <AnimatedBox variants={childVariants} animate={isOpen ? "open" : "closed"} flexGrow={1}>
           {children}
@@ -149,6 +155,7 @@ const Sidebar = ({
           {footer}
         </Box>
       )}
+      {closeOnOutsideClick && isOpen && <DetectOutsideClick onClick={onClose} clickRef={sideBarRef} />}
     </AnimatedBox>
   );
 };

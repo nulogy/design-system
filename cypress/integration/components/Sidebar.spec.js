@@ -71,4 +71,16 @@ describe("Sidebar", () => {
       Sidebar().should("have.css", "right", "35px");
     });
   });
+  describe("Close on Outside Click", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("layout--with-close-sidebar-on-outside-click");
+    });
+    it("slides out when triggered", () => {
+      trigger().click();
+      Sidebar().should("be.visible");
+      cy.get("body").click();
+      Sidebar().should("not.be.visible");
+      Sidebar().should("have.css", "right", "0px");
+    });
+  });
 });
