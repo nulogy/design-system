@@ -1,3 +1,10 @@
+## [5.2.1](https://github.com/nulogy/design-system/compare/v5.2.0...v5.2.1) (2021-01-26)
+
+
+### Bug Fixes
+
+* Rename SideBar to Sidebar ([6a6c438](https://github.com/nulogy/design-system/commit/6a6c43861a7815d80894e68683aed2894d5cee3e))
+
 # [5.2.0](https://github.com/nulogy/design-system/compare/v5.1.0...v5.2.0) (2021-01-22)
 
 
