@@ -27,7 +27,10 @@ class DetectOutsideClick extends React.Component {
     }
 
     function clickedOutsideRef(ref) {
-      return ref && !ref.contains(e.target) && ref !== e.target;
+      if (ref.length > 0) {
+        return ref && !ref.contains(e.target) && ref !== e.target;
+      }
+      return ref && ref !== e.target;
     }
   }
 
