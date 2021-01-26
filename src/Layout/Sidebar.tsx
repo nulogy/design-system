@@ -119,9 +119,9 @@ const Sidebar = ({
       position="fixed"
       top={NAVBAR_HEIGHT}
       right={offset}
-      width={typeof width === 'string' ? { default: "100%", small: width} : width}
+      width={typeof width === 'string' ? { default: "100%", small: width } : width}
       zIndex={"Sidebar" as any}
-      ref={sideBarRef}
+      ref={sideBarRef as any}
       {...props}
     >
       <Flex
