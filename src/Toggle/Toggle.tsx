@@ -1,15 +1,15 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
-import styled, { ThemeContext } from "styled-components";
+import { ThemeContext } from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
-import ToggleButton from "./ToggleButton";
-import { DefaultNDSThemeType } from '../theme.type';
+import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
+import ToggleButton from "./ToggleButton";
 
 const labelTextStyles = (theme: DefaultNDSThemeType) => ({
   fontSize: theme.fontSizes.small,
@@ -92,7 +92,12 @@ const BaseToggle = ({
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
   return (
-    <Field className={className} alignItems="flex-start" py="half" {...spaceProps}>
+    <Field
+      className={className}
+      alignItems="flex-start"
+      py="half"
+      {...spaceProps}
+    >
       <MaybeToggleTitle
         id={labelText && `${labelText}-label`}
         labelText={labelText}
@@ -160,10 +165,8 @@ const StatefulToggle = ({
   const [toggled, setToggled] = useState(defaultToggled);
 
   const handleClick = (e) => {
-    if (!disabled) {
-      setToggled(!toggled);
-      if (onClick) onClick(e);
-    }
+    if (!disabled) setToggled(!toggled);
+    if (onClick) onClick(e);
   };
 
   return (

@@ -11,4 +11,24 @@ describe("Tooltip", () => {
       getToggleInput().should("have.value", "on");
     });
   });
+  describe("Disabled", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("toggle--toggle-set-to-disabled");
+    });
+    it("does not change the value on click", () => {
+      getToggleInput().should("have.value", "off");
+      getToggle().click();
+      getToggleInput().should("have.value", "off");
+    });
+  });
+  describe("Controlled", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("toggle--controlled-toggle");
+    });
+    it("does not change the value on click", () => {
+      getToggleInput().should("have.value", "off");
+      getToggle().click();
+      getToggleInput().should("have.value", "off");
+    });
+  });
 });
