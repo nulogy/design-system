@@ -154,13 +154,16 @@ type StatefulToggleProps = BaseToggleProps & {
 const StatefulToggle = ({
   defaultToggled,
   onClick,
+  disabled,
   ...props
 }: StatefulToggleProps) => {
   const [toggled, setToggled] = useState(defaultToggled);
 
   const handleClick = (e) => {
-    setToggled(!toggled);
-    if (onClick) onClick(e);
+    if (!disabled) {
+      setToggled(!toggled);
+      if (onClick) onClick(e);
+    }
   };
 
   return (
@@ -168,6 +171,7 @@ const StatefulToggle = ({
       toggled={toggled}
       onClick={handleClick}
       value={toggled ? "on" : "off"}
+      disabled={disabled}
       {...props}
     />
   );
