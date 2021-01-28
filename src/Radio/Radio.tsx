@@ -53,7 +53,7 @@ type VisualRadioProps = {
   theme?: DefaultNDSThemeType;
 };
 
-const VisualRadio: React.SFC<VisualRadioProps> = styled.div(
+const VisualRadio: React.FC<VisualRadioProps> = styled.div(
   ({ disabled, theme }: VisualRadioProps): CSSObject => ({
     minWidth: theme.space.x2,
     height: theme.space.x2,
@@ -77,7 +77,12 @@ const VisualRadio: React.SFC<VisualRadioProps> = styled.div(
     },
   })
 );
-const RadioInput = styled.input((props) => ({
+
+type RadioInputProps = React.ComponentPropsWithRef<"input"> & {
+  error?: boolean;
+};
+
+const RadioInput: React.FC<RadioInputProps> = styled.input((props) => ({
   position: "absolute",
   opacity: "0",
   height: "1px",
@@ -109,7 +114,7 @@ type BaseRadioProps = VisualRadioProps &
     value?: any;
   };
 
-const BaseRadio: React.SFC<BaseRadioProps> = forwardRef(({
+const BaseRadio: React.FC<BaseRadioProps> = forwardRef(({
   className,
   labelText,
   disabled,
