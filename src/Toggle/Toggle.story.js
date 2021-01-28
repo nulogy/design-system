@@ -44,6 +44,7 @@ export const ToggleSetToDisabled = () => (
       onText="on"
       offText="off"
       onChange={action("on change")}
+      data-testid="toggle-example"
     />
     <Toggle
       id="toggle-2"
@@ -109,6 +110,7 @@ export const ControlledToggle = () => (
     onText="on"
     offText="off"
     onChange={action("on change")}
+    data-testid="toggle-example"
   />
 );
 
