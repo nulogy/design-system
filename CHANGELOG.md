@@ -1,3 +1,10 @@
+# [5.3.0](https://github.com/nulogy/design-system/compare/v5.2.5...v5.3.0) (2021-01-28)
+
+
+### Features
+
+* **Sidebar:** add overlay ([#847](https://github.com/nulogy/design-system/issues/847)) ([96fc811](https://github.com/nulogy/design-system/commit/96fc811dd8cfa7bdd88d296102958d1ffea383f1))
+
 ## [5.2.5](https://github.com/nulogy/design-system/compare/v5.2.4...v5.2.5) (2021-01-28)
 
 
