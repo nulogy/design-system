@@ -64,11 +64,12 @@ const ToggleInput = styled.input(
 );
 type ToggleButtonProps = ToggleInputProps & {
   defaultToggled?: boolean;
+  toggled?: boolean;
   disabled?: boolean;
 };
 const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef(
   (props, ref) => {
-    const { disabled, defaultToggled } = props;
+    const { disabled, defaultToggled, toggled } = props;
     const inputRef = useRef(null);
     useImperativeHandle(ref, () => inputRef.current);
     const handleClick = () => {
@@ -83,6 +84,7 @@ const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef(
           ref={inputRef}
           type="checkbox"
           defaultChecked={defaultToggled}
+          value={toggled ? "on" : "off"}
           {...props}
         />
         <Slider disabled={disabled} />

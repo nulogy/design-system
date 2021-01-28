@@ -55,7 +55,6 @@ type BaseToggleProps = {
   onText?: string;
   offText?: string;
   id?: string;
-  value?: string;
   className?: string;
   required?: boolean;
   helpText?: any;
@@ -120,6 +119,7 @@ const BaseToggle = ({
             aria-invalid={error}
             aria-labelledby={labelText && `${labelText}-label`}
             onClick={handleClick}
+            toggled={toggled}
             {...restProps}
             ref={props.innerRef}
           />
@@ -141,7 +141,6 @@ BaseToggle.defaultProps = {
   onText: undefined,
   offText: undefined,
   id: undefined,
-  value: "on",
   className: undefined,
   required: false,
   helpText: undefined,
@@ -173,7 +172,6 @@ const StatefulToggle = ({
     <BaseToggle
       toggled={toggled}
       onClick={handleClick}
-      value={toggled ? "on" : "off"}
       disabled={disabled}
       {...props}
     />
