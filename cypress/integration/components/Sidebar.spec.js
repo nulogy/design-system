@@ -1,5 +1,7 @@
-const Sidebar = () => cy.get('[role="complementary"]');
-const trigger = () => cy.contains("Toggle Sidebar");
+const Sidebar = () => cy.get('[role="dialog"]');
+const trigger = () => cy.contains("Open Sidebar");
+const overlay = () => cy.get('[data-testid="sidebar-overlay"]');
+const closeButton = () => cy.get('[data-testid="sidebar-close-button"]');
 
 describe("Sidebar", () => {
   describe("Default", () => {
@@ -15,7 +17,8 @@ describe("Sidebar", () => {
     });
     it("slides out", () => {
       trigger().click();
-      trigger().click();
+      overlay().should("be.visible");
+      overlay().click({force: true});
       Sidebar().should("not.be.visible");
     });
   });
@@ -43,12 +46,16 @@ describe("Sidebar", () => {
     it("is shown", () => {
       Sidebar().should("be.visible");
     });
-    it("slides out when triggered", () => {
-      trigger().click();
+    it("slides out when overlay clicked", () => {
+      overlay().click({force: true});
+      Sidebar().should("not.be.visible");
+    });
+    it("slides out when close button clicked", () => {
+      closeButton().click({force: true});
       Sidebar().should("not.be.visible");
     });
     it("slides in", () => {
-      trigger().click();
+      overlay().click({force: true});
       trigger().click();
       Sidebar().should("be.visible");
     });
@@ -61,8 +68,13 @@ describe("Sidebar", () => {
       Sidebar().should("be.visible");
       Sidebar().should("have.css", "right", "400px");
     });
-    it("slides out when triggered", () => {
-      trigger().click();
+    it("slides out when close button clicked", () => {
+      closeButton().click();
+      Sidebar().should("not.be.visible");
+      Sidebar().should("have.css", "right", "0px");
+    });
+    it("slides out when overlay clicked", () => {
+      overlay().click({force: true});
       Sidebar().should("not.be.visible");
       Sidebar().should("have.css", "right", "0px");
     });
@@ -71,14 +83,32 @@ describe("Sidebar", () => {
       Sidebar().should("have.css", "right", "35px");
     });
   });
-  describe("Close on Outside Click", () => {
+  describe("Without overlay", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-close-sidebar-on-outside-click");
+      cy.renderFromStorybook("layout--with-sidebar-without-overlay");
     });
-    it("slides out when triggered", () => {
+    it("slides out when clicking on the body", () => {
       trigger().click();
       Sidebar().should("be.visible");
       cy.get("body").click();
+      Sidebar().should("not.be.visible");
+      Sidebar().should("have.css", "right", "0px");
+    });
+  });
+  describe("Don't close on outide click", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("layout--dont-close-sidebar-on-outside-click");
+    });
+    it("does not close when clicking on the body", () => {
+      trigger().click();
+      Sidebar().should("be.visible");
+      cy.get("body").click();
+      Sidebar().should("be.visible");
+    });
+    it("closes when the close button is pressed", () => {
+      trigger().click();
+      Sidebar().should("be.visible");
+      closeButton().click();
       Sidebar().should("not.be.visible");
       Sidebar().should("have.css", "right", "0px");
     });

@@ -98,6 +98,7 @@ export default {
   title: "Components/Layout",
   parameters: {
     layout: "fullscreen",
+    chromatic: { delay: 300 }, // time for sidebar animation
   },
 };
 
@@ -238,7 +239,7 @@ export const WithSidebar = () => {
             ref={triggerRef}
             id="openSidebarTrigger"
           >
-            Toggle Sidebar
+            Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
@@ -249,6 +250,56 @@ export const WithSidebar = () => {
           onClose={closeSidebar}
           triggerRef={triggerRef}
           aria-controls="openSidebarTrigger"
+        />
+      </Page>
+    </ApplicationFrame>
+  );
+};
+
+export const WithSidebarWithoutOverlay = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef(null);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeSidebar = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <ApplicationFrame
+      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+      overflowX="hidden"
+      height="100vh"
+    >
+      <Page
+        breadcrumbs={
+          <Breadcrumbs>
+            <Link href="/">Home</Link>
+            <Link href="/">Materials</Link>
+          </Breadcrumbs>
+        }
+        title="Materials Overview"
+      >
+        <Box minWidth="300px">
+          <PrimaryButton
+            onClick={toggleSidebar}
+            ref={triggerRef}
+            id="openSidebarTrigger"
+          >
+            Open Sidebar
+          </PrimaryButton>
+          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
+            Space for more content
+          </Box>
+        </Box>
+        <ExampleSidebar
+          isOpen={isOpen}
+          onClose={closeSidebar}
+          triggerRef={triggerRef}
+          aria-controls="openSidebarTrigger"
+          overlay={false}
         />
       </Page>
     </ApplicationFrame>
@@ -287,7 +338,7 @@ export const WithSidebarOpenByDefault = () => {
             ref={triggerRef}
             id="openSidebarTrigger"
           >
-            Toggle Sidebar
+            Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
@@ -336,7 +387,7 @@ export const WithSidebarCustomOffset = () => {
             ref={triggerRef}
             id="openSidebarTrigger"
           >
-            Toggle Sidebar
+            Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
@@ -355,7 +406,7 @@ export const WithSidebarCustomOffset = () => {
   );
 };
 
-export const WithCloseSidebarOnOutsideClick = () => {
+export const DontCloseSidebarOnOutsideClick = () => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef(null);
 
@@ -387,7 +438,7 @@ export const WithCloseSidebarOnOutsideClick = () => {
             ref={triggerRef}
             id="openSidebarTrigger"
           >
-            Toggle Sidebar
+            Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
@@ -398,7 +449,7 @@ export const WithCloseSidebarOnOutsideClick = () => {
           onClose={closeSidebar}
           triggerRef={triggerRef}
           aria-controls="openSideBarTrigger"
-          closeOnOutsideClick
+          closeSidebarOnOutsideClick={false}
         />
       </Page>
     </ApplicationFrame>
