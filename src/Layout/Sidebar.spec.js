@@ -17,5 +17,25 @@ describe("Sidebar", () => {
       fireEvent.click(closeBtn);
       expect(onCloseHandler).toHaveBeenCalledTimes(1);
     });
+
+    it("shows an overlay by default", () => {
+      renderWithNDSProvider(
+        <Sidebar isOpen>
+          Sidebar
+        </Sidebar>
+      );
+      expect(queryByTestId(/sidebar-overlay/i)).toBeTruthy();
+    });
+
+
+    it("doesn't show an overlay when set to false", () => {
+      renderWithNDSProvider(
+        <Sidebar isOpen overlay={false}>
+          Sidebar
+        </Sidebar>
+      );
+      expect(queryByTestId(/sidebar-overlay/i)).toBeNull();
+    });
+
   });
 });

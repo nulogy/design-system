@@ -45,6 +45,7 @@ const SidebarOverlay = ({transitionDuration}) => (
       animate={{opacity: 1}}
       exit={{opacity: 0}}
       transition={{duration: transitionDuration}}
+      data-testid="sidebar-overlay"
     />
 )
 
