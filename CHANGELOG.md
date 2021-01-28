@@ -1,3 +1,10 @@
+## [5.3.1](https://github.com/nulogy/design-system/compare/v5.3.0...v5.3.1) (2021-01-28)
+
+
+### Bug Fixes
+
+* **Sidebar:** make overlay positioning fixed so it always fills the whole window ([#849](https://github.com/nulogy/design-system/issues/849)) ([345f820](https://github.com/nulogy/design-system/commit/345f8208de63ba6be13d680c1383f64def779d7c))
+
 # [5.3.0](https://github.com/nulogy/design-system/compare/v5.2.5...v5.3.0) (2021-01-28)
 
 
