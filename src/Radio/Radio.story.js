@@ -7,9 +7,7 @@ export default {
 };
 
 export const _Radio = () => (
-  <>
-    <Radio p="x3" id="radio" labelText="I am a radio button" />
-  </>
+  <Radio p="x3" id="radio" labelText="I am a radio button" data-testid="radio"/>
 );
 
 export const SetToDefaultChecked = () => (
