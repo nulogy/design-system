@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, RefObject } from "react";
-
+import {AnimatePresence} from "framer-motion";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { IconicButton } from "../Button";
@@ -21,6 +21,7 @@ type SidebarProps = AnimatedBoxProps & {
   triggerRef?: RefObject<any>;
   duration?: number;
   closeOnOutsideClick?: boolean;
+  overlay?: boolean
 };
 
 const focusFirstElement = () => {
@@ -30,6 +31,22 @@ const focusFirstElement = () => {
     (focusable[0] as HTMLElement).focus();
   }
 }
+
+const SidebarOverlay = ({transitionDuration}) => (
+    <AnimatedBox
+      position="absolute"
+      top="0"
+      bottom="0"
+      left="0"
+      right="0"
+      zIndex={"799" as any}
+      bg="rgba(18, 43, 71, 0.5)"
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      exit={{opacity: 0}}
+      transition={{duration: transitionDuration}}
+    />
+)
 
 const Sidebar = ({
   p = "x3",
@@ -45,6 +62,7 @@ const Sidebar = ({
   triggerRef,
   duration = 0.25,
   closeOnOutsideClick,
+  overlay = true,
   ...props
 }: SidebarProps) => {
   const closeButton = useRef(null);
@@ -102,7 +120,14 @@ const Sidebar = ({
       },
     },
   };
+
   return (
+  <>
+    {overlay && (
+      <AnimatePresence>
+        {isOpen && (<SidebarOverlay transitionDuration={duration} />) }
+      </AnimatePresence>
+    )}
     <AnimatedBox
       role="complementary"
       bg="white"
@@ -157,6 +182,7 @@ const Sidebar = ({
       )}
       {closeOnOutsideClick && isOpen && <DetectOutsideClick onClick={onClose} clickRef={sideBarRef} />}
     </AnimatedBox>
+  </>
   );
 };
 
