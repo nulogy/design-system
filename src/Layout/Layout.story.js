@@ -386,7 +386,7 @@ export const WithSidebarCustomOffset = () => {
             ref={triggerRef}
             id="openSidebarTrigger"
           >
-            Toggle Sidebar
+            Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
@@ -405,7 +405,7 @@ export const WithSidebarCustomOffset = () => {
   );
 };
 
-export const WithCloseSidebarOnOutsideClick = () => {
+export const DontCloseSidebarOnOutsideClick = () => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef(null);
 
@@ -437,7 +437,7 @@ export const WithCloseSidebarOnOutsideClick = () => {
             ref={triggerRef}
             id="openSidebarTrigger"
           >
-            Toggle Sidebar
+            Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
@@ -448,7 +448,7 @@ export const WithCloseSidebarOnOutsideClick = () => {
           onClose={closeSidebar}
           triggerRef={triggerRef}
           aria-controls="openSideBarTrigger"
-          closeOnOutsideClick
+          closeSidebarOnOutsideClick={false}
         />
       </Page>
     </ApplicationFrame>

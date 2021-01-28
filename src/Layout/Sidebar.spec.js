@@ -19,23 +19,19 @@ describe("Sidebar", () => {
     });
 
     it("shows an overlay by default", () => {
-      renderWithNDSProvider(
-        <Sidebar isOpen>
-          Sidebar
-        </Sidebar>
+      const { queryByTestId } = renderWithNDSProvider(
+        <Sidebar isOpen>Sidebar</Sidebar>
       );
-      expect(queryByTestId(/sidebar-overlay/i)).toBeTruthy();
+      expect(queryByTestId("sidebar-overlay")).toBeTruthy();
     });
 
-
     it("doesn't show an overlay when set to false", () => {
-      renderWithNDSProvider(
+      const { queryByTestId } = renderWithNDSProvider(
         <Sidebar isOpen overlay={false}>
           Sidebar
         </Sidebar>
       );
-      expect(queryByTestId(/sidebar-overlay/i)).toBeNull();
+      expect(queryByTestId("sidebar-overlay")).toBeNull();
     });
-
   });
 });

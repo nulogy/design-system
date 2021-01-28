@@ -62,7 +62,7 @@ const Sidebar = ({
   offset = "0px",
   triggerRef,
   duration = 0.25,
-  closeOnOutsideClick,
+  closeOnOutsideClick = true,
   overlay = true,
   ...props
 }: SidebarProps) => {
