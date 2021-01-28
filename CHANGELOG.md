@@ -1,3 +1,10 @@
+## [5.2.5](https://github.com/nulogy/design-system/compare/v5.2.4...v5.2.5) (2021-01-28)
+
+
+### Bug Fixes
+
+* **Toggle:** state should not update when disabled ([#845](https://github.com/nulogy/design-system/issues/845)) ([c378697](https://github.com/nulogy/design-system/commit/c378697739761a95bfa319781ebbf95298c2277b))
+
 ## [5.2.4](https://github.com/nulogy/design-system/compare/v5.2.3...v5.2.4) (2021-01-26)
 
 
