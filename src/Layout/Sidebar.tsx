@@ -130,7 +130,7 @@ const Sidebar = ({
       </AnimatePresence>
     )}
     <AnimatedBox
-      role="complementary"
+      role="dialog"
       bg="white"
       display="flex"
       flexDirection="column"
