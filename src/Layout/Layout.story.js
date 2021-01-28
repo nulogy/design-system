@@ -98,6 +98,7 @@ export default {
   title: "Components/Layout",
   parameters: {
     layout: "fullscreen",
+    chromatic: { delay: 300 }, // time for sidebar animation
   },
 };
 
