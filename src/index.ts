@@ -60,7 +60,12 @@ export { Modal } from "./Modal";
 export { Tab, Tabs } from "./Tabs";
 
 export { Table } from "./Table";
-export type { TableProps, TableColumnType, TableRowType } from "./Table";
+export type {
+  TableProps,
+  TableColumnType,
+  TableRowType,
+  TableCellInfoType,
+} from "./Table";
 
 export { StatusIndicator } from "./StatusIndicator";
 export { Pagination } from "./Pagination";

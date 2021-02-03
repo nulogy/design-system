@@ -1,18 +1,19 @@
 import PropTypes from "prop-types";
 
-type CellInfoType = {
-  cellData: any,
-  column?: ColumnType,
-  row?: RowType,
-}
+export type RowType = any;
 
+export type CellInfoType = {
+  cellData: any;
+  column: ColumnType;
+  row: RowType;
+};
 
 type ColumnInfoType = {
   align?: string;
   label: string;
   dataKey?: string;
   width?: string;
-}
+};
 
 export type ColumnType = {
   align?: string;
@@ -21,11 +22,9 @@ export type ColumnType = {
   cellFormatter?: (cell: CellInfoType) => React.ReactNode | JSX.Element;
   cellRenderer?: (cell: CellInfoType) => React.ReactNode | JSX.Element;
   headerRenderer?: (column: ColumnInfoType) => React.ReactNode | JSX.Element;
-  headerFormatter?: (column: ColumnInfoType) => React.ReactNode | JSX.Element ;
+  headerFormatter?: (column: ColumnInfoType) => React.ReactNode | JSX.Element;
   width?: string;
-}
-
-export type RowType = any;
+};
 
 export const columnPropType = PropTypes.shape({
   align: PropTypes.oneOf(["right", "left", "center"]),

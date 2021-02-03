@@ -3,11 +3,12 @@ import StatefulTable from "./StatefulTable";
 import BaseTable from "./BaseTable";
 import SortingColumnHeader from "./SortingColumnHeader";
 import { StatefulTableProps } from './StatefulTable';
-import { ColumnType, RowType } from './Table.types';
+import { ColumnType, RowType, CellInfoType } from './Table.types';
 
 export type TableProps = StatefulTableProps;
 export type TableColumnType = ColumnType;
 export type TableRowType = RowType;
+export type TableCellInfoType = CellInfoType;
 
 const Table = ({
   hasSelectableRows,
