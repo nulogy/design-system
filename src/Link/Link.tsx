@@ -26,7 +26,7 @@ type LinkProps = ColorProps &
     color?: string;
     fontSize?: string;
     theme?: DefaultNDSThemeType;
-    "aria-label": string;
+    "aria-label"?: string;
   };
 
 const getHoverColor = (props: LinkProps) =>
