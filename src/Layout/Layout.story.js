@@ -449,7 +449,7 @@ export const DontCloseSidebarOnOutsideClick = () => {
           onClose={closeSidebar}
           triggerRef={triggerRef}
           aria-controls="openSideBarTrigger"
-          closeSidebarOnOutsideClick={false}
+          closeOnOutsideClick={false}
         />
       </Page>
     </ApplicationFrame>
