@@ -1,5 +1,7 @@
 import React from "react";
 import { IconicButton } from "../index";
+import { Flex } from "../Flex";
+import { Box } from "../Box";
 
 export default {
   title: "Components/IconicButton",
@@ -63,3 +65,22 @@ export const WithACustomSize = () => (
 WithACustomSize.story = {
   name: "with a custom size",
 };
+
+export const WithACustomBoundary = () => (
+  <Flex px="x3" height="15000px">
+    <Flex justifyContent="flex-end" alignItems="flex-start" width="100%">
+    <IconicButton
+      icon="rightArrow"
+      labelHidden
+    >
+      I am an Iconic Button 2
+    </IconicButton>
+    <IconicButton
+      icon="leftArrow"
+      labelHidden
+    >
+      I am an Iconic Button
+    </IconicButton>
+  </Flex>
+  </Flex>
+);
