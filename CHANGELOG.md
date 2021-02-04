@@ -1,3 +1,11 @@
+## [5.3.2](https://github.com/nulogy/design-system/compare/v5.3.1...v5.3.2) (2021-02-04)
+
+
+### Bug Fixes
+
+* **Link:** aria-label should be optional ([9998067](https://github.com/nulogy/design-system/commit/9998067711a6c55301c184b3d152827201c35b4b))
+* **Table:** export TableCellInfoType to use with cellRenderer ([310f084](https://github.com/nulogy/design-system/commit/310f084e76dd8b8b4426e7031628e06ae31d55c2))
+
 ## [5.3.1](https://github.com/nulogy/design-system/compare/v5.3.0...v5.3.1) (2021-01-28)
 
 
