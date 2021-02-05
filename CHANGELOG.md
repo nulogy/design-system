@@ -1,3 +1,10 @@
+## [5.3.3](https://github.com/nulogy/design-system/compare/v5.3.2...v5.3.3) (2021-02-05)
+
+
+### Bug Fixes
+
+* **IconicButton:** upgrade react-popper to fix hover label positioning when the button is on the right edge of the window ([#853](https://github.com/nulogy/design-system/issues/853)) ([5cd02d7](https://github.com/nulogy/design-system/commit/5cd02d7c96a616a4941c738adf9ccf0f24297914))
+
 ## [5.3.2](https://github.com/nulogy/design-system/compare/v5.3.1...v5.3.2) (2021-02-04)
 
 
