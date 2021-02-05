@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
-import { Manager, Reference, Popper } from "react-popper";
+import { Manager, Reference, Popper } from "react-popper-latest";
 import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
@@ -107,16 +107,19 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
                 p="half"
               />
             )}
-          </Reference>
+          </Reference> 
           <Popper
             placement="bottom"
-            modifiers={{
-              preventOverflow: {
+            modifiers={[
+              {
+                name: "preventOverflow",
                 enabled: true,
-                padding: 8,
-                boundariesElement: "viewport",
+                options: {
+                  padding: 8,
+                  rootBoundary: "viewport",
+                },
               },
-            }}
+            ]}
           >
             {({ ref, style, placement }) =>
               labelHidden ? (

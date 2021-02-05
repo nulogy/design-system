@@ -33,6 +33,7 @@ const GLOBALS = {
   "react-input-autosize": "AutosizeInput",
   "html-parse-stringify2": "HTML",
   "smoothscroll-polyfill": "smoothscroll",
+  "react-fast-compare": "isEqual",
 };
 
 const externals = Object.keys(GLOBALS);
