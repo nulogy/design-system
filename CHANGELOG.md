@@ -1,3 +1,10 @@
+# [5.4.0](https://github.com/nulogy/design-system/compare/v5.3.3...v5.4.0) (2021-02-09)
+
+
+### Features
+
+* increases the opacity of disabled Text from 33% to 70% ([#855](https://github.com/nulogy/design-system/issues/855)) ([e2efa75](https://github.com/nulogy/design-system/commit/e2efa75e9deddcfba6f46beab9fedf3dce308c5e))
+
 ## [5.3.3](https://github.com/nulogy/design-system/compare/v5.3.2...v5.3.3) (2021-02-05)
 
 
