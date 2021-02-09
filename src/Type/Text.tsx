@@ -52,7 +52,7 @@ const Text = styled.p.attrs<TextProps>((props: TextProps) =>
   cursor,
   ({ disabled, textTransform }: TextProps): CSSObject => ({
     textTransform,
-    opacity: disabled ? "0.3333" : undefined,
+    opacity: disabled ? "0.7" : undefined,
   })
 );
 Text.defaultProps = {
