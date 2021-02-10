@@ -1,3 +1,10 @@
+# [5.5.0](https://github.com/nulogy/design-system/compare/v5.4.0...v5.5.0) (2021-02-10)
+
+
+### Features
+
+* **Radio:** accept any react node to the labelText prop ([#856](https://github.com/nulogy/design-system/issues/856)) ([57334a8](https://github.com/nulogy/design-system/commit/57334a83bf71212d75075610f0f92f79faf015ae))
+
 # [5.4.0](https://github.com/nulogy/design-system/compare/v5.3.3...v5.4.0) (2021-02-09)
 
 
