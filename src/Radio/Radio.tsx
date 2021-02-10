@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, ReactNode } from "react";
 import { space } from "styled-system";
 import styled, { CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
@@ -103,7 +103,7 @@ const RadioInput: React.FC<RadioInputProps> = styled.input((props) => ({
 
 type BaseRadioProps = VisualRadioProps &
   React.ComponentPropsWithRef<"input"> & {
-    labelText?: string;
+    labelText?: ReactNode;
     checked?: boolean;
     defaultChecked?: boolean;
     disabled?: boolean;

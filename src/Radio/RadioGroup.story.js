@@ -1,5 +1,5 @@
 import React from "react";
-import { Radio, RadioGroup } from "../index";
+import { Radio, RadioGroup, Icon, Tooltip } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -28,7 +28,21 @@ export const RadioGroupWithAllProps = () => (
     requirementText="(Required)"
     defaultValue="a"
   >
-    <Radio value="a" labelText="Option A" />
+    <Radio
+      value="a"
+      labelText={
+        <>
+          Option A
+          <Tooltip
+            placement="bottom"
+            tooltip="Option A is a special option with extra information"
+            defaultOpen
+          >
+            <Icon icon="help" color="darkBlue" size="16px" ml="x1" />
+          </Tooltip>
+        </>
+      }
+    />
     <Radio value="b" labelText="Option B" />
     <Radio value="c" labelText="Option C" />
   </RadioGroup>
