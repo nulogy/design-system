@@ -1,18 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 
 class PreventBodyElementScrolling extends React.Component {
   componentDidMount() {
-    this.initialBodyOverflowX = document.body.style.overflowX;
-    this.initialBodyOverflowY = document.body.style.overflowY;
-    this.initialBodyOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const { scrollableRef } = this.props;
+    const refs = Array.isArray(scrollableRef) ? scrollableRef : [scrollableRef];
+    refs.every(disableBodyScroll);
   }
 
   componentWillUnmount() {
-    document.body.style.overflowX = this.initialBodyOverflowX;
-    document.body.style.overflowY = this.initialBodyOverflowY;
-    document.body.style.overflow = this.initialBodyOverflow;
+    clearAllBodyScrollLocks();
   }
 
   render() {
@@ -23,9 +21,14 @@ class PreventBodyElementScrolling extends React.Component {
 
 PreventBodyElementScrolling.propTypes = {
   children: PropTypes.node,
+  scrollableRef: PropTypes.oneOfType([
+    PropTypes.shape({}),
+    PropTypes.arrayOf(PropTypes.shape({})),
+  ]),
 };
 
 PreventBodyElementScrolling.defaultProps = {
   children: null,
+  scrollableRef: null,
 };
 export default PreventBodyElementScrolling;
