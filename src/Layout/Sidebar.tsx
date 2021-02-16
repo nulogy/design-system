@@ -7,7 +7,7 @@ import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { useTranslation } from "react-i18next";
-import { DetectOutsideClick, PreventBodyElementScrolling } from "../utils";
+import { PreventBodyElementScrolling } from "../utils";
 
 type SidebarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
@@ -33,20 +33,21 @@ const focusFirstElement = () => {
   }
 }
 
-const SidebarOverlay = ({transitionDuration, top}) => (
-    <AnimatedBox
-      position="fixed"
-      top={top}
-      bottom="0"
-      left="0"
-      right="0"
-      zIndex={"799" as any}
-      bg="rgba(18, 43, 71, 0.5)"
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      transition={{duration: transitionDuration}}
-      data-testid="sidebar-overlay"
+const SidebarOverlay = ({ transitionDuration, top, transparent, onClick }) => (
+  <AnimatedBox
+    position="fixed"
+    top={top}
+    bottom="0"
+    left="0"
+    right="0"
+    zIndex={"799" as any}
+    bg={!transparent && "rgba(18, 43, 71, 0.5)"}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: transitionDuration }}
+    data-testid="sidebar-overlay"
+    onMouseDown={onClick}
     />
 )
 
@@ -128,9 +129,9 @@ const Sidebar = ({
 
   return (
   <>
-    {overlay && (
+    {closeOnOutsideClick && (
       <AnimatePresence>
-          {isOpen && (<SidebarOverlay top={top} transitionDuration={duration} />) }
+          {isOpen && (<SidebarOverlay top={top} transparent={!overlay} transitionDuration={duration} onClick={closeOnOutsideClick && isOpen && onClose} />) }
       </AnimatePresence>
     )}
     <AnimatedBox
@@ -185,8 +186,7 @@ const Sidebar = ({
           {footer}
         </Box>
       )}
-        {closeOnOutsideClick && isOpen && <DetectOutsideClick onClick={onClose} clickRef={[sideBarRef, contentRef]} />}
-        {overlay && disableScroll && isOpen && <PreventBodyElementScrolling scrollRef={sideBarRef} />}
+      {overlay && disableScroll && isOpen && <PreventBodyElementScrolling scrollRef={sideBarRef} />}
     </AnimatedBox>
   </>
   );

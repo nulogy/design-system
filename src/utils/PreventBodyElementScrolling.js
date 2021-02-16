@@ -6,7 +6,11 @@ class PreventBodyElementScrolling extends React.Component {
   componentDidMount() {
     const { scrollableRef } = this.props;
     const refs = Array.isArray(scrollableRef) ? scrollableRef : [scrollableRef];
-    refs.every(disableBodyScroll);
+    refs.every((ref) => {
+      if (ref && ref.current) {
+        disableBodyScroll(ref.current);
+      }
+    });
   }
 
   componentWillUnmount() {

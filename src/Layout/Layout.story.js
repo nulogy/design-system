@@ -290,6 +290,7 @@ export const WithSidebarWithoutOverlay = () => {
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
+            <input />
           </Box>
         </Box>
         <ExampleSidebar

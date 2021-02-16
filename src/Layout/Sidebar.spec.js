@@ -25,9 +25,17 @@ describe("Sidebar", () => {
       expect(queryByTestId("sidebar-overlay")).toBeTruthy();
     });
 
-    it("doesn't show an overlay when set to false", () => {
+    it("shows an invisible overlay when set to false", () => {
       const { queryByTestId } = renderWithNDSProvider(
         <Sidebar isOpen overlay={false}>
+          Sidebar
+        </Sidebar>
+      );
+      expect(queryByTestId("sidebar-overlay")).toHaveStyle("opacity: 0")
+    });
+    it("doesn't use an overlay if the sidebar stays open on outside clicks", () => {
+      const { queryByTestId } = renderWithNDSProvider(
+        <Sidebar isOpen overlay={false} closeOnOutsideClick={false}>
           Sidebar
         </Sidebar>
       );
