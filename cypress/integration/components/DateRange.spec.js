@@ -54,7 +54,7 @@ describe("Date Range", () => {
       getStartInputComponent().click();
       cy.get(".react-datepicker__day--008").first().click();
       getStartTimeInputComponent().click();
-      getStartTimeOptions().eq(6).click();
+      getStartTimeOptions().eq(4).click();
       getEndTimeInputComponent().click();
       getEndTimeOptions().eq(3).click();
       getEndInputComponent().click();
