@@ -93,6 +93,14 @@ describe("Timepicker", () => {
         getInput().should("have.value", "11:30 PM");
       });
     });
+    describe("hides the dropdown", () => {
+      it("on outside click", () => {
+        getInput().click();
+        getDropdownComponent().should("be.visible");
+        cy.get("body").click();
+        getDropdownComponent().should("not.be.visible");
+      });
+    });
   });
 
   describe("24 hour time format", () => {

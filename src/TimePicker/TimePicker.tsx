@@ -242,6 +242,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
         });
         handleOptionSelection(option);
       }
+      setDropdownIsOpen(false);
       onBlur(e);
     };
     const handleFocus = (e) => {
