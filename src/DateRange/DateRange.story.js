@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs } from "@storybook/addon-knobs";
 
-import DateRange from "./DateRange";
 import { Button, Box, Flex, PrimaryButton } from "../";
+import DateRange from "./DateRange";
 
 export default {
   title: "Components/DateRange",
@@ -68,11 +67,21 @@ WithCustomError.story = {
 
 export const CustomizingInputProps = () => (
   <DateRange
-    startDateInputProps={{ placeholder: "From (Mon YYYY)", inputWidth: "160px" }}
-    endDateInputProps={{ placeholder: "To (Mon YYYY)", inputWidth: "140px" }}
+    startDateInputProps={{
+      placeholder: "From (Mon YYYY)",
+      inputWidth: "160px",
+      labelText: "From",
+    }}
+    endDateInputProps={{
+      placeholder: "To (Mon YYYY)",
+      inputWidth: "140px",
+      labelText: "To",
+    }}
+    labelProps={{ labelText: "" }}
     onRangeChange={action("range changed")}
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}
+    errorMessage="This range conflicts with another range"
   />
 );
 
@@ -82,7 +91,7 @@ CustomizingInputProps.story = {
 
 export const IndividualInputError = () => (
   <DateRange
-    startDateErrorMessage="Start date is required"
+    errorMessage="Start date is required"
     startDateInputProps={{ required: true }}
     defaultEndDate={new Date("2019-09-10T05:00:00.000Z")}
     onRangeChange={action("range changed")}
@@ -109,7 +118,7 @@ export const WithTimes = () => (
 export const CustomizingInputPropsWithTimes = () => (
   <DateRange
     startDateInputProps={{ placeholder: "From", inputWidth: "130px" }}
-    endDateInputProps={{ placeholder: "To", inputWidth: "130px"  }}
+    endDateInputProps={{ placeholder: "To", inputWidth: "130px" }}
     onRangeChange={action("range changed")}
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}
