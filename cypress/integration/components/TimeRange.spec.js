@@ -19,12 +19,12 @@ describe("Time Range", () => {
 
     it("shows options that are after the selected start time for the end time", () => {
       getStartTimeInputComponent().click();
-      getStartTimeOptions().eq(5).click();
-      getValue().should("have.value", "10:15 AM");
+      getStartTimeOptions().eq(4).click();
+      getValue().should("have.value", "10:00 AM");
       getEndTimeInputComponent().click();
-      getEndTimeOptions().eq(0).should("have.text", "10:15 AM");
+      getEndTimeOptions().eq(0).should("have.text", "10:00 AM");
       getEndTimeOptions().each(($el) =>
-        cy.get($el).should("not.have.value", "10:00 AM")
+        cy.get($el).should("not.have.value", "9:45 AM")
       );
     });
     it("shows options that are before the selected end time for the start time", () => {

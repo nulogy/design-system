@@ -1,6 +1,14 @@
 // @ts-nocheck
-import React, { useState, useContext, useEffect, forwardRef } from "react";
+import React, {
+  useState,
+  useContext,
+  useEffect,
+  forwardRef,
+  useRef,
+  useCallback,
+} from "react";
 import { setMinutes } from "date-fns";
+import debounce from "debounce";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { InputField } from "../Input/InputField";
@@ -139,6 +147,7 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
     borderBottomRightRadius: theme.radii.medium,
     display: isOpen ? "block" : "none",
     zIndex: theme.zIndex.content,
+    scrollBehavior: "smooth",
   };
 });
 const TimePickerOption = styled.li(
@@ -206,14 +215,27 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
     const { locale } = useContext(LocaleContext);
     const [ref, setRef] = useState(null);
+    const dropdownRef = useRef(null);
     const { t } = useTranslation();
+
+    const scrollToSelection = useCallback(
+      debounce((currentOption, dropdown) => {
+        const currentIndex = Array.from(dropdown.current.children).indexOf(
+          currentOption
+        );
+        if (currentIndex > 2) {
+          dropdown.current.scrollTop =
+            (currentIndex - 2) * currentOption.scrollHeight;
+        } else {
+          dropdown.current.scrollTop = 0;
+        }
+      }, 200),
+      []
+    );
 
     useEffect(() => {
       if (currentOptionRef && dropdownIsOpen) {
-        currentOptionRef.scrollIntoView({
-          behaviour: "smooth",
-          block: "center",
-        });
+        scrollToSelection(currentOptionRef, dropdownRef);
       }
     }, [currentOptionRef, dropdownIsOpen, input]);
     const matchingIndex = getIntervalFromTime(input, interval, minTime);
@@ -339,6 +361,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
             aria-expanded={dropdownIsOpen}
             role="listbox"
             data-testid="select-dropdown"
+            ref={dropdownRef}
           >
             {dropdownOptions.map((option, i) => {
               const isClosest = matchingIndex === i;
