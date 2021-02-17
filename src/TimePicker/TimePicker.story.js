@@ -62,6 +62,20 @@ WithCustomPlaceholder.story = {
   name: "with custom placeholder",
 };
 
+export const disabled = () => (
+  <TimePicker
+    onChange={action("time changed")}
+    onInputChange={action("input changed")}
+    labelText="Duration"
+    placeholder="--:--"
+    disabled
+  />
+);
+
+disabled.story = {
+  name: "disabled",
+};
+
 export const WithErrorState = () => (
   <TimePicker
     onChange={action("time changed")}

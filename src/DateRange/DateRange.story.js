@@ -71,6 +71,7 @@ export const CustomizingInputProps = () => (
       placeholder: "From (Mon YYYY)",
       inputWidth: "160px",
       labelText: "From",
+      error: true,
     }}
     endDateInputProps={{
       placeholder: "To (Mon YYYY)",
@@ -81,12 +82,45 @@ export const CustomizingInputProps = () => (
     onRangeChange={action("range changed")}
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}
-    errorMessage="This range conflicts with another range"
+    errorMessage="Start date is required."
   />
 );
 
 CustomizingInputProps.story = {
   name: "customizing input props",
+};
+
+
+export const Disabled = () => (
+  <DateRange
+    startDateInputProps={{
+      placeholder: "From (Mon YYYY)",
+      inputWidth: "160px",
+      labelText: "From",
+      disabled: true,
+    }}
+    endDateInputProps={{
+      placeholder: "To (Mon YYYY)",
+      inputWidth: "140px",
+      labelText: "To",
+      disabled: true,
+    }}
+    labelProps={{ labelText: "" }}
+    onRangeChange={action("range changed")}
+    onStartDateChange={action("start date changed")}
+    onEndDateChange={action("end date changed")}
+    showTimes
+    endTimeProps = {{
+      disabled: true,
+    }}
+    startTimeProps ={{
+      disabled: true,
+    }}
+  />
+);
+
+Disabled.story = {
+  name: "disabled",
 };
 
 export const IndividualInputError = () => (

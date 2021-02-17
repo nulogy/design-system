@@ -30,6 +30,8 @@ type TimeRangeProps = {
   interval?: number;
   startAriaLabel?: string;
   endAriaLabel?: string;
+  endTimeProps: any;
+  startTimeProps: any;
 };
 const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
   (
@@ -48,6 +50,8 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
       interval,
       startAriaLabel,
       endAriaLabel,
+      endTimeProps,
+      startTimeProps,
       ...props
     },
     ref
@@ -111,6 +115,8 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
         aria-label={startAriaLabel || t("select a start time")}
         data-testid="timerange-start-time"
         ref={inputRef1}
+        error={rangeError}
+        {...startTimeProps}
       />
     );
     const endInput = (
@@ -125,6 +131,8 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
         aria-label={endAriaLabel || t("select an end time")}
         data-testid="timerange-end-time"
         ref={inputRef2}
+        error={rangeError}
+        {...endTimeProps}
       />
     );
     useEffect(() => {

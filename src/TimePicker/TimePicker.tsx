@@ -206,6 +206,8 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       onChange,
       "aria-label": ariaLabel,
       value,
+      error,
+      disabled,
       ...props
     },
     inputRef
@@ -245,7 +247,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       return optionsAtInterval;
     };
     const dropdownOptions = getDropdownOptions() || [];
-    const hasError = !!(errorMessage || errorList);
+    const hasError = !!(errorMessage || errorList || error);
     const handleOptionSelection = (option, showDropdown = false) => {
       if (option && option.label && option.value) {
         setInput(option.label);
@@ -355,6 +357,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
             data-testid="select-input"
             type="text"
             ref={inputRef}
+            disabled={disabled}
           />
           <TimePickerDropdown
             isOpen={dropdownIsOpen}

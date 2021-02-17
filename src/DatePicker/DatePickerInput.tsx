@@ -22,7 +22,7 @@ const DatePickerInput: React.SFC<DatePickerInputProps> = forwardRef(
       onClick,
       onInputChange,
       value,
-      inputProps,
+      inputProps = InputFieldDefaultProps,
       onUpKeyPress,
       onDownKeyPress,
       onEnterKeyPress,
@@ -61,15 +61,4 @@ const DatePickerInput: React.SFC<DatePickerInputProps> = forwardRef(
     );
   }
 );
-DatePickerInput.defaultProps = {
-  onClick: undefined,
-  onChange: undefined,
-  onUpKeyPress: undefined,
-  onDownKeyPress: undefined,
-  onEnterKeyPress: undefined,
-  onSpaceKeyPress: undefined,
-  value: undefined,
-  inputProps: InputFieldDefaultProps,
-  "aria-label": undefined,
-};
 export default DatePickerInput;
