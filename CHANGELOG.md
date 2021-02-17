@@ -3,7 +3,8 @@
 
 ### Bug Fixes
 
-* **TimePicker:** dropdown should close when clicking outside the Time… ([#859](https://github.com/nulogy/design-system/issues/859)) ([68d326a](https://github.com/nulogy/design-system/commit/68d326ac018b0a7cf7a5e8f3e2ce01a3b83816b8))
+* **TimePicker:** dropdown should close when clicking outside the TimePicker ([#859](https://github.com/nulogy/design-system/issues/859)) ([68d326a](https://github.com/nulogy/design-system/commit/68d326ac018b0a7cf7a5e8f3e2ce01a3b83816b8))
+* **TimePicker:** fix scroll behaviour so it doesn't adjust the page's scroll position when new times are picked ([#859](https://github.com/nulogy/design-system/issues/859)) ([68d326a](https://github.com/nulogy/design-system/commit/68d326ac018b0a7cf7a5e8f3e2ce01a3b83816b8))
 
 ## [5.5.1](https://github.com/nulogy/design-system/compare/v5.5.0...v5.5.1) (2021-02-17)
 
