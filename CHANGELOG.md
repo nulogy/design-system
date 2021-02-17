@@ -1,3 +1,10 @@
+## [5.5.1](https://github.com/nulogy/design-system/compare/v5.5.0...v5.5.1) (2021-02-17)
+
+
+### Bug Fixes
+
+* **Sidebar:** change default behaviour to closing the sidebar when the overlay is clicked and lock scrolling while the sidebar is open ([#857](https://github.com/nulogy/design-system/issues/857)) ([a271f9c](https://github.com/nulogy/design-system/commit/a271f9cff9e8e9de6e6bc907968f17464b723df9))
+
 # [5.5.0](https://github.com/nulogy/design-system/compare/v5.4.0...v5.5.0) (2021-02-10)
 
 
