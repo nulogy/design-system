@@ -14,9 +14,13 @@ import { forwardRef } from "react";
 const DEFAULT_LABEL = "Date Range";
 const StyledStartTime = styled(TimePicker)(({ theme }) => ({
   marginLeft: theme.space.x1,
+  display: "flex",
+  alignItems: "flex-end",
 }));
 const StyledEndTime = styled(TimePicker)(({ theme }) => ({
   marginRight: theme.space.x1,
+  display: "flex",
+  alignItems: "flex-end",
 }));
 type DateRangeProps = {
   dateFormat?: string;
@@ -45,6 +49,8 @@ type DateRangeProps = {
   interval?: number;
   locale?: string;
   disableFlipping?: boolean;
+  endTimeProps?: any;
+  startTimeProps?: any;
 };
 const DateRange: React.SFC<DateRangeProps> = forwardRef(
   (
@@ -56,12 +62,15 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
       errorMessage,
       startDateErrorMessage,
       endDateErrorMessage,
-      defaultStartDate,
-      defaultEndDate,
+      defaultStartDate = null,
+      defaultEndDate = null,
       endDateInputProps,
       startDateInputProps,
       disableRangeValidation,
-      labelProps,
+      labelProps = {
+            ...FieldLabelDefaultProps,
+            labelText: DEFAULT_LABEL,
+          },
       minDate,
       maxDate,
       showTimes,
@@ -73,8 +82,10 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
       onEndTimeChange,
       timeFormat,
       interval,
-      disableFlipping,
+      disableFlipping = false,
       locale,
+      endTimeProps,
+      startTimeProps,
       ...props
     },
     ref
@@ -155,17 +166,19 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
         });
       }
     };
+    
+    const startInputProps = {
+      "aria-label": t("select a start date"),
+      error: rangeError,
+      ...startDateInputProps,
+    };
     const startDateInput = (
       <>
         <DatePicker
           dateFormat={dateFormat}
           selected={startDate}
           onChange={changeStartDateHandler}
-          inputProps={{
-            "aria-label": t("select a start date"),
-            error: rangeError,
-            ...startDateInputProps,
-          }}
+          inputProps={startInputProps}
           errorMessage={startDateErrorMessage}
           minDate={minDate}
           maxDate={maxDate}
@@ -187,6 +200,8 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
             locale={locale}
             data-testid="daterange-start-time"
             ref={timeRef1}
+            error={!!rangeError}
+            {...startTimeProps}
           />
         )}
       </>
@@ -206,6 +221,8 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
             aria-label={t("select an end time")}
             data-testid="daterange-end-time"
             ref={timeRef2}
+            error={!!rangeError}
+            {...endTimeProps}
           />
         )}
         <DatePicker
@@ -214,6 +231,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
           onChange={changeEndDateHandler}
           inputProps={{
             "aria-label": t("select an end date"),
+            error: rangeError,
             ...endDateInputProps,
           }}
           errorMessage={endDateErrorMessage}
@@ -253,35 +271,4 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
     );
   }
 );
-DateRange.defaultProps = {
-  dateFormat: undefined,
-  onRangeChange: undefined,
-  onStartDateChange: undefined,
-  onEndDateChange: undefined,
-  endDateErrorMessage: undefined,
-  startDateErrorMessage: undefined,
-  errorMessage: undefined,
-  defaultStartDate: null,
-  defaultEndDate: null,
-  endDateInputProps: InputFieldDefaultProps,
-  startDateInputProps: InputFieldDefaultProps,
-  disableRangeValidation: false,
-  labelProps: {
-    ...FieldLabelDefaultProps,
-    labelText: DEFAULT_LABEL,
-  },
-  minDate: null,
-  maxDate: null,
-  showTimes: false,
-  minTime: null,
-  maxTime: null,
-  defaultStartTime: null,
-  defaultEndTime: null,
-  onStartTimeChange: null,
-  onEndTimeChange: null,
-  timeFormat: undefined,
-  interval: undefined,
-  locale: undefined,
-  disableFlipping: false,
-};
 export default DateRange;

@@ -119,8 +119,8 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     const customInputProps = {
       ...InputFieldDefaultProps,
       inputWidth: "184px",
-      ...inputProps,
       error: !!(errorMessage || errorList),
+      ...inputProps,
       placeholder:
         (inputProps && inputProps.placeholder) ||
         (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
