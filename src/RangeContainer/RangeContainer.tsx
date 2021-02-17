@@ -33,8 +33,8 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
         <Flex>
           {startComponent}
         </Flex>
-        <Flex px="half" alignItems="center" maxHeight="38px">
-          <Text>-</Text>
+        <Flex px="half" alignItems="flex-end" alignSelf="flex-end" height="100%">
+          <Text lineHeight="38px">-</Text>
         </Flex>
         <Flex>
           {endComponent}
