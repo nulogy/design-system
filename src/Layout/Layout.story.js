@@ -192,7 +192,7 @@ const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
     footer={<PrimaryButton>Apply</PrimaryButton>}
     {...props}
   >
-    <Select options={[]} labelText="Delivery:" />
+    <Select options={[{label: "first option", value: 1}]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
@@ -222,7 +222,6 @@ export const WithSidebar = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
-      height="100vh"
     >
       <Page
         breadcrumbs={
@@ -241,7 +240,7 @@ export const WithSidebar = () => {
           >
             Open Sidebar
           </PrimaryButton>
-          <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
+          <Box height="3000px" width="50%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
           </Box>
         </Box>
@@ -271,7 +270,6 @@ export const WithSidebarWithoutOverlay = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
-      height="100vh"
     >
       <Page
         breadcrumbs={
@@ -292,6 +290,7 @@ export const WithSidebarWithoutOverlay = () => {
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
             Space for more content
+            <input />
           </Box>
         </Box>
         <ExampleSidebar
@@ -321,7 +320,6 @@ export const WithSidebarOpenByDefault = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
-      height="100vh"
     >
       <Page
         breadcrumbs={
@@ -370,7 +368,6 @@ export const WithSidebarCustomOffset = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
-      height="100vh"
     >
       <Page
         breadcrumbs={
@@ -421,7 +418,6 @@ export const DontCloseSidebarOnOutsideClick = () => {
     <ApplicationFrame
       navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
       overflowX="hidden"
-      height="100vh"
     >
       <Page
         breadcrumbs={

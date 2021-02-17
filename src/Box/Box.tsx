@@ -30,7 +30,6 @@ import { transition, TransitionProps } from "../StyledProps/transition";
 import { transform, TransformProps } from "../StyledProps/transform";
 import { CursorProps, cursor } from "../StyledProps/cursor";
 import { VisibilityProps, visibility } from "../StyledProps/visibility";
-import { RefObject } from "react";
 
 type SharedBoxProps = ColorProps &
   SpaceProps &
@@ -77,6 +76,10 @@ export type AnimatedBoxProps = SharedBoxProps &
   MotionProps & {
     role?: string;
     ref?: any;
+    onClick?: (event: React.MouseEvent<any>) => void;
+    onMouseEnter?: (event: React.MouseEvent<any>) => void;
+    onMouseOut?: (event: React.MouseEvent<any>) => void;
+    onMouseDown?: (event: React.MouseEvent<any>) => void;
   };
 
 export const AnimatedBox: React.FC<AnimatedBoxProps> = styled(motion.div)(

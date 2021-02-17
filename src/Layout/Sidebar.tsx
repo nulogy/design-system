@@ -7,7 +7,7 @@ import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { useTranslation } from "react-i18next";
-import { DetectOutsideClick } from "../utils";
+import { PreventBodyElementScrolling } from "../utils";
 
 type SidebarProps = AnimatedBoxProps & {
   children?: React.ReactNode;
@@ -21,7 +21,8 @@ type SidebarProps = AnimatedBoxProps & {
   triggerRef?: RefObject<any>;
   duration?: number;
   closeOnOutsideClick?: boolean;
-  overlay?: boolean
+  overlay?: boolean;
+  disableScroll?: boolean;
 };
 
 const focusFirstElement = () => {
@@ -32,20 +33,21 @@ const focusFirstElement = () => {
   }
 }
 
-const SidebarOverlay = ({transitionDuration}) => (
-    <AnimatedBox
-      position="fixed"
-      top="0"
-      bottom="0"
-      left="0"
-      right="0"
-      zIndex={"799" as any}
-      bg="rgba(18, 43, 71, 0.5)"
-      initial={{opacity: 0}}
-      animate={{opacity: 1}}
-      exit={{opacity: 0}}
-      transition={{duration: transitionDuration}}
-      data-testid="sidebar-overlay"
+const SidebarOverlay = ({ transitionDuration, top, transparent, onClick }) => (
+  <AnimatedBox
+    position="fixed"
+    top={top}
+    bottom="0"
+    left="0"
+    right="0"
+    zIndex={"799" as any}
+    bg={!transparent && "rgba(18, 43, 71, 0.5)"}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: transitionDuration }}
+    data-testid="sidebar-overlay"
+    onMouseDown={onClick}
     />
 )
 
@@ -62,14 +64,17 @@ const Sidebar = ({
   offset = "0px",
   triggerRef,
   duration = 0.25,
+  top = NAVBAR_HEIGHT,
   closeOnOutsideClick = true,
   overlay = true,
+  disableScroll = true,
   ...props
 }: SidebarProps) => {
   const closeButton = useRef(null);
   const [shouldUpdateFocus, setShouldUpdateFocus] = useState(false);
   const { t } = useTranslation();
   const sideBarRef = useRef(null);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     if (closeButton.current && isOpen) {
@@ -124,9 +129,9 @@ const Sidebar = ({
 
   return (
   <>
-    {overlay && (
+    {closeOnOutsideClick && (
       <AnimatePresence>
-        {isOpen && (<SidebarOverlay transitionDuration={duration} />) }
+          {isOpen && (<SidebarOverlay top={top} transparent={!overlay} transitionDuration={duration} onClick={closeOnOutsideClick && isOpen && onClose} />) }
       </AnimatePresence>
     )}
     <AnimatedBox
@@ -134,7 +139,7 @@ const Sidebar = ({
       bg="white"
       display="flex"
       flexDirection="column"
-      height="100%"
+      height={`calc(100% - ${NAVBAR_HEIGHT})`}
       boxShadow="large"
       borderLeftWidth="1px"
       borderLeftStyle="solid"
@@ -143,7 +148,7 @@ const Sidebar = ({
       variants={variants}
       initial={isOpen ? "open" : "closed"}
       position="fixed"
-      top={NAVBAR_HEIGHT}
+      top={top}
       right={offset}
       width={typeof width === 'string' ? { default: "100%", small: width } : width}
       zIndex={"sidebar" as any}
@@ -162,7 +167,7 @@ const Sidebar = ({
           <Box>{title && <Heading3>{title}</Heading3>}</Box>
           <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={closeButtonAriaLabel || t("close")}/></Box>
         </Flex>
-        <AnimatedBox variants={childVariants} animate={isOpen ? "open" : "closed"} flexGrow={1}>
+        <AnimatedBox variants={childVariants} animate={isOpen ? "open" : "closed"} flexGrow={1} ref={contentRef as any}>
           {children}
         </AnimatedBox>
       </Flex>
@@ -181,7 +186,7 @@ const Sidebar = ({
           {footer}
         </Box>
       )}
-      {closeOnOutsideClick && isOpen && <DetectOutsideClick onClick={onClose} clickRef={sideBarRef} />}
+      {overlay && disableScroll && isOpen && <PreventBodyElementScrolling scrollRef={sideBarRef} />}
     </AnimatedBox>
   </>
   );
