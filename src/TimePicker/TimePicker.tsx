@@ -358,6 +358,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
             type="text"
             ref={inputRef}
             disabled={disabled}
+            autoComplete="off"
           />
           <TimePickerDropdown
             isOpen={dropdownIsOpen}
