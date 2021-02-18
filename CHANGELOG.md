@@ -1,3 +1,12 @@
+## [5.5.4](https://github.com/nulogy/design-system/compare/v5.5.3...v5.5.4) (2021-02-18)
+
+
+### Bug Fixes
+
+* add disabled and custom error state to TimeRange and DateRange components ([7ed0abd](https://github.com/nulogy/design-system/commit/7ed0abda9111dfba642c817f23315a7961e63133))
+* set autocomplete="off" on Time and Date picker inputs ([c81b4d9](https://github.com/nulogy/design-system/commit/c81b4d91c6bc3992d984fff7a6fa72a2e16fd5c1))
+* **DateRange:** fix bug where dash is misaligned when custom labels are used ([cf0e733](https://github.com/nulogy/design-system/commit/cf0e733ec2b0c210b1bbf4d0629d9603d105ac7d))
+
 ## [5.5.3](https://github.com/nulogy/design-system/compare/v5.5.2...v5.5.3) (2021-02-18)
 
 
