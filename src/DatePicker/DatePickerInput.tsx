@@ -50,6 +50,7 @@ const DatePickerInput: React.SFC<DatePickerInputProps> = forwardRef(
       <InputField
         ref={ref}
         aria-label={ariaLabel || t("select a date")}
+        autoComplete="off"
         {...inputProps}
         value={value}
         placeholder={inputProps.placeholder}
