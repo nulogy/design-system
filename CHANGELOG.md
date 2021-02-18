@@ -1,3 +1,10 @@
+## [5.5.3](https://github.com/nulogy/design-system/compare/v5.5.2...v5.5.3) (2021-02-18)
+
+
+### Bug Fixes
+
+* **Alert:** border thickness was defaulting to 3px instead of 4px ([#861](https://github.com/nulogy/design-system/issues/861)) ([c1a9f07](https://github.com/nulogy/design-system/commit/c1a9f07d47484ecf82e3119878ec6ba7e51e2950))
+
 ## [5.5.2](https://github.com/nulogy/design-system/compare/v5.5.1...v5.5.2) (2021-02-17)
 
 
