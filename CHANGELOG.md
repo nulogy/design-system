@@ -1,3 +1,10 @@
+# [5.6.0](https://github.com/nulogy/design-system/compare/v5.5.4...v5.6.0) (2021-02-23)
+
+
+### Features
+
+* Updates to icon package with barcode icon ([#862](https://github.com/nulogy/design-system/issues/862)) ([3260181](https://github.com/nulogy/design-system/commit/3260181a5fa2866afedb838113a287f8e3f8ea55))
+
 ## [5.5.4](https://github.com/nulogy/design-system/compare/v5.5.3...v5.5.4) (2021-02-18)
 
 
