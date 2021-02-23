@@ -2005,9 +2005,9 @@
     prettier "^2.0.5"
 
 "@nulogy/icons@^4.12.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.12.0.tgz#b67c863cf51dca39dc0c52b2a67e81fed32c3e4b"
-  integrity sha512-vCZEkHN6KCTHXqklqLbPB25T07Y4J4JhbKj4q7j0VFAoCJZdgm59CCEhUadwngjV3gpSlcYkmRITPLbZ7MBNOw==
+  version "4.13.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.13.0.tgz#97ed06da75d894b8eafbdad81f07b0937b99fb3a"
+  integrity sha512-oxoZrNLA9MLWnn6MQrAZ/567C9/vzvvrjNUPzu13lcS0w5SrKu6Es79YM3MG/vf2Le2+NLI7IOhiiabrYhIXsg==
   dependencies:
     fs "^0.0.1-security"
     svgi "^1.1.0"
