@@ -1,6 +1,7 @@
 import React from "react";
 import { IconicButton } from "../index";
 import { Flex } from "../Flex";
+import theme from "../theme";
 
 export default {
   title: "Components/IconicButton",
@@ -63,6 +64,16 @@ export const WithACustomSize = () => (
 
 WithACustomSize.story = {
   name: "with a custom size",
+};
+
+export const WithACustomColor = () => (
+  <IconicButton color={theme.colors.red} icon="close" labelHidden>
+    Close
+  </IconicButton>
+);
+
+WithACustomColor.story = {
+  name: "with a custom color",
 };
 
 export const rightAligned = () => (
