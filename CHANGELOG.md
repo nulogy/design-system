@@ -1,3 +1,10 @@
+# [5.7.0](https://github.com/nulogy/design-system/compare/v5.6.0...v5.7.0) (2021-03-02)
+
+
+### Features
+
+* **IconicButton:** Adds ability to set a color ([#863](https://github.com/nulogy/design-system/issues/863)) ([6ebaaa9](https://github.com/nulogy/design-system/commit/6ebaaa994f550248e2791d1d29cd883ff98900aa))
+
 # [5.6.0](https://github.com/nulogy/design-system/compare/v5.5.4...v5.6.0) (2021-02-23)
 
 
