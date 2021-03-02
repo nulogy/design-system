@@ -65,6 +65,16 @@ WithACustomSize.story = {
   name: "with a custom size",
 };
 
+export const WithACustomColor = () => (
+  <IconicButton color="red" icon="close" labelHidden>
+    Close
+  </IconicButton>
+);
+
+WithACustomColor.story = {
+  name: "with a custom color",
+};
+
 export const rightAligned = () => (
   <Flex px="x3" height="15000px">
     <Flex justifyContent="flex-end" alignItems="flex-start" width="100%">
