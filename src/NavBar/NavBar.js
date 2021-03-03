@@ -44,11 +44,15 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   padding: `${theme.space.x2} ${theme.space.x3}`,
 }));
 
-const BrandingLink = ({ brandingLinkTo, brandingLinkHref, children, props }) =>
-  brandingLinkTo ? (
-    <ReactLink component={Link} to={brandingLinkTo} {...props}>{children}</ReactLink>
+const BrandingLink = ({ to, href, children, ...props }) =>
+  to ? (
+    <ReactLink component={Link} to={to} {...props}>
+      {children}
+    </ReactLink>
   ) : (
-    <Link href={brandingLinkHref} {...props}>{children}</Link>
+    <Link href={href} {...props}>
+      {children}
+    </Link>
   );
 
 const MediumNavBar = ({
@@ -66,7 +70,8 @@ const MediumNavBar = ({
         <BrandingLink
           aria-label="Nulogy logo"
           underline={false}
-          style={{ display: "block", height: subtext ? "56px" : "40px" }}
+          display="block"
+          height={subtext ? "56px" : "40px"}
           my={subtext ? "-8px" : null}
           href={brandingLinkHref}
           to={brandingLinkTo}
@@ -229,10 +234,8 @@ class SmallNavBarNoState extends React.Component {
         >
           <BrandingLink
             aria-label="Nulogy logo"
-            style={{
-              display: "block",
-              height: subtext && !this.isSmallScreen() ? "56px" : "40px",
-            }}
+            display="block"
+            height={subtext && !this.isSmallScreen() ? "56px" : "40px"}
             my={subtext && !this.isSmallScreen() ? "-8px" : null}
             underline={false}
             href={brandingLinkHref}
