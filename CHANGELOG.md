@@ -1,3 +1,10 @@
+# [5.8.0](https://github.com/nulogy/design-system/compare/v5.7.0...v5.8.0) (2021-03-03)
+
+
+### Features
+
+* add react-router support in NavBar and ReactRouterLink ([#864](https://github.com/nulogy/design-system/issues/864)) ([499e51f](https://github.com/nulogy/design-system/commit/499e51f3330953f823db4d6527744057479a44b4))
+
 # [5.7.0](https://github.com/nulogy/design-system/compare/v5.6.0...v5.7.0) (2021-03-02)
 
 
