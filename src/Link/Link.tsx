@@ -16,7 +16,7 @@ const resetButtonStyles = {
   border: "none",
 };
 
-type LinkProps = ColorProps &
+export type LinkProps = ColorProps &
   SpaceProps &
   LayoutProps & {
     className?: string;

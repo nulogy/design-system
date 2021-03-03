@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
+import { Link as ReactLink } from "react-router-dom";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
-import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
@@ -17,7 +17,7 @@ import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import isValidMenuItem from "./isValidMenuItem";
-import EnvironmentBanner from './EnvironmentBanner';
+import EnvironmentBanner from "./EnvironmentBanner";
 
 const MAX_LOGO_WIDTH = "184px";
 const MAX_LOGO_HEIGHT = "36px";
@@ -42,16 +42,23 @@ const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
   position: "relative",
 }));
 
-
-
-
-const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
+const BrandLogoContainer = ({
+  logoSrc,
+  brandingLinkHref,
+  brandingLinkTo,
+  subtext,
+}) => {
+  const LinkComponent = (props) =>
+    brandingLinkTo ? (
+      <ReactLink component={Link} to={brandingLinkTo} {...props} />
+    ) : (
+      <Link href={brandingLinkHref} {...props} />
+    );
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
-      <Link
+      <LinkComponent
         aria-label="Home"
         underline={false}
-        href={brandingLinkHref}
         style={{ display: "block" }}
       >
         {logoSrc && (
@@ -68,7 +75,7 @@ const BrandLogoContainer = ({ logoSrc, brandingLinkHref, subtext }) => {
             subtext={subtext}
           />
         )}
-      </Link>
+      </LinkComponent>
     </Box>
   );
 };
@@ -91,6 +98,7 @@ const MediumNavBar = ({
   environment,
   logoSrc,
   brandingLinkHref,
+  brandingLinkTo,
   ...props
 }) => {
   const { t } = useTranslation();
@@ -102,6 +110,7 @@ const MediumNavBar = ({
           <BrandLogoContainer
             logoSrc={logoSrc}
             brandingLinkHref={brandingLinkHref}
+            brandingLinkTo={brandingLinkTo}
             subtext={subtext}
           />
           <Flex
@@ -160,6 +169,7 @@ MediumNavBar.defaultProps = {
   ...BrandLogoContainer.defaultProps,
   subtext: null,
   brandingLinkHref: "/",
+  brandingLinkTo: undefined,
   menuData: null,
 };
 
@@ -243,6 +253,7 @@ class SmallNavBarNoState extends React.Component {
       menuState: { isOpen, toggleMenu, closeMenu },
       subtext,
       brandingLinkHref,
+      brandingLinkTo,
       environment,
       logoSrc,
       ...props
@@ -254,6 +265,7 @@ class SmallNavBarNoState extends React.Component {
           <BrandLogoContainer
             logoSrc={logoSrc}
             brandingLinkHref={brandingLinkHref}
+            brandingLinkTo={brandingLinkTo}
             subtext={subtext}
           />
           <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
