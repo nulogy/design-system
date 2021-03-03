@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { fontSize, lineHeight, space } from "styled-system";
+import { Link as ReactLink } from "react-router-dom";
 import theme from "../theme";
 import { DropdownLink } from "../DropdownMenu";
 
@@ -66,6 +67,21 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
   </li>
 );
 
+const renderSubMenuRouterLink = (subMenuItem, onItemClick) => (
+  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
+    <ReactLink
+      component={SubMenuLink}
+      fontSize="small"
+      lineHeight="smallTextBase"
+      py="half"
+      onClick={onItemClick}
+      to={subMenuItem.to}
+    >
+      {subMenuItem.name}
+    </ReactLink>
+  </li>
+);
+
 const renderCustom = (subMenuItem, onItemClick) => (
   <ApplySubMenuLinkStyles key={subMenuItem.name} onClick={onItemClick}>
     {subMenuItem.render()}
@@ -83,6 +99,8 @@ const getRenderFunction = (subMenuItem) => {
     return renderSubMenuLink;
   } else if (subMenuItem.render) {
     return renderCustom;
+  } else if (subMenuItem.to) {
+    return renderSubMenuRouterLink;
   } else {
     return renderText;
   }

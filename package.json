@@ -115,6 +115,7 @@
     "prop-types": "15.7.2",
     "puppeteer": "^3.3.0",
     "react-color": "^2.18.1",
+    "react-router-dom": "^5.2.0",
     "react-select": "^3.0.8",
     "react-test-renderer": "^16.10",
     "rollup": "^2.7.3",

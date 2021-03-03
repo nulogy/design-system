@@ -7,6 +7,7 @@ import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import NulogyLogo from "./NulogyLogo";
+import { Link as ReactLink } from "react-router-dom";
 
 const borderStyle = "1px solid #e4e7eb";
 
@@ -129,6 +130,20 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
   </StyledLi>
 );
 
+const renderRouterLink = (menuItem, linkOnClick, themeColorObject, layer) => (
+  <StyledLi key={menuItem.name}>
+    <ReactLink
+      component={MenuLink}
+      layer={layer}
+      {...themeColorObject}
+      onClick={linkOnClick}
+      to={menuItem.to}
+    >
+      {menuItem.name}
+    </ReactLink>
+  </StyledLi>
+);
+
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
   <ApplyMenuLinkStyles
     key={menuItem.name}
@@ -164,6 +179,8 @@ const getRenderFunction = (menuItem) => {
     return renderMenuLink;
   } else if (menuItem.render) {
     return renderCustom;
+  } else if (menuItem.to) {
+    return renderRouterLink;
   } else {
     return renderText;
   }

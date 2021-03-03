@@ -24,7 +24,7 @@ export {
   ControlIcon,
 } from "./Button";
 export { ButtonGroup } from "./ButtonGroup";
-export { Link } from "./Link";
+export { Link, ReactRouterLink } from "./Link";
 export { InlineValidation } from "./Validation";
 
 export { Alert } from "./Alert";
