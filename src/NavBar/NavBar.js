@@ -4,17 +4,18 @@ import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
+import { Link as ReactLink } from "react-router-dom";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
+import theme from "../theme";
+import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
-import theme from "../theme";
-import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 
 const themeColors = {
   blue: {
@@ -43,29 +44,38 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   padding: `${theme.space.x2} ${theme.space.x3}`,
 }));
 
+const BrandingLink = ({ brandingLinkTo, brandingLinkHref, children, props }) =>
+  brandingLinkTo ? (
+    <ReactLink component={Link} to={brandingLinkTo} {...props}>{children}</ReactLink>
+  ) : (
+    <Link href={brandingLinkHref} {...props}>{children}</Link>
+  );
+
 const MediumNavBar = ({
   menuData,
   themeColor,
   subtext,
   brandingLinkHref,
+  brandingLinkTo,
   ...props
 }) => {
   const { t } = useTranslation();
   return (
     <header {...props}>
       <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
-        <Link
+        <BrandingLink
           aria-label="Nulogy logo"
           underline={false}
           style={{ display: "block", height: subtext ? "56px" : "40px" }}
           my={subtext ? "-8px" : null}
           href={brandingLinkHref}
+          to={brandingLinkTo}
         >
           <Branding
             logoColor={getThemeColor(themeColor).logoColor}
             subtext={subtext}
           />
-        </Link>
+        </BrandingLink>
         <Flex
           justifyContent="space-between"
           alignContent="flex-end"
@@ -114,12 +124,14 @@ MediumNavBar.propTypes = {
   subtext: PropTypes.string,
   brandingLinkHref: PropTypes.string,
   menuData: PropTypes.shape(MenuDataPropTypes),
+  brandingLinkTo: PropTypes.string,
   themeColor: PropTypes.oneOf(["blue", "white"]),
 };
 
 MediumNavBar.defaultProps = {
   subtext: null,
   brandingLinkHref: "/",
+  brandingLinkTo: undefined,
   menuData: null,
   themeColor: undefined,
 };
@@ -206,6 +218,7 @@ class SmallNavBarNoState extends React.Component {
       menuState: { isOpen, toggleMenu, closeMenu },
       subtext,
       brandingLinkHref,
+      brandingLinkTo,
       themeColor,
       ...props
     } = this.props;
@@ -214,7 +227,7 @@ class SmallNavBarNoState extends React.Component {
         <NavBarBackground
           backgroundColor={getThemeColor(themeColor).background}
         >
-          <Link
+          <BrandingLink
             aria-label="Nulogy logo"
             style={{
               display: "block",
@@ -223,13 +236,14 @@ class SmallNavBarNoState extends React.Component {
             my={subtext && !this.isSmallScreen() ? "-8px" : null}
             underline={false}
             href={brandingLinkHref}
+            to={brandingLinkTo}
           >
             <Branding
               logoColor={getThemeColor(themeColor).logoColor}
               logoType={this.isSmallScreen() ? "lettermark" : "wordmark"}
               subtext={this.isSmallScreen() ? null : subtext}
             />
-          </Link>
+          </BrandingLink>
           <Flex
             justifyContent="flex-end"
             style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
@@ -276,6 +290,7 @@ SmallNavBarNoState.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   subtext: PropTypes.string,
   brandingLinkHref: PropTypes.string,
+  brandingLinkTo: PropTypes.string,
   breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   width: PropTypes.number,
   themeColor: PropTypes.oneOf(["blue", "white"]),
@@ -285,6 +300,7 @@ SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
   brandingLinkHref: "/",
+  brandingLinkTo: undefined,
   breakpointLower: theme.breakpoints.small,
   width: undefined,
   themeColor: undefined,

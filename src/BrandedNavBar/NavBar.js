@@ -253,6 +253,7 @@ class SmallNavBarNoState extends React.Component {
       menuState: { isOpen, toggleMenu, closeMenu },
       subtext,
       brandingLinkHref,
+      brandingLinkTo,
       environment,
       logoSrc,
       ...props
@@ -264,6 +265,7 @@ class SmallNavBarNoState extends React.Component {
           <BrandLogoContainer
             logoSrc={logoSrc}
             brandingLinkHref={brandingLinkHref}
+            brandingLinkTo={brandingLinkTo}
             subtext={subtext}
           />
           <Flex justifyContent="flex-end" ml="x3" flexGrow="1">

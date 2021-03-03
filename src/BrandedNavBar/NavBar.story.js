@@ -4,7 +4,6 @@ import { select } from "@storybook/addon-knobs";
 import { BrowserRouter } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
-import { Link } from "../Icon";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo =
@@ -26,70 +25,6 @@ const BrandedNavBar = (props) => (
     </Heading1>
   </ResetStorybookView>
 );
-
-const primaryMenuReactRouter = [
-  {
-    name: "Dashboard",
-    items: [
-      {
-        name: "Customers",
-        to: "/customers",
-      },
-      { name: "Invoices", items: [{ name: "new invoice", to: "/new"}] },
-      { name: "Projects", href: "/" },
-      { name: "Items", href: "/" },
-      { name: "Vendors", href: "/" },
-      { name: "Carriers", href: "/" },
-    ],
-  },
-
-  {
-    name: "Inspector",
-    items: [
-      { name: "Dashboard", href: "/" },
-      { name: "Moves", href: "/" },
-      { name: "Pick Lists", href: "/" },
-      { name: "Receive Orders", href: "/" },
-      { name: "Receipts", href: "/" },
-      { name: "Ship Orders", href: "/" },
-      { name: "Shipments", href: "/" },
-      { name: "Item Lists", href: "/" },
-      { name: "Cycle Counts", href: "/" },
-      { name: "Blind Counts", href: "/" },
-      { name: "Inbound Stock Transfer Orders", href: "/" },
-      { name: "Inbound Stock Transfers", href: "/" },
-      { name: "Outbound Stock Transfers", href: "/" },
-    ],
-  },
-  {
-    name: "Operations",
-    items: [
-      {
-        name: "Production",
-        items: [
-          { name: "Dashboard", href: "/" },
-          {
-            name: "Projects",
-            items: [
-              { name: "Cycle Counts", href: "/" },
-              { name: "Blind Counts", href: "/" },
-            ],
-          },
-          {
-            name: "Jobs",
-            items: [
-              { name: "Job 1", href: "/" },
-              { name: "Job 2", href: "/" },
-            ],
-          },
-        ],
-      },
-      { name: "Item cart", href: "/" },
-      { name: "Inventory", href: "/" },
-    ],
-  },
-  { name: "Link", to: "/Link" },
-];
 
 const primaryMenu = [
   {
@@ -270,6 +205,70 @@ export const WithIcon = () => (
 WithIcon.story = {
   name: "With icon",
 };
+
+const primaryMenuReactRouter = [
+  {
+    name: "Dashboard",
+    items: [
+      {
+        name: "Customers",
+        to: "/customers",
+      },
+      { name: "Invoices", items: [{ name: "new invoice", to: "/new"}] },
+      { name: "Projects", href: "/" },
+      { name: "Items", href: "/" },
+      { name: "Vendors", href: "/" },
+      { name: "Carriers", href: "/" },
+    ],
+  },
+
+  {
+    name: "Inspector",
+    items: [
+      { name: "Dashboard", href: "/" },
+      { name: "Moves", href: "/" },
+      { name: "Pick Lists", href: "/" },
+      { name: "Receive Orders", href: "/" },
+      { name: "Receipts", href: "/" },
+      { name: "Ship Orders", href: "/" },
+      { name: "Shipments", href: "/" },
+      { name: "Item Lists", href: "/" },
+      { name: "Cycle Counts", href: "/" },
+      { name: "Blind Counts", href: "/" },
+      { name: "Inbound Stock Transfer Orders", href: "/" },
+      { name: "Inbound Stock Transfers", href: "/" },
+      { name: "Outbound Stock Transfers", href: "/" },
+    ],
+  },
+  {
+    name: "Operations",
+    items: [
+      {
+        name: "Production",
+        items: [
+          { name: "Dashboard", href: "/" },
+          {
+            name: "Projects",
+            items: [
+              { name: "Cycle Counts", href: "/" },
+              { name: "Blind Counts", href: "/" },
+            ],
+          },
+          {
+            name: "Jobs",
+            items: [
+              { name: "Job 1", href: "/" },
+              { name: "Job 2", href: "/" },
+            ],
+          },
+        ],
+      },
+      { name: "Item cart", href: "/" },
+      { name: "Inventory", href: "/" },
+    ],
+  },
+  { name: "Link", to: "/Link" },
+];
 
 export const WithReactRouter = () => (
   <BrowserRouter basename="/">

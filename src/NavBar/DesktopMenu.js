@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
+import { Link as ReactLink } from "react-router-dom";
 import theme from "../theme";
 import MenuTrigger from "./MenuTrigger";
 
@@ -101,6 +102,14 @@ const renderMenuLink = (menuItem, themeColorObject) => (
   </div>
 );
 
+const renderRouterLink = (menuItem, themeColorObject) => (
+  <div key={menuItem.name}>
+    <ReactLink component={MenuLink} to={menuItem.to} {...themeColorObject}>
+      {menuItem.name}
+    </ReactLink>
+  </div>
+);
+
 const renderCustom = (menuItem, themeColorObject) => (
   <ApplyMenuLinkStyles {...themeColorObject} key={menuItem.name}>
     {menuItem.render()}
@@ -120,6 +129,8 @@ const getRenderFunction = (menuItem) => {
     return renderMenuLink;
   } else if (menuItem.render) {
     return renderCustom;
+  } else if (menuItem.to) {
+    return renderRouterLink;
   } else {
     return renderText;
   }
