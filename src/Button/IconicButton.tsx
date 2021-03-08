@@ -20,14 +20,13 @@ const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   pointerEvents: "none",
 }));
 const WrapperButton: React.SFC<any> = styled.button(
-  ({ color, disabled, theme }: any) => ({
+  ({ disabled, theme }: any) => ({
     background: "transparent",
     border: "none",
     position: "relative",
     display: "inline-flex",
     alignItems: "center",
     padding: `${theme.space.half} ${theme.space.none}`,
-    color: color,
     cursor: disabled ? "default" : "pointer",
     [`${Icon}`]: {
       borderRadius: theme.radii.circle,
@@ -90,7 +89,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
   (
     {
       children,
-      color = NDSTheme.colors.darkBlue,
+      color = "darkBlue",
       icon,
       labelHidden,
       className,
@@ -141,7 +140,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
           </Popper>
         </Manager>
         {children && !labelHidden && (
-          <Text mr="half" ml="half">
+          <Text mr="half" ml="half" color={color}>
             {children}
           </Text>
         )}
