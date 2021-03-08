@@ -1,3 +1,10 @@
+## [5.9.1](https://github.com/nulogy/design-system/compare/v5.9.0...v5.9.1) (2021-03-08)
+
+
+### Bug Fixes
+
+* IconicButton label color should match icon color ([#868](https://github.com/nulogy/design-system/issues/868)) ([c682325](https://github.com/nulogy/design-system/commit/c6823254e24f444357ae0fc4549c2234d4d814df))
+
 # [5.9.0](https://github.com/nulogy/design-system/compare/v5.8.0...v5.9.0) (2021-03-08)
 
 
