@@ -1,3 +1,10 @@
+# [5.9.0](https://github.com/nulogy/design-system/compare/v5.8.0...v5.9.0) (2021-03-08)
+
+
+### Features
+
+* add sort icon ([#867](https://github.com/nulogy/design-system/issues/867)) ([23bcbdb](https://github.com/nulogy/design-system/commit/23bcbdb29dce7da401d608239a71421d9c7a53af))
+
 # [5.8.0](https://github.com/nulogy/design-system/compare/v5.7.0...v5.8.0) (2021-03-03)
 
 
