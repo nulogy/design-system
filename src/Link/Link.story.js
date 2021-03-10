@@ -1,6 +1,6 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { Link, ReactRouterLink } from "../index";
+import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
+import { Link } from "../index";
 
 export default {
   title: "Components/Link",
@@ -60,10 +60,12 @@ AsAButton.story = {
 
 export const _ReactRouterLink = () => (
   <BrowserRouter>
-    <ReactRouterLink to="/place">Link</ReactRouterLink>
+    <ReactRouterLink component={Link} to="/place">
+      Link
+    </ReactRouterLink>
   </BrowserRouter>
 );
 
 _ReactRouterLink.story = {
-  name: "ReactRouterLink",
+  name: "with react router",
 };

@@ -48,7 +48,7 @@
     "@nulogy/icons": "^4.14.0",
     "react": ">=16.10.2",
     "react-dom": ">=16.10.2",
-    "styled-components": "^5.0.0"
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
@@ -115,8 +115,8 @@
     "prop-types": "15.7.2",
     "puppeteer": "^3.3.0",
     "react-color": "^2.18.1",
-    "react-router-dom": "^5.2.0",
     "react-select": "^3.0.8",
+    "react-router-dom": "^5.2.0",
     "react-test-renderer": "^16.10",
     "rollup": "^2.7.3",
     "rollup-plugin-babel": "^4.4.0",
@@ -126,7 +126,7 @@
     "semantic-release": "^17.2.1",
     "source-map-loader": "^1.0.1",
     "storybook-addon-performance": "^0.13.0",
-    "styled-components": "^5.0.0",
+    "styled-components": "^5.1.0",
     "svg-sprite-loader": "^3.8.0",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.5",

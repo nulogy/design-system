@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
-import { Link as ReactLink } from "react-router-dom";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
@@ -44,16 +43,11 @@ const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
   padding: `${theme.space.x2} ${theme.space.x3}`,
 }));
 
-const BrandingLink = ({ to, href, children, ...props }) =>
-  to ? (
-    <ReactLink component={Link} to={to} {...props}>
-      {children}
-    </ReactLink>
-  ) : (
-    <Link href={href} {...props}>
-      {children}
-    </Link>
-  );
+const BrandingLink = ({ to, href, children, ...props }) => (
+  <Link href={href} to={to} {...props}>
+    {children}
+  </Link>
+);
 
 const MediumNavBar = ({
   menuData,
@@ -61,6 +55,7 @@ const MediumNavBar = ({
   subtext,
   brandingLinkHref,
   brandingLinkTo,
+  brandingLinkComponent,
   ...props
 }) => {
   const { t } = useTranslation();
@@ -74,6 +69,7 @@ const MediumNavBar = ({
           height={subtext ? "56px" : "40px"}
           my={subtext ? "-8px" : null}
           href={brandingLinkHref}
+          as={brandingLinkComponent}
           to={brandingLinkTo}
         >
           <Branding

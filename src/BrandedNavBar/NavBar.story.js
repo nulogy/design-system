@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { select } from "@storybook/addon-knobs";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
@@ -213,8 +213,18 @@ const primaryMenuReactRouter = [
       {
         name: "Customers",
         to: "/customers",
+        as: ReactRouterLink,
       },
-      { name: "Invoices", items: [{ name: "new invoice", to: "/new"}] },
+      {
+        name: "Invoices",
+        items: [
+          {
+            name: "new invoice",
+            to: "/new",
+            as: ReactRouterLink,
+          },
+        ],
+      },
       { name: "Projects", href: "/" },
       { name: "Items", href: "/" },
       { name: "Vendors", href: "/" },
@@ -274,6 +284,7 @@ export const WithReactRouter = () => (
   <BrowserRouter basename="/">
     <BrandedNavBar
       brandingLinkTo="/Home"
+      brandingLinkComponent={ReactRouterLink}
       menuData={{
         primaryMenu: primaryMenuReactRouter,
         secondaryMenu: secondaryMenuWithIcon,

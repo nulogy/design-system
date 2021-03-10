@@ -7,11 +7,14 @@ import typescript from "rollup-plugin-typescript2";
 /* Rollup outputs module and main bundles for the @nulogy/components package */
 import packageJson from "./package.json";
 
-const GLOBALS = {
+const PEER_DEPENDENCIES = {
   react: "React",
-  "react-dom": "ReactDOM",
-  "prop-types": "PropTypes",
   "styled-components": "styled",
+};
+
+const GLOBALS = {
+  ...PEER_DEPENDENCIES,
+  "prop-types": "PropTypes",
   "react-windowed-select": "components",
   "@babel/runtime/helpers/typeof": "typeof",
   "@babel/runtime/helpers/defineProperty": "defineProperty",
@@ -34,6 +37,9 @@ const GLOBALS = {
   "html-parse-stringify2": "HTML",
   "smoothscroll-polyfill": "smoothscroll",
   "react-fast-compare": "isEqual",
+  "path-to-regexp": "pathToRegexp",
+  "react-is": "reactIs",
+  "react-dom": "reactDom",
 };
 
 const externals = Object.keys(GLOBALS);
