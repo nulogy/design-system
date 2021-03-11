@@ -1,3 +1,10 @@
+## [5.9.3](https://github.com/nulogy/design-system/compare/v5.9.2...v5.9.3) (2021-03-11)
+
+
+### Bug Fixes
+
+* add dependencies from react-popper ([#865](https://github.com/nulogy/design-system/issues/865)) ([8977cd7](https://github.com/nulogy/design-system/commit/8977cd7e2b0a00a0950ca0a699c560a915e56bc7))
+
 ## [5.9.2](https://github.com/nulogy/design-system/compare/v5.9.1...v5.9.2) (2021-03-11)
 
 
