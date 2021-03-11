@@ -1,3 +1,10 @@
+## [5.9.2](https://github.com/nulogy/design-system/compare/v5.9.1...v5.9.2) (2021-03-11)
+
+
+### Bug Fixes
+
+* Add support for using reac-router through "as" prop in NavBar, BrandedNavBar and Link (see stories for code samples) ([#869](https://github.com/nulogy/design-system/issues/869)) ([686c625](https://github.com/nulogy/design-system/commit/686c6254446f4a77ba673990be5e7a692ca2580b))
+
 ## [5.9.1](https://github.com/nulogy/design-system/compare/v5.9.0...v5.9.1) (2021-03-08)
 
 
