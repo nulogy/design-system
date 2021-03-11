@@ -1,9 +1,8 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { Breadcrumbs } from "./index";
+import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Link } from "../Link";
 import { Text } from "../Type";
-import { ReactRouterLink } from '../Link/ReactRouterLink';
+import { Breadcrumbs } from "./index";
 
 export default {
   title: "Components/Breadcrumbs",
@@ -36,8 +35,12 @@ WithoutLink.story = {
 export const WithReactRouter = () => (
   <BrowserRouter>
     <Breadcrumbs>
-      <ReactRouterLink to="/">Home</ReactRouterLink>
-      <ReactRouterLink to="/Tenants">Tenants</ReactRouterLink>
+      <Link as={ReactRouterLink} to="/">
+        Home
+      </Link>
+      <Link as={ReactRouterLink} to="/Tenants">
+        Tenants
+      </Link>
       <Text>Current Tenant</Text>
     </Breadcrumbs>
   </BrowserRouter>

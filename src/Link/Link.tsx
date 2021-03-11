@@ -8,15 +8,16 @@ import {
   LayoutProps,
 } from "styled-system";
 import { darken } from "polished";
-import { DefaultNDSThemeType } from "../theme.type";
 import { themeGet } from "@styled-system/theme-get";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const resetButtonStyles = {
   background: "none",
   border: "none",
 };
 
-export type LinkProps = ColorProps &
+export type LinkProps = React.ComponentPropsWithRef<"a"> &
+  ColorProps &
   SpaceProps &
   LayoutProps & {
     className?: string;
@@ -33,8 +34,10 @@ const getHoverColor = (props: LinkProps) =>
   props.hover
     ? props.color
     : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
-
-const Link = styled.a<LinkProps>(
+const Link = styled.a.withConfig({
+  shouldForwardProp: (prop, defaultValidatorFn) =>
+    !["underline", "hover"].includes(prop) && defaultValidatorFn(prop),
+})<LinkProps>(
   color,
   space,
   typography,

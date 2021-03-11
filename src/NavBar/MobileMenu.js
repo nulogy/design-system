@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
-import { Link as ReactLink } from "react-router-dom";
 import { themeGet } from "@styled-system/theme-get";
 import { Text, Heading3 } from "../Type";
 import { BrandingText } from "../Branding";
@@ -114,6 +113,8 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
       {...themeColorObject}
       onClick={linkOnClick}
       href={menuItem.href}
+      to={menuItem.to}
+      as={menuItem.as}
     >
       {menuItem.name}
     </MenuLink>
@@ -148,29 +149,13 @@ const renderText = (menuItem, linkOnClick, themeColorObject, layer) => (
   </MenuText>
 );
 
-const renderRouterLink = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <li key={menuItem.name} style={{ display: "block" }}>
-    <ReactLink
-      component={MenuLink}
-      layer={layer}
-      {...themeColorObject}
-      onClick={linkOnClick}
-      to={menuItem.to}
-    >
-      {menuItem.name}
-    </ReactLink>
-  </li>
-);
-
 const getRenderFunction = (menuItem) => {
   if (menuItem.items) {
     return renderSubMenu;
-  } else if (menuItem.href) {
+  } else if (menuItem.href || menuItem.to) {
     return renderMenuLink;
   } else if (menuItem.render) {
     return renderCustom;
-  } else if (menuItem.to) {
-    return renderRouterLink;
   } else {
     return renderText;
   }

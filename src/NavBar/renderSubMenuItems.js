@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { fontSize, lineHeight, space } from "styled-system";
-import { Link as ReactLink } from "react-router-dom";
 import theme from "../theme";
 import { DropdownLink } from "../DropdownMenu";
 
@@ -61,6 +60,8 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
       py="half"
       onClick={onItemClick}
       href={subMenuItem.href}
+      to={subMenuItem.to}
+      as={subMenuItem.as}
     >
       {subMenuItem.name}
     </SubMenuLink>
@@ -73,21 +74,6 @@ const renderCustom = (subMenuItem, onItemClick) => (
   </ApplySubMenuLinkStyles>
 );
 
-const renderSubMenuRouterLink = (subMenuItem, onItemClick) => (
-  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
-    <ReactLink
-      component={SubMenuLink}
-      fontSize="small"
-      lineHeight="smallTextBase"
-      py="half"
-      onClick={onItemClick}
-      to={subMenuItem.to}
-    >
-      {subMenuItem.name}
-    </ReactLink>
-  </li>
-);
-
 
 const renderText = (subMenuItem) => (
   <SubMenuText key={subMenuItem.name}>{subMenuItem.name}</SubMenuText>
@@ -96,12 +82,10 @@ const renderText = (subMenuItem) => (
 const getRenderFunction = (subMenuItem) => {
   if (subMenuItem.items) {
     return renderSubMenuTrigger;
-  } else if (subMenuItem.href) {
+  } else if (subMenuItem.href || subMenuItem.to) {
     return renderSubMenuLink;
   } else if (subMenuItem.render) {
     return renderCustom;
-  } else if (subMenuItem.to) {
-    return renderSubMenuRouterLink;
   } else {
     return renderText;
   }

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
-import { Link as ReactLink } from "react-router-dom";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
@@ -46,18 +45,16 @@ const BrandLogoContainer = ({
   logoSrc,
   brandingLinkHref,
   brandingLinkTo,
+  brandingLinkComponent,
   subtext,
 }) => {
-  const LinkComponent = (props) =>
-    brandingLinkTo ? (
-      <ReactLink component={Link} to={brandingLinkTo} {...props} />
-    ) : (
-      <Link href={brandingLinkHref} {...props} />
-    );
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
-      <LinkComponent
+      <Link
         aria-label="Home"
+        href={brandingLinkHref}
+        to={brandingLinkTo}
+        as={brandingLinkComponent}
         underline={false}
         style={{ display: "block" }}
       >
@@ -75,7 +72,7 @@ const BrandLogoContainer = ({
             subtext={subtext}
           />
         )}
-      </LinkComponent>
+      </Link>
     </Box>
   );
 };
@@ -99,6 +96,7 @@ const MediumNavBar = ({
   logoSrc,
   brandingLinkHref,
   brandingLinkTo,
+  brandingLinkComponent,
   ...props
 }) => {
   const { t } = useTranslation();
@@ -111,6 +109,7 @@ const MediumNavBar = ({
             logoSrc={logoSrc}
             brandingLinkHref={brandingLinkHref}
             brandingLinkTo={brandingLinkTo}
+            brandingLinkComponent={brandingLinkComponent}
             subtext={subtext}
           />
           <Flex

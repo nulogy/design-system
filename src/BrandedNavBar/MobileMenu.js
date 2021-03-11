@@ -7,7 +7,6 @@ import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import NulogyLogo from "./NulogyLogo";
-import { Link as ReactLink } from "react-router-dom";
 
 const borderStyle = "1px solid #e4e7eb";
 
@@ -124,23 +123,11 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
       {...themeColorObject}
       onClick={linkOnClick}
       href={menuItem.href}
-    >
-      {menuItem.name}
-    </MenuLink>
-  </StyledLi>
-);
-
-const renderRouterLink = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <StyledLi key={menuItem.name}>
-    <ReactLink
-      component={MenuLink}
-      layer={layer}
-      {...themeColorObject}
-      onClick={linkOnClick}
+      as={menuItem.as}
       to={menuItem.to}
     >
       {menuItem.name}
-    </ReactLink>
+    </MenuLink>
   </StyledLi>
 );
 
@@ -175,12 +162,10 @@ const renderText = (menuItem, linkOnClick, themeColorObject, layer) => (
 const getRenderFunction = (menuItem) => {
   if (menuItem.items) {
     return renderSubMenu;
-  } else if (menuItem.href) {
+  } else if (menuItem.href || menuItem.to) {
     return renderMenuLink;
   } else if (menuItem.render) {
     return renderCustom;
-  } else if (menuItem.to) {
-    return renderRouterLink;
   } else {
     return renderText;
   }
