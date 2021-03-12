@@ -41,10 +41,10 @@ WithASelectedSize.story = {
 export const WithASelectedIcon = () => (
   <>
     <Button icon="add" iconSide="left">
-      Create project
+      New project
     </Button>
     <Button icon="add" iconSide="right">
-      Create project
+      New project
     </Button>
   </>
 );
