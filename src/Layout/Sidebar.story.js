@@ -6,8 +6,6 @@ import {
   Icon,
   Breadcrumbs,
   Link,
-  Heading2,
-  Text,
   Page,
   Sidebar,
   Select,
@@ -95,94 +93,12 @@ const secondaryMenu = [
 ];
 
 export default {
-  title: "Components/Layout",
+  title: "Components/Sidebar",
   parameters: {
     layout: "fullscreen",
     chromatic: { delay: 300 }, // time for sidebar animation
   },
 };
-
-export const _ApplicationFrame = () => (
-  <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-    height="100vh"
-  ></ApplicationFrame>
-);
-
-export const _Page = () => (
-  <Page
-    breadcrumbs={
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    }
-    title="Materials Overview"
-    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
-  >
-    <>
-      <Text fontFamily="mono" fontSize="small">
-        // content
-      </Text>
-    </>
-  </Page>
-);
-
-export const _Layout = () => (
-  <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-    height="100vh"
-  >
-    <Page
-      breadcrumbs={
-        <Breadcrumbs>
-          <Link href="/">Home</Link>
-          <Link href="/">Materials</Link>
-        </Breadcrumbs>
-      }
-      title="Materials Overview"
-    >
-      <>
-        <Text fontFamily="mono" fontSize="small">
-          // content
-        </Text>
-      </>
-    </Page>
-  </ApplicationFrame>
-);
-
-export const NoPageTitle = () => (
-  <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-  >
-    <Page
-      breadcrumbs={
-        <Breadcrumbs>
-          <Link href="/">Home</Link>
-          <Link href="/">Materials</Link>
-        </Breadcrumbs>
-      }
-    >
-      <Text fontFamily="mono" fontSize="small">
-        // content
-      </Text>
-    </Page>
-  </ApplicationFrame>
-);
-
-export const NoBreadcrumbs = () => (
-  <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-    height="100vh"
-  >
-    <Page title="Materials Overview">
-      <>
-        <Heading2>Overview</Heading2>
-        <Text>I am main content.</Text>
-      </>
-    </Page>
-  </ApplicationFrame>
-);
 
 const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
   <Sidebar
@@ -207,7 +123,7 @@ const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
   </Sidebar>
 );
 
-export const WithSidebar = () => {
+export const _Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef(null);
 
@@ -255,7 +171,7 @@ export const WithSidebar = () => {
   );
 };
 
-export const WithSidebarWithoutOverlay = () => {
+export const WithoutOverlay = () => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef(null);
 
@@ -305,7 +221,7 @@ export const WithSidebarWithoutOverlay = () => {
   );
 };
 
-export const WithSidebarOpenByDefault = () => {
+export const OpenByDefault = () => {
   const [isOpen, setIsOpen] = useState(true);
   const triggerRef = useRef(null);
 
@@ -353,7 +269,7 @@ export const WithSidebarOpenByDefault = () => {
   );
 };
 
-export const WithSidebarCustomOffset = () => {
+export const WithCustomOffset = () => {
   const [isOpen, setIsOpen] = useState(true);
   const triggerRef = useRef(null);
 
@@ -403,7 +319,7 @@ export const WithSidebarCustomOffset = () => {
   );
 };
 
-export const DontCloseSidebarOnOutsideClick = () => {
+export const DontCloseOnOutsideClick = () => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef(null);
 

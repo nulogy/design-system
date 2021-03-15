@@ -6,7 +6,7 @@ const closeButton = () => cy.get('[data-testid="sidebar-close-button"]');
 describe("Sidebar", () => {
   describe("Default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-sidebar");
+      cy.renderFromStorybook("sidebar--sidebar");
     });
     it("is hidden", () => {
       Sidebar().should("not.be.visible");
@@ -24,7 +24,7 @@ describe("Sidebar", () => {
   });
   describe("Accessibility", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-sidebar");
+      cy.renderFromStorybook("sidebar--sidebar");
     });
     it("focuses the close button when opened", () => {
       trigger().click();
@@ -41,7 +41,7 @@ describe("Sidebar", () => {
   });
   describe("Open by default", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-sidebar-open-by-default");
+      cy.renderFromStorybook("sidebar--open-by-default");
     });
     it("is shown", () => {
       Sidebar().should("be.visible");
@@ -62,7 +62,7 @@ describe("Sidebar", () => {
   });
   describe("Custom offset", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-sidebar-custom-offset");
+      cy.renderFromStorybook("sidebar--with-custom-offset");
     });
     it("is shown", () => {
       Sidebar().should("be.visible");
@@ -85,7 +85,7 @@ describe("Sidebar", () => {
   });
   describe("Without overlay", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--with-sidebar-without-overlay");
+      cy.renderFromStorybook("sidebar--without-overlay");
     });
     it("slides out when clicking on the body", () => {
       trigger().click();
@@ -97,7 +97,7 @@ describe("Sidebar", () => {
   });
   describe("Don't close on outide click", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("layout--dont-close-sidebar-on-outside-click");
+      cy.renderFromStorybook("sidebar--dont-close-on-outside-click");
     });
     it("does not close when clicking on the body", () => {
       trigger().click();
