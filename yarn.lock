@@ -2011,10 +2011,10 @@
     eslint-plugin-react-hooks "^4.0.4"
     prettier "^2.0.5"
 
-"@nulogy/icons@^4.14.0":
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.14.0.tgz#1657b9626c4adae039cac0178c5d14fbef0eeeb6"
-  integrity sha512-a39ZMxwQJf43D7zH+xkH/rYjec2ZgIBN7nmK7Y97glunfV8WDZ+RKEtCOMnC2Lcfgf6E/zZdsuzfw5+oSjNdTA==
+"@nulogy/icons@^4.15.0":
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.15.0.tgz#899405a1437d21abe37ac2ff4d855fb393dac053"
+  integrity sha512-kdUNzmA3XEuSN+9+rZJBW91HNDiKKAzojUcnAccgjVPi/wPWYLBxIhAkpI8lzFOGwTAQ8CI5uNSshY5nP3oJqA==
   dependencies:
     fs "^0.0.1-security"
     svgi "^1.1.0"
