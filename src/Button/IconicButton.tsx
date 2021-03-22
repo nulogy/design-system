@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 import { space, SpaceProps } from "styled-system";
 import { Manager, Reference, Popper } from "react-popper-latest";
 import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
+import { deprecatedProp } from "../utils/deprecatedProp";
 
 const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
@@ -82,6 +84,7 @@ type IconicButtonProps = SpaceProps & {
   onClick?: (...args: any[]) => any;
   icon?: any;
   iconSize?: string;
+  tooltip?: string;
   children?: any;
 };
 const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
@@ -93,6 +96,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
       labelHidden,
       className,
       iconSize,
+      tooltip,
       ...props
     },
     forwardedRef
@@ -130,9 +134,9 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
             ]}
           >
             {({ ref, style, placement }) =>
-              labelHidden ? (
+              labelHidden || tooltip ? (
                 <HoverText ref={ref} style={style} placement={placement}>
-                  {children}
+                  {tooltip ? tooltip : children}
                 </HoverText>
               ) : null
             }
@@ -148,5 +152,17 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
   }
 );
 export const iconNames = Object.keys(icons);
+
+IconicButton.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+  labelHidden: deprecatedProp(PropTypes.bool, "tooltip"),
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
+  icon: PropTypes.string,
+  iconSize: PropTypes.string,
+  tooltip: PropTypes.string,
+  children: PropTypes.node,
+};
 
 export default IconicButton;
