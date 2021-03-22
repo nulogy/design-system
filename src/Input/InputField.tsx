@@ -9,7 +9,6 @@ import { subPx } from "../utils";
 import { MaybeFieldLabel } from "../FieldLabel";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
-import NDSTheme from "../theme";
 import { DefaultNDSThemeType } from "../theme.type";
 
 const inputStyles = (theme) => ({
@@ -75,14 +74,7 @@ const StyledInput: React.SFC<StyledInputProps> = styled.input(
   space,
   (props: StyledInputProps) => getInputStyle(props)
 );
-const StyledInputIcon = styled(Icon)(({ theme }) => ({
-  position: "absolute",
-  right: theme.space.x1,
-  color: theme.colors.darkGrey,
-  bottom: "50%",
-  transform: "translateY(50%)",
-  pointerEvents: "none",
-}));
+
 export type InputFieldProps = React.ComponentPropsWithRef<"input"> & {
   icon?: string;
   disabled?: boolean;
@@ -146,7 +138,16 @@ export const InputField: React.SFC<InputFieldProps> = forwardRef<
             {...props}
           />
           {icon && (
-            <StyledInputIcon icon={icon} size={iconSize || NDSTheme.space.x2} />
+            <Icon
+              icon={icon}
+              size={iconSize || "x2"}
+              position="absolute"
+              right="x1"
+              color="darkGrey"
+              bottom="50%"
+              transform="translateY(50%)"
+              pointerEvents="none"
+            />
           )}
         </Box>
         <Suffix

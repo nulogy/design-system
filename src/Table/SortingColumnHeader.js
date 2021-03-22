@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { Text } from "../Type";
 import { Flex } from "../Flex";
 import { ControlIcon } from "../Button";
-import NDStheme from "../theme";
 
 const SortingColumnHeader = ({
   onChange,
@@ -21,7 +20,7 @@ const SortingColumnHeader = ({
     <Flex alignItems="center">
       <Text mr="x1">{label}</Text>
       <ControlIcon
-        size={NDStheme.space.x3}
+        size="x3"
         icon={ascending ? "sortDown" : "sortUp"}
         label={ariaLabel || defaultAriaLabel}
         toggled={active}

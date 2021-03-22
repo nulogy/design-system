@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
-import NDSTheme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 import { deprecatedProp } from "../utils/deprecatedProp";
 import DesktopMenu from "./DesktopMenu";
@@ -255,10 +255,17 @@ class SmallNavBarNoState extends React.Component {
       brandingLinkTo,
       environment,
       logoSrc,
+      breakpointLower,
       ...props
     } = this.props;
+    const { breakpoints } = useTheme();
     return (
-      <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
+      <SmallHeader
+        ref={this.navRef}
+        isOpen={isOpen}
+        breakpointLower={breakpoints[breakpointLower] || breakpointLower}
+        {...props}
+      >
         {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
         <NavBarBackground backgroundColor="white">
           <BrandLogoContainer
@@ -321,7 +328,7 @@ SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
   brandingLinkHref: "/",
-  breakpointLower: NDSTheme.breakpoints.small,
+  breakpointLower: "small",
   width: undefined,
   themeColor: undefined,
 };
@@ -346,11 +353,21 @@ const SelectNavBarBasedOnWidth = ({
   }
 };
 
-const BaseNavBar = ({ showTraining, environment, ...props }) => {
+const BaseNavBar = ({
+  showTraining,
+  environment,
+  breakpointUpper,
+  ...props
+}) => {
   const environmentValue = showTraining ? "training" : environment;
+  const { breakpoints } = useTheme();
   return (
     <ReactResizeDetector handleWidth>
-      <SelectNavBarBasedOnWidth {...props} environment={environmentValue} />
+      <SelectNavBarBasedOnWidth
+        breakpointUpper={breakpoints[breakpointUpper] || breakpointUpper}
+        {...props}
+        environment={environmentValue}
+      />
     </ReactResizeDetector>
   );
 };
@@ -367,7 +384,7 @@ BaseNavBar.propTypes = {
 BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
-  breakpointUpper: NDSTheme.breakpoints.medium,
+  breakpointUpper: "medium",
   environment: undefined,
   showTraining: undefined,
   logoSrc: undefined,

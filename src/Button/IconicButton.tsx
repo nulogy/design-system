@@ -6,7 +6,6 @@ import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
-import NDSTheme from "../theme";
 
 const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
@@ -110,7 +109,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
             {({ ref }) => (
               <Icon
                 ref={ref}
-                size={iconSize || NDSTheme.space.x4}
+                size={iconSize || "x4"}
                 icon={icon}
                 p="half"
                 color={color}

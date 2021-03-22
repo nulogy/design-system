@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import { Icon } from "../Icon";
-import NDSTheme from "../theme";
 const getIconColorByState = ({ toggled, disabled, theme }) => {
   if (toggled) {
     return theme.colors.darkBlue;
@@ -63,7 +62,7 @@ ControlIcon.defaultProps = {
   onClick: () => {},
   toggled: false,
   disabled: false,
-  size: NDSTheme.space.x4,
+  size: "x4",
   type: "button",
 };
 export default ControlIcon;
