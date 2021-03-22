@@ -1,19 +1,15 @@
 import React from "react";
 import styled, { CSSObject, useTheme } from "styled-components";
-import { space, color, position, PositionProps, ColorProps, SpaceProps } from "styled-system";
+import { space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
 
 import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
-import { transform, TransformProps } from "../StyledProps/transform";
 
 
 const iconNames = Object.keys(icons);
 
-type SvgProps = SpaceProps &
-  ColorProps &
-  PositionProps &
-  TransformProps & {
+type SvgProps = SpaceProps & {
   icon: string;
   className?: string;
   size?: string;
@@ -86,9 +82,6 @@ Svg.defaultProps = {
 
 const Icon = styled(Svg)<SvgProps>(
   space,
-  color,
-  position,
-  transform,
   ({ size }: SvgProps): CSSObject => ({
     minWidth: size,
   })
@@ -102,7 +95,7 @@ Icon.defaultProps = {
 
 const iconSizeRatio = 1.25;
 
-const CenteredIcon = styled(Svg)(color, {
+const CenteredIcon = styled(Svg)({
   position: "absolute",
   top: 0,
 });

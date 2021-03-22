@@ -11,6 +11,15 @@ import Prefix from "./Prefix";
 import Suffix from "./Suffix";
 import { DefaultNDSThemeType } from "../theme.type";
 
+const StyledInputIcon = styled(Icon)(({ theme }) => ({
+  position: "absolute",
+  right: theme.space.x1,
+  color: theme.colors.darkGrey,
+  bottom: "50%",
+  transform: "translateY(50%)",
+  pointerEvents: "none",
+}));
+
 const inputStyles = (theme) => ({
   disabled: {
     color: transparentize(0.6667, theme.colors.black),
@@ -138,16 +147,7 @@ export const InputField: React.SFC<InputFieldProps> = forwardRef<
             {...props}
           />
           {icon && (
-            <Icon
-              icon={icon}
-              size={iconSize || "x2"}
-              position="absolute"
-              right="x1"
-              color="darkGrey"
-              bottom="50%"
-              transform="translateY(50%)"
-              pointerEvents="none"
-            />
+            <StyledInputIcon icon={icon} size={iconSize || "x2"} />
           )}
         </Box>
         <Suffix
