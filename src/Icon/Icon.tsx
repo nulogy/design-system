@@ -1,10 +1,11 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
-import { space, color, SpaceProps } from "styled-system";
+import styled, { CSSObject, useTheme } from "styled-components";
+import { space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
 
 import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
+
 
 const iconNames = Object.keys(icons);
 
@@ -40,11 +41,12 @@ const Svg = React.forwardRef<SVGSVGElement, SvgProps>(
     }: SvgProps,
     ref
   ) => {
+    const { space } = useTheme();
     if (icon === "loading") {
       return (
         <LoadingIcon
           color={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
-          size={size}
+          size={space[size] || size}
           className={className}
           {...props}
         />
@@ -55,8 +57,8 @@ const Svg = React.forwardRef<SVGSVGElement, SvgProps>(
         <svg
           ref={ref}
           aria-hidden={title == null}
-          width={size}
-          height={size}
+          width={space[size] || size}
+          height={space[size] || size}
           fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
           viewBox={icons[icon].viewBox}
           focusable={focusable}
@@ -80,7 +82,6 @@ Svg.defaultProps = {
 
 const Icon = styled(Svg)<SvgProps>(
   space,
-  color,
   ({ size }: SvgProps): CSSObject => ({
     minWidth: size,
   })
@@ -94,7 +95,7 @@ Icon.defaultProps = {
 
 const iconSizeRatio = 1.25;
 
-const CenteredIcon = styled(Svg)(color, {
+const CenteredIcon = styled(Svg)({
   position: "absolute",
   top: 0,
 });

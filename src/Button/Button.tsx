@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import { Icon } from "../Icon";
-import NDSTheme from "../theme";
 import { subPx } from "../utils";
 import { DefaultNDSThemeType } from '../theme.type';
 
@@ -93,7 +92,7 @@ const Button: React.SFC<ButtonProps> = React.forwardRef(
   ({ children, iconSide, icon, className, asLink, ...props }, ref) => {
     const {
       lineHeights: { smallTextCompressed },
-    } = NDSTheme;
+    } = useTheme();
     return (
       <WrapperButton
         as={asLink ? "a" : undefined}

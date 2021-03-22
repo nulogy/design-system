@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
-import NDSTheme from "../theme";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
 import { deprecatedProp } from "../utils/deprecatedProp";
 import DesktopMenu from "./DesktopMenu";
@@ -229,75 +229,67 @@ MenuIcon.defaultProps = {
 };
 
 /* eslint-disable react/destructuring-assignment */
-class SmallNavBarNoState extends React.Component {
-  constructor() {
-    super();
-    this.navRef = React.createRef();
-  }
+const SmallNavBarNoState = ({
+  menuData,
+  menuState: { isOpen, toggleMenu, closeMenu },
+  subtext,
+  brandingLinkHref,
+  brandingLinkTo,
+  environment,
+  logoSrc,
+  breakpointLower,
+  ...props}) => {
+  const navRef = React.useRef();
 
-  componentDidUpdate(prevProps) {
-    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen)
-      this.navRef.current.scrollTop = 0;
-  }
-
-  isSmallScreen() {
-    const { breakpointLower, width } = this.props;
-
-    return width < pixelDigitsFrom(breakpointLower);
-  }
-
-  render() {
-    const {
-      menuData,
-      menuState: { isOpen, toggleMenu, closeMenu },
-      subtext,
-      brandingLinkHref,
-      brandingLinkTo,
-      environment,
-      logoSrc,
-      ...props
-    } = this.props;
-    return (
-      <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-        {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
-        <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer
-            logoSrc={logoSrc}
-            brandingLinkHref={brandingLinkHref}
-            brandingLinkTo={brandingLinkTo}
+  useEffect(() => {
+    navRef.current.scrollTop = 0;
+  }, [isOpen]); 
+  const { breakpoints } = useTheme();
+  return (
+    <SmallHeader
+      ref={navRef}
+      isOpen={isOpen}
+      breakpointLower={breakpoints[breakpointLower] || breakpointLower}
+      {...props}
+    >
+      {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
+      <NavBarBackground backgroundColor="white">
+        <BrandLogoContainer
+          logoSrc={logoSrc}
+          brandingLinkHref={brandingLinkHref}
+          brandingLinkTo={brandingLinkTo}
+          subtext={subtext}
+        />
+        <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
+          {menuData.search && (
+            <Flex maxWidth="18em" alignItems="center" px="0">
+              <NavBarSearch {...menuData.search} />
+            </Flex>
+          )}
+          {(menuData.primaryMenu || menuData.secondaryMenu) && (
+            <MobileMenuTrigger
+              {...themeColorObject}
+              onClick={toggleMenu}
+              aria-expanded={isOpen ? true : null}
+            >
+              <MenuIcon isOpen={isOpen} />
+            </MobileMenuTrigger>
+          )}
+        </Flex>
+      </NavBarBackground>
+      {isOpen && (
+        <PreventBodyElementScrolling>
+          <MobileMenu
+            themeColorObject={themeColorObject}
             subtext={subtext}
+            menuData={menuData}
+            closeMenu={closeMenu}
+            logoSrc={logoSrc}
           />
-          <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
-            {menuData.search && (
-              <Flex maxWidth="18em" alignItems="center" px="0">
-                <NavBarSearch {...menuData.search} />
-              </Flex>
-            )}
-            {(menuData.primaryMenu || menuData.secondaryMenu) && (
-              <MobileMenuTrigger
-                {...themeColorObject}
-                onClick={toggleMenu}
-                aria-expanded={isOpen ? true : null}
-              >
-                <MenuIcon isOpen={isOpen} />
-              </MobileMenuTrigger>
-            )}
-          </Flex>
-        </NavBarBackground>
-        {isOpen && (
-          <PreventBodyElementScrolling>
-            <MobileMenu
-              themeColorObject={themeColorObject}
-              subtext={subtext}
-              menuData={menuData}
-              closeMenu={closeMenu}
-              logoSrc={logoSrc}
-            />
-          </PreventBodyElementScrolling>
-        )}
-      </SmallHeader>
-    );
-  }
+        </PreventBodyElementScrolling>
+      )}
+    </SmallHeader>
+  );
 }
 /* eslint-enable react/destructuring-assignment */
 
@@ -321,7 +313,7 @@ SmallNavBarNoState.defaultProps = {
   menuData: null,
   subtext: null,
   brandingLinkHref: "/",
-  breakpointLower: NDSTheme.breakpoints.small,
+  breakpointLower: "small",
   width: undefined,
   themeColor: undefined,
 };
@@ -346,11 +338,21 @@ const SelectNavBarBasedOnWidth = ({
   }
 };
 
-const BaseNavBar = ({ showTraining, environment, ...props }) => {
+const BaseNavBar = ({
+  showTraining,
+  environment,
+  breakpointUpper,
+  ...props
+}) => {
   const environmentValue = showTraining ? "training" : environment;
+  const { breakpoints } = useTheme();
   return (
     <ReactResizeDetector handleWidth>
-      <SelectNavBarBasedOnWidth {...props} environment={environmentValue} />
+      <SelectNavBarBasedOnWidth
+        breakpointUpper={breakpoints[breakpointUpper] || breakpointUpper}
+        {...props}
+        environment={environmentValue}
+      />
     </ReactResizeDetector>
   );
 };
@@ -367,7 +369,7 @@ BaseNavBar.propTypes = {
 BaseNavBar.defaultProps = {
   menuData: null,
   className: undefined,
-  breakpointUpper: NDSTheme.breakpoints.medium,
+  breakpointUpper: "medium",
   environment: undefined,
   showTraining: undefined,
   logoSrc: undefined,
