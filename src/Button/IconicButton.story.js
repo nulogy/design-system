@@ -65,6 +65,7 @@ WithACustomSize.story = {
   name: "with a custom size",
 };
 
+
 export const WithACustomColor = () => (
   <IconicButton color="red" icon="close">
     Close
@@ -73,6 +74,16 @@ export const WithACustomColor = () => (
 
 WithACustomColor.story = {
   name: "with a custom color",
+};
+
+export const WithATooltipAndLabel = () => (
+  <IconicButton tooltip="Stop job" icon="close">
+    Stop
+  </IconicButton>
+);
+
+WithATooltipAndLabel.story = {
+  name: "with a tooltip and label",
 };
 
 export const rightAligned = () => (

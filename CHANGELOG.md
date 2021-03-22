@@ -1,3 +1,17 @@
+# [5.11.0](https://github.com/nulogy/design-system/compare/v5.10.0...v5.11.0) (2021-03-15)
+
+
+### Features
+
+* update icons package to v4.15.0 ([#873](https://github.com/nulogy/design-system/issues/873)) ([f493296](https://github.com/nulogy/design-system/commit/f493296e74519983fb8ec62cd25bb19510ccb5b2))
+
+# [5.10.0](https://github.com/nulogy/design-system/compare/v5.9.3...v5.10.0) (2021-03-12)
+
+
+### Features
+
+* **IconicButton:** Add ability to add  a tooltip in addition to the label with `tooltip` prop. `labelHidden` prop will be deprecated, use `tooltip` with the label text instead and remove children. ([#871](https://github.com/nulogy/design-system/issues/871)) ([560bdc1](https://github.com/nulogy/design-system/commit/560bdc1002a387934e0051465189115ccddb513c))
+
 ## [5.9.3](https://github.com/nulogy/design-system/compare/v5.9.2...v5.9.3) (2021-03-11)
 
 
