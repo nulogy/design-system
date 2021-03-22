@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
@@ -229,82 +229,67 @@ MenuIcon.defaultProps = {
 };
 
 /* eslint-disable react/destructuring-assignment */
-class SmallNavBarNoState extends React.Component {
-  constructor() {
-    super();
-    this.navRef = React.createRef();
-  }
+const SmallNavBarNoState = ({
+  menuData,
+  menuState: { isOpen, toggleMenu, closeMenu },
+  subtext,
+  brandingLinkHref,
+  brandingLinkTo,
+  environment,
+  logoSrc,
+  breakpointLower,
+  ...props}) => {
+  const navRef = React.useRef();
 
-  componentDidUpdate(prevProps) {
-    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen)
-      this.navRef.current.scrollTop = 0;
-  }
-
-  isSmallScreen() {
-    const { breakpointLower, width } = this.props;
-
-    return width < pixelDigitsFrom(breakpointLower);
-  }
-
-  render() {
-    const {
-      menuData,
-      menuState: { isOpen, toggleMenu, closeMenu },
-      subtext,
-      brandingLinkHref,
-      brandingLinkTo,
-      environment,
-      logoSrc,
-      breakpointLower,
-      ...props
-    } = this.props;
-    const { breakpoints } = useTheme();
-    return (
-      <SmallHeader
-        ref={this.navRef}
-        isOpen={isOpen}
-        breakpointLower={breakpoints[breakpointLower] || breakpointLower}
-        {...props}
-      >
-        {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
-        <NavBarBackground backgroundColor="white">
-          <BrandLogoContainer
-            logoSrc={logoSrc}
-            brandingLinkHref={brandingLinkHref}
-            brandingLinkTo={brandingLinkTo}
+  useEffect(() => {
+    navRef.current.scrollTop = 0;
+  }, [isOpen]); 
+  const { breakpoints } = useTheme();
+  return (
+    <SmallHeader
+      ref={navRef}
+      isOpen={isOpen}
+      breakpointLower={breakpoints[breakpointLower] || breakpointLower}
+      {...props}
+    >
+      {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
+      <NavBarBackground backgroundColor="white">
+        <BrandLogoContainer
+          logoSrc={logoSrc}
+          brandingLinkHref={brandingLinkHref}
+          brandingLinkTo={brandingLinkTo}
+          subtext={subtext}
+        />
+        <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
+          {menuData.search && (
+            <Flex maxWidth="18em" alignItems="center" px="0">
+              <NavBarSearch {...menuData.search} />
+            </Flex>
+          )}
+          {(menuData.primaryMenu || menuData.secondaryMenu) && (
+            <MobileMenuTrigger
+              {...themeColorObject}
+              onClick={toggleMenu}
+              aria-expanded={isOpen ? true : null}
+            >
+              <MenuIcon isOpen={isOpen} />
+            </MobileMenuTrigger>
+          )}
+        </Flex>
+      </NavBarBackground>
+      {isOpen && (
+        <PreventBodyElementScrolling>
+          <MobileMenu
+            themeColorObject={themeColorObject}
             subtext={subtext}
+            menuData={menuData}
+            closeMenu={closeMenu}
+            logoSrc={logoSrc}
           />
-          <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
-            {menuData.search && (
-              <Flex maxWidth="18em" alignItems="center" px="0">
-                <NavBarSearch {...menuData.search} />
-              </Flex>
-            )}
-            {(menuData.primaryMenu || menuData.secondaryMenu) && (
-              <MobileMenuTrigger
-                {...themeColorObject}
-                onClick={toggleMenu}
-                aria-expanded={isOpen ? true : null}
-              >
-                <MenuIcon isOpen={isOpen} />
-              </MobileMenuTrigger>
-            )}
-          </Flex>
-        </NavBarBackground>
-        {isOpen && (
-          <PreventBodyElementScrolling>
-            <MobileMenu
-              themeColorObject={themeColorObject}
-              subtext={subtext}
-              menuData={menuData}
-              closeMenu={closeMenu}
-              logoSrc={logoSrc}
-            />
-          </PreventBodyElementScrolling>
-        )}
-      </SmallHeader>
-    );
-  }
+        </PreventBodyElementScrolling>
+      )}
+    </SmallHeader>
+  );
 }
 /* eslint-enable react/destructuring-assignment */
 
