@@ -57,8 +57,8 @@ const Svg = React.forwardRef<SVGSVGElement, SvgProps>(
         <svg
           ref={ref}
           aria-hidden={title == null}
-          width={size}
-          height={size}
+          width={space[size] || size}
+          height={space[size] || size}
           fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
           viewBox={icons[icon].viewBox}
           focusable={focusable}
