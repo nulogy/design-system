@@ -1,3 +1,10 @@
+## [5.11.1](https://github.com/nulogy/design-system/compare/v5.11.0...v5.11.1) (2021-03-22)
+
+
+### Bug Fixes
+
+* use theme from themeProvider for breakpoint props in NavBar and Icon size props ([#875](https://github.com/nulogy/design-system/issues/875)) ([a27b983](https://github.com/nulogy/design-system/commit/a27b98361ff2943940170a6625982d6899907b35))
+
 # [5.11.0](https://github.com/nulogy/design-system/compare/v5.10.0...v5.11.0) (2021-03-15)
 
 
