@@ -367,3 +367,52 @@ export const DontCloseOnOutsideClick = () => {
     </ApplicationFrame>
   );
 };
+
+export const WithoutCloseButton = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const triggerRef = useRef(null);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+  const closeSidebar = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <ApplicationFrame
+      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+      overflowX="hidden"
+    >
+      <Page
+        breadcrumbs={
+          <Breadcrumbs>
+            <Link href="/">Home</Link>
+            <Link href="/">Materials</Link>
+          </Breadcrumbs>
+        }
+        title="Materials Overview"
+      >
+        <Box minWidth="300px">
+          <PrimaryButton
+            onClick={toggleSidebar}
+            ref={triggerRef}
+            id="openSidebarTrigger"
+          >
+            Open Sidebar
+          </PrimaryButton>
+          <Box height="3000px" width="50%" bg="lightBlue" mt="x3" p="x2">
+            Space for more content
+          </Box>
+        </Box>
+        <ExampleSidebar
+          hideCloseButton
+          isOpen={isOpen}
+          onClose={closeSidebar}
+          triggerRef={triggerRef}
+          aria-controls="openSidebarTrigger"
+        />
+      </Page>
+    </ApplicationFrame>
+  );
+};

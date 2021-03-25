@@ -23,6 +23,7 @@ type SidebarProps = AnimatedBoxProps & {
   closeOnOutsideClick?: boolean;
   overlay?: boolean;
   disableScroll?: boolean;
+  hideCloseButton?: boolean;
 };
 
 const focusFirstElement = () => {
@@ -68,6 +69,7 @@ const Sidebar = ({
   closeOnOutsideClick = true,
   overlay = true,
   disableScroll = true,
+  hideCloseButton = false,
   ...props
 }: SidebarProps) => {
   const closeButton = useRef(null);
@@ -165,7 +167,7 @@ const Sidebar = ({
       >
       <Flex justifyContent="space-between" alignItems="flex-start">
           <Box>{title && <Heading3>{title}</Heading3>}</Box>
-          <Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={closeButtonAriaLabel || t("close")}/></Box>
+          {!hideCloseButton && (<Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={closeButtonAriaLabel || t("close")}/></Box>)}
         </Flex>
         <AnimatedBox variants={childVariants} animate={isOpen ? "open" : "closed"} flexGrow={1} ref={contentRef as any}>
           {children}
