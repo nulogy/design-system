@@ -369,7 +369,7 @@ export const DontCloseOnOutsideClick = () => {
 };
 
 export const WithoutCloseButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const triggerRef = useRef(null);
 
   const toggleSidebar = () => {
