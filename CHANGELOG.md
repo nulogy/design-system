@@ -1,3 +1,10 @@
+# [5.12.0](https://github.com/nulogy/design-system/compare/v5.11.1...v5.12.0) (2021-03-25)
+
+
+### Features
+
+* Add option hideCloseButton option to the Sidebar ([#876](https://github.com/nulogy/design-system/issues/876)) ([4bc71e9](https://github.com/nulogy/design-system/commit/4bc71e9d314e2efd63a5abeb06a98e4ffbcb222f))
+
 ## [5.11.1](https://github.com/nulogy/design-system/compare/v5.11.0...v5.11.1) (2021-03-22)
 
 
