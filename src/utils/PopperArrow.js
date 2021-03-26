@@ -14,10 +14,10 @@ const positionArrow = (placement) => {
         marginBottom: "-7px",
         "&:before": {
           top: "2px",
-          left: "-4px",
+          left: "-px",
         },
         "&:after": {
-          left: "-4px",
+          left: "-2px",
         },
       };
     case "right":
@@ -47,14 +47,14 @@ const positionArrow = (placement) => {
     case "bottom":
     default:
       return {
-        marginTop: "-7px",
+        marginTop: "-2px",
         top: 0,
         "&:before": {
           top: "-2px",
-          left: "-4px",
+          left: "0px",
         },
         "&:after": {
-          left: "-4px",
+          left: "0px",
         },
       };
   }
@@ -122,7 +122,6 @@ const drawArrow = (placement, borderColor, backgroundColor) => {
             backgroundColor
           )} transparent`,
           borderWidth: "0 8px 8px 8px",
-          left: "-4px",
         },
       };
   }
@@ -133,7 +132,6 @@ const PopperArrow = styled.div(
     position: "absolute",
     height: theme.space.x1,
     width: theme.space.x1,
-    margin: "12px",
     "&:before": {
       borderStyle: "solid",
       content: "''",

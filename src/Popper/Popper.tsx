@@ -1,7 +1,8 @@
 // @ts-nocheck
 import React, { useState, useEffect } from "react";
-import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
+import { usePopper } from "react-popper-latest";
 import { useTranslation } from "react-i18next";
+import { Box } from "../Box";
 import { PopperArrow } from "../utils";
 import { keyCodes } from "../constants";
 const makeArray = (children) => {
@@ -51,6 +52,16 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
   ) => {
     let timeoutID;
     const [isOpen, setIsOpen] = useState(defaultOpen);
+    const [referenceElement, setReferenceElement] = useState(null);
+    const [popperElement, setPopperElement] = useState(null);
+    const [arrowElement, setArrowElement] = useState(null);
+    const { styles, attributes, placement } = usePopper(referenceElement, popperElement, {
+      placement: popperPlacement,
+      modifiers: [
+        { name: "arrow", options: { element: arrowElement,  }, ...modifiers },
+      ],
+    });
+    console.log(popperElement);
     const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
       if (!skipDelay) {
         timeoutID = setTimeout(fnc, delay);
@@ -114,85 +125,41 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
       ...onHoverHandlers,
       ...onClickEventHandlers,
     };
-    const transformInnerChildren = (elements) =>
-      makeArray(elements).map((element, i) => {
-        const transformedElement = wrapInFunction(element)({
-          closeMenu: (e) => {
-            closePopUp();
-            e.stopPropagation();
-          },
-          openMenu: (e) => {
-            openPopUp();
-            e.stopPropagation();
-          },
-        });
-        return React.cloneElement(transformedElement, {
-          // eslint-disable-next-line react/no-array-index-key
-          key: i,
-        });
-      });
-    const renderInnerChildren = () => {
-      const innerChildren = children.props.children;
-      return typeof innerChildren !== "string"
-        ? transformInnerChildren(innerChildren)
-        : innerChildren;
-    };
     const { t } = useTranslation();
     const openLabel = openAriaLabel || t("open");
     const closeLabel = closeAriaLabel || t("close");
     return (
-      <Manager ref={popperRef}>
-        <Reference>
-          {({ ref }) =>
-            React.cloneElement(trigger, {
-              "aria-haspopup": true,
-              "aria-expanded": isOpen,
-              "aria-describedby": id,
-              "aria-label": isOpen ? closeLabel : openLabel,
-              ...eventHandlers,
-              ref,
-            })
+      <>
+        <trigger.type
+          {...trigger.props}
+          ref={setReferenceElement}
+          aria-haspopup={true}
+          aria-expanded={isOpen}
+          aria-describedby={id}
+          aria-label={isOpen ? closeLabel : openLabel}
+          {...eventHandlers}
+        />
+
+        <Box
+          ref={setPopperElement}
+          style={styles.popper}
+          display={isOpen ? "block" : "none"}
+          position="relative"
+          {...attributes.popper}
+        >
+          {children}
+          {showArrow && <PopperArrow
+              key="popper-arrow"
+              // {...arrowProps}
+              placement={popperPlacement}
+              ref={setArrowElement}
+              style={styles.arrow}
+              backgroundColor={backgroundColor}
+              borderColor={borderColor}
+            />
           }
-        </Reference>
-        <ReactPopperPopUp placement={popperPlacement} modifiers={modifiers}>
-          {({ ref, style, placement, arrowProps }) => (
-            <>
-              {isOpen &&
-                React.cloneElement(
-                  children,
-                  {
-                    open: isOpen,
-                    ref,
-                    id,
-                    style: {
-                      position: "absolute",
-                      ...(isOpen ? style : null),
-                      top: isOpen ? 0 : "-9999px",
-                    },
-                    dataPlacement: placement,
-                    className: `${
-                      children.props.className || ""
-                    } nds-popper-pop-up`,
-                    ...eventHandlers,
-                  },
-                  [
-                    ...renderInnerChildren(),
-                    showArrow && (
-                      <PopperArrow
-                        key="popper-arrow"
-                        {...arrowProps}
-                        placement={placement}
-                        ref={arrowProps.ref}
-                        backgroundColor={backgroundColor}
-                        borderColor={borderColor}
-                      />
-                    ),
-                  ]
-                )}
-            </>
-          )}
-        </ReactPopperPopUp>
-      </Manager>
+        </Box>
+      </>
     );
   }
 );
