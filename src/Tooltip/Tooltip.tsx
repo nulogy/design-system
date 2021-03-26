@@ -106,7 +106,7 @@ const Tooltip: React.SFC<TooltipProps> = React.forwardRef(
   ) => (
     <Popper
       ref={ref}
-      popperPlacement={placement}
+      placement={placement}
       defaultOpen={defaultOpen}
       showDelay={showDelay}
       hideDelay={hideDelay}

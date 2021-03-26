@@ -14,7 +14,7 @@ const makeArray = (children) => {
 const wrapInFunction = (x) => (typeof x === "function" ? x : () => x);
 type PopperProps = {
   ref: any;
-  popperPlacement?: string;
+  placement?: string;
   defaultOpen?: boolean;
   showDelay?: string | number;
   hideDelay?: string | number;
@@ -32,7 +32,7 @@ type PopperProps = {
 const Popper: React.SFC<PopperProps> = React.forwardRef(
   (
     {
-      popperPlacement,
+      placement,
       defaultOpen,
       id,
       showDelay,
@@ -55,8 +55,8 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
     const [referenceElement, setReferenceElement] = useState(null);
     const [popperElement, setPopperElement] = useState(null);
     const [arrowElement, setArrowElement] = useState(null);
-    const { styles, attributes, placement } = usePopper(referenceElement, popperElement, {
-      placement: popperPlacement,
+    const { styles, attributes } = usePopper(referenceElement, popperElement, {
+      placement,
       modifiers: [
         { name: "arrow", options: { element: arrowElement,  }, ...modifiers },
       ],
@@ -151,7 +151,7 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
           {showArrow && <PopperArrow
               key="popper-arrow"
               // {...arrowProps}
-              placement={popperPlacement}
+              placement={placement}
               ref={setArrowElement}
               style={styles.arrow}
               backgroundColor={backgroundColor}
@@ -167,7 +167,7 @@ Popper.defaultProps = {
   showDelay: "100",
   hideDelay: "350",
   defaultOpen: false,
-  popperPlacement: "bottom",
+  placement: "bottom",
   id: null,
   openOnClick: false,
   openOnHover: true,

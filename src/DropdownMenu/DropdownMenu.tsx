@@ -72,7 +72,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef(
         })}
         showDelay={showDelay}
         hideDelay={hideDelay}
-        popperPlacement={placement}
+        placement={placement}
         defaultOpen={defaultOpen}
         showArrow={showArrow}
         openOnClick
