@@ -61,7 +61,6 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
         { name: "arrow", options: { element: arrowElement,  }, ...modifiers },
       ],
     });
-    console.log(popperElement);
     const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
       if (!skipDelay) {
         timeoutID = setTimeout(fnc, delay);
