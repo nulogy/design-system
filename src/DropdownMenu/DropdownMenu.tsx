@@ -1,17 +1,22 @@
 // @ts-nocheck
 import React from "react";
-import DropdownMenuContainer from "./DropdownMenuContainer";
+import propTypes from "@styled-system/prop-types";
 import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
-import propTypes from "@styled-system/prop-types";
 import { getSubset, omitSubset } from "../utils/subset";
-const DEFAULT_POPPER_MODIFIERS = {
-  preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
-};
-const transformPropsToModifiers = ({ boundariesElement }) => ({
-  ...DEFAULT_POPPER_MODIFIERS,
-  boundariesElement,
-});
+import DropdownMenuContainer from "./DropdownMenuContainer";
+
+const transformPropsToModifiers = ({ boundariesElement }) => [
+  {
+    name: "preventOverflow",
+    enabled: true,
+    options: {
+      padding: 8,
+      rootBoundary: boundariesElement,
+    },
+  },
+];
+
 type DropdownMenuProps = {
   className?: string;
   id?: string;

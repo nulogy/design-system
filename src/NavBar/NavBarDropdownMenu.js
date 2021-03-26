@@ -143,7 +143,7 @@ StatelessNavBarDropdownMenu.propTypes = {
   }).isRequired,
   showArrow: PropTypes.bool,
   placement: PropTypes.oneOf(["bottom-start", "right-start"]),
-  modifiers: PropTypes.shape({}),
+  modifiers: PropTypes.array,
   triggerTogglesMenuState: PropTypes.bool,
   dropdownMenuContainerEventHandlers: PropTypes.func,
 };
@@ -151,7 +151,7 @@ StatelessNavBarDropdownMenu.propTypes = {
 StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
-  modifiers: null,
+  modifiers: [],
   triggerTogglesMenuState: true,
   dropdownMenuContainerEventHandlers: () => {},
 };

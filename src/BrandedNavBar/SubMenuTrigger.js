@@ -63,7 +63,6 @@ const SubMenuTrigger = (props) => {
   return (
     <NavBarDropdownMenu
       placement="right-start"
-      modifiers={null}
       showArrow={false}
       triggerTogglesMenuState={false}
       {...otherProps}

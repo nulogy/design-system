@@ -22,7 +22,7 @@ type PopperProps = {
   trigger: React.ReactNode;
   openOnClick?: boolean;
   openOnHover?: boolean;
-  modifiers?: {};
+  modifiers?: [];
   backgroundColor?: string;
   borderColor?: string;
   showArrow?: boolean;
@@ -58,7 +58,8 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
     const { styles, attributes } = usePopper(referenceElement, popperElement, {
       placement,
       modifiers: [
-        { name: "arrow", options: { element: arrowElement,  }, ...modifiers },
+        { name: "arrow", options: { element: arrowElement } },
+        ...modifiers,
       ],
     });
     const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
@@ -170,7 +171,7 @@ Popper.defaultProps = {
   id: null,
   openOnClick: false,
   openOnHover: true,
-  modifiers: null,
+  modifiers: [],
   backgroundColor: undefined,
   borderColor: undefined,
   showArrow: true,

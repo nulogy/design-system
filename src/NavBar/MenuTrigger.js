@@ -115,7 +115,7 @@ const MenuTrigger = (props) => {
         preventOverflow: {
           enabled: true,
           padding: 8,
-          boundariesElement: "viewport",
+          rootBoundary: "viewport",
         },
       }}
       trigger={() => (
