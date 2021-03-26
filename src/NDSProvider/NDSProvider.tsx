@@ -7,13 +7,14 @@ import styled, {
 import { I18nextProvider } from "react-i18next";
 import NDSTheme from "../theme";
 import i18n from "../i18n";
+import { ThemeType, DefaultNDSThemeType } from "../theme.type";
 import { LocaleContext } from "./LocaleContext";
 import { mergeThemes } from "./mergeThemes.util";
-import { ThemeType, DefaultNDSThemeType } from '../theme.type';
 
 type NDSProviderProps = {
   theme?: ThemeType;
   locale?: string;
+  disableGlobalStyles?: boolean;
   children?: any;
 };
 
@@ -27,7 +28,7 @@ const Reset = createGlobalStyle(() => {
 type GlobalStylesProps = {
   theme?: DefaultNDSThemeType;
   locale?: string;
-}
+};
 
 const ModalStyleOverride = createGlobalStyle(
   ({ theme, locale }: GlobalStylesProps) => {
@@ -77,9 +78,31 @@ const GlobalStyles = styled.div(
     };
   }
 );
+
+type AllNDSGlobalStylesProps = {
+  theme?: ThemeType;
+  locale?: string;
+  disableGlobalStyles?: boolean;
+  children?: any;
+};
+
+const Styles = ({ theme, locale, disableGlobalStyles, children }) =>
+  disableGlobalStyles ? (
+    <>
+      <Reset />
+      <ModalStyleOverride theme={theme} locale={locale} />
+      <GlobalStyles theme={theme} locale={locale}>
+        {children}
+      </GlobalStyles>
+    </>
+  ) : (
+    children
+  );
+
 const NDSProvider = ({
   theme,
   children,
+  disableGlobalStyles = false,
   locale = "en_US",
 }: NDSProviderProps) => {
   useEffect(() => {
