@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Manager, Reference, Popper } from "react-popper";
-import { DetectOutsideClick, withMenuState, PopperArrow } from "../utils";
+import { Popper } from "../Popper";
+import { DetectOutsideClick, withMenuState } from "../utils";
 import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
 
 /* eslint-disable react/destructuring-assignment */
@@ -62,71 +62,56 @@ class StatelessNavBarDropdownMenu extends React.Component {
     const childrenFnc =
       typeof children === "function" ? children : () => children;
     return (
-      <Manager>
-        <Reference>
-          {({ ref }) =>
-            React.cloneElement(
-              trigger({
-                closeMenu,
-                openMenu,
-                isOpen,
-              }),
-              {
-                "aria-haspopup": true,
-                "aria-expanded": isOpen,
-                type: "button",
-                ...this.menuTriggerEventHandlers(),
-                ref: (node) => {
-                  ref(node);
-                  this.setTriggerRef(node);
-                },
-              }
-            )
+      <Popper
+        modifiers={modifiers}
+        placement={placement}
+        openOnHover={false}
+        backgroundColor="whiteGrey"
+        borderColor="whiteGrey"
+        trigger={React.cloneElement(
+          trigger({
+            closeMenu,
+            openMenu,
+            isOpen,
+          }),
+          {
+            "aria-haspopup": true,
+            "aria-expanded": isOpen,
+            type: "button",
+            ...this.menuTriggerEventHandlers(),
+            ref: (node) => {
+              ref(node);
+              this.setTriggerRef(node);
+            },
           }
-        </Reference>
-        {isOpen && (
-          <Popper placement={placement} modifiers={modifiers}>
-            {(popperProps) => (
-              <>
-                <DropdownMenuContainer
-                  {...popperProps}
-                  placement={placement}
-                  showArrow={showArrow}
-                  {...this.menuEventHandlers()}
-                  ref={(node) => {
-                    popperProps.ref(node);
-                    this.setMenuRef(node);
-                  }}
-                  onMouseDown={(e) => {
-                    e.preventDefault();
-                    e.target.focus();
-                  }}
-                  {...dropdownMenuContainerEventHandlers({
-                    openMenu,
-                    closeMenu,
-                  })}
-                >
-                  <PopperArrow
-                    {...popperProps.arrowProps}
-                    placement={placement}
-                    ref={popperProps.arrowProps.ref}
-                    backgroundColor="whiteGrey"
-                    borderColor="whiteGrey"
-                  />
-                  <DetectOutsideClick
-                    onClick={this.handleOutsideClick}
-                    clickRef={[this.menuRef, this.triggerRef]}
-                  />
-                  {childrenFnc({
-                    closeMenu,
-                    openMenu,
-                  })}
-                </DropdownMenuContainer>
-              </>
-            )}
-          </Popper>
         )}
-      </Manager>
+      >
+        <DropdownMenuContainer
+          placement={placement}
+          showArrow={showArrow}
+          {...this.menuEventHandlers()}
+          ref={(node) => {
+            this.setMenuRef(node);
+          }}
+          onMouseDown={(e) => {
+            e.preventDefault();
+            e.target.focus();
+          }}
+          {...dropdownMenuContainerEventHandlers({
+            openMenu,
+            closeMenu,
+          })}
+        >
+          <DetectOutsideClick
+            onClick={this.handleOutsideClick}
+            clickRef={[this.menuRef, this.triggerRef]}
+          />
+          {childrenFnc({
+            closeMenu,
+            openMenu,
+          })}
+        </DropdownMenuContainer>
+      </Popper>
     );
   }
 }
