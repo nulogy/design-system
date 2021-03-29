@@ -10,7 +10,7 @@ const positionArrow = (placement) => {
   switch (location) {
     case "top":
       return {
-        bottom: "-7px",
+        bottom: "-7px", // size of popper arrow - border
         "&:before": {
           top: "2px",
           left: "-4px",
@@ -21,7 +21,7 @@ const positionArrow = (placement) => {
       };
     case "right":
       return {
-        left: "-8px",
+        left: "-7px",
         "&:before": {
           top: "-4px",
         },
@@ -32,7 +32,7 @@ const positionArrow = (placement) => {
       };
     case "left":
       return {
-        right: "-8px",
+        right: "-7px",
         "&:before": {
           top: "-4px",
         },
@@ -44,7 +44,7 @@ const positionArrow = (placement) => {
     case "bottom":
     default:
       return {
-        top: "-5px",
+        top: "-5px", // not sure why this px size works
         "&:before": {
           top: "-2px",
           left: "0px",
