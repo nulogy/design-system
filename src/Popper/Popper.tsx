@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useState, useEffect } from "react";
-import { usePopper } from "react-popper-latest";
+import { usePopper } from "react-popper";
 import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
 import { PopperArrow } from "../utils";
