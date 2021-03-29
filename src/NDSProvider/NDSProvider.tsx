@@ -86,8 +86,13 @@ type AllNDSGlobalStylesProps = {
   children?: any;
 };
 
-const Styles = ({ theme, locale, disableGlobalStyles, children }) =>
-  disableGlobalStyles ? (
+const AllNDSGlobalStyles = ({
+  theme,
+  locale,
+  disableGlobalStyles,
+  children,
+}: AllNDSGlobalStylesProps) =>
+  !disableGlobalStyles ? (
     <>
       <Reset />
       <ModalStyleOverride theme={theme} locale={locale} />
@@ -111,13 +116,15 @@ const NDSProvider = ({
   const mergedTheme = mergeThemes(NDSTheme, theme);
   return (
     <LocaleContext.Provider value={{ locale }}>
-      <Reset />
-      <ModalStyleOverride theme={mergedTheme} locale={locale} />
-      <GlobalStyles theme={mergedTheme} locale={locale}>
+      <AllNDSGlobalStyles
+        theme={mergedTheme}
+        locale={locale}
+        disableGlobalStyles={disableGlobalStyles}
+      >
         <I18nextProvider i18n={i18n}>
           <ThemeProvider theme={mergedTheme}>{children}</ThemeProvider>
         </I18nextProvider>
-      </GlobalStyles>
+      </AllNDSGlobalStyles>
     </LocaleContext.Provider>
   );
 };
