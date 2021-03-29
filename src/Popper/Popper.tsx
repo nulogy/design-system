@@ -5,13 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
 import { PopperArrow } from "../utils";
 import { keyCodes } from "../constants";
-const makeArray = (children) => {
-  if (!Array.isArray(children)) {
-    return [children];
-  }
-  return children;
-};
-const wrapInFunction = (x) => (typeof x === "function" ? x : () => x);
+
 type PopperProps = {
   ref: any;
   placement?: string;
@@ -58,7 +52,14 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
     const { styles, attributes } = usePopper(referenceElement, popperElement, {
       placement,
       modifiers: [
-        { name: "arrow", options: { element: arrowElement } },
+        { name: "offset", options: { offset: [0, 4] } },
+        {
+          name: "arrow",
+          options: {
+            element: arrowElement,
+            padding: 10, // for offset of the arrow from the border-radius only
+          },
+        },
         ...modifiers,
       ],
     });
@@ -148,16 +149,16 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
           {...attributes.popper}
         >
           {children}
-          {showArrow && <PopperArrow
+          {showArrow && (
+            <PopperArrow
               key="popper-arrow"
-              // {...arrowProps}
               placement={placement}
               ref={setArrowElement}
               style={styles.arrow}
               backgroundColor={backgroundColor}
               borderColor={borderColor}
             />
-          }
+          )}
         </Box>
       </>
     );

@@ -10,28 +10,6 @@ const tooltipStyles = (theme) => ({
   borderColor: theme.colors.grey,
   textColor: theme.colors.black,
 });
-const getTooltipMargin = (placement) => {
-  const direction = String(placement).split("-")[0];
-  switch (direction) {
-    case "top":
-      return {
-        marginBottom: "4px",
-      };
-    case "right":
-      return {
-        marginLeft: "4px",
-      };
-    case "left":
-      return {
-        marginRight: "4px",
-      };
-    case "bottom":
-    default:
-      return {
-        marginTop: "4px",
-      };
-  }
-};
 
 type TooltipContainerProps = PositionProps & {
   theme?: DefaultNDSThemeType;
@@ -51,7 +29,7 @@ type TooltipContainerProps = PositionProps & {
     | "sticky";
 };
 const TooltipContainer = styled(Box)(
-  ({ theme, dataPlacement, open, position }: TooltipContainerProps): any => ({
+  ({ theme, open, position }: TooltipContainerProps): any => ({
     color: tooltipStyles(theme).textColor,
     display: "flex",
     flexDirection: "column",
@@ -63,7 +41,6 @@ const TooltipContainer = styled(Box)(
     padding: theme.space.x1,
     transition: "opacity 0.3s",
     zIndex: theme.zIndex.content,
-    ...getTooltipMargin(dataPlacement),
     position,
     top: open ? 0 : "-9999px",
   })

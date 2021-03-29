@@ -10,20 +10,18 @@ const positionArrow = (placement) => {
   switch (location) {
     case "top":
       return {
-        bottom: 0,
-        marginBottom: "-7px",
+        bottom: "-7px",
         "&:before": {
           top: "2px",
-          left: "-px",
+          left: "-4px",
         },
         "&:after": {
-          left: "-2px",
+          left: "-4px",
         },
       };
     case "right":
       return {
-        left: 0,
-        marginLeft: "-8px",
+        left: "-8px",
         "&:before": {
           top: "-4px",
         },
@@ -34,8 +32,7 @@ const positionArrow = (placement) => {
       };
     case "left":
       return {
-        marginRight: "-8px",
-        right: 0,
+        right: "-8px",
         "&:before": {
           top: "-4px",
         },
@@ -47,8 +44,7 @@ const positionArrow = (placement) => {
     case "bottom":
     default:
       return {
-        marginTop: "-2px",
-        top: 0,
+        top: "-5px",
         "&:before": {
           top: "-2px",
           left: "0px",
@@ -122,6 +118,7 @@ const drawArrow = (placement, borderColor, backgroundColor) => {
             backgroundColor
           )} transparent`,
           borderWidth: "0 8px 8px 8px",
+          left: "-4px",
         },
       };
   }
