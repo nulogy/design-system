@@ -80,7 +80,7 @@ const GlobalStyles = styled.div(
 );
 
 type AllNDSGlobalStylesProps = {
-  theme?: ThemeType;
+  theme?: DefaultNDSThemeType;
   locale?: string;
   disableGlobalStyles?: boolean;
   children?: any;
