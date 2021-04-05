@@ -1,3 +1,10 @@
+# [5.13.0](https://github.com/nulogy/design-system/compare/v5.12.0...v5.13.0) (2021-04-05)
+
+
+### Features
+
+* add attachment icon ([#879](https://github.com/nulogy/design-system/issues/879)) ([4e12685](https://github.com/nulogy/design-system/commit/4e12685b636c8d7cb2b9c639a0b03bceb3bd47e0))
+
 # [5.12.0](https://github.com/nulogy/design-system/compare/v5.11.1...v5.12.0) (2021-03-25)
 
 
