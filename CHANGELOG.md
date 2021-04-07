@@ -1,3 +1,10 @@
+# [5.15.0](https://github.com/nulogy/design-system/compare/v5.14.0...v5.15.0) (2021-04-07)
+
+
+### Features
+
+* Adds a prop to disableGlobalStyles in NDSProvider ([#877](https://github.com/nulogy/design-system/issues/877)) ([6627bc3](https://github.com/nulogy/design-system/commit/6627bc32fe5df793fa44e164e7861d53ca4bf0c8))
+
 # [5.14.0](https://github.com/nulogy/design-system/compare/v5.13.0...v5.14.0) (2021-04-07)
 
 
