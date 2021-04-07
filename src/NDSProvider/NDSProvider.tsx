@@ -7,13 +7,14 @@ import styled, {
 import { I18nextProvider } from "react-i18next";
 import NDSTheme from "../theme";
 import i18n from "../i18n";
+import { ThemeType, DefaultNDSThemeType } from "../theme.type";
 import { LocaleContext } from "./LocaleContext";
 import { mergeThemes } from "./mergeThemes.util";
-import { ThemeType, DefaultNDSThemeType } from '../theme.type';
 
 type NDSProviderProps = {
   theme?: ThemeType;
   locale?: string;
+  disableGlobalStyles?: boolean;
   children?: any;
 };
 
@@ -27,7 +28,7 @@ const Reset = createGlobalStyle(() => {
 type GlobalStylesProps = {
   theme?: DefaultNDSThemeType;
   locale?: string;
-}
+};
 
 const ModalStyleOverride = createGlobalStyle(
   ({ theme, locale }: GlobalStylesProps) => {
@@ -77,9 +78,36 @@ const GlobalStyles = styled.div(
     };
   }
 );
+
+type AllNDSGlobalStylesProps = {
+  theme?: DefaultNDSThemeType;
+  locale?: string;
+  disableGlobalStyles?: boolean;
+  children?: any;
+};
+
+const AllNDSGlobalStyles = ({
+  theme,
+  locale,
+  disableGlobalStyles,
+  children,
+}: AllNDSGlobalStylesProps) =>
+  !disableGlobalStyles ? (
+    <>
+      <Reset />
+      <ModalStyleOverride theme={theme} locale={locale} />
+      <GlobalStyles theme={theme} locale={locale}>
+        {children}
+      </GlobalStyles>
+    </>
+  ) : (
+    children
+  );
+
 const NDSProvider = ({
   theme,
   children,
+  disableGlobalStyles = false,
   locale = "en_US",
 }: NDSProviderProps) => {
   useEffect(() => {
@@ -88,13 +116,15 @@ const NDSProvider = ({
   const mergedTheme = mergeThemes(NDSTheme, theme);
   return (
     <LocaleContext.Provider value={{ locale }}>
-      <Reset />
-      <ModalStyleOverride theme={mergedTheme} locale={locale} />
-      <GlobalStyles theme={mergedTheme} locale={locale}>
+      <AllNDSGlobalStyles
+        theme={mergedTheme}
+        locale={locale}
+        disableGlobalStyles={disableGlobalStyles}
+      >
         <I18nextProvider i18n={i18n}>
           <ThemeProvider theme={mergedTheme}>{children}</ThemeProvider>
         </I18nextProvider>
-      </GlobalStyles>
+      </AllNDSGlobalStyles>
     </LocaleContext.Provider>
   );
 };
