@@ -1,3 +1,10 @@
+# [5.14.0](https://github.com/nulogy/design-system/compare/v5.13.0...v5.14.0) (2021-04-07)
+
+
+### Features
+
+* add openInNew icon ([#880](https://github.com/nulogy/design-system/issues/880)) ([3a32eb7](https://github.com/nulogy/design-system/commit/3a32eb791baa24da6b24654fa8f66411090b8588))
+
 # [5.13.0](https://github.com/nulogy/design-system/compare/v5.12.0...v5.13.0) (2021-04-05)
 
 
