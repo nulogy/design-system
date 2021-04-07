@@ -325,26 +325,24 @@ const SelectNavBarBasedOnWidth = ({
   }
 };
 
-const BaseNavBar = (props) => (
+const NavBar = (props) => (
   <ReactResizeDetector handleWidth>
     <SelectNavBarBasedOnWidth {...props} />
   </ReactResizeDetector>
 );
 
-BaseNavBar.propTypes = {
+NavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   themeColor: PropTypes.oneOf(["blue", "white"]),
 };
 
-BaseNavBar.defaultProps = {
+NavBar.defaultProps = {
   menuData: null,
   className: undefined,
   breakpointUpper: theme.breakpoints.medium,
   themeColor: "blue",
 };
-
-const NavBar = styled(BaseNavBar)({});
 
 export default NavBar;

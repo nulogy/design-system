@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import styled, { CSSObject, ThemeContext } from "styled-components";
+import { CSSObject, ThemeContext } from "styled-components";
 
-import Radio from "./Radio";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
-import { DefaultNDSThemeType } from '../theme.type';
+import { DefaultNDSThemeType } from "../theme.type";
+import Radio from "./Radio";
 
 const labelTextStyles = (theme: DefaultNDSThemeType): CSSObject => ({
   fontSize: theme.fontSizes.small,
@@ -33,7 +33,7 @@ const getRadioButtons = (props: any) => {
   return radioButtons;
 };
 
-interface BaseRadioGroupProps {
+interface RadioGroupProps {
   className?: string;
   id?: string;
   errorMessage?: string;
@@ -46,7 +46,7 @@ interface BaseRadioGroupProps {
   disabled?: boolean;
 }
 
-const BaseRadioGroup = ({
+const RadioGroup = ({
   className,
   id,
   errorMessage,
@@ -55,7 +55,7 @@ const BaseRadioGroup = ({
   helpText,
   requirementText,
   ...props
-}: BaseRadioGroupProps) => {
+}: RadioGroupProps) => {
   const otherProps = { ...props, errorMessage, errorList };
   const themeContext = useContext(ThemeContext);
 
@@ -78,7 +78,7 @@ const BaseRadioGroup = ({
   );
 };
 
-BaseRadioGroup.defaultProps = {
+RadioGroup.defaultProps = {
   errorMessage: null,
   errorList: null,
   defaultValue: undefined,
@@ -90,7 +90,5 @@ BaseRadioGroup.defaultProps = {
   requirementText: null,
   default: false,
 };
-
-const RadioGroup = styled(BaseRadioGroup)({});
 
 export default RadioGroup;

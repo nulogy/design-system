@@ -2,19 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import { Heading2 } from "../Type";
-import Field from "./Field";
+import { Box } from "../Box";
 import { Alert } from "../Alert";
+import Field from "./Field";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
+
 type BaseFormProps = React.ComponentPropsWithRef<"form"> &
   SpaceProps & {
     title?: string;
   };
 const BaseForm: React.SFC<BaseFormProps> = ({ title, children, ...props }) => (
-  <form {...props}>
+  <Box as="form" {...props}>
     {title && <Heading2>{title}</Heading2>}
     {children}
-  </form>
+  </Box>
 );
 const Form = styled(BaseForm)(space, ({ title, theme }) => ({
   width: "100%",
@@ -37,6 +39,7 @@ const Form = styled(BaseForm)(space, ({ title, theme }) => ({
     },
   },
 }));
+
 BaseForm.defaultProps = {
   children: [],
   title: undefined,
