@@ -238,12 +238,16 @@ const SmallNavBarNoState = ({
   environment,
   logoSrc,
   breakpointLower,
-  ...props}) => {
+  ...props
+}) => {
   const navRef = React.useRef();
 
   useEffect(() => {
-    navRef.current.scrollTop = 0;
-  }, [isOpen]); 
+    if (navRef.current) {
+      navRef.current.scrollTop = 0;
+    }
+  }, [isOpen]);
+
   const { breakpoints } = useTheme();
   return (
     <SmallHeader
@@ -290,7 +294,7 @@ const SmallNavBarNoState = ({
       )}
     </SmallHeader>
   );
-}
+};
 /* eslint-enable react/destructuring-assignment */
 
 SmallNavBarNoState.propTypes = {
