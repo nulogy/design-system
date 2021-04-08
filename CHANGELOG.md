@@ -1,3 +1,10 @@
+## [5.15.1](https://github.com/nulogy/design-system/compare/v5.15.0...v5.15.1) (2021-04-08)
+
+
+### Bug Fixes
+
+* check ref is defined in SmallNavBar before usage ([#882](https://github.com/nulogy/design-system/issues/882)) ([78adaa3](https://github.com/nulogy/design-system/commit/78adaa3c01e5fcc1303f962e5a8006360da0f952))
+
 # [5.15.0](https://github.com/nulogy/design-system/compare/v5.14.0...v5.15.0) (2021-04-07)
 
 
