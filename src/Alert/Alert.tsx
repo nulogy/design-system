@@ -8,6 +8,12 @@ import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 
+const AlertCSS = ({ theme }) => ({
+  [`${Link}`]: {
+    color: theme.colors.blue,
+  },
+});
+
 const alertColours: any = {
   danger: {
     borderColor: "red",
@@ -88,11 +94,7 @@ const Alert = ({
       borderLeftStyle="solid"
       role="alert"
       className={className}
-      css={({ theme }) => ({
-        [`${Link}`]: {
-          color: theme.colors.black,
-        },
-      })}
+      css={AlertCSS}
       {...props}
     >
       {type === "danger" && (
