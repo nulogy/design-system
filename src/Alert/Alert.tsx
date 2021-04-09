@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { space, layout } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
@@ -59,7 +61,7 @@ CloseButton.defaultProps = {
   "aria-label": undefined,
 };
 
-const Alert = ({
+const BaseAlert = ({
   children,
   isCloseable,
   title,
@@ -88,11 +90,6 @@ const Alert = ({
       borderLeftStyle="solid"
       role="alert"
       className={className}
-      css={({ theme }) => ({
-        [`${Link}`]: {
-          color: theme.colors.black,
-        },
-      })}
       {...props}
     >
       {type === "danger" && (
@@ -112,7 +109,7 @@ const Alert = ({
   ) : null;
 };
 
-Alert.propTypes = {
+BaseAlert.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isCloseable: PropTypes.bool,
@@ -125,7 +122,7 @@ Alert.propTypes = {
   ...propTypes.layout,
 };
 
-Alert.defaultProps = {
+BaseAlert.defaultProps = {
   className: undefined,
   isCloseable: false,
   closeAriaLabel: undefined,
@@ -134,5 +131,11 @@ Alert.defaultProps = {
   controlled: false,
   onClose: () => {},
 };
+
+const Alert = styled(BaseAlert)(space, layout, ({ theme }) => ({
+  [`${Link}`]: {
+    color: theme.colors.black,
+  },
+}));
 
 export default Alert;
