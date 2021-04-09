@@ -13,10 +13,10 @@ type BaseFormProps = React.ComponentPropsWithRef<"form"> &
     title?: string;
   };
 const BaseForm: React.SFC<BaseFormProps> = ({ title, children, ...props }) => (
-  <Box as="form" {...props}>
+  <form {...props}>
     {title && <Heading2>{title}</Heading2>}
     {children}
-  </Box>
+  </form>
 );
 const Form = styled(BaseForm)(space, ({ title, theme }) => ({
   width: "100%",
