@@ -9,7 +9,7 @@ import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 
-const AlertCSS = ({ theme }) => ({
+const AlertStyles = ({ theme }) => ({
   [`${Link}`]: {
     color: theme.colors.black,
   },
@@ -96,7 +96,6 @@ const Alert = styled(
         borderLeftStyle="solid"
         role="alert"
         className={className}
-        css={AlertCSS}
         {...props}
       >
         {type === "danger" && (
@@ -115,7 +114,7 @@ const Alert = styled(
       </Flex>
     ) : null;
   }
-)({});
+)(AlertStyles);
 
 Alert.propTypes = {
   children: PropTypes.node.isRequired,
