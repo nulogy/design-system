@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import propTypes from "@styled-system/prop-types";
 import { getSubset, omitSubset } from "../utils/subset";
-import Field from "../Form/Field";
+import { Field } from "../Form";
 import { InlineValidation } from "../Validation";
 import { InputField, InputFieldProps } from "./InputField";
 
