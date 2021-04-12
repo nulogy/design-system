@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+import { space, layout } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
