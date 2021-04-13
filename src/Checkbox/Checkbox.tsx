@@ -1,6 +1,5 @@
 import React, { forwardRef } from "react";
 import styled, { CSSObject } from "styled-components";
-import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { Text } from "../Type";
@@ -112,7 +111,7 @@ const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input((prop
     ...getCheckboxStyle(props, "unchecked"),
   },
 }));
-const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
+const Checkbox: React.SFC<any> = forwardRef((props, ref) => {
   const {
     className,
     labelText,
@@ -125,7 +124,7 @@ const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
   return (
-    <Box className={className} {...spaceProps}>
+    <Box className={className} py="half" px="0" {...spaceProps}>
       <ClickInputLabel disabled={disabled}>
         <CheckboxInput
           type="checkbox"
@@ -142,21 +141,12 @@ const BaseCheckbox: React.SFC<any> = forwardRef((props, ref) => {
           indeterminate={indeterminate}
           data-testid="visual-checkbox"
         />
-        {labelText && <Text disabled={disabled}>{labelText}</Text>}
+        {labelText && <Text disabled={disabled} ml="x1">{labelText}</Text>}
       </ClickInputLabel>
     </Box>
   );
 });
 
-const Checkbox = styled(BaseCheckbox)(
-  ({ theme }) => ({
-    padding: `${theme.space.half} 0`,
-    [`& ${Text}`]: {
-      marginLeft: theme.space.x1,
-    },
-  }),
-  space
-);
 Checkbox.defaultProps = {
   labelText: undefined,
   checked: undefined,
@@ -168,4 +158,5 @@ Checkbox.defaultProps = {
   required: false,
   indeterminate: undefined,
 };
+
 export default Checkbox;

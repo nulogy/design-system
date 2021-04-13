@@ -1,5 +1,4 @@
 import React, { forwardRef, ReactNode } from "react";
-import { space } from "styled-system";
 import styled, { CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
@@ -101,7 +100,7 @@ const RadioInput: React.FC<RadioInputProps> = styled.input((props) => ({
   },
 }));
 
-type BaseRadioProps = VisualRadioProps &
+type RadioProps = VisualRadioProps &
   React.ComponentPropsWithRef<"input"> & {
     labelText?: ReactNode;
     checked?: boolean;
@@ -114,42 +113,40 @@ type BaseRadioProps = VisualRadioProps &
     value?: any;
   };
 
-const BaseRadio: React.FC<BaseRadioProps> = forwardRef(({
-  className,
-  labelText,
-  disabled,
-  checked,
-  required,
-  error,
-  ...props
-}, ref) => {
-  const spaceProps = getSubset(props, propTypes.space);
-  const restProps = omitSubset(props, propTypes.space);
-  return (
-    <Box className={className} {...spaceProps}>
-      <ClickInputLabel disabled={disabled}>
-        <RadioInput
-          type="radio"
-          ref={ref}
-          aria-checked={checked}
-          checked={checked}
-          disabled={disabled}
-          error={error}
-          {...restProps}
-          required={required}
-          aria-required={required}
-          aria-invalid={error}
-        />
-        <VisualRadio disabled={disabled} />
-        <Text inline disabled={disabled}>
-          {" "}
-          {labelText}{" "}
-        </Text>
-      </ClickInputLabel>
-    </Box>
-  );
-});
-BaseRadio.defaultProps = {
+const Radio: React.FC<RadioProps> = forwardRef(
+  (
+    { className, labelText, disabled, checked, required, error, ...props },
+    ref
+  ) => {
+    const spaceProps = getSubset(props, propTypes.space);
+    const restProps = omitSubset(props, propTypes.space);
+    return (
+      <Box className={className} py="half" px="0" {...spaceProps}>
+        <ClickInputLabel disabled={disabled}>
+          <RadioInput
+            type="radio"
+            ref={ref}
+            aria-checked={checked}
+            checked={checked}
+            disabled={disabled}
+            error={error}
+            {...restProps}
+            required={required}
+            aria-required={required}
+            aria-invalid={error}
+          />
+          <VisualRadio disabled={disabled} />
+          <Text inline disabled={disabled}>
+            {" "}
+            {labelText}{" "}
+          </Text>
+        </ClickInputLabel>
+      </Box>
+    );
+  }
+);
+
+Radio.defaultProps = {
   checked: undefined,
   defaultChecked: undefined,
   disabled: false,
@@ -158,10 +155,5 @@ BaseRadio.defaultProps = {
   className: undefined,
   required: false,
 };
-const Radio = styled(BaseRadio)(
-  ({ theme }) => ({
-    padding: `${theme.space.half} 0`,
-  }),
-  space
-);
+
 export default Radio;

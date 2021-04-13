@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import { space, layout } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { useTranslation } from "react-i18next";
+import styled from "styled-components";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
+
+const AlertStyles = ({ theme }) => ({
+  [`${Link}`]: {
+    color: theme.colors.black,
+  },
+});
 
 const alertColours: any = {
   danger: {
@@ -61,55 +66,57 @@ CloseButton.defaultProps = {
   "aria-label": undefined,
 };
 
-const BaseAlert = ({
-  children,
-  isCloseable,
-  title,
-  type,
-  className,
-  closeAriaLabel,
-  onClose,
-  controlled,
-  ...props
-}) => {
-  const [isVisible, setIsVisible] = useState(true);
+const Alert = styled(
+  ({
+    children,
+    isCloseable,
+    title,
+    type,
+    className,
+    closeAriaLabel,
+    onClose,
+    controlled,
+    ...props
+  }) => {
+    const [isVisible, setIsVisible] = useState(true);
 
-  const hideAlert = () => {
-    onClose();
-    if (!controlled) {
-      setIsVisible(false);
-    }
-  };
-  return isVisible ? (
-    <Flex
-      bg={alertColours[type].backgroundColor}
-      p="x2"
-      borderRadius="medium"
-      borderLeftWidth="4px"
-      borderLeftColor={alertColours[type].borderColor}
-      borderLeftStyle="solid"
-      role="alert"
-      className={className}
-      {...props}
-    >
-      {type === "danger" && (
-        <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />
-      )}
-      {type === "success" && (
-        <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />
-      )}
-      <Box mr="auto">
-        {title && <Text fontWeight="bold">{title}</Text>}
-        {children}
-      </Box>
-      {isCloseable && (
-        <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />
-      )}
-    </Flex>
-  ) : null;
-};
+    const hideAlert = () => {
+      onClose();
+      if (!controlled) {
+        setIsVisible(false);
+      }
+    };
+    return isVisible ? (
+      <Flex
+        bg={alertColours[type].backgroundColor}
+        p="x2"
+        borderRadius="medium"
+        borderLeftWidth="4px"
+        borderLeftColor={alertColours[type].borderColor}
+        borderLeftStyle="solid"
+        role="alert"
+        className={className}
+        {...props}
+      >
+        {type === "danger" && (
+          <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />
+        )}
+        {type === "success" && (
+          <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />
+        )}
+        <Box mr="auto">
+          {title && <Text fontWeight="bold">{title}</Text>}
+          {children}
+        </Box>
+        {isCloseable && (
+          <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />
+        )}
+      </Flex>
+    ) : null;
+  }
+)(AlertStyles);
 
-BaseAlert.propTypes = {
+Alert.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   isCloseable: PropTypes.bool,
@@ -122,7 +129,7 @@ BaseAlert.propTypes = {
   ...propTypes.layout,
 };
 
-BaseAlert.defaultProps = {
+Alert.defaultProps = {
   className: undefined,
   isCloseable: false,
   closeAriaLabel: undefined,
@@ -131,11 +138,5 @@ BaseAlert.defaultProps = {
   controlled: false,
   onClose: () => {},
 };
-
-const Alert = styled(BaseAlert)(space, layout, ({ theme }) => ({
-  [`${Link}`]: {
-    color: theme.colors.black,
-  },
-}));
 
 export default Alert;

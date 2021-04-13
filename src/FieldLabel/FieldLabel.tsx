@@ -25,7 +25,7 @@ const LabelText = styled.span(({ theme }) => ({
   lineHeight: theme.lineHeights.smallTextCompressed,
 }));
 
-const BaseFieldLabel = ({
+const FieldLabel = ({
   labelText,
   requirementText,
   helpText,
@@ -42,10 +42,8 @@ const BaseFieldLabel = ({
   </Label>
 );
 
-BaseFieldLabel.propTypes = FieldLabelProps;
+FieldLabel.propTypes = FieldLabelProps;
 
-BaseFieldLabel.defaultProps = FieldLabelDefaultProps;
-
-const FieldLabel = styled(BaseFieldLabel)({});
+FieldLabel.defaultProps = FieldLabelDefaultProps;
 
 export default FieldLabel;

@@ -1,10 +1,11 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import theme from "../theme";
-import BrandingText from "./BrandingText";
 import { Flex } from "../Flex";
+import BrandingText from "./BrandingText";
 import LettermarkLogo from "./LettermarkLogo";
 import WordmarkLogo from "./WordmarkLogo";
+
 const logoColors = {
   white: {
     letter: "#F0B41C",
@@ -24,8 +25,10 @@ const alignments = {
   center: "center",
   right: "flex-end",
 };
+
 const getLogoColor = (logoColor) => logoColors[logoColor] || logoColors.blue;
 const getAlignment = (alignment) => alignments[alignment] || alignments.left;
+
 const BrandingWrap: React.SFC<any> = styled.div(
   ({ alignment, size }: any): CSSObject => ({
     width: "100%",
@@ -36,6 +39,7 @@ const BrandingWrap: React.SFC<any> = styled.div(
     padding: size === "medium" ? "2px 0" : undefined,
   })
 );
+
 const Line: React.SFC<any> = styled.div(
   ({ logoColor }: any): CSSObject => ({
     position: "relative",
@@ -52,12 +56,14 @@ const Line: React.SFC<any> = styled.div(
     },
   })
 );
+
 const BrandingBoxPaddings = {
   small: 0,
   medium: "2px",
   large: "6px",
 };
-type BaseBrandingProps = {
+
+type BrandingProps = {
   logoType?: "wordmark" | "lettermark";
   logoColor?: "blue" | "white";
   size?: "small" | "medium" | "large";
@@ -66,7 +72,7 @@ type BaseBrandingProps = {
   subtext?: string;
   className?: string;
 };
-const BaseBranding: React.SFC<BaseBrandingProps> = ({
+const Branding: React.SFC<BrandingProps> = ({
   logoType,
   subtext,
   size = "medium",
@@ -113,7 +119,7 @@ const BaseBranding: React.SFC<BaseBrandingProps> = ({
     )}
   </BrandingWrap>
 );
-BaseBranding.defaultProps = {
+Branding.defaultProps = {
   logoType: "wordmark",
   logoColor: "blue",
   size: "medium",
@@ -122,5 +128,5 @@ BaseBranding.defaultProps = {
   subtext: undefined,
   className: undefined,
 };
-const Branding = styled(BaseBranding)({});
+
 export default Branding;

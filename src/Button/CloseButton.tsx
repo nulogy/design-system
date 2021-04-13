@@ -44,7 +44,7 @@ const WrapperButton = styled.button(({ disabled }) => ({
     },
   },
 }));
-const BaseCloseButton = React.forwardRef(({ ...props }: any, ref) => {
+const CloseButton = React.forwardRef(({ ...props }: any, ref) => {
   const { t } = useTranslation();
   return (
     <WrapperButton aria-label={t("close")} ref={ref} {...props}>
@@ -52,6 +52,5 @@ const BaseCloseButton = React.forwardRef(({ ...props }: any, ref) => {
     </WrapperButton>
   );
 });
-const CloseButton = styled(BaseCloseButton)({});
 
 export default CloseButton;
