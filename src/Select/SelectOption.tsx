@@ -4,10 +4,17 @@ import { components } from "react-windowed-select";
 
 import { typography } from "styled-system";
 import { subPx } from "../utils";
+import { DefaultNDSThemeType } from "../theme.type";
+
+type SelectOptionProps = {
+  isSelected?: Boolean;
+  isFocused?: Boolean;
+  theme?: DefaultNDSThemeType;
+};
 
 const StyledOption = styled.div(
   typography,
-  ({ isSelected, isFocused, theme }) => ({
+  ({ isSelected, isFocused, theme }: SelectOptionProps) => ({
     "&:last-child": {
       borderBottomLeftRadius: theme.radii.medium,
       borderBottomRightRadius: theme.radii.medium,

@@ -104,17 +104,6 @@ const Theme: DefaultNDSThemeType = {
     large: tokens.size_breakpoint_large,
     extraLarge: tokens.size_breakpoint_extra_large,
   },
-  zIndex: {
-    content: tokens.z_indices_content,
-    tabsScollIndicator: tokens.z_indices_tabs_scroll_indicator,
-    tabsBar: tokens.z_indices_tabs_bar,
-    overlay: tokens.z_indices_overlay,
-    tableHeader: tokens.z_indices_table_header,
-    modalHeaderAndFooter: tokens.z_indices_modal_header_and_footer,
-    openControl: tokens.z_indices_open_control,
-    navBar: tokens.z_indices_nav_bar,
-    sidebar: tokens.z_indices_sidebar,
-  },
   zIndices: {
     content: tokens.z_indices_content,
     tabsScollIndicator: tokens.z_indices_tabs_scroll_indicator,

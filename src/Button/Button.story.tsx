@@ -40,7 +40,7 @@ WithASelectedSize.story = {
 
 export const WithASelectedIcon = () => (
   <>
-    <Button icon="add" iconSide="left">
+    <Button icon="add" iconSide="left" size="small" onClick={() => { }} disabled>
       Create project
     </Button>
     <Button icon="add" iconSide="right">

@@ -4,16 +4,7 @@ export type { ThemeType } from "./theme.type";
 export { Box, AnimatedBox } from "./Box";
 export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
-export {
-  Text,
-  Title,
-  SectionTitle,
-  SubsectionTitle,
-  Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-} from "./Type";
+export { Text, Heading1, Heading2, Heading3, Heading4 } from "./Type";
 
 export {
   Button,

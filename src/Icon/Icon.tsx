@@ -6,16 +6,14 @@ import icons from "@nulogy/icons";
 import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
 
-
-const iconNames = Object.keys(icons);
-
-type SvgProps = SpaceProps & {
+type IconProps = SpaceProps & {
   icon: string;
   className?: string;
   size?: string;
   title?: string;
   color?: string;
   focusable?: boolean;
+  style?: React.CSSProperties;
 };
 
 /* eslint-disable react/no-array-index-key */
@@ -28,7 +26,7 @@ const getPathElements = (icon: any) => (
 );
 /* eslint-enable react/no-array-index-key */
 
-const Svg = React.forwardRef<SVGSVGElement, SvgProps>(
+const Svg = React.forwardRef<SVGSVGElement, IconProps>(
   (
     {
       icon,
@@ -38,7 +36,7 @@ const Svg = React.forwardRef<SVGSVGElement, SvgProps>(
       color: fillColor,
       title,
       ...props
-    }: SvgProps,
+    }: IconProps,
     ref
   ) => {
     const { space } = useTheme();
@@ -72,6 +70,8 @@ const Svg = React.forwardRef<SVGSVGElement, SvgProps>(
   }
 );
 
+Svg.displayName = "Svg";
+
 Svg.defaultProps = {
   color: "currentColor",
   className: undefined,
@@ -80,9 +80,9 @@ Svg.defaultProps = {
   focusable: false,
 };
 
-const Icon = styled(Svg)<SvgProps>(
+const Icon = styled(Svg)<IconProps>(
   space,
-  ({ size }: SvgProps): CSSObject => ({
+  ({ size }: IconProps): CSSObject => ({
     minWidth: size,
   })
 );
@@ -108,7 +108,7 @@ const IconContainer = styled.span(space, {
   width: `${iconSizeRatio}em`,
 });
 
-export const InlineIcon = (props: SvgProps) => (
+export const InlineIcon = (props: IconProps) => (
   <IconContainer {...props}>
     <CenteredIcon size={`${iconSizeRatio}em`} {...props} />
   </IconContainer>

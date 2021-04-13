@@ -1,10 +1,11 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
+import { PositionProps } from "styled-system";
 import { Box } from "../Box";
 import { Popper } from "../Popper";
 import { generateId } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
-import { PositionProps } from "styled-system";
+
 const tooltipStyles = (theme) => ({
   backgroundColor: theme.colors.white,
   borderColor: theme.colors.grey,
@@ -62,7 +63,7 @@ const TooltipContainer = styled(Box)(
     boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
     padding: theme.space.x1,
     transition: "opacity 0.3s",
-    zIndex: theme.zIndex.content,
+    zIndex: theme.zIndices.content,
     ...getTooltipMargin(dataPlacement),
     position,
     top: open ? 0 : "-9999px",

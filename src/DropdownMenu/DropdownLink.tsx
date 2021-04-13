@@ -3,7 +3,7 @@ import styled from "styled-components";
 const DropdownLink: React.SFC<any> = styled.a.withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
     !["hoverColor", "bgHoverColor"].includes(prop) && defaultValidatorFn(prop),
-})(({ theme, bgHoverColor, hoverColor, color }: any) => ({
+})(({ theme, bgHoverColor = "lightGrey", hoverColor = "darkBlue", color = "darkBlue" }: any) => ({
   display: "block",
   textDecoration: "none",
   borderColor: "transparent",
@@ -31,9 +31,5 @@ const DropdownLink: React.SFC<any> = styled.a.withConfig({
     opacity: ".5",
   },
 }));
-DropdownLink.defaultProps = {
-  color: "darkBlue",
-  hoverColor: "darkBlue",
-  bgHoverColor: "lightGrey",
-};
+
 export default DropdownLink;

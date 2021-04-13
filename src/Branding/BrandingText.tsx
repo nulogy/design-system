@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import theme from "../theme";
-import CSSObject from "styled-components";
+
+type BrandingTextProps = {
+  logoColor?: "blue" | "white";
+  size?: "small" | "medium" | "large";
+};
+
 const logoColors = {
   white: theme.colors.white,
   blue: "#0E77D2",
 };
+
 const getLogoColor = (logoColor) => logoColors[logoColor] || logoColors.blue;
-type BrandingTextProps = {
-  logoColor?: "blue" | "white";
-  size: any;
-};
+
 const BrandingText: React.SFC<any> = styled.span(
   ({ logoColor, size }: BrandingTextProps): any => ({
     color: getLogoColor(logoColor),

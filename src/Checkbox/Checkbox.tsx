@@ -7,6 +7,20 @@ import { ClickInputLabel } from "../utils";
 import { getSubset, omitSubset } from "../utils/subset";
 import { DefaultNDSThemeType } from '../theme.type';
 
+type CheckboxProps = React.ComponentPropsWithRef<"input"> & {
+  labelText?: string;
+  checked?: any;
+  defaultChecked?: boolean;
+  disabled?: boolean;
+  error?: boolean;
+  id?: string;
+  className?: string;
+  required?: boolean;
+  indeterminate?: boolean;
+  theme?: DefaultNDSThemeType;
+  ref?: unknown;
+};
+
 const checkboxStyle = (theme) => ({
   checked: {
     disabled: {
@@ -56,20 +70,6 @@ const indeterminateStyles = {
   borderWidth: "0 3px 0 0",
   transform: "rotate(90deg) translateX(1px)",
   borderRadius: 0,
-};
-
-type CheckboxProps = React.ComponentPropsWithRef<"input"> & {
-  labelText?: string;
-  checked?: any;
-  defaultChecked?: boolean;
-  disabled?: boolean;
-  error?: boolean;
-  id?: string;
-  className?: string;
-  required?: boolean;
-  indeterminate?: boolean;
-  theme?: DefaultNDSThemeType;
-  ref?: unknown;
 };
 
 const VisualCheckbox: React.FunctionComponent<any> = styled.div(

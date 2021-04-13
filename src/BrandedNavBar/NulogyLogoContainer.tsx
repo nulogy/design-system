@@ -1,13 +1,20 @@
 import React from "react";
-import PropTypes from "prop-types";
-import NulogyLogo from "./NulogyLogo";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
 import { Text } from "../Type";
+import NulogyLogo from "./NulogyLogo";
 
 const borderStyle = "1px solid #e4e7eb";
 
-export const NulogyLogoContainer = ({ subText, height }) => (
+type NulogyLogoContainerProps = {
+  subText?: string;
+  height?: string;
+};
+
+export const NulogyLogoContainer = ({
+  subText,
+  height,
+}: NulogyLogoContainerProps) => (
   <Flex
     px="x1"
     py="half"
@@ -36,12 +43,3 @@ export const NulogyLogoContainer = ({ subText, height }) => (
     )}
   </Flex>
 );
-
-NulogyLogoContainer.propTypes = {
-  subText: PropTypes.string,
-  height: PropTypes.string.isRequired,
-};
-
-NulogyLogoContainer.defaultProps = {
-  subText: undefined,
-};

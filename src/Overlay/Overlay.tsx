@@ -16,7 +16,7 @@ const Overlay: React.SFC<OverlayProps> = styled(Flex)<OverlayProps>(
     left: 0,
     right: 0,
     bottom: 0,
-    zIndex: theme.zIndex.overlay,
+    zIndex: theme.zIndices.overlay,
     backgroundColor: dark
       ? transparentize(0.5, theme.colors.blackBlue)
       : transparentize(0.05, theme.colors.white),

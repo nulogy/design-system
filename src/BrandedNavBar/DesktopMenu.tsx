@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { DefaultNDSThemeType } from "../theme.type";
 import MenuTrigger from "./MenuTrigger";
 
 const getSharedStyles = (color, theme) => {
@@ -18,15 +19,27 @@ const getSharedStyles = (color, theme) => {
   };
 };
 
+type ApplyMenuLinkStylesProps = {
+  color?: string;
+  hoverColor?: string;
+  hoverBackground?: string;
+  theme?: DefaultNDSThemeType;
+};
+
 const ApplyMenuLinkStyles = styled.div(
-  ({ color, hoverColor, hoverBackground, theme }) => ({
+  ({
+    color = "white",
+    hoverColor = "lightBlue",
+    hoverBackground = "black",
+    theme,
+  }: ApplyMenuLinkStylesProps) => ({
     "button, a": {
       ...getSharedStyles(color, theme),
       transition: ".2s",
       "&:hover, &:focus": {
         outline: "none",
-        color: theme.colors.hoverColor || hoverColor,
-        backgroundColor: theme.colors.hoverBackground || hoverBackground,
+        color: theme.colors[hoverColor] || hoverColor,
+        backgroundColor: theme.colors[hoverBackground] || hoverBackground,
         cursor: "pointer",
       },
       "&:disabled": {
@@ -39,37 +52,39 @@ const ApplyMenuLinkStyles = styled.div(
   })
 );
 
-ApplyMenuLinkStyles.propTypes = {
-  color: PropTypes.string,
-  hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string,
+type MenuLinkProps = {
+  color?: string;
+  hoverColor?: string;
+  hoverBackground?: string;
+  theme?: DefaultNDSThemeType;
 };
 
-ApplyMenuLinkStyles.defaultProps = {
-  color: "white",
-  hoverColor: "lightBlue",
-  hoverBackground: "black",
+const MenuLink = styled.a(
+  ({ color, hoverColor, hoverBackground, theme }: MenuLinkProps) => ({
+    ...getSharedStyles(color, theme),
+    fontWeight: theme.fontWeights.medium,
+    transition: ".2s",
+    "&:hover, &:focus": {
+      outline: "none",
+      color: theme.colors[hoverColor] || hoverColor,
+      backgroundColor: theme.colors[hoverBackground] || hoverBackground,
+      cursor: "pointer",
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+    "&:focus": {
+      boxShadow: theme.shadows.focus,
+    },
+  })
+);
+
+type MenuTextProps = {
+  textColor?: string;
+  theme?: DefaultNDSThemeType;
 };
 
-const MenuLink = styled.a(({ color, hoverColor, hoverBackground, theme }) => ({
-  ...getSharedStyles(color, theme),
-  fontWeight: theme.fontWeights.medium,
-  transition: ".2s",
-  "&:hover, &:focus": {
-    outline: "none",
-    color: theme.colors[hoverColor] || hoverColor,
-    backgroundColor: theme.colors[hoverBackground] || hoverBackground,
-    cursor: "pointer",
-  },
-  "&:disabled": {
-    opacity: ".5",
-  },
-  "&:focus": {
-    boxShadow: theme.shadows.focus,
-  },
-}));
-
-const MenuText = styled.div(({ textColor, theme }) => ({
+const MenuText = styled.div(({ textColor, theme }: MenuTextProps) => ({
   ...getSharedStyles(textColor, theme),
   fontWeight: theme.fontWeights.medium,
 }));
@@ -130,21 +145,20 @@ const getRenderFunction = (menuItem) => {
 const renderMenuItem = (menuItem, themeColorObject) =>
   getRenderFunction(menuItem)(menuItem, themeColorObject);
 
-const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
+type BaseDesktopMenuProps = {
+  menuData: any[];
+  themeColorObject: any;
+};
+
+const BaseDesktopMenu = ({
+  menuData,
+  themeColorObject,
+  ...props
+}: BaseDesktopMenuProps) => (
   <Nav {...props}>
     {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}
   </Nav>
 );
-
-BaseDesktopMenu.propTypes = {
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  themeColorObject: PropTypes.shape({}),
-};
-
-BaseDesktopMenu.defaultProps = {
-  menuData: null,
-  themeColorObject: null,
-};
 
 const DesktopMenu = styled(BaseDesktopMenu)({
   div: {

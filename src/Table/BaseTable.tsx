@@ -8,12 +8,6 @@ import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
 import { rowsPropType, ColumnType, RowType } from "./Table.types";
 
-const StyledTable = styled.table<any>(space, {
-  borderCollapse: "collapse",
-  width: "100%",
-  background: "white",
-  position: "relative",
-});
 export type BaseTableProps = {
   columns: ColumnType[];
   rows: RowType[];
@@ -28,21 +22,31 @@ export type BaseTableProps = {
   stickyHeader?: boolean;
   onRowMouseEnter?: (...args: any[]) => any;
   onRowMouseLeave?: (...args: any[]) => any;
+  onMouseEnter?: any;
+  onMouseLeave?: any;
 };
+
+const StyledTable = styled.table<any>(space, {
+  borderCollapse: "collapse",
+  width: "100%",
+  background: "white",
+  position: "relative",
+});
+
 const BaseTable: React.SFC<BaseTableProps> = ({
   columns,
   rows,
-  noRowsContent,
-  keyField,
+  noRowsContent = "No records have been created for this table.",
+  keyField = "id",
   id,
   loading,
-  footerRows,
-  rowHovers,
+  footerRows = [],
+  rowHovers = true,
   compact,
   className,
   stickyHeader,
-  onRowMouseEnter,
-  onRowMouseLeave,
+  onRowMouseEnter = () => { },
+  onRowMouseLeave = () => { },
   ...props
 }) => (
   <StyledTable id={id} className={className} {...props}>
@@ -96,7 +100,8 @@ BaseTable.defaultProps = {
   compact: false,
   className: undefined,
   stickyHeader: false,
-  onRowMouseEnter: () => {},
-  onRowMouseLeave: () => {},
+  onRowMouseEnter: () => { },
+  onRowMouseLeave: () => { },
 };
+
 export default BaseTable;

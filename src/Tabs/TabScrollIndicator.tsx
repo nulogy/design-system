@@ -14,7 +14,7 @@ const TabScrollIndicatorButton = styled.button(({ side, width, theme }) => ({
   width,
   background: theme.colors.white,
   opacity: 0.8,
-  zIndex: theme.zIndex.tabsScollIndicator,
+  zIndex: theme.zIndices.tabsScollIndicator,
   display: "inline-flex",
   justifyContent: "center",
   alignItems: "center",

@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { color } from "styled-system";
 import { DefaultNDSThemeType } from "../theme.type";
-type DropdownButtonProps = {
+
+type DropdownButtonProps = React.ComponentPropsWithRef<"button"> & {
   color?: string;
   disabled?: boolean;
   theme?: DefaultNDSThemeType;
   hoverColor?: string;
   bgHoverColor?: string;
 };
+
 const DropdownButton: React.SFC<DropdownButtonProps> = styled.button(
   color,
   ({

@@ -7,7 +7,18 @@ import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
-import { deprecatedProp } from "../utils/deprecatedProp";
+
+type IconicButtonProps = SpaceProps & {
+  className?: string;
+  color?: string;
+  labelHidden?: boolean;
+  disabled?: boolean;
+  onClick?: (...args: any[]) => any;
+  icon?: any;
+  iconSize?: string;
+  tooltip?: string;
+  children?: any;
+};
 
 const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
@@ -76,17 +87,7 @@ const WrapperButton: React.SFC<any> = styled.button(
   }),
   space
 );
-type IconicButtonProps = SpaceProps & {
-  className?: string;
-  color?: string;
-  labelHidden?: boolean;
-  disabled?: boolean;
-  onClick?: (...args: any[]) => any;
-  icon?: any;
-  iconSize?: string;
-  tooltip?: string;
-  children?: any;
-};
+
 const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
   (
     {
@@ -156,7 +157,6 @@ export const iconNames = Object.keys(icons);
 IconicButton.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
-  labelHidden: deprecatedProp(PropTypes.bool, "tooltip"),
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   icon: PropTypes.string,

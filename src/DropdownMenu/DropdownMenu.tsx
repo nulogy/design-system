@@ -5,13 +5,8 @@ import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
 import propTypes from "@styled-system/prop-types";
 import { getSubset, omitSubset } from "../utils/subset";
-const DEFAULT_POPPER_MODIFIERS = {
-  preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
-};
-const transformPropsToModifiers = ({ boundariesElement }) => ({
-  ...DEFAULT_POPPER_MODIFIERS,
-  boundariesElement,
-});
+import { Reference } from "react-popper";
+
 type DropdownMenuProps = {
   className?: string;
   id?: string;
@@ -20,18 +15,18 @@ type DropdownMenuProps = {
   backgroundColor?: string;
   showArrow?: boolean;
   placement?:
-    | "top"
-    | "top-start"
-    | "top-end"
-    | "bottom"
-    | "bottom-start"
-    | "bottom-end"
-    | "left"
-    | "left-start"
-    | "left-end"
-    | "right"
-    | "right-start"
-    | "right-end";
+  | "top"
+  | "top-start"
+  | "top-end"
+  | "bottom"
+  | "bottom-start"
+  | "bottom-end"
+  | "left"
+  | "left-start"
+  | "left-end"
+  | "right"
+  | "right-start"
+  | "right-end";
   showDelay?: string | number;
   hideDelay?: string | number;
   defaultOpen?: boolean;
@@ -39,21 +34,31 @@ type DropdownMenuProps = {
   openAriaLabel?: string;
   closeAriaLabel?: string;
 };
-const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef(
+
+const DEFAULT_POPPER_MODIFIERS = {
+  preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
+};
+
+const transformPropsToModifiers = ({ boundariesElement }) => ({
+  ...DEFAULT_POPPER_MODIFIERS,
+  boundariesElement,
+});
+
+const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenuProps, Reference>(
   (
     {
-      trigger,
+      trigger = () => <IconicButton icon="more" />,
       children,
-      showArrow,
+      showArrow = true,
       disabled,
       defaultOpen,
-      backgroundColor,
-      placement,
+      backgroundColor = "whiteGrey",
+      placement = "bottom-start",
       className,
       id,
-      boundariesElement,
-      showDelay,
-      hideDelay,
+      boundariesElement = "viewport",
+      showDelay = "100",
+      hideDelay = "200",
       openAriaLabel,
       closeAriaLabel,
       ...props
@@ -97,19 +102,5 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef(
     );
   }
 );
-DropdownMenu.defaultProps = {
-  disabled: false,
-  className: undefined,
-  id: undefined,
-  trigger: () => <IconicButton icon="more" />,
-  backgroundColor: "whiteGrey",
-  showArrow: true,
-  placement: "bottom-start",
-  showDelay: "100",
-  hideDelay: "200",
-  defaultOpen: false,
-  boundariesElement: "viewport",
-  openAriaLabel: undefined,
-  closeAriaLabel: undefined,
-};
+
 export default DropdownMenu;

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 
-import { Button, PrimaryButton } from "../";
+import { Button, PrimaryButton } from "..";
 import TimeRange from "./TimeRange";
 
 export default {

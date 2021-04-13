@@ -8,15 +8,14 @@ type TruncatedTextProps = {
   children?: string;
   indicator?: string;
   element?: any;
-  maxCharacters?: number
-  showTooltip?: boolean,
-  fullWidth?: boolean,
-  "data-testid"?: string,
-  tooltipProps?: TooltipProps,
+  maxCharacters?: number;
+  showTooltip?: boolean;
+  fullWidth?: boolean;
+  "data-testid"?: string;
+  tooltipProps?: TooltipProps;
 };
 
-type MaybeTooltipProps = {
-  children?: React.ReactNode;
+type MaybeTooltipProps = TooltipProps & {
   showTooltip?: boolean;
 }
 
@@ -41,7 +40,7 @@ const TruncatedTextFillWidth = ({
   children,
   "data-testid": testId,
   ...props
-}:TruncatedTextProps) => {
+}: TruncatedTextProps) => {
   const [hasOverflowText, setHasOverflowText] = useState(false);
   const hasTooltip = showTooltip && hasOverflowText;
   const updateOverflow = (e) => {
@@ -84,7 +83,7 @@ const TruncatedTextMaxCharacters = ({
   tooltipProps,
   "data-testid": testId,
   ...props
-}:TruncatedTextProps) => {
+}: TruncatedTextProps) => {
   const innerText = children;
   const requiresTruncation = innerText.length > maxCharacters;
   const truncatedText = requiresTruncation

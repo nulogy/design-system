@@ -21,8 +21,6 @@ import DatePickerHeader from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
 
-const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
-const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
 type DatePickerProps = FieldProps & {
   selected?: any;
   dateFormat?: string;
@@ -37,6 +35,10 @@ type DatePickerProps = FieldProps & {
   disableFlipping?: boolean;
   className?: string;
 };
+
+const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
+const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
+
 const DatePicker: React.SFC<DatePickerProps> = forwardRef(
   (
     {

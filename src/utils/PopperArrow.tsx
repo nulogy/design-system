@@ -1,6 +1,13 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { PopperArrowProps as ReactPopperArrowProps } from "react-popper";
 import theme from "../theme";
+
+type PopperArrowProps = ReactPopperArrowProps & {
+  placement?: string;
+  borderColor?: string;
+  backgroundColor?: string;
+};
 
 const getThemeColor = (color) =>
   theme.colors[color] ? theme.colors[color] : color;
@@ -128,7 +135,7 @@ const drawArrow = (placement, borderColor, backgroundColor) => {
   }
 };
 
-const PopperArrow = styled.div(
+const PopperArrow: React.FC<PopperArrowProps> = styled.div(
   {
     position: "absolute",
     height: theme.space.x1,
@@ -153,37 +160,16 @@ const PopperArrow = styled.div(
       width: 0,
     },
   },
-  ({ placement, borderColor, backgroundColor }) => ({
+  ({
+    placement = "bottom",
+    borderColor = "grey",
+    backgroundColor = "white",
+  }: PopperArrowProps) => ({
     ...drawArrow(placement, borderColor, backgroundColor),
   }),
-  ({ placement }) => ({
+  ({ placement = "bottom" }) => ({
     ...positionArrow(placement),
   })
 );
-
-PopperArrow.propTypes = {
-  placement: PropTypes.oneOf([
-    "top",
-    "top-start",
-    "top-end",
-    "bottom",
-    "bottom-start",
-    "bottom-end",
-    "left",
-    "left-start",
-    "left-end",
-    "right",
-    "right-start",
-    "right-end",
-  ]),
-  borderColor: PropTypes.string,
-  backgroundColor: PropTypes.string,
-};
-
-PopperArrow.defaultProps = {
-  placement: "bottom",
-  borderColor: "grey",
-  backgroundColor: "white",
-};
 
 export default PopperArrow;

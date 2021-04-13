@@ -3,6 +3,12 @@ import styled from "styled-components";
 import { space, color, flexbox, layout } from "styled-system";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
+import { FlexProps } from "../Flex/Flex";
+
+type BreadcrumbsProps = FlexProps & {
+  children: any;
+  as?: string | undefined;
+};
 
 const insertSeparators = (items: any, className: any) => {
   return items.reduce((acc: any, current: any, index: number) => {
@@ -44,15 +50,7 @@ const StyledOl = styled.ol(() => ({
   display: "flex",
 }));
 
-type BreadcrumbsProps = {
-  children: any;
-  as?: string | undefined;
-};
-const Breadcrumbs: React.SFC<BreadcrumbsProps> = ({
-  children,
-  as,
-  ...props
-}) => {
+const Breadcrumbs = ({ children, as, ...props }: BreadcrumbsProps) => {
   const childrenArr = Array.isArray(children) ? children : [children];
   const allItems = [...childrenArr].map((child, index) => {
     return (

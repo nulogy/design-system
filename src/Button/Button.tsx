@@ -3,9 +3,21 @@ import styled, { useTheme } from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import { Icon } from "../Icon";
 import { subPx } from "../utils";
-import { DefaultNDSThemeType } from '../theme.type';
+import { DefaultNDSThemeType } from "../theme.type";
 
 type SizeType = "small" | "medium" | "large" | undefined;
+
+export type ButtonProps = SpaceProps &
+  React.ComponentPropsWithRef<"button"> & {
+    className?: string;
+    icon?: any;
+    iconSide?: "left" | "right";
+    size?: SizeType;
+    fullWidth?: boolean;
+    asLink?: boolean;
+    children?: React.ReactNode;
+    theme?: DefaultNDSThemeType;
+  };
 
 const getSize = (size: SizeType, theme: DefaultNDSThemeType) => {
   switch (size) {
@@ -76,20 +88,20 @@ const WrapperButton = styled.button<any>(
   }),
   space
 );
-export type ButtonProps = SpaceProps &
-  React.ComponentPropsWithRef<"button"> & {
-    className?: string;
-    icon?: any;
-    iconSide?: "left" | "right";
-    size?: SizeType;
-    disabled?: boolean;
-    fullWidth?: boolean;
-    asLink?: boolean;
-    children?: React.ReactNode;
-    theme?: DefaultNDSThemeType;
-  };
+
 const Button: React.SFC<ButtonProps> = React.forwardRef(
-  ({ children, iconSide, icon, className, asLink, ...props }, ref) => {
+  (
+    {
+      children,
+      iconSide = "right",
+      icon,
+      className,
+      asLink,
+      size = "medium",
+      ...props
+    }: ButtonProps,
+    ref
+  ) => {
     const {
       lineHeights: { smallTextCompressed },
     } = useTheme();
@@ -98,6 +110,7 @@ const Button: React.SFC<ButtonProps> = React.forwardRef(
         as={asLink ? "a" : undefined}
         ref={ref}
         className={className}
+        size={size}
         {...props}
       >
         {icon && iconSide === "left" && (
@@ -111,13 +124,5 @@ const Button: React.SFC<ButtonProps> = React.forwardRef(
     );
   }
 );
-Button.defaultProps = {
-  className: undefined,
-  icon: null,
-  iconSide: "right",
-  size: "medium",
-  disabled: false,
-  fullWidth: false,
-  asLink: false,
-};
+
 export default Button;

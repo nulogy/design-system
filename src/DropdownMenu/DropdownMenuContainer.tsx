@@ -3,6 +3,14 @@ import { color } from "styled-system";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme.type";
 
+type DropdownMenuContainerProps = {
+  className?: string;
+  backgroundColor?: string;
+  showArrow?: boolean;
+  dataPlacement?: any;
+  theme?: DefaultNDSThemeType;
+};
+
 const getMenuMargin = (placement, showArrow) => {
   const direction = String(placement).split("-")[0];
   switch (direction) {
@@ -27,13 +35,7 @@ const getMenuMargin = (placement, showArrow) => {
       };
   }
 };
-type DropdownMenuContainerProps = {
-  className?: string;
-  backgroundColor?: string;
-  showArrow?: boolean;
-  dataPlacement?: any;
-  theme?: DefaultNDSThemeType;
-};
+
 const DropdownMenuContainer: React.SFC<DropdownMenuContainerProps> = styled(
   Box
 )(
