@@ -11,7 +11,6 @@ import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
-import { deprecatedProp } from "../utils/deprecatedProp";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
@@ -365,7 +364,6 @@ BaseNavBar.propTypes = {
   menuData: PropTypes.shape(MenuDataPropTypes),
   className: PropTypes.string,
   breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  showTraining: deprecatedProp(PropTypes.bool, "environment"),
   environment: PropTypes.oneOf(["training", "development", undefined]),
   logoSrc: PropTypes.string,
 };

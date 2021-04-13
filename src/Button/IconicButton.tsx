@@ -7,7 +7,6 @@ import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
-import { deprecatedProp } from "../utils/deprecatedProp";
 
 const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
@@ -156,7 +155,6 @@ export const iconNames = Object.keys(icons);
 IconicButton.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
-  labelHidden: deprecatedProp(PropTypes.bool, "tooltip"),
   disabled: PropTypes.bool,
   onClick: PropTypes.func,
   icon: PropTypes.string,
