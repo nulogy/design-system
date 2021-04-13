@@ -6,9 +6,9 @@ import theme from "../theme";
 import {
   Box,
   Flex,
-  Title,
-  SectionTitle,
-  SubsectionTitle,
+  Heading1,
+  Heading2,
+  Heading3,
   Text,
   NavBar,
   IconicButton,
@@ -161,11 +161,11 @@ export const Default = () => (
         minHeight={StorybookContentHeight}
       >
         <Box p="x3" flexGrow="2">
-          <Title mb="x6">I am title</Title>
+          <Heading1 mb="x6">I am title</Heading1>
           <Tabs defaultSelectedIndex={0}>
             <Tab label="Details">
               <Box pt="x2" mb="x3">
-                <SectionTitle mb="x4">Details</SectionTitle>
+                <Heading2 mb="x4">Details</Heading2>
                 <Flex flexWrap="wrap" justifyContent="space-between" mb="x3">
                   <Box width={1 / 3} pr="x1" mb="x3">
                     <Text
@@ -239,17 +239,17 @@ export const Default = () => (
 
             <Tab label="Milestones">
               <Box py="x2">
-                <SectionTitle mb="x2">Milestone Performance</SectionTitle>
+                <Heading2 mb="x2">Milestone Performance</Heading2>
                 <Table columns={milestoneColumns} rows={milestoneRows} />
               </Box>
             </Tab>
             <Tab label="Production Records">
               <Box pt="x2" mb="x3">
-                <SectionTitle mb="x2">Production Records</SectionTitle>
+                <Heading2 mb="x2">Production Records</Heading2>
                 <Table columns={productionColumns} rows={productionRows} />
               </Box>
               <Box pt="x1">
-                <SubsectionTitle mb="x3">Comments</SubsectionTitle>
+                <Heading3 mb="x3">Comments</Heading3>
                 <Form>
                   <Textarea rows={4} mb="x3" placeholder="Leave a comment..." />
                   <Box>
@@ -278,11 +278,11 @@ export const WithSidebar = () => (
         minHeight={StorybookContentHeight}
       >
         <Box p="x3" flexGrow="2">
-          <Title mb="x6">I am title</Title>
+          <Heading1 mb="x6">I am title</Heading1>
           <Tabs defaultSelectedIndex={0}>
             <Tab label="Details">
               <Box pt="x2" mb="x3">
-                <SectionTitle mb="x4">Details</SectionTitle>
+                <Heading2 mb="x4">Details</Heading2>
                 <Flex flexWrap="wrap" justifyContent="space-between" mb="x3">
                   <Box width={1 / 3} pr="x1" mb="x3">
                     <Text
@@ -356,17 +356,17 @@ export const WithSidebar = () => (
 
             <Tab label="Milestones">
               <Box py="x2">
-                <SectionTitle mb="x2">Milestone Performance</SectionTitle>
+                <Heading2 mb="x2">Milestone Performance</Heading2>
                 <Table columns={milestoneColumns} rows={milestoneRows} />
               </Box>
             </Tab>
             <Tab label="Production Records">
               <Box pt="x2" mb="x3">
-                <SectionTitle mb="x2">Production Records</SectionTitle>
+                <Heading2 mb="x2">Production Records</Heading2>
                 <Table columns={productionColumns} rows={productionRows} />
               </Box>
               <Box pt="x1">
-                <SubsectionTitle mb="x3">Comments</SubsectionTitle>
+                <Heading3 mb="x3">Comments</Heading3>
                 <Form>
                   <Textarea rows={4} mb="x3" placeholder="Leave a comment..." />
                   <Box>
@@ -396,7 +396,7 @@ export const WithSidebar = () => (
           //  overflow="auto"
         >
           <Flex justifyContent="space-between" alignItems="flex-start" mb="x4">
-            <SectionTitle mt="half">Job 324400</SectionTitle>
+            <Heading2 mt="half">Job 324400</Heading2>
             <IconicButton icon="close" />
           </Flex>
           <Form>
@@ -550,11 +550,11 @@ export const WithBreadcrumbsAndActions = () => (
             </Flex>
             <IconicButton icon="more" mt="x2" />
           </Flex>
-          <Title mb="x6">I am title</Title>
+          <Heading1 mb="x6">I am title</Heading1>
           <Tabs defaultSelectedIndex={0}>
             <Tab label="Details">
               <Box pt="x2" mb="x3">
-                <SectionTitle mb="x4">Details</SectionTitle>
+                <Heading2 mb="x4">Details</Heading2>
                 <Flex flexWrap="wrap" justifyContent="space-between" mb="x3">
                   <Box width={1 / 3} pr="x1" mb="x3">
                     <Text
@@ -628,17 +628,17 @@ export const WithBreadcrumbsAndActions = () => (
 
             <Tab label="Milestones">
               <Box py="x2">
-                <SectionTitle mb="x2">Milestone Performance</SectionTitle>
+                <Heading2 mb="x2">Milestone Performance</Heading2>
                 <Table columns={milestoneColumns} rows={milestoneRows} />
               </Box>
             </Tab>
             <Tab label="Production Records">
               <Box pt="x2" mb="x3">
-                <SectionTitle mb="x2">Production Records</SectionTitle>
+                <Heading2 mb="x2">Production Records</Heading2>
                 <Table columns={productionColumns} rows={productionRows} />
               </Box>
               <Box pt="x1">
-                <SubsectionTitle mb="x3">Comments</SubsectionTitle>
+                <Heading3 mb="x3">Comments</Heading3>
                 <Form>
                   <Textarea rows={4} mb="x3" placeholder="Leave a comment..." />
                   <Box>
@@ -666,7 +666,7 @@ export const WithBreadcrumbsAndActions = () => (
           borderRadius="medium"
         >
           <Flex justifyContent="space-between" alignItems="flex-start" mb="x4">
-            <SectionTitle mt="half">I am Sidebar</SectionTitle>
+            <Heading2 mt="half">I am Sidebar</Heading2>
             <IconicButton icon="close" />
           </Flex>
           <Text>I am Sidebar content.</Text>
