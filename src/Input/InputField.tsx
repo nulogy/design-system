@@ -22,7 +22,7 @@ const StyledInputIcon = styled(Icon)(({ theme }) => ({
 
 const inputStyles = (theme) => ({
   disabled: {
-    color: transparentize(0.6667, theme.colors.black),
+    color: transparentize(0.33, theme.colors.black),
     borderColor: theme.colors.lightGrey,
     backgroundColor: theme.colors.whiteGrey,
   },
