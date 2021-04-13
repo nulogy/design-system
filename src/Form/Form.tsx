@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { SpaceProps } from "styled-system";
+import { space, SpaceProps } from "styled-system";
 import { Heading2 } from "../Type";
-import { Box } from "../Box";
 import { Alert } from "../Alert";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
@@ -39,7 +38,7 @@ const Form = styled(({ title, children, ...props }: FormProps) => (
     {title && <Heading2>{title}</Heading2>}
     {children}
   </form>
-))(FormStyles);
+))(space, FormStyles);
 
 Form.defaultProps = {
   children: [],
