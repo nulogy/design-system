@@ -10,7 +10,6 @@ export default {
 
 export const _Textarea = () => (
   <Textarea
-    p="x3"
     labelText="Label"
     onChange={action("value changed")}
     onBlur={action("blurred")}
@@ -33,7 +32,7 @@ TextareaWithAllProps.story = {
   name: "Textarea with all props",
 };
 
-export const SetToDisabled = () => <Textarea labelText="Label" disabled />;
+export const SetToDisabled = () => <Textarea labelText="Label" disabled value="Disabled" />;
 
 SetToDisabled.story = {
   name: "Set to disabled",
