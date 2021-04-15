@@ -2,12 +2,15 @@ import React from "react";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 
-type DividerProps = BoxProps & {
-  children?: React.ReactNode;
-};
+type DividerProps = BoxProps;
 
-const Divider = (props: DividerProps) => (
-  <Box as="hr" borderTop="1px solid" borderColor="lightGrey" {...props}></Box>
+const Divider = ({ borderColor = "lightGrey", ...props }: DividerProps) => (
+  <Box
+    as="hr"
+    borderTop="1px solid"
+    borderColor={borderColor}
+    {...props}
+  />
 );
 
 export default Divider;
