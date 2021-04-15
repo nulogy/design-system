@@ -146,7 +146,7 @@ const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
     borderBottomLeftRadius: theme.radii.medium,
     borderBottomRightRadius: theme.radii.medium,
     display: isOpen ? "block" : "none",
-    zIndex: theme.zIndex.content,
+    zIndex: theme.zIndices.content,
     scrollBehavior: "smooth",
   };
 });
