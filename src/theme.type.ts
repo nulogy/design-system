@@ -123,7 +123,6 @@ export type DefaultNDSThemeType = {
   shadows: Shadows;
   radii: Radii;
   breakpoints: Breakpoints;
-  zIndex: ZIndices;
   zIndices: ZIndices;
 };
 

@@ -41,7 +41,7 @@ const ModalHeader = styled.div(
       theme
     )} ${theme.space.x2} ${theme.space.x3}`,
     backgroundColor: transparentize(0.1, theme.colors.white),
-    zIndex: theme.zIndex.modalHeaderAndFooter,
+    zIndex: theme.zIndices.modalHeaderAndFooter,
     borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
     ":after": {
       content: "''",
@@ -59,7 +59,7 @@ const ModalFooter = styled.div(({ theme }) => ({
   position: "relative",
   padding: `${theme.space.x2} ${theme.space.x3}`,
   backgroundColor: transparentize(0.1, theme.colors.white),
-  zIndex: theme.zIndex.modalHeaderAndFooter,
+  zIndex: theme.zIndices.modalHeaderAndFooter,
   borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
   ":after": {
     content: "''",
@@ -87,7 +87,7 @@ const overlayStyle = (theme) => ({
   justifyContent: "center",
   alignItems: "center",
   backgroundColor: transparentize(0.5, theme.colors.blackBlue),
-  zIndex: theme.zIndex.overlay,
+  zIndex: theme.zIndices.overlay,
 });
 const StyledReactModal = styled(ReactModal)(
   ({ maxWidth }) => ({

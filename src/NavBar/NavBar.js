@@ -168,7 +168,7 @@ const SmallHeader = styled.header(({ isOpen }) =>
         position: "fixed",
         width: "100%",
         height: "100%",
-        zIndex: theme.zIndex.overlay,
+        zIndex: theme.zIndices.overlay,
         overflow: "scroll",
         top: "0",
         left: "0",
