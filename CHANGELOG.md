@@ -1,3 +1,10 @@
+# [5.16.0](https://github.com/nulogy/design-system/compare/v5.15.1...v5.16.0) (2021-04-15)
+
+
+### Features
+
+* add a horizontal <Divider/> component ([#887](https://github.com/nulogy/design-system/issues/887)) ([cce60de](https://github.com/nulogy/design-system/commit/cce60deede750f615990fa23ae3528f44b924c0f))
+
 ## [5.15.1](https://github.com/nulogy/design-system/compare/v5.15.0...v5.15.1) (2021-04-08)
 
 
