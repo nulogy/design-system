@@ -1,3 +1,10 @@
+# [5.17.0](https://github.com/nulogy/design-system/compare/v5.16.0...v5.17.0) (2021-04-16)
+
+
+### Features
+
+* Add typography prop ([#890](https://github.com/nulogy/design-system/issues/890)) ([e65ea0e](https://github.com/nulogy/design-system/commit/e65ea0e1b7aa61f748167968bd0b755ec1df8f6a))
+
 # [5.16.0](https://github.com/nulogy/design-system/compare/v5.15.1...v5.16.0) (2021-04-15)
 
 
