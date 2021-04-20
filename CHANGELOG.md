@@ -1,3 +1,10 @@
+# [5.18.0](https://github.com/nulogy/design-system/compare/v5.17.0...v5.18.0) (2021-04-20)
+
+
+### Features
+
+* adds values to disabled input stories ([a190609](https://github.com/nulogy/design-system/commit/a19060964895b959a2968953cadefd70cf5f526e))
+
 # [5.17.0](https://github.com/nulogy/design-system/compare/v5.16.0...v5.17.0) (2021-04-16)
 
 
