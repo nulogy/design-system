@@ -1,3 +1,10 @@
+# [5.19.0](https://github.com/nulogy/design-system/compare/v5.18.0...v5.19.0) (2021-04-21)
+
+
+### Features
+
+* **Table:** add space styled props ([#891](https://github.com/nulogy/design-system/issues/891)) ([dbd8371](https://github.com/nulogy/design-system/commit/dbd83718133928d67b47792d00dc4b921daadce7))
+
 # [5.18.0](https://github.com/nulogy/design-system/compare/v5.17.0...v5.18.0) (2021-04-20)
 
 
