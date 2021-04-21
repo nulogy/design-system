@@ -1,31 +1,33 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+import { space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-import PropTypes from "prop-types";
-import { rowsPropType, ColumnType, RowType } from './Table.types';
+import { rowsPropType, ColumnType, RowType } from "./Table.types";
 
-const StyledTable = styled.table<any>({
+const StyledTable = styled.table<any>(space, {
   borderCollapse: "collapse",
   width: "100%",
   background: "white",
   position: "relative",
 });
 export type BaseTableProps = {
-  columns: ColumnType[],
-  rows: RowType[],
-  noRowsContent?: string,
-  keyField?: string,
-  id?: string,
-  loading?: boolean,
-  footerRows?: any,
-  rowHovers?: boolean,
-  compact?: boolean,
-  className?: string,
-  stickyHeader?: boolean,
-  onRowMouseEnter?: (...args: any[]) => any,
-  onRowMouseLeave?: (...args: any[]) => any,
+  columns: ColumnType[];
+  rows: RowType[];
+  noRowsContent?: string;
+  keyField?: string;
+  id?: string;
+  loading?: boolean;
+  footerRows?: any;
+  rowHovers?: boolean;
+  compact?: boolean;
+  className?: string;
+  stickyHeader?: boolean;
+  onRowMouseEnter?: (...args: any[]) => any;
+  onRowMouseLeave?: (...args: any[]) => any;
 };
 const BaseTable: React.SFC<BaseTableProps> = ({
   columns,
@@ -68,6 +70,7 @@ const BaseTable: React.SFC<BaseTableProps> = ({
 );
 
 BaseTable.propTypes = {
+  ...propTypes.space,
   columns: PropTypes.any,
   rows: PropTypes.any,
   noRowsContent: PropTypes.string,
