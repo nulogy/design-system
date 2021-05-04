@@ -1,3 +1,10 @@
+# [5.20.0](https://github.com/nulogy/design-system/compare/v5.19.0...v5.20.0) (2021-05-04)
+
+
+### Features
+
+* add sticky note icon ([0ceeb4a](https://github.com/nulogy/design-system/commit/0ceeb4a80f88966230f49c3f7a8ff1197204610b))
+
 # [5.19.0](https://github.com/nulogy/design-system/compare/v5.18.0...v5.19.0) (2021-04-21)
 
 
