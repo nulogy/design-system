@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styled, { CSSObject } from "styled-components";
 import { Box } from "../Box";
-import { Alert } from "../Alert";
+import Alert, { AlertProps } from "../Alert/Alert";
 import { DefaultNDSThemeType } from "../theme.type";
+
+type ToastProps = AlertProps & {
+  triggered?: boolean;
+  onShow?: (...args: any[]) => any;
+  onHide?: (...args: any[]) => any;
+  showDuration?: number;
+  onHidden?: (...args: any[]) => any;
+};
+
 const SHOW_DURATION = 2000; // in ms
 const ANIMATE_OUT_DURATION = 1000;
 const TOAST_Y_MAX = "0px";
@@ -32,7 +41,7 @@ type AnimatedAlertProps = {
   theme?: DefaultNDSThemeType;
 };
 const AnimatedAlert = styled(Alert)(
-  ({ visible, theme }: AnimatedAlertProps) => ({
+  ({ visible, theme }: AnimatedAlertProps): CSSObject => ({
     boxShadow: theme.shadows.medium,
     minWidth: "200px",
     maxWidth: "600px",
@@ -58,19 +67,7 @@ const AnimatedBoxBottom: React.SFC<AnimatedBoxBottomProps> = styled(Box)(
     ...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES),
   })
 );
-
-type ToastProps = {
-  triggered?: boolean;
-  title?: string;
-  onShow?: (...args: any[]) => any;
-  onHide?: (...args: any[]) => any;
-  isCloseable?: boolean;
-  showDuration?: number;
-  children?: any;
-  type?: string;
-  onHidden?: (...args: any[]) => any;
-};
-export const Toast: React.SFC<ToastProps> = ({
+export const Toast = ({
   triggered,
   onHide,
   onShow,
@@ -79,7 +76,7 @@ export const Toast: React.SFC<ToastProps> = ({
   showDuration,
   onHidden,
   ...props
-}) => {
+}: ToastProps) => {
   const [visible, setVisible] = useState(triggered);
   const [timeoutID, setTimeoutID] = useState<number | undefined>(undefined);
   const cancelHidingToast = () => {
@@ -149,11 +146,11 @@ export const Toast: React.SFC<ToastProps> = ({
 };
 Toast.defaultProps = {
   triggered: false,
-  onShow: () => {},
-  onHide: () => {},
+  onShow: () => { },
+  onHide: () => { },
   children: undefined,
   isCloseable: false,
   showDuration: SHOW_DURATION,
-  onHidden: () => {},
+  onHidden: () => { },
 };
 export default Toast;

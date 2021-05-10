@@ -1,13 +1,24 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import propTypes from "@styled-system/prop-types";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import { SpaceProps, LayoutProps } from "styled-system";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
+
+export type AlertProps = SpaceProps &
+  LayoutProps & {
+    children?: React.ReactNode;
+    className?: string;
+    isCloseable?: boolean;
+    closeAriaLabel?: string;
+    title?: string;
+    type?: "danger" | "informative" | "success" | "warning" | undefined;
+    onClose: any;
+    controlled: boolean;
+  };
 
 const AlertStyles = ({ theme }) => ({
   [`${Link}`]: {
@@ -34,7 +45,10 @@ const alertColours: any = {
   },
 };
 
-type CloseButtonProps = any;
+type CloseButtonProps = {
+  onClick: any;
+  "aria-label": string;
+};
 
 const CloseButton = ({
   onClick,
@@ -56,32 +70,22 @@ const CloseButton = ({
   );
 };
 
-CloseButton.propTypes = {
-  onClick: PropTypes.func,
-  "aria-label": PropTypes.string,
-};
-
-CloseButton.defaultProps = {
-  onClick: undefined,
-  "aria-label": undefined,
-};
-
 const Alert = styled(
   ({
     children,
-    isCloseable,
+    isCloseable = false,
     title,
-    type,
+    type = "informative",
     className,
     closeAriaLabel,
     onClose,
-    controlled,
+    controlled = false,
     ...props
-  }) => {
+  }: AlertProps) => {
     const [isVisible, setIsVisible] = useState(true);
 
     const hideAlert = () => {
-      onClose();
+      if (onClose) onClose();
       if (!controlled) {
         setIsVisible(false);
       }
@@ -115,28 +119,5 @@ const Alert = styled(
     ) : null;
   }
 )(AlertStyles);
-
-Alert.propTypes = {
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  isCloseable: PropTypes.bool,
-  closeAriaLabel: PropTypes.string,
-  title: PropTypes.string,
-  type: PropTypes.oneOf(["danger", "informative", "success", "warning"]),
-  onClose: PropTypes.func,
-  controlled: PropTypes.bool,
-  ...propTypes.space,
-  ...propTypes.layout,
-};
-
-Alert.defaultProps = {
-  className: undefined,
-  isCloseable: false,
-  closeAriaLabel: undefined,
-  title: null,
-  type: "informative",
-  controlled: false,
-  onClose: () => {},
-};
 
 export default Alert;
