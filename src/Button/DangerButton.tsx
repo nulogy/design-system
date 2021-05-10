@@ -4,7 +4,7 @@ import Button, { ButtonProps } from "./Button";
 import { DefaultNDSThemeType } from "../theme.type";
 
 type DangerButtonProps = ButtonProps & {
-  disabled: boolean;
+  disabled?: boolean;
   theme?: DefaultNDSThemeType;
 };
 const DangerButton = styled(Button)(

@@ -8,6 +8,18 @@ import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 
+type IconicButtonProps = SpaceProps & {
+  className?: string;
+  color?: string;
+  labelHidden?: boolean;
+  disabled?: boolean;
+  onClick?: (...args: any[]) => any;
+  icon?: any;
+  iconSize?: string;
+  tooltip?: string;
+  children?: any;
+};
+
 const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
   ontSize: theme.fontSizes.small,
@@ -75,17 +87,7 @@ const WrapperButton: React.SFC<any> = styled.button(
   }),
   space
 );
-type IconicButtonProps = SpaceProps & {
-  className?: string;
-  color?: string;
-  labelHidden?: boolean;
-  disabled?: boolean;
-  onClick?: (...args: any[]) => any;
-  icon?: any;
-  iconSize?: string;
-  tooltip?: string;
-  children?: any;
-};
+
 const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
   (
     {

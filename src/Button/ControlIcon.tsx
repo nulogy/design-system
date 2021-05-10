@@ -2,6 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
 import { Icon } from "../Icon";
+
+type ControlIconProps = React.ComponentPropsWithRef<"button"> & {
+  onClick?: (...args: any[]) => any;
+  icon: string;
+  toggled?: boolean;
+  disabled?: boolean;
+  size?: string;
+  type?: string;
+  label?: string;
+};
+
 const getIconColorByState = ({ toggled, disabled, theme }) => {
   if (toggled) {
     return theme.colors.darkBlue;
@@ -11,6 +22,7 @@ const getIconColorByState = ({ toggled, disabled, theme }) => {
   }
   return theme.colors.darkGrey;
 };
+
 const StyledButton: React.SFC<any> = styled.button(
   ({ toggled, disabled, theme }: any) => ({
     background: "transparent",
@@ -32,18 +44,10 @@ const StyledButton: React.SFC<any> = styled.button(
   }),
   space
 );
-type ControlIconProps = {
-  icon: string;
-  label: string;
-  onClick?: (...args: any[]) => any;
-  toggled?: boolean;
-  disabled?: boolean;
-  size?: string;
-  type?: string;
-};
+
 const ControlIcon = React.forwardRef(
   (
-    { icon, toggled, disabled, label, size, type, ...props }: ControlIconProps,
+    { icon, toggled, disabled, label, size = "x4", type = "button", ...props }: ControlIconProps,
     ref
   ) => (
     <StyledButton
@@ -58,11 +62,4 @@ const ControlIcon = React.forwardRef(
     </StyledButton>
   )
 );
-ControlIcon.defaultProps = {
-  onClick: () => {},
-  toggled: false,
-  disabled: false,
-  size: "x4",
-  type: "button",
-};
 export default ControlIcon;
