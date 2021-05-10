@@ -92,7 +92,7 @@ const extractValue = (options, isMulti) => {
     return options.value;
   }
 };
-type ReactSelectProps = {
+export type SelectProps = {
   options: any[];
   windowThreshold?: number;
   filterOption?: (...args: any[]) => any;
@@ -127,7 +127,7 @@ type ReactSelectProps = {
   closeMenuOnSelect?: boolean;
   "aria-label"?: string;
 };
-const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
+const ReactSelect = forwardRef(
   (
     {
       autocomplete,
@@ -164,7 +164,7 @@ const ReactSelect: React.SFC<ReactSelectProps> = forwardRef(
       filterOption,
       closeMenuOnSelect,
       ...props
-    },
+    }: SelectProps,
     ref
   ) => {
     const { t } = useTranslation();
