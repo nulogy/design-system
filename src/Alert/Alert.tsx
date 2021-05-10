@@ -16,8 +16,8 @@ export type AlertProps = SpaceProps &
     closeAriaLabel?: string;
     title?: string;
     type?: "danger" | "informative" | "success" | "warning" | undefined;
-    onClose: any;
-    controlled: boolean;
+    onClose?: any;
+    controlled?: boolean;
   };
 
 const AlertStyles = ({ theme }) => ({
