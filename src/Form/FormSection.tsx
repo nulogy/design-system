@@ -3,12 +3,15 @@ import styled from "styled-components";
 import { Heading3 } from "../Type";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
-const FormSectionTitle = styled(Heading3).attrs({
-  as: "legend",
-})({});
+
 type BaseFormSectionProps = React.ComponentPropsWithRef<"fieldset"> & {
   title?: string;
 };
+
+const FormSectionTitle = styled(Heading3).attrs({
+  as: "legend",
+})({});
+
 const BaseFormSection: React.SFC<BaseFormSectionProps> = ({
   title,
   children,

@@ -3,6 +3,7 @@ import { Flex } from "../Flex";
 import { Text } from "../Type";
 import { ControlIcon } from "../Button";
 import { localizedFormat } from "../utils/localized-date-fns";
+
 type DatePickerHeaderProps = {
   date: any;
   decreaseMonth: (...args: any[]) => any;
@@ -11,6 +12,7 @@ type DatePickerHeaderProps = {
   nextMonthButtonDisabled: boolean;
   locale?: string;
 };
+
 const DatePickerHeader: React.SFC<DatePickerHeaderProps> = ({
   date,
   decreaseMonth,

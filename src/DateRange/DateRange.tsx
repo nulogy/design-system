@@ -11,17 +11,7 @@ import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 import { TimePicker } from "../TimePicker";
 import { getDuration } from "../TimeRange/TimeRange.utils";
 import { forwardRef } from "react";
-const DEFAULT_LABEL = "Date Range";
-const StyledStartTime = styled(TimePicker)(({ theme }) => ({
-  marginLeft: theme.space.x1,
-  display: "flex",
-  alignItems: "flex-end",
-}));
-const StyledEndTime = styled(TimePicker)(({ theme }) => ({
-  marginRight: theme.space.x1,
-  display: "flex",
-  alignItems: "flex-end",
-}));
+
 type DateRangeProps = {
   dateFormat?: string;
   onRangeChange?: (...args: any[]) => any;
@@ -52,6 +42,21 @@ type DateRangeProps = {
   endTimeProps?: any;
   startTimeProps?: any;
 };
+
+const DEFAULT_LABEL = "Date Range";
+
+const StyledStartTime = styled(TimePicker)(({ theme }) => ({
+  marginLeft: theme.space.x1,
+  display: "flex",
+  alignItems: "flex-end",
+}));
+
+const StyledEndTime = styled(TimePicker)(({ theme }) => ({
+  marginRight: theme.space.x1,
+  display: "flex",
+  alignItems: "flex-end",
+}));
+
 const DateRange: React.SFC<DateRangeProps> = forwardRef(
   (
     {
@@ -68,9 +73,9 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
       startDateInputProps,
       disableRangeValidation,
       labelProps = {
-            ...FieldLabelDefaultProps,
-            labelText: DEFAULT_LABEL,
-          },
+        ...FieldLabelDefaultProps,
+        labelText: DEFAULT_LABEL,
+      },
       minDate,
       maxDate,
       showTimes,
@@ -166,7 +171,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
         });
       }
     };
-    
+
     const startInputProps = {
       "aria-label": t("select a start date"),
       error: rangeError,

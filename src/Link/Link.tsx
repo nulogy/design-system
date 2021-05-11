@@ -11,11 +11,6 @@ import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import { DefaultNDSThemeType } from "../theme.type";
 
-const resetButtonStyles = {
-  background: "none",
-  border: "none",
-};
-
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
   ColorProps &
   SpaceProps &
@@ -29,6 +24,11 @@ export type LinkProps = React.ComponentPropsWithRef<"a"> &
     theme?: DefaultNDSThemeType;
     "aria-label"?: string;
   };
+
+const resetButtonStyles = {
+  background: "none",
+  border: "none",
+};
 
 const getHoverColor = (props: LinkProps) =>
   props.hover
