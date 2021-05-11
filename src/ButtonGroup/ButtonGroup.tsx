@@ -1,5 +1,12 @@
 import styled from "styled-components";
 import { Flex } from "../Flex";
+import { FlexProps } from "../Flex/Flex";
+
+type ButtonGroupProps = FlexProps & {
+  alignment?: "left" | "spaced" | "right";
+  className?: string;
+};
+
 const alignments = {
   left: "flex-start",
   spaced: "space-between",
@@ -25,10 +32,7 @@ const buttonSpacings = (theme) => ({
 const getAlignment = (alignment) => alignments[alignment] || alignments.left;
 const getButtonSpacing = (alignment, theme) =>
   buttonSpacings(theme)[alignment] || buttonSpacings(theme).left;
-type ButtonGroupProps = {
-  alignment?: "left" | "spaced" | "right";
-  className?: string;
-};
+
 const ButtonGroup: React.SFC<ButtonGroupProps> = styled(Flex)(
   ({ alignment, theme }: any) => ({
     flexWrap: "wrap",
