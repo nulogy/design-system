@@ -7,12 +7,14 @@ import { FieldLabel } from "../FieldLabel";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
 import { InlineValidation } from "../Validation";
 import { getSubset, omitSubset } from "../utils/subset";
+
 type RangeContainerProps = {
   labelProps?: any;
   startComponent?: React.ReactNode;
   endComponent?: React.ReactNode;
   errorMessages?: (string | undefined)[];
 };
+
 const RangeContainer: React.SFC<RangeContainerProps> = ({
   labelProps,
   startComponent,

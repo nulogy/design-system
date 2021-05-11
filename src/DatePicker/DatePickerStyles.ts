@@ -48,7 +48,6 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       },
     },
     ".react-datepicker__day": {
-      padding: theme.colors.x2,
       fontSize: theme.fontSizes.medium,
       borderRadius: theme.radii.medium,
       color: theme.colors.darkGrey,
