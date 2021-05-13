@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { space } from "styled-system";
 import PropTypes from "prop-types";
+import { space } from "styled-system";
 import propTypes from "@styled-system/prop-types";
-
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
@@ -89,6 +88,20 @@ BaseTable.propTypes = {
   stickyHeader: PropTypes.bool,
   onRowMouseEnter: PropTypes.func,
   onRowMouseLeave: PropTypes.func,
+};
+
+BaseTable.defaultProps = {
+  noRowsContent: "No records have been created for this table.",
+  keyField: "id",
+  id: undefined,
+  loading: false,
+  footerRows: [],
+  rowHovers: true,
+  compact: false,
+  className: undefined,
+  stickyHeader: false,
+  onRowMouseEnter: () => { },
+  onRowMouseLeave: () => { },
 };
 
 export default BaseTable;
