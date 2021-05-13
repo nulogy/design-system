@@ -18,10 +18,12 @@ export type LinkProps = React.ComponentPropsWithRef<"a"> &
     className?: string;
     underline?: boolean;
     hover?: string;
-    as?: React.ElementType;
+    as?: React.ElementType | string;
+    to?: string;
     color?: string;
     fontSize?: string;
     theme?: DefaultNDSThemeType;
+    children: JSX.Element | JSX.Element[] | React.ReactNode;
     "aria-label"?: string;
   };
 

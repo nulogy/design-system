@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
@@ -11,6 +11,7 @@ import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
+import { DefaultNDSThemeType } from "../theme.type";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
@@ -30,15 +31,30 @@ const themeColorObject = {
   logoColor: "blue",
 };
 
-const NavBarBackground = styled(Flex)(({ backgroundColor, theme }) => ({
-  background: backgroundColor,
-  padding: `0 ${theme.space.x3}`,
-  boxShadow: theme.shadows.large,
-  alignItems: "center",
-  height: NAVBAR_HEIGHT,
-  zIndex: theme.zIndices.navBar,
-  position: "relative",
-}));
+type NavBarBackgroundProps = {
+  backgroundColor?: string;
+  theme?: DefaultNDSThemeType;
+};
+
+const NavBarBackground = styled(Flex)(
+  ({ backgroundColor, theme }: NavBarBackgroundProps): CSSObject => ({
+    background: backgroundColor,
+    padding: `0 ${theme.space.x3}`,
+    boxShadow: theme.shadows.large,
+    alignItems: "center",
+    height: NAVBAR_HEIGHT,
+    zIndex: theme.zIndices.navBar,
+    position: "relative",
+  })
+);
+
+type BrandLogoContainerProps = {
+  logoSrc?: string;
+  brandingLinkHref?: string;
+  brandingLinkTo?: string;
+  brandingLinkComponent?: React.ElementType;
+  subtext?: string;
+};
 
 const BrandLogoContainer = ({
   logoSrc,
@@ -46,7 +62,7 @@ const BrandLogoContainer = ({
   brandingLinkTo,
   brandingLinkComponent,
   subtext,
-}) => {
+}: BrandLogoContainerProps) => {
   return (
     <Box maxWidth={MAX_LOGO_WIDTH} maxHeight={MAX_LOGO_HEIGHT}>
       <Link
@@ -76,16 +92,13 @@ const BrandLogoContainer = ({
   );
 };
 
-BrandLogoContainer.propTypes = {
-  logoSrc: PropTypes.string,
-  brandingLinkHref: PropTypes.string,
-  subtext: PropTypes.string,
-};
-
-BrandLogoContainer.defaultProps = {
-  logoSrc: undefined,
-  brandingLinkHref: undefined,
-  subtext: undefined,
+type MediumNavBarProps = BrandLogoContainerProps & {
+  subtext?: string;
+  menuData?: any;
+  brandingLinkHref?: string;
+  brandingLinkTo?: string;
+  brandingLinkComponent?: React.ElementType;
+  environment?: "development" | "training";
 };
 
 const MediumNavBar = ({
@@ -93,11 +106,11 @@ const MediumNavBar = ({
   subtext,
   environment,
   logoSrc,
-  brandingLinkHref,
+  brandingLinkHref = "/",
   brandingLinkTo,
   brandingLinkComponent,
   ...props
-}) => {
+}: MediumNavBarProps) => {
   const { t } = useTranslation();
   return (
     <>
@@ -114,7 +127,7 @@ const MediumNavBar = ({
           <Flex
             justifyContent="space-between"
             alignContent="flex-end"
-            flexGrow="1"
+            flexGrow={1}
             ml="x3"
             alignItems="center"
           >
@@ -149,30 +162,15 @@ const MediumNavBar = ({
   );
 };
 
-const MenuDataPropTypes = {
-  primaryMenu: PropTypes.arrayOf(isValidMenuItem),
-  secondaryMenu: PropTypes.arrayOf(isValidMenuItem),
-  search: PropTypes.shape({
-    onSubmit: PropTypes.func,
-  }),
-};
-
-MediumNavBar.propTypes = {
-  ...BrandLogoContainer.propTypes,
-  subtext: PropTypes.string,
-  menuData: PropTypes.shape(MenuDataPropTypes),
-};
-
-MediumNavBar.defaultProps = {
-  ...BrandLogoContainer.defaultProps,
-  subtext: null,
-  brandingLinkHref: "/",
-  brandingLinkTo: undefined,
-  menuData: null,
+type MobileMenuTriggerProps = {
+  color?: string;
+  hoverColor?: string;
+  hoverBackground?: string;
+  theme?: DefaultNDSThemeType;
 };
 
 const MobileMenuTrigger = styled.button(
-  ({ color, hoverColor, hoverBackground, theme }) => ({
+  ({ color, hoverColor, hoverBackground, theme }: MobileMenuTriggerProps) => ({
     color: theme.colors[color] || color,
     background: "none",
     border: "none",
@@ -193,9 +191,16 @@ const MobileMenuTrigger = styled.button(
   })
 );
 
-const SmallHeader = styled.header(({ isOpen, theme }) =>
-  isOpen
-    ? {
+type SmallHeaderProps = {
+  isOpen?: boolean;
+  theme?: DefaultNDSThemeType;
+  breakpointLower?: string | number;
+};
+
+const SmallHeader = styled.header(
+  ({ isOpen, theme }: SmallHeaderProps): CSSObject =>
+    isOpen
+      ? {
         position: "fixed",
         width: "100%",
         height: "100%",
@@ -207,7 +212,7 @@ const SmallHeader = styled.header(({ isOpen, theme }) =>
         bottom: "0",
         backgroundColor: theme.colors.white,
       }
-    : null
+      : null
 );
 
 const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
@@ -219,12 +224,16 @@ const MenuIcon = ({ isOpen }) => {
   return <Icon icon={icon} title={title} />;
 };
 
-MenuIcon.propTypes = {
-  isOpen: PropTypes.bool,
-};
-
-MenuIcon.defaultProps = {
-  isOpen: false,
+type SmallNavBarNoStateProps = BrandLogoContainerProps & {
+  menuState?: any;
+  menuData?: any;
+  subtext?: string;
+  brandingLinkHref?: string;
+  brandingLinkTo?: string;
+  breakpointLower?: number | string;
+  width?: number;
+  themeColor?: "blue" | "white";
+  environment?: "development" | "training";
 };
 
 /* eslint-disable react/destructuring-assignment */
@@ -232,17 +241,17 @@ const SmallNavBarNoState = ({
   menuData,
   menuState: { isOpen, toggleMenu, closeMenu },
   subtext,
-  brandingLinkHref,
+  brandingLinkHref = "/",
   brandingLinkTo,
   environment,
   logoSrc,
-  breakpointLower,
+  breakpointLower = "small",
   ...props
-}) => {
-  const navRef = React.useRef();
+}: SmallNavBarNoStateProps) => {
+  const navRef = React.useRef(null);
 
   useEffect(() => {
-    if (navRef.current) {
+    if (navRef && navRef.current) {
       navRef.current.scrollTop = 0;
     }
   }, [isOpen]);
@@ -252,7 +261,9 @@ const SmallNavBarNoState = ({
     <SmallHeader
       ref={navRef}
       isOpen={isOpen}
-      breakpointLower={breakpoints[breakpointLower] || breakpointLower}
+      breakpointLower={
+        breakpoints ? breakpoints[breakpointLower] : breakpointLower
+      }
       {...props}
     >
       {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
@@ -263,7 +274,7 @@ const SmallNavBarNoState = ({
           brandingLinkTo={brandingLinkTo}
           subtext={subtext}
         />
-        <Flex justifyContent="flex-end" ml="x3" flexGrow="1">
+        <Flex justifyContent="flex-end" ml="x3" flexGrow={1}>
           {menuData.search && (
             <Flex maxWidth="18em" alignItems="center" px="0">
               <NavBarSearch {...menuData.search} />
@@ -296,31 +307,6 @@ const SmallNavBarNoState = ({
 };
 /* eslint-enable react/destructuring-assignment */
 
-SmallNavBarNoState.propTypes = {
-  ...BrandLogoContainer.propTypes,
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool,
-    toggleMenu: PropTypes.func,
-    closeMenu: PropTypes.func,
-  }).isRequired,
-  menuData: PropTypes.shape(MenuDataPropTypes),
-  subtext: PropTypes.string,
-  brandingLinkHref: PropTypes.string,
-  breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  width: PropTypes.number,
-  themeColor: PropTypes.oneOf(["blue", "white"]),
-};
-
-SmallNavBarNoState.defaultProps = {
-  ...BrandLogoContainer.defaultProps,
-  menuData: null,
-  subtext: null,
-  brandingLinkHref: "/",
-  breakpointLower: "small",
-  width: undefined,
-  themeColor: undefined,
-};
-
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
 const SelectNavBarBasedOnWidth = ({
@@ -328,7 +314,7 @@ const SelectNavBarBasedOnWidth = ({
   defaultOpen,
   breakpointUpper,
   ...props
-}) => {
+}: any) => {
   const currentWidth =
     width || (typeof window !== "undefined" && window.innerWidth);
 
@@ -341,40 +327,29 @@ const SelectNavBarBasedOnWidth = ({
   }
 };
 
+type BaseNavBarProps = {
+  menuData: any;
+  className: string;
+  breakpointUpper: number | string;
+  environment: "training" | "development" | undefined;
+  logoSrc: string;
+};
+
 const BaseNavBar = ({
-  showTraining,
   environment,
-  breakpointUpper,
+  breakpointUpper = "medium",
   ...props
-}) => {
-  const environmentValue = showTraining ? "training" : environment;
+}: BaseNavBarProps) => {
   const { breakpoints } = useTheme();
   return (
     <ReactResizeDetector handleWidth>
       <SelectNavBarBasedOnWidth
         breakpointUpper={breakpoints[breakpointUpper] || breakpointUpper}
         {...props}
-        environment={environmentValue}
+        environment={environment}
       />
     </ReactResizeDetector>
   );
-};
-
-BaseNavBar.propTypes = {
-  menuData: PropTypes.shape(MenuDataPropTypes),
-  className: PropTypes.string,
-  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  environment: PropTypes.oneOf(["training", "development", undefined]),
-  logoSrc: PropTypes.string,
-};
-
-BaseNavBar.defaultProps = {
-  menuData: null,
-  className: undefined,
-  breakpointUpper: "medium",
-  environment: undefined,
-  showTraining: undefined,
-  logoSrc: undefined,
 };
 
 const NavBar = styled(BaseNavBar)({});

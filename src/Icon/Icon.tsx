@@ -15,6 +15,7 @@ type IconProps = SpaceProps & {
   title?: string;
   color?: string;
   focusable?: boolean;
+  style?: React.CSSProperties;
 };
 
 /* eslint-disable react/no-array-index-key */
@@ -70,6 +71,8 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
     );
   }
 );
+
+Svg.displayName = "Svg";
 
 Svg.defaultProps = {
   color: "currentColor",

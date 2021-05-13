@@ -1,11 +1,43 @@
+/* TS IGNORED: due to problems typing propTypes and defaultProps, 
+it can stop being ingnored when its refactored to a functional component */
 import React from "react";
 import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick, withMenuState, PopperArrow } from "../utils";
 import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
 
+type MenuState = {
+  isOpen?: boolean;
+  openMenu?: Function;
+  closeMenu?: Function;
+  toggleMenu?: Function;
+};
+
+type NavBarDropdownMenuProps = {
+  children?: React.ReactNode;
+  trigger?: Function;
+  menuState?: MenuState;
+  showArrow?: boolean;
+  placement?: "bottom-start" | "right-start";
+  modifiers?: any;
+  triggerTogglesMenuState?: boolean;
+  dropdownMenuContainerEventHandlers?: Function;
+};
+
+class StatelessNavBarDropdownMenuClass extends React.Component<
+  NavBarDropdownMenuProps,
+  any
+> {
+  menuRef: any;
+  triggerRef: any;
+}
+
+type Ref = {
+  ref: any;
+};
+
 /* eslint-disable react/destructuring-assignment */
-class StatelessNavBarDropdownMenu extends React.Component {
+class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
   constructor(props) {
     super(props);
 
@@ -25,7 +57,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
   menuTriggerEventHandlers() {
     return {
       onBlur: () => this.props.menuState.closeMenu(false),
-      onClick: () => this.handleTriggerClick(false),
+      onClick: () => this.handleTriggerClick(),
     };
   }
 
@@ -64,7 +96,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
     return (
       <Manager>
         <Reference>
-          {({ ref }) =>
+          {({ ref }: Ref) =>
             React.cloneElement(
               trigger({
                 closeMenu,
@@ -94,7 +126,9 @@ class StatelessNavBarDropdownMenu extends React.Component {
                   showArrow={showArrow}
                   {...this.menuEventHandlers()}
                   ref={(node) => {
-                    popperProps.ref(node);
+                    if (typeof popperProps.ref === "function") {
+                      popperProps.ref(node);
+                    }
                     this.setMenuRef(node);
                   }}
                   onMouseDown={(e) => {
@@ -132,6 +166,7 @@ class StatelessNavBarDropdownMenu extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
+// @ts-ignore
 StatelessNavBarDropdownMenu.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
@@ -147,22 +182,18 @@ StatelessNavBarDropdownMenu.propTypes = {
   triggerTogglesMenuState: PropTypes.bool,
   dropdownMenuContainerEventHandlers: PropTypes.func,
 };
-
+// @ts-ignore
 StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
   modifiers: null,
   triggerTogglesMenuState: true,
-  dropdownMenuContainerEventHandlers: () => {},
+  dropdownMenuContainerEventHandlers: () => { },
 };
 
 const NavBarDropdownMenu = withMenuState(StatelessNavBarDropdownMenu);
 
-NavBarDropdownMenu.propTypes = {
-  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
-
+// @ts-ignore
 NavBarDropdownMenu.defaultProps = {
   showDelay: "0",
   hideDelay: "100",

@@ -5,6 +5,7 @@ import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
 import propTypes from "@styled-system/prop-types";
 import { getSubset, omitSubset } from "../utils/subset";
+import { Reference } from "react-popper";
 
 type DropdownMenuProps = {
   className?: string;
@@ -43,7 +44,7 @@ const transformPropsToModifiers = ({ boundariesElement }) => ({
   boundariesElement,
 });
 
-const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef(
+const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenuProps, Reference>(
   (
     {
       trigger = () => <IconicButton icon="more" />,
