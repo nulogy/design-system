@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
+import PropTypes from "prop-types";
+import propTypes from "@styled-system/prop-types";
+
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-import { ColumnType, RowType } from "./Table.types";
+import { rowsPropType, ColumnType, RowType } from "./Table.types";
 
 export type BaseTableProps = {
   columns: ColumnType[];
@@ -70,5 +73,22 @@ const BaseTable: React.SFC<BaseTableProps> = ({
     )}
   </StyledTable>
 );
+
+BaseTable.propTypes = {
+  ...propTypes.space,
+  columns: PropTypes.any,
+  rows: PropTypes.any,
+  noRowsContent: PropTypes.string,
+  keyField: PropTypes.string,
+  id: PropTypes.string,
+  loading: PropTypes.bool,
+  footerRows: rowsPropType,
+  rowHovers: PropTypes.bool,
+  compact: PropTypes.bool,
+  className: PropTypes.string,
+  stickyHeader: PropTypes.bool,
+  onRowMouseEnter: PropTypes.func,
+  onRowMouseLeave: PropTypes.func,
+};
 
 export default BaseTable;

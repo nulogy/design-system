@@ -177,7 +177,9 @@
     ],
     "testMatch": [
       "**/src/**/*.spec.js",
-      "**/spec/**/*.spec.js"
+      "**/spec/**/*.spec.js",
+      "**/src/**/*.spec.tsx",
+      "**/spec/**/*.spec.tsx"
     ],
     "setupFiles": [
       "<rootDir>/spec/support/registerContext.js"

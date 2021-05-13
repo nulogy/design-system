@@ -1,8 +1,8 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import { Pagination } from ".";
-import { getPageItemstoDisplay } from "./Pagination";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { getPageItemstoDisplay } from "./Pagination";
+import { Pagination } from ".";
 
 describe("Pagination", () => {
   describe("truncation", () => {

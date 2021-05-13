@@ -165,8 +165,8 @@ type TableBodyProps = {
 const TableBody = ({
   rows,
   columns,
-  keyField,
-  noRowsContent,
+  keyField = "id",
+  noRowsContent = "No records have been created for this table.",
   loading,
   rowHovers,
   compact,
@@ -190,20 +190,5 @@ const TableBody = ({
     )}
   </tbody>
 );
-
-TableBody.propTypes = {
-  columns: columnsPropType.isRequired,
-  rows: rowsPropType.isRequired,
-  rowHovers: PropTypes.bool.isRequired,
-  noRowsContent: PropTypes.string,
-  keyField: PropTypes.string,
-  loading: PropTypes.bool,
-  compact: PropTypes.bool.isRequired,
-};
-TableBody.defaultProps = {
-  noRowsContent: "No records have been created for this table.",
-  keyField: "id",
-  loading: false,
-};
 
 export default TableBody;

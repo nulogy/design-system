@@ -1,10 +1,10 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 
-import { DateRange } from ".";
 import { resetDate, mockDate } from "../testing/mockUtils/mockDates";
 import "../testing/matchers/toMatchDate";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { DateRange } from ".";
 
 const openDropdown = (container, i = 0) => {
   fireEvent.focus(container.querySelectorAll("input")[i]);

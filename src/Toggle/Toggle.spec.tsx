@@ -10,7 +10,7 @@ describe("Toggle", () => {
     const onClick = jest.fn();
 
     it("returns the selected time when the selection has changed", () => {
-      const { container, queryByText } = renderWithNDSProvider(
+      const { container } = renderWithNDSProvider(
         <Toggle onChange={onChange} onClick={onClick} data-testid="toggle" />
       );
       fireEvent.click(

@@ -1,8 +1,8 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 
-import { TimeRange } from ".";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { TimeRange } from ".";
 
 const openDropdown = (container, i = 0) => {
   fireEvent.focus(container.querySelectorAll("input")[i]);
