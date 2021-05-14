@@ -86,7 +86,7 @@ const Tooltip = React.forwardRef(
       showDelay,
       hideDelay,
       defaultOpen,
-    },
+    }: TooltipContainerProps,
     ref
   ) => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -98,28 +98,39 @@ const Tooltip = React.forwardRef(
       ...triggerProps,
       onClick: () => setIsOpen(!isOpen),
     });
-    return (
-      <>
-        {trigger}
-        {renderLayer(
-          <AnimatePresence>
-            {isOpen && (
-              <AnimatedBox
-                className="tooltip-box"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.1 }}
-                {...layerProps}
-              >
-                {tooltip}
-                <Arrow {...arrowProps} borderWidth={1} size={6} />
-              </AnimatedBox>
-            )}
-          </AnimatePresence>
-        )}
-      </>
-    );
+    return <>
+      {trigger}
+      {renderLayer(
+        <AnimatePresence>
+          {isOpen && (
+            <AnimatedBox
+              fontFamily="IBM Plex Sans"
+              display="flex"
+              flexDirection="column"
+              fontSize="small"
+              borderRadius="medium"
+              border="1px solid #c0c8d1"
+              boxShadow="small"
+              padding="x1"
+              className="tooltip-box"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.1 }}
+              {...layerProps}
+            >
+              {tooltip}
+              <Arrow
+                {...arrowProps}
+                borderWidth={1}
+                borderColor="#c0c8d1"
+                size={6}
+              />
+            </AnimatedBox>
+          )}
+        </AnimatePresence>
+      )}
+    </>
   }
 );
 Tooltip.defaultProps = {
