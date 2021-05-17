@@ -14,7 +14,9 @@ import {
   FieldLabelDefaultProps,
 } from "../FieldLabel/FieldLabel.type";
 import { getDuration } from "./TimeRange.utils";
+
 const DEFAULT_LABEL = "Time Range";
+
 type TimeRangeProps = {
   timeFormat?: string;
   onRangeChange?: (...args: any[]) => any;
@@ -33,6 +35,7 @@ type TimeRangeProps = {
   endTimeProps: any;
   startTimeProps: any;
 };
+
 const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
   (
     {
@@ -155,7 +158,7 @@ const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
         }
         {...props}
       />
-  );
+    );
   }
 );
 TimeRange.defaultProps = {

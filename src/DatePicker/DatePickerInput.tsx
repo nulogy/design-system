@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
 import { InputField } from "../Input/InputField";
 import { InputFieldDefaultProps } from "../Input/InputField.type";
+
 type DatePickerInputProps = {
   onClick?: (...args: any[]) => any;
   onChange?: (...args: any[]) => any;
@@ -15,6 +16,7 @@ type DatePickerInputProps = {
   inputProps?: any;
   "aria-label"?: string;
 };
+
 const DatePickerInput: React.SFC<DatePickerInputProps> = forwardRef(
   (
     {

@@ -6,6 +6,16 @@ import BrandingText from "./BrandingText";
 import LettermarkLogo from "./LettermarkLogo";
 import WordmarkLogo from "./WordmarkLogo";
 
+type BrandingProps = {
+  logoType?: "wordmark" | "lettermark";
+  logoColor?: "blue" | "white";
+  size?: "small" | "medium" | "large";
+  alignment?: "left" | "center" | "right";
+  withLine?: boolean;
+  subtext?: string;
+  className?: string;
+};
+
 const logoColors = {
   white: {
     letter: "#F0B41C",
@@ -62,26 +72,16 @@ const BrandingBoxPaddings = {
   medium: "2px",
   large: "6px",
 };
-
-type BrandingProps = {
-  logoType?: "wordmark" | "lettermark";
-  logoColor?: "blue" | "white";
-  size?: "small" | "medium" | "large";
-  alignment?: "left" | "center" | "right";
-  withLine?: boolean;
-  subtext?: string;
-  className?: string;
-};
-const Branding: React.SFC<BrandingProps> = ({
-  logoType,
+const Branding = ({
+  logoType = "wordmark",
   subtext,
   size = "medium",
-  alignment,
+  alignment = "left",
   withLine,
-  logoColor,
+  logoColor = "blue",
   className,
   ...props
-}) => (
+}: BrandingProps) => (
   <BrandingWrap
     size={size}
     alignment={alignment}
@@ -119,14 +119,6 @@ const Branding: React.SFC<BrandingProps> = ({
     )}
   </BrandingWrap>
 );
-Branding.defaultProps = {
-  logoType: "wordmark",
-  logoColor: "blue",
-  size: "medium",
-  alignment: "left",
-  withLine: false,
-  subtext: undefined,
-  className: undefined,
-};
+
 
 export default Branding;

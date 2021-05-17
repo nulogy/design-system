@@ -1,10 +1,9 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import { fontSize, lineHeight, space } from "styled-system";
+import propTypes from "@styled-system/prop-types";
 import theme from "../theme";
 import { DropdownLink } from "../DropdownMenu";
-import propTypes from '@styled-system/prop-types'
-
 
 const SubMenuLink = styled(DropdownLink)(fontSize, lineHeight, space);
 
@@ -14,7 +13,7 @@ SubMenuLink.propTypes = {
   ...propTypes.space,
 };
 
-const getSharedStyles = () => ({
+const getSharedStyles = (): CSSObject => ({
   display: "block",
   whiteSpace: "nowrap",
   textDecoration: "none",
@@ -25,7 +24,7 @@ const getSharedStyles = () => ({
   padding: `${theme.space.half} ${theme.space.x2}`,
 });
 
-const ApplySubMenuLinkStyles = styled.li({
+const ApplySubMenuLinkStyles = styled.li((): any => ({
   color: theme.colors.darkBlue,
   verticalAlign: "middle",
   "> *": {
@@ -43,12 +42,12 @@ const ApplySubMenuLinkStyles = styled.li({
       boxShadow: theme.shadows.focus,
     },
   },
-});
+}));
 
-const SubMenuText = styled.li({
+const SubMenuText = styled.li((): any => ({
   color: theme.colors.darkGrey,
   ...getSharedStyles(),
-});
+}));
 
 const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
   <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
@@ -68,7 +67,6 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
       py="half"
       onClick={onItemClick}
       href={subMenuItem.href}
-      onClick={onItemClick}
       to={subMenuItem.to}
       as={subMenuItem.as}
     >

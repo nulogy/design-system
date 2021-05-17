@@ -11,6 +11,24 @@ import Prefix from "./Prefix";
 import Suffix from "./Suffix";
 import { DefaultNDSThemeType } from "../theme.type";
 
+export type InputFieldProps = React.ComponentPropsWithRef<"input"> & {
+  icon?: string;
+  disabled?: boolean;
+  error?: boolean;
+  required?: boolean;
+  labelText?: string;
+  requirementText?: string;
+  helpText?: React.ReactNode;
+  suffix?: string;
+  prefix?: string;
+  suffixWidth?: string;
+  prefixWidth?: string;
+  suffixAlignment?: TextAlignProps["textAlign"];
+  prefixAlignment?: TextAlignProps["textAlign"];
+  iconSize?: string;
+  inputWidth?: string;
+};
+
 const StyledInputIcon = styled(Icon)(({ theme }) => ({
   position: "absolute",
   right: theme.space.x1,
@@ -84,23 +102,6 @@ const StyledInput: React.SFC<StyledInputProps> = styled.input(
   (props: StyledInputProps) => getInputStyle(props)
 );
 
-export type InputFieldProps = React.ComponentPropsWithRef<"input"> & {
-  icon?: string;
-  disabled?: boolean;
-  error?: boolean;
-  required?: boolean;
-  labelText?: string;
-  requirementText?: string;
-  helpText?: React.ReactNode;
-  suffix?: string;
-  prefix?: string;
-  suffixWidth?: string;
-  prefixWidth?: string;
-  suffixAlignment?: TextAlignProps["textAlign"];
-  prefixAlignment?: TextAlignProps["textAlign"];
-  iconSize?: string;
-  inputWidth?: string;
-};
 export const InputField: React.SFC<InputFieldProps> = forwardRef<
   HTMLInputElement,
   InputFieldProps

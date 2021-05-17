@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { space } from "styled-system";
-import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
-import Card from "./Card";
 import { BoxProps } from "../Box/Box";
+import Card from "./Card";
 
-const UnstyledCardSet: React.SFC<BoxProps> = ({ children, ...props }) => (
+const UnstyledCardSet: React.SFC<BoxProps> = ({ children = [], ...props }) => (
   <Box {...props}>{children}</Box>
 );
+
 const CardSet = styled(UnstyledCardSet)(space, ({ theme }) => ({
   [`${Card}`]: {
     marginBottom: theme.space.x1,
@@ -17,7 +17,5 @@ const CardSet = styled(UnstyledCardSet)(space, ({ theme }) => ({
     },
   },
 }));
-UnstyledCardSet.defaultProps = {
-  children: [],
-};
+
 export default CardSet;

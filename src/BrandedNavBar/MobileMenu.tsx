@@ -6,6 +6,7 @@ import { themeGet } from "@styled-system/theme-get";
 import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
+import { DefaultNDSThemeType } from "../theme.type";
 import NulogyLogo from "./NulogyLogo";
 
 const borderStyle = "1px solid #e4e7eb";
@@ -42,8 +43,22 @@ const getSharedStyles = ({ color, layer, theme }) => ({
   },
 });
 
+type ApplyMenuLinkStylesProps = {
+  layer?: number;
+  color?: string;
+  hoverColor?: string;
+  hoverBackground?: string;
+  theme?: DefaultNDSThemeType;
+};
+
 const ApplyMenuLinkStyles = styled.li(
-  ({ color, hoverColor, hoverBackground, layer, theme }) => ({
+  ({
+    color = "white",
+    hoverColor = "lightBlue",
+    hoverBackground = "white",
+    layer = 0,
+    theme,
+  }: ApplyMenuLinkStylesProps) => ({
     display: "block",
     "button, a": {
       ...getSharedStyles({ color, layer, theme }),
@@ -63,22 +78,16 @@ const ApplyMenuLinkStyles = styled.li(
   })
 );
 
-ApplyMenuLinkStyles.propTypes = {
-  layer: PropTypes.number,
-  color: PropTypes.string,
-  hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string,
-};
-
-ApplyMenuLinkStyles.defaultProps = {
-  layer: 0,
-  color: "white",
-  hoverColor: "lightBlue",
-  hoverBackground: "black",
+type MenuLinkProps = {
+  layer?: number;
+  color?: string;
+  hoverColor?: string;
+  hoverBackground?: string;
+  theme?: DefaultNDSThemeType;
 };
 
 const MenuLink = styled.a(
-  ({ color, hoverColor, hoverBackground, layer, theme }) => ({
+  ({ color, hoverColor, hoverBackground, layer, theme }: MenuLinkProps) => ({
     ...getSharedStyles({ color, layer, theme }),
     width: "100%",
     borderRadius: "0",
@@ -101,7 +110,13 @@ const MenuLink = styled.a(
   })
 );
 
-const MenuText = styled.li(({ textColor, layer, theme }) => ({
+type MenuTextProps = {
+  textColor?: string;
+  layer?: number;
+  theme?: DefaultNDSThemeType;
+};
+
+const MenuText = styled.li(({ textColor, layer, theme }: MenuTextProps) => ({
   ...getSharedStyles({ color: textColor, layer, theme }),
 }));
 
@@ -196,7 +211,30 @@ const getSubMenuHeading = (layer, color, name) =>
     </Text>
   );
 
-const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
+type ThemeColorObject = {
+  textColor?: string;
+  background?: string;
+  logoColor?: string;
+};
+
+type MenuItem = {
+  items?: any[];
+  name?: string;
+};
+
+type SubMenuProps = {
+  layer?: number;
+  menuItem?: MenuItem;
+  linkOnClick?: Function;
+  themeColorObject?: ThemeColorObject;
+};
+
+const SubMenu = ({
+  menuItem,
+  linkOnClick,
+  themeColorObject,
+  layer,
+}: SubMenuProps) => (
   <>
     {getSubMenuHeading(
       layer,
@@ -214,27 +252,6 @@ const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
   </>
 );
 
-const ThemeColorObjectPropTypes = {
-  textColor: PropTypes.string,
-  background: PropTypes.string,
-  logoColor: PropTypes.string,
-};
-
-SubMenu.propTypes = {
-  layer: PropTypes.number.isRequired,
-  menuItem: PropTypes.shape({
-    items: PropTypes.arrayOf(PropTypes.shape({})),
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-  linkOnClick: PropTypes.func,
-  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes),
-};
-
-SubMenu.defaultProps = {
-  linkOnClick: null,
-  themeColorObject: undefined,
-};
-
 const Menu = styled.ul(({ theme }) => ({
   margin: "0",
   padding: `${theme.space.x1} 0`,
@@ -246,14 +263,31 @@ const Menu = styled.ul(({ theme }) => ({
   },
 }));
 
+type NavProps = {
+  backgroundColor: string;
+};
+
 const Nav = styled.nav(
-  ({ backgroundColor }) => ({
+  ({ backgroundColor }: NavProps) => ({
     backgroundColor,
   }),
   {
     minHeight: "calc(100vh - 72px)",
   }
 );
+
+type MenuData = {
+  primaryMenu?: any[];
+  secondaryMenu?: any[];
+};
+
+type BaseMobileMenuProps = {
+  menuData: MenuData;
+  subtext?: string;
+  closeMenu?: Function;
+  themeColorObject?: ThemeColorObject;
+  logoSrc?: string;
+};
 
 const BaseMobileMenu = ({
   menuData,
@@ -262,7 +296,7 @@ const BaseMobileMenu = ({
   themeColorObject,
   logoSrc,
   ...props
-}) => (
+}: BaseMobileMenuProps) => (
   <Nav
     backgroundColor={themeColorObject && themeColorObject.background}
     {...props}
@@ -311,25 +345,6 @@ const BaseMobileMenu = ({
     )}
   </Nav>
 );
-
-BaseMobileMenu.propTypes = {
-  menuData: PropTypes.shape({
-    primaryMenu: PropTypes.arrayOf(PropTypes.shape({})),
-    secondaryMenu: PropTypes.arrayOf(PropTypes.shape({})),
-  }),
-  subtext: PropTypes.string,
-  closeMenu: PropTypes.func,
-  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes),
-  logoSrc: PropTypes.string,
-};
-
-BaseMobileMenu.defaultProps = {
-  menuData: null,
-  subtext: null,
-  closeMenu: () => {},
-  themeColorObject: undefined,
-  logoSrc: undefined,
-};
 
 const MobileMenu = styled(BaseMobileMenu)(display);
 
