@@ -3,6 +3,7 @@ import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 
 const Card: React.SFC<BoxProps> = styled(Box)({});
+
 Card.defaultProps = {
   children: [],
   borderRadius: "medium",

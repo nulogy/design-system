@@ -44,6 +44,9 @@ export const parameters = {
   viewport: { viewports: newViewports },
   layout: "padded",
   options: {
+    storySort: {
+      method: "alphabetical",
+    },
     theme: create({
       gridCellSize: 8,
     }),

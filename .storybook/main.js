@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ["../src/**/*.story.js"],
+  stories: ["../src/**/*.story.tsx", "../src/**/*.story.js"],
   addons: [
     "@storybook/addon-knobs",
     "@storybook/addon-viewport",
@@ -7,7 +7,7 @@ module.exports = {
       name: "@storybook/addon-storysource",
       options: {
         rule: {
-          test: [/\.story\.js?$/],
+          test: [/\.story\.js?$/, /\.story\.tsx?$/],
         },
       },
     },

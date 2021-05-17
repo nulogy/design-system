@@ -12,9 +12,14 @@ describe("select", () => {
     ];
 
     const callback = jest.fn();
+    const loadOptions = jest.fn();
 
     const { container, queryByText } = renderWithNDSProvider(
-      <AsyncSelect defaultOptions={options} onChange={callback} />
+      <AsyncSelect
+        loadOptions={loadOptions}
+        defaultOptions={options}
+        onChange={callback}
+      />
     );
 
     selectOption("Two", container, queryByText);

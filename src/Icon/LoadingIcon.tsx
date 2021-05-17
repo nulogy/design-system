@@ -1,15 +1,17 @@
 import React from "react";
 import generateId from "../utils/generateId";
+
 type LoadingIconProps = {
   size?: string | number;
   color?: string;
   title?: string;
   className?: string;
 };
+
 const LoadingIcon: React.SFC<LoadingIconProps> = ({
-  color,
-  size,
-  title,
+  color = "currentColor",
+  size = "24px",
+  title = "Loading",
   ...props
 }: LoadingIconProps) => {
   const id = generateId();
@@ -61,9 +63,5 @@ const LoadingIcon: React.SFC<LoadingIconProps> = ({
     </svg>
   );
 };
-LoadingIcon.defaultProps = {
-  color: "currentColor",
-  size: "24px",
-  title: "Loading",
-};
+
 export default LoadingIcon;

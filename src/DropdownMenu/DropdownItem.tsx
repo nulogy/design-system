@@ -1,11 +1,13 @@
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
+
 type DropdownItemProps = {
   theme?: DefaultNDSThemeType;
   color?: string;
   hoverColor?: string;
   bgHoverColor?: string;
 };
+
 const DropdownItem: React.SFC<DropdownItemProps> = styled.div(
   ({
     theme,

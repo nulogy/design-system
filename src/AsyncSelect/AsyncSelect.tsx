@@ -16,7 +16,6 @@ import {
   SelectMenu,
   SelectInput,
 } from "../Select";
-import { SelectDefaultProps } from "../Select/Select";
 import { getSubset } from "../utils/subset";
 
 const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
@@ -25,9 +24,46 @@ const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
     display: showArrow ? "flex" : "none",
   },
 }));
-type AsyncSelectProps = any;
 
-const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
+type AsyncSelectProps = {
+  windowThreshold?: number;
+  filterOption?: (...args: any[]) => any;
+  autocomplete?: boolean;
+  disabled?: boolean;
+  error?: boolean;
+  errorMessage?: string;
+  errorList?: string[];
+  labelText?: string;
+  helpText?: any;
+  noOptionsMessage?: string;
+  requirementText?: string;
+  id?: string;
+  initialIsOpen?: boolean;
+  menuPosition?: string;
+  maxHeight?: string;
+  multiselect?: boolean;
+  name?: string;
+  onBlur?: (...args: any[]) => any;
+  onChange?: (...args: any[]) => any;
+  placeholder?: string;
+  required?: boolean;
+  value?: any;
+  defaultValue?: any;
+  className?: string;
+  classNamePrefix?: string;
+  menuIsOpen?: boolean;
+  onMenuOpen?: (...args: any[]) => any;
+  onMenuClose?: (...args: any[]) => any;
+  onInputChange?: (...args: any[]) => any;
+  components?: any;
+  closeMenuOnSelect?: boolean;
+  "aria-label"?: string;
+  cacheOptions?: boolean;
+  defaultOptions?: Array<any>;
+  loadOptions: any;
+};
+
+const AsyncSelect = forwardRef(
   (
     {
       autocomplete,
@@ -59,11 +95,11 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
       onInputChange,
       components,
       "aria-label": ariaLabel,
-      cacheOptions,
+      cacheOptions = false,
       defaultOptions,
       loadOptions,
       ...props
-    },
+    }: AsyncSelectProps,
     ref
   ) => {
     const { t } = useTranslation();
@@ -134,9 +170,5 @@ const AsyncSelect: React.SFC<AsyncSelectProps> = forwardRef(
     );
   }
 );
-AsyncSelect.defaultProps = {
-  ...SelectDefaultProps,
-  cacheOptions: false,
-  defaultOptions: undefined,
-};
+
 export default AsyncSelect;

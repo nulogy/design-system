@@ -31,7 +31,7 @@ describe("Sidebar", () => {
           Sidebar
         </Sidebar>
       );
-      expect(queryByTestId("sidebar-overlay")).toHaveStyle("opacity: 0")
+      expect(queryByTestId("sidebar-overlay")).toHaveStyle("opacity: 0");
     });
     it("doesn't use an overlay if the sidebar stays open on outside clicks", () => {
       const { queryByTestId } = renderWithNDSProvider(

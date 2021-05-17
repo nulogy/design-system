@@ -2,13 +2,13 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
+import { Button } from "../Button";
 import {
   convertTo24HourTimeArray,
   getBestMatchTime,
   getTimeOptions,
 } from "./TimePicker";
 import { TimePicker } from ".";
-import { Button } from "../Button";
 
 const openDropdown = (container, i = 0) => {
   fireEvent.focus(container.querySelectorAll("input")[i]);

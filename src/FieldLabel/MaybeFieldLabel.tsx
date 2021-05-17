@@ -1,7 +1,7 @@
 import React from "react";
 import FieldLabel from "./FieldLabel";
 
-const MaybeFieldLabel: React.SFC<any> = ({ labelText, children, ...props }) =>
+const MaybeFieldLabel = ({ labelText, children, ...props }: any) =>
   labelText ? (
     <FieldLabel labelText={labelText} {...props}>
       {children}
@@ -9,8 +9,5 @@ const MaybeFieldLabel: React.SFC<any> = ({ labelText, children, ...props }) =>
   ) : (
     <>{children}</>
   );
-MaybeFieldLabel.defaultProps = {
-  labelText: null,
-  children: null,
-};
+
 export default MaybeFieldLabel;

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 
-import { Button, Box, Flex, PrimaryButton } from "../";
+import { Button, Box, Flex, PrimaryButton } from "..";
 import DateRange from "./DateRange";
 
 export default {
@@ -110,10 +110,10 @@ export const Disabled = () => (
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}
     showTimes
-    endTimeProps = {{
+    endTimeProps={{
       disabled: true,
     }}
-    startTimeProps ={{
+    startTimeProps={{
       disabled: true,
     }}
   />

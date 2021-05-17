@@ -5,6 +5,21 @@ import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
 import Checkbox from "./Checkbox";
 
+interface CheckboxGroupProps {
+  errorMessage?: string;
+  errorList?: string[];
+  labelText: string;
+  name: string;
+  defaultValue?: string[];
+  checkedValue?: string[];
+  onChange?: (...args: any[]) => any;
+  className?: string;
+  id?: string;
+  helpText?: React.ReactNode;
+  requirementText?: string;
+  disabled?: boolean;
+}
+
 const getCheckboxButtons = (props) => {
   const checkboxButtons = React.Children.map(props.children, (checkbox) => {
     const {
@@ -44,21 +59,6 @@ const LabelText = styled.span<any>(({ theme }) => ({
 const Legend = styled.legend(({ theme }) => ({
   marginBottom: theme.space.x1,
 }));
-
-interface CheckboxGroupProps {
-  errorMessage?: string;
-  errorList?: string[];
-  labelText: string;
-  name: string;
-  defaultValue?: string[];
-  checkedValue?: string[];
-  onChange?: (...args: any[]) => any;
-  className?: string;
-  id?: string;
-  helpText?: React.ReactNode;
-  requirementText?: string;
-  disabled?: boolean;
-}
 
 const CheckboxGroup: React.SFC<CheckboxGroupProps> = ({
   className,
