@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React, { useState } from "react";
-import styled, { CSSObject } from "styled-components";
+import styled, { CSSObject, useTheme } from "styled-components";
 import { useLayer, useHover, Arrow } from "react-laag";
 import { motion, AnimatePresence } from "framer-motion";
 import { PositionProps } from "styled-system";
@@ -10,8 +10,9 @@ import { generateId } from "../utils";
 import { useTranslation } from "react-i18next";
 import { DefaultNDSThemeType } from "../theme.type";
 import { AnimatedBox } from "../Box/Box";
+import { theme } from "..";
 
-export type TooltipContainerProps = PositionProps & {
+type TooltipContainerProps = PositionProps & {
   theme?: DefaultNDSThemeType;
   dataPlacement?: "top" | "bottom" | "left" | "right";
   open?: boolean;
@@ -85,6 +86,7 @@ const Tooltip: React.FC<TooltipContainerProps> = ({
     arrowOffset: 4,
     triggerOffset: 5,
   });
+  const { colors } = useTheme();
   const id = generateId();
   const trigger = React.cloneElement(children, {
     "aria-haspopup": true,
@@ -127,8 +129,8 @@ const Tooltip: React.FC<TooltipContainerProps> = ({
               <Arrow
                 {...arrowProps}
                 borderWidth={1}
-                borderColor="#c0c8d1"
-                backgrundColor="white"
+                borderColor={colors.grey}
+                backgroundColor={colors.white}
                 size={6}
               />
             </AnimatedBox>
