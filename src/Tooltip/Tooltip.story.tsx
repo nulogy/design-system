@@ -21,7 +21,7 @@ export const WithWrappedText = () => (
     <Tooltip
       placement="bottom"
       tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
-      defaultOpen
+      open
     >
       <Button> Button </Button>
     </Tooltip>
@@ -38,7 +38,7 @@ export const WithCustomMaxWidth = () => (
       placement="bottom"
       tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
       maxWidth="128px"
-      defaultOpen
+      open
     >
       <Button> Button </Button>
     </Tooltip>
@@ -52,46 +52,46 @@ WithCustomMaxWidth.story = {
 export const WithPlacement = () => (
   <>
     <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="top-start" tooltip="top-start" defaultOpen>
+      <Tooltip placement="top-start" tooltip="top-start" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="top" tooltip="top" defaultOpen>
+      <Tooltip placement="top" tooltip="top" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="top-end" tooltip="top-end" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-    </Flex>
-    <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="left-start" tooltip="left-start" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="left" tooltip="left" defaultOpen>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="left-end" tooltip="left-end" defaultOpen>
+      <Tooltip placement="top-end" tooltip="top-end" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
     </Flex>
     <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="right-start" tooltip="right-start" defaultOpen>
+      <Tooltip placement="left-start" tooltip="left-start" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="right" tooltip="right" defaultOpen>
+      <Tooltip placement="left" tooltip="left" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="right-end" tooltip="right-end" defaultOpen>
+      <Tooltip placement="left-end" tooltip="left-end" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
     </Flex>
     <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="bottom-start" tooltip="bottom-start" defaultOpen>
+      <Tooltip placement="right-start" tooltip="right-start" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="bottom" tooltip="bottom" defaultOpen>
+      <Tooltip placement="right" tooltip="right" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="bottom-end" tooltip="bottom-end" defaultOpen>
+      <Tooltip placement="right-end" tooltip="right-end" open>
+        <Button>Tooltip trigger</Button>
+      </Tooltip>
+    </Flex>
+    <Flex my="x6" mx="x8" justifyContent="space-around">
+      <Tooltip placement="bottom-start" tooltip="bottom-start" open>
+        <Button>Tooltip trigger</Button>
+      </Tooltip>
+      <Tooltip placement="bottom" tooltip="bottom" open>
+        <Button>Tooltip trigger</Button>
+      </Tooltip>
+      <Tooltip placement="bottom-end" tooltip="bottom-end" open>
         <Button>Tooltip trigger</Button>
       </Tooltip>
     </Flex>
@@ -171,7 +171,7 @@ WithOtherFocusableElements.story = {
 };
 
 export const OpenByDefault = () => (
-  <Tooltip tooltip="I am an open Tooltip!" defaultOpen>
+  <Tooltip tooltip="I am an open Tooltip!" open>
     <Button>Hover me</Button>
   </Tooltip>
 );
