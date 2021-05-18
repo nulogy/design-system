@@ -21,7 +21,7 @@ export const WithWrappedText = () => (
     <Tooltip
       placement="bottom"
       tooltip="I am a Tooltip! I have very long text, and my default max-width is 24em (based on 14px font-size), which is equal to 336px, or approximately 45 characters."
-      open
+      defaultOpen
     >
       <Button> Button </Button>
     </Tooltip>
@@ -38,7 +38,7 @@ export const WithCustomMaxWidth = () => (
       placement="bottom"
       tooltip="I am a Tooltip! I have very long text, but I have a smaller maxWidth prop that causes me to wrap frequently."
       maxWidth="128px"
-      open
+      defaultOpen
     >
       <Button> Button </Button>
     </Tooltip>

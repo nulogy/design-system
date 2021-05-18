@@ -1,8 +1,8 @@
 // @ts-nocheck
-import React from "react";
-import styled from "styled-components";
-import { useLayer, Arrow } from "react-laag";
-import { AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import styled, { CSSObject } from "styled-components";
+import { useLayer, useHover, Arrow } from "react-laag";
+import { motion, AnimatePresence } from "framer-motion";
 import { PositionProps } from "styled-system";
 import { Box } from "../Box";
 import { Popper } from "../Popper";
@@ -59,6 +59,14 @@ const getLaagPlacement = (placement) => {
   return placement.includes("-") ? placement : `${placement}-center`;
 };
 
+const conditionallyApplyDelay = (fnc, delay) => {
+  if (delay) {
+    timeoutID = setTimeout(fnc, Number(delay));
+  } else {
+    fnc();
+  }
+};
+
 const Tooltip = ({
   className,
   tooltip,
@@ -67,14 +75,9 @@ const Tooltip = ({
   placement = "bottom",
   showDelay = "100",
   hideDelay = "350",
-  open,
+  defaultOpen,
 }) => {
-  // const [initialOpen, setInitialOpen] = useState(defaultOpen);
-  const [isOver, hoverProps] = useHover({
-    delayEnter: showDelay,
-    delayLeave: hideDelay,
-  });
-  const isOpen = isOver || open;
+  const [isOpen, setIsOpen] = useState(defaultOpen);
   const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
     isOpen,
     placement: getLaagPlacement(placement),
@@ -86,8 +89,11 @@ const Tooltip = ({
   const trigger = React.cloneElement(children, {
     "aria-haspopup": true,
     "aria-describedby": id,
+    onMouseEnter: () => conditionallyApplyDelay(() => setIsOpen(true), showDelay),
+    onMouseLeave: () => conditionallyApplyDelay(() => setIsOpen(false), hideDelay),
+    onBlur: () => setIsOpen(false),
+    onFocus: () => setIsOpen(true),
     ...triggerProps,
-    ...hoverProps,
   });
   return (
     <>
