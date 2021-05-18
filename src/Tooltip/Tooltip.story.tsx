@@ -52,46 +52,46 @@ WithCustomMaxWidth.story = {
 export const WithPlacement = () => (
   <>
     <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="top-start" tooltip="top-start" open>
+      <Tooltip placement="top-start" tooltip="top-start" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="top" tooltip="top" open>
+      <Tooltip placement="top" tooltip="top" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="top-end" tooltip="top-end" open>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-    </Flex>
-    <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="left-start" tooltip="left-start" open>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="left" tooltip="left" open>
-        <Button>Tooltip trigger</Button>
-      </Tooltip>
-      <Tooltip placement="left-end" tooltip="left-end" open>
+      <Tooltip placement="top-end" tooltip="top-end" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
     </Flex>
     <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="right-start" tooltip="right-start" open>
+      <Tooltip placement="left-start" tooltip="left-start" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="right" tooltip="right" open>
+      <Tooltip placement="left" tooltip="left" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="right-end" tooltip="right-end" open>
+      <Tooltip placement="left-end" tooltip="left-end" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
     </Flex>
     <Flex my="x6" mx="x8" justifyContent="space-around">
-      <Tooltip placement="bottom-start" tooltip="bottom-start" open>
+      <Tooltip placement="right-start" tooltip="right-start" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="bottom" tooltip="bottom" open>
+      <Tooltip placement="right" tooltip="right" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
-      <Tooltip placement="bottom-end" tooltip="bottom-end" open>
+      <Tooltip placement="right-end" tooltip="right-end" defaultOpen>
+        <Button>Tooltip trigger</Button>
+      </Tooltip>
+    </Flex>
+    <Flex my="x6" mx="x8" justifyContent="space-around">
+      <Tooltip placement="bottom-start" tooltip="bottom-start" defaultOpen>
+        <Button>Tooltip trigger</Button>
+      </Tooltip>
+      <Tooltip placement="bottom" tooltip="bottom" defaultOpen>
+        <Button>Tooltip trigger</Button>
+      </Tooltip>
+      <Tooltip placement="bottom-end" tooltip="bottom-end" defaultOpen>
         <Button>Tooltip trigger</Button>
       </Tooltip>
     </Flex>
