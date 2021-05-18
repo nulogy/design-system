@@ -171,7 +171,7 @@ WithOtherFocusableElements.story = {
 };
 
 export const OpenByDefault = () => (
-  <Tooltip tooltip="I am an open Tooltip!" open>
+  <Tooltip tooltip="I am an open Tooltip!" defaultOpen>
     <Button>Hover me</Button>
   </Tooltip>
 );
