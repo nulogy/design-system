@@ -6,8 +6,6 @@ import icons from "@nulogy/icons";
 import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
 
-const iconNames = Object.keys(icons);
-
 type IconProps = SpaceProps & {
   icon: string;
   className?: string;
