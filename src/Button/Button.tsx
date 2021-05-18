@@ -89,9 +89,17 @@ const WrapperButton = styled.button<any>(
   space
 );
 
-const Button = React.forwardRef(
+const Button: React.SFC<ButtonProps> = React.forwardRef(
   (
-    { children, iconSide = "right", icon, className, asLink, size = "medium", ...props }: ButtonProps,
+    {
+      children,
+      iconSide = "right",
+      icon,
+      className,
+      asLink,
+      size = "medium",
+      ...props
+    }: ButtonProps,
     ref
   ) => {
     const {
