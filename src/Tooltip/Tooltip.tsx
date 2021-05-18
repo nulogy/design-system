@@ -82,6 +82,7 @@ const Tooltip: React.FC<TooltipContainerProps> = ({
   const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
     isOpen,
     placement: getLaagPlacement(placement),
+    overflowContainer: false,
     auto: true,
     arrowOffset: 4,
     triggerOffset: 5,
