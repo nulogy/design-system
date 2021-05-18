@@ -332,6 +332,8 @@ type BaseNavBarProps = {
   className: string;
   breakpointUpper: number | string;
   environment: "training" | "development" | undefined;
+  subtext?: string;
+  brandingLinkHref?: string;
   logoSrc: string;
 };
 
