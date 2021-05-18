@@ -5,8 +5,11 @@ import { useLayer, Arrow } from "react-laag";
 import { AnimatePresence } from "framer-motion";
 import { PositionProps } from "styled-system";
 import { Box } from "../Box";
+import { Popper } from "../Popper";
+import { generateId } from "../utils";
+import { useTranslation } from "react-i18next";
 import { DefaultNDSThemeType } from "../theme.type";
-import { AnimatedBox } from '../Box/Box';
+import { AnimatedBox } from "../Box/Box";
 
 type TooltipContainerProps = PositionProps & {
   theme?: DefaultNDSThemeType;
@@ -56,35 +59,38 @@ const getLaagPlacement = (placement) => {
   return placement.includes("-") ? placement : `${placement}-center`;
 };
 
-const Tooltip = React.forwardRef(
-  (
-    {
-      className,
-      tooltip,
-      maxWidth = "24em",
-      children,
-      placement = "bottom",
-      showDelay = "100",
-      hideDelay = "350",
-      open,
-    },
-    ref
-  ) => {
-    // const [initialOpen, setInitialOpen] = useState(defaultOpen);
-    const [isOver, hoverProps] = useHover({ delayEnter: showDelay, delayLeave: hideDelay });
-    const isOpen = isOver || open;
-    const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
-      isOpen,
-      placement: getLaagPlacement(placement),
-      auto: true,
-      arrowOffset: 4,
-      triggerOffset: 5,
-    });
-    const trigger = React.cloneElement(children, {
-      ...triggerProps,
-      ...hoverProps,
-    });
-    return <>
+const Tooltip = ({
+  className,
+  tooltip,
+  maxWidth = "24em",
+  children,
+  placement = "bottom",
+  showDelay = "100",
+  hideDelay = "350",
+  open,
+}) => {
+  // const [initialOpen, setInitialOpen] = useState(defaultOpen);
+  const [isOver, hoverProps] = useHover({
+    delayEnter: showDelay,
+    delayLeave: hideDelay,
+  });
+  const isOpen = isOver || open;
+  const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
+    isOpen,
+    placement: getLaagPlacement(placement),
+    auto: true,
+    arrowOffset: 4,
+    triggerOffset: 5,
+  });
+  const id = generateId();
+  const trigger = React.cloneElement(children, {
+    "aria-haspopup": true,
+    "aria-describedby": id,
+    ...triggerProps,
+    ...hoverProps,
+  });
+  return (
+    <>
       {trigger}
       {renderLayer(
         <AnimatePresence>
@@ -108,6 +114,7 @@ const Tooltip = React.forwardRef(
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.1 }}
               role="tooltip"
+              id={id}
               {...layerProps}
             >
               {tooltip}
@@ -123,7 +130,7 @@ const Tooltip = React.forwardRef(
         </AnimatePresence>
       )}
     </>
-  }
-);
+  );
+};
 
 export default Tooltip;
