@@ -10,6 +10,7 @@ import packageJson from "./package.json";
 const PEER_DEPENDENCIES = {
   react: "React",
   "styled-components": "styled",
+  "@nulogy/icons": "icons",
 };
 
 const GLOBALS = {
