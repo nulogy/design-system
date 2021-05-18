@@ -20,7 +20,7 @@ export default {
 export const _DropdownMenu = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
 
@@ -35,7 +35,7 @@ export const WithCustomTrigger = () => (
     trigger={() => <Button>Custom Trigger</Button>}
   >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
 
@@ -53,7 +53,7 @@ export const WithCustomColors = () => (
     <DropdownLink href="/" {...customColors}>
       Dropdown Link
     </DropdownLink>
-    <DropdownButton onClick={() => {}} {...customColors}>
+    <DropdownButton onClick={() => { }} {...customColors}>
       Dropdown Button
     </DropdownButton>
   </DropdownMenu>
@@ -94,7 +94,7 @@ export const SetToDefaultOpen = () => (
     closeAriaLabel="close dropdown"
   >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
     <DropdownItem>
       <a href="/" style={{ textDecoration: "none" }}>
         Custom Link Component
@@ -114,7 +114,7 @@ export const SetToDisabled = () => (
     closeAriaLabel="close dropdown"
   >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
 

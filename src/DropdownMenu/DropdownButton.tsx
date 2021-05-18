@@ -24,6 +24,7 @@ const DropdownButton: React.SFC<DropdownButtonProps> = styled.button(
     border: "none",
     textAlign: "left",
     backgroundColor: "transparent",
+    fontFamily: theme.fonts.base,
     lineHeight: theme.lineHeights.base,
     fontSize: theme.fontSizes.medium,
     transition: ".2s",

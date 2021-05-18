@@ -1,11 +1,24 @@
 // @ts-nocheck
-import React from "react";
-import DropdownMenuContainer from "./DropdownMenuContainer";
-import { IconicButton } from "../Button";
-import { Popper } from "../Popper";
+import React, { useState } from "react";
 import propTypes from "@styled-system/prop-types";
+import { useTheme } from "styled-components";
+import { useLayer, Arrow } from "react-laag";
+import { AnimatePresence } from "framer-motion";
+import { IconicButton } from "../Button";
 import { getSubset, omitSubset } from "../utils/subset";
-import { Reference } from "react-popper";
+import DropdownMenuContainer from "./DropdownMenuContainer";
+
+const conditionallyApplyDelay = (fnc, delay) => {
+  if (delay) {
+    timeoutID = setTimeout(fnc, Number(delay));
+  } else {
+    fnc();
+  }
+};
+
+const getLaagPlacement = (placement) => {
+  return placement.includes("-") ? placement : `${placement}-center`;
+};
 
 type DropdownMenuProps = {
   className?: string;
@@ -16,14 +29,18 @@ type DropdownMenuProps = {
   showArrow?: boolean;
   placement?:
   | "top"
+  | "top-center"
   | "top-start"
   | "top-end"
+  | "bottom-center"
   | "bottom"
   | "bottom-start"
   | "bottom-end"
+  | "left-center"
   | "left"
   | "left-start"
   | "left-end"
+  | "right-center"
   | "right"
   | "right-start"
   | "right-end";
@@ -65,40 +82,70 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenu
     },
     ref
   ) => {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
+    const { renderLayer, triggerProps, layerProps, arrowProps } = useLayer({
+      isOpen,
+      placement: getLaagPlacement(placement),
+      overflowContainer: false,
+      auto: true,
+      arrowOffset: 4,
+      triggerOffset: 5,
+    });
+    const handleOnClick = () => {
+      if (isOpen) {
+        conditionallyApplyDelay(() => setIsOpen(false), hideDelay);
+      } else {
+        conditionallyApplyDelay(() => setIsOpen(true), showDelay);
+      }
+    };
+    const dropdownTrigger = React.cloneElement(trigger(), {
+      type: "button",
+      disabled: disabled ? true : null,
+      "aria-haspopup": true,
+      onClick: handleOnClick,
+      onBlur: () => setIsOpen(false),
+      onFocus: () => setIsOpen(true),
+      "aria-label": isOpen ? closeAriaLabel : openAriaLabel,
+      ...spaceProps,
+      ...triggerProps,
+    });
+    const { colors } = useTheme();
     return (
-      <Popper
-        trigger={React.cloneElement(trigger(), {
-          type: "button",
-          disabled: disabled ? true : null,
-          "aria-haspopup": true,
-          ...spaceProps,
-        })}
-        showDelay={showDelay}
-        hideDelay={hideDelay}
-        popperPlacement={placement}
-        defaultOpen={defaultOpen}
-        showArrow={showArrow}
-        openOnClick
-        ref={ref}
-        openOnHover={false}
-        modifiers={transformPropsToModifiers({ boundariesElement })}
-        backgroundColor={backgroundColor}
-        borderColor={backgroundColor}
-        openAriaLabel={openAriaLabel}
-        closeAriaLabel={closeAriaLabel}
-      >
-        <DropdownMenuContainer
-          className={className}
-          id={id}
-          backgroundColor={backgroundColor}
-          showArrow={showArrow}
-          {...restProps}
-        >
-          {children}
-        </DropdownMenuContainer>
-      </Popper>
+      <>
+        {dropdownTrigger}
+        {renderLayer(
+          <AnimatePresence>
+            {isOpen && (
+              // dropdown container styles, role, class
+              <DropdownMenuContainer
+                backgroundColor={backgroundColor}
+                borderColor={backgroundColor}
+                className={`tooltip-box ${className}`}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.1 }}
+                role="tooltip"
+                id={id}
+                {...layerProps}
+              >
+                {children}
+                {showArrow && (
+                  <Arrow
+                    {...arrowProps}
+                    borderWidth={1}
+                    borderColor={colors[backgroundColor]}
+                    backgroundColor={colors[backgroundColor]}
+                    size={6}
+                  />
+                )}
+              </DropdownMenuContainer>
+            )}
+          </AnimatePresence>
+        )}
+      </>
     );
   }
 );

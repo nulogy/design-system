@@ -1,16 +1,12 @@
 // @ts-nocheck
 import React, { useState } from "react";
-import styled, { CSSObject, useTheme } from "styled-components";
-import { useLayer, useHover, Arrow } from "react-laag";
-import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "styled-components";
+import { useLayer, Arrow } from "react-laag";
+import { AnimatePresence } from "framer-motion";
 import { PositionProps } from "styled-system";
-import { Box } from "../Box";
-import { Popper } from "../Popper";
 import { generateId } from "../utils";
-import { useTranslation } from "react-i18next";
 import { DefaultNDSThemeType } from "../theme.type";
 import { AnimatedBox } from "../Box/Box";
-import { theme } from "..";
 
 type TooltipContainerProps = PositionProps & {
   theme?: DefaultNDSThemeType;
@@ -92,8 +88,10 @@ const Tooltip: React.FC<TooltipContainerProps> = ({
   const trigger = React.cloneElement(children, {
     "aria-haspopup": true,
     "aria-describedby": id,
-    onMouseEnter: () => conditionallyApplyDelay(() => setIsOpen(true), showDelay),
-    onMouseLeave: () => conditionallyApplyDelay(() => setIsOpen(false), hideDelay),
+    onMouseEnter: () =>
+      conditionallyApplyDelay(() => setIsOpen(true), showDelay),
+    onMouseLeave: () =>
+      conditionallyApplyDelay(() => setIsOpen(false), hideDelay),
     onBlur: () => setIsOpen(false),
     onFocus: () => setIsOpen(true),
     ...triggerProps,
@@ -105,7 +103,7 @@ const Tooltip: React.FC<TooltipContainerProps> = ({
         <AnimatePresence>
           {isOpen && (
             <AnimatedBox
-              fontFamily="IBM Plex Sans"
+              fontFamily="base"
               display="flex"
               flexDirection="column"
               fontSize="small"
