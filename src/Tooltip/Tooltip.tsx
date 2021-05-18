@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import { DefaultNDSThemeType } from "../theme.type";
 import { AnimatedBox } from "../Box/Box";
 
-type TooltipContainerProps = PositionProps & {
+export type TooltipContainerProps = PositionProps & {
   theme?: DefaultNDSThemeType;
   dataPlacement?: "top" | "bottom" | "left" | "right";
   open?: boolean;
@@ -67,7 +67,7 @@ const conditionallyApplyDelay = (fnc, delay) => {
   }
 };
 
-const Tooltip = ({
+const Tooltip: React.FC<TooltipContainerProps> = ({
   className,
   tooltip,
   maxWidth = "24em",
