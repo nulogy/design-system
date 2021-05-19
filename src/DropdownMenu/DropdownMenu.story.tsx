@@ -63,18 +63,6 @@ WithCustomColors.story = {
   name: "with custom colors",
 };
 
-export const WithButtonClosingMenu = () => (
-  <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-    {({ closeMenu }) => (
-      <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>
-    )}
-  </DropdownMenu>
-);
-
-WithButtonClosingMenu.story = {
-  name: "with button closing menu",
-};
-
 export const WithCustomItem = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownItem>
