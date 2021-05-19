@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import { IconicButton } from "../Button";
 import { getSubset, omitSubset } from "../utils/subset";
 import DropdownMenuContainer from "./DropdownMenuContainer";
+import HandleEsc from "../utils/HandleEsc";
 
 const conditionallyApplyDelay = (fnc, delay) => {
   if (delay) {
@@ -92,6 +93,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenu
       auto: true,
       arrowOffset: 4,
       triggerOffset: 5,
+      onOutsideClick: () => setIsOpen(false),
     });
     const handleOnClick = () => {
       if (isOpen) {
@@ -100,6 +102,9 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenu
         conditionallyApplyDelay(() => setIsOpen(true), showDelay);
       }
     };
+
+    HandleEsc(() => setIsOpen(false));
+
     const dropdownTrigger = React.cloneElement(trigger(), {
       type: "button",
       disabled: disabled ? true : null,
@@ -111,6 +116,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenu
       ...spaceProps,
       ...triggerProps,
     });
+
     const { colors } = useTheme();
     return (
       <>
@@ -129,6 +135,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenu
                 transition={{ duration: 0.1 }}
                 role="tooltip"
                 id={id}
+                {...restProps}
                 {...layerProps}
               >
                 {children}
@@ -138,7 +145,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenu
                     borderWidth={1}
                     borderColor={colors[backgroundColor]}
                     backgroundColor={colors[backgroundColor]}
-                    size={6}
+                    size={8}
                   />
                 )}
               </DropdownMenuContainer>
