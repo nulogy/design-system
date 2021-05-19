@@ -121,3 +121,19 @@ export const SetToDisabled = () => (
 SetToDisabled.story = {
   name: "Set to disabled",
 };
+
+export const HideArrow = () => (
+  <DropdownMenu
+    openAriaLabel="open dropdown"
+    closeAriaLabel="close dropdown"
+    showArrow={false}
+    defaultOpen
+  >
+    <DropdownLink href="/">Dropdown Link</DropdownLink>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
+  </DropdownMenu>
+);
+
+HideArrow.story = {
+  name: "Hide arrow",
+};
