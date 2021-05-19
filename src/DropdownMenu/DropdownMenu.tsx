@@ -7,7 +7,6 @@ import { AnimatePresence } from "framer-motion";
 import { IconicButton } from "../Button";
 import { getSubset, omitSubset } from "../utils/subset";
 import HandleEsc from "../utils/HandleEsc";
-import conditionallyApplyDelay from "../utils/conditionallyApplyDelay";
 import getLaagPlacement from "../utils/getReactLaagPlacement";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
@@ -35,8 +34,6 @@ type DropdownMenuProps = {
   | "right"
   | "right-start"
   | "right-end";
-  showDelay?: string | number;
-  hideDelay?: string | number;
   defaultOpen?: boolean;
   overflowContainer?: boolean;
   openAriaLabel?: string;
@@ -53,8 +50,6 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = ({
   className,
   id,
   overflowContainer,
-  showDelay,
-  hideDelay,
   openAriaLabel,
   closeAriaLabel,
   ...props
@@ -73,11 +68,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = ({
     onOutsideClick: () => setIsOpen(false),
   });
   const handleOnClick = () => {
-    if (isOpen) {
-      conditionallyApplyDelay(() => setIsOpen(false), hideDelay);
-    } else {
-      conditionallyApplyDelay(() => setIsOpen(true), showDelay);
-    }
+    setIsOpen(!isOpen);
   };
 
   HandleEsc(() => setIsOpen(false));
@@ -101,11 +92,10 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = ({
       {renderLayer(
         <AnimatePresence>
           {isOpen && (
-            // dropdown container styles, role, class
             <DropdownMenuContainer
               backgroundColor={backgroundColor}
               borderColor={backgroundColor}
-              className={`tooltip-box ${className}`}
+              className={`nds-dropdown-menu ${className}`}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -140,8 +130,6 @@ DropdownMenu.defaultProps = {
   backgroundColor: "whiteGrey",
   showArrow: true,
   placement: "bottom-start",
-  showDelay: "100",
-  hideDelay: "200",
   defaultOpen: false,
   overlflowContainer: true,
   openAriaLabel: undefined,
