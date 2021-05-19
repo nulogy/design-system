@@ -1,5 +1,20 @@
 # Migration Guide
 
+## Migrating from v5 to v6:
+
+### Remove deprecated props and components 
+
+* `Title`, `SectionTitle`, and `SubsectionTitle`  should be replaced with  `Heading1`, `Heading2`, and `Heading3`
+* The `showTraining` prop has been removed from `BrandedNavBar`. Use `environment="training"` instead. 
+
+### Replace theme.zindex with theme.zindices 
+
+This shouldn't cause an issue if you're interacting with zIndex via properties, but if you were directly importing the theme then any reference to theme.zIndex should be replaced with theme.zIndices. 
+
+### Install @nulogy/icons as a peerDependency 
+
+The upgrade in v5 didn't take due to a rollup setting, so if you still haven't added @nulogy/icons with `yarn add @nulogy/icons` then now is the time. 
+
 ## Migrating from v4 to v5:
 
 ### 1. Install @nulogy/icons
