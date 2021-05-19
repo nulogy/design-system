@@ -6,6 +6,8 @@ import { AnimatePresence } from "framer-motion";
 import { PositionProps } from "styled-system";
 import { generateId } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
+import conditionallyApplyDelay from "../utils/conditionallyApplyDelay";
+import getLaagPlacement from "../utils/getReactLaagPlacement";
 import { AnimatedBox } from "../Box/Box";
 
 type TooltipContainerProps = PositionProps & {
@@ -50,18 +52,6 @@ export type TooltipProps = {
   | "right-end";
   maxWidth?: string;
   children?: React.ReactNode;
-};
-
-const getLaagPlacement = (placement) => {
-  return placement.includes("-") ? placement : `${placement}-center`;
-};
-
-const conditionallyApplyDelay = (fnc, delay) => {
-  if (delay) {
-    timeoutID = setTimeout(fnc, Number(delay));
-  } else {
-    fnc();
-  }
 };
 
 const Tooltip: React.FC<TooltipContainerProps> = ({
