@@ -91,20 +91,20 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
     };
     const onClickEventHandlers = openOnClick
       ? {
-          onMouseDown: () => {
-            if (isOpen) {
-              closePopUp(false);
-            } else {
-              openPopUp(false);
-            }
-          },
-        }
+        onMouseDown: () => {
+          if (isOpen) {
+            closePopUp(false);
+          } else {
+            openPopUp(false);
+          }
+        },
+      }
       : null;
     const onHoverHandlers = openOnHover
       ? {
-          onMouseEnter: () => openPopUp(false),
-          onMouseLeave: () => closePopUp(false),
-        }
+        onMouseEnter: () => openPopUp(false),
+        onMouseLeave: () => closePopUp(false),
+      }
       : null;
     const eventHandlers = {
       onFocus: () => openPopUp(false),
@@ -170,9 +170,8 @@ const Popper: React.SFC<PopperProps> = React.forwardRef(
                       top: isOpen ? 0 : "-9999px",
                     },
                     dataPlacement: placement,
-                    className: `${
-                      children.props.className || ""
-                    } nds-popper-pop-up`,
+                    className: `${children.props.className || ""
+                      } nds-popper-pop-up`,
                     ...eventHandlers,
                   },
                   [

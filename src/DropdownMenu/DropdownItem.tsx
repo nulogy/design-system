@@ -18,7 +18,7 @@ const DropdownItem: React.SFC<DropdownItemProps> = styled.div(
     "*": {
       color: theme.colors[color],
       display: "block",
-      width: "100%",
+      maxWidth: "100%",
       cursor: "pointer",
       border: "none",
       textAlign: "left",

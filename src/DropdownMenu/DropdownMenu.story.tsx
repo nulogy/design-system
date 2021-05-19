@@ -20,7 +20,7 @@ export default {
 export const _DropdownMenu = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
 
@@ -35,7 +35,7 @@ export const WithCustomTrigger = () => (
     trigger={() => <Button>Custom Trigger</Button>}
   >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
 
@@ -53,7 +53,7 @@ export const WithCustomColors = () => (
     <DropdownLink href="/" {...customColors}>
       Dropdown Link
     </DropdownLink>
-    <DropdownButton onClick={() => {}} {...customColors}>
+    <DropdownButton onClick={() => { }} {...customColors}>
       Dropdown Button
     </DropdownButton>
   </DropdownMenu>
@@ -61,18 +61,6 @@ export const WithCustomColors = () => (
 
 WithCustomColors.story = {
   name: "with custom colors",
-};
-
-export const WithButtonClosingMenu = () => (
-  <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-    {({ closeMenu }) => (
-      <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>
-    )}
-  </DropdownMenu>
-);
-
-WithButtonClosingMenu.story = {
-  name: "with button closing menu",
 };
 
 export const WithCustomItem = () => (
@@ -94,7 +82,7 @@ export const SetToDefaultOpen = () => (
     closeAriaLabel="close dropdown"
   >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
     <DropdownItem>
       <a href="/" style={{ textDecoration: "none" }}>
         Custom Link Component
@@ -114,10 +102,26 @@ export const SetToDisabled = () => (
     closeAriaLabel="close dropdown"
   >
     <DropdownLink href="/">Dropdown Link</DropdownLink>
-    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
 
 SetToDisabled.story = {
   name: "Set to disabled",
+};
+
+export const HideArrow = () => (
+  <DropdownMenu
+    openAriaLabel="open dropdown"
+    closeAriaLabel="close dropdown"
+    showArrow={false}
+    defaultOpen
+  >
+    <DropdownLink href="/">Dropdown Link</DropdownLink>
+    <DropdownButton onClick={() => { }}>Dropdown Button</DropdownButton>
+  </DropdownMenu>
+);
+
+HideArrow.story = {
+  name: "Hide arrow",
 };
