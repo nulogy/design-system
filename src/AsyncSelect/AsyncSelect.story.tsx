@@ -18,31 +18,6 @@ const northAmericanCountries = [
   },
 ];
 
-const componentList = await fetch(
-  `https://components-list.ca/rest/v2/name/${inputValue}`
-);
-/// {...} indicated more data of the same type 
-componentList = [
-
-  {
-    name: "Table",
-    imports: [{
-      name: "TableCellInfoType"
-    },
-    {
-      name: "TableColumnType"
-    },
-    { ... }
-    ],
-  },
-
-  {
-    name: "Tabs"
-  },
-
-  { ... }
-]
-
 const loadMatchingCountries = async (inputValue) => {
   const data = await fetch(
     `https://restcountries.eu/rest/v2/name/${inputValue}`
