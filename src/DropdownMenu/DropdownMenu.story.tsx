@@ -15,6 +15,9 @@ const customColors = {
 
 export default {
   title: "Components/DropdownMenu",
+  parameters: {
+    chromatic: { delay: 300 }, // ample time for animation
+  },
 };
 
 export const _DropdownMenu = () => (

@@ -4,7 +4,7 @@ import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
 export default {
   title: "Components/Tooltip",
   parameters: {
-    chromatic: { disable: true },
+    chromatic: { delay: 300 }, // ample time for animation
   },
 };
 
