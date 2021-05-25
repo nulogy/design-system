@@ -15,8 +15,7 @@ type TruncatedTextProps = {
   tooltipProps?: TooltipProps;
 };
 
-type MaybeTooltipProps = {
-  children?: React.ReactNode;
+type MaybeTooltipProps = TooltipProps & {
   showTooltip?: boolean;
 }
 
