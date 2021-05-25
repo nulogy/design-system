@@ -1,12 +1,15 @@
 # [6.0.0](https://github.com/nulogy/design-system/compare/v5.20.0...v6.0.0) (2021-05-25)
 
 
-* fix!: remove all deprecated props and components ([21553f7](https://github.com/nulogy/design-system/commit/21553f7915a77e0120fae99828ed3ffc8a114917))
-
-
 ### BREAKING CHANGES
+See migration.md for full details and upgrade instructions ([21553f7](https://github.com/nulogy/design-system/commit/21553f7915a77e0120fae99828ed3ffc8a114917))
 
-* removes all deprecated components, adds more typescript coverage, makes @nulogy/icons a peer dependency and replaces theme.zIndex with theme.zIndices. See migration.md for more details.
+* `Title`, `SectionTitle`, and `SubsectionTitle`  should be replaced with  `Heading1`, `Heading2`, and `Heading3`
+* The `showTraining` prop has been removed from `BrandedNavBar`. Use `environment="training"` instead. 
+* adds more typescript coverage!
+* makes @nulogy/icons a peer dependency
+* renames zIndex token key in the theme: replaces theme.zIndex with theme.zIndices. 
+
 
 # [5.20.0](https://github.com/nulogy/design-system/compare/v5.19.0...v5.20.0) (2021-05-04)
 
