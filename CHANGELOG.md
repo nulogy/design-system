@@ -1,3 +1,10 @@
+# [5.21.0](https://github.com/nulogy/design-system/compare/v5.20.0...v5.21.0) (2021-05-25)
+
+
+### Features
+
+* Add more Typescript coverage ([#895](https://github.com/nulogy/design-system/issues/895)) ([c5d2068](https://github.com/nulogy/design-system/commit/c5d20683658d9f4e09531d7dd0ea4238575de9e1))
+
 # [5.20.0](https://github.com/nulogy/design-system/compare/v5.19.0...v5.20.0) (2021-05-04)
 
 
