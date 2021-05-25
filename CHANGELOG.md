@@ -1,3 +1,13 @@
+# [6.0.0](https://github.com/nulogy/design-system/compare/v5.20.0...v6.0.0) (2021-05-25)
+
+
+* fix!: remove all deprecated props and components ([21553f7](https://github.com/nulogy/design-system/commit/21553f7915a77e0120fae99828ed3ffc8a114917))
+
+
+### BREAKING CHANGES
+
+* removes all deprecated components, adds more typescript coverage, makes @nulogy/icons a peer dependency and replaces theme.zIndex with theme.zIndices. See migration.md for more details.
+
 # [5.20.0](https://github.com/nulogy/design-system/compare/v5.19.0...v5.20.0) (2021-05-04)
 
 
