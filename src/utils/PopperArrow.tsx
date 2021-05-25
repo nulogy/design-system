@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
 import { PopperArrowProps as ReactPopperArrowProps } from "react-popper";
 import theme from "../theme";
 
@@ -7,6 +8,7 @@ type PopperArrowProps = ReactPopperArrowProps & {
   borderColor?: string;
   backgroundColor?: string;
 };
+
 const getThemeColor = (color) =>
   theme.colors[color] ? theme.colors[color] : color;
 
@@ -164,6 +166,8 @@ const PopperArrow: React.FC<PopperArrowProps> = styled.div(
     backgroundColor = "white",
   }: PopperArrowProps) => ({
     ...drawArrow(placement, borderColor, backgroundColor),
+  }),
+  ({ placement = "bottom" }) => ({
     ...positionArrow(placement),
   })
 );

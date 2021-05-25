@@ -20,7 +20,7 @@ import { getSubset } from "../utils/subset";
 
 const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
   // These classes are only applied when classname prefix is set
-  "[class*='dropdown-indicator'], [class*='indicator-separator']": {
+  "[class*='dropdown-indicator'], [class*='indicator-separator'], [class*='indicatorContainer']": {
     display: showArrow ? "flex" : "none",
   },
 }));
