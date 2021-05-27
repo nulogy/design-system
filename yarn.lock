@@ -6599,11 +6599,6 @@ cypress-plugin-tab@^1.0.1:
   dependencies:
     ally.js "^1.4.1"
 
-cypress-storybook@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/cypress-storybook/-/cypress-storybook-0.2.3.tgz#b7459004612b5e824e2f38182a0ffd2d0972747a"
-  integrity sha512-/cEtnsP3ui8H2wG1wBAbM8lqdDobu3xHqJGuUael+bB4GHNp+eoQxK5fgu8n4Ti+wBxoln8giYKhUOqk8+Ja+Q==
-
 cypress@^4.0.0:
   version "4.12.1"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-4.12.1.tgz#0ead1b9f4c0917d69d8b57f996b6e01fe693b6ec"
