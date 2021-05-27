@@ -16,12 +16,12 @@ module.exports = function (plop) {
       },
       {
         type: "add",
-        path: "./src/{{name}}/index.js",
+        path: "./src/{{name}}/index.ts",
         templateFile: "./src/template/index.hbs",
       },
       {
         type: "add",
-        path: "./src/{{name}}/{{name}}.story.js",
+        path: "./src/{{name}}/{{name}}.story.tsx",
         templateFile: "./src/template/component.story.hbs",
       },
       {

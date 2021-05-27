@@ -18,7 +18,7 @@ describe("Sidebar", () => {
     it("slides out", () => {
       trigger().click();
       overlay().should("be.visible");
-      overlay().click({force: true});
+      overlay().click({ force: true });
       Sidebar().should("not.be.visible");
     });
   });
@@ -47,15 +47,15 @@ describe("Sidebar", () => {
       Sidebar().should("be.visible");
     });
     it("slides out when overlay clicked", () => {
-      overlay().click({force: true});
+      overlay().click({ force: true });
       Sidebar().should("not.be.visible");
     });
     it("slides out when close button clicked", () => {
-      closeButton().click({force: true});
+      closeButton().click({ force: true });
       Sidebar().should("not.be.visible");
     });
     it("slides in", () => {
-      overlay().click({force: true});
+      overlay().click({ force: true });
       trigger().click();
       Sidebar().should("be.visible");
     });
@@ -74,13 +74,9 @@ describe("Sidebar", () => {
       Sidebar().should("have.css", "right", "0px");
     });
     it("slides out when overlay clicked", () => {
-      overlay().click({force: true});
+      overlay().click({ force: true });
       Sidebar().should("not.be.visible");
       Sidebar().should("have.css", "right", "0px");
-    });
-    it("updates offset", () => {
-    cy.changeKnob("offset", "35px");
-      Sidebar().should("have.css", "right", "35px");
     });
   });
   describe("Without overlay", () => {
