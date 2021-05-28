@@ -80,7 +80,7 @@ const BaseToggle = ({
   labelText,
   requirementText,
   helpText,
-  toggled,
+  toggled = false,
   onClick,
   "data-testid": dataTestId,
   ...props
@@ -90,6 +90,7 @@ const BaseToggle = ({
   };
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
+
   return (
     <Field
       className={className}
