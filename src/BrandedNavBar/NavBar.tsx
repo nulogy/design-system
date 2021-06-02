@@ -328,13 +328,13 @@ const SelectNavBarBasedOnWidth = ({
 };
 
 type BaseNavBarProps = {
-  menuData: any;
-  className: string;
-  breakpointUpper: number | string;
-  environment: "training" | "development" | undefined;
+  menuData?: any;
+  className?: string;
+  breakpointUpper?: number | string;
+  environment?: "training" | "development" | undefined;
   subtext?: string;
   brandingLinkHref?: string;
-  logoSrc: string;
+  logoSrc?: string;
 };
 
 const BaseNavBar = ({
