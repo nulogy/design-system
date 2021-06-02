@@ -1,3 +1,10 @@
+## [6.0.2](https://github.com/nulogy/design-system/compare/v6.0.1...v6.0.2) (2021-06-02)
+
+
+### Bug Fixes
+
+* make navbar properties optional ([a8a070c](https://github.com/nulogy/design-system/commit/a8a070c58a0fe3f672d3d0e2b05db0b14747b6e5))
+
 ## [6.0.1](https://github.com/nulogy/design-system/compare/v6.0.0...v6.0.1) (2021-06-02)
 
 
