@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/nulogy/design-system/compare/v6.0.0...v6.0.1) (2021-06-02)
+
+
+### Bug Fixes
+
+* **FieldLabel:** adds data-testids to the subcomponents of field-label ([46a91a0](https://github.com/nulogy/design-system/commit/46a91a0237a5473a2b31a10ae941d4a6961ec370))
+
 # [6.0.0](https://github.com/nulogy/design-system/compare/v5.20.0...v6.0.0) (2021-05-25)
 
 
