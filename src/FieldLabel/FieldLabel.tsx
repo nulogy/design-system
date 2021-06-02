@@ -34,9 +34,13 @@ const FieldLabel = ({
 }) => (
   <Label style={{ display: "block" }} {...props}>
     <Box mb={children && "x1"} data-testid="field-label">
-      <LabelText>{labelText}</LabelText>
-      {requirementText && <RequirementText>{requirementText}</RequirementText>}
-      {helpText && <HelpText>{helpText}</HelpText>}
+      <LabelText data-testid="label-text">{labelText}</LabelText>
+      {requirementText && (
+        <RequirementText data-testid="requirement-text">
+          {requirementText}
+        </RequirementText>
+      )}
+      {helpText && <HelpText data-testid="help-text">{helpText}</HelpText>}
     </Box>
     {children}
   </Label>
