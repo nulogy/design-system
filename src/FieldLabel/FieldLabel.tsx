@@ -31,7 +31,7 @@ const FieldLabel = ({
   helpText,
   children,
   ...props
-}) => (
+}: FieldLabelProps) => (
   <Label style={{ display: "block" }} {...props}>
     <Box mb={children && "x1"} data-testid="field-label">
       <LabelText data-testid="label-text">{labelText}</LabelText>
@@ -45,8 +45,6 @@ const FieldLabel = ({
     {children}
   </Label>
 );
-
-FieldLabel.propTypes = FieldLabelProps;
 
 FieldLabel.defaultProps = FieldLabelDefaultProps;
 

@@ -1,14 +1,13 @@
-import PropTypes from "prop-types";
-import propTypes from "@styled-system/prop-types";
+import React from "react";
+import {SpaceProps} from "styled-system";
 
-export const FieldLabelProps = {
-  labelText: PropTypes.string.isRequired,
-  children: PropTypes.node,
-  requirementText: PropTypes.string,
-  helpText: PropTypes.node,
-  id: PropTypes.string,
-  ...propTypes.space,
-};
+export type FieldLabelProps = SpaceProps & {
+  labelText: string,
+  children?: React.ReactNode,
+  requirementText?: string,
+  helpText?: React.ReactNode,
+  id: string
+}
 
 export const FieldLabelDefaultProps = {
   children: null,
