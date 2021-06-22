@@ -103,7 +103,7 @@ export type SelectProps = {
   errorList?: string[];
   labelText?: string;
   helpText?: any;
-  noOptionsMessage?: string;
+  noOptionsMessage?: Function;
   requirementText?: string;
   id?: string;
   initialIsOpen?: boolean;
