@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "styled-components";
+import { SpaceProps } from "styled-system";
 import propTypes from "@styled-system/prop-types";
 import { Box } from "../Box";
 import { HelpText, RequirementText } from "../FieldLabel";
@@ -48,7 +49,7 @@ const MaybeToggleTitle: React.SFC<MaybeToggleTitleProps> = ({
   );
 };
 
-type BaseToggleProps = {
+type BaseToggleProps = SpaceProps & {
   onChange?: (...args: any[]) => any;
   toggled?: boolean;
   disabled?: boolean;
