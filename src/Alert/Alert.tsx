@@ -18,6 +18,7 @@ export type AlertProps = SpaceProps &
     type?: "danger" | "informative" | "success" | "warning" | undefined;
     onClose?: any;
     controlled?: boolean;
+    style?: React.CSSProperties;
   };
 
 const AlertStyles = ({ theme }) => ({
