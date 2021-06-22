@@ -12,6 +12,7 @@ type FormProps = SpaceProps & {
   title?: string;
   children: React.ReactNode;
   style?: React.CSSProperties;
+  id?: string;
 };
 
 type FormStylesProps = {
