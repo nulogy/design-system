@@ -10,6 +10,7 @@ import React, {
 import { setMinutes } from "date-fns";
 import debounce from "debounce";
 import styled from "styled-components";
+import { SpaceProps } from "styled-system";
 import { useTranslation } from "react-i18next";
 import { InputField } from "../Input/InputField";
 import { InlineValidation } from "../Validation";
@@ -168,7 +169,9 @@ const TimePickerOption = styled.li(
     };
   }
 );
-type TimePickerProps = {
+type TimePickerProps = SpaceProps & {
+  disabled?: boolean,
+  value?: string,
   timeFormat?: string;
   interval?: number;
   placeholder?: string;
@@ -182,10 +185,12 @@ type TimePickerProps = {
   errorMessage?: string;
   errorList?: React.ReactNode;
   labelText?: string;
+  ref?: any;
   onBlur?: (...args: any[]) => any;
   onFocus?: (...args: any[]) => any;
   onClick?: (...args: any[]) => any;
 };
+
 const TimePicker: React.SFC<TimePickerProps> = forwardRef(
   (
     {
