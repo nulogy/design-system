@@ -32,8 +32,8 @@ type TimeRangeProps = {
   interval?: number;
   startAriaLabel?: string;
   endAriaLabel?: string;
-  endTimeProps: any;
-  startTimeProps: any;
+  endTimeProps?: any;
+  startTimeProps?: any;
 };
 
 const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
