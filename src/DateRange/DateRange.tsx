@@ -7,12 +7,13 @@ import { DatePicker } from "../DatePicker";
 import { RangeContainer } from "../RangeContainer";
 import { InputFieldDefaultProps } from "../Input/InputField.type";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
+import { FieldProps } from "../Form/Field";
 import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 import { TimePicker } from "../TimePicker";
 import { getDuration } from "../TimeRange/TimeRange.utils";
 import { forwardRef } from "react";
 
-type DateRangeProps = {
+type DateRangeProps = FieldProps & {
   dateFormat?: string;
   onRangeChange?: (...args: any[]) => any;
   onStartDateChange?: (...args: any[]) => any;
