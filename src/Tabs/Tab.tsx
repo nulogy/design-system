@@ -78,7 +78,7 @@ const TabButton: React.SFC<TabButtonProps> = styled.button(
     },
   })
 );
-type TabProps = React.ComponentPropsWithRef<"button"> & {
+type TabProps = TabButtonProps & {
   label?: React.ReactNode;
 };
 const Tab: React.SFC<TabProps> = React.forwardRef(
