@@ -42,7 +42,7 @@ const TableFooterRow = ({ row, columns, loading }) => {
             <TableCell
               key={column.dataKey}
               row={row}
-              column={{ dataKey: column.dataKey, label: column.label }}
+              column={{ dataKey: column.dataKey, label: column.label, align: column.align }}
               cellData={row[column.dataKey]}
             />
           )
