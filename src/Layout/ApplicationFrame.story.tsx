@@ -1,19 +1,5 @@
-import { text } from "@storybook/addon-knobs";
-import React, { useState, useRef } from "react";
-import {
-  ApplicationFrame,
-  BrandedNavBar,
-  Icon,
-  Breadcrumbs,
-  Link,
-  Heading2,
-  Text,
-  Page,
-  Sidebar,
-  Select,
-  PrimaryButton,
-  Box,
-} from "..";
+import React from "react";
+import { ApplicationFrame, BrandedNavBar, Icon } from "..";
 
 const primaryMenu = [
   {
@@ -103,7 +89,9 @@ export default {
 
 export const _ApplicationFrame = () => (
   <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
+    navBar={
+      <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />
+    }
     height="100vh"
   ></ApplicationFrame>
 );

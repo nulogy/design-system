@@ -1,10 +1,11 @@
 import React from "react";
+import { TabsProps, TabsState } from "./Tabs";
 import { Tab, Tabs } from ".";
 
-class ControlledTabs extends React.Component {
+class ControlledTabs extends React.Component<TabsProps, TabsState> {
   constructor(props) {
     super(props);
-    this.state = {
+  this.state = {
       selectedIndex: null,
     };
 

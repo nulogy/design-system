@@ -1,7 +1,12 @@
 import React, { useRef } from "react";
 import { Checkbox, Button } from "../index";
 
-class CheckboxWithState extends React.Component {
+type CheckboxState = {
+  checkbox1: boolean,
+  checkbox2: boolean
+}
+
+class CheckboxWithState extends React.Component<{}, CheckboxState> {
   constructor(props) {
     super(props);
 

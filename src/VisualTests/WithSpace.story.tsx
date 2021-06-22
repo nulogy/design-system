@@ -44,6 +44,7 @@ export const _AsyncSelect = () => (
     className="Select"
     classNamePrefix="SelectTest"
     labelText="Country"
+    loadOptions=""
     {...spaceProps}
   />
 );

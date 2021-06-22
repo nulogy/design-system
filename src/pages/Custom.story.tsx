@@ -54,7 +54,7 @@ export const Default = () => (
         borderRadius="medium"
         minHeight={StorybookContentHeight}
       >
-        <Box p="x3" flexGrow="2">
+        <Box p="x3" flexGrow={2}>
           <Heading1 mb="x6">I am title</Heading1>
           <Text>I am main content.</Text>
         </Box>
@@ -74,7 +74,7 @@ export const WithSidebar = () => (
         borderRadius="medium"
         minHeight={StorybookContentHeight}
       >
-        <Box p="x3" flexGrow="2">
+        <Box p="x3" flexGrow={2}>
           <Heading1 mb="x6">I am title</Heading1>
           <Text>I am main content.</Text>
         </Box>
@@ -119,7 +119,7 @@ export const WithBreadcrumbsAndActions = () => (
         borderRadius="medium"
         minHeight={StorybookContentHeight}
       >
-        <Box pt="x1" pr="x3" pb="x3" pl="x3" flexGrow="2">
+        <Box pt="x1" pr="x3" pb="x3" pl="x3" flexGrow={2}>
           <Flex justifyContent="space-between" alignItems="flex-start">
             <Breadcrumbs pt="half" my="x2">
               <Link>Breadcrumb</Link>

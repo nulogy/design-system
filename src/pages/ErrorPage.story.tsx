@@ -13,7 +13,7 @@ export default {
 
 export const Base = () => (
   <Flex height="100vh" flexDirection="column" pt="x3" pr="x2" pb="x2" pl="x2">
-    <Flex flexGrow="1" maxWidth={ErrorPageWidth} m="0 auto">
+    <Flex flexGrow={1} maxWidth={ErrorPageWidth} m="0 auto">
       <Flex
         width="100%"
         flexDirection={{ extraSmall: "column", large: "row" }}
@@ -39,7 +39,7 @@ export const Base = () => (
 
 export const WithALink = () => (
   <Flex height="100vh" flexDirection="column" pt="x3" pr="x2" pb="x2" pl="x2">
-    <Flex flexGrow="1" maxWidth={ErrorPageWidth} m="0 auto">
+    <Flex flexGrow={1} maxWidth={ErrorPageWidth} m="0 auto">
       <Flex
         width="100%"
         flexDirection={{ extraSmall: "column", large: "row" }}
@@ -74,7 +74,7 @@ WithALink.story = {
 
 export const Maintenance = () => (
   <Flex height="100vh" flexDirection="column" pt="x3" pr="x2" pb="x2" pl="x2">
-    <Flex flexGrow="1" maxWidth={ErrorPageWidth} m="0 auto">
+    <Flex flexGrow={1} maxWidth={ErrorPageWidth} m="0 auto">
       <Flex
         width="100%"
         flexDirection={{ extraSmall: "column", large: "row" }}

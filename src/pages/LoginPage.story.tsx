@@ -1,5 +1,4 @@
 import React from "react";
-import theme from "../theme";
 import {
   Alert,
   Box,
@@ -31,7 +30,7 @@ export const Base = () => (
       maxWidth="384px"
       alignItems="center"
       justifyContent="center"
-      flexGrow="1"
+      flexGrow={1}
     >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
@@ -46,13 +45,14 @@ export const Base = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Branding
-          withLine
-          size="large"
-          subtext="Logo Subtext"
-          alignment="center"
-          style={{ marginBottom: theme.space.x2 }}
-        />
+        <Box mb="x3">
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+          />
+        </Box>
         <Text
           color="darkGrey"
           fontSize="small"
@@ -61,7 +61,7 @@ export const Base = () => (
         >
           Additional Text
         </Text>
-        <Form style={{ width: "100%" }}>
+        <Form>
           <Input labelText="Email" />
           <Input type="password" labelText="Password" />
           <PrimaryButton fullWidth>Sign In</PrimaryButton>
@@ -85,7 +85,7 @@ export const WithRememberMe = () => (
       maxWidth="384px"
       alignItems="center"
       justifyContent="center"
-      flexGrow="1"
+      flexGrow={1}
     >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
@@ -100,13 +100,14 @@ export const WithRememberMe = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Branding
-          withLine
-          size="large"
-          subtext="Logo Subtext"
-          alignment="center"
-          style={{ marginBottom: theme.space.x2 }}
-        />
+        <Box mb="x2">
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+          />
+        </Box>
         <Text
           color="darkGrey"
           fontSize="small"
@@ -144,7 +145,7 @@ export const WithForgotPasswordLink = () => (
       maxWidth="384px"
       alignItems="center"
       justifyContent="center"
-      flexGrow="1"
+      flexGrow={1}
     >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
@@ -159,13 +160,14 @@ export const WithForgotPasswordLink = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Branding
-          withLine
-          size="large"
-          subtext="Logo Subtext"
-          alignment="center"
-          style={{ marginBottom: theme.space.x2 }}
-        />
+        <Box mb="x2">
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+          />
+        </Box>
         <Text
           color="darkGrey"
           fontSize="small"
@@ -205,7 +207,7 @@ export const WithError = () => (
       maxWidth="384px"
       alignItems="center"
       justifyContent="center"
-      flexGrow="1"
+      flexGrow={1}
     >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
@@ -220,17 +222,18 @@ export const WithError = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Branding
-          withLine
-          size="large"
-          subtext="Logo Subtext"
-          alignment="center"
-          style={{ marginBottom: theme.space.x2 }}
-        />
+        <Box mb="x2">
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+          />
+        </Box>
         <Text fontSize="small" lineHeight="smallTextBase" mb="x4">
           Additional Text
         </Text>
-        <Alert mb="x4" style={{ width: "100%" }} type="danger">
+        <Alert mb="x4" width="100%" type="danger">
           text
         </Alert>
         <Form style={{ width: "100%" }}>
@@ -261,7 +264,7 @@ export const WithErrorAndNoAdditionalText = () => (
       maxWidth="384px"
       alignItems="center"
       justifyContent="center"
-      flexGrow="1"
+      flexGrow={1}
     >
       <Flex
         height={{ extraSmall: "100%", small: "auto" }}
@@ -276,17 +279,18 @@ export const WithErrorAndNoAdditionalText = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Branding
-          withLine
-          size="large"
-          subtext="Logo Subtext"
-          alignment="center"
-          style={{ marginBottom: theme.space.x4 }}
-        />
-        <Alert mb="x4" style={{ width: "100%" }} type="danger">
+        <Box mb="x4">
+          <Branding
+            withLine
+            size="large"
+            subtext="Logo Subtext"
+            alignment="center"
+          />
+        </Box>
+        <Alert mb="x4" width="100%" type="danger">
           text
         </Alert>
-        <Form style={{ width: "100%" }}>
+        <Form>
           <Input labelText="Email" />
           <Input type="password" labelText="Password" />
           <PrimaryButton fullWidth>Sign In</PrimaryButton>

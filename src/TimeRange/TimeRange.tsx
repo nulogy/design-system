@@ -7,7 +7,7 @@ import React, {
   useRef,
 } from "react";
 import { useTranslation } from "react-i18next";
-import propTypes from "@styled-system/prop-types";
+import { SpaceProps } from "styled-system";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
 import {
@@ -17,11 +17,12 @@ import { getDuration } from "./TimeRange.utils";
 
 const DEFAULT_LABEL = "Time Range";
 
-type TimeRangeProps = {
+type TimeRangeProps = SpaceProps & {
   timeFormat?: string;
   onRangeChange?: (...args: any[]) => any;
   onStartTimeChange?: (...args: any[]) => any;
   onEndTimeChange?: (...args: any[]) => any;
+  ref?: any;
   errorMessage?: string;
   defaultStartTime?: string;
   defaultEndTime?: string;

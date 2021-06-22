@@ -1,19 +1,23 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../Button";
-import { Box } from "../index";
+import { Box, Flex } from "../index";
 import { AnimatedBox } from "./Box";
 
 export default {
   title: "Components/Box",
 };
 
+const styles = {
+  background: "red"
+}
+
 export const _Box = () => <Box p="x3">Hello World</Box>;
 
 export const WithATextColour = () => (
-  <Box p="x3" color="blue">
+  <Flex p="x3" color="blue" style={styles}>
     Hello World
-  </Box>
+  </Flex>
 );
 
 WithATextColour.story = {

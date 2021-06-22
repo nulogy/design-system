@@ -84,7 +84,6 @@ export const WithAnOptionSelected = () => (
       onChange={action("selection changed")}
       onBlur={action("blurred")}
       onInputChange={action("typed input value changed")}
-      loading
     />
     <br />
     <Select
