@@ -5,7 +5,7 @@ import { BoxProps } from "../Box/Box";
 
 export type FlexProps = BoxProps;
 
-const Flex: React.SFC<FlexProps> = styled(Box)(
+const Flex: React.FunctionComponent<FlexProps> = styled(Box)(
   {
     display: "flex",
   },
