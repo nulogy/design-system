@@ -1,3 +1,10 @@
+## [6.0.3](https://github.com/nulogy/design-system/compare/v6.0.2...v6.0.3) (2021-06-23)
+
+
+### Bug Fixes
+
+* respect a Table's column alignment setting in the footer ([1f584a0](https://github.com/nulogy/design-system/commit/1f584a09e6ab537e54ebd2885a385ff4dabbc9fd))
+
 ## [6.0.2](https://github.com/nulogy/design-system/compare/v6.0.1...v6.0.2) (2021-06-02)
 
 
