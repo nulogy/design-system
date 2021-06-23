@@ -34,7 +34,7 @@ const dropdownCellRenderer = ({ cellData }) => (
 const columns = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
-  { label: "Actual Quantity", dataKey: "actualQuantity" },
+  { label: "Actual Quantity", dataKey: "actualQuantity", align: "right" },
 ];
 
 const columnsWithWidths = [
