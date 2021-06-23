@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { useState, useEffect } from "react";
 import styled, { CSSObject } from "styled-components";
 import { Box } from "../Box";
@@ -146,11 +147,11 @@ export const Toast = ({
 };
 Toast.defaultProps = {
   triggered: false,
-  onShow: () => { },
-  onHide: () => { },
+  onShow: () => {},
+  onHide: () => {},
   children: undefined,
   isCloseable: false,
   showDuration: SHOW_DURATION,
-  onHidden: () => { },
+  onHidden: () => {},
 };
 export default Toast;
