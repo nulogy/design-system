@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { text, boolean, select } from "@storybook/addon-knobs";
 import { Button, Select, SelectOption } from "../index";
 import { Box } from "../Box";
-import {SelectProps} from "../Select";
+import {SelectProps} from "../Select/Select";
 
 const errorList = ["Error message 1", "Error message 2"];
 

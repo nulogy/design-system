@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { space, SpaceProps } from "styled-system";
 import { Manager, Reference, Popper } from "react-popper-latest";
 import { transparentize } from "polished";
