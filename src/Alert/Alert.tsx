@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
-import { SpaceProps, LayoutProps } from "styled-system";
 import { Box } from "../Box";
+import {BoxProps} from "../Box/Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 
-export type AlertProps = SpaceProps &
-  LayoutProps & {
+export type AlertProps = BoxProps & {
     children?: React.ReactNode;
     className?: string;
     isCloseable?: boolean;
