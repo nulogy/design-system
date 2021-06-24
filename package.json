@@ -8,7 +8,7 @@
   },
   "scripts": {
     "chromatic": "npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes",
-    "lint": "yarn run eslint",
+    "lint": "yarn run tsc && yarn run eslint",
     "eslint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
     "lint:fix": "yarn run eslint --fix",
     "start": "concurrently \"yarn build:watch\" \"start-storybook -p 9999\"",
