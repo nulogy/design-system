@@ -1,3 +1,6 @@
+// @ts-nocheck
+// typescript turned off because of {toast.type} not being a string
+
 import React, { useState } from "react";
 import { Button, DangerButton, IconicButton, PrimaryButton } from "../Button";
 import { Flex } from "../Flex";

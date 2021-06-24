@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";

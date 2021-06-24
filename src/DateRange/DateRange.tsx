@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
 import { isBefore, isSameDay } from "date-fns";
 import styled from "styled-components";
