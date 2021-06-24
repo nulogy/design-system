@@ -36,7 +36,11 @@ const ColumnHeaderWithFilter = ({ onChange, label }) => (
   <Input labelText={`Filter by ${label}`} onChange={onChange} name={label} />
 );
 
-const TableWithFilters = ({ rowsPerPage }) => {
+type TableWithFiltersProps = {
+  rowsPerPage?: number;
+};
+
+const TableWithFilters = ({ rowsPerPage }: TableWithFiltersProps) => {
   const [rows, setRows] = useState(ROWS);
   const [filter, setFilter] = useState({});
 

@@ -15,8 +15,8 @@ type TableState = {
 }
 
 class TableWithServerSidePagination extends React.Component<{}, TableState> {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       rows: [],
@@ -27,7 +27,7 @@ class TableWithServerSidePagination extends React.Component<{}, TableState> {
 
   componentDidMount() {
     const { page } = this.state;
-    this.getData(page);
+    this.getData(page, null);
   }
 
   getData = (pageNumber, callback) => {
