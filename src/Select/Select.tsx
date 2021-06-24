@@ -93,7 +93,7 @@ const extractValue = (options, isMulti) => {
   }
 };
 export type SelectProps = {
-  options: any[];
+  options?: any[];
   windowThreshold?: number;
   filterOption?: (...args: any[]) => any;
   autocomplete?: boolean;
