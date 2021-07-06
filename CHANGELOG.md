@@ -1,3 +1,10 @@
+## [6.0.4](https://github.com/nulogy/design-system/compare/v6.0.3...v6.0.4) (2021-07-06)
+
+
+### Bug Fixes
+
+* pass compact prop to table footer ([#915](https://github.com/nulogy/design-system/issues/915)) ([da42ad1](https://github.com/nulogy/design-system/commit/da42ad110a5af0032402554caca46002c7374603))
+
 ## [6.0.3](https://github.com/nulogy/design-system/compare/v6.0.2...v6.0.3) (2021-06-23)
 
 
