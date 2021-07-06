@@ -68,6 +68,7 @@ const BaseTable: React.SFC<BaseTableProps> = ({
         rows={footerRows}
         keyField={keyField}
         loading={loading}
+        compact={compact}
       />
     )}
   </StyledTable>
