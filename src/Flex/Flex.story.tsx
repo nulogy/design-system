@@ -6,7 +6,7 @@ const Flex = ({ children, ...props }) => (
   <NDSFlex
     boxSizing="content-box"
     padding="x3"
-    background="whiteGrey"
+    bg="whiteGrey"
     minHeight="400px"
     {...props}
   >
