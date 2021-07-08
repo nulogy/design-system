@@ -8,14 +8,10 @@ export default {
   title: "Components/Box",
 };
 
-const styles = {
-  background: "red"
-}
-
 export const _Box = () => <Box p="x3">Hello World</Box>;
 
 export const WithATextColour = () => (
-  <Flex p="x3" color="blue" style={styles}>
+  <Flex p="x3" color="blue">
     Hello World
   </Flex>
 );

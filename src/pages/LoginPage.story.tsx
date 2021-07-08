@@ -45,7 +45,7 @@ export const Base = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Box mb="x3">
+        <Box mb="x2" width="100%">
           <Branding
             withLine
             size="large"
@@ -100,7 +100,7 @@ export const WithRememberMe = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Box mb="x2">
+        <Box mb="x2" width="100%">
           <Branding
             withLine
             size="large"
@@ -160,7 +160,7 @@ export const WithForgotPasswordLink = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Box mb="x2">
+        <Box mb="x2" width="100%">
           <Branding
             withLine
             size="large"
@@ -222,7 +222,7 @@ export const WithError = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Box mb="x2">
+        <Box mb="x2" width="100%">
           <Branding
             withLine
             size="large"
@@ -279,7 +279,7 @@ export const WithErrorAndNoAdditionalText = () => (
         flexDirection="column"
         alignItems="center"
       >
-        <Box mb="x4">
+        <Box mb="x4" width="100%">
           <Branding
             withLine
             size="large"
