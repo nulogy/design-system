@@ -4,10 +4,12 @@ import theme from "../theme";
 
 const Flex = ({ children, ...props }) => (
   <NDSFlex
-    boxSizing="content-box"
     padding="x3"
     bg="whiteGrey"
     minHeight="400px"
+    style={{
+      boxSizing: "content-box",
+    }}
     {...props}
   >
     {children}
@@ -18,7 +20,10 @@ const IE11Flex = ({ children, ...props }) => (
   <NDSFlex
     boxSizing="content-box"
     padding="x3"
-    background="whiteGrey"
+    bg="whiteGrey"
+    style={{
+      boxSizing: "content-box",
+    }}
     {...props}
   >
     {children}
