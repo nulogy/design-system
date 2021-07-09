@@ -1,3 +1,10 @@
+## [6.0.5](https://github.com/nulogy/design-system/compare/v6.0.4...v6.0.5) (2021-07-09)
+
+
+### Bug Fixes
+
+* fix remaining known typescript issues ([#908](https://github.com/nulogy/design-system/issues/908)) ([44b7eb7](https://github.com/nulogy/design-system/commit/44b7eb777a7a8c62b57c8187afc01ee0fd0179d1))
+
 ## [6.0.4](https://github.com/nulogy/design-system/compare/v6.0.3...v6.0.4) (2021-07-06)
 
 
