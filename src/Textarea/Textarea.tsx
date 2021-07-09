@@ -2,6 +2,7 @@ import React, { forwardRef } from "react";
 import styled from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { transparentize } from "polished";
+import { SpaceProps } from "styled-system";
 import { space } from "styled-system";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -36,13 +37,14 @@ const getTextareaStyle = (props) => {
   return textareaStyleMap.default;
 };
 
-type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> & {
-  theme?: DefaultNDSThemeType;
-  errorMessage?: string;
-  errorList?: string[];
-  error?: boolean;
-  rows?: number;
-};
+type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
+  SpaceProps & {
+    theme?: DefaultNDSThemeType;
+    errorMessage?: string;
+    errorList?: string[];
+    error?: boolean;
+    rows?: number;
+  };
 const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
   space,
   ({ theme }) => ({
@@ -99,31 +101,33 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
   ) => {
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
-    return <Field className={className} {...spaceProps}>
-      <MaybeFieldLabel
-        labelText={labelText}
-        requirementText={requirementText}
-        helpText={helpText}
-      >
-        <StyledTextarea
-          aria-invalid={error}
-          aria-required={required}
-          required={required}
-          id={id}
-          ref={ref}
+    return (
+      <Field className={className} {...spaceProps}>
+        <MaybeFieldLabel
+          labelText={labelText}
+          requirementText={requirementText}
+          helpText={helpText}
+        >
+          <StyledTextarea
+            aria-invalid={error}
+            aria-required={required}
+            required={required}
+            id={id}
+            ref={ref}
+            errorMessage={errorMessage}
+            errorList={errorList}
+            error={error}
+            rows={rows}
+            {...restProps}
+          />
+        </MaybeFieldLabel>
+        <InlineValidation
+          mt="x1"
           errorMessage={errorMessage}
           errorList={errorList}
-          error={error}
-          rows={rows}
-          {...restProps}
         />
-      </MaybeFieldLabel>
-      <InlineValidation
-        mt="x1"
-        errorMessage={errorMessage}
-        errorList={errorList}
-      />
-    </Field>
+      </Field>
+    );
   }
 );
 Textarea.defaultProps = {

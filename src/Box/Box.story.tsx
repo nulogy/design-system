@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Button } from "../Button";
-import { Box } from "../index";
+import { Box, Flex } from "../index";
 import { AnimatedBox } from "./Box";
 
 export default {
@@ -11,9 +11,9 @@ export default {
 export const _Box = () => <Box p="x3">Hello World</Box>;
 
 export const WithATextColour = () => (
-  <Box p="x3" color="blue">
+  <Flex p="x3" color="blue">
     Hello World
-  </Box>
+  </Flex>
 );
 
 WithATextColour.story = {

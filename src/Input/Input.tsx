@@ -1,11 +1,12 @@
 import React, { forwardRef } from "react";
 import propTypes from "@styled-system/prop-types";
+import {SpaceProps} from "styled-system";
 import { getSubset, omitSubset } from "../utils/subset";
 import { Field } from "../Form";
 import { InlineValidation } from "../Validation";
 import { InputField, InputFieldProps } from "./InputField";
 
-type InputProps = InputFieldProps & {
+type InputProps = InputFieldProps & SpaceProps & {
   errorMessage?: string;
   helpText?: React.ReactNode;
   errorList?: string[];

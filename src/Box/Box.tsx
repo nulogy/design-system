@@ -27,12 +27,12 @@ import {
   OverflowProps,
   typography,
 } from "styled-system";
+import { TypographyProps } from 'styled-system';
 import { transition, TransitionProps } from "../StyledProps/transition";
 import { transform, TransformProps } from "../StyledProps/transform";
 import { CursorProps, cursor } from "../StyledProps/cursor";
 import { VisibilityProps, visibility } from "../StyledProps/visibility";
 import { ThemeType } from "../theme.type";
-import { TypographyProps } from 'styled-system';
 
 type SharedBoxProps = ColorProps &
   SpaceProps &
@@ -49,7 +49,9 @@ type SharedBoxProps = ColorProps &
   CursorProps &
   VisibilityProps &
   OverflowProps &
-  TypographyProps;
+  TypographyProps & {
+    boxSizing?: string
+  }
 
 type CssArg = {
   theme: ThemeType;

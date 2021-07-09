@@ -17,6 +17,7 @@ interface CheckboxGroupProps {
   id?: string;
   helpText?: React.ReactNode;
   requirementText?: string;
+  required?: boolean;
   disabled?: boolean;
 }
 

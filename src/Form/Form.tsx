@@ -3,16 +3,24 @@ import styled from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import { Heading2 } from "../Type";
 import { Alert } from "../Alert";
+import { ThemeType } from "../theme.type";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
 
-type FormProps = React.ComponentPropsWithRef<"form"> &
-  SpaceProps & {
-    title?: string;
-  };
+type FormProps = SpaceProps & {
+  title?: string;
+  children: React.ReactNode;
+  style?: React.CSSProperties;
+  id?: string;
+};
 
-const FormStyles = ({ title, theme }) => ({
+type FormStylesProps = {
+  title?: string;
+  theme: ThemeType;
+};
+
+const FormStyles = ({ title, theme }: FormStylesProps) => ({
   width: "100%",
   [`${Heading2}`]: {
     marginBottom: title ? theme.space.x6 : 0,
@@ -33,6 +41,7 @@ const FormStyles = ({ title, theme }) => ({
     },
   },
 });
+
 const Form = styled(({ title, children, ...props }: FormProps) => (
   <form {...props}>
     {title && <Heading2>{title}</Heading2>}
@@ -40,8 +49,4 @@ const Form = styled(({ title, children, ...props }: FormProps) => (
   </form>
 ))(space, FormStyles);
 
-Form.defaultProps = {
-  children: [],
-  title: undefined,
-};
 export default Form;

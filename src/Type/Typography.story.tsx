@@ -83,7 +83,7 @@ export const Article = () => (
     <Heading3>
       This is small text (14px) with medium(default) line height (24px).
     </Heading3>
-    <Text mb="x3" fontSize={0} lineHeight={theme.lineHeights.smallTextBase}>
+    <Text mb="x3" fontSize="small" lineHeight={theme.lineHeights.smallTextBase}>
       Porttitor urna sit amet, congue nulla. Etiam in posuere nibh. Nam
       pellentesque, lacus id elementum posuere, neque purus ullamcorper nunc,
       consequat mi velit eget mi. Duis ipsum augue, pulvinar ullamcorper

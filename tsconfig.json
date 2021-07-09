@@ -22,9 +22,7 @@
   "exclude": [
     "node_modules",
     "./dist",
-    "**/*.story.js",
     "**/*.spec.js",
-    "**/*.story.ts",
-    "**/*.spec.ts"
+    "**/*.spec.tsx"
   ]
 }

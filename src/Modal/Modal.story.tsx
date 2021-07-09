@@ -34,9 +34,13 @@ const options = [
 
 // Modal.setAppElement("#root")
 
-class ModalExample extends React.Component {
-  constructor() {
-    super();
+type ModalExampleProps = {
+  isOpen: boolean
+}
+
+class ModalExample extends React.Component<{}, ModalExampleProps> {
+  constructor(props) {
+    super(props);
 
     this.state = {
       isOpen: false,

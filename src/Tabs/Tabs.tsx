@@ -3,10 +3,10 @@ import styled from "styled-components";
 import React from "react";
 import propTypes from "@styled-system/prop-types";
 import ReactResizeDetector from "react-resize-detector";
-import TabFocusManager from "./TabFocusManager";
-import TabScrollIndicators from "./TabScrollIndicators";
 import { getSubset } from "../utils/subset";
 import { Box } from "../Box";
+import TabFocusManager from "./TabFocusManager";
+import TabScrollIndicators from "./TabScrollIndicators";
 
 const TabContainer = styled(Box)(({ theme }) => ({
   display: "flex",
@@ -29,7 +29,7 @@ const TabContainer = styled(Box)(({ theme }) => ({
     right: 0,
   },
 }));
-type TabsProps = {
+export type TabsProps = {
   className?: string;
   selectedIndex?: number;
   defaultSelectedIndex?: number;
@@ -37,7 +37,7 @@ type TabsProps = {
   fitted?: boolean;
   onTabClick?: (...args: any[]) => any;
 };
-type TabsState = {
+export type TabsState = {
   selectedIndex: any;
   selectedIndex: any;
 };

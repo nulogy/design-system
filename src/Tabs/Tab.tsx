@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
@@ -78,7 +77,7 @@ const TabButton: React.SFC<TabButtonProps> = styled.button(
     },
   })
 );
-type TabProps = React.ComponentPropsWithRef<"button"> & {
+type TabProps = TabButtonProps & {
   label?: React.ReactNode;
 };
 const Tab: React.SFC<TabProps> = React.forwardRef(

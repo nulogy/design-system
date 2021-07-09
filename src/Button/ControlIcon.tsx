@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { space } from "styled-system";
+import { space, SpaceProps } from "styled-system";
 import { Icon } from "../Icon";
 
-type ControlIconProps = React.ComponentPropsWithRef<"button"> & {
-  onClick?: (...args: any[]) => any;
-  icon: string;
-  toggled?: boolean;
-  disabled?: boolean;
-  size?: string;
-  type?: string;
-  label?: string;
-};
+type ControlIconProps = React.ComponentPropsWithRef<"button"> &
+  SpaceProps & {
+    onClick?: (...args: any[]) => any;
+    icon: string;
+    toggled?: boolean;
+    disabled?: boolean;
+    size?: string;
+    type?: string;
+    label?: string;
+  };
 
 const getIconColorByState = ({ toggled, disabled, theme }) => {
   if (toggled) {
@@ -47,7 +48,15 @@ const StyledButton: React.SFC<any> = styled.button(
 
 const ControlIcon = React.forwardRef(
   (
-    { icon, toggled, disabled, label, size = "x4", type = "button", ...props }: ControlIconProps,
+    {
+      icon,
+      toggled,
+      disabled,
+      label,
+      size = "x4",
+      type = "button",
+      ...props
+    }: ControlIconProps,
     ref
   ) => (
     <StyledButton

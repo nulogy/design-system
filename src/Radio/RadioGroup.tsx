@@ -40,6 +40,7 @@ interface RadioGroupProps {
   errorList?: string[];
   labelText?: string;
   helpText?: string;
+  required?: boolean;
   requirementText?: string;
   children?: any;
   name?: string;

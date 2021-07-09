@@ -17,6 +17,7 @@ export type ButtonProps = SpaceProps &
     asLink?: boolean;
     children?: React.ReactNode;
     theme?: DefaultNDSThemeType;
+    href?: string;
   };
 
 const getSize = (size: SizeType, theme: DefaultNDSThemeType) => {

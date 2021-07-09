@@ -1,6 +1,7 @@
 import React, { forwardRef, ReactNode } from "react";
 import styled, { CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
+import { SpaceProps } from "styled-system";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
@@ -100,7 +101,7 @@ const RadioInput: React.FC<RadioInputProps> = styled.input((props) => ({
   },
 }));
 
-type RadioProps = VisualRadioProps &
+type RadioProps = VisualRadioProps & SpaceProps &
   React.ComponentPropsWithRef<"input"> & {
     labelText?: ReactNode;
     checked?: boolean;

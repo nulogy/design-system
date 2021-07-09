@@ -1,6 +1,7 @@
+// @ts-nocheck
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import { select, boolean } from "@storybook/addon-knobs";
 
 import { DatePicker, Button } from "../index";
 

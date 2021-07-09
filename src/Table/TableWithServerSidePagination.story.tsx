@@ -8,9 +8,15 @@ const COLUMNS = [
   { label: "Completed", dataKey: "completed" },
 ];
 
-class TableWithServerSidePagination extends React.Component {
-  constructor() {
-    super();
+type TableState = {
+  page: number,
+  loading: boolean,
+  rows: Array<any>
+}
+
+class TableWithServerSidePagination extends React.Component<{}, TableState> {
+  constructor(props) {
+    super(props);
 
     this.state = {
       rows: [],
@@ -21,7 +27,7 @@ class TableWithServerSidePagination extends React.Component {
 
   componentDidMount() {
     const { page } = this.state;
-    this.getData(page);
+    this.getData(page, null);
   }
 
   getData = (pageNumber, callback) => {

@@ -14,7 +14,7 @@ export const Inactive = () => (
 export const PageExampleActive = () => (
   <Overlay flexDirection="column" m={{ extraSmall: "x2", small: "x3" }}>
     <Flex
-      flexGrow="2"
+      flexGrow={2}
       flexDirection="column"
       justifyContent="center"
       margin="auto"
@@ -44,7 +44,7 @@ PageExampleActive.story = {
 export const PageExampleInactive = () => (
   <Overlay flexDirection="column" m={{ extraSmall: "x2", small: "x3" }}>
     <Flex
-      flexGrow="2"
+      flexGrow={2}
       flexDirection="column"
       justifyContent="center"
       margin="auto"
