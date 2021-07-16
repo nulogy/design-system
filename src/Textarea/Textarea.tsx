@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import styled from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { transparentize } from "polished";
 import { SpaceProps } from "styled-system";
@@ -44,10 +44,11 @@ type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
     errorList?: string[];
     error?: boolean;
     rows?: number;
+    isResizeable?: boolean;
   };
 const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
   space,
-  ({ theme }) => ({
+  ({ theme, isResizeable }: any): CSSObject => ({
     display: "block",
     width: "100%",
     border: "1px solid",
@@ -57,6 +58,7 @@ const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
     lineHeight: theme.lineHeights.base,
     minHeight: theme.space.x5,
     minWidth: "20em",
+    resize: isResizeable ? null : "none",
     "&:focus": {
       outline: "none",
       color: theme.colors.black,
@@ -81,6 +83,7 @@ type TextareaProps = StyledTextareaProps & {
   helpText?: React.ReactNode;
   requirementText?: string;
   rows?: number;
+  isResizeable?: boolean;
 };
 const Textarea: React.SFC<TextareaProps> = forwardRef(
   (
@@ -95,6 +98,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
       id,
       className,
       rows,
+      isResizeable = true,
       ...props
     },
     ref
@@ -118,6 +122,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
             errorList={errorList}
             error={error}
             rows={rows}
+            isResizeable={isResizeable}
             {...restProps}
           />
         </MaybeFieldLabel>

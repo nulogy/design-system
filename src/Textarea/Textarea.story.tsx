@@ -32,10 +32,24 @@ TextareaWithAllProps.story = {
   name: "Textarea with all props",
 };
 
-export const SetToDisabled = () => <Textarea labelText="Label" disabled value="Disabled" />;
+export const SetToDisabled = () => (
+  <Textarea labelText="Label" disabled value="Disabled" />
+);
 
 SetToDisabled.story = {
   name: "Set to disabled",
+};
+
+export const WithNoResizing = () => (
+  <Textarea
+    labelText="Label"
+    value="I shouldn't be able to be resized"
+    isResizeable={false}
+  />
+);
+
+WithNoResizing.story = {
+  name: "With resizing turned off",
 };
 
 export const WithErrorMessage = () => (
