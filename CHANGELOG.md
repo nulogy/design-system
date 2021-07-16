@@ -1,3 +1,10 @@
+# [6.1.0](https://github.com/nulogy/design-system/compare/v6.0.5...v6.1.0) (2021-07-16)
+
+
+### Features
+
+* Add option to turn off resizing in a Textarea ([#919](https://github.com/nulogy/design-system/issues/919)) ([73efc0c](https://github.com/nulogy/design-system/commit/73efc0c9f89b818b0afe1920ea6d61d82895bd36))
+
 ## [6.0.5](https://github.com/nulogy/design-system/compare/v6.0.4...v6.0.5) (2021-07-09)
 
 
