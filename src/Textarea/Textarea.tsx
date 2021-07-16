@@ -44,6 +44,7 @@ type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
     errorList?: string[];
     error?: boolean;
     rows?: number;
+    isResizeable?: boolean;
   };
 const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
   space,
@@ -81,6 +82,7 @@ type TextareaProps = StyledTextareaProps & {
   helpText?: React.ReactNode;
   requirementText?: string;
   rows?: number;
+  isResizeable?: boolean;
 };
 const Textarea: React.SFC<TextareaProps> = forwardRef(
   (
@@ -95,6 +97,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
       id,
       className,
       rows,
+      isResizeable,
       ...props
     },
     ref
@@ -118,6 +121,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
             errorList={errorList}
             error={error}
             rows={rows}
+            isResizeable={isResizeable}
             {...restProps}
           />
         </MaybeFieldLabel>

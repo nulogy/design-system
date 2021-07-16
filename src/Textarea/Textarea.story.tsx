@@ -41,7 +41,11 @@ SetToDisabled.story = {
 };
 
 export const WithNoResizing = () => (
-  <Textarea labelText="Label" value="I shouldn't be able to be resized" isResizeable={false} />
+  <Textarea
+    labelText="Label"
+    value="I shouldn't be able to be resized"
+    isResizeable={false}
+  />
 );
 
 WithNoResizing.story = {
