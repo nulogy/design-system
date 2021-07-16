@@ -6,7 +6,7 @@ export default {
   title: "Components/IconicButton",
 };
 
-export const WithoutALabel = () => <IconicButton icon="chatBubble" />;
+export const WithoutALabel = () => <IconicButton icon="delete" />;
 
 WithoutALabel.story = {
   name: "without a label",

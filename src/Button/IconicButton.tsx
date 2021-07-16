@@ -118,9 +118,6 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
                 icon={icon}
                 p="half"
                 color={color}
-                style={{
-                  overflow: "visible"
-                }}
               />
             )}
           </Reference>
