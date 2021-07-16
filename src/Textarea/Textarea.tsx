@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import styled from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { transparentize } from "polished";
 import { SpaceProps } from "styled-system";
@@ -48,7 +48,7 @@ type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
   };
 const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
   space,
-  ({ theme }) => ({
+  ({ theme, isResizeable }: any): CSSObject => ({
     display: "block",
     width: "100%",
     border: "1px solid",
@@ -58,6 +58,7 @@ const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
     lineHeight: theme.lineHeights.base,
     minHeight: theme.space.x5,
     minWidth: "20em",
+    resize: isResizeable ? null : "none",
     "&:focus": {
       outline: "none",
       color: theme.colors.black,
@@ -97,7 +98,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
       id,
       className,
       rows,
-      isResizeable,
+      isResizeable = true,
       ...props
     },
     ref
