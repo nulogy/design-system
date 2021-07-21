@@ -105,7 +105,7 @@ const AsyncSelect = forwardRef(
           requirementText={requirementText}
           helpText={helpText}
         >
-          <StyledAsyncReactSelect
+          <AsyncReactSelect
             className={className}
             classNamePrefix={classNamePrefix}
             noOptionsMessage={noOptionsMessage}
@@ -119,6 +119,7 @@ const AsyncSelect = forwardRef(
               error,
               maxHeight,
               windowed: false,
+              isAsync: true,
             })}
             isDisabled={disabled}
             isSearchable={autocomplete}
