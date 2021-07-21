@@ -178,8 +178,6 @@
       "node_modules/(?!(@nulogy|storybook-addon-performance))"
     ],
     "testMatch": [
-      "**/src/**/*.spec.js",
-      "**/spec/**/*.spec.js",
       "**/src/**/*.spec.tsx",
       "**/spec/**/*.spec.tsx"
     ],
