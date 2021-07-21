@@ -1,7 +1,7 @@
 import React, { useContext, forwardRef } from "react";
 import AsyncReactSelect from "react-select/async";
 import { useTranslation } from "react-i18next";
-import styled, { ThemeContext } from "styled-components";
+import { ThemeContext } from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -17,13 +17,6 @@ import {
   SelectInput,
 } from "../Select";
 import { getSubset } from "../utils/subset";
-
-const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
-  // These classes are only applied when classname prefix is set
-  "[class*='dropdown-indicator'], [class*='indicator-separator'], [class*='indicatorContainer']": {
-    display: showArrow ? "flex" : "none",
-  },
-}));
 
 type AsyncSelectProps = {
   windowThreshold?: number;
