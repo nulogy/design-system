@@ -1,3 +1,10 @@
+## [6.1.1](https://github.com/nulogy/design-system/compare/v6.1.0...v6.1.1) (2021-07-21)
+
+
+### Bug Fixes
+
+* prevent jest from trying to run cypress tests ([#920](https://github.com/nulogy/design-system/issues/920)) ([c7b86db](https://github.com/nulogy/design-system/commit/c7b86dbd6c14ed618e2296e711fb6dc558ac22bd))
+
 # [6.1.0](https://github.com/nulogy/design-system/compare/v6.0.5...v6.1.0) (2021-07-16)
 
 
