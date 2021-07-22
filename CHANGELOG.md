@@ -1,3 +1,10 @@
+## [6.1.2](https://github.com/nulogy/design-system/compare/v6.1.1...v6.1.2) (2021-07-22)
+
+
+### Bug Fixes
+
+* Allow clearing all items in the AsyncSelect component ([#921](https://github.com/nulogy/design-system/issues/921)) ([8c056a6](https://github.com/nulogy/design-system/commit/8c056a6b72414032ff38939761f95e7981e7d276))
+
 ## [6.1.1](https://github.com/nulogy/design-system/compare/v6.1.0...v6.1.1) (2021-07-21)
 
 
