@@ -3,6 +3,7 @@ describe("AsyncSelect", () => {
   const getDropdownMenu = () => cy.get("[data-testid='select-dropdown']");
   const getMultiselect = () => getSelectComponent();
   const getClearButton = () => cy.get("[data-testid='select-clear']");
+  const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
   describe("Multiselect", () => {
     beforeEach(() => {
@@ -13,11 +14,11 @@ describe("AsyncSelect", () => {
       getMultiselect().click();
 
       cy.focused().type("cana");
-      cy.wait(200);
+      assertDropDownIsOpen().contains("Canada");
       cy.focused().type("{enter}");
 
       cy.focused().type("austra");
-      cy.wait(200);
+      assertDropDownIsOpen().contains("Australia");
       cy.focused().type("{enter}");
 
       getMultiselect().contains("Canada");

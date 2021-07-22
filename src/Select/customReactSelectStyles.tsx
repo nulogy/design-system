@@ -22,15 +22,18 @@ const getShadow = ({ errored, isOpen, theme }) => {
   }
 };
 
-export const showDropdownIndicator = ({ isMulti, hasValue, isAsync }) =>
-  isMulti && hasValue && !isAsync;
+export const showIndicatorSeparator = ({
+  isMulti,
+  hasValue,
+  hasDefaultOptions,
+}) => isMulti && hasValue && hasDefaultOptions;
 
 const customStyles = ({
   theme,
   error,
   maxHeight,
   windowed,
-  isAsync = false,
+  hasDefaultOptions = true,
 }) => {
   return {
     option: () => ({
@@ -85,11 +88,7 @@ const customStyles = ({
     }),
     dropdownIndicator: (provided, state) => ({
       ...provided,
-      ...(!showDropdownIndicator({
-        isMulti: state.isMulti,
-        hasValue: state.hasValue,
-        isAsync,
-      }) && { display: "none" }),
+      ...(!hasDefaultOptions && { display: "none" }),
       color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey,
     }),
     indicatorsContainer: (provided) => ({
@@ -170,10 +169,10 @@ const customStyles = ({
     }),
     indicatorSeparator: (provided, state) => ({
       ...provided,
-      display: showDropdownIndicator({
+      display: showIndicatorSeparator({
         isMulti: state.isMulti,
         hasValue: state.hasValue,
-        isAsync,
+        hasDefaultOptions,
       })
         ? "block"
         : "none",

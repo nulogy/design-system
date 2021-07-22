@@ -1,23 +1,23 @@
-import { showDropdownIndicator } from "./customReactSelectStyles";
+import { showIndicatorSeparator } from "./customReactSelectStyles";
 
 describe("custom react-select styles", () => {
-  describe("showDropdownIndicator", () => {
+  describe("showIndicatorSeparator", () => {
     test.each`
-      isMulti  | hasValue | isAsync  | expected
-      ${true}  | ${false} | ${false} | ${false}
-      ${false} | ${true}  | ${false} | ${false}
-      ${false} | ${false} | ${true}  | ${false}
-      ${true}  | ${true}  | ${false} | ${true}
-      ${false} | ${true}  | ${true}  | ${false}
-      ${true}  | ${false} | ${true}  | ${false}
-      ${true}  | ${true}  | ${true}  | ${false}
-      ${false} | ${false} | ${false} | ${false}
+      isMulti  | hasValue | hasDefaultOptions | expected
+      ${true}  | ${true}  | ${true}           | ${true}
+      ${true}  | ${false} | ${false}          | ${false}
+      ${false} | ${true}  | ${false}          | ${false}
+      ${false} | ${false} | ${true}           | ${false}
+      ${true}  | ${true}  | ${false}          | ${false}
+      ${false} | ${true}  | ${true}           | ${false}
+      ${true}  | ${false} | ${true}           | ${false}
+      ${false} | ${false} | ${false}          | ${false}
     `(
-      "returns $expected when isMulti is $isMulti, hasValue is $hasValue, and isAsync is $isAsync",
-      ({ isMulti, hasValue, isAsync, expected }) => {
-        expect(showDropdownIndicator({ isMulti, hasValue, isAsync })).toBe(
-          expected
-        );
+      "returns $expected when isMulti is $isMulti, hasValue is $hasValue, and hasDefaultOptions is $hasDefaultOptions",
+      ({ isMulti, hasValue, hasDefaultOptions, expected }) => {
+        expect(
+          showIndicatorSeparator({ isMulti, hasValue, hasDefaultOptions })
+        ).toBe(expected);
       }
     );
   });

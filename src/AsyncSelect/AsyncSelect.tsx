@@ -119,7 +119,7 @@ const AsyncSelect = forwardRef(
               error,
               maxHeight,
               windowed: false,
-              isAsync: true,
+              hasDefaultOptions: Boolean(defaultOptions),
             })}
             isDisabled={disabled}
             isSearchable={autocomplete}
@@ -148,7 +148,6 @@ const AsyncSelect = forwardRef(
               Input: SelectInput,
               ...components,
             }}
-            showArrow={defaultOptions}
             aria-label={ariaLabel}
             cacheOptions={cacheOptions}
             defaultOptions={defaultOptions}
