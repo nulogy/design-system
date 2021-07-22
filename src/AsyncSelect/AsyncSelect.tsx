@@ -15,6 +15,7 @@ import {
   SelectContainer,
   SelectMenu,
   SelectInput,
+  SelectDropdownIndicator,
 } from "../Select";
 import { getSubset } from "../utils/subset";
 
@@ -143,6 +144,7 @@ const AsyncSelect = forwardRef(
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,
+              DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
               Input: SelectInput,

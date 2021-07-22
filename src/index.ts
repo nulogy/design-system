@@ -38,6 +38,7 @@ export {
   SelectControl,
   SelectMultiValue,
   SelectClearIndicator,
+  SelectDropdownIndicator,
   SelectContainer,
   SelectMenu,
   SelectInput,

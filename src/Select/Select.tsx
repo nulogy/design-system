@@ -16,6 +16,7 @@ import {
   SelectContainer,
   SelectMenu,
   SelectInput,
+  SelectDropdownIndicator,
 } from "./SelectComponents";
 import { getSubset } from "../utils/subset";
 
@@ -223,6 +224,7 @@ const ReactSelect = forwardRef(
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,
+              DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
               Input: SelectInput,

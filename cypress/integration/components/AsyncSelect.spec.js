@@ -3,6 +3,7 @@ describe("AsyncSelect", () => {
   const getDropdownMenu = () => cy.get("[data-testid='select-dropdown']");
   const getMultiselect = () => getSelectComponent();
   const getClearButton = () => cy.get("[data-testid='select-clear']");
+  const getDropdownButton = () => cy.get("[data-testid='select-arrow']");
   const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
   describe("Multiselect", () => {
@@ -38,11 +39,23 @@ describe("AsyncSelect", () => {
     });
 
     it("does not show the dropdown arrow", () => {
-      getDropdownMenu().should("not.exist");
+      getDropdownButton().should("not.exist");
     });
+
+    it("does show the dropdown arrow if there are default options", () => {});
 
     it("does not show the clear button when no values are selected", () => {
       getClearButton().should("not.exist");
+    });
+  });
+
+  describe("with default options", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("asyncselect--with-default-options");
+    });
+
+    it("does show the dropdown arrow if there are default options", () => {
+      getDropdownButton().should("exist");
     });
   });
 });
