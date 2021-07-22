@@ -1,7 +1,7 @@
 import React, { useContext, forwardRef } from "react";
 import AsyncReactSelect from "react-select/async";
 import { useTranslation } from "react-i18next";
-import styled, { ThemeContext } from "styled-components";
+import { ThemeContext } from "styled-components";
 import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -15,15 +15,9 @@ import {
   SelectContainer,
   SelectMenu,
   SelectInput,
+  SelectDropdownIndicator,
 } from "../Select";
 import { getSubset } from "../utils/subset";
-
-const StyledAsyncReactSelect = styled(AsyncReactSelect)(({ showArrow }) => ({
-  // These classes are only applied when classname prefix is set
-  "[class*='dropdown-indicator'], [class*='indicator-separator'], [class*='indicatorContainer']": {
-    display: showArrow ? "flex" : "none",
-  },
-}));
 
 type AsyncSelectProps = {
   windowThreshold?: number;
@@ -112,7 +106,7 @@ const AsyncSelect = forwardRef(
           requirementText={requirementText}
           helpText={helpText}
         >
-          <StyledAsyncReactSelect
+          <AsyncReactSelect
             className={className}
             classNamePrefix={classNamePrefix}
             noOptionsMessage={noOptionsMessage}
@@ -126,6 +120,7 @@ const AsyncSelect = forwardRef(
               error,
               maxHeight,
               windowed: false,
+              hasDefaultOptions: Boolean(defaultOptions),
             })}
             isDisabled={disabled}
             isSearchable={autocomplete}
@@ -149,12 +144,12 @@ const AsyncSelect = forwardRef(
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,
+              DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
               Input: SelectInput,
               ...components,
             }}
-            showArrow={defaultOptions}
             aria-label={ariaLabel}
             cacheOptions={cacheOptions}
             defaultOptions={defaultOptions}

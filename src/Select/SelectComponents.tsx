@@ -31,6 +31,14 @@ export const SelectClearIndicator = (props) => {
   );
 };
 
+export const SelectDropdownIndicator = (props) => {
+  return (
+    <div data-testid="select-arrow">
+      <selectComponents.DropdownIndicator {...props} />
+    </div>
+  );
+};
+
 export const SelectMenu = (props) => {
   return (
     <div data-testid="select-dropdown">
