@@ -29,7 +29,7 @@ describe("AsyncSelect", () => {
       getMultiselect().click();
 
       cy.focused().type("cana");
-      cy.wait(200);
+      assertDropDownIsOpen().contains("Canada");
       cy.focused().type("{enter}");
 
       getClearButton().click();
