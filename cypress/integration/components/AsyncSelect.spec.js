@@ -39,10 +39,8 @@ describe("AsyncSelect", () => {
     });
 
     it("does not show the dropdown arrow", () => {
-      getDropdownButton().should("not.exist");
+      getDropdownButton().should("not.be.visible");
     });
-
-    it("does show the dropdown arrow if there are default options", () => {});
 
     it("does not show the clear button when no values are selected", () => {
       getClearButton().should("not.exist");
@@ -54,8 +52,8 @@ describe("AsyncSelect", () => {
       cy.renderFromStorybook("asyncselect--with-default-options");
     });
 
-    it("does show the dropdown arrow if there are default options", () => {
-      getDropdownButton().should("exist");
+    it("shows the dropdown arrow if there are default options", () => {
+      getDropdownButton().should("be.visible");
     });
   });
 });
