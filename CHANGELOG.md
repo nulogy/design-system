@@ -1,3 +1,10 @@
+## [6.1.3](https://github.com/nulogy/design-system/compare/v6.1.2...v6.1.3) (2021-07-23)
+
+
+### Bug Fixes
+
+* Remove @hypnosphi/create-react-context dependency ([#923](https://github.com/nulogy/design-system/issues/923)) ([dbc796f](https://github.com/nulogy/design-system/commit/dbc796fe9b3f34932fc2b7d6ccd5872692b1cb2f))
+
 ## [6.1.2](https://github.com/nulogy/design-system/compare/v6.1.1...v6.1.2) (2021-07-22)
 
 
