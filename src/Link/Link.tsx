@@ -6,6 +6,7 @@ import {
   ColorProps,
   SpaceProps,
   LayoutProps,
+  TypographyProps,
 } from "styled-system";
 import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
@@ -14,7 +15,8 @@ import { DefaultNDSThemeType } from "../theme.type";
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
   ColorProps &
   SpaceProps &
-  LayoutProps & {
+  LayoutProps &
+  TypographyProps & {
     className?: string;
     underline?: boolean;
     hover?: string;
@@ -36,6 +38,7 @@ const getHoverColor = (props: LinkProps) =>
   props.hover
     ? props.color
     : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
+
 const Link = styled.a.withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
     !["underline", "hover"].includes(prop) && defaultValidatorFn(prop),
@@ -53,10 +56,12 @@ const Link = styled.a.withConfig({
     },
   })
 );
+
 Link.defaultProps = {
   className: undefined,
   underline: true,
   fontSize: "medium",
   color: "blue",
 };
+
 export default Link;

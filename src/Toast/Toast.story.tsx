@@ -178,6 +178,36 @@ WithCloseButton.story = {
   name: "with close button",
 };
 
+export const CloseableWithLongMessage = () => {
+  const [triggered, setTriggered] = useState(false);
+
+  const triggerToast = () => {
+    setTriggered(!triggered);
+  };
+
+  const onHideHandler = () => {
+    setTriggered(false);
+  };
+
+  return (
+    <>
+      <Button onClick={triggerToast}>Save Changes</Button>
+      <Toast
+        triggered={triggered}
+        onHide={onHideHandler}
+        type="danger"
+        isCloseable
+      >
+        An error occurred while saving results. Please try again
+      </Toast>
+    </>
+  );
+};
+
+CloseableWithLongMessage.story = {
+  name: "closeable with a long message",
+};
+
 export const MultipleCloseableToastsExample = () => {
   const MultipleToastsExample = () => {
     const [currentToasts, setCurrentToasts] = useState([]);

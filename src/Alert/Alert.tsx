@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { Box } from "../Box";
-import {BoxProps} from "../Box/Box";
+import { BoxProps } from "../Box/Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 
 export type AlertProps = BoxProps & {
-    children?: React.ReactNode;
-    className?: string;
-    isCloseable?: boolean;
-    closeAriaLabel?: string;
-    title?: string;
-    type?: "danger" | "informative" | "success" | "warning" | undefined;
-    onClose?: any;
-    controlled?: boolean;
-    style?: React.CSSProperties;
-  };
+  children?: React.ReactNode;
+  className?: string;
+  isCloseable?: boolean;
+  closeAriaLabel?: string;
+  title?: string;
+  type?: "danger" | "informative" | "success" | "warning" | undefined;
+  onClose?: any;
+  controlled?: boolean;
+  style?: React.CSSProperties;
+};
 
 const AlertStyles = ({ theme }) => ({
   [`${Link}`]: {
@@ -56,17 +56,18 @@ const CloseButton = ({
 }: CloseButtonProps) => {
   const { t } = useTranslation();
   return (
-    <Box>
+    <Flex ml="x2">
       <Link
         as="button"
         color="darkGrey"
+        lineHeight="0"
         hover="blue"
         onClick={onClick}
         aria-label={ariaLabel || t("close")}
       >
         <Icon icon="close" size="16" />
       </Link>
-    </Box>
+    </Flex>
   );
 };
 
@@ -76,7 +77,6 @@ const Alert = styled(
     isCloseable = false,
     title,
     type = "informative",
-    className,
     closeAriaLabel,
     onClose,
     controlled = false,
@@ -99,7 +99,6 @@ const Alert = styled(
         borderLeftColor={alertColours[type].borderColor}
         borderLeftStyle="solid"
         role="alert"
-        className={className}
         {...props}
       >
         {type === "danger" && (
