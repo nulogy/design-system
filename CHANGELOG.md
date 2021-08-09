@@ -1,3 +1,10 @@
+## [6.1.4](https://github.com/nulogy/design-system/compare/v6.1.3...v6.1.4) (2021-08-09)
+
+
+### Bug Fixes
+
+* Add spacing to the Toast close button and align it with text  ([#926](https://github.com/nulogy/design-system/issues/926)) ([d9a1653](https://github.com/nulogy/design-system/commit/d9a16537912e61c40619dca95955b80100a430a3))
+
 ## [6.1.3](https://github.com/nulogy/design-system/compare/v6.1.2...v6.1.3) (2021-07-23)
 
 
