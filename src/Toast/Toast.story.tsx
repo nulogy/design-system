@@ -166,7 +166,7 @@ export const WithCloseButton = () => {
       <>
         <Button onClick={triggerToast}>Save Changes</Button>
         <Toast triggered={triggered} onHide={onHideHandler} isCloseable>
-          Saved
+          An error occurred while saving results. Please try again
         </Toast>
       </>
     );
@@ -176,6 +176,38 @@ export const WithCloseButton = () => {
 
 WithCloseButton.story = {
   name: "with close button",
+};
+
+export const CloseableWithMultiLineMessage = () => {
+  const [triggered, setTriggered] = useState(false);
+
+  const triggerToast = () => {
+    setTriggered(!triggered);
+  };
+
+  const onHideHandler = () => {
+    setTriggered(false);
+  };
+
+  return (
+    <>
+      <Button onClick={triggerToast}>Save Changes</Button>
+      <Toast
+        triggered={triggered}
+        onHide={onHideHandler}
+        type="danger"
+        isCloseable
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem
+        eveniet, repellat accusamus error reiciendis libero. Totam autem
+        distinctio vo
+      </Toast>
+    </>
+  );
+};
+
+CloseableWithMultiLineMessage.story = {
+  name: "closeable with a 150 character long multi-line message",
 };
 
 export const MultipleCloseableToastsExample = () => {
