@@ -1,44 +1,30 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "@nulogy/nulogy"
-  ],
+  "extends": ["@nulogy/nulogy"],
   "rules": {
     "jsx-a11y/label-has-associated-control": [
       2,
       {
         "labelComponents": [],
-        "labelAttributes": [
-          "labelText"
-        ],
-        "controlComponents": [
-          "FieldLabel"
-        ],
+        "labelAttributes": ["labelText"],
+        "controlComponents": ["FieldLabel"],
         "assert": "either"
       }
     ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "components": [
-          "Link"
-        ],
-        "specialLink": [
-          "as"
-        ]
+        "components": ["Link"],
+        "specialLink": ["as"]
       }
     ],
     // rules below are to override nulogy config
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
-    ]
+    ],
+    "react/display-name": "off"
   }
 }
