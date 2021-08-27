@@ -1,3 +1,10 @@
+## [6.1.5](https://github.com/nulogy/design-system/compare/v6.1.4...v6.1.5) (2021-08-27)
+
+
+### Bug Fixes
+
+* Give Sidebar's zIndex prop to overlay ([#931](https://github.com/nulogy/design-system/issues/931)) ([8089f71](https://github.com/nulogy/design-system/commit/8089f71c5e54e3d05d5601002e48c3c3ddea10a5))
+
 ## [6.1.4](https://github.com/nulogy/design-system/compare/v6.1.3...v6.1.4) (2021-08-09)
 
 
