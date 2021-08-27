@@ -34,14 +34,14 @@ const focusFirstElement = () => {
   }
 }
 
-const SidebarOverlay = ({ transitionDuration, top, transparent, onClick }) => (
+const SidebarOverlay = ({ transitionDuration, top, transparent, zIndex = 799 as any, onClick }) => (
   <AnimatedBox
     position="fixed"
     top={top}
     bottom="0"
     left="0"
     right="0"
-    zIndex={"799" as any}
+    zIndex={zIndex}
     bg={!transparent && "rgba(18, 43, 71, 0.5)"}
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -70,6 +70,7 @@ const Sidebar = ({
   overlay = true,
   disableScroll = true,
   hideCloseButton = false,
+  zIndex,
   ...props
 }: SidebarProps) => {
   const closeButton = useRef(null);
@@ -133,7 +134,7 @@ const Sidebar = ({
   <>
     {closeOnOutsideClick && (
       <AnimatePresence>
-          {isOpen && (<SidebarOverlay top={top} transparent={!overlay} transitionDuration={duration} onClick={closeOnOutsideClick && isOpen && onClose} />) }
+          {isOpen && (<SidebarOverlay top={top} transparent={!overlay} transitionDuration={duration} zIndex={zIndex} onClick={closeOnOutsideClick && isOpen && onClose} />) }
       </AnimatePresence>
     )}
     <AnimatedBox
@@ -153,7 +154,7 @@ const Sidebar = ({
       top={top}
       right={offset}
       width={typeof width === 'string' ? { default: "100%", small: width } : width}
-      zIndex={"sidebar" as any}
+      zIndex={zIndex || "sidebar" as any}
       ref={sideBarRef as any}
       {...props}
     >

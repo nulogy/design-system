@@ -42,4 +42,13 @@ describe("Sidebar", () => {
       expect(queryByTestId("sidebar-overlay")).toBeNull();
     });
   });
+
+  describe("zIndex", () => {
+    it("provides a custom zIndex to the overlay", () => {
+      const { queryByTestId } = renderWithNDSProvider(
+        <Sidebar isOpen zIndex={1001}>Sidebar</Sidebar>
+      );
+      expect(queryByTestId("sidebar-overlay")).toHaveStyle("z-index: 1001");
+    });
+  });
 });
