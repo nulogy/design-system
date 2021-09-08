@@ -91,4 +91,12 @@ describe("TruncatedText", () => {
         .contains("Instructions fit here.");
     });
   });
+  describe("without children", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("truncatedtext--without-children");
+    });
+    it("renders without crashing", () => {
+      cy.get("[data-testid='truncated-text']").should("exist");
+    });
+  });
 });

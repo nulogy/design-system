@@ -76,3 +76,18 @@ export const FullWidth = () => (
 FullWidth.story = {
   name: "full width",
 };
+
+export const WithoutChildren = () => (
+  <Box>
+    <Heading1>
+      No text should appear after this sentence, neither should the page crash.
+    </Heading1>
+    <TruncatedText>{null}</TruncatedText>
+    <TruncatedText>{undefined}</TruncatedText>
+    <TruncatedText />
+  </Box>
+);
+
+WithoutChildren.story = {
+  name: "Without children",
+};
