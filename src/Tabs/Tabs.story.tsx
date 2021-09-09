@@ -5,7 +5,7 @@ import { Tab, Tabs } from ".";
 class ControlledTabs extends React.Component<TabsProps, TabsState> {
   constructor(props) {
     super(props);
-  this.state = {
+    this.state = {
       selectedIndex: null,
     };
 
@@ -158,4 +158,24 @@ export const WithContentLoadedOnSelection = () => (
 
 WithContentLoadedOnSelection.story = {
   name: "with content loaded on selection",
+};
+
+export const WithConditionallyRenderedTabs = () => (
+  <Tabs>
+    {true && (
+      <Tab label="Tab 1" className="Tab1">
+        <input className="Input1" />
+      </Tab>
+    )}
+
+    {false && (
+      <Tab label="Tab 2" className="Tab2">
+        <input className="Input2" />
+      </Tab>
+    )}
+  </Tabs>
+);
+
+WithConditionallyRenderedTabs.story = {
+  name: "With conditionally rendered Tabs",
 };

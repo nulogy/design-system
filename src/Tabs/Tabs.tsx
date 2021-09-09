@@ -39,7 +39,6 @@ export type TabsProps = {
 };
 export type TabsState = {
   selectedIndex: any;
-  selectedIndex: any;
 };
 class Tabs extends React.Component<TabsProps, TabsState> {
   constructor(props) {
@@ -65,34 +64,36 @@ class Tabs extends React.Component<TabsProps, TabsState> {
   getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
     const { fitted, children, onTabClick } = this.props;
     const selectedIndex = this.getSelectedIndex();
-    const tabs = React.Children.map(children, (tab, index) =>
-      React.cloneElement(tab, {
-        onClick: (e) => {
-          setFocusToTab(index);
-          if (tab.props.onClick) {
-            tab.props.onClick(e);
-          }
-          if (onTabClick) {
-            onTabClick(e, index);
-          } else {
-            this.handleTabClick(index);
-          }
-        },
-        onFocus: (e) => {
-          e.stopPropagation();
-        },
-        onKeyDown: handleArrowNavigation,
-        index,
-        tabIndex: index === focusedIndex ? 0 : -1,
-        selected: index === selectedIndex,
-        "aria-selected": index === selectedIndex,
-        fullWidth: fitted,
-        ref: (ref) => {
-          this.tabRefs[index] = ref;
-        },
-      })
-    );
-    return tabs;
+
+    return React.Children.map(children, (tab, index) => {
+      if (tab) {
+        return React.cloneElement(tab, {
+          onClick: (e) => {
+            setFocusToTab(index);
+            if (tab?.props?.onClick) {
+              tab?.props?.onClick(e);
+            }
+            if (onTabClick) {
+              onTabClick(e, index);
+            } else {
+              this.handleTabClick(index);
+            }
+          },
+          onFocus: (e) => {
+            e.stopPropagation();
+          },
+          onKeyDown: handleArrowNavigation,
+          index,
+          tabIndex: index === focusedIndex ? 0 : -1,
+          selected: index === selectedIndex,
+          "aria-selected": index === selectedIndex,
+          fullWidth: fitted,
+          ref: (ref) => {
+            this.tabRefs[index] = ref;
+          },
+        });
+      }
+    });
   }
   getTabContent() {
     const { children, renderTabContentOnlyWhenSelected } = this.props;
@@ -104,7 +105,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
       } else {
         return (
           <div aria-hidden={!selected} hidden={!selected} selected={selected}>
-            {tab.props.children}
+            {tab?.props?.children}
           </div>
         );
       }

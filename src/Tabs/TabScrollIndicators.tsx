@@ -20,10 +20,6 @@ type TabScrollIndicatorsProps = {
 type TabScrollIndicatorsState = {
   contentHiddenLeft: boolean;
   contentHiddenRight: boolean;
-  contentHiddenLeft: boolean;
-  contentHiddenRight: boolean;
-  contentHiddenLeft: boolean;
-  contentHiddenRight: boolean;
 };
 class TabScrollIndicators extends React.Component<
   TabScrollIndicatorsProps,
