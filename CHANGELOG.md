@@ -1,3 +1,10 @@
+## [6.1.6](https://github.com/nulogy/design-system/compare/v6.1.5...v6.1.6) (2021-09-09)
+
+
+### Bug Fixes
+
+* handle absent children in the TruncatedText component ([#936](https://github.com/nulogy/design-system/issues/936)) ([91568cd](https://github.com/nulogy/design-system/commit/91568cd9f6da723048fdb95d07dca3b32c1c5b3c))
+
 ## [6.1.5](https://github.com/nulogy/design-system/compare/v6.1.4...v6.1.5) (2021-08-27)
 
 
