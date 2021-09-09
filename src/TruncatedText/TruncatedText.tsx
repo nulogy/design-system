@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Tooltip } from "../Tooltip";
 import { Text } from "../Type";
-import { TooltipProps } from '../Tooltip/Tooltip';
+import { TooltipProps } from "../Tooltip/Tooltip";
 
 type TruncatedTextProps = {
   children?: string;
@@ -17,10 +17,18 @@ type TruncatedTextProps = {
 
 type MaybeTooltipProps = TooltipProps & {
   showTooltip?: boolean;
-}
+};
 
-const MaybeTooltip = ({ children, showTooltip, ...props }: MaybeTooltipProps) => {
-  return showTooltip ? <Tooltip {...props}>{children}</Tooltip> : <>{children}</>;
+const MaybeTooltip = ({
+  children,
+  showTooltip,
+  ...props
+}: MaybeTooltipProps) => {
+  return showTooltip ? (
+    <Tooltip {...props}>{children}</Tooltip>
+  ) : (
+    <>{children}</>
+  );
 };
 
 MaybeTooltip.propTypes = {
@@ -84,12 +92,14 @@ const TruncatedTextMaxCharacters = ({
   "data-testid": testId,
   ...props
 }: TruncatedTextProps) => {
-  const innerText = children;
+  const innerText = children ?? "";
   const requiresTruncation = innerText.length > maxCharacters;
+
   const truncatedText = requiresTruncation
     ? innerText.slice(0, maxCharacters) + indicator
-    : children;
+    : innerText;
   const hasTooltip = showTooltip && requiresTruncation;
+
   return (
     <MaybeTooltip
       showTooltip={hasTooltip}
