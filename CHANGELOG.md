@@ -1,3 +1,10 @@
+## [6.1.7](https://github.com/nulogy/design-system/compare/v6.1.6...v6.1.7) (2021-09-15)
+
+
+### Bug Fixes
+
+* Allow conditional rendering in the Tabs component ([#938](https://github.com/nulogy/design-system/issues/938)) ([d1b3c12](https://github.com/nulogy/design-system/commit/d1b3c12a3f4060b8ee5af56905ec154836a93781))
+
 ## [6.1.6](https://github.com/nulogy/design-system/compare/v6.1.5...v6.1.6) (2021-09-09)
 
 
