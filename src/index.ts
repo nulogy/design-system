@@ -50,6 +50,7 @@ export { Tooltip } from "./Tooltip";
 export { Card, CardSet } from "./Card";
 export { Modal } from "./Modal";
 export { Tab, Tabs } from "./Tabs";
+export { Switch, Switcher } from "./Switcher";
 
 export { Table } from "./Table";
 export type {
