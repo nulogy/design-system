@@ -6,77 +6,11 @@ import { Heading2 } from "../Type";
 import { CloseButton } from "../Button";
 import { PreventBodyElementScrolling } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
+import ModalContent from "./ModalContent";
+import ModalFooter from "./ModalFooter";
+import ModalHeader from "./ModalHeader";
+import ModalCloseButton from "./ModalCloseButton"
 
-type ModalContentProps = React.ComponentPropsWithRef<"div"> & {
-  hasFooter?: any;
-  theme?: DefaultNDSThemeType;
-};
-
-const ModalContent: React.SFC<ModalContentProps> = styled.div(
-  ({ hasFooter, theme }: ModalContentProps) => ({
-    marginTop: "-64px",
-    marginBottom: hasFooter ? "-72px" : 0,
-    overflow: "auto",
-    paddingTop: "88px",
-    paddingBottom: hasFooter ? "96px" : theme.space.x2,
-    paddingLeft: theme.space.x3,
-    paddingRight: theme.space.x3,
-  })
-);
-
-const getHeaderPaddingRight = (
-  closeButtonIncluded?: boolean,
-  theme?: DefaultNDSThemeType,
-) => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
-
-type ModalHeaderProps = React.ComponentPropsWithRef<"div"> & {
-  hasCloseButton?: boolean;
-  theme?: DefaultNDSThemeType;
-};
-const ModalHeader = styled.div(
-  ({ hasCloseButton, theme }: ModalHeaderProps): CSSObject => ({
-    position: "relative",
-    padding: `${theme.space.x2} ${getHeaderPaddingRight(
-      hasCloseButton,
-      theme
-    )} ${theme.space.x2} ${theme.space.x3}`,
-    backgroundColor: transparentize(0.1, theme.colors.white),
-    zIndex: theme.zIndices.modalHeaderAndFooter,
-    borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
-    ":after": {
-      content: "''",
-      position: "absolute",
-      bottom: 0,
-      left: theme.space.x1,
-      right: theme.space.x1,
-      display: "block",
-      margin: "0 auto",
-      borderBottom: `solid 1px ${theme.colors.lightGrey}`,
-    },
-  })
-);
-const ModalFooter = styled.div(({ theme }) => ({
-  position: "relative",
-  padding: `${theme.space.x2} ${theme.space.x3}`,
-  backgroundColor: transparentize(0.1, theme.colors.white),
-  zIndex: theme.zIndices.modalHeaderAndFooter,
-  borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
-  ":after": {
-    content: "''",
-    position: "absolute",
-    top: 0,
-    left: theme.space.x1,
-    right: theme.space.x1,
-    display: "block",
-    margin: "0 auto",
-    borderBottom: `solid 1px ${theme.colors.lightGrey}`,
-  },
-}));
-const ModalCloseButton = styled(CloseButton)(({ theme }) => ({
-  position: "absolute",
-  top: "12px",
-  right: theme.space.x2,
-}));
 const overlayStyle = (theme) => ({
   position: "fixed",
   top: 0,
@@ -89,6 +23,7 @@ const overlayStyle = (theme) => ({
   backgroundColor: transparentize(0.5, theme.colors.blackBlue),
   zIndex: theme.zIndices.overlay,
 });
+
 const StyledReactModal = styled(ReactModal)(
   ({ maxWidth }) => ({
     maxWidth,
@@ -127,6 +62,7 @@ const StyledReactModal = styled(ReactModal)(
     MozOsxFontSmoothing: "grayscale",
   })
 );
+
 type ModalProps = {
   isOpen?: boolean;
   title?: string;
@@ -146,6 +82,7 @@ type ModalProps = {
   ariaHideApp?: boolean;
   footerContent?: React.ReactNode;
 };
+
 const Modal: ReactModal = ({
   isOpen,
   children,
@@ -217,6 +154,7 @@ const Modal: ReactModal = ({
     </StyledReactModal>
   );
 };
+
 Modal.defaultProps = {
   isOpen: true,
   title: undefined,
@@ -237,5 +175,7 @@ Modal.defaultProps = {
   ariaHideApp: true,
   footerContent: undefined,
 };
+
 Modal.setAppElement = ReactModal.setAppElement;
+
 export default Modal;
