@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import styled, {
-  createGlobalStyle,
-  ThemeProvider,
-  CSSObject,
-} from "styled-components";
+import {ThemeProvider,} from "styled-components";
 import { I18nextProvider } from "react-i18next";
 import NDSTheme from "../theme";
 import i18n from "../i18n";
 import { ThemeType, DefaultNDSThemeType } from "../theme.type";
 import { LocaleContext } from "./LocaleContext";
 import { mergeThemes } from "./mergeThemes.util";
+import GlobalStyles from "./GlobalStyles";
+import ModalStyleOverride from "./ModalStyleOverride";
+import Reset from "./Reset";
 
 type NDSProviderProps = {
   theme?: ThemeType;
@@ -17,67 +16,6 @@ type NDSProviderProps = {
   disableGlobalStyles?: boolean;
   children?: any;
 };
-
-const Reset = createGlobalStyle(() => {
-  return {
-    body: {
-      margin: 0,
-    },
-  };
-});
-type GlobalStylesProps = {
-  theme?: DefaultNDSThemeType;
-  locale?: string;
-};
-
-const ModalStyleOverride = createGlobalStyle(
-  ({ theme, locale }: GlobalStylesProps) => {
-    const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
-    return {
-      ".ReactModal__Content": {
-        fontFamily,
-        button: {
-          fontFamily,
-        },
-        input: {
-          fontFamily,
-        },
-        textarea: {
-          fontFamily,
-        },
-      },
-    };
-  }
-);
-const GlobalStyles = styled.div(
-  ({ theme, locale }: GlobalStylesProps): CSSObject => {
-    const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
-    return {
-      color: theme.colors.black,
-      fontFamily,
-      fontSize: theme.fontSizes.medium,
-      lineHeight: theme.lineHeights.base,
-      "-webkit-font-smoothing": "antialiased",
-      "-moz-osx-font-smoothing": "grayscale",
-      "*": {
-        boxSizing: "border-box",
-      },
-      img: {
-        maxWidth: "100%",
-        height: "auto",
-      },
-      button: {
-        fontFamily,
-      },
-      input: {
-        fontFamily,
-      },
-      textarea: {
-        fontFamily,
-      },
-    };
-  }
-);
 
 type AllNDSGlobalStylesProps = {
   theme?: DefaultNDSThemeType;
@@ -128,4 +66,5 @@ const NDSProvider = ({
     </LocaleContext.Provider>
   );
 };
+
 export default NDSProvider;
