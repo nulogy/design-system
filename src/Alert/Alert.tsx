@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
@@ -7,6 +6,7 @@ import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
+import CloseButton from "./CloseButton";
 
 export type AlertProps = BoxProps & {
   children?: React.ReactNode;
@@ -43,32 +43,6 @@ const alertColours: any = {
     borderColor: "yellow",
     backgroundColor: "lightYellow",
   },
-};
-
-type CloseButtonProps = {
-  onClick: any;
-  "aria-label": string;
-};
-
-const CloseButton = ({
-  onClick,
-  "aria-label": ariaLabel,
-}: CloseButtonProps) => {
-  const { t } = useTranslation();
-  return (
-    <Flex ml="x2">
-      <Link
-        as="button"
-        color="darkGrey"
-        lineHeight="0"
-        hover="blue"
-        onClick={onClick}
-        aria-label={ariaLabel || t("close")}
-      >
-        <Icon icon="close" size="16" />
-      </Link>
-    </Flex>
-  );
 };
 
 const Alert = styled(
