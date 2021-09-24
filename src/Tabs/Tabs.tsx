@@ -5,30 +5,10 @@ import propTypes from "@styled-system/prop-types";
 import ReactResizeDetector from "react-resize-detector";
 import { getSubset } from "../utils/subset";
 import { Box } from "../Box";
+import TabContainer from "./TabContainer";
 import TabFocusManager from "./TabFocusManager";
 import TabScrollIndicators from "./TabScrollIndicators";
 
-const TabContainer = styled(Box)(({ theme }) => ({
-  display: "flex",
-  whiteSpace: "nowrap",
-  overflowX: "scroll",
-  overflowY: "hidden",
-  marginBottom: theme.space.x1,
-  "::-webkit-scrollbar": {
-    display: "none",
-  },
-  position: "relative",
-  "&:before": {
-    content: "''",
-    backgroundColor: theme.colors.grey,
-    height: "1px",
-    display: "block",
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-}));
 export type TabsProps = {
   className?: string;
   selectedIndex?: number;
@@ -37,9 +17,11 @@ export type TabsProps = {
   fitted?: boolean;
   onTabClick?: (...args: any[]) => any;
 };
+
 export type TabsState = {
   selectedIndex: any;
 };
+
 class Tabs extends React.Component<TabsProps, TabsState> {
   constructor(props) {
     super(props);
@@ -54,6 +36,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     this.handleTabClick = this.handleTabClick.bind(this);
     this.getTabs = this.getTabs.bind(this);
   }
+
   getSelectedIndex() {
     const { selectedIndex: controlledSelectedIndex } = this.props;
     const { selectedIndex: uncontrolledSelectedIndex } = this.state;
@@ -61,6 +44,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
       ? uncontrolledSelectedIndex
       : controlledSelectedIndex;
   }
+
   getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
     const { fitted, children, onTabClick } = this.props;
     const selectedIndex = this.getSelectedIndex();
@@ -95,6 +79,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
       }
     });
   }
+
   getTabContent() {
     const { children, renderTabContentOnlyWhenSelected } = this.props;
     const selectedIndex = this.getSelectedIndex();
@@ -112,11 +97,13 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     });
     return tabContent;
   }
+
   handleTabClick(index) {
     this.setState({
       selectedIndex: index,
     });
   }
+
   render() {
     const { className } = this.props;
     const spaceProps = getSubset(this.props, propTypes.space);
@@ -152,6 +139,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     );
   }
 }
+
 Tabs.defaultProps = {
   children: null,
   className: undefined,
@@ -161,4 +149,5 @@ Tabs.defaultProps = {
   fitted: false,
   onTabClick: undefined,
 };
+
 export default Tabs;
