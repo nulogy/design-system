@@ -1,20 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Text } from "../Type";
-import { TooltipProps } from "../Tooltip/Tooltip";
+import {TruncatedTextProps} from "./TruncatedTextProps";
 import TruncatedTextFillWidth from "./TruncatedTextFillWidth";
 import TruncatedTextMaxCharacters from "./TruncatedTextMaxCharacters";
-
-type TruncatedTextProps = {
-  children?: string;
-  indicator?: string;
-  element?: any;
-  maxCharacters?: number;
-  showTooltip?: boolean;
-  fullWidth?: boolean;
-  "data-testid"?: string;
-  tooltipProps?: TooltipProps;
-};
 
 const TruncatedText = ({ fullWidth, children, ...props }: TruncatedTextProps) =>
   fullWidth ? (
