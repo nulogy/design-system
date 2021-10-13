@@ -18,12 +18,12 @@ describe("AsyncSelect", () => {
       assertDropDownIsOpen().contains("Canada");
       cy.focused().type("{enter}");
 
-      cy.focused().type("austra");
-      assertDropDownIsOpen().contains("Australia");
+      cy.focused().type("mex");
+      assertDropDownIsOpen().contains("Mexico");
       cy.focused().type("{enter}");
 
       getMultiselect().contains("Canada");
-      getMultiselect().contains("Australia");
+      getMultiselect().contains("Mexico");
     });
 
     it("clears all selected values", () => {

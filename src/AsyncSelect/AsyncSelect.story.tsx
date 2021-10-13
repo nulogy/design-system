@@ -18,11 +18,27 @@ const northAmericanCountries = [
   },
 ];
 
-const loadMatchingCountries = async (inputValue) => {
-  const data = await fetch(
-    `https://restcountries.eu/rest/v2/name/${inputValue}`
+const simulatedAPIRequest = async (
+  inputValue: string,
+  milliseconds = 450
+): Promise<Response> => {
+  const country = northAmericanCountries.find((country) =>
+    country.value.toLowerCase().startsWith(inputValue)
   );
+
+  const responseBody = JSON.stringify([{ name: country.value }]);
+
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(new Response(responseBody));
+    }, milliseconds);
+  });
+};
+
+const loadMatchingCountries = async (inputValue: string) => {
+  const data = await simulatedAPIRequest(inputValue);
   const results = await data.json();
+
   return results.map(({ name }) => ({
     label: name,
     value: name,
