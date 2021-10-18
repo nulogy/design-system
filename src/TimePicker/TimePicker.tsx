@@ -9,16 +9,39 @@ import React, {
 } from "react";
 import { setMinutes } from "date-fns";
 import debounce from "debounce";
-import styled from "styled-components";
 import { SpaceProps } from "styled-system";
 import { useTranslation } from "react-i18next";
-import { InputField } from "../Input/InputField";
 import { InlineValidation } from "../Validation";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { localizedFormat } from "../utils/localized-date-fns";
 import { DetectOutsideClick } from "../utils";
 import { Box } from "../Box";
 import { keyCodes } from "../constants";
+import TimePickerOption from "./TimePickerOption";
+import TimePickerDropdown from "./TimePickerDropdown";
+import TimePickerInput from "./TimePickerInput";
+
+type TimePickerProps = SpaceProps & {
+  disabled?: boolean,
+  value?: string,
+  timeFormat?: string;
+  interval?: number;
+  placeholder?: string;
+  className?: string;
+  onChange?: (...args: any[]) => any;
+  onInputChange?: (...args: any[]) => any;
+  minTime?: string;
+  maxTime?: string;
+  defaultValue?: string;
+  "aria-label"?: string;
+  errorMessage?: string;
+  errorList?: React.ReactNode;
+  labelText?: string;
+  ref?: any;
+  onBlur?: (...args: any[]) => any;
+  onFocus?: (...args: any[]) => any;
+  onClick?: (...args: any[]) => any;
+};
 
 const DEFAULT_TIME_FORMAT = "h:mm aa";
 const DEFAULT_PLACEHOLDER = "HH:MM";
@@ -97,6 +120,7 @@ const getTimeIntervals = (interval) => {
   }
   return times;
 };
+
 export const getTimeOptions = (
   interval,
   timeFormat,
@@ -124,71 +148,6 @@ export const getTimeOptions = (
         getIntervalFromTime(b.value, interval)
     )
     .slice(startingInterval, finalInterval);
-};
-const TimePickerInput = styled(InputField)(({ dropdownIsOpen }) => ({
-  ...(dropdownIsOpen && {
-    borderBottomLeftRadius: "0px",
-    borderBottomRightRadius: "0px",
-  }),
-}));
-const TimePickerDropdown = styled.ul(({ theme, isOpen }) => {
-  return {
-    position: "absolute",
-    width: "100%",
-    background: theme.colors.white,
-    listStyle: "none",
-    margin: "0px",
-    padding: "0px",
-    maxHeight: "200px",
-    overflow: "auto",
-    boxShadow: theme.shadows.focus,
-    border: "1px solid",
-    borderColor: theme.colors.blue,
-    borderBottomLeftRadius: theme.radii.medium,
-    borderBottomRightRadius: theme.radii.medium,
-    display: isOpen ? "block" : "none",
-    zIndex: theme.zIndices.content,
-    scrollBehavior: "smooth",
-  };
-});
-const TimePickerOption = styled.li(
-  ({ theme, isSelected, isFocused, isClosest }) => {
-    return {
-      padding: theme.space.x1,
-      marginBottom: "0px",
-      backgroundColor: isSelected ? theme.colors.darkBlue : theme.colors.white,
-      color: isSelected ? theme.colors.white : theme.colors.black,
-      "&:hover": {
-        background: !isSelected && theme.colors.lightBlue,
-      },
-      ...(isFocused ||
-        (isClosest && {
-          background: !isSelected && theme.colors.lightBlue,
-          outline: "none",
-        })),
-    };
-  }
-);
-type TimePickerProps = SpaceProps & {
-  disabled?: boolean,
-  value?: string,
-  timeFormat?: string;
-  interval?: number;
-  placeholder?: string;
-  className?: string;
-  onChange?: (...args: any[]) => any;
-  onInputChange?: (...args: any[]) => any;
-  minTime?: string;
-  maxTime?: string;
-  defaultValue?: string;
-  "aria-label"?: string;
-  errorMessage?: string;
-  errorList?: React.ReactNode;
-  labelText?: string;
-  ref?: any;
-  onBlur?: (...args: any[]) => any;
-  onFocus?: (...args: any[]) => any;
-  onClick?: (...args: any[]) => any;
 };
 
 const TimePicker: React.SFC<TimePickerProps> = forwardRef(
@@ -260,6 +219,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       }
       setDropdownIsOpen(showDropdown);
     };
+
     const handleBlur = (e) => {
       if (input) {
         const option = getBestMatchTime({
@@ -274,23 +234,28 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
       setDropdownIsOpen(false);
       onBlur(e);
     };
+
     const handleFocus = (e) => {
       onFocus(e);
     };
+
     const handleClickInput = (e) => {
       onClick(e);
       setDropdownIsOpen(true);
     };
+
     const onCurrentOptionRefChange = React.useCallback((node) => {
       if (node) {
         setCurrentOptionRef(node);
       }
     }, []);
+
     const onRefChange = React.useCallback((node) => {
       if (node) {
         setRef(node);
       }
     }, []);
+
     const handleKeyDown = (event) => {
       if (event.keyCode === keyCodes.DOWN) {
         setInput(
@@ -408,6 +373,7 @@ const TimePicker: React.SFC<TimePickerProps> = forwardRef(
     );
   }
 );
+
 TimePicker.defaultProps = {
   timeFormat: DEFAULT_TIME_FORMAT,
   interval: 15,
@@ -426,4 +392,5 @@ TimePicker.defaultProps = {
   onBlur: () => {},
   onFocus: () => {},
 };
+
 export default TimePicker;

@@ -1,9 +1,9 @@
 import React from "react";
-import styled from "styled-components";
-import { space, color, flexbox, layout } from "styled-system";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import { FlexProps } from "../Flex/Flex";
+import BreadcrumbsList from "./BreadcrumbsList";
+import BreadcrumbsListItem from "./BreadcrumbsListItem";
 
 type BreadcrumbsProps = FlexProps & {
   children: any;
@@ -15,60 +15,41 @@ const insertSeparators = (items: any, className: any) => {
     return acc.concat(
       current,
       // eslint-disable-next-line react/no-array-index-key
-      <StyledLi
+      <BreadcrumbsListItem
         aria-hidden
         key={`separator-${index}`}
         className={className}
         px="x1"
       >
         <Icon icon="rightArrow" />
-      </StyledLi>
+      </BreadcrumbsListItem>
     );
   }, []);
 };
-const StyledLi: React.SFC<any> = styled.li(
-  ({ theme }) => ({
-    margin: 0,
-    padding: 0,
-    listStyle: "none",
-    display: "inline-flex",
-    alignSelf: "center",
-    color: theme.colors.darkGrey,
-    "a:visited": {
-      color: theme.colors.darkBlue,
-    },
-  }),
-  space,
-  layout,
-  color,
-  flexbox
-);
-
-const StyledOl = styled.ol(() => ({
-  margin: 0,
-  padding: 0,
-  display: "flex",
-}));
 
 const Breadcrumbs = ({ children, as, ...props }: BreadcrumbsProps) => {
   const childrenArr = Array.isArray(children) ? children : [children];
   const allItems = [...childrenArr].map((child, index) => {
     return (
       // eslint-disable-next-line react/no-array-index-key
-      <StyledLi key={`child-${index}`}>
+      <BreadcrumbsListItem key={`child-${index}`}>
         {React.cloneElement(child, {
           color: "darkBlue",
         })}
-      </StyledLi>
+      </BreadcrumbsListItem>
     );
   });
   return (
     <Flex as={as} {...props}>
-      <StyledOl>{insertSeparators(allItems, "seperator")}</StyledOl>
+      <BreadcrumbsList>
+        {insertSeparators(allItems, "seperator")}
+      </BreadcrumbsList>
     </Flex>
   );
 };
+
 Breadcrumbs.defaultProps = {
   as: "nav",
 };
+
 export default Breadcrumbs;

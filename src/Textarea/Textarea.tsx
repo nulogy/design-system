@@ -1,76 +1,12 @@
 import React, { forwardRef } from "react";
-import styled, { CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
-import { transparentize } from "polished";
-import { SpaceProps } from "styled-system";
-import { space } from "styled-system";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
-import { subPx } from "../utils";
-import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
+import StyledTextarea from "./StyledTextarea";
+import {StyledTextareaProps} from "./StyledTextarea";
 
-const textareaStyles = (theme) => ({
-  disabled: {
-    color: transparentize(0.33, theme.colors.black),
-    borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.whiteGrey,
-  },
-  error: {
-    color: theme.colors.red,
-    borderColor: theme.colors.red,
-  },
-  default: {
-    color: theme.colors.black,
-    borderColor: theme.colors.grey,
-  },
-});
-const getTextareaStyle = (props) => {
-  const textareaStyleMap = textareaStyles(props.theme);
-  if (props.disabled) {
-    return textareaStyleMap.disabled;
-  }
-  if (props.error) {
-    return textareaStyleMap.error;
-  }
-  return textareaStyleMap.default;
-};
-
-type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
-  SpaceProps & {
-    theme?: DefaultNDSThemeType;
-    errorMessage?: string;
-    errorList?: string[];
-    error?: boolean;
-    rows?: number;
-    isResizeable?: boolean;
-  };
-const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
-  space,
-  ({ theme, isResizeable }: any): CSSObject => ({
-    display: "block",
-    width: "100%",
-    border: "1px solid",
-    borderRadius: theme.radii.medium,
-    padding: subPx(theme.space.x1),
-    fontSize: theme.fontSizes.medium,
-    lineHeight: theme.lineHeights.base,
-    minHeight: theme.space.x5,
-    minWidth: "20em",
-    resize: isResizeable ? null : "none",
-    "&:focus": {
-      outline: "none",
-      color: theme.colors.black,
-      borderColor: theme.colors.blue,
-      boxShadow: theme.shadows.focus,
-    },
-    "::placeholder": {
-      color: transparentize(0.4, theme.colors.black),
-    },
-  }),
-  (props) => getTextareaStyle(props)
-);
 type TextareaProps = StyledTextareaProps & {
   className?: string;
   id?: string;
@@ -85,6 +21,7 @@ type TextareaProps = StyledTextareaProps & {
   rows?: number;
   isResizeable?: boolean;
 };
+
 const Textarea: React.SFC<TextareaProps> = forwardRef(
   (
     {
@@ -105,6 +42,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
   ) => {
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
+
     return (
       <Field className={className} {...spaceProps}>
         <MaybeFieldLabel
@@ -135,6 +73,7 @@ const Textarea: React.SFC<TextareaProps> = forwardRef(
     );
   }
 );
+
 Textarea.defaultProps = {
   className: undefined,
   id: undefined,
@@ -147,4 +86,5 @@ Textarea.defaultProps = {
   requirementText: undefined,
   rows: 3,
 };
+
 export default Textarea;

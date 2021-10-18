@@ -1,17 +1,15 @@
 // @ts-nocheck
-import React, { useState, useEffect, useRef, useImperativeHandle } from "react";
+import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from "react";
 import { isBefore, isSameDay } from "date-fns";
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { DatePicker } from "../DatePicker";
 import { RangeContainer } from "../RangeContainer";
-import { InputFieldDefaultProps } from "../Input/InputField.type";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
 import { FieldProps } from "../Form/Field";
 import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
-import { TimePicker } from "../TimePicker";
 import { getDuration } from "../TimeRange/TimeRange.utils";
-import { forwardRef } from "react";
+import EndTime from "./EndTime";
+import StartTime from "./StartTime";
 
 type DateRangeProps = FieldProps & {
   dateFormat?: string;
@@ -45,18 +43,6 @@ type DateRangeProps = FieldProps & {
 };
 
 const DEFAULT_LABEL = "Date Range";
-
-const StyledStartTime = styled(TimePicker)(({ theme }) => ({
-  marginLeft: theme.space.x1,
-  display: "flex",
-  alignItems: "flex-end",
-}));
-
-const StyledEndTime = styled(TimePicker)(({ theme }) => ({
-  marginRight: theme.space.x1,
-  display: "flex",
-  alignItems: "flex-end",
-}));
 
 const DateRange: React.SFC<DateRangeProps> = forwardRef(
   (
@@ -194,7 +180,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
           ref={dateRef1}
         />
         {showTimes && (
-          <StyledStartTime
+          <StartTime
             selected={startTime}
             defaultValue={defaultStartTime}
             aria-label={t("select a start time")}
@@ -215,7 +201,7 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
     const endDateInput = (
       <>
         {showTimes && (
-          <StyledEndTime
+          <EndTime
             selected={endTime}
             defaultValue={defaultEndTime}
             minTime={minTime}

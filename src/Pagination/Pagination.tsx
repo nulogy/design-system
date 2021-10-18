@@ -1,106 +1,12 @@
 // @ts-nocheck
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
-
-const getHoverBackground = (currentPage, disabled, theme) => {
-  if (currentPage) {
-    return theme.colors.darkBlue;
-  }
-  if (disabled) {
-    return "inital";
-  }
-  return theme.colors.lightGrey;
-};
-
-const PaginationButton = styled.button(
-  ({ theme, disabled, currentPage }: any) => ({
-    fontSize: theme.fontSizes.small,
-    padding: `${theme.space.x1} ${theme.space.x2}`,
-    lineHeight: theme.lineHeights.smallTextBase,
-    display: "flex",
-    borderRadius: theme.radii.medium,
-    border: `1px solid ${
-      currentPage ? theme.colors.darkBlue : theme.colors.lightGrey
-    }`,
-    color: disabled ? theme.colors.grey : theme.colors.black,
-    "&:not(:last-child)": {
-      marginRight: theme.space.x2,
-    },
-    cursor: disabled ? "default" : "pointer",
-    "&:hover": {
-      background: getHoverBackground(currentPage, disabled, theme),
-    },
-  })
-);
-
-const PreviousButton = ({
-  disabled,
-  onClick,
-  label,
-  "aria-label": ariaLabel,
-}: any) => {
-  const { t } = useTranslation();
-  return (
-    <PaginationButton
-      disabled={disabled}
-      onClick={onClick}
-      aria-label={ariaLabel || t("go to previous results")}
-    >
-      <Icon icon="leftArrow" ml="-8px" /> {label || t("previous")}
-    </PaginationButton>
-  );
-};
-
-PreviousButton.propTypes = {
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  label: PropTypes.node,
-  "aria-label": PropTypes.string,
-};
-
-PreviousButton.defaultProps = {
-  disabled: false,
-  onClick: null,
-  label: undefined,
-  "aria-label": undefined,
-};
-
-const NextButton = ({ disabled, onClick, label, "aria-label": ariaLabel }) => {
-  const { t } = useTranslation();
-  return (
-    <PaginationButton
-      disabled={disabled}
-      onClick={onClick}
-      aria-label={ariaLabel || t("go to next results")}
-    >
-      {label || t("next")} <Icon icon="rightArrow" mr="-8px" />
-    </PaginationButton>
-  );
-};
-
-NextButton.propTypes = {
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  label: PropTypes.node,
-  "aria-label": PropTypes.string,
-};
-
-NextButton.defaultProps = {
-  disabled: false,
-  onClick: null,
-  label: undefined,
-  "aria-label": undefined,
-};
-
-const PageNumber = styled(PaginationButton)(({ theme, currentPage }: any) => ({
-  background: currentPage ? theme.colors.darkBlue : "transparent",
-  color: currentPage ? theme.colors.whiteGrey : theme.colors.black,
-}));
+import PageNumber from "./PageNumber";
+import PreviousButton from "./PreviousButton";
+import NextButton from "./NextButton";
 
 const SEPERATOR = "...";
 
