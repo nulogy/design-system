@@ -5,7 +5,7 @@ import { DefaultNDSThemeType } from "../theme.type";
 
 const getHeaderPaddingRight = (
   closeButtonIncluded?: boolean,
-  theme?: DefaultNDSThemeType,
+  theme?: DefaultNDSThemeType
 ) => (closeButtonIncluded ? theme.space.x8 : theme.space.x3);
 
 type ModalHeaderProps = React.ComponentPropsWithRef<"div"> & {

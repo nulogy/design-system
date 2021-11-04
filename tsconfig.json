@@ -19,10 +19,5 @@
     "jsx": "react"
   },
   "include": ["src/**/*"],
-  "exclude": [
-    "node_modules",
-    "./dist",
-    "**/*.spec.js",
-    "**/*.spec.tsx"
-  ]
+  "exclude": ["node_modules", "./dist", "**/*.spec.js", "**/*.spec.tsx"]
 }

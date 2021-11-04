@@ -9,7 +9,7 @@ import {
   Input,
   Select,
   Text,
-  DatePicker
+  DatePicker,
 } from "../index";
 
 const env = process.env.NODE_ENV;
@@ -35,8 +35,8 @@ const options = [
 // Modal.setAppElement("#root")
 
 type ModalExampleProps = {
-  isOpen: boolean
-}
+  isOpen: boolean;
+};
 
 class ModalExample extends React.Component<{}, ModalExampleProps> {
   constructor(props) {
@@ -116,7 +116,7 @@ export const WithCloseButton = () => (
   <Modal
     title="Modal Title"
     footerContent={modalButtons}
-    onRequestClose={() => { }}
+    onRequestClose={() => {}}
   >
     Content Content Content
   </Modal>
@@ -237,7 +237,7 @@ WithNoTitle.story = {
 };
 
 export const WithNoFooterContent = () => (
-  <Modal title="Without footerContent" onRequestClose={() => { }}>
+  <Modal title="Without footerContent" onRequestClose={() => {}}>
     Content Content Content
   </Modal>
 );
@@ -260,7 +260,7 @@ export const WithSelect = () => (
   <Modal
     title="Edit Profile"
     footerContent={modalButtons}
-    onRequestClose={() => { }}
+    onRequestClose={() => {}}
     maxWidth="456px"
   >
     <Form id="myForm" mb="x2">
@@ -282,7 +282,7 @@ export const WithSelectAndScrollingContent = () => (
   <Modal
     title="Edit Profile"
     footerContent={modalButtons}
-    onRequestClose={() => { }}
+    onRequestClose={() => {}}
     maxWidth="456px"
   >
     <Form id="myForm" mb="x2">

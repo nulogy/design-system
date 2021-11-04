@@ -2,9 +2,9 @@ import React, { useRef } from "react";
 import { Checkbox, Button } from "../index";
 
 type CheckboxState = {
-  checkbox1: boolean,
-  checkbox2: boolean
-}
+  checkbox1: boolean;
+  checkbox2: boolean;
+};
 
 class CheckboxWithState extends React.Component<{}, CheckboxState> {
   constructor(props) {

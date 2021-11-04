@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 class PreventBodyElementScrolling extends React.Component {
   componentDidMount() {

@@ -55,15 +55,16 @@ export const DateRangeStyles = createGlobalStyle({
       borderTopLeftRadius: 0,
       borderBottomLeftRadius: 0,
     },
-    [`.react-datepicker__day.${START_DATE_CLASS},  .react-datepicker__day.${END_DATE_CLASS}`]: {
-      color: theme.colors.white,
-      background: theme.colors.darkBlue,
-      borderRadius: theme.radii.medium,
-      cursor: "initial",
-      "&:hover": {
+    [`.react-datepicker__day.${START_DATE_CLASS},  .react-datepicker__day.${END_DATE_CLASS}`]:
+      {
         color: theme.colors.white,
         background: theme.colors.darkBlue,
+        borderRadius: theme.radii.medium,
+        cursor: "initial",
+        "&:hover": {
+          color: theme.colors.white,
+          background: theme.colors.darkBlue,
+        },
       },
-    },
   },
 });

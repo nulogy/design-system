@@ -34,7 +34,12 @@ WithAllProps.story = {
 };
 
 export const SetToDisabled = () => (
-  <Input labelText="Set to disabled" disabled onBlur={action("blurred")} value="Disabled" />
+  <Input
+    labelText="Set to disabled"
+    disabled
+    onBlur={action("blurred")}
+    value="Disabled"
+  />
 );
 
 SetToDisabled.story = {

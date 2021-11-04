@@ -140,10 +140,7 @@ const DatePicker: React.SFC<DatePickerProps> = forwardRef(
     );
     const spaceProps = getSubset(props, propTypes.space);
     return (
-      <Field
-        className={`${className} nds-date-picker`}
-        {...spaceProps}
-      >
+      <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
         <LocaleContext.Consumer>
           {({ locale }) => (

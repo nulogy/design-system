@@ -90,7 +90,6 @@ CustomizingInputProps.story = {
   name: "customizing input props",
 };
 
-
 export const Disabled = () => (
   <DateRange
     startDateInputProps={{

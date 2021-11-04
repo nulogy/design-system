@@ -23,13 +23,8 @@ interface CheckboxGroupProps {
 
 const getCheckboxButtons = (props) => {
   const checkboxButtons = React.Children.map(props.children, (checkbox) => {
-    const {
-      value,
-      disabled,
-      required,
-      onChange,
-      ...checkboxProps
-    } = checkbox.props;
+    const { value, disabled, required, onChange, ...checkboxProps } =
+      checkbox.props;
     return (
       <Checkbox
         {...checkboxProps}

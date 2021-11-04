@@ -6,9 +6,9 @@ type TabFocusManagerProps = {
     focus?: (...args: any[]) => any;
   }[];
 };
-type TabFocusManagerState = { focusedIndex: any } & ((
-  prevState: any
-) => { focusedIndex: number }) &
+type TabFocusManagerState = { focusedIndex: any } & ((prevState: any) => {
+  focusedIndex: number;
+}) &
   ((prevState: any) => { focusedIndex: number }) & { focusedIndex: number };
 class TabFocusManager extends React.Component<
   TabFocusManagerProps,

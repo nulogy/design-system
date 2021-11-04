@@ -89,9 +89,7 @@ export default {
 
 export const _ApplicationFrame = () => (
   <ApplicationFrame
-    navBar={
-      <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />
-    }
+    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
     height="100vh"
   ></ApplicationFrame>
 );

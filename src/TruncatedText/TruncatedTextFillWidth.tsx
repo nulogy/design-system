@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Text } from "../Type";
-import {TruncatedTextProps} from "./TruncatedTextProps";
+import { TruncatedTextProps } from "./TruncatedTextProps";
 import MaybeTooltip from "./MaybeTooltip";
 
 const TruncatedTextFillWidth = ({

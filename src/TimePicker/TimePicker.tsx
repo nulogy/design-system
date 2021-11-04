@@ -22,8 +22,8 @@ import TimePickerDropdown from "./TimePickerDropdown";
 import TimePickerInput from "./TimePickerInput";
 
 type TimePickerProps = SpaceProps & {
-  disabled?: boolean,
-  value?: string,
+  disabled?: boolean;
+  value?: string;
   timeFormat?: string;
   interval?: number;
   placeholder?: string;

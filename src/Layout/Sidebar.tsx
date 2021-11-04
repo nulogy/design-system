@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, RefObject } from "react";
-import {AnimatePresence} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { IconicButton } from "../Button";
@@ -27,14 +27,21 @@ type SidebarProps = AnimatedBoxProps & {
 };
 
 const focusFirstElement = () => {
-  const FOCUSABLE_EL_SELECTOR = "button, a[href], select, textarea, input, [tabindex]:not([tabindex='-1'])";
+  const FOCUSABLE_EL_SELECTOR =
+    "button, a[href], select, textarea, input, [tabindex]:not([tabindex='-1'])";
   const focusable = document.querySelectorAll(FOCUSABLE_EL_SELECTOR);
   if (focusable && focusable[0]) {
     (focusable[0] as HTMLElement).focus();
   }
-}
+};
 
-const SidebarOverlay = ({ transitionDuration, top, transparent, zIndex = 799 as any, onClick }) => (
+const SidebarOverlay = ({
+  transitionDuration,
+  top,
+  transparent,
+  zIndex = 799 as any,
+  onClick,
+}) => (
   <AnimatedBox
     position="fixed"
     top={top}
@@ -49,8 +56,8 @@ const SidebarOverlay = ({ transitionDuration, top, transparent, zIndex = 799 as 
     transition={{ duration: transitionDuration }}
     data-testid="sidebar-overlay"
     onMouseDown={onClick}
-    />
-)
+  />
+);
 
 const Sidebar = ({
   p = "x3",
@@ -131,69 +138,95 @@ const Sidebar = ({
   };
 
   return (
-  <>
-    {closeOnOutsideClick && (
-      <AnimatePresence>
-          {isOpen && (<SidebarOverlay top={top} transparent={!overlay} transitionDuration={duration} zIndex={zIndex} onClick={closeOnOutsideClick && isOpen && onClose} />) }
-      </AnimatePresence>
-    )}
-    <AnimatedBox
-      role="dialog"
-      bg="white"
-      display="flex"
-      flexDirection="column"
-      height={`calc(100% - ${NAVBAR_HEIGHT})`}
-      boxShadow="large"
-      borderLeftWidth="1px"
-      borderLeftStyle="solid"
-      borderLeftColor="lightGrey"
-      animate={isOpen ? "open" : "closed"}
-      variants={variants}
-      initial={isOpen ? "open" : "closed"}
-      position="fixed"
-      top={top}
-      right={offset}
-      width={typeof width === 'string' ? { default: "100%", small: width } : width}
-      zIndex={zIndex || "sidebar" as any}
-      ref={sideBarRef as any}
-      {...props}
-    >
-      <Flex
-        p={p}
-        maxHeight="100%"
-        overflow="auto"
-        flexGrow={1}
-        flexDirection="column"
-        style={{ overflowBehaviour: "contain" } as any}
-      >
-      <Flex justifyContent="space-between" alignItems="flex-start">
-          <Box>{title && <Heading3>{title}</Heading3>}</Box>
-          {!hideCloseButton && (<Box><IconicButton ref={closeButton} icon="close" onClick={onClose} data-testid={closeButtonTestId} aria-label={closeButtonAriaLabel || t("close")}/></Box>)}
-        </Flex>
-        <AnimatedBox variants={childVariants} animate={isOpen ? "open" : "closed"} flexGrow={1} ref={contentRef as any}>
-          {children}
-        </AnimatedBox>
-      </Flex>
-      {footer && (
-        <Box
-          position="sticky"
-          backgroundColor="white"
-          borderTopWidth="1px"
-          borderTopStyle="solid"
-          borderTopColor="lightGrey"
-          alignSelf="flex-end"
-          width="100%"
-          p={p}
-          pt="x2"
-        >
-          {footer}
-        </Box>
+    <>
+      {closeOnOutsideClick && (
+        <AnimatePresence>
+          {isOpen && (
+            <SidebarOverlay
+              top={top}
+              transparent={!overlay}
+              transitionDuration={duration}
+              zIndex={zIndex}
+              onClick={closeOnOutsideClick && isOpen && onClose}
+            />
+          )}
+        </AnimatePresence>
       )}
-      {overlay && disableScroll && isOpen && <PreventBodyElementScrolling scrollRef={sideBarRef} />}
-    </AnimatedBox>
-  </>
+      <AnimatedBox
+        role="dialog"
+        bg="white"
+        display="flex"
+        flexDirection="column"
+        height={`calc(100% - ${NAVBAR_HEIGHT})`}
+        boxShadow="large"
+        borderLeftWidth="1px"
+        borderLeftStyle="solid"
+        borderLeftColor="lightGrey"
+        animate={isOpen ? "open" : "closed"}
+        variants={variants}
+        initial={isOpen ? "open" : "closed"}
+        position="fixed"
+        top={top}
+        right={offset}
+        width={
+          typeof width === "string" ? { default: "100%", small: width } : width
+        }
+        zIndex={zIndex || ("sidebar" as any)}
+        ref={sideBarRef as any}
+        {...props}
+      >
+        <Flex
+          p={p}
+          maxHeight="100%"
+          overflow="auto"
+          flexGrow={1}
+          flexDirection="column"
+          style={{ overflowBehaviour: "contain" } as any}
+        >
+          <Flex justifyContent="space-between" alignItems="flex-start">
+            <Box>{title && <Heading3>{title}</Heading3>}</Box>
+            {!hideCloseButton && (
+              <Box>
+                <IconicButton
+                  ref={closeButton}
+                  icon="close"
+                  onClick={onClose}
+                  data-testid={closeButtonTestId}
+                  aria-label={closeButtonAriaLabel || t("close")}
+                />
+              </Box>
+            )}
+          </Flex>
+          <AnimatedBox
+            variants={childVariants}
+            animate={isOpen ? "open" : "closed"}
+            flexGrow={1}
+            ref={contentRef as any}
+          >
+            {children}
+          </AnimatedBox>
+        </Flex>
+        {footer && (
+          <Box
+            position="sticky"
+            backgroundColor="white"
+            borderTopWidth="1px"
+            borderTopStyle="solid"
+            borderTopColor="lightGrey"
+            alignSelf="flex-end"
+            width="100%"
+            p={p}
+            pt="x2"
+          >
+            {footer}
+          </Box>
+        )}
+        {overlay && disableScroll && isOpen && (
+          <PreventBodyElementScrolling scrollRef={sideBarRef} />
+        )}
+      </AnimatedBox>
+    </>
   );
 };
 
 export default Sidebar;
-

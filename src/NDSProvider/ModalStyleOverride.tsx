@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import {GlobalStylesProps} from "./GlobalStyles";
+import { GlobalStylesProps } from "./GlobalStyles";
 
 const ModalStyleOverride = createGlobalStyle(
   ({ theme, locale }: GlobalStylesProps) => {

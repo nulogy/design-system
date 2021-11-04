@@ -8,8 +8,7 @@ describe("Radio", () => {
     it("can be checked", () => {
       radio().should("not.be.checked");
       radio().check();
-      radio().should("be.checked")
-
+      radio().should("be.checked");
     });
   });
   describe("Checked", () => {
@@ -17,7 +16,7 @@ describe("Radio", () => {
       cy.renderFromStorybook("radio--set-to-default-checked");
     });
     it("is checked", () => {
-      radio().should("be.checked")
+      radio().should("be.checked");
     });
   });
   describe("Disabled", () => {
@@ -59,7 +58,6 @@ describe("Radio", () => {
     });
   });
 });
-
 
 describe("Radio Group", () => {
   describe("Default", () => {

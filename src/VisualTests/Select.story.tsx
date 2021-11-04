@@ -53,7 +53,7 @@ export const WithADefaultValue = () => (
 );
 
 WithADefaultValue.story = {
-  name: "with a defaultValue"
+  name: "with a defaultValue",
 };
 
 export const WithABlankValue = () => {
@@ -71,7 +71,7 @@ export const WithABlankValue = () => {
 };
 
 WithABlankValue.story = {
-  name: "with a blank value"
+  name: "with a blank value",
 };
 
 export const WithAnOptionSelected = () => (
@@ -117,7 +117,7 @@ export const WithWrappingText = () => (
 );
 
 WithWrappingText.story = {
-  name: "With wrapping text"
+  name: "With wrapping text",
 };
 
 export const TestMultiselectOverflow = () => (

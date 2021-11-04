@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Text } from "../Type";
-import {TruncatedTextProps} from "./TruncatedTextProps";
+import { TruncatedTextProps } from "./TruncatedTextProps";
 import TruncatedTextFillWidth from "./TruncatedTextFillWidth";
 import TruncatedTextMaxCharacters from "./TruncatedTextMaxCharacters";
 
@@ -12,7 +12,7 @@ const TruncatedText = ({ fullWidth, children, ...props }: TruncatedTextProps) =>
     <TruncatedTextMaxCharacters {...props}>
       {children}
     </TruncatedTextMaxCharacters>
-);
+  );
 
 TruncatedText.propTypes = {
   children: PropTypes.node,

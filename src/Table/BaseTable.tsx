@@ -45,8 +45,8 @@ const BaseTable: React.SFC<BaseTableProps> = ({
   compact,
   className,
   stickyHeader,
-  onRowMouseEnter = () => { },
-  onRowMouseLeave = () => { },
+  onRowMouseEnter = () => {},
+  onRowMouseLeave = () => {},
   ...props
 }) => (
   <StyledTable id={id} className={className} {...props}>
@@ -101,8 +101,8 @@ BaseTable.defaultProps = {
   compact: false,
   className: undefined,
   stickyHeader: false,
-  onRowMouseEnter: () => { },
-  onRowMouseLeave: () => { },
+  onRowMouseEnter: () => {},
+  onRowMouseLeave: () => {},
 };
 
 export default BaseTable;

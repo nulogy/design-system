@@ -188,7 +188,7 @@ StatelessNavBarDropdownMenu.defaultProps = {
   placement: "bottom-start",
   modifiers: null,
   triggerTogglesMenuState: true,
-  dropdownMenuContainerEventHandlers: () => { },
+  dropdownMenuContainerEventHandlers: () => {},
 };
 
 const NavBarDropdownMenu = withMenuState(StatelessNavBarDropdownMenu);

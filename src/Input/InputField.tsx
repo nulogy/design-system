@@ -137,7 +137,12 @@ export const InputField: React.SFC<InputFieldProps> = forwardRef<
           prefixWidth={prefixWidth}
           textAlign={prefixAlignment}
         />
-        <Box position="relative" display="flex" flexGrow={1} maxWidth={inputWidth}>
+        <Box
+          position="relative"
+          display="flex"
+          flexGrow={1}
+          maxWidth={inputWidth}
+        >
           <StyledInput
             aria-invalid={error}
             aria-required={required}
@@ -147,9 +152,7 @@ export const InputField: React.SFC<InputFieldProps> = forwardRef<
             inputWidth={inputWidth}
             {...props}
           />
-          {icon && (
-            <StyledInputIcon icon={icon} size={iconSize || "x2"} />
-          )}
+          {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} />}
         </Box>
         <Suffix
           suffix={suffix}

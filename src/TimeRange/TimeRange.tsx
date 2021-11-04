@@ -10,9 +10,7 @@ import { useTranslation } from "react-i18next";
 import { SpaceProps } from "styled-system";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
-import {
-  FieldLabelDefaultProps,
-} from "../FieldLabel/FieldLabel.type";
+import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
 import { getDuration } from "./TimeRange.utils";
 
 const DEFAULT_LABEL = "Time Range";

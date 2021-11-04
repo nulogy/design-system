@@ -5,7 +5,7 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { getSubset, omitSubset } from "../utils/subset";
 import StyledTextarea from "./StyledTextarea";
-import {StyledTextareaProps} from "./StyledTextarea";
+import { StyledTextareaProps } from "./StyledTextarea";
 
 type TextareaProps = StyledTextareaProps & {
   className?: string;
