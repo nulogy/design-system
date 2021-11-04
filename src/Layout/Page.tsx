@@ -2,38 +2,37 @@ import React from "react";
 
 import { Box } from "../Box";
 import { Flex } from "../Flex";
-import { Heading1 } from "../Type";
 import { FlexProps } from "../Flex/Flex";
+import { BoxProps } from "../Box/Box";
+import Header from "./Header";
 
 type PageProps = FlexProps & {
   breadcrumbs?: React.ReactNode;
   title?: string;
   children?: React.ReactNode;
   headerContent?: React.ReactNode;
-  headerBackground?: string;
+  headerProps?: BoxProps;
 };
 
-export const Page = ({
+export const Page: React.FC<PageProps> = ({
   breadcrumbs,
   title,
   children,
   headerContent,
-  headerBackground = "whiteGrey",
-  ...props
-}: PageProps) => (
-  <Flex flexDirection="column" {...props}>
-    <Box p="x3" background={headerBackground}>
-      {breadcrumbs}
-      <Flex alignItems="center" mt="x1">
-        {title && <Heading1 mb="0">{title}</Heading1>}
-        {headerContent && (
-          <Box ml="x1" flexGrow={1}>
-            {headerContent}
-          </Box>
-        )}
-      </Flex>
-    </Box>
+  headerProps,
+  ...rest
+}) => (
+  <Flex flexDirection="column" {...rest}>
+    <Header
+      breadcrumbs={breadcrumbs}
+      title={title}
+      background={headerProps?.background}
+      {...headerProps}
+    >
+      {headerContent}
+    </Header>
     <Box p="x3">{children}</Box>
   </Flex>
 );
+
 export default Page;

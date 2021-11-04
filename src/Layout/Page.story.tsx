@@ -148,3 +148,38 @@ export const NoBreadcrumbs = () => (
     </Page>
   </ApplicationFrame>
 );
+
+export const NoBackground = () => (
+  <Page
+    breadcrumbs={
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/">Materials</Link>
+      </Breadcrumbs>
+    }
+    title="Materials Overview"
+    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
+    headerProps={{
+      background: "none",
+    }}
+  />
+);
+
+export const CustomBackground = () => (
+  <Page
+    breadcrumbs={
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/">Materials</Link>
+      </Breadcrumbs>
+    }
+    title="Materials Overview"
+    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
+    headerProps={{
+      background:
+        'url("https://images.unsplash.com/photo-1614851099362-9adf73ccebe9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80")',
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    }}
+  />
+);
