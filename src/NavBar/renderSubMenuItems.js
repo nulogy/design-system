@@ -74,7 +74,6 @@ const renderCustom = (subMenuItem, onItemClick) => (
   </ApplySubMenuLinkStyles>
 );
 
-
 const renderText = (subMenuItem) => (
   <SubMenuText key={subMenuItem.name}>{subMenuItem.name}</SubMenuText>
 );

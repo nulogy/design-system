@@ -7,4 +7,3 @@ const LabelText = styled.span(({ theme }) => ({
 }));
 
 export default LabelText;
-

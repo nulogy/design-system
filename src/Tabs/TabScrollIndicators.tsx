@@ -32,9 +32,8 @@ class TabScrollIndicators extends React.Component<
       contentHiddenRight: this.contentHiddenRight(),
     };
     this.handleIndicatorClick = this.handleIndicatorClick.bind(this);
-    this.getScrollLeftValueByTabIndex = this.getScrollLeftValueByTabIndex.bind(
-      this
-    );
+    this.getScrollLeftValueByTabIndex =
+      this.getScrollLeftValueByTabIndex.bind(this);
     this.contentHiddenLeft = this.contentHiddenLeft.bind(this);
     this.contentHiddenRight = this.contentHiddenRight.bind(this);
     this.handleScroll = this.handleScroll.bind(this);

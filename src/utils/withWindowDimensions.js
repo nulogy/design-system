@@ -36,12 +36,13 @@ WindowDimensions.propTypes = {
   children: PropTypes.func.isRequired,
 };
 
-const withWindowDimensions = (Component) => (props) => (
-  <WindowDimensions>
-    {(windowDimensions) => (
-      <Component windowDimensions={windowDimensions} {...props} />
-    )}
-  </WindowDimensions>
-);
+const withWindowDimensions = (Component) => (props) =>
+  (
+    <WindowDimensions>
+      {(windowDimensions) => (
+        <Component windowDimensions={windowDimensions} {...props} />
+      )}
+    </WindowDimensions>
+  );
 
 export default withWindowDimensions;

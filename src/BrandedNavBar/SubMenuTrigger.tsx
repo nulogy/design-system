@@ -1,5 +1,8 @@
 import React from "react";
-import styled, { CSSObject, StyledComponentPropsWithRef } from "styled-components";
+import styled, {
+  CSSObject,
+  StyledComponentPropsWithRef,
+} from "styled-components";
 import theme from "../theme";
 import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";

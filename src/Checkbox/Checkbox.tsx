@@ -5,7 +5,7 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { getSubset, omitSubset } from "../utils/subset";
-import { DefaultNDSThemeType } from '../theme.type';
+import { DefaultNDSThemeType } from "../theme.type";
 
 type CheckboxProps = React.ComponentPropsWithRef<"input"> & {
   labelText?: string;
@@ -93,24 +93,26 @@ const VisualCheckbox: React.FunctionComponent<any> = styled.div(
     },
   })
 );
-const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input((props) => ({
-  position: "absolute",
-  opacity: "0",
-  height: "1px",
-  width: "1px",
-  [`&:focus + ${VisualCheckbox}`]: {
-    boxShadow: props.theme.shadows.focus,
-  },
-  [`&:checked + ${VisualCheckbox}`]: {
-    ...getCheckboxStyle(props, "checked"),
-    "&:before": {
-      display: "block",
+const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input(
+  (props) => ({
+    position: "absolute",
+    opacity: "0",
+    height: "1px",
+    width: "1px",
+    [`&:focus + ${VisualCheckbox}`]: {
+      boxShadow: props.theme.shadows.focus,
     },
-  },
-  [`&:not(:checked) + ${VisualCheckbox}`]: {
-    ...getCheckboxStyle(props, "unchecked"),
-  },
-}));
+    [`&:checked + ${VisualCheckbox}`]: {
+      ...getCheckboxStyle(props, "checked"),
+      "&:before": {
+        display: "block",
+      },
+    },
+    [`&:not(:checked) + ${VisualCheckbox}`]: {
+      ...getCheckboxStyle(props, "unchecked"),
+    },
+  })
+);
 const Checkbox: React.SFC<any> = forwardRef((props, ref) => {
   const {
     className,
@@ -141,7 +143,11 @@ const Checkbox: React.SFC<any> = forwardRef((props, ref) => {
           indeterminate={indeterminate}
           data-testid="visual-checkbox"
         />
-        {labelText && <Text disabled={disabled} ml="x1">{labelText}</Text>}
+        {labelText && (
+          <Text disabled={disabled} ml="x1">
+            {labelText}
+          </Text>
+        )}
       </ClickInputLabel>
     </Box>
   );

@@ -2,8 +2,8 @@ import React from "react";
 import StatefulTable from "./StatefulTable";
 import BaseTable from "./BaseTable";
 import SortingColumnHeader from "./SortingColumnHeader";
-import { StatefulTableProps } from './StatefulTable';
-import { ColumnType, RowType, CellInfoType } from './Table.types';
+import { StatefulTableProps } from "./StatefulTable";
+import { ColumnType, RowType, CellInfoType } from "./Table.types";
 
 export type TableProps = StatefulTableProps;
 export type TableColumnType = ColumnType;

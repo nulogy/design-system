@@ -55,13 +55,10 @@ describe("DateRange", () => {
     });
     it("returns the selected range when the time changes", () => {
       const onRangeChange = jest.fn();
-      const {
-        container,
-        queryAllByText,
-        getByLabelText,
-      } = renderWithNDSProvider(
-        <DateRange onRangeChange={onRangeChange} showTimes />
-      );
+      const { container, queryAllByText, getByLabelText } =
+        renderWithNDSProvider(
+          <DateRange onRangeChange={onRangeChange} showTimes />
+        );
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       selectTimeOption("11:00 PM", container, queryAllByText, 1);
@@ -113,13 +110,10 @@ describe("DateRange", () => {
     });
     it("returns the selected range with an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
-      const {
-        container,
-        queryAllByText,
-        getByLabelText,
-      } = renderWithNDSProvider(
-        <DateRange showTimes onRangeChange={onRangeChange} />
-      );
+      const { container, queryAllByText, getByLabelText } =
+        renderWithNDSProvider(
+          <DateRange showTimes onRangeChange={onRangeChange} />
+        );
       const startDateInput = getByLabelText("Select a start date");
       fireEvent.click(startDateInput);
       fireEvent.click(

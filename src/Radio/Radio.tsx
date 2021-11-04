@@ -101,7 +101,8 @@ const RadioInput: React.FC<RadioInputProps> = styled.input((props) => ({
   },
 }));
 
-type RadioProps = VisualRadioProps & SpaceProps &
+type RadioProps = VisualRadioProps &
+  SpaceProps &
   React.ComponentPropsWithRef<"input"> & {
     labelText?: ReactNode;
     checked?: boolean;

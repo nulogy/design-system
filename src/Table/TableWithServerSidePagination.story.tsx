@@ -9,10 +9,10 @@ const COLUMNS = [
 ];
 
 type TableState = {
-  page: number,
-  loading: boolean,
-  rows: Array<any>
-}
+  page: number;
+  loading: boolean;
+  rows: Array<any>;
+};
 
 class TableWithServerSidePagination extends React.Component<{}, TableState> {
   constructor(props) {

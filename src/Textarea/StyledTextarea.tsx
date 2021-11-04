@@ -4,7 +4,7 @@ import { transparentize } from "polished";
 import { SpaceProps } from "styled-system";
 import { space } from "styled-system";
 import { subPx } from "../utils";
-import { DefaultNDSThemeType } from '../theme.type';
+import { DefaultNDSThemeType } from "../theme.type";
 
 export type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
   SpaceProps & {

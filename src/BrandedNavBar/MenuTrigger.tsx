@@ -6,7 +6,7 @@ import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
-import { DefaultNDSThemeType } from '../theme.type';
+import { DefaultNDSThemeType } from "../theme.type";
 
 type MenuTriggerProps = {
   name?: string;

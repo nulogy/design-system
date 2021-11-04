@@ -120,5 +120,4 @@ const Branding = ({
   </BrandingWrap>
 );
 
-
 export default Branding;

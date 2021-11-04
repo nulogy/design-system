@@ -65,7 +65,6 @@ WithACustomSize.story = {
   name: "with a custom size",
 };
 
-
 export const WithACustomColor = () => (
   <IconicButton color="red" icon="close">
     Close

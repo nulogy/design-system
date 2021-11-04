@@ -27,7 +27,7 @@ import {
   OverflowProps,
   typography,
 } from "styled-system";
-import { TypographyProps } from 'styled-system';
+import { TypographyProps } from "styled-system";
 import { transition, TransitionProps } from "../StyledProps/transition";
 import { transform, TransformProps } from "../StyledProps/transform";
 import { CursorProps, cursor } from "../StyledProps/cursor";
@@ -50,8 +50,8 @@ type SharedBoxProps = ColorProps &
   VisibilityProps &
   OverflowProps &
   TypographyProps & {
-    boxSizing?: string
-  }
+    boxSizing?: string;
+  };
 
 type CssArg = {
   theme: ThemeType;
@@ -80,7 +80,7 @@ const Box: React.FC<BoxProps> = styled.div(
   overflow,
   transition,
   visibility,
-  typography,
+  typography
 );
 
 export type AnimatedBoxProps = SharedBoxProps &

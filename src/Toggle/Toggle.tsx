@@ -136,7 +136,7 @@ const BaseToggle = ({
 };
 
 BaseToggle.defaultProps = {
-  onChange: () => { },
+  onChange: () => {},
   toggled: undefined,
   disabled: false,
   onText: undefined,
@@ -148,7 +148,7 @@ BaseToggle.defaultProps = {
   labelText: undefined,
   requirementText: undefined,
   error: false,
-  onClick: () => { },
+  onClick: () => {},
 };
 
 type StatefulToggleProps = BaseToggleProps & {
@@ -186,7 +186,7 @@ StatefulToggle.propTypes = {
 
 StatefulToggle.defaultProps = {
   defaultToggled: undefined,
-  onClick: () => { },
+  onClick: () => {},
 };
 
 type ToggleProps = StatefulToggleProps;

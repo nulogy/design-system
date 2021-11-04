@@ -6,24 +6,26 @@ import { rowPropType } from "./Table.types";
 
 export const SELECTABLE_COLUMN_DATA_KEY = "selected";
 
-const selectHeaderFormatter = (
-  onSelectHeader,
-  isHeaderSelected,
-  selectAllAriaLabel,
-  deselectAllAriaLabel
-) => () => {
-  const { t } = useTranslation();
-  const checkedAriaLabel = deselectAllAriaLabel || t("deselect all");
-  const uncheckedAriaLabel = selectAllAriaLabel || t("select all");
-  const ariaLabel = isHeaderSelected ? checkedAriaLabel : uncheckedAriaLabel;
-  return (
-    <Checkbox
-      checked={isHeaderSelected}
-      onChange={onSelectHeader}
-      aria-label={ariaLabel}
-    />
-  );
-};
+const selectHeaderFormatter =
+  (
+    onSelectHeader,
+    isHeaderSelected,
+    selectAllAriaLabel,
+    deselectAllAriaLabel
+  ) =>
+  () => {
+    const { t } = useTranslation();
+    const checkedAriaLabel = deselectAllAriaLabel || t("deselect all");
+    const uncheckedAriaLabel = selectAllAriaLabel || t("select all");
+    const ariaLabel = isHeaderSelected ? checkedAriaLabel : uncheckedAriaLabel;
+    return (
+      <Checkbox
+        checked={isHeaderSelected}
+        onChange={onSelectHeader}
+        aria-label={ariaLabel}
+      />
+    );
+  };
 
 const SelectCell = ({ row, onSelectRow }) => {
   const selectRowHandler = () => onSelectRow(row);
@@ -50,9 +52,8 @@ SelectCell.defaultProps = {
   onSelectRow: null,
 };
 
-const selectCellRenderer = (onSelectRow) => (props) => (
-  <SelectCell onSelectRow={onSelectRow} {...props} />
-);
+const selectCellRenderer = (onSelectRow) => (props) =>
+  <SelectCell onSelectRow={onSelectRow} {...props} />;
 
 export const addSelectableControl = ({
   columns,

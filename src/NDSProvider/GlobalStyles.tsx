@@ -1,4 +1,4 @@
-import styled, {CSSObject} from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 
 export type GlobalStylesProps = {

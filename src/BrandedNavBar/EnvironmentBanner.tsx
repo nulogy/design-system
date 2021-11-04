@@ -14,7 +14,8 @@ const EnvironmentBanner = ({ children }: EnvironmentBannerProps) => (
       fontWeight="bold"
       color="white"
       textTransform="uppercase"
-      py="2px">
+      py="2px"
+    >
       {children}
     </Text>
   </Box>

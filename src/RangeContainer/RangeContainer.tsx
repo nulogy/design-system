@@ -27,20 +27,17 @@ const RangeContainer: React.SFC<RangeContainerProps> = ({
   return (
     <Flex {...spaceProps} flexDirection="column">
       <FieldLabel {...labelProps} {...restProps} />
-      <Flex
-        flexWrap="wrap"
-        mt="x1"
-        mb={errorMessages.length ? "x1" : "x3"}
-      >
-        <Flex>
-          {startComponent}
-        </Flex>
-        <Flex px="half" alignItems="flex-end" alignSelf="flex-end" height="100%">
+      <Flex flexWrap="wrap" mt="x1" mb={errorMessages.length ? "x1" : "x3"}>
+        <Flex>{startComponent}</Flex>
+        <Flex
+          px="half"
+          alignItems="flex-end"
+          alignSelf="flex-end"
+          height="100%"
+        >
           <Text lineHeight="38px">-</Text>
         </Flex>
-        <Flex>
-          {endComponent}
-        </Flex>
+        <Flex>{endComponent}</Flex>
       </Flex>
       {errorMessages.map((errorMessage, i) => (
         // eslint-disable-next-line react/no-array-index-key

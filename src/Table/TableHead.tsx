@@ -2,12 +2,12 @@
 import React from "react";
 import styled from "styled-components";
 import StyledTh from "./StyledTh";
-import { ColumnType } from './Table.types';
+import { ColumnType } from "./Table.types";
 
 type TableHeadProps = {
-  columns: ColumnType[],
-  compact?: boolean,
-  sticky?: boolean,
+  columns: ColumnType[];
+  compact?: boolean;
+  sticky?: boolean;
 };
 
 const StyledHeaderRow = styled.tr(({ theme }) => ({

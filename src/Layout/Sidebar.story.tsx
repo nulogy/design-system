@@ -108,7 +108,10 @@ const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
     footer={<PrimaryButton>Apply</PrimaryButton>}
     {...props}
   >
-    <Select options={[{label: "first option", value: 1}]} labelText="Delivery:" />
+    <Select
+      options={[{ label: "first option", value: 1 }]}
+      labelText="Delivery:"
+    />
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />

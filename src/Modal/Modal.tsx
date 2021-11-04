@@ -9,7 +9,7 @@ import { DefaultNDSThemeType } from "../theme.type";
 import ModalContent from "./ModalContent";
 import ModalFooter from "./ModalFooter";
 import ModalHeader from "./ModalHeader";
-import ModalCloseButton from "./ModalCloseButton"
+import ModalCloseButton from "./ModalCloseButton";
 
 const overlayStyle = (theme) => ({
   position: "fixed",
@@ -138,8 +138,8 @@ const Modal: ReactModal = ({
                 {title}
               </Heading2>
             ) : (
-                <div style={{ height: themeContext.space.x4 }} />
-              )}
+              <div style={{ height: themeContext.space.x4 }} />
+            )}
             {onRequestClose && (
               <ModalCloseButton
                 onClick={onRequestClose}

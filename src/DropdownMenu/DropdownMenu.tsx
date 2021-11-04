@@ -15,18 +15,18 @@ type DropdownMenuProps = {
   backgroundColor?: string;
   showArrow?: boolean;
   placement?:
-  | "top"
-  | "top-start"
-  | "top-end"
-  | "bottom"
-  | "bottom-start"
-  | "bottom-end"
-  | "left"
-  | "left-start"
-  | "left-end"
-  | "right"
-  | "right-start"
-  | "right-end";
+    | "top"
+    | "top-start"
+    | "top-end"
+    | "bottom"
+    | "bottom-start"
+    | "bottom-end"
+    | "left"
+    | "left-start"
+    | "left-end"
+    | "right"
+    | "right-start"
+    | "right-end";
   showDelay?: string | number;
   hideDelay?: string | number;
   defaultOpen?: boolean;
@@ -44,7 +44,10 @@ const transformPropsToModifiers = ({ boundariesElement }) => ({
   boundariesElement,
 });
 
-const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<DropdownMenuProps, Reference>(
+const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<
+  DropdownMenuProps,
+  Reference
+>(
   (
     {
       trigger = () => <IconicButton icon="more" />,

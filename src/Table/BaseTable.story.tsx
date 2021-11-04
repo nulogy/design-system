@@ -385,21 +385,21 @@ WithFullWidthSection.story = {
 
 export const WithAFooter = () => (
   <>
-  <Table
-    columns={columns}
-    keyField="date"
-    rows={rowData}
-    footerRows={footerRowData}
-    loading={boolean("Show loading state", false)}
-  />
-  <Table
-    compact
-    columns={columns}
-    keyField="date"
-    rows={compactRowData}
-    footerRows={footerRowData}
-    loading={boolean("Show loading state", false)}
-  />
+    <Table
+      columns={columns}
+      keyField="date"
+      rows={rowData}
+      footerRows={footerRowData}
+      loading={boolean("Show loading state", false)}
+    />
+    <Table
+      compact
+      columns={columns}
+      keyField="date"
+      rows={compactRowData}
+      footerRows={footerRowData}
+      loading={boolean("Show loading state", false)}
+    />
   </>
 );
 

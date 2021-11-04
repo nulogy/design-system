@@ -1,5 +1,5 @@
 import React from "react";
-import { useTheme } from 'styled-components';
+import { useTheme } from "styled-components";
 
 type LoadingAnimationProps = React.ComponentPropsWithRef<"svg"> & {
   inactive?: boolean;

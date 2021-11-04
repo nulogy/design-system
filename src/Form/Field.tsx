@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Box } from "../Box";
-import { BoxProps } from '../Box/Box';
+import { BoxProps } from "../Box/Box";
 
 export type FieldProps = BoxProps;
 
