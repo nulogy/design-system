@@ -110,7 +110,7 @@ export const _Page = () => (
   >
     <>
       <Text fontFamily="mono" fontSize="small">
-        // content
+        content
       </Text>
     </>
   </Page>
@@ -129,7 +129,7 @@ export const NoPageTitle = () => (
       }
     >
       <Text fontFamily="mono" fontSize="small">
-        // content
+        content
       </Text>
     </Page>
   </ApplicationFrame>

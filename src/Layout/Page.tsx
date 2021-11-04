@@ -10,6 +10,7 @@ type PageProps = FlexProps & {
   title?: string;
   children?: React.ReactNode;
   headerContent?: React.ReactNode;
+  headerBackground?: string;
 };
 
 export const Page = ({
@@ -17,24 +18,22 @@ export const Page = ({
   title,
   children,
   headerContent,
+  headerBackground = "whiteGrey",
   ...props
 }: PageProps) => (
-  <Flex flexDirection="column" py="x3" px="x3" {...props}>
-    {breadcrumbs}
-    <Flex alignItems="center">
-      {title && (
-        <Heading1 mb="x6" mt="x2">
-          {title}
-        </Heading1>
-      )}
-      {headerContent && (
-        <Box mb="x6" mt="x2" flexGrow={1} ml="x1">
-          {headerContent}
-        </Box>
-      )}
-    </Flex>
-    {children}
+  <Flex flexDirection="column" {...props}>
+    <Box p="x3" background={headerBackground}>
+      {breadcrumbs}
+      <Flex alignItems="center" mt="x1">
+        {title && <Heading1 mb="0">{title}</Heading1>}
+        {headerContent && (
+          <Box ml="x1" flexGrow={1}>
+            {headerContent}
+          </Box>
+        )}
+      </Flex>
+    </Box>
+    <Box p="x3">{children}</Box>
   </Flex>
 );
-
 export default Page;
