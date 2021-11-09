@@ -16,11 +16,12 @@ type IconicButtonProps = SpaceProps & {
   onClick?: (...args: any[]) => any;
   icon?: any;
   iconSize?: string;
+  fontSize?: string;
   tooltip?: string;
   children?: any;
 };
 
-const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
+const HoverText: React.FC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
   ontSize: theme.fontSizes.small,
   lineHeight: theme.lineHeights.smallTextCompressed,
@@ -31,7 +32,8 @@ const HoverText: React.SFC<any> = styled.div(({ theme }) => ({
   padding: `${theme.space.half} ${theme.space.x1}`,
   pointerEvents: "none",
 }));
-const WrapperButton: React.SFC<any> = styled.button(
+
+const WrapperButton: React.FC<any> = styled.button(
   ({ disabled, theme }: any) => ({
     background: "transparent",
     border: "none",
@@ -97,6 +99,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
       labelHidden,
       className,
       iconSize,
+      fontSize,
       tooltip,
       ...props
     },
@@ -144,7 +147,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
           </Popper>
         </Manager>
         {children && !labelHidden && (
-          <Text mr="half" ml="half" color={color}>
+          <Text fontSize={fontSize} mr="half" ml="half" color={color}>
             {children}
           </Text>
         )}
@@ -152,6 +155,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
     );
   }
 );
+
 export const iconNames = Object.keys(icons);
 
 IconicButton.propTypes = {
