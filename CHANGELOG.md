@@ -1,3 +1,10 @@
+# [6.2.0](https://github.com/nulogy/design-system/compare/v6.1.7...v6.2.0) (2021-11-09)
+
+
+### Features
+
+* allow setting a custom font size to the iconic button ([#962](https://github.com/nulogy/design-system/issues/962)) ([6c996cc](https://github.com/nulogy/design-system/commit/6c996cc8c91bb88d6101ef505b59c7baa1aacf0f))
+
 ## [6.1.7](https://github.com/nulogy/design-system/compare/v6.1.6...v6.1.7) (2021-09-15)
 
 
