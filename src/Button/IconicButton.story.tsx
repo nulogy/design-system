@@ -55,14 +55,14 @@ WithAHiddenLabel.story = {
   name: "with a hidden label",
 };
 
-export const WithACustomSize = () => (
+export const WithACustomIconSize = () => (
   <IconicButton icon="user" iconSize="50px" labelHidden>
     I am an Iconic Button
   </IconicButton>
 );
 
-WithACustomSize.story = {
-  name: "with a custom size",
+WithACustomIconSize.story = {
+  name: "with a custom icon size",
 };
 
 export const WithACustomColor = () => (
@@ -97,3 +97,21 @@ export const rightAligned = () => (
     </Flex>
   </Flex>
 );
+
+export const WithACustomFontSize = () => (
+  <Flex flexDirection="column">
+    <IconicButton fontSize="small" tooltip="Stop job" icon="close">
+      This is an IconicButton with a small font size
+    </IconicButton>
+    <IconicButton fontSize="large" tooltip="Stop job" icon="close">
+      This is an IconicButton with a large font size
+    </IconicButton>
+    <IconicButton fontSize="48px" tooltip="Stop job" icon="close">
+      This is an IconicButton with 48px font size
+    </IconicButton>
+  </Flex>
+);
+
+WithACustomFontSize.story = {
+  name: "with a custom font size",
+};
