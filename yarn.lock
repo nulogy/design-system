@@ -1741,10 +1741,10 @@
     fs "^0.0.1-security"
     svgi "^1.1.0"
 
-"@nulogy/tokens@4":
-  version "4.14.1"
-  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-4.14.1.tgz#55194510d7069358005bec95e3adf94a1e027a88"
-  integrity sha512-VQZKkQ77Am7Hca904LUlYhOmEnKVMq5qvzTmpI0jazQWplYcx8vDceMIWcksEzgnKQAfSvESK/U7tcUMa3Jwkg==
+"@nulogy/tokens@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-5.1.0.tgz#283a99eb8eff5723358e69dce106f9377a56b01d"
+  integrity sha512-99At2AWRe7DXHZTieFY2wNSmq7wrwWjdHJ8Gn5pipXTFptHU5UBSSYjcqcNEr8B3lP9bllB055E9QxumopS9dA==
 
 "@octokit/auth-token@^2.4.4":
   version "2.4.5"
