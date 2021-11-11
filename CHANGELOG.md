@@ -1,3 +1,10 @@
+# [6.3.0](https://github.com/nulogy/design-system/compare/v6.2.1...v6.3.0) (2021-11-11)
+
+
+### Features
+
+* add midGrey color ([#965](https://github.com/nulogy/design-system/issues/965)) ([e2b667e](https://github.com/nulogy/design-system/commit/e2b667e15892b6f1f00bf49296ce9212aa3de00e))
+
 ## [6.2.1](https://github.com/nulogy/design-system/compare/v6.2.0...v6.2.1) (2021-11-11)
 
 
