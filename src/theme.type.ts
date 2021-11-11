@@ -5,6 +5,7 @@ type Colors = {
   blue: string;
   lightBlue: string;
   darkGrey: string;
+  midGrey: string;
   grey: string;
   lightGrey: string;
   whiteGrey: string;
