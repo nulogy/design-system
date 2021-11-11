@@ -1,3 +1,10 @@
+## [6.2.1](https://github.com/nulogy/design-system/compare/v6.2.0...v6.2.1) (2021-11-11)
+
+
+### Bug Fixes
+
+* upgrade nds-tokens to v5.1.0 ([#963](https://github.com/nulogy/design-system/issues/963)) ([b7eab01](https://github.com/nulogy/design-system/commit/b7eab0112b8e70ee3e4ce9bdd83b8acb6179f8dc))
+
 # [6.2.0](https://github.com/nulogy/design-system/compare/v6.1.7...v6.2.0) (2021-11-09)
 
 
