@@ -9,6 +9,7 @@ const Theme: DefaultNDSThemeType = {
     blue: tokens.color_base_blue,
     lightBlue: tokens.color_base_light_blue,
     darkGrey: tokens.color_base_dark_grey,
+    midGrey: tokens.color_base_mid_grey,
     grey: tokens.color_base_grey,
     lightGrey: tokens.color_base_light_grey,
     whiteGrey: tokens.color_base_white_grey,
