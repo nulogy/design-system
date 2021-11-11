@@ -5,11 +5,11 @@ import {
   Icon,
   Breadcrumbs,
   Link,
-  Heading2,
   Text,
   Page,
-  PrimaryButton,
+  StatusIndicator,
 } from "..";
+import Header from "./Header";
 
 const primaryMenu = [
   {
@@ -99,33 +99,43 @@ export default {
 
 export const _Page = () => (
   <Page
-    breadcrumbs={
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
+    header={
+      <Header
+        breadcrumbs={
+          <Breadcrumbs>
+            <Link href="/">Home</Link>
+            <Link href="/">Materials</Link>
+          </Breadcrumbs>
+        }
+        title="Materials Overview"
+      >
+        <StatusIndicator type="informative">Beta</StatusIndicator>
+      </Header>
     }
-    title="Materials Overview"
-    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
   >
-    <>
-      <Text fontFamily="mono" fontSize="small">
-        content
-      </Text>
-    </>
+    <Text fontFamily="mono" fontSize="small">
+      content
+    </Text>
   </Page>
 );
 
-export const NoPageTitle = () => (
+export const withNavBar = () => (
   <ApplicationFrame
     navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
   >
     <Page
-      breadcrumbs={
-        <Breadcrumbs>
-          <Link href="/">Home</Link>
-          <Link href="/">Materials</Link>
-        </Breadcrumbs>
+      header={
+        <Header
+          breadcrumbs={
+            <Breadcrumbs>
+              <Link href="/">Home</Link>
+              <Link href="/">Materials</Link>
+            </Breadcrumbs>
+          }
+          title="Materials Overview"
+        >
+          <StatusIndicator type="informative">Beta</StatusIndicator>
+        </Header>
       }
     >
       <Text fontFamily="mono" fontSize="small">
@@ -135,51 +145,6 @@ export const NoPageTitle = () => (
   </ApplicationFrame>
 );
 
-export const NoBreadcrumbs = () => (
-  <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-    height="100vh"
-  >
-    <Page title="Materials Overview">
-      <>
-        <Heading2>Overview</Heading2>
-        <Text>I am main content.</Text>
-      </>
-    </Page>
-  </ApplicationFrame>
-);
-
-export const NoBackground = () => (
-  <Page
-    breadcrumbs={
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    }
-    title="Materials Overview"
-    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
-    headerProps={{
-      background: "none",
-    }}
-  />
-);
-
-export const CustomBackground = () => (
-  <Page
-    breadcrumbs={
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    }
-    title="Materials Overview"
-    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
-    headerProps={{
-      background:
-        'url("https://images.unsplash.com/photo-1614851099362-9adf73ccebe9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80")',
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-    }}
-  />
-);
+withNavBar.story = {
+  title: "With navigation bar",
+};

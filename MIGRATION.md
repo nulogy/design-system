@@ -1,5 +1,11 @@
 # Migration Guide
 
+## Migrating from v6 to v7:
+
+### Accept a <Header /> component for the <Page />
+
+* Removes `breadcrumbs`, `title`, `headerContent`, `headerProps` from the `<Page />` component and adds a new optional prop `header` which accepts a `<Header />` component.
+
 ## Migrating from v5 to v6:
 
 ### Remove deprecated props and components 

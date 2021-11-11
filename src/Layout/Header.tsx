@@ -6,7 +6,7 @@ import { Heading1 } from "../Type";
 
 type HeaderProps = BoxProps & {
   breadcrumbs?: React.ReactNode;
-  content?: React.ReactNode;
+  title?: string;
   children?: React.ReactNode;
 };
 
