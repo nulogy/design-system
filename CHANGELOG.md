@@ -1,3 +1,10 @@
+## [6.3.1](https://github.com/nulogy/design-system/compare/v6.3.0...v6.3.1) (2021-11-18)
+
+
+### Bug Fixes
+
+* upgrade dependencies to resolve vulnerabilities ([#967](https://github.com/nulogy/design-system/issues/967)) ([c7b2c70](https://github.com/nulogy/design-system/commit/c7b2c70a5490ebe2bbb2ad942ae473c3daa792de))
+
 # [6.3.0](https://github.com/nulogy/design-system/compare/v6.2.1...v6.3.0) (2021-11-11)
 
 
