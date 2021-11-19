@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from "react";
+import React, { useMemo } from "react";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
@@ -70,6 +70,10 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<
   ) => {
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
+    const modifiers = useMemo(() => {
+      return transformPropsToModifiers({ boundariesElement });
+    }, [boundariesElement]);
+
     return (
       <Popper
         trigger={React.cloneElement(trigger(), {
@@ -86,7 +90,7 @@ const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<
         openOnClick
         ref={ref}
         openOnHover={false}
-        modifiers={transformPropsToModifiers({ boundariesElement })}
+        modifiers={modifiers}
         backgroundColor={backgroundColor}
         borderColor={backgroundColor}
         openAriaLabel={openAriaLabel}
