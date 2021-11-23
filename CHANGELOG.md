@@ -1,3 +1,10 @@
+## [6.3.2](https://github.com/nulogy/design-system/compare/v6.3.1...v6.3.2) (2021-11-23)
+
+
+### Bug Fixes
+
+* memoize dropdown popper modifiers ([#969](https://github.com/nulogy/design-system/issues/969)) ([dbe4574](https://github.com/nulogy/design-system/commit/dbe4574733343b07a0e5134b30a3b5b995a2995c))
+
 ## [6.3.1](https://github.com/nulogy/design-system/compare/v6.3.0...v6.3.1) (2021-11-18)
 
 
