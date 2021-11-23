@@ -1,6 +1,6 @@
 ## Description
 
-**Describe the change you're making, the motiviations behind it, and any thing else a reviewer may need to know to approve this PR.**
+**Describe the change you're making, the motivations behind it, and any thing else a reviewer may need to know to approve this PR.**
 
 ## Changes include
 
