@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Table } from "..";
 
 const COLUMNS = [
   { label: "Name", dataKey: "name" },
-  { label: "Population (x 1000)", dataKey: "population" },
+  { label: "Population (x 1000)", dataKey: "population", numeric: true },
 ];
 
 const ROWS = [
@@ -19,66 +19,70 @@ const ROWS = [
   { name: "Elephant", population: "130" },
 ];
 
-const numericAlphabeticalSort = (a, b) =>
-  a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" });
+const INITIAL_SORT_COLUMN = "name";
+const KEY_FIELD = "name";
 
-const getSortedRows = (rows, columnKey, sortFunction) =>
-  rows.sort((a, b) => sortFunction(a[columnKey], b[columnKey]));
+const numericAlphabeticalSort = (a, b, numeric) =>
+  String(a).localeCompare(b, undefined, { numeric, sensitivity: "base" });
 
-const INITIAL_SORTED_ROWS = getSortedRows(
-  ROWS,
-  "name",
-  numericAlphabeticalSort
-);
+const applySort = (rows, sortColumn, columns) =>
+  rows.sort((a, b) => {
+    const column = columns.find((col) => col.dataKey === sortColumn);
+    const { numeric } = column;
 
-const TableWithSorting = () => {
-  const [rows, setRows] = useState(INITIAL_SORTED_ROWS);
-  const [sortState, setSortState] = useState({
-    name: false,
-    current: "name",
+    return numericAlphabeticalSort(a[sortColumn], b[sortColumn], numeric);
   });
 
-  const sortRows = (sortObj) => {
-    const columnKey = sortObj.current;
-    if (columnKey) {
-      const sortedRows = getSortedRows(
-        rows,
-        columnKey,
-        numericAlphabeticalSort
-      );
-      setRows(sortObj[columnKey] ? sortedRows : sortedRows.reverse());
-    }
-  };
+const sortRows = (rows, columns, sortState) => {
+  const sortedRows = applySort(rows, sortState.sortColumn, columns);
 
-  useEffect(() => {
-    sortRows(sortState);
-  }, [sortState]);
+  return sortState.ascending ? sortedRows : sortedRows.reverse();
+};
+
+const TableWithSorting = () => {
+  const [sortState, setSortState] = useState({
+    ascending: true,
+    sortColumn: INITIAL_SORT_COLUMN,
+  });
+  const [rows, setRows] = useState(() =>
+    sortRows([...ROWS], COLUMNS, sortState)
+  );
 
   const onSortChange = (dataKey) => {
-    return setSortState((state) => ({
-      ...state,
-      [dataKey]: !state[dataKey],
-      current: dataKey,
-    }));
+    let newSortState;
+
+    setSortState((previousState) => {
+      const ascending =
+        previousState.sortColumn !== dataKey || !previousState.ascending;
+      newSortState = { ascending, sortColumn: dataKey };
+
+      return newSortState;
+    });
+
+    setRows((previousState) => sortRows(previousState, COLUMNS, newSortState));
   };
-  const transformColumn = (column, onChange) => {
-    const isAscending = sortState[column.dataKey] || false;
+
+  const transformColumn = (column) => {
+    const isAscending =
+      sortState.ascending && column.dataKey === sortState.sortColumn;
+
     return {
       ...column,
+
       headerFormatter: ({ label, dataKey }) => (
         <Table.SortingHeader
-          onChange={() => onChange(dataKey, isAscending)}
+          onChange={() => onSortChange(dataKey)}
           label={label}
           ascending={isAscending}
-          active={dataKey === sortState.current}
+          active={dataKey === sortState.sortColumn}
         />
       ),
     };
   };
-  const columns = COLUMNS.map((column) =>
-    transformColumn(column, onSortChange)
-  );
-  return <Table columns={columns} rows={rows} keyField="name" />;
+
+  const columns = COLUMNS.map((column) => transformColumn(column));
+
+  return <Table columns={columns} rows={rows} keyField={KEY_FIELD} />;
 };
 
 export default {
@@ -90,3 +94,4 @@ export const WithSorting = () => <TableWithSorting />;
 WithSorting.story = {
   name: "with sorting",
 };
+/* eslint-enable react/prop-types */
