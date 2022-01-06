@@ -39,13 +39,18 @@ const sortRows = (rows, columns, sortState) => {
   return sortState.ascending ? sortedRows : sortedRows.reverse();
 };
 
-const TableWithSorting = () => {
+const SortingTable = ({
+  columns: incomingColumns,
+  rows: incomingRows,
+  initialSortColumn,
+  ...props
+}) => {
   const [sortState, setSortState] = useState({
     ascending: true,
-    sortColumn: INITIAL_SORT_COLUMN,
+    sortColumn: initialSortColumn,
   });
   const [rows, setRows] = useState(() =>
-    sortRows([...ROWS], COLUMNS, sortState)
+    sortRows([...incomingRows], incomingColumns, sortState)
   );
 
   const onSortChange = (dataKey) => {
@@ -59,7 +64,9 @@ const TableWithSorting = () => {
       return newSortState;
     });
 
-    setRows((previousState) => sortRows(previousState, COLUMNS, newSortState));
+    setRows((previousState) =>
+      sortRows(previousState, incomingColumns, newSortState)
+    );
   };
 
   const transformColumn = (column) => {
@@ -80,9 +87,20 @@ const TableWithSorting = () => {
     };
   };
 
-  const columns = COLUMNS.map((column) => transformColumn(column));
+  const columns = incomingColumns.map((column) => transformColumn(column));
 
-  return <Table columns={columns} rows={rows} keyField={KEY_FIELD} />;
+  return <Table columns={columns} rows={rows} {...props} />;
+};
+
+const TableWithSorting = () => {
+  return (
+    <SortingTable
+      columns={COLUMNS}
+      rows={ROWS}
+      keyField={KEY_FIELD}
+      initialSortColumn={INITIAL_SORT_COLUMN}
+    />
+  );
 };
 
 export default {
