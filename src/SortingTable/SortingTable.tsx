@@ -1,26 +1,9 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import { Table } from "..";
+import { Table, TableProps } from "../Table";
 
-const COLUMNS = [
-  { label: "Name", dataKey: "name" },
-  { label: "Population (x 1000)", dataKey: "population", numeric: true },
-];
-
-const ROWS = [
-  { name: "Antelope", population: "50" },
-  { name: "Dingo", population: "180" },
-  { name: "Chimpanzee", population: "170" },
-  { name: "Iguana", population: "4000" },
-  { name: "Hippopotamus", population: "100" },
-  { name: "Flamingo", population: "200" },
-  { name: "Giraffe", population: "120" },
-  { name: "Black Bear", population: "100" },
-  { name: "Elephant", population: "130" },
-];
-
-const INITIAL_SORT_COLUMN = "name";
-const KEY_FIELD = "name";
+type SortingTableProps = TableProps & {
+  initialSortColumn: string;
+};
 
 const numericAlphabeticalSort = (a, b, numeric) =>
   String(a).localeCompare(b, undefined, { numeric, sensitivity: "base" });
@@ -44,7 +27,7 @@ const SortingTable = ({
   rows: incomingRows,
   initialSortColumn,
   ...props
-}) => {
+}: SortingTableProps) => {
   const [sortState, setSortState] = useState({
     ascending: true,
     sortColumn: initialSortColumn,
@@ -92,24 +75,4 @@ const SortingTable = ({
   return <Table columns={columns} rows={rows} {...props} />;
 };
 
-const TableWithSorting = () => {
-  return (
-    <SortingTable
-      columns={COLUMNS}
-      rows={ROWS}
-      keyField={KEY_FIELD}
-      initialSortColumn={INITIAL_SORT_COLUMN}
-    />
-  );
-};
-
-export default {
-  title: "Components/Table",
-};
-
-export const WithSorting = () => <TableWithSorting />;
-
-WithSorting.story = {
-  name: "with sorting",
-};
-/* eslint-enable react/prop-types */
+export default SortingTable;
