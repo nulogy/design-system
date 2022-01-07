@@ -1,3 +1,10 @@
+# [6.4.0](https://github.com/nulogy/design-system/compare/v6.3.2...v6.4.0) (2022-01-07)
+
+
+### Features
+
+* Add SortingTable component ([#980](https://github.com/nulogy/design-system/issues/980)) ([c2b1b0c](https://github.com/nulogy/design-system/commit/c2b1b0c3cfdffa9c8bf6929f625993ae01b2092d))
+
 ## [6.3.2](https://github.com/nulogy/design-system/compare/v6.3.1...v6.3.2) (2021-11-23)
 
 
