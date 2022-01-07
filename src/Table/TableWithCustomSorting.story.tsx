@@ -4,19 +4,19 @@ import { Table } from "..";
 
 const COLUMNS = [
   { label: "Name", dataKey: "name" },
-  { label: "Population (x 1000)", dataKey: "population" },
+  { label: "Species Type", dataKey: "type" },
 ];
 
 const ROWS = [
-  { name: "Antelope", population: "50" },
-  { name: "Dingo", population: "180" },
-  { name: "Chimpanzee", population: "170" },
-  { name: "Iguana", population: "4000" },
-  { name: "Hippopotamus", population: "100" },
-  { name: "Flamingo", population: "200" },
-  { name: "Giraffe", population: "120" },
-  { name: "Black Bear", population: "100" },
-  { name: "Elephant", population: "130" },
+  { name: "Antelope", type: "Mammal" },
+  { name: "Dingo", type: "Mammal" },
+  { name: "Chimpanzee", type: "Mammal" },
+  { name: "Iguana", type: "Lizard" },
+  { name: "Hippopotamus", type: "Mammal" },
+  { name: "Flamingo", type: "Avian" },
+  { name: "Giraffe", type: "Mammal" },
+  { name: "Black Bear", type: "Mammal" },
+  { name: "Elephant", type: "Mammal" },
 ];
 
 const INITIAL_SORT_COLUMN = "name";
