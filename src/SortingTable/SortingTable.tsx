@@ -21,7 +21,7 @@ const applySort = (
   sortColumn: string,
   columns: SortableColumnType[]
 ) =>
-  rows.sort((a, b) => {
+  [...rows].sort((a, b) => {
     const column = columns.find((col) => col.dataKey === sortColumn);
     const { numeric } = column;
 
@@ -50,7 +50,7 @@ const SortingTable = ({
   });
 
   const [rows, setRows] = useState(() =>
-    sortRows([...incomingRows], incomingColumns, sortState)
+    sortRows(incomingRows, incomingColumns, sortState)
   );
 
   const onSortChange = (dataKey) => {
