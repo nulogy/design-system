@@ -79,3 +79,4 @@ export { AsyncSelect } from "./AsyncSelect";
 export { ApplicationFrame, Page, Sidebar } from "./Layout";
 export { useWindowDimensions } from "./utils";
 export { Divider } from "./Divider";
+export { SortingTable } from "./SortingTable";
