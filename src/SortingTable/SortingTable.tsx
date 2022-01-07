@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Table, TableProps } from "../Table";
+import { Table } from "../Table";
+import type { TableProps } from "../Table";
 import type { RowType, ColumnType } from "../Table/Table.types";
 
 type SortingTableProps = TableProps & {
@@ -38,12 +39,12 @@ const sortRows = (
   return sortState.ascending ? sortedRows : sortedRows.reverse();
 };
 
-const SortingTable = ({
+const SortingTable: React.FC<SortingTableProps> = ({
   columns: incomingColumns,
   rows: incomingRows,
   initialSortColumn,
   ...props
-}: SortingTableProps) => {
+}) => {
   const [sortState, setSortState] = useState<SortState>({
     ascending: true,
     sortColumn: initialSortColumn,
