@@ -1,14 +1,26 @@
 import React, { useState } from "react";
 import { Table, TableProps } from "../Table";
+import type { RowType, ColumnType } from "../Table/Table.types";
 
 type SortingTableProps = TableProps & {
   initialSortColumn: string;
 };
 
+type SortableColumnType = ColumnType & { numeric?: boolean };
+
+type SortState = {
+  ascending: boolean;
+  sortColumn: string;
+};
+
 const numericAlphabeticalSort = (a, b, numeric) =>
   String(a).localeCompare(b, undefined, { numeric, sensitivity: "base" });
 
-const applySort = (rows, sortColumn, columns) =>
+const applySort = (
+  rows: RowType[],
+  sortColumn: string,
+  columns: SortableColumnType[]
+) =>
   rows.sort((a, b) => {
     const column = columns.find((col) => col.dataKey === sortColumn);
     const { numeric } = column;
@@ -16,7 +28,11 @@ const applySort = (rows, sortColumn, columns) =>
     return numericAlphabeticalSort(a[sortColumn], b[sortColumn], numeric);
   });
 
-const sortRows = (rows, columns, sortState) => {
+const sortRows = (
+  rows: RowType[],
+  columns: SortableColumnType[],
+  sortState: SortState
+) => {
   const sortedRows = applySort(rows, sortState.sortColumn, columns);
 
   return sortState.ascending ? sortedRows : sortedRows.reverse();
@@ -28,10 +44,11 @@ const SortingTable = ({
   initialSortColumn,
   ...props
 }: SortingTableProps) => {
-  const [sortState, setSortState] = useState({
+  const [sortState, setSortState] = useState<SortState>({
     ascending: true,
     sortColumn: initialSortColumn,
   });
+
   const [rows, setRows] = useState(() =>
     sortRows([...incomingRows], incomingColumns, sortState)
   );
