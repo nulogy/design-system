@@ -55,19 +55,6 @@ type AnimatedBoxBottomProps = React.ComponentPropsWithRef<"div"> & {
   visible?: boolean;
 };
 
-const AnimatedBoxBottom: React.SFC<AnimatedBoxBottomProps> = styled(Box)(
-  ({ visible }: AnimatedBoxBottomProps): CSSObject => ({
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "fit-content",
-    tranform: `translateY(${TOAST_Y_MIN})`,
-    ...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES),
-  })
-);
 export const Toast = ({
   triggered,
   onHide,
@@ -76,6 +63,7 @@ export const Toast = ({
   children,
   showDuration,
   onHidden,
+  zIndex,
   ...props
 }: ToastProps) => {
   const [visible, setVisible] = useState(triggered);
@@ -126,12 +114,22 @@ export const Toast = ({
     hideToast(0);
   };
   return (
-    <AnimatedBoxBottom
+    <Box
       visible={visible}
       onMouseEnter={onMouseIn}
       onFocus={onMouseIn}
       onMouseLeave={onMouseOut}
       onBlur={onMouseOut}
+      position="fixed"
+      bottom="0"
+      left="0"
+      right="0"
+      marginLeft="auto"
+      marginRight="auto"
+      width="fit-content"
+      transform={`translateY(${TOAST_Y_MIN})`}
+      {...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES)}
+      zIndex={zIndex}
     >
       <AnimatedAlert
         visible={visible}
@@ -142,7 +140,7 @@ export const Toast = ({
       >
         {children}
       </AnimatedAlert>
-    </AnimatedBoxBottom>
+    </Box>
   );
 };
 Toast.defaultProps = {

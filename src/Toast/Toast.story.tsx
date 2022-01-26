@@ -2,9 +2,15 @@
 // typescript turned off because of {toast.type} not being a string
 
 import React, { useState } from "react";
-import { Button, DangerButton, IconicButton, PrimaryButton } from "../Button";
-import { Flex } from "../Flex";
-import { Toast } from ".";
+import {
+  Button,
+  DangerButton,
+  IconicButton,
+  Modal,
+  PrimaryButton,
+  Flex,
+  Toast,
+} from "../index";
 
 export default {
   title: "Components/Toast",
@@ -176,6 +182,21 @@ export const WithCloseButton = () => {
 
 WithCloseButton.story = {
   name: "with close button",
+};
+
+export const WithModal = () => (
+  <>
+    <Toast triggered={true} type="danger" isCloseable zIndex={1001}>
+      Something went wrong. Try again.
+    </Toast>
+    <Modal title="Modal Title" onRequestClose={() => {}} maxWidth="456px">
+      Modal Body
+    </Modal>
+  </>
+);
+
+WithModal.story = {
+  name: "with a modal",
 };
 
 export const CloseableWithMultiLineMessage = () => {
