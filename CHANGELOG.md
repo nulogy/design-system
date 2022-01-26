@@ -1,3 +1,10 @@
+## [6.4.1](https://github.com/nulogy/design-system/compare/v6.4.0...v6.4.1) (2022-01-26)
+
+
+### Bug Fixes
+
+* allow passing z-index to Toast ([#987](https://github.com/nulogy/design-system/issues/987)) ([75dd07a](https://github.com/nulogy/design-system/commit/75dd07a3a4c46b4c2f465ba9d67de52f21971a7c))
+
 # [6.4.0](https://github.com/nulogy/design-system/compare/v6.3.2...v6.4.0) (2022-01-07)
 
 
