@@ -105,6 +105,7 @@ type ZIndices = {
   tabsScollIndicator: number;
   tabsBar: number;
   overlay: number;
+  aboveOverlay: number;
   tableHeader: number;
   modalHeaderAndFooter: number;
   openControl: number;
