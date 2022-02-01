@@ -1,3 +1,10 @@
+# [6.5.0](https://github.com/nulogy/design-system/compare/v6.4.1...v6.5.0) (2022-02-01)
+
+
+### Features
+
+* add new z-index to the theme ([#988](https://github.com/nulogy/design-system/issues/988)) ([53433ba](https://github.com/nulogy/design-system/commit/53433ba8079f3f73d4c4701a9078833407f1e1b2))
+
 ## [6.4.1](https://github.com/nulogy/design-system/compare/v6.4.0...v6.4.1) (2022-01-26)
 
 
