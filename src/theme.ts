@@ -110,6 +110,7 @@ const Theme: DefaultNDSThemeType = {
     tabsScollIndicator: tokens.z_indices_tabs_scroll_indicator,
     tabsBar: tokens.z_indices_tabs_bar,
     overlay: tokens.z_indices_overlay,
+    aboveOverlay: tokens.z_indices_above_overlay,
     tableHeader: tokens.z_indices_table_header,
     modalHeaderAndFooter: tokens.z_indices_modal_header_and_footer,
     openControl: tokens.z_indices_open_control,
