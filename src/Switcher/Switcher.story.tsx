@@ -4,10 +4,6 @@ import { Text } from "../Type";
 import Switcher from "./Switcher";
 import Switch from "./Switch";
 
-export default {
-  title: "Components/Switcher",
-};
-
 export const WithSelectedValue = () => {
   const [selected, setSelected] = useState("option_1");
 
@@ -21,10 +17,6 @@ export const WithSelectedValue = () => {
       <Switch value="option_2">Option 2</Switch>
     </Switcher>
   );
-};
-
-WithSelectedValue.story = {
-  name: "With Selected Value",
 };
 
 export const WithContent = () => {
@@ -54,6 +46,6 @@ export const WithContent = () => {
   );
 };
 
-WithContent.story = {
-  name: "With Content",
+export default {
+  title: "Components/Switcher",
 };

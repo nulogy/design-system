@@ -4,9 +4,9 @@ import React from "react";
 import propTypes from "@styled-system/prop-types";
 import ReactResizeDetector from "react-resize-detector";
 import { getSubset } from "../utils/subset";
+import FocusManager from "../utils/ts/FocusManager";
 import { Box } from "../Box";
 import TabContainer from "./TabContainer";
-import FocusManager from "../utils/ts/FocusManager";
 import TabScrollIndicators from "./TabScrollIndicators";
 
 export type TabsProps = {
