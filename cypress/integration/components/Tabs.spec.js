@@ -28,7 +28,10 @@ describe("Tabs", () => {
     });
 
     it("selects a tab when enter is pressed on it", () => {
-      getTab(1).type("{enter}").should("have.attr", "aria-selected", "true");
+      getTab(1).type("{enter}");
+
+      getTab(1).should("have.attr", "aria-selected", "true");
+      cy.get("[aria-hidden=false]").should("have.text", "Tab 1 Content");
     });
 
     it("focuses the first tab by default", () => {
