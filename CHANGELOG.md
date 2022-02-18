@@ -1,3 +1,10 @@
+# [6.6.0](https://github.com/nulogy/design-system/compare/v6.5.0...v6.6.0) (2022-02-18)
+
+
+### Features
+
+* add a Switcher component ([#939](https://github.com/nulogy/design-system/issues/939)) ([8e8f8ca](https://github.com/nulogy/design-system/commit/8e8f8cad6c98507e3c5850a3e469c4ff0a8f9845))
+
 # [6.5.0](https://github.com/nulogy/design-system/compare/v6.4.1...v6.5.0) (2022-02-01)
 
 
