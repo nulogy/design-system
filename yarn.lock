@@ -2133,10 +2133,10 @@
     fs "^0.0.1-security"
     svgi "^1.1.0"
 
-"@nulogy/tokens@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-5.1.0.tgz#283a99eb8eff5723358e69dce106f9377a56b01d"
-  integrity sha512-99At2AWRe7DXHZTieFY2wNSmq7wrwWjdHJ8Gn5pipXTFptHU5UBSSYjcqcNEr8B3lP9bllB055E9QxumopS9dA==
+"@nulogy/tokens@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/tokens/-/tokens-5.2.0.tgz#fd43dc64d05038234591a93d853896c599443f90"
+  integrity sha512-HrlSDNBGlYRG3jZVKyRvjHvLHTnX5gBLFXO8Ioisw8i5NlEfbWwLqTi3OvGjpUvVyvo5Auk534OaYH2b0fUblg==
 
 "@octokit/auth-token@^2.4.4":
   version "2.4.5"

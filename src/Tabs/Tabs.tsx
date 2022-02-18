@@ -4,9 +4,9 @@ import React from "react";
 import propTypes from "@styled-system/prop-types";
 import ReactResizeDetector from "react-resize-detector";
 import { getSubset } from "../utils/subset";
+import FocusManager from "../utils/ts/FocusManager";
 import { Box } from "../Box";
 import TabContainer from "./TabContainer";
-import TabFocusManager from "./TabFocusManager";
 import TabScrollIndicators from "./TabScrollIndicators";
 
 export type TabsProps = {
@@ -109,8 +109,8 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     const spaceProps = getSubset(this.props, propTypes.space);
     return (
       <Box position="relative">
-        <TabFocusManager tabRefs={this.tabRefs}>
-          {({ handleArrowNavigation, setFocusToTab, focusedIndex }) => (
+        <FocusManager refs={this.tabRefs}>
+          {({ focusedIndex, setFocusedIndex, handleArrowNavigation }) => (
             <TabScrollIndicators
               tabRefs={this.tabRefs}
               tabContainerRef={this.tabContainerRef}
@@ -125,7 +125,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
                 >
                   <ReactResizeDetector handleWidth onResize={handleResize} />
                   {this.getTabs(
-                    setFocusToTab,
+                    setFocusedIndex,
                     focusedIndex,
                     handleArrowNavigation
                   )}
@@ -133,7 +133,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
               )}
             </TabScrollIndicators>
           )}
-        </TabFocusManager>
+        </FocusManager>
         {this.getTabContent()}
       </Box>
     );
