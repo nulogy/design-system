@@ -1,3 +1,10 @@
+## [6.6.1](https://github.com/nulogy/design-system/compare/v6.6.0...v6.6.1) (2022-03-02)
+
+
+### Bug Fixes
+
+* add role and title to loading animation ([#994](https://github.com/nulogy/design-system/issues/994)) ([99bd34c](https://github.com/nulogy/design-system/commit/99bd34c4061400254d9cb653f0416161ac854c82))
+
 # [6.6.0](https://github.com/nulogy/design-system/compare/v6.5.0...v6.6.0) (2022-02-18)
 
 
