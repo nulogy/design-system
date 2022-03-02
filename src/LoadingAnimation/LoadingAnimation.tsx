@@ -16,7 +16,9 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
       height="24px"
       viewBox="0 0 100 10"
       preserveAspectRatio="xMidYMid"
+      role="img"
     >
+      <title id="lightbulb11">Loading animation</title>
       <g transform="translate(4 5)">
         <circle
           cx="0"
