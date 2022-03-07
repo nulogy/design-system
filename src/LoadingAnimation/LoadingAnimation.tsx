@@ -6,8 +6,10 @@ type LoadingAnimationProps = React.ComponentPropsWithRef<"svg"> & {
 };
 const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
   const { colors } = useTheme();
+
   const color1 = inactive ? colors.grey : colors.blue;
   const color2 = inactive ? colors.lightGrey : colors.yellow;
+
   return (
     // Modified svg By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL
     <svg
@@ -18,7 +20,7 @@ const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
       preserveAspectRatio="xMidYMid"
       role="img"
     >
-      <title id="lightbulb11">Loading animation</title>
+      <title>Loading animation</title>
       <g transform="translate(4 5)">
         <circle
           cx="0"
