@@ -1,6 +1,8 @@
 import React from "react";
 import { IconicButton } from "../index";
 import { Flex } from "../Flex";
+import { StatusIndicator } from "../StatusIndicator";
+import { Box } from "../Box";
 
 export default {
   title: "Components/IconicButton",
@@ -114,4 +116,19 @@ export const WithACustomFontSize = () => (
 
 WithACustomFontSize.story = {
   name: "with a custom font size",
+};
+
+export const WithNonTextChildren = () => (
+  <IconicButton fontSize="small" aria-label="warnings" icon="warning">
+    <Flex>
+      <Box as="span" pr="x1">
+        Warnings
+      </Box>
+      <StatusIndicator type="informative">3</StatusIndicator>
+    </Flex>
+  </IconicButton>
+);
+
+WithNonTextChildren.story = {
+  name: "with non text children",
 };
