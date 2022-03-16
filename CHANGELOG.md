@@ -1,3 +1,10 @@
+## [6.6.2](https://github.com/nulogy/design-system/compare/v6.6.1...v6.6.2) (2022-03-16)
+
+
+### Bug Fixes
+
+* don't use non-text children as aria-label ([#996](https://github.com/nulogy/design-system/issues/996)) ([ac43f6f](https://github.com/nulogy/design-system/commit/ac43f6f474a8c2b1a6d5db51f557e3e408dd88a8))
+
 ## [6.6.1](https://github.com/nulogy/design-system/compare/v6.6.0...v6.6.1) (2022-03-02)
 
 
