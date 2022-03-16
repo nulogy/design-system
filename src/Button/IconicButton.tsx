@@ -108,7 +108,13 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
     return (
       <WrapperButton
         ref={forwardedRef}
-        aria-label={children}
+        aria-label={
+          props["aria-label"]
+            ? props["aria-label"]
+            : typeof children === "string"
+            ? children
+            : undefined
+        }
         className={className}
         {...props}
       >
