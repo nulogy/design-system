@@ -143,7 +143,10 @@ const DateRange: React.SFC<DateRangeProps> = forwardRef(
     const validateDateRange = () => {
       let error;
       if (endDate && startDate) {
-        if (isBefore(endDate, startDate)) {
+        if (
+          isBefore(endDate, startDate) &&
+          (showTimes || !isSameDay(endDate, startDate))
+        ) {
           error = "end date is before start date";
         }
         if (isSameDay(endDate, startDate) && showTimes) {
