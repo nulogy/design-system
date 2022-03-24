@@ -108,7 +108,34 @@ describe("DateRange", () => {
       );
       expect(latestCall.error).toEqual("end date is before start date");
     });
-    it("returns the selected range with an error if the range is invalid", () => {
+    it("does not return an error if the end date is changed to the start date when times are not shown", () => {
+      const defaultStartDate = new Date();
+      const defaultEndDate = new Date(
+        defaultStartDate.getFullYear(),
+        defaultStartDate.getMonth(),
+        defaultStartDate.getDate() + 6
+      );
+      const onRangeChange = jest.fn();
+      const { container, getByLabelText } = renderWithNDSProvider(
+        <DateRange
+          defaultStartDate={defaultStartDate}
+          defaultEndDate={defaultEndDate}
+          onRangeChange={onRangeChange}
+        />
+      );
+      const endDateInput = getByLabelText("Select an end date");
+      fireEvent.click(endDateInput);
+      fireEvent.click(
+        container.querySelectorAll(".react-datepicker__day--001")[0]
+      );
+      const onChangeCalls = onRangeChange.mock.calls;
+      const latestCall = onChangeCalls[onChangeCalls.length - 1][0];
+      expect(latestCall.endDate).toMatchDate(
+        new Date("2020-02-01T11:01:58.135Z")
+      );
+      expect(latestCall.error).toBeUndefined();
+    });
+    it("returns the selected range with an error if the range is invalid based on time", () => {
       const onRangeChange = jest.fn();
       const { container, queryAllByText, getByLabelText } =
         renderWithNDSProvider(
