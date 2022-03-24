@@ -1,3 +1,10 @@
+## [6.6.3](https://github.com/nulogy/design-system/compare/v6.6.2...v6.6.3) (2022-03-24)
+
+
+### Bug Fixes
+
+* Prevent validation errors from time when daterange does not show time ([#997](https://github.com/nulogy/design-system/issues/997)) ([0016afd](https://github.com/nulogy/design-system/commit/0016afd8c27c035c74ffddb33c3939faaf1b09a7))
+
 ## [6.6.2](https://github.com/nulogy/design-system/compare/v6.6.1...v6.6.2) (2022-03-16)
 
 
