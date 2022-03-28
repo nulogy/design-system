@@ -1,3 +1,10 @@
+## [6.6.4](https://github.com/nulogy/design-system/compare/v6.6.3...v6.6.4) (2022-03-28)
+
+
+### Bug Fixes
+
+* align title with close button vertically ([#998](https://github.com/nulogy/design-system/issues/998)) ([6742737](https://github.com/nulogy/design-system/commit/674273750b081455c48965ac5348e43b570e6629))
+
 ## [6.6.3](https://github.com/nulogy/design-system/compare/v6.6.2...v6.6.3) (2022-03-24)
 
 
