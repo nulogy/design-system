@@ -59,7 +59,7 @@ const SidebarOverlay = ({
   />
 );
 
-const Sidebar = ({
+const Sidebar: React.FC<SidebarProps> = ({
   p = "x3",
   width = "400px",
   children,
@@ -79,7 +79,7 @@ const Sidebar = ({
   hideCloseButton = false,
   zIndex,
   ...props
-}: SidebarProps) => {
+}) => {
   const closeButton = useRef(null);
   const [shouldUpdateFocus, setShouldUpdateFocus] = useState(false);
   const { t } = useTranslation();
@@ -183,10 +183,14 @@ const Sidebar = ({
           flexDirection="column"
           style={{ overflowBehaviour: "contain" } as any}
         >
-          <Flex justifyContent="space-between" alignItems="flex-start">
-            <Box>{title && <Heading3>{title}</Heading3>}</Box>
+          <Flex justifyContent="space-between" alignItems="flex-start" pb="x3">
+            {title && (
+              <Flex alignItems="center" height="100%">
+                <Heading3 mb={0}>{title}</Heading3>
+              </Flex>
+            )}
             {!hideCloseButton && (
-              <Box>
+              <Box marginLeft="x2">
                 <IconicButton
                   ref={closeButton}
                   icon="close"
