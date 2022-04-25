@@ -2,7 +2,7 @@ import React, { FunctionComponent, useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
-import { AnimatedBox, Box, theme } from "..";
+import { AnimatedBox, theme } from "..";
 
 type SwitchProps = {
   disabled?: boolean;
@@ -20,13 +20,15 @@ const Switch: FunctionComponent<SwitchProps> = ({
 }) => (
   <AnimatedBox
     display="flex"
+    alignItems="center"
     justifyContent={toggled ? "flex-end" : "flex-start"}
-    height="26px"
-    width="50px"
+    height="24px"
+    width="48px"
     bg={disabled ? "grey" : getSwitchBackground(toggled)}
-    borderRadius="12px"
+    borderRadius="20px"
     padding="2px"
     boxShadow="small"
+    whileHover="hover"
     onClick={onClick}
   >
     {children}
@@ -37,27 +39,28 @@ type SliderProps = {
   disabled?: boolean;
 };
 
-
 const Slider: FunctionComponent<SliderProps> = ({ disabled, children }) => (
   <motion.div
     className="slider"
     layout
+    variants={{
+      hover: {
+        boxShadow: disabled ? null : theme.shadows.focus,
+        scale: disabled ? null : 1.1,
+      },
+    }}
     transition={{
       type: "spring",
       stiffness: 500,
       damping: 30,
     }}
-    whileHover={{
-      boxShadow: disabled ? null : theme.shadows.focus,
-      scale: disabled ? null : 1.1,
-    }}
-    whileTap={{
+    whileFocus={{
       boxShadow: disabled ? null : theme.shadows.focus,
       scale: disabled ? null : 1.1,
     }}
     style={{
-      height: "22px",
-      width: "22px",
+      height: "20px",
+      width: "20px",
       borderRadius: "50%",
       backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.white,
     }}
@@ -109,7 +112,7 @@ const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef(
     };
     return (
       <Switch disabled={disabled} toggled={toggled} onClick={handleClick}>
-      <ToggleInput
+        <ToggleInput
           ref={inputRef}
           type="checkbox"
           defaultChecked={defaultToggled}
