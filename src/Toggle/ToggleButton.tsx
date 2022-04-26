@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
+import type { Transition } from "framer-motion";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 import { AnimatedBox, theme } from "..";
@@ -11,6 +12,21 @@ type SwitchProps = {
 };
 
 const getSwitchBackground = (toggled) => (toggled ? "darkBlue" : "darkGrey");
+
+type AnimationConfig = {
+  transition: Transition;
+  scale: number;
+};
+
+const animationConfig: AnimationConfig = {
+  transition: {
+    type: "spring",
+    stiffness: 850,
+    damping: 37,
+    duration: 0.1,
+  },
+  scale: 1.08,
+};
 
 const Switch: FunctionComponent<SwitchProps> = ({
   children,
@@ -46,17 +62,13 @@ const Slider: FunctionComponent<SliderProps> = ({ disabled, children }) => (
     variants={{
       hover: {
         boxShadow: disabled ? null : theme.shadows.focus,
-        scale: disabled ? null : 1.1,
+        scale: disabled ? null : animationConfig.scale,
       },
     }}
-    transition={{
-      type: "spring",
-      stiffness: 500,
-      damping: 30,
-    }}
+    transition={animationConfig.transition}
     whileFocus={{
       boxShadow: disabled ? null : theme.shadows.focus,
-      scale: disabled ? null : 1.1,
+      scale: disabled ? null : animationConfig.scale,
     }}
     style={{
       height: "20px",
@@ -93,7 +105,7 @@ const ToggleInput = styled.input(
       backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue,
     },
     [`&:focus + .slider`]: {
-      transform: disabled ? null : "scale(1.1)",
+      transform: disabled ? null : `scale(${animationConfig.scale})`,
       boxShadow: disabled ? undefined : theme.shadows.focus,
     },
   })
