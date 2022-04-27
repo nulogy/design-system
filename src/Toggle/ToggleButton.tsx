@@ -4,6 +4,7 @@ import type { Transition } from "framer-motion";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 import { AnimatedBox, theme } from "..";
+import type { TransformProperties } from "framer-motion/types/motion/types";
 
 type SwitchProps = {
   disabled?: boolean;
@@ -15,7 +16,7 @@ const getSwitchBackground = (toggled) => (toggled ? "darkBlue" : "darkGrey");
 
 type AnimationConfig = {
   transition: Transition;
-  scale: number;
+  scale: TransformProperties["scale"];
 };
 
 const animationConfig: AnimationConfig = {
@@ -136,8 +137,10 @@ const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef(
     );
   }
 );
+
 ToggleButton.defaultProps = {
   defaultToggled: undefined,
   disabled: false,
 };
+
 export default ToggleButton;
