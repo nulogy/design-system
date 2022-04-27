@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useRef, useImperativeHandle } from "react";
+import React, { useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
 import type { Transition } from "framer-motion";
 import styled, { CSSObject } from "styled-components";
@@ -28,7 +28,7 @@ const animationConfig: AnimationConfig = {
   scale: 1.08,
 };
 
-const Switch: FunctionComponent<SwitchProps> = ({
+const Switch: React.FC<SwitchProps> = ({
   children,
   disabled,
   toggled,
@@ -55,7 +55,7 @@ type SliderProps = {
   disabled?: boolean;
 };
 
-const Slider: FunctionComponent<SliderProps> = ({ disabled, children }) => (
+const Slider: React.FC<SliderProps> = ({ disabled, children }) => (
   <motion.div
     className="slider"
     layout
@@ -111,7 +111,7 @@ const ToggleInput = styled.input(
   })
 );
 
-const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef(
+const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef(
   (props, ref) => {
     const { disabled, defaultToggled, toggled } = props;
     const inputRef = useRef(null);
