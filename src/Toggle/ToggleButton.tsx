@@ -62,14 +62,14 @@ const Slider: React.FC<SliderProps> = ({ disabled, children }) => (
     layout
     variants={{
       hover: {
-        boxShadow: disabled ? null : theme.shadows.focus,
-        scale: disabled ? null : animationConfig.scale,
+        boxShadow: disabled ? undefined : theme.shadows.focus,
+        scale: disabled ? undefined : animationConfig.scale,
       },
     }}
     transition={animationConfig.transition}
     whileFocus={{
-      boxShadow: disabled ? null : theme.shadows.focus,
-      scale: disabled ? null : animationConfig.scale,
+      boxShadow: disabled ? undefined : theme.shadows.focus,
+      scale: disabled ? undefined : animationConfig.scale,
     }}
     style={{
       height: "20px",
