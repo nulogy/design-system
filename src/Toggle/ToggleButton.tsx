@@ -1,10 +1,10 @@
 import React, { useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
+import type { TransformProperties } from "framer-motion/types/motion/types";
 import type { Transition } from "framer-motion";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 import { AnimatedBox, theme } from "..";
-import type { TransformProperties } from "framer-motion/types/motion/types";
 
 type SwitchProps = {
   disabled?: boolean;
@@ -12,12 +12,30 @@ type SwitchProps = {
   onClick?: (event: React.MouseEvent<any>) => void;
 };
 
-const getSwitchBackground = (toggled) => (toggled ? "darkBlue" : "darkGrey");
+type SliderProps = {
+  disabled?: boolean;
+};
+
+type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
+  disabled?: boolean;
+  name?: string;
+  theme?: DefaultNDSThemeType;
+};
+
+type ToggleButtonProps = React.ComponentPropsWithRef<"input"> & {
+  defaultToggled?: boolean;
+  toggled?: boolean;
+  disabled?: boolean;
+  name?: string;
+  theme?: DefaultNDSThemeType;
+};
 
 type AnimationConfig = {
   transition: Transition;
   scale: TransformProperties["scale"];
 };
+
+const getSwitchBackground = (toggled) => (toggled ? "darkBlue" : "darkGrey");
 
 const animationConfig: AnimationConfig = {
   transition: {
@@ -52,10 +70,6 @@ const Switch: React.FC<SwitchProps> = ({
   </AnimatedBox>
 );
 
-type SliderProps = {
-  disabled?: boolean;
-};
-
 const Slider: React.FC<SliderProps> = ({ disabled, children }) => (
   <motion.div
     className="slider"
@@ -82,20 +96,6 @@ const Slider: React.FC<SliderProps> = ({ disabled, children }) => (
   </motion.div>
 );
 
-type ToggleButtonProps = React.ComponentPropsWithRef<"input"> & {
-  defaultToggled?: boolean;
-  toggled?: boolean;
-  disabled?: boolean;
-  name?: string;
-  theme?: DefaultNDSThemeType;
-};
-
-type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
-  disabled?: boolean;
-  name?: string;
-  theme?: DefaultNDSThemeType;
-};
-
 const ToggleInput = styled.input(
   ({ disabled, theme }: ToggleInputProps): CSSObject => ({
     width: "1px",
@@ -116,13 +116,16 @@ const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef(
   (props, ref) => {
     const { disabled, defaultToggled, toggled } = props;
     const inputRef = useRef(null);
+
     useImperativeHandle(ref, () => inputRef.current);
+
     const handleClick = () => {
       if (inputRef.current) {
         // triggers the onChange event on a checkbox input
         inputRef.current.click();
       }
     };
+
     return (
       <Switch disabled={disabled} toggled={toggled} onClick={handleClick}>
         <ToggleInput
