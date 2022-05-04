@@ -1,85 +1,133 @@
 import React, { useRef, useImperativeHandle } from "react";
+import { motion } from "framer-motion";
+import type { TransformProperties } from "framer-motion/types/motion/types";
+import type { Transition } from "framer-motion";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
-type SliderProps = React.ComponentPropsWithRef<"span"> & {
+import { AnimatedBox, theme } from "..";
+
+type SwitchProps = {
   disabled?: boolean;
-  theme?: DefaultNDSThemeType;
+  toggled?: boolean;
+  onClick?: (event: React.MouseEvent<any>) => void;
 };
-const Slider = styled.span(
-  ({ disabled, theme }: SliderProps): CSSObject => ({
-    position: "absolute",
-    height: theme.space.x3,
-    width: theme.space.x6,
-    top: "0",
-    right: "0",
-    bottom: "0",
-    left: "0",
-    backgroundColor: disabled ? theme.colors.grey : theme.colors.darkGrey,
-    borderRadius: "12px",
-    transition: ".2s ease",
-    cursor: disabled ? undefined : "pointer",
-    "&:before": {
-      content: "''",
-      position: "absolute",
-      height: "22px",
-      width: "22px",
-      left: "1px",
-      top: "1px",
-      borderRadius: theme.radii.circle,
-      boxSizing: "border-box",
-      backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.white,
-      transition: ".2s ease",
-    },
-  })
-);
-const Switch = styled.div(({ theme }) => ({
-  position: "relative",
-  display: "inline-flex",
-  minWidth: theme.space.x6,
-  minHeight: theme.space.x3,
-  input: {
-    opacity: "0",
-    width: "1px",
-    height: "1px",
-  },
-}));
+
+type SliderProps = {
+  disabled?: boolean;
+};
 
 type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
   disabled?: boolean;
   name?: string;
   theme?: DefaultNDSThemeType;
 };
+
+type ToggleButtonProps = React.ComponentPropsWithRef<"input"> & {
+  defaultToggled?: boolean;
+  toggled?: boolean;
+  disabled?: boolean;
+  name?: string;
+  theme?: DefaultNDSThemeType;
+};
+
+type AnimationConfig = {
+  transition: Transition;
+  scale: TransformProperties["scale"];
+};
+
+const getSwitchBackground = (toggled) => (toggled ? "darkBlue" : "darkGrey");
+
+const animationConfig: AnimationConfig = {
+  transition: {
+    type: "spring",
+    stiffness: 850,
+    damping: 37,
+    duration: 0.1,
+  },
+  scale: 1.08,
+};
+
+const Switch: React.FC<SwitchProps> = ({
+  children,
+  disabled,
+  toggled,
+  onClick,
+}) => (
+  <AnimatedBox
+    display="flex"
+    alignItems="center"
+    justifyContent={toggled ? "flex-end" : "flex-start"}
+    height="24px"
+    width="48px"
+    bg={disabled ? "grey" : getSwitchBackground(toggled)}
+    borderRadius="20px"
+    padding="2px"
+    boxShadow="small"
+    whileHover="hover"
+    onClick={onClick}
+  >
+    {children}
+  </AnimatedBox>
+);
+
+const Slider: React.FC<SliderProps> = ({ disabled, children }) => (
+  <motion.div
+    className="slider"
+    layout
+    variants={{
+      hover: {
+        boxShadow: disabled ? undefined : theme.shadows.focus,
+        scale: disabled ? undefined : animationConfig.scale,
+      },
+    }}
+    transition={animationConfig.transition}
+    whileFocus={{
+      boxShadow: disabled ? undefined : theme.shadows.focus,
+      scale: disabled ? undefined : animationConfig.scale,
+    }}
+    style={{
+      height: "20px",
+      width: "20px",
+      borderRadius: "50%",
+      backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.white,
+    }}
+  >
+    {children}
+  </motion.div>
+);
+
 const ToggleInput = styled.input(
   ({ disabled, theme }: ToggleInputProps): CSSObject => ({
-    [`&:checked + ${Slider}:before`]: {
-      transform: "translateX(24px)",
-    },
-    [`&:checked + ${Slider}`]: {
+    width: "1px",
+    height: "1px",
+    opacity: 0,
+    position: "absolute",
+    [`&:checked + .slider}`]: {
       backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue,
     },
-    [`&:focus + ${Slider}:before`]: {
+    [`&:focus + .slider`]: {
+      transform: disabled ? null : `scale(${animationConfig.scale})`,
       boxShadow: disabled ? undefined : theme.shadows.focus,
     },
   })
 );
-type ToggleButtonProps = ToggleInputProps & {
-  defaultToggled?: boolean;
-  toggled?: boolean;
-  disabled?: boolean;
-};
-const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef(
+
+const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef(
   (props, ref) => {
     const { disabled, defaultToggled, toggled } = props;
     const inputRef = useRef(null);
+
     useImperativeHandle(ref, () => inputRef.current);
+
     const handleClick = () => {
       if (inputRef.current) {
         // triggers the onChange event on a checkbox input
         inputRef.current.click();
       }
     };
+
     return (
-      <Switch onClick={handleClick}>
+      <Switch disabled={disabled} toggled={toggled} onClick={handleClick}>
         <ToggleInput
           ref={inputRef}
           type="checkbox"
@@ -92,8 +140,10 @@ const ToggleButton: React.SFC<ToggleButtonProps> = React.forwardRef(
     );
   }
 );
+
 ToggleButton.defaultProps = {
   defaultToggled: undefined,
   disabled: false,
 };
+
 export default ToggleButton;
