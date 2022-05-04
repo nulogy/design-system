@@ -1,3 +1,10 @@
+# [6.7.0](https://github.com/nulogy/design-system/compare/v6.6.4...v6.7.0) (2022-05-04)
+
+
+### Features
+
+* Improve toggle animations ([#906](https://github.com/nulogy/design-system/issues/906)) ([173052f](https://github.com/nulogy/design-system/commit/173052fb5730111432d969fc93bca4646a353062))
+
 ## [6.6.4](https://github.com/nulogy/design-system/compare/v6.6.3...v6.6.4) (2022-03-28)
 
 
