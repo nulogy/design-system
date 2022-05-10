@@ -166,4 +166,13 @@ describe("Tabs", () => {
       );
     });
   });
+
+  describe("with default tab selection", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("tabs--with-a-default-selected-index");
+    });
+    it("focuses on the default selected tab", () => {
+      cy.focused().should("have.text", "Tab 2");
+    });
+  })
 });

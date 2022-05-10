@@ -5,7 +5,7 @@ import Switcher from "./Switcher";
 import Switch from "./Switch";
 
 export const WithSelectedValue = () => {
-  const [selected, setSelected] = useState("option_1");
+  const [selected, setSelected] = useState("option_2");
 
   return (
     <Switcher
