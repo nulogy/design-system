@@ -1,3 +1,10 @@
+## [6.7.1](https://github.com/nulogy/design-system/compare/v6.7.0...v6.7.1) (2022-05-11)
+
+
+### Bug Fixes
+
+* Ensure focus is set properly for Tabs and Switcher components with default and selected values ([#1005](https://github.com/nulogy/design-system/issues/1005)) ([4f5b2d4](https://github.com/nulogy/design-system/commit/4f5b2d414f6898a565b8f2e49a2dd97818df6c97))
+
 # [6.7.0](https://github.com/nulogy/design-system/compare/v6.6.4...v6.7.0) (2022-05-04)
 
 
