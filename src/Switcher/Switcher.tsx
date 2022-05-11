@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import PropTypes from "prop-types";
 import { Box } from "../Box";
 import FocusManager from "../utils/ts/FocusManager";
@@ -19,6 +19,12 @@ const Switcher: React.FC<SwitcherProps> = ({ selected, onChange, ...rest }) => {
 
     return value === selected;
   };
+
+  const getSelectedIndex = () => {
+    return React.Children.toArray(rest.children).findIndex(
+      (child) => (child as ReactElement)?.props?.value === selected
+    )
+  }
 
   const options = (focusedIndex, setFocusedIndex, handleArrowNavigation) => {
     return React.Children.map(rest.children, (child, index) => {
@@ -44,7 +50,7 @@ const Switcher: React.FC<SwitcherProps> = ({ selected, onChange, ...rest }) => {
 
   return (
     <Box display="inline-flex" bg="whiteGrey" borderRadius="20px" {...rest}>
-      <FocusManager refs={optionRefs}>
+      <FocusManager refs={optionRefs} defaultFocusedIndex={getSelectedIndex()}>
         {({ focusedIndex, setFocusedIndex, handleArrowNavigation }) =>
           options(focusedIndex, setFocusedIndex, handleArrowNavigation)
         }

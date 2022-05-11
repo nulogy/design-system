@@ -109,7 +109,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     const spaceProps = getSubset(this.props, propTypes.space);
     return (
       <Box position="relative">
-        <FocusManager refs={this.tabRefs}>
+        <FocusManager refs={this.tabRefs} defaultFocusedIndex={this.getSelectedIndex()}>
           {({ focusedIndex, setFocusedIndex, handleArrowNavigation }) => (
             <TabScrollIndicators
               tabRefs={this.tabRefs}
