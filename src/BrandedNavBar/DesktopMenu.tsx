@@ -95,7 +95,7 @@ const Nav = styled.nav({
 });
 
 const renderMenuTrigger = (menuItem, themeColorObject) => (
-  <div key={menuItem.key || menuItem.name}>
+  <div key={menuItem.key ?? menuItem.name}>
     <MenuTrigger
       name={menuItem.name}
       aria-label={menuItem.ariaLabel}
@@ -106,7 +106,7 @@ const renderMenuTrigger = (menuItem, themeColorObject) => (
 );
 
 const renderMenuLink = (menuItem, themeColorObject) => (
-  <div key={menuItem.name}>
+  <div key={menuItem.key ?? menuItem.name}>
     <MenuLink
       href={menuItem.href}
       to={menuItem.to}
@@ -119,13 +119,16 @@ const renderMenuLink = (menuItem, themeColorObject) => (
 );
 
 const renderCustom = (menuItem, themeColorObject) => (
-  <ApplyMenuLinkStyles {...themeColorObject} key={menuItem.name}>
+  <ApplyMenuLinkStyles
+    {...themeColorObject}
+    key={menuItem.key ?? menuItem.name}
+  >
     {menuItem.render()}
   </ApplyMenuLinkStyles>
 );
 
 const renderText = (menuItem, themeColorObject) => (
-  <MenuText key={menuItem.name} {...themeColorObject}>
+  <MenuText key={menuItem.key ?? menuItem.name} {...themeColorObject}>
     {menuItem.name}
   </MenuText>
 );

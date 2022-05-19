@@ -132,7 +132,7 @@ const StyledLi = styled.li(({ theme }) => ({
 }));
 
 const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <StyledLi key={menuItem.name}>
+  <StyledLi key={menuItem.key ?? menuItem.name}>
     <MenuLink
       layer={layer}
       {...themeColorObject}
@@ -148,7 +148,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
   <ApplyMenuLinkStyles
-    key={menuItem.name}
+    key={menuItem.key ?? menuItem.name}
     {...themeColorObject}
     layer={layer}
     onClick={linkOnClick}
@@ -158,7 +158,7 @@ const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
 );
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <li key={menuItem.name} style={{ display: "block" }}>
+  <li key={menuItem.key ?? menuItem.name} style={{ display: "block" }}>
     <SubMenu
       menuItem={menuItem}
       layer={layer}
@@ -169,7 +169,11 @@ const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
 );
 
 const renderText = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <MenuText key={menuItem.name} layer={layer} {...themeColorObject}>
+  <MenuText
+    key={menuItem.key ?? menuItem.name}
+    layer={layer}
+    {...themeColorObject}
+  >
     {menuItem.name}
   </MenuText>
 );
