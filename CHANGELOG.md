@@ -1,3 +1,10 @@
+## [6.7.2](https://github.com/nulogy/design-system/compare/v6.7.1...v6.7.2) (2022-05-19)
+
+
+### Bug Fixes
+
+* use the menuItem.key as the key if it is present ([#1006](https://github.com/nulogy/design-system/issues/1006)) ([c076a42](https://github.com/nulogy/design-system/commit/c076a42c3d03acd55fdc07f51bc1b8d292256b99))
+
 ## [6.7.1](https://github.com/nulogy/design-system/compare/v6.7.0...v6.7.1) (2022-05-11)
 
 
