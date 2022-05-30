@@ -54,6 +54,7 @@ const Switch: React.FC<SwitchProps> = ({
   onClick,
 }) => (
   <AnimatedBox
+    position="relative"
     display="flex"
     alignItems="center"
     justifyContent={toggled ? "flex-end" : "flex-start"}
