@@ -150,7 +150,7 @@ BaseDesktopMenu.defaultProps = {
 };
 
 const DesktopMenu = styled(BaseDesktopMenu)({
-  div: {
+  "> div": {
     ":not(:last-of-type)": {
       marginRight: theme.space.x1,
     },

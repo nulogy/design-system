@@ -164,7 +164,7 @@ const BaseDesktopMenu = ({
 );
 
 const DesktopMenu = styled(BaseDesktopMenu)({
-  div: {
+  "> div": {
     ":not(:last-of-type)": {
       marginRight: "8px",
     },
