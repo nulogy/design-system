@@ -1,3 +1,10 @@
+## [6.7.3](https://github.com/nulogy/design-system/compare/v6.7.2...v6.7.3) (2022-05-31)
+
+
+### Bug Fixes
+
+* replace deprecated React.SFC with React.FC ([#1011](https://github.com/nulogy/design-system/issues/1011)) ([60720a0](https://github.com/nulogy/design-system/commit/60720a07aae0054193b7c1ed951e072e94ae066c))
+
 ## [6.7.2](https://github.com/nulogy/design-system/compare/v6.7.1...v6.7.2) (2022-05-19)
 
 
