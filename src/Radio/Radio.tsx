@@ -123,7 +123,13 @@ const Radio: React.FC<RadioProps> = forwardRef(
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
     return (
-      <Box className={className} py="half" px="0" {...spaceProps}>
+      <Box
+        position="relative"
+        className={className}
+        py="half"
+        px="0"
+        {...spaceProps}
+      >
         <ClickInputLabel disabled={disabled}>
           <RadioInput
             type="radio"
