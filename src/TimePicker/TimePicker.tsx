@@ -150,7 +150,7 @@ export const getTimeOptions = (
     .slice(startingInterval, finalInterval);
 };
 
-const TimePicker: React.SFC<TimePickerProps> = forwardRef(
+const TimePicker: React.FC<TimePickerProps> = forwardRef(
   (
     {
       timeFormat,

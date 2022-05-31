@@ -21,7 +21,7 @@ const renderHeaderCellContent = ({
   ...column
 }) => headerFormatter(column);
 
-const TableHead: React.SFC<TableHeadProps> = ({ columns, compact, sticky }) => {
+const TableHead: React.FC<TableHeadProps> = ({ columns, compact, sticky }) => {
   const renderColumns = (allColumns) =>
     allColumns.map((column) => (
       <StyledTh

@@ -26,7 +26,7 @@ export type TooltipProps = {
   children?: React.ReactNode;
 };
 
-const Tooltip: React.SFC<TooltipProps> = React.forwardRef(
+const Tooltip: React.FC<TooltipProps> = React.forwardRef(
   (
     {
       className,

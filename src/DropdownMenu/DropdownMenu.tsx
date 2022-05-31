@@ -44,7 +44,7 @@ const transformPropsToModifiers = ({ boundariesElement }) => ({
   boundariesElement,
 });
 
-const DropdownMenu: React.SFC<DropdownMenuProps> = React.forwardRef<
+const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<
   DropdownMenuProps,
   Reference
 >(

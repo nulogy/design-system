@@ -19,7 +19,7 @@ type WordmarkLogoProps = {
   letterFill?: string;
   size?: string;
 };
-const WordmarkLogo: React.SFC<WordmarkLogoProps> = ({
+const WordmarkLogo: React.FC<WordmarkLogoProps> = ({
   size,
   logoFill,
   letterFill,

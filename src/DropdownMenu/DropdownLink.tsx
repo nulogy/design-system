@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const DropdownLink: React.SFC<any> = styled.a.withConfig({
+const DropdownLink: React.FC<any> = styled.a.withConfig({
   shouldForwardProp: (prop, defaultValidatorFn) =>
     !["hoverColor", "bgHoverColor"].includes(prop) && defaultValidatorFn(prop),
 })(

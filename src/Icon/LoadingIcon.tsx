@@ -8,7 +8,7 @@ type LoadingIconProps = {
   className?: string;
 };
 
-const LoadingIcon: React.SFC<LoadingIconProps> = ({
+const LoadingIcon: React.FC<LoadingIconProps> = ({
   color = "currentColor",
   size = "24px",
   title = "Loading",

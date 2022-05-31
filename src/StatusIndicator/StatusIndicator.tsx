@@ -60,7 +60,7 @@ type StatusIndicatorProps = SpaceProps &
       | "warning"
       | "quiet";
   };
-const StatusIndicator: React.SFC<any> = styled.p(
+const StatusIndicator: React.FC<any> = styled.p(
   space,
   typography,
   flexbox,

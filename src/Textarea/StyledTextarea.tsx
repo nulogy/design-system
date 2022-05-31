@@ -43,7 +43,7 @@ const getTextareaStyle = (props) => {
   return textareaStyleMap.default;
 };
 
-const StyledTextarea: React.SFC<StyledTextareaProps> = styled.textarea(
+const StyledTextarea: React.FC<StyledTextareaProps> = styled.textarea(
   space,
   ({ theme, isResizeable }: any): CSSObject => ({
     display: "block",

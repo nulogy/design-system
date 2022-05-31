@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { space } from "styled-system";
-const Fieldset: React.SFC<any> = styled.fieldset(
+const Fieldset: React.FC<any> = styled.fieldset(
   {
     padding: 0,
     border: 0,

@@ -90,7 +90,7 @@ const WrapperButton = styled.button<any>(
   space
 );
 
-const Button: React.SFC<ButtonProps> = React.forwardRef(
+const Button: React.FC<ButtonProps> = React.forwardRef(
   (
     {
       children,

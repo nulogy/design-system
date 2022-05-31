@@ -33,7 +33,7 @@ const StyledTable = styled.table<any>(space, {
   position: "relative",
 });
 
-const BaseTable: React.SFC<BaseTableProps> = ({
+const BaseTable: React.FC<BaseTableProps> = ({
   columns,
   rows,
   noRowsContent = "No records have been created for this table.",

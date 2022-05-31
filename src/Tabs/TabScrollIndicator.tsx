@@ -47,7 +47,7 @@ type TabScrollIndicatorProps = {
   ariaLabelLeft?: string;
   ariaLabelRight?: string;
 };
-const TabScrollIndicator: React.SFC<TabScrollIndicatorProps> = ({
+const TabScrollIndicator: React.FC<TabScrollIndicatorProps> = ({
   onClick,
   side,
   ariaLabelLeft,

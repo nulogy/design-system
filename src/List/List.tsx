@@ -29,7 +29,7 @@ type ListProps = React.ComponentPropsWithRef<"ul"> &
     leftAlign?: boolean;
     listStyle?: string;
   };
-const List: React.SFC<ListProps> = styled.ul(
+const List: React.FC<ListProps> = styled.ul(
   ({ compact, theme, leftAlign, listStyle }: ListProps) => ({
     margin: 0,
     paddingLeft: leftAlign ? "18px" : undefined,

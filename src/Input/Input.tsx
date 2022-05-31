@@ -14,7 +14,7 @@ type InputProps = InputFieldProps &
     className?: string;
   };
 
-const Input: React.SFC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
+const Input: React.FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
   ({ errorMessage, errorList, className, ...props }, ref) => {
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);

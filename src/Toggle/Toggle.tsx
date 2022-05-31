@@ -25,7 +25,7 @@ type MaybeToggleTitleProps = React.ComponentPropsWithRef<"div"> & {
   children?: any;
 };
 
-const MaybeToggleTitle: React.SFC<MaybeToggleTitleProps> = ({
+const MaybeToggleTitle: React.FC<MaybeToggleTitleProps> = ({
   labelText,
   requirementText,
   helpText,

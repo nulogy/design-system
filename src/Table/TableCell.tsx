@@ -8,7 +8,7 @@ type StyledTableCellProps = {
   compact?: boolean;
   theme?: DefaultNDSThemeType;
 };
-const StyledTableCell: React.SFC<StyledTableCellProps> = styled.td(
+const StyledTableCell: React.FC<StyledTableCellProps> = styled.td(
   ({ align, compact, theme }: StyledTableCellProps): CSSObject => {
     const padding = compact ? theme.space.x1 : theme.space.x2;
     return {
@@ -29,7 +29,7 @@ type TableCellProps = {
   cellData?: object | React.ReactNode | boolean;
   compact?: boolean;
 };
-const TableCell: React.SFC<TableCellProps> = ({
+const TableCell: React.FC<TableCellProps> = ({
   row,
   column,
   colSpan,

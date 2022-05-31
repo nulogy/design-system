@@ -10,7 +10,7 @@ type OverlayProps = FlexProps & {
   theme?: DefaultNDSThemeType;
 };
 
-const Overlay: React.SFC<OverlayProps> = styled(Flex)<OverlayProps>(
+const Overlay: React.FC<OverlayProps> = styled(Flex)<OverlayProps>(
   ({ dark, theme }: OverlayProps) => ({
     top: 0,
     left: 0,

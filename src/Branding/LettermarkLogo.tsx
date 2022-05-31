@@ -14,7 +14,7 @@ type LettermarkLogoProps = {
   letterFill?: string;
   size?: string;
 };
-const LettermarkLogo: React.SFC<LettermarkLogoProps> = ({
+const LettermarkLogo: React.FC<LettermarkLogoProps> = ({
   size,
   letterFill,
   ...props

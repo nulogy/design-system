@@ -10,7 +10,7 @@ type DropdownButtonProps = React.ComponentPropsWithRef<"button"> & {
   bgHoverColor?: string;
 };
 
-const DropdownButton: React.SFC<DropdownButtonProps> = styled.button(
+const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
   color,
   ({
     disabled = false,

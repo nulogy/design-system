@@ -44,7 +44,7 @@ type TabButtonProps = React.ComponentPropsWithRef<"button"> & {
   fullWidth?: boolean;
   theme?: DefaultNDSThemeType;
 };
-const TabButton: React.SFC<TabButtonProps> = styled.button(
+const TabButton: React.FC<TabButtonProps> = styled.button(
   ({ selected, disabled, fullWidth, theme }: TabButtonProps): any => ({
     width: fullWidth ? "100%" : undefined,
     fontWeight: theme.fontWeights.medium,
@@ -80,13 +80,11 @@ const TabButton: React.SFC<TabButtonProps> = styled.button(
 type TabProps = TabButtonProps & {
   label?: React.ReactNode;
 };
-const Tab: React.SFC<TabProps> = React.forwardRef(
-  ({ label, ...props }, ref) => (
-    <TabButton role="tab" type="button" ref={ref} {...props}>
-      {label}
-    </TabButton>
-  )
-);
+const Tab: React.FC<TabProps> = React.forwardRef(({ label, ...props }, ref) => (
+  <TabButton role="tab" type="button" ref={ref} {...props}>
+    {label}
+  </TabButton>
+));
 Tab.defaultProps = {
   label: null,
 };

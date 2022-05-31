@@ -35,7 +35,7 @@ type TimeRangeProps = SpaceProps & {
   startTimeProps?: any;
 };
 
-const TimeRange: React.SFC<TimeRangeProps> = forwardRef(
+const TimeRange: React.FC<TimeRangeProps> = forwardRef(
   (
     {
       timeFormat,
