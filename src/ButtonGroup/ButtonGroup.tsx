@@ -33,7 +33,7 @@ const getAlignment = (alignment) => alignments[alignment] || alignments.left;
 const getButtonSpacing = (alignment, theme) =>
   buttonSpacings(theme)[alignment] || buttonSpacings(theme).left;
 
-const ButtonGroup: React.SFC<ButtonGroupProps> = styled(Flex)(
+const ButtonGroup: React.FC<ButtonGroupProps> = styled(Flex)(
   ({ alignment, theme }: any) => ({
     flexWrap: "wrap",
     marginBottom: `-${theme.space.x1}`,

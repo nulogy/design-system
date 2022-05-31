@@ -1,7 +1,7 @@
 import styled, { CSSObject } from "styled-components";
 import theme from "../theme";
 
-const ClickInputLabel: React.SFC<any> = styled.label(
+const ClickInputLabel: React.FC<any> = styled.label(
   ({ disabled }: any): CSSObject => ({
     cursor: disabled ? undefined : "pointer",
     display: "inline-flex",

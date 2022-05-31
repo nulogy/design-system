@@ -36,9 +36,7 @@ const getMenuMargin = (placement, showArrow) => {
   }
 };
 
-const DropdownMenuContainer: React.SFC<DropdownMenuContainerProps> = styled(
-  Box
-)(
+const DropdownMenuContainer: React.FC<DropdownMenuContainerProps> = styled(Box)(
   color,
   ({
     dataPlacement,

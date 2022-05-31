@@ -72,7 +72,7 @@ const getInputStyle = ({ disabled, error, theme }: StyledInputProps) => {
   return inputStyles(theme).default;
 };
 
-const StyledInput: React.SFC<StyledInputProps> = styled.input(
+const StyledInput: React.FC<StyledInputProps> = styled.input(
   ({ theme, inputWidth }: any): CSSObject => ({
     display: "block",
     flexGrow: 1,
@@ -102,7 +102,7 @@ const StyledInput: React.SFC<StyledInputProps> = styled.input(
   (props: StyledInputProps) => getInputStyle(props)
 );
 
-export const InputField: React.SFC<InputFieldProps> = forwardRef<
+export const InputField: React.FC<InputFieldProps> = forwardRef<
   HTMLInputElement,
   InputFieldProps
 >(

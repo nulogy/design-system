@@ -7,7 +7,7 @@ type ModalContentProps = React.ComponentPropsWithRef<"div"> & {
   theme?: DefaultNDSThemeType;
 };
 
-const ModalContent: React.SFC<ModalContentProps> = styled.div(
+const ModalContent: React.FC<ModalContentProps> = styled.div(
   ({ hasFooter, theme }: ModalContentProps) => ({
     marginTop: "-64px",
     marginBottom: hasFooter ? "-72px" : 0,

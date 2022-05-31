@@ -2,7 +2,7 @@ import styled, { CSSObject } from "styled-components";
 import { darken } from "polished";
 import Button, { ButtonProps } from "./Button";
 
-const PrimaryButton: React.SFC<any> = styled(Button)(
+const PrimaryButton: React.FC<any> = styled(Button)(
   ({ disabled, theme }: ButtonProps): CSSObject => ({
     color: theme.colors.white,
     borderColor: theme.colors.blue,

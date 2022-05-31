@@ -113,7 +113,7 @@ const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input(
     },
   })
 );
-const Checkbox: React.SFC<any> = forwardRef((props, ref) => {
+const Checkbox: React.FC<any> = forwardRef((props, ref) => {
   const {
     className,
     labelText,

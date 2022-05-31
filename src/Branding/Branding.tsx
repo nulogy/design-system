@@ -39,7 +39,7 @@ const alignments = {
 const getLogoColor = (logoColor) => logoColors[logoColor] || logoColors.blue;
 const getAlignment = (alignment) => alignments[alignment] || alignments.left;
 
-const BrandingWrap: React.SFC<any> = styled.div(
+const BrandingWrap: React.FC<any> = styled.div(
   ({ alignment, size }: any): CSSObject => ({
     width: "100%",
     display: "inline-flex",
@@ -50,7 +50,7 @@ const BrandingWrap: React.SFC<any> = styled.div(
   })
 );
 
-const Line: React.SFC<any> = styled.div(
+const Line: React.FC<any> = styled.div(
   ({ logoColor }: any): CSSObject => ({
     position: "relative",
     width: "100%",

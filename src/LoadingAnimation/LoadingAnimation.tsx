@@ -4,7 +4,7 @@ import { useTheme } from "styled-components";
 type LoadingAnimationProps = React.ComponentPropsWithRef<"svg"> & {
   inactive?: boolean;
 };
-const LoadingAnimation: React.SFC<LoadingAnimationProps> = ({ inactive }) => {
+const LoadingAnimation: React.FC<LoadingAnimationProps> = ({ inactive }) => {
   const { colors } = useTheme();
 
   const color1 = inactive ? colors.grey : colors.blue;

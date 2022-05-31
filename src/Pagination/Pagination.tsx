@@ -29,7 +29,7 @@ export const getPageItemstoDisplay = (totalPages, currentPage) => {
   ];
 };
 
-const Pagination: React.SFC<any> = (props) => {
+const Pagination: React.FC<any> = (props) => {
   const {
     currentPage,
     totalPages,

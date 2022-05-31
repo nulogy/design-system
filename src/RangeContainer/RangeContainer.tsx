@@ -15,7 +15,7 @@ type RangeContainerProps = {
   errorMessages?: (string | undefined)[];
 };
 
-const RangeContainer: React.SFC<RangeContainerProps> = ({
+const RangeContainer: React.FC<RangeContainerProps> = ({
   labelProps,
   startComponent,
   endComponent,

@@ -24,7 +24,7 @@ const getIconColorByState = ({ toggled, disabled, theme }) => {
   return theme.colors.darkGrey;
 };
 
-const StyledButton: React.SFC<any> = styled.button(
+const StyledButton: React.FC<any> = styled.button(
   ({ toggled, disabled, theme }: any) => ({
     background: "transparent",
     border: "none",

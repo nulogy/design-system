@@ -13,7 +13,7 @@ const logoColors = {
 
 const getLogoColor = (logoColor) => logoColors[logoColor] || logoColors.blue;
 
-const BrandingText: React.SFC<any> = styled.span(
+const BrandingText: React.FC<any> = styled.span(
   ({ logoColor, size }: BrandingTextProps): any => ({
     color: getLogoColor(logoColor),
     textDecoration: "none",

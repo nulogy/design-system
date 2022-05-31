@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { space, color, flexbox, layout } from "styled-system";
 
-const BreadcrumbsListItem: React.SFC<any> = styled.li(
+const BreadcrumbsListItem: React.FC<any> = styled.li(
   ({ theme }) => ({
     margin: 0,
     padding: 0,

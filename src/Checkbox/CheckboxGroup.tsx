@@ -23,8 +23,13 @@ interface CheckboxGroupProps {
 
 const getCheckboxButtons = (props) => {
   const checkboxButtons = React.Children.map(props.children, (checkbox) => {
-    const { value, disabled, required, onChange, ...checkboxProps } =
-      checkbox.props;
+    const {
+      value,
+      disabled,
+      required,
+      onChange,
+      ...checkboxProps
+    } = checkbox.props;
     return (
       <Checkbox
         {...checkboxProps}
@@ -56,7 +61,7 @@ const Legend = styled.legend(({ theme }) => ({
   marginBottom: theme.space.x1,
 }));
 
-const CheckboxGroup: React.SFC<CheckboxGroupProps> = ({
+const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
   className,
   id,
   errorMessage,

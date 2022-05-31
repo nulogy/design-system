@@ -5,7 +5,7 @@ import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 import Card from "./Card";
 
-const UnstyledCardSet: React.SFC<BoxProps> = ({ children = [], ...props }) => (
+const UnstyledCardSet: React.FC<BoxProps> = ({ children = [], ...props }) => (
   <Box {...props}>{children}</Box>
 );
 

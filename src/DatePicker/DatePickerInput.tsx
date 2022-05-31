@@ -17,7 +17,7 @@ type DatePickerInputProps = {
   "aria-label"?: string;
 };
 
-const DatePickerInput: React.SFC<DatePickerInputProps> = forwardRef(
+const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
   (
     {
       onChange,
