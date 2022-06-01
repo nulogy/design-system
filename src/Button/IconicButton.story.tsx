@@ -100,6 +100,10 @@ export const rightAligned = () => (
   </Flex>
 );
 
+rightAligned.parameters = {
+  chromatic: { diffThreshold: 0.3 },
+};
+
 export const WithACustomFontSize = () => (
   <Flex flexDirection="column">
     <IconicButton fontSize="small" tooltip="Stop job" icon="close">
