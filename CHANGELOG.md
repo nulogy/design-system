@@ -1,3 +1,10 @@
+## [6.7.4](https://github.com/nulogy/design-system/compare/v6.7.3...v6.7.4) (2022-06-02)
+
+
+### Bug Fixes
+
+* use the key in submenu items if present ([#1013](https://github.com/nulogy/design-system/issues/1013)) ([492f6f0](https://github.com/nulogy/design-system/commit/492f6f09dbb947d9c4854a53520f3ef5a8853dc9))
+
 ## [6.7.3](https://github.com/nulogy/design-system/compare/v6.7.2...v6.7.3) (2022-05-31)
 
 
