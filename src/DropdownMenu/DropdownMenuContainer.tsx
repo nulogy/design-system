@@ -48,7 +48,7 @@ const DropdownMenuContainer: React.FC<DropdownMenuContainerProps> = styled(Box)(
     backgroundColor: theme.colors[backgroundColor],
     borderTop: `1px solid  ${theme.colors[backgroundColor]}`,
     borderBottom: `1px solid ${theme.colors[backgroundColor]}`,
-    boxShadow: theme.shadows.small,
+    boxShadow: theme.shadows.medium,
     padding: "7px 0",
     zIndex: "100",
     ...getMenuMargin(dataPlacement, showArrow),
