@@ -19,7 +19,7 @@ export default {
 
 export const _DropdownMenu = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-    <DropdownLink href="/">Dropdown Link</DropdownLink>
+    <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
@@ -34,7 +34,7 @@ export const WithCustomTrigger = () => (
     closeAriaLabel="close dropdown"
     trigger={() => <Button>Custom Trigger</Button>}
   >
-    <DropdownLink href="/">Dropdown Link</DropdownLink>
+    <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );
@@ -50,7 +50,7 @@ export const WithCustomColors = () => (
     openAriaLabel="open dropdown"
     closeAriaLabel="close dropdown"
   >
-    <DropdownLink href="/" {...customColors}>
+    <DropdownLink href="/never_been" {...customColors}>
       Dropdown Link
     </DropdownLink>
     <DropdownButton onClick={() => {}} {...customColors}>
@@ -78,7 +78,7 @@ WithButtonClosingMenu.story = {
 export const WithCustomItem = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownItem>
-      <a href="/">Custom Link Component</a>
+      <a href="/never_been">Custom Link Component</a>
     </DropdownItem>
   </DropdownMenu>
 );
@@ -93,10 +93,10 @@ export const SetToDefaultOpen = () => (
     openAriaLabel="open dropdown"
     closeAriaLabel="close dropdown"
   >
-    <DropdownLink href="/">Dropdown Link</DropdownLink>
+    <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     <DropdownItem>
-      <a href="/" style={{ textDecoration: "none" }}>
+      <a href="/never_been" style={{ textDecoration: "none" }}>
         Custom Link Component
       </a>
     </DropdownItem>
@@ -107,13 +107,28 @@ SetToDefaultOpen.story = {
   name: "set to defaultOpen",
 };
 
+export const WithVisitedLinks = () => (
+  <DropdownMenu
+    defaultOpen
+    openAriaLabel="open dropdown"
+    closeAriaLabel="close dropdown"
+  >
+    <DropdownLink href="/">Dropdown Link</DropdownLink>
+    <DropdownItem>
+      <a href="/" style={{ textDecoration: "none" }}>
+        Custom Link Component
+      </a>
+    </DropdownItem>
+  </DropdownMenu>
+);
+
 export const SetToDisabled = () => (
   <DropdownMenu
     disabled
     openAriaLabel="open dropdown"
     closeAriaLabel="close dropdown"
   >
-    <DropdownLink href="/">Dropdown Link</DropdownLink>
+    <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
   </DropdownMenu>
 );

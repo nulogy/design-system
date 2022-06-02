@@ -1,4 +1,4 @@
-# Logs
+ # Logs
 logs
 *.log
 npm-debug.log*
@@ -90,3 +90,6 @@ yarn-error.log*
 
 # RubyMine settings
 .idea
+
+# asdf version manager
+.tool-versions
