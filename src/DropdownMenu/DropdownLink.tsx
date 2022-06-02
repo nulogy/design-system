@@ -6,9 +6,9 @@ const DropdownLink: React.FC<any> = styled.a.withConfig({
 })(
   ({
     theme,
-    bgHoverColor = "lightGrey",
+    bgHoverColor = "lightBlue",
     hoverColor = "darkBlue",
-    color = "darkBlue",
+    color = "darkGrey",
   }: any) => ({
     display: "block",
     textDecoration: "none",
@@ -20,12 +20,12 @@ const DropdownLink: React.FC<any> = styled.a.withConfig({
     color: theme.colors[color],
     padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
     borderLeft: `${theme.space.half} solid transparent`,
+    "&:visited": {
+      color: theme.colors[color],
+    },
     "&:hover": {
       color: theme.colors[hoverColor],
       backgroundColor: theme.colors[bgHoverColor],
-    },
-    "&:visited": {
-      color: theme.colors[color],
     },
     "&:focus": {
       outline: "none",

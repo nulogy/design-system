@@ -16,7 +16,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
     disabled = false,
     theme,
     hoverColor = "darkBlue",
-    bgHoverColor = "lightGrey",
+    bgHoverColor = "lightBlue",
   }: DropdownButtonProps) => ({
     display: "block",
     width: "100%",
@@ -45,9 +45,9 @@ const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
   })
 );
 DropdownButton.defaultProps = {
-  color: "darkBlue",
+  color: "darkGrey",
   disabled: false,
   hoverColor: "darkBlue",
-  bgHoverColor: "lightGrey",
+  bgHoverColor: "lightBlue",
 };
 export default DropdownButton;

@@ -11,9 +11,9 @@ type DropdownItemProps = {
 const DropdownItem: React.FC<DropdownItemProps> = styled.div(
   ({
     theme,
-    color = "darkBlue",
+    color = "darkGrey",
     hoverColor = "darkBlue",
-    bgHoverColor = "lightGrey",
+    bgHoverColor = "lightBlue",
   }: DropdownItemProps): CSSObject => ({
     "*": {
       color: theme.colors[color],
