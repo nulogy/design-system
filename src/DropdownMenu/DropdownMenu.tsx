@@ -55,7 +55,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<
       showArrow = true,
       disabled,
       defaultOpen,
-      backgroundColor = "whiteGrey",
+      backgroundColor = "white",
       placement = "bottom-start",
       className,
       id,
