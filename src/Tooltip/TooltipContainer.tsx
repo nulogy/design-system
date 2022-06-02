@@ -59,7 +59,7 @@ const TooltipContainer = styled(Box)(
     backgroundColor: tooltipStyles(theme).backgroundColor,
     borderRadius: theme.radii.medium,
     border: `1px solid ${tooltipStyles(theme).borderColor}`,
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.18)",
+    boxShadow: theme.shadows.medium,
     padding: theme.space.x1,
     transition: "opacity 0.3s",
     zIndex: theme.zIndices.content,
