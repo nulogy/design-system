@@ -43,7 +43,10 @@ const SubMenuText = styled.li({
 });
 
 const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
-  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
+  <li
+    style={{ whiteSpace: "nowrap" }}
+    key={subMenuItem.key ?? subMenuItem.name}
+  >
     <SubMenuTrigger
       onItemClick={onItemClick}
       name={subMenuItem.name}
@@ -53,7 +56,10 @@ const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
 );
 
 const renderSubMenuLink = (subMenuItem, onItemClick) => (
-  <li style={{ whiteSpace: "nowrap" }} key={subMenuItem.name}>
+  <li
+    style={{ whiteSpace: "nowrap" }}
+    key={subMenuItem.key ?? subMenuItem.name}
+  >
     <SubMenuLink
       fontSize="small"
       lineHeight="smallTextBase"
@@ -69,13 +75,18 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
 );
 
 const renderCustom = (subMenuItem, onItemClick) => (
-  <ApplySubMenuLinkStyles key={subMenuItem.name} onClick={onItemClick}>
+  <ApplySubMenuLinkStyles
+    key={subMenuItem.key ?? subMenuItem.name}
+    onClick={onItemClick}
+  >
     {subMenuItem.render()}
   </ApplySubMenuLinkStyles>
 );
 
 const renderText = (subMenuItem) => (
-  <SubMenuText key={subMenuItem.name}>{subMenuItem.name}</SubMenuText>
+  <SubMenuText key={subMenuItem.key ?? subMenuItem.name}>
+    {subMenuItem.name}
+  </SubMenuText>
 );
 
 const getRenderFunction = (subMenuItem) => {
