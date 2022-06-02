@@ -158,7 +158,6 @@ const Sidebar: React.FC<SidebarProps> = ({
         display="flex"
         flexDirection="column"
         height={`calc(100% - ${NAVBAR_HEIGHT})`}
-        boxShadow="large"
         borderLeftWidth="1px"
         borderLeftStyle="solid"
         borderLeftColor="lightGrey"
