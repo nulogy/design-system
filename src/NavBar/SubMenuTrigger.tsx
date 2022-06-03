@@ -6,7 +6,7 @@ import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 
-const StyledButton = styled.button(({ isOpen }) => ({
+const StyledButton = styled.button<{ isOpen: boolean }>(({ isOpen }) => ({
   display: "block",
   position: "relative",
   color: theme.colors.darkBlue,
@@ -34,17 +34,26 @@ const StyledButton = styled.button(({ isOpen }) => ({
   cursor: "pointer",
 }));
 
-const SubMenuTriggerButton = React.forwardRef(
+type SubMenuTriggerButtonProps = {
+  name: string;
+  isOpen: boolean;
+  onMouseEnter: any;
+  onMouseLeave: any;
+};
+
+const SubMenuTriggerButton = React.forwardRef<any, SubMenuTriggerButtonProps>(
   ({ name, isOpen, ...props }, ref) => (
     <StyledButton isOpen={isOpen} ref={ref} {...props}>
-      {name}
-      <Icon
-        style={{ position: "absolute", top: "7px" }}
-        icon="rightArrow"
-        color="darkBlue"
-        size="20px"
-        p="2px"
-      />
+      <>
+        {name}
+        <Icon
+          style={{ position: "absolute", top: "7px" }}
+          icon="rightArrow"
+          color="darkBlue"
+          size="20px"
+          p="2px"
+        />
+      </>
     </StyledButton>
   )
 );

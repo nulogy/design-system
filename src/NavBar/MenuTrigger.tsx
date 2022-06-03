@@ -4,41 +4,43 @@ import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
 import theme from "../theme";
 import { Icon } from "../Icon";
+import type { MenuTriggerProps } from "../BrandedNavBar/MenuTrigger";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
-const StyledButton = styled.button(
-  ({ color, hoverColor, hoverBackground }) => ({
-    display: "flex",
-    alignItems: "center",
-    position: "relative",
-    color: themeGet(`colors.${color}`, color)(color),
-    border: "none",
-    backgroundColor: "transparent",
-    textDecoration: "none",
-    lineHeight: theme.lineHeights.base,
-    transition: "background-color .2s",
-    fontSize: `${theme.fontSizes.medium}`,
-    padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
-    borderRadius: theme.radii.medium,
-    "&:hover, &:focus": {
-      outline: "none",
-      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(
-        `colors.${hoverBackground}`,
-        hoverBackground
-      )(hoverBackground),
-      cursor: "pointer",
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus,
-    },
-    "&:disabled": {
-      opacity: ".5",
-    },
-  })
-);
+const StyledButton = styled.button<{
+  hoverColor: string;
+  hoverBackground: string;
+}>(({ color, hoverColor, hoverBackground }) => ({
+  display: "flex",
+  alignItems: "center",
+  position: "relative",
+  color: themeGet(`colors.${color}`, color)(color),
+  border: "none",
+  backgroundColor: "transparent",
+  textDecoration: "none",
+  lineHeight: theme.lineHeights.base,
+  transition: "background-color .2s",
+  fontSize: `${theme.fontSizes.medium}`,
+  padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
+  borderRadius: theme.radii.medium,
+  "&:hover, &:focus": {
+    outline: "none",
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+    backgroundColor: themeGet(
+      `colors.${hoverBackground}`,
+      hoverBackground
+    )(hoverBackground),
+    cursor: "pointer",
+  },
+  "&:focus": {
+    boxShadow: theme.shadows.focus,
+  },
+  "&:disabled": {
+    opacity: ".5",
+  },
+}));
 
 StyledButton.propTypes = {
   color: PropTypes.string,
@@ -52,7 +54,7 @@ StyledButton.defaultProps = {
   hoverBackground: theme.colors.black,
 };
 
-const MenuTriggerButton = React.forwardRef(
+const MenuTriggerButton = React.forwardRef<any, MenuTriggerProps>(
   ({ name, color, hoverColor, hoverBackground, ...props }, ref) => (
     <StyledButton
       color={color}
