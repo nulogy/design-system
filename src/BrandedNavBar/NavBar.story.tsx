@@ -5,6 +5,7 @@ import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
 import { DropdownButton, DropdownLink } from "../DropdownMenu";
+import theme from "../theme";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo =
@@ -31,9 +32,6 @@ const primaryMenu = [
   {
     name: "Dashboard",
     items: [
-      { name: "Customers", href: "/" },
-      { name: "Invoices", href: "/" },
-      { name: "Projects", href: "/" },
       { name: "Items", href: "/" },
       { name: "Vendors", href: "/" },
       { name: "Carriers", href: "/" },
@@ -279,6 +277,16 @@ export const WithReactRouter = () => (
 
 WithReactRouter.story = {
   name: "With react router",
+};
+
+export const WithHamburgerMenu = () => {
+  return <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
+};
+WithHamburgerMenu.parameters = {
+  viewport: {
+    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+  },
+  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
 };
 
 const customPrimaryMenu = [
