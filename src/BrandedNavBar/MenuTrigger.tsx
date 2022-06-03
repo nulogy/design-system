@@ -2,10 +2,10 @@ import React, { ReactNode } from "react";
 import styled, { CSSObject } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { Icon } from "../Icon";
+import { DefaultNDSThemeType } from "../theme.type";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
-import { DefaultNDSThemeType } from "../theme.type";
 
 export type MenuTriggerProps = {
   name?: ReactNode;

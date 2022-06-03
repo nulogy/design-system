@@ -11,10 +11,11 @@ import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
 import theme from "../theme";
-import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
+import { subPx } from "../utils";
+import { DefaultNDSThemeType } from "../theme.type";
 import DesktopMenu from "./DesktopMenu";
-import MobileMenu from "./MobileMenu";
 import isValidMenuItem from "./isValidMenuItem";
+import SmallNavBar from "./SmallNavBar";
 
 const themeColors = {
   blue: {
@@ -38,18 +39,31 @@ const themeColors = {
 const getThemeColor = (themeColor) =>
   themeColors[themeColor] || themeColors.blue;
 
-const NavBarBackground = styled(Flex)(({ backgroundColor }) => ({
+export const NavBarBackground = styled(Flex)<{
+  backgroundColor: string;
+  theme?: DefaultNDSThemeType;
+}>(({ backgroundColor, theme }) => ({
   background: backgroundColor,
   padding: `${theme.space.x2} ${theme.space.x3}`,
 }));
 
-const BrandingLink = ({ to, href, children, ...props }) => (
+export const BrandingLink = ({ to, href, children, ...props }) => (
   <Link href={href} to={to} {...props}>
     {children}
   </Link>
 );
 
-const MediumNavBar = ({
+type MediumNavBarProps = {
+  subtext?: string;
+  menuData?: any;
+  themeColor?: string;
+  brandingLinkHref?: string;
+  brandingLinkTo?: string;
+  brandingLinkComponent?: React.ElementType;
+  environment?: "development" | "training";
+};
+
+const MediumNavBar: React.FC<MediumNavBarProps> = ({
   menuData,
   themeColor,
   subtext,
@@ -80,7 +94,7 @@ const MediumNavBar = ({
         <Flex
           justifyContent="space-between"
           alignContent="flex-end"
-          style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
+          style={{ flexGrow: 1, margin: `0 0 0 ${theme.space.x3}` }}
         >
           {menuData.primaryMenu && (
             <DesktopMenu
@@ -137,32 +151,33 @@ MediumNavBar.defaultProps = {
   themeColor: undefined,
 };
 
-const MobileMenuTrigger = styled.button(
-  ({ color, hoverColor, hoverBackground }) => ({
-    color: themeGet(`colors.${color}`, color)(color),
-    background: "none",
-    border: "none",
-    padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
-    marginLeft: theme.space.x1,
-    borderRadius: theme.radii.medium,
-    transition: ".2s",
-    height: theme.space.x5,
-    "&:hover, &:focus": {
-      outline: "none",
-      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(
-        `colors.${hoverBackground}`,
-        hoverBackground
-      )(hoverBackground),
-      cursor: "pointer",
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus,
-    },
-  })
-);
+export const MobileMenuTrigger = styled.button<{
+  hoverColor: string;
+  hoverBackground: string;
+}>(({ color, hoverColor, hoverBackground }) => ({
+  color: themeGet(`colors.${color}`, color)(color),
+  background: "none",
+  border: "none",
+  padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
+  marginLeft: theme.space.x1,
+  borderRadius: theme.radii.medium,
+  transition: ".2s",
+  height: theme.space.x5,
+  "&:hover, &:focus": {
+    outline: "none",
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+    backgroundColor: themeGet(
+      `colors.${hoverBackground}`,
+      hoverBackground
+    )(hoverBackground),
+    cursor: "pointer",
+  },
+  "&:focus": {
+    boxShadow: theme.shadows.focus,
+  },
+}));
 
-const SmallHeader = styled.header(({ isOpen }) =>
+export const SmallHeader = styled.header<{ isOpen: boolean }>(({ isOpen }) =>
   isOpen
     ? {
         position: "fixed",
@@ -180,7 +195,7 @@ const SmallHeader = styled.header(({ isOpen }) =>
 
 const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
 
-const MenuIcon = ({ isOpen }) => {
+export const MenuIcon = ({ isOpen }) => {
   const { t } = useTranslation();
   const icon = isOpen ? "close" : "menu";
   const title = isOpen ? t("close menu") : t("open menu");
@@ -194,118 +209,6 @@ MenuIcon.propTypes = {
 MenuIcon.defaultProps = {
   isOpen: false,
 };
-
-/* eslint-disable react/destructuring-assignment */
-class SmallNavBarNoState extends React.Component {
-  constructor() {
-    super();
-    this.navRef = React.createRef();
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen)
-      this.navRef.current.scrollTop = 0;
-  }
-
-  isSmallScreen() {
-    const { breakpointLower, width } = this.props;
-
-    return width < pixelDigitsFrom(breakpointLower);
-  }
-
-  render() {
-    const {
-      menuData,
-      menuState: { isOpen, toggleMenu, closeMenu },
-      subtext,
-      brandingLinkHref,
-      brandingLinkTo,
-      themeColor,
-      ...props
-    } = this.props;
-    return (
-      <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-        <NavBarBackground
-          backgroundColor={getThemeColor(themeColor).background}
-        >
-          <BrandingLink
-            aria-label="Nulogy logo"
-            display="block"
-            height={subtext && !this.isSmallScreen() ? "56px" : "40px"}
-            my={subtext && !this.isSmallScreen() ? "-8px" : null}
-            underline={false}
-            href={brandingLinkHref}
-            to={brandingLinkTo}
-          >
-            <Branding
-              logoColor={getThemeColor(themeColor).logoColor}
-              logoType={this.isSmallScreen() ? "lettermark" : "wordmark"}
-              subtext={this.isSmallScreen() ? null : subtext}
-            />
-          </BrandingLink>
-          <Flex
-            justifyContent="flex-end"
-            style={{ flexGrow: "1", margin: `0 0 0 ${theme.space.x3}` }}
-          >
-            {menuData.search && (
-              <Flex maxWidth="18em" alignItems="center" px="0">
-                <NavBarSearch {...menuData.search} />
-              </Flex>
-            )}
-            {(menuData.primaryMenu || menuData.secondaryMenu) && (
-              <MobileMenuTrigger
-                {...getThemeColor(themeColor)}
-                onClick={toggleMenu}
-                aria-expanded={isOpen ? true : null}
-              >
-                <MenuIcon isOpen={isOpen} />
-              </MobileMenuTrigger>
-            )}
-          </Flex>
-        </NavBarBackground>
-        {isOpen && (
-          <PreventBodyElementScrolling>
-            <MobileMenu
-              themeColorObject={getThemeColor(themeColor)}
-              subtext={subtext}
-              includeSubtext={this.isSmallScreen()}
-              menuData={menuData}
-              closeMenu={closeMenu}
-            />
-          </PreventBodyElementScrolling>
-        )}
-      </SmallHeader>
-    );
-  }
-}
-/* eslint-enable react/destructuring-assignment */
-
-SmallNavBarNoState.propTypes = {
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool,
-    toggleMenu: PropTypes.func,
-    closeMenu: PropTypes.func,
-  }).isRequired,
-  menuData: PropTypes.shape(MenuDataPropTypes),
-  subtext: PropTypes.string,
-  brandingLinkHref: PropTypes.string,
-  brandingLinkTo: PropTypes.string,
-  breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  width: PropTypes.number,
-  themeColor: PropTypes.oneOf(["blue", "white"]),
-};
-
-SmallNavBarNoState.defaultProps = {
-  menuData: null,
-  subtext: null,
-  brandingLinkHref: "/",
-  brandingLinkTo: undefined,
-  breakpointLower: theme.breakpoints.small,
-  width: undefined,
-  themeColor: undefined,
-};
-
-const SmallNavBar = withMenuState(SmallNavBarNoState);
 
 const SelectNavBarBasedOnWidth = ({
   width,
