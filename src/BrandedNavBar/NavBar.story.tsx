@@ -31,9 +31,6 @@ const primaryMenu = [
   {
     name: "Dashboard",
     items: [
-      { name: "Customers", href: "/" },
-      { name: "Invoices", href: "/" },
-      { name: "Projects", href: "/" },
       { name: "Items", href: "/" },
       { name: "Vendors", href: "/" },
       { name: "Carriers", href: "/" },
@@ -279,6 +276,15 @@ export const WithReactRouter = () => (
 
 WithReactRouter.story = {
   name: "With react router",
+};
+
+export const WithHamburgerMenu = () => {
+  return <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
+};
+WithHamburgerMenu.parameters = {
+  viewport: {
+    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+  },
 };
 
 const customPrimaryMenu = [
