@@ -6,7 +6,7 @@ import { DropdownLink } from "../DropdownMenu";
 
 const SubMenuLink = styled(DropdownLink)(fontSize, lineHeight, space);
 
-const getSharedStyles = () => ({
+const getSharedStyles = (): any => ({
   display: "block",
   whiteSpace: "nowrap",
   textDecoration: "none",

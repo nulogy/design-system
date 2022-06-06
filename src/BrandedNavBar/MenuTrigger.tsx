@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { Icon } from "../Icon";
@@ -8,7 +8,7 @@ import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
 export type MenuTriggerProps = {
-  name?: ReactNode;
+  name?: string;
   "aria-label"?: string;
   menuData?: any[];
   color?: string;

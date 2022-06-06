@@ -36,7 +36,7 @@ const themeColors = {
   },
 };
 
-const getThemeColor = (themeColor) =>
+export const getThemeColor = (themeColor) =>
   themeColors[themeColor] || themeColors.blue;
 
 export const NavBarBackground = styled(Flex)<{
@@ -127,7 +127,7 @@ const MediumNavBar: React.FC<MediumNavBarProps> = ({
   );
 };
 
-const MenuDataPropTypes = {
+export const MenuDataPropTypes = {
   primaryMenu: PropTypes.arrayOf(isValidMenuItem),
   secondaryMenu: PropTypes.arrayOf(isValidMenuItem),
   search: PropTypes.shape({
@@ -193,7 +193,7 @@ export const SmallHeader = styled.header<{ isOpen: boolean }>(({ isOpen }) =>
     : null
 );
 
-const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
+export const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
 
 export const MenuIcon = ({ isOpen }) => {
   const { t } = useTranslation();
@@ -223,6 +223,7 @@ const SelectNavBarBasedOnWidth = ({
     return <MediumNavBar {...props} />;
   } else {
     return (
+      // @ts-ignore
       <SmallNavBar {...props} width={currentWidth} defaultOpen={defaultOpen} />
     );
   }

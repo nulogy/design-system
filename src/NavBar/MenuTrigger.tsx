@@ -76,7 +76,7 @@ const MenuTriggerButton = React.forwardRef<any, MenuTriggerProps>(
 );
 
 MenuTriggerButton.propTypes = {
-  name: PropTypes.node.isRequired,
+  name: PropTypes.string.isRequired,
   color: PropTypes.string,
   hoverColor: PropTypes.string,
   hoverBackground: PropTypes.string,

@@ -5,19 +5,22 @@ import { Branding } from "../Branding";
 import { Flex } from "../Flex";
 import theme from "../theme";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
-import { PreventBodyElementScrolling } from "../utils";
+import { PreventBodyElementScrolling, withMenuState } from "../utils";
 import MobileMenu from "./MobileMenu";
 import {
   BrandingLink,
+  getThemeColor,
+  MenuDataPropTypes,
   MenuIcon,
   MobileMenuTrigger,
   NavBarBackground,
+  pixelDigitsFrom,
   SmallHeader,
 } from "./NavBar";
 
 class SmallNavBarNoState extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.navRef = React.createRef();
   }
 

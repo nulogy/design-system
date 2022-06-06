@@ -33,29 +33,31 @@ const getSharedStyles = ({ color, layer }) => ({
   marginBottom: theme.space.x1,
 });
 
-const ApplyMenuLinkStyles = styled.li(
-  ({ color, hoverColor, hoverBackground, layer }) => ({
-    display: "block",
-    "*": {
-      ...getSharedStyles({ color, layer }),
-      textDecoration: "none",
-      "&:hover, &:focus": {
-        outline: "none",
-        color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-        backgroundColor: themeGet(
-          `colors.${hoverBackground}`,
-          hoverBackground
-        )(hoverBackground),
-      },
-      "&:disabled": {
-        opacity: ".5",
-      },
-      "&:focus": {
-        boxShadow: theme.shadows.focus,
-      },
+const ApplyMenuLinkStyles = styled.li<{
+  hoverColor: string;
+  hoverBackground: string;
+  layer?: number;
+}>(({ color, hoverColor, hoverBackground, layer }) => ({
+  display: "block",
+  "*": {
+    ...getSharedStyles({ color, layer }),
+    textDecoration: "none",
+    "&:hover, &:focus": {
+      outline: "none",
+      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+      backgroundColor: themeGet(
+        `colors.${hoverBackground}`,
+        hoverBackground
+      )(hoverBackground),
     },
-  })
-);
+    "&:disabled": {
+      opacity: ".5",
+    },
+    "&:focus": {
+      boxShadow: theme.shadows.focus,
+    },
+  },
+}));
 
 ApplyMenuLinkStyles.propTypes = {
   layer: PropTypes.number,
@@ -71,7 +73,11 @@ ApplyMenuLinkStyles.defaultProps = {
   hoverBackground: theme.colors.black,
 };
 
-const MenuLink = styled.a(({ color, hoverColor, hoverBackground, layer }) => ({
+const MenuLink = styled.a<{
+  hoverColor: string;
+  hoverBackground: string;
+  layer: number;
+}>(({ color, hoverColor, hoverBackground, layer }) => ({
   ...getSharedStyles({ color, layer }),
   width: "100%",
   borderRadius: "0",
@@ -93,7 +99,10 @@ const MenuLink = styled.a(({ color, hoverColor, hoverBackground, layer }) => ({
   },
 }));
 
-const MenuText = styled.li(({ textColor, layer }) => ({
+const MenuText = styled.li<{
+  textColor: string;
+  layer: number;
+}>(({ textColor, layer }) => ({
   ...getSharedStyles({ color: textColor, layer }),
 }));
 
@@ -236,7 +245,9 @@ const Menu = styled.ul(() => ({
   },
 }));
 
-const Nav = styled.nav(
+const Nav = styled.nav<{
+  backgroundColor: string;
+}>(
   ({ backgroundColor }) => ({
     backgroundColor,
   }),
