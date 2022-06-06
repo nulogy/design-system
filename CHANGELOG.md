@@ -1,3 +1,10 @@
+## [6.7.5](https://github.com/nulogy/design-system/compare/v6.7.4...v6.7.5) (2022-06-06)
+
+
+### Bug Fixes
+
+* migrate remaining NavBar components to TypeScript ([#1016](https://github.com/nulogy/design-system/issues/1016)) ([323cb6b](https://github.com/nulogy/design-system/commit/323cb6b93efc72fadc2a91d1eb154ef746eadf6c))
+
 ## [6.7.4](https://github.com/nulogy/design-system/compare/v6.7.3...v6.7.4) (2022-06-02)
 
 
