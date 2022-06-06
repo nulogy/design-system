@@ -6,7 +6,7 @@ const errorList = ["Error message 1", "Error message 2"];
 export default {
   title: "Components/RadioGroup",
   parameters: {
-    chromatic: { diffThreshold: 0.2 },
+    chromatic: { diffThreshold: 0.3 },
   },
 };
 
