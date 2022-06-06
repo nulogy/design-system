@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import type { CSSObject } from "styled-components";
 import { fontSize, lineHeight, space } from "styled-system";
 import theme from "../theme";
 import { DropdownLink } from "../DropdownMenu";
 
 const SubMenuLink = styled(DropdownLink)(fontSize, lineHeight, space);
 
-const getSharedStyles = () => ({
+const getSharedStyles = (): CSSObject => ({
   display: "block",
   whiteSpace: "nowrap",
   textDecoration: "none",

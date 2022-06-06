@@ -1,14 +1,13 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
-import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
 import { Icon } from "../Icon";
+import { DefaultNDSThemeType } from "../theme.type";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
-import { DefaultNDSThemeType } from "../theme.type";
 
-type MenuTriggerProps = {
+export type MenuTriggerProps = {
   name?: string;
   "aria-label"?: string;
   menuData?: any[];

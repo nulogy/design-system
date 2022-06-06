@@ -18,29 +18,30 @@ const getSharedStyles = (color) => ({
   borderRadius: theme.radii.medium,
 });
 
-const ApplyMenuLinkStyles = styled.div(
-  ({ color, hoverColor, hoverBackground }) => ({
-    "*": {
-      ...getSharedStyles(color),
-      transition: ".2s",
-      "&:hover, &:focus": {
-        outline: "none",
-        color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-        backgroundColor: themeGet(
-          `colors.${hoverBackground}`,
-          hoverBackground
-        )(hoverBackground),
-        cursor: "pointer",
-      },
-      "&:disabled": {
-        opacity: ".5",
-      },
-      "&:focus": {
-        boxShadow: theme.shadows.focus,
-      },
+const ApplyMenuLinkStyles = styled.div<{
+  hoverColor: string;
+  hoverBackground: string;
+}>(({ color, hoverColor, hoverBackground }) => ({
+  "*": {
+    ...getSharedStyles(color),
+    transition: ".2s",
+    "&:hover, &:focus": {
+      outline: "none",
+      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+      backgroundColor: themeGet(
+        `colors.${hoverBackground}`,
+        hoverBackground
+      )(hoverBackground),
+      cursor: "pointer",
     },
-  })
-);
+    "&:disabled": {
+      opacity: ".5",
+    },
+    "&:focus": {
+      boxShadow: theme.shadows.focus,
+    },
+  },
+}));
 
 ApplyMenuLinkStyles.propTypes = {
   color: PropTypes.string,
@@ -54,27 +55,29 @@ ApplyMenuLinkStyles.defaultProps = {
   hoverBackground: theme.colors.black,
 };
 
-const MenuLink = styled.a(({ color, hoverColor, hoverBackground }) => ({
-  ...getSharedStyles(color),
-  transition: ".2s",
-  "&:hover, &:focus": {
-    outline: "none",
-    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(
-      `colors.${hoverBackground}`,
-      hoverBackground
-    )(hoverBackground),
-    cursor: "pointer",
-  },
-  "&:disabled": {
-    opacity: ".5",
-  },
-  "&:focus": {
-    boxShadow: theme.shadows.focus,
-  },
-}));
+const MenuLink = styled.a<{ hoverColor: string; hoverBackground: string }>(
+  ({ color, hoverColor, hoverBackground }) => ({
+    ...getSharedStyles(color),
+    transition: ".2s",
+    "&:hover, &:focus": {
+      outline: "none",
+      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+      backgroundColor: themeGet(
+        `colors.${hoverBackground}`,
+        hoverBackground
+      )(hoverBackground),
+      cursor: "pointer",
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+    "&:focus": {
+      boxShadow: theme.shadows.focus,
+    },
+  })
+);
 
-const MenuText = styled.div(({ textColor }) => ({
+const MenuText = styled.div<{ textColor: string }>(({ textColor }) => ({
   ...getSharedStyles(textColor),
 }));
 
