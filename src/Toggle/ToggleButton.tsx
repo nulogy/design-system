@@ -4,7 +4,8 @@ import type { TransformProperties } from "framer-motion/types/motion/types";
 import type { Transition } from "framer-motion";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
-import { AnimatedBox, theme } from "..";
+import { default as theme } from "../theme";
+import { AnimatedBox } from "../Box";
 
 type SwitchProps = {
   disabled?: boolean;
