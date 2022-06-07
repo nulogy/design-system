@@ -1,15 +1,10 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
 import { Text } from "../Type";
+import { TextProps } from "../Type/Text";
 
-type DropdownTextProps = {
-  theme?: DefaultNDSThemeType;
-  color?: string;
-};
-
-const DropdownText: React.FC<DropdownTextProps> = styled(Text)(
-  ({ theme }: DropdownTextProps): CSSObject => ({
+const DropdownText: React.FC<TextProps> = styled(Text)(
+  ({ theme }: TextProps): CSSObject => ({
     color: theme.colors.darkGrey,
     display: "block",
     width: "100%",
