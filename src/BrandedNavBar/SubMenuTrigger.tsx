@@ -78,6 +78,6 @@ const SubMenuTrigger = ({
   );
 };
 
-SubMenuTrigger.displayName = "SubMenuTriggerButton";
+SubMenuTrigger.displayName = "SubMenuTrigger";
 
 export default SubMenuTrigger;
