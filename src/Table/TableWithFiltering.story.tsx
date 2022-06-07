@@ -86,7 +86,7 @@ const TableWithFilters = ({ rowsPerPage }: TableWithFiltersProps) => {
 };
 
 export default {
-  title: "Components/Table",
+  title: "Components/Table/with filtering",
 };
 
 export const WithFiltering = () => <TableWithFilters />;

@@ -85,7 +85,7 @@ const TableWithCustomSorting = () => {
 };
 
 export default {
-  title: "Components/Table",
+  title: "Components/Table/with custom sorting",
 };
 
 export const WithCustomSorting = () => <TableWithCustomSorting />;
