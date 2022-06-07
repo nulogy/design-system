@@ -5,7 +5,7 @@ import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import { DefaultNDSThemeType } from "../theme.type";
-import { DropdownLink, DropdownText } from "../DropdownMenu";
+import { DropdownLink, DropdownText, DropdownButton } from "../DropdownMenu";
 import { Link } from "../Link";
 import { LinkProps } from "../Link/Link";
 import NulogyLogo from "./NulogyLogo";
@@ -21,8 +21,7 @@ const BrandingWrap = styled.div(({ theme }) => ({
 // eslint-disable-next-line no-mixed-operators
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
 
-const TopLevelLink = styled(Link)(({ theme }) => ({
-  color: theme.colors.darkBlue,
+const getSharedStyles = (theme) => ({
   display: "block",
   textDecoration: "none",
   border: "none",
@@ -32,6 +31,11 @@ const TopLevelLink = styled(Link)(({ theme }) => ({
   lineHeight: theme.lineHeights.heading3,
   padding: `${theme.space.x1} ${theme.space.x3}`,
   paddingLeft: getPaddingLeft(0),
+});
+
+const TopLevelLink = styled(Link)(({ theme }) => ({
+  ...getSharedStyles(theme),
+  color: theme.colors.darkBlue,
   "&:visited": {
     color: theme.colors.darkBlue,
   },
@@ -53,76 +57,9 @@ const TopLevelLink = styled(Link)(({ theme }) => ({
 }));
 
 const TopLevelText = styled(Text)(({ theme }) => ({
+  ...getSharedStyles(theme),
   color: theme.colors.blackBlue,
-  display: "block",
-  textDecoration: "none",
-  border: "none",
-  backgroundColor: "transparent",
-  fontSize: theme.fontSizes.large,
-  fontWeight: theme.fontWeights.medium,
-  lineHeight: theme.lineHeights.heading3,
-  padding: `${theme.space.x1} ${theme.space.x3}`,
-  paddingLeft: getPaddingLeft(0),
 }));
-
-const getSharedStyles = ({ color, layer, theme }) => ({
-  display: "block",
-  color: theme.colors[color] || color,
-  textDecoration: "none",
-  border: "none",
-  backgroundColor: "transparent",
-  borderRadius: theme.radii.medium,
-  fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
-  lineHeight: layer === 0 ? theme.lineHeights.heading3 : theme.lineHeights.base,
-  padding:
-    layer === 0
-      ? `${theme.space.x1} ${theme.space.x3}`
-      : `${theme.space.x1} ${theme.space.x2}`,
-  paddingLeft: getPaddingLeft(layer),
-  marginBottom: theme.space.x1,
-  "&:visited": {
-    color: theme.colors[color] || color,
-  },
-  "&:hover": {
-    color: "#434d59", // darkGrey
-    background: "#f0f2f5", // whiteGrey
-  },
-});
-
-type ApplyMenuLinkStylesProps = {
-  layer?: number;
-  color?: string;
-  hoverColor?: string;
-  hoverBackground?: string;
-  theme?: DefaultNDSThemeType;
-};
-
-const ApplyMenuLinkStyles = styled.li(
-  ({
-    color = "white",
-    hoverColor = "lightBlue",
-    hoverBackground = "white",
-    layer = 0,
-    theme,
-  }: ApplyMenuLinkStylesProps) => ({
-    display: "block",
-    "button, a": {
-      ...getSharedStyles({ color, layer, theme }),
-      textDecoration: "none",
-      "&:hover, &:focus": {
-        outline: "none",
-        color: theme.colors[hoverColor] || hoverColor,
-        backgroundColor: theme.colors[hoverBackground] || hoverBackground,
-      },
-      "&:disabled": {
-        opacity: ".5",
-      },
-      "&:focus": {
-        boxShadow: theme.shadows.focus,
-      },
-    },
-  })
-);
 
 type ApplyIndentProps = {
   layer?: number;
@@ -132,7 +69,7 @@ type ApplyIndentProps = {
 
 const ApplyIndent = styled.li(({ layer, theme }: ApplyIndentProps) => ({
   marginBottom: theme.space.x1,
-  [`> ${DropdownLink}`]: {
+  [`> ${DropdownButton}, > ${DropdownLink}`]: {
     paddingLeft: `${24 * layer + 20}px`,
   },
   [`> ${DropdownText}`]: {
@@ -164,14 +101,9 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
 };
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <ApplyMenuLinkStyles
-    key={menuItem.key ?? menuItem.name}
-    {...themeColorObject}
-    layer={layer}
-    onClick={linkOnClick}
-  >
-    {menuItem.render()}
-  </ApplyMenuLinkStyles>
+  <ApplyIndent layer={layer} key={menuItem.key ?? menuItem.name}>
+    {menuItem.render(linkOnClick, layer)}
+  </ApplyIndent>
 );
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
