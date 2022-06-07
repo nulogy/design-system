@@ -1,23 +1,5 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
-import theme from "../theme";
-import { DropdownLink } from "../DropdownMenu";
-
-const getSharedStyles = (): CSSObject => ({
-  display: "block",
-  whiteSpace: "nowrap",
-  textDecoration: "none",
-  borderColor: "transparent",
-  backgroundColor: "transparent",
-  lineHeight: theme.lineHeights.smallTextBase,
-  fontSize: `${theme.fontSizes.small}`,
-  padding: `${theme.space.half} ${theme.space.x2}`,
-});
-
-const SubMenuText = styled.li((): any => ({
-  color: theme.colors.darkGrey,
-  ...getSharedStyles(),
-}));
+import { DropdownText, DropdownLink } from "../DropdownMenu";
 
 const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
   <li
@@ -59,9 +41,12 @@ const renderCustom = (subMenuItem, onItemClick) => (
 );
 
 const renderText = (subMenuItem) => (
-  <SubMenuText key={subMenuItem.key ?? subMenuItem.name}>
-    {subMenuItem.name}
-  </SubMenuText>
+  <li
+    style={{ whiteSpace: "nowrap" }}
+    key={subMenuItem.key ?? subMenuItem.name}
+  >
+    <DropdownText>{subMenuItem.name}</DropdownText>
+  </li>
 );
 
 const getRenderFunction = (subMenuItem) => {

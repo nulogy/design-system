@@ -4,6 +4,7 @@ import {
   DropdownLink,
   DropdownButton,
   DropdownItem,
+  DropdownText,
   Button,
 } from "../index";
 
@@ -75,7 +76,7 @@ WithButtonClosingMenu.story = {
   name: "with button closing menu",
 };
 
-export const WithCustomItem = () => (
+export const WithCustomLink = () => (
   <DropdownMenu
     defaultOpen
     openAriaLabel="open dropdown"
@@ -87,9 +88,11 @@ export const WithCustomItem = () => (
   </DropdownMenu>
 );
 
-WithCustomItem.story = {
-  name: "with custom item",
-};
+export const WithCustomText = () => (
+  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+    <DropdownText>Custom Text</DropdownText>
+  </DropdownMenu>
+);
 
 export const SetToDefaultOpen = () => (
   <DropdownMenu
