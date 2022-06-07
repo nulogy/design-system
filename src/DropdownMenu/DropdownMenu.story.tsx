@@ -75,7 +75,7 @@ WithButtonClosingMenu.story = {
   name: "with button closing menu",
 };
 
-export const WithCustomItem = () => (
+export const WithCustomLink = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownItem>
       <a href="/never_been">Custom Link Component</a>
@@ -83,9 +83,15 @@ export const WithCustomItem = () => (
   </DropdownMenu>
 );
 
-WithCustomItem.story = {
+WithCustomLink.story = {
   name: "with custom item",
 };
+
+export const WithCustomText = () => (
+  <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+    <DropdownItem><span>Custom Text</span></DropdownItem>
+  </DropdownMenu>
+);
 
 export const SetToDefaultOpen = () => (
   <DropdownMenu

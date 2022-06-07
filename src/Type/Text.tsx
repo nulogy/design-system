@@ -13,6 +13,7 @@ import {
 } from "styled-system";
 import { TextOverflowProps, textOverflow } from "../StyledProps/textOverflow";
 import { CursorProps, cursor } from "../StyledProps/cursor";
+import type { DefaultNDSThemeType } from "../theme.type";
 const getAttrs = (inline?: boolean) => (inline ? { as: "span" } : null);
 
 export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
@@ -38,7 +39,7 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
   TextOverflowProps &
   TypographyProps &
   CursorProps &
-  ColorProps;
+  ColorProps & { theme?: DefaultNDSThemeType };
 
 const Text = styled.p.attrs<TextProps>((props: TextProps) =>
   getAttrs(props.inline)
@@ -50,19 +51,18 @@ const Text = styled.p.attrs<TextProps>((props: TextProps) =>
   overflow,
   textOverflow,
   cursor,
-  ({ disabled, textTransform }: TextProps): CSSObject => ({
+  ({ disabled, textTransform, theme }: TextProps): CSSObject => ({
     textTransform,
+    color: "currentColor",
+    marginTop: 0,
+    marginBottom: 0,
+    fontSize: theme.fontSizes.medium,
+    lineHeight: theme.lineHeights.base,
     opacity: disabled ? "0.7" : undefined,
   })
 );
 Text.defaultProps = {
   inline: false,
   disabled: false,
-  mt: 0,
-  mb: 0,
-  fontSize: "medium",
-  lineHeight: "base",
-  textTransform: undefined,
-  color: "currentColor",
 };
 export default Text;
