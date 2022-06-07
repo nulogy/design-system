@@ -14,26 +14,6 @@ const getSharedStyles = (): CSSObject => ({
   padding: `${theme.space.half} ${theme.space.x2}`,
 });
 
-const ApplySubMenuLinkStyles = styled.li((): any => ({
-  color: theme.colors.darkBlue,
-  verticalAlign: "middle",
-  "> *": {
-    ...getSharedStyles(),
-    transition: ".2s",
-    textDecoration: "none",
-    "&:hover, &:focus": {
-      outline: "none",
-      backgroundColor: theme.colors.lightGrey,
-    },
-    "&:disabled": {
-      opacity: ".5",
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus,
-    },
-  },
-}));
-
 const SubMenuText = styled.li((): any => ({
   color: theme.colors.darkGrey,
   ...getSharedStyles(),
@@ -70,12 +50,12 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
 );
 
 const renderCustom = (subMenuItem, onItemClick) => (
-  <ApplySubMenuLinkStyles
+  <li
+    style={{ whiteSpace: "nowrap" }}
     key={subMenuItem.key ?? subMenuItem.name}
-    onClick={onItemClick}
   >
-    {subMenuItem.render()}
-  </ApplySubMenuLinkStyles>
+    {subMenuItem.render(onItemClick)}
+  </li>
 );
 
 const renderText = (subMenuItem) => (
