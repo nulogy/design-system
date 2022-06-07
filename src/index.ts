@@ -25,6 +25,7 @@ export {
   DropdownLink,
   DropdownButton,
   DropdownItem,
+  DropdownText,
 } from "./DropdownMenu";
 export { HelpText, RequirementText, FieldLabel } from "./FieldLabel";
 export { Input } from "./Input";
