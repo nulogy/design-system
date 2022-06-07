@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { display } from "styled-system";
-import { themeGet } from "@styled-system/theme-get";
 import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import { DefaultNDSThemeType } from "../theme.type";
-import { DropdownText } from "../DropdownMenu";
+import { DropdownLink, DropdownText } from "../DropdownMenu";
+import { Link } from "../Link";
+import { LinkProps } from "../Link/Link";
 import NulogyLogo from "./NulogyLogo";
 
 const borderStyle = "1px solid #e4e7eb";
@@ -19,6 +20,37 @@ const BrandingWrap = styled.div(({ theme }) => ({
 
 // eslint-disable-next-line no-mixed-operators
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
+
+const TopLevelLink = styled(Link)(({ theme }) => ({
+  color: theme.colors.darkBlue,
+  display: "block",
+  textDecoration: "none",
+  border: "none",
+  backgroundColor: "transparent",
+  fontSize: theme.fontSizes.large,
+  fontWeight: theme.fontWeights.medium,
+  lineHeight: theme.lineHeights.heading3,
+  padding: `${theme.space.x1} ${theme.space.x3}`,
+  paddingLeft: getPaddingLeft(0),
+  "&:visited": {
+    color: theme.colors.darkBlue,
+  },
+  width: "100%",
+  borderRadius: "0",
+  transition: ".2s",
+  "&:hover, &:focus": {
+    outline: "none",
+    color: theme.colors.blackBlue,
+    backgroundColor: theme.colors.whiteGrey,
+    cursor: "pointer",
+  },
+  "&:focus": {
+    boxShadow: theme.shadows.focus,
+  },
+  "&:disabled": {
+    opacity: ".5",
+  },
+}));
 
 const TopLevelText = styled(Text)(({ theme }) => ({
   color: theme.colors.blackBlue,
@@ -92,42 +124,19 @@ const ApplyMenuLinkStyles = styled.li(
   })
 );
 
-type MenuLinkProps = {
+type ApplyIndentProps = {
   layer?: number;
-  color?: string;
-  hoverColor?: string;
-  hoverBackground?: string;
   theme?: DefaultNDSThemeType;
+  key?: string;
 };
 
-const MenuLink = styled.a(
-  ({ color, hoverColor, hoverBackground, layer, theme }: MenuLinkProps) => ({
-    ...getSharedStyles({ color, layer, theme }),
-    width: "100%",
-    borderRadius: "0",
-    transition: ".2s",
-    "&:hover, &:focus": {
-      outline: "none",
-      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(
-        `colors.${hoverBackground}`,
-        hoverBackground
-      )(hoverBackground),
-      cursor: "pointer",
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus,
-    },
-    "&:disabled": {
-      opacity: ".5",
-    },
-  })
-);
-
-const ApplyIndent = styled.li(({ layer, theme }: MenuLinkProps) => ({
+const ApplyIndent = styled.li(({ layer, theme }: ApplyIndentProps) => ({
   marginBottom: theme.space.x1,
+  [`> ${DropdownLink}`]: {
+    paddingLeft: `${24 * layer + 20}px`,
+  },
   [`> ${DropdownText}`]: {
-    paddingLeft: `${24 * layer + 24}px`,
+    paddingLeft: getPaddingLeft(layer),
   },
 }));
 
@@ -137,25 +146,22 @@ const SubMenuItemsList = styled.ul({
   margin: "0",
 });
 
-const StyledLi = styled.li(({ theme }) => ({
-  marginBottom: theme.space.x1,
-  display: "block",
-}));
-
-const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <StyledLi key={menuItem.key ?? menuItem.name}>
-    <MenuLink
-      layer={layer}
-      {...themeColorObject}
-      onClick={linkOnClick}
-      href={menuItem.href}
-      as={menuItem.as}
-      to={menuItem.to}
-    >
-      {menuItem.name}
-    </MenuLink>
-  </StyledLi>
-);
+const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
+  const MenuLink: React.FC<LinkProps> =
+    layer === 0 ? TopLevelLink : DropdownLink;
+  return (
+    <ApplyIndent layer={layer} key={menuItem.key ?? menuItem.name}>
+      <MenuLink
+        onClick={linkOnClick}
+        href={menuItem.href}
+        as={menuItem.as}
+        to={menuItem.to}
+      >
+        {menuItem.name}
+      </MenuLink>
+    </ApplyIndent>
+  );
+};
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
   <ApplyMenuLinkStyles
