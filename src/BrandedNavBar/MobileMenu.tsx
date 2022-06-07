@@ -215,20 +215,13 @@ const renderMenuItems = (menuItems, linkOnClick, themeColorObject, layer) =>
 const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
   renderMenuItems(menuData, linkOnClick, themeColorObject, 0);
 
-const getSubMenuHeading = (layer, color, name) =>
+const getSubMenuHeading = (layer, name) =>
   layer === 0 ? (
-    <Heading3 mb="x1" color={color}>
-      {name}
-    </Heading3>
+    <TopLevelText as="h3">{name}</TopLevelText>
   ) : (
-    <Text
-      mb="x1"
-      color={color}
-      py="x1"
-      style={{ paddingLeft: getPaddingLeft(layer) }}
-    >
+    <DropdownText mb="x1" style={{ paddingLeft: getPaddingLeft(layer) }}>
       {name}
-    </Text>
+    </DropdownText>
   );
 
 type ThemeColorObject = {
@@ -256,11 +249,7 @@ const SubMenu = ({
   layer,
 }: SubMenuProps) => (
   <>
-    {getSubMenuHeading(
-      layer,
-      themeColorObject && themeColorObject.textColor,
-      menuItem.name
-    )}
+    {getSubMenuHeading(layer, menuItem.name)}
     <SubMenuItemsList>
       {renderMenuItems(
         menuItem.items,
