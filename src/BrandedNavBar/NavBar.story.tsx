@@ -4,6 +4,7 @@ import { select } from "@storybook/addon-knobs";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
+import { DropdownButton, DropdownLink } from "../DropdownMenu";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo =
@@ -38,7 +39,6 @@ const primaryMenu = [
       { name: "Carriers", href: "/" },
     ],
   },
-
   {
     name: "Inspector",
     items: [
@@ -295,4 +295,42 @@ export const WithReactRouter = () => (
 
 WithReactRouter.story = {
   name: "With react router",
+};
+
+const customPrimaryMenu = [
+  {
+    name: "Submenu",
+    items: [
+      { name: "Submenu link", href: "/" },
+      {
+        name: "Custom submenu HTML Link",
+        render: () => <a href="/">Submenu Raw HTML Link</a>,
+      },
+      {
+        name: "Custom submenu DropdownLink",
+        render: () => <DropdownLink href="/">DropdownLink</DropdownLink>,
+      },
+      {
+        name: "Custom submenu DropdownButton",
+        render: () => <DropdownButton>DropdownButton</DropdownButton>,
+      },
+    ],
+  },
+  { name: "Menu link", href: "/" },
+  {
+    name: "Custom Menu HTML Link",
+    render: () => <a href="/">Menu Raw HTML Link</a>,
+  },
+];
+export const CustomRendering = () => (
+  <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} />
+);
+
+export const CustomRenderingInHamburger = () => (
+  <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} />
+);
+CustomRenderingInHamburger.parameters = {
+  viewport: {
+    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+  },
 };
