@@ -10,6 +10,7 @@ import {
   overflow,
   LayoutProps,
   layout,
+  compose,
 } from "styled-system";
 import { TextOverflowProps, textOverflow } from "../StyledProps/textOverflow";
 import { CursorProps, cursor } from "../StyledProps/cursor";
@@ -44,13 +45,6 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
 const Text = styled.p.attrs<TextProps>((props: TextProps) =>
   getAttrs(props.inline)
 )<TextProps>(
-  space,
-  typography,
-  color,
-  layout,
-  overflow,
-  textOverflow,
-  cursor,
   ({ disabled, textTransform, theme }: TextProps): CSSObject => ({
     textTransform,
     color: "currentColor",
@@ -59,7 +53,8 @@ const Text = styled.p.attrs<TextProps>((props: TextProps) =>
     fontSize: theme.fontSizes.medium,
     lineHeight: theme.lineHeights.base,
     opacity: disabled ? "0.7" : undefined,
-  })
+  }),
+  compose(space, typography, color, layout, overflow, textOverflow, cursor)
 );
 Text.defaultProps = {
   inline: false,
