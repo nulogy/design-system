@@ -37,24 +37,7 @@ const primaryMenu = [
       { name: "Items", href: "/" },
       { name: "Vendors", href: "/" },
       { name: "Carriers", href: "/" },
-    ],
-  },
-  {
-    name: "Inspector",
-    items: [
-      { name: "Dashboard", href: "/" },
-      { name: "Moves", href: "/" },
-      { name: "Pick Lists", href: "/" },
-      { name: "Receive Orders", href: "/" },
-      { name: "Receipts", href: "/" },
-      { name: "Ship Orders", href: "/" },
-      { name: "Shipments", href: "/" },
-      { name: "Item Lists", href: "/" },
-      { name: "Cycle Counts", href: "/" },
-      { name: "Blind Counts", href: "/" },
-      { name: "Inbound Stock Transfer Orders", href: "/" },
-      { name: "Inbound Stock Transfers", href: "/" },
-      { name: "Outbound Stock Transfers", href: "/" },
+      { name: "Only text submenu" },
     ],
   },
   {
@@ -85,6 +68,7 @@ const primaryMenu = [
     ],
   },
   { name: "Link", href: "/" },
+  { name: "Only text" },
 ];
 
 const secondaryMenu = [
