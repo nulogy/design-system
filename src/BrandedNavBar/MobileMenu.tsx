@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { display } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
@@ -7,6 +6,7 @@ import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import { DefaultNDSThemeType } from "../theme.type";
+import { DropdownText } from "../DropdownMenu";
 import NulogyLogo from "./NulogyLogo";
 
 const borderStyle = "1px solid #e4e7eb";
@@ -17,7 +17,21 @@ const BrandingWrap = styled.div(({ theme }) => ({
   marginBottom: theme.space.x1,
 }));
 
+// eslint-disable-next-line no-mixed-operators
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
+
+const TopLevelText = styled(Text)(({ theme }) => ({
+  color: theme.colors.blackBlue,
+  display: "block",
+  textDecoration: "none",
+  border: "none",
+  backgroundColor: "transparent",
+  fontSize: theme.fontSizes.large,
+  fontWeight: theme.fontWeights.medium,
+  lineHeight: theme.lineHeights.heading3,
+  padding: `${theme.space.x1} ${theme.space.x3}`,
+  paddingLeft: getPaddingLeft(0),
+}));
 
 const getSharedStyles = ({ color, layer, theme }) => ({
   display: "block",
@@ -110,14 +124,11 @@ const MenuLink = styled.a(
   })
 );
 
-type MenuTextProps = {
-  textColor?: string;
-  layer?: number;
-  theme?: DefaultNDSThemeType;
-};
-
-const MenuText = styled.li(({ textColor, layer, theme }: MenuTextProps) => ({
-  ...getSharedStyles({ color: textColor, layer, theme }),
+const ApplyIndent = styled.li(({ layer, theme }: MenuLinkProps) => ({
+  marginBottom: theme.space.x1,
+  [`> ${DropdownText}`]: {
+    paddingLeft: `${24 * layer + 24}px`,
+  },
 }));
 
 const SubMenuItemsList = styled.ul({
@@ -168,15 +179,14 @@ const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
   </li>
 );
 
-const renderText = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <MenuText
-    key={menuItem.key ?? menuItem.name}
-    layer={layer}
-    {...themeColorObject}
-  >
-    {menuItem.name}
-  </MenuText>
-);
+const renderText = (menuItem, linkOnClick, themeColorObject, layer) => {
+  const MenuText = layer === 0 ? TopLevelText : DropdownText;
+  return (
+    <ApplyIndent layer={layer} key={menuItem.key ?? menuItem.name}>
+      <MenuText>{menuItem.name}</MenuText>
+    </ApplyIndent>
+  );
+};
 
 const getRenderFunction = (menuItem) => {
   if (menuItem.items) {
