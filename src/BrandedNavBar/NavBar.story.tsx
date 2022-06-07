@@ -280,7 +280,9 @@ WithReactRouter.story = {
 };
 
 export const WithHamburgerMenu = () => {
-  return <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
+  return (
+    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />
+  );
 };
 WithHamburgerMenu.parameters = {
   viewport: {
@@ -319,7 +321,10 @@ export const CustomRendering = () => (
 );
 
 export const CustomRenderingInHamburger = () => (
-  <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} />
+  <BrandedNavBar
+    menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }}
+    defaultOpen
+  />
 );
 CustomRenderingInHamburger.parameters = {
   viewport: {
