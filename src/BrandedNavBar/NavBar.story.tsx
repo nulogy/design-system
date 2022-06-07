@@ -33,7 +33,6 @@ const primaryMenu = [
     name: "Dashboard",
     items: [
       { name: "Items", href: "/" },
-      { name: "Vendors", href: "/" },
       { name: "Carriers", href: "/" },
       { name: "Only text submenu" },
     ],
@@ -56,13 +55,10 @@ const primaryMenu = [
             name: "Jobs",
             items: [
               { name: "Job 1", href: "/" },
-              { name: "Job 2", href: "/" },
             ],
           },
         ],
       },
-      { name: "Item cart", href: "/" },
-      { name: "Inventory", href: "/" },
     ],
   },
   { name: "Link", href: "/" },
