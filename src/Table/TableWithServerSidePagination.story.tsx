@@ -85,7 +85,7 @@ class TableWithServerSidePagination extends React.Component<{}, TableState> {
 }
 
 export default {
-  title: "Components/Table",
+  title: "Components/Table/with server side pagination",
 };
 
 export const WithServerSidePagination = () => <TableWithServerSidePagination />;
