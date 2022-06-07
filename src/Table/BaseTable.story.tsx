@@ -266,7 +266,7 @@ const rowDataWithSections = [
 ];
 
 export default {
-  title: "Components/Table",
+  title: "Components/Table/Base",
 };
 
 export const WithData = () => (

@@ -372,7 +372,3 @@ export const WithOnHoverActions = () => {
     />
   );
 };
-
-WithOnHoverActions.story = {
-  name: "with hover actions",
-};
