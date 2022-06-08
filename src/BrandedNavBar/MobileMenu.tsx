@@ -29,6 +29,7 @@ const getSharedStyles = (theme) => ({
   fontSize: theme.fontSizes.large,
   fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.heading3,
+  marginBottom: theme.space.x1,
   padding: `${theme.space.x1} ${theme.space.x3}`,
   paddingLeft: getPaddingLeft(0),
 });
