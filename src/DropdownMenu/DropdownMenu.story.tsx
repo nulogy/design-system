@@ -76,7 +76,11 @@ WithButtonClosingMenu.story = {
 };
 
 export const WithCustomItem = () => (
-  <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+  <DropdownMenu
+    defaultOpen
+    openAriaLabel="open dropdown"
+    closeAriaLabel="close dropdown"
+  >
     <DropdownItem>
       <a href="/never_been">Custom Link Component</a>
     </DropdownItem>
