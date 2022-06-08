@@ -61,21 +61,24 @@ const TopLevelText = styled(Text)(({ theme }) => ({
   color: theme.colors.blackBlue,
 }));
 
-type ApplyIndentProps = {
+type ChildIndentingLiProps = {
   layer?: number;
   theme?: DefaultNDSThemeType;
   key?: string;
 };
 
-const ApplyIndent = styled.li(({ layer, theme }: ApplyIndentProps) => ({
-  marginBottom: theme.space.x1,
-  [`> ${DropdownButton}, > ${DropdownLink}`]: {
-    paddingLeft: `${24 * layer + 20}px`,
-  },
-  [`> ${DropdownText}`]: {
-    paddingLeft: getPaddingLeft(layer),
-  },
-}));
+const ChildIndentingLi = styled.li(
+  ({ layer, theme }: ChildIndentingLiProps) => ({
+    marginBottom: theme.space.x1,
+    [`> ${DropdownButton}, > ${DropdownLink}`]: {
+      // eslint-disable-next-line no-mixed-operators
+      paddingLeft: `${24 * layer + 20}px`,
+    },
+    [`> ${DropdownText}`]: {
+      paddingLeft: getPaddingLeft(layer),
+    },
+  })
+);
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -87,7 +90,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
   const MenuLink: React.FC<LinkProps> =
     layer === 0 ? TopLevelLink : DropdownLink;
   return (
-    <ApplyIndent layer={layer} key={menuItem.key ?? menuItem.name}>
+    <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
       <MenuLink
         onClick={linkOnClick}
         href={menuItem.href}
@@ -96,14 +99,14 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
       >
         {menuItem.name}
       </MenuLink>
-    </ApplyIndent>
+    </ChildIndentingLi>
   );
 };
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <ApplyIndent layer={layer} key={menuItem.key ?? menuItem.name}>
+  <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
     {menuItem.render(linkOnClick, layer)}
-  </ApplyIndent>
+  </ChildIndentingLi>
 );
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
@@ -120,9 +123,9 @@ const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
 const renderText = (menuItem, linkOnClick, themeColorObject, layer) => {
   const MenuText = layer === 0 ? TopLevelText : DropdownText;
   return (
-    <ApplyIndent layer={layer} key={menuItem.key ?? menuItem.name}>
+    <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
       <MenuText>{menuItem.name}</MenuText>
-    </ApplyIndent>
+    </ChildIndentingLi>
   );
 };
 
