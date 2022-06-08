@@ -41,7 +41,7 @@ const DropdownMenuContainer: React.FC<DropdownMenuContainerProps> = styled(Box)(
   ({
     dataPlacement,
     showArrow = true,
-    backgroundColor = "whiteGrey",
+    backgroundColor = "white",
     theme,
   }: DropdownMenuContainerProps): any => ({
     borderRadius: theme.radii.medium,

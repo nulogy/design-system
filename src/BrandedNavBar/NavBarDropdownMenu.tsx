@@ -144,8 +144,8 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
                     {...popperProps.arrowProps}
                     placement={placement}
                     ref={popperProps.arrowProps.ref}
-                    backgroundColor="whiteGrey"
-                    borderColor="whiteGrey"
+                    backgroundColor="white"
+                    borderColor="white"
                   />
                   <DetectOutsideClick
                     onClick={this.handleOutsideClick}

@@ -3,8 +3,8 @@ import styled, {
   CSSObject,
   StyledComponentPropsWithRef,
 } from "styled-components";
-import theme from "../theme";
 import { Icon } from "../Icon";
+import { DropdownButton } from "../DropdownMenu/index";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 
@@ -15,36 +15,13 @@ type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   menuData: any[];
 };
 
-const StyledButton: StyledComponentPropsWithRef<any> = styled.button(
-  ({ isOpen }: any): CSSObject => ({
-    display: "block",
+const StyledButton: StyledComponentPropsWithRef<any> = styled(DropdownButton)(
+  ({ isOpen, theme }: any): CSSObject => ({
     position: "relative",
-    color: theme.colors.darkBlue,
-    fontSize: theme.fontSizes.small,
-    lineHeight: theme.lineHeights.smallTextBase,
-    width: "100%",
-    padding: `${theme.space.half} 28px ${theme.space.half} 12px`,
-    border: "none",
-    borderLeft: `${theme.space.half} solid transparent`,
-    "&:hover": {
-      backgroundColor: theme.colors.lightGrey,
-    },
-    "&:disabled": {
-      opacity: ".5",
-    },
-    "&:focus": {
-      outline: "none",
-      color: theme.colors.darkBlue,
-      backgroundColor: theme.colors.lightGrey,
-      borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`,
-    },
-    backgroundColor: isOpen ? theme.colors.lightGrey : "transparent",
-    textDecoration: "none",
-    textAlign: "left",
-    cursor: "pointer",
+    backgroundColor: isOpen ? theme.colors.lightBlue : "transparent",
+    color: isOpen ? theme.colors.darkBlue : theme.colors.darkGrey,
   })
 );
-
 type SubMenuTriggerButtonProps = React.ComponentPropsWithRef<"button"> & {
   name?: string;
   isOpen: boolean;
@@ -57,9 +34,8 @@ const SubMenuTriggerButton = React.forwardRef<
   <StyledButton isOpen={isOpen} ref={ref} {...props}>
     {name}
     <Icon
-      style={{ position: "absolute", top: "7px" }}
+      style={{ position: "absolute", top: "10px" }}
       icon="rightArrow"
-      color="darkBlue"
       size="20px"
       p="2px"
     />
