@@ -1,17 +1,7 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
-import { fontSize, lineHeight, space } from "styled-system";
-import propTypes from "@styled-system/prop-types";
 import theme from "../theme";
 import { DropdownLink } from "../DropdownMenu";
-
-const SubMenuLink = styled(DropdownLink)(fontSize, lineHeight, space);
-
-SubMenuLink.propTypes = {
-  ...propTypes.fontSize,
-  ...propTypes.lineHeight,
-  ...propTypes.space,
-};
 
 const getSharedStyles = (): CSSObject => ({
   display: "block",
@@ -67,9 +57,7 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
     style={{ whiteSpace: "nowrap" }}
     key={subMenuItem.key ?? subMenuItem.name}
   >
-    <SubMenuLink
-      fontSize="small"
-      lineHeight="smallTextBase"
+    <DropdownLink
       py="half"
       onClick={onItemClick}
       href={subMenuItem.href}
@@ -77,7 +65,7 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
       as={subMenuItem.as}
     >
       {subMenuItem.name}
-    </SubMenuLink>
+    </DropdownLink>
   </li>
 );
 
