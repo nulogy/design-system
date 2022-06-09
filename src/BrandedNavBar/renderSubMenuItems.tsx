@@ -1,24 +1,19 @@
 import React from "react";
+import styled, { CSSObject } from "styled-components";
 import { DropdownText, DropdownLink } from "../DropdownMenu";
 
 const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
-  <li
-    style={{ whiteSpace: "nowrap" }}
-    key={subMenuItem.key ?? subMenuItem.name}
-  >
+  <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
     <SubMenuTrigger
       onItemClick={onItemClick}
       name={subMenuItem.name}
       menuData={subMenuItem.items}
     />
-  </li>
+  </NoWrapLi>
 );
 
 const renderSubMenuLink = (subMenuItem, onItemClick) => (
-  <li
-    style={{ whiteSpace: "nowrap" }}
-    key={subMenuItem.key ?? subMenuItem.name}
-  >
+  <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
     <DropdownLink
       py="half"
       onClick={onItemClick}
@@ -28,25 +23,19 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
     >
       {subMenuItem.name}
     </DropdownLink>
-  </li>
+  </NoWrapLi>
 );
 
 const renderCustom = (subMenuItem, onItemClick) => (
-  <li
-    style={{ whiteSpace: "nowrap" }}
-    key={subMenuItem.key ?? subMenuItem.name}
-  >
+  <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
     {subMenuItem.render(onItemClick)}
-  </li>
+  </NoWrapLi>
 );
 
 const renderText = (subMenuItem) => (
-  <li
-    style={{ whiteSpace: "nowrap" }}
-    key={subMenuItem.key ?? subMenuItem.name}
-  >
+  <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
     <DropdownText>{subMenuItem.name}</DropdownText>
-  </li>
+  </NoWrapLi>
 );
 
 const getRenderFunction = (subMenuItem) => {
@@ -65,5 +54,11 @@ const renderSubMenuItems = (subMenuItems, onItemClick, SubMenuTrigger) =>
   subMenuItems.map((subMenuItem) =>
     getRenderFunction(subMenuItem)(subMenuItem, onItemClick, SubMenuTrigger)
   );
+
+const NoWrapLi = styled.li(
+  (): CSSObject => ({
+    whiteSpace: "nowrap",
+  })
+);
 
 export default renderSubMenuItems;
