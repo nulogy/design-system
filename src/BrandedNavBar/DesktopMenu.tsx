@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 import MenuTrigger from "./MenuTrigger";
@@ -18,39 +17,6 @@ const getSharedStyles = (color, theme) => {
     borderRadius: theme.radii.medium,
   };
 };
-
-type ApplyMenuLinkStylesProps = {
-  color?: string;
-  hoverColor?: string;
-  hoverBackground?: string;
-  theme?: DefaultNDSThemeType;
-};
-
-const ApplyMenuLinkStyles = styled.div(
-  ({
-    color = "white",
-    hoverColor = "lightBlue",
-    hoverBackground = "black",
-    theme,
-  }: ApplyMenuLinkStylesProps) => ({
-    "button, a": {
-      ...getSharedStyles(color, theme),
-      transition: ".2s",
-      "&:hover, &:focus": {
-        outline: "none",
-        color: theme.colors[hoverColor] || hoverColor,
-        backgroundColor: theme.colors[hoverBackground] || hoverBackground,
-        cursor: "pointer",
-      },
-      "&:disabled": {
-        opacity: ".5",
-      },
-      "&:focus": {
-        boxShadow: theme.shadows.focus,
-      },
-    },
-  })
-);
 
 type MenuLinkProps = {
   color?: string;
@@ -118,13 +84,8 @@ const renderMenuLink = (menuItem, themeColorObject) => (
   </div>
 );
 
-const renderCustom = (menuItem, themeColorObject) => (
-  <ApplyMenuLinkStyles
-    {...themeColorObject}
-    key={menuItem.key ?? menuItem.name}
-  >
-    {menuItem.render()}
-  </ApplyMenuLinkStyles>
+const renderCustom = (menuItem) => (
+  <div key={menuItem.key ?? menuItem.name}>{menuItem.render()}</div>
 );
 
 const renderText = (menuItem, themeColorObject) => (
