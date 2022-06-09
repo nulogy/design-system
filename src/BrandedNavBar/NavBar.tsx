@@ -40,7 +40,7 @@ const NavBarBackground = styled(Flex)(
   ({ backgroundColor, theme }: NavBarBackgroundProps): CSSObject => ({
     background: backgroundColor,
     padding: `0 ${theme.space.x3}`,
-    boxShadow: theme.shadows.large,
+    borderBottom: `1px solid ${theme.colors.lightGrey}`,
     alignItems: "center",
     height: NAVBAR_HEIGHT,
     zIndex: theme.zIndices.navBar,
