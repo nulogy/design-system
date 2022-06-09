@@ -11,13 +11,9 @@ type DropdownButtonProps = React.ComponentPropsWithRef<"button"> & {
 };
 
 const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
-  color,
-  ({
-    disabled = false,
-    theme,
-    hoverColor = "darkBlue",
-    bgHoverColor = "lightBlue",
-  }: DropdownButtonProps) => ({
+  ({ disabled, theme, hoverColor, bgHoverColor }: DropdownButtonProps) => ({
+    color: theme.colors.darkGrey,
+    fontWeight: theme.fontWeights.medium,
     display: "block",
     width: "100%",
     cursor: disabled ? "default" : "pointer",
@@ -42,10 +38,10 @@ const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
     "&:disabled": {
       opacity: ".5",
     },
-  })
+  }),
+  color
 );
 DropdownButton.defaultProps = {
-  color: "darkGrey",
   disabled: false,
   hoverColor: "darkBlue",
   bgHoverColor: "lightBlue",
