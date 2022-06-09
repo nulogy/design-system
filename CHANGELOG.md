@@ -1,3 +1,29 @@
+# [6.8.0](https://github.com/nulogy/design-system/compare/v6.7.5...v6.8.0) (2022-06-09)
+
+
+### Bug Fixes
+
+* allow styled-system props to override default CSS ([b3435ef](https://github.com/nulogy/design-system/commit/b3435ef314ed3b989666c5bf34f9790c3a2ac7b6))
+* circular dependency ([ef78ce9](https://github.com/nulogy/design-system/commit/ef78ce9789bc27b4f6b692bd836f9afacf76b6fa))
+* duplicate component name ([585a530](https://github.com/nulogy/design-system/commit/585a530b0369251d8a8a936e4341a652d97f6724))
+* remove trailing space ([8fdd5a4](https://github.com/nulogy/design-system/commit/8fdd5a4e4a0786011f7feac0507a5198d45a97b3))
+* spacing on top-level menu items ([a41f7d7](https://github.com/nulogy/design-system/commit/a41f7d76a24bbb60608ecb36d2949c09acff0105))
+
+
+### Features
+
+* increase dropdown font weights to medium ([3c89ca3](https://github.com/nulogy/design-system/commit/3c89ca35df8ec8b6b9a461b5afda99d9da900eeb))
+* remove boxShadow from Sidebar ([0037cbb](https://github.com/nulogy/design-system/commit/0037cbbd466067a6f7f79b85dd295c0030672d0f))
+* replace BrandedNavBar shadow with flat border ([d93c3dc](https://github.com/nulogy/design-system/commit/d93c3dc74b2b3a6cfafd12e169e1cb8ea5f38240))
+* update BrandedNavBar submenu colours ([61421d6](https://github.com/nulogy/design-system/commit/61421d612a6b9a4a6be9071e18fc0c99d25ca648))
+* update DropdownMenu boxShadow to medium from small ([156e107](https://github.com/nulogy/design-system/commit/156e107ccc9993268126553b8fd35f8831ecc0a0))
+* update DropdownMenu colours ([6d16f67](https://github.com/nulogy/design-system/commit/6d16f67edd46730753b2c64ef58e6aa035cfb377))
+* update link sub-menu item hamburger styles ([d42c429](https://github.com/nulogy/design-system/commit/d42c4291bafa91d2beb195d46d049a685ba5f951))
+* update sub-menu heading styles ([82738ea](https://github.com/nulogy/design-system/commit/82738ea4abf0de932080db409a1e6da19d26b3db))
+* update text-only menu item hamburger styles ([eba39ad](https://github.com/nulogy/design-system/commit/eba39ad7d706cce5eff3ff72eaae028a31af666a))
+* update text-only menu item styles ([fa2c31a](https://github.com/nulogy/design-system/commit/fa2c31a9fc299c4a5b5ae23fa9dcf90ee9de67a0))
+* update TooltipContainer boxShadow to medium from custom ([bdbf972](https://github.com/nulogy/design-system/commit/bdbf972c68c58f8d7a5250cb6a60506f94083168))
+
 ## [6.7.5](https://github.com/nulogy/design-system/compare/v6.7.4...v6.7.5) (2022-06-06)
 
 
