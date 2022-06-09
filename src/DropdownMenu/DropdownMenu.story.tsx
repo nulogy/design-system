@@ -89,7 +89,7 @@ export const WithCustomLink = () => (
 );
 
 export const WithCustomText = () => (
-  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+  <DropdownMenu defaultOpen>
     <DropdownText>Custom Text</DropdownText>
   </DropdownMenu>
 );
@@ -107,6 +107,7 @@ export const SetToDefaultOpen = () => (
         Custom Link Component
       </a>
     </DropdownItem>
+    <DropdownText>Custom Text</DropdownText>
   </DropdownMenu>
 );
 
