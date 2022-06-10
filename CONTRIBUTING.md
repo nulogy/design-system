@@ -36,6 +36,8 @@ _Coming soon_
 
 Note: NDS follows the [Conventional Commits](https://www.conventionalcommits.org) specification. PRs with only one commit should have the appropriate prefix (ex. 'fix:'). PRs with multiple commits should have the prefix in the PR title.
 
+**WARNING**: using a `!` after the [Conventional Commits](https://www.conventionalcommits.org) `type/scope` (e.g. `feat`) is not sufficient for [semantic-release](https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow/maintenance-releases#releasing-a-breaking-change) to detect a breaking change. ` BREAKING CHANGE` needs to be explicitly included in the body of the commit message.
+
 ## Testing
 
 - To run everything:
