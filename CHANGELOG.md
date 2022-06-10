@@ -1,3 +1,14 @@
+# [7.0.0](https://github.com/nulogy/design-system/compare/v6.8.0...v7.0.0) (2022-06-10)
+
+
+* feat!: allow custom rendered menu items to specify their own styles ([e441163](https://github.com/nulogy/design-system/commit/e441163c2c6515b743f0b0f711a87db03dc18b85))
+
+
+### BREAKING CHANGES
+
+* styles of components from custom render functions need
+to specify their own styles.
+
 # [6.8.0](https://github.com/nulogy/design-system/compare/v6.7.5...v6.8.0) (2022-06-09)
 
 
