@@ -198,6 +198,7 @@ const SubMenu = ({
 );
 
 const Menu = styled.ul(({ theme }) => ({
+  listStyle: "none",
   margin: "0",
   padding: `${theme.space.x1} 0`,
   zIndex: theme.zIndices.content,
