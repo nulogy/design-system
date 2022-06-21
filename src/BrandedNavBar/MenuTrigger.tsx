@@ -13,6 +13,7 @@ export type MenuTriggerProps = {
   hoverBackground?: string;
   menuData?: any[];
   trigger?: (props: TriggerFunctionProps) => React.ReactNode;
+  layer: number;
 };
 
 const MenuTrigger = ({
@@ -23,6 +24,7 @@ const MenuTrigger = ({
   hoverBackground,
   "aria-label": ariaLabel,
   trigger,
+  layer,
   ...props
 }: MenuTriggerProps) => {
   let dropdownMinWidth = "auto";
@@ -58,7 +60,7 @@ const MenuTrigger = ({
       trigger={() => {
         const defaultRender = () => <MenuTriggerButton {...triggerProps} />;
         return trigger
-          ? trigger({ mode: "desktop", defaultRender })
+          ? trigger({ mode: "desktop", defaultRender, layer })
           : defaultRender();
       }}
     >
@@ -77,7 +79,8 @@ const MenuTrigger = ({
               closeMenu(e);
               e.stopPropagation();
             },
-            SubMenuTrigger
+            SubMenuTrigger,
+            layer + 1
           )}
         </ul>
       )}

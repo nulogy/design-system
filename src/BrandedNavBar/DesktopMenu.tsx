@@ -60,13 +60,14 @@ const Nav = styled.nav({
   alignItems: "center",
 });
 
-const renderMenuTrigger = (menuItem, themeColorObject) => (
+const renderMenuTrigger = (menuItem, themeColorObject, layer) => (
   <div key={menuItem.key ?? menuItem.name}>
     <MenuTrigger
       name={menuItem.name}
       aria-label={menuItem.ariaLabel}
       menuData={menuItem.items}
       trigger={menuItem.trigger}
+      layer={layer}
       {...themeColorObject}
     />
   </div>
@@ -85,8 +86,10 @@ const renderMenuLink = (menuItem, themeColorObject) => (
   </div>
 );
 
-const renderCustom = (menuItem) => (
-  <div key={menuItem.key ?? menuItem.name}>{menuItem.render()}</div>
+const renderCustom = (menuItem, _themeColorObject, layer) => (
+  <div key={menuItem.key ?? menuItem.name}>
+    {menuItem.render({ mode: "desktop", layer })}
+  </div>
 );
 
 const renderText = (menuItem, themeColorObject) => (
@@ -107,8 +110,8 @@ const getRenderFunction = (menuItem) => {
   }
 };
 
-const renderMenuItem = (menuItem, themeColorObject) =>
-  getRenderFunction(menuItem)(menuItem, themeColorObject);
+const renderMenuItem = (menuItem, themeColorObject, layer) =>
+  getRenderFunction(menuItem)(menuItem, themeColorObject, layer);
 
 type BaseDesktopMenuProps = {
   menuData: any[];
@@ -121,7 +124,7 @@ const BaseDesktopMenu = ({
   ...props
 }: BaseDesktopMenuProps) => (
   <Nav {...props}>
-    {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}
+    {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject, 0))}
   </Nav>
 );
 
