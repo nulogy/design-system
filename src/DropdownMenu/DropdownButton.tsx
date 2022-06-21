@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { color } from "styled-system";
 import { DefaultNDSThemeType } from "../theme.type";
+import { addStyledProps, StyledProps } from "../StyledProps";
 
-type DropdownButtonProps = React.ComponentPropsWithRef<"button"> & {
-  color?: string;
-  disabled?: boolean;
-  theme?: DefaultNDSThemeType;
-  hoverColor?: string;
-  bgHoverColor?: string;
-};
+type DropdownButtonProps = React.ComponentPropsWithRef<"button"> &
+  StyledProps & {
+    color?: string;
+    disabled?: boolean;
+    theme?: DefaultNDSThemeType;
+    hoverColor?: string;
+    bgHoverColor?: string;
+  };
 
 const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
   ({ disabled, theme, hoverColor, bgHoverColor }: DropdownButtonProps) => ({
@@ -39,7 +40,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
       opacity: ".5",
     },
   }),
-  color
+  addStyledProps
 );
 DropdownButton.defaultProps = {
   disabled: false,

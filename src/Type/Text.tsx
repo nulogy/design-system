@@ -1,20 +1,6 @@
 import styled, { CSSObject } from "styled-components";
-import {
-  color,
-  space,
-  typography,
-  SpaceProps,
-  TypographyProps,
-  ColorProps,
-  OverflowProps,
-  overflow,
-  LayoutProps,
-  layout,
-  compose,
-} from "styled-system";
-import { TextOverflowProps, textOverflow } from "../StyledProps/textOverflow";
-import { CursorProps, cursor } from "../StyledProps/cursor";
 import type { DefaultNDSThemeType } from "../theme.type";
+import { addStyledProps, StyledProps } from "../StyledProps";
 const getAttrs = (inline?: boolean) => (inline ? { as: "span" } : null);
 
 export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
@@ -34,13 +20,7 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
     | "uppercase"
     | undefined;
   fontSize?: string;
-} & SpaceProps &
-  OverflowProps &
-  LayoutProps &
-  TextOverflowProps &
-  TypographyProps &
-  CursorProps &
-  ColorProps & { theme?: DefaultNDSThemeType };
+} & StyledProps & { theme?: DefaultNDSThemeType };
 
 const Text = styled.p.attrs<TextProps>((props: TextProps) =>
   getAttrs(props.inline)
@@ -54,7 +34,7 @@ const Text = styled.p.attrs<TextProps>((props: TextProps) =>
     lineHeight: theme.lineHeights.base,
     opacity: disabled ? "0.7" : undefined,
   }),
-  compose(space, typography, color, layout, overflow, textOverflow, cursor)
+  addStyledProps
 );
 Text.defaultProps = {
   inline: false,
