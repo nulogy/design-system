@@ -328,15 +328,31 @@ CustomRenderingInHamburger.parameters = {
   chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
 };
 
-const primaryMenuWithCustomTrigger = [
+const primaryMenuWithCustomTriggers = [
   {
-    name: "Submenu",
-    trigger: () => <Button>Custom trigger</Button>,
-    items: [{ name: "Submenu link", href: "/" }],
+    name: "Menu",
+    trigger: () => <Button>Custom menu trigger</Button>,
+    items: [
+      { name: "Menu 1 link", href: "/" },
+      {
+        name: "Submenu 1",
+        trigger: () => <Button>Custom submenu trigger</Button>,
+        items: [{ name: "Submenu 1 link", href: "/" }],
+      },
+      {
+        name: "Submenu 2",
+        trigger: ({ openMenu, closeMenu }) => (
+          <Button onMouseEnter={openMenu} onMouseLeave={closeMenu}>
+            Custom submenu trigger w/ open on hover
+          </Button>
+        ),
+        items: [{ name: "Submenu 2 link", href: "/" }],
+      },
+    ],
   },
 ];
-export const CustomMenuTrigger = () => (
+export const CustomMenuTriggers = () => (
   <BrandedNavBar
-    menuData={{ primaryMenu: primaryMenuWithCustomTrigger, secondaryMenu }}
+    menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }}
   />
 );
