@@ -7,6 +7,7 @@ import { Icon } from "../Icon";
 import { DropdownButton, DropdownLink } from "../DropdownMenu";
 import theme from "../theme";
 import { Button } from "../Button";
+import { Text } from "../Type";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo =
@@ -331,22 +332,40 @@ CustomRenderingInHamburger.parameters = {
 const primaryMenuWithCustomTriggers = [
   {
     name: "Menu",
-    trigger: () => <Button>Custom menu trigger</Button>,
+    trigger: ({ mode }) => <Button>Custom menu trigger for {mode}</Button>,
     items: [
       { name: "Menu 1 link", href: "/" },
       {
-        name: "Submenu 1",
-        trigger: () => <Button>Custom submenu trigger</Button>,
+        name: "Submenu 1 (pass-through to hamburger default)",
+        trigger: ({ mode }) =>
+          mode === "desktop" ? <Button>Custom submenu trigger</Button> : null,
         items: [{ name: "Submenu 1 link", href: "/" }],
       },
       {
         name: "Submenu 2",
-        trigger: ({ openMenu, closeMenu }) => (
-          <Button onMouseEnter={openMenu} onMouseLeave={closeMenu}>
-            Custom submenu trigger w/ open on hover
-          </Button>
-        ),
+        trigger: ({ mode, openMenu, closeMenu }) => {
+          return mode === "desktop" ? (
+            <Button onMouseEnter={openMenu} onMouseLeave={closeMenu}>
+              Custom submenu trigger w/ open on hover
+            </Button>
+          ) : (
+            <Text color="black" pl="x6">
+              Custom submenu hamburger heading 1
+            </Text>
+          );
+        },
         items: [{ name: "Submenu 2 link", href: "/" }],
+      },
+      {
+        name: "Submenu 3 (pass-through to desktop default)",
+        trigger: ({ mode }) => {
+          return mode === "mobile" ? (
+            <Text color="black" pl="x6">
+              Custom submenu hamburger heading 2
+            </Text>
+          ) : null;
+        },
+        items: [{ name: "Submenu 3 link", href: "/" }],
       },
     ],
   },
@@ -356,3 +375,16 @@ export const CustomMenuTriggers = () => (
     menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }}
   />
 );
+
+export const CustomMenuTriggersInHamburger = () => (
+  <BrandedNavBar
+    menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }}
+    defaultOpen
+  />
+);
+CustomMenuTriggersInHamburger.parameters = {
+  viewport: {
+    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+  },
+  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
+};

@@ -2,20 +2,14 @@ import React from "react";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 import SubMenuTriggerButton from "./SubMenuTriggerButton";
-
-type SubMenuTriggerButtonProps = {
-  name?: string;
-  isOpen?: boolean;
-  closeMenu?: any;
-  openMenu?: any;
-};
+import { TriggerFunctionProps } from "./TriggerFunctionProps";
 
 type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   name?: string;
   isOpen?: boolean;
   onItemClick?: any;
   menuData: any[];
-  trigger: (props: SubMenuTriggerButtonProps) => JSX.Element;
+  trigger: (props: TriggerFunctionProps) => JSX.Element | null;
 };
 
 const SubMenuTrigger = ({
@@ -37,19 +31,20 @@ const SubMenuTrigger = ({
         onMouseEnter: openMenu,
         onMouseLeave: closeMenu,
       })}
-      trigger={
-        trigger
-          ? ({ closeMenu, openMenu, isOpen }) =>
-              trigger({ closeMenu, openMenu, isOpen, name })
-          : ({ closeMenu, openMenu, isOpen }) => (
-              <SubMenuTriggerButton
-                isOpen={isOpen}
-                name={name}
-                onMouseEnter={openMenu}
-                onMouseLeave={closeMenu}
-              />
-            )
-      }
+      trigger={({ closeMenu, openMenu, isOpen }) => {
+        const customTrigger =
+          trigger && trigger({ mode: "desktop", closeMenu, openMenu, isOpen });
+        return (
+          customTrigger || (
+            <SubMenuTriggerButton
+              isOpen={isOpen}
+              name={name}
+              onMouseEnter={openMenu}
+              onMouseLeave={closeMenu}
+            />
+          )
+        );
+      }}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
         {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
