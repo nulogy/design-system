@@ -12,7 +12,7 @@ export type MenuTriggerProps = {
   hoverColor?: string;
   hoverBackground?: string;
   menuData?: any[];
-  trigger?: (props: TriggerFunctionProps) => JSX.Element | null;
+  trigger?: (props: TriggerFunctionProps) => React.ReactNode;
 };
 
 const MenuTrigger = ({
@@ -56,8 +56,10 @@ const MenuTrigger = ({
         },
       }}
       trigger={() => {
-        const customTrigger = trigger && trigger({ mode: "desktop" });
-        return customTrigger || <MenuTriggerButton {...triggerProps} />;
+        const defaultRender = () => <MenuTriggerButton {...triggerProps} />;
+        return trigger
+          ? trigger({ mode: "desktop", defaultRender })
+          : defaultRender();
       }}
     >
       {({ closeMenu }) => (

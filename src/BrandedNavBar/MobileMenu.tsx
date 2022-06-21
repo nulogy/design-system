@@ -170,7 +170,7 @@ type ThemeColorObject = {
 type MenuItem = {
   items?: any[];
   name?: string;
-  trigger?: (props: TriggerFunctionProps) => JSX.Element | null;
+  trigger?: (props: TriggerFunctionProps) => React.ReactNode;
 };
 
 type SubMenuProps = {
@@ -186,11 +186,12 @@ const SubMenu = ({
   themeColorObject,
   layer,
 }: SubMenuProps) => {
-  const customHeading =
-    menuItem.trigger && menuItem.trigger({ mode: "mobile" });
+  const defaultRender = () => getSubMenuHeading(layer, menuItem.name);
   return (
     <>
-      {customHeading || getSubMenuHeading(layer, menuItem.name)}
+      {menuItem.trigger
+        ? menuItem.trigger({ mode: "mobile", defaultRender })
+        : defaultRender()}
       <SubMenuItemsList>
         {renderMenuItems(
           menuItem.items,

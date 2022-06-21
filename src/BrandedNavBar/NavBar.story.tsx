@@ -337,8 +337,12 @@ const primaryMenuWithCustomTriggers = [
       { name: "Menu 1 link", href: "/" },
       {
         name: "Submenu 1 (pass-through to hamburger default)",
-        trigger: ({ mode }) =>
-          mode === "desktop" ? <Button>Custom submenu trigger</Button> : null,
+        trigger: ({ mode, defaultRender }) =>
+          mode === "desktop" ? (
+            <Button>Custom submenu trigger</Button>
+          ) : (
+            defaultRender()
+          ),
         items: [{ name: "Submenu 1 link", href: "/" }],
       },
       {
@@ -358,12 +362,14 @@ const primaryMenuWithCustomTriggers = [
       },
       {
         name: "Submenu 3 (pass-through to desktop default)",
-        trigger: ({ mode }) => {
+        trigger: ({ mode, defaultRender }) => {
           return mode === "mobile" ? (
             <Text color="black" pl="x6">
               Custom submenu hamburger heading 2
             </Text>
-          ) : null;
+          ) : (
+            defaultRender()
+          );
         },
         items: [{ name: "Submenu 3 link", href: "/" }],
       },

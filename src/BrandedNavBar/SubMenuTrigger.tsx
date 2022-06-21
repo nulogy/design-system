@@ -9,7 +9,7 @@ type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   isOpen?: boolean;
   onItemClick?: any;
   menuData: any[];
-  trigger: (props: TriggerFunctionProps) => JSX.Element | null;
+  trigger: (props: TriggerFunctionProps) => React.ReactNode;
 };
 
 const SubMenuTrigger = ({
@@ -32,18 +32,22 @@ const SubMenuTrigger = ({
         onMouseLeave: closeMenu,
       })}
       trigger={({ closeMenu, openMenu, isOpen }) => {
-        const customTrigger =
-          trigger && trigger({ mode: "desktop", closeMenu, openMenu, isOpen });
-        return (
-          customTrigger || (
-            <SubMenuTriggerButton
-              isOpen={isOpen}
-              name={name}
-              onMouseEnter={openMenu}
-              onMouseLeave={closeMenu}
-            />
-          )
+        const defaultRender = () => (
+          <SubMenuTriggerButton
+            isOpen={isOpen}
+            name={name}
+            onMouseEnter={openMenu}
+            onMouseLeave={closeMenu}
+          />
         );
+        const triggerProps: TriggerFunctionProps = {
+          mode: "desktop",
+          closeMenu,
+          openMenu,
+          isOpen,
+          defaultRender,
+        };
+        return trigger ? trigger(triggerProps) : defaultRender();
       }}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
