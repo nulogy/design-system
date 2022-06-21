@@ -302,7 +302,9 @@ const customPrimaryMenu = [
       },
       {
         name: "Custom submenu DropdownButton",
-        render: () => <DropdownButton>DropdownButton</DropdownButton>,
+        render: ({ layer }) => (
+          <DropdownButton>DropdownButton at layer {layer}</DropdownButton>
+        ),
       },
     ],
   },
@@ -332,14 +334,18 @@ CustomRenderingInHamburger.parameters = {
 const primaryMenuWithCustomTriggers = [
   {
     name: "Menu",
-    trigger: ({ mode }) => <Button>Custom menu trigger for {mode}</Button>,
+    trigger: ({ mode, layer }) => (
+      <Button>
+        Custom menu trigger for {mode}. layer: {layer}
+      </Button>
+    ),
     items: [
       { name: "Menu 1 link", href: "/" },
       {
         name: "Submenu 1 (pass-through to hamburger default)",
-        trigger: ({ mode, defaultRender }) =>
+        trigger: ({ mode, defaultRender, layer }) =>
           mode === "desktop" ? (
-            <Button>Custom submenu trigger</Button>
+            <Button>Custom submenu trigger. layer: {layer}</Button>
           ) : (
             defaultRender()
           ),
@@ -347,25 +353,23 @@ const primaryMenuWithCustomTriggers = [
       },
       {
         name: "Submenu 2",
-        trigger: ({ mode, openMenu, closeMenu }) => {
+        trigger: ({ mode, openMenu, closeMenu, defaultRender, layer }) => {
           return mode === "desktop" ? (
             <Button onMouseEnter={openMenu} onMouseLeave={closeMenu}>
-              Custom submenu trigger w/ open on hover
+              Custom submenu trigger w/ open on hover. layer: {layer}
             </Button>
           ) : (
-            <Text color="black" pl="x6">
-              Custom submenu hamburger heading 1
-            </Text>
+            defaultRender()
           );
         },
         items: [{ name: "Submenu 2 link", href: "/" }],
       },
       {
         name: "Submenu 3 (pass-through to desktop default)",
-        trigger: ({ mode, defaultRender }) => {
+        trigger: ({ mode, defaultRender, layer }) => {
           return mode === "mobile" ? (
             <Text color="black" pl="x6">
-              Custom submenu hamburger heading 2
+              Custom submenu hamburger heading 2. layer: {layer}
             </Text>
           ) : (
             defaultRender()

@@ -10,6 +10,7 @@ type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   onItemClick?: any;
   menuData: any[];
   trigger: (props: TriggerFunctionProps) => React.ReactNode;
+  layer: number;
 };
 
 const SubMenuTrigger = ({
@@ -17,6 +18,7 @@ const SubMenuTrigger = ({
   name,
   onItemClick,
   trigger,
+  layer,
   ...props
 }: SubMenuTriggerProps) => {
   return (
@@ -46,12 +48,13 @@ const SubMenuTrigger = ({
           openMenu,
           isOpen,
           defaultRender,
+          layer,
         };
         return trigger ? trigger(triggerProps) : defaultRender();
       }}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger)}
+        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger, layer + 1)}
       </ul>
     </NavBarDropdownMenu>
   );

@@ -107,7 +107,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
   <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
-    {menuItem.render(linkOnClick, layer)}
+    {menuItem.render({ mode: "mobile", onItemClick: linkOnClick, layer })}
   </ChildIndentingLi>
 );
 
@@ -190,7 +190,7 @@ const SubMenu = ({
   return (
     <>
       {menuItem.trigger
-        ? menuItem.trigger({ mode: "mobile", defaultRender })
+        ? menuItem.trigger({ mode: "mobile", defaultRender, layer })
         : defaultRender()}
       <SubMenuItemsList>
         {renderMenuItems(

@@ -6,4 +6,5 @@ export type TriggerFunctionProps = {
   closeMenu?: any;
   openMenu?: any;
   defaultRender: () => React.ReactNode;
+  layer: number;
 };
