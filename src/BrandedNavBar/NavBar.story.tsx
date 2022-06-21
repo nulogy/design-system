@@ -6,6 +6,7 @@ import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
 import { DropdownButton, DropdownLink } from "../DropdownMenu";
 import theme from "../theme";
+import { Button } from "../Button";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo =
@@ -53,9 +54,7 @@ const primaryMenu = [
           },
           {
             name: "Jobs",
-            items: [
-              { name: "Job 1", href: "/" },
-            ],
+            items: [{ name: "Job 1", href: "/" }],
           },
         ],
       },
@@ -328,3 +327,16 @@ CustomRenderingInHamburger.parameters = {
   },
   chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
 };
+
+const primaryMenuWithCustomTrigger = [
+  {
+    name: "Submenu",
+    trigger: () => <Button>Custom trigger</Button>,
+    items: [{ name: "Submenu link", href: "/" }],
+  },
+];
+export const CustomMenuTrigger = () => (
+  <BrandedNavBar
+    menuData={{ primaryMenu: primaryMenuWithCustomTrigger, secondaryMenu }}
+  />
+);

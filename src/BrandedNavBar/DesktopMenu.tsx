@@ -66,6 +66,7 @@ const renderMenuTrigger = (menuItem, themeColorObject) => (
       name={menuItem.name}
       aria-label={menuItem.ariaLabel}
       menuData={menuItem.items}
+      trigger={menuItem.trigger}
       {...themeColorObject}
     />
   </div>
