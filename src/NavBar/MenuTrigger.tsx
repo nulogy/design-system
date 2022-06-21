@@ -4,10 +4,18 @@ import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
 import theme from "../theme";
 import { Icon } from "../Icon";
-import type { MenuTriggerProps } from "../BrandedNavBar/MenuTrigger";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
+
+export type MenuTriggerProps = {
+  name?: string;
+  "aria-label"?: string;
+  color?: string;
+  hoverColor?: string;
+  hoverBackground?: string;
+  menuData?: any[];
+};
 
 const StyledButton = styled.button<{
   hoverColor: string;
