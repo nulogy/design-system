@@ -24,6 +24,7 @@ const MenuTrigger = ({
   hoverColor,
   hoverBackground,
   "aria-label": ariaLabel,
+  trigger,
   ...props
 }: MenuTriggerProps) => {
   let dropdownMinWidth = "auto";
@@ -31,6 +32,13 @@ const MenuTrigger = ({
     // Popper.js throws an error if popperData is not returned from this fn
     dropdownMinWidth = `${popperData.instance.reference.clientWidth}px`;
     return popperData;
+  };
+  const triggerProps = {
+    color,
+    hoverColor,
+    hoverBackground,
+    name,
+    "aria-label": ariaLabel,
   };
   return (
     // @ts-ignore
@@ -49,15 +57,11 @@ const MenuTrigger = ({
           boundariesElement: "viewport",
         },
       }}
-      trigger={() => (
-        <MenuTriggerButton
-          color={color}
-          hoverColor={hoverColor}
-          hoverBackground={hoverBackground}
-          name={name}
-          aria-label={ariaLabel}
-        />
-      )}
+      trigger={
+        trigger
+          ? () => trigger(triggerProps)
+          : () => <MenuTriggerButton {...triggerProps} />
+      }
     >
       {({ closeMenu }) => (
         <ul
