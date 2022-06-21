@@ -3,18 +3,16 @@ import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 import MenuTriggerButton from "./MenuTriggerButton";
+import { TriggerFunctionProps } from "./TriggerFunctionProps";
 
-export type TriggerFunctionProps = {
+export type MenuTriggerProps = {
   name?: string;
   "aria-label"?: string;
   color?: string;
   hoverColor?: string;
   hoverBackground?: string;
-};
-
-export type MenuTriggerProps = TriggerFunctionProps & {
   menuData?: any[];
-  trigger?: (props: TriggerFunctionProps) => JSX.Element;
+  trigger?: (props: TriggerFunctionProps) => JSX.Element | null;
 };
 
 const MenuTrigger = ({
@@ -57,11 +55,10 @@ const MenuTrigger = ({
           boundariesElement: "viewport",
         },
       }}
-      trigger={
-        trigger
-          ? () => trigger(triggerProps)
-          : () => <MenuTriggerButton {...triggerProps} />
-      }
+      trigger={() => {
+        const customTrigger = trigger && trigger({ mode: "desktop" });
+        return customTrigger || <MenuTriggerButton {...triggerProps} />;
+      }}
     >
       {({ closeMenu }) => (
         <ul

@@ -9,6 +9,7 @@ import { DropdownLink, DropdownText, DropdownButton } from "../DropdownMenu";
 import { Link } from "../Link";
 import { LinkProps } from "../Link/Link";
 import NulogyLogo from "./NulogyLogo";
+import { TriggerFunctionProps } from "./TriggerFunctionProps";
 
 const borderStyle = "1px solid #e4e7eb";
 
@@ -169,6 +170,7 @@ type ThemeColorObject = {
 type MenuItem = {
   items?: any[];
   name?: string;
+  trigger?: (props: TriggerFunctionProps) => JSX.Element | null;
 };
 
 type SubMenuProps = {
@@ -183,19 +185,23 @@ const SubMenu = ({
   linkOnClick,
   themeColorObject,
   layer,
-}: SubMenuProps) => (
-  <>
-    {getSubMenuHeading(layer, menuItem.name)}
-    <SubMenuItemsList>
-      {renderMenuItems(
-        menuItem.items,
-        linkOnClick,
-        themeColorObject,
-        layer + 1
-      )}
-    </SubMenuItemsList>
-  </>
-);
+}: SubMenuProps) => {
+  const customHeading =
+    menuItem.trigger && menuItem.trigger({ mode: "mobile" });
+  return (
+    <>
+      {customHeading || getSubMenuHeading(layer, menuItem.name)}
+      <SubMenuItemsList>
+        {renderMenuItems(
+          menuItem.items,
+          linkOnClick,
+          themeColorObject,
+          layer + 1
+        )}
+      </SubMenuItemsList>
+    </>
+  );
+};
 
 const Menu = styled.ul(({ theme }) => ({
   listStyle: "none",
