@@ -82,3 +82,5 @@ export { ApplicationFrame, Page, Sidebar } from "./Layout";
 export { useWindowDimensions } from "./utils";
 export { Divider } from "./Divider";
 export { SortingTable } from "./SortingTable";
+export { addStyledProps } from "./StyledProps";
+export type { StyledProps } from "./StyledProps";

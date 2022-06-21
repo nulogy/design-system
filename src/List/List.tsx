@@ -1,28 +1,10 @@
 import styled from "styled-components";
-import {
-  space,
-  SpaceProps,
-  color,
-  ColorProps,
-  typography,
-  TypographyProps,
-  layout,
-  LayoutProps,
-  boxShadow,
-  BoxShadowProps,
-  border,
-  BorderProps,
-} from "styled-system";
-import ListItem from "./ListItem";
 import { DefaultNDSThemeType } from "../theme.type";
+import { addStyledProps, StyledProps } from "../StyledProps";
+import ListItem from "./ListItem";
 
 type ListProps = React.ComponentPropsWithRef<"ul"> &
-  SpaceProps &
-  BorderProps &
-  ColorProps &
-  LayoutProps &
-  TypographyProps &
-  BoxShadowProps & {
+  StyledProps & {
     theme?: DefaultNDSThemeType;
     className?: string;
     compact?: boolean;
@@ -38,12 +20,7 @@ const List: React.FC<ListProps> = styled.ul(
       marginBottom: compact ? 0 : theme.space.x1,
     },
   }),
-  space,
-  color,
-  typography,
-  layout,
-  boxShadow,
-  border
+  addStyledProps
 );
 List.defaultProps = {
   className: undefined,
