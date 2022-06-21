@@ -8,6 +8,7 @@ const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger) => (
       onItemClick={onItemClick}
       name={subMenuItem.name}
       menuData={subMenuItem.items}
+      trigger={subMenuItem.trigger}
     />
   </NoWrapLi>
 );
