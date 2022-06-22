@@ -334,17 +334,17 @@ CustomRenderingInHamburger.parameters = {
 const primaryMenuWithCustomTriggers = [
   {
     name: "Menu",
-    trigger: ({ mode, layer }) => (
+    trigger: ({ size, layer }) => (
       <Button>
-        Custom menu trigger for {mode}. layer: {layer}
+        Custom menu trigger for {size}. layer: {layer}
       </Button>
     ),
     items: [
       { name: "Menu 1 link", href: "/" },
       {
         name: "Submenu 1 (pass-through to hamburger default)",
-        trigger: ({ mode, defaultRender, layer }) =>
-          mode === "desktop" ? (
+        trigger: ({ size, defaultRender, layer }) =>
+          size === "medium" ? (
             <Button>Custom submenu trigger. layer: {layer}</Button>
           ) : (
             defaultRender()
@@ -353,8 +353,8 @@ const primaryMenuWithCustomTriggers = [
       },
       {
         name: "Submenu 2",
-        trigger: ({ mode, openMenu, closeMenu, defaultRender, layer }) => {
-          return mode === "desktop" ? (
+        trigger: ({ size, openMenu, closeMenu, defaultRender, layer }) => {
+          return size === "medium" ? (
             <Button onMouseEnter={openMenu} onMouseLeave={closeMenu}>
               Custom submenu trigger w/ open on hover. layer: {layer}
             </Button>
@@ -366,8 +366,8 @@ const primaryMenuWithCustomTriggers = [
       },
       {
         name: "Submenu 3 (pass-through to desktop default)",
-        trigger: ({ mode, defaultRender, layer }) => {
-          return mode === "mobile" ? (
+        trigger: ({ size, defaultRender, layer }) => {
+          return size === "small" ? (
             <Text color="black" pl="x6">
               Custom submenu hamburger heading 2. layer: {layer}
             </Text>

@@ -60,7 +60,7 @@ const MenuTrigger = ({
       trigger={() => {
         const defaultRender = () => <MenuTriggerButton {...triggerProps} />;
         return trigger
-          ? trigger({ mode: "desktop", defaultRender, layer })
+          ? trigger({ size: "medium", defaultRender, layer })
           : defaultRender();
       }}
     >

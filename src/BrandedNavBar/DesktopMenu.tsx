@@ -88,7 +88,7 @@ const renderMenuLink = (menuItem, themeColorObject) => (
 
 const renderCustom = (menuItem, _themeColorObject, layer) => (
   <div key={menuItem.key ?? menuItem.name}>
-    {menuItem.render({ mode: "desktop", layer })}
+    {menuItem.render({ size: "medium", layer })}
   </div>
 );
 

@@ -35,7 +35,7 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => (
 
 const renderCustom = (subMenuItem, onItemClick, _SubMenuTrigger, layer) => (
   <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
-    {subMenuItem.render({ mode: "desktop", onItemClick, layer })}
+    {subMenuItem.render({ size: "medium", onItemClick, layer })}
   </NoWrapLi>
 );
 
