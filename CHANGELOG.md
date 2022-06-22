@@ -1,3 +1,20 @@
+# [7.1.0](https://github.com/nulogy/design-system/compare/v7.0.1...v7.1.0) (2022-06-22)
+
+
+### Bug Fixes
+
+* stop NavBar from relying on BrandedNavBar prop types ([d29ffb9](https://github.com/nulogy/design-system/commit/d29ffb9e339f7e84df4a08e96c8218646ac7775d))
+
+
+### Features
+
+* add convenience method for adding style-system props to components ([fed4769](https://github.com/nulogy/design-system/commit/fed4769c5c40c8b7c0bf567f6b064d774d568d45))
+* add trigger prop to BrandedNavBar sub-menus ([5830b36](https://github.com/nulogy/design-system/commit/5830b3696737f2b48827a02b0058de62cb3c2a5d))
+* add trigger prop to BrandedNavBar top-level menus ([a45c826](https://github.com/nulogy/design-system/commit/a45c8260d0ff12cc6c2408194ade62f86ed56e2d))
+* allow custom BrandedNavBar triggers access to the default trigger ([9e35119](https://github.com/nulogy/design-system/commit/9e351199176ef9db7b60c91efd220094b84fab49))
+* customize BrandedNavBar trigger based on mobile or desktop ([9294478](https://github.com/nulogy/design-system/commit/9294478cc116254cc6204af8e185eb216cc1e14e))
+* pass layer and mode into BrandedNavBar custom trigger and render functions ([ae3fbf9](https://github.com/nulogy/design-system/commit/ae3fbf98176f841e1780c0b83c16549a5cbeba39))
+
 ## [7.0.1](https://github.com/nulogy/design-system/compare/v7.0.0...v7.0.1) (2022-06-22)
 
 
