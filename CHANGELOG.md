@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/nulogy/design-system/compare/v7.0.0...v7.0.1) (2022-06-22)
+
+
+### Bug Fixes
+
+* BrandedNavBar top-level custom hamburger menu item line heights ([9490c43](https://github.com/nulogy/design-system/commit/9490c434d4604554f757c62e25963c1336a32b31))
+
 # [7.0.0](https://github.com/nulogy/design-system/compare/v6.8.0...v7.0.0) (2022-06-10)
 
 
