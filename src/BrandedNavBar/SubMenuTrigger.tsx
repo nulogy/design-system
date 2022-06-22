@@ -43,7 +43,7 @@ const SubMenuTrigger = ({
           />
         );
         const triggerProps: TriggerFunctionProps = {
-          mode: "desktop",
+          size: "medium",
           closeMenu,
           openMenu,
           isOpen,
