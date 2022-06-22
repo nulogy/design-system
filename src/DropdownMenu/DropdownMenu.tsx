@@ -1,11 +1,11 @@
 // @ts-nocheck
 import React, { useMemo } from "react";
-import DropdownMenuContainer from "./DropdownMenuContainer";
+import propTypes from "@styled-system/prop-types";
+import { Reference } from "react-popper";
 import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
-import propTypes from "@styled-system/prop-types";
 import { getSubset, omitSubset } from "../utils/subset";
-import { Reference } from "react-popper";
+import DropdownMenuContainer from "./DropdownMenuContainer";
 
 type DropdownMenuProps = {
   className?: string;

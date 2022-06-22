@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { space, SpaceProps } from "styled-system";
-import { Manager, Reference, Popper } from "react-popper-latest";
+import { Manager, Reference, Popper } from "react-popper";
 import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";

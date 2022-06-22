@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { PopperArrowProps as ReactPopperArrowProps } from "react-popper";
 import theme from "../theme";
 
