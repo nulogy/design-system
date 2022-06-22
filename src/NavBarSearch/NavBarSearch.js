@@ -18,13 +18,7 @@ const BaseNavBarSearch = ({ name, onSubmit, ...props }) => {
   return (
     <form {...props} onSubmit={handleOnSubmit}>
       <Flex role="search">
-        <Input
-          id="navbar-search"
-          type="search"
-          aria-labelledby={name}
-          required
-          placeholder={t("search nulogy")}
-        />
+        <Input id="navbar-search" type="search" aria-labelledby={name} required placeholder={t("search nulogy")} />
         <button id={name} aria-label={name}>
           <Icon icon="search" />
         </button>

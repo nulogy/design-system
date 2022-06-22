@@ -351,10 +351,7 @@ export const Ie11MinHeightSolution2 = () => (
         <Box style={boxStyles}>5</Box>
       </Flex>
     </NDSFlex>
-    <Text my="x2">
-      This solution involves wrapping Flex element with another Flex element
-      with column direction..
-    </Text>
+    <Text my="x2">This solution involves wrapping Flex element with another Flex element with column direction..</Text>
   </>
 );
 

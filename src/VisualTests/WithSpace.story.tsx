@@ -57,19 +57,12 @@ export const _Breadcrumbs = () => (
   </Breadcrumbs>
 );
 
-export const _PrimaryButton = () => (
-  <PrimaryButton {...spaceProps}>Create project</PrimaryButton>
-);
+export const _PrimaryButton = () => <PrimaryButton {...spaceProps}>Create project</PrimaryButton>;
 
 export const _DatePicker = () => <DatePicker {...spaceProps} />;
 
 export const _DropdownMenu = () => (
-  <DropdownMenu
-    defaultOpen
-    openAriaLabel="open dropdown"
-    closeAriaLabel="close dropdown"
-    {...spaceProps}
-  >
+  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown" {...spaceProps}>
     <DropdownLink href="/">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     <DropdownItem>
@@ -87,11 +80,7 @@ export const _FieldLabel = () => (
     requirementText="(Required)"
     {...spaceProps}
   >
-    <Input
-      id="birthplace"
-      labelText="Place of birth"
-      requirementText="(Optional)"
-    />
+    <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
   </FieldLabel>
 );
 
@@ -105,11 +94,7 @@ export const _Form = () => (
       requirementText="(Optional)"
       helpText="Enter a date below"
     />
-    <Input
-      id="birthplace"
-      labelText="Place of birth"
-      requirementText="(Optional)"
-    />
+    <Input id="birthplace" labelText="Place of birth" requirementText="(Optional)" />
   </Form>
 );
 
@@ -122,27 +107,16 @@ export const _Link = () => (
 export const _List = () => (
   <List leftAlign {...spaceProps}>
     <ListItem>List Item 1</ListItem>
-    <ListItem>
-      List Item 2 that is really really really really really really really
-      really really long
-    </ListItem>
+    <ListItem>List Item 2 that is really really really really really really really really really long</ListItem>
     <ListItem mt="x1">List Item 3</ListItem>
   </List>
 );
-export const _Pagination = () => (
-  <Pagination currentPage={3} totalPages={4} {...spaceProps} />
-);
+export const _Pagination = () => <Pagination currentPage={3} totalPages={4} {...spaceProps} />;
 
 export const _Radio = () => (
   <>
     <Radio id="radio" error labelText="I am error" {...spaceProps} />
-    <Radio
-      id="radio"
-      defaultChecked
-      error
-      labelText="I am error"
-      {...spaceProps}
-    />
+    <Radio id="radio" defaultChecked error labelText="I am error" {...spaceProps} />
   </>
 );
 
@@ -226,9 +200,7 @@ const rowData = [
   },
 ];
 
-export const _Table = () => (
-  <Table columns={columns} rows={rowData} {...spaceProps} />
-);
+export const _Table = () => <Table columns={columns} rows={rowData} {...spaceProps} />;
 
 export const _Tabs = () => (
   <Tabs {...spaceProps}>
@@ -247,16 +219,10 @@ export const _Tabs = () => (
   </Tabs>
 );
 
-export const _TimePicker = () => (
-  <TimePicker labelText="End Time" defaultValue="12:38 PM" {...spaceProps} />
-);
+export const _TimePicker = () => <TimePicker labelText="End Time" defaultValue="12:38 PM" {...spaceProps} />;
 
 export const _TruncatedText = () => (
-  <TruncatedText {...spaceProps}>
-    Special instructions are provided for the shipment
-  </TruncatedText>
+  <TruncatedText {...spaceProps}>Special instructions are provided for the shipment</TruncatedText>
 );
 
-export const _InlineValidation = () => (
-  <InlineValidation errorMessage="Something has gone wrong" {...spaceProps} />
-);
+export const _InlineValidation = () => <InlineValidation errorMessage="Something has gone wrong" {...spaceProps} />;

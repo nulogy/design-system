@@ -37,9 +37,7 @@ const MaybeToggleTitle: React.FC<MaybeToggleTitleProps> = ({
     <div {...props}>
       <Box mb={children && "x1"}>
         <span style={labelTextStyles(themeContext)}>{labelText}</span>
-        {requirementText && (
-          <RequirementText>{requirementText}</RequirementText>
-        )}
+        {requirementText && <RequirementText>{requirementText}</RequirementText>}
         {helpText && <HelpText>{helpText}</HelpText>}
       </Box>
       {children}
@@ -92,24 +90,14 @@ const BaseToggle = ({
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
   return (
-    <Field
-      className={className}
-      alignItems="flex-start"
-      py="half"
-      {...spaceProps}
-    >
+    <Field className={className} alignItems="flex-start" py="half" {...spaceProps}>
       <MaybeToggleTitle
         id={labelText && `${labelText}-label`}
         labelText={labelText}
         requirementText={requirementText}
         helpText={helpText}
       >
-        <ClickInputLabel
-          as="div"
-          onClick={onClick}
-          disabled={disabled}
-          data-testid={dataTestId}
-        >
+        <ClickInputLabel as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
           <ToggleButton
             id={id}
             checked={toggled}
@@ -156,12 +144,7 @@ type StatefulToggleProps = BaseToggleProps & {
   onClick?: boolean;
 };
 
-const StatefulToggle = ({
-  defaultToggled,
-  onClick,
-  disabled,
-  ...props
-}: StatefulToggleProps) => {
+const StatefulToggle = ({ defaultToggled, onClick, disabled, ...props }: StatefulToggleProps) => {
   const [toggled, setToggled] = useState(defaultToggled);
 
   const handleClick = (e) => {
@@ -169,14 +152,7 @@ const StatefulToggle = ({
     if (onClick) onClick(e);
   };
 
-  return (
-    <BaseToggle
-      toggled={toggled}
-      onClick={handleClick}
-      disabled={disabled}
-      {...props}
-    />
-  );
+  return <BaseToggle toggled={toggled} onClick={handleClick} disabled={disabled} {...props} />;
 };
 
 StatefulToggle.propTypes = {
@@ -192,15 +168,10 @@ StatefulToggle.defaultProps = {
 type ToggleProps = StatefulToggleProps;
 
 const Toggle = ({ toggled, ...props }: ToggleProps) =>
-  toggled === undefined ? (
-    <StatefulToggle {...props} />
-  ) : (
-    <BaseToggle toggled={toggled} {...props} />
-  );
+  toggled === undefined ? <StatefulToggle {...props} /> : <BaseToggle toggled={toggled} {...props} />;
 
-const ToggleComponent = React.forwardRef<
-  React.ComponentPropsWithRef<"input">,
-  ToggleProps
->((props, ref) => <Toggle innerRef={ref} {...props} />);
+const ToggleComponent = React.forwardRef<React.ComponentPropsWithRef<"input">, ToggleProps>((props, ref) => (
+  <Toggle innerRef={ref} {...props} />
+));
 
 export default ToggleComponent;

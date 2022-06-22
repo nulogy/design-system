@@ -29,12 +29,7 @@ const RangeContainer: React.FC<RangeContainerProps> = ({
       <FieldLabel {...labelProps} {...restProps} />
       <Flex flexWrap="wrap" mt="x1" mb={errorMessages.length ? "x1" : "x3"}>
         <Flex>{startComponent}</Flex>
-        <Flex
-          px="half"
-          alignItems="flex-end"
-          alignSelf="flex-end"
-          height="100%"
-        >
+        <Flex px="half" alignItems="flex-end" alignSelf="flex-end" height="100%">
           <Text lineHeight="38px">-</Text>
         </Flex>
         <Flex>{endComponent}</Flex>

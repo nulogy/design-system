@@ -36,10 +36,7 @@ const StyledButton = styled.button<{
   "&:hover, &:focus": {
     outline: "none",
     color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(
-      `colors.${hoverBackground}`,
-      hoverBackground
-    )(hoverBackground),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer",
   },
   "&:focus": {
@@ -64,13 +61,7 @@ StyledButton.defaultProps = {
 
 const MenuTriggerButton = React.forwardRef<any, MenuTriggerProps>(
   ({ name, color, hoverColor, hoverBackground, ...props }, ref) => (
-    <StyledButton
-      color={color}
-      hoverColor={hoverColor}
-      hoverBackground={hoverBackground}
-      ref={ref}
-      {...props}
-    >
+    <StyledButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} ref={ref} {...props}>
       {name}
       <Icon
         style={{ position: "absolute", top: "11px", right: "8px" }}
@@ -97,15 +88,7 @@ MenuTriggerButton.defaultProps = {
 };
 
 const MenuTrigger = (props) => {
-  const {
-    menuData,
-    name,
-    color,
-    hoverColor,
-    hoverBackground,
-    "aria-label": ariaLabel,
-    ...otherProps
-  } = props;
+  const { menuData, name, color, hoverColor, hoverBackground, "aria-label": ariaLabel, ...otherProps } = props;
   let dropdownMinWidth = "auto";
   const setDropdownMinWidth = (popperData) => {
     // Popper.js throws an error if popperData is not returned from this fn

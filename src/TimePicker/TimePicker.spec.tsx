@@ -3,11 +3,7 @@ import { fireEvent } from "@testing-library/react";
 
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { Button } from "../Button";
-import {
-  convertTo24HourTimeArray,
-  getBestMatchTime,
-  getTimeOptions,
-} from "./TimePicker";
+import { convertTo24HourTimeArray, getBestMatchTime, getTimeOptions } from "./TimePicker";
 import { TimePicker } from ".";
 
 const openDropdown = (container, i = 0) => {
@@ -41,11 +37,7 @@ describe("TimePicker", () => {
     it("returns the value of the input when it is typed into", () => {
       const labelText = "Expiry Time";
       const { container } = renderWithNDSProvider(
-        <TimePicker
-          onChange={onChange}
-          onInputChange={onInputChange}
-          labelText={labelText}
-        />
+        <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
       );
       const value = "20:00";
       fireEvent.change(container.querySelectorAll("input")[0], {
@@ -59,12 +51,7 @@ describe("TimePicker", () => {
       const onBlur = jest.fn();
       const { container, getByTestId } = renderWithNDSProvider(
         <>
-          <TimePicker
-            onChange={onChange}
-            onInputChange={onInputChange}
-            onBlur={onBlur}
-            labelText={labelText}
-          />
+          <TimePicker onChange={onChange} onInputChange={onInputChange} onBlur={onBlur} labelText={labelText} />
           <Button>Submit</Button>
         </>
       );
@@ -78,16 +65,11 @@ describe("TimePicker", () => {
     });
 
     describe("selects value in dropdown", () => {
-      const SELECTED_TEST_ID =
-        "select-option closest-select-option selected-select-option";
+      const SELECTED_TEST_ID = "select-option closest-select-option selected-select-option";
       it("for 3:15 PM", () => {
         const labelText = "Expiry Time";
         const { container, getByTestId } = renderWithNDSProvider(
-          <TimePicker
-            onChange={onChange}
-            onInputChange={onInputChange}
-            labelText={labelText}
-          />
+          <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
         );
         const value = "3:15 PM";
         fireEvent.change(container.querySelectorAll("input")[0], {
@@ -102,11 +84,7 @@ describe("TimePicker", () => {
       it("for 3p", () => {
         const labelText = "Expiry Time";
         const { container, getByTestId } = renderWithNDSProvider(
-          <TimePicker
-            onChange={onChange}
-            onInputChange={onInputChange}
-            labelText={labelText}
-          />
+          <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
         );
         const value = "3p";
         fireEvent.change(container.querySelectorAll("input")[0], {
@@ -118,11 +96,7 @@ describe("TimePicker", () => {
       it("for 3:1", () => {
         const labelText = "Expiry Time";
         const { container, getByTestId } = renderWithNDSProvider(
-          <TimePicker
-            onChange={onChange}
-            onInputChange={onInputChange}
-            labelText={labelText}
-          />
+          <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
         );
         const value = "3:1";
         fireEvent.change(container.querySelectorAll("input")[0], {
@@ -134,11 +108,7 @@ describe("TimePicker", () => {
       it("for 3:12p", () => {
         const labelText = "Expiry Time";
         const { container, getByTestId } = renderWithNDSProvider(
-          <TimePicker
-            onChange={onChange}
-            onInputChange={onInputChange}
-            labelText={labelText}
-          />
+          <TimePicker onChange={onChange} onInputChange={onInputChange} labelText={labelText} />
         );
         const value = "3:12p";
         fireEvent.change(container.querySelectorAll("input")[0], {
@@ -299,13 +269,7 @@ describe("gets best matching time", () => {
 
 describe("gets time options", () => {
   it("returns an array of options every 15 min", () => {
-    const timeOptions = getTimeOptions(
-      15,
-      "h:mm aa",
-      undefined,
-      undefined,
-      "en_US"
-    );
+    const timeOptions = getTimeOptions(15, "h:mm aa", undefined, undefined, "en_US");
     expect(timeOptions[0]).toEqual({
       value: "00:00",
       label: "12:00 AM",
@@ -317,13 +281,7 @@ describe("gets time options", () => {
     expect(timeOptions).toMatchSnapshot();
   });
   it("returns an array of options within min and max", () => {
-    const timeOptions = getTimeOptions(
-      10,
-      "h:mm aa",
-      "08:00",
-      "20:30",
-      "en_US"
-    );
+    const timeOptions = getTimeOptions(10, "h:mm aa", "08:00", "20:30", "en_US");
     expect(timeOptions[0]).toEqual({
       value: "08:00",
       label: "8:00 AM",
@@ -335,13 +293,7 @@ describe("gets time options", () => {
     expect(timeOptions).toMatchSnapshot();
   });
   it("returns an array of options within min", () => {
-    const timeOptions = getTimeOptions(
-      10,
-      "h:mm aa",
-      "09:00",
-      undefined,
-      "en_US"
-    );
+    const timeOptions = getTimeOptions(10, "h:mm aa", "09:00", undefined, "en_US");
     expect(timeOptions[0]).toEqual({
       value: "09:00",
       label: "9:00 AM",
@@ -353,13 +305,7 @@ describe("gets time options", () => {
     expect(timeOptions).toMatchSnapshot();
   });
   it("returns an array of options within max", () => {
-    const timeOptions = getTimeOptions(
-      10,
-      "h:mm aa",
-      undefined,
-      "19:00",
-      "en_US"
-    );
+    const timeOptions = getTimeOptions(10, "h:mm aa", undefined, "19:00", "en_US");
     expect(timeOptions[0]).toEqual({
       value: "00:00",
       label: "12:00 AM",

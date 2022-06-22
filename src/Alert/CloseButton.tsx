@@ -9,10 +9,7 @@ type CloseButtonProps = {
   "aria-label": string;
 };
 
-const CloseButton = ({
-  onClick,
-  "aria-label": ariaLabel,
-}: CloseButtonProps) => {
+const CloseButton = ({ onClick, "aria-label": ariaLabel }: CloseButtonProps) => {
   const { t } = useTranslation();
   return (
     <Flex ml="x2">

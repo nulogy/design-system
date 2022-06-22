@@ -1,12 +1,5 @@
 // @ts-nocheck
-import React, {
-  useState,
-  useContext,
-  useEffect,
-  forwardRef,
-  useRef,
-  useCallback,
-} from "react";
+import React, { useState, useContext, useEffect, forwardRef, useRef, useCallback } from "react";
 import { setMinutes } from "date-fns";
 import debounce from "debounce";
 import { SpaceProps } from "styled-system";
@@ -88,8 +81,7 @@ const getIntervalFromTime = (time, interval, minTime) => {
     const timeArray = convertTo24HourTimeArray(time);
     const hours = timeArray[0];
     const minutes = timeArray[1];
-    const getInterval = (h, m) =>
-      Math.round((h * 60) / interval + m / interval);
+    const getInterval = (h, m) => Math.round((h * 60) / interval + m / interval);
     const currentTimeInterval = getInterval(hours, minutes);
     const nearestInterval =
       currentTimeInterval >= minInterval
@@ -100,16 +92,8 @@ const getIntervalFromTime = (time, interval, minTime) => {
   return 0;
 };
 
-export const getBestMatchTime = ({
-  time,
-  timeFormat,
-  minTime,
-  maxTime,
-  locale,
-}) => {
-  return getTimeOptions(1, timeFormat, minTime, maxTime, locale)[
-    getIntervalFromTime(time, 1, minTime)
-  ];
+export const getBestMatchTime = ({ time, timeFormat, minTime, maxTime, locale }) => {
+  return getTimeOptions(1, timeFormat, minTime, maxTime, locale)[getIntervalFromTime(time, 1, minTime)];
 };
 
 const getTimeIntervals = (interval) => {
@@ -121,13 +105,7 @@ const getTimeIntervals = (interval) => {
   return times;
 };
 
-export const getTimeOptions = (
-  interval,
-  timeFormat,
-  minTime,
-  maxTime,
-  locale
-) => {
+export const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) => {
   const allTimes = getTimeIntervals(interval);
   let startingInterval = 0;
   let finalInterval = allTimes.length;
@@ -142,11 +120,7 @@ export const getTimeOptions = (
       value: localizedFormat(date, MILITARY_TIME_FORMAT, locale),
       label: localizedFormat(date, timeFormat, locale),
     }))
-    .sort(
-      (a, b) =>
-        getIntervalFromTime(a.value, interval) -
-        getIntervalFromTime(b.value, interval)
-    )
+    .sort((a, b) => getIntervalFromTime(a.value, interval) - getIntervalFromTime(b.value, interval))
     .slice(startingInterval, finalInterval);
 };
 
@@ -186,12 +160,9 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
 
     const scrollToSelection = useCallback(
       debounce((currentOption, dropdown) => {
-        const currentIndex = Array.from(dropdown.current.children).indexOf(
-          currentOption
-        );
+        const currentIndex = Array.from(dropdown.current.children).indexOf(currentOption);
         if (currentIndex > 2) {
-          dropdown.current.scrollTop =
-            (currentIndex - 2) * currentOption.scrollHeight;
+          dropdown.current.scrollTop = (currentIndex - 2) * currentOption.scrollHeight;
         } else {
           dropdown.current.scrollTop = 0;
         }
@@ -206,8 +177,7 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
     }, [currentOptionRef, dropdownIsOpen, input]);
     const matchingIndex = getIntervalFromTime(input, interval, minTime);
     const getDropdownOptions = () => {
-      const optionsAtInterval =
-        getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
+      const optionsAtInterval = getTimeOptions(interval, timeFormat, minTime, maxTime, locale) || [];
       return optionsAtInterval;
     };
     const dropdownOptions = getDropdownOptions() || [];
@@ -258,38 +228,22 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
 
     const handleKeyDown = (event) => {
       if (event.keyCode === keyCodes.DOWN) {
-        setInput(
-          dropdownOptions[matchingIndex]
-            ? dropdownOptions[matchingIndex].label
-            : null
-        );
+        setInput(dropdownOptions[matchingIndex] ? dropdownOptions[matchingIndex].label : null);
         if (input) {
-          setInput(
-            dropdownOptions[matchingIndex + 1]
-              ? dropdownOptions[matchingIndex + 1].label
-              : null
-          );
+          setInput(dropdownOptions[matchingIndex + 1] ? dropdownOptions[matchingIndex + 1].label : null);
         }
         setDropdownIsOpen(true);
       }
 
       if (event.keyCode === keyCodes.UP) {
-        setInput(
-          dropdownOptions[matchingIndex - 1]
-            ? dropdownOptions[matchingIndex - 1].label
-            : null
-        );
+        setInput(dropdownOptions[matchingIndex - 1] ? dropdownOptions[matchingIndex - 1].label : null);
       }
 
       if (event.keyCode === keyCodes.TAB) {
         handleBlur(event);
       }
       if (event.keyCode === keyCodes.RETURN) {
-        setInput(
-          dropdownOptions[matchingIndex]
-            ? dropdownOptions[matchingIndex].label
-            : null
-        );
+        setInput(dropdownOptions[matchingIndex] ? dropdownOptions[matchingIndex].label : null);
       }
     };
     const handleInputChange = (e) => {
@@ -339,8 +293,7 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
           >
             {dropdownOptions.map((option, i) => {
               const isClosest = matchingIndex === i;
-              const isSelected =
-                standardizeTime(option.label) === standardizeTime(input);
+              const isSelected = standardizeTime(option.label) === standardizeTime(input);
               const closestTestId = isClosest ? "closest-select-option" : "";
               const selectedTestId = isSelected ? "selected-select-option" : "";
               return (
@@ -362,11 +315,7 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
               );
             })}
           </TimePickerDropdown>
-          <InlineValidation
-            mt="x1"
-            errorMessage={errorMessage}
-            errorList={errorList}
-          />
+          <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </Box>
         <DetectOutsideClick onClick={handleBlur} clickRef={[ref]} />
       </>

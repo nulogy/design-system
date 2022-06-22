@@ -18,24 +18,13 @@ type StyledTrProps = React.ComponentProps<"tr"> & {
   className?: string;
 };
 
-const StyledTr: React.FC<StyledTrProps> = styled.tr(
-  ({ rowHovers, theme }: StyledTrProps) => ({
-    "&:hover": {
-      backgroundColor: rowHovers ? theme.colors.whiteGrey : null,
-    },
-  })
-);
+const StyledTr: React.FC<StyledTrProps> = styled.tr(({ rowHovers, theme }: StyledTrProps) => ({
+  "&:hover": {
+    backgroundColor: rowHovers ? theme.colors.whiteGrey : null,
+  },
+}));
 
-const renderRows = (
-  rows,
-  columns,
-  keyField,
-  noRowsContent,
-  rowHovers,
-  compact,
-  onRowMouseLeave,
-  onRowMouseEnter
-) =>
+const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact, onRowMouseLeave, onRowMouseEnter) =>
   rows.length > 0 ? (
     rows.map((row) => (
       <TableBodyRow
@@ -51,9 +40,7 @@ const renderRows = (
       />
     ))
   ) : (
-    <TableMessageContainer colSpan={columns.length}>
-      {noRowsContent}
-    </TableMessageContainer>
+    <TableMessageContainer colSpan={columns.length}>{noRowsContent}</TableMessageContainer>
   );
 
 type TableBodyRowProps = {
@@ -78,13 +65,7 @@ const TableBodyRow = ({
 }: TableBodyRowProps) => {
   const renderAllCells = () =>
     columns.map((column) => (
-      <TableCell
-        key={column.dataKey}
-        row={row}
-        column={column}
-        cellData={row[column.dataKey]}
-        compact={compact}
-      />
+      <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} compact={compact} />
     ));
   return (
     <>
@@ -96,12 +77,7 @@ const TableBodyRow = ({
         onMouseEnter={onMouseEnter}
       >
         {row.heading ? (
-          <TableCell
-            row={row}
-            colSpan={columns.length}
-            cellData={row.heading}
-            compact={compact}
-          />
+          <TableCell row={row} colSpan={columns.length} cellData={row.heading} compact={compact} />
         ) : (
           renderAllCells()
         )}
@@ -130,9 +106,7 @@ TableBodyRow.defaultProps = {
 const TableMessageContainer = ({ colSpan, children }) => (
   <tr data-testid="table-message-container">
     <td colSpan={colSpan}>
-      <StyledMessageContainer className="nds-table__no-rows-content">
-        {children}
-      </StyledMessageContainer>
+      <StyledMessageContainer className="nds-table__no-rows-content">{children}</StyledMessageContainer>
     </td>
   </tr>
 );
@@ -142,9 +116,7 @@ TableMessageContainer.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const LoadingContent = ({ colSpan }) => (
-  <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>
-);
+const LoadingContent = ({ colSpan }) => <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>;
 
 LoadingContent.propTypes = {
   colSpan: PropTypes.number.isRequired,
@@ -175,16 +147,7 @@ const TableBody = ({
 }: TableBodyProps) => (
   <tbody data-testid="table-body">
     {!loading ? (
-      renderRows(
-        rows,
-        columns,
-        keyField,
-        noRowsContent,
-        rowHovers,
-        compact,
-        onRowMouseLeave,
-        onRowMouseEnter
-      )
+      renderRows(rows, columns, keyField, noRowsContent, rowHovers, compact, onRowMouseLeave, onRowMouseEnter)
     ) : (
       <LoadingContent colSpan={columns.length} />
     )}

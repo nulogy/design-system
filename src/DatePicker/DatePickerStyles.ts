@@ -77,12 +77,11 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
         },
       },
     },
-    ".react-datepicker__day, .react-datepicker__month-text, .react-datepicker__quarter-text":
-      {
-        "&[aria-disabled='false']": {
-          cursor: "pointer",
-        },
+    ".react-datepicker__day, .react-datepicker__month-text, .react-datepicker__quarter-text": {
+      "&[aria-disabled='false']": {
+        cursor: "pointer",
       },
+    },
     ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover":
       {
         backgroundColor: "transparent",

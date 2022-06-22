@@ -24,8 +24,7 @@ const GLOBALS = {
   "@babel/runtime/helpers/slicedToArray": "slicedToArray",
   "@babel/runtime/helpers/objectWithoutProperties": "objectWithoutProperties",
   "object-assign": "assign",
-  "@babel/runtime/helpers/objectWithoutPropertiesLoose":
-    "objectWithoutPropertiesLoose",
+  "@babel/runtime/helpers/objectWithoutPropertiesLoose": "objectWithoutPropertiesLoose",
   "@babel/runtime/helpers/extends": "extends",
   "@babel/runtime/helpers/assertThisInitialized": "assertThisInitialized",
   "@babel/runtime/helpers/inheritsLoose": "inheritsLoose",

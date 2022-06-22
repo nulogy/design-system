@@ -9,9 +9,7 @@ const TruncatedText = ({ fullWidth, children, ...props }: TruncatedTextProps) =>
   fullWidth ? (
     <TruncatedTextFillWidth {...props}>{children}</TruncatedTextFillWidth>
   ) : (
-    <TruncatedTextMaxCharacters {...props}>
-      {children}
-    </TruncatedTextMaxCharacters>
+    <TruncatedTextMaxCharacters {...props}>{children}</TruncatedTextMaxCharacters>
   );
 
 TruncatedText.propTypes = {

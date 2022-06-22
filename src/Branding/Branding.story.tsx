@@ -57,12 +57,7 @@ export const _Branding = () => (
         <Branding logoColor="white" size="large" subtext="Logo Subtext" />
         <br />
         <br />
-        <Branding
-          withLine
-          logoColor="white"
-          size="large"
-          subtext="Logo Subtext"
-        />
+        <Branding withLine logoColor="white" size="large" subtext="Logo Subtext" />
       </Box>
     </Flex>
     <Flex my="x2" justifyContent="space-between">
@@ -82,12 +77,7 @@ export const _Branding = () => (
     </Flex>
     <Flex my="x2" justifyContent="space-between">
       <Branding size="large" withLine subtext="Left Align" alignment="left" />
-      <Branding
-        size="large"
-        withLine
-        subtext="Center Align"
-        alignment="center"
-      />
+      <Branding size="large" withLine subtext="Center Align" alignment="center" />
       <Branding size="large" withLine subtext="Right Align" alignment="right" />
     </Flex>
   </>

@@ -6,9 +6,7 @@ export default {
 };
 
 export const _Button = () => <Button>Create project</Button>;
-export const _PrimaryButton = () => (
-  <PrimaryButton>Create project</PrimaryButton>
-);
+export const _PrimaryButton = () => <PrimaryButton>Create project</PrimaryButton>;
 
 _PrimaryButton.story = {
   name: "PrimaryButton",
@@ -53,17 +51,13 @@ WithASelectedIcon.story = {
   name: "With a selected Icon",
 };
 
-export const SetToFullWidth = () => (
-  <PrimaryButton fullWidth>Create project</PrimaryButton>
-);
+export const SetToFullWidth = () => <PrimaryButton fullWidth>Create project</PrimaryButton>;
 
 SetToFullWidth.story = {
   name: "Set to full width",
 };
 
-export const SetToDisabled = () => (
-  <PrimaryButton disabled>Create project</PrimaryButton>
-);
+export const SetToDisabled = () => <PrimaryButton disabled>Create project</PrimaryButton>;
 
 SetToDisabled.story = {
   name: "Set to disabled",

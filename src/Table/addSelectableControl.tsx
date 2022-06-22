@@ -6,26 +6,13 @@ import { rowPropType } from "./Table.types";
 
 export const SELECTABLE_COLUMN_DATA_KEY = "selected";
 
-const selectHeaderFormatter =
-  (
-    onSelectHeader,
-    isHeaderSelected,
-    selectAllAriaLabel,
-    deselectAllAriaLabel
-  ) =>
-  () => {
-    const { t } = useTranslation();
-    const checkedAriaLabel = deselectAllAriaLabel || t("deselect all");
-    const uncheckedAriaLabel = selectAllAriaLabel || t("select all");
-    const ariaLabel = isHeaderSelected ? checkedAriaLabel : uncheckedAriaLabel;
-    return (
-      <Checkbox
-        checked={isHeaderSelected}
-        onChange={onSelectHeader}
-        aria-label={ariaLabel}
-      />
-    );
-  };
+const selectHeaderFormatter = (onSelectHeader, isHeaderSelected, selectAllAriaLabel, deselectAllAriaLabel) => () => {
+  const { t } = useTranslation();
+  const checkedAriaLabel = deselectAllAriaLabel || t("deselect all");
+  const uncheckedAriaLabel = selectAllAriaLabel || t("select all");
+  const ariaLabel = isHeaderSelected ? checkedAriaLabel : uncheckedAriaLabel;
+  return <Checkbox checked={isHeaderSelected} onChange={onSelectHeader} aria-label={ariaLabel} />;
+};
 
 const SelectCell = ({ row, onSelectRow }) => {
   const selectRowHandler = () => onSelectRow(row);
@@ -34,13 +21,7 @@ const SelectCell = ({ row, onSelectRow }) => {
   const checkedAriaLabel = row.selectAriaLabel || t("select row");
   const uncheckedAriaLabel = row.deselectAriaLabel || t("select row");
   const ariaLabel = checked ? checkedAriaLabel : uncheckedAriaLabel;
-  return (
-    <Checkbox
-      aria-label={ariaLabel}
-      checked={checked}
-      onChange={selectRowHandler}
-    />
-  );
+  return <Checkbox aria-label={ariaLabel} checked={checked} onChange={selectRowHandler} />;
 };
 
 SelectCell.propTypes = {
@@ -52,8 +33,7 @@ SelectCell.defaultProps = {
   onSelectRow: null,
 };
 
-const selectCellRenderer = (onSelectRow) => (props) =>
-  <SelectCell onSelectRow={onSelectRow} {...props} />;
+const selectCellRenderer = (onSelectRow) => (props) => <SelectCell onSelectRow={onSelectRow} {...props} />;
 
 export const addSelectableControl = ({
   columns,
@@ -69,12 +49,7 @@ export const addSelectableControl = ({
   const selectableColumn = {
     dataKey: SELECTABLE_COLUMN_DATA_KEY,
     cellFormatter: selectCellRenderer(onSelectRow),
-    headerFormatter: selectHeaderFormatter(
-      onSelectHeader,
-      isHeaderSelected,
-      selectAllAriaLabel,
-      deselectAllAriaLabel
-    ),
+    headerFormatter: selectHeaderFormatter(onSelectHeader, isHeaderSelected, selectAllAriaLabel, deselectAllAriaLabel),
     width: "30px",
   };
   const selectableCellData = (rowKey) => ({

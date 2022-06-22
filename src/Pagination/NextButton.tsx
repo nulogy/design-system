@@ -8,11 +8,7 @@ import PaginationButton from "./PaginationButton";
 const NextButton = ({ disabled, onClick, label, "aria-label": ariaLabel }) => {
   const { t } = useTranslation();
   return (
-    <PaginationButton
-      disabled={disabled}
-      onClick={onClick}
-      aria-label={ariaLabel || t("go to next results")}
-    >
+    <PaginationButton disabled={disabled} onClick={onClick} aria-label={ariaLabel || t("go to next results")}>
       {label || t("next")} <Icon icon="rightArrow" mr="-8px" />
     </PaginationButton>
   );

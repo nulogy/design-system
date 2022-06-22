@@ -6,34 +6,32 @@ export type GlobalStylesProps = {
   locale?: string;
 };
 
-const GlobalStyles = styled.div(
-  ({ theme, locale }: GlobalStylesProps): CSSObject => {
-    const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
-    return {
-      color: theme.colors.black,
+const GlobalStyles = styled.div(({ theme, locale }: GlobalStylesProps): CSSObject => {
+  const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
+  return {
+    color: theme.colors.black,
+    fontFamily,
+    fontSize: theme.fontSizes.medium,
+    lineHeight: theme.lineHeights.base,
+    "-webkit-font-smoothing": "antialiased",
+    "-moz-osx-font-smoothing": "grayscale",
+    "*": {
+      boxSizing: "border-box",
+    },
+    img: {
+      maxWidth: "100%",
+      height: "auto",
+    },
+    button: {
       fontFamily,
-      fontSize: theme.fontSizes.medium,
-      lineHeight: theme.lineHeights.base,
-      "-webkit-font-smoothing": "antialiased",
-      "-moz-osx-font-smoothing": "grayscale",
-      "*": {
-        boxSizing: "border-box",
-      },
-      img: {
-        maxWidth: "100%",
-        height: "auto",
-      },
-      button: {
-        fontFamily,
-      },
-      input: {
-        fontFamily,
-      },
-      textarea: {
-        fontFamily,
-      },
-    };
-  }
-);
+    },
+    input: {
+      fontFamily,
+    },
+    textarea: {
+      fontFamily,
+    },
+  };
+});
 
 export default GlobalStyles;

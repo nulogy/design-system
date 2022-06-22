@@ -25,8 +25,7 @@ const barStyles = (theme) => ({
     zIndex: theme.zIndices.tabsBar,
   },
 });
-const getBarStyles = (selected, theme) =>
-  selected ? barStyles(theme).expanded : barStyles(theme).default;
+const getBarStyles = (selected, theme) => (selected ? barStyles(theme).expanded : barStyles(theme).default);
 const getBarHoverStyles = (selected, disabled, theme) => {
   if (disabled || selected) {
     return null;

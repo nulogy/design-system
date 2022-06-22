@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  ApplicationFrame,
-  BrandedNavBar,
-  Icon,
-  Breadcrumbs,
-  Link,
-  Heading2,
-  Text,
-  Page,
-  PrimaryButton,
-} from "..";
+import { ApplicationFrame, BrandedNavBar, Icon, Breadcrumbs, Link, Heading2, Text, Page, PrimaryButton } from "..";
 
 const primaryMenu = [
   {
@@ -117,9 +107,7 @@ export const _Page = () => (
 );
 
 export const NoPageTitle = () => (
-  <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-  >
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}>
     <Page
       breadcrumbs={
         <Breadcrumbs>
@@ -136,10 +124,7 @@ export const NoPageTitle = () => (
 );
 
 export const NoBreadcrumbs = () => (
-  <ApplicationFrame
-    navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-    height="100vh"
-  >
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} height="100vh">
     <Page title="Materials Overview">
       <>
         <Heading2>Overview</Heading2>

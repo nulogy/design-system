@@ -126,9 +126,7 @@ export const WithAccessibilityTitle = () => (
     </Flex>
     <Flex p="x2">
       <Icon icon="user" />
-      {
-        " This doesn't have a title attribute, so it has aria-hidden set true instead."
-      }
+      {" This doesn't have a title attribute, so it has aria-hidden set true instead."}
     </Flex>
   </>
 );

@@ -102,10 +102,7 @@ const StyledInput: React.FC<StyledInputProps> = styled.input(
   (props: StyledInputProps) => getInputStyle(props)
 );
 
-export const InputField: React.FC<InputFieldProps> = forwardRef<
-  HTMLInputElement,
-  InputFieldProps
->(
+export const InputField: React.FC<InputFieldProps> = forwardRef<HTMLInputElement, InputFieldProps>(
   (
     {
       icon,
@@ -126,23 +123,10 @@ export const InputField: React.FC<InputFieldProps> = forwardRef<
     },
     ref
   ) => (
-    <MaybeFieldLabel
-      labelText={labelText}
-      requirementText={requirementText}
-      helpText={helpText}
-    >
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
       <Flex alignItems="flex-start">
-        <Prefix
-          prefix={prefix}
-          prefixWidth={prefixWidth}
-          textAlign={prefixAlignment}
-        />
-        <Box
-          position="relative"
-          display="flex"
-          flexGrow={1}
-          maxWidth={inputWidth}
-        >
+        <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
+        <Box position="relative" display="flex" flexGrow={1} maxWidth={inputWidth}>
           <StyledInput
             aria-invalid={error}
             aria-required={required}
@@ -154,11 +138,7 @@ export const InputField: React.FC<InputFieldProps> = forwardRef<
           />
           {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} />}
         </Box>
-        <Suffix
-          suffix={suffix}
-          suffixWidth={suffixWidth}
-          textAlign={suffixAlignment}
-        />
+        <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
       </Flex>
     </MaybeFieldLabel>
   )

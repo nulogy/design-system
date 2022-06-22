@@ -9,8 +9,7 @@ type PopperArrowProps = ReactPopperArrowProps & {
   backgroundColor?: string;
 };
 
-const getThemeColor = (color) =>
-  theme.colors[color] ? theme.colors[color] : color;
+const getThemeColor = (color) => (theme.colors[color] ? theme.colors[color] : color);
 
 const positionArrow = (placement) => {
   const location = String(placement).split("-")[0];
@@ -73,45 +72,33 @@ const drawArrow = (placement, borderColor, backgroundColor) => {
     case "top":
       return {
         "&:before": {
-          borderColor: `${getThemeColor(
-            borderColor
-          )} transparent transparent transparent`,
+          borderColor: `${getThemeColor(borderColor)} transparent transparent transparent`,
           borderWidth: "8px 8px 0 8px",
         },
         "&:after": {
-          borderColor: `${getThemeColor(
-            backgroundColor
-          )} transparent transparent transparent`,
+          borderColor: `${getThemeColor(backgroundColor)} transparent transparent transparent`,
           borderWidth: "8px 8px 0 8px",
         },
       };
     case "right":
       return {
         "&:before": {
-          borderColor: `transparent ${getThemeColor(
-            borderColor
-          )} transparent transparent`,
+          borderColor: `transparent ${getThemeColor(borderColor)} transparent transparent`,
           borderWidth: "8px 8px 8px 0",
         },
         "&:after": {
-          borderColor: `transparent ${getThemeColor(
-            backgroundColor
-          )} transparent transparent`,
+          borderColor: `transparent ${getThemeColor(backgroundColor)} transparent transparent`,
           borderWidth: "8px 8px 8px 0",
         },
       };
     case "left":
       return {
         "&:before": {
-          borderColor: `transparent transparent transparent ${getThemeColor(
-            borderColor
-          )}`,
+          borderColor: `transparent transparent transparent ${getThemeColor(borderColor)}`,
           borderWidth: "8px 0 8px 8px",
         },
         "&:after": {
-          borderColor: `transparent transparent transparent ${getThemeColor(
-            backgroundColor
-          )}`,
+          borderColor: `transparent transparent transparent ${getThemeColor(backgroundColor)}`,
           borderWidth: "8px 0 8px 8px",
         },
       };
@@ -119,15 +106,11 @@ const drawArrow = (placement, borderColor, backgroundColor) => {
     default:
       return {
         "&:before": {
-          borderColor: `transparent transparent ${getThemeColor(
-            borderColor
-          )} transparent`,
+          borderColor: `transparent transparent ${getThemeColor(borderColor)} transparent`,
           borderWidth: "0 8px 8px 8px",
         },
         "&:after": {
-          borderColor: `transparent transparent ${getThemeColor(
-            backgroundColor
-          )} transparent`,
+          borderColor: `transparent transparent ${getThemeColor(backgroundColor)} transparent`,
           borderWidth: "0 8px 8px 8px",
           left: "-4px",
         },
@@ -160,11 +143,7 @@ const PopperArrow: React.FC<PopperArrowProps> = styled.div(
       width: 0,
     },
   },
-  ({
-    placement = "bottom",
-    borderColor = "grey",
-    backgroundColor = "white",
-  }: PopperArrowProps) => ({
+  ({ placement = "bottom", borderColor = "grey", backgroundColor = "white" }: PopperArrowProps) => ({
     ...drawArrow(placement, borderColor, backgroundColor),
   }),
   ({ placement = "bottom" }) => ({

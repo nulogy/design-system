@@ -10,19 +10,8 @@ export default {
 const Palette = ({ colour, name }) => {
   return (
     <Box width={{ extraSmall: 1, small: 1 / 6 }}>
-      <Box
-        mr="x2"
-        mb="x2"
-        boxShadow="medium"
-        overflow="hidden"
-        borderRadius="small"
-      >
-        <Box
-          pt={{ extraSmall: "x4", small: "x8" }}
-          pb={{ extraSmall: "x4", small: "x8" }}
-          mb="x1"
-          bg={colour}
-        />
+      <Box mr="x2" mb="x2" boxShadow="medium" overflow="hidden" borderRadius="small">
+        <Box pt={{ extraSmall: "x4", small: "x8" }} pb={{ extraSmall: "x4", small: "x8" }} mb="x1" bg={colour} />
         <Text mb="half" px="x1">
           {name}
         </Text>
@@ -58,13 +47,10 @@ export const LineHeights = () => (
       <>
         <Heading3>{lineHeight}</Heading3>
         <Box mb="x1">
+          <Text lineHeight={lineHeight}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Text>
           <Text lineHeight={lineHeight}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
-          <Text lineHeight={lineHeight}>
-            Maecenas at urna egestas, dignissim risus ut, posuere lorem. Orci
-            varius natoque penatibus et magnis dis parturient montes, nascetur
-            ridiculus mus.
+            Maecenas at urna egestas, dignissim risus ut, posuere lorem. Orci varius natoque penatibus et magnis dis
+            parturient montes, nascetur ridiculus mus.
           </Text>
         </Box>
       </>

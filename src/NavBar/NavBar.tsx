@@ -36,8 +36,7 @@ const themeColors = {
   },
 };
 
-export const getThemeColor = (themeColor) =>
-  themeColors[themeColor] || themeColors.blue;
+export const getThemeColor = (themeColor) => themeColors[themeColor] || themeColors.blue;
 
 export const NavBarBackground = styled(Flex)<{
   backgroundColor: string;
@@ -86,10 +85,7 @@ const MediumNavBar: React.FC<MediumNavBarProps> = ({
           as={brandingLinkComponent}
           to={brandingLinkTo}
         >
-          <Branding
-            logoColor={getThemeColor(themeColor).logoColor}
-            subtext={subtext}
-          />
+          <Branding logoColor={getThemeColor(themeColor).logoColor} subtext={subtext} />
         </BrandingLink>
         <Flex
           justifyContent="space-between"
@@ -106,10 +102,7 @@ const MediumNavBar: React.FC<MediumNavBarProps> = ({
           )}
           <Flex style={{ float: "right" }}>
             {menuData.search && (
-              <Box
-                maxWidth="18em"
-                mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}
-              >
+              <Box maxWidth="18em" mr={menuData.secondaryMenu ? theme.space.x1 : theme.space.none}>
                 <NavBarSearch {...menuData.search} />
               </Box>
             )}
@@ -166,10 +159,7 @@ export const MobileMenuTrigger = styled.button<{
   "&:hover, &:focus": {
     outline: "none",
     color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(
-      `colors.${hoverBackground}`,
-      hoverBackground
-    )(hoverBackground),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer",
   },
   "&:focus": {
@@ -210,14 +200,8 @@ MenuIcon.defaultProps = {
   isOpen: false,
 };
 
-const SelectNavBarBasedOnWidth = ({
-  width,
-  defaultOpen,
-  breakpointUpper,
-  ...props
-}) => {
-  const currentWidth =
-    width || (typeof window !== "undefined" && window.innerWidth);
+const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...props }) => {
+  const currentWidth = width || (typeof window !== "undefined" && window.innerWidth);
 
   if (currentWidth >= pixelDigitsFrom(breakpointUpper)) {
     return <MediumNavBar {...props} />;

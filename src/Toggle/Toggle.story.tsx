@@ -7,9 +7,7 @@ export default {
   title: "Components/Toggle",
 };
 
-export const _Toggle = () => (
-  <Toggle pt="x3" data-testid="toggle-example" onChange={action("on change")} />
-);
+export const _Toggle = () => <Toggle pt="x3" data-testid="toggle-example" onChange={action("on change")} />;
 
 export const ToggleWithAllProps = () => (
   <Toggle
@@ -63,27 +61,14 @@ ToggleSetToDisabled.story = {
 };
 
 export const WithCustomId = () => (
-  <Toggle
-    id="my-custom-id"
-    labelText="Toggle"
-    onText="on"
-    offText="off"
-    onChange={action("on change")}
-  />
+  <Toggle id="my-custom-id" labelText="Toggle" onText="on" offText="off" onChange={action("on change")} />
 );
 
 WithCustomId.story = {
   name: "With custom id",
 };
 
-export const WithText = () => (
-  <Toggle
-    labelText="Toggle"
-    onText="on"
-    offText="off"
-    onChange={action("on change")}
-  />
-);
+export const WithText = () => <Toggle labelText="Toggle" onText="on" offText="off" onChange={action("on change")} />;
 
 WithText.story = {
   name: "With text",
@@ -122,14 +107,7 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Toggle
-        id="my-custom-id"
-        labelText="Toggle"
-        onText="on"
-        offText="off"
-        onChange={action("on change")}
-        ref={ref}
-      />
+      <Toggle id="my-custom-id" labelText="Toggle" onText="on" offText="off" onChange={action("on change")} ref={ref} />
       <Button onClick={handleClick}>Focus the Toggle</Button>
     </>
   );

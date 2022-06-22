@@ -20,13 +20,7 @@ export const getPageItemstoDisplay = (totalPages, currentPage) => {
   if (currentPage > totalPages - 5) {
     return [1, SEPERATOR, ...pages.slice(totalPages - 5)];
   }
-  return [
-    1,
-    SEPERATOR,
-    ...pages.slice(currentPage - 2, currentPage + 2),
-    SEPERATOR,
-    totalPages,
-  ];
+  return [1, SEPERATOR, ...pages.slice(currentPage - 2, currentPage + 2), SEPERATOR, totalPages];
 };
 
 const Pagination: React.FC<any> = (props) => {
@@ -45,11 +39,7 @@ const Pagination: React.FC<any> = (props) => {
   } = props;
   const { t } = useTranslation();
   return (
-    <Flex
-      as="nav"
-      aria-label={ariaLabel || t("pagination navigation")}
-      {...restProps}
-    >
+    <Flex as="nav" aria-label={ariaLabel || t("pagination navigation")} {...restProps}>
       <PreviousButton
         disabled={currentPage === 1}
         onClick={onPrevious}
@@ -62,13 +52,7 @@ const Pagination: React.FC<any> = (props) => {
         if (page === SEPERATOR)
           return (
             // eslint-disable-next-line react/no-array-index-key
-            <Text
-              key={`sep${index}`}
-              py="x1"
-              mr="x2"
-              fontSize="small"
-              lineHeight="smallTextBase"
-            >
+            <Text key={`sep${index}`} py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
               {SEPERATOR}
             </Text>
           );
@@ -78,9 +62,7 @@ const Pagination: React.FC<any> = (props) => {
               aria-current={isCurrentPage}
               currentPage={isCurrentPage}
               disabled={isCurrentPage}
-              aria-label={
-                isCurrentPage ? null : t("go to page", { count: page })
-              }
+              aria-label={isCurrentPage ? null : t("go to page", { count: page })}
               key={page}
               onClick={() => onSelectPage(page)}
             >
@@ -88,12 +70,7 @@ const Pagination: React.FC<any> = (props) => {
             </PageNumber>
           );
       })}
-      <NextButton
-        disabled={currentPage === totalPages}
-        onClick={onNext}
-        ariaLabel={nextAriaLabel}
-        label={nextLabel}
-      />
+      <NextButton disabled={currentPage === totalPages} onClick={onNext} ariaLabel={nextAriaLabel} label={nextLabel} />
     </Flex>
   );
 };

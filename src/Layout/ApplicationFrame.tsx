@@ -10,12 +10,7 @@ type ApplicationFrameProps = FlexProps & {
   children?: React.ReactNode;
 };
 
-const ApplicationFrame = ({
-  navBar,
-  children,
-  environment,
-  ...props
-}: ApplicationFrameProps) => {
+const ApplicationFrame = ({ navBar, children, environment, ...props }: ApplicationFrameProps) => {
   return (
     <Flex flexDirection="column" minHeight="100vh" height="100vh" {...props}>
       <Box position="sticky" top="0" zIndex={"navBar" as any}>

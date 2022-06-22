@@ -20,12 +20,7 @@ const TruncatedTextFillWidth = ({
     }
   };
   return (
-    <MaybeTooltip
-      showTooltip={hasTooltip}
-      tooltip={children}
-      defaultOpen
-      {...tooltipProps}
-    >
+    <MaybeTooltip showTooltip={hasTooltip} tooltip={children} defaultOpen {...tooltipProps}>
       <Text
         as={element.type}
         cursor={hasTooltip ? "pointer" : "initial"}

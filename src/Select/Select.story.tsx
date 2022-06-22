@@ -62,13 +62,7 @@ const SelectWithManyOptions = ({ multiselect, labelText }: SelectProps) => {
   useEffect(() => {
     setOptions();
   }, []);
-  return (
-    <Select
-      multiselect={multiselect}
-      options={photoList}
-      labelText={labelText}
-    />
-  );
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} />;
 };
 
 type SelectWithStateProps = SelectProps & {
@@ -122,11 +116,7 @@ export const _Select = () => (
     classNamePrefix={text("classNamePrefix", undefined)}
     closeMenuOnSelect={boolean("closeMenuOnSelect", true)}
     disabled={boolean("disabled", false)}
-    defaultValue={select(
-      "defaultValue",
-      [undefined, ...options.map(({ value }) => value)],
-      undefined
-    )}
+    defaultValue={select("defaultValue", [undefined, ...options.map(({ value }) => value)], undefined)}
     error={boolean("error", false)}
     errorMessage={text("errorMessage", "")}
     labelText={text("labelText", "Inventory Status")}
@@ -140,11 +130,7 @@ export const _Select = () => (
     multiselect={boolean("multiselect", false)}
     name={text("name", undefined)}
     placeholder={text("placeholder", " ")}
-    value={select(
-      "value",
-      [undefined, ...options.map(({ value }) => value)],
-      undefined
-    )}
+    value={select("value", [undefined, ...options.map(({ value }) => value)], undefined)}
     menuIsOpen={boolean("menuIsOpen", undefined)}
     onMenuOpen={action("on menu open")}
     onMenuClose={action("on menu close")}
@@ -202,11 +188,7 @@ WithAnOptionSelected.story = {
 };
 
 export const WithState = () => (
-  <SelectWithState
-    placeholder="Please select inventory status"
-    options={options}
-    labelText="Inventory status"
-  />
+  <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
 );
 
 WithState.story = {

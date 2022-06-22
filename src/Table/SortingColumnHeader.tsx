@@ -5,17 +5,9 @@ import { Text } from "../Type";
 import { Flex } from "../Flex";
 import { ControlIcon } from "../Button";
 
-const SortingColumnHeader = ({
-  onChange,
-  label,
-  ascending,
-  active,
-  ariaLabel,
-}) => {
+const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) => {
   const { t } = useTranslation();
-  const defaultAriaLabel = ascending
-    ? t("sort descending")
-    : t("sort ascending");
+  const defaultAriaLabel = ascending ? t("sort descending") : t("sort ascending");
   return (
     <Flex alignItems="center">
       <Text mr="x1">{label}</Text>

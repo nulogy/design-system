@@ -39,9 +39,7 @@ WindowDimensions.propTypes = {
 const withWindowDimensions = (Component) => (props) =>
   (
     <WindowDimensions>
-      {(windowDimensions) => (
-        <Component windowDimensions={windowDimensions} {...props} />
-      )}
+      {(windowDimensions) => <Component windowDimensions={windowDimensions} {...props} />}
     </WindowDimensions>
   );
 

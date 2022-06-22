@@ -34,9 +34,7 @@ class ControlledTabs extends React.Component<TabsProps, TabsState> {
             Uncontrolled Content: Tab 4
           </Tab>
         </Tabs>
-        <div className="ControlledTabContent">
-          Controlled Content: Tab {selectedIndex + 1}
-        </div>
+        <div className="ControlledTabContent">Controlled Content: Tab {selectedIndex + 1}</div>
       </>
     );
   }

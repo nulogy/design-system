@@ -17,17 +17,11 @@ const TruncatedTextMaxCharacters = ({
   const innerText = children ?? "";
   const requiresTruncation = innerText.length > maxCharacters;
 
-  const truncatedText = requiresTruncation
-    ? innerText.slice(0, maxCharacters) + indicator
-    : innerText;
+  const truncatedText = requiresTruncation ? innerText.slice(0, maxCharacters) + indicator : innerText;
   const hasTooltip = showTooltip && requiresTruncation;
 
   return (
-    <MaybeTooltip
-      showTooltip={hasTooltip}
-      tooltip={innerText}
-      {...tooltipProps}
-    >
+    <MaybeTooltip showTooltip={hasTooltip} tooltip={innerText} {...tooltipProps}>
       <Text
         as={element.type}
         cursor={hasTooltip ? "pointer" : "initial"}

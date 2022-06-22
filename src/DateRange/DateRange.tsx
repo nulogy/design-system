@@ -1,11 +1,5 @@
 // @ts-nocheck
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  useImperativeHandle,
-  forwardRef,
-} from "react";
+import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from "react";
 import { isBefore, isSameDay } from "date-fns";
 import { useTranslation } from "react-i18next";
 import { DatePicker } from "../DatePicker";
@@ -143,10 +137,7 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
     const validateDateRange = () => {
       let error;
       if (endDate && startDate) {
-        if (
-          isBefore(endDate, startDate) &&
-          (showTimes || !isSameDay(endDate, startDate))
-        ) {
+        if (isBefore(endDate, startDate) && (showTimes || !isSameDay(endDate, startDate))) {
           error = "end date is before start date";
         }
         if (isSameDay(endDate, startDate) && showTimes) {
@@ -254,18 +245,11 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
         <RangeContainer
           labelProps={{
             ...labelProps,
-            labelText:
-              labelProps.labelText === DEFAULT_LABEL
-                ? t("date range")
-                : labelProps.labelText,
+            labelText: labelProps.labelText === DEFAULT_LABEL ? t("date range") : labelProps.labelText,
           }}
           startComponent={startDateInput}
           endComponent={endDateInput}
-          errorMessages={
-            !disableRangeValidation
-              ? [t(rangeError), errorMessage]
-              : [errorMessage]
-          }
+          errorMessages={!disableRangeValidation ? [t(rangeError), errorMessage] : [errorMessage]}
           {...props}
         />
       </>

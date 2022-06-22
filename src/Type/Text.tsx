@@ -22,9 +22,7 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
   fontSize?: string;
 } & StyledProps & { theme?: DefaultNDSThemeType };
 
-const Text = styled.p.attrs<TextProps>((props: TextProps) =>
-  getAttrs(props.inline)
-)<TextProps>(
+const Text = styled.p.attrs<TextProps>((props: TextProps) => getAttrs(props.inline))<TextProps>(
   ({ disabled, textTransform, theme }: TextProps): CSSObject => ({
     textTransform,
     color: "currentColor",

@@ -37,9 +37,7 @@ const useWindowDimensions = () => {
     return getWindowDimensionInfo(width, height);
   };
 
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
   useEffect(() => {
     if (hasWindow) {

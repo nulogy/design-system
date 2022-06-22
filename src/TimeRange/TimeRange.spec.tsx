@@ -22,9 +22,7 @@ describe("TimeRange", () => {
   describe("range selection", () => {
     it("returns the selected range when the range changes", () => {
       const onRangeChange = jest.fn();
-      const { container, queryAllByText } = renderWithNDSProvider(
-        <TimeRange onRangeChange={onRangeChange} />
-      );
+      const { container, queryAllByText } = renderWithNDSProvider(<TimeRange onRangeChange={onRangeChange} />);
       selectTimeOption("10:00 AM", container, queryAllByText);
       selectTimeOption("11:15 AM", container, queryAllByText, 1);
       const onChangeCalls = onRangeChange.mock.calls;
@@ -36,11 +34,7 @@ describe("TimeRange", () => {
     it("shows an error if the range is invalid", () => {
       const onRangeChange = jest.fn();
       const { queryByText } = renderWithNDSProvider(
-        <TimeRange
-          onRangeChange={onRangeChange}
-          defaultStartTime="12:00"
-          defaultEndTime="05:00"
-        />
+        <TimeRange onRangeChange={onRangeChange} defaultStartTime="12:00" defaultEndTime="05:00" />
       );
       expect(queryByText("end time is before start time")).not.toBeNull();
     });
@@ -48,10 +42,7 @@ describe("TimeRange", () => {
       const onStartTimeChange = jest.fn();
       const onEndTimeChange = jest.fn();
       const { container, queryAllByText } = renderWithNDSProvider(
-        <TimeRange
-          onStartTimeChange={onStartTimeChange}
-          onEndTimeChange={onEndTimeChange}
-        />
+        <TimeRange onStartTimeChange={onStartTimeChange} onEndTimeChange={onEndTimeChange} />
       );
       selectTimeOption("10:00 AM", container, queryAllByText);
       const onChangeCalls = onStartTimeChange.mock.calls;
@@ -63,10 +54,7 @@ describe("TimeRange", () => {
       const onStartTimeChange = jest.fn();
       const onEndTimeChange = jest.fn();
       const { container, queryAllByText } = renderWithNDSProvider(
-        <TimeRange
-          onStartTimeChange={onStartTimeChange}
-          onEndTimeChange={onEndTimeChange}
-        />
+        <TimeRange onStartTimeChange={onStartTimeChange} onEndTimeChange={onEndTimeChange} />
       );
       selectTimeOption("11:00 AM", container, queryAllByText, 1);
       const onChangeCalls = onEndTimeChange.mock.calls;

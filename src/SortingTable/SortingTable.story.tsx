@@ -27,10 +27,5 @@ export default {
 };
 
 export const _SortingTable = () => (
-  <SortingTable
-    columns={COLUMNS}
-    rows={ROWS}
-    keyField={KEY_FIELD}
-    initialSortColumn={INITIAL_SORT_COLUMN}
-  />
+  <SortingTable columns={COLUMNS} rows={ROWS} keyField={KEY_FIELD} initialSortColumn={INITIAL_SORT_COLUMN} />
 );

@@ -75,19 +75,13 @@ const Alert = styled(
         role="alert"
         {...props}
       >
-        {type === "danger" && (
-          <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />
-        )}
-        {type === "success" && (
-          <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />
-        )}
+        {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
+        {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
         <Box mr="auto">
           {title && <Text fontWeight="bold">{title}</Text>}
           {children}
         </Box>
-        {isCloseable && (
-          <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />
-        )}
+        {isCloseable && <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />}
       </Flex>
     ) : null;
   }

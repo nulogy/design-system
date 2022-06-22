@@ -65,12 +65,7 @@ export default {
 };
 
 export const WithSelectableRows = () => (
-  <Table
-    columns={columns}
-    rows={rowData}
-    hasSelectableRows
-    onRowSelectionChange={action("row selection changed")}
-  />
+  <Table columns={columns} rows={rowData} hasSelectableRows onRowSelectionChange={action("row selection changed")} />
 );
 
 WithSelectableRows.story = {

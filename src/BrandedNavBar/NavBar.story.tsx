@@ -10,8 +10,7 @@ import { Button } from "../Button";
 import { Text } from "../Type";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
-const sampleLogo =
-  "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
+const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
 const ResetStorybookView = styled.div({
   position: "absolute",
@@ -33,11 +32,7 @@ const BrandedNavBar = (props) => (
 const primaryMenu = [
   {
     name: "Dashboard",
-    items: [
-      { name: "Items", href: "/" },
-      { name: "Carriers", href: "/" },
-      { name: "Only text submenu" },
-    ],
+    items: [{ name: "Items", href: "/" }, { name: "Carriers", href: "/" }, { name: "Only text submenu" }],
   },
   {
     name: "Operations",
@@ -116,42 +111,26 @@ export default {
   title: "Components/BrandedNavBar",
 };
 
-export const _BrandedNavBar = () => (
-  <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />
-);
+export const _BrandedNavBar = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
 
 _BrandedNavBar.story = {
   name: "BrandedNavBar",
 };
 
-export const WithACompanyLogo = () => (
-  <BrandedNavBar
-    menuData={{ primaryMenu, secondaryMenu }}
-    logoSrc={sampleLogo}
-  />
-);
+export const WithACompanyLogo = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />;
 
 WithACompanyLogo.story = {
   name: "With a company logo",
 };
 
-export const WithAppName = () => (
-  <BrandedNavBar
-    subtext="Quality Control"
-    menuData={{ primaryMenu, secondaryMenu }}
-  />
-);
+export const WithAppName = () => <BrandedNavBar subtext="Quality Control" menuData={{ primaryMenu, secondaryMenu }} />;
 
 WithAppName.story = {
   name: "With app name",
 };
 
 export const WithACompanyLogoAndAppName = () => (
-  <BrandedNavBar
-    menuData={{ primaryMenu, secondaryMenu }}
-    subtext="Quality control"
-    logoSrc={sampleLogo}
-  />
+  <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} subtext="Quality control" logoSrc={sampleLogo} />
 );
 
 WithACompanyLogoAndAppName.story = {
@@ -276,9 +255,7 @@ WithReactRouter.story = {
 };
 
 export const WithHamburgerMenu = () => {
-  return (
-    <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />
-  );
+  return <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />;
 };
 WithHamburgerMenu.parameters = {
   viewport: {
@@ -302,9 +279,7 @@ const customPrimaryMenu = [
       },
       {
         name: "Custom submenu DropdownButton",
-        render: ({ layer }) => (
-          <DropdownButton>DropdownButton at layer {layer}</DropdownButton>
-        ),
+        render: ({ layer }) => <DropdownButton>DropdownButton at layer {layer}</DropdownButton>,
       },
     ],
   },
@@ -314,15 +289,10 @@ const customPrimaryMenu = [
     render: () => <a href="/">Menu Raw HTML Link</a>,
   },
 ];
-export const CustomRendering = () => (
-  <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} />
-);
+export const CustomRendering = () => <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} />;
 
 export const CustomRenderingInHamburger = () => (
-  <BrandedNavBar
-    menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }}
-    defaultOpen
-  />
+  <BrandedNavBar menuData={{ primaryMenu: customPrimaryMenu, secondaryMenu }} defaultOpen />
 );
 CustomRenderingInHamburger.parameters = {
   viewport: {
@@ -344,11 +314,7 @@ const primaryMenuWithCustomTriggers = [
       {
         name: "Submenu 1 (pass-through to hamburger default)",
         trigger: ({ size, defaultRender, layer }) =>
-          size === "medium" ? (
-            <Button>Custom submenu trigger. layer: {layer}</Button>
-          ) : (
-            defaultRender()
-          ),
+          size === "medium" ? <Button>Custom submenu trigger. layer: {layer}</Button> : defaultRender(),
         items: [{ name: "Submenu 1 link", href: "/" }],
       },
       {
@@ -381,16 +347,11 @@ const primaryMenuWithCustomTriggers = [
   },
 ];
 export const CustomMenuTriggers = () => (
-  <BrandedNavBar
-    menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }}
-  />
+  <BrandedNavBar menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }} />
 );
 
 export const CustomMenuTriggersInHamburger = () => (
-  <BrandedNavBar
-    menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }}
-    defaultOpen
-  />
+  <BrandedNavBar menuData={{ primaryMenu: primaryMenuWithCustomTriggers, secondaryMenu }} defaultOpen />
 );
 CustomMenuTriggersInHamburger.parameters = {
   viewport: {

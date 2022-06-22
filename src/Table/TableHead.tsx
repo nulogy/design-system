@@ -16,10 +16,7 @@ const StyledHeaderRow = styled.tr(({ theme }) => ({
 }));
 
 const defaultheaderFormatter = ({ label }) => label;
-const renderHeaderCellContent = ({
-  headerFormatter = defaultheaderFormatter,
-  ...column
-}) => headerFormatter(column);
+const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...column }) => headerFormatter(column);
 
 const TableHead: React.FC<TableHeadProps> = ({ columns, compact, sticky }) => {
   const renderColumns = (allColumns) =>

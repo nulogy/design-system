@@ -36,24 +36,18 @@ const SwitchButton = styled.button<SwitchProps>(({ selected, theme }): any => ({
 }));
 
 /* eslint-disable-next-line react/display-name */
-const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ children, ...rest }, ref) => {
-    return (
-      <SwitchButton {...rest} ref={ref}>
-        {children}
-      </SwitchButton>
-    );
-  }
-);
+const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(({ children, ...rest }, ref) => {
+  return (
+    <SwitchButton {...rest} ref={ref}>
+      {children}
+    </SwitchButton>
+  );
+});
 
 Switch.propTypes = {
   children: PropTypes.node,
   selected: PropTypes.bool,
-  value: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-    PropTypes.array,
-  ]),
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.array]),
 };
 
 export default Switch;

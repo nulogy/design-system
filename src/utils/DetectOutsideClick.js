@@ -47,10 +47,7 @@ class DetectOutsideClick extends React.Component {
 
 DetectOutsideClick.propTypes = {
   onClick: PropTypes.func.isRequired,
-  clickRef: PropTypes.oneOfType([
-    PropTypes.shape({}),
-    PropTypes.arrayOf(PropTypes.shape({})),
-  ]),
+  clickRef: PropTypes.oneOfType([PropTypes.shape({}), PropTypes.arrayOf(PropTypes.shape({}))]),
   children: PropTypes.node,
 };
 

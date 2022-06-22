@@ -2,11 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { selectOption } from "./Select.spec-utils";
-import {
-  UsingRefToControlFocus,
-  WithMultiselect,
-  WithState,
-} from "./Select.story";
+import { UsingRefToControlFocus, WithMultiselect, WithState } from "./Select.story";
 import { Select } from ".";
 
 describe("select", () => {
@@ -35,9 +31,7 @@ describe("select", () => {
       { label: "Three", value: "three" },
     ];
 
-    const { container, queryByText } = renderWithNDSProvider(
-      <Select options={options} defaultValue="two" />
-    );
+    const { container, queryByText } = renderWithNDSProvider(<Select options={options} defaultValue="two" />);
 
     expect(container).toHaveTextContent("Two");
     selectOption("Three", container, queryByText);
@@ -58,9 +52,7 @@ describe("multi select", () => {
   it("returns the selected items on change", () => {
     const callback = jest.fn();
 
-    const { container, queryByText } = renderWithNDSProvider(
-      <WithMultiselect onChange={callback} />
-    );
+    const { container, queryByText } = renderWithNDSProvider(<WithMultiselect onChange={callback} />);
 
     selectOption("PCN4", container, queryByText);
     selectOption("PCN9", container, queryByText);
@@ -75,18 +67,14 @@ describe("multi select", () => {
       { label: "Three", value: "three" },
     ];
 
-    const { container } = renderWithNDSProvider(
-      <Select options={options} multiselect defaultValue={["one", "two"]} />
-    );
+    const { container } = renderWithNDSProvider(<Select options={options} multiselect defaultValue={["one", "two"]} />);
 
     expect(container).toHaveTextContent("One");
     expect(container).toHaveTextContent("Two");
   });
   describe("with ref", () => {
     it("can set the focus", () => {
-      const { container, queryByText } = renderWithNDSProvider(
-        <UsingRefToControlFocus />
-      );
+      const { container, queryByText } = renderWithNDSProvider(<UsingRefToControlFocus />);
       expect(container.querySelectorAll("input")[0]).not.toHaveFocus();
       fireEvent.click(queryByText("Focus the Input"));
       expect(container.querySelectorAll("input")[0]).toHaveFocus();

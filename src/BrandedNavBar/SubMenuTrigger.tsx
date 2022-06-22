@@ -13,14 +13,7 @@ type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   layer: number;
 };
 
-const SubMenuTrigger = ({
-  menuData,
-  name,
-  onItemClick,
-  trigger,
-  layer,
-  ...props
-}: SubMenuTriggerProps) => {
+const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, ...props }: SubMenuTriggerProps) => {
   return (
     // @ts-ignore
     <NavBarDropdownMenu
@@ -35,12 +28,7 @@ const SubMenuTrigger = ({
       })}
       trigger={({ closeMenu, openMenu, isOpen }) => {
         const defaultRender = () => (
-          <SubMenuTriggerButton
-            isOpen={isOpen}
-            name={name}
-            onMouseEnter={openMenu}
-            onMouseLeave={closeMenu}
-          />
+          <SubMenuTriggerButton isOpen={isOpen} name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
         );
         const triggerProps: TriggerFunctionProps = {
           size: "medium",

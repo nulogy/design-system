@@ -6,5 +6,5 @@ describe("Switcher", () => {
     it("focuses on the selected switch", () => {
       cy.focused().should("have.text", "Option 2");
     });
-  })
+  });
 });

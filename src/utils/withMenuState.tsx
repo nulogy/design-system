@@ -105,20 +105,9 @@ class MenuState extends MenuStateInt {
 }
 
 const withMenuState = (MenuComponent) => {
-  const MenuComponentWithState = ({
-    showDelay,
-    hideDelay,
-    defaultOpen,
-    ...props
-  }) => (
-    <MenuState
-      showDelay={showDelay}
-      hideDelay={hideDelay}
-      defaultOpen={defaultOpen}
-    >
-      {(menuComponentProps) => (
-        <MenuComponent menuState={menuComponentProps} {...props} />
-      )}
+  const MenuComponentWithState = ({ showDelay, hideDelay, defaultOpen, ...props }) => (
+    <MenuState showDelay={showDelay} hideDelay={hideDelay} defaultOpen={defaultOpen}>
+      {(menuComponentProps) => <MenuComponent menuState={menuComponentProps} {...props} />}
     </MenuState>
   );
 

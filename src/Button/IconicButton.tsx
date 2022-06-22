@@ -92,43 +92,19 @@ const WrapperButton: React.FC<any> = styled.button(
 
 const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
   (
-    {
-      children,
-      color = "darkBlue",
-      icon,
-      labelHidden,
-      className,
-      iconSize,
-      fontSize,
-      tooltip,
-      ...props
-    },
+    { children, color = "darkBlue", icon, labelHidden, className, iconSize, fontSize, tooltip, ...props },
     forwardedRef
   ) => {
     return (
       <WrapperButton
         ref={forwardedRef}
-        aria-label={
-          props["aria-label"]
-            ? props["aria-label"]
-            : typeof children === "string"
-            ? children
-            : undefined
-        }
+        aria-label={props["aria-label"] ? props["aria-label"] : typeof children === "string" ? children : undefined}
         className={className}
         {...props}
       >
         <Manager>
           <Reference>
-            {({ ref }) => (
-              <Icon
-                ref={ref}
-                size={iconSize || "x4"}
-                icon={icon}
-                p="half"
-                color={color}
-              />
-            )}
+            {({ ref }) => <Icon ref={ref} size={iconSize || "x4"} icon={icon} p="half" color={color} />}
           </Reference>
           <Popper
             placement="bottom"

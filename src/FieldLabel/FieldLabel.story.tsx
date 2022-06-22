@@ -6,8 +6,7 @@ const CustomInput = (props) => <Input {...props} />;
 
 const helpTextWithLink = (
   <>
-    I am help text. I can be a string or a node that includes a{" "}
-    <Link href="http://nulogy.design">link</Link>.
+    I am help text. I can be a string or a node that includes a <Link href="http://nulogy.design">link</Link>.
   </>
 );
 
@@ -21,17 +20,13 @@ _FieldLabel.story = {
   name: "FieldLabel",
 };
 
-export const WithHelpText = () => (
-  <FieldLabel labelText="Default label" helpText={helpTextWithLink} />
-);
+export const WithHelpText = () => <FieldLabel labelText="Default label" helpText={helpTextWithLink} />;
 
 WithHelpText.story = {
   name: "with HelpText",
 };
 
-export const WithRequirementText = () => (
-  <FieldLabel labelText="Default label" requirementText="(Required)" />
-);
+export const WithRequirementText = () => <FieldLabel labelText="Default label" requirementText="(Required)" />;
 
 WithRequirementText.story = {
   name: "with RequirementText",

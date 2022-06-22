@@ -167,11 +167,7 @@ TestMultiselectOverflow.story = {
 };
 
 export const WithANullValue = () => {
-  const optionsWithBlank = [
-    { value: null, label: "Nullable" },
-    { value: null, label: "Other null" },
-    ...options,
-  ];
+  const optionsWithBlank = [{ value: null, label: "Nullable" }, { value: null, label: "Other null" }, ...options];
   return (
     <Select
       defaultValue={null}

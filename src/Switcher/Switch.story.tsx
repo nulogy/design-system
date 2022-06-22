@@ -25,9 +25,7 @@ SelectedSwitch.story = {
   name: "Selected Switch Button ",
 };
 
-export const UnSelectedSwitch = () => (
-  <Switch value="unselected-switch">This is an unselected Switch</Switch>
-);
+export const UnSelectedSwitch = () => <Switch value="unselected-switch">This is an unselected Switch</Switch>;
 
 UnSelectedSwitch.story = {
   name: "Unselected Switch Button",

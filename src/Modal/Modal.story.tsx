@@ -113,11 +113,7 @@ export const _Modal = () => (
 );
 
 export const WithCloseButton = () => (
-  <Modal
-    title="Modal Title"
-    footerContent={modalButtons}
-    onRequestClose={() => {}}
-  >
+  <Modal title="Modal Title" footerContent={modalButtons} onRequestClose={() => {}}>
     Content Content Content
   </Modal>
 );
@@ -129,46 +125,34 @@ WithCloseButton.story = {
 export const WithScrollingContent = () => (
   <Modal title="Modal Title" footerContent={modalButtons}>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
   </Modal>
 );
@@ -180,46 +164,34 @@ WithScrollingContent.story = {
 export const WithScrollingContentWithoutFooterContent = () => (
   <Modal title="Modal Title">
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
     <Text>
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content Content Content Content Content Content Content
-      Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content Content Content Content
+      Content Content Content Content Content Content Content Content Content Content Content
     </Text>
   </Modal>
 );
@@ -228,9 +200,7 @@ WithScrollingContentWithoutFooterContent.story = {
   name: "with scrolling content without footer content",
 };
 
-export const WithNoTitle = () => (
-  <Modal footerContent={modalButtons}>Content Content Content</Modal>
-);
+export const WithNoTitle = () => <Modal footerContent={modalButtons}>Content Content Content</Modal>;
 
 WithNoTitle.story = {
   name: "with no title",
@@ -257,12 +227,7 @@ WithCustomMaxWidth.story = {
 };
 
 export const WithSelect = () => (
-  <Modal
-    title="Edit Profile"
-    footerContent={modalButtons}
-    onRequestClose={() => {}}
-    maxWidth="456px"
-  >
+  <Modal title="Edit Profile" footerContent={modalButtons} onRequestClose={() => {}} maxWidth="456px">
     <Form id="myForm" mb="x2">
       <Select
         maxHeight="96px"
@@ -279,12 +244,7 @@ WithSelect.story = {
 };
 
 export const WithSelectAndScrollingContent = () => (
-  <Modal
-    title="Edit Profile"
-    footerContent={modalButtons}
-    onRequestClose={() => {}}
-    maxWidth="456px"
-  >
+  <Modal title="Edit Profile" footerContent={modalButtons} onRequestClose={() => {}} maxWidth="456px">
     <Form id="myForm" mb="x2">
       <Input name="name" id="name" labelText="Name" />
       <Input type="number" name="age" id="age" labelText="Age" />

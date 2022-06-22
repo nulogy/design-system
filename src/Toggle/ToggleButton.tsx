@@ -48,12 +48,7 @@ const animationConfig: AnimationConfig = {
   scale: 1.08,
 };
 
-const Switch: React.FC<SwitchProps> = ({
-  children,
-  disabled,
-  toggled,
-  onClick,
-}) => (
+const Switch: React.FC<SwitchProps> = ({ children, disabled, toggled, onClick }) => (
   <AnimatedBox
     position="relative"
     display="flex"
@@ -114,34 +109,32 @@ const ToggleInput = styled.input(
   })
 );
 
-const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef(
-  (props, ref) => {
-    const { disabled, defaultToggled, toggled } = props;
-    const inputRef = useRef(null);
+const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef((props, ref) => {
+  const { disabled, defaultToggled, toggled } = props;
+  const inputRef = useRef(null);
 
-    useImperativeHandle(ref, () => inputRef.current);
+  useImperativeHandle(ref, () => inputRef.current);
 
-    const handleClick = () => {
-      if (inputRef.current) {
-        // triggers the onChange event on a checkbox input
-        inputRef.current.click();
-      }
-    };
+  const handleClick = () => {
+    if (inputRef.current) {
+      // triggers the onChange event on a checkbox input
+      inputRef.current.click();
+    }
+  };
 
-    return (
-      <Switch disabled={disabled} toggled={toggled} onClick={handleClick}>
-        <ToggleInput
-          ref={inputRef}
-          type="checkbox"
-          defaultChecked={defaultToggled}
-          value={toggled ? "on" : "off"}
-          {...props}
-        />
-        <Slider disabled={disabled} />
-      </Switch>
-    );
-  }
-);
+  return (
+    <Switch disabled={disabled} toggled={toggled} onClick={handleClick}>
+      <ToggleInput
+        ref={inputRef}
+        type="checkbox"
+        defaultChecked={defaultToggled}
+        value={toggled ? "on" : "off"}
+        {...props}
+      />
+      <Slider disabled={disabled} />
+    </Switch>
+  );
+});
 
 ToggleButton.defaultProps = {
   defaultToggled: undefined,

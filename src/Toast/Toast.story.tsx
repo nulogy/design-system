@@ -2,15 +2,7 @@
 // typescript turned off because of {toast.type} not being a string
 
 import React, { useState } from "react";
-import {
-  Button,
-  DangerButton,
-  IconicButton,
-  Modal,
-  PrimaryButton,
-  Flex,
-  Toast,
-} from "../index";
+import { Button, DangerButton, IconicButton, Modal, PrimaryButton, Flex, Toast } from "../index";
 
 export default {
   title: "Components/Toast",
@@ -90,25 +82,16 @@ export const _MultipleToastsExample = () => {
     return (
       <>
         <Flex alignItems="center">
-          <PrimaryButton
-            onClick={() => triggerToast(TOAST_ACTIONS.SAVE)}
-            mr="x2"
-          >
+          <PrimaryButton onClick={() => triggerToast(TOAST_ACTIONS.SAVE)} mr="x2">
             Save Changes
           </PrimaryButton>
           <Button onClick={() => triggerToast(TOAST_ACTIONS.RESET)} mr="x2">
             Reset
           </Button>
-          <DangerButton
-            onClick={() => triggerToast(TOAST_ACTIONS.ERROR)}
-            mr="x2"
-          >
+          <DangerButton onClick={() => triggerToast(TOAST_ACTIONS.ERROR)} mr="x2">
             Trigger Error
           </DangerButton>
-          <IconicButton
-            icon="delete"
-            onClick={() => triggerToast(TOAST_ACTIONS.DELETE)}
-          >
+          <IconicButton icon="delete" onClick={() => triggerToast(TOAST_ACTIONS.DELETE)}>
             Delete
           </IconicButton>
         </Flex>
@@ -213,15 +196,9 @@ export const CloseableWithMultiLineMessage = () => {
   return (
     <>
       <Button onClick={triggerToast}>Save Changes</Button>
-      <Toast
-        triggered={triggered}
-        onHide={onHideHandler}
-        type="danger"
-        isCloseable
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem
-        eveniet, repellat accusamus error reiciendis libero. Totam autem
-        distinctio vo
+      <Toast triggered={triggered} onHide={onHideHandler} type="danger" isCloseable>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quidem eveniet, repellat accusamus error
+        reiciendis libero. Totam autem distinctio vo
       </Toast>
     </>
   );
@@ -267,25 +244,16 @@ export const MultipleCloseableToastsExample = () => {
     return (
       <>
         <Flex alignItems="center">
-          <PrimaryButton
-            onClick={() => triggerToast(TOAST_ACTIONS.SAVE)}
-            mr="x2"
-          >
+          <PrimaryButton onClick={() => triggerToast(TOAST_ACTIONS.SAVE)} mr="x2">
             Save Changes
           </PrimaryButton>
           <Button onClick={() => triggerToast(TOAST_ACTIONS.RESET)} mr="x2">
             Reset
           </Button>
-          <DangerButton
-            onClick={() => triggerToast(TOAST_ACTIONS.ERROR)}
-            mr="x2"
-          >
+          <DangerButton onClick={() => triggerToast(TOAST_ACTIONS.ERROR)} mr="x2">
             Trigger Error
           </DangerButton>
-          <IconicButton
-            icon="delete"
-            onClick={() => triggerToast(TOAST_ACTIONS.DELETE)}
-          >
+          <IconicButton icon="delete" onClick={() => triggerToast(TOAST_ACTIONS.DELETE)}>
             Delete
           </IconicButton>
         </Flex>

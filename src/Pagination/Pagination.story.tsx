@@ -24,25 +24,19 @@ export const _Pagination = () => (
   </>
 );
 
-export const OnTheFirstPage = () => (
-  <Pagination currentPage={1} totalPages={10} />
-);
+export const OnTheFirstPage = () => <Pagination currentPage={1} totalPages={10} />;
 
 OnTheFirstPage.story = {
   name: "on the first page",
 };
 
-export const OnTheLastPage = () => (
-  <Pagination currentPage={10} totalPages={10} />
-);
+export const OnTheLastPage = () => <Pagination currentPage={10} totalPages={10} />;
 
 OnTheLastPage.story = {
   name: "on the last page",
 };
 
-export const WithLessThan5Pages = () => (
-  <Pagination currentPage={3} totalPages={4} />
-);
+export const WithLessThan5Pages = () => <Pagination currentPage={3} totalPages={4} />;
 
 WithLessThan5Pages.story = {
   name: "with less than 5 pages",

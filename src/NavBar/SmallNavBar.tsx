@@ -25,8 +25,7 @@ class SmallNavBarNoState extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen)
-      this.navRef.current.scrollTop = 0;
+    if (this.props.menuState.isOpen && !prevProps.menuState.isOpen) this.navRef.current.scrollTop = 0;
   }
 
   isSmallScreen() {
@@ -47,9 +46,7 @@ class SmallNavBarNoState extends React.Component {
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-        <NavBarBackground
-          backgroundColor={getThemeColor(themeColor).background}
-        >
+        <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
           <BrandingLink
             aria-label="Nulogy logo"
             display="block"
@@ -65,10 +62,7 @@ class SmallNavBarNoState extends React.Component {
               subtext={this.isSmallScreen() ? null : subtext}
             />
           </BrandingLink>
-          <Flex
-            justifyContent="flex-end"
-            style={{ flexGrow: 1, margin: `0 0 0 ${theme.space.x3}` }}
-          >
+          <Flex justifyContent="flex-end" style={{ flexGrow: 1, margin: `0 0 0 ${theme.space.x3}` }}>
             {menuData.search && (
               <Flex maxWidth="18em" alignItems="center" px="0">
                 <NavBarSearch {...menuData.search} />

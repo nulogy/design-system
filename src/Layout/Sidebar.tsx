@@ -27,21 +27,14 @@ type SidebarProps = AnimatedBoxProps & {
 };
 
 const focusFirstElement = () => {
-  const FOCUSABLE_EL_SELECTOR =
-    "button, a[href], select, textarea, input, [tabindex]:not([tabindex='-1'])";
+  const FOCUSABLE_EL_SELECTOR = "button, a[href], select, textarea, input, [tabindex]:not([tabindex='-1'])";
   const focusable = document.querySelectorAll(FOCUSABLE_EL_SELECTOR);
   if (focusable && focusable[0]) {
     (focusable[0] as HTMLElement).focus();
   }
 };
 
-const SidebarOverlay = ({
-  transitionDuration,
-  top,
-  transparent,
-  zIndex = 799 as any,
-  onClick,
-}) => (
+const SidebarOverlay = ({ transitionDuration, top, transparent, zIndex = 799 as any, onClick }) => (
   <AnimatedBox
     position="fixed"
     top={top}
@@ -167,9 +160,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         position="fixed"
         top={top}
         right={offset}
-        width={
-          typeof width === "string" ? { default: "100%", small: width } : width
-        }
+        width={typeof width === "string" ? { default: "100%", small: width } : width}
         zIndex={zIndex || ("sidebar" as any)}
         ref={sideBarRef as any}
         {...props}
@@ -224,9 +215,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             {footer}
           </Box>
         )}
-        {overlay && disableScroll && isOpen && (
-          <PreventBodyElementScrolling scrollRef={sideBarRef} />
-        )}
+        {overlay && disableScroll && isOpen && <PreventBodyElementScrolling scrollRef={sideBarRef} />}
       </AnimatedBox>
     </>
   );

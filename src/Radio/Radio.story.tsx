@@ -6,14 +6,7 @@ export default {
   title: "Components/Radio",
 };
 
-export const _Radio = () => (
-  <Radio
-    p="x3"
-    id="radio"
-    labelText="I am a radio button"
-    data-testid="radio"
-  />
-);
+export const _Radio = () => <Radio p="x3" id="radio" labelText="I am a radio button" data-testid="radio" />;
 
 export const SetToDefaultChecked = () => (
   <>
@@ -59,18 +52,8 @@ SetToRequired.story = {
 
 export const Controlled = () => (
   <>
-    <Radio
-      id="radio-1"
-      checked
-      onChange={action("onChange")}
-      labelText="I am controlled and checked"
-    />
-    <Radio
-      id="radio-2"
-      checked={false}
-      onChange={action("onChange")}
-      labelText="I am controlled and unchecked"
-    />
+    <Radio id="radio-1" checked onChange={action("onChange")} labelText="I am controlled and checked" />
+    <Radio id="radio-2" checked={false} onChange={action("onChange")} labelText="I am controlled and unchecked" />
   </>
 );
 
@@ -82,12 +65,7 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Radio
-        ref={ref}
-        checked
-        onChange={action("onChange")}
-        labelText="I am controlled and checked"
-      />
+      <Radio ref={ref} checked onChange={action("onChange")} labelText="I am controlled and checked" />
       <Button onClick={handleClick}>Focus the Input</Button>
     </>
   );

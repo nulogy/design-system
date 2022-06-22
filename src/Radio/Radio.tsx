@@ -116,20 +116,11 @@ type RadioProps = VisualRadioProps &
   };
 
 const Radio: React.FC<RadioProps> = forwardRef(
-  (
-    { className, labelText, disabled, checked, required, error, ...props },
-    ref
-  ) => {
+  ({ className, labelText, disabled, checked, required, error, ...props }, ref) => {
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
     return (
-      <Box
-        position="relative"
-        className={className}
-        py="half"
-        px="0"
-        {...spaceProps}
-      >
+      <Box position="relative" className={className} py="half" px="0" {...spaceProps}>
         <ClickInputLabel disabled={disabled}>
           <RadioInput
             type="radio"

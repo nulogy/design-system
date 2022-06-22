@@ -74,12 +74,7 @@ WithErrorList.story = {
 };
 
 export const SetToDisabled = () => (
-  <CheckboxGroup
-    disabled
-    labelText="Setting Selection"
-    name="settingSelection"
-    defaultValue={["a"]}
-  >
+  <CheckboxGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue={["a"]}>
     <Checkbox value="a" labelText="Option A" />
     <Checkbox value="b" labelText="Option B" />
     <Checkbox value="c" labelText="Option C" />
@@ -91,12 +86,7 @@ SetToDisabled.story = {
 };
 
 export const Controlled = () => (
-  <CheckboxGroup
-    labelText="Setting Selection"
-    name="settingSelection"
-    checkedValue={["a"]}
-    onChange={() => {}}
-  >
+  <CheckboxGroup labelText="Setting Selection" name="settingSelection" checkedValue={["a"]} onChange={() => {}}>
     <Checkbox value="a" labelText="Option A" />
     <Checkbox value="b" labelText="Option B" />
     <Checkbox value="c" labelText="Option C" />

@@ -45,12 +45,8 @@ export default {
   title: "Components/Checkbox",
 };
 
-export const _Checkbox = () => (
-  <Checkbox p="x3" id="checkbox" labelText="I am a checkbox" />
-);
-export const SetToDefaultChecked = () => (
-  <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />
-);
+export const _Checkbox = () => <Checkbox p="x3" id="checkbox" labelText="I am a checkbox" />;
+export const SetToDefaultChecked = () => <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />;
 
 SetToDefaultChecked.story = {
   name: "Set to defaultChecked",
@@ -100,13 +96,7 @@ SetToRequired.story = {
 
 export const Indeterminate = () => (
   <>
-    <Checkbox
-      id="checkbox"
-      labelText="I am an indeterminate checkbox"
-      readOnly
-      checked
-      indeterminate
-    />
+    <Checkbox id="checkbox" labelText="I am an indeterminate checkbox" readOnly checked indeterminate />
     <Checkbox
       id="checkbox"
       labelText="I am a unchecked indeterminate checkbox"
@@ -151,13 +141,7 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Checkbox
-        ref={ref}
-        labelText="I am a unchecked indeterminate checkbox"
-        readOnly
-        checked={false}
-        indeterminate
-      />
+      <Checkbox ref={ref} labelText="I am a unchecked indeterminate checkbox" readOnly checked={false} indeterminate />
       <Button onClick={handleClick}>Focus the Input</Button>
     </>
   );
