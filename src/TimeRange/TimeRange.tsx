@@ -1,11 +1,5 @@
 // @ts-nocheck
-import React, {
-  useState,
-  useEffect,
-  forwardRef,
-  useImperativeHandle,
-  useRef,
-} from "react";
+import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SpaceProps } from "styled-system";
 import { TimePicker } from "../TimePicker";
@@ -144,17 +138,12 @@ const TimeRange: React.FC<TimeRangeProps> = forwardRef(
       <RangeContainer
         labelProps={{
           ...labelProps,
-          labelText:
-            labelProps.labelText === DEFAULT_LABEL
-              ? t("time range")
-              : labelProps.labelText,
+          labelText: labelProps.labelText === DEFAULT_LABEL ? t("time range") : labelProps.labelText,
         }}
         startComponent={startInput}
         selected={endTime}
         endComponent={endInput}
-        errorMessages={
-          !disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]
-        }
+        errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
         {...props}
       />
     );

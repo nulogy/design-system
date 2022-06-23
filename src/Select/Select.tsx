@@ -55,14 +55,9 @@ export const SelectDefaultProps = {
 const checkOptionsAreValid = (options) => {
   if (options && process.env.NODE_ENV === "development") {
     const uniq = (a) => Array.from(new Set(a));
-    const uniqueValues = uniq(
-      options.map(({ value }) => (value === null ? "_null_" : value))
-    );
+    const uniqueValues = uniq(options.map(({ value }) => (value === null ? "_null_" : value)));
     if (uniqueValues.length < options.length) {
-      console.warn(
-        "NDS: The options prop passed to Select must have unique values for each option",
-        options
-      );
+      console.warn("NDS: The options prop passed to Select must have unique values for each option", options);
     }
   }
 };
@@ -178,11 +173,7 @@ const ReactSelect = forwardRef(
 
     return (
       <Field {...spaceProps}>
-        <MaybeFieldLabel
-          labelText={labelText}
-          requirementText={requirementText}
-          helpText={helpText}
-        >
+        <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
             ref={ref}
             className={className}
@@ -205,10 +196,7 @@ const ReactSelect = forwardRef(
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
             onBlur={onBlur}
-            onChange={
-              onChange &&
-              ((option) => onChange(extractValue(option, multiselect)))
-            }
+            onChange={onChange && ((option) => onChange(extractValue(option, multiselect)))}
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
             name={name}
@@ -234,11 +222,7 @@ const ReactSelect = forwardRef(
             filterOption={filterOption}
             closeMenuOnSelect={closeMenuOnSelect}
           />
-          <InlineValidation
-            mt="x1"
-            errorMessage={errorMessage}
-            errorList={errorList}
-          />
+          <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
       </Field>
     );

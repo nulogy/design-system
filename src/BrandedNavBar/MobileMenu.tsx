@@ -69,18 +69,16 @@ type ChildIndentingLiProps = {
   key?: string;
 };
 
-const ChildIndentingLi = styled.li(
-  ({ layer, theme }: ChildIndentingLiProps) => ({
-    marginBottom: theme.space.x1,
-    [`> ${DropdownButton}, > ${DropdownLink}`]: {
-      // eslint-disable-next-line no-mixed-operators
-      paddingLeft: `${24 * layer + 20}px`,
-    },
-    [`> ${DropdownText}`]: {
-      paddingLeft: getPaddingLeft(layer),
-    },
-  })
-);
+const ChildIndentingLi = styled.li(({ layer, theme }: ChildIndentingLiProps) => ({
+  marginBottom: theme.space.x1,
+  [`> ${DropdownButton}, > ${DropdownLink}`]: {
+    // eslint-disable-next-line no-mixed-operators
+    paddingLeft: `${24 * layer + 20}px`,
+  },
+  [`> ${DropdownText}`]: {
+    paddingLeft: getPaddingLeft(layer),
+  },
+}));
 
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
@@ -89,16 +87,10 @@ const SubMenuItemsList = styled.ul({
 });
 
 const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
-  const MenuLink: React.FC<LinkProps> =
-    layer === 0 ? TopLevelLink : DropdownLink;
+  const MenuLink: React.FC<LinkProps> = layer === 0 ? TopLevelLink : DropdownLink;
   return (
     <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
-      <MenuLink
-        onClick={linkOnClick}
-        href={menuItem.href}
-        as={menuItem.as}
-        to={menuItem.to}
-      >
+      <MenuLink onClick={linkOnClick} href={menuItem.href} as={menuItem.as} to={menuItem.to}>
         {menuItem.name}
       </MenuLink>
     </ChildIndentingLi>
@@ -113,12 +105,7 @@ const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
   <li key={menuItem.key ?? menuItem.name} style={{ display: "block" }}>
-    <SubMenu
-      menuItem={menuItem}
-      layer={layer}
-      themeColorObject={themeColorObject}
-      linkOnClick={linkOnClick}
-    />
+    <SubMenu menuItem={menuItem} layer={layer} themeColorObject={themeColorObject} linkOnClick={linkOnClick} />
   </li>
 );
 
@@ -180,26 +167,12 @@ type SubMenuProps = {
   themeColorObject?: ThemeColorObject;
 };
 
-const SubMenu = ({
-  menuItem,
-  linkOnClick,
-  themeColorObject,
-  layer,
-}: SubMenuProps) => {
+const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }: SubMenuProps) => {
   const defaultRender = () => getSubMenuHeading(layer, menuItem.name);
   return (
     <>
-      {menuItem.trigger
-        ? menuItem.trigger({ size: "small", defaultRender, layer })
-        : defaultRender()}
-      <SubMenuItemsList>
-        {renderMenuItems(
-          menuItem.items,
-          linkOnClick,
-          themeColorObject,
-          layer + 1
-        )}
-      </SubMenuItemsList>
+      {menuItem.trigger ? menuItem.trigger({ size: "small", defaultRender, layer }) : defaultRender()}
+      <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
     </>
   );
 };
@@ -242,45 +215,17 @@ type BaseMobileMenuProps = {
   logoSrc?: string;
 };
 
-const BaseMobileMenu = ({
-  menuData,
-  closeMenu,
-  subtext,
-  themeColorObject,
-  logoSrc,
-  ...props
-}: BaseMobileMenuProps) => (
-  <Nav
-    backgroundColor={themeColorObject && themeColorObject.background}
-    {...props}
-  >
+const BaseMobileMenu = ({ menuData, closeMenu, subtext, themeColorObject, logoSrc, ...props }: BaseMobileMenuProps) => (
+  <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     <BrandingWrap>
-      <BrandingText
-        logoColor={themeColorObject && themeColorObject.logoColor}
-      />
+      <BrandingText logoColor={themeColorObject && themeColorObject.logoColor} />
     </BrandingWrap>
     <Menu>
-      {menuData.primaryMenu &&
-        renderTopLayerMenuItems(
-          menuData.primaryMenu,
-          closeMenu,
-          themeColorObject
-        )}
-      {menuData.secondaryMenu &&
-        renderTopLayerMenuItems(
-          menuData.secondaryMenu,
-          closeMenu,
-          themeColorObject
-        )}
+      {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
+      {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
     </Menu>
     {logoSrc && (
-      <Flex
-        textAlign="center"
-        borderTop={borderStyle}
-        height="40px"
-        alignItems="center"
-        justifyContent="center"
-      >
+      <Flex textAlign="center" borderTop={borderStyle} height="40px" alignItems="center" justifyContent="center">
         <NulogyLogo />
         {subtext && (
           <Text

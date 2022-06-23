@@ -73,20 +73,8 @@ const BrandLogoContainer = ({
         underline={false}
         style={{ display: "block" }}
       >
-        {logoSrc && (
-          <img
-            src={logoSrc}
-            style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }}
-            alt=""
-          />
-        )}
-        {!logoSrc && (
-          <Branding
-            size={subtext ? "small" : "medium"}
-            logoColor="blue"
-            subtext={subtext}
-          />
-        )}
+        {logoSrc && <img src={logoSrc} style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }} alt="" />}
+        {!logoSrc && <Branding size={subtext ? "small" : "medium"} logoColor="blue" subtext={subtext} />}
       </Link>
     </Box>
   );
@@ -124,13 +112,7 @@ const MediumNavBar = ({
             brandingLinkComponent={brandingLinkComponent}
             subtext={subtext}
           />
-          <Flex
-            justifyContent="space-between"
-            alignContent="flex-end"
-            flexGrow={1}
-            ml="x3"
-            alignItems="center"
-          >
+          <Flex justifyContent="space-between" alignContent="flex-end" flexGrow={1} ml="x3" alignItems="center">
             {menuData.primaryMenu && (
               <DesktopMenu
                 themeColorObject={themeColorObject}
@@ -148,10 +130,7 @@ const MediumNavBar = ({
               )}
               {logoSrc && (
                 <Box pl="x3">
-                  <NulogyLogoContainer
-                    height={NAVBAR_HEIGHT}
-                    subText={subtext}
-                  />
+                  <NulogyLogoContainer height={NAVBAR_HEIGHT} subText={subtext} />
                 </Box>
               )}
             </Flex>
@@ -169,27 +148,25 @@ type MobileMenuTriggerProps = {
   theme?: DefaultNDSThemeType;
 };
 
-const MobileMenuTrigger = styled.button(
-  ({ color, hoverColor, hoverBackground, theme }: MobileMenuTriggerProps) => ({
-    color: theme.colors[color] || color,
-    background: "none",
-    border: "none",
-    padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
-    marginLeft: theme.space.x1,
-    borderRadius: theme.radii.medium,
-    transition: ".2s",
-    height: theme.space.x5,
-    "&:hover, &:focus": {
-      outline: "none",
-      color: theme.colors[hoverColor] || hoverColor,
-      backgroundColor: theme.colors[hoverBackground] || hoverBackground,
-      cursor: "pointer",
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus,
-    },
-  })
-);
+const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground, theme }: MobileMenuTriggerProps) => ({
+  color: theme.colors[color] || color,
+  background: "none",
+  border: "none",
+  padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
+  marginLeft: theme.space.x1,
+  borderRadius: theme.radii.medium,
+  transition: ".2s",
+  height: theme.space.x5,
+  "&:hover, &:focus": {
+    outline: "none",
+    color: theme.colors[hoverColor] || hoverColor,
+    backgroundColor: theme.colors[hoverBackground] || hoverBackground,
+    cursor: "pointer",
+  },
+  "&:focus": {
+    boxShadow: theme.shadows.focus,
+  },
+}));
 
 type SmallHeaderProps = {
   isOpen?: boolean;
@@ -261,9 +238,7 @@ const SmallNavBarNoState = ({
     <SmallHeader
       ref={navRef}
       isOpen={isOpen}
-      breakpointLower={
-        breakpoints ? breakpoints[breakpointLower] : breakpointLower
-      }
+      breakpointLower={breakpoints ? breakpoints[breakpointLower] : breakpointLower}
       {...props}
     >
       {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
@@ -281,11 +256,7 @@ const SmallNavBarNoState = ({
             </Flex>
           )}
           {(menuData.primaryMenu || menuData.secondaryMenu) && (
-            <MobileMenuTrigger
-              {...themeColorObject}
-              onClick={toggleMenu}
-              aria-expanded={isOpen ? true : null}
-            >
+            <MobileMenuTrigger {...themeColorObject} onClick={toggleMenu} aria-expanded={isOpen ? true : null}>
               <MenuIcon isOpen={isOpen} />
             </MobileMenuTrigger>
           )}
@@ -309,21 +280,13 @@ const SmallNavBarNoState = ({
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
 
-const SelectNavBarBasedOnWidth = ({
-  width,
-  defaultOpen,
-  breakpointUpper,
-  ...props
-}: any) => {
-  const currentWidth =
-    width || (typeof window !== "undefined" && window.innerWidth);
+const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...props }: any) => {
+  const currentWidth = width || (typeof window !== "undefined" && window.innerWidth);
 
   if (currentWidth >= pixelDigitsFrom(breakpointUpper)) {
     return <MediumNavBar {...props} />;
   } else {
-    return (
-      <SmallNavBar {...props} width={currentWidth} defaultOpen={defaultOpen} />
-    );
+    return <SmallNavBar {...props} width={currentWidth} defaultOpen={defaultOpen} />;
   }
 };
 
@@ -337,11 +300,7 @@ type BaseNavBarProps = {
   logoSrc?: string;
 };
 
-const BaseNavBar = ({
-  environment,
-  breakpointUpper = "medium",
-  ...props
-}: BaseNavBarProps) => {
+const BaseNavBar = ({ environment, breakpointUpper = "medium", ...props }: BaseNavBarProps) => {
   const { breakpoints } = useTheme();
   return (
     <ReactResizeDetector handleWidth>

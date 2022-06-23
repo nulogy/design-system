@@ -59,9 +59,7 @@ const MenuTrigger = ({
       }}
       trigger={() => {
         const defaultRender = () => <MenuTriggerButton {...triggerProps} />;
-        return trigger
-          ? trigger({ size: "medium", defaultRender, layer })
-          : defaultRender();
+        return trigger ? trigger({ size: "medium", defaultRender, layer }) : defaultRender();
       }}
     >
       {({ closeMenu }) => (

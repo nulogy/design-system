@@ -1,11 +1,4 @@
-import {
-  subDays,
-  addDays,
-  isValid,
-  isAfter,
-  isBefore,
-  isSameDay,
-} from "date-fns";
+import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
 import propTypes from "@styled-system/prop-types";
@@ -84,26 +77,14 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
       setSelectedDate(date);
     };
     const handleDownKey = () => {
-      const newSelectedDate = isValid(selectedDate)
-        ? subDays(selectedDate, 1)
-        : new Date();
-      if (
-        !minDate ||
-        isAfter(newSelectedDate, minDate) ||
-        isSameDay(newSelectedDate, minDate)
-      ) {
+      const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
+      if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
         handleSelectedDateChange(newSelectedDate);
       }
     };
     const handleUpKey = () => {
-      const newSelectedDate = isValid(selectedDate)
-        ? addDays(selectedDate, 1)
-        : new Date();
-      if (
-        !maxDate ||
-        isBefore(newSelectedDate, maxDate) ||
-        isSameDay(newSelectedDate, maxDate)
-      ) {
+      const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
+      if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
         handleSelectedDateChange(newSelectedDate);
       }
     };
@@ -169,11 +150,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
             />
           )}
         </LocaleContext.Consumer>
-        <InlineValidation
-          mt="x1"
-          errorMessage={errorMessage}
-          errorList={errorList}
-        />
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
     );
   }

@@ -91,36 +91,15 @@ const WrapperButton = styled.button<any>(
 );
 
 const Button: React.FC<ButtonProps> = React.forwardRef(
-  (
-    {
-      children,
-      iconSide = "right",
-      icon,
-      className,
-      asLink,
-      size = "medium",
-      ...props
-    }: ButtonProps,
-    ref
-  ) => {
+  ({ children, iconSide = "right", icon, className, asLink, size = "medium", ...props }: ButtonProps, ref) => {
     const {
       lineHeights: { smallTextCompressed },
     } = useTheme();
     return (
-      <WrapperButton
-        as={asLink ? "a" : undefined}
-        ref={ref}
-        className={className}
-        size={size}
-        {...props}
-      >
-        {icon && iconSide === "left" && (
-          <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />
-        )}
+      <WrapperButton as={asLink ? "a" : undefined} ref={ref} className={className} size={size} {...props}>
+        {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
         {children}
-        {icon && iconSide === "right" && (
-          <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />
-        )}
+        {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
       </WrapperButton>
     );
   }

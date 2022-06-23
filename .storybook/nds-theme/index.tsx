@@ -36,10 +36,7 @@ const withNDSProvider = (story) => {
 
   return (
     !loading && (
-      <NDSProvider
-        locale={select("NDSProvider Locale", localeKnobOptions, "en_US")}
-        theme={theme}
-      >
+      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} theme={theme}>
         {story}
       </NDSProvider>
     )

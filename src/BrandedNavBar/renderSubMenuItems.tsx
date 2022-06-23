@@ -2,12 +2,7 @@ import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { DropdownText, DropdownLink } from "../DropdownMenu";
 
-const renderSubMenuTrigger = (
-  subMenuItem,
-  onItemClick,
-  SubMenuTrigger,
-  layer
-) => (
+const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger, layer) => (
   <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
     <SubMenuTrigger
       onItemClick={onItemClick}
@@ -21,13 +16,7 @@ const renderSubMenuTrigger = (
 
 const renderSubMenuLink = (subMenuItem, onItemClick) => (
   <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
-    <DropdownLink
-      py="half"
-      onClick={onItemClick}
-      href={subMenuItem.href}
-      to={subMenuItem.to}
-      as={subMenuItem.as}
-    >
+    <DropdownLink py="half" onClick={onItemClick} href={subMenuItem.href} to={subMenuItem.to} as={subMenuItem.as}>
       {subMenuItem.name}
     </DropdownLink>
   </NoWrapLi>
@@ -58,14 +47,7 @@ const getRenderFunction = (subMenuItem) => {
 };
 
 const renderSubMenuItems = (subMenuItems, onItemClick, SubMenuTrigger, layer) =>
-  subMenuItems.map((subMenuItem) =>
-    getRenderFunction(subMenuItem)(
-      subMenuItem,
-      onItemClick,
-      SubMenuTrigger,
-      layer
-    )
-  );
+  subMenuItems.map((subMenuItem) => getRenderFunction(subMenuItem)(subMenuItem, onItemClick, SubMenuTrigger, layer));
 
 const NoWrapLi = styled.li(
   (): CSSObject => ({

@@ -7,16 +7,8 @@ type MaybeTooltipProps = TooltipProps & {
   showTooltip?: boolean;
 };
 
-const MaybeTooltip = ({
-  children,
-  showTooltip,
-  ...props
-}: MaybeTooltipProps) => {
-  return showTooltip ? (
-    <Tooltip {...props}>{children}</Tooltip>
-  ) : (
-    <>{children}</>
-  );
+const MaybeTooltip = ({ children, showTooltip, ...props }: MaybeTooltipProps) => {
+  return showTooltip ? <Tooltip {...props}>{children}</Tooltip> : <>{children}</>;
 };
 
 MaybeTooltip.propTypes = {

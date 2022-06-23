@@ -101,17 +101,8 @@ export default {
 };
 
 const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
-  <Sidebar
-    isOpen={isOpen}
-    title="Filters"
-    onClose={onClose}
-    footer={<PrimaryButton>Apply</PrimaryButton>}
-    {...props}
-  >
-    <Select
-      options={[{ label: "first option", value: 1 }]}
-      labelText="Delivery:"
-    />
+  <Sidebar isOpen={isOpen} title="Filters" onClose={onClose} footer={<PrimaryButton>Apply</PrimaryButton>} {...props}>
+    <Select options={[{ label: "first option", value: 1 }]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
     <Select options={[]} labelText="Delivery:" />
@@ -138,10 +129,7 @@ export const _Sidebar = () => {
   };
 
   return (
-    <ApplicationFrame
-      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-      overflowX="hidden"
-    >
+    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -152,11 +140,7 @@ export const _Sidebar = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton
-            onClick={toggleSidebar}
-            ref={triggerRef}
-            id="openSidebarTrigger"
-          >
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
             Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="50%" bg="lightBlue" mt="x3" p="x2">
@@ -186,10 +170,7 @@ export const WithoutOverlay = () => {
   };
 
   return (
-    <ApplicationFrame
-      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-      overflowX="hidden"
-    >
+    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -200,11 +181,7 @@ export const WithoutOverlay = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton
-            onClick={toggleSidebar}
-            ref={triggerRef}
-            id="openSidebarTrigger"
-          >
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
             Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
@@ -236,10 +213,7 @@ export const OpenByDefault = () => {
   };
 
   return (
-    <ApplicationFrame
-      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-      overflowX="hidden"
-    >
+    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -250,11 +224,7 @@ export const OpenByDefault = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton
-            onClick={toggleSidebar}
-            ref={triggerRef}
-            id="openSidebarTrigger"
-          >
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
             Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
@@ -284,10 +254,7 @@ export const WithCustomOffset = () => {
   };
 
   return (
-    <ApplicationFrame
-      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-      overflowX="hidden"
-    >
+    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -298,11 +265,7 @@ export const WithCustomOffset = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton
-            onClick={toggleSidebar}
-            ref={triggerRef}
-            id="openSidebarTrigger"
-          >
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
             Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
@@ -334,10 +297,7 @@ export const DontCloseOnOutsideClick = () => {
   };
 
   return (
-    <ApplicationFrame
-      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-      overflowX="hidden"
-    >
+    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -348,11 +308,7 @@ export const DontCloseOnOutsideClick = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton
-            onClick={toggleSidebar}
-            ref={triggerRef}
-            id="openSidebarTrigger"
-          >
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
             Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="100%" bg="lightBlue" mt="x3" p="x2">
@@ -383,10 +339,7 @@ export const WithoutCloseButton = () => {
   };
 
   return (
-    <ApplicationFrame
-      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-      overflowX="hidden"
-    >
+    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -397,11 +350,7 @@ export const WithoutCloseButton = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton
-            onClick={toggleSidebar}
-            ref={triggerRef}
-            id="openSidebarTrigger"
-          >
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
             Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="50%" bg="lightBlue" mt="x3" p="x2">
@@ -432,10 +381,7 @@ export const WithALongTitle = () => {
   };
 
   return (
-    <ApplicationFrame
-      navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />}
-      overflowX="hidden"
-    >
+    <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />} overflowX="hidden">
       <Page
         breadcrumbs={
           <Breadcrumbs>
@@ -446,11 +392,7 @@ export const WithALongTitle = () => {
         title="Materials Overview"
       >
         <Box minWidth="300px">
-          <PrimaryButton
-            onClick={toggleSidebar}
-            ref={triggerRef}
-            id="openSidebarTrigger"
-          >
+          <PrimaryButton onClick={toggleSidebar} ref={triggerRef} id="openSidebarTrigger">
             Open Sidebar
           </PrimaryButton>
           <Box height="3000px" width="50%" bg="lightBlue" mt="x3" p="x2">

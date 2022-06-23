@@ -25,10 +25,7 @@ class PreventBodyElementScrolling extends React.Component {
 
 PreventBodyElementScrolling.propTypes = {
   children: PropTypes.node,
-  scrollableRef: PropTypes.oneOfType([
-    PropTypes.shape({}),
-    PropTypes.arrayOf(PropTypes.shape({})),
-  ]),
+  scrollableRef: PropTypes.oneOfType([PropTypes.shape({}), PropTypes.arrayOf(PropTypes.shape({}))]),
 };
 
 PreventBodyElementScrolling.defaultProps = {

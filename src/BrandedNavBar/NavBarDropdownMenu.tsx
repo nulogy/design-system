@@ -24,10 +24,7 @@ type NavBarDropdownMenuProps = {
   dropdownMenuContainerEventHandlers?: Function;
 };
 
-class StatelessNavBarDropdownMenuClass extends React.Component<
-  NavBarDropdownMenuProps,
-  any
-> {
+class StatelessNavBarDropdownMenuClass extends React.Component<NavBarDropdownMenuProps, any> {
   menuRef: any;
   triggerRef: any;
 }
@@ -91,8 +88,7 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
       dropdownMenuContainerEventHandlers,
       menuState: { isOpen, closeMenu, openMenu },
     } = this.props;
-    const childrenFnc =
-      typeof children === "function" ? children : () => children;
+    const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
         <Reference>
@@ -147,10 +143,7 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
                     backgroundColor="white"
                     borderColor="white"
                   />
-                  <DetectOutsideClick
-                    onClick={this.handleOutsideClick}
-                    clickRef={[this.menuRef, this.triggerRef]}
-                  />
+                  <DetectOutsideClick onClick={this.handleOutsideClick} clickRef={[this.menuRef, this.triggerRef]} />
                   {childrenFnc({
                     closeMenu,
                     openMenu,

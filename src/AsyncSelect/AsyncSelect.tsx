@@ -101,11 +101,7 @@ const AsyncSelect = forwardRef(
     const spaceProps = getSubset(props, propTypes.space);
     return (
       <Field {...spaceProps}>
-        <MaybeFieldLabel
-          labelText={labelText}
-          requirementText={requirementText}
-          helpText={helpText}
-        >
+        <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <AsyncReactSelect
             className={className}
             classNamePrefix={classNamePrefix}
@@ -155,11 +151,7 @@ const AsyncSelect = forwardRef(
             defaultOptions={defaultOptions}
             loadOptions={loadOptions}
           />
-          <InlineValidation
-            mt="x1"
-            errorMessage={errorMessage}
-            errorList={errorList}
-          />
+          <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
       </Field>
     );

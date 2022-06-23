@@ -7,19 +7,11 @@ export default {
 };
 
 export const Active = () => <LoadingAnimation>Example</LoadingAnimation>;
-export const Inactive = () => (
-  <LoadingAnimation inactive>Example</LoadingAnimation>
-);
+export const Inactive = () => <LoadingAnimation inactive>Example</LoadingAnimation>;
 
 export const PageExampleActive = () => (
   <Overlay flexDirection="column" m={{ extraSmall: "x2", small: "x3" }}>
-    <Flex
-      flexGrow={2}
-      flexDirection="column"
-      justifyContent="center"
-      margin="auto"
-      mb="x4"
-    >
+    <Flex flexGrow={2} flexDirection="column" justifyContent="center" margin="auto" mb="x4">
       <Text mb="x2" fontWeight="medium" textAlign="right">
         1/4
       </Text>
@@ -43,13 +35,7 @@ PageExampleActive.story = {
 
 export const PageExampleInactive = () => (
   <Overlay flexDirection="column" m={{ extraSmall: "x2", small: "x3" }}>
-    <Flex
-      flexGrow={2}
-      flexDirection="column"
-      justifyContent="center"
-      margin="auto"
-      mb="x4"
-    >
+    <Flex flexGrow={2} flexDirection="column" justifyContent="center" margin="auto" mb="x4">
       <Text mb="x2" fontWeight="medium" color="grey" textAlign="right">
         1/4
       </Text>

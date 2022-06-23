@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  ButtonGroup,
-  Button,
-  PrimaryButton,
-  DangerButton,
-  QuietButton,
-  IconicButton,
-} from "../index";
+import { Box, ButtonGroup, Button, PrimaryButton, DangerButton, QuietButton, IconicButton } from "../index";
 
 export default {
   title: "Components/ButtonGroup",

@@ -24,10 +24,7 @@ const transformColumn = (column, onChange) => {
   return {
     ...column,
     headerFormatter: ({ label, dataKey }) => (
-      <ColumnHeaderWithFilter
-        onChange={(e) => onChange(dataKey, e)}
-        label={label}
-      />
+      <ColumnHeaderWithFilter onChange={(e) => onChange(dataKey, e)} label={label} />
     ),
   };
 };
@@ -46,18 +43,12 @@ const TableWithFilters = ({ rowsPerPage }: TableWithFiltersProps) => {
 
   const filterRows = (filterObj) => {
     const filteredRows = Object.keys(filterObj).map((key) =>
-      ROWS.filter((row) =>
-        row[key].toLowerCase().includes(filterObj[key].toLowerCase())
-      )
+      ROWS.filter((row) => row[key].toLowerCase().includes(filterObj[key].toLowerCase()))
     );
-    const filteredRowsByLength = filteredRows.sort(
-      (a, b) => a.length - b.length
-    );
+    const filteredRowsByLength = filteredRows.sort((a, b) => a.length - b.length);
     const commonRows =
       filteredRowsByLength.length > 1
-        ? filteredRowsByLength[0].filter((row) =>
-            filteredRowsByLength[1].includes(row)
-          )
+        ? filteredRowsByLength[0].filter((row) => filteredRowsByLength[1].includes(row))
         : filteredRowsByLength[0] || ROWS;
     setRows(commonRows);
   };
@@ -72,17 +63,8 @@ const TableWithFilters = ({ rowsPerPage }: TableWithFiltersProps) => {
       [dataKey]: filterValue,
     }));
   };
-  const columns = COLUMNS.map((column) =>
-    transformColumn(column, onFilterInputChange)
-  );
-  return (
-    <Table
-      columns={columns}
-      rows={rows}
-      keyField="name"
-      rowsPerPage={rowsPerPage}
-    />
-  );
+  const columns = COLUMNS.map((column) => transformColumn(column, onFilterInputChange));
+  return <Table columns={columns} rows={rows} keyField="name" rowsPerPage={rowsPerPage} />;
 };
 
 export default {
@@ -95,9 +77,7 @@ WithFiltering.story = {
   name: "with filtering",
 };
 
-export const WithFilteringAndPagination = () => (
-  <TableWithFilters rowsPerPage={4} />
-);
+export const WithFilteringAndPagination = () => <TableWithFilters rowsPerPage={4} />;
 
 WithFilteringAndPagination.story = {
   name: "with filtering and pagination",

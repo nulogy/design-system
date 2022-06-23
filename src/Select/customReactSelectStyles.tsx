@@ -22,19 +22,10 @@ const getShadow = ({ errored, isOpen, theme }) => {
   }
 };
 
-export const showIndicatorSeparator = ({
-  isMulti,
-  hasValue,
-  hasDefaultOptions,
-}) => isMulti && hasValue && hasDefaultOptions;
+export const showIndicatorSeparator = ({ isMulti, hasValue, hasDefaultOptions }) =>
+  isMulti && hasValue && hasDefaultOptions;
 
-const customStyles = ({
-  theme,
-  error,
-  maxHeight,
-  windowed,
-  hasDefaultOptions = true,
-}) => {
+const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = true }) => {
   return {
     option: () => ({
       height: 38,
@@ -47,12 +38,8 @@ const customStyles = ({
       width: "100%",
       fontSize: theme.fontSizes.medium,
       lineHeight: theme.lineHeights.base,
-      color: state.isDisabled
-        ? transparentize(0.6667, theme.colors.black)
-        : theme.colors.black,
-      background: state.isDisabled
-        ? theme.colors.whiteGrey
-        : theme.colors.white,
+      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : theme.colors.black,
+      background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
       border: `1px solid ${theme.colors.grey}`,
       borderColor: getBorderColor({
         errored: error,
@@ -68,14 +55,9 @@ const customStyles = ({
         theme,
       }),
       borderRadius: theme.radii.medium,
-      borderBottomLeftRadius:
-        state.selectProps.menuIsOpen && state.selectProps.options.length
-          ? 0
-          : theme.radii.medium,
+      borderBottomLeftRadius: state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
       borderBottomRightRadius:
-        state.selectProps.menuIsOpen && state.selectProps.options.length
-          ? 0
-          : theme.radii.medium,
+        state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
       "&:hover, &:focus": {
         borderColor: getBorderColor({
           errored: error,
@@ -180,9 +162,7 @@ const customStyles = ({
     }),
     placeholder: (provided, state) => ({
       ...provided,
-      color: state.isDisabled
-        ? transparentize(0.6667, theme.colors.black)
-        : "hsl(0,0%,50%)",
+      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)",
     }),
   };
 };

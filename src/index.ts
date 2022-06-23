@@ -6,27 +6,14 @@ export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
 export { Text, Heading1, Heading2, Heading3, Heading4 } from "./Type";
 
-export {
-  Button,
-  PrimaryButton,
-  DangerButton,
-  QuietButton,
-  IconicButton,
-  ControlIcon,
-} from "./Button";
+export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton, ControlIcon } from "./Button";
 export { ButtonGroup } from "./ButtonGroup";
 export { Link } from "./Link";
 export { InlineValidation } from "./Validation";
 
 export { Alert } from "./Alert";
 export { Branding } from "./Branding";
-export {
-  DropdownMenu,
-  DropdownLink,
-  DropdownButton,
-  DropdownItem,
-  DropdownText,
-} from "./DropdownMenu";
+export { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, DropdownText } from "./DropdownMenu";
 export { HelpText, RequirementText, FieldLabel } from "./FieldLabel";
 export { Input } from "./Input";
 export { NavBar } from "./NavBar";
@@ -54,12 +41,7 @@ export { Tab, Tabs } from "./Tabs";
 export { Switch, Switcher } from "./Switcher";
 
 export { Table } from "./Table";
-export type {
-  TableProps,
-  TableColumnType,
-  TableRowType,
-  TableCellInfoType,
-} from "./Table";
+export type { TableProps, TableColumnType, TableRowType, TableCellInfoType } from "./Table";
 
 export { StatusIndicator } from "./StatusIndicator";
 export { Pagination } from "./Pagination";

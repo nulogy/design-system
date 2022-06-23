@@ -28,10 +28,7 @@ const ApplyMenuLinkStyles = styled.div<{
     "&:hover, &:focus": {
       outline: "none",
       color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(
-        `colors.${hoverBackground}`,
-        hoverBackground
-      )(hoverBackground),
+      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
       cursor: "pointer",
     },
     "&:disabled": {
@@ -62,10 +59,7 @@ const MenuLink = styled.a<{ hoverColor: string; hoverBackground: string }>(
     "&:hover, &:focus": {
       outline: "none",
       color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(
-        `colors.${hoverBackground}`,
-        hoverBackground
-      )(hoverBackground),
+      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
       cursor: "pointer",
     },
     "&:disabled": {
@@ -87,23 +81,13 @@ const Nav = styled.nav({
 
 const renderMenuTrigger = (menuItem, themeColorObject) => (
   <div key={menuItem.name}>
-    <MenuTrigger
-      name={menuItem.name}
-      aria-label={menuItem.ariaLabel}
-      menuData={menuItem.items}
-      {...themeColorObject}
-    />
+    <MenuTrigger name={menuItem.name} aria-label={menuItem.ariaLabel} menuData={menuItem.items} {...themeColorObject} />
   </div>
 );
 
 const renderMenuLink = (menuItem, themeColorObject) => (
   <div key={menuItem.name}>
-    <MenuLink
-      href={menuItem.href}
-      as={menuItem.as}
-      to={menuItem.to}
-      {...themeColorObject}
-    >
+    <MenuLink href={menuItem.href} as={menuItem.as} to={menuItem.to} {...themeColorObject}>
       {menuItem.name}
     </MenuLink>
   </div>
@@ -133,13 +117,10 @@ const getRenderFunction = (menuItem) => {
   }
 };
 
-const renderMenuItem = (menuItem, themeColorObject) =>
-  getRenderFunction(menuItem)(menuItem, themeColorObject);
+const renderMenuItem = (menuItem, themeColorObject) => getRenderFunction(menuItem)(menuItem, themeColorObject);
 
 const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
-  <Nav {...props}>
-    {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}
-  </Nav>
+  <Nav {...props}>{menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}</Nav>
 );
 
 BaseDesktopMenu.propTypes = {

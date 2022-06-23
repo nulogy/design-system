@@ -82,27 +82,14 @@ const Branding = ({
   className,
   ...props
 }: BrandingProps) => (
-  <BrandingWrap
-    size={size}
-    alignment={alignment}
-    className={className}
-    {...props}
-  >
+  <BrandingWrap size={size} alignment={alignment} className={className} {...props}>
     {logoType === "lettermark" ? (
       <LettermarkLogo size={size} letterFill={getLogoColor(logoColor).letter} />
     ) : (
-      <WordmarkLogo
-        size={size}
-        letterFill={getLogoColor(logoColor).letter}
-        logoFill={getLogoColor(logoColor).logo}
-      />
+      <WordmarkLogo size={size} letterFill={getLogoColor(logoColor).letter} logoFill={getLogoColor(logoColor).logo} />
     )}
     {subtext && (
-      <Flex
-        justifyContent={getAlignment(alignment)}
-        width="100%"
-        py={BrandingBoxPaddings[size]}
-      >
+      <Flex justifyContent={getAlignment(alignment)} width="100%" py={BrandingBoxPaddings[size]}>
         {alignment !== "left" && withLine && <Line logoColor={logoColor} />}
         <BrandingText
           logoColor={logoColor}

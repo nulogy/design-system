@@ -10,9 +10,7 @@ const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");
 };
 
-const buttonRenderer = ({ label }) => (
-  <Button onClick={action("button clicked")}>{label}</Button>
-);
+const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
 
 const sectionRow = ({ cellData }) => (
   <Box bg="lightBlue" py="x1" px="x2">
@@ -329,55 +327,41 @@ WithLotsOfRowsAndColumns.story = {
   name: "with lots of rows and columns",
 };
 
-export const WithCustomColumnWidths = () => (
-  <Table columns={columnsWithWidths} rows={rowDataWithWidths} />
-);
+export const WithCustomColumnWidths = () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />;
 
 WithCustomColumnWidths.story = {
   name: "with custom column widths",
 };
 
 export const WithACustomCellComponent = () => (
-  <Table
-    columns={getColumnsWithCellRenderer(dropdownCellRenderer)}
-    rows={rowData}
-  />
+  <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
 );
 
 WithACustomCellComponent.story = {
   name: "with a custom cell component",
 };
 
-export const WithCellAlignment = () => (
-  <Table columns={columnsWithAlignment} rows={rowData} />
-);
+export const WithCellAlignment = () => <Table columns={columnsWithAlignment} rows={rowData} />;
 
 WithCellAlignment.story = {
   name: "with cell alignment",
 };
 
-export const WithACellFormatter = () => (
-  <Table columns={columnsWithFormatter} rows={rowData} />
-);
+export const WithACellFormatter = () => <Table columns={columnsWithFormatter} rows={rowData} />;
 
 WithACellFormatter.story = {
   name: "with a cell formatter",
 };
 
 export const WithACustomColumnLabelComponent = () => (
-  <Table
-    columns={getColumnsWithHeaderFormatter(buttonRenderer)}
-    rows={rowData}
-  />
+  <Table columns={getColumnsWithHeaderFormatter(buttonRenderer)} rows={rowData} />
 );
 
 WithACustomColumnLabelComponent.story = {
   name: "with a custom column label component",
 };
 
-export const WithFullWidthSection = () => (
-  <Table columns={columns} rows={rowDataWithSections} />
-);
+export const WithFullWidthSection = () => <Table columns={columns} rows={rowDataWithSections} />;
 
 WithFullWidthSection.story = {
   name: "with full width section",

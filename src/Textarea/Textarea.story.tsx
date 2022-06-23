@@ -9,11 +9,7 @@ export default {
 };
 
 export const _Textarea = () => (
-  <Textarea
-    labelText="Label"
-    onChange={action("value changed")}
-    onBlur={action("blurred")}
-  />
+  <Textarea labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
 );
 
 export const TextareaWithAllProps = () => (
@@ -32,20 +28,14 @@ TextareaWithAllProps.story = {
   name: "Textarea with all props",
 };
 
-export const SetToDisabled = () => (
-  <Textarea labelText="Label" disabled value="Disabled" />
-);
+export const SetToDisabled = () => <Textarea labelText="Label" disabled value="Disabled" />;
 
 SetToDisabled.story = {
   name: "Set to disabled",
 };
 
 export const WithNoResizing = () => (
-  <Textarea
-    labelText="Label"
-    value="I shouldn't be able to be resized"
-    isResizeable={false}
-  />
+  <Textarea labelText="Label" value="I shouldn't be able to be resized" isResizeable={false} />
 );
 
 WithNoResizing.story = {
@@ -79,12 +69,7 @@ WithErrorList.story = {
 };
 
 export const WithCustomNumberOfRows = () => (
-  <Textarea
-    labelText="Label"
-    rows={7}
-    onChange={action("value changed")}
-    onBlur={action("blurred")}
-  />
+  <Textarea labelText="Label" rows={7} onChange={action("value changed")} onBlur={action("blurred")} />
 );
 
 WithCustomNumberOfRows.story = {
@@ -92,12 +77,7 @@ WithCustomNumberOfRows.story = {
 };
 
 export const WithCustomId = () => (
-  <Textarea
-    id="my-custom-id"
-    labelText="Label"
-    onChange={action("value changed")}
-    onBlur={action("blurred")}
-  />
+  <Textarea id="my-custom-id" labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
 );
 
 WithCustomId.story = {
@@ -112,13 +92,7 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Textarea
-        ref={ref}
-        labelText="Label"
-        rows={7}
-        onChange={action("value changed")}
-        onBlur={action("blurred")}
-      />
+      <Textarea ref={ref} labelText="Label" rows={7} onChange={action("value changed")} onBlur={action("blurred")} />
       <Button onClick={handleClick}>Focus the Input</Button>
     </>
   );

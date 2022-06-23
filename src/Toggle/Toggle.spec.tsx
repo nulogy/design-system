@@ -13,9 +13,7 @@ describe("Toggle", () => {
       const { container } = renderWithNDSProvider(
         <Toggle onChange={onChange} onClick={onClick} data-testid="toggle" />
       );
-      fireEvent.click(
-        container.querySelectorAll("[data-testid='toggle'] input")[0]
-      );
+      fireEvent.click(container.querySelectorAll("[data-testid='toggle'] input")[0]);
 
       expect(onChange).toHaveBeenCalled();
       expect(onClick).toHaveBeenCalled();

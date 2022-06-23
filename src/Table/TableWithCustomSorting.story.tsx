@@ -51,8 +51,7 @@ const TableWithCustomSorting = () => {
     let newSortState;
 
     setSortState((previousState) => {
-      const ascending =
-        previousState.sortColumn !== dataKey || !previousState.ascending;
+      const ascending = previousState.sortColumn !== dataKey || !previousState.ascending;
       newSortState = { ascending, sortColumn: dataKey };
 
       return newSortState;
@@ -62,8 +61,7 @@ const TableWithCustomSorting = () => {
   };
 
   const transformColumn = (column) => {
-    const isAscending =
-      sortState.ascending && column.dataKey === sortState.sortColumn;
+    const isAscending = sortState.ascending && column.dataKey === sortState.sortColumn;
 
     return {
       ...column,

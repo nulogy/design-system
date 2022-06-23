@@ -23,13 +23,7 @@ interface CheckboxGroupProps {
 
 const getCheckboxButtons = (props) => {
   const checkboxButtons = React.Children.map(props.children, (checkbox) => {
-    const {
-      value,
-      disabled,
-      required,
-      onChange,
-      ...checkboxProps
-    } = checkbox.props;
+    const { value, disabled, required, onChange, ...checkboxProps } = checkbox.props;
     return (
       <Checkbox
         {...checkboxProps}
@@ -38,12 +32,8 @@ const getCheckboxButtons = (props) => {
         error={!!(props.errorMessage || props.errorList)}
         required={props.required || required}
         name={props.name}
-        defaultChecked={
-          props.defaultValue ? props.defaultValue.includes(value) : undefined
-        }
-        checked={
-          props.checkedValue ? props.checkedValue.includes(value) : undefined
-        }
+        defaultChecked={props.defaultValue ? props.defaultValue.includes(value) : undefined}
+        checked={props.checkedValue ? props.checkedValue.includes(value) : undefined}
         onChange={props.onChange || onChange}
       />
     );
@@ -76,17 +66,11 @@ const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
     <Fieldset className={className} id={id} hasHelpText={!!helpText}>
       <Legend>
         <LabelText>{labelText}</LabelText>
-        {requirementText && (
-          <RequirementText>{requirementText}</RequirementText>
-        )}
+        {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </Legend>
       {helpText && <HelpText>{helpText}</HelpText>}
       {getCheckboxButtons(otherProps)}
-      <InlineValidation
-        mt="x1"
-        errorMessage={errorMessage}
-        errorList={errorList}
-      />
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
     </Fieldset>
   );
 };

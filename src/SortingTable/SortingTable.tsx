@@ -17,11 +17,7 @@ type SortState = {
 const numericAlphabeticalSort = (a, b, numeric) =>
   String(a).localeCompare(b, undefined, { numeric, sensitivity: "base" });
 
-const applySort = (
-  rows: RowType[],
-  sortColumn: string,
-  columns: SortableColumnType[]
-) =>
+const applySort = (rows: RowType[], sortColumn: string, columns: SortableColumnType[]) =>
   [...rows].sort((a, b) => {
     const column = columns.find((col) => col.dataKey === sortColumn);
     const { numeric } = column;
@@ -29,11 +25,7 @@ const applySort = (
     return numericAlphabeticalSort(a[sortColumn], b[sortColumn], numeric);
   });
 
-const sortRows = (
-  rows: RowType[],
-  columns: SortableColumnType[],
-  sortState: SortState
-) => {
+const sortRows = (rows: RowType[], columns: SortableColumnType[], sortState: SortState) => {
   const sortedRows = applySort(rows, sortState.sortColumn, columns);
 
   return sortState.ascending ? sortedRows : sortedRows.reverse();
@@ -50,29 +42,23 @@ const SortingTable: React.FC<SortingTableProps> = ({
     sortColumn: initialSortColumn,
   });
 
-  const [rows, setRows] = useState(() =>
-    sortRows(incomingRows, incomingColumns, sortState)
-  );
+  const [rows, setRows] = useState(() => sortRows(incomingRows, incomingColumns, sortState));
 
   const onSortChange = (dataKey) => {
     let newSortState;
 
     setSortState((previousState) => {
-      const ascending =
-        previousState.sortColumn !== dataKey || !previousState.ascending;
+      const ascending = previousState.sortColumn !== dataKey || !previousState.ascending;
       newSortState = { ascending, sortColumn: dataKey };
 
       return newSortState;
     });
 
-    setRows((previousState) =>
-      sortRows(previousState, incomingColumns, newSortState)
-    );
+    setRows((previousState) => sortRows(previousState, incomingColumns, newSortState));
   };
 
   const transformColumn = (column) => {
-    const isAscending =
-      sortState.ascending && column.dataKey === sortState.sortColumn;
+    const isAscending = sortState.ascending && column.dataKey === sortState.sortColumn;
 
     return {
       ...column,

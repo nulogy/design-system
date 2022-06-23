@@ -195,41 +195,31 @@ export default {
   title: "Components/NavBar",
 };
 
-export const _NavBar = () => (
-  <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />
-);
+export const _NavBar = () => <NavBar menuData={{ primaryMenu, secondaryMenu, search }} />;
 
 _NavBar.story = {
   name: "NavBar",
 };
 
-export const WithoutSearch = () => (
-  <NavBar menuData={{ primaryMenu, secondaryMenu }} />
-);
+export const WithoutSearch = () => <NavBar menuData={{ primaryMenu, secondaryMenu }} />;
 
 WithoutSearch.story = {
   name: "Without search",
 };
 
-export const WithoutSecondaryMenu = () => (
-  <NavBar menuData={{ primaryMenu, search }} />
-);
+export const WithoutSecondaryMenu = () => <NavBar menuData={{ primaryMenu, search }} />;
 
 WithoutSecondaryMenu.story = {
   name: "Without secondary menu",
 };
 
-export const WithoutSearchAndSecondaryMenu = () => (
-  <NavBar menuData={{ primaryMenu }} />
-);
+export const WithoutSearchAndSecondaryMenu = () => <NavBar menuData={{ primaryMenu }} />;
 
 WithoutSearchAndSecondaryMenu.story = {
   name: "Without search and secondary menu",
 };
 
-export const WithoutSearchAndPrimaryMenu = () => (
-  <NavBar menuData={{ secondaryMenu }} />
-);
+export const WithoutSearchAndPrimaryMenu = () => <NavBar menuData={{ secondaryMenu }} />;
 
 WithoutSearchAndPrimaryMenu.story = {
   name: "Without search and primary menu",
@@ -255,19 +245,14 @@ WithCustomLinkComponents.story = {
   name: "With custom link components",
 };
 
-export const WithTextInTheMenu = () => (
-  <NavBar menuData={{ primaryMenu: primaryMenuText }} />
-);
+export const WithTextInTheMenu = () => <NavBar menuData={{ primaryMenu: primaryMenuText }} />;
 
 WithTextInTheMenu.story = {
   name: "With text in the menu",
 };
 
 export const WithSubtext = () => (
-  <NavBar
-    subtext="Logo Subtext"
-    menuData={{ primaryMenu: primaryMenuCustomLinks, search }}
-  />
+  <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks, search }} />
 );
 
 WithSubtext.story = {
@@ -275,10 +260,7 @@ WithSubtext.story = {
 };
 
 export const WithAlternativeBrandingLink = () => (
-  <NavBar
-    brandingLinkHref="/portal"
-    menuData={{ primaryMenu: primaryMenuCustomLinks }}
-  />
+  <NavBar brandingLinkHref="/portal" menuData={{ primaryMenu: primaryMenuCustomLinks }} />
 );
 
 WithAlternativeBrandingLink.story = {
@@ -286,11 +268,7 @@ WithAlternativeBrandingLink.story = {
 };
 
 export const WithAlternateThemeColor = () => (
-  <NavBar
-    subtext="Logo Subtext"
-    menuData={{ primaryMenu: primaryMenuCustomLinks }}
-    themeColor="white"
-  />
+  <NavBar subtext="Logo Subtext" menuData={{ primaryMenu: primaryMenuCustomLinks }} themeColor="white" />
 );
 
 WithAlternateThemeColor.story = {

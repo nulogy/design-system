@@ -131,13 +131,7 @@ export const Toast = ({
       {...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES)}
       zIndex={zIndex}
     >
-      <AnimatedAlert
-        visible={visible}
-        isCloseable={isCloseable}
-        onClose={handleCloseButtonClick}
-        controlled
-        {...props}
-      >
+      <AnimatedAlert visible={visible} isCloseable={isCloseable} onClose={handleCloseButtonClick} controlled {...props}>
         {children}
       </AnimatedAlert>
     </Box>

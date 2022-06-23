@@ -12,13 +12,7 @@ type PageProps = FlexProps & {
   headerContent?: React.ReactNode;
 };
 
-export const Page = ({
-  breadcrumbs,
-  title,
-  children,
-  headerContent,
-  ...props
-}: PageProps) => (
+export const Page = ({ breadcrumbs, title, children, headerContent, ...props }: PageProps) => (
   <Flex flexDirection="column" py="x3" px="x3" {...props}>
     {breadcrumbs}
     <Flex alignItems="center">

@@ -41,22 +41,14 @@ type SubMenuTriggerButtonProps = {
   onMouseLeave: any;
 };
 
-const SubMenuTriggerButton = React.forwardRef<any, SubMenuTriggerButtonProps>(
-  ({ name, isOpen, ...props }, ref) => (
-    <StyledButton isOpen={isOpen} ref={ref} {...props}>
-      <>
-        {name}
-        <Icon
-          style={{ position: "absolute", top: "7px" }}
-          icon="rightArrow"
-          color="darkBlue"
-          size="20px"
-          p="2px"
-        />
-      </>
-    </StyledButton>
-  )
-);
+const SubMenuTriggerButton = React.forwardRef<any, SubMenuTriggerButtonProps>(({ name, isOpen, ...props }, ref) => (
+  <StyledButton isOpen={isOpen} ref={ref} {...props}>
+    <>
+      {name}
+      <Icon style={{ position: "absolute", top: "7px" }} icon="rightArrow" color="darkBlue" size="20px" p="2px" />
+    </>
+  </StyledButton>
+));
 
 SubMenuTriggerButton.propTypes = {
   name: PropTypes.string.isRequired,
@@ -81,12 +73,7 @@ const SubMenuTrigger = (props) => {
         onMouseLeave: closeMenu,
       })}
       trigger={({ closeMenu, openMenu, isOpen }) => (
-        <SubMenuTriggerButton
-          isOpen={isOpen}
-          name={name}
-          onMouseEnter={openMenu}
-          onMouseLeave={closeMenu}
-        />
+        <SubMenuTriggerButton isOpen={isOpen} name={name} onMouseEnter={openMenu} onMouseLeave={closeMenu} />
       )}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>

@@ -8,12 +8,7 @@ export default {
 };
 
 export const Default = () => (
-  <TimePicker
-    p="x3"
-    onChange={action("time changed")}
-    onInputChange={action("input changed")}
-    labelText="Start Time"
-  />
+  <TimePicker p="x3" onChange={action("time changed")} onInputChange={action("input changed")} labelText="Start Time" />
 );
 
 Default.story = {
@@ -118,14 +113,7 @@ WithCustomDefault.story = {
 
 const ControlledTimePicker = () => {
   const [value, setValue] = useState("13:43");
-  return (
-    <TimePicker
-      onChange={setValue}
-      onInputChange={setValue}
-      labelText="End Time"
-      value={value}
-    />
-  );
+  return <TimePicker onChange={setValue} onInputChange={setValue} labelText="End Time" value={value} />;
 };
 
 export const WithValue = () => <ControlledTimePicker />;

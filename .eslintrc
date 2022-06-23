@@ -25,6 +25,8 @@
       {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
-    ]
+    ],
+    // Do not mark formatting violations as errors
+    "prettier/prettier": 0
   }
 }

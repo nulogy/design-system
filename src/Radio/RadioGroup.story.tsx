@@ -36,11 +36,7 @@ export const RadioGroupWithAllProps = () => (
       labelText={
         <>
           Option A
-          <Tooltip
-            placement="bottom"
-            tooltip="Option A is a special option with extra information"
-            defaultOpen
-          >
+          <Tooltip placement="bottom" tooltip="Option A is a special option with extra information" defaultOpen>
             <Icon icon="help" color="darkBlue" size="16px" ml="x1" />
           </Tooltip>
         </>
@@ -91,12 +87,7 @@ WithErrorList.story = {
 };
 
 export const SetToDisabled = () => (
-  <RadioGroup
-    disabled
-    labelText="Setting Selection"
-    name="settingSelection"
-    defaultValue="a"
-  >
+  <RadioGroup disabled labelText="Setting Selection" name="settingSelection" defaultValue="a">
     <Radio value="a" labelText="Option A" />
     <Radio value="b" labelText="Option B" />
     <Radio value="c" labelText="Option C" />
@@ -108,12 +99,7 @@ SetToDisabled.story = {
 };
 
 export const Controlled = () => (
-  <RadioGroup
-    labelText="Setting Selection"
-    name="settingSelection"
-    checkedValue="a"
-    onChange={() => {}}
-  >
+  <RadioGroup labelText="Setting Selection" name="settingSelection" checkedValue="a" onChange={() => {}}>
     <Radio value="a" labelText="Option A" />
     <Radio value="b" labelText="Option B" />
     <Radio value="c" labelText="Option C" />

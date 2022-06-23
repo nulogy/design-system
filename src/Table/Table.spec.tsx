@@ -16,13 +16,7 @@ describe("Table", () => {
         const callback = jest.fn();
 
         const { container } = renderWithNDSProvider(
-          <Table
-            columns={columns}
-            rows={rowData}
-            hasSelectableRows
-            keyField="c1"
-            onRowSelectionChange={callback}
-          />
+          <Table columns={columns} rows={rowData} hasSelectableRows keyField="c1" onRowSelectionChange={callback} />
         );
 
         fireEvent.click(container.querySelectorAll("input")[1]);
@@ -35,13 +29,7 @@ describe("Table", () => {
         const callback = jest.fn();
 
         const { container } = renderWithNDSProvider(
-          <Table
-            columns={columns}
-            rows={rowData}
-            hasSelectableRows
-            keyField="c1"
-            onRowSelectionChange={callback}
-          />
+          <Table columns={columns} rows={rowData} hasSelectableRows keyField="c1" onRowSelectionChange={callback} />
         );
 
         fireEvent.click(container.querySelectorAll("input")[0]);
@@ -77,12 +65,7 @@ describe("Table", () => {
         const callback = jest.fn();
 
         const { container } = renderWithNDSProvider(
-          <Table
-            columns={getMockColumns(3)}
-            rows={rowData}
-            hasExpandableRows
-            onRowExpansionChange={callback}
-          />
+          <Table columns={getMockColumns(3)} rows={rowData} hasExpandableRows onRowExpansionChange={callback} />
         );
 
         fireEvent.click(container.querySelectorAll("button")[0]);
@@ -113,12 +96,7 @@ describe("Table", () => {
         const callback = jest.fn();
 
         const { container } = renderWithNDSProvider(
-          <Table
-            columns={getMockColumns(3)}
-            rows={rowData}
-            hasExpandableRows
-            onRowExpansionChange={callback}
-          />
+          <Table columns={getMockColumns(3)} rows={rowData} hasExpandableRows onRowExpansionChange={callback} />
         );
 
         fireEvent.click(container.querySelectorAll("button")[1]);
@@ -190,13 +168,7 @@ describe("Table", () => {
       });
       it("renders the inner Pagination with correct props", () => {
         const wrapper = mountWithNDSProvider(
-          <Table
-            columns={mockColumns}
-            rows={getMockRows(20)}
-            hasSelectableRows
-            keyField="c1"
-            rowsPerPage={6}
-          />
+          <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows keyField="c1" rowsPerPage={6} />
         );
         const pagination = wrapper.find(Pagination);
         expect(pagination.length).toEqual(1);
@@ -205,12 +177,7 @@ describe("Table", () => {
       });
       it("does not display pagination when rowsPerPage is falsy", () => {
         const wrapper = mountWithNDSProvider(
-          <Table
-            columns={mockColumns}
-            rows={getMockRows(20)}
-            hasSelectableRows
-            keyField="c1"
-          />
+          <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows keyField="c1" />
         );
         const pagination = wrapper.find(Pagination);
         const rows = wrapper.find("tbody tr");
@@ -222,12 +189,7 @@ describe("Table", () => {
   describe("loading", () => {
     it("shows only loading text when loading", () => {
       const wrapper = mountWithNDSProvider(
-        <Table
-          columns={mockColumns}
-          rows={getMockRows(20)}
-          hasSelectableRows
-          loading
-        />
+        <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows loading />
       );
       const rows = wrapper.find("tbody tr");
       const loadingCell = wrapper.find("tbody tr td");
@@ -237,12 +199,7 @@ describe("Table", () => {
     it("shows rows when not loading", () => {
       const rowData = getMockRows(20);
       const wrapper = mountWithNDSProvider(
-        <Table
-          columns={mockColumns}
-          rows={rowData}
-          hasSelectableRows
-          loading={false}
-        />
+        <Table columns={mockColumns} rows={rowData} hasSelectableRows loading={false} />
       );
       const rows = wrapper.find("tbody tr");
       const cell = wrapper.find("tbody tr td");
@@ -258,12 +215,7 @@ describe("Table", () => {
         const callback = jest.fn();
 
         const { getAllByTestId } = renderWithNDSProvider(
-          <Table
-            columns={columns}
-            rows={rowData}
-            keyField="c1"
-            onRowMouseEnter={callback}
-          />
+          <Table columns={columns} rows={rowData} keyField="c1" onRowMouseEnter={callback} />
         );
 
         fireEvent.mouseEnter(getAllByTestId("table-row")[1]);
@@ -280,12 +232,7 @@ describe("Table", () => {
         const callback = jest.fn();
 
         const { getAllByTestId } = renderWithNDSProvider(
-          <Table
-            columns={columns}
-            rows={rowData}
-            keyField="c1"
-            onRowMouseLeave={callback}
-          />
+          <Table columns={columns} rows={rowData} keyField="c1" onRowMouseLeave={callback} />
         );
 
         fireEvent.mouseLeave(getAllByTestId("table-row")[1]);

@@ -2,8 +2,7 @@ describe("Timepicker", () => {
   const getTimePickerSelect = () => cy.get("[data-testid*='select-container']");
   const TIME_OPTIONS_SELECTOR = "[data-testid*='select-dropdown']";
   const TIME_OPTION_SELECTOR = "[data-testid*='select-option']";
-  const TIME_OPTION_SELECTED_SELECTOR =
-    "[data-testid*='selected-select-option']";
+  const TIME_OPTION_SELECTED_SELECTOR = "[data-testid*='selected-select-option']";
   const TIME_OPTION_CLOSEST_SELECTOR = "[data-testid*='closest-select-option']";
   const getSelectedOption = () => cy.get(TIME_OPTION_SELECTED_SELECTOR);
   const getClosestOption = () => cy.get(TIME_OPTION_CLOSEST_SELECTOR);
@@ -110,9 +109,7 @@ describe("Timepicker", () => {
     describe("scrolls to closest times", () => {
       it("shows matching times by interval", () => {
         getInput().click();
-        cy.focused().type(
-          "{backspace}{backspace}{backspace}{backspace}{backspace}5:"
-        );
+        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}5:");
         getDropdownOptions().contains("4:45").should("be.visible");
         getDropdownOptions().contains("5:00").should("be.visible");
         getDropdownOptions().contains("5:15").should("be.visible");
@@ -120,9 +117,7 @@ describe("Timepicker", () => {
       });
       it("shows times by minute when minutes are added", () => {
         getInput().click();
-        cy.focused().type(
-          "{backspace}{backspace}{backspace}{backspace}{backspace}23:"
-        );
+        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}23:");
         cy.focused().type("1");
         getDropdownOptions().contains("22:45").should("be.visible");
         getDropdownOptions().contains("23:00").should("be.visible");
@@ -139,9 +134,7 @@ describe("Timepicker", () => {
     describe("scrolls to closest times", () => {
       it("shows matching times by interval", () => {
         getInput().click();
-        cy.focused().type(
-          "{backspace}{backspace}{backspace}{backspace}{backspace}5:"
-        );
+        cy.focused().type("{backspace}{backspace}{backspace}{backspace}{backspace}5:");
         getDropdownOptions().contains("4:00").should("be.visible");
         getDropdownOptions().contains("04:30").should("be.visible");
         getDropdownOptions().contains("5:00").should("be.visible");

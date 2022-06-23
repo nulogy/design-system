@@ -20,16 +20,8 @@ const Input: React.FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
     const restProps = omitSubset(props, propTypes.space);
     return (
       <Field className={className} {...spaceProps}>
-        <InputField
-          {...restProps}
-          error={!!(errorMessage || errorList)}
-          ref={ref}
-        />
-        <InlineValidation
-          mt="x1"
-          errorMessage={errorMessage}
-          errorList={errorList}
-        />
+        <InputField {...restProps} error={!!(errorMessage || errorList)} ref={ref} />
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
     );
   }

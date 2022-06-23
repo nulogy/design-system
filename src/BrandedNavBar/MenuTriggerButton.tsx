@@ -12,12 +12,7 @@ type StyledButtonProps = React.ComponentPropsWithRef<"button"> & {
 };
 
 const StyledButton = styled.button(
-  ({
-    color = "white",
-    hoverColor = "lightBlue",
-    hoverBackground = "black",
-    theme,
-  }: StyledButtonProps): CSSObject => ({
+  ({ color = "white", hoverColor = "lightBlue", hoverBackground = "black", theme }: StyledButtonProps): CSSObject => ({
     display: "flex",
     alignItems: "center",
     position: "relative",
@@ -53,27 +48,9 @@ type MenuTriggerButtonProps = React.ComponentPropsWithRef<"button"> & {
   hoverBackground?: string;
 };
 
-const MenuTriggerButton = React.forwardRef<
-  HTMLButtonElement,
-  MenuTriggerButtonProps
->(
-  (
-    {
-      name,
-      color,
-      hoverColor,
-      hoverBackground,
-      ...props
-    }: MenuTriggerButtonProps,
-    ref
-  ) => (
-    <StyledButton
-      color={color}
-      hoverColor={hoverColor}
-      hoverBackground={hoverBackground}
-      ref={ref}
-      {...props}
-    >
+const MenuTriggerButton = React.forwardRef<HTMLButtonElement, MenuTriggerButtonProps>(
+  ({ name, color, hoverColor, hoverBackground, ...props }: MenuTriggerButtonProps, ref) => (
+    <StyledButton color={color} hoverColor={hoverColor} hoverBackground={hoverBackground} ref={ref} {...props}>
       {name}
       <Icon
         style={{

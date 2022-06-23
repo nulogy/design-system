@@ -1,13 +1,5 @@
 import styled, { CSSObject } from "styled-components";
-import {
-  color,
-  space,
-  typography,
-  ColorProps,
-  SpaceProps,
-  LayoutProps,
-  TypographyProps,
-} from "styled-system";
+import { color, space, typography, ColorProps, SpaceProps, LayoutProps, TypographyProps } from "styled-system";
 import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import { DefaultNDSThemeType } from "../theme.type";
@@ -35,13 +27,10 @@ const resetButtonStyles = {
 };
 
 const getHoverColor = (props: LinkProps) =>
-  props.hover
-    ? props.color
-    : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
+  props.hover ? props.color : darken("0.1", themeGet(`colors.${props.color}`, props.color)(props));
 
 const Link = styled.a.withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) =>
-    !["underline", "hover"].includes(prop) && defaultValidatorFn(prop),
+  shouldForwardProp: (prop, defaultValidatorFn) => !["underline", "hover"].includes(prop) && defaultValidatorFn(prop),
 })<LinkProps>(
   color,
   space,

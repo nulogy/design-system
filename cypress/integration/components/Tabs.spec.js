@@ -9,10 +9,7 @@ describe("Tabs", () => {
     });
 
     it("selects the tab on click", () => {
-      getTab(1)
-        .should("have.attr", "aria-selected", "false")
-        .click()
-        .should("have.attr", "aria-selected", "true");
+      getTab(1).should("have.attr", "aria-selected", "false").click().should("have.attr", "aria-selected", "true");
     });
 
     it("moves focus to the tab on click", () => {
@@ -145,25 +142,13 @@ describe("Tabs", () => {
     it("shows the content for each tab on click", () => {
       getTab(1).click();
 
-      cy.get("[aria-hidden=false]").should(
-        "have.text",
-        "Uncontrolled Content: Tab 1"
-      );
-      cy.get(".ControlledTabContent").should(
-        "have.text",
-        "Controlled Content: Tab 1"
-      );
+      cy.get("[aria-hidden=false]").should("have.text", "Uncontrolled Content: Tab 1");
+      cy.get(".ControlledTabContent").should("have.text", "Controlled Content: Tab 1");
 
       getTab(2).click();
 
-      cy.get("[aria-hidden=false]").should(
-        "have.text",
-        "Uncontrolled Content: Tab 2"
-      );
-      cy.get(".ControlledTabContent").should(
-        "have.text",
-        "Controlled Content: Tab 2"
-      );
+      cy.get("[aria-hidden=false]").should("have.text", "Uncontrolled Content: Tab 2");
+      cy.get(".ControlledTabContent").should("have.text", "Controlled Content: Tab 2");
     });
   });
 
@@ -174,5 +159,5 @@ describe("Tabs", () => {
     it("focuses on the default selected tab", () => {
       cy.focused().should("have.text", "Tab 2");
     });
-  })
+  });
 });

@@ -138,12 +138,7 @@ const Modal: ReactModal = ({
             ) : (
               <div style={{ height: themeContext.space.x4 }} />
             )}
-            {onRequestClose && (
-              <ModalCloseButton
-                onClick={onRequestClose}
-                aria-label={closeAriaLabel}
-              />
-            )}
+            {onRequestClose && <ModalCloseButton onClick={onRequestClose} aria-label={closeAriaLabel} />}
           </ModalHeader>
         )}
         <ModalContent hasFooter={!!footerContent}>{children}</ModalContent>

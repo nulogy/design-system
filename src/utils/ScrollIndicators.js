@@ -18,11 +18,7 @@ const ScrollIndicatorTop = () => (
       pointerEvents: "none",
     }}
   >
-    <Icon
-      style={{ display: "block", margin: "0 auto" }}
-      color="darkGrey"
-      icon="upArrow"
-    />
+    <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="upArrow" />
   </div>
 );
 
@@ -41,11 +37,7 @@ const ScrollIndicatorBottom = () => (
       pointerEvents: "none",
     }}
   >
-    <Icon
-      style={{ display: "block", margin: "0 auto" }}
-      color="darkGrey"
-      icon="downArrow"
-    />
+    <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="downArrow" />
   </div>
 );
 

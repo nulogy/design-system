@@ -23,8 +23,8 @@ const Switcher: React.FC<SwitcherProps> = ({ selected, onChange, ...rest }) => {
   const getSelectedIndex = () => {
     return React.Children.toArray(rest.children).findIndex(
       (child) => (child as ReactElement)?.props?.value === selected
-    )
-  }
+    );
+  };
 
   const options = (focusedIndex, setFocusedIndex, handleArrowNavigation) => {
     return React.Children.map(rest.children, (child, index) => {

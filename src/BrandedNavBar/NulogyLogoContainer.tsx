@@ -11,10 +11,7 @@ type NulogyLogoContainerProps = {
   height?: string;
 };
 
-export const NulogyLogoContainer = ({
-  subText,
-  height,
-}: NulogyLogoContainerProps) => (
+export const NulogyLogoContainer = ({ subText, height }: NulogyLogoContainerProps) => (
   <Flex
     px="x1"
     py="half"

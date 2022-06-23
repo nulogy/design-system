@@ -45,11 +45,7 @@ const Textarea: React.FC<TextareaProps> = forwardRef(
 
     return (
       <Field className={className} {...spaceProps}>
-        <MaybeFieldLabel
-          labelText={labelText}
-          requirementText={requirementText}
-          helpText={helpText}
-        >
+        <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <StyledTextarea
             aria-invalid={error}
             aria-required={required}
@@ -64,11 +60,7 @@ const Textarea: React.FC<TextareaProps> = forwardRef(
             {...restProps}
           />
         </MaybeFieldLabel>
-        <InlineValidation
-          mt="x1"
-          errorMessage={errorMessage}
-          errorList={errorList}
-        />
+        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
     );
   }

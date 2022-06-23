@@ -50,23 +50,21 @@ const getTooltipMargin = (placement) => {
   }
 };
 
-const TooltipContainer = styled(Box)(
-  ({ theme, dataPlacement, open, position }: TooltipContainerProps): any => ({
-    color: tooltipStyles(theme).textColor,
-    display: "flex",
-    flexDirection: "column",
-    fontSize: theme.fontSizes.small,
-    backgroundColor: tooltipStyles(theme).backgroundColor,
-    borderRadius: theme.radii.medium,
-    border: `1px solid ${tooltipStyles(theme).borderColor}`,
-    boxShadow: theme.shadows.medium,
-    padding: theme.space.x1,
-    transition: "opacity 0.3s",
-    zIndex: theme.zIndices.content,
-    ...getTooltipMargin(dataPlacement),
-    position,
-    top: open ? 0 : "-9999px",
-  })
-);
+const TooltipContainer = styled(Box)(({ theme, dataPlacement, open, position }: TooltipContainerProps): any => ({
+  color: tooltipStyles(theme).textColor,
+  display: "flex",
+  flexDirection: "column",
+  fontSize: theme.fontSizes.small,
+  backgroundColor: tooltipStyles(theme).backgroundColor,
+  borderRadius: theme.radii.medium,
+  border: `1px solid ${tooltipStyles(theme).borderColor}`,
+  boxShadow: theme.shadows.medium,
+  padding: theme.space.x1,
+  transition: "opacity 0.3s",
+  zIndex: theme.zIndices.content,
+  ...getTooltipMargin(dataPlacement),
+  position,
+  top: open ? 0 : "-9999px",
+}));
 
 export default TooltipContainer;

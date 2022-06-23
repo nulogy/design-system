@@ -14,18 +14,14 @@ WithoutALabel.story = {
   name: "without a label",
 };
 
-export const WithLabel = () => (
-  <IconicButton icon="delete">Delete</IconicButton>
-);
+export const WithLabel = () => <IconicButton icon="delete">Delete</IconicButton>;
 
 WithLabel.story = {
   name: "with label",
 };
 
 export const WithALongLabel = () => (
-  <IconicButton icon="user">
-    I am an Iconic Button with a really really really long label
-  </IconicButton>
+  <IconicButton icon="user">I am an Iconic Button with a really really really long label</IconicButton>
 );
 
 WithALongLabel.story = {

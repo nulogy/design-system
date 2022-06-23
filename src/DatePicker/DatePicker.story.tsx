@@ -17,12 +17,7 @@ export default {
 
 export const Default = () => (
   <DatePicker
-    selected={select(
-      "selected",
-      selectedDateExamples,
-      selectedDateExamples[0],
-      "selected"
-    )}
+    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
@@ -35,12 +30,7 @@ Default.story = {
 
 export const WithCustomDateFormat = () => (
   <DatePicker
-    selected={select(
-      "selected",
-      selectedDateExamples,
-      selectedDateExamples[0],
-      "selected"
-    )}
+    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     dateFormat="MMMM d, yyyy"
     onChange={action("date changed")}
     onInputChange={action("input changed")}
@@ -96,12 +86,7 @@ WithMinAndMaxDate.story = {
 
 export const DisableFlipping = () => (
   <DatePicker
-    selected={select(
-      "selected",
-      selectedDateExamples,
-      selectedDateExamples[0],
-      "selected"
-    )}
+    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}

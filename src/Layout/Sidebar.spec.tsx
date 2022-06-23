@@ -19,9 +19,7 @@ describe("Sidebar", () => {
     });
 
     it("shows an overlay by default", () => {
-      const { queryByTestId } = renderWithNDSProvider(
-        <Sidebar isOpen>Sidebar</Sidebar>
-      );
+      const { queryByTestId } = renderWithNDSProvider(<Sidebar isOpen>Sidebar</Sidebar>);
       expect(queryByTestId("sidebar-overlay")).toBeTruthy();
     });
 

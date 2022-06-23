@@ -12,29 +12,24 @@ type SelectOptionProps = {
   theme?: DefaultNDSThemeType;
 };
 
-const StyledOption = styled.div(
-  typography,
-  ({ isSelected, isFocused, theme }: SelectOptionProps) => ({
-    "&:last-child": {
-      borderBottomLeftRadius: theme.radii.medium,
-      borderBottomRightRadius: theme.radii.medium,
+const StyledOption = styled.div(typography, ({ isSelected, isFocused, theme }: SelectOptionProps) => ({
+  "&:last-child": {
+    borderBottomLeftRadius: theme.radii.medium,
+    borderBottomRightRadius: theme.radii.medium,
+  },
+  div: {
+    padding: subPx(theme.space.x1),
+    fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
+    background: isFocused ? theme.colors.lightBlue : null,
+    minHeight: theme.space.x4,
+    minWidth: "max-content",
+    whiteSpace: "nowrap",
+    "&:hover": {
+      background: !isSelected ? theme.colors.lightBlue : null,
+      cursor: "pointer",
     },
-    div: {
-      padding: subPx(theme.space.x1),
-      fontWeight: isSelected
-        ? theme.fontWeights.medium
-        : theme.fontWeights.normal,
-      background: isFocused ? theme.colors.lightBlue : null,
-      minHeight: theme.space.x4,
-      minWidth: "max-content",
-      whiteSpace: "nowrap",
-      "&:hover": {
-        background: !isSelected ? theme.colors.lightBlue : null,
-        cursor: "pointer",
-      },
-    },
-  })
-);
+  },
+}));
 
 export const SelectOption = (props) => {
   return (

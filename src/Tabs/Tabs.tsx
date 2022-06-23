@@ -27,8 +27,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     super(props);
     const { defaultSelectedIndex } = this.props;
     this.state = {
-      selectedIndex:
-        defaultSelectedIndex === null ? null : defaultSelectedIndex,
+      selectedIndex: defaultSelectedIndex === null ? null : defaultSelectedIndex,
     };
     this.tabContent = [];
     this.tabContainerRef = React.createRef();
@@ -40,9 +39,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
   getSelectedIndex() {
     const { selectedIndex: controlledSelectedIndex } = this.props;
     const { selectedIndex: uncontrolledSelectedIndex } = this.state;
-    return controlledSelectedIndex === undefined
-      ? uncontrolledSelectedIndex
-      : controlledSelectedIndex;
+    return controlledSelectedIndex === undefined ? uncontrolledSelectedIndex : controlledSelectedIndex;
   }
 
   getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
@@ -111,10 +108,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
       <Box position="relative">
         <FocusManager refs={this.tabRefs} defaultFocusedIndex={this.getSelectedIndex()}>
           {({ focusedIndex, setFocusedIndex, handleArrowNavigation }) => (
-            <TabScrollIndicators
-              tabRefs={this.tabRefs}
-              tabContainerRef={this.tabContainerRef}
-            >
+            <TabScrollIndicators tabRefs={this.tabRefs} tabContainerRef={this.tabContainerRef}>
               {({ handleScroll, handleResize }) => (
                 <TabContainer
                   className={className}
@@ -124,11 +118,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
                   {...spaceProps}
                 >
                   <ReactResizeDetector handleWidth onResize={handleResize} />
-                  {this.getTabs(
-                    setFocusedIndex,
-                    focusedIndex,
-                    handleArrowNavigation
-                  )}
+                  {this.getTabs(setFocusedIndex, focusedIndex, handleArrowNavigation)}
                 </TabContainer>
               )}
             </TabScrollIndicators>

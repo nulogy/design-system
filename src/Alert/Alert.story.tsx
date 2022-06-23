@@ -7,22 +7,12 @@ export default {
   title: "Components/Alert",
 };
 
-export const Danger = () => (
-  <Alert type="danger">{text("Alert Text", "Danger alert")}</Alert>
-);
-export const Informative = () => (
-  <Alert>{text("Alert Text", "Informative alert")}</Alert>
-);
-export const Success = () => (
-  <Alert type="success">{text("Alert Text", "Success alert")}</Alert>
-);
-export const Warning = () => (
-  <Alert type="warning">{text("Alert Text", "Warning alert")}</Alert>
-);
+export const Danger = () => <Alert type="danger">{text("Alert Text", "Danger alert")}</Alert>;
+export const Informative = () => <Alert>{text("Alert Text", "Informative alert")}</Alert>;
+export const Success = () => <Alert type="success">{text("Alert Text", "Success alert")}</Alert>;
+export const Warning = () => <Alert type="warning">{text("Alert Text", "Warning alert")}</Alert>;
 export const WithACloseButton = () => (
-  <Alert isCloseable={boolean("isCloseable", true)}>
-    {text("Alert Text", "Warning alert")}
-  </Alert>
+  <Alert isCloseable={boolean("isCloseable", true)}>{text("Alert Text", "Warning alert")}</Alert>
 );
 
 WithACloseButton.story = {

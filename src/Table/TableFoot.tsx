@@ -13,13 +13,7 @@ const StyledFooterRow = styled.tr(({ theme }) => ({
 
 const renderRows = (rows, columns, keyField, loading, compact) =>
   rows.map((row) => (
-    <TableFooterRow
-      row={row}
-      columns={columns}
-      key={row[keyField]}
-      loading={loading}
-      compact={compact}
-    />
+    <TableFooterRow row={row} columns={columns} key={row[keyField]} loading={loading} compact={compact} />
   ));
 
 const TableFooterRow = ({ row, columns, loading, compact }) => {
@@ -31,12 +25,7 @@ const TableFooterRow = ({ row, columns, loading, compact }) => {
     <StyledFooterRow>
       {columnsWithoutControls.map((column, index) =>
         index === 0 ? (
-          <StyledTh
-            key={column.dataKey}
-            scope="row"
-            colSpan={numberOfControlColumns + 1}
-            compact={compact}
-          >
+          <StyledTh key={column.dataKey} scope="row" colSpan={numberOfControlColumns + 1} compact={compact}>
             {row[column.dataKey]}
           </StyledTh>
         ) : (

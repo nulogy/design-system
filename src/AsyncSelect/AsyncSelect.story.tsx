@@ -18,13 +18,8 @@ const northAmericanCountries = [
   },
 ];
 
-const simulatedAPIRequest = async (
-  inputValue: string,
-  milliseconds = 450
-): Promise<Response> => {
-  const country = northAmericanCountries.find((country) =>
-    country.value.toLowerCase().startsWith(inputValue)
-  );
+const simulatedAPIRequest = async (inputValue: string, milliseconds = 450): Promise<Response> => {
+  const country = northAmericanCountries.find((country) => country.value.toLowerCase().startsWith(inputValue));
 
   const responseBody = JSON.stringify([{ name: country.value }]);
 
@@ -161,12 +156,7 @@ export const Controlled = () => {
 
   return (
     <>
-      <AsyncSelect
-        onChange={handleChange}
-        value={value}
-        labelText="Country"
-        loadOptions={loadMatchingCountries}
-      />
+      <AsyncSelect onChange={handleChange} value={value} labelText="Country" loadOptions={loadMatchingCountries} />
       <Button onClick={handleClear}>Clear</Button>
     </>
   );

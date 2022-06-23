@@ -41,13 +41,8 @@ WithASetWidth.story = {
 };
 
 export const WithAResponsiveWidth = () => (
-  <Box
-    p="x3"
-    width={{ extraSmall: 1, small: 1 / 2, medium: 1 / 4 }}
-    bg="whiteGrey"
-  >
-    Full width on extra small screens, 1/2 width on small and 1/4 width on
-    medium
+  <Box p="x3" width={{ extraSmall: 1, small: 1 / 2, medium: 1 / 4 }} bg="whiteGrey">
+    Full width on extra small screens, 1/2 width on small and 1/4 width on medium
   </Box>
 );
 

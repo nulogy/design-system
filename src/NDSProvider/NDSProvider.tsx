@@ -24,12 +24,7 @@ type AllNDSGlobalStylesProps = {
   children?: any;
 };
 
-const AllNDSGlobalStyles = ({
-  theme,
-  locale,
-  disableGlobalStyles,
-  children,
-}: AllNDSGlobalStylesProps) =>
+const AllNDSGlobalStyles = ({ theme, locale, disableGlobalStyles, children }: AllNDSGlobalStylesProps) =>
   !disableGlobalStyles ? (
     <>
       <Reset />
@@ -42,23 +37,14 @@ const AllNDSGlobalStyles = ({
     children
   );
 
-const NDSProvider = ({
-  theme,
-  children,
-  disableGlobalStyles = false,
-  locale = "en_US",
-}: NDSProviderProps) => {
+const NDSProvider = ({ theme, children, disableGlobalStyles = false, locale = "en_US" }: NDSProviderProps) => {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
   const mergedTheme = mergeThemes(NDSTheme, theme);
   return (
     <LocaleContext.Provider value={{ locale }}>
-      <AllNDSGlobalStyles
-        theme={mergedTheme}
-        locale={locale}
-        disableGlobalStyles={disableGlobalStyles}
-      >
+      <AllNDSGlobalStyles theme={mergedTheme} locale={locale} disableGlobalStyles={disableGlobalStyles}>
         <I18nextProvider i18n={i18n}>
           <ThemeProvider theme={mergedTheme}>{children}</ThemeProvider>
         </I18nextProvider>

@@ -1,12 +1,5 @@
 import styled from "styled-components";
-import {
-  space,
-  color,
-  typography,
-  SpaceProps,
-  ColorProps,
-  TypographyProps,
-} from "styled-system";
+import { space, color, typography, SpaceProps, ColorProps, TypographyProps } from "styled-system";
 type ListItemProps = React.ComponentPropsWithRef<"li"> &
   SpaceProps &
   ColorProps &

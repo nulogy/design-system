@@ -5,19 +5,10 @@ import { useTranslation } from "react-i18next";
 import { Icon } from "../Icon";
 import PaginationButton from "./PaginationButton";
 
-const PreviousButton = ({
-  disabled,
-  onClick,
-  label,
-  "aria-label": ariaLabel,
-}: any) => {
+const PreviousButton = ({ disabled, onClick, label, "aria-label": ariaLabel }: any) => {
   const { t } = useTranslation();
   return (
-    <PaginationButton
-      disabled={disabled}
-      onClick={onClick}
-      aria-label={ariaLabel || t("go to previous results")}
-    >
+    <PaginationButton disabled={disabled} onClick={onClick} aria-label={ariaLabel || t("go to previous results")}>
       <Icon icon="leftArrow" ml="-8px" /> {label || t("previous")}
     </PaginationButton>
   );

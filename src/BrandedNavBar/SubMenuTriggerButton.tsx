@@ -1,7 +1,4 @@
-import styled, {
-  CSSObject,
-  StyledComponentPropsWithRef,
-} from "styled-components";
+import styled, { CSSObject, StyledComponentPropsWithRef } from "styled-components";
 import React from "react";
 import { DropdownButton } from "../DropdownMenu";
 import { Icon } from "../Icon";
@@ -18,20 +15,14 @@ type SubMenuTriggerButtonProps = React.ComponentPropsWithRef<"button"> & {
   isOpen: boolean;
 };
 
-const SubMenuTriggerButton = React.forwardRef<
-  HTMLButtonElement,
-  SubMenuTriggerButtonProps
->(({ name, isOpen, ...props }, ref) => (
-  <StyledButton isOpen={isOpen} ref={ref} {...props}>
-    {name}
-    <Icon
-      style={{ position: "absolute", top: "10px" }}
-      icon="rightArrow"
-      size="20px"
-      p="2px"
-    />
-  </StyledButton>
-));
+const SubMenuTriggerButton = React.forwardRef<HTMLButtonElement, SubMenuTriggerButtonProps>(
+  ({ name, isOpen, ...props }, ref) => (
+    <StyledButton isOpen={isOpen} ref={ref} {...props}>
+      {name}
+      <Icon style={{ position: "absolute", top: "10px" }} icon="rightArrow" size="20px" p="2px" />
+    </StyledButton>
+  )
+);
 
 SubMenuTriggerButton.displayName = "SubMenuTriggerButton";
 

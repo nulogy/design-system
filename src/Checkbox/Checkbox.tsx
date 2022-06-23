@@ -93,36 +93,26 @@ const VisualCheckbox: React.FunctionComponent<any> = styled.div(
     },
   })
 );
-const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input(
-  (props) => ({
-    position: "absolute",
-    opacity: "0",
-    height: "1px",
-    width: "1px",
-    [`&:focus + ${VisualCheckbox}`]: {
-      boxShadow: props.theme.shadows.focus,
+const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input((props) => ({
+  position: "absolute",
+  opacity: "0",
+  height: "1px",
+  width: "1px",
+  [`&:focus + ${VisualCheckbox}`]: {
+    boxShadow: props.theme.shadows.focus,
+  },
+  [`&:checked + ${VisualCheckbox}`]: {
+    ...getCheckboxStyle(props, "checked"),
+    "&:before": {
+      display: "block",
     },
-    [`&:checked + ${VisualCheckbox}`]: {
-      ...getCheckboxStyle(props, "checked"),
-      "&:before": {
-        display: "block",
-      },
-    },
-    [`&:not(:checked) + ${VisualCheckbox}`]: {
-      ...getCheckboxStyle(props, "unchecked"),
-    },
-  })
-);
+  },
+  [`&:not(:checked) + ${VisualCheckbox}`]: {
+    ...getCheckboxStyle(props, "unchecked"),
+  },
+}));
 const Checkbox: React.FC<any> = forwardRef((props, ref) => {
-  const {
-    className,
-    labelText,
-    disabled,
-    checked,
-    required,
-    error,
-    indeterminate,
-  } = props;
+  const { className, labelText, disabled, checked, required, error, indeterminate } = props;
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
   return (

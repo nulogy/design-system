@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  DropdownMenu,
-  DropdownLink,
-  DropdownButton,
-  DropdownItem,
-  DropdownText,
-  Button,
-} from "../index";
+import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, DropdownText, Button } from "../index";
 
 const customColors = {
   color: "white",
@@ -45,12 +38,7 @@ WithCustomTrigger.story = {
 };
 
 export const WithCustomColors = () => (
-  <DropdownMenu
-    defaultOpen
-    backgroundColor="blackBlue"
-    openAriaLabel="open dropdown"
-    closeAriaLabel="close dropdown"
-  >
+  <DropdownMenu defaultOpen backgroundColor="blackBlue" openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownLink href="/never_been" {...customColors}>
       Dropdown Link
     </DropdownLink>
@@ -66,9 +54,7 @@ WithCustomColors.story = {
 
 export const WithButtonClosingMenu = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-    {({ closeMenu }) => (
-      <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>
-    )}
+    {({ closeMenu }) => <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>}
   </DropdownMenu>
 );
 
@@ -77,11 +63,7 @@ WithButtonClosingMenu.story = {
 };
 
 export const WithCustomLink = () => (
-  <DropdownMenu
-    defaultOpen
-    openAriaLabel="open dropdown"
-    closeAriaLabel="close dropdown"
-  >
+  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownItem>
       <a href="/never_been">Custom Link Component</a>
     </DropdownItem>
@@ -95,11 +77,7 @@ export const WithCustomText = () => (
 );
 
 export const SetToDefaultOpen = () => (
-  <DropdownMenu
-    defaultOpen
-    openAriaLabel="open dropdown"
-    closeAriaLabel="close dropdown"
-  >
+  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
     <DropdownItem>
@@ -116,11 +94,7 @@ SetToDefaultOpen.story = {
 };
 
 export const WithVisitedLinks = () => (
-  <DropdownMenu
-    defaultOpen
-    openAriaLabel="open dropdown"
-    closeAriaLabel="close dropdown"
-  >
+  <DropdownMenu defaultOpen openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownLink href="/">Dropdown Link</DropdownLink>
     <DropdownItem>
       <a href="/" style={{ textDecoration: "none" }}>
@@ -131,11 +105,7 @@ export const WithVisitedLinks = () => (
 );
 
 export const SetToDisabled = () => (
-  <DropdownMenu
-    disabled
-    openAriaLabel="open dropdown"
-    closeAriaLabel="close dropdown"
-  >
+  <DropdownMenu disabled openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
     <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
   </DropdownMenu>

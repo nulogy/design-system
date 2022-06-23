@@ -55,9 +55,7 @@ const addExpandableColumn = ({ columns, onRowExpansionChange }) => {
 const addExpandableCell = ({ rows, keyField, expandedRows }) => {
   const expandableCellData = (rowKey) => {
     return {
-      [EXPANDABLE_COLUMN_DATA_KEY]: expandedRows
-        ? expandedRows.includes(rowKey)
-        : false,
+      [EXPANDABLE_COLUMN_DATA_KEY]: expandedRows ? expandedRows.includes(rowKey) : false,
     };
   };
   const transformedRows = rows.map((row) => ({

@@ -15,12 +15,7 @@ const insertSeparators = (items: any, className: any) => {
     return acc.concat(
       current,
       // eslint-disable-next-line react/no-array-index-key
-      <BreadcrumbsListItem
-        aria-hidden
-        key={`separator-${index}`}
-        className={className}
-        px="x1"
-      >
+      <BreadcrumbsListItem aria-hidden key={`separator-${index}`} className={className} px="x1">
         <Icon icon="rightArrow" />
       </BreadcrumbsListItem>
     );
@@ -41,9 +36,7 @@ const Breadcrumbs = ({ children, as, ...props }: BreadcrumbsProps) => {
   });
   return (
     <Flex as={as} {...props}>
-      <BreadcrumbsList>
-        {insertSeparators(allItems, "seperator")}
-      </BreadcrumbsList>
+      <BreadcrumbsList>{insertSeparators(allItems, "seperator")}</BreadcrumbsList>
     </Flex>
   );
 };

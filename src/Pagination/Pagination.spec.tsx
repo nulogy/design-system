@@ -12,33 +12,9 @@ describe("Pagination", () => {
       expect(getPageItemstoDisplay(5, 1)).toEqual([1, 2, 3, 4, 5]);
     });
     it("it returns an array of page numbers with truncation at the beginning when current page is 5 pages from the end", () => {
-      expect(getPageItemstoDisplay(12, 10)).toEqual([
-        1,
-        "...",
-        8,
-        9,
-        10,
-        11,
-        12,
-      ]);
-      expect(getPageItemstoDisplay(20, 20)).toEqual([
-        1,
-        "...",
-        16,
-        17,
-        18,
-        19,
-        20,
-      ]);
-      expect(getPageItemstoDisplay(12, 8)).toEqual([
-        1,
-        "...",
-        8,
-        9,
-        10,
-        11,
-        12,
-      ]);
+      expect(getPageItemstoDisplay(12, 10)).toEqual([1, "...", 8, 9, 10, 11, 12]);
+      expect(getPageItemstoDisplay(20, 20)).toEqual([1, "...", 16, 17, 18, 19, 20]);
+      expect(getPageItemstoDisplay(12, 8)).toEqual([1, "...", 8, 9, 10, 11, 12]);
     });
     it("it returns an array of page numbers with truncation at the end when current page is 5 pages from the beginning", () => {
       expect(getPageItemstoDisplay(15, 1)).toEqual([1, 2, 3, 4, 5, "...", 15]);
@@ -46,26 +22,8 @@ describe("Pagination", () => {
       expect(getPageItemstoDisplay(8, 2)).toEqual([1, 2, 3, 4, 5, "...", 8]);
     });
     it("it returns an array of page numbers with truncation at the both sides is in the middle", () => {
-      expect(getPageItemstoDisplay(15, 6)).toEqual([
-        1,
-        "...",
-        5,
-        6,
-        7,
-        8,
-        "...",
-        15,
-      ]);
-      expect(getPageItemstoDisplay(15, 10)).toEqual([
-        1,
-        "...",
-        9,
-        10,
-        11,
-        12,
-        "...",
-        15,
-      ]);
+      expect(getPageItemstoDisplay(15, 6)).toEqual([1, "...", 5, 6, 7, 8, "...", 15]);
+      expect(getPageItemstoDisplay(15, 10)).toEqual([1, "...", 9, 10, 11, 12, "...", 15]);
     });
   });
   describe("callbacks", () => {

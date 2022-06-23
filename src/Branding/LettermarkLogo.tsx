@@ -14,11 +14,7 @@ type LettermarkLogoProps = {
   letterFill?: string;
   size?: string;
 };
-const LettermarkLogo: React.FC<LettermarkLogoProps> = ({
-  size,
-  letterFill,
-  ...props
-}) => (
+const LettermarkLogo: React.FC<LettermarkLogoProps> = ({ size, letterFill, ...props }) => (
   <svg
     {...getSize(size)}
     {...props}

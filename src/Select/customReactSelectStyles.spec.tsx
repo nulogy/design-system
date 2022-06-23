@@ -15,9 +15,7 @@ describe("custom react-select styles", () => {
     `(
       "returns $expected when isMulti is $isMulti, hasValue is $hasValue, and hasDefaultOptions is $hasDefaultOptions",
       ({ isMulti, hasValue, hasDefaultOptions, expected }) => {
-        expect(
-          showIndicatorSeparator({ isMulti, hasValue, hasDefaultOptions })
-        ).toBe(expected);
+        expect(showIndicatorSeparator({ isMulti, hasValue, hasDefaultOptions })).toBe(expected);
       }
     );
   });

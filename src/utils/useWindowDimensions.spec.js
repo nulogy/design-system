@@ -1,8 +1,6 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
-import useWindowDimensions, {
-  getWindowDimensionInfo,
-} from "./useWindowDimensions";
+import useWindowDimensions, { getWindowDimensionInfo } from "./useWindowDimensions";
 import { act } from "react-dom/test-utils";
 
 // simulate window resize

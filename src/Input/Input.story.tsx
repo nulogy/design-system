@@ -8,13 +8,7 @@ export default {
   title: "Components/Input",
 };
 
-export const _Input = () => (
-  <Input
-    labelText="Input"
-    onChange={action("value changed")}
-    onBlur={action("blurred")}
-  />
-);
+export const _Input = () => <Input labelText="Input" onChange={action("value changed")} onBlur={action("blurred")} />;
 
 export const WithAllProps = () => (
   <Input
@@ -34,12 +28,7 @@ WithAllProps.story = {
 };
 
 export const SetToDisabled = () => (
-  <Input
-    labelText="Set to disabled"
-    disabled
-    onBlur={action("blurred")}
-    value="Disabled"
-  />
+  <Input labelText="Set to disabled" disabled onBlur={action("blurred")} value="Disabled" />
 );
 
 SetToDisabled.story = {
@@ -47,12 +36,7 @@ SetToDisabled.story = {
 };
 
 export const WithErrorMessage = () => (
-  <Input
-    labelText="Label"
-    errorMessage="Error message"
-    onChange={action("value changed")}
-    onBlur={action("blurred")}
-  />
+  <Input labelText="Label" errorMessage="Error message" onChange={action("value changed")} onBlur={action("blurred")} />
 );
 
 WithErrorMessage.story = {
@@ -74,12 +58,7 @@ WithErrorList.story = {
 };
 
 export const WithCustomId = () => (
-  <Input
-    id="my-own-id"
-    labelText="Label"
-    onChange={action("value changed")}
-    onBlur={action("blurred")}
-  />
+  <Input id="my-own-id" labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
 );
 
 WithCustomId.story = {
@@ -89,12 +68,7 @@ WithCustomId.story = {
 export const SetToRequired = () => (
   <>
     <Form title="Required field example">
-      <Input
-        required
-        labelText="Label"
-        onChange={action("value changed")}
-        onBlur={action("blurred")}
-      />
+      <Input required labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
       <PrimaryButton>Send</PrimaryButton>
     </Form>
   </>
@@ -127,11 +101,7 @@ export const WithAAffixPrefixAndSuffix = () => (
       </FormSection>
       <FormSection title="With right alignment">
         <Input prefix="Eaches" prefixWidth="360px" prefixAlignment="right" />
-        <Input
-          prefix="Pallets and boxes"
-          prefixWidth="360px"
-          prefixAlignment="right"
-        />
+        <Input prefix="Pallets and boxes" prefixWidth="360px" prefixAlignment="right" />
       </FormSection>
     </Form>
     <Form title="Prefix and Suffix" mb="x6">
@@ -152,13 +122,7 @@ export const UsingRefToControlFocus = () => {
 
   return (
     <>
-      <Input
-        id="my-own-id"
-        ref={ref}
-        labelText="Label"
-        onChange={action("value changed")}
-        onBlur={action("blurred")}
-      />
+      <Input id="my-own-id" ref={ref} labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
       <Button onClick={handleClick}>Focus the Input</Button>
     </>
   );

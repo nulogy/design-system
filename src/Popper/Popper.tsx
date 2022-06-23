@@ -60,11 +60,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
     };
     const setPopUpState = (nextIsOpenState, skipDelay) => {
       clearTimeout(timeoutID);
-      conditionallyApplyDelay(
-        () => setIsOpen(nextIsOpenState),
-        nextIsOpenState ? showDelay : hideDelay,
-        skipDelay
-      );
+      conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
     };
     const closePopUp = (skipDelay) => {
       setPopUpState(false, skipDelay);
@@ -133,9 +129,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
       });
     const renderInnerChildren = () => {
       const innerChildren = children.props.children;
-      return typeof innerChildren !== "string"
-        ? transformInnerChildren(innerChildren)
-        : innerChildren;
+      return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
     };
     const { t } = useTranslation();
     const openLabel = openAriaLabel || t("open");
@@ -170,9 +164,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
                       top: isOpen ? 0 : "-9999px",
                     },
                     dataPlacement: placement,
-                    className: `${
-                      children.props.className || ""
-                    } nds-popper-pop-up`,
+                    className: `${children.props.className || ""} nds-popper-pop-up`,
                     ...eventHandlers,
                   },
                   [

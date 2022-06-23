@@ -30,20 +30,17 @@ const buttonSpacings = (theme) => ({
   },
 });
 const getAlignment = (alignment) => alignments[alignment] || alignments.left;
-const getButtonSpacing = (alignment, theme) =>
-  buttonSpacings(theme)[alignment] || buttonSpacings(theme).left;
+const getButtonSpacing = (alignment, theme) => buttonSpacings(theme)[alignment] || buttonSpacings(theme).left;
 
-const ButtonGroup: React.FC<ButtonGroupProps> = styled(Flex)(
-  ({ alignment, theme }: any) => ({
-    flexWrap: "wrap",
-    marginBottom: `-${theme.space.x1}`,
-    justifyContent: getAlignment(alignment),
-    button: {
-      marginBottom: theme.space.x1,
-    },
-    ...getButtonSpacing(alignment, theme),
-  })
-);
+const ButtonGroup: React.FC<ButtonGroupProps> = styled(Flex)(({ alignment, theme }: any) => ({
+  flexWrap: "wrap",
+  marginBottom: `-${theme.space.x1}`,
+  justifyContent: getAlignment(alignment),
+  button: {
+    marginBottom: theme.space.x1,
+  },
+  ...getButtonSpacing(alignment, theme),
+}));
 ButtonGroup.defaultProps = {
   alignment: "left",
   className: undefined,

@@ -25,10 +25,7 @@ const getSharedStyles = ({ color, layer }) => ({
   borderRadius: theme.radii.medium,
   fontSize: layer === 0 ? theme.fontSizes.large : theme.fontSizes.medium,
   lineHeight: layer === 0 ? theme.lineHeights.heading3 : theme.lineHeights.base,
-  padding:
-    layer === 0
-      ? `${theme.space.x1} ${theme.space.x3}`
-      : `${theme.space.x1} ${theme.space.x2}`,
+  padding: layer === 0 ? `${theme.space.x1} ${theme.space.x3}` : `${theme.space.x1} ${theme.space.x2}`,
   paddingLeft: getPaddingLeft(layer),
   marginBottom: theme.space.x1,
 });
@@ -45,10 +42,7 @@ const ApplyMenuLinkStyles = styled.li<{
     "&:hover, &:focus": {
       outline: "none",
       color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(
-        `colors.${hoverBackground}`,
-        hoverBackground
-      )(hoverBackground),
+      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     },
     "&:disabled": {
       opacity: ".5",
@@ -85,10 +79,7 @@ const MenuLink = styled.a<{
   "&:hover, &:focus": {
     outline: "none",
     color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(
-      `colors.${hoverBackground}`,
-      hoverBackground
-    )(hoverBackground),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
     cursor: "pointer",
   },
   "&:focus": {
@@ -113,10 +104,7 @@ const SubMenuItemsList = styled.ul({
 });
 
 const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <li
-    key={menuItem.name}
-    style={{ display: "block", marginBottom: theme.space.x1 }}
-  >
+  <li key={menuItem.name} style={{ display: "block", marginBottom: theme.space.x1 }}>
     <MenuLink
       layer={layer}
       {...themeColorObject}
@@ -131,24 +119,14 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
 );
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <ApplyMenuLinkStyles
-    key={menuItem.name}
-    {...themeColorObject}
-    layer={layer}
-    onClick={linkOnClick}
-  >
+  <ApplyMenuLinkStyles key={menuItem.name} {...themeColorObject} layer={layer} onClick={linkOnClick}>
     {menuItem.render()}
   </ApplyMenuLinkStyles>
 );
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
   <li key={menuItem.name} style={{ display: "block" }}>
-    <SubMenu
-      menuItem={menuItem}
-      layer={layer}
-      themeColorObject={themeColorObject}
-      linkOnClick={linkOnClick}
-    />
+    <SubMenu menuItem={menuItem} layer={layer} themeColorObject={themeColorObject} linkOnClick={linkOnClick} />
   </li>
 );
 
@@ -185,31 +163,15 @@ const getSubMenuHeading = (layer, color, name) =>
       {name}
     </Heading3>
   ) : (
-    <Text
-      mb={theme.space.x1}
-      color={color}
-      py={theme.space.x1}
-      style={{ paddingLeft: getPaddingLeft(layer) }}
-    >
+    <Text mb={theme.space.x1} color={color} py={theme.space.x1} style={{ paddingLeft: getPaddingLeft(layer) }}>
       {name}
     </Text>
   );
 
 const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
   <>
-    {getSubMenuHeading(
-      layer,
-      themeColorObject && themeColorObject.textColor,
-      menuItem.name
-    )}
-    <SubMenuItemsList>
-      {renderMenuItems(
-        menuItem.items,
-        linkOnClick,
-        themeColorObject,
-        layer + 1
-      )}
-    </SubMenuItemsList>
+    {getSubMenuHeading(layer, themeColorObject && themeColorObject.textColor, menuItem.name)}
+    <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
   </>
 );
 
@@ -256,40 +218,16 @@ const Nav = styled.nav<{
   }
 );
 
-const BaseMobileMenu = ({
-  menuData,
-  closeMenu,
-  subtext,
-  includeSubtext,
-  themeColorObject,
-  ...props
-}) => (
-  <Nav
-    backgroundColor={themeColorObject && themeColorObject.background}
-    {...props}
-  >
+const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeColorObject, ...props }) => (
+  <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     {subtext && includeSubtext && (
       <BrandingWrap>
-        <BrandingText
-          logoColor={themeColorObject && themeColorObject.logoColor}
-        >
-          {subtext}
-        </BrandingText>
+        <BrandingText logoColor={themeColorObject && themeColorObject.logoColor}>{subtext}</BrandingText>
       </BrandingWrap>
     )}
     <Menu>
-      {menuData.primaryMenu &&
-        renderTopLayerMenuItems(
-          menuData.primaryMenu,
-          closeMenu,
-          themeColorObject
-        )}
-      {menuData.secondaryMenu &&
-        renderTopLayerMenuItems(
-          menuData.secondaryMenu,
-          closeMenu,
-          themeColorObject
-        )}
+      {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
+      {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
     </Menu>
   </Nav>
 );

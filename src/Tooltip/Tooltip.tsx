@@ -27,19 +27,7 @@ export type TooltipProps = {
 };
 
 const Tooltip: React.FC<TooltipProps> = React.forwardRef(
-  (
-    {
-      className,
-      tooltip,
-      maxWidth,
-      children,
-      placement,
-      showDelay,
-      hideDelay,
-      defaultOpen,
-    },
-    ref
-  ) => (
+  ({ className, tooltip, maxWidth, children, placement, showDelay, hideDelay, defaultOpen }, ref) => (
     <Popper
       ref={ref}
       popperPlacement={placement}
@@ -49,11 +37,7 @@ const Tooltip: React.FC<TooltipProps> = React.forwardRef(
       trigger={children}
       id={generateId()}
     >
-      <TooltipContainer
-        className={className}
-        maxWidth={maxWidth}
-        role="tooltip"
-      >
+      <TooltipContainer className={className} maxWidth={maxWidth} role="tooltip">
         {tooltip}
       </TooltipContainer>
     </Popper>

@@ -47,26 +47,8 @@ const StyledButton: React.FC<any> = styled.button(
 );
 
 const ControlIcon = React.forwardRef(
-  (
-    {
-      icon,
-      toggled,
-      disabled,
-      label,
-      size = "x4",
-      type = "button",
-      ...props
-    }: ControlIconProps,
-    ref
-  ) => (
-    <StyledButton
-      aria-label={label}
-      ref={ref}
-      disabled={disabled}
-      toggled={toggled}
-      type={type}
-      {...props}
-    >
+  ({ icon, toggled, disabled, label, size = "x4", type = "button", ...props }: ControlIconProps, ref) => (
+    <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} type={type} {...props}>
       <Icon size={size} icon={icon} />
     </StyledButton>
   )

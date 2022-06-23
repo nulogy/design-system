@@ -1,12 +1,6 @@
 import PropTypes from "prop-types";
 
-const isValidMenuItem = function validArrayItem(
-  arr,
-  idx,
-  componentName,
-  location,
-  propFullName
-) {
+const isValidMenuItem = function validArrayItem(arr, idx, componentName, location, propFullName) {
   const obj = arr[idx];
 
   if (typeof obj !== "object") {

@@ -63,13 +63,7 @@ const BaseTable: React.FC<BaseTableProps> = ({
       onRowMouseEnter={onRowMouseEnter}
     />
     {footerRows && (
-      <TableFoot
-        columns={columns}
-        rows={footerRows}
-        keyField={keyField}
-        loading={loading}
-        compact={compact}
-      />
+      <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} compact={compact} />
     )}
   </StyledTable>
 );

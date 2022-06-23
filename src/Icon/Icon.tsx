@@ -27,18 +27,7 @@ const getPathElements = (icon: any) => (
 /* eslint-enable react/no-array-index-key */
 
 const Svg = React.forwardRef<SVGSVGElement, IconProps>(
-  (
-    {
-      icon,
-      size,
-      focusable,
-      className,
-      color: fillColor,
-      title,
-      ...props
-    }: IconProps,
-    ref
-  ) => {
+  ({ icon, size, focusable, className, color: fillColor, title, ...props }: IconProps, ref) => {
     const { space } = useTheme();
     if (icon === "loading") {
       return (
