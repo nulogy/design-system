@@ -99,6 +99,7 @@ export const Toast = ({
       setVisible(false);
       if (onHide) onHide();
     }
+    return () => {cancelHidingToast()}
   }, [triggered]);
   const onMouseIn = () => {
     if (!isCloseable) {
