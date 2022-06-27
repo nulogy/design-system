@@ -102,9 +102,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
 };
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <LiWithSpace key={menuItem.key ?? menuItem.name}>
-    {menuItem.render({ size: "small", onItemClick: linkOnClick, layer })}
-  </LiWithSpace>
+  <li key={menuItem.key ?? menuItem.name}>{menuItem.render({ size: "small", onItemClick: linkOnClick, layer })}</li>
 );
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
