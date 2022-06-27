@@ -5,9 +5,10 @@ import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import { DefaultNDSThemeType } from "../theme.type";
-import { DropdownLink, DropdownText, DropdownButton } from "../DropdownMenu";
+import { DropdownLink, DropdownText } from "../DropdownMenu";
 import { Link } from "../Link";
 import { LinkProps } from "../Link/Link";
+import { addStyledProps } from "../StyledProps";
 import NulogyLogo from "./NulogyLogo";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
 
@@ -32,52 +33,49 @@ const getSharedStyles = (theme) => ({
   lineHeight: theme.lineHeights.heading3,
   marginBottom: theme.space.x1,
   padding: `${theme.space.x1} ${theme.space.x3}`,
-  paddingLeft: getPaddingLeft(0),
 });
 
-const TopLevelLink = styled(Link)(({ theme }) => ({
-  ...getSharedStyles(theme),
-  color: theme.colors.darkBlue,
-  "&:visited": {
+const TopLevelLink = styled(Link)(
+  ({ theme }) => ({
+    ...getSharedStyles(theme),
     color: theme.colors.darkBlue,
-  },
-  width: "100%",
-  borderRadius: "0",
-  transition: ".2s",
-  "&:hover, &:focus": {
-    outline: "none",
+    "&:visited": {
+      color: theme.colors.darkBlue,
+    },
+    width: "100%",
+    borderRadius: "0",
+    transition: ".2s",
+    "&:hover, &:focus": {
+      outline: "none",
+      color: theme.colors.blackBlue,
+      backgroundColor: theme.colors.whiteGrey,
+      cursor: "pointer",
+    },
+    "&:focus": {
+      boxShadow: theme.shadows.focus,
+    },
+    "&:disabled": {
+      opacity: ".5",
+    },
+  }),
+  addStyledProps
+);
+
+const TopLevelText = styled(Text)(
+  ({ theme }) => ({
+    ...getSharedStyles(theme),
     color: theme.colors.blackBlue,
-    backgroundColor: theme.colors.whiteGrey,
-    cursor: "pointer",
-  },
-  "&:focus": {
-    boxShadow: theme.shadows.focus,
-  },
-  "&:disabled": {
-    opacity: ".5",
-  },
-}));
+  }),
+  addStyledProps
+);
 
-const TopLevelText = styled(Text)(({ theme }) => ({
-  ...getSharedStyles(theme),
-  color: theme.colors.blackBlue,
-}));
-
-type ChildIndentingLiProps = {
-  layer?: number;
+type LiWithSpaceProps = {
   theme?: DefaultNDSThemeType;
   key?: string;
 };
 
-const ChildIndentingLi = styled.li(({ layer, theme }: ChildIndentingLiProps) => ({
+const LiWithSpace = styled.li(({ theme }: LiWithSpaceProps) => ({
   marginBottom: theme.space.x1,
-  [`> ${DropdownButton}, > ${DropdownLink}`]: {
-    // eslint-disable-next-line no-mixed-operators
-    paddingLeft: `${24 * layer + 20}px`,
-  },
-  [`> ${DropdownText}`]: {
-    paddingLeft: getPaddingLeft(layer),
-  },
 }));
 
 const SubMenuItemsList = styled.ul({
@@ -87,20 +85,26 @@ const SubMenuItemsList = styled.ul({
 });
 
 const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
+  const sharedLinkProps = {
+    onClick: linkOnClick,
+    href: menuItem.href,
+    as: menuItem.as,
+    to: menuItem.to,
+    // eslint-disable-next-line no-mixed-operators
+    pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
+  };
   const MenuLink: React.FC<LinkProps> = layer === 0 ? TopLevelLink : DropdownLink;
   return (
-    <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
-      <MenuLink onClick={linkOnClick} href={menuItem.href} as={menuItem.as} to={menuItem.to}>
-        {menuItem.name}
-      </MenuLink>
-    </ChildIndentingLi>
+    <LiWithSpace key={menuItem.key ?? menuItem.name}>
+      <MenuLink {...sharedLinkProps}>{menuItem.name}</MenuLink>
+    </LiWithSpace>
   );
 };
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
+  <LiWithSpace key={menuItem.key ?? menuItem.name}>
     {menuItem.render({ size: "small", onItemClick: linkOnClick, layer })}
-  </ChildIndentingLi>
+  </LiWithSpace>
 );
 
 const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
@@ -112,9 +116,9 @@ const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
 const renderText = (menuItem, linkOnClick, themeColorObject, layer) => {
   const MenuText = layer === 0 ? TopLevelText : DropdownText;
   return (
-    <ChildIndentingLi layer={layer} key={menuItem.key ?? menuItem.name}>
-      <MenuText>{menuItem.name}</MenuText>
-    </ChildIndentingLi>
+    <LiWithSpace key={menuItem.key ?? menuItem.name}>
+      <MenuText pl={getPaddingLeft(layer)}>{menuItem.name}</MenuText>
+    </LiWithSpace>
   );
 };
 
@@ -143,7 +147,7 @@ const getSubMenuHeading = (layer, name) =>
   layer === 0 ? (
     <TopLevelText as="h3">{name}</TopLevelText>
   ) : (
-    <DropdownText mb="x1" style={{ paddingLeft: getPaddingLeft(layer) }}>
+    <DropdownText mb="x1" pl={getPaddingLeft(layer)}>
       {name}
     </DropdownText>
   );
