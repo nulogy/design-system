@@ -1,3 +1,16 @@
+# [7.2.0](https://github.com/nulogy/design-system/compare/v7.1.0...v7.2.0) (2022-06-28)
+
+
+### Bug Fixes
+
+* allow Link descendents to fully use styled-system ([91010d5](https://github.com/nulogy/design-system/commit/91010d53195fb513a295a36eff43f5f4836a3b68))
+
+
+### Features
+
+* stop overriding styles on BrandedNavBar children via CSS ([22c0eda](https://github.com/nulogy/design-system/commit/22c0eda50deb3ab3de099c05a1eabd6888130c29))
+* stop setting a margin-bottom on custom rendered BrandedNavBar items ([5e1440f](https://github.com/nulogy/design-system/commit/5e1440faecd8034e0db76d9e06f845da32199f20))
+
 # [7.1.0](https://github.com/nulogy/design-system/compare/v7.0.1...v7.1.0) (2022-06-22)
 
 
