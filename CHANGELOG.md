@@ -1,3 +1,10 @@
+## [7.2.1](https://github.com/nulogy/design-system/compare/v7.2.0...v7.2.1) (2022-06-28)
+
+
+### Bug Fixes
+
+* clean up toast timeout on unmount ([#1032](https://github.com/nulogy/design-system/issues/1032)) ([9ea83ad](https://github.com/nulogy/design-system/commit/9ea83ad559efa239d33f44f83ac757c1950d4381))
+
 # [7.2.0](https://github.com/nulogy/design-system/compare/v7.1.0...v7.2.0) (2022-06-28)
 
 
