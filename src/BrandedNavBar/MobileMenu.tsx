@@ -31,7 +31,6 @@ const getSharedStyles = (theme) => ({
   fontSize: theme.fontSizes.large,
   fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.heading3,
-  marginBottom: theme.space.x1,
   padding: `${theme.space.x1} ${theme.space.x3}`,
 });
 
@@ -69,15 +68,6 @@ const TopLevelText = styled(Text)(
   addStyledProps
 );
 
-type LiWithSpaceProps = {
-  theme?: DefaultNDSThemeType;
-  key?: string;
-};
-
-const LiWithSpace = styled.li(({ theme }: LiWithSpaceProps) => ({
-  marginBottom: theme.space.x1,
-}));
-
 const SubMenuItemsList = styled.ul({
   listStyle: "none",
   paddingLeft: "0",
@@ -92,12 +82,13 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     to: menuItem.to,
     // eslint-disable-next-line no-mixed-operators
     pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
+    mb: "x1",
   };
   const MenuLink: React.FC<LinkProps> = layer === 0 ? TopLevelLink : DropdownLink;
   return (
-    <LiWithSpace key={menuItem.key ?? menuItem.name}>
+    <li key={menuItem.key ?? menuItem.name}>
       <MenuLink {...sharedLinkProps}>{menuItem.name}</MenuLink>
-    </LiWithSpace>
+    </li>
   );
 };
 
@@ -114,9 +105,11 @@ const renderSubMenu = (menuItem, linkOnClick, themeColorObject, layer) => (
 const renderText = (menuItem, linkOnClick, themeColorObject, layer) => {
   const MenuText = layer === 0 ? TopLevelText : DropdownText;
   return (
-    <LiWithSpace key={menuItem.key ?? menuItem.name}>
-      <MenuText pl={getPaddingLeft(layer)}>{menuItem.name}</MenuText>
-    </LiWithSpace>
+    <li key={menuItem.key ?? menuItem.name}>
+      <MenuText pl={getPaddingLeft(layer)} mb="x1">
+        {menuItem.name}
+      </MenuText>
+    </li>
   );
 };
 
@@ -143,7 +136,9 @@ const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
 
 const getSubMenuHeading = (layer, name) =>
   layer === 0 ? (
-    <TopLevelText as="h3">{name}</TopLevelText>
+    <TopLevelText as="h3" mb="x1">
+      {name}
+    </TopLevelText>
   ) : (
     <DropdownText mb="x1" pl={getPaddingLeft(layer)}>
       {name}
