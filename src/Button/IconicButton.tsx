@@ -8,18 +8,15 @@ import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 
-type IconicButtonProps = SpaceProps & {
-  className?: string;
-  color?: string;
-  labelHidden?: boolean;
-  disabled?: boolean;
-  onClick?: (...args: any[]) => any;
-  icon?: any;
-  iconSize?: string;
-  fontSize?: string;
-  tooltip?: string;
-  children?: any;
-};
+type IconicButtonProps = React.HTMLProps<HTMLButtonElement> &
+  SpaceProps & {
+    color?: string;
+    labelHidden?: boolean;
+    icon?: any;
+    iconSize?: string;
+    fontSize?: string;
+    tooltip?: string;
+  };
 
 const HoverText: React.FC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
