@@ -1,3 +1,10 @@
+## [7.2.2](https://github.com/nulogy/design-system/compare/v7.2.1...v7.2.2) (2022-06-29)
+
+
+### Bug Fixes
+
+* add a button type to the sidebar close button ([#1035](https://github.com/nulogy/design-system/issues/1035)) ([aa1362d](https://github.com/nulogy/design-system/commit/aa1362dbab9a50664949ea7aff717ecf778008dd))
+
 ## [7.2.1](https://github.com/nulogy/design-system/compare/v7.2.0...v7.2.1) (2022-06-28)
 
 
