@@ -182,6 +182,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             {!hideCloseButton && (
               <Box marginLeft="x2">
                 <IconicButton
+                  type="button"
                   ref={closeButton}
                   icon="close"
                   onClick={onClose}
