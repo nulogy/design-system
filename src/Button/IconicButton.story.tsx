@@ -84,7 +84,7 @@ WithATooltipAndLabel.story = {
 };
 
 export const rightAligned = () => (
-  <Flex px="x3" height="15000px">
+  <Flex px="x3" height="150px">
     <Flex justifyContent="flex-end" alignItems="flex-start" width="100%">
       <IconicButton icon="rightArrow" labelHidden>
         I am an Iconic Button
