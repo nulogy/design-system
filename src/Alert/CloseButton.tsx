@@ -15,6 +15,7 @@ const CloseButton = ({ onClick, "aria-label": ariaLabel }: CloseButtonProps) => 
     <Flex ml="x2">
       <Link
         as="button"
+        type="button"
         color="darkGrey"
         lineHeight="0"
         hover="blue"
