@@ -1,3 +1,11 @@
+## [7.2.3](https://github.com/nulogy/design-system/compare/v7.2.2...v7.2.3) (2022-07-04)
+
+
+### Bug Fixes
+
+* add button type to alert close button ([4c6e852](https://github.com/nulogy/design-system/commit/4c6e8520ce9dbd5e9da4e53bebc0adf28d178620))
+* reduce height causing story to be flagged in chromatic ([83c9e8f](https://github.com/nulogy/design-system/commit/83c9e8f4ed11bf6b753db8b15a00b8b42e195d37))
+
 ## [7.2.2](https://github.com/nulogy/design-system/compare/v7.2.1...v7.2.2) (2022-06-29)
 
 
