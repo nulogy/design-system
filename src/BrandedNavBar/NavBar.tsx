@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 import styled, { CSSObject } from "styled-components";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
@@ -15,7 +14,6 @@ import { DefaultNDSThemeType } from "../theme.type";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
-import isValidMenuItem from "./isValidMenuItem";
 import EnvironmentBanner from "./EnvironmentBanner";
 
 const MAX_LOGO_WIDTH = "184px";
