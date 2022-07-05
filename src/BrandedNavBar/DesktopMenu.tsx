@@ -109,8 +109,12 @@ type BaseDesktopMenuProps = {
   themeColorObject: any;
 };
 
-const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }: BaseDesktopMenuProps) => (
-  <Nav {...props}>{menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject, 0))}</Nav>
+const BaseDesktopMenu = React.forwardRef<HTMLElement, BaseDesktopMenuProps>(
+  ({ menuData, themeColorObject, ...props }, ref) => (
+    <Nav {...props} ref={ref}>
+      {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject, 0))}
+    </Nav>
+  )
 );
 
 const DesktopMenu = styled(BaseDesktopMenu)({
