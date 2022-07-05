@@ -58,7 +58,8 @@ export { ALL_NDS_LOCALES } from "./locales.const";
 export { TruncatedText } from "./TruncatedText";
 export { Toast } from "./Toast";
 
-export { BrandedNavBar } from "./BrandedNavBar";
+export { BrandedNavBar, MenuTrigger } from "./BrandedNavBar";
+export type { MenuTriggerProps } from "./BrandedNavBar";
 export { AsyncSelect } from "./AsyncSelect";
 export { ApplicationFrame, Page, Sidebar } from "./Layout";
 export { useWindowDimensions } from "./utils";
