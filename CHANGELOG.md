@@ -1,3 +1,10 @@
+# [7.3.0](https://github.com/nulogy/design-system/compare/v7.2.3...v7.3.0) (2022-07-05)
+
+
+### Features
+
+* prepare branded nav bar for customization ([#1039](https://github.com/nulogy/design-system/issues/1039)) ([3ffeb22](https://github.com/nulogy/design-system/commit/3ffeb2290fd570b8d1059f8d4a3387986929712b))
+
 ## [7.2.3](https://github.com/nulogy/design-system/compare/v7.2.2...v7.2.3) (2022-07-04)
 
 
