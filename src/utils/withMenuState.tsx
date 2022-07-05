@@ -1,7 +1,7 @@
 import React from "react";
 import { keyCodes } from "../constants";
 
-type WithMenuStateProps = {
+export type WithMenuStateProps = {
   children?: any;
   showDelay?: string | number;
   hideDelay?: string | number;

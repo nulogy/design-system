@@ -104,13 +104,17 @@ const getRenderFunction = (menuItem) => {
 const renderMenuItem = (menuItem, themeColorObject, layer) =>
   getRenderFunction(menuItem)(menuItem, themeColorObject, layer);
 
-type BaseDesktopMenuProps = {
+export type DesktopMenuProps = {
   menuData: any[];
   themeColorObject: any;
 };
 
-const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }: BaseDesktopMenuProps) => (
-  <Nav {...props}>{menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject, 0))}</Nav>
+const BaseDesktopMenu = React.forwardRef<HTMLElement, DesktopMenuProps>(
+  ({ menuData, themeColorObject, ...props }, ref) => (
+    <Nav {...props} ref={ref}>
+      {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject, 0))}
+    </Nav>
+  )
 );
 
 const DesktopMenu = styled(BaseDesktopMenu)({

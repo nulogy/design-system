@@ -14,6 +14,8 @@ import {
   compose,
   overflow,
   OverflowProps,
+  flexbox,
+  FlexboxProps,
 } from "styled-system";
 import { textOverflow, TextOverflowProps } from "./textOverflow";
 import { cursor, CursorProps } from "./cursor";
@@ -33,7 +35,8 @@ export const addStyledProps = compose(
   transform,
   transition,
   typography,
-  visibility
+  visibility,
+  flexbox
 );
 
 export type StyledProps = BorderProps &
@@ -47,4 +50,5 @@ export type StyledProps = BorderProps &
   TransformProps &
   TransitionProps &
   TypographyProps &
-  VisibilityProps;
+  VisibilityProps &
+  FlexboxProps;
