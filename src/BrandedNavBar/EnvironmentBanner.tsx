@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "../Box";
 import { Text } from "../Type";
 
-type EnvironmentBannerProps = {
+export type EnvironmentBannerProps = {
   children?: React.ReactNode;
 };
 

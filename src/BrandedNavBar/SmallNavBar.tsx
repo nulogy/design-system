@@ -5,7 +5,7 @@ import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import { Flex } from "../Flex";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
-import { PreventBodyElementScrolling, subPx, withMenuState } from "../utils";
+import { PreventBodyElementScrolling, subPx, withMenuState, WithMenuStateProps } from "../utils";
 import BrandLogoContainer, { BrandLogoContainerProps } from "./BrandLogoContainer";
 import EnvironmentBanner from "./EnvironmentBanner";
 import MobileMenu from "./MobileMenu";
@@ -151,5 +151,7 @@ const SmallNavBarNoState = ({
 /* eslint-enable react/destructuring-assignment */
 
 const SmallNavBar = withMenuState(SmallNavBarNoState);
+
+export type SmallNavBarProps = SmallNavBarNoStateProps & WithMenuStateProps;
 
 export default SmallNavBar;
