@@ -12,6 +12,9 @@ export const _Branding = () => (
         <Branding size="small" />
         <br />
         <br />
+        <Branding logoType="lettermark" size="small" />
+        <br />
+        <br />
         <Branding />
         <br />
         <br />
@@ -36,6 +39,12 @@ export const _Branding = () => (
         <Branding withLine size="large" subtext="Logo Subtext" />
       </Box>
       <Box bg="black" width={1 / 2} p="x2">
+        <Branding logoColor="white" size="small" />
+        <br />
+        <br />
+        <Branding logoColor="white" logoType="lettermark" size="small" />
+        <br />
+        <br />
         <Branding logoColor="white" />
         <br />
         <br />
