@@ -1,3 +1,10 @@
+## [7.3.1](https://github.com/nulogy/design-system/compare/v7.3.0...v7.3.1) (2022-07-06)
+
+
+### Bug Fixes
+
+* modify iconic button props type ([#1041](https://github.com/nulogy/design-system/issues/1041)) ([e1e0f7f](https://github.com/nulogy/design-system/commit/e1e0f7ff6e44bdd5cde3f40d1a7356510623525e))
+
 # [7.3.0](https://github.com/nulogy/design-system/compare/v7.2.3...v7.3.0) (2022-07-05)
 
 
