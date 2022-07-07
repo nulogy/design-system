@@ -1,5 +1,9 @@
 import React from "react";
 const sizes = {
+  small: {
+    height: "24px",
+    width: "28px",
+  },
   medium: {
     height: "32px",
     width: "37px",
