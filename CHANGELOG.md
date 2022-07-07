@@ -1,3 +1,10 @@
+# [7.5.0](https://github.com/nulogy/design-system/compare/v7.4.0...v7.5.0) (2022-07-07)
+
+
+### Features
+
+* add hoverBackgroundColor prop to the IconicButton component ([#1042](https://github.com/nulogy/design-system/issues/1042)) ([9399c06](https://github.com/nulogy/design-system/commit/9399c0676e41053e32e911491b9cb537e2564f0c))
+
 # [7.4.0](https://github.com/nulogy/design-system/compare/v7.3.1...v7.4.0) (2022-07-07)
 
 
