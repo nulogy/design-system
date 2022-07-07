@@ -1,3 +1,10 @@
+# [7.4.0](https://github.com/nulogy/design-system/compare/v7.3.1...v7.4.0) (2022-07-07)
+
+
+### Features
+
+* allow Nulogy lettermark branding to be small ([#1043](https://github.com/nulogy/design-system/issues/1043)) ([60c9794](https://github.com/nulogy/design-system/commit/60c97940cf6fe16b18e8f7d9ab9a72f94518c886))
+
 ## [7.3.1](https://github.com/nulogy/design-system/compare/v7.3.0...v7.3.1) (2022-07-06)
 
 
