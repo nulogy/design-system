@@ -6,7 +6,6 @@ import { DefaultNDSThemeType } from "../theme.type";
 import { Flex } from "../Flex";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { PreventBodyElementScrolling, subPx, withMenuState, WithMenuStateProps } from "../utils";
-import BrandLogoContainer, { BrandLogoContainerProps } from "./BrandLogoContainer";
 import EnvironmentBanner from "./EnvironmentBanner";
 import MobileMenu from "./MobileMenu";
 import NavBarBackground from "./NavBarBackground";
@@ -69,18 +68,18 @@ const MenuIcon = ({ isOpen }) => {
   return <Icon icon={icon} title={title} />;
 };
 
-type SmallNavBarNoStateProps = BrandLogoContainerProps & {
+type SmallNavBarNoStateProps = {
   menuState?: any;
   menuData?: any;
   subtext?: string;
-  brandingLinkHref?: string;
-  brandingLinkTo?: string;
   breakpointLower?: number | string;
   width?: number;
   themeColor?: "blue" | "white";
   themeColorObject: any;
   environment?: "development" | "training";
   navBarHeight: string;
+  logo: React.ReactElement;
+  showNulogyLogo?: boolean;
 };
 
 /* eslint-disable react/destructuring-assignment */
@@ -88,13 +87,12 @@ const SmallNavBarNoState = ({
   menuData,
   menuState: { isOpen, toggleMenu, closeMenu },
   subtext,
-  brandingLinkHref = "/",
-  brandingLinkTo,
   environment,
-  logoSrc,
+  showNulogyLogo,
   breakpointLower = "small",
   themeColorObject,
   navBarHeight,
+  logo,
   ...props
 }: SmallNavBarNoStateProps) => {
   const navRef = React.useRef(null);
@@ -115,12 +113,7 @@ const SmallNavBarNoState = ({
     >
       {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
       <NavBarBackground backgroundColor="white" height={navBarHeight}>
-        <BrandLogoContainer
-          logoSrc={logoSrc}
-          brandingLinkHref={brandingLinkHref}
-          brandingLinkTo={brandingLinkTo}
-          subtext={subtext}
-        />
+        {logo}
         <Flex justifyContent="flex-end" ml="x3" flexGrow={1}>
           {menuData.search && (
             <Flex maxWidth="18em" alignItems="center" px="0">
@@ -141,7 +134,7 @@ const SmallNavBarNoState = ({
             subtext={subtext}
             menuData={menuData}
             closeMenu={closeMenu}
-            logoSrc={logoSrc}
+            showNulogyLogo={showNulogyLogo}
           />
         </PreventBodyElementScrolling>
       )}
