@@ -8,7 +8,7 @@ import { Box } from "../Box";
 import DesktopMenu from "./DesktopMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import EnvironmentBanner from "./EnvironmentBanner";
-import BrandLogoContainer, { BrandLogoContainerProps } from "./BrandLogoContainer";
+import BrandLogoContainer from "./BrandLogoContainer";
 import SmallNavBar from "./SmallNavBar";
 import NavBarBackground from "./NavBarBackground";
 
@@ -23,35 +23,29 @@ const themeColorObject = {
   logoColor: "blue",
 };
 
-type MediumNavBarProps = BrandLogoContainerProps & {
-  subtext?: string;
+type MediumNavBarProps = {
   menuData?: any;
   environment?: "development" | "training";
+  logo: React.ReactNode;
+  showNulogyLogo?: boolean;
+  subtext?: string;
 };
 
-const MediumNavBar = ({
+const MediumNavBar: React.FC<MediumNavBarProps> = ({
   menuData,
-  subtext,
   environment,
-  logoSrc,
-  brandingLinkHref = "/",
-  brandingLinkTo,
-  brandingLinkComponent,
+  logo,
+  showNulogyLogo,
+  subtext,
   ...props
-}: MediumNavBarProps) => {
+}) => {
   const { t } = useTranslation();
   return (
     <>
       {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
       <header {...props}>
         <NavBarBackground backgroundColor="white" height={NAVBAR_HEIGHT}>
-          <BrandLogoContainer
-            logoSrc={logoSrc}
-            brandingLinkHref={brandingLinkHref}
-            brandingLinkTo={brandingLinkTo}
-            brandingLinkComponent={brandingLinkComponent}
-            subtext={subtext}
-          />
+          {logo}
           <Flex justifyContent="space-between" alignContent="flex-end" flexGrow={1} ml="x3" alignItems="center">
             {menuData.primaryMenu && (
               <DesktopMenu
@@ -68,7 +62,7 @@ const MediumNavBar = ({
                   menuData={menuData.secondaryMenu}
                 />
               )}
-              {logoSrc && (
+              {showNulogyLogo && (
                 <Box pl="x3">
                   <NulogyLogoContainer height={NAVBAR_HEIGHT} subText={subtext} />
                 </Box>
@@ -83,19 +77,40 @@ const MediumNavBar = ({
 
 const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
 
-const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...props }: any) => {
+const SelectNavBarBasedOnWidth = ({
+  width,
+  defaultOpen,
+  breakpointUpper,
+  brandingLinkHref = "/",
+  brandingLinkTo,
+  brandingLinkComponent,
+  logoSrc,
+  ...props
+}: any) => {
   const currentWidth = width || (typeof window !== "undefined" && window.innerWidth);
 
+  const logo = (
+    <BrandLogoContainer
+      logoSrc={logoSrc}
+      brandingLinkHref={brandingLinkHref}
+      brandingLinkTo={brandingLinkTo}
+      brandingLinkComponent={brandingLinkComponent}
+      subtext={props.subtext}
+    />
+  );
+
   if (currentWidth >= pixelDigitsFrom(breakpointUpper)) {
-    return <MediumNavBar {...props} />;
+    return <MediumNavBar logo={logo} showNulogyLogo={logoSrc} {...props} />;
   } else {
     return (
       <SmallNavBar
-        {...props}
         width={currentWidth}
         defaultOpen={defaultOpen}
         themeColorObject={themeColorObject}
         navBarHeight={NAVBAR_HEIGHT}
+        logo={logo}
+        showNulogyLogo={logoSrc}
+        {...props}
       />
     );
   }

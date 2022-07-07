@@ -4,7 +4,6 @@ import { display } from "styled-system";
 import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
-import { DefaultNDSThemeType } from "../theme.type";
 import { DropdownLink, DropdownText } from "../DropdownMenu";
 import { Link } from "../Link";
 import { LinkProps } from "../Link/Link";
@@ -209,10 +208,17 @@ type BaseMobileMenuProps = {
   subtext?: string;
   closeMenu?: Function;
   themeColorObject?: ThemeColorObject;
-  logoSrc?: string;
+  showNulogyLogo?: boolean;
 };
 
-const BaseMobileMenu = ({ menuData, closeMenu, subtext, themeColorObject, logoSrc, ...props }: BaseMobileMenuProps) => (
+const BaseMobileMenu: React.FC<BaseMobileMenuProps> = ({
+  menuData,
+  closeMenu,
+  subtext,
+  themeColorObject,
+  showNulogyLogo,
+  ...props
+}) => (
   <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     <BrandingWrap>
       <BrandingText logoColor={themeColorObject && themeColorObject.logoColor} />
@@ -221,7 +227,7 @@ const BaseMobileMenu = ({ menuData, closeMenu, subtext, themeColorObject, logoSr
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
       {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
     </Menu>
-    {logoSrc && (
+    {showNulogyLogo && (
       <Flex textAlign="center" borderTop={borderStyle} height="40px" alignItems="center" justifyContent="center">
         <NulogyLogo />
         {subtext && (
