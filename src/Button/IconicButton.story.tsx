@@ -132,3 +132,26 @@ export const WithNonTextChildren = () => (
 WithNonTextChildren.story = {
   name: "with non text children",
 };
+
+export const WithCustomHoverBackgroundThemeColor = () => (
+  <IconicButton hoverBackgroundColor="lightYellow" fontSize="small" aria-label="warnings" icon="warning">
+    <Flex>
+      <Box as="span" pr="x1">
+        Warnings
+      </Box>
+    </Flex>
+  </IconicButton>
+);
+
+export const WithCustomHoverBackgroundNonThemeColor = () => (
+  <IconicButton hoverBackgroundColor="#FA8072" fontSize="small" aria-label="warnings" icon="warning">
+    <Flex>
+      <Box as="span" pr="x1">
+        Warnings
+      </Box>
+    </Flex>
+  </IconicButton>
+);
+WithNonTextChildren.story = {
+  name: "with non text children",
+};

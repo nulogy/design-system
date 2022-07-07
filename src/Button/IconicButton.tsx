@@ -13,6 +13,7 @@ type BaseProps = {
   labelHidden?: boolean;
   icon?: any;
   iconSize?: string;
+  hoverBackgroundColor?: string;
   fontSize?: string;
   tooltip?: string;
 };
@@ -32,7 +33,7 @@ const HoverText: React.FC<any> = styled.div(({ theme }) => ({
 }));
 
 const WrapperButton: React.FC<any> = styled.button(
-  ({ disabled, theme }: any) => ({
+  ({ disabled, hoverBackgroundColor, theme }: any) => ({
     background: "transparent",
     border: "none",
     position: "relative",
@@ -54,7 +55,7 @@ const WrapperButton: React.FC<any> = styled.button(
     },
     "&:hover": {
       [`${Icon}`]: {
-        backgroundColor: theme.colors.lightBlue,
+        backgroundColor: theme.colors[hoverBackgroundColor] ?? hoverBackgroundColor,
       },
       [`${HoverText}`]: {
         opacity: "1",
@@ -90,7 +91,18 @@ const WrapperButton: React.FC<any> = styled.button(
 
 const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
   (
-    { children, color = "darkBlue", icon, labelHidden, className, iconSize, fontSize, tooltip, ...props },
+    {
+      children,
+      color = "darkBlue",
+      hoverBackgroundColor = "lightBlue",
+      icon,
+      labelHidden,
+      className,
+      iconSize,
+      fontSize,
+      tooltip,
+      ...props
+    },
     forwardedRef
   ) => {
     return (
@@ -98,6 +110,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
         ref={forwardedRef}
         aria-label={props["aria-label"] ? props["aria-label"] : typeof children === "string" ? children : undefined}
         className={className}
+        hoverBackgroundColor={hoverBackgroundColor}
         {...props}
       >
         <Manager>
