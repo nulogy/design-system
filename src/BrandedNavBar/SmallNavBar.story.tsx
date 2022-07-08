@@ -16,7 +16,7 @@ const ResetStorybookView = styled.div({
   height: "100vh",
 });
 
-const WrappedSmallNavBar = (props) => (
+const WrappedSmallNavBar = (props: Partial<SmallNavBarProps>) => (
   <ResetStorybookView>
     <SmallNavBar navBarHeight="56px" {...props} />
     <Heading1 mt="x3" ml="x1">

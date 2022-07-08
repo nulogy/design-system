@@ -74,10 +74,10 @@ type SmallNavBarNoStateProps = {
   breakpointLower?: number | string;
   width?: number;
   themeColor?: "blue" | "white";
-  themeColorObject: any;
+  themeColorObject?: any;
   environment?: "development" | "training";
   navBarHeight: string;
-  logo: React.ReactElement;
+  logo?: React.ReactElement;
   showNulogyLogo?: boolean;
 } & AcceptsMenuStateProps;
 
