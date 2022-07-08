@@ -4,7 +4,7 @@ import { select } from "@storybook/addon-knobs";
 import { Heading1 } from "../Type";
 import { Branding } from "../Branding";
 import { Link } from "../Link";
-import { theme } from "../index";
+import { Button, SmallNavBarProps, theme } from "../index";
 import BrandLogoContainer from "./BrandLogoContainer";
 import { SmallNavBar } from "./index";
 
@@ -129,5 +129,17 @@ export const WithEnvironmentBanner = () => (
   <WrappedSmallNavBar
     menuData={{ primaryMenu, secondaryMenu }}
     environment={select("environment", ["training", "development"], "training")}
+  />
+);
+
+export const WithCustomMenuButton = () => (
+  <WrappedSmallNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    environment={select("environment", ["training", "development"], "training")}
+    renderMenuButton={({ onClick, ariaExpanded, isOpen }) => (
+      <Button onClick={onClick} aria-expanded={ariaExpanded}>
+        Click to {isOpen ? "close" : "open"}
+      </Button>
+    )}
   />
 );

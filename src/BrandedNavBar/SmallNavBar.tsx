@@ -68,6 +68,13 @@ const MenuIcon = ({ isOpen }) => {
   return <Icon icon={icon} title={title} />;
 };
 
+export type RenderMenuButtonProps = {
+  themeColorObject: any;
+  onClick: () => void;
+  ariaExpanded: true | null;
+  isOpen: boolean;
+};
+
 type SmallNavBarNoStateProps = {
   menuData?: any;
   subtext?: string;
@@ -79,6 +86,7 @@ type SmallNavBarNoStateProps = {
   navBarHeight: string;
   logo?: React.ReactElement;
   showNulogyLogo?: boolean;
+  renderMenuButton?: (props: RenderMenuButtonProps) => React.ReactElement;
 } & AcceptsMenuStateProps;
 
 /* eslint-disable react/destructuring-assignment */
@@ -92,6 +100,7 @@ const SmallNavBarNoState = ({
   themeColorObject,
   navBarHeight,
   logo,
+  renderMenuButton,
   ...props
 }: SmallNavBarNoStateProps) => {
   const navRef = React.useRef(null);
@@ -103,6 +112,7 @@ const SmallNavBarNoState = ({
   }, [isOpen]);
 
   const { breakpoints } = useTheme();
+  const ariaExpanded = isOpen ? true : null;
   return (
     <SmallHeader
       ref={navRef}
@@ -119,11 +129,19 @@ const SmallNavBarNoState = ({
               <NavBarSearch {...menuData.search} />
             </Flex>
           )}
-          {(menuData.primaryMenu || menuData.secondaryMenu) && (
-            <MobileMenuTrigger {...themeColorObject} onClick={toggleMenu} aria-expanded={isOpen ? true : null}>
-              <MenuIcon isOpen={isOpen} />
-            </MobileMenuTrigger>
-          )}
+          {(menuData.primaryMenu || menuData.secondaryMenu) &&
+            (renderMenuButton ? (
+              renderMenuButton({
+                themeColorObject: themeColorObject,
+                onClick: toggleMenu,
+                ariaExpanded,
+                isOpen,
+              })
+            ) : (
+              <MobileMenuTrigger {...themeColorObject} onClick={toggleMenu} aria-expanded={ariaExpanded}>
+                <MenuIcon isOpen={isOpen} />
+              </MobileMenuTrigger>
+            ))}
         </Flex>
       </NavBarBackground>
       {isOpen && (

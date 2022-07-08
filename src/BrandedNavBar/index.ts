@@ -10,4 +10,4 @@ export type { BrandLogoContainerProps } from "./BrandLogoContainer";
 export { default as DesktopMenu } from "./DesktopMenu";
 export type { DesktopMenuProps } from "./DesktopMenu";
 export { default as SmallNavBar } from "./SmallNavBar";
-export type { SmallNavBarProps } from "./SmallNavBar";
+export type { SmallNavBarProps, RenderMenuButtonProps } from "./SmallNavBar";
