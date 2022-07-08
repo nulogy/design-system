@@ -74,6 +74,7 @@ export type {
   BrandLogoContainerProps,
   DesktopMenuProps,
   SmallNavBarProps,
+  RenderMenuButtonProps,
 } from "./BrandedNavBar";
 export { AsyncSelect } from "./AsyncSelect";
 export { ApplicationFrame, Page, Sidebar } from "./Layout";
