@@ -5,7 +5,7 @@ import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import { Flex } from "../Flex";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
-import { PreventBodyElementScrolling, subPx, withMenuState, WithMenuStateProps } from "../utils";
+import { PreventBodyElementScrolling, subPx, withMenuState, WithMenuStateProps, AcceptsMenuStateProps } from "../utils";
 import EnvironmentBanner from "./EnvironmentBanner";
 import MobileMenu from "./MobileMenu";
 import NavBarBackground from "./NavBarBackground";
@@ -69,7 +69,6 @@ const MenuIcon = ({ isOpen }) => {
 };
 
 type SmallNavBarNoStateProps = {
-  menuState?: any;
   menuData?: any;
   subtext?: string;
   breakpointLower?: number | string;
@@ -80,7 +79,7 @@ type SmallNavBarNoStateProps = {
   navBarHeight: string;
   logo: React.ReactElement;
   showNulogyLogo?: boolean;
-};
+} & AcceptsMenuStateProps;
 
 /* eslint-disable react/destructuring-assignment */
 const SmallNavBarNoState = ({
