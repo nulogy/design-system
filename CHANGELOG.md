@@ -1,3 +1,21 @@
+# [8.0.0](https://github.com/nulogy/design-system/compare/v7.5.0...v8.0.0) (2022-07-11)
+
+
+### Features
+
+* add types to withMenuState ([c2a0431](https://github.com/nulogy/design-system/commit/c2a0431aaa18c434b3efc13d93d3bcde76298c2c))
+* allow the BrandedNavBar hamburger trigger to be customized ([20f172e](https://github.com/nulogy/design-system/commit/20f172e1f16f77dcdee6fbb33237d3d19085f847))
+
+
+* feat!: allow BrandedNavBar left-hand logo to be customized ([ccc79aa](https://github.com/nulogy/design-system/commit/ccc79aa29452246e171420fc73ba41e04765db2b))
+
+
+### BREAKING CHANGES
+
+* the logoSrc: string prop on the BrandedNavBar/MobileMenu has been replaced with
+the showNulogyLogo: boolean prop. The behaviour of the prop is the same as before: it determines
+if the Nulogy logo shows at the bottom of the hamburger menu.
+
 # [7.5.0](https://github.com/nulogy/design-system/compare/v7.4.0...v7.5.0) (2022-07-07)
 
 
