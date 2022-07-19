@@ -5,7 +5,7 @@ import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import { Flex } from "../Flex";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
-import { PreventBodyElementScrolling, subPx, withMenuState, WithMenuStateProps, AcceptsMenuStateProps } from "../utils";
+import { PreventBodyElementScrolling, withMenuState, WithMenuStateProps, AcceptsMenuStateProps } from "../utils";
 import EnvironmentBanner from "./EnvironmentBanner";
 import MobileMenu from "./MobileMenu";
 import NavBarBackground from "./NavBarBackground";
@@ -21,7 +21,7 @@ const MobileMenuTrigger = styled.button(({ color, hoverColor, hoverBackground, t
   color: theme.colors[color] || color,
   background: "none",
   border: "none",
-  padding: `${subPx(theme.space.x1)} ${theme.space.x1}`,
+  padding: theme.space.x1,
   marginLeft: theme.space.x1,
   borderRadius: theme.radii.medium,
   transition: ".2s",
