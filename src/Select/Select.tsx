@@ -221,6 +221,7 @@ const ReactSelect = forwardRef(
             aria-label={ariaLabel}
             filterOption={filterOption}
             closeMenuOnSelect={closeMenuOnSelect}
+            {...props}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
