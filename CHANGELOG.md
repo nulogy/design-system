@@ -1,3 +1,10 @@
+## [8.0.1](https://github.com/nulogy/design-system/compare/v8.0.0...v8.0.1) (2022-07-20)
+
+
+### Bug Fixes
+
+* vertically centre the BrandedNavBar hamburger open and close buttons ([#1048](https://github.com/nulogy/design-system/issues/1048)) ([cabefae](https://github.com/nulogy/design-system/commit/cabefae595aa5279917da3e34ecaddf382d3c0f6))
+
 # [8.0.0](https://github.com/nulogy/design-system/compare/v7.5.0...v8.0.0) (2022-07-11)
 
 
