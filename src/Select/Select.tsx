@@ -132,7 +132,6 @@ const ReactSelect = forwardRef(
       required,
       requirementText,
       helpText,
-      noOptionsMessage,
       disabled,
       errorMessage,
       errorList,
@@ -140,25 +139,14 @@ const ReactSelect = forwardRef(
       id,
       initialIsOpen,
       maxHeight,
-      menuPosition,
       multiselect,
-      name,
       onChange,
       placeholder,
       value,
       defaultValue,
-      className,
-      classNamePrefix,
-      onBlur,
-      menuIsOpen,
-      onMenuOpen,
-      onMenuClose,
-      onInputChange,
       components,
       "aria-label": ariaLabel,
       windowThreshold = 300,
-      filterOption,
-      closeMenuOnSelect,
       ...props
     }: SelectProps,
     ref
@@ -176,12 +164,7 @@ const ReactSelect = forwardRef(
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
             ref={ref}
-            className={className}
-            classNamePrefix={classNamePrefix}
-            noOptionsMessage={noOptionsMessage}
             placeholder={placeholder || t("select ...")}
-            options={options}
-            labelText={labelText}
             windowThreshold={windowThreshold}
             styles={customStyles({
               theme: themeContext,
@@ -195,17 +178,10 @@ const ReactSelect = forwardRef(
             aria-invalid={error}
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
-            onBlur={onBlur}
             onChange={onChange && ((option) => onChange(extractValue(option, multiselect)))}
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
-            name={name}
             isMulti={multiselect}
-            menuIsOpen={menuIsOpen}
-            onMenuOpen={onMenuOpen}
-            onMenuClose={onMenuClose}
-            menuPosition={menuPosition}
-            onInputChange={onInputChange}
             theme={themeContext}
             components={{
               Option: SelectOption,
@@ -219,8 +195,8 @@ const ReactSelect = forwardRef(
               ...components,
             }}
             aria-label={ariaLabel}
-            filterOption={filterOption}
-            closeMenuOnSelect={closeMenuOnSelect}
+            options={options}
+            labelText={labelText}
             {...props}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
