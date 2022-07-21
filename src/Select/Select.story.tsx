@@ -548,6 +548,26 @@ export const UsingRefToControlFocus = () => {
   );
 };
 
+const CustomOption = (props) => {
+  return <SelectOption {...props}>{props.selectProps.myCustomProp}</SelectOption>;
+};
+
+const CustomSingleValue = ({ innerProps, ...props }) => {
+  return <div {...innerProps}>{props.selectProps.myCustomProp}</div>;
+};
+
+export const WithCustomProps = () => {
+  return (
+    <>
+      <Select
+        options={[{ value: "accepted", label: "Accepted" }]}
+        myCustomProp="custom prop value"
+        components={{ Option: CustomOption, SingleValue: CustomSingleValue }}
+      />
+    </>
+  );
+};
+
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
