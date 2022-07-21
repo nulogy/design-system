@@ -1,3 +1,10 @@
+# [8.1.0](https://github.com/nulogy/design-system/compare/v8.0.1...v8.1.0) (2022-07-21)
+
+
+### Features
+
+* pass along custom props to the Select component ([#1049](https://github.com/nulogy/design-system/issues/1049)) ([93a795d](https://github.com/nulogy/design-system/commit/93a795dd0405c9cdbdf983e9287514380a7e8fb9))
+
 ## [8.0.1](https://github.com/nulogy/design-system/compare/v8.0.0...v8.0.1) (2022-07-20)
 
 
