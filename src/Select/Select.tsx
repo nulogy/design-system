@@ -6,6 +6,7 @@ import { ThemeContext } from "styled-components";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
+import { getSubset } from "../utils/subset";
 import customStyles from "./customReactSelectStyles";
 import { SelectOption } from "./SelectOption";
 
@@ -18,7 +19,43 @@ import {
   SelectInput,
   SelectDropdownIndicator,
 } from "./SelectComponents";
-import { getSubset } from "../utils/subset";
+
+export type SelectProps = {
+  options?: any[];
+  windowThreshold?: number;
+  filterOption?: (...args: any[]) => any;
+  autocomplete?: boolean;
+  disabled?: boolean;
+  error?: boolean;
+  errorMessage?: string;
+  errorList?: string[];
+  labelText?: string;
+  helpText?: any;
+  noOptionsMessage?: Function;
+  requirementText?: string;
+  id?: string;
+  initialIsOpen?: boolean;
+  menuPosition?: string;
+  maxHeight?: string;
+  multiselect?: boolean;
+  name?: string;
+  onBlur?: (...args: any[]) => any;
+  onChange?: (...args: any[]) => any;
+  placeholder?: string;
+  required?: boolean;
+  value?: any;
+  defaultValue?: any;
+  className?: string;
+  classNamePrefix?: string;
+  menuIsOpen?: boolean;
+  onMenuOpen?: (...args: any[]) => any;
+  onMenuClose?: (...args: any[]) => any;
+  onInputChange?: (...args: any[]) => any;
+  components?: any;
+  closeMenuOnSelect?: boolean;
+  "aria-label"?: string;
+  [key: string]: any; // Allow for custom props to be passed and used inside custom components using the `selectProps` prop
+};
 
 export const SelectDefaultProps = {
   autocomplete: true,
@@ -88,41 +125,7 @@ const extractValue = (options, isMulti) => {
     return options.value;
   }
 };
-export type SelectProps = {
-  options?: any[];
-  windowThreshold?: number;
-  filterOption?: (...args: any[]) => any;
-  autocomplete?: boolean;
-  disabled?: boolean;
-  error?: boolean;
-  errorMessage?: string;
-  errorList?: string[];
-  labelText?: string;
-  helpText?: any;
-  noOptionsMessage?: Function;
-  requirementText?: string;
-  id?: string;
-  initialIsOpen?: boolean;
-  menuPosition?: string;
-  maxHeight?: string;
-  multiselect?: boolean;
-  name?: string;
-  onBlur?: (...args: any[]) => any;
-  onChange?: (...args: any[]) => any;
-  placeholder?: string;
-  required?: boolean;
-  value?: any;
-  defaultValue?: any;
-  className?: string;
-  classNamePrefix?: string;
-  menuIsOpen?: boolean;
-  onMenuOpen?: (...args: any[]) => any;
-  onMenuClose?: (...args: any[]) => any;
-  onInputChange?: (...args: any[]) => any;
-  components?: any;
-  closeMenuOnSelect?: boolean;
-  "aria-label"?: string;
-};
+
 const ReactSelect = forwardRef(
   (
     {
