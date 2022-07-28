@@ -1,3 +1,10 @@
+## [8.1.1](https://github.com/nulogy/design-system/compare/v8.1.0...v8.1.1) (2022-07-28)
+
+
+### Bug Fixes
+
+* change type definition to allow passing custom props ([#1050](https://github.com/nulogy/design-system/issues/1050)) ([13fdf3d](https://github.com/nulogy/design-system/commit/13fdf3d5f2d1072b43d58672eafd20ef7999b07e))
+
 # [8.1.0](https://github.com/nulogy/design-system/compare/v8.0.1...v8.1.0) (2022-07-21)
 
 
