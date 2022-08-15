@@ -56,7 +56,7 @@ const FocusManager: React.FC<FocusManagerProps> = ({ children, refs = undefined,
       {children({
         focusedIndex,
         setFocusedIndex,
-        handleArrowNavigation: handleArrowNavigation,
+        handleArrowNavigation,
       })}
     </>
   );
