@@ -1,3 +1,10 @@
+## [8.1.2](https://github.com/nulogy/design-system/compare/v8.1.1...v8.1.2) (2022-08-15)
+
+
+### Bug Fixes
+
+* allow tabs to be conditionally rendered ([#1051](https://github.com/nulogy/design-system/issues/1051)) ([4367f5a](https://github.com/nulogy/design-system/commit/4367f5a49dd4a4ad5bfc65dbfaf237b24e061b4e))
+
 ## [8.1.1](https://github.com/nulogy/design-system/compare/v8.1.0...v8.1.1) (2022-07-28)
 
 
