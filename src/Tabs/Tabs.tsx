@@ -1,5 +1,4 @@
 // @ts-nocheck
-import styled from "styled-components";
 import React from "react";
 import propTypes from "@styled-system/prop-types";
 import ReactResizeDetector from "react-resize-detector";
@@ -46,8 +45,11 @@ class Tabs extends React.Component<TabsProps, TabsState> {
     const { fitted, children, onTabClick } = this.props;
     const selectedIndex = this.getSelectedIndex();
 
-    return React.Children.map(children, (tab, index) => {
-      if (tab) {
+    const tabs = React.Children.toArray(children);
+
+    return tabs
+      .filter((tab) => Boolean(tab))
+      .map((tab, index) => {
         return React.cloneElement(tab, {
           onClick: (e) => {
             setFocusToTab(index);
@@ -73,25 +75,30 @@ class Tabs extends React.Component<TabsProps, TabsState> {
             this.tabRefs[index] = ref;
           },
         });
-      }
-    });
+      });
   }
 
   getTabContent() {
     const { children, renderTabContentOnlyWhenSelected } = this.props;
     const selectedIndex = this.getSelectedIndex();
-    const tabContent = React.Children.map(children, (tab, index) => {
-      const selected = index === selectedIndex;
-      if (renderTabContentOnlyWhenSelected && !selected) {
-        return null;
-      } else {
-        return (
-          <div aria-hidden={!selected} hidden={!selected} selected={selected}>
-            {tab?.props?.children}
-          </div>
-        );
-      }
-    });
+
+    const tabs = React.Children.toArray(children);
+
+    const tabContent = tabs
+      .filter((tab) => Boolean(tab))
+      .map((tab, index) => {
+        const selected = index === selectedIndex;
+        if (renderTabContentOnlyWhenSelected && !selected) {
+          return null;
+        } else {
+          return (
+            <div aria-hidden={!selected} hidden={!selected} selected={selected}>
+              {tab?.props?.children}
+            </div>
+          );
+        }
+      });
+
     return tabContent;
   }
 

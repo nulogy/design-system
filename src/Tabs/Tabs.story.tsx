@@ -160,17 +160,13 @@ WithContentLoadedOnSelection.story = {
 
 export const WithConditionallyRenderedTabs = () => (
   <Tabs>
-    {true && (
-      <Tab label="Tab 1" className="Tab1">
-        <input className="Input1" />
-      </Tab>
-    )}
+    {false && <Tab label="Hidden 2">Hidden tab 1</Tab>}
 
-    {false && (
-      <Tab label="Tab 2" className="Tab2">
-        <input className="Input2" />
-      </Tab>
-    )}
+    {true && <Tab label="Shown 1">Shown tab 1</Tab>}
+
+    {false && <Tab label="Hidden 2">Hidden tab 2</Tab>}
+
+    {true && <Tab label="Shown 2">Shown tab 2</Tab>}
   </Tabs>
 );
 
