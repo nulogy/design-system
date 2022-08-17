@@ -13,13 +13,13 @@ type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   layer: number;
 };
 
-const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, ...props }: SubMenuTriggerProps) => {
+const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType, ...props }: SubMenuTriggerProps) => {
   return (
     // @ts-ignore
     <NavBarDropdownMenu
-      placement="right-start"
+      placement={getPlacement(menuType)}
       modifiers={null}
-      showArrow={false}
+      showArrow={true}
       triggerTogglesMenuState={false}
       {...props}
       dropdownMenuContainerEventHandlers={({ openMenu, closeMenu }) => ({
@@ -42,11 +42,20 @@ const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, ...props 
       }}
     >
       <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
-        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger, layer + 1)}
+        {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger, layer + 1, menuType)}
       </ul>
     </NavBarDropdownMenu>
   );
 };
+
+function getPlacement(menuType) {
+  switch (menuType) {
+    case "primary":
+      return "right-start";
+    case "secondary":
+      return "left-start";
+  }
+}
 
 SubMenuTrigger.displayName = "SubMenuTrigger";
 

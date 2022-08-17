@@ -25,6 +25,7 @@ const MenuTrigger = ({
   "aria-label": ariaLabel,
   trigger,
   layer,
+  menuType,
   ...props
 }: MenuTriggerProps) => {
   let dropdownMinWidth = "auto";
@@ -78,7 +79,8 @@ const MenuTrigger = ({
               e.stopPropagation();
             },
             SubMenuTrigger,
-            layer + 1
+            layer + 1,
+            menuType
           )}
         </ul>
       )}
