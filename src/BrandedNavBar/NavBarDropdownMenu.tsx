@@ -18,7 +18,7 @@ type NavBarDropdownMenuProps = {
   trigger?: Function;
   menuState?: MenuState;
   showArrow?: boolean;
-  placement?: "bottom-start" | "right-start";
+  placement?: "bottom-start" | "right-start" | "left-start";
   modifiers?: any;
   triggerTogglesMenuState?: boolean;
   dropdownMenuContainerEventHandlers?: Function;
@@ -88,6 +88,7 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
       dropdownMenuContainerEventHandlers,
       menuState: { isOpen, closeMenu, openMenu },
     } = this.props;
+
     const childrenFnc = typeof children === "function" ? children : () => children;
     return (
       <Manager>
@@ -170,7 +171,7 @@ StatelessNavBarDropdownMenu.propTypes = {
     toggleMenu: PropTypes.func,
   }).isRequired,
   showArrow: PropTypes.bool,
-  placement: PropTypes.oneOf(["bottom-start", "right-start"]),
+  placement: PropTypes.oneOf(["bottom-start", "right-start", "left-start"]),
   modifiers: PropTypes.shape({}),
   triggerTogglesMenuState: PropTypes.bool,
   dropdownMenuContainerEventHandlers: PropTypes.func,

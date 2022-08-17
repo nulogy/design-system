@@ -163,6 +163,61 @@ WithIcon.story = {
   name: "With icon",
 };
 
+export const WithPrimaryAndSecondarySubMenus = () => (
+  <BrandedNavBar
+    menuData={{
+      primaryMenu: [
+        {
+          name: "Operations",
+          items: [
+            {
+              name: "Production",
+              items: [
+                { name: "Dashboard", href: "/" },
+                {
+                  name: "Projects",
+                  items: [
+                    { name: "Cycle Counts", href: "/" },
+                    { name: "Blind Counts", href: "/" },
+                  ],
+                },
+                {
+                  name: "Jobs",
+                  items: [{ name: "Job 1", href: "/" }],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      secondaryMenu: [
+        {
+          name: "Settings",
+          items: [
+            {
+              name: "Production",
+              items: [
+                { name: "Dashboard", href: "/" },
+                {
+                  name: "Projects",
+                  items: [
+                    { name: "Cycle Counts", href: "/" },
+                    { name: "Blind Counts", href: "/" },
+                  ],
+                },
+                {
+                  name: "Jobs",
+                  items: [{ name: "Job 1", href: "/" }],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }}
+  />
+);
+
 const primaryMenuReactRouter = [
   {
     name: "Dashboard",

@@ -5,6 +5,8 @@ import renderSubMenuItems from "./renderSubMenuItems";
 import MenuTriggerButton from "./MenuTriggerButton";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
 
+export type MenuType = "primary" | "secondary";
+
 export type MenuTriggerProps = {
   name?: string;
   "aria-label"?: string;
@@ -14,6 +16,7 @@ export type MenuTriggerProps = {
   menuData?: any[];
   trigger?: (props: TriggerFunctionProps) => React.ReactNode;
   layer: number;
+  menuType: MenuType;
 };
 
 const MenuTrigger = ({
@@ -25,6 +28,7 @@ const MenuTrigger = ({
   "aria-label": ariaLabel,
   trigger,
   layer,
+  menuType,
   ...props
 }: MenuTriggerProps) => {
   let dropdownMinWidth = "auto";
@@ -78,7 +82,8 @@ const MenuTrigger = ({
               e.stopPropagation();
             },
             SubMenuTrigger,
-            layer + 1
+            layer + 1,
+            menuType
           )}
         </ul>
       )}

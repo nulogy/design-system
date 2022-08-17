@@ -51,6 +51,7 @@ const MediumNavBar: React.FC<MediumNavBarProps> = ({
               <DesktopMenu
                 themeColorObject={themeColorObject}
                 aria-label={t("primary navigation")}
+                menuType="primary"
                 menuData={menuData.primaryMenu}
               />
             )}
@@ -59,6 +60,7 @@ const MediumNavBar: React.FC<MediumNavBarProps> = ({
                 <DesktopMenu
                   themeColorObject={themeColorObject}
                   aria-label={t("secondary navigation")}
+                  menuType="secondary"
                   menuData={menuData.secondaryMenu}
                 />
               )}

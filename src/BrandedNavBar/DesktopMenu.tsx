@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 import MenuTrigger from "./MenuTrigger";
+import type { MenuType } from "./MenuTrigger";
 
 const getSharedStyles = (color, theme) => {
   return {
@@ -58,9 +59,10 @@ const Nav = styled.nav({
   alignItems: "center",
 });
 
-const renderMenuTrigger = (menuItem, themeColorObject, layer) => (
+const renderMenuTrigger = (menuItem, themeColorObject, layer, menuType) => (
   <div key={menuItem.key ?? menuItem.name}>
     <MenuTrigger
+      menuType={menuType}
       name={menuItem.name}
       aria-label={menuItem.ariaLabel}
       menuData={menuItem.items}
@@ -101,18 +103,19 @@ const getRenderFunction = (menuItem) => {
   }
 };
 
-const renderMenuItem = (menuItem, themeColorObject, layer) =>
-  getRenderFunction(menuItem)(menuItem, themeColorObject, layer);
+const renderMenuItem = (menuItem, themeColorObject, layer, menuType) =>
+  getRenderFunction(menuItem)(menuItem, themeColorObject, layer, menuType);
 
 export type DesktopMenuProps = {
   menuData: any[];
+  menuType: MenuType;
   themeColorObject: any;
 };
 
 const BaseDesktopMenu = React.forwardRef<HTMLElement, DesktopMenuProps>(
-  ({ menuData, themeColorObject, ...props }, ref) => (
+  ({ menuData, menuType, themeColorObject, ...props }, ref) => (
     <Nav {...props} ref={ref}>
-      {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject, 0))}
+      {menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject, 0, menuType))}
     </Nav>
   )
 );
