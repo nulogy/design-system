@@ -1,3 +1,10 @@
+## [8.1.4](https://github.com/nulogy/design-system/compare/v8.1.3...v8.1.4) (2022-08-17)
+
+
+### Bug Fixes
+
+* change the arrow direction for the secondary menu sub-items ([#1053](https://github.com/nulogy/design-system/issues/1053)) ([63946d5](https://github.com/nulogy/design-system/commit/63946d57c0f7570f1290b8398c993c9c611a4a8c))
+
 ## [8.1.3](https://github.com/nulogy/design-system/compare/v8.1.2...v8.1.3) (2022-08-17)
 
 
