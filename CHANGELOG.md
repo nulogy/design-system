@@ -1,3 +1,10 @@
+## [8.1.3](https://github.com/nulogy/design-system/compare/v8.1.2...v8.1.3) (2022-08-17)
+
+
+### Bug Fixes
+
+* restore BrandedNavBar submenu item padding to normal 8px ([#1052](https://github.com/nulogy/design-system/issues/1052)) ([5c0c309](https://github.com/nulogy/design-system/commit/5c0c3097e0b93379877c47416de170e411e7bea6))
+
 ## [8.1.2](https://github.com/nulogy/design-system/compare/v8.1.1...v8.1.2) (2022-08-15)
 
 
