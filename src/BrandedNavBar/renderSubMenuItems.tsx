@@ -16,7 +16,7 @@ const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger, layer) =
 
 const renderSubMenuLink = (subMenuItem, onItemClick) => (
   <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
-    <DropdownLink py="half" onClick={onItemClick} href={subMenuItem.href} to={subMenuItem.to} as={subMenuItem.as}>
+    <DropdownLink onClick={onItemClick} href={subMenuItem.href} to={subMenuItem.to} as={subMenuItem.as}>
       {subMenuItem.name}
     </DropdownLink>
   </NoWrapLi>
