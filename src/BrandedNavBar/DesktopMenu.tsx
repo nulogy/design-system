@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 import MenuTrigger from "./MenuTrigger";
+import type { MenuType } from "./MenuTrigger";
 
 const getSharedStyles = (color, theme) => {
   return {
@@ -107,7 +108,7 @@ const renderMenuItem = (menuItem, themeColorObject, layer, menuType) =>
 
 export type DesktopMenuProps = {
   menuData: any[];
-  menuType: "primary" | "secondary";
+  menuType: MenuType;
   themeColorObject: any;
 };
 

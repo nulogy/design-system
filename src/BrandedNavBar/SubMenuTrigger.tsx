@@ -3,6 +3,7 @@ import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 import SubMenuTriggerButton from "./SubMenuTriggerButton";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
+import type { MenuType } from "./MenuTrigger";
 
 type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   name?: string;
@@ -11,6 +12,7 @@ type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   menuData: any[];
   trigger: (props: TriggerFunctionProps) => React.ReactNode;
   layer: number;
+  menuType: MenuType;
 };
 
 const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType, ...props }: SubMenuTriggerProps) => {
