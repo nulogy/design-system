@@ -1,9 +1,8 @@
 // @ts-nocheck
 import React, { useState, useEffect } from "react";
-import styled, { CSSObject } from "styled-components";
-import { Box } from "../Box";
+import { AnimatePresence } from "framer-motion";
 import Alert, { AlertProps } from "../Alert/Alert";
-import { DefaultNDSThemeType } from "../theme.type";
+import { AnimatedBox } from "../Box";
 
 type ToastProps = AlertProps & {
   triggered?: boolean;
@@ -15,45 +14,6 @@ type ToastProps = AlertProps & {
 
 const SHOW_DURATION = 2000; // in ms
 const ANIMATE_OUT_DURATION = 1000;
-const TOAST_Y_MAX = "0px";
-const TOAST_Y_MIN = "-32px";
-const ACTIVE_Z_INDEX = 2;
-const INACTIVE_Z_INDEX = ACTIVE_Z_INDEX - 1;
-const SLIDE_IN_STYLES = {
-  transform: `translateY(${TOAST_Y_MIN})`,
-  transition: "transform 0.15s ease-out",
-  zIndex: ACTIVE_Z_INDEX,
-};
-const SLIDE_OUT_STYLES = {
-  transform: `translateY(${TOAST_Y_MAX})`,
-  transition: "transform 0.9s ease-in",
-  zIndex: INACTIVE_Z_INDEX,
-  pointerEvents: "none",
-};
-const FADE_IN_STYLES = {
-  opacity: 1,
-  transition: "opacity 0.25s linear",
-};
-const FADE_OUT_STYLES = {
-  transition: "opacity 1s linear",
-};
-type AnimatedAlertProps = {
-  visible?: boolean;
-  theme?: DefaultNDSThemeType;
-};
-const AnimatedAlert = styled(Alert)(
-  ({ visible, theme }: AnimatedAlertProps): CSSObject => ({
-    boxShadow: theme.shadows.medium,
-    minWidth: "200px",
-    maxWidth: "600px",
-    opacity: 0,
-    ...(visible ? FADE_IN_STYLES : FADE_OUT_STYLES),
-  })
-);
-
-type AnimatedBoxBottomProps = React.ComponentPropsWithRef<"div"> & {
-  visible?: boolean;
-};
 
 export const Toast = ({
   triggered,
@@ -99,7 +59,9 @@ export const Toast = ({
       setVisible(false);
       if (onHide) onHide();
     }
-    return () => {cancelHidingToast()}
+    return () => {
+      cancelHidingToast();
+    };
   }, [triggered]);
   const onMouseIn = () => {
     if (!isCloseable) {
@@ -115,29 +77,54 @@ export const Toast = ({
     hideToast(0);
   };
   return (
-    <Box
-      visible={visible}
-      onMouseEnter={onMouseIn}
-      onFocus={onMouseIn}
-      onMouseLeave={onMouseOut}
-      onBlur={onMouseOut}
-      position="fixed"
-      bottom="0"
-      left="0"
-      right="0"
-      marginLeft="auto"
-      marginRight="auto"
-      width="fit-content"
-      transform={`translateY(${TOAST_Y_MIN})`}
-      {...(visible ? SLIDE_IN_STYLES : SLIDE_OUT_STYLES)}
-      zIndex={zIndex}
-    >
-      <AnimatedAlert visible={visible} isCloseable={isCloseable} onClose={handleCloseButtonClick} controlled {...props}>
-        {children}
-      </AnimatedAlert>
-    </Box>
+    <AnimatePresence initial={false}>
+      {visible && (
+        <AnimatedBox
+          onMouseEnter={onMouseIn}
+          onFocus={onMouseIn}
+          onMouseLeave={onMouseOut}
+          onBlur={onMouseOut}
+          position="fixed"
+          bottom="0"
+          left="0"
+          right="0"
+          marginLeft="auto"
+          marginRight="auto"
+          width="fit-content"
+          zIndex={zIndex}
+          boxShadow="medium"
+          layout
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          animate={{
+            opacity: 1,
+            y: -30,
+            transition: { type: "spring", bounce: 0.4, duration: 0.6 },
+          }}
+          exit={{
+            y: 50,
+            opacity: 0,
+            transition: { ease: "easeOut", duration: 0.15 },
+          }}
+        >
+          <Alert
+            minWidth="200px"
+            maxWidth="600px"
+            isCloseable={isCloseable}
+            onClose={handleCloseButtonClick}
+            controlled
+            {...props}
+          >
+            {children}
+          </Alert>
+        </AnimatedBox>
+      )}
+    </AnimatePresence>
   );
 };
+
 Toast.defaultProps = {
   triggered: false,
   onShow: () => {},
@@ -147,4 +134,5 @@ Toast.defaultProps = {
   showDuration: SHOW_DURATION,
   onHidden: () => {},
 };
+
 export default Toast;
