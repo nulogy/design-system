@@ -1,3 +1,10 @@
+## [8.1.5](https://github.com/nulogy/design-system/compare/v8.1.4...v8.1.5) (2022-08-23)
+
+
+### Bug Fixes
+
+* remove the toast wrapper after exiting ([#1054](https://github.com/nulogy/design-system/issues/1054)) ([f748297](https://github.com/nulogy/design-system/commit/f7482971a2a7d3a426ca6e434e9d66a9571d7abe))
+
 ## [8.1.4](https://github.com/nulogy/design-system/compare/v8.1.3...v8.1.4) (2022-08-17)
 
 
