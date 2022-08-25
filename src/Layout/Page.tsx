@@ -17,12 +17,12 @@ export const Page = ({ breadcrumbs, title, children, headerContent, ...props }: 
     {breadcrumbs}
     <Flex alignItems="center">
       {title && (
-        <Heading1 mb="x6" mt="x2">
+        <Heading1 mb="x6" mt="x1">
           {title}
         </Heading1>
       )}
       {headerContent && (
-        <Box mb="x6" mt="x2" flexGrow={1} ml="x1">
+        <Box mb="x6" mt="x1" flexGrow={1} ml="x2">
           {headerContent}
         </Box>
       )}
