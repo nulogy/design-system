@@ -79,9 +79,10 @@ type ModalProps = {
   appElement?: JSX.Element;
   ariaHideApp?: boolean;
   footerContent?: React.ReactNode;
+  parentSelector?: (...args: any) => HTMLElement;
 };
 
-const Modal: ReactModal = ({
+const Modal: React.FC<ModalProps> & { setAppElement: (element: string | HTMLElement) => void } = ({
   isOpen,
   children,
   title,
@@ -100,6 +101,7 @@ const Modal: ReactModal = ({
   ariaHideApp,
   footerContent,
   closeAriaLabel,
+  parentSelector,
 }) => {
   const modalHasHeader = onRequestClose || title;
   const themeContext = useContext(ThemeContext);
@@ -127,10 +129,11 @@ const Modal: ReactModal = ({
       }}
       appElement={appElement}
       ariaHideApp={ariaHideApp}
+      parentSelector={parentSelector}
     >
       <PreventBodyElementScrolling>
         {modalHasHeader && (
-          <ModalHeader hasCloseButton={onRequestClose}>
+          <ModalHeader hasCloseButton={Boolean(onRequestClose)}>
             {title ? (
               <Heading2 id="modal-title" mb="none">
                 {title}
@@ -152,7 +155,6 @@ Modal.defaultProps = {
   isOpen: true,
   title: undefined,
   ariaLabel: undefined,
-  children: undefined,
   onRequestClose: undefined,
   closeAriaLabel: undefined,
   onAfterOpen: undefined,
@@ -167,6 +169,7 @@ Modal.defaultProps = {
   appElement: undefined,
   ariaHideApp: true,
   footerContent: undefined,
+  parentSelector: undefined,
 };
 
 Modal.setAppElement = ReactModal.setAppElement;

@@ -266,6 +266,26 @@ WithSelectAndScrollingContent.story = {
   name: "with select and scrolling content",
 };
 
+export const WithParentSelector = () => {
+  const id = "wrapper";
+
+  return (
+    <div id={id}>
+      <Modal
+        title="Modal Title"
+        footerContent={modalButtons}
+        parentSelector={() => document.getElementById(id)}
+      >
+        Content
+      </Modal>
+    </div>
+  );
+};
+
+WithParentSelector.story = {
+  name: "with a parent selector",
+};
+
 export const ExampleControlledModal = () => <ModalExample />;
 
 ExampleControlledModal.story = {
