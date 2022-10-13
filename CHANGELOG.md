@@ -1,3 +1,11 @@
+## [8.1.6](https://github.com/nulogy/design-system/compare/v8.1.5...v8.1.6) (2022-10-13)
+
+
+### Bug Fixes
+
+* add `parentSelector` prop to the <Modal /> ([ffbfa6f](https://github.com/nulogy/design-system/commit/ffbfa6f6cc22cd5611bcc3ce7648a6ecd77dd36a))
+* rename `react-popper-latest` package alias name ([70d347f](https://github.com/nulogy/design-system/commit/70d347f38c415ce82078c70ab3e129fea75d9068))
+
 ## [8.1.5](https://github.com/nulogy/design-system/compare/v8.1.4...v8.1.5) (2022-08-23)
 
 
