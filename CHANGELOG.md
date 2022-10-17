@@ -1,3 +1,10 @@
+## [8.1.7](https://github.com/nulogy/design-system/compare/v8.1.6...v8.1.7) (2022-10-17)
+
+
+### Bug Fixes
+
+* bump react modal to 3.14.4 ([a78ca46](https://github.com/nulogy/design-system/commit/a78ca46910e6a83641e2cf42eddc077cb7d6d0a3))
+
 ## [8.1.6](https://github.com/nulogy/design-system/compare/v8.1.5...v8.1.6) (2022-10-13)
 
 
