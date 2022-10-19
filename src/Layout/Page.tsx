@@ -10,10 +10,11 @@ type PageProps = FlexProps & {
   title?: string;
   children?: React.ReactNode;
   headerContent?: React.ReactNode;
+  fullHeight?: boolean
 };
 
-export const Page = ({ breadcrumbs, title, children, headerContent, ...props }: PageProps) => (
-  <Flex flexDirection="column" py="x3" px="x3" {...props}>
+export const Page = ({ breadcrumbs, title, children, headerContent, fullHeight, ...props }: PageProps) => (
+  <Flex flexDirection="column" py="x3" px="x3" flexGrow={fullHeight ? 1 : 0} {...props}>
     {breadcrumbs}
     <Flex alignItems="center">
       {title && (

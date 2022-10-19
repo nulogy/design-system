@@ -17,9 +17,9 @@ const ApplicationFrame = ({ navBar, children, environment, ...props }: Applicati
         {environment && <EnvironmentBanner>{environment}</EnvironmentBanner>}
         {navBar}
       </Box>
-      <Box position="relative" flexGrow={1}>
+      <Flex flexDirection="column" position="relative" flexGrow={1}>
         {children}
-      </Box>
+      </Flex>
     </Flex>
   );
 };
