@@ -1,3 +1,10 @@
+## [8.1.8](https://github.com/nulogy/design-system/compare/v8.1.7...v8.1.8) (2022-10-21)
+
+
+### Bug Fixes
+
+* update yarn.lock ([49c6429](https://github.com/nulogy/design-system/commit/49c64299ecfbd950a4971999664f5c75b9d98b03))
+
 ## [8.1.7](https://github.com/nulogy/design-system/compare/v8.1.6...v8.1.7) (2022-10-17)
 
 
