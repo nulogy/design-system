@@ -46,6 +46,9 @@ export default {
 };
 
 export const _Checkbox = () => <Checkbox p="x3" id="checkbox" labelText="I am a checkbox" />;
+export const Multiline = () => <Checkbox p="x3" id="checkbox" labelText="Lorem ipsum dolor sit amet consecutor" />;
+Multiline.decorators = [(story) => <div style={{ width: "200px" }}>{story()}</div>];
+
 export const SetToDefaultChecked = () => <Checkbox id="checkbox" defaultChecked labelText="I am checked by default" />;
 
 SetToDefaultChecked.story = {

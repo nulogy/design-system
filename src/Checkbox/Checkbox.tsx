@@ -6,6 +6,7 @@ import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { getSubset, omitSubset } from "../utils/subset";
 import { DefaultNDSThemeType } from "../theme.type";
+import { addStyledProps } from "../StyledProps";
 
 type CheckboxProps = React.ComponentPropsWithRef<"input"> & {
   labelText?: string;
@@ -79,7 +80,6 @@ const VisualCheckbox: React.FunctionComponent<any> = styled.div(
     borderRadius: theme.radii.small,
     border: "solid 1px",
     position: "relative",
-    alignSelf: "center",
     // checkmark
     "&:before": {
       content: "''",
@@ -91,7 +91,8 @@ const VisualCheckbox: React.FunctionComponent<any> = styled.div(
       border: `solid ${theme.colors.white}`,
       ...(indeterminate ? indeterminateStyles : checkedStyles),
     },
-  })
+  }),
+  addStyledProps
 );
 const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input((props) => ({
   position: "absolute",
@@ -132,6 +133,7 @@ const Checkbox: React.FC<any> = forwardRef((props, ref) => {
           checked={checked}
           indeterminate={indeterminate}
           data-testid="visual-checkbox"
+          marginTop={labelText ? "half" : "0px"}
         />
         {labelText && (
           <Text disabled={disabled} ml="x1">
