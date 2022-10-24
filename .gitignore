@@ -91,5 +91,8 @@ yarn-error.log*
 # RubyMine settings
 .idea
 
+# VSCode settings
+.vscode
+
 # asdf version manager
 .tool-versions
