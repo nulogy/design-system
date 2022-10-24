@@ -1,3 +1,10 @@
+## [8.1.9](https://github.com/nulogy/design-system/compare/v8.1.8...v8.1.9) (2022-10-24)
+
+
+### Bug Fixes
+
+* align checkbox check with first line of multiline labels ([0aae65b](https://github.com/nulogy/design-system/commit/0aae65b9bd97bf2d56a4248bd9e78fe9963252a0))
+
 ## [8.1.8](https://github.com/nulogy/design-system/compare/v8.1.7...v8.1.8) (2022-10-21)
 
 
