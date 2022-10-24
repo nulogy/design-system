@@ -162,13 +162,32 @@ const ReactSelect = forwardRef(
       checkOptionsAreValid(options);
     }, [options]);
 
+    const handleChange = (option) => {
+      // onChange && ((option) => onChange(extractValue(option, multiselect)))
+      onChange && onChange(extractValue(option, multiselect))
+      // console.log('handleChange', option)
+    }
+    
+    const handleInputChange = (e) => {
+      props.onInputChange && props.onInputChange(e);
+      // console.log('handleInputChange', e)
+
+    }
+
+    const handlePaste = async (e: React.ClipboardEvent<HTMLInputElement>) => {
+      const clipboardData =  e.clipboardData.getData('text/plain');
+      const options = clipboardData.split(', ');
+      console.log('handlePaste', { options, clipboardData: e.clipboardData.getData('text/plain')})
+    }
+
     return (
       <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
             ref={ref}
-            placeholder={placeholder || t("select ...")}
+            placeholder={placeholder || (t("select ...") as string)}
             windowThreshold={windowThreshold}
+            /* @ts-ignore */
             styles={customStyles({
               theme: themeContext,
               error,
@@ -181,10 +200,11 @@ const ReactSelect = forwardRef(
             aria-invalid={error}
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
-            onChange={onChange && ((option) => onChange(extractValue(option, multiselect)))}
+            onChange={handleChange}
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
             isMulti={multiselect}
+            /* @ts-ignore */
             theme={themeContext}
             components={{
               Option: SelectOption,
@@ -194,13 +214,14 @@ const ReactSelect = forwardRef(
               DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
-              Input: SelectInput,
+              Input: (props) => <SelectInput {...props} onPaste={handlePaste}/>,
               ...components,
             }}
             aria-label={ariaLabel}
             options={options}
             labelText={labelText}
             {...props}
+            onInputChange={handleInputChange}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
