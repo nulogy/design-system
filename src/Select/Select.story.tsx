@@ -44,7 +44,9 @@ const wrappingOptions = [
 ];
 
 const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps) => {
+  const selectRef = useRef(null);
   const [photoList, setPhotoList] = useState([]);
+
   const getPhotos = async () => {
     // returns 5000 items
     const data = await fetch("https://jsonplaceholder.typicode.com/photos");
@@ -55,14 +57,17 @@ const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps
     }));
     return results;
   };
+
   const setOptions = async () => {
     const result = await getPhotos();
     setPhotoList(result);
   };
+
   useEffect(() => {
     setOptions();
   }, []);
-  return <Select multiselect={multiselect} options={photoList} labelText={labelText} {...props} />;
+
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} ref={selectRef} {...props} />;
 };
 
 type SelectWithStateProps = SelectProps & {
@@ -572,9 +577,16 @@ UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
 
+export const WithPasteOptionsInSelect = () => {
+  const [state, setState] = React.useState([]);
 
-export const WithPasteOptionsInSelect = () => (
-  <Box style={{ width: "300px" }}>
-    <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
-  </Box>
-);
+  const handleChange = (value, event) => {
+    setState(value);
+    console.log("WithPasteOptionsInSelect", { value, state, event });
+  };
+  return (
+    <Box style={{ width: "300px" }}>
+      <SelectWithManyOptions value={state} onChange={handleChange} multiselect labelText="Multiselect many options:" />
+    </Box>
+  );
+};
