@@ -43,7 +43,7 @@ const wrappingOptions = [
   },
 ];
 
-const SelectWithManyOptions = ({ multiselect, labelText }: SelectProps) => {
+const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps) => {
   const [photoList, setPhotoList] = useState([]);
   const getPhotos = async () => {
     // returns 5000 items
@@ -62,7 +62,7 @@ const SelectWithManyOptions = ({ multiselect, labelText }: SelectProps) => {
   useEffect(() => {
     setOptions();
   }, []);
-  return <Select multiselect={multiselect} options={photoList} labelText={labelText} />;
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} {...props} />;
 };
 
 type SelectWithStateProps = SelectProps & {
@@ -571,3 +571,10 @@ export const WithCustomProps = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
+
+
+export const WithPasteOptionsInSelect = () => (
+  <Box style={{ width: "300px" }}>
+    <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
+  </Box>
+);
