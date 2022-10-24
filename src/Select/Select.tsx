@@ -103,6 +103,7 @@ export const getOption = (options, value) => {
   // allows an option with  a null value to be matched
   if (options.length > 0 && value !== undefined) {
     const optionWithMatchingValue = options.find((o) => o.value === value);
+    console.log("getOption", { optionWithMatchingValue, value, options });
     return optionWithMatchingValue || null;
   }
   return value;
@@ -126,6 +127,7 @@ const extractValue = (options, isMulti) => {
   }
 };
 
+// petror@nulogy.dev: TODO: update package "react-windowed-select" to latest version
 const ReactSelect = forwardRef(
   (
     {
@@ -163,22 +165,57 @@ const ReactSelect = forwardRef(
     }, [options]);
 
     const handleChange = (option) => {
+      console.log("handleChange", { option });
+
       // onChange && ((option) => onChange(extractValue(option, multiselect)))
-      onChange && onChange(extractValue(option, multiselect))
+      onChange && onChange(extractValue(option, multiselect));
+      console.log("handleChange extractValue", { option: extractValue(option, multiselect) });
       // console.log('handleChange', option)
-    }
-    
+    };
+
     const handleInputChange = (e) => {
       props.onInputChange && props.onInputChange(e);
       // console.log('handleInputChange', e)
-
-    }
+    };
 
     const handlePaste = async (e: React.ClipboardEvent<HTMLInputElement>) => {
-      const clipboardData =  e.clipboardData.getData('text/plain');
-      const options = clipboardData.split(', ');
-      console.log('handlePaste', { options, clipboardData: e.clipboardData.getData('text/plain')})
-    }
+      const clipboardData = e.clipboardData.getData("text/plain") || "";
+      const selectedOptions = clipboardData
+        .split(", ")
+        .map((value) => ({ value, label: value, isInOptionsList: true }));
+
+      console.log("handlePaste", { selectedOptions, ref });
+
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      if (ref && ref.current) {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        ref.current.setState((prevState) => {
+          console.log({ prevState, selectedOptions, options });
+          return {
+            ...prevState,
+            value: [...(prevState.value || []), ...selectedOptions],
+          };
+        });
+      }
+
+      setTimeout(() => {
+        console.log(ref.current.state.value);
+        handleChange(ref.current.state.value);
+        console.log(
+          "getReactSelectValue",
+          { options, value: ref.current.state.value },
+          //
+          // TODO: add ability for getReactSelectValue to dispaly selected values, that are absent in the options list
+          //
+          getReactSelectValue(
+            options,
+            ref.current.state.value.map((i) => i.value)
+          )
+        );
+      });
+    };
 
     return (
       <Field {...spaceProps}>
@@ -187,7 +224,6 @@ const ReactSelect = forwardRef(
             ref={ref}
             placeholder={placeholder || (t("select ...") as string)}
             windowThreshold={windowThreshold}
-            /* @ts-ignore */
             styles={customStyles({
               theme: themeContext,
               error,
@@ -200,21 +236,24 @@ const ReactSelect = forwardRef(
             aria-invalid={error}
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
+            creatable
             onChange={handleChange}
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
             isMulti={multiselect}
-            /* @ts-ignore */
             theme={themeContext}
             components={{
               Option: SelectOption,
               Control: SelectControl,
-              MultiValue: SelectMultiValue,
+              MultiValue: (props) => {
+                console.log("MultiValue props", props);
+                return <SelectMultiValue {...props} />;
+              },
               ClearIndicator: SelectClearIndicator,
               DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
-              Input: (props) => <SelectInput {...props} onPaste={handlePaste}/>,
+              Input: (props) => <SelectInput {...props} onPaste={handlePaste} />,
               ...components,
             }}
             aria-label={ariaLabel}
