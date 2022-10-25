@@ -580,10 +580,10 @@ UsingRefToControlFocus.story = {
 export const WithPasteOptionsInSelect = () => {
   const [state, setState] = React.useState([]);
 
-  const handleChange = (value, event) => {
+  const handleChange = (value) => {
     setState(value);
-    console.log("WithPasteOptionsInSelect", { value, state, event });
   };
+  console.log("WithPasteOptionsInSelect", { state });
   return (
     <Box style={{ width: "300px" }}>
       <SelectWithManyOptions value={state} onChange={handleChange} multiselect labelText="Multiselect many options:" />
