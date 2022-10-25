@@ -122,6 +122,9 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       "&:last-child": {
         marginRight: theme.space.half,
       },
+      "&.disabled": {
+        background: "transparent",
+      },
     }),
     multiValueLabel: () => ({
       textOverflow: "ellipsis",
@@ -142,6 +145,9 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
         background: theme.colors.darkGrey,
         cursor: "pointer",
         svg: { fill: theme.colors.white },
+      },
+      "&.disabled": {
+        display: "none",
       },
     }),
     noOptionsMessage: (provided) => ({
