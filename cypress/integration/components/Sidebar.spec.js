@@ -86,19 +86,19 @@ describe("Sidebar", () => {
     it("slides out when clicking on the body", () => {
       trigger().click();
       Sidebar().should("be.visible");
-      cy.get("body").click();
+      overlay().click({ force: true });
       Sidebar().should("not.be.visible");
       Sidebar().should("have.css", "right", "0px");
     });
   });
-  describe("Don't close on outide click", () => {
+  describe("Don't close on outside click", () => {
     beforeEach(() => {
       cy.renderFromStorybook("sidebar--dont-close-on-outside-click");
     });
     it("does not close when clicking on the body", () => {
       trigger().click();
       Sidebar().should("be.visible");
-      cy.get("body").click();
+      cy.get("body").click({ force: true });
       Sidebar().should("be.visible");
     });
     it("closes when the close button is pressed", () => {
