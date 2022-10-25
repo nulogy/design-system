@@ -103,9 +103,14 @@ export const getOption = (options, value) => {
   // allows an option with  a null value to be matched
   if (options.length > 0 && value !== undefined) {
     const optionWithMatchingValue = options.find((o) => o.value === value);
-    console.log("getOption", { optionWithMatchingValue, value, options });
-    return optionWithMatchingValue || null;
+
+    if (optionWithMatchingValue) {
+      return optionWithMatchingValue;
+    }
+
+    return value ? { value, label: value, notInOptionsList: true } : null;
   }
+
   return value;
 };
 
@@ -115,6 +120,7 @@ const getReactSelectValue = (options, input) => {
   }
   return getOption(options, input);
 };
+
 const extractValue = (options, isMulti) => {
   if (isMulti) {
     return options && options.length ? options.map((o) => o.value) : [];
@@ -165,12 +171,9 @@ const ReactSelect = forwardRef(
     }, [options]);
 
     const handleChange = (option) => {
-      console.log("handleChange", { option });
-
-      // onChange && ((option) => onChange(extractValue(option, multiselect)))
       onChange && onChange(extractValue(option, multiselect));
-      console.log("handleChange extractValue", { option: extractValue(option, multiselect) });
-      // console.log('handleChange', option)
+
+      console.log("handleChange extractValue", { extractValue: extractValue(option, multiselect) });
     };
 
     const handleInputChange = (e) => {
@@ -178,44 +181,32 @@ const ReactSelect = forwardRef(
       // console.log('handleInputChange', e)
     };
 
+    // TODO: ingore items that already are selected
     const handlePaste = async (e: React.ClipboardEvent<HTMLInputElement>) => {
       const clipboardData = e.clipboardData.getData("text/plain") || "";
-      const selectedOptions = clipboardData
-        .split(", ")
-        .map((value) => ({ value, label: value, isInOptionsList: true }));
+      const pastedOptions = clipboardData.split(", ").map((pastedOption) => {
+        const existedOption = options.find((option) => option.label === pastedOption || option.value === pastedOption);
 
-      console.log("handlePaste", { selectedOptions, ref });
+        if (existedOption) {
+          return existedOption;
+        }
 
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      if (ref && ref.current) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        ref.current.setState((prevState) => {
-          console.log({ prevState, selectedOptions, options });
-          return {
-            ...prevState,
-            value: [...(prevState.value || []), ...selectedOptions],
-          };
-        });
-      }
-
-      setTimeout(() => {
-        console.log(ref.current.state.value);
-        handleChange(ref.current.state.value);
-        console.log(
-          "getReactSelectValue",
-          { options, value: ref.current.state.value },
-          //
-          // TODO: add ability for getReactSelectValue to dispaly selected values, that are absent in the options list
-          //
-          getReactSelectValue(
-            options,
-            ref.current.state.value.map((i) => i.value)
-          )
-        );
+        return { value: pastedOption, label: pastedOption };
       });
+
+      const newValue = [...(ref.current.state.value || []), ...pastedOptions];
+
+      ref.current.setState((prevState) => {
+        return {
+          ...prevState,
+          value: newValue,
+        };
+      });
+      handleChange(newValue);
     };
+    useEffect(() => {
+      console.log({ privateValue: ref?.current?.state?.value, value });
+    });
 
     return (
       <Field {...spaceProps}>
@@ -246,8 +237,14 @@ const ReactSelect = forwardRef(
               Option: SelectOption,
               Control: SelectControl,
               MultiValue: (props) => {
-                console.log("MultiValue props", props);
-                return <SelectMultiValue {...props} />;
+                console.log("SelectMultiValue", props);
+
+                return (
+                  <SelectMultiValue
+                    {...props}
+                    className={`${props.data.notInOptionsList ? "disabled" : ""} ${props.className || ""}`}
+                  />
+                );
               },
               ClearIndicator: SelectClearIndicator,
               DropdownIndicator: SelectDropdownIndicator,
