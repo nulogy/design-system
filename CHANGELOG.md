@@ -1,3 +1,10 @@
+# [8.2.0](https://github.com/nulogy/design-system/compare/v8.1.9...v8.2.0) (2022-10-25)
+
+
+### Features
+
+* add `fullHeight` prop to <Page /> ([ba92ddd](https://github.com/nulogy/design-system/commit/ba92dddfed9c9838cb3a74d87c7be71dfecbae04))
+
 ## [8.1.9](https://github.com/nulogy/design-system/compare/v8.1.8...v8.1.9) (2022-10-24)
 
 
