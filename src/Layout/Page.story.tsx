@@ -133,3 +133,20 @@ export const NoBreadcrumbs = () => (
     </Page>
   </ApplicationFrame>
 );
+
+export const WithFullHeight = () => (
+  <ApplicationFrame navBar={<BrandedNavBar menuData={{ primaryMenu: [{ name: "Menu Link", href: "/" }] }} />}>
+    <Page
+      title="Materials Overview"
+      fullHeight
+      breadcrumbs={
+        <Breadcrumbs>
+          <Link href="/">Home</Link>
+          <Link href="/">Materials</Link>
+        </Breadcrumbs>
+      }
+    >
+      <Text>I am main content.</Text>
+    </Page>
+  </ApplicationFrame>
+);
