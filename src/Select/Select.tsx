@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, forwardRef, useCallback, Ref } from "react";
+import React, { useContext, useEffect, forwardRef, useCallback } from "react";
 import propTypes from "@styled-system/prop-types";
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
@@ -193,27 +193,30 @@ const ReactSelect = forwardRef(
         const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
         const clipboardData = e.clipboardData.getData("text/plain") || "";
 
-        const pastedOptions = clipboardData
-          .split(", ")
-          .map((pastedOption) => {
-            const existedOption = options.find(
-              (option) => option.label === pastedOption || option.value === pastedOption
-            );
-            console.log({ existedOption, pastedOption, options });
+        const pastedOptions = Array.from(
+          new Set(
+            clipboardData
+              .split(", ")
+              .map((pastedOption) => {
+                const existedOption = options.find(
+                  (option) => option.label === pastedOption || option.value === pastedOption
+                );
 
-            if (existedOption) {
-              return existedOption;
-            }
+                if (existedOption) {
+                  return existedOption;
+                }
 
-            return { value: pastedOption, label: pastedOption };
-          })
-          .filter(
-            (pastedOption) =>
-              // ignoring selected options
-              currentValue.findIndex(
-                (option) => pastedOption.value === option.value || pastedOption.label === option.label
-              ) === -1
-          );
+                return { value: pastedOption, label: pastedOption };
+              })
+              .filter(
+                (pastedOption) =>
+                  // ignoring selected options
+                  currentValue.findIndex(
+                    (option) => pastedOption.value === option.value || pastedOption.label === option.label
+                  ) === -1
+              )
+          )
+        );
 
         const newValue = [...currentValue, ...pastedOptions];
 
@@ -231,13 +234,12 @@ const ReactSelect = forwardRef(
     );
 
     const _SelectInput = useCallback(
-      (props) => <SelectInput {...props} {...(multiselect ? { onPaste: handlePaste } : {})} />,
+      (inputProps) => <SelectInput {...inputProps} {...(multiselect ? { onPaste: handlePaste } : {})} />,
       [handlePaste, multiselect]
     );
 
     useEffect(() => {
       if (ref) {
-        // not able to resolve ts issue with ref from forwardRef
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         ref.current = reactSelectRef.current;
