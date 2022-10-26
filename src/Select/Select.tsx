@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, forwardRef } from "react";
+import React, { useContext, useEffect, forwardRef, useCallback, Ref } from "react";
 import propTypes from "@styled-system/prop-types";
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
@@ -19,6 +19,14 @@ import {
   SelectInput,
   SelectDropdownIndicator,
 } from "./SelectComponents";
+
+type ReactSelectStateManager = {
+  state: {
+    value: any[];
+  };
+  setState: (prevState: any) => void;
+  blur: () => void;
+};
 
 export type SelectProps = {
   options?: any[];
@@ -165,63 +173,82 @@ const ReactSelect = forwardRef(
     const { t } = useTranslation();
     const themeContext = useContext(ThemeContext);
     const spaceProps = getSubset(props, propTypes.space);
+    const reactSelectRef = React.useRef<ReactSelectStateManager>(null);
 
     useEffect(() => {
       checkOptionsAreValid(options);
     }, [options]);
 
-    const handleChange = React.useCallback(
+    const handleChange = useCallback(
       (option) => {
         onChange && onChange(extractValue(option, multiselect));
       },
       [multiselect, onChange]
     );
 
-    // TODO: resolve TS issues
-    const handlePaste = React.useCallback(async (e: React.ClipboardEvent<HTMLInputElement>) => {
-      const currentRef = ref.current;
-      const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
-      const clipboardData = e.clipboardData.getData("text/plain") || "";
+    // TODO: write auto-tests
+    const handlePaste = useCallback(
+      async (e: React.ClipboardEvent<HTMLInputElement>) => {
+        const currentRef = reactSelectRef.current;
+        const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
+        const clipboardData = e.clipboardData.getData("text/plain") || "";
 
-      const pastedOptions = clipboardData
-        .split(", ")
-        .map((pastedOption) => {
-          const existedOption = options.find(
-            (option) => option.label === pastedOption || option.value === pastedOption
+        const pastedOptions = clipboardData
+          .split(", ")
+          .map((pastedOption) => {
+            const existedOption = options.find(
+              (option) => option.label === pastedOption || option.value === pastedOption
+            );
+            console.log({ existedOption, pastedOption, options });
+
+            if (existedOption) {
+              return existedOption;
+            }
+
+            return { value: pastedOption, label: pastedOption };
+          })
+          .filter(
+            (pastedOption) =>
+              // ignoring selected options
+              currentValue.findIndex(
+                (option) => pastedOption.value === option.value || pastedOption.label === option.label
+              ) === -1
           );
 
-          if (existedOption) {
-            return existedOption;
-          }
+        const newValue = [...currentValue, ...pastedOptions];
 
-          return { value: pastedOption, label: pastedOption };
-        })
-        .filter(
-          (pastedOption) =>
-            // ignore selected options
-            currentValue.findIndex(
-              (option) => pastedOption.value === option.value || pastedOption.label === option.label
-            ) === -1
-        );
+        currentRef.setState((prevState) => {
+          return {
+            ...prevState,
+            value: newValue,
+          };
+        });
+        handleChange(newValue);
 
-      const newValue = [...currentValue, ...pastedOptions];
+        currentRef.blur();
+      },
+      [handleChange, options]
+    );
 
-      currentRef.setState((prevState) => {
-        return {
-          ...prevState,
-          value: newValue,
-        };
-      });
-      handleChange(newValue);
+    const _SelectInput = useCallback(
+      (props) => <SelectInput {...props} {...(multiselect ? { onPaste: handlePaste } : {})} />,
+      [handlePaste, multiselect]
+    );
 
-      currentRef.blur();
-    }, []);
+    useEffect(() => {
+      if (ref) {
+        // not able to resolve ts issue with ref from forwardRef
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        ref.current = reactSelectRef.current;
+      }
+    }, [reactSelectRef, ref]);
 
     return (
       <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
-            ref={ref}
+            ref={reactSelectRef}
             placeholder={placeholder || (t("select ...") as string)}
             windowThreshold={windowThreshold}
             styles={customStyles({
@@ -245,17 +272,12 @@ const ReactSelect = forwardRef(
             components={{
               Option: SelectOption,
               Control: SelectControl,
-              MultiValue: (props) => (
-                <SelectMultiValue
-                  {...props}
-                  className={`${props.data.notInOptionsList ? "disabled" : ""} ${props.className || ""}`}
-                />
-              ),
+              MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,
               DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
-              Input: (props) => <SelectInput {...props} onPaste={handlePaste} />,
+              Input: _SelectInput,
               ...components,
             }}
             aria-label={ariaLabel}

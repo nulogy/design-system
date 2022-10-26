@@ -15,10 +15,13 @@ export const SelectControl = (props) => {
   );
 };
 
-export const SelectMultiValue = (props) => {
+export const SelectMultiValue = ({ className, ...props }) => {
   return (
     <div data-testid="select-multivalue">
-      <selectComponents.MultiValue {...props} />
+      <selectComponents.MultiValue
+        className={`${props.data.notInOptionsList ? "disabled" : ""} ${className || ""}`}
+        {...props}
+      />
     </div>
   );
 };
