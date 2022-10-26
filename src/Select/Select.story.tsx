@@ -583,7 +583,7 @@ export const WithPasteOptionsInSelect = () => {
   const handleChange = (value) => {
     setState(value);
   };
-  console.log("WithPasteOptionsInSelect", { state });
+
   return (
     <Box style={{ width: "300px" }}>
       <SelectWithManyOptions value={state} onChange={handleChange} multiselect labelText="Multiselect many options:" />

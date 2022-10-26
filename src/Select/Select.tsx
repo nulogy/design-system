@@ -170,43 +170,52 @@ const ReactSelect = forwardRef(
       checkOptionsAreValid(options);
     }, [options]);
 
-    const handleChange = (option) => {
-      onChange && onChange(extractValue(option, multiselect));
+    const handleChange = React.useCallback(
+      (option) => {
+        onChange && onChange(extractValue(option, multiselect));
+      },
+      [multiselect, onChange]
+    );
 
-      console.log("handleChange extractValue", { extractValue: extractValue(option, multiselect) });
-    };
-
-    const handleInputChange = (e) => {
-      props.onInputChange && props.onInputChange(e);
-      // console.log('handleInputChange', e)
-    };
-
-    // TODO: ingore items that already are selected
-    const handlePaste = async (e: React.ClipboardEvent<HTMLInputElement>) => {
+    // TODO: resolve TS issues
+    const handlePaste = React.useCallback(async (e: React.ClipboardEvent<HTMLInputElement>) => {
+      const currentRef = ref.current;
+      const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
       const clipboardData = e.clipboardData.getData("text/plain") || "";
-      const pastedOptions = clipboardData.split(", ").map((pastedOption) => {
-        const existedOption = options.find((option) => option.label === pastedOption || option.value === pastedOption);
 
-        if (existedOption) {
-          return existedOption;
-        }
+      const pastedOptions = clipboardData
+        .split(", ")
+        .map((pastedOption) => {
+          const existedOption = options.find(
+            (option) => option.label === pastedOption || option.value === pastedOption
+          );
 
-        return { value: pastedOption, label: pastedOption };
-      });
+          if (existedOption) {
+            return existedOption;
+          }
 
-      const newValue = [...(ref.current.state.value || []), ...pastedOptions];
+          return { value: pastedOption, label: pastedOption };
+        })
+        .filter(
+          (pastedOption) =>
+            // ignore selected options
+            currentValue.findIndex(
+              (option) => pastedOption.value === option.value || pastedOption.label === option.label
+            ) === -1
+        );
 
-      ref.current.setState((prevState) => {
+      const newValue = [...currentValue, ...pastedOptions];
+
+      currentRef.setState((prevState) => {
         return {
           ...prevState,
           value: newValue,
         };
       });
       handleChange(newValue);
-    };
-    useEffect(() => {
-      console.log({ privateValue: ref?.current?.state?.value, value });
-    });
+
+      currentRef.blur();
+    }, []);
 
     return (
       <Field {...spaceProps}>
@@ -236,16 +245,12 @@ const ReactSelect = forwardRef(
             components={{
               Option: SelectOption,
               Control: SelectControl,
-              MultiValue: (props) => {
-                console.log("SelectMultiValue", props);
-
-                return (
-                  <SelectMultiValue
-                    {...props}
-                    className={`${props.data.notInOptionsList ? "disabled" : ""} ${props.className || ""}`}
-                  />
-                );
-              },
+              MultiValue: (props) => (
+                <SelectMultiValue
+                  {...props}
+                  className={`${props.data.notInOptionsList ? "disabled" : ""} ${props.className || ""}`}
+                />
+              ),
               ClearIndicator: SelectClearIndicator,
               DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
@@ -257,7 +262,6 @@ const ReactSelect = forwardRef(
             options={options}
             labelText={labelText}
             {...props}
-            onInputChange={handleInputChange}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
