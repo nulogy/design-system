@@ -43,6 +43,13 @@ const wrappingOptions = [
   },
 ];
 
+const PCNList = [
+  { value: "2", label: "PCN2" },
+  { value: "4", label: "PCN4" },
+  { value: "1", label: "PCN1" },
+  { value: "9", label: "PCN9" },
+];
+
 const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps) => {
   const selectRef = useRef(null);
   const [photoList, setPhotoList] = useState([]);
@@ -359,12 +366,6 @@ WithWrappingText.story = {
 };
 
 export const WithMultiselect = (props) => {
-  const PCNList = [
-    { value: "2", label: "PCN2" },
-    { value: "4", label: "PCN4" },
-    { value: "1", label: "PCN1" },
-    { value: "9", label: "PCN9" },
-  ];
   return (
     <Select
       defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
@@ -384,12 +385,6 @@ WithMultiselect.story = {
 };
 
 export const WithCloseMenuOnSelectTurnedOff = () => {
-  const PCNList = [
-    { value: "2", label: "PCN2" },
-    { value: "4", label: "PCN4" },
-    { value: "1", label: "PCN1" },
-    { value: "9", label: "PCN9" },
-  ];
   return (
     <Select
       defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
@@ -577,7 +572,7 @@ UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
 
-export const WithPasteOptionsInSelect = () => {
+export const PasteCsvValueInSelect = (props) => {
   const [state, setState] = React.useState([]);
 
   const handleChange = (value) => {
@@ -585,8 +580,21 @@ export const WithPasteOptionsInSelect = () => {
   };
 
   return (
-    <Box style={{ width: "300px" }}>
-      <SelectWithManyOptions value={state} onChange={handleChange} multiselect labelText="Multiselect many options:" />
-    </Box>
+    <Select
+      defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+      noOptionsMessage={() => "No options"}
+      placeholder="Please select inventory status"
+      options={PCNList}
+      labelText="Select PCN"
+      className="Select"
+      onChange={handleChange}
+      value={state}
+      multiselect
+      {...props}
+    />
   );
+};
+
+PasteCsvValueInSelect.story = {
+  name: "paste CSV value in select",
 };
