@@ -186,7 +186,6 @@ const ReactSelect = forwardRef(
       [multiselect, onChange]
     );
 
-    // TODO: write auto-tests
     const handlePaste = useCallback(
       async (e: React.ClipboardEvent<HTMLInputElement>) => {
         const currentRef = reactSelectRef.current;
@@ -251,7 +250,7 @@ const ReactSelect = forwardRef(
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
             ref={reactSelectRef}
-            placeholder={placeholder || (t("select ...") as string)}
+            placeholder={placeholder || t("select ...")}
             windowThreshold={windowThreshold}
             styles={customStyles({
               theme: themeContext,
