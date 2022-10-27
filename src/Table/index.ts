@@ -1,5 +1,5 @@
-import Table, { TableRowType, TableColumnType, TableCellInfoType, TableProps } from "./Table";
+import Table from "./Table";
 
-export type { TableRowType, TableColumnType, TableProps, TableCellInfoType };
+export type { TableRowType, TableColumnType, TableProps, TableCellInfoType } from "./Table";
 
 export { Table };
