@@ -5,6 +5,7 @@ export { Box, AnimatedBox } from "./Box";
 export { Flex } from "./Flex";
 export { Icon, InlineIcon } from "./Icon";
 export { Text, Heading1, Heading2, Heading3, Heading4 } from "./Type";
+export type { TextProps } from "./Type";
 
 export { Button, PrimaryButton, DangerButton, QuietButton, IconicButton, ControlIcon } from "./Button";
 export { ButtonGroup } from "./ButtonGroup";
