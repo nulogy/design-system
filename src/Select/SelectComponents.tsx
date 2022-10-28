@@ -19,7 +19,7 @@ export const SelectMultiValue = ({ className, ...props }) => {
   return (
     <div data-testid="select-multivalue">
       <selectComponents.MultiValue
-        className={`${props.data.notInOptionsList ? "disabled" : ""} ${className || ""}`}
+        className={`${props.data.notInOptionsList ? "invalid" : ""} ${className || ""}`}
         {...props}
       />
     </div>
