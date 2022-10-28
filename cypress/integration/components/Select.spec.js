@@ -4,6 +4,7 @@ describe("Select", () => {
   const getValue = () => cy.get("[data-testid='select-control']");
   const getMultiselect = () => getSelectComponent();
   const getSelectedItems = () => cy.get("[data-testid='select-multivalue']");
+  const getClearButton = () => cy.get("[data-testid='select-clear']");
   const getCloseButtons = () => cy.get("[data-testid='select-multivalue'] svg");
   const assertDropDownIsClosed = () => getDropdownMenu().should("not.exist");
   const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
@@ -78,7 +79,7 @@ describe("Select", () => {
     });
   });
 
-  describe.only("Multiselect with copy/paste CSV functionality", () => {
+  describe("Multiselect with copy/paste CSV functionality", () => {
     const getCopyCsvLabesButton = () => cy.get("[data-testid='csv-labels']");
     const getCopyCsvValuesButton = () => cy.get("[data-testid='csv-values']");
     const getCopyCsvValuesWithDuplicateButton = () => cy.get("[data-testid='csv-labels-with-duplicates']");
