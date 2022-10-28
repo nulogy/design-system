@@ -122,8 +122,9 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       "&:last-child": {
         marginRight: theme.space.half,
       },
-      "&.disabled": {
+      "&.invalid": {
         background: "transparent",
+        border: `1px solid ${theme.colors.red}`,
       },
     }),
     multiValueLabel: () => ({
@@ -135,6 +136,9 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       fontSize: theme.fontSizes.small,
       padding: theme.space.half,
       paddingLeft: theme.space.x1,
+      "&.invalid": {
+        color: theme.colors.red,
+      },
     }),
     multiValueRemove: (provided) => ({
       ...provided,
@@ -146,8 +150,12 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
         cursor: "pointer",
         svg: { fill: theme.colors.white },
       },
-      "&.disabled": {
-        display: "none",
+      "&.invalid": {
+        svg: { fill: theme.colors.red },
+        "&:hover": {
+          background: theme.colors.lightRed,
+          cursor: "pointer",
+        },
       },
     }),
     noOptionsMessage: (provided) => ({
