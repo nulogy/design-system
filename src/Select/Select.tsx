@@ -192,30 +192,21 @@ const ReactSelect = forwardRef(
         const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
         const clipboardData = e.clipboardData.getData("text/plain") || "";
 
-        const pastedOptions = Array.from(
-          new Set(
-            clipboardData
-              .split(", ")
-              .map((pastedOption) => {
-                const existedOption = options.find(
-                  (option) => option.label === pastedOption || option.value === pastedOption
-                );
+        const pastedOptions = Array.from(new Set(clipboardData.split(", ")))
+          .map((pastedOption) => {
+            const existedOption = options.find((option) => option.label === pastedOption);
 
-                if (existedOption) {
-                  return existedOption;
-                }
+            if (existedOption) {
+              return existedOption;
+            }
 
-                return { value: pastedOption, label: pastedOption };
-              })
-              .filter(
-                (pastedOption) =>
-                  // ignoring selected options
-                  currentValue.findIndex(
-                    (option) => pastedOption.value === option.value || pastedOption.label === option.label
-                  ) === -1
-              )
-          )
-        );
+            return { value: pastedOption, label: pastedOption };
+          })
+          .filter(
+            (pastedOption) =>
+              // ignoring already selected options
+              currentValue.findIndex((option) => pastedOption.label === option.label) === -1
+          );
 
         const newValue = [...currentValue, ...pastedOptions];
 
