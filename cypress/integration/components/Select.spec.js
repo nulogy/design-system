@@ -98,34 +98,37 @@ describe("Select", () => {
       getMultiselect().contains("PCN4");
     });
 
-    it("copy and paste CSV values to select", () => {
-      const csvValues = "2, 1";
-
-      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
-
-      getMultiselect().contains("PCN1");
-      getMultiselect().contains("PCN2");
-    });
-
-    it("ignoring duplicated values", () => {
-      const csvValues = "2, 2, 1";
+    it("ignoring duplicated labes", () => {
+      const csvValues = "PCN2, PCN2, PCN1";
 
       paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
 
       getSelectedItems().should("have.length", 2);
 
       getMultiselect().contains("PCN1");
+      getMultiselect().contains("PCN2");
+    });
+
+    it("ignoring duplicated values that does not exist in the options list", () => {
+      const csvValues = "A002, A002, B001, PCN2";
+
+      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
+
+      getSelectedItems().should("have.length", 3);
+
+      getMultiselect().contains("A002");
+      getMultiselect().contains("B001");
       getMultiselect().contains("PCN2");
     });
 
     it("ignoring values that are already selected", () => {
-      const csvValues = "2, 1";
+      const csvValues = "PCN2, PCN1";
 
       paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
 
       getSelectedItems().should("have.length", 2);
 
-      const csvValues = "2, 4";
+      const csvValues = "PCN2, PCN4";
       paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
 
       getSelectedItems().should("have.length", 3);
@@ -135,13 +138,13 @@ describe("Select", () => {
       getMultiselect().contains("PCN4");
     });
 
-    it("values that are not in options list are disabled on view", () => {
+    it("values that are not in options list are invalid on view", () => {
       const csvValues = "PCN1, PCN5";
 
       paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
 
-      getMultiselect().contains("PCN1").should("not.have.class", "disabled");
-      getMultiselect().contains("PCN5").should("have.class", "disabled");
+      getMultiselect().contains("PCN1").should("not.have.class", "invalid");
+      getMultiselect().contains("PCN5").should("have.class", "invalid");
     });
   });
 
