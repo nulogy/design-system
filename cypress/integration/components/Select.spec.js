@@ -93,7 +93,7 @@ describe("Select", () => {
     it("copy and paste CSV labels to select", () => {
       const csvValues = "PCN2, PCN4";
 
-      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
+      cy.triggerPasteEvent({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
 
       getMultiselect().contains("PCN2");
       getMultiselect().contains("PCN4");
@@ -102,7 +102,7 @@ describe("Select", () => {
     it("ignoring duplicated labes", () => {
       const csvValues = "PCN2, PCN2, PCN1";
 
-      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
+      cy.triggerPasteEvent({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
 
       getSelectedItems().should("have.length", 2);
 
@@ -113,7 +113,7 @@ describe("Select", () => {
     it("ignoring duplicated values that does not exist in the options list", () => {
       const csvValues = "A002, A002, B001, PCN2";
 
-      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
+      cy.triggerPasteEvent({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
 
       getSelectedItems().should("have.length", 3);
 
@@ -125,12 +125,12 @@ describe("Select", () => {
     it("ignoring values that are already selected", () => {
       const csvValues = "PCN2, PCN1";
 
-      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
+      cy.triggerPasteEvent({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
 
       getSelectedItems().should("have.length", 2);
 
       const csvValues = "PCN2, PCN4";
-      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
+      cy.triggerPasteEvent({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
 
       getSelectedItems().should("have.length", 3);
 
@@ -142,7 +142,7 @@ describe("Select", () => {
     it("values that are not in options list are invalid on view", () => {
       const csvValues = "PCN1, PCN5";
 
-      paste({ destinationSelector: selectTextInputSelector, pasteType: "text/plain", pastePayload: csvValues });
+      cy.triggerPasteEvent({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
 
       getMultiselect().contains("PCN1").should("not.have.class", "invalid");
       getMultiselect().contains("PCN5").should("have.class", "invalid");
@@ -233,15 +233,3 @@ describe("Select", () => {
   });
   describe("Knobs", () => {});
 });
-
-function paste({ destinationSelector, pastePayload, pasteType = "text/plain" }) {
-  // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
-  cy.get(destinationSelector).then(($destination) => {
-    const pasteEvent = Object.assign(new Event("paste", { bubbles: true, cancelable: true }), {
-      clipboardData: {
-        getData: (type = pasteType) => pastePayload,
-      },
-    });
-    $destination[0].dispatchEvent(pasteEvent);
-  });
-}
