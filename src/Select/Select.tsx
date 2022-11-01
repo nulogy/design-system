@@ -220,7 +220,7 @@ const ReactSelect = forwardRef(
 
         currentRef.blur();
       },
-      [handleChange, options]
+      [options]
     );
 
     const _SelectInput = useCallback(
