@@ -58,7 +58,7 @@ Cypress.Commands.add("isNotInViewport", (element) => {
   });
 });
 
-Cypress.Commands.add("triggerPasteEvent", ({ destinationSelector, pastePayload, pasteType = "text/plain" }) {
+Cypress.Commands.add("paste", ({ destinationSelector, pastePayload, pasteType = "text/plain" }) {
   // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
   cy.get(destinationSelector).then((destination) => {
     const pasteEvent = Object.assign(new Event("paste", { bubbles: true, cancelable: true }), {

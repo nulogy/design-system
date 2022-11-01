@@ -51,7 +51,6 @@ const PCNList = [
 ];
 
 const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps) => {
-  const selectRef = useRef(null);
   const [photoList, setPhotoList] = useState([]);
 
   const getPhotos = async () => {
@@ -74,7 +73,7 @@ const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps
     setOptions();
   }, []);
 
-  return <Select multiselect={multiselect} options={photoList} labelText={labelText} ref={selectRef} {...props} />;
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} {...props} />;
 };
 
 type SelectWithStateProps = SelectProps & {
@@ -586,7 +585,6 @@ export const PasteCsvValueInSelect = (props) => {
       placeholder="Please select inventory status"
       options={PCNList}
       labelText="Select PCN"
-      className="Select"
       onChange={handleChange}
       value={state}
       multiselect
