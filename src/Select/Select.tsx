@@ -141,7 +141,6 @@ const extractValue = (options, isMulti) => {
   }
 };
 
-// petror@nulogy.dev: TODO: update package "react-windowed-select" to latest version
 const ReactSelect = forwardRef(
   (
     {
