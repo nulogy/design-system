@@ -1,3 +1,10 @@
+## [8.2.2](https://github.com/nulogy/design-system/compare/v8.2.1...v8.2.2) (2022-11-24)
+
+
+### Bug Fixes
+
+* Tabs unique "key" prop warning ([7d87a74](https://github.com/nulogy/design-system/commit/7d87a74f030d50eda7eed9414ab1adb5e7a4051b))
+
 ## [8.2.1](https://github.com/nulogy/design-system/compare/v8.2.0...v8.2.1) (2022-10-27)
 
 
