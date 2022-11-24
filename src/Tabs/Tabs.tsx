@@ -92,7 +92,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
           return null;
         } else {
           return (
-            <div aria-hidden={!selected} hidden={!selected} selected={selected}>
+            <div aria-hidden={!selected} hidden={!selected} selected={selected} key={tab.key || tab.label}>
               {tab?.props?.children}
             </div>
           );
