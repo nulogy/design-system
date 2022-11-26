@@ -97,50 +97,6 @@ export const SelectDefaultProps = {
   closeMenuOnSelect: true,
 };
 
-const checkOptionsAreValid = (options) => {
-  if (options && process.env.NODE_ENV === "development") {
-    const uniq = (a) => Array.from(new Set(a));
-    const uniqueValues = uniq(options.map(({ value }) => (value === null ? "_null_" : value)));
-    if (uniqueValues.length < options.length) {
-      console.warn("NDS: The options prop passed to Select must have unique values for each option", options);
-    }
-  }
-};
-
-export const getOption = (options, value) => {
-  // allows an option with  a null value to be matched
-  if (options.length > 0 && value !== undefined) {
-    const optionWithMatchingValue = options.find((o) => o.value === value);
-
-    if (optionWithMatchingValue) {
-      return optionWithMatchingValue;
-    }
-
-    return value ? { value, label: value, notInOptionsList: true } : null;
-  }
-
-  return value;
-};
-
-const getReactSelectValue = (options, input) => {
-  if (Array.isArray(input)) {
-    return input.map((i) => getOption(options, i));
-  }
-  return getOption(options, input);
-};
-
-const extractValue = (options, isMulti) => {
-  if (isMulti) {
-    return options && options.length ? options.map((o) => o.value) : [];
-  }
-
-  if (options == null) {
-    return options;
-  } else {
-    return options.value;
-  }
-};
-
 const ReactSelect = forwardRef(
   (
     {
@@ -187,37 +143,45 @@ const ReactSelect = forwardRef(
 
     const handlePaste = useCallback(
       async (e: React.ClipboardEvent<HTMLInputElement>) => {
+        e.preventDefault();
+
         const currentRef = reactSelectRef.current;
         const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
-        const clipboardData = e.clipboardData.getData("text/plain") || "";
 
-        const pastedOptions = Array.from(new Set(clipboardData.split(", ")))
+        const clipboardData = e.clipboardData.getData("text/plain") || "";
+        const values = extractValuesFromCsvString(clipboardData);
+
+        const notExistingOptions: string[] = [];
+        const pastedOptions = values
           .map((pastedOption) => {
-            const existedOption = options.find((option) => option.label === pastedOption);
+            const existedOption = options.find(
+              (option) => option.label === pastedOption || option.value === pastedOption
+            );
 
             if (existedOption) {
               return existedOption;
             }
 
-            return { value: pastedOption, label: pastedOption };
+            notExistingOptions.push(pastedOption);
+
+            return null;
           })
+          .filter((pastedOption) => pastedOption)
           .filter(
             (pastedOption) =>
               // ignoring already selected options
-              currentValue.findIndex((option) => pastedOption.label === option.label) === -1
+              currentValue.findIndex((option) => pastedOption.value === option.value) === -1
           );
-
         const newValue = [...currentValue, ...pastedOptions];
 
         currentRef.setState((prevState) => {
           return {
             ...prevState,
             value: newValue,
+            inputValue: notExistingOptions.join(", "),
           };
         });
         handleChange(newValue);
-
-        currentRef.blur();
       },
       [options]
     );
@@ -282,9 +246,62 @@ const ReactSelect = forwardRef(
     );
   }
 );
+
+const checkOptionsAreValid = (options) => {
+  if (options && process.env.NODE_ENV === "development") {
+    const uniq = (a) => Array.from(new Set(a));
+    const uniqueValues = uniq(options.map(({ value }) => (value === null ? "_null_" : value)));
+    if (uniqueValues.length < options.length) {
+      console.warn("NDS: The options prop passed to Select must have unique values for each option", options);
+    }
+  }
+};
+
+export const getOption = (options, value) => {
+  // allows an option with  a null value to be matched
+  if (options.length > 0 && value !== undefined) {
+    const optionWithMatchingValue = options.find((o) => o.value === value);
+    return optionWithMatchingValue || null;
+  }
+  return value;
+};
+
+const getReactSelectValue = (options, input) => {
+  if (Array.isArray(input)) {
+    return input.map((i) => getOption(options, i));
+  }
+  return getOption(options, input);
+};
+
+const extractValue = (options, isMulti) => {
+  if (isMulti) {
+    return options && options.length ? options.map((o) => o.value) : [];
+  }
+
+  if (options == null) {
+    return options;
+  } else {
+    return options.value;
+  }
+};
+
+const extractValuesFromCsvString = (csv: string) => {
+  const quoteRegEx = /(["'])(?:(?=(\\?))\2.)*?\1/gim;
+  const matchedValues = csv.match(quoteRegEx) || [];
+  const quotedValues = matchedValues.map((str) => str.replace(/(["',])/g, ""));
+  const values = csv
+    .replace(quoteRegEx, "")
+    .split(", ")
+    .filter((str) => str.length > 0)
+    .concat(quotedValues);
+
+  return values;
+};
+
 ReactSelect.defaultProps = {
   ...SelectDefaultProps,
   windowThreshold: 300,
   filterOption: undefined,
 };
+
 export default ReactSelect;
