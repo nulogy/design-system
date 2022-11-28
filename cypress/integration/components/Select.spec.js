@@ -79,7 +79,7 @@ describe("Select", () => {
     });
   });
 
-  describe("Multiselect with copy/paste CSV functionality", () => {
+  describe("Multiselect: paste CSV sting", () => {
     const getCopyCsvLabesButton = () => cy.get("[data-testid='csv-labels']");
     const getCopyCsvValuesButton = () => cy.get("[data-testid='csv-values']");
     const getCopyCsvValuesWithDuplicateButton = () => cy.get("[data-testid='csv-labels-with-duplicates']");
@@ -110,16 +110,15 @@ describe("Select", () => {
       getMultiselect().contains("PCN2");
     });
 
-    it("ignoring duplicated values that does not exist in the options list", () => {
+    it("paste values that does not exist in the options list in input as a text", () => {
       const csvValues = "A002, A002, B001, PCN2";
 
       cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
 
-      getSelectedItems().should("have.length", 3);
+      getSelectedItems().should("have.length", 1);
 
-      getMultiselect().contains("A002");
-      getMultiselect().contains("B001");
       getMultiselect().contains("PCN2");
+      getSelectTextInput().should("have.value", "A002, B001");
     });
 
     it("ignoring values that are already selected", () => {
@@ -137,15 +136,6 @@ describe("Select", () => {
       getMultiselect().contains("PCN1");
       getMultiselect().contains("PCN2");
       getMultiselect().contains("PCN4");
-    });
-
-    it("values that are not in options list are invalid on view", () => {
-      const csvValues = "PCN1, PCN5";
-
-      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
-
-      getMultiselect().contains("PCN1").should("not.have.class", "invalid");
-      getMultiselect().contains("PCN5").should("have.class", "invalid");
     });
   });
 
