@@ -152,14 +152,14 @@ const ReactSelect = forwardRef(
         const values = extractValuesFromCsvString(clipboardData);
 
         const notExistingOptions: string[] = [];
-        const pastedOptions = values
+        const pastedOptions = Array.from(new Set(values))
           .map((pastedOption) => {
-            const existedOption = options.find(
+            const existingOption = options.find(
               (option) => option.label === pastedOption || option.value === pastedOption
             );
 
-            if (existedOption) {
-              return existedOption;
+            if (existingOption) {
+              return existingOption;
             }
 
             notExistingOptions.push(pastedOption);
