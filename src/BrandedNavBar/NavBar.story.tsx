@@ -2,12 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { select } from "@storybook/addon-knobs";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
 import { DropdownButton, DropdownLink } from "../DropdownMenu";
 import theme from "../theme";
 import { Button } from "../Button";
 import { Text } from "../Type";
+import { Branding } from "../Branding";
+import { Link } from "../Link";
+import { NavBarWithResizablePrimaryMenuProps } from "./NavBar";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
@@ -20,7 +24,7 @@ const ResetStorybookView = styled.div({
   height: "100vh",
 });
 
-const BrandedNavBar = (props) => (
+const BrandedNavBar = (props: NavBarWithResizablePrimaryMenuProps) => (
   <ResetStorybookView>
     <NDSBrandedNavBar {...props} />
     <Heading1 mt="x3" ml="x1">
@@ -28,6 +32,28 @@ const BrandedNavBar = (props) => (
     </Heading1>
   </ResetStorybookView>
 );
+
+type ProgressiveNulogyLogoProps = {
+  brandingLinkHref: string;
+  width: number;
+};
+
+function ProgressiveNulogyLogo({ brandingLinkHref, width }: ProgressiveNulogyLogoProps) {
+  const { t } = useTranslation();
+  const logoType = width >= 1920 ? "wordmark" : "lettermark";
+  return (
+    <Link
+      aria-label={t("Home")}
+      as={Link}
+      to={brandingLinkHref}
+      underline={false}
+      lineHeight="1"
+      style={{ display: "block" }}
+    >
+      <Branding size="medium" logoType={logoType} logoColor="blue" />
+    </Link>
+  );
+}
 
 const primaryMenu = [
   {
@@ -117,7 +143,14 @@ _BrandedNavBar.story = {
   name: "BrandedNavBar",
 };
 
-export const WithACompanyLogo = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} logoSrc={sampleLogo} />;
+export const WithACompanyLogo = () => (
+  <BrandedNavBar
+    menuData={{ primaryMenu, secondaryMenu }}
+    logo={(brandingLinkHref: string, width: number) => (
+      <ProgressiveNulogyLogo brandingLinkHref={brandingLinkHref} width={width} />
+    )}
+  />
+);
 
 WithACompanyLogo.story = {
   name: "With a company logo",
