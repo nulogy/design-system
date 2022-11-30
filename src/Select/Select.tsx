@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, forwardRef, useCallback } from "react";
+import React from "react";
 import propTypes from "@styled-system/prop-types";
 import WindowedSelect from "react-windowed-select";
 import { useTranslation } from "react-i18next";
@@ -9,6 +9,7 @@ import { InlineValidation } from "../Validation";
 import { getSubset } from "../utils/subset";
 import customStyles from "./customReactSelectStyles";
 import { SelectOption } from "./SelectOption";
+import { extractValuesFromCsvString } from "./selectHelpers";
 
 import {
   SelectControl,
@@ -97,7 +98,7 @@ export const SelectDefaultProps = {
   closeMenuOnSelect: true,
 };
 
-const ReactSelect = forwardRef(
+const ReactSelect = React.forwardRef(
   (
     {
       autocomplete,
@@ -126,22 +127,22 @@ const ReactSelect = forwardRef(
     ref
   ) => {
     const { t } = useTranslation();
-    const themeContext = useContext(ThemeContext);
+    const themeContext = React.useContext(ThemeContext);
     const spaceProps = getSubset(props, propTypes.space);
     const reactSelectRef = React.useRef<ReactSelectStateManager>(null);
 
-    useEffect(() => {
+    React.useEffect(() => {
       checkOptionsAreValid(options);
     }, [options]);
 
-    const handleChange = useCallback(
+    const handleChange = React.useCallback(
       (option) => {
         onChange && onChange(extractValue(option, multiselect));
       },
       [multiselect, onChange]
     );
 
-    const handlePaste = useCallback(
+    const handlePaste = React.useCallback(
       async (e: React.ClipboardEvent<HTMLInputElement>) => {
         e.preventDefault();
 
@@ -152,7 +153,7 @@ const ReactSelect = forwardRef(
         const values = extractValuesFromCsvString(clipboardData);
 
         const notExistingOptions: string[] = [];
-        const pastedOptions = Array.from(new Set(values))
+        const pastedOptions = values
           .map((pastedOption) => {
             const existingOption = options.find(
               (option) => option.label === pastedOption || option.value === pastedOption
@@ -166,7 +167,7 @@ const ReactSelect = forwardRef(
 
             return null;
           })
-          .filter((pastedOption) => pastedOption)
+          .filter(Boolean)
           .filter(
             (pastedOption) =>
               // ignoring already selected options
@@ -186,12 +187,12 @@ const ReactSelect = forwardRef(
       [options]
     );
 
-    const _SelectInput = useCallback(
+    const _SelectInput = React.useCallback(
       (inputProps) => <SelectInput {...inputProps} {...(multiselect ? { onPaste: handlePaste } : {})} />,
       [handlePaste, multiselect]
     );
 
-    useEffect(() => {
+    React.useEffect(() => {
       if (ref) {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
@@ -218,7 +219,6 @@ const ReactSelect = forwardRef(
             aria-invalid={error}
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
-            creatable
             onChange={handleChange}
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
@@ -283,19 +283,6 @@ const extractValue = (options, isMulti) => {
   } else {
     return options.value;
   }
-};
-
-const extractValuesFromCsvString = (csv: string) => {
-  const quoteRegEx = /(["'])(?:(?=(\\?))\2.)*?\1/gim;
-  const matchedValues = csv.match(quoteRegEx) || [];
-  const quotedValues = matchedValues.map((str) => str.replace(/(["',])/g, ""));
-  const values = csv
-    .replace(quoteRegEx, "")
-    .split(", ")
-    .filter((str) => str.length > 0)
-    .concat(quotedValues);
-
-  return values;
 };
 
 ReactSelect.defaultProps = {
