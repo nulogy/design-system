@@ -79,10 +79,7 @@ describe("Select", () => {
     });
   });
 
-  describe("Multiselect: paste CSV sting", () => {
-    const getCopyCsvLabesButton = () => cy.get("[data-testid='csv-labels']");
-    const getCopyCsvValuesButton = () => cy.get("[data-testid='csv-values']");
-    const getCopyCsvValuesWithDuplicateButton = () => cy.get("[data-testid='csv-labels-with-duplicates']");
+  describe("Multiselect: paste CSV string", () => {
     const selectTextInputSelector = "[data-testid='select-input'] input";
     const getSelectTextInput = () => cy.get(selectTextInputSelector);
 
