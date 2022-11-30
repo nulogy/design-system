@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
 import { text, boolean, select } from "@storybook/addon-knobs";
-import { Button, Select, SelectOption } from "../index";
+import { Button, Select, SelectOption, Text, Divider } from "../index";
 import { Box } from "../Box";
 import { SelectProps } from "../Select/Select";
 
@@ -579,20 +579,29 @@ export const PasteCsvValueInSelect = (props) => {
   };
 
   return (
-    <Select
-      defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
-      noOptionsMessage={() => "No options"}
-      placeholder="Please select inventory status"
-      options={PCNList}
-      labelText="Select PCN"
-      onChange={handleChange}
-      value={state}
-      multiselect
-      {...props}
-    />
+    <>
+      <Select
+        defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={PCNList}
+        labelText="Select PCN"
+        onChange={handleChange}
+        value={state}
+        multiselect
+        {...props}
+      />
+      <Text>Copy CSV string with labels and paste to the input:</Text>
+      <Text fontFamily="monospace">PCN1, PCN2, PCN9</Text>
+      <Divider />
+      <Text>Also you can use values in the same format:</Text>
+      <Text fontFamily="monospace">1, 2, 9</Text>
+      <Divider />
+      <Text>
+        In case if you paste items that are not existing in the options list, you will get them as editable text in the
+        input:
+      </Text>
+      <Text fontFamily="monospace">PCN7, PCN1, PCN2, PCN9, PCN22</Text>
+    </>
   );
-};
-
-PasteCsvValueInSelect.story = {
-  name: "paste CSV value in select",
 };
