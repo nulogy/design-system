@@ -1,39 +1,34 @@
-import React from "react";
+import React, { isValidElement } from "react";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import { FlexProps } from "../Flex/Flex";
 import BreadcrumbsList from "./BreadcrumbsList";
 import BreadcrumbsListItem from "./BreadcrumbsListItem";
 
-type BreadcrumbsProps = FlexProps & {
-  children: any;
-  as?: string | undefined;
-};
-
 const insertSeparators = (items: any, className: any) => {
   return items.reduce((acc: any, current: any, index: number) => {
     return acc.concat(
       current,
-      // eslint-disable-next-line react/no-array-index-key
-      <BreadcrumbsListItem aria-hidden key={`separator-${index}`} className={className} px="x1">
+      <BreadcrumbsListItem aria-hidden key={`separator-${index}`} className={className}>
         <Icon icon="rightArrow" />
       </BreadcrumbsListItem>
     );
   }, []);
 };
 
-const Breadcrumbs = ({ children, as, ...props }: BreadcrumbsProps) => {
-  const childrenArr = Array.isArray(children) ? children : [children];
-  const allItems = [...childrenArr].map((child, index) => {
+const Breadcrumbs: React.FC<FlexProps> = ({ children, as, ...props }) => {
+  const allItems = React.Children.map(children, (child, index) => {
+    if (!isValidElement(child)) return null;
+
     return (
-      // eslint-disable-next-line react/no-array-index-key
       <BreadcrumbsListItem key={`child-${index}`}>
         {React.cloneElement(child, {
           color: "darkBlue",
         })}
       </BreadcrumbsListItem>
     );
-  });
+  }).filter(Boolean);
+
   return (
     <Flex as={as} {...props}>
       <BreadcrumbsList>{insertSeparators(allItems, "seperator")}</BreadcrumbsList>
