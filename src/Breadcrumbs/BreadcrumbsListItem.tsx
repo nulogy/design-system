@@ -9,7 +9,7 @@ const BreadcrumbsListItem: React.FC<any> = styled.li(
     listStyle: "none",
     display: "inline-flex",
     alignSelf: "center",
-    color: theme.colors.darkGrey,
+    color: theme.colors.midGrey,
     "a:visited": {
       color: theme.colors.darkBlue,
     },
