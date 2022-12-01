@@ -1,3 +1,10 @@
+# [8.3.0](https://github.com/nulogy/design-system/compare/v8.2.2...v8.3.0) (2022-12-01)
+
+
+### Features
+
+* copy paste a list of values on a multi select ([ba66bc5](https://github.com/nulogy/design-system/commit/ba66bc55e186d053e25b2ea8156d8d555ebed4e3))
+
 ## [8.2.2](https://github.com/nulogy/design-system/compare/v8.2.1...v8.2.2) (2022-11-24)
 
 
