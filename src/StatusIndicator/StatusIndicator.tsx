@@ -1,5 +1,7 @@
-import styled, { StyledComponent } from "styled-components";
+import React from "react";
+import styled from "styled-components";
 import { space, typography, flexbox, SpaceProps, TypographyProps, FlexboxProps } from "styled-system";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const StatusIndicatorColours = (theme) => ({
   neutral: {
@@ -38,22 +40,32 @@ const StatusIndicatorColours = (theme) => ({
     color: theme.colors.darkGrey,
   },
 });
+
 const getStatusIndicatorColours = (type, theme) => {
   return StatusIndicatorColours(theme)[type];
 };
+
+type StatusIndicatorType = "neutral" | "dark" | "danger" | "informative" | "success" | "warning" | "quiet";
+
 type StatusIndicatorProps = SpaceProps &
   TypographyProps &
   FlexboxProps & {
-    type?: "neutral" | "dark" | "danger" | "informative" | "success" | "warning" | "quiet";
+    type?: StatusIndicatorType;
   };
-const StatusIndicator: React.FC<any> = styled.p(space, typography, flexbox, ({ theme, type }: any) => ({
-  display: "inline-block",
-  fontWeight: theme.fontWeights.bold,
-  textTransform: "uppercase",
-  letterSpacing: ".05em",
-  borderRadius: theme.space.x1,
-  ...getStatusIndicatorColours(type, theme),
-}));
+
+const StatusIndicator: React.FC<StatusIndicatorProps> = styled.p(
+  space,
+  typography,
+  flexbox,
+  ({ theme, type }: { theme: DefaultNDSThemeType; type: StatusIndicatorType }) => ({
+    display: "inline-block",
+    fontWeight: theme.fontWeights.bold,
+    textTransform: "uppercase",
+    letterSpacing: ".05em",
+    borderRadius: theme.space.x1,
+    ...getStatusIndicatorColours(type, theme),
+  })
+);
 
 StatusIndicator.defaultProps = {
   type: "neutral",
