@@ -4,7 +4,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
 import { text, boolean, select } from "@storybook/addon-knobs";
-import { Button, Select, SelectOption } from "../index";
+import { Button, Select, SelectOption, Text, Divider } from "../index";
 import { Box } from "../Box";
 import { SelectProps } from "../Select/Select";
 
@@ -43,8 +43,16 @@ const wrappingOptions = [
   },
 ];
 
-const SelectWithManyOptions = ({ multiselect, labelText }: SelectProps) => {
+const PCNList = [
+  { value: "2", label: "PCN2" },
+  { value: "4", label: "PCN4" },
+  { value: "1", label: "PCN1" },
+  { value: "9", label: "PCN9" },
+];
+
+const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps) => {
   const [photoList, setPhotoList] = useState([]);
+
   const getPhotos = async () => {
     // returns 5000 items
     const data = await fetch("https://jsonplaceholder.typicode.com/photos");
@@ -55,14 +63,17 @@ const SelectWithManyOptions = ({ multiselect, labelText }: SelectProps) => {
     }));
     return results;
   };
+
   const setOptions = async () => {
     const result = await getPhotos();
     setPhotoList(result);
   };
+
   useEffect(() => {
     setOptions();
   }, []);
-  return <Select multiselect={multiselect} options={photoList} labelText={labelText} />;
+
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} {...props} />;
 };
 
 type SelectWithStateProps = SelectProps & {
@@ -354,12 +365,6 @@ WithWrappingText.story = {
 };
 
 export const WithMultiselect = (props) => {
-  const PCNList = [
-    { value: "2", label: "PCN2" },
-    { value: "4", label: "PCN4" },
-    { value: "1", label: "PCN1" },
-    { value: "9", label: "PCN9" },
-  ];
   return (
     <Select
       defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
@@ -379,12 +384,6 @@ WithMultiselect.story = {
 };
 
 export const WithCloseMenuOnSelectTurnedOff = () => {
-  const PCNList = [
-    { value: "2", label: "PCN2" },
-    { value: "4", label: "PCN4" },
-    { value: "1", label: "PCN1" },
-    { value: "9", label: "PCN9" },
-  ];
   return (
     <Select
       defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
@@ -570,4 +569,39 @@ export const WithCustomProps = () => {
 
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
+};
+
+export const PasteCsvValueInSelect = (props) => {
+  const [state, setState] = React.useState([]);
+
+  const handleChange = (value) => {
+    setState(value);
+  };
+
+  return (
+    <>
+      <Select
+        defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={PCNList}
+        labelText="Select PCN"
+        onChange={handleChange}
+        value={state}
+        multiselect
+        {...props}
+      />
+      <Text>Copy CSV string with labels and paste to the input:</Text>
+      <Text fontFamily="monospace">PCN1, PCN2, PCN9</Text>
+      <Divider />
+      <Text>Also you can use values in the same format:</Text>
+      <Text fontFamily="monospace">1, 2, 9</Text>
+      <Divider />
+      <Text>
+        In case if you paste items that are not existing in the options list, you will get them as editable text in the
+        input:
+      </Text>
+      <Text fontFamily="monospace">PCN7, PCN1, PCN2, PCN9, PCN22</Text>
+    </>
+  );
 };

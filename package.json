@@ -179,6 +179,7 @@
     ],
     "testMatch": [
       "**/src/**/*.spec.tsx",
+      "**/src/**/*.spec.ts",
       "**/spec/**/*.spec.tsx"
     ],
     "setupFiles": [
