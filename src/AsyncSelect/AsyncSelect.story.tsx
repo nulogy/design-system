@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
 import { AsyncSelect, Button } from "../index";
+import simulatedAPIRequest from "../utils/story/simulatedAPIRequest";
 
 const northAmericanCountries = [
   {
@@ -18,20 +19,8 @@ const northAmericanCountries = [
   },
 ];
 
-const simulatedAPIRequest = async (inputValue: string, milliseconds = 450): Promise<Response> => {
-  const country = northAmericanCountries.find((country) => country.value.toLowerCase().startsWith(inputValue));
-
-  const responseBody = JSON.stringify([{ name: country.value }]);
-
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(new Response(responseBody));
-    }, milliseconds);
-  });
-};
-
 const loadMatchingCountries = async (inputValue: string) => {
-  const data = await simulatedAPIRequest(inputValue);
+  const data = await simulatedAPIRequest(inputValue, northAmericanCountries);
   const results = await data.json();
 
   return results.map(({ name }) => ({

@@ -144,18 +144,10 @@ describe("Select", () => {
       cy.renderFromStorybook("select--add-new-option-on-input-change");
     });
 
-    it("user able to paste and select values with live update of options", () => {
-      const csvValues = "PCN2, PCN1";
-
-      getSelectTextInput().type("test");
+    it("user type and select values with live update of options", () => {
+      getSelectTextInput().type("cana");
       getSelectTextInput().should("have.focus");
-
-      cy.focused().type("{backspace}{backspace}{backspace}");
       getSelectTextInput().type("{downarrow}").type("{enter}");
-      getSelectTextInput().should("have.focus");
-
-      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
-
       getSelectTextInput().should("have.focus");
     });
   });
