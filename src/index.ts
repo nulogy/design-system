@@ -78,7 +78,7 @@ export type {
   RenderMenuButtonProps,
 } from "./BrandedNavBar";
 export { AsyncSelect } from "./AsyncSelect";
-export { ApplicationFrame, Page, Sidebar } from "./Layout";
+export { ApplicationFrame, Page, Sidebar, Header } from "./Layout";
 export { useWindowDimensions } from "./utils";
 export { Divider } from "./Divider";
 export { SortingTable } from "./SortingTable";
