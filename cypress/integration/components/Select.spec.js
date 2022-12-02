@@ -136,6 +136,22 @@ describe("Select", () => {
     });
   });
 
+  describe("Multiselect: options live update", () => {
+    const selectTextInputSelector = "[data-testid='select-input'] input";
+    const getSelectTextInput = () => cy.get(selectTextInputSelector);
+
+    beforeEach(() => {
+      cy.renderFromStorybook("select--add-new-option-on-input-change");
+    });
+
+    it("user type and select values with live update of options", () => {
+      getSelectTextInput().type("cana");
+      getSelectTextInput().should("have.focus");
+      getSelectTextInput().type("{downarrow}").type("{enter}");
+      getSelectTextInput().should("have.focus");
+    });
+  });
+
   describe("Default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("select--select");

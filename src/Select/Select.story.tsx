@@ -7,6 +7,7 @@ import { text, boolean, select } from "@storybook/addon-knobs";
 import { Button, Select, SelectOption, Text, Divider } from "../index";
 import { Box } from "../Box";
 import { SelectProps } from "../Select/Select";
+import simulatedAPIRequest from "../utils/story/simulatedAPIRequest";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -50,19 +51,44 @@ const PCNList = [
   { value: "9", label: "PCN9" },
 ];
 
+const getPhotos = async () => {
+  // returns 5000 items
+  const data = await fetch("https://jsonplaceholder.typicode.com/photos");
+  const json = await data.json();
+  const results = json.map(({ title, id }) => ({
+    label: title,
+    value: id,
+  }));
+  return results;
+};
+
+const northAmericanCountries = [
+  {
+    value: "Canada",
+    label: "Canada",
+  },
+  {
+    value: "United States",
+    label: "United States",
+  },
+  {
+    value: "Mexico",
+    label: "Mexico",
+  },
+];
+
+const loadMatchingCountries = async (inputValue: string) => {
+  const data = await simulatedAPIRequest(inputValue, northAmericanCountries, 0);
+  const results = await data.json();
+
+  return results.map(({ name }) => ({
+    label: name,
+    value: name,
+  }));
+};
+
 const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps) => {
   const [photoList, setPhotoList] = useState([]);
-
-  const getPhotos = async () => {
-    // returns 5000 items
-    const data = await fetch("https://jsonplaceholder.typicode.com/photos");
-    const json = await data.json();
-    const results = json.map(({ title, id }) => ({
-      label: title,
-      value: id,
-    }));
-    return results;
-  };
 
   const setOptions = async () => {
     const result = await getPhotos();
@@ -602,6 +628,36 @@ export const PasteCsvValueInSelect = (props) => {
         input:
       </Text>
       <Text fontFamily="monospace">PCN7, PCN1, PCN2, PCN9, PCN22</Text>
+    </>
+  );
+};
+
+export const AddNewOptionOnInputChange = (props) => {
+  const [state, setState] = React.useState([]);
+  const [options, setOptions] = React.useState([]);
+
+  const handleChange = (value) => {
+    setState(value);
+  };
+
+  const handleChangeInput = (value: string) => {
+    loadMatchingCountries(value).then((res) => setOptions([...options, ...res]));
+  };
+
+  return (
+    <>
+      <Select
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Select PCN"
+        onChange={handleChange}
+        onInputChange={handleChangeInput}
+        value={state}
+        multiselect
+        {...props}
+      />
+      <Text>Every input change will add new option and input still should be focused</Text>
     </>
   );
 };

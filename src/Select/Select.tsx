@@ -130,9 +130,11 @@ const ReactSelect = React.forwardRef(
     const themeContext = React.useContext(ThemeContext);
     const spaceProps = getSubset(props, propTypes.space);
     const reactSelectRef = React.useRef<ReactSelectStateManager>(null);
+    const optionsRef = React.useRef(options);
 
     React.useEffect(() => {
       checkOptionsAreValid(options);
+      optionsRef.current = options;
     }, [options]);
 
     const handleChange = React.useCallback(
@@ -142,54 +144,52 @@ const ReactSelect = React.forwardRef(
       [multiselect, onChange]
     );
 
-    const handlePaste = React.useCallback(
-      async (e: React.ClipboardEvent<HTMLInputElement>) => {
-        e.preventDefault();
+    const handlePaste = React.useCallback(async (e: React.ClipboardEvent<HTMLInputElement>) => {
+      e.preventDefault();
 
-        const currentRef = reactSelectRef.current;
-        const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
+      const options = optionsRef.current;
+      const currentRef = reactSelectRef.current;
+      const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
 
-        const clipboardData = e.clipboardData.getData("text/plain") || "";
-        const values = extractValuesFromCsvString(clipboardData);
+      const clipboardData = e.clipboardData.getData("text/plain") || "";
+      const values = extractValuesFromCsvString(clipboardData);
 
-        const notExistingOptions: string[] = [];
-        const pastedOptions = values
-          .map((pastedOption) => {
-            const existingOption = options.find(
-              (option) => option.label === pastedOption || option.value === pastedOption
-            );
-
-            if (existingOption) {
-              return existingOption;
-            }
-
-            notExistingOptions.push(pastedOption);
-
-            return null;
-          })
-          .filter(Boolean)
-          .filter(
-            (pastedOption) =>
-              // ignoring already selected options
-              currentValue.findIndex((option) => pastedOption.value === option.value) === -1
+      const notExistingOptions: string[] = [];
+      const pastedOptions = values
+        .map((pastedOption) => {
+          const existingOption = options.find(
+            (option) => option.label === pastedOption || option.value === pastedOption
           );
-        const newValue = [...currentValue, ...pastedOptions];
 
-        currentRef.setState((prevState) => {
-          return {
-            ...prevState,
-            value: newValue,
-            inputValue: notExistingOptions.join(", "),
-          };
-        });
-        handleChange(newValue);
-      },
-      [options]
-    );
+          if (existingOption) {
+            return existingOption;
+          }
+
+          notExistingOptions.push(pastedOption);
+
+          return null;
+        })
+        .filter(Boolean)
+        .filter(
+          (pastedOption) =>
+            // ignoring already selected options
+            currentValue.findIndex((option) => pastedOption.value === option.value) === -1
+        );
+      const newValue = [...currentValue, ...pastedOptions];
+
+      currentRef.setState((prevState) => {
+        return {
+          ...prevState,
+          value: newValue,
+          inputValue: notExistingOptions.join(", "),
+        };
+      });
+      handleChange(newValue);
+    }, []);
 
     const _SelectInput = React.useCallback(
       (inputProps) => <SelectInput {...inputProps} {...(multiselect ? { onPaste: handlePaste } : {})} />,
-      [handlePaste, multiselect]
+      [multiselect]
     );
 
     React.useEffect(() => {
