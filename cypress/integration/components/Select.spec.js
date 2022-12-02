@@ -136,6 +136,39 @@ describe("Select", () => {
     });
   });
 
+  describe.only("Multiselect: options live update", () => {
+    const selectTextInputSelector = "[data-testid='select-input'] input";
+    const getSelectTextInput = () => cy.get(selectTextInputSelector);
+
+    beforeEach(() => {
+      cy.renderFromStorybook("select--add-new-option-on-input-change");
+    });
+
+    it("add new option on every input change and input should be focused", () => {
+      getSelectTextInput().type("test");
+      getSelectTextInput().should("have.focus");
+
+      const csvValues = "PCN2, PCN1";
+
+      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
+
+      cy.focused().type("{backspace}{backspace}{backspace}");
+      getSelectTextInput().should("have.focus");
+
+      cy.focused().type("{enter}");
+      cy.focused().type("{enter}");
+    });
+
+    it("user able to paste and select values with live update of options", () => {
+      getSelectTextInput().type("test");
+      getSelectTextInput().should("have.focus");
+
+      cy.focused().type("{backspace}{backspace}{backspace}");
+      getSelectTextInput().type("{downarrow}").type("{enter}");
+      getSelectTextInput().should("have.focus");
+    });
+  });
+
   describe("Default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("select--select");

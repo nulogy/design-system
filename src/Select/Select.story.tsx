@@ -605,3 +605,33 @@ export const PasteCsvValueInSelect = (props) => {
     </>
   );
 };
+
+export const AddNewOptionOnInputChange = (props) => {
+  const [state, setState] = React.useState([]);
+  const [options, setOptions] = React.useState([...PCNList]);
+
+  const handleChange = (value) => {
+    setState(value);
+  };
+
+  const handleChangeInput = (value) => {
+    setOptions([...options, { label: value, value }]);
+  };
+
+  return (
+    <>
+      <Select
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={options}
+        labelText="Select PCN"
+        onChange={handleChange}
+        onInputChange={handleChangeInput}
+        value={state}
+        multiselect
+        {...props}
+      />
+      <Text>Every input change will add new option and input still should be focused</Text>
+    </>
+  );
+};
