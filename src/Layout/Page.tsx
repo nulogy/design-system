@@ -1,34 +1,37 @@
 import React from "react";
-
 import { Box } from "../Box";
 import { Flex } from "../Flex";
-import { Heading1 } from "../Type";
 import { FlexProps } from "../Flex/Flex";
+import { BoxProps } from "../Box/Box";
+import Header from "./Header";
 
 type PageProps = FlexProps & {
   breadcrumbs?: React.ReactNode;
   title?: string;
   children?: React.ReactNode;
   headerContent?: React.ReactNode;
-  fullHeight?: boolean
+  fullHeight?: boolean;
+  renderHeader?: () => JSX.Element;
 };
 
-export const Page = ({ breadcrumbs, title, children, headerContent, fullHeight, ...props }: PageProps) => (
-  <Flex flexDirection="column" py="x3" px="x3" flexGrow={fullHeight ? 1 : 0} {...props}>
-    {breadcrumbs}
-    <Flex alignItems="center">
-      {title && (
-        <Heading1 mb="x6" mt="x2">
-          {title}
-        </Heading1>
-      )}
-      {headerContent && (
-        <Box mb="x6" mt="x2" flexGrow={1} ml="x1">
-          {headerContent}
-        </Box>
-      )}
-    </Flex>
-    {children}
+export const Page: React.FC<PageProps> = ({
+  breadcrumbs,
+  title,
+  children,
+  headerContent,
+  fullHeight,
+  renderHeader,
+  ...rest
+}) => (
+  <Flex flexDirection="column" flexGrow={fullHeight ? 1 : 0} {...rest}>
+    {renderHeader
+      ? renderHeader()
+      : (breadcrumbs || title || headerContent) && (
+          <Header renderBreadcrumbs={() => breadcrumbs} title={title}>
+            {headerContent}
+          </Header>
+        )}
+    <Box p="x3">{children}</Box>
   </Flex>
 );
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { ApplicationFrame, BrandedNavBar, Icon, Breadcrumbs, Link, Heading2, Text, Page, PrimaryButton } from "..";
+import { ApplicationFrame, BrandedNavBar, Icon, Breadcrumbs, Link, Heading2, Text, Page, StatusIndicator } from "..";
 
 const primaryMenu = [
   {
@@ -96,11 +96,11 @@ export const _Page = () => (
       </Breadcrumbs>
     }
     title="Materials Overview"
-    headerContent={<PrimaryButton type="informative">Beta</PrimaryButton>}
+    headerContent={<StatusIndicator type="informative">Beta</StatusIndicator>}
   >
     <>
       <Text fontFamily="mono" fontSize="small">
-        // content
+        content
       </Text>
     </>
   </Page>
@@ -117,7 +117,7 @@ export const NoPageTitle = () => (
       }
     >
       <Text fontFamily="mono" fontSize="small">
-        // content
+        content
       </Text>
     </Page>
   </ApplicationFrame>
@@ -132,6 +132,18 @@ export const NoBreadcrumbs = () => (
       </>
     </Page>
   </ApplicationFrame>
+);
+
+export const NoBackground = () => (
+  <Page
+    breadcrumbs={
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/">Materials</Link>
+      </Breadcrumbs>
+    }
+    title="Materials Overview"
+  />
 );
 
 export const WithFullHeight = () => (
