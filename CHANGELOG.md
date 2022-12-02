@@ -1,3 +1,22 @@
+# [8.4.0](https://github.com/nulogy/design-system/compare/v8.3.0...v8.4.0) (2022-12-02)
+
+
+### Bug Fixes
+
+* add the gap properties to the Flex component ([4ee5395](https://github.com/nulogy/design-system/commit/4ee53953e6002150f0ce36ad3847913256e46ed2))
+* add TypeScript autocomplete to statusIndicator ([bd12caf](https://github.com/nulogy/design-system/commit/bd12cafdd76df1cdb7ce72f9f1ce9e665891710b))
+* change breadcrumbs colors ([2ff6845](https://github.com/nulogy/design-system/commit/2ff6845be0711a7dd7a4faf2cda34f484e848334))
+* change the font-size of the breadcrumbs ([b241234](https://github.com/nulogy/design-system/commit/b241234b43851e795cb2ff7d165c539a0cb2bca2))
+* filter out empty children ([b1ff581](https://github.com/nulogy/design-system/commit/b1ff5816485916af4b502ce56c2909573d6695ad))
+
+
+### Features
+
+* add the Header component ([791060f](https://github.com/nulogy/design-system/commit/791060f1553c0503d9a396a8c9cf8cefad550ece))
+* add the Summary component ([e41e65f](https://github.com/nulogy/design-system/commit/e41e65f2a86f9310e4fdd05646cb07585cd64580))
+* add the useMediaQuery hook ([a511db9](https://github.com/nulogy/design-system/commit/a511db9642fbe8934eba6d399183100a1e601712))
+* upgrade @nulogy/tokens ([1842e33](https://github.com/nulogy/design-system/commit/1842e33bef25e3a721a94b222247181fe2c058a1))
+
 # [8.3.0](https://github.com/nulogy/design-system/compare/v8.2.2...v8.3.0) (2022-12-01)
 
 
