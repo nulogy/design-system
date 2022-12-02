@@ -1,3 +1,10 @@
+## [8.4.1](https://github.com/nulogy/design-system/compare/v8.4.0...v8.4.1) (2022-12-02)
+
+
+### Bug Fixes
+
+* remove SelectInput rerender for options live update ([b26a58f](https://github.com/nulogy/design-system/commit/b26a58f552066ba618e206a26773318c2de9e853))
+
 # [8.4.0](https://github.com/nulogy/design-system/compare/v8.3.0...v8.4.0) (2022-12-02)
 
 
