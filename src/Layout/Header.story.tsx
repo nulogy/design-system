@@ -1,10 +1,22 @@
 import React from "react";
-import { Box, Breadcrumbs, Button, DropdownButton, DropdownLink, Flex, Link, PrimaryButton, StatusIndicator } from "..";
+import {
+  Box,
+  Breadcrumbs,
+  Button,
+  DropdownButton,
+  DropdownLink,
+  Flex,
+  Link,
+  PrimaryButton,
+  StatusIndicator,
+  Header,
+} from "..";
 import Summary from "../Summary/Summary";
 import SummaryItem from "../Summary/SummaryItem";
 import SummaryDivider from "../Summary/SummaryDivider";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
-import Header from "./Header";
+import { theme } from "..";
+import { pixelDigitsFrom } from "../NavBar/NavBar";
 
 export const DefaultBackground = () => (
   <Header
@@ -168,9 +180,14 @@ export const WithEverything = () => (
   </Header>
 );
 
+const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map((vp) =>
+  pixelDigitsFrom(vp)
+);
+
 export default {
   title: "Components/Header",
   parameters: {
     layout: "fullscreen",
+    chromatic: { viewports },
   },
 };

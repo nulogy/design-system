@@ -1,19 +1,17 @@
 import React from "react";
 import { StatusIndicator } from "../StatusIndicator";
-import SummaryItem from "./SummaryItem";
-import Summary from "./Summary";
-import SummaryDivider from "./SummaryDivider";
+import { Summary, SummaryDivider, SummaryItem } from "..";
 
 export function Default() {
   return (
     <Summary>
-      <SummaryItem value={42} status={<StatusIndicator type="informative">On Time</StatusIndicator>} />
-      <SummaryItem value={100} status={<StatusIndicator type="danger">On Time</StatusIndicator>} />
-      <SummaryItem value={200} status={<StatusIndicator type="neutral">On Time</StatusIndicator>} />
+      <SummaryItem value={2} status={<StatusIndicator type="danger">Missed</StatusIndicator>} />
+      <SummaryItem value={42} status={<StatusIndicator type="warning">Delayed</StatusIndicator>} />
+      <SummaryItem value={139} status={<StatusIndicator type="neutral">On Time</StatusIndicator>} />
 
       <SummaryDivider />
 
-      <SummaryItem value={12} status={<StatusIndicator type="success">On Time</StatusIndicator>} />
+      <SummaryItem value={12} status={<StatusIndicator type="success">Delivered</StatusIndicator>} />
     </Summary>
   );
 }
@@ -30,10 +28,4 @@ export function WithMainInfoOnly() {
 
 export default {
   title: "Components/Summary",
-  parameters: {
-    backgrounds: {
-      default: "whiteGrey",
-      values: [{ name: "whiteGrey", value: "#F0F2F5" }],
-    },
-  },
 };
