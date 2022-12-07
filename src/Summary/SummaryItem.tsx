@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Flex } from "../Flex";
-import { Heading3, Heading4, Text } from "../Type";
+import { Text } from "../Type";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { useSummaryContext } from "./SummaryContext";
 
