@@ -1,3 +1,11 @@
+## [8.4.2](https://github.com/nulogy/design-system/compare/v8.4.1...v8.4.2) (2022-12-07)
+
+
+### Bug Fixes
+
+* allow the useMediaQuery to work if window is undefined ([16a94bc](https://github.com/nulogy/design-system/commit/16a94bc9271025e7934237fb5e97c421b32a44b0))
+* export Summary, SummaryItem, SummaryDivider components ([4693dd6](https://github.com/nulogy/design-system/commit/4693dd6e88d597174bd865b71e2876e89329db75))
+
 ## [8.4.1](https://github.com/nulogy/design-system/compare/v8.4.0...v8.4.1) (2022-12-02)
 
 
