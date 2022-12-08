@@ -11,7 +11,12 @@ import { Button } from "../Button";
 import { Text } from "../Type";
 import { Branding } from "../Branding";
 import { Link } from "../Link";
+import { Form } from "../Form";
+import { Select } from "../Select";
+import { Divider } from "../Divider";
+import { Box } from "../Box";
 import { NavBarWithResizablePrimaryMenuProps } from "./NavBar";
+import MenuTriggerButton from "./MenuTriggerButton";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
@@ -143,14 +148,157 @@ _BrandedNavBar.story = {
   name: "BrandedNavBar",
 };
 
-export const WithACompanyLogo = () => (
-  <BrandedNavBar
-    menuData={{ primaryMenu, secondaryMenu }}
-    logo={(brandingLinkHref: string, width: number) => (
-      <ProgressiveNulogyLogo brandingLinkHref={brandingLinkHref} width={width} />
-    )}
-  />
-);
+export const WithEverythingTurnedOn = () => {
+  const primaryMenu = [
+    {
+      name: "Analytics",
+      items: [
+        {
+          name: "Historical orders",
+          to: "/",
+          as: ReactRouterLink,
+          isEnabled: true,
+        },
+        {
+          name: "Scorecards",
+          to: "/",
+          as: ReactRouterLink,
+          isEnabled: false,
+        },
+      ],
+    },
+    {
+      name: "Inventory Management",
+      items: [
+        {
+          name: "Materials overview",
+          to: "/",
+          as: ReactRouterLink,
+          isEnabled: true,
+        },
+        {
+          name: "Inventory reconciliation",
+          to: "/",
+          as: ReactRouterLink,
+          isEnabled: true,
+        },
+      ],
+    },
+    {
+      render: ({ size, layer }) => {
+        return (
+          <ReactRouterLink component={Button} to="/" size={size} layer={layer}>
+            Invoices
+          </ReactRouterLink>
+        );
+      },
+      key: "invoices",
+      isEnabled: true,
+    },
+    {
+      render: ({ size, layer }) => (
+        <ReactRouterLink to="/" size={size} layer={layer}>
+          Items
+        </ReactRouterLink>
+      ),
+      key: "items",
+    },
+    {
+      render: ({ size, layer }) => (
+        <ReactRouterLink to="/" size={size} layer={layer}>
+          Imports and exports
+        </ReactRouterLink>
+      ),
+      key: "importsAndExports",
+    },
+  ];
+
+  const adminOrgSwitcher = {
+    key: "admin org switcher",
+    trigger: () => (
+      <Button icon="downArrow" aria-label="admin org switcher">
+        <Icon icon="building" />
+      </Button>
+    ),
+    items: [
+      {
+        key: "organization-item-1",
+        render: () => (
+          <Form>
+            <Select
+              options={[
+                { label: "option 1", value: "1" },
+                { label: "option 2", value: "2" },
+              ]}
+            />
+          </Form>
+        ),
+      },
+    ],
+  };
+
+  let secondaryMenu;
+  // users usually have a bigger screen, so avoid jitter when the width gets picked up.
+  const showingDesktopNav = true;
+  if (showingDesktopNav) {
+    secondaryMenu = [
+      {
+        name: "Guided tours",
+        render: () => <Button>Guided tours</Button>,
+      },
+      {
+        name: "Help desk",
+        render: () => <Button>HelpDesk</Button>,
+      },
+      {
+        name: "Help menu separator",
+        render: () => <Divider />,
+      },
+      {
+        ...adminOrgSwitcher,
+        isEnabled: true,
+      },
+      {
+        name: "Admin org switcher separator",
+        render: () => <Divider />,
+        isEnabled: true,
+      },
+    ];
+  } else {
+    secondaryMenu = [];
+  }
+  secondaryMenu = [
+    ...secondaryMenu,
+    {
+      name: "User Menu",
+      render: ({ size }) => {
+        return size === "medium" ? <Button>User Menu</Button> : <Button>Mobile User Menu</Button>;
+      },
+    },
+  ];
+
+  return (
+    <BrowserRouter basename="/">
+      <BrandedNavBar
+        menuData={{ primaryMenu, secondaryMenu }}
+        logo={({ brandingLinkHref, width }: { brandingLinkHref: string; width: number }) => (
+          <ProgressiveNulogyLogo brandingLinkHref={brandingLinkHref} width={width} />
+        )}
+      />
+    </BrowserRouter>
+  );
+};
+
+export const WithACompanyLogo = () => {
+  return (
+    <BrandedNavBar
+      menuData={{ primaryMenu, secondaryMenu }}
+      logo={({ brandingLinkHref, width }: { brandingLinkHref: string; width: number }) => (
+        <ProgressiveNulogyLogo brandingLinkHref={brandingLinkHref} width={width} />
+      )}
+    />
+  );
+};
 
 WithACompanyLogo.story = {
   name: "With a company logo",
@@ -174,7 +322,9 @@ export const WithEnvironmentBanner = () => (
   <BrandedNavBar
     menuData={{ primaryMenu, secondaryMenu }}
     subtext="Quality control"
-    logoSrc={sampleLogo}
+    logo={(brandingLinkHref: string, width: number) => (
+      <ProgressiveNulogyLogo brandingLinkHref={brandingLinkHref} width={width} />
+    )}
     environment={select("environment", ["training", "development"], "training")}
   />
 );
@@ -328,8 +478,12 @@ const primaryMenuReactRouter = [
 export const WithReactRouter = () => (
   <BrowserRouter basename="/">
     <BrandedNavBar
-      brandingLinkTo="/Home"
-      brandingLinkComponent={ReactRouterLink}
+      brandingLinkHref="/Home"
+      logo={({ brandingLinkHref }: { brandingLinkHref: string }) => (
+        <ReactRouterLink to={brandingLinkHref}>
+          <img src={sampleLogo} alt="Sample Logo" />
+        </ReactRouterLink>
+      )}
       menuData={{
         primaryMenu: primaryMenuReactRouter,
         secondaryMenu: secondaryMenuWithIcon,

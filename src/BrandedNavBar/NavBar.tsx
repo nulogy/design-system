@@ -34,7 +34,7 @@ export type NavBarWithResizablePrimaryMenuProps = {
   className?: string;
   breakpointUpper?: number | string;
   defaultOpen?: boolean;
-  logo?: (brandingLinkHref: string, width: number) => React.ReactElement;
+  logo?: (props: { brandingLinkHref: string; width: number }) => React.ReactElement;
 };
 // TODO: Should we have some default Nulogy logo, in case if logo props was not provided?
 const NavBarWithResizablePrimaryMenu: React.FC<NavBarWithResizablePrimaryMenuProps> = ({
@@ -55,7 +55,7 @@ const NavBarWithResizablePrimaryMenu: React.FC<NavBarWithResizablePrimaryMenuPro
         breakpointUpper={breakpointUpper}
         width={width}
         menuData={{ primaryMenu, secondaryMenu }}
-        logo={logo && logo(brandingLinkHref, width)}
+        logo={logo && logo({ brandingLinkHref, width })}
         {...props}
       />
     </div>
@@ -197,7 +197,7 @@ function filterDisabledMenuItems(menuItems) {
     });
 }
 
-const HAMBURGER_BREAKPOINT = 1024;
+export const HAMBURGER_BREAKPOINT = 1024;
 const MIN_MENU_SPACING = 64;
 export const NAVBAR_HEIGHT = "56px";
 const LARGEST_MENU_ELEM_WIDTH = 201; // width of the largest primary menu element in French
@@ -305,7 +305,7 @@ function useMoreMenuSize({ maxMoreMenuSize, distance, growThreshold, shrinkThres
 }
 
 interface MenuParentItem {
-  name: string;
+  name?: string | React.ReactNode | React.ReactElement;
   key?: string;
   items?: MenuItem[];
   trigger?: (props: any) => React.ReactElement;
@@ -313,7 +313,7 @@ interface MenuParentItem {
 }
 
 interface MenuItem {
-  name: string;
+  name?: string;
   to?: string;
   href?: string;
   as?: React.ReactElement;
@@ -327,17 +327,6 @@ export interface NewNavBarProps {
   defaultOpen?: boolean;
   environment?: string;
 }
-
-// export default function NewNavBar({ primaryMenu, secondaryMenu, defaultOpen, environment }: NewNavBarProps) {
-//   return (
-//     <NavBarWithResizablePrimaryMenu
-//       menuData={{ primaryMenu, secondaryMenu }}
-//       breakpointUpper={HAMBURGER_BREAKPOINT + 1}
-//       environment={environment}
-//       defaultOpen={defaultOpen}
-//     />
-//   );
-// }
 
 type ProgressiveMenuButtonProps = {
   size: string;
