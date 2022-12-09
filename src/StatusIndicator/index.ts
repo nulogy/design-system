@@ -1,1 +1,1 @@
-export { default as StatusIndicator } from "./StatusIndicator";
+export { default as StatusIndicator, StatusIndicatorType } from "./StatusIndicator";

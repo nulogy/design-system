@@ -1,8 +1,8 @@
 import React from "react";
-import { StatusIndicator } from ".";
 import { Text, Heading2, Heading3 } from "../Type";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
+import { StatusIndicator } from "./";
 
 export default {
   title: "Components/StatusIndicator",
