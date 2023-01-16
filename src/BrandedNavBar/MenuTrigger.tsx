@@ -4,6 +4,7 @@ import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 import MenuTriggerButton from "./MenuTriggerButton";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
+import NewMenuTriggerButton from "./NewMenuTriggerButton";
 
 export type MenuType = "primary" | "secondary";
 
@@ -62,7 +63,7 @@ const MenuTrigger = ({
         },
       }}
       trigger={() => {
-        const defaultRender = () => <MenuTriggerButton {...triggerProps} />;
+        const defaultRender = () => <NewMenuTriggerButton {...triggerProps} />;
         return trigger ? trigger({ size: "medium", defaultRender, layer }) : defaultRender();
       }}
     >

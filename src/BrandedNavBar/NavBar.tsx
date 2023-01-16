@@ -17,7 +17,7 @@ import {
 } from "styled-system";
 import { Box, DesktopMenu, EnvironmentBanner, Flex, Icon, NavBarBackground, SmallNavBar } from "../index";
 import { MenuIcon } from "../NavBar/NavBar";
-import { DefaultNDSThemeType } from "../theme.type";
+import NewMenuTriggerButton, { NewMenuTriggerButtonProps } from "./NewMenuTriggerButton";
 
 export type StyleProps = SpaceProps & OverflowProps & LayoutProps & TypographyProps & ColorProps;
 
@@ -37,6 +37,7 @@ export type NavBarWithResizablePrimaryMenuProps = {
   logo?: (props: { brandingLinkHref: string; width: number }) => React.ReactElement;
 };
 // TODO: Should we have some default Nulogy logo, in case if logo props was not provided?
+// TODO: Use for logo ./BrandLogoContainer.tsx
 const NavBarWithResizablePrimaryMenu: React.FC<NavBarWithResizablePrimaryMenuProps> = ({
   menuData,
   breakpointUpper = "medium",
@@ -64,8 +65,6 @@ const NavBarWithResizablePrimaryMenu: React.FC<NavBarWithResizablePrimaryMenuPro
 
 export default NavBarWithResizablePrimaryMenu;
 
-// export const NAVBAR_HEIGHT = "56px";
-
 const themeColorObject = {
   color: "darkBlue",
   hoverColor: "blackBlue",
@@ -84,7 +83,7 @@ type MediumNavBarProps = {
   width: number;
 };
 
-function MediumNavBar({ menuData, environment, logo, width, ...props }: MediumNavBarProps) {
+const MediumNavBar: React.FC<MediumNavBarProps> = ({ menuData, environment, logo, width, ...props }) => {
   const { t } = useTranslation();
   const originalPrimaryMenu = menuData.primaryMenu;
 
@@ -139,7 +138,7 @@ function MediumNavBar({ menuData, environment, logo, width, ...props }: MediumNa
       </header>
     </>
   );
-}
+};
 
 const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
 
@@ -158,9 +157,9 @@ const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...prop
       themeColorObject={themeColorObject}
       navBarHeight={NAVBAR_HEIGHT}
       renderMenuButton={({ onClick, isOpen, ariaExpanded }) => (
-        <NewMenuButton height="x5" onClick={onClick} aria-expanded={ariaExpanded}>
+        <NewMenuTriggerButton height="x5" onClick={onClick} aria-expanded={ariaExpanded}>
           <MenuIcon isOpen={isOpen} />
-        </NewMenuButton>
+        </NewMenuTriggerButton>
       )}
     />
   );
@@ -203,52 +202,7 @@ export const NAVBAR_HEIGHT = "56px";
 const LARGEST_MENU_ELEM_WIDTH = 201; // width of the largest primary menu element in French
 const BACKGROUND_PADDING = 48; // width of the padding at the edges of the NavBarBackground
 
-// NDS should really export this instead of us having to re-create it here
-type NewMenuButtonProps = React.ComponentPropsWithRef<"button"> &
-  StyleProps & {
-    color?: string;
-    disabled?: boolean;
-    theme?: DefaultNDSThemeType;
-    hoverColor?: string;
-    bgHoverColor?: string;
-  };
-
-const NewMenuButton: React.FC<NewMenuButtonProps> = styled.button(
-  ({ theme }) => ({
-    color: theme.colors.darkGrey,
-    backgroundColor: "transparent",
-    cursor: "pointer",
-    whiteSpace: "nowrap",
-    border: "none",
-    padding: theme.space.x1,
-    fontSize: theme.fontSizes.small,
-    fontWeight: theme.fontWeights.medium,
-    lineHeight: theme.space.x3,
-    borderRadius: theme.sizes.x1,
-    transition: ".2s",
-    "&:hover": {
-      color: theme.colors.darkBlue,
-      backgroundColor: theme.colors.lightBlue,
-    },
-    "&: focus": {
-      outline: "none",
-      color: theme.colors.darkBlue,
-      backgroundColor: theme.colors.white,
-      boxShadow: theme.shadows.focus,
-      "&:hover": {
-        backgroundColor: theme.colors.lightBlue,
-      },
-    },
-    "&: active": {
-      color: theme.colors.darkBlue,
-      backgroundColor: theme.colors.lightBlue,
-      boxShadow: theme.shadows.focus,
-    },
-  }),
-  stylePropsToCss
-);
-
-type NewMenuButtonWithChevronProps = NewMenuButtonProps & {
+type NewMenuButtonWithChevronProps = NewMenuTriggerButtonProps & {
   icon: string;
 };
 
@@ -264,9 +218,8 @@ const NewMenuButtonWithChevron: React.FC<NewMenuButtonWithChevronProps> = React.
     );
   }
 );
-NewMenuButtonWithChevron.displayName = "NewMenuButtonWithChevron";
 
-const StyledNewMenuButton = styled(NewMenuButton)(({ theme }) => ({
+const StyledNewMenuButton = styled(NewMenuTriggerButton)(({ theme }) => ({
   "> div > svg": {
     fill: theme.colors.darkGrey,
   },
