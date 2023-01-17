@@ -4,8 +4,8 @@ describe("Select", () => {
   const getValue = () => cy.get("[data-testid='select-control']");
   const getMultiselect = () => getSelectComponent();
   const getSelectedItems = () => cy.get("[data-testid='select-multivalue']");
-  const getClearButton = () => cy.get("[data-testid='select-clear']");
   const getCloseButtons = () => cy.get("[data-testid='select-multivalue'] svg");
+  const getClearButton = () => cy.get("[data-testid='select-clear']");
   const assertDropDownIsClosed = () => getDropdownMenu().should("not.exist");
   const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
 
@@ -76,79 +76,6 @@ describe("Select", () => {
       getClearButton().click();
 
       getMultiselect().contains("Please select inventory status");
-    });
-  });
-
-  describe("Multiselect: paste CSV string", () => {
-    const selectTextInputSelector = "[data-testid='select-input'] input";
-    const getSelectTextInput = () => cy.get(selectTextInputSelector);
-
-    beforeEach(() => {
-      cy.renderFromStorybook("select--paste-csv-value-in-select");
-    });
-
-    it("copy and paste CSV labels to select", () => {
-      const csvValues = "PCN2, PCN4";
-
-      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
-
-      getMultiselect().contains("PCN2");
-      getMultiselect().contains("PCN4");
-    });
-
-    it("ignoring duplicated labels", () => {
-      const csvValues = "PCN2, PCN2, PCN1";
-
-      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
-
-      getSelectedItems().should("have.length", 2);
-
-      getMultiselect().contains("PCN1");
-      getMultiselect().contains("PCN2");
-    });
-
-    it("paste values that does not exist in the options list in input as a text", () => {
-      const csvValues = "A002, A002, B001, PCN2";
-
-      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
-
-      getSelectedItems().should("have.length", 1);
-
-      getMultiselect().contains("PCN2");
-      getSelectTextInput().should("have.value", "A002, B001");
-    });
-
-    it("ignoring values that are already selected", () => {
-      const csvValues = "PCN2, PCN1";
-
-      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: csvValues });
-
-      getSelectedItems().should("have.length", 2);
-
-      const anotherCsvValues = "PCN2, PCN4";
-      cy.paste({ destinationSelector: selectTextInputSelector, pastePayload: anotherCsvValues });
-
-      getSelectedItems().should("have.length", 3);
-
-      getMultiselect().contains("PCN1");
-      getMultiselect().contains("PCN2");
-      getMultiselect().contains("PCN4");
-    });
-  });
-
-  describe("Multiselect: options live update", () => {
-    const selectTextInputSelector = "[data-testid='select-input'] input";
-    const getSelectTextInput = () => cy.get(selectTextInputSelector);
-
-    beforeEach(() => {
-      cy.renderFromStorybook("select--add-new-option-on-input-change");
-    });
-
-    it("user type and select values with live update of options", () => {
-      getSelectTextInput().type("cana");
-      getSelectTextInput().should("have.focus");
-      getSelectTextInput().type("{downarrow}").type("{enter}");
-      getSelectTextInput().should("have.focus");
     });
   });
 

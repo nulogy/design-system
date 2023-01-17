@@ -9,7 +9,6 @@ import { InlineValidation } from "../Validation";
 import { getSubset } from "../utils/subset";
 import customStyles from "./customReactSelectStyles";
 import { SelectOption } from "./SelectOption";
-import { extractValuesFromCsvString } from "./selectHelpers";
 
 import {
   SelectControl,
@@ -144,54 +143,6 @@ const ReactSelect = React.forwardRef(
       [multiselect, onChange]
     );
 
-    const handlePaste = React.useCallback(async (e: React.ClipboardEvent<HTMLInputElement>) => {
-      e.preventDefault();
-
-      const options = optionsRef.current;
-      const currentRef = reactSelectRef.current;
-      const currentValue = (currentRef.state.value || []) as { label: string; value: string }[];
-
-      const clipboardData = e.clipboardData.getData("text/plain") || "";
-      const values = extractValuesFromCsvString(clipboardData);
-
-      const notExistingOptions: string[] = [];
-      const pastedOptions = values
-        .map((pastedOption) => {
-          const existingOption = options.find(
-            (option) => option.label === pastedOption || option.value === pastedOption
-          );
-
-          if (existingOption) {
-            return existingOption;
-          }
-
-          notExistingOptions.push(pastedOption);
-
-          return null;
-        })
-        .filter(Boolean)
-        .filter(
-          (pastedOption) =>
-            // ignoring already selected options
-            currentValue.findIndex((option) => pastedOption.value === option.value) === -1
-        );
-      const newValue = [...currentValue, ...pastedOptions];
-
-      currentRef.setState((prevState) => {
-        return {
-          ...prevState,
-          value: newValue,
-          inputValue: notExistingOptions.join(", "),
-        };
-      });
-      handleChange(newValue);
-    }, []);
-
-    const _SelectInput = React.useCallback(
-      (inputProps) => <SelectInput {...inputProps} {...(multiselect ? { onPaste: handlePaste } : {})} />,
-      [multiselect]
-    );
-
     React.useEffect(() => {
       if (ref) {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -232,7 +183,7 @@ const ReactSelect = React.forwardRef(
               DropdownIndicator: SelectDropdownIndicator,
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
-              Input: _SelectInput,
+              Input: SelectInput,
               ...components,
             }}
             aria-label={ariaLabel}
