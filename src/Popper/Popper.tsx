@@ -1,9 +1,11 @@
 // @ts-nocheck
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { useTranslation } from "react-i18next";
-import { PopperArrow } from "../utils";
+import { PopperArrow, DetectOutsideClick } from "../utils";
 import { keyCodes } from "../constants";
+import { Box } from "../Box";
+
 const makeArray = (children) => {
   if (!Array.isArray(children)) {
     return [children];
@@ -50,7 +52,14 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
     popperRef
   ) => {
     let timeoutID;
-    const [isOpen, setIsOpen] = useState(defaultOpen);
+    const [isOpen, setIsOpen] = React.useState(defaultOpen);
+
+    const _popperRef = React.useRef(null);
+
+    const { t } = useTranslation();
+    const openLabel = openAriaLabel || t("open");
+    const closeLabel = closeAriaLabel || t("close");
+
     const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
       if (!skipDelay) {
         timeoutID = setTimeout(fnc, delay);
@@ -58,36 +67,23 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
         fnc();
       }
     };
+
     const setPopUpState = (nextIsOpenState, skipDelay) => {
       clearTimeout(timeoutID);
       conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
     };
+
     const closePopUp = (skipDelay) => {
       setPopUpState(false, skipDelay);
     };
-    useEffect(() => {
-      const handleKeyDown = (event) => {
-        switch (event.keyCode) {
-          case keyCodes.ESC:
-            closePopUp();
-            break;
-          default:
-            break;
-        }
-      };
-      document.addEventListener("keydown", handleKeyDown);
-      const cleanup = () => {
-        document.removeEventListener("keydown", handleKeyDown);
-        clearTimeout(timeoutID);
-      };
-      return cleanup;
-    }, []);
+
     const openPopUp = (skipDelay) => {
       setPopUpState(true, skipDelay);
     };
+
     const onClickEventHandlers = openOnClick
       ? {
-          onMouseDown: () => {
+          onClick: () => {
             if (isOpen) {
               closePopUp(false);
             } else {
@@ -96,20 +92,25 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
           },
         }
       : null;
+
     const onHoverHandlers = openOnHover
       ? {
           onMouseEnter: () => openPopUp(false),
           onMouseLeave: () => closePopUp(false),
         }
       : null;
-    const eventHandlers = {
+
+    const referenceEventHandlers = {
       onFocus: () => openPopUp(false),
-      onBlur: () => {
-        closePopUp(false);
-      },
       ...onHoverHandlers,
       ...onClickEventHandlers,
     };
+
+    const popperEventHandlers = {
+      onFocus: () => openPopUp(false),
+      ...onHoverHandlers,
+    };
+
     const transformInnerChildren = (elements) =>
       makeArray(elements).map((element, i) => {
         const transformedElement = wrapInFunction(element)({
@@ -127,63 +128,89 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
           key: i,
         });
       });
+
     const renderInnerChildren = () => {
       const innerChildren = children.props.children;
       return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
     };
-    const { t } = useTranslation();
-    const openLabel = openAriaLabel || t("open");
-    const closeLabel = closeAriaLabel || t("close");
+
+    React.useEffect(() => {
+      const handleKeyDown = (event) => {
+        switch (event.keyCode) {
+          case keyCodes.ESC:
+            closePopUp();
+            break;
+          default:
+            break;
+        }
+      };
+
+      document.addEventListener("keydown", handleKeyDown);
+
+      const cleanup = () => {
+        document.removeEventListener("keydown", handleKeyDown);
+        clearTimeout(timeoutID);
+      };
+
+      return cleanup;
+    }, []);
+
     return (
       <Manager ref={popperRef}>
-        <Reference>
-          {({ ref }) =>
-            React.cloneElement(trigger, {
-              "aria-haspopup": true,
-              "aria-expanded": isOpen,
-              "aria-describedby": id,
-              "aria-label": isOpen ? closeLabel : openLabel,
-              ...eventHandlers,
-              ref,
-            })
-          }
-        </Reference>
-        <ReactPopperPopUp placement={popperPlacement} modifiers={modifiers}>
-          {({ ref, style, placement, arrowProps }) => (
-            <>
-              {isOpen &&
-                React.cloneElement(
-                  children,
-                  {
-                    open: isOpen,
-                    ref,
-                    id,
-                    style: {
-                      position: "absolute",
-                      ...(isOpen ? style : null),
-                      top: isOpen ? 0 : "-9999px",
-                    },
-                    dataPlacement: placement,
-                    className: `${children.props.className || ""} nds-popper-pop-up`,
-                    ...eventHandlers,
-                  },
-                  [
-                    ...renderInnerChildren(),
-                    showArrow && (
-                      <PopperArrow
-                        key="popper-arrow"
-                        {...arrowProps}
-                        placement={placement}
-                        ref={arrowProps.ref}
-                        backgroundColor={backgroundColor}
-                        borderColor={borderColor}
-                      />
-                    ),
-                  ]
-                )}
-            </>
-          )}
-        </ReactPopperPopUp>
+        <DetectOutsideClick onClick={() => closePopUp(true)} clickRef={_popperRef} />
+        <Box ref={_popperRef} display="inline-flex">
+          <Reference>
+            {({ ref }) =>
+              React.cloneElement(trigger, {
+                "aria-haspopup": true,
+                "aria-expanded": isOpen,
+                "aria-describedby": id,
+                "aria-label": isOpen ? closeLabel : openLabel,
+                ...referenceEventHandlers,
+                ref,
+              })
+            }
+          </Reference>
+          <ReactPopperPopUp placement={popperPlacement} modifiers={modifiers}>
+            {({ ref, style, placement, arrowProps }) => {
+              console.log({ ref });
+              return (
+                <>
+                  {isOpen &&
+                    React.cloneElement(
+                      children,
+                      {
+                        open: isOpen,
+                        ref,
+                        id,
+                        style: {
+                          position: "absolute",
+                          ...(isOpen ? style : null),
+                          top: isOpen ? 0 : "-9999px",
+                        },
+                        dataPlacement: placement,
+                        className: `${children.props.className || ""} nds-popper-pop-up`,
+                        ...popperEventHandlers,
+                      },
+                      [
+                        ...renderInnerChildren(),
+                        showArrow && (
+                          <PopperArrow
+                            key="popper-arrow"
+                            {...arrowProps}
+                            placement={placement}
+                            ref={arrowProps.ref}
+                            backgroundColor={backgroundColor}
+                            borderColor={borderColor}
+                          />
+                        ),
+                      ]
+                    )}
+                </>
+              );
+            }}
+          </ReactPopperPopUp>
+        </Box>
       </Manager>
     );
   }
