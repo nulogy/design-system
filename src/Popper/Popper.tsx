@@ -23,6 +23,7 @@ type PopperProps = {
   trigger: React.ReactNode;
   openOnClick?: boolean;
   openOnHover?: boolean;
+  closeOnClickInside?: boolean;
   modifiers?: {};
   backgroundColor?: string;
   borderColor?: string;
@@ -42,6 +43,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
       children,
       openOnClick,
       openOnHover,
+      closeOnClickInside,
       modifiers,
       backgroundColor,
       borderColor,
@@ -81,7 +83,14 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
       setPopUpState(true, skipDelay);
     };
 
-    const onClickEventHandlers = openOnClick
+    const onHoverHandlers = openOnHover
+      ? {
+          onMouseEnter: () => openPopUp(false),
+          onMouseLeave: () => closePopUp(false),
+        }
+      : null;
+
+    const onClickReferenceEventHandlers = openOnClick
       ? {
           onClick: () => {
             if (isOpen) {
@@ -93,22 +102,31 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
         }
       : null;
 
-    const onHoverHandlers = openOnHover
-      ? {
-          onMouseEnter: () => openPopUp(false),
-          onMouseLeave: () => closePopUp(false),
-        }
-      : null;
-
     const referenceEventHandlers = {
       onFocus: () => openPopUp(false),
       ...onHoverHandlers,
-      ...onClickEventHandlers,
+      ...onClickReferenceEventHandlers,
     };
+
+    const onClickPopperEventHandlers = closeOnClickInside
+      ? {
+          onClick: () => {
+            closePopUp(false);
+          },
+        }
+      : null;
 
     const popperEventHandlers = {
       onFocus: () => openPopUp(false),
       ...onHoverHandlers,
+      ...onClickPopperEventHandlers,
+    };
+
+    const onClickOutside = () => {
+      console.log("onClickOutside");
+      if (isOpen) {
+        closePopUp(true);
+      }
     };
 
     const transformInnerChildren = (elements) =>
@@ -157,7 +175,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
 
     return (
       <Manager ref={popperRef}>
-        <DetectOutsideClick onClick={() => closePopUp(true)} clickRef={_popperRef} />
+        <DetectOutsideClick onClick={onClickOutside} clickRef={_popperRef} />
         <Box ref={_popperRef} display="inline-flex">
           <Reference>
             {({ ref }) =>
@@ -223,6 +241,7 @@ Popper.defaultProps = {
   id: null,
   openOnClick: false,
   openOnHover: true,
+  closeOnClickInside: true,
   modifiers: null,
   backgroundColor: undefined,
   borderColor: undefined,
