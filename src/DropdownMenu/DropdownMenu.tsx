@@ -5,7 +5,6 @@ import { Reference } from "react-popper";
 import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
 import { getSubset, omitSubset } from "../utils/subset";
-import { StyledProps } from "../StyledProps";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
 type DropdownMenuProps = {
@@ -34,8 +33,7 @@ type DropdownMenuProps = {
   boundariesElement?: string;
   openAriaLabel?: string;
   closeAriaLabel?: string;
-  closeOnClickInside?: boolean;
-} & StyledProps;
+};
 
 const DEFAULT_POPPER_MODIFIERS = {
   preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
@@ -63,7 +61,6 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
       hideDelay = "200",
       openAriaLabel,
       closeAriaLabel,
-      closeOnClickInside = true,
       ...props
     },
     ref
@@ -95,7 +92,6 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
         borderColor={backgroundColor}
         openAriaLabel={openAriaLabel}
         closeAriaLabel={closeAriaLabel}
-        closeOnClickInside={closeOnClickInside}
       >
         <DropdownMenuContainer
           className={className}
