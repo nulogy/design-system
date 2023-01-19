@@ -114,22 +114,3 @@ export const SetToDisabled = () => (
 SetToDisabled.story = {
   name: "Set to disabled",
 };
-
-export const PreventToCloseWhenClickInsideAndCloseProgrammatically = () => {
-  return (
-    <DropdownMenu closeOnClickInside={false} openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
-      {({ closeMenu }) => (
-        <>
-          <DropdownButton
-            onClick={(e) => {
-              closeMenu(e);
-            }}
-          >
-            Click Me To Close
-          </DropdownButton>
-          <DropdownButton>Dropdown Button</DropdownButton>
-        </>
-      )}
-    </DropdownMenu>
-  );
-};

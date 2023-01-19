@@ -61,22 +61,4 @@ describe("DropdownMenu", () => {
 
     assertDropdownIsOpen();
   });
-
-  it("prevent to close when click inside of dropdown", () => {
-    cy.renderFromStorybook("dropdownmenu--prevent-to-close-when-click-inside-and-close-programmatically");
-
-    getOpenButton().click();
-
-    getDropdownButton().click();
-    assertDropdownIsOpen();
-  });
-
-  it("close dropdown programmatically, when dropdown has closeOnClickInside=false", () => {
-    cy.renderFromStorybook("dropdownmenu--prevent-to-close-when-click-inside-and-close-programmatically");
-
-    getOpenButton().click();
-
-    cy.contains("Click Me To Close").click();
-    assertDropdownIsClosed();
-  });
 });

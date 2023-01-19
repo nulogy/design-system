@@ -5,6 +5,7 @@ import { Reference } from "react-popper";
 import { IconicButton } from "../Button";
 import { Popper } from "../Popper";
 import { getSubset, omitSubset } from "../utils/subset";
+import { StyledProps } from "../StyledProps";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
 type DropdownMenuProps = {
@@ -33,7 +34,7 @@ type DropdownMenuProps = {
   boundariesElement?: string;
   openAriaLabel?: string;
   closeAriaLabel?: string;
-};
+} & StyledProps;
 
 const DEFAULT_POPPER_MODIFIERS = {
   preventOverflow: { enabled: true, padding: 8, boundariesElement: "viewport" },
