@@ -4,6 +4,7 @@ import renderSubMenuItems from "./renderSubMenuItems";
 import SubMenuTriggerButton from "./SubMenuTriggerButton";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
 import type { MenuType } from "./MenuTrigger";
+import { NAVBAR_HEIGHT } from "./NavBar";
 
 type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
   name?: string;
@@ -20,7 +21,13 @@ const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType,
     // @ts-ignore
     <NavBarDropdownMenu
       placement={getPlacement(menuType)}
-      modifiers={null}
+      modifiers={{
+        preventOverflow: {
+          enabled: true,
+          padding: 8,
+          boundariesElement: "viewport",
+        },
+      }}
       showArrow={true}
       triggerTogglesMenuState={false}
       {...props}
@@ -43,7 +50,15 @@ const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType,
         return trigger ? trigger(triggerProps) : defaultRender();
       }}
     >
-      <ul style={{ listStyle: "none", margin: "0", padding: "0" }}>
+      <ul
+        style={{
+          listStyle: "none",
+          margin: "0",
+          padding: "0",
+          maxHeight: `calc(100vh - ${NAVBAR_HEIGHT} - 20px)`,
+          overflowY: "auto",
+        }}
+      >
         {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger, layer + 1, menuType)}
       </ul>
     </NavBarDropdownMenu>
@@ -58,7 +73,5 @@ function getPlacement(menuType) {
       return "left-start";
   }
 }
-
-SubMenuTrigger.displayName = "SubMenuTrigger";
 
 export default SubMenuTrigger;
