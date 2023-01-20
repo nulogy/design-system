@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+import { addStyledProps } from "../StyledProps";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 import SubMenuTriggerButton from "./SubMenuTriggerButton";
@@ -50,20 +52,23 @@ const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType,
         return trigger ? trigger(triggerProps) : defaultRender();
       }}
     >
-      <ul
-        style={{
-          listStyle: "none",
-          margin: "0",
-          padding: "0",
-          maxHeight: `calc(100vh - ${NAVBAR_HEIGHT} - 20px)`,
-          overflowY: "auto",
-        }}
-      >
+      <SubMenuItemsList>
         {renderSubMenuItems(menuData, onItemClick, SubMenuTrigger, layer + 1, menuType)}
-      </ul>
+      </SubMenuItemsList>
     </NavBarDropdownMenu>
   );
 };
+
+const SubMenuItemsList = styled("ul")(
+  () => ({
+    listStyle: "none",
+    margin: "0",
+    padding: "0",
+    maxHeight: `calc(100vh - ${NAVBAR_HEIGHT} - 20px)`,
+    overflowY: "auto",
+  }),
+  addStyledProps
+);
 
 function getPlacement(menuType) {
   switch (menuType) {
