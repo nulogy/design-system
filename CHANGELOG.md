@@ -1,3 +1,10 @@
+## [8.4.3](https://github.com/nulogy/design-system/compare/v8.4.2...v8.4.3) (2023-01-24)
+
+
+### Bug Fixes
+
+* bug that closes dropdown when scrolling  ([#1073](https://github.com/nulogy/design-system/issues/1073)) ([cadcb81](https://github.com/nulogy/design-system/commit/cadcb819f46f1448dd32745ee07c65171f115ca2))
+
 ## [8.4.2](https://github.com/nulogy/design-system/compare/v8.4.1...v8.4.2) (2022-12-07)
 
 
