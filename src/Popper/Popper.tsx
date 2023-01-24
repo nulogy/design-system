@@ -87,7 +87,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
     };
     const onClickEventHandlers = openOnClick
       ? {
-          onMouseDown: () => {
+          onClick: () => {
             if (isOpen) {
               closePopUp(false);
             } else {
