@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { addStyledProps } from "../StyledProps";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
@@ -19,14 +19,15 @@ type SubMenuTriggerProps = React.ComponentPropsWithRef<"button"> & {
 };
 
 const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType, ...props }: SubMenuTriggerProps) => {
+  const theme = useTheme();
+
   return (
-    // @ts-ignore
     <NavBarDropdownMenu
       placement={getPlacement(menuType)}
       modifiers={{
         preventOverflow: {
           enabled: true,
-          padding: 8,
+          padding: theme.space.x1,
           boundariesElement: "viewport",
         },
       }}
@@ -60,11 +61,11 @@ const SubMenuTrigger = ({ menuData, name, onItemClick, trigger, layer, menuType,
 };
 
 const SubMenuItemsList = styled("ul")(
-  () => ({
+  ({ theme }) => ({
     listStyle: "none",
     margin: "0",
     padding: "0",
-    maxHeight: `calc(100vh - ${NAVBAR_HEIGHT} - 20px)`,
+    maxHeight: `calc(100vh - ${NAVBAR_HEIGHT} - ${theme.space.x3})`,
     overflowY: "auto",
   }),
   addStyledProps

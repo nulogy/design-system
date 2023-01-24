@@ -10,7 +10,7 @@ type DropdownMenuContainerProps = {
   dataPlacement?: any;
   theme?: DefaultNDSThemeType;
 };
-// TODO: Check this function. Looks like this is dead code.
+
 const getMenuMargin = (placement, showArrow) => {
   const direction = String(placement).split("-")[0];
   switch (direction) {
