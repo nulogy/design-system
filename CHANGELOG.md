@@ -1,3 +1,10 @@
+## [8.4.4](https://github.com/nulogy/design-system/compare/v8.4.3...v8.4.4) (2023-01-24)
+
+
+### Bug Fixes
+
+* allow menu scrolling in BrandedNavBar ([#1074](https://github.com/nulogy/design-system/issues/1074)) ([790f9f0](https://github.com/nulogy/design-system/commit/790f9f0e4bfe2ec2e0d3ea08b06b3d259607305b))
+
 ## [8.4.3](https://github.com/nulogy/design-system/compare/v8.4.2...v8.4.3) (2023-01-24)
 
 
