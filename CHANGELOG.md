@@ -1,3 +1,10 @@
+## [8.4.5](https://github.com/nulogy/design-system/compare/v8.4.4...v8.4.5) (2023-01-25)
+
+
+### Bug Fixes
+
+* make size of Switcher 32px ([#1069](https://github.com/nulogy/design-system/issues/1069)) ([a3182f1](https://github.com/nulogy/design-system/commit/a3182f12ea85536f279141652ae8e1e53d00b18e))
+
 ## [8.4.4](https://github.com/nulogy/design-system/compare/v8.4.3...v8.4.4) (2023-01-24)
 
 
