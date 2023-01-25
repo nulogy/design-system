@@ -8,7 +8,6 @@ type SwitchProps = {
 
 const SwitchButton = styled.button<SwitchProps>(({ selected, theme }): any => ({
   height: theme.space.x4,
-  margin: 1,
   padding: `${theme.space.half} ${theme.space.x2}`,
   background: selected ? theme.colors.white : "none",
   color: selected ? theme.colors.darkBlue : theme.colors.darkGrey,
