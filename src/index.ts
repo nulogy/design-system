@@ -44,7 +44,7 @@ export { Switch, Switcher } from "./Switcher";
 export { Table } from "./Table";
 export type { TableProps, TableColumnType, TableRowType, TableCellInfoType } from "./Table";
 
-export { StatusIndicator, StatusIndicatorView } from "./StatusIndicator";
+export { StatusIndicator, StatusIndicatorValues } from "./StatusIndicator";
 export type { StatusIndicatorType } from "./StatusIndicator";
 
 export { Pagination } from "./Pagination";
