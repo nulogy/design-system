@@ -1,3 +1,10 @@
+## [8.4.6](https://github.com/nulogy/design-system/compare/v8.4.5...v8.4.6) (2023-02-02)
+
+
+### Bug Fixes
+
+* pass the width prop explicitly ([#1075](https://github.com/nulogy/design-system/issues/1075)) ([b067181](https://github.com/nulogy/design-system/commit/b067181765108e5933bab13984546c54c704cb0f))
+
 ## [8.4.5](https://github.com/nulogy/design-system/compare/v8.4.4...v8.4.5) (2023-01-25)
 
 
