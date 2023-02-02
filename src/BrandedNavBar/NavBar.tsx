@@ -132,11 +132,14 @@ const BaseNavBar = ({ environment, breakpointUpper = "medium", ...props }: BaseN
   const { breakpoints } = useTheme();
   return (
     <ReactResizeDetector handleWidth>
-      <SelectNavBarBasedOnWidth
-        breakpointUpper={breakpoints[breakpointUpper] || breakpointUpper}
-        {...props}
-        environment={environment}
-      />
+      {({ width }) => (
+        <SelectNavBarBasedOnWidth
+          breakpointUpper={breakpoints[breakpointUpper] || breakpointUpper}
+          width={width}
+          environment={environment}
+          {...props}
+        />
+      )}
     </ReactResizeDetector>
   );
 };
