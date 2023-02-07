@@ -1,3 +1,10 @@
+## [8.4.7](https://github.com/nulogy/design-system/compare/v8.4.6...v8.4.7) (2023-02-07)
+
+
+### Bug Fixes
+
+* export status indicator values ([#1070](https://github.com/nulogy/design-system/issues/1070)) ([b354664](https://github.com/nulogy/design-system/commit/b3546645eb24929a17b184ed6fb9a2bc897a0708))
+
 ## [8.4.6](https://github.com/nulogy/design-system/compare/v8.4.5...v8.4.6) (2023-02-02)
 
 
