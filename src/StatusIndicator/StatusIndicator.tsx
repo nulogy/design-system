@@ -3,38 +3,50 @@ import styled from "styled-components";
 import { space, typography, flexbox, SpaceProps, TypographyProps, FlexboxProps } from "styled-system";
 import { DefaultNDSThemeType } from "../theme.type";
 
+export const StatusIndicatorValues = {
+  neutral: "neutral",
+  dark: "dark",
+  danger: "danger",
+  informative: "informative",
+  success: "success",
+  warning: "warning",
+  quiet: "quiet",
+} as const;
+
+export type StatusIndicatorType = typeof StatusIndicatorValues[keyof typeof StatusIndicatorValues];
+
 const StatusIndicatorColours = (theme) => ({
-  neutral: {
+  [StatusIndicatorValues.neutral]: {
     borderColor: theme.colors.lightGrey,
     backgroundColor: theme.colors.lightGrey,
     color: theme.colors.darkGrey,
   },
-  dark: {
+  [StatusIndicatorValues.dark]: {
     borderColor: theme.colors.blackBlue,
     backgroundColor: theme.colors.blackBlue,
     color: theme.colors.white,
   },
-  quiet: {
+  [StatusIndicatorValues.quiet]: {
     borderColor: theme.colors.white,
     backgroundColor: theme.colors.white,
     color: theme.colors.darkGrey,
   },
-  danger: {
+  [StatusIndicatorValues.danger]: {
     borderColor: theme.colors.red,
     backgroundColor: theme.colors.red,
     color: theme.colors.white,
   },
-  informative: {
+  [StatusIndicatorValues.informative]: {
     borderColor: theme.colors.blue,
     backgroundColor: theme.colors.blue,
     color: theme.colors.white,
   },
-  success: {
+  [StatusIndicatorValues.success]: {
     borderColor: theme.colors.green,
     backgroundColor: theme.colors.green,
     color: theme.colors.white,
   },
-  warning: {
+  [StatusIndicatorValues.warning]: {
     borderColor: theme.colors.yellow,
     backgroundColor: theme.colors.yellow,
     color: theme.colors.darkGrey,
@@ -44,8 +56,6 @@ const StatusIndicatorColours = (theme) => ({
 const getStatusIndicatorColours = (type, theme) => {
   return StatusIndicatorColours(theme)[type];
 };
-
-type StatusIndicatorType = "neutral" | "dark" | "danger" | "informative" | "success" | "warning" | "quiet";
 
 type StatusIndicatorProps = SpaceProps &
   TypographyProps &
@@ -68,7 +78,7 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = styled.p(
 );
 
 StatusIndicator.defaultProps = {
-  type: "neutral",
+  type: StatusIndicatorValues.neutral,
   mt: "0",
   mr: "0",
   mb: "0",
