@@ -1,3 +1,10 @@
+# [8.5.0](https://github.com/nulogy/design-system/compare/v8.4.7...v8.5.0) (2023-02-08)
+
+
+### Features
+
+* revert handle paste CSV for Select ([#1072](https://github.com/nulogy/design-system/issues/1072)) ([621e2f4](https://github.com/nulogy/design-system/commit/621e2f46e184e8567d2cdbe81f29f7d714810773))
+
 ## [8.4.7](https://github.com/nulogy/design-system/compare/v8.4.6...v8.4.7) (2023-02-07)
 
 
