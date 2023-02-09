@@ -1,5 +1,5 @@
 import React from "react";
-import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, DropdownText, Button, Flex, Text } from "../index";
+import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, DropdownText, Button, Flex, Text, Icon } from "../index";
 
 const customColors = {
   color: "white",
@@ -102,7 +102,7 @@ export const WithSubmenu = () => (
         <DropdownButton>
           <Flex justifyContent="space-between">
             <Text>Submenu</Text>
-            <Text>&gt;</Text>
+            <Icon icon="rightArrow" title="right arrow" />
           </Flex>
         </DropdownButton>
       )}
