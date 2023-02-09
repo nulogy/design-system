@@ -34,6 +34,7 @@ type DropdownMenuProps = {
   boundariesElement?: string;
   openAriaLabel?: string;
   closeAriaLabel?: string;
+  openOnHover?: boolean;
 } & StyledProps;
 
 const DEFAULT_POPPER_MODIFIERS = {
@@ -62,6 +63,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
       hideDelay = "200",
       openAriaLabel,
       closeAriaLabel,
+      openOnHover = false,
       ...props
     },
     ref
@@ -85,9 +87,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
         popperPlacement={placement}
         defaultOpen={defaultOpen}
         showArrow={showArrow}
-        openOnClick
+        openOnClick={!openOnHover}
         ref={ref}
-        openOnHover={false}
+        openOnHover={openOnHover}
         modifiers={modifiers}
         backgroundColor={backgroundColor}
         borderColor={backgroundColor}
