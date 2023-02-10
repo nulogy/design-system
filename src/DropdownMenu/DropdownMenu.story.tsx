@@ -1,5 +1,5 @@
 import React from "react";
-import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, DropdownText, Button } from "../index";
+import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, DropdownText, Button, Flex, Text, Icon } from "../index";
 
 const customColors = {
   color: "white",
@@ -91,6 +91,35 @@ export const SetToDefaultOpen = () => (
 
 SetToDefaultOpen.story = {
   name: "set to defaultOpen",
+};
+
+export const WithSubmenu = () => (
+  <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
+    <DropdownLink href="/never_been">Dropdown Link</DropdownLink>
+    <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    <DropdownMenu
+      trigger={() => (
+        <DropdownButton>
+          <Flex justifyContent="space-between">
+            <Text>Submenu</Text>
+            <Icon icon="rightArrow" title="right arrow" />
+          </Flex>
+        </DropdownButton>
+      )}
+      placement="left-start"
+      showArrow={false}
+      openOnHover
+      openAriaLabel="open sub dropdown"
+      closeAriaLabel="close sub dropdown"
+    >
+      <DropdownButton onClick={() => {}}>Inner Dropdown Button</DropdownButton>
+      <DropdownText> Inner Custom Text</DropdownText>
+    </DropdownMenu>
+  </DropdownMenu>
+);
+
+WithSubmenu.story = {
+  name: "with submenu",
 };
 
 export const WithVisitedLinks = () => (
