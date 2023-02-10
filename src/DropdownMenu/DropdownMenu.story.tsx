@@ -109,8 +109,8 @@ export const WithSubmenu = () => (
       placement="left-start"
       showArrow={false}
       openOnHover
-      openAriaLabel="open dropdown"
-      closeAriaLabel="close dropdown"
+      openAriaLabel="open sub dropdown"
+      closeAriaLabel="close sub dropdown"
     >
       <DropdownButton onClick={() => {}}>Inner Dropdown Button</DropdownButton>
       <DropdownText> Inner Custom Text</DropdownText>

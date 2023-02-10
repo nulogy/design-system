@@ -1,12 +1,27 @@
 describe("DropdownMenu", () => {
   const getOpenButton = () => cy.get("[aria-label='open dropdown']");
+  const getSubmenuButton = () => cy.get("[aria-label='open sub dropdown']");
   const getCloseButton = () => cy.get("[aria-label='close dropdown']");
+  const getSubCloseButton = () => cy.get("[aria-label='close sub dropdown']");
   const getDropdownLink = () => cy.contains("Dropdown Link");
   const getDropdownButton = () => cy.contains("Dropdown Button");
+  const getSubDropdownButton = () => cy.contains("Inner Dropdown Button");
+
   const assertDropdownIsOpen = () => {
     getCloseButton().should("exist");
     getDropdownButton().should("exist");
   };
+  const assertSubDropdownIsClosed = () => {
+    getSubmenuButton().should("exist");
+    getSubCloseButton().should("not.exist");
+    getSubDropdownButton().should("not.exist");
+  };
+
+  const assertSubDropdownIsOpen = () => {
+    getSubCloseButton().should("exist");
+    getSubDropdownButton().should("exist");
+  };
+
   const assertDropdownIsClosed = () => {
     getOpenButton().should("exist");
     getCloseButton().should("not.exist");
@@ -17,6 +32,7 @@ describe("DropdownMenu", () => {
     beforeEach(() => {
       cy.renderFromStorybook("dropdownmenu--dropdown-menu");
     });
+
     it("toggles the menu on click", () => {
       getOpenButton().click();
       assertDropdownIsOpen();
@@ -60,5 +76,18 @@ describe("DropdownMenu", () => {
     getOpenButton().click();
 
     assertDropdownIsOpen();
+  });
+
+  it("handles submenus that open on hover", () => {
+    cy.renderFromStorybook("dropdownmenu--with-submenu");
+
+    getOpenButton().click();
+    assertDropdownIsOpen();
+
+    getSubmenuButton().trigger('mouseover')
+    assertSubDropdownIsOpen();
+
+    getSubCloseButton().trigger('mouseout')
+    assertSubDropdownIsClosed();
   });
 });
