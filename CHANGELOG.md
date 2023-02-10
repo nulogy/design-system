@@ -1,3 +1,10 @@
+# [8.6.0](https://github.com/nulogy/design-system/compare/v8.5.0...v8.6.0) (2023-02-10)
+
+
+### Features
+
+* Allow setting openOnHover for DropdownMenu ([#1076](https://github.com/nulogy/design-system/issues/1076)) ([d86e841](https://github.com/nulogy/design-system/commit/d86e841022188829c8eb811ce3a7083b7f13a097))
+
 # [8.5.0](https://github.com/nulogy/design-system/compare/v8.4.7...v8.5.0) (2023-02-08)
 
 
