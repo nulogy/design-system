@@ -243,6 +243,55 @@ export const WithPrimaryAndSecondarySubMenus = () => (
   />
 );
 
+export const WithExternalLinks = () => (
+  <BrandedNavBar
+    menuData={{
+      primaryMenu: [
+        {
+          name: "Top level open in new tab link",
+          href: "https://www.google.com",
+          openInNew: true,
+        },
+        {
+          name: "Top level open in same tab link",
+          href: "https://www.google.com",
+          openInNew: false,
+        },
+        {
+          name: "Dropdown",
+          items: [
+            {
+              name: "New tab link in dropdown",
+              href: "https://www.google.com",
+              openInNew: true,
+            },
+            {
+              name: "Same tab link in dropdown",
+              href: "https://www.google.com",
+              openInNew: false,
+            },
+            {
+              name: "Sub Menu",
+              items: [
+                {
+                  name: "New tab link in submenu",
+                  href: "https://www.google.com",
+                  openInNew: true,
+                },
+                {
+                  name: "Same tab link in submenu",
+                  href: "https://www.google.com",
+                  openInNew: false,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }}
+  />
+);
+
 const primaryMenuReactRouter = [
   {
     name: "Dashboard",
