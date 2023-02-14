@@ -5,6 +5,7 @@ import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import { DropdownLink, DropdownText } from "../DropdownMenu";
+import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { LinkProps } from "../Link/Link";
 import { addStyledProps } from "../StyledProps";
@@ -82,11 +83,16 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     // eslint-disable-next-line no-mixed-operators
     pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
     mb: "x1",
+    target: menuItem.openInNew ? "_blank" : null,
   };
-  const MenuLink: React.FC<LinkProps> = layer === 0 ? TopLevelLink : DropdownLink;
+  const topLevel = layer === 0;
+  const MenuLink: React.FC<LinkProps> = topLevel ? TopLevelLink : DropdownLink;
   return (
     <li key={menuItem.key ?? menuItem.name}>
-      <MenuLink {...sharedLinkProps}>{menuItem.name}</MenuLink>
+      <MenuLink {...sharedLinkProps}>
+        {menuItem.name}
+        {menuItem.openInNew && <Icon size={topLevel ? "24px" : "16px"} ml="4px" icon="openInNew" />}
+      </MenuLink>
     </li>
   );
 };
