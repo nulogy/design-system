@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import MenuTrigger from "./MenuTrigger";
 import type { MenuType } from "./MenuTrigger";
@@ -73,13 +74,23 @@ const renderMenuTrigger = (menuItem, themeColorObject, layer, menuType) => (
   </div>
 );
 
-const renderMenuLink = (menuItem, themeColorObject) => (
-  <div key={menuItem.key ?? menuItem.name}>
-    <MenuLink href={menuItem.href} to={menuItem.to} as={menuItem.as} {...themeColorObject}>
-      {menuItem.name}
-    </MenuLink>
-  </div>
-);
+const renderMenuLink = (menuItem, themeColorObject) => {
+  const linkProps = {
+    href: menuItem.href,
+    to: menuItem.to,
+    as: menuItem.as,
+    target: menuItem.openInNew ? "_blank" : null,
+  };
+
+  return (
+    <div key={menuItem.key ?? menuItem.name}>
+      <MenuLink {...linkProps} {...themeColorObject}>
+        {menuItem.name}
+        {menuItem.openInNew && <Icon size="16px" ml="4px" icon="openInNew" />}
+      </MenuLink>
+    </div>
+  );
+};
 
 const renderCustom = (menuItem, _themeColorObject, layer) => (
   <div key={menuItem.key ?? menuItem.name}>{menuItem.render({ size: "medium", layer })}</div>
