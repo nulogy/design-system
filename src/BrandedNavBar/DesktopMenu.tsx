@@ -86,7 +86,7 @@ const renderMenuLink = (menuItem, themeColorObject) => {
     <div key={menuItem.key ?? menuItem.name}>
       <MenuLink {...linkProps} {...themeColorObject}>
         {menuItem.name}
-        {menuItem.openInNew && <Icon size="16px" ml="4px" icon="openInNew" />}
+        {menuItem.openInNew && <Icon size="16px" mb="-2px" ml="4px" icon="openInNew" />}
       </MenuLink>
     </div>
   );
