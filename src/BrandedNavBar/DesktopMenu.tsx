@@ -105,13 +105,17 @@ const renderText = (menuItem, themeColorObject) => (
 const getRenderFunction = (menuItem) => {
   if (menuItem.items) {
     return renderMenuTrigger;
-  } else if (menuItem.href || menuItem.to) {
-    return renderMenuLink;
-  } else if (menuItem.render) {
-    return renderCustom;
-  } else {
-    return renderText;
   }
+
+  if (menuItem.href || menuItem.to) {
+    return renderMenuLink;
+  }
+
+  if (menuItem.render) {
+    return renderCustom;
+  }
+
+  return renderText;
 };
 
 const renderMenuItem = (menuItem, themeColorObject, layer, menuType) =>
