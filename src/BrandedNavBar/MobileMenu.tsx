@@ -94,7 +94,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     <li key={menuItem.key ?? menuItem.name}>
       <MenuLink {...sharedLinkProps}>
         {menuItem.name}
-        {menuItem.openInNew && <Icon size={topLevel ? "24px" : "16px"} icon="openInNew" />}
+        {menuItem.openInNew && <Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />}
       </MenuLink>
     </li>
   );
