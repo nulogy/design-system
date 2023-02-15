@@ -29,7 +29,7 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => {
     <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
       <DropdownLink {...linkProps}>
         {subMenuItem.name}
-        {subMenuItem.openInNew && <Icon size="16px" mb="-2px" ml="4px" icon="openInNew" />}
+        {subMenuItem.openInNew && <Icon size="16px" icon="openInNew" />}
       </DropdownLink>
     </NoWrapLi>
   );

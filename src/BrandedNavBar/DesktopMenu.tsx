@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import type { CSSObject } from "styled-components";
 import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import MenuTrigger from "./MenuTrigger";
 import type { MenuType } from "./MenuTrigger";
 
-const getSharedStyles = (color, theme) => {
+const getSharedStyles = (color, theme): CSSObject => {
   return {
-    display: "block",
+    display: "flex",
+    alignItems: "center",
+    gap: theme.space.half,
     color: theme.colors[color] || color,
     textDecoration: "none",
     border: "none",
@@ -86,7 +89,7 @@ const renderMenuLink = (menuItem, themeColorObject) => {
     <div key={menuItem.key ?? menuItem.name}>
       <MenuLink {...linkProps} {...themeColorObject}>
         {menuItem.name}
-        {menuItem.openInNew && <Icon size="16px" mb="-2px" ml="4px" icon="openInNew" />}
+        {menuItem.openInNew && <Icon size="16px" icon="openInNew" />}
       </MenuLink>
     </div>
   );

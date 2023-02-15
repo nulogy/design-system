@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import type { CSSObject } from "styled-components";
 import { display } from "styled-system";
 import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
@@ -23,8 +24,10 @@ const BrandingWrap = styled.div(({ theme }) => ({
 // eslint-disable-next-line no-mixed-operators
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
 
-const getSharedStyles = (theme) => ({
-  display: "block",
+const getSharedStyles = (theme): CSSObject => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.half,
   textDecoration: "none",
   border: "none",
   backgroundColor: "transparent",
@@ -91,7 +94,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     <li key={menuItem.key ?? menuItem.name}>
       <MenuLink {...sharedLinkProps}>
         {menuItem.name}
-        {menuItem.openInNew && <Icon size={topLevel ? "24px" : "16px"} mb="-2px" ml="4px" icon="openInNew" />}
+        {menuItem.openInNew && <Icon size={topLevel ? "24px" : "16px"} icon="openInNew" />}
       </MenuLink>
     </li>
   );

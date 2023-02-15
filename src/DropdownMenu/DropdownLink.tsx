@@ -8,7 +8,9 @@ const DropdownLink: React.FC<any> = styled.a.withConfig({
   ({ theme, color, bgHoverColor, hoverColor }: any) => ({
     color: theme.colors[color],
     fontWeight: theme.fontWeights.medium,
-    display: "block",
+    display: "flex",
+    alignItems: "center",
+    gap: theme.space.half,
     textDecoration: "none",
     borderColor: "transparent",
     backgroundColor: "transparent",

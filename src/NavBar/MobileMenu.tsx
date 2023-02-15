@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import type { CSSObject } from "styled-components";
 import { display } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
 import { Text, Heading3 } from "../Type";
@@ -16,8 +17,10 @@ const BrandingWrap = styled.div({
 
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
 
-const getSharedStyles = ({ color, layer }) => ({
-  display: "block",
+const getSharedStyles = ({ color, layer }): CSSObject => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.half,
   color: themeGet(`colors.${color}`, color)(color),
   textDecoration: "none",
   border: "none",
