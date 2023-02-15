@@ -79,7 +79,7 @@ const renderMenuLink = (menuItem, themeColorObject) => {
     href: menuItem.href,
     to: menuItem.to,
     as: menuItem.as,
-    target: menuItem.openInNew ? "_blank" : null,
+    target: menuItem.openInNew ? "_blank" : undefined,
   };
 
   return (

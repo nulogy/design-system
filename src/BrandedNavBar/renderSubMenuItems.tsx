@@ -22,7 +22,7 @@ const renderSubMenuLink = (subMenuItem, onItemClick) => {
     href: subMenuItem.href,
     to: subMenuItem.to,
     as: subMenuItem.as,
-    target: subMenuItem.openInNew ? "_blank" : null,
+    target: subMenuItem.openInNew ? "_blank" : undefined,
   };
 
   return (

@@ -83,7 +83,7 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     // eslint-disable-next-line no-mixed-operators
     pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
     mb: "x1",
-    target: menuItem.openInNew ? "_blank" : null,
+    target: menuItem.openInNew ? "_blank" : undefined,
   };
   const topLevel = layer === 0;
   const MenuLink: React.FC<LinkProps> = topLevel ? TopLevelLink : DropdownLink;
