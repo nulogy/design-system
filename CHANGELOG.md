@@ -1,3 +1,10 @@
+# [8.7.0](https://github.com/nulogy/design-system/compare/v8.6.0...v8.7.0) (2023-02-16)
+
+
+### Features
+
+* Open navbar links in new tab ([#1077](https://github.com/nulogy/design-system/issues/1077)) ([845e6e3](https://github.com/nulogy/design-system/commit/845e6e3ea37c63e4afdfbe043bff3b595b9e112e))
+
 # [8.6.0](https://github.com/nulogy/design-system/compare/v8.5.0...v8.6.0) (2023-02-10)
 
 
