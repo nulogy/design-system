@@ -1,12 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import type { CSSObject } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import theme from "../theme";
 import MenuTrigger from "./MenuTrigger";
 
-const getSharedStyles = (color) => ({
-  display: "block",
+const getSharedStyles = (color): CSSObject => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.half,
   color: themeGet(`colors.${color}`, color)(color),
   textDecoration: "none",
   border: "none",

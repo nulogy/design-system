@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import type { CSSObject } from "styled-components";
 import { display } from "styled-system";
 import { Text, Heading3 } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import { DropdownLink, DropdownText } from "../DropdownMenu";
+import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { LinkProps } from "../Link/Link";
 import { addStyledProps } from "../StyledProps";
@@ -22,8 +24,10 @@ const BrandingWrap = styled.div(({ theme }) => ({
 // eslint-disable-next-line no-mixed-operators
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
 
-const getSharedStyles = (theme) => ({
-  display: "block",
+const getSharedStyles = (theme): CSSObject => ({
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.half,
   textDecoration: "none",
   border: "none",
   backgroundColor: "transparent",
@@ -82,11 +86,16 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     // eslint-disable-next-line no-mixed-operators
     pl: layer === 0 ? getPaddingLeft(layer) : `${24 * layer + 20}px`,
     mb: "x1",
+    target: menuItem.openInNew ? "_blank" : undefined,
   };
-  const MenuLink: React.FC<LinkProps> = layer === 0 ? TopLevelLink : DropdownLink;
+  const topLevel = layer === 0;
+  const MenuLink: React.FC<LinkProps> = topLevel ? TopLevelLink : DropdownLink;
   return (
     <li key={menuItem.key ?? menuItem.name}>
-      <MenuLink {...sharedLinkProps}>{menuItem.name}</MenuLink>
+      <MenuLink {...sharedLinkProps}>
+        {menuItem.name}
+        {menuItem.openInNew && <Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />}
+      </MenuLink>
     </li>
   );
 };

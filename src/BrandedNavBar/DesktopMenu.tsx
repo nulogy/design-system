@@ -1,12 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import type { CSSObject } from "styled-components";
+import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import MenuTrigger from "./MenuTrigger";
 import type { MenuType } from "./MenuTrigger";
 
-const getSharedStyles = (color, theme) => {
+const getSharedStyles = (color, theme): CSSObject => {
   return {
-    display: "block",
+    display: "flex",
+    alignItems: "center",
+    gap: theme.space.half,
     color: theme.colors[color] || color,
     textDecoration: "none",
     border: "none",
@@ -73,13 +77,23 @@ const renderMenuTrigger = (menuItem, themeColorObject, layer, menuType) => (
   </div>
 );
 
-const renderMenuLink = (menuItem, themeColorObject) => (
-  <div key={menuItem.key ?? menuItem.name}>
-    <MenuLink href={menuItem.href} to={menuItem.to} as={menuItem.as} {...themeColorObject}>
-      {menuItem.name}
-    </MenuLink>
-  </div>
-);
+const renderMenuLink = (menuItem, themeColorObject) => {
+  const linkProps = {
+    href: menuItem.href,
+    to: menuItem.to,
+    as: menuItem.as,
+    target: menuItem.openInNew ? "_blank" : undefined,
+  };
+
+  return (
+    <div key={menuItem.key ?? menuItem.name}>
+      <MenuLink {...linkProps} {...themeColorObject}>
+        {menuItem.name}
+        {menuItem.openInNew && <Icon size="x2" icon="openInNew" />}
+      </MenuLink>
+    </div>
+  );
+};
 
 const renderCustom = (menuItem, _themeColorObject, layer) => (
   <div key={menuItem.key ?? menuItem.name}>{menuItem.render({ size: "medium", layer })}</div>
@@ -94,13 +108,17 @@ const renderText = (menuItem, themeColorObject) => (
 const getRenderFunction = (menuItem) => {
   if (menuItem.items) {
     return renderMenuTrigger;
-  } else if (menuItem.href || menuItem.to) {
-    return renderMenuLink;
-  } else if (menuItem.render) {
-    return renderCustom;
-  } else {
-    return renderText;
   }
+
+  if (menuItem.href || menuItem.to) {
+    return renderMenuLink;
+  }
+
+  if (menuItem.render) {
+    return renderCustom;
+  }
+
+  return renderText;
 };
 
 const renderMenuItem = (menuItem, themeColorObject, layer, menuType) =>

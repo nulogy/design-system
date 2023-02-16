@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { DropdownText, DropdownLink } from "../DropdownMenu";
+import { Icon } from "../Icon";
 
 const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger, layer, menuType) => (
   <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
@@ -15,13 +16,24 @@ const renderSubMenuTrigger = (subMenuItem, onItemClick, SubMenuTrigger, layer, m
   </NoWrapLi>
 );
 
-const renderSubMenuLink = (subMenuItem, onItemClick) => (
-  <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
-    <DropdownLink onClick={onItemClick} href={subMenuItem.href} to={subMenuItem.to} as={subMenuItem.as}>
-      {subMenuItem.name}
-    </DropdownLink>
-  </NoWrapLi>
-);
+const renderSubMenuLink = (subMenuItem, onItemClick) => {
+  const linkProps = {
+    onClick: onItemClick,
+    href: subMenuItem.href,
+    to: subMenuItem.to,
+    as: subMenuItem.as,
+    target: subMenuItem.openInNew ? "_blank" : undefined,
+  };
+
+  return (
+    <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>
+      <DropdownLink {...linkProps}>
+        {subMenuItem.name}
+        {subMenuItem.openInNew && <Icon size="x2" icon="openInNew" />}
+      </DropdownLink>
+    </NoWrapLi>
+  );
+};
 
 const renderCustom = (subMenuItem, onItemClick, _SubMenuTrigger, layer) => (
   <NoWrapLi key={subMenuItem.key ?? subMenuItem.name}>

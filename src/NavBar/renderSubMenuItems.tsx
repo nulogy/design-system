@@ -8,7 +8,9 @@ import { DropdownLink } from "../DropdownMenu";
 const SubMenuLink = styled(DropdownLink)(fontSize, lineHeight, space);
 
 const getSharedStyles = (): CSSObject => ({
-  display: "block",
+  display: "flex",
+  alignItems: "center",
+  gap: theme.space.half,
   whiteSpace: "nowrap",
   textDecoration: "none",
   borderColor: "transparent",
