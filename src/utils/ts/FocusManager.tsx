@@ -51,9 +51,8 @@ const FocusManager: React.FC<FocusManagerProps> = ({ children, refs = undefined,
 
     if (prevFocusedIndex.current !== focusedIndex) {
       updateFocused();
+      prevFocusedIndex.current = focusedIndex;
     }
-
-    prevFocusedIndex.current = focusedIndex;
   }, [focusedIndex, refs]);
 
   return (

@@ -154,9 +154,10 @@ describe("Tabs", () => {
 
   describe("with default tab selection", () => {
     beforeEach(() => {
-      cy.renderFromStorybook("tabs--with-a-default-selected-index");
+      cy.renderFromStorybook("tabs--with-other-interactive-elements");
     });
     it("focuses on the default selected tab", () => {
+      cy.get("button").contains("Click me").tab();
       cy.focused().should("have.text", "Tab 2");
     });
   });
