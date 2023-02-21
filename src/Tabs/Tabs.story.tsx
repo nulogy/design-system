@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "../Button";
+import { Flex } from "../Flex";
 import { TabsProps, TabsState } from "./Tabs";
 import { Tab, Tabs } from ".";
 
@@ -73,6 +75,18 @@ export const WithADefaultSelectedIndex = () => (
 WithADefaultSelectedIndex.story = {
   name: "with a defaultSelectedIndex",
 };
+
+export const WithOtherInteractiveElements = () => (
+  <Flex gap="x2" alignItems="flex-start" flexDirection="column">
+    <Button>Click me</Button>
+    <Tabs defaultSelectedIndex={1}>
+      <Tab label="Tab 1">Tab 1 Content</Tab>
+      <Tab label="Tab 2">Tab 2 Content</Tab>
+      <Tab label="Tab 3">Tab 3 Content</Tab>
+      <Tab label="Tab 4">Tab 4 Content</Tab>
+    </Tabs>
+  </Flex>
+);
 
 export const SetToFitted = () => (
   <Tabs fitted>

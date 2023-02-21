@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Box } from "../Box";
 import { Text } from "../Type";
+import { Button } from "../Button";
+import { Flex } from "../Flex";
 import Switcher from "./Switcher";
 import Switch from "./Switch";
 
@@ -14,6 +16,16 @@ export const WithSelectedValue = () => {
     </Switcher>
   );
 };
+
+export const WithOtherInteractiveElements = () => (
+  <Flex gap="x1" alignItems="center">
+    <Button>Click me</Button>
+    <Switcher aria-label="storybook-switcher" selected="option_2">
+      <Switch value="option_1">Option 1</Switch>
+      <Switch value="option_2">Option 2</Switch>
+    </Switcher>
+  </Flex>
+);
 
 export const WithContent = () => {
   const [selected, setSelected] = useState("all");

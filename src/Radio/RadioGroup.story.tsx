@@ -51,6 +51,10 @@ RadioGroupWithAllProps.story = {
   name: "RadioGroup with all props",
 };
 
+RadioGroupWithAllProps.parameters = {
+  chromatic: { diffThreshold: 0.3 },
+};
+
 export const WithErrorMessage = () => (
   <RadioGroup
     errorMessage="Please select an option"

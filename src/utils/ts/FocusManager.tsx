@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 
 type Reference = {
   current?: JSX.Element;
@@ -19,6 +19,7 @@ type FocusManagerProps = {
 
 const FocusManager: React.FC<FocusManagerProps> = ({ children, refs = undefined, defaultFocusedIndex }) => {
   const [focusedIndex, setFocusedIndex] = useState<number>(defaultFocusedIndex ?? 0);
+  const prevFocusedIndex = useRef<number>(focusedIndex);
 
   const focusPrevious = () => {
     setFocusedIndex((prevFocusedIndex) => (prevFocusedIndex - 1 + refs.length) % refs.length);
@@ -48,7 +49,10 @@ const FocusManager: React.FC<FocusManagerProps> = ({ children, refs = undefined,
       refs[focusedIndex].focus();
     };
 
-    updateFocused();
+    if (prevFocusedIndex.current !== focusedIndex) {
+      updateFocused();
+      prevFocusedIndex.current = focusedIndex;
+    }
   }, [focusedIndex, refs]);
 
   return (
