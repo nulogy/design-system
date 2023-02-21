@@ -1,3 +1,10 @@
+## [8.7.1](https://github.com/nulogy/design-system/compare/v8.7.0...v8.7.1) (2023-02-21)
+
+
+### Bug Fixes
+
+* don't focus the element on mount ([#1078](https://github.com/nulogy/design-system/issues/1078)) ([dd10f1d](https://github.com/nulogy/design-system/commit/dd10f1dfb9dc53680eec410541078a108de0430a))
+
 # [8.7.0](https://github.com/nulogy/design-system/compare/v8.6.0...v8.7.0) (2023-02-16)
 
 
