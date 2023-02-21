@@ -2,6 +2,7 @@ name: Chromatic
 on:
   push:
 jobs:
+  if: github.event.review.state == 'approved'
   test:
     runs-on: ubuntu-latest
 
