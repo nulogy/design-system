@@ -10,7 +10,7 @@ describe("Datepicker", () => {
 
     describe("has the correct defaults", () => {
       it("has the correct date selected by default", () => {
-        getDateInputComponent().should("have.value", "01 Jan 2019");
+        getDateInputComponent().should("have.value", "2019-Jan-01");
       });
     });
 
@@ -48,12 +48,12 @@ describe("Datepicker", () => {
       it("allows the user to select a date by clicking", () => {
         getDateInputComponent().click();
         cy.get(".react-datepicker__day--002").first().click();
-        getDateInputComponent().should("have.value", "02 Jan 2019");
+        getDateInputComponent().should("have.value", "2019-Jan-02");
       });
 
       it("allows the user to select a date by typing", () => {
         getDateInputComponent().type("{backspace}{backspace}20");
-        getDateInputComponent().should("have.value", "01 Jan 2020");
+        getDateInputComponent().should("have.value", "2019-Jan-20");
       });
 
       it("hides the calendar when a date is selected", () => {
@@ -90,7 +90,7 @@ describe("Datepicker", () => {
           getDateInputComponent().click();
           getDateInputComponent().type("{downarrow}");
           cy.get(".react-datepicker__day--031.react-datepicker__day--selected").should("exist");
-          getDateInputComponent().should("have.value", "31 Dec 2018");
+          getDateInputComponent().should("have.value", "2018-Dec-31");
         });
         it("displays the current month", () => {
           getDateInputComponent().click();
@@ -101,7 +101,7 @@ describe("Datepicker", () => {
           getDateInputComponent().click();
           getDateInputComponent().type("{uparrow}");
           cy.get(".react-datepicker__day--002.react-datepicker__day--selected").should("exist");
-          getDateInputComponent().should("have.value", "02 Jan 2019");
+          getDateInputComponent().should("have.value", "2019-Jan-02");
         });
       });
     });
@@ -116,19 +116,19 @@ describe("Datepicker", () => {
           getDateInputComponent().click();
           getDateInputComponent().type("{uparrow}{uparrow}{uparrow}{uparrow}{uparrow}");
           cy.get(".react-datepicker__day--010.react-datepicker__day--selected").should("exist");
-          getDateInputComponent().should("have.value", "10 Jan 2019");
+          getDateInputComponent().should("have.value", "2019-Jan-10");
           getDateInputComponent().type("{uparrow}");
           cy.get(".react-datepicker__day--010.react-datepicker__day--selected").should("exist");
-          getDateInputComponent().should("have.value", "10 Jan 2019");
+          getDateInputComponent().should("have.value", "2019-Jan-10");
         });
         it("pressing the down arrow selects a previous date up to the min date", () => {
           getDateInputComponent().click();
           getDateInputComponent().type("{downarrow}{downarrow}");
           cy.get(".react-datepicker__day--003.react-datepicker__day--selected").should("exist");
-          getDateInputComponent().should("have.value", "03 Jan 2019");
+          getDateInputComponent().should("have.value", "2019-Jan-03");
           getDateInputComponent().type("{downarrow}");
           cy.get(".react-datepicker__day--003.react-datepicker__day--selected").should("exist");
-          getDateInputComponent().should("have.value", "03 Jan 2019");
+          getDateInputComponent().should("have.value", "2019-Jan-03");
         });
       });
     });
