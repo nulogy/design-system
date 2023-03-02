@@ -1,13 +1,27 @@
-name: "Chromatic"
+name: Chromatic
 on:
   push:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-      - run: |
-          yarn && yarn build-storybook
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build Storybook
+        run: yarn build-storybook
+
       - uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
