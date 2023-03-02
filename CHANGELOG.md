@@ -1,3 +1,10 @@
+## [8.7.2](https://github.com/nulogy/design-system/compare/v8.7.1...v8.7.2) (2023-03-02)
+
+
+### Bug Fixes
+
+* change default date format to match Nulogy content guide ([#1080](https://github.com/nulogy/design-system/issues/1080)) ([9a9e6ff](https://github.com/nulogy/design-system/commit/9a9e6ffdf59d4ca8661b9269c846d03dcf1c83ff))
+
 ## [8.7.1](https://github.com/nulogy/design-system/compare/v8.7.0...v8.7.1) (2023-02-21)
 
 
