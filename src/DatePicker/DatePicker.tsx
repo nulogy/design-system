@@ -29,8 +29,8 @@ type DatePickerProps = FieldProps & {
   className?: string;
 };
 
-const DEFAULT_DATE_FORMAT = "dd MMM yyyy";
-const DEFAULT_PLACEHOLDER = "DD Mon YYYY";
+const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
+const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
 
 const DatePicker: React.FC<DatePickerProps> = forwardRef(
   (
