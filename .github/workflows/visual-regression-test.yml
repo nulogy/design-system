@@ -22,8 +22,3 @@ jobs:
 
       - name: Lost Pixel
         uses: lost-pixel/lost-pixel@v3.0.3
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: lost-pixel-artefacts
-          path: .lostpixel
