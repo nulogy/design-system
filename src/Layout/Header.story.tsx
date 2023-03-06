@@ -18,21 +18,8 @@ import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { theme } from "..";
 import { pixelDigitsFrom } from "../NavBar/NavBar";
 
-export const DefaultBackground = () => (
+export const Default = () => (
   <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-  />
-);
-
-export const WithAnUndecoratedBackground = () => (
-  <Header
-    undecorated
     renderBreadcrumbs={() => (
       <Breadcrumbs>
         <Link href="/">Home</Link>
@@ -45,7 +32,6 @@ export const WithAnUndecoratedBackground = () => (
 
 export const WithActions = () => (
   <Header
-    undecorated
     renderBreadcrumbs={() => (
       <Breadcrumbs>
         <Link href="/">Home</Link>
@@ -63,20 +49,6 @@ export const WithActions = () => (
         </DropdownMenu>
       </Flex>
     )}
-  />
-);
-
-export const WithCustomBackground = () => (
-  <Header
-    renderBreadcrumbs={() => (
-      <Breadcrumbs>
-        <Link href="/">Home</Link>
-        <Link href="/">Materials</Link>
-      </Breadcrumbs>
-    )}
-    title="Materials Overview"
-    background="#98FB98"
-    undecorated
   />
 );
 
@@ -136,6 +108,33 @@ export const WithSummary = () => (
   />
 );
 
+export const WithAnUndecoratedBackground = () => (
+  <Header
+    undecorated
+    renderBreadcrumbs={() => (
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/">Materials</Link>
+      </Breadcrumbs>
+    )}
+    title="Materials Overview"
+  />
+);
+
+export const WithCustomBackground = () => (
+  <Header
+    renderBreadcrumbs={() => (
+      <Breadcrumbs>
+        <Link href="/">Home</Link>
+        <Link href="/">Materials</Link>
+      </Breadcrumbs>
+    )}
+    title="Materials Overview"
+    background="#98FB98"
+    undecorated
+  />
+);
+
 export const WithEverything = () => (
   <Header
     breakpoints={{
@@ -180,9 +179,7 @@ export const WithEverything = () => (
   </Header>
 );
 
-const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map((vp) =>
-  pixelDigitsFrom(vp)
-);
+const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(pixelDigitsFrom);
 
 export default {
   title: "Components/Header",

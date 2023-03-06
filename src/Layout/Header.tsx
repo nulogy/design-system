@@ -23,7 +23,7 @@ type HeaderProps = BoxProps & {
 };
 
 const Header: React.FC<HeaderProps> = ({
-  background = "whiteGrey",
+  background,
   renderBreadcrumbs,
   title,
   undecorated = false,
@@ -42,8 +42,10 @@ const Header: React.FC<HeaderProps> = ({
   const m = useMediaQuery(`(max-width: ${mediumBreakpoint}px)`);
   const sm = useMediaQuery(`(max-width: ${smallBreakpoint}px)`);
 
+  const bg = background ? background : undecorated ? "transparent" : "whiteGrey";
+
   return (
-    <Flex py="x1" px="x3" gap="x2" position="relative" bg={background} {...rest}>
+    <Flex py="x1" px="x3" gap="x2" position="relative" bg={bg} {...rest}>
       <Flex
         flexGrow={3}
         justifyContent="space-between"
