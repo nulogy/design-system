@@ -1,3 +1,10 @@
+## [8.7.3](https://github.com/nulogy/design-system/compare/v8.7.2...v8.7.3) (2023-03-06)
+
+
+### Bug Fixes
+
+* remove default background on undecorated headers ([#1084](https://github.com/nulogy/design-system/issues/1084)) ([5addcda](https://github.com/nulogy/design-system/commit/5addcda8695b064cfc67ce8ca76a88d3ae904a69))
+
 ## [8.7.2](https://github.com/nulogy/design-system/compare/v8.7.1...v8.7.2) (2023-03-02)
 
 
