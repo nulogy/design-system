@@ -44,6 +44,7 @@ export type SelectProps = {
   id?: string;
   initialIsOpen?: boolean;
   menuPosition?: string;
+  menuPlacement?: string;
   maxHeight?: string;
   multiselect?: boolean;
   name?: string;
@@ -80,6 +81,7 @@ export const SelectDefaultProps = {
   initialIsOpen: undefined,
   maxHeight: "248px",
   menuPosition: "absolute",
+  menuPlacement: "bottom",
   multiselect: false,
   name: undefined,
   onBlur: undefined,
