@@ -1,4 +1,5 @@
 import { transparentize } from "polished";
+import { DefaultNDSThemeType } from "../theme.type";
 
 const getBorderColor = ({ errored, disabled, isOpen, isFocused, theme }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
@@ -21,6 +22,40 @@ const getShadow = ({ errored, isOpen, theme }) => {
     return focus;
   }
 };
+
+type Placement = "top" | "bottom";
+
+export function getControlBorderRadius({
+  border,
+  isMenuOpen,
+  menuLength,
+  menuPlacement,
+  theme,
+}: {
+  border: Placement;
+  isMenuOpen: boolean;
+  menuLength: number;
+  menuPlacement: Placement;
+  theme: DefaultNDSThemeType;
+}) {
+  const isMenuEmpty = menuLength === 0;
+
+  if (!isMenuOpen || isMenuEmpty || border !== menuPlacement) return theme.radii.medium;
+
+  return 0;
+}
+
+export function getMenuBorderRadius({
+  border,
+  menuPlacement,
+  theme,
+}: {
+  border: Placement;
+  menuPlacement: Placement;
+  theme: DefaultNDSThemeType;
+}) {
+  return border === menuPlacement ? { radius: theme.radii.medium, style: "solid" } : { radius: 0, style: "none" };
+}
 
 export const showIndicatorSeparator = ({ isMulti, hasValue, hasDefaultOptions }) =>
   isMulti && hasValue && hasDefaultOptions;
@@ -55,9 +90,36 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
         theme,
       }),
       borderRadius: theme.radii.medium,
-      borderBottomLeftRadius: state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
-      borderBottomRightRadius:
-        state.selectProps.menuIsOpen && state.selectProps.options.length ? 0 : theme.radii.medium,
+      borderBottomLeftRadius: getControlBorderRadius({
+        border: "bottom",
+        isMenuOpen: state.selectProps.menuIsOpen,
+        menuLength: state.selectProps.options.length,
+        menuPlacement: state.selectProps.menuPlacement,
+        theme: theme,
+      }),
+      borderBottomRightRadius: getControlBorderRadius({
+        border: "bottom",
+        isMenuOpen: state.selectProps.menuIsOpen,
+        menuLength: state.selectProps.options.length,
+        menuPlacement: state.selectProps.menuPlacement,
+        theme: theme,
+      }),
+
+      borderTopRightRadius: getControlBorderRadius({
+        border: "top",
+        isMenuOpen: state.selectProps.menuIsOpen,
+        menuLength: state.selectProps.options.length,
+        menuPlacement: state.selectProps.menuPlacement,
+        theme: theme,
+      }),
+      borderTopLeftRadius: getControlBorderRadius({
+        border: "top",
+        isMenuOpen: state.selectProps.menuIsOpen,
+        menuLength: state.selectProps.options.length,
+        menuPlacement: state.selectProps.menuPlacement,
+        theme: theme,
+      }),
+
       "&:hover, &:focus": {
         borderColor: getBorderColor({
           errored: error,
@@ -85,7 +147,9 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       maxHeight: "150px",
     }),
     menu: (provided, state) => ({
+      ...provided,
       marginTop: 0,
+      marginBottom: 0,
       position: "absolute",
       overflowX: "auto",
       zIndex: "100",
@@ -99,10 +163,32 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
         isFocused: false,
         theme,
       }),
-      borderBottomStyle: "solid",
       borderLeftStyle: "solid",
       borderRightStyle: "solid",
-      borderRadius: `0 0 4px 4px`,
+      borderBottomStyle: getMenuBorderRadius({
+        border: "bottom",
+        menuPlacement: state.selectProps.menuPlacement,
+        theme,
+      }).style,
+      borderTopStyle: getMenuBorderRadius({ border: "top", menuPlacement: state.selectProps.menuPlacement, theme })
+        .style,
+      borderBottomLeftRadius: getMenuBorderRadius({
+        border: "bottom",
+        menuPlacement: state.selectProps.menuPlacement,
+        theme,
+      }).radius,
+      borderBottomRightRadius: getMenuBorderRadius({
+        border: "bottom",
+        menuPlacement: state.selectProps.menuPlacement,
+        theme,
+      }).radius,
+      borderTopLeftRadius: getMenuBorderRadius({ border: "top", menuPlacement: state.selectProps.menuPlacement, theme })
+        .radius,
+      borderTopRightRadius: getMenuBorderRadius({
+        border: "top",
+        menuPlacement: state.selectProps.menuPlacement,
+        theme,
+      }).radius,
       boxShadow: getShadow({ errored: error, isOpen: true, theme }),
     }),
     menuList: (provided) => ({

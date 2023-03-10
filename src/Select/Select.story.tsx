@@ -6,7 +6,8 @@ import styled from "styled-components";
 import { text, boolean, select } from "@storybook/addon-knobs";
 import { Button, Select, SelectOption } from "../index";
 import { Box } from "../Box";
-import { SelectProps } from "../Select/Select";
+import { SelectProps } from "../Select";
+import { Flex } from "../Flex";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -564,6 +565,15 @@ export const WithCustomProps = () => {
         components={{ Option: CustomOption, SingleValue: CustomSingleValue }}
       />
     </>
+  );
+};
+
+export const WithTopMenuPlacement = () => {
+
+  return (
+    <Flex height="100vh" alignItems="center" justifyContent="center">
+      <Select options={options} menuPlacement="top" />
+    </Flex>
   );
 };
 
