@@ -31,7 +31,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         if: ${{ failure() && steps.lp.conclusion == 'failure' }}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_LOST_PIXEL_TOKEN }}
           commit-message: update lost-pixel baselines
           delete-branch: true
           branch: 'lost-pixel-update/${{ github.ref_name }}'
