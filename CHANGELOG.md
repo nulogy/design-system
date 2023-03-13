@@ -1,3 +1,10 @@
+# [8.8.0](https://github.com/nulogy/design-system/compare/v8.7.3...v8.8.0) (2023-03-13)
+
+
+### Features
+
+* allow select menu to open to the top ([3845ffd](https://github.com/nulogy/design-system/commit/3845ffdbcd776703e10f5067788325ed67401588))
+
 ## [8.7.3](https://github.com/nulogy/design-system/compare/v8.7.2...v8.7.3) (2023-03-06)
 
 
