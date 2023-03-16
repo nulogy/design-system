@@ -1,5 +1,7 @@
 import * as tokens from "@nulogy/tokens";
-import { DefaultNDSThemeType } from "./theme.type";
+import { DefaultNDSThemeType, ThemeType } from "./theme.type";
+
+const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
 
 const Theme: DefaultNDSThemeType = {
   colors: {
@@ -116,6 +118,60 @@ const Theme: DefaultNDSThemeType = {
     openControl: tokens.z_indices_open_control,
     navBar: tokens.z_indices_nav_bar,
     sidebar: tokens.z_indices_sidebar,
+  },
+};
+
+export const spaciousTheme: ThemeType = {
+  fontSizes: {
+    smaller: pixelDigitsFrom(tokens.size_font_smaller) * 1.2 + "px",
+    small: pixelDigitsFrom(tokens.size_font_small) * 1.2 + "px",
+    medium: pixelDigitsFrom(tokens.size_font_medium) * 1.2 + "px",
+    large: pixelDigitsFrom(tokens.size_font_large) * 1.2 + "px",
+    larger: pixelDigitsFrom(tokens.size_font_larger) * 1.2 + "px",
+    largest: pixelDigitsFrom(tokens.size_font_largest) * 1.2 + "px",
+    heading1: pixelDigitsFrom(tokens.size_font_heading_1) * 1.2 + "px",
+    heading2: pixelDigitsFrom(tokens.size_font_heading_2) * 1.2 + "px",
+    heading3: pixelDigitsFrom(tokens.size_font_heading_3) * 1.2 + "px",
+    heading4: pixelDigitsFrom(tokens.size_font_heading_4) * 1.2 + "px",
+  },
+  lineHeights: {
+    base: String(pixelDigitsFrom(tokens.line_height_base) * 1.2),
+    smallTextBase: String(pixelDigitsFrom(tokens.line_height_small_text_base) * 1.2),
+    smallTextCompressed: String(pixelDigitsFrom(tokens.line_height_small_text_compressed) * 1.2),
+    smallerText: String(pixelDigitsFrom(tokens.line_height_smaller_text) * 1.2),
+    heading1: String(pixelDigitsFrom(tokens.line_height_heading_1) * 1.2),
+    heading2: String(pixelDigitsFrom(tokens.line_height_heading_2) * 1.2),
+    heading3: String(pixelDigitsFrom(tokens.line_height_heading_3) * 1.2),
+    heading4: String(pixelDigitsFrom(tokens.line_height_heading_4) * 1.2),
+    title: String(pixelDigitsFrom(tokens.line_height_heading_1) * 1.2),
+    sectionTitle: String(pixelDigitsFrom(tokens.line_height_heading_2) * 1.2),
+    subsectionTitle: String(pixelDigitsFrom(tokens.line_height_heading_3) * 1.2),
+  },
+  radii: {
+    small: pixelDigitsFrom(tokens.radius_border_small) * 2 + "px",
+    medium: pixelDigitsFrom(tokens.radius_border_medium) * 2 + "px",
+  },
+  sizes: {
+    none: pixelDigitsFrom(tokens.size_base_none) * 2 + "px",
+    half: pixelDigitsFrom(tokens.size_base_half) * 2 + "px",
+    x1: pixelDigitsFrom(tokens.size_base_x_1) * 2 + "px",
+    x2: pixelDigitsFrom(tokens.size_base_x_2) * 2 + "px",
+    x3: pixelDigitsFrom(tokens.size_base_x_3) * 2 + "px",
+    x4: pixelDigitsFrom(tokens.size_base_x_4) * 2 + "px",
+    x5: pixelDigitsFrom(tokens.size_base_x_5) * 2 + "px",
+    x6: pixelDigitsFrom(tokens.size_base_x_6) * 2 + "px",
+    x8: pixelDigitsFrom(tokens.size_base_x_8) * 2 + "px",
+  },
+  space: {
+    none: pixelDigitsFrom(tokens.size_base_none) * 2 + "px",
+    half: pixelDigitsFrom(tokens.size_base_half) * 2 + "px",
+    x1: pixelDigitsFrom(tokens.size_base_x_1) * 2 + "px",
+    x2: pixelDigitsFrom(tokens.size_base_x_2) * 2 + "px",
+    x3: pixelDigitsFrom(tokens.size_base_x_3) * 2 + "px",
+    x4: pixelDigitsFrom(tokens.size_base_x_4) * 2 + "px",
+    x5: pixelDigitsFrom(tokens.size_base_x_5) * 2 + "px",
+    x6: pixelDigitsFrom(tokens.size_base_x_6) * 2 + "px",
+    x8: pixelDigitsFrom(tokens.size_base_x_8) * 2 + "px",
   },
 };
 

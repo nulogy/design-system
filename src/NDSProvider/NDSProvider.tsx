@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { I18nextProvider } from "react-i18next";
-import NDSTheme from "../theme";
+import defaultTheme, { spaciousTheme } from "../theme";
 import i18n from "../i18n";
 import { ThemeType, DefaultNDSThemeType } from "../theme.type";
 import { LocaleContext } from "./LocaleContext";
@@ -15,6 +15,7 @@ type NDSProviderProps = {
   locale?: string;
   disableGlobalStyles?: boolean;
   children?: any;
+  density?: "spacious" | "default"
 };
 
 type AllNDSGlobalStylesProps = {
@@ -23,6 +24,11 @@ type AllNDSGlobalStylesProps = {
   disableGlobalStyles?: boolean;
   children?: any;
 };
+
+const themes = {
+  default: defaultTheme,
+  spacious: spaciousTheme,
+} as const;
 
 const AllNDSGlobalStyles = ({ theme, locale, disableGlobalStyles, children }: AllNDSGlobalStylesProps) =>
   !disableGlobalStyles ? (
@@ -34,19 +40,24 @@ const AllNDSGlobalStyles = ({ theme, locale, disableGlobalStyles, children }: Al
       </GlobalStyles>
     </>
   ) : (
-    children
-  );
+      children
+    );
 
-const NDSProvider = ({ theme, children, disableGlobalStyles = false, locale = "en_US" }: NDSProviderProps) => {
+const NDSProvider = (props: NDSProviderProps) => {
+  const { disableGlobalStyles = false, locale = "en_US", density, theme = {}, children } = props
+
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
-  const mergedTheme = mergeThemes(NDSTheme, theme);
+
+  const selectedTheme = mergeThemes(defaultTheme, themes[density])
+  // const mergedTheme = mergeThemes(selectedTheme, theme);
+
   return (
     <LocaleContext.Provider value={{ locale }}>
-      <AllNDSGlobalStyles theme={mergedTheme} locale={locale} disableGlobalStyles={disableGlobalStyles}>
+      <AllNDSGlobalStyles theme={selectedTheme} locale={locale} disableGlobalStyles={disableGlobalStyles}>
         <I18nextProvider i18n={i18n}>
-          <ThemeProvider theme={mergedTheme}>{children}</ThemeProvider>
+          <ThemeProvider theme={selectedTheme}>{children}</ThemeProvider>
         </I18nextProvider>
       </AllNDSGlobalStyles>
     </LocaleContext.Provider>

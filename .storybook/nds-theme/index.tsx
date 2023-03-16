@@ -5,6 +5,7 @@ import { STORY_CHANGED } from "@storybook/core-events";
 import { select } from "@storybook/addon-knobs";
 import { NDSProvider, theme as NDSTheme } from "../../src";
 import { ALL_NDS_LOCALES } from "../../src/locales.const";
+import { spaciousTheme } from "../../src/theme";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce(
   (obj, i) => ({
@@ -16,7 +17,7 @@ const localeKnobOptions = ALL_NDS_LOCALES.reduce(
 
 const withNDSProvider = (story) => {
   const channel = addons.getChannel();
-  const [theme, setTheme] = useState(NDSTheme);
+  const [theme, setTheme] = useState({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(false);
@@ -36,7 +37,7 @@ const withNDSProvider = (story) => {
 
   return (
     !loading && (
-      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} theme={theme}>
+      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} theme={theme} density="spacious">
         {story}
       </NDSProvider>
     )
