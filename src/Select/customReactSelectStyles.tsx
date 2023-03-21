@@ -145,6 +145,10 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       padding: 0,
       overflow: "auto",
       maxHeight: "150px",
+      rowGap: "4px",
+      columnGap: "4px",
+      paddingTop: "4px",
+      paddingBottom: "4px",
     }),
     menu: (provided, state) => ({
       ...provided,
@@ -204,10 +208,7 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       ...provided,
       background: theme.colors.lightGrey,
       color: theme.colors.black,
-      margin: `2px ${theme.space.x1} 2px 0`,
-      "&:last-child": {
-        marginRight: theme.space.half,
-      },
+      margin: 0,
     }),
     multiValueLabel: () => ({
       textOverflow: "ellipsis",
