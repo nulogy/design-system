@@ -1,12 +1,9 @@
-name: Chromatic
+name: trigger Chromatic
 
-on:
-  pull_request_review:
-    types: [submitted]
+on: workflow_dispatch
 
 jobs:
-  test:
-    if: github.event.review.state == 'approved'
+  run-chromatic:
     runs-on: ubuntu-latest
 
     steps:
