@@ -1,3 +1,10 @@
+## [8.8.1](https://github.com/nulogy/design-system/compare/v8.8.0...v8.8.1) (2023-03-27)
+
+
+### Bug Fixes
+
+* upgrade date-fns from 2.9.0 to 2.23.0 ([#946](https://github.com/nulogy/design-system/issues/946)) ([4b12221](https://github.com/nulogy/design-system/commit/4b122212683fad52c06326888c8fc1f69f5f949f))
+
 # [8.8.0](https://github.com/nulogy/design-system/compare/v8.7.3...v8.8.0) (2023-03-13)
 
 
