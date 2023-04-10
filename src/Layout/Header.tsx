@@ -5,7 +5,7 @@ import type { BoxProps } from "../Box/Box";
 import { Flex } from "../Flex";
 import { Heading1, Text } from "../Type";
 import useMediaQuery from "../hooks/useMediaQuery";
-import { pixelDigitsFrom } from "../NavBar/NavBar";
+import numberFromDimension from "../utils/numberFromDimension";
 
 type Breakpoint = string | number;
 
@@ -36,8 +36,8 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const theme = useTheme();
 
-  const smallBreakpoint = pixelDigitsFrom(breakpoints?.small ?? theme.breakpoints.small);
-  const mediumBreakpoint = pixelDigitsFrom(breakpoints?.medium ?? theme.breakpoints.medium);
+  const smallBreakpoint = numberFromDimension(breakpoints?.small ?? theme.breakpoints.small);
+  const mediumBreakpoint = numberFromDimension(breakpoints?.medium ?? theme.breakpoints.medium);
 
   const m = useMediaQuery(`(max-width: ${mediumBreakpoint}px)`);
   const sm = useMediaQuery(`(max-width: ${smallBreakpoint}px)`);

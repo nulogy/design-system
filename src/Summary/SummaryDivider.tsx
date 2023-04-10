@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box } from "../Box";
-import { pixelDigitsFrom } from "../NavBar/NavBar";
+import numberFromDimension from "../utils/numberFromDimension";
 import { useSummaryContext } from "./SummaryContext";
 
 const Divider = styled(Box)<{ breakpoint: number }>(({ theme, breakpoint }) => ({
@@ -20,7 +20,7 @@ const Divider = styled(Box)<{ breakpoint: number }>(({ theme, breakpoint }) => (
 const SummaryDivider = (props) => {
   const { breakpoint } = useSummaryContext();
 
-  return <Divider breakpoint={pixelDigitsFrom(breakpoint)} {...props} />;
+  return <Divider breakpoint={numberFromDimension(breakpoint)} {...props} />;
 };
 
 export default SummaryDivider;

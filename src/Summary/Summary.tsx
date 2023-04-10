@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { pixelDigitsFrom } from "../NavBar/NavBar";
+import numberFromDimension from "../utils/numberFromDimension";
 import { Box } from "../Box";
 import theme from "../theme";
 import { SummaryContextProvider } from "./SummaryContext";
@@ -32,7 +32,7 @@ const SummaryWrapper = styled(Box)<{ breakpoint: number }>(({ theme, breakpoint 
 const DEFAULT_BREAKPOINT = theme.breakpoints.medium;
 
 const Summary: React.FC<SummaryProps> = ({ breakpoint = DEFAULT_BREAKPOINT, children, ...rest }) => {
-  const breakpointPx = pixelDigitsFrom(breakpoint);
+  const breakpointPx = numberFromDimension(breakpoint);
 
   return (
     <SummaryContextProvider breakpoint={breakpointPx}>
