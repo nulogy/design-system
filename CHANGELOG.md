@@ -1,3 +1,10 @@
+# [8.10.0](https://github.com/nulogy/design-system/compare/v8.9.1...v8.10.0) (2023-04-21)
+
+
+### Features
+
+* upgrade @nulogy/icons to 4.26.0 ([#1122](https://github.com/nulogy/design-system/issues/1122)) ([7a542ca](https://github.com/nulogy/design-system/commit/7a542ca0f82d443b381c5d349c55fe64860a14bc))
+
 ## [8.9.1](https://github.com/nulogy/design-system/compare/v8.9.0...v8.9.1) (2023-04-10)
 
 
