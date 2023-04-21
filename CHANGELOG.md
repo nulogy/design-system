@@ -1,3 +1,10 @@
+## [8.10.1](https://github.com/nulogy/design-system/compare/v8.10.0...v8.10.1) (2023-04-21)
+
+
+### Bug Fixes
+
+* prevent IconicButton from clipping icons ([#1123](https://github.com/nulogy/design-system/issues/1123)) ([0e64c9d](https://github.com/nulogy/design-system/commit/0e64c9dafd2fe1f694e856046d9899bc0a0f1e48))
+
 # [8.10.0](https://github.com/nulogy/design-system/compare/v8.9.1...v8.10.0) (2023-04-21)
 
 
