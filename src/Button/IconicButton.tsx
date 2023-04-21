@@ -7,6 +7,7 @@ import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
+import { DefaultNDSThemeType } from "../theme.type";
 
 type BaseProps = {
   color?: string;
@@ -19,6 +20,17 @@ type BaseProps = {
 };
 
 type IconicButtonProps = BaseProps & SpaceProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps>;
+
+const IconWrapper = styled.span(({ theme, size }: {theme: DefaultNDSThemeType; size: string}) => ({
+  display: "inline-flex",
+  flexShrink: 0,
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: theme.radii.circle,
+  height: `calc(${theme.sizes[size] ?? size} + ${theme.sizes.x1})`,
+  width: `calc(${theme.sizes[size] ?? size} + ${theme.sizes.x1})`,
+  transition: ".2s",
+}));
 
 const HoverText: React.FC<any> = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
@@ -41,10 +53,7 @@ const WrapperButton: React.FC<any> = styled.button(
     alignItems: "center",
     padding: `${theme.space.half} ${theme.space.none}`,
     cursor: disabled ? "default" : "pointer",
-    [`${Icon}`]: {
-      borderRadius: theme.radii.circle,
-      transition: ".2s",
-    },
+
     [`${Text}`]: {
       display: "block",
       fontWeight: theme.fontWeights.medium,
@@ -54,7 +63,7 @@ const WrapperButton: React.FC<any> = styled.button(
       opacity: "0",
     },
     "&:hover": {
-      [`${Icon}`]: {
+      [`${IconWrapper}`]: {
         backgroundColor: theme.colors[hoverBackgroundColor] ?? hoverBackgroundColor,
       },
       [`${HoverText}`]: {
@@ -62,7 +71,7 @@ const WrapperButton: React.FC<any> = styled.button(
       },
     },
     "&:active": {
-      [`${Icon}`]: {
+      [`${IconWrapper}`]: {
         transform: "scale(0.875)",
         transition: ".2s ease-in",
       },
@@ -70,7 +79,7 @@ const WrapperButton: React.FC<any> = styled.button(
     "&:disabled": {
       opacity: ".5",
       "&:hover, &:active": {
-        [`${Icon}`]: {
+        [`${IconWrapper}`]: {
           background: "none",
           transform: "none",
         },
@@ -78,7 +87,7 @@ const WrapperButton: React.FC<any> = styled.button(
     },
     "&:focus": {
       outline: "none",
-      [`${Icon}`]: {
+      [`${IconWrapper}`]: {
         boxShadow: theme.shadows.focus,
       },
       [`${HoverText}`]: {
@@ -105,6 +114,8 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
     },
     forwardedRef
   ) => {
+    const size = iconSize || "x3"
+
     return (
       <WrapperButton
         ref={forwardedRef}
@@ -115,7 +126,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
       >
         <Manager>
           <Reference>
-            {({ ref }) => <Icon ref={ref} size={iconSize || "x4"} icon={icon} p="half" color={color} />}
+            {({ ref }) => <IconWrapper ref={ref} size={iconSize || "x3"}><Icon size={size} icon={icon} color={color} /></IconWrapper>}
           </Reference>
           <Popper
             placement="bottom"

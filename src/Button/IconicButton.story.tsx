@@ -152,6 +152,7 @@ export const WithCustomHoverBackgroundNonThemeColor = () => (
     </Flex>
   </IconicButton>
 );
-WithNonTextChildren.story = {
-  name: "with non text children",
-};
+
+export const WithLargerIcons = () => (
+  <IconicButton icon="chatBubble">Add comment</IconicButton>
+);
