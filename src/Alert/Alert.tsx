@@ -8,22 +8,25 @@ import { Flex } from "../Flex";
 import { Text } from "../Type";
 import CloseButton from "./CloseButton";
 
+type NotificationType = "danger" | "informative" | "success" | "warning"
+
 export type AlertProps = BoxProps & {
   children?: React.ReactNode;
   className?: string;
   isCloseable?: boolean;
   closeAriaLabel?: string;
   title?: string;
-  type?: "danger" | "informative" | "success" | "warning" | undefined;
+  type?: NotificationType;
   onClose?: any;
   controlled?: boolean;
   style?: React.CSSProperties;
+  centered?: boolean
 };
 
 const AlertStyles = ({ theme }) => ({
-  [`${Link}`]: {
-    color: theme.colors.black,
-  },
+  // [`${Link}`]: {
+  //   color: theme.colors.black,
+  // },
 });
 
 const alertColours: any = {
@@ -54,6 +57,7 @@ const Alert = styled(
     closeAriaLabel,
     onClose,
     controlled = false,
+    centered = false,
     ...props
   }: AlertProps) => {
     const [isVisible, setIsVisible] = useState(true);
@@ -73,11 +77,12 @@ const Alert = styled(
         borderLeftColor={alertColours[type].borderColor}
         borderLeftStyle="solid"
         role="alert"
+        alignItems={children ? "flex-start" : undefined}
         {...props}
       >
         {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
         {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
-        <Box mr="auto">
+        <Box flexGrow={centered ? 1 : undefined} mr={centered ? undefined : "auto"} textAlign={centered ? "center": undefined}>
           {title && <Text fontWeight="bold">{title}</Text>}
           {children}
         </Box>

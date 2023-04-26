@@ -12,7 +12,7 @@ import { BrandedNavBar as NDSBrandedNavBar } from "./index";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
-const ResetStorybookView = styled.div({
+export const ResetStorybookView = styled.div({
   position: "absolute",
   top: 0,
   left: 0,
@@ -132,9 +132,11 @@ const secondaryMenuWithIcon = [
   },
 ];
 
+export const menuData = { primaryMenu, secondaryMenu }
 export default {
   title: "Components/BrandedNavBar",
 };
+
 
 export const _BrandedNavBar = () => <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} />;
 

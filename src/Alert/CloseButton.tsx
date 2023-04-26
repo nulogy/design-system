@@ -12,7 +12,7 @@ type CloseButtonProps = {
 const CloseButton = ({ onClick, "aria-label": ariaLabel }: CloseButtonProps) => {
   const { t } = useTranslation();
   return (
-    <Flex ml="x2">
+    <Flex ml="x2" height="x3">
       <Link
         as="button"
         type="button"
@@ -22,7 +22,7 @@ const CloseButton = ({ onClick, "aria-label": ariaLabel }: CloseButtonProps) => 
         onClick={onClick}
         aria-label={ariaLabel || t("close")}
       >
-        <Icon icon="close" size="16" />
+        <Icon icon="close" size="x2" />
       </Link>
     </Flex>
   );
