@@ -25,6 +25,12 @@ export const Centered = () => (
   </Banner>
 );
 
+export const Dismissible = () => (
+  <Banner title="This banner is dismissable" isCloseable>
+    You can click on the close button to dismiss the Banner
+  </Banner>
+);
+
 export const AboveTheNavbar = () => (
   <>
     <Banner title="Notice of change: The Order collaboration and In progress orders modules will no longer be available as of Monday, May 29, 2023.">
