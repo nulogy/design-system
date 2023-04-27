@@ -2,9 +2,9 @@ import React from "react";
 import { Alert } from "../index";
 import { Link } from "../Link";
 import { Box } from "../Box";
-import { Button } from "../Button";
+import { PrimaryButton } from "../Button";
 import type { AlertProps } from "../Alert/Alert";
-import { ResetStorybookView, menuData } from "../BrandedNavBar/NavBar.story";
+import { menuData } from "../BrandedNavBar/NavBar.story";
 import { WithSummary as Header } from "../Layout/Header.story";
 import { BrandedNavBar } from "../BrandedNavBar";
 
@@ -15,7 +15,7 @@ const Banner = (props: AlertProps) => (
 export const WithCallToAction = () => (
   <Banner title="Link all your accounts" isCloseable>
     Nulogy Digital Quality Inspections now allows users to access all their different accounts using a single email.
-    <Box mt="x2"> <Button size="small">Learn more</Button></Box>
+    <Box mt="x2"> <PrimaryButton>Learn more</PrimaryButton></Box>
   </Banner>
 );
 
