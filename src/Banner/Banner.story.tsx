@@ -9,10 +9,12 @@ import { Flex } from "../Flex";
 import Banner from "./Banner";
 
 export const WithCallToAction = () => (
-    <Banner title="Link all your accounts" isCloseable>
-      Nulogy Digital Quality Inspections now allows users to access all their different accounts using a single email.
-      <Box mt="x2"><PrimaryButton>Learn more</PrimaryButton></Box>
-    </Banner>
+  <Banner title="Link all your accounts" isCloseable>
+    Nulogy Digital Quality Inspections now allows users to access all their different accounts using a single email.
+    <Box mt="x2">
+      <PrimaryButton>Learn more</PrimaryButton>
+    </Box>
+  </Banner>
 );
 
 export const Dismissible = () => (
@@ -22,10 +24,13 @@ export const Dismissible = () => (
 );
 
 export const AboveTheNavbar = () => (
-    <Banner title="Action required" >
-      We've detected unauthorized access attempts on your account. Please change your password immediately to secure your account.
+  <>
+    <Banner title="Action required">
+      We have detected unauthorized access attempts on your account. Please change your password immediately to secure
+      your account.
     </Banner>
     <BrandedNavBar menuData={menuData} />
+  </>
 );
 
 export const BellowTheNavbar = () => (
@@ -40,24 +45,26 @@ export const BellowTheHeader = () => (
     <BrandedNavBar menuData={menuData} />
     <Header />
     <Banner type="warning">
-      <strong>Page refresh required</strong> To obtain the most recent data, <Link href="javascript:void(0)">click here</Link>.
+      <strong>Page refresh required</strong> To obtain the most recent data, <Link href="/">click here</Link>.
     </Banner>
   </>
 );
 
-const bannerTypes = ["danger" , "informative" , "success" , "warning"] as const
+const bannerTypes = ["danger", "informative", "success", "warning"] as const;
 
 export const BannerTypes = () => (
   <Flex flexDirection="column">
-    {bannerTypes.map(type =>
-      <Banner type={type} title={type}>This is a banner with type "{type}"</Banner>
-    )}
+    {bannerTypes.map((type) => (
+      <Banner key={type} type={type} title={type}>
+        This is a banner with type &quot;{type}&quot;
+      </Banner>
+    ))}
   </Flex>
-)
+);
 
 export default {
   title: "Components/Banner",
   parameters: {
-    layout: 'fullscreen',
-  }
+    layout: "fullscreen",
+  },
 };
