@@ -10,26 +10,27 @@ import CloseButton from "./CloseButton";
 
 type NotificationType = "danger" | "informative" | "success" | "warning"
 
-export type AlertProps = BoxProps & {
-  children?: React.ReactNode;
-  className?: string;
+export type AlertProps = BoxProps & React.HTMLProps<HTMLDivElement> & {
   isCloseable?: boolean;
   closeAriaLabel?: string;
   title?: string;
   type?: NotificationType;
   onClose?: any;
   controlled?: boolean;
-  style?: React.CSSProperties;
-  centered?: boolean
 };
 
-const AlertStyles = ({ theme }) => ({
-  // [`${Link}`]: {
-  //   color: theme.colors.black,
-  // },
+const styles = ({ theme }) => ({
+  [`${Link}`]: {
+    color: theme.colors.black,
+  },
 });
 
-const alertColours: any = {
+type ColoursConfig = {
+  borderColor: string,
+  backgroundColor: string
+}
+
+const alertColours: Record<NotificationType, ColoursConfig> = {
   danger: {
     borderColor: "red",
     backgroundColor: "lightRed",
@@ -48,7 +49,7 @@ const alertColours: any = {
   },
 };
 
-const Alert = styled(
+const Alert =
   ({
     children,
     isCloseable = false,
@@ -57,7 +58,6 @@ const Alert = styled(
     closeAriaLabel,
     onClose,
     controlled = false,
-    centered = false,
     ...props
   }: AlertProps) => {
     const [isVisible, setIsVisible] = useState(true);
@@ -68,7 +68,10 @@ const Alert = styled(
         setIsVisible(false);
       }
     };
-    return isVisible ? (
+
+    if (!isVisible) return null
+
+    return (
       <Flex
         bg={alertColours[type].backgroundColor}
         p="x2"
@@ -82,14 +85,13 @@ const Alert = styled(
       >
         {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
         {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
-        <Box flexGrow={centered ? 1 : undefined} mr={centered ? undefined : "auto"} textAlign={centered ? "center": undefined}>
+        <Box mr="auto">
           {title && <Text fontWeight="bold">{title}</Text>}
           {children}
         </Box>
         {isCloseable && <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />}
       </Flex>
-    ) : null;
-  }
-)(AlertStyles);
+    );
+}
 
-export default Alert;
+export default styled(Alert)(styles);

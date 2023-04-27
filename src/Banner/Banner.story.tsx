@@ -1,28 +1,18 @@
 import React from "react";
-import { Alert } from "../index";
 import { Link } from "../Link";
 import { Box } from "../Box";
 import { PrimaryButton } from "../Button";
-import type { AlertProps } from "../Alert/Alert";
 import { menuData } from "../BrandedNavBar/NavBar.story";
 import { WithSummary as Header } from "../Layout/Header.story";
 import { BrandedNavBar } from "../BrandedNavBar";
-
-const Banner = (props: AlertProps) => (
-  <Alert borderStyle="none" borderRadius="0" {...props} />
-)
+import { Flex } from "../Flex";
+import Banner from "./Banner";
 
 export const WithCallToAction = () => (
-  <Banner title="Link all your accounts" isCloseable>
-    Nulogy Digital Quality Inspections now allows users to access all their different accounts using a single email.
-    <Box mt="x2"> <PrimaryButton>Learn more</PrimaryButton></Box>
-  </Banner>
-);
-
-export const Centered = () => (
-  <Banner type="warning" centered>
-    <strong>Page refresh required</strong> To obtain the most recent data, <Link underline={false} href="javascript:void()">click here</Link>.
-  </Banner>
+    <Banner title="Link all your accounts" isCloseable>
+      Nulogy Digital Quality Inspections now allows users to access all their different accounts using a single email.
+      <Box mt="x2"><PrimaryButton>Learn more</PrimaryButton></Box>
+    </Banner>
 );
 
 export const Dismissible = () => (
@@ -32,12 +22,10 @@ export const Dismissible = () => (
 );
 
 export const AboveTheNavbar = () => (
-  <>
-    <Banner title="Notice of change: The Order collaboration and In progress orders modules will no longer be available as of Monday, May 29, 2023.">
-      Use the new Purchase orders module and the PO line items module for an improved experience of managing your orders.
+    <Banner title="Action required" >
+      We've detected unauthorized access attempts on your account. Please change your password immediately to secure your account.
     </Banner>
     <BrandedNavBar menuData={menuData} />
-  </>
 );
 
 export const BellowTheNavbar = () => (
@@ -51,9 +39,21 @@ export const BellowTheHeader = () => (
   <>
     <BrandedNavBar menuData={menuData} />
     <Header />
-    <Centered />
+    <Banner type="warning">
+      <strong>Page refresh required</strong> To obtain the most recent data, <Link href="javascript:void(0)">click here</Link>.
+    </Banner>
   </>
 );
+
+const bannerTypes = ["danger" , "informative" , "success" , "warning"] as const
+
+export const BannerTypes = () => (
+  <Flex flexDirection="column">
+    {bannerTypes.map(type =>
+      <Banner type={type} title={type}>This is a banner with type "{type}"</Banner>
+    )}
+  </Flex>
+)
 
 export default {
   title: "Components/Banner",
