@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "../Link";
 import { Box } from "../Box";
 import { PrimaryButton } from "../Button";
-import { menuData } from "../BrandedNavBar/NavBar.story";
 import { WithSummary as Header } from "../Layout/Header.story";
 import { BrandedNavBar } from "../BrandedNavBar";
 import { Flex } from "../Flex";
@@ -68,3 +67,29 @@ export default {
     layout: "fullscreen",
   },
 };
+
+const menuData = {
+  primaryMenu: [
+    {
+      name: "Dashboard",
+      items: [{ name: "Items", href: "/" }, { name: "Carriers", href: "/" }, { name: "Only text submenu" }],
+    },
+  ],
+  secondaryMenu: [
+    {
+      name: "User@Nulogy.com",
+      items: [
+        { name: "Profile", href: "/" },
+        { name: "Preferences", href: "/" },
+        { name: "Logout", href: "/" },
+      ],
+    },
+    {
+      name: "Settings",
+      items: [
+        { name: "Permissions", href: "/" },
+        { name: "Manage account", href: "/" },
+      ],
+    },
+  ]
+}
