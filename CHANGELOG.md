@@ -4,6 +4,14 @@
 ### Features
 
 * Add Banner component ([#1135](https://github.com/nulogy/design-system/issues/1135)) ([d507027](https://github.com/nulogy/design-system/commit/d50702758aeb1fed41f07798a74548b419263c4f))
+* Export banner component ([9ce1e1f](https://github.com/nulogy/design-system/commit/9ce1e1f7dc6ade148884a62d3d97a35853c8260c))
+
+# [8.11.0](https://github.com/nulogy/design-system/compare/v8.10.1...v8.11.0) (2023-05-01)
+
+
+### Features
+
+* Add Banner component ([#1135](https://github.com/nulogy/design-system/issues/1135)) ([d507027](https://github.com/nulogy/design-system/commit/d50702758aeb1fed41f07798a74548b419263c4f))
 
 ## [8.10.1](https://github.com/nulogy/design-system/compare/v8.10.0...v8.10.1) (2023-04-21)
 
