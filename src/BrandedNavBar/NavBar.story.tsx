@@ -132,6 +132,7 @@ const secondaryMenuWithIcon = [
   },
 ];
 
+const menuData = { primaryMenu, secondaryMenu };
 export default {
   title: "Components/BrandedNavBar",
 };
