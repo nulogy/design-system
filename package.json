@@ -132,9 +132,7 @@
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.5",
     "typescript-eslint": "^0.0.1-alpha.0",
-    "wait-on": "^5.1.0",
-    "webpack": "^4.8.3",
-    "webpack-cli": "^3.1.0"
+    "wait-on": "^5.1.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.9.6",
