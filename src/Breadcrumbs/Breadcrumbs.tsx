@@ -23,6 +23,7 @@ const Breadcrumbs: React.FC<FlexProps> = ({ children, as, ...props }) => {
     return (
       <BreadcrumbsListItem key={`child-${index}`}>
         {React.cloneElement(child, {
+          // @ts-ignore
           color: "darkBlue",
         })}
       </BreadcrumbsListItem>
