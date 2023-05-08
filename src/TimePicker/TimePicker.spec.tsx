@@ -14,7 +14,7 @@ const openDropdown = (container, i = 0) => {
   });
 };
 
-const selectOption = (optionText, container, queryByText, i) => {
+const selectOption = (optionText, container, queryByText, i = 0) => {
   openDropdown(container, i);
 
   fireEvent.click(queryByText(optionText));
@@ -46,6 +46,7 @@ describe("TimePicker", () => {
 
       expect(onInputChange).toHaveBeenCalledWith(value);
     });
+
     it("calls onBlur", () => {
       const labelText = "Expiry Time";
       const onBlur = jest.fn();
@@ -66,6 +67,7 @@ describe("TimePicker", () => {
 
     describe("selects value in dropdown", () => {
       const SELECTED_TEST_ID = "select-option closest-select-option selected-select-option";
+
       it("for 3:15 PM", () => {
         const labelText = "Expiry Time";
         const { container, getByTestId } = renderWithNDSProvider(
@@ -127,46 +129,55 @@ describe("convert to 24 hr time array [h, mm]", () => {
     const expected = [13, 0];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 012:01", () => {
     const actual = convertTo24HourTimeArray("0012:01");
     const expected = [12, 1];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 1:30", () => {
     const actual = convertTo24HourTimeArray("1:30");
     const expected = [1, 30];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 1a", () => {
     const actual = convertTo24HourTimeArray("1a");
     const expected = [1, 0];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 1:1p", () => {
     const actual = convertTo24HourTimeArray("1:1p");
     const expected = [13, 10];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 1:1a", () => {
     const actual = convertTo24HourTimeArray("1:1a");
     const expected = [1, 10];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 11", () => {
     const actual = convertTo24HourTimeArray("11");
     const expected = [11, 0];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 11:3", () => {
     const actual = convertTo24HourTimeArray("11:3");
     const expected = [11, 30];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 12a", () => {
     const actual = convertTo24HourTimeArray("12a");
     const expected = [0, 0];
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 11 : 3", () => {
     const actual = convertTo24HourTimeArray(" 11 : 3");
     const expected = [11, 30];
@@ -182,7 +193,6 @@ describe("gets best matching time", () => {
       minTime: undefined,
       maxTime: undefined,
       locale: "en_US",
-      interval: 10,
     });
     const expected = {
       label: "11:00 PM",
@@ -190,6 +200,7 @@ describe("gets best matching time", () => {
     };
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 11:11", () => {
     const actual = getBestMatchTime({
       time: "11:11",
@@ -197,7 +208,6 @@ describe("gets best matching time", () => {
       minTime: undefined,
       maxTime: undefined,
       locale: "en_US",
-      interval: 10,
     });
     const expected = {
       label: "11:11 AM",
@@ -205,6 +215,7 @@ describe("gets best matching time", () => {
     };
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 11:11 P", () => {
     const actual = getBestMatchTime({
       time: "11:11 P",
@@ -212,7 +223,6 @@ describe("gets best matching time", () => {
       minTime: undefined,
       maxTime: undefined,
       locale: "en_US",
-      interval: 10,
     });
     const expected = {
       label: "11:11 PM",
@@ -220,6 +230,7 @@ describe("gets best matching time", () => {
     };
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 20:2", () => {
     const actual = getBestMatchTime({
       time: "20:2",
@@ -227,7 +238,6 @@ describe("gets best matching time", () => {
       minTime: undefined,
       maxTime: undefined,
       locale: "en_US",
-      interval: 5,
     });
     const expected = {
       label: "8:20 PM",
@@ -235,6 +245,7 @@ describe("gets best matching time", () => {
     };
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 8:1p", () => {
     const actual = getBestMatchTime({
       time: "8:1p",
@@ -242,7 +253,6 @@ describe("gets best matching time", () => {
       minTime: undefined,
       maxTime: undefined,
       locale: "en_US",
-      interval: 15,
     });
     const expected = {
       label: "8:10 PM",
@@ -250,6 +260,7 @@ describe("gets best matching time", () => {
     };
     expect(actual).toEqual(expected);
   });
+
   it("returns the correct array for 8:1p with 10 interval", () => {
     const actual = getBestMatchTime({
       time: "8:1p",
@@ -257,7 +268,6 @@ describe("gets best matching time", () => {
       minTime: undefined,
       maxTime: undefined,
       locale: "en_US",
-      interval: 10,
     });
     const expected = {
       label: "8:10 PM",
@@ -280,6 +290,7 @@ describe("gets time options", () => {
     });
     expect(timeOptions).toMatchSnapshot();
   });
+
   it("returns an array of options within min and max", () => {
     const timeOptions = getTimeOptions(10, "h:mm aa", "08:00", "20:30", "en_US");
     expect(timeOptions[0]).toEqual({
@@ -292,6 +303,7 @@ describe("gets time options", () => {
     });
     expect(timeOptions).toMatchSnapshot();
   });
+
   it("returns an array of options within min", () => {
     const timeOptions = getTimeOptions(10, "h:mm aa", "09:00", undefined, "en_US");
     expect(timeOptions[0]).toEqual({
@@ -304,6 +316,7 @@ describe("gets time options", () => {
     });
     expect(timeOptions).toMatchSnapshot();
   });
+
   it("returns an array of options within max", () => {
     const timeOptions = getTimeOptions(10, "h:mm aa", undefined, "19:00", "en_US");
     expect(timeOptions[0]).toEqual({
