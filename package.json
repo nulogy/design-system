@@ -127,7 +127,7 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "semantic-release": "^17.2.1",
     "source-map-loader": "^1.0.1",
-    "storybook-addon-performance": "^0.16.0",
+    "storybook-addon-performance": "^0.17.1",
     "styled-components": "^5.1.0",
     "svg-sprite-loader": "^3.8.0",
     "ts-jest": "^26.1.1",
