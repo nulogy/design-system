@@ -1,3 +1,10 @@
+## [8.11.1](https://github.com/nulogy/design-system/compare/v8.11.0...v8.11.1) (2023-05-15)
+
+
+### Bug Fixes
+
+* change padding in the Multiselect ([#1101](https://github.com/nulogy/design-system/issues/1101)) ([916a68f](https://github.com/nulogy/design-system/commit/916a68f7c801a9e1fb47529b14c3a4d901918d71))
+
 # [8.11.0](https://github.com/nulogy/design-system/compare/v8.10.1...v8.11.0) (2023-05-01)
 
 
