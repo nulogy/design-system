@@ -151,6 +151,7 @@
     "polished": "3.4.4",
     "react-datepicker": "^4.1.0",
     "react-fast-compare": "^3.2.0",
+    "react-hot-toast": "^2.4.1",
     "react-i18next": "^11.14.2",
     "react-input-autosize": "^2.2.2",
     "react-modal": "^3.14.4",
