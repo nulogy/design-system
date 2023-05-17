@@ -76,6 +76,7 @@ export type { ThemeType } from "./theme.type";
 export { TimePicker } from "./TimePicker";
 export { TimeRange } from "./TimeRange";
 export { Toast } from "./Toast";
+export { ToastContainer, toast } from "./ToastContainer";
 export { Toggle } from "./Toggle";
 export { Tooltip } from "./Tooltip";
 export { TruncatedText } from "./TruncatedText";
