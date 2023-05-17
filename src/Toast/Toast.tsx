@@ -12,7 +12,7 @@ type ToastProps = AlertProps & {
   onHidden?: () => void;
 };
 
-const SHOW_DURATION = 2000; // in ms
+export const TOAST_SHOW_DURATION = 2000; // in ms
 const ANIMATE_OUT_DURATION = 1000;
 
 export const Toast = ({
@@ -33,7 +33,7 @@ export const Toast = ({
     clearTimeout(timeoutID);
   };
 
-  const hideToast = (delay = SHOW_DURATION) => {
+  const hideToast = (delay = TOAST_SHOW_DURATION) => {
     cancelHidingToast();
     let timeoutId: number
 
@@ -76,7 +76,7 @@ export const Toast = ({
 
   const onMouseOut = () => {
     if (!isCloseable) {
-      hideToast(SHOW_DURATION / 2);
+      hideToast(TOAST_SHOW_DURATION / 2);
     }
   };
 
@@ -138,7 +138,7 @@ export const Toast = ({
 Toast.defaultProps = {
   triggered: false,
   isCloseable: false,
-  showDuration: SHOW_DURATION,
+  showDuration: TOAST_SHOW_DURATION,
   onShow: () => {},
   onHide: () => {},
   onHidden: () => {},
