@@ -15,6 +15,23 @@ type ToastProps = AlertProps & {
 export const TOAST_SHOW_DURATION = 2000; // in ms
 const ANIMATE_OUT_DURATION = 1000;
 
+export const toastAnimationConfig = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: -30,
+    transition: { type: "spring", bounce: 0.4, duration: 0.6 },
+  },
+  exit: {
+    y: 50,
+    opacity: 0,
+    transition: { ease: "easeOut", duration: 0.15 },
+  },
+};
+
 export const Toast = ({
   triggered,
   onHide,
@@ -35,25 +52,25 @@ export const Toast = ({
 
   const hideToast = (delay = TOAST_SHOW_DURATION) => {
     cancelHidingToast();
-    let timeoutId: number
+    let timeoutId: number;
 
     timeoutId = window.setTimeout(() => {
-        setVisible(false);
-        if (onHide) onHide();
+      setVisible(false);
+      if (onHide) onHide();
 
-        timeoutId = window.setTimeout(() => {
-            if (onHidden) onHidden();
-        }, ANIMATE_OUT_DURATION)
-      }, delay)
+      timeoutId = window.setTimeout(() => {
+        if (onHidden) onHidden();
+      }, ANIMATE_OUT_DURATION);
+    }, delay);
 
-    setTimeoutID(timeoutId)
-  }
+    setTimeoutID(timeoutId);
+  };
 
   const triggerToast = () => {
     setVisible(true);
     if (onShow) onShow();
     if (!isCloseable) hideToast(showDuration);
-  }
+  };
 
   useEffect(() => {
     if (triggered) {
@@ -103,22 +120,9 @@ export const Toast = ({
           zIndex={zIndex}
           boxShadow="medium"
           layout
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          animate={{
-            opacity: 1,
-            y: -30,
-            transition: { type: "spring", bounce: 0.4, duration: 0.6 },
-          }}
-          exit={{
-            y: 50,
-            opacity: 0,
-            transition: { ease: "easeOut", duration: 0.15 },
-          }}
+          {...toastAnimationConfig}
         >
-        {/* @ts-ignore */}
+          {/* @ts-ignore */}
           <Alert
             minWidth="200px"
             maxWidth="600px"
