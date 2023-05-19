@@ -125,7 +125,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-typescript2": "^0.30.0",
-    "semantic-release": "^17.2.1",
+    "semantic-release": "^21.0.2",
     "source-map-loader": "^1.0.1",
     "storybook-addon-performance": "^0.17.1",
     "styled-components": "^5.1.0",
