@@ -1,3 +1,10 @@
+# [8.12.0](https://github.com/nulogy/design-system/compare/v8.11.1...v8.12.0) (2023-05-29)
+
+
+### Features
+
+* add Toast container ([#1154](https://github.com/nulogy/design-system/issues/1154)) ([bb77238](https://github.com/nulogy/design-system/commit/bb772382946052204f21e041b1d9ed91d46acf7e))
+
 ## [8.11.1](https://github.com/nulogy/design-system/compare/v8.11.0...v8.11.1) (2023-05-15)
 
 
