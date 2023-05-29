@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { FlexProps } from "../Flex/Flex";
 import { Box } from "../Box";
-import { BoxProps } from "../Box/Box";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
 import { Flex } from "../Flex";
@@ -10,8 +10,7 @@ import CloseButton from "./CloseButton";
 
 type NotificationType = "danger" | "informative" | "success" | "warning";
 
-export type AlertProps = BoxProps &
-  React.HTMLProps<HTMLDivElement> & {
+export type AlertProps = FlexProps & {
     isCloseable?: boolean;
     closeAriaLabel?: string;
     title?: string;

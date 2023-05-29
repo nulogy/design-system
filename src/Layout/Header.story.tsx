@@ -16,7 +16,7 @@ import SummaryItem from "../Summary/SummaryItem";
 import SummaryDivider from "../Summary/SummaryDivider";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { theme } from "..";
-import { pixelDigitsFrom } from "../NavBar/NavBar";
+import numberFromDimension from "../utils/numberFromDimension" 
 
 export const Default = () => (
   <Header
@@ -179,7 +179,7 @@ export const WithEverything = () => (
   </Header>
 );
 
-const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(pixelDigitsFrom);
+const viewports = [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(numberFromDimension);
 
 export default {
   title: "Components/Header",

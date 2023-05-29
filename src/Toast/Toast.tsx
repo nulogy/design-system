@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import Alert, { AlertProps } from "../Alert/Alert";
@@ -6,14 +5,32 @@ import { AnimatedBox } from "../Box";
 
 type ToastProps = AlertProps & {
   triggered?: boolean;
-  onShow?: (...args: any[]) => any;
-  onHide?: (...args: any[]) => any;
+  isCloseable?: boolean;
   showDuration?: number;
-  onHidden?: (...args: any[]) => any;
+  onShow?: () => void;
+  onHide?: () => void;
+  onHidden?: () => void;
 };
 
-const SHOW_DURATION = 2000; // in ms
+export const TOAST_SHOW_DURATION = 2000; // in ms
 const ANIMATE_OUT_DURATION = 1000;
+
+export const toastAnimationConfig = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: -30,
+    transition: { type: "spring", bounce: 0.4, duration: 0.6 },
+  },
+  exit: {
+    y: 50,
+    opacity: 0,
+    transition: { ease: "easeOut", duration: 0.15 },
+  },
+};
 
 export const Toast = ({
   triggered,
@@ -28,30 +45,33 @@ export const Toast = ({
 }: ToastProps) => {
   const [visible, setVisible] = useState(triggered);
   const [timeoutID, setTimeoutID] = useState<number | undefined>(undefined);
+
   const cancelHidingToast = () => {
     clearTimeout(timeoutID);
   };
-  const hideToast = (delay = SHOW_DURATION) => {
+
+  const hideToast = (delay = TOAST_SHOW_DURATION) => {
     cancelHidingToast();
-    setTimeoutID(
-      setTimeout(() => {
-        setVisible(false);
-        if (onHide) onHide();
-        setTimeoutID(
-          setTimeout(() => {
-            if (onHidden) onHidden();
-          }, ANIMATE_OUT_DURATION)
-        );
-      }, delay)
-    );
+    let timeoutId: number;
+
+    timeoutId = window.setTimeout(() => {
+      setVisible(false);
+      if (onHide) onHide();
+
+      timeoutId = window.setTimeout(() => {
+        if (onHidden) onHidden();
+      }, ANIMATE_OUT_DURATION);
+    }, delay);
+
+    setTimeoutID(timeoutId);
   };
+
   const triggerToast = () => {
     setVisible(true);
     if (onShow) onShow();
-    if (!isCloseable) {
-      hideToast(showDuration);
-    }
+    if (!isCloseable) hideToast(showDuration);
   };
+
   useEffect(() => {
     if (triggered) {
       triggerToast();
@@ -59,28 +79,34 @@ export const Toast = ({
       setVisible(false);
       if (onHide) onHide();
     }
+
     return () => {
       cancelHidingToast();
     };
   }, [triggered]);
+
   const onMouseIn = () => {
     if (!isCloseable) {
       cancelHidingToast();
     }
   };
+
   const onMouseOut = () => {
     if (!isCloseable) {
-      hideToast(SHOW_DURATION / 2);
+      hideToast(TOAST_SHOW_DURATION / 2);
     }
   };
+
   const handleCloseButtonClick = () => {
     hideToast(0);
   };
+
   return (
     <AnimatePresence initial={false}>
       {visible && (
         <AnimatedBox
           onMouseEnter={onMouseIn}
+          /* @ts-ignore */
           onFocus={onMouseIn}
           onMouseLeave={onMouseOut}
           onBlur={onMouseOut}
@@ -94,21 +120,9 @@ export const Toast = ({
           zIndex={zIndex}
           boxShadow="medium"
           layout
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          animate={{
-            opacity: 1,
-            y: -30,
-            transition: { type: "spring", bounce: 0.4, duration: 0.6 },
-          }}
-          exit={{
-            y: 50,
-            opacity: 0,
-            transition: { ease: "easeOut", duration: 0.15 },
-          }}
+          {...toastAnimationConfig}
         >
+          {/* @ts-ignore */}
           <Alert
             minWidth="200px"
             maxWidth="600px"
@@ -127,11 +141,10 @@ export const Toast = ({
 
 Toast.defaultProps = {
   triggered: false,
+  isCloseable: false,
+  showDuration: TOAST_SHOW_DURATION,
   onShow: () => {},
   onHide: () => {},
-  children: undefined,
-  isCloseable: false,
-  showDuration: SHOW_DURATION,
   onHidden: () => {},
 };
 

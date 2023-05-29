@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import { Flex } from "../Flex";
 import { Box } from "../Box";
+import numberFromDimension from "../utils/numberFromDimension";
 import DesktopMenu from "./DesktopMenu";
 import { NulogyLogoContainer } from "./NulogyLogoContainer";
 import EnvironmentBanner from "./EnvironmentBanner";
@@ -77,8 +78,6 @@ const MediumNavBar: React.FC<MediumNavBarProps> = ({
   );
 };
 
-const pixelDigitsFrom = (pixelString) => parseInt(pixelString, 10);
-
 const SelectNavBarBasedOnWidth = ({
   width,
   defaultOpen,
@@ -101,7 +100,7 @@ const SelectNavBarBasedOnWidth = ({
     />
   );
 
-  if (currentWidth >= pixelDigitsFrom(breakpointUpper)) {
+  if (currentWidth >= numberFromDimension(breakpointUpper)) {
     return <MediumNavBar logo={logo} showNulogyLogo={logoSrc} {...props} />;
   } else {
     return (
