@@ -113,7 +113,6 @@
     "mockdate": "^3.0.2",
     "plop": "^2.4.0",
     "prop-types": "15.7.2",
-    "puppeteer": "^3.3.0",
     "react": "16.10.2",
     "react-color": "^2.18.1",
     "react-dom": "16.10.2",
