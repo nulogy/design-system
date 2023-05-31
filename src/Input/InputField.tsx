@@ -7,15 +7,19 @@ import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { subPx } from "../utils";
 import { MaybeFieldLabel } from "../FieldLabel";
+import { DefaultNDSThemeType } from "../theme.type";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
-import { DefaultNDSThemeType } from "../theme.type";
 
-export type InputFieldProps = React.ComponentPropsWithRef<"input"> & {
+export type ComponentSize = "medium" | "large";
+
+type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
+
+export type InputFieldProps = NativeInputProps & {
+  htmlSize?: number;
+  size?: ComponentSize;
   icon?: string;
-  disabled?: boolean;
   error?: boolean;
-  required?: boolean;
   labelText?: string;
   requirementText?: string;
   helpText?: React.ReactNode;
@@ -29,56 +33,60 @@ export type InputFieldProps = React.ComponentPropsWithRef<"input"> & {
   inputWidth?: string;
 };
 
-const StyledInputIcon = styled(Icon)(({ theme }) => ({
-  position: "absolute",
-  right: theme.space.x1,
-  color: theme.colors.darkGrey,
-  bottom: "50%",
-  transform: "translateY(50%)",
-  pointerEvents: "none",
-}));
+export const InputField: React.FC<InputFieldProps> = forwardRef<HTMLInputElement, InputFieldProps>(
+  (
+    {
+      icon,
+      error,
+      required,
+      labelText,
+      requirementText,
+      helpText,
+      prefix,
+      prefixWidth,
+      prefixAlignment,
+      suffix,
+      suffixAlignment,
+      suffixWidth,
+      inputWidth,
+      iconSize,
+      size,
+      htmlSize,
+      ...props
+    },
+    ref
+  ) => (
+    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
+      <Flex alignItems="flex-start">
+        <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
+        <Box position="relative" display="flex" flexGrow={1} maxWidth={inputWidth}>
+          <StyledInput
+            aria-invalid={error}
+            aria-required={required}
+            required={required}
+            error={error}
+            ref={ref}
+            size={htmlSize}
+            sizeVariant={size}
+            inputWidth={inputWidth}
+            {...props}
+          />
+          {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} />}
+        </Box>
+        <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
+      </Flex>
+    </MaybeFieldLabel>
+  )
+);
 
-const inputStyles = (theme) => ({
-  disabled: {
-    color: transparentize(0.33, theme.colors.black),
-    borderColor: theme.colors.lightGrey,
-    backgroundColor: theme.colors.whiteGrey,
-  },
-  error: {
-    color: theme.colors.red,
-    borderColor: theme.colors.red,
-  },
-  default: {
-    color: theme.colors.black,
-    borderColor: theme.colors.grey,
-  },
-});
+type StyledInputProps = Omit<InputFieldProps, "htmlSize" | "size"> & { sizeVariant: ComponentSize };
 
-type StyledInputProps = React.ComponentPropsWithRef<"input"> & {
-  theme?: DefaultNDSThemeType;
-  disabled?: boolean;
-  error?: boolean;
-  inputWidth?: string;
-  required?: boolean;
-};
-
-const getInputStyle = ({ disabled, error, theme }: StyledInputProps) => {
-  if (disabled) {
-    return inputStyles(theme).disabled;
-  }
-  if (error) {
-    return inputStyles(theme).error;
-  }
-  return inputStyles(theme).default;
-};
-
-const StyledInput: React.FC<StyledInputProps> = styled.input(
-  ({ theme, inputWidth }: any): CSSObject => ({
+const StyledInput = styled.input<StyledInputProps>(
+  ({ theme, inputWidth }): CSSObject => ({
     display: "block",
     flexGrow: 1,
     border: "1px solid",
     borderRadius: theme.radii.medium,
-    padding: subPx(theme.space.x1),
     fontSize: theme.fontSizes.medium,
     lineHeight: theme.lineHeights.base,
     margin: theme.space.none,
@@ -98,48 +106,59 @@ const StyledInput: React.FC<StyledInputProps> = styled.input(
       color: transparentize(0.4, theme.colors.black),
     },
   }),
-  space,
-  (props: StyledInputProps) => getInputStyle(props)
+  ({ sizeVariant, theme }) => cssForSize(sizeVariant, theme),
+  ({ disabled, error, theme }) => cssForState({ disabled, error, theme }),
+  space
 );
 
-export const InputField: React.FC<InputFieldProps> = forwardRef<HTMLInputElement, InputFieldProps>(
-  (
-    {
-      icon,
-      error,
-      required,
-      labelText,
-      requirementText,
-      helpText,
-      prefix,
-      prefixWidth,
-      prefixAlignment,
-      suffix,
-      suffixAlignment,
-      suffixWidth,
-      inputWidth,
-      iconSize,
-      ...props
-    },
-    ref
-  ) => (
-    <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-      <Flex alignItems="flex-start">
-        <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
-        <Box position="relative" display="flex" flexGrow={1} maxWidth={inputWidth}>
-          <StyledInput
-            aria-invalid={error}
-            aria-required={required}
-            required={required}
-            error={error}
-            ref={ref}
-            inputWidth={inputWidth}
-            {...props}
-          />
-          {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} />}
-        </Box>
-        <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
-      </Flex>
-    </MaybeFieldLabel>
-  )
-);
+const StyledInputIcon = styled(Icon)(({ theme }) => ({
+  position: "absolute",
+  right: theme.space.x1,
+  color: theme.colors.darkGrey,
+  bottom: "50%",
+  transform: "translateY(50%)",
+  pointerEvents: "none",
+}));
+
+const cssForSize = (sizeVariant: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
+  switch (sizeVariant) {
+    case "large":
+      return {
+        padding: `${subPx(theme.space.x2)}`,
+      };
+
+    case "medium":
+    default:
+      return {
+        padding: `${subPx(theme.space.x1)}`,
+      };
+  }
+};
+
+const cssForState = ({
+  disabled,
+  error,
+  theme,
+}: {
+  disabled: InputFieldProps["disabled"];
+  error: InputFieldProps["error"];
+  theme: DefaultNDSThemeType;
+}) => {
+  if (disabled)
+    return {
+      color: transparentize(0.33, theme.colors.black),
+      borderColor: theme.colors.lightGrey,
+      backgroundColor: theme.colors.whiteGrey,
+    };
+
+  if (error)
+    return {
+      color: theme.colors.red,
+      borderColor: theme.colors.red,
+    };
+
+  return {
+    color: theme.colors.black,
+    borderColor: theme.colors.grey,
+  };
+};

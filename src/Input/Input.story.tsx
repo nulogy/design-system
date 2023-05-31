@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { Input, Form, FormSection, PrimaryButton, Button } from "../index";
+import { Input, Form, FormSection, PrimaryButton, Button, Flex } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -26,6 +26,33 @@ export const WithAllProps = () => (
 WithAllProps.story = {
   name: "with all props",
 };
+
+export const WithDifferentSizes = () => (
+  <Flex flexDirection="column">
+    <Input
+      placeholder="Placeholder"
+      p="x3"
+      labelText="Medium (default)"
+      helpText="Additional help text"
+      requirementText="Required"
+      onChange={action("value changed")}
+      onBlur={action("blurred")}
+      size="medium"
+      required
+    />
+    <Input
+      placeholder="Placeholder"
+      p="x3"
+      labelText="Large"
+      helpText="Additional help text"
+      requirementText="Required"
+      onChange={action("value changed")}
+      onBlur={action("blurred")}
+      size="large"
+      required
+    />
+  </Flex>
+);
 
 export const SetToDisabled = () => (
   <Input labelText="Set to disabled" disabled onBlur={action("blurred")} value="Disabled" />
