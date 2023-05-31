@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-type SwitchProps = {
+export type SwitchProps = React.ComponentPropsWithRef<"button"> & {
   selected?: boolean;
-} & React.ComponentPropsWithRef<"button">;
+};
 
-const SwitchButton = styled.button<SwitchProps>(({ selected, theme }): any => ({
+const SwitchButton = styled.button<SwitchProps>(({ selected, theme }) => ({
   height: theme.space.x4,
   padding: `${theme.space.half} ${theme.space.x2}`,
   background: selected ? theme.colors.white : "none",
@@ -34,7 +34,6 @@ const SwitchButton = styled.button<SwitchProps>(({ selected, theme }): any => ({
   }),
 }));
 
-/* eslint-disable-next-line react/display-name */
 const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(({ children, ...rest }, ref) => {
   return (
     <SwitchButton {...rest} ref={ref}>

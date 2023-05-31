@@ -2,13 +2,14 @@ import React, { ReactElement } from "react";
 import PropTypes from "prop-types";
 import { Box } from "../Box";
 import FocusManager from "../utils/ts/FocusManager";
+import { type SwitchProps } from "./Switch";
 
-type SwitchValue = HTMLButtonElement["value"];
+type SwitchValue = SwitchProps["value"];
 
 type SwitcherProps = {
-  children?: any;
+  children?: ReactElement<SwitchProps>[];
   selected?: SwitchValue;
-  onChange?: Function;
+  onChange?: (value: SwitchValue) => void;
 };
 
 const Switcher: React.FC<SwitcherProps> = ({ selected, onChange, ...rest }) => {
@@ -29,7 +30,6 @@ const Switcher: React.FC<SwitcherProps> = ({ selected, onChange, ...rest }) => {
   const options = (focusedIndex, setFocusedIndex, handleArrowNavigation) => {
     return React.Children.map(rest.children, (child, index) => {
       return React.cloneElement(child, {
-        index,
         tabIndex: index === focusedIndex ? 0 : -1,
         selected: isSelected(child.props.value, index),
         "aria-selected": isSelected(child.props.value, index),
@@ -60,7 +60,7 @@ const Switcher: React.FC<SwitcherProps> = ({ selected, onChange, ...rest }) => {
 };
 
 Switcher.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.arrayOf(PropTypes.element),
   selected: PropTypes.string,
   onChange: PropTypes.func,
 };
