@@ -5,14 +5,14 @@ import { Icon } from "../Icon";
 import { subPx } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
 
-type SizeType = "small" | "medium" | "large" | undefined;
+type ComponentSize = "small" | "medium" | "large";
 
 export type ButtonProps = SpaceProps &
   React.ComponentPropsWithRef<"button"> & {
     className?: string;
     icon?: any;
     iconSide?: "left" | "right";
-    size?: SizeType;
+    size?: ComponentSize;
     fullWidth?: boolean;
     asLink?: boolean;
     children?: React.ReactNode;
@@ -20,7 +20,7 @@ export type ButtonProps = SpaceProps &
     href?: string;
   };
 
-const getSize = (size: SizeType, theme: DefaultNDSThemeType) => {
+const getSize = (size: ComponentSize, theme: DefaultNDSThemeType) => {
   switch (size) {
     case "small":
       return {
@@ -28,17 +28,14 @@ const getSize = (size: SizeType, theme: DefaultNDSThemeType) => {
         lineHeight: `${theme.lineHeights.smallTextCompressed}`,
         padding: `${subPx(theme.space.half)} ${theme.space.x1}`,
       };
-    case "medium":
-      return {
-        fontSize: `${theme.fontSizes.medium}`,
-        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
-      };
+
     case "large":
       return {
-        fontSize: `${theme.fontSizes.large}`,
-        lineHeight: `${theme.lineHeights.subsectionTitle}`,
+        fontSize: `${theme.fontSizes.medium}`,
         padding: `${subPx(theme.space.x2)} ${theme.space.x3}`,
       };
+
+    case "medium":
     default:
       return {
         fontSize: `${theme.fontSizes.medium}`,
@@ -46,8 +43,9 @@ const getSize = (size: SizeType, theme: DefaultNDSThemeType) => {
       };
   }
 };
-const WrapperButton = styled.button<any>(
-  ({ fullWidth }: any) => ({
+
+const WrapperButton = styled.button<ButtonProps>(
+  ({ fullWidth }) => ({
     width: fullWidth ? "100%" : "auto",
   }),
   ({ disabled, theme }) => ({
@@ -84,9 +82,7 @@ const WrapperButton = styled.button<any>(
       opacity: ".5",
     },
   }),
-  ({ size, theme }: any) => ({
-    ...getSize(size, theme),
-  }),
+  ({ size, theme }) => getSize(size, theme),
   space
 );
 
@@ -95,8 +91,9 @@ const Button: React.FC<ButtonProps> = React.forwardRef(
     const {
       lineHeights: { smallTextCompressed },
     } = useTheme();
+
     return (
-      <WrapperButton as={asLink ? "a" : undefined} ref={ref} className={className} size={size} {...props}>
+      <WrapperButton as={asLink ? "a" : "button"} ref={ref} className={className} size={size} {...props}>
         {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
         {children}
         {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}
