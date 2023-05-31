@@ -58,7 +58,7 @@
     "@babel/plugin-transform-runtime": "^7.9.6",
     "@babel/preset-env": "7.3.1",
     "@babel/preset-typescript": "^7.10.4",
-    "@nulogy/eslint-config-nulogy": "^0.0.1-alpha.2",
+    "@nulogy/eslint-config-nulogy": "^1.0.0",
     "@nulogy/icons": "^4.26.0",
     "@rollup/plugin-babel": "^5.0.0",
     "@rollup/plugin-node-resolve": "^7.1.3",

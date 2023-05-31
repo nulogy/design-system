@@ -2647,10 +2647,10 @@
     read-package-json-fast "^2.0.3"
     which "^2.0.2"
 
-"@nulogy/eslint-config-nulogy@^0.0.1-alpha.2":
-  version "0.0.1-alpha.3"
-  resolved "https://registry.yarnpkg.com/@nulogy/eslint-config-nulogy/-/eslint-config-nulogy-0.0.1-alpha.3.tgz#01a1208204962ae75dd3ef97ef85236cd0fbcda3"
-  integrity sha512-E3g4wsV9lW5pgVQWSGtBc3r16jXHSeuokRRxLxyFC6bKQA4u8fZuG42aUmh0EtLF2zEN3y59tIcaW2wyv0HuMQ==
+"@nulogy/eslint-config-nulogy@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/eslint-config-nulogy/-/eslint-config-nulogy-1.0.0.tgz#31f8a18964f331921197a1908424e961670667ff"
+  integrity sha512-DRWnIZDqken8MUxuhmGdfCJjPWywYRN3rm3Irah980sqSEQx8ahws6hrh7EglWO7wVKa9/FLkv88mYLldlorVg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^3.4.0"
     "@typescript-eslint/parser" "^3.4.0"
