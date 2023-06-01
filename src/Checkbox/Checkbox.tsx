@@ -1,26 +1,28 @@
 import React, { forwardRef } from "react";
 import styled, { CSSObject } from "styled-components";
 import propTypes from "@styled-system/prop-types";
+import { SpaceProps } from "styled-system";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { getSubset, omitSubset } from "../utils/subset";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps } from "../StyledProps";
+import { ComponentSize } from "../Input/InputField";
 
-type CheckboxProps = React.ComponentPropsWithRef<"input"> & {
-  labelText?: string;
-  checked?: any;
-  defaultChecked?: boolean;
-  disabled?: boolean;
-  error?: boolean;
-  id?: string;
-  className?: string;
-  required?: boolean;
-  indeterminate?: boolean;
-  theme?: DefaultNDSThemeType;
-  ref?: unknown;
-};
+type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
+
+type CheckboxProps = NativeInputProps &
+  SpaceProps & {
+    htmlSize?: number;
+    size?: ComponentSize;
+    labelText?: string;
+    checked?: boolean;
+    defaultChecked?: boolean;
+    error?: boolean;
+    indeterminate?: boolean;
+    theme?: DefaultNDSThemeType;
+  };
 
 const checkboxStyle = (theme) => ({
   checked: {
@@ -52,6 +54,7 @@ const checkboxStyle = (theme) => ({
     },
   },
 });
+
 const getCheckboxStyle = (props, checked) => {
   const checkboxStyleMap = checkboxStyle(props.theme);
   if (props.disabled) {
@@ -62,19 +65,29 @@ const getCheckboxStyle = (props, checked) => {
   }
   return checkboxStyleMap[checked].default;
 };
+
 const checkedStyles = {
   borderRadius: "1px",
   borderWidth: "0 3px 3px 0",
   transform: "rotate(45deg)",
 };
+
 const indeterminateStyles = {
   borderWidth: "0 3px 0 0",
   transform: "rotate(90deg) translateX(1px)",
   borderRadius: 0,
 };
 
-const VisualCheckbox: React.FunctionComponent<any> = styled.div(
-  ({ indeterminate, theme }: any): CSSObject => ({
+type VisualCheckboxProps = React.ComponentProps<"div"> &
+  SpaceProps & {
+    checked?: boolean;
+    disabled?: boolean;
+    indeterminate?: boolean;
+    theme?: DefaultNDSThemeType;
+  };
+
+const VisualCheckbox = styled.div<VisualCheckboxProps>(
+  ({ indeterminate, theme }): CSSObject => ({
     minWidth: theme.space.x2,
     height: theme.space.x2,
     borderRadius: theme.radii.small,
@@ -94,7 +107,8 @@ const VisualCheckbox: React.FunctionComponent<any> = styled.div(
   }),
   addStyledProps
 );
-const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input((props) => ({
+
+const CheckboxInput = styled.input<CheckboxProps>((props) => ({
   position: "absolute",
   opacity: "0",
   height: "1px",
@@ -112,20 +126,23 @@ const CheckboxInput: React.FunctionComponent<CheckboxProps> = styled.input((prop
     ...getCheckboxStyle(props, "unchecked"),
   },
 }));
-const Checkbox: React.FC<any> = forwardRef((props, ref) => {
-  const { className, labelText, disabled, checked, required, error, indeterminate } = props;
+
+const Checkbox: React.FC<CheckboxProps> = forwardRef((props, ref) => {
+  const { size, className, labelText, disabled, checked, required, error, indeterminate } = props;
+
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
+
   return (
     <Box className={className} py="half" px="0" {...spaceProps}>
-      <ClickInputLabel disabled={disabled}>
+      <ClickInputLabel size={size} disabled={disabled}>
         <CheckboxInput
           type="checkbox"
           required={required}
           aria-required={required}
           aria-invalid={error}
           indeterminate={indeterminate}
-          ref={ref as any}
+          ref={ref}
           {...restProps}
         />
         <VisualCheckbox
