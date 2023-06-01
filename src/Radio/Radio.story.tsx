@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { Radio, Button } from "../index";
+import { Flex } from "../Flex";
+import styled from "styled-components";
 
 export default {
   title: "Components/Radio",
@@ -28,6 +30,21 @@ export const SetToDisabled = () => (
 SetToDisabled.story = {
   name: "Set to disabled",
 };
+
+const DashedRadio = styled(Radio)`
+  border-radius: 0.375rem;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: ${({ theme }) => theme.colors.lightBlue};
+`;
+
+export const WithDifferentSizes = () => (
+  <Flex flexDirection="column" gap="x2" alignItems="flex-start">
+    <DashedRadio id="radio-1" labelText="I am a default sized Radio" />
+    <DashedRadio id="radio-1" size="medium" labelText="I am a medium sized Radio" />
+    <DashedRadio id="radio-2" size="large" labelText="I am a large sized Radio" />
+  </Flex>
+);
 
 export const SetToError = () => (
   <>

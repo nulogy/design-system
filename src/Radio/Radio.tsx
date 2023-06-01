@@ -7,6 +7,8 @@ import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
+import { ComponentSize } from "../Input/InputField";
+
 const radioStyle = (theme) => ({
   checked: {
     disabled: {
@@ -37,8 +39,10 @@ const radioStyle = (theme) => ({
     },
   },
 });
+
 const getRadioStyle = (props, checked) => {
   const radioStyleMap = radioStyle(props.theme);
+
   if (props.disabled) {
     return radioStyleMap[checked].disabled;
   }
@@ -53,7 +57,7 @@ type VisualRadioProps = {
   theme?: DefaultNDSThemeType;
 };
 
-const VisualRadio: React.FC<VisualRadioProps> = styled.div(
+const VisualRadio = styled.div<VisualRadioProps>(
   ({ disabled, theme }: VisualRadioProps): CSSObject => ({
     minWidth: theme.space.x2,
     height: theme.space.x2,
@@ -78,11 +82,7 @@ const VisualRadio: React.FC<VisualRadioProps> = styled.div(
   })
 );
 
-type RadioInputProps = React.ComponentPropsWithRef<"input"> & {
-  error?: boolean;
-};
-
-const RadioInput: React.FC<RadioInputProps> = styled.input((props) => ({
+const RadioInput = styled.input<RadioProps>((props) => ({
   position: "absolute",
   opacity: "0",
   height: "1px",
@@ -101,27 +101,25 @@ const RadioInput: React.FC<RadioInputProps> = styled.input((props) => ({
   },
 }));
 
-type RadioProps = VisualRadioProps &
-  SpaceProps &
-  React.ComponentPropsWithRef<"input"> & {
+type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
+
+type RadioProps = NativeInputProps &
+  SpaceProps & {
+    htmlSize?: number;
+    size?: ComponentSize;
     labelText?: ReactNode;
     checked?: boolean;
     defaultChecked?: boolean;
-    disabled?: boolean;
     error?: boolean;
-    id?: string;
-    className?: string;
-    required?: boolean;
-    value?: any;
   };
 
 const Radio: React.FC<RadioProps> = forwardRef(
-  ({ className, labelText, disabled, checked, required, error, ...props }, ref) => {
+  ({ className, labelText, disabled, checked, required, error, size, ...props }, ref) => {
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
     return (
-      <Box position="relative" className={className} py="half" px="0" {...spaceProps}>
-        <ClickInputLabel disabled={disabled}>
+      <Box position="relative" className={className} px="0" {...spaceProps}>
+        <ClickInputLabel size={size} disabled={disabled}>
           <RadioInput
             type="radio"
             ref={ref}
