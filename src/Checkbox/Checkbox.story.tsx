@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { Checkbox, Button } from "../index";
+import styled from "styled-components";
+import { Checkbox, Button, Flex } from "../index";
 
 type CheckboxState = {
   checkbox1: boolean;
@@ -40,6 +41,21 @@ class CheckboxWithState extends React.Component<{}, CheckboxState> {
     );
   }
 }
+
+const DashedCheckbox = styled(Checkbox)`
+  border-radius: 0.375rem;
+  border-width: 2px;
+  border-style: dashed;
+  border-color: ${({ theme }) => theme.colors.lightBlue};
+`;
+
+export const WithDifferentSizes = () => (
+  <Flex flexDirection="column" gap="x2" alignItems="flex-start">
+    <DashedCheckbox id="checkbox-1" labelText="I am a default sized Checkbox" />
+    <DashedCheckbox id="checkbox-1" size="medium" labelText="I am a medium sized Checkbox" />
+    <DashedCheckbox id="checkbox-1" size="large" labelText="I am a large sized Checkbox" />
+  </Flex>
+);
 
 export default {
   title: "Components/Checkbox",
