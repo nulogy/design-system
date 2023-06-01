@@ -1,8 +1,25 @@
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import theme from "../theme";
+import { ComponentSize } from "../Input/InputField";
+import { DefaultNDSThemeType } from "../theme.type";
 
-const ClickInputLabel: React.FC<any> = styled.label(
-  ({ disabled }: any): CSSObject => ({
+const cssForSize = (size: ComponentSize, theme: DefaultNDSThemeType) => {
+  switch (size) {
+    case "large":
+      return {
+        padding: `${theme.space.x2} 0`,
+      };
+
+    case "medium":
+    default:
+      return {
+        padding: `${theme.space.x1} 0`,
+      };
+  }
+};
+
+const ClickInputLabel = styled.label<{ size: ComponentSize; disabled: boolean }>(
+  ({ disabled }) => ({
     cursor: disabled ? undefined : "pointer",
     display: "inline-flex",
     width: "auto",
@@ -10,7 +27,8 @@ const ClickInputLabel: React.FC<any> = styled.label(
     verticalAlign: "top",
     alignItems: "flex-start",
     userSelect: "none",
-    padding: `${theme.space.half} 0`,
-  })
+  }),
+  ({ size, theme }) => cssForSize(size, theme)
 );
+
 export default ClickInputLabel;
