@@ -1,6 +1,7 @@
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
+import type { ReactDatePickerProps } from "react-datepicker";
 import propTypes from "@styled-system/prop-types";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
@@ -17,7 +18,9 @@ import { DatePickerStyles } from "./DatePickerStyles";
 type DatePickerProps = FieldProps & {
   selected?: any;
   dateFormat?: string;
-  onChange?: (...args: any[]) => any;
+  onChange?: ReactDatePickerProps["onChange"];
+  onBlur?: ReactDatePickerProps["onBlur"];
+  onFocus?: ReactDatePickerProps["onFocus"];
   onInputChange?: (...args: any[]) => any;
   inputProps?: any;
   errorMessage?: string;
@@ -46,6 +49,8 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
       className,
       onInputChange,
       onChange,
+      onBlur,
+      onFocus,
       selected,
       ...props
     },
@@ -88,6 +93,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
         handleSelectedDateChange(newSelectedDate);
       }
     };
+
     const handleEnterKey = () => {
       if (ref) {
         // @ts-ignore
@@ -119,7 +125,9 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
         onEnterKeyPress={handleEnterKey}
       />
     );
+
     const spaceProps = getSubset(props, propTypes.space);
+
     return (
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
@@ -144,7 +152,10 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
                 }
                 onRefChange(r);
               }}
+              onFocus={onFocus}
+              onBlur={onBlur}
               popperModifiers={{
+                // @ts-ignore
                 flip: { enabled: !disableFlipping },
               }}
             />

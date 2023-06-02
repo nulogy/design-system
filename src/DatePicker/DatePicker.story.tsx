@@ -19,6 +19,8 @@ export const Default = () => (
   <DatePicker
     selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     onChange={action("date changed")}
+    onFocus={action("date selector focused")}
+    onBlur={action("date selector blurred")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
   />
@@ -33,6 +35,8 @@ export const WithCustomDateFormat = () => (
     selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     dateFormat="MMMM d, yyyy"
     onChange={action("date changed")}
+    onFocus={action("date selector focused")}
+    onBlur={action("date selector blurred")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
   />
@@ -45,6 +49,8 @@ WithCustomDateFormat.story = {
 export const WithCustomPlaceholder = () => (
   <DatePicker
     dateFormat="MMMM d, yyyy"
+    onFocus={action("date selector focused")}
+    onBlur={action("date selector blurred")}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date", placeholder: "Month day, year" }}
@@ -58,6 +64,8 @@ WithCustomPlaceholder.story = {
 export const WithErrorState = () => (
   <DatePicker
     dateFormat="MMMM d, yyyy"
+    onFocus={action("date selector focused")}
+    onBlur={action("date selector blurred")}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
@@ -74,6 +82,8 @@ export const WithMinAndMaxDate = () => (
     selected={new Date("2019-01-05T05:00:00.000Z")}
     minDate={new Date("2019-01-03T05:00:00.000Z")}
     maxDate={new Date("2019-01-10T05:00:00.000Z")}
+    onFocus={action("date selector focused")}
+    onBlur={action("date selector blurred")}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
@@ -87,6 +97,8 @@ WithMinAndMaxDate.story = {
 export const DisableFlipping = () => (
   <DatePicker
     selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+    onBlur={action("date selector blurred")}
+    onFocus={action("date selector focused")}
     onChange={action("date changed")}
     onInputChange={action("input changed")}
     inputProps={{ labelText: "Expiry Date" }}
@@ -109,6 +121,8 @@ export const UsingRefToControlFocus = () => {
       <DatePicker
         dateFormat="MMMM d, yyyy"
         onChange={action("date changed")}
+        onFocus={action("date selector focused")}
+        onBlur={action("date selector blurred")}
         onInputChange={action("input changed")}
         inputProps={{ labelText: "Expiry Date" }}
         ref={ref}

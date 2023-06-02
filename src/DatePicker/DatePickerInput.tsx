@@ -4,6 +4,8 @@ import { InputField } from "../Input/InputField";
 import { InputFieldDefaultProps } from "../Input/InputField.type";
 
 type DatePickerInputProps = {
+  onBlur?: React.ComponentPropsWithRef<"input">["onBlur"];
+  onFocus?: React.ComponentPropsWithRef<"input">["onFocus"];
   onClick?: (...args: any[]) => any;
   onChange?: (...args: any[]) => any;
   onUpKeyPress?: (...args: any[]) => any;
@@ -22,6 +24,8 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
     {
       onChange,
       onClick,
+      onBlur,
+      onFocus,
       onInputChange,
       value,
       inputProps = InputFieldDefaultProps,
@@ -50,6 +54,8 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
     const { t } = useTranslation();
     return (
       <InputField
+        onBlur={onBlur}
+        onFocus={onFocus}
         ref={ref}
         aria-label={ariaLabel || t("select a date")}
         autoComplete="off"
