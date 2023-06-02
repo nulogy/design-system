@@ -90,6 +90,8 @@ CustomizingInputProps.story = {
   name: "customizing input props",
 };
 
+const NON_BREAKING_SPACE = "\u00A0";
+
 export const Disabled = () => (
   <DateRange
     startDateInputProps={{
@@ -104,15 +106,17 @@ export const Disabled = () => (
       labelText: "To",
       disabled: true,
     }}
-    labelProps={{ labelText: "" }}
     onRangeChange={action("range changed")}
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}
+    labelProps={{ labelText: "" }}
     showTimes
     endTimeProps={{
+      labelText: NON_BREAKING_SPACE,
       disabled: true,
     }}
     startTimeProps={{
+      labelText: NON_BREAKING_SPACE,
       disabled: true,
     }}
   />
