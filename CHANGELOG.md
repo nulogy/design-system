@@ -1,3 +1,15 @@
+# [8.13.0](https://github.com/nulogy/design-system/compare/v8.12.0...v8.13.0) (2023-06-02)
+
+
+### Bug Fixes
+
+* make the TimePicker in the DateRange to open to the bottom ([607c672](https://github.com/nulogy/design-system/commit/607c672acb8c88bc311050ecf5a2310bf1873d58))
+
+
+### Features
+
+* add onFocus and onBlur callbacks to the DatePicker ([de932e6](https://github.com/nulogy/design-system/commit/de932e696e3fc5d66ace192df434a96d5348c28e))
+
 # [8.12.0](https://github.com/nulogy/design-system/compare/v8.11.1...v8.12.0) (2023-05-29)
 
 
