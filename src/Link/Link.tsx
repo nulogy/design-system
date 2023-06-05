@@ -3,6 +3,7 @@ import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
+import { ComponentSize } from "../Input/InputField";
 
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
   StyledProps & {
@@ -10,6 +11,7 @@ export type LinkProps = React.ComponentPropsWithRef<"a"> &
     underline?: boolean;
     hover?: string;
     as?: React.ElementType | string;
+    size?: ComponentSize;
     to?: string;
     color?: string;
     fontSize?: string;
@@ -33,10 +35,25 @@ function getColor(props: LinkProps) {
 
 const getHoverColor = (props: LinkProps) => (props.hover ? getColor(props) : darken("0.1", getColor(props)));
 
-const Link = styled.a.withConfig({
+const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
+  switch (size) {
+    case "large":
+      return {
+        padding: `${theme.space.x2} 0`,
+      };
+
+    case "medium":
+    default:
+      return {
+        // No padding
+      };
+  }
+};
+
+const Link = styled.a.withConfig<LinkProps>({
   shouldForwardProp: (prop, defaultValidatorFn) => !["underline", "hover"].includes(prop) && defaultValidatorFn(prop),
-})<LinkProps>(
-  ({ underline, as, ...props }: LinkProps): CSSObject => ({
+})(
+  ({ underline, as, ...props }): CSSObject => ({
     ...resetButtonStyles,
     padding: as === "button" ? "0" : undefined,
     textDecoration: underline ? "underline" : "none",
@@ -47,6 +64,7 @@ const Link = styled.a.withConfig({
       color: getHoverColor(props),
     },
   }),
+  ({ size, theme }) => getSize(size, theme),
   addStyledProps
 );
 
