@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { Radio, Button } from "../index";
 import { Flex } from "../Flex";
-import styled from "styled-components";
+import dashed from "../utils/dashed";
 
 export default {
   title: "Components/Radio",
@@ -31,12 +31,7 @@ SetToDisabled.story = {
   name: "Set to disabled",
 };
 
-const DashedRadio = styled(Radio)`
-  border-radius: 0.375rem;
-  border-width: 2px;
-  border-style: dashed;
-  border-color: ${({ theme }) => theme.colors.lightBlue};
-`;
+const DashedRadio = dashed(Radio);
 
 export const WithDifferentSizes = () => (
   <Flex flexDirection="column" gap="x2" alignItems="flex-start">
