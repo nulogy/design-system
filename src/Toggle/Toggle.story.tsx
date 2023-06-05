@@ -2,6 +2,38 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean } from "@storybook/addon-knobs";
 import { Toggle, Button } from "../index";
+import { Flex } from "../Flex";
+import dashed from "../utils/dashed";
+
+const DashedToggle = dashed(Toggle);
+
+export const WithDifferentSizes = () => (
+  <Flex flexDirection="column" gap="x2" alignItems="flex-start">
+    <DashedToggle
+      onText="Default"
+      offText="Default"
+      pt="x3"
+      data-testid="toggle-example"
+      onChange={action("on change")}
+    />
+    <DashedToggle
+      onText="Medium"
+      offText="Medium"
+      size="medium"
+      pt="x3"
+      data-testid="toggle-example"
+      onChange={action("on change")}
+    />
+    <DashedToggle
+      onText="Large"
+      size="large"
+      offText="Large"
+      pt="x3"
+      data-testid="toggle-example"
+      onChange={action("on change")}
+    />
+  </Flex>
+);
 
 export default {
   title: "Components/Toggle",

@@ -10,6 +10,7 @@ import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
+import type { ComponentSize } from "../Input/InputField";
 import ToggleButton from "./ToggleButton";
 
 const labelTextStyles = (theme: DefaultNDSThemeType) => ({
@@ -49,6 +50,7 @@ const MaybeToggleTitle: React.FC<MaybeToggleTitleProps> = ({
 
 type BaseToggleProps = SpaceProps & {
   onChange?: (...args: any[]) => any;
+  size?: ComponentSize;
   toggled?: boolean;
   disabled?: boolean;
   onText?: string;
@@ -81,6 +83,7 @@ const BaseToggle = ({
   helpText,
   toggled,
   onClick,
+  size,
   "data-testid": dataTestId,
   ...props
 }: BaseToggleProps) => {
@@ -97,7 +100,7 @@ const BaseToggle = ({
         requirementText={requirementText}
         helpText={helpText}
       >
-        <ClickInputLabel as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
+        <ClickInputLabel size={size} as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
           <ToggleButton
             id={id}
             checked={toggled}
