@@ -184,6 +184,21 @@ export const WithConditionallyRenderedTabs = () => (
   </Tabs>
 );
 
-WithConditionallyRenderedTabs.story = {
-  name: "With conditionally rendered Tabs",
-};
+export const WithDifferentSizes = () => (
+  <Flex gap="x4">
+    <Tabs defaultSelectedIndex={2} size="medium">
+      <Tab label="Default tab 1">Tab 1 Content</Tab>
+      <Tab label="Default tab 2">Tab 2 Content</Tab>
+    </Tabs>
+
+    <Tabs defaultSelectedIndex={2} size="medium">
+      <Tab label="Medium tab 1">Tab 1 Content</Tab>
+      <Tab label="Medium tab 2">Tab 2 Content</Tab>
+    </Tabs>
+
+    <Tabs defaultSelectedIndex={2} size="large">
+      <Tab label="Large tab 1">Tab 1 Content</Tab>
+      <Tab label="Large tab 2">Tab 2 Content</Tab>
+    </Tabs>
+  </Flex>
+);

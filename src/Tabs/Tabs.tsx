@@ -7,10 +7,12 @@ import FocusManager from "../utils/ts/FocusManager";
 import { Box } from "../Box";
 import TabContainer from "./TabContainer";
 import TabScrollIndicators from "./TabScrollIndicators";
+import { ComponentSize } from "../Input/InputField";
 
 export type TabsProps = {
   className?: string;
   selectedIndex?: number;
+  size?: ComponentSize;
   defaultSelectedIndex?: number;
   renderTabContentOnlyWhenSelected?: boolean;
   fitted?: boolean;
@@ -42,7 +44,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
   }
 
   getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
-    const { fitted, children, onTabClick } = this.props;
+    const { fitted, children, onTabClick, size } = this.props;
     const selectedIndex = this.getSelectedIndex();
 
     const tabs = React.Children.toArray(children);
@@ -67,6 +69,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
           },
           onKeyDown: handleArrowNavigation,
           index,
+          size,
           tabIndex: index === focusedIndex ? 0 : -1,
           selected: index === selectedIndex,
           "aria-selected": index === selectedIndex,

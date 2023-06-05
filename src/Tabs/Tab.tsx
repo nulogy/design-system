@@ -1,7 +1,9 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
-const barStyles = (theme) => ({
+import { ComponentSize } from "../Input/InputField";
+
+const barStyles = (theme): { expanded: CSSObject; default: CSSObject } => ({
   expanded: {
     content: "''",
     backgroundColor: theme.colors.darkBlue,
@@ -25,26 +27,42 @@ const barStyles = (theme) => ({
     zIndex: theme.zIndices.tabsBar,
   },
 });
+
 const getBarStyles = (selected, theme) => (selected ? barStyles(theme).expanded : barStyles(theme).default);
 const getBarHoverStyles = (selected, disabled, theme) => {
   if (disabled || selected) {
     return null;
-  } else {
-    return {
-      ...barStyles(theme).expanded,
-      backgroundColor: theme.colors.lightBlue,
-    };
+  }
+
+  return {
+    ...barStyles(theme).expanded,
+    backgroundColor: theme.colors.lightBlue,
+  };
+};
+
+const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
+  switch (size) {
+    case "large":
+      return {
+        padding: `${theme.space.x2} ${theme.space.x4}`,
+      };
+
+    case "medium":
+    default:
+      return {
+        padding: `${theme.space.x1} ${theme.space.x3}`,
+      };
   }
 };
 
 type TabButtonProps = React.ComponentPropsWithRef<"button"> & {
+  size?: ComponentSize;
   selected?: boolean;
-  disabled?: boolean;
   fullWidth?: boolean;
-  theme?: DefaultNDSThemeType;
 };
-const TabButton: React.FC<TabButtonProps> = styled.button(
-  ({ selected, disabled, fullWidth, theme }: TabButtonProps): any => ({
+
+const TabButton = styled.button<TabButtonProps>(
+  ({ selected, disabled, fullWidth, theme }) => ({
     width: fullWidth ? "100%" : undefined,
     fontWeight: theme.fontWeights.medium,
     textDecoration: "none",
@@ -55,8 +73,8 @@ const TabButton: React.FC<TabButtonProps> = styled.button(
     backgroundColor: "transparent",
     border: "none",
     margin: theme.space.none,
-    padding: `${theme.space.x1} ${theme.space.x3}`,
     position: "relative",
+
     "&:focus": {
       outline: "none",
       backgroundColor: theme.colors.lightBlue,
@@ -74,11 +92,14 @@ const TabButton: React.FC<TabButtonProps> = styled.button(
         ...getBarHoverStyles(selected, disabled, theme),
       },
     },
-  })
+  }),
+  ({ size, theme }) => getSize(size, theme)
 );
+
 type TabProps = TabButtonProps & {
   label?: React.ReactNode;
 };
+
 const Tab: React.FC<TabProps> = React.forwardRef(({ label, ...props }, ref) => (
   <TabButton role="tab" type="button" ref={ref} {...props}>
     {label}
