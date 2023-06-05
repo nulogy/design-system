@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import PropTypes from "prop-types";
 import { space, SpaceProps } from "styled-system";
 import { Manager, Reference, Popper } from "react-popper-2";
@@ -8,8 +8,10 @@ import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 import { DefaultNDSThemeType } from "../theme.type";
+import { ComponentSize } from "../Input/InputField";
 
 type BaseProps = {
+  size?: ComponentSize;
   color?: string;
   labelHidden?: boolean;
   icon?: any;
@@ -21,7 +23,7 @@ type BaseProps = {
 
 type IconicButtonProps = BaseProps & SpaceProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps>;
 
-const IconWrapper = styled.span(({ theme, size }: {theme: DefaultNDSThemeType; size: string}) => ({
+const IconWrapper = styled.span(({ theme, size }: { theme: DefaultNDSThemeType; size: string }) => ({
   display: "inline-flex",
   flexShrink: 0,
   alignItems: "center",
@@ -44,14 +46,28 @@ const HoverText: React.FC<any> = styled.div(({ theme }) => ({
   pointerEvents: "none",
 }));
 
-const WrapperButton: React.FC<any> = styled.button(
+const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
+  switch (size) {
+    case "large":
+      return {
+        padding: `${theme.space.x1} ${theme.space.none}`,
+      };
+
+    case "medium":
+    default:
+      return {
+        padding: `${theme.space.half} ${theme.space.none}`,
+      };
+  }
+};
+
+const WrapperButton = styled.button<IconicButtonProps>(
   ({ disabled, hoverBackgroundColor, theme }: any) => ({
     background: "transparent",
     border: "none",
     position: "relative",
     display: "inline-flex",
     alignItems: "center",
-    padding: `${theme.space.half} ${theme.space.none}`,
     cursor: disabled ? "default" : "pointer",
 
     [`${Text}`]: {
@@ -95,7 +111,8 @@ const WrapperButton: React.FC<any> = styled.button(
       },
     },
   }),
-  space
+  space,
+  ({ size, theme }) => getSize(size, theme)
 );
 
 const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
@@ -114,7 +131,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
     },
     forwardedRef
   ) => {
-    const size = iconSize || "x3"
+    const size = iconSize || "x3";
 
     return (
       <WrapperButton
@@ -126,7 +143,11 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
       >
         <Manager>
           <Reference>
-            {({ ref }) => <IconWrapper ref={ref} size={iconSize || "x3"}><Icon size={size} icon={icon} color={color} /></IconWrapper>}
+            {({ ref }) => (
+              <IconWrapper ref={ref} size={iconSize || "x3"}>
+                <Icon size={size} icon={icon} color={color} />
+              </IconWrapper>
+            )}
           </Reference>
           <Popper
             placement="bottom"
