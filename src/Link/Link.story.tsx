@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Link } from "../index";
+import { Flex } from "../Flex";
+import dashed from "../utils/dashed";
 
 export default {
   title: "Components/Link",
@@ -42,15 +44,27 @@ WithADifferentColor.story = {
   name: "With a different color",
 };
 
-export const WithADifferentSize = () => (
-  <Link color="black" fontSize="large" href="http://nulogy.design">
+export const WithADifferentFontSize = () => (
+  <Link fontSize="large" href="http://nulogy.design">
     Link
   </Link>
 );
 
-WithADifferentSize.story = {
-  name: "With a different size",
-};
+const DashedLink = dashed(Link);
+
+export const WithDifferentSizes = () => (
+  <Flex gap="x2" alignItems="flex-start">
+    <DashedLink href="http://nulogy.design">Default Link</DashedLink>
+
+    <DashedLink size="medium" href="http://nulogy.design">
+      Medium Link
+    </DashedLink>
+
+    <DashedLink size="large" href="http://nulogy.design">
+      Large Link
+    </DashedLink>
+  </Flex>
+);
 
 export const AsAButton = () => <Link as="button">Link</Link>;
 
