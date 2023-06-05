@@ -3,6 +3,7 @@ import { IconicButton } from "../index";
 import { Flex } from "../Flex";
 import { StatusIndicator } from "../StatusIndicator";
 import { Box } from "../Box";
+import dashed from "../utils/dashed";
 
 export default {
   title: "Components/IconicButton",
@@ -114,6 +115,22 @@ export const WithACustomFontSize = () => (
   </Flex>
 );
 
+const DashedIconicButton = dashed(IconicButton);
+
+export const WithDifferentSizes = () => (
+  <Flex gap="x2" alignItems="flex-start">
+    <DashedIconicButton tooltip="Stop job" icon="close">
+      Default size
+    </DashedIconicButton>
+    <DashedIconicButton size="medium" tooltip="Stop job" icon="close">
+      Medium size
+    </DashedIconicButton>
+    <DashedIconicButton size="large" tooltip="Stop job" icon="close">
+      Large size
+    </DashedIconicButton>
+  </Flex>
+);
+
 WithACustomFontSize.story = {
   name: "with a custom font size",
 };
@@ -153,6 +170,4 @@ export const WithCustomHoverBackgroundNonThemeColor = () => (
   </IconicButton>
 );
 
-export const WithLargerIcons = () => (
-  <IconicButton icon="chatBubble">Add comment</IconicButton>
-);
+export const WithLargerIcons = () => <IconicButton icon="chatBubble">Add comment</IconicButton>;
