@@ -1,7 +1,21 @@
+import React from "react";
 import styled from "styled-components";
-import { addStyledProps } from "../StyledProps";
+import { addStyledProps, StyledProps } from "../StyledProps";
+import { ComponentSize } from "../Input/InputField";
+import { DefaultNDSThemeType } from "../theme.type";
+import { getSize } from "./DropdownButton";
 
-const DropdownLink: React.FC<any> = styled.a.withConfig({
+type DropdownLinkProps = React.ComponentPropsWithRef<"a"> &
+  StyledProps & {
+    disabled?: boolean;
+    size?: ComponentSize;
+    color?: string;
+    theme?: DefaultNDSThemeType;
+    hoverColor?: string;
+    bgHoverColor?: string;
+  };
+
+const DropdownLink = styled.a.withConfig<DropdownLinkProps>({
   shouldForwardProp: (prop, defaultValidatorFn) =>
     !["hoverColor", "bgHoverColor"].includes(prop) && defaultValidatorFn(prop),
 })(
@@ -17,7 +31,6 @@ const DropdownLink: React.FC<any> = styled.a.withConfig({
     lineHeight: theme.lineHeights.base,
     fontSize: theme.fontSizes.medium,
     transition: ".2s",
-    padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
     borderLeft: `${theme.space.half} solid transparent`,
     "&:visited": {
       color: theme.colors[color],
@@ -36,8 +49,10 @@ const DropdownLink: React.FC<any> = styled.a.withConfig({
       opacity: ".5",
     },
   }),
+  ({ size, theme }) => getSize(size, theme),
   addStyledProps
 );
+
 DropdownLink.defaultProps = {
   disabled: false,
   color: "darkGrey",

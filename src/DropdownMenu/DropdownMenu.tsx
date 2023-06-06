@@ -7,9 +7,11 @@ import { Popper } from "../Popper";
 import { getSubset, omitSubset } from "../utils/subset";
 import { StyledProps } from "../StyledProps";
 import DropdownMenuContainer from "./DropdownMenuContainer";
+import { ComponentSize } from "../Input/InputField";
 
 type DropdownMenuProps = {
   className?: string;
+  size?: ComponentSize;
   id?: string;
   disabled?: boolean;
   trigger?: React.ReactNode | ((...args: any[]) => any);
@@ -52,6 +54,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
       trigger = () => <IconicButton icon="more" />,
       children,
       showArrow = true,
+      size,
       disabled,
       defaultOpen,
       backgroundColor = "white",
@@ -103,7 +106,9 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
           showArrow={showArrow}
           {...restProps}
         >
-          {children}
+          {React.Children.map(children, (child) =>
+            React.cloneElement(child, { size, ...child.props }, child.props.children)
+          )}
         </DropdownMenuContainer>
       </Popper>
     );
