@@ -1,18 +1,35 @@
-import styled from "styled-components";
+import React from "react";
+import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
+import { ComponentSize } from "../Input/InputField";
 
 type DropdownButtonProps = React.ComponentPropsWithRef<"button"> &
   StyledProps & {
+    size?: ComponentSize;
     color?: string;
-    disabled?: boolean;
     theme?: DefaultNDSThemeType;
     hoverColor?: string;
     bgHoverColor?: string;
   };
 
-const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
-  ({ disabled, theme, hoverColor, bgHoverColor }: DropdownButtonProps) => ({
+export const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
+  switch (size) {
+    case "large":
+      return {
+        padding: `${theme.space.x2} ${theme.space.x2} ${theme.space.x2} 12px`,
+      };
+
+    case "medium":
+    default:
+      return {
+        padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
+      };
+  }
+};
+
+const DropdownButton = styled.button<DropdownButtonProps>(
+  ({ disabled, theme, hoverColor, bgHoverColor }) => ({
     color: theme.colors.darkGrey,
     fontWeight: theme.fontWeights.medium,
     display: "block",
@@ -24,7 +41,6 @@ const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
     lineHeight: theme.lineHeights.base,
     fontSize: theme.fontSizes.medium,
     transition: ".2s",
-    padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
     borderLeft: `${theme.space.half} solid transparent`,
     "&:hover": {
       color: theme.colors[hoverColor],
@@ -40,11 +56,14 @@ const DropdownButton: React.FC<DropdownButtonProps> = styled.button(
       opacity: ".5",
     },
   }),
+  ({ size, theme }) => getSize(size, theme),
   addStyledProps
 );
+
 DropdownButton.defaultProps = {
   disabled: false,
   hoverColor: "darkBlue",
   bgHoverColor: "lightBlue",
 };
+
 export default DropdownButton;

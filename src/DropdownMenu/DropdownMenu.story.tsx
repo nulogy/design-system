@@ -1,5 +1,16 @@
 import React from "react";
-import { DropdownMenu, DropdownLink, DropdownButton, DropdownItem, DropdownText, Button, Flex, Text, Icon } from "../index";
+import {
+  DropdownMenu,
+  DropdownLink,
+  DropdownButton,
+  DropdownItem,
+  DropdownText,
+  Button,
+  Flex,
+  Text,
+  Icon,
+  IconicButton,
+} from "../index";
 
 const customColors = {
   color: "white",
@@ -51,6 +62,42 @@ export const WithCustomColors = () => (
 WithCustomColors.story = {
   name: "with custom colors",
 };
+
+export const WithDifferentSizes = () => (
+  <Flex gap="48px">
+    <DropdownMenu
+      trigger={() => <IconicButton icon="more">Default menu</IconicButton>}
+      defaultOpen
+      openAriaLabel="open dropdown"
+      closeAriaLabel="close dropdown"
+    >
+      <DropdownLink href="/">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    </DropdownMenu>
+
+    <DropdownMenu
+      trigger={() => <IconicButton icon="more">Medium menu</IconicButton>}
+      defaultOpen
+      openAriaLabel="open dropdown"
+      closeAriaLabel="close dropdown"
+      size="medium"
+    >
+      <DropdownLink href="/">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    </DropdownMenu>
+
+    <DropdownMenu
+      trigger={() => <IconicButton icon="more">Large menu</IconicButton>}
+      defaultOpen
+      openAriaLabel="open dropdown"
+      closeAriaLabel="close dropdown"
+      size="large"
+    >
+      <DropdownLink href="/">Dropdown Link</DropdownLink>
+      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
+    </DropdownMenu>
+  </Flex>
+);
 
 export const WithButtonClosingMenu = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
