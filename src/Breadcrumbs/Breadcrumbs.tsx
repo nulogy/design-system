@@ -2,26 +2,29 @@ import React, { isValidElement } from "react";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import { FlexProps } from "../Flex/Flex";
+import { ComponentSize } from "../Input/InputField";
 import BreadcrumbsList from "./BreadcrumbsList";
-import BreadcrumbsListItem from "./BreadcrumbsListItem";
+import { BreadcrumbsListItem, BreadcrumbsListSeparator } from "./BreadcrumbsListItem";
 
-const insertSeparators = (items: any, className: any) => {
-  return items.reduce((acc: any, current: any, index: number) => {
+const insertSeparators = (items: JSX.Element[]) => {
+  return items.reduce((acc: JSX.Element[], current, index) => {
     return acc.concat(
       current,
-      <BreadcrumbsListItem aria-hidden key={`separator-${index}`} className={className}>
+      <BreadcrumbsListSeparator aria-hidden key={`separator-${index}`} className="separator">
         <Icon icon="rightArrow" />
-      </BreadcrumbsListItem>
+      </BreadcrumbsListSeparator>
     );
   }, []);
 };
 
-const Breadcrumbs: React.FC<FlexProps> = ({ children, as, ...props }) => {
+type BreadcrumbsProps = Omit<FlexProps, "size"> & { size: ComponentSize };
+
+const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size, children, ...props }) => {
   const allItems = React.Children.map(children, (child, index) => {
     if (!isValidElement(child)) return null;
 
     return (
-      <BreadcrumbsListItem key={`child-${index}`}>
+      <BreadcrumbsListItem size={size} key={`child-${index}`}>
         {React.cloneElement(child, {
           // @ts-ignore
           color: "darkBlue",
@@ -31,8 +34,8 @@ const Breadcrumbs: React.FC<FlexProps> = ({ children, as, ...props }) => {
   }).filter(Boolean);
 
   return (
-    <Flex as={as} {...props}>
-      <BreadcrumbsList>{insertSeparators(allItems, "seperator")}</BreadcrumbsList>
+    <Flex {...props}>
+      <BreadcrumbsList>{insertSeparators(allItems)}</BreadcrumbsList>
     </Flex>
   );
 };
