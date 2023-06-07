@@ -1,8 +1,9 @@
-// @ts-nocheck
 import styled from "styled-components";
-import { InputField } from "../Input/InputField";
+import { InputField, InputFieldProps } from "../Input/InputField";
 
-const TimePickerInput = styled(InputField)(({ dropdownIsOpen }) => ({
+type TimePickerInputProps = InputFieldProps & { dropdownIsOpen: boolean };
+
+const TimePickerInput = styled(InputField)<TimePickerInputProps>(({ dropdownIsOpen }) => ({
   ...(dropdownIsOpen && {
     borderBottomLeftRadius: "0px",
     borderBottomRightRadius: "0px",

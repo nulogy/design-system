@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
 
-import { TimePicker, Button } from "../index";
+import { TimePicker, Button, Flex } from "../index";
 
 export default {
   title: "Components/TimePicker",
@@ -140,6 +140,19 @@ export const UsingRefToControlFocus = () => {
     </>
   );
 };
+
+export const WithDifferentSizes = () => (
+  <Flex gap="x2" alignItems="flex-start">
+    <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Default size" />
+    <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Medium size" />
+    <TimePicker
+      size="large"
+      onChange={action("time changed")}
+      onInputChange={action("input changed")}
+      labelText="Large size"
+    />
+  </Flex>
+);
 
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
