@@ -14,8 +14,10 @@ import { FieldProps } from "../Form/Field";
 import DatePickerHeader from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
+import { ComponentSize } from "../Input/InputField";
 
-type DatePickerProps = FieldProps & {
+type DatePickerProps = Omit<FieldProps, "size"> & {
+  size?: ComponentSize;
   selected?: any;
   dateFormat?: string;
   onChange?: ReactDatePickerProps["onChange"];
@@ -39,6 +41,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
   (
     {
       dateFormat = DEFAULT_DATE_FORMAT,
+      size,
       errorMessage,
       errorList,
       inputProps,
@@ -117,6 +120,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
 
     const customInput = (
       <DatePickerInput
+        size={size}
         inputProps={customInputProps}
         dateFormat={dateFormat}
         onInputChange={handleInputChange}

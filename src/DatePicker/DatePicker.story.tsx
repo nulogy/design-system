@@ -4,6 +4,7 @@ import { action } from "@storybook/addon-actions";
 import { select, boolean } from "@storybook/addon-knobs";
 
 import { DatePicker, Button } from "../index";
+import { Flex } from "../Flex";
 
 const selectedDateExamples = [
   new Date("2019-01-01T05:00:00.000Z"),
@@ -45,6 +46,39 @@ export const WithCustomDateFormat = () => (
 WithCustomDateFormat.story = {
   name: "with custom date format",
 };
+
+export const WithLarge = () => (
+  <Flex gap="x2" alignItems="flex-start">
+    <DatePicker
+      selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+      dateFormat="MMMM d, yyyy"
+      onChange={action("date changed")}
+      onFocus={action("date selector focused")}
+      onBlur={action("date selector blurred")}
+      onInputChange={action("input changed")}
+      inputProps={{ labelText: "Default size" }}
+    />
+    <DatePicker
+      selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+      dateFormat="MMMM d, yyyy"
+      onChange={action("date changed")}
+      onFocus={action("date selector focused")}
+      onBlur={action("date selector blurred")}
+      onInputChange={action("input changed")}
+      inputProps={{ labelText: "Medium size" }}
+    />
+    <DatePicker
+      size="large"
+      selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+      dateFormat="MMMM d, yyyy"
+      onChange={action("date changed")}
+      onFocus={action("date selector focused")}
+      onBlur={action("date selector blurred")}
+      onInputChange={action("input changed")}
+      inputProps={{ labelText: "Large size" }}
+    />
+  </Flex>
+);
 
 export const WithCustomPlaceholder = () => (
   <DatePicker
