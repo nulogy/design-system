@@ -1,9 +1,10 @@
 import React, { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
-import { InputField } from "../Input/InputField";
+import { ComponentSize, InputField } from "../Input/InputField";
 import { InputFieldDefaultProps } from "../Input/InputField.type";
 
 type DatePickerInputProps = {
+  size?: ComponentSize;
   onBlur?: React.ComponentPropsWithRef<"input">["onBlur"];
   onFocus?: React.ComponentPropsWithRef<"input">["onFocus"];
   onClick?: (...args: any[]) => any;
@@ -33,6 +34,7 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
       onDownKeyPress,
       onEnterKeyPress,
       "aria-label": ariaLabel,
+      ...props
     },
     ref
   ) => {
@@ -66,6 +68,7 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
         onClick={onClick}
         onKeyDown={handleKeyDown}
         onChange={handleChange}
+        {...props}
       />
     );
   }

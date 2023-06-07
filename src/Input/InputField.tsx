@@ -71,7 +71,7 @@ export const InputField: React.FC<InputFieldProps> = forwardRef<HTMLInputElement
             inputWidth={inputWidth}
             {...props}
           />
-          {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} />}
+          {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} sizeVariant={size} />}
         </Box>
         <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
       </Flex>
@@ -106,21 +106,39 @@ const StyledInput = styled.input<StyledInputProps>(
       color: transparentize(0.4, theme.colors.black),
     },
   }),
-  ({ sizeVariant, theme }) => cssForSize(sizeVariant, theme),
+  ({ sizeVariant, theme }) => inputCssForSize(sizeVariant, theme),
   ({ disabled, error, theme }) => cssForState({ disabled, error, theme }),
   space
 );
 
-const StyledInputIcon = styled(Icon)(({ theme }) => ({
-  position: "absolute",
-  right: theme.space.x1,
-  color: theme.colors.darkGrey,
-  bottom: "50%",
-  transform: "translateY(50%)",
-  pointerEvents: "none",
-}));
+const StyledInputIcon = styled(Icon)<{ sizeVariant: ComponentSize }>(
+  ({ theme }) => ({
+    position: "absolute",
+    right: theme.space.x2,
+    color: theme.colors.darkGrey,
+    bottom: "50%",
+    transform: "translateY(50%)",
+    pointerEvents: "none",
+  }),
+  ({ sizeVariant, theme }) => iconCssForSize(sizeVariant, theme)
+);
 
-const cssForSize = (sizeVariant: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
+const iconCssForSize = (sizeVariant: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
+  switch (sizeVariant) {
+    case "large":
+      return {
+        right: theme.space.x2,
+      };
+
+    case "medium":
+    default:
+      return {
+        right: theme.space.x1,
+      };
+  }
+};
+
+const inputCssForSize = (sizeVariant: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
   switch (sizeVariant) {
     case "large":
       return {
