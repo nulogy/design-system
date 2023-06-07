@@ -10,11 +10,13 @@ import { localizedFormat } from "../utils/localized-date-fns";
 import { DetectOutsideClick } from "../utils";
 import { Box } from "../Box";
 import { keyCodes } from "../constants";
+import { ComponentSize } from "../Input/InputField";
 import TimePickerOption from "./TimePickerOption";
 import TimePickerDropdown from "./TimePickerDropdown";
 import TimePickerInput from "./TimePickerInput";
 
 type TimePickerProps = SpaceProps & {
+  size?: ComponentSize;
   disabled?: boolean;
   value?: string;
   timeFormat?: string;
@@ -146,6 +148,7 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
       value,
       error,
       disabled,
+      size,
       ...props
     },
     inputRef
@@ -260,7 +263,6 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
           className={`nds-time-picker ${className || ""}`}
           position="relative"
           ref={onRefChange}
-          width="130px"
           data-testid="select-container"
           {...props}
         >
@@ -276,13 +278,13 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
             onClick={handleClickInput}
             onKeyDown={(e) => handleKeyDown(e)}
             aria-label={ariaLabel || t("Select a time")}
-            inputWidth="130px"
             iconSize="20px"
             data-testid="select-input"
             type="text"
             ref={inputRef}
             disabled={disabled}
             autoComplete="off"
+            size={size}
           />
           <TimePickerDropdown
             isOpen={dropdownIsOpen}
@@ -309,6 +311,7 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
                   }}
                   role="option"
                   data-testid={`select-option ${closestTestId} ${selectedTestId}`}
+                  size={size}
                 >
                   {option.label}
                 </TimePickerOption>
