@@ -92,13 +92,20 @@ type Radii = {
   circle: string;
 };
 
-type Breakpoints = {
+type BreakpointsConfig = {
   extraSmall: string;
   small: string;
   medium: string;
   large: string;
   extraLarge: string;
 };
+
+export const Breakpoints = (config: Readonly<BreakpointsConfig>) => ({
+  ...config,
+  // We need the map function because the `variant` function from `styled-system`
+  // expects the breakpoints to be an array and not an object
+  map: (fn) => Object.values(config).map(fn),
+});
 
 type ZIndices = {
   content: number;
@@ -124,7 +131,7 @@ export type DefaultNDSThemeType = {
   borders: Borders;
   shadows: Shadows;
   radii: Radii;
-  breakpoints: Breakpoints;
+  breakpoints: BreakpointsConfig;
   zIndices: ZIndices;
 };
 
