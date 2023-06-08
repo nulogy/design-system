@@ -17,7 +17,7 @@ const insertSeparators = (items: JSX.Element[]) => {
   }, []);
 };
 
-type BreadcrumbsProps = Omit<FlexProps, "size"> & { size: ComponentSize };
+type BreadcrumbsProps = Omit<FlexProps, "size"> & { size?: ComponentSize };
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size, children, ...props }) => {
   const allItems = React.Children.map(children, (child, index) => {
@@ -25,10 +25,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size, children, ...props }) =
 
     return (
       <BreadcrumbsListItem size={size} key={`child-${index}`}>
-        {React.cloneElement(child, {
-          // @ts-ignore
-          color: "darkBlue",
-        })}
+        {child}
       </BreadcrumbsListItem>
     );
   }).filter(Boolean);
@@ -41,6 +38,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size, children, ...props }) =
 };
 
 Breadcrumbs.defaultProps = {
+  size: "medium",
   as: "nav",
 };
 
