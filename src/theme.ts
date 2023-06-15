@@ -1,5 +1,5 @@
 import * as tokens from "@nulogy/tokens";
-import { Breakpoints, DefaultNDSThemeType } from "./theme.type";
+import { DefaultNDSThemeType } from "./theme.type";
 
 const Theme: DefaultNDSThemeType = {
   colors: {
@@ -98,13 +98,13 @@ const Theme: DefaultNDSThemeType = {
     medium: tokens.radius_border_medium,
     circle: tokens.radius_border_circle,
   },
-  breakpoints: Breakpoints({
+  breakpoints: {
     extraSmall: tokens.size_breakpoint_extra_small,
     small: tokens.size_breakpoint_small,
     medium: tokens.size_breakpoint_medium,
     large: tokens.size_breakpoint_large,
     extraLarge: tokens.size_breakpoint_extra_large,
-  }),
+  },
   zIndices: {
     content: tokens.z_indices_content,
     tabsScollIndicator: tokens.z_indices_tabs_scroll_indicator,
