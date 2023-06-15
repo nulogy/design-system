@@ -11,6 +11,15 @@ import ModalStyleOverride from "./ModalStyleOverride";
 import Reset from "./Reset";
 import ComponentSizeContextProvider, { ComponentSize } from "./ComponentSizeContext";
 
+export const buildBreakPoints = (breakpointsConfig: Readonly<Breakpoints>) => ({
+  ...breakpointsConfig,
+
+  // We need the map function as a polyfill because the `variant` function
+  // from `styled-system` expects the breakpoints
+  // to be an array and not an object
+  map: (fn) => Object.values(breakpointsConfig).map(fn),
+});
+
 type NDSProviderProps = {
   theme?: ThemeType;
   locale?: string;
@@ -44,24 +53,21 @@ const NDSProvider: React.FC<NDSProviderProps> = ({
   children,
   disableGlobalStyles = false,
   locale = "en_US",
-  size = "large",
+  size = "medium",
 }) => {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
 
   const mergedTheme = mergeThemes(NDSTheme, theme);
+  const themeWithBreakpoints = { ...mergedTheme, breakpoints: buildBreakPoints(mergedTheme.breakpoints) };
 
   return (
     <LocaleContext.Provider value={{ locale }}>
       <ComponentSizeContextProvider size={size}>
-        <AllNDSGlobalStyles
-          theme={{ ...mergedTheme, breakpoints: Breakpoints(mergedTheme.breakpoints) }}
-          locale={locale}
-          disableGlobalStyles={disableGlobalStyles}
-        >
+        <AllNDSGlobalStyles theme={themeWithBreakpoints} locale={locale} disableGlobalStyles={disableGlobalStyles}>
           <I18nextProvider i18n={i18n}>
-            <ThemeProvider theme={mergedTheme}>{children}</ThemeProvider>
+            <ThemeProvider theme={themeWithBreakpoints}>{children}</ThemeProvider>
           </I18nextProvider>
         </AllNDSGlobalStyles>
       </ComponentSizeContextProvider>
