@@ -10,8 +10,8 @@ import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
-import type { ComponentSize } from "../Input/InputField";
 import ToggleButton from "./ToggleButton";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 const labelTextStyles = (theme: DefaultNDSThemeType) => ({
   fontSize: theme.fontSizes.small,
@@ -90,6 +90,8 @@ const BaseToggle = ({
   const handleClick = (e) => {
     if (onClick) onClick(e);
   };
+
+  const componentSize = useComponentSize(size);
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
   return (
@@ -100,7 +102,7 @@ const BaseToggle = ({
         requirementText={requirementText}
         helpText={helpText}
       >
-        <ClickInputLabel size={size} as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
+        <ClickInputLabel size={componentSize} as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
           <ToggleButton
             id={id}
             checked={toggled}

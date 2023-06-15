@@ -1,5 +1,7 @@
 import { transparentize } from "polished";
+import { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 const getBorderColor = ({ errored, disabled, isOpen, isFocused, theme }) => {
   const { red, lightGrey, blue, grey } = theme.colors;
@@ -57,10 +59,25 @@ export function getMenuBorderRadius({
   return border === menuPlacement ? { radius: theme.radii.medium, style: "solid" } : { radius: 0, style: "none" };
 }
 
+type SizeConfig = {
+  [key in ComponentSize]: CSSObject;
+};
+
+export function stylesForSize(config: SizeConfig, size: ComponentSize) {
+  return config[size];
+}
+
 export const showIndicatorSeparator = ({ isMulti, hasValue, hasDefaultOptions }) =>
   isMulti && hasValue && hasDefaultOptions;
 
-const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = true }) => {
+const customStyles = ({
+  theme,
+  error,
+  maxHeight,
+  windowed,
+  size,
+  hasDefaultOptions = true,
+}: { theme: DefaultNDSThemeType } & { [key: string]: any }) => {
   return {
     option: () => ({
       height: 38,
@@ -140,15 +157,26 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       color: theme.colors.grey,
     }),
     input: () => ({}),
-    valueContainer: (provided) => ({
+    valueContainer: (provided, state) => ({
       ...provided,
       padding: 0,
       overflow: "auto",
       maxHeight: "150px",
-      rowGap: theme.space.half,
-      columnGap: theme.space.half,
-      paddingTop: theme.space.half,
-      paddingBottom: theme.space.half,
+      gap: theme.space.half,
+      ...stylesForSize(
+        {
+          large: {
+            paddingTop: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
+            paddingBottom: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
+            gap: theme.space.x1,
+          },
+          medium: {
+            paddingTop: theme.space.half,
+            paddingBottom: theme.space.half,
+          },
+        },
+        size
+      ),
     }),
     menu: (provided, state) => ({
       ...provided,
@@ -217,12 +245,25 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
       color: theme.colors.black,
       borderRadius: theme.radii.small,
       fontSize: theme.fontSizes.small,
-      padding: theme.space.half,
-      paddingLeft: theme.space.x1,
+      ...stylesForSize(
+        {
+          large: {
+            fontSize: theme.fontSizes.medium,
+            lineHeight: theme.lineHeights.base,
+            padding: theme.space.x1,
+            paddingRight: theme.space.half,
+          },
+          medium: {
+            padding: theme.space.half,
+            paddingLeft: theme.space.x1,
+          },
+        },
+        size
+      ),
     }),
     multiValueRemove: (provided) => ({
       ...provided,
-      svg: { fill: theme.colors.black },
+      svg: { fill: theme.colors.black, height: theme.sizes.x2, width: theme.sizes.x2 },
       borderBottomLeftRadius: 0,
       borderTopLeftRadius: 0,
       "&:hover": {
@@ -230,6 +271,17 @@ const customStyles = ({ theme, error, maxHeight, windowed, hasDefaultOptions = t
         cursor: "pointer",
         svg: { fill: theme.colors.white },
       },
+      ...stylesForSize(
+        {
+          large: {
+            padding: theme.space.x1,
+          },
+          medium: {
+            // Nothing
+          },
+        },
+        size
+      ),
     }),
     noOptionsMessage: (provided) => ({
       ...provided,

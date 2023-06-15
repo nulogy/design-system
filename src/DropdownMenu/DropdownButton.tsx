@@ -1,8 +1,9 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
+import { variant } from "styled-system";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type DropdownButtonProps = React.ComponentPropsWithRef<"button"> &
   StyledProps & {
@@ -12,21 +13,6 @@ type DropdownButtonProps = React.ComponentPropsWithRef<"button"> &
     hoverColor?: string;
     bgHoverColor?: string;
   };
-
-export const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
-  switch (size) {
-    case "large":
-      return {
-        padding: `${theme.space.x2} ${theme.space.x2} ${theme.space.x2} 12px`,
-      };
-
-    case "medium":
-    default:
-      return {
-        padding: `${theme.space.x1} ${theme.space.x2} ${theme.space.x1} 12px`,
-      };
-  }
-};
 
 const DropdownButton = styled.button<DropdownButtonProps>(
   ({ disabled, theme, hoverColor, bgHoverColor }) => ({
@@ -56,7 +42,25 @@ const DropdownButton = styled.button<DropdownButtonProps>(
       opacity: ".5",
     },
   }),
-  ({ size, theme }) => getSize(size, theme),
+  variant({
+    prop: "size",
+    variants: {
+      large: {
+        pt: "x2",
+        pr: "x2",
+        pb: "x2",
+        pl: "12px",
+      },
+
+      medium: {
+        pt: "x1",
+        pr: "x2",
+        pb: "x1",
+        pl: "12px",
+      },
+    },
+  }),
+
   addStyledProps
 );
 

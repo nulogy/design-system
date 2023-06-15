@@ -7,6 +7,7 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { getSubset } from "../utils/subset";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import customStyles from "./customReactSelectStyles";
 import { SelectOption } from "./SelectOption";
 
@@ -63,6 +64,7 @@ export type SelectProps = {
   components?: any;
   closeMenuOnSelect?: boolean;
   "aria-label"?: string;
+  size?: ComponentSize;
   [key: string]: any; // Allow for custom props to be passed and used inside custom components using the `selectProps` prop
 };
 
@@ -102,6 +104,7 @@ export const SelectDefaultProps = {
 const ReactSelect = React.forwardRef(
   (
     {
+      size,
       autocomplete,
       options,
       labelText,
@@ -133,6 +136,8 @@ const ReactSelect = React.forwardRef(
     const reactSelectRef = React.useRef<ReactSelectStateManager>(null);
     const optionsRef = React.useRef(options);
 
+    const componentSize = useComponentSize(size);
+
     React.useEffect(() => {
       checkOptionsAreValid(options);
       optionsRef.current = options;
@@ -157,6 +162,7 @@ const ReactSelect = React.forwardRef(
       <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
+            size={componentSize}
             ref={reactSelectRef}
             placeholder={placeholder || t("select ...")}
             windowThreshold={windowThreshold}
@@ -164,6 +170,7 @@ const ReactSelect = React.forwardRef(
               theme: themeContext,
               error,
               maxHeight,
+              size: componentSize,
               windowed: options.length > windowThreshold,
             })}
             isDisabled={disabled}

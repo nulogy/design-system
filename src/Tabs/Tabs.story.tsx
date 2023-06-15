@@ -186,7 +186,7 @@ export const WithConditionallyRenderedTabs = () => (
 
 export const WithDifferentSizes = () => (
   <Flex gap="x4">
-    <Tabs defaultSelectedIndex={2} size="medium">
+    <Tabs defaultSelectedIndex={2}>
       <Tab label="Default tab 1">Tab 1 Content</Tab>
       <Tab label="Default tab 2">Tab 2 Content</Tab>
     </Tabs>

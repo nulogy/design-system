@@ -10,7 +10,7 @@ import { localizedFormat } from "../utils/localized-date-fns";
 import { DetectOutsideClick } from "../utils";
 import { Box } from "../Box";
 import { keyCodes } from "../constants";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import TimePickerOption from "./TimePickerOption";
 import TimePickerDropdown from "./TimePickerDropdown";
 import TimePickerInput from "./TimePickerInput";
@@ -160,6 +160,7 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
     const [ref, setRef] = useState(null);
     const dropdownRef = useRef(null);
     const { t } = useTranslation();
+    const componentSize = useComponentSize(size);
 
     const scrollToSelection = useCallback(
       debounce((currentOption, dropdown) => {
@@ -256,13 +257,16 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
         onInputChange(inputValue);
       }
     };
+
     const displayValue = value ? value : input || "";
+
     return (
       <>
         <Box
           className={`nds-time-picker ${className || ""}`}
           position="relative"
           ref={onRefChange}
+          width={componentSize === "large" ? "208px" : "130px"}
           data-testid="select-container"
           {...props}
         >
@@ -278,13 +282,14 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
             onClick={handleClickInput}
             onKeyDown={(e) => handleKeyDown(e)}
             aria-label={ariaLabel || t("Select a time")}
+            inputWidth={componentSize === "large" ? "208px" : "130px"}
             iconSize="20px"
             data-testid="select-input"
             type="text"
             ref={inputRef}
             disabled={disabled}
             autoComplete="off"
-            size={size}
+            size={componentSize}
           />
           <TimePickerDropdown
             isOpen={dropdownIsOpen}
@@ -311,7 +316,7 @@ const TimePicker: React.FC<TimePickerProps> = forwardRef(
                   }}
                   role="option"
                   data-testid={`select-option ${closestTestId} ${selectedTestId}`}
-                  size={size}
+                  size={componentSize}
                 >
                   {option.label}
                 </TimePickerOption>

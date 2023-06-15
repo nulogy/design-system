@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import FocusManager from "../utils/ts/FocusManager";
 import type { ComponentSize } from "../NDSProvider/ComponentSizeContext";
-import { useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import type { SwitchProps } from "./Switch";
+import { useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type SwitcherProps = {
   size?: ComponentSize;
@@ -14,6 +14,8 @@ type SwitcherProps = {
 };
 
 const Switcher: React.FC<SwitcherProps> = ({ size, selected, onChange, ...rest }) => {
+  const componentSize = useComponentSize(size);
+
   const optionRefs = [];
 
   const isSelected = (value: string, index: number) => {
@@ -31,7 +33,7 @@ const Switcher: React.FC<SwitcherProps> = ({ size, selected, onChange, ...rest }
   const options = (focusedIndex, setFocusedIndex, handleArrowNavigation) => {
     return React.Children.map(rest.children, (child, index) => {
       return React.cloneElement(child, {
-        size,
+        size: componentSize,
         tabIndex: index === focusedIndex ? 0 : -1,
         selected: isSelected(child.props.value, index),
         "aria-selected": isSelected(child.props.value, index),

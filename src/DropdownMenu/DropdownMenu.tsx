@@ -7,7 +7,7 @@ import { Popper } from "../Popper";
 import { getSubset, omitSubset } from "../utils/subset";
 import { StyledProps } from "../StyledProps";
 import DropdownMenuContainer from "./DropdownMenuContainer";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type DropdownMenuProps = {
   className?: string;
@@ -77,6 +77,8 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
       return transformPropsToModifiers({ boundariesElement });
     }, [boundariesElement]);
 
+    const componentSize = useComponentSize(size);
+
     return (
       <Popper
         trigger={React.cloneElement(trigger(), {
@@ -107,7 +109,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<DropdownMenuP
           {...restProps}
         >
           {React.Children.map(children, (child) =>
-            React.cloneElement(child, { size, ...child.props }, child.props.children)
+            React.cloneElement(child, { size: componentSize, ...child.props }, child.props.children)
           )}
         </DropdownMenuContainer>
       </Popper>

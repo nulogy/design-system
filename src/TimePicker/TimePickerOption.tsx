@@ -1,7 +1,7 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
-import { ComponentSize } from "../Input/InputField";
-import { DefaultNDSThemeType } from "../theme.type";
+import styled from "styled-components";
+import { variant } from "styled-system";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type TimePickerOptionProps = React.ComponentProps<"li"> & {
   size?: ComponentSize;
@@ -19,7 +19,18 @@ const TimePickerOption = styled.li<TimePickerOptionProps>(
       background: !isSelected && theme.colors.lightBlue,
     },
   }),
-  ({ size, theme }) => cssForSize(size, theme),
+  variant({
+    prop: "size",
+    variants: {
+      large: {
+        px: "x1",
+        py: "x2",
+      },
+      medium: {
+        p: "x1",
+      },
+    },
+  }),
   ({ isSelected, theme, isFocused, isClosest }) => {
     if (isFocused || isClosest) {
       return {
@@ -29,20 +40,5 @@ const TimePickerOption = styled.li<TimePickerOptionProps>(
     }
   }
 );
-
-const cssForSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
-  switch (size) {
-    case "large":
-      return {
-        padding: theme.space.x2,
-      };
-
-    case "medium":
-    default:
-      return {
-        padding: theme.space.x1,
-      };
-  }
-};
 
 export default TimePickerOption;

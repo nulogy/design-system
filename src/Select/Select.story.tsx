@@ -1,13 +1,11 @@
-// @ts-nocheck
-// typescript turned off because of SelectWithState prop issues
 import React, { useEffect, useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
 import { text, boolean, select } from "@storybook/addon-knobs";
-import { Button, Select, SelectOption } from "../index";
+import { Button, Heading2, Select, SelectOption } from "../index";
 import { Box } from "../Box";
-import { SelectProps } from "../Select";
 import { Flex } from "../Flex";
+import { SelectProps } from "./Select";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -81,7 +79,7 @@ type SelectWithStateProps = SelectProps & {
   selectedValue: string;
 };
 
-class SelectWithState extends React.Component<{}, SelectWithStateProps> {
+class SelectWithState extends React.Component<{ selectedValue: string }, SelectWithStateProps> {
   constructor(props) {
     super(props);
 
@@ -101,7 +99,7 @@ class SelectWithState extends React.Component<{}, SelectWithStateProps> {
   render() {
     const { selectedValue } = this.state;
     return (
-      <>
+      <Flex flexDirection="column" gap="x2" alignItems="flex-start">
         <Select
           className="Select"
           classNamePrefix="SelectTest"
@@ -111,7 +109,7 @@ class SelectWithState extends React.Component<{}, SelectWithStateProps> {
           {...this.props}
         />
         <Button onClick={this.clearSelection}>Clear selection</Button>
-      </>
+      </Flex>
     );
   }
 }
@@ -151,6 +149,78 @@ export const _Select = () => (
     onBlur={action("blurred")}
   />
 );
+
+export const WithDifferentSizes = () => {
+  return (
+    <Flex flexDirection="column" gap="x2">
+      <Heading2>Standard</Heading2>
+      <Flex gap="x2" minHeight="360px">
+        <Select
+          defaultMenuIsOpen
+          placeholder="Please select inventory status"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          options={options}
+          labelText="Default size"
+          onInputChange={action("typed input value changed")}
+        />
+        <Select
+          size="medium"
+          defaultMenuIsOpen
+          placeholder="Please select inventory status"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          options={options}
+          labelText="Medium size"
+          onInputChange={action("typed input value changed")}
+        />
+        <Select
+          size="large"
+          defaultMenuIsOpen
+          placeholder="Please select inventory status"
+          onChange={action("selection changed")}
+          onBlur={action("blurred")}
+          options={options}
+          labelText="Large size"
+          onInputChange={action("typed input value changed")}
+        />
+      </Flex>
+
+      <Heading2>Multi-select</Heading2>
+      <Flex gap="x2" alignItems="flex-start">
+        <Select
+          defaultMenuIsOpen
+          defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={PCNList}
+          labelText="Default Size"
+          multiselect
+        />
+        <Select
+          size="medium"
+          defaultMenuIsOpen
+          defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={PCNList}
+          labelText="Medium Size"
+          multiselect
+        />
+        <Select
+          size="large"
+          defaultMenuIsOpen
+          defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
+          noOptionsMessage={() => "No options"}
+          placeholder="Please select inventory status"
+          options={PCNList}
+          labelText="Large Size"
+          multiselect
+        />
+      </Flex>
+    </Flex>
+  );
+};
 
 export const WithABlankValue = () => {
   const optionsWithBlank = [{ value: null, label: "" }, ...options];
@@ -200,6 +270,7 @@ WithAnOptionSelected.story = {
 };
 
 export const WithState = () => (
+  // @ts-ignore
   <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
 );
 
@@ -569,7 +640,6 @@ export const WithCustomProps = () => {
 };
 
 export const WithTopMenuPlacement = () => {
-
   return (
     <Flex height="100vh" alignItems="center" justifyContent="center">
       <Select options={options} menuPlacement="top" />

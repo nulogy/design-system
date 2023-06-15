@@ -34,7 +34,7 @@ SetToDisabled.story = {
 const DashedRadio = dashed(Radio);
 
 export const WithDifferentSizes = () => (
-  <Flex flexDirection="column" gap="x2" alignItems="flex-start">
+  <Flex gap="x2" alignItems="flex-start">
     <DashedRadio id="radio-1" labelText="I am a default sized Radio" />
     <DashedRadio id="radio-1" size="medium" labelText="I am a medium sized Radio" />
     <DashedRadio id="radio-2" size="large" labelText="I am a large sized Radio" />

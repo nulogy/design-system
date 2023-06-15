@@ -10,6 +10,7 @@ import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 import { getDuration } from "../TimeRange/TimeRange.utils";
 import EndTime from "./EndTime";
 import StartTime from "./StartTime";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type DateRangeProps = FieldProps & {
   dateFormat?: string;
@@ -40,6 +41,7 @@ type DateRangeProps = FieldProps & {
   disableFlipping?: boolean;
   endTimeProps?: any;
   startTimeProps?: any;
+  size?: ComponentSize;
 };
 
 const DEFAULT_LABEL = "Date Range";
@@ -78,6 +80,7 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
       locale,
       endTimeProps,
       startTimeProps,
+      size,
       ...props
     },
     ref
@@ -91,6 +94,10 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
     const [startTime, setStartTime] = useState(defaultStartTime);
     const [endTime, setEndTime] = useState(defaultEndTime);
     const [rangeError, setRangeError] = useState();
+    const { t } = useTranslation();
+
+    const componentSize = useComponentSize(size);
+
     useImperativeHandle(ref, () => ({
       dateRef1: {
         ...dateRef1,
@@ -109,31 +116,39 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
         focus: () => timeRef2.current.focus(),
       },
     }));
-    const { t } = useTranslation();
+
+    useEffect(() => {
+      validateDateRange();
+    }, [startDate, endDate, startTime, endTime]);
+
     const changeStartTimeHandler = (label, value) => {
       setStartTime(value);
       if (onStartTimeChange) {
         onStartTimeChange(label, value);
       }
     };
+
     const changeEndTimeHandler = (label, value) => {
       setEndTime(value);
       if (onEndTimeChange) {
         onEndTimeChange(label, value);
       }
     };
+
     const changeStartDateHandler = (date) => {
       setStartDate(date);
       if (onStartDateChange) {
         onStartDateChange(date);
       }
     };
+
     const changeEndDateHandler = (date) => {
       setEndDate(date);
       if (onEndDateChange) {
         onEndDateChange(date);
       }
     };
+
     const validateDateRange = () => {
       let error;
       if (endDate && startDate) {
@@ -164,9 +179,11 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
       error: rangeError,
       ...startDateInputProps,
     };
+
     const startDateInput = (
       <>
         <DatePicker
+          size={componentSize}
           dateFormat={dateFormat}
           selected={startDate}
           onChange={changeStartDateHandler}
@@ -181,6 +198,7 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
         />
         {showTimes && (
           <StartTime
+            size={componentSize}
             selected={startTime}
             defaultValue={defaultStartTime}
             aria-label={t("select a start time")}
@@ -198,10 +216,12 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
         )}
       </>
     );
+
     const endDateInput = (
       <>
         {showTimes && (
           <EndTime
+            size={componentSize}
             selected={endTime}
             defaultValue={defaultEndTime}
             minTime={minTime}
@@ -218,6 +238,7 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
           />
         )}
         <DatePicker
+          size={componentSize}
           dateFormat={dateFormat}
           selected={endDate}
           onChange={changeEndDateHandler}
@@ -236,13 +257,12 @@ const DateRange: React.FC<DateRangeProps> = forwardRef(
         />
       </>
     );
-    useEffect(() => {
-      validateDateRange();
-    }, [startDate, endDate, startTime, endTime]);
+
     return (
       <>
         <DateRangeStyles />
         <RangeContainer
+          size={componentSize}
           labelProps={{
             ...labelProps,
             labelText: labelProps.labelText === DEFAULT_LABEL ? t("date range") : labelProps.labelText,

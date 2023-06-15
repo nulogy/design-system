@@ -8,7 +8,7 @@ import { ClickInputLabel } from "../utils";
 import { getSubset, omitSubset } from "../utils/subset";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps } from "../StyledProps";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
 
@@ -130,12 +130,13 @@ const CheckboxInput = styled.input<CheckboxProps>((props) => ({
 const Checkbox: React.FC<CheckboxProps> = forwardRef((props, ref) => {
   const { size, className, labelText, disabled, checked, required, error, indeterminate } = props;
 
+  const componentSize = useComponentSize(size);
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
 
   return (
-    <Box className={className} py="half" px="0" {...spaceProps}>
-      <ClickInputLabel size={size} disabled={disabled}>
+    <Box className={className} px="0" {...spaceProps}>
+      <ClickInputLabel size={componentSize} disabled={disabled}>
         <CheckboxInput
           type="checkbox"
           required={required}

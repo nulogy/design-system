@@ -47,7 +47,7 @@ WithCustomDateFormat.story = {
   name: "with custom date format",
 };
 
-export const WithLarge = () => (
+export const WithDifferentSizes = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DatePicker
       selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
@@ -59,6 +59,7 @@ export const WithLarge = () => (
       inputProps={{ labelText: "Default size" }}
     />
     <DatePicker
+      size="medium"
       selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}

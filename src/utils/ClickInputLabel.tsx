@@ -1,22 +1,7 @@
 import styled from "styled-components";
+import { variant } from "styled-system";
 import theme from "../theme";
-import { ComponentSize } from "../Input/InputField";
-import { DefaultNDSThemeType } from "../theme.type";
-
-const cssForSize = (size: ComponentSize, theme: DefaultNDSThemeType) => {
-  switch (size) {
-    case "large":
-      return {
-        padding: `${theme.space.x2} 0`,
-      };
-
-    case "medium":
-    default:
-      return {
-        padding: `${theme.space.x1} 0`,
-      };
-  }
-};
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 const ClickInputLabel = styled.label<{ size: ComponentSize; disabled: boolean }>(
   ({ disabled }) => ({
@@ -28,7 +13,20 @@ const ClickInputLabel = styled.label<{ size: ComponentSize; disabled: boolean }>
     alignItems: "flex-start",
     userSelect: "none",
   }),
-  ({ size, theme }) => cssForSize(size, theme)
+  variant({
+    prop: "size",
+    variants: {
+      large: {
+        py: "x2",
+        px: "0",
+      },
+
+      medium: {
+        py: "x1",
+        px: "0",
+      },
+    },
+  })
 );
 
 export default ClickInputLabel;

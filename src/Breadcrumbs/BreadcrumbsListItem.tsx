@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { space, color, flexbox, layout, variant } from "styled-system";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 export const BreadcrumbsListSeparator = styled.li(
   ({ theme }) => ({
@@ -40,13 +40,13 @@ export const BreadcrumbsListItem = styled.li<{ size: ComponentSize }>(
         "a, p": {
           py: "x2",
           px: "x1",
+          fontSize: "medium",
         },
       },
-
       medium: {
-        py: "x2",
-        px: "x1",
         "a, p": {
+          py: "0",
+          px: "0",
           fontSize: "small",
         },
       },

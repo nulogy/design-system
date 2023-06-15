@@ -4,6 +4,7 @@ import { Link } from "../Link";
 import { Text } from "../Type";
 import { Breadcrumbs } from "./index";
 import { Flex } from "../Flex";
+import dashed from "../utils/dashed";
 
 export default {
   title: "Components/Breadcrumbs",
@@ -21,20 +22,22 @@ export const _Breadcrumbs = () => (
   </>
 );
 
+const DashedBreadcrumbs = dashed(Breadcrumbs);
+
 export const WithDifferentSizes = () => (
-  <Flex alignItems="flex-start">
-    <Breadcrumbs>
+  <Flex gap="x2" alignItems="flex-start">
+    <DashedBreadcrumbs>
       <Link href="/">Default</Link>
       <Link href="/">Size</Link>
-    </Breadcrumbs>
-    <Breadcrumbs size="medium">
+    </DashedBreadcrumbs>
+    <DashedBreadcrumbs size="medium">
       <Link href="/">Medium</Link>
       <Link href="/">Size</Link>
-    </Breadcrumbs>
-    <Breadcrumbs size="large">
+    </DashedBreadcrumbs>
+    <DashedBreadcrumbs size="large">
       <Link href="/">Large</Link>
       <Link href="/">Size</Link>
-    </Breadcrumbs>
+    </DashedBreadcrumbs>
   </Flex>
 );
 

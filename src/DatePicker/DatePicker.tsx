@@ -14,7 +14,7 @@ import { FieldProps } from "../Form/Field";
 import DatePickerHeader from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type DatePickerProps = Omit<FieldProps, "size"> & {
   size?: ComponentSize;
@@ -61,35 +61,43 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
   ) => {
     const [selectedDate, setSelectedDate] = useState(selected);
     const [ref, setRef] = useState(null);
+
+    const componentSize = useComponentSize(size);
+
     useEffect(() => {
       registerDatePickerLocales();
     });
     useEffect(() => {
       setSelectedDate(selected);
     }, [selected]);
+
     const onRefChange = React.useCallback((node) => {
       if (node) {
         setRef(node);
       }
     }, []);
+
     const handleInputChange = (event) => {
       const { value } = event.target;
       if (onInputChange) {
         onInputChange(value);
       }
     };
+
     const handleSelectedDateChange = (date) => {
       if (onChange) {
         onChange(date);
       }
       setSelectedDate(date);
     };
+
     const handleDownKey = () => {
       const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
       if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
         handleSelectedDateChange(newSelectedDate);
       }
     };
+
     const handleUpKey = () => {
       const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
       if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
@@ -105,12 +113,14 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
         ref.setOpen(!isOpen);
       }
     };
+
     const renderHeader = ({ locale }) => {
       return (props) => <DatePickerHeader locale={locale} {...props} />;
     };
+
     const customInputProps = {
       ...InputFieldDefaultProps,
-      inputWidth: "184px",
+      inputWidth: componentSize === "large" ? "240px" : "184px",
       error: !!(errorMessage || errorList),
       ...inputProps,
       placeholder:
@@ -120,7 +130,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
 
     const customInput = (
       <DatePickerInput
-        size={size}
+        size={componentSize}
         inputProps={customInputProps}
         dateFormat={dateFormat}
         onInputChange={handleInputChange}
@@ -170,4 +180,5 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
     );
   }
 );
+
 export default DatePicker;

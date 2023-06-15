@@ -1,14 +1,14 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import PropTypes from "prop-types";
-import { space, SpaceProps } from "styled-system";
+import { space, SpaceProps, variant } from "styled-system";
 import { Manager, Reference, Popper } from "react-popper-2";
 import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 import { DefaultNDSThemeType } from "../theme.type";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type BaseProps = {
   size?: ComponentSize;
@@ -45,21 +45,6 @@ const HoverText: React.FC<any> = styled.div(({ theme }) => ({
   padding: `${theme.space.half} ${theme.space.x1}`,
   pointerEvents: "none",
 }));
-
-const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
-  switch (size) {
-    case "large":
-      return {
-        padding: `${theme.space.x1} ${theme.space.none}`,
-      };
-
-    case "medium":
-    default:
-      return {
-        padding: `${theme.space.half} ${theme.space.none}`,
-      };
-  }
-};
 
 const WrapperButton = styled.button<IconicButtonProps>(
   ({ disabled, hoverBackgroundColor, theme }: any) => ({
@@ -111,8 +96,20 @@ const WrapperButton = styled.button<IconicButtonProps>(
       },
     },
   }),
-  space,
-  ({ size, theme }) => getSize(size, theme)
+  variant({
+    prop: "size",
+    variants: {
+      large: {
+        py: "x1",
+        px: "none",
+      },
+      medium: {
+        py: "half",
+        px: "none",
+      },
+    },
+  }),
+  space
 );
 
 const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
@@ -124,14 +121,15 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
       icon,
       labelHidden,
       className,
-      iconSize,
+      iconSize = "x3",
       fontSize,
       tooltip,
+      size,
       ...props
     },
     forwardedRef
   ) => {
-    const size = iconSize || "x3";
+    const componentSize = useComponentSize(size);
 
     return (
       <WrapperButton
@@ -139,13 +137,14 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
         aria-label={props["aria-label"] ? props["aria-label"] : typeof children === "string" ? children : undefined}
         className={className}
         hoverBackgroundColor={hoverBackgroundColor}
+        size={componentSize}
         {...props}
       >
         <Manager>
           <Reference>
             {({ ref }) => (
-              <IconWrapper ref={ref} size={iconSize || "x3"}>
-                <Icon size={size} icon={icon} color={color} />
+              <IconWrapper ref={ref} size={iconSize}>
+                <Icon size={iconSize} icon={icon} color={color} />
               </IconWrapper>
             )}
           </Reference>
