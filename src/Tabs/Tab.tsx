@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
-import { ComponentSize } from "../Input/InputField";
+import { variant } from "styled-system";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 const barStyles = (theme): { expanded: CSSObject; default: CSSObject } => ({
   expanded: {
@@ -38,21 +38,6 @@ const getBarHoverStyles = (selected, disabled, theme) => {
     ...barStyles(theme).expanded,
     backgroundColor: theme.colors.lightBlue,
   };
-};
-
-const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
-  switch (size) {
-    case "large":
-      return {
-        padding: `${theme.space.x2} ${theme.space.x4}`,
-      };
-
-    case "medium":
-    default:
-      return {
-        padding: `${theme.space.x1} ${theme.space.x3}`,
-      };
-  }
 };
 
 type TabButtonProps = React.ComponentPropsWithRef<"button"> & {
@@ -93,7 +78,19 @@ const TabButton = styled.button<TabButtonProps>(
       },
     },
   }),
-  ({ size, theme }) => getSize(size, theme)
+  variant({
+    prop: "size",
+    variants: {
+      large: {
+        py: "x2",
+        px: "x4",
+      },
+      medium: {
+        py: "x1",
+        px: "x3",
+      },
+    },
+  })
 );
 
 type TabProps = TabButtonProps & {

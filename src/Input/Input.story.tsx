@@ -28,11 +28,21 @@ WithAllProps.story = {
 };
 
 export const WithDifferentSizes = () => (
-  <Flex flexDirection="column">
+  <Flex alignItems="flex-start">
     <Input
       placeholder="Placeholder"
       p="x3"
-      labelText="Medium (default)"
+      labelText="Default size"
+      helpText="Additional help text"
+      requirementText="Required"
+      onChange={action("value changed")}
+      onBlur={action("blurred")}
+      required
+    />
+    <Input
+      placeholder="Placeholder"
+      p="x3"
+      labelText="Medium size"
       helpText="Additional help text"
       requirementText="Required"
       onChange={action("value changed")}
@@ -43,7 +53,7 @@ export const WithDifferentSizes = () => (
     <Input
       placeholder="Placeholder"
       p="x3"
-      labelText="Large"
+      labelText="Large size"
       helpText="Additional help text"
       requirementText="Required"
       onChange={action("value changed")}

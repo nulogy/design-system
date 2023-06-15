@@ -8,7 +8,7 @@ import dashed from "../utils/dashed";
 const DashedToggle = dashed(Toggle);
 
 export const WithDifferentSizes = () => (
-  <Flex flexDirection="column" gap="x2" alignItems="flex-start">
+  <Flex gap="x2" alignItems="flex-start">
     <DashedToggle
       onText="Default"
       offText="Default"

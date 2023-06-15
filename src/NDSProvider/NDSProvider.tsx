@@ -9,12 +9,14 @@ import { mergeThemes } from "./mergeThemes.util";
 import GlobalStyles from "./GlobalStyles";
 import ModalStyleOverride from "./ModalStyleOverride";
 import Reset from "./Reset";
+import ComponentSizeContextProvider, { ComponentSize } from "./ComponentSizeContext";
 
 type NDSProviderProps = {
   theme?: ThemeType;
   locale?: string;
   disableGlobalStyles?: boolean;
   children?: any;
+  size?: ComponentSize;
 };
 
 type AllNDSGlobalStylesProps = {
@@ -42,23 +44,27 @@ const NDSProvider: React.FC<NDSProviderProps> = ({
   children,
   disableGlobalStyles = false,
   locale = "en_US",
+  size = "large",
 }) => {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
+
   const mergedTheme = mergeThemes(NDSTheme, theme);
 
   return (
     <LocaleContext.Provider value={{ locale }}>
-      <AllNDSGlobalStyles
-        theme={{ ...mergedTheme, breakpoints: Breakpoints(mergedTheme.breakpoints) }}
-        locale={locale}
-        disableGlobalStyles={disableGlobalStyles}
-      >
-        <I18nextProvider i18n={i18n}>
-          <ThemeProvider theme={mergedTheme}>{children}</ThemeProvider>
-        </I18nextProvider>
-      </AllNDSGlobalStyles>
+      <ComponentSizeContextProvider size={size}>
+        <AllNDSGlobalStyles
+          theme={{ ...mergedTheme, breakpoints: Breakpoints(mergedTheme.breakpoints) }}
+          locale={locale}
+          disableGlobalStyles={disableGlobalStyles}
+        >
+          <I18nextProvider i18n={i18n}>
+            <ThemeProvider theme={mergedTheme}>{children}</ThemeProvider>
+          </I18nextProvider>
+        </AllNDSGlobalStyles>
+      </ComponentSizeContextProvider>
     </LocaleContext.Provider>
   );
 };

@@ -17,9 +17,44 @@ export const Default = () => (
   />
 );
 
-Default.story = {
-  name: "default",
-};
+export const WithDifferentSizes = () => (
+  <Flex gap="x2" flexDirection="column" alignItems="flex-start">
+    <DateRange
+      onRangeChange={action("range changed")}
+      onStartDateChange={action("start date changed")}
+      onEndDateChange={action("end date changed")}
+      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
+      showTimes
+      defaultStartTime="13:30"
+      defaultEndTime="10:30"
+    />
+
+    <DateRange
+      size="medium"
+      onRangeChange={action("range changed")}
+      onStartDateChange={action("start date changed")}
+      onEndDateChange={action("end date changed")}
+      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
+      showTimes
+      defaultStartTime="13:30"
+      defaultEndTime="10:30"
+    />
+
+    <DateRange
+      size="large"
+      onRangeChange={action("range changed")}
+      onStartDateChange={action("start date changed")}
+      onEndDateChange={action("end date changed")}
+      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
+      defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
+      showTimes
+      defaultStartTime="13:30"
+      defaultEndTime="10:30"
+    />
+  </Flex>
+);
 
 export const DefaultStartAndEndDate = () => (
   <DateRange
@@ -30,10 +65,6 @@ export const DefaultStartAndEndDate = () => (
     onEndDateChange={action("end date changed")}
   />
 );
-
-DefaultStartAndEndDate.story = {
-  name: "default start and end date",
-};
 
 export const DisabledRangeValidation = () => (
   <DateRange
@@ -46,10 +77,6 @@ export const DisabledRangeValidation = () => (
   />
 );
 
-DisabledRangeValidation.story = {
-  name: "disabled range validation",
-};
-
 export const WithCustomError = () => (
   <DateRange
     errorMessage="This range conflicts with another range"
@@ -61,21 +88,17 @@ export const WithCustomError = () => (
   />
 );
 
-WithCustomError.story = {
-  name: "with custom error",
-};
-
 export const CustomizingInputProps = () => (
   <DateRange
     startDateInputProps={{
       placeholder: "From (Mon YYYY)",
-      inputWidth: "160px",
+      inputWidth: "200px",
       labelText: "From",
       error: true,
     }}
     endDateInputProps={{
       placeholder: "To (Mon YYYY)",
-      inputWidth: "140px",
+      inputWidth: "180px",
       labelText: "To",
     }}
     labelProps={{ labelText: "" }}
@@ -86,44 +109,36 @@ export const CustomizingInputProps = () => (
   />
 );
 
-CustomizingInputProps.story = {
-  name: "customizing input props",
-};
+export const Disabled = () => {
+  const NON_BREAKING_SPACE = "\u00A0";
 
-const NON_BREAKING_SPACE = "\u00A0";
-
-export const Disabled = () => (
-  <DateRange
-    startDateInputProps={{
-      placeholder: "From (Mon YYYY)",
-      inputWidth: "160px",
-      labelText: "From",
-      disabled: true,
-    }}
-    endDateInputProps={{
-      placeholder: "To (Mon YYYY)",
-      inputWidth: "140px",
-      labelText: "To",
-      disabled: true,
-    }}
-    onRangeChange={action("range changed")}
-    onStartDateChange={action("start date changed")}
-    onEndDateChange={action("end date changed")}
-    labelProps={{ labelText: "" }}
-    showTimes
-    endTimeProps={{
-      labelText: NON_BREAKING_SPACE,
-      disabled: true,
-    }}
-    startTimeProps={{
-      labelText: NON_BREAKING_SPACE,
-      disabled: true,
-    }}
-  />
-);
-
-Disabled.story = {
-  name: "disabled",
+  return (
+    <DateRange
+      startDateInputProps={{
+        placeholder: "From (Mon YYYY)",
+        labelText: "From",
+        disabled: true,
+      }}
+      endDateInputProps={{
+        placeholder: "To (Mon YYYY)",
+        labelText: "To",
+        disabled: true,
+      }}
+      onRangeChange={action("range changed")}
+      onStartDateChange={action("start date changed")}
+      onEndDateChange={action("end date changed")}
+      labelProps={{ labelText: "" }}
+      showTimes
+      endTimeProps={{
+        labelText: NON_BREAKING_SPACE,
+        disabled: true,
+      }}
+      startTimeProps={{
+        labelText: NON_BREAKING_SPACE,
+        disabled: true,
+      }}
+    />
+  );
 };
 
 export const IndividualInputError = () => (
@@ -136,10 +151,6 @@ export const IndividualInputError = () => (
     onEndDateChange={action("end date changed")}
   />
 );
-
-IndividualInputError.story = {
-  name: "individual input error",
-};
 
 export const WithTimes = () => (
   <DateRange
@@ -163,14 +174,6 @@ export const CustomizingInputPropsWithTimes = () => (
   />
 );
 
-CustomizingInputPropsWithTimes.story = {
-  name: "customizing input props with times",
-};
-
-WithTimes.story = {
-  name: "with times",
-};
-
 export const WithDefaultStartAndEndTimes = () => (
   <DateRange
     onRangeChange={action("range changed")}
@@ -184,10 +187,6 @@ export const WithDefaultStartAndEndTimes = () => (
   />
 );
 
-WithDefaultStartAndEndTimes.story = {
-  name: "with default start and end times",
-};
-
 export const WithTimeError = () => (
   <DateRange
     onRangeChange={action("range changed")}
@@ -200,10 +199,6 @@ export const WithTimeError = () => (
     defaultEndTime="10:30"
   />
 );
-
-WithTimeError.story = {
-  name: "with time error",
-};
 
 export const UsingRefToControlFocus = () => {
   const ref = useRef(null);
@@ -249,8 +244,4 @@ export const UsingRefToControlFocus = () => {
       </Flex>
     </Flex>
   );
-};
-
-UsingRefToControlFocus.story = {
-  name: "using ref to control focus",
 };

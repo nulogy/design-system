@@ -1,9 +1,11 @@
 import styled, { CSSObject } from "styled-components";
 import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
+import { variant } from "styled-system";
+import React from "react";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
   StyledProps & {
@@ -35,22 +37,7 @@ function getColor(props: LinkProps) {
 
 const getHoverColor = (props: LinkProps) => (props.hover ? getColor(props) : darken("0.1", getColor(props)));
 
-const getSize = (size: ComponentSize, theme: DefaultNDSThemeType): CSSObject => {
-  switch (size) {
-    case "large":
-      return {
-        padding: `${theme.space.x2} 0`,
-      };
-
-    case "medium":
-    default:
-      return {
-        // No padding
-      };
-  }
-};
-
-const Link = styled.a.withConfig<LinkProps>({
+const StyledLink = styled.a.withConfig<LinkProps>({
   shouldForwardProp: (prop, defaultValidatorFn) => !["underline", "hover"].includes(prop) && defaultValidatorFn(prop),
 })(
   ({ underline, as, ...props }): CSSObject => ({
@@ -64,9 +51,24 @@ const Link = styled.a.withConfig<LinkProps>({
       color: getHoverColor(props),
     },
   }),
-  ({ size, theme }) => getSize(size, theme),
+  variant({
+    prop: "size",
+    variants: {
+      large: {
+        py: "x2",
+        px: "0",
+      },
+      medium: {},
+    },
+  }),
   addStyledProps
 );
+
+const Link = React.forwardRef(({ size, ...props }: LinkProps, ref) => {
+  const componentSize = useComponentSize(size);
+
+  return <StyledLink size={componentSize} ref={ref} {...props} />;
+});
 
 Link.defaultProps = {
   underline: true,

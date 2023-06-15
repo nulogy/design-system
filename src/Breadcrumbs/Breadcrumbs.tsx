@@ -2,7 +2,7 @@ import React, { isValidElement } from "react";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import { FlexProps } from "../Flex/Flex";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import BreadcrumbsList from "./BreadcrumbsList";
 import { BreadcrumbsListItem, BreadcrumbsListSeparator } from "./BreadcrumbsListItem";
 
@@ -20,11 +20,13 @@ const insertSeparators = (items: JSX.Element[]) => {
 type BreadcrumbsProps = Omit<FlexProps, "size"> & { size?: ComponentSize };
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size, children, ...props }) => {
+  const componentSize = useComponentSize(size);
+
   const allItems = React.Children.map(children, (child, index) => {
     if (!isValidElement(child)) return null;
 
     return (
-      <BreadcrumbsListItem size={size} key={`child-${index}`}>
+      <BreadcrumbsListItem size={componentSize} key={`child-${index}`}>
         {child}
       </BreadcrumbsListItem>
     );
@@ -38,7 +40,6 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size, children, ...props }) =
 };
 
 Breadcrumbs.defaultProps = {
-  size: "medium",
   as: "nav",
 };
 

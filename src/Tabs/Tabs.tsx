@@ -5,9 +5,9 @@ import ReactResizeDetector from "react-resize-detector";
 import { getSubset } from "../utils/subset";
 import FocusManager from "../utils/ts/FocusManager";
 import { Box } from "../Box";
+import { ComponentSize, ComponentSizeContext } from "../NDSProvider/ComponentSizeContext";
 import TabContainer from "./TabContainer";
 import TabScrollIndicators from "./TabScrollIndicators";
-import { ComponentSize } from "../Input/InputField";
 
 export type TabsProps = {
   className?: string;
@@ -24,6 +24,8 @@ export type TabsState = {
 };
 
 class Tabs extends React.Component<TabsProps, TabsState> {
+  static contextType = ComponentSizeContext;
+
   constructor(props) {
     super(props);
     const { defaultSelectedIndex } = this.props;
@@ -45,8 +47,10 @@ class Tabs extends React.Component<TabsProps, TabsState> {
 
   getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
     const { fitted, children, onTabClick, size } = this.props;
-    const selectedIndex = this.getSelectedIndex();
 
+    const componentSize = size ?? this.context.size;
+
+    const selectedIndex = this.getSelectedIndex();
     const tabs = React.Children.toArray(children);
 
     return tabs
@@ -69,7 +73,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
           },
           onKeyDown: handleArrowNavigation,
           index,
-          size,
+          size: componentSize,
           tabIndex: index === focusedIndex ? 0 : -1,
           selected: index === selectedIndex,
           "aria-selected": index === selectedIndex,

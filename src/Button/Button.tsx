@@ -1,9 +1,9 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
-import { space, SpaceProps } from "styled-system";
+import { space, SpaceProps, variant } from "styled-system";
 import { Icon } from "../Icon";
-import { subPx } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
+import { useComponentSize, ComponentSize as ContextComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type ComponentSize = "small" | "medium" | "large";
 
@@ -19,30 +19,6 @@ export type ButtonProps = SpaceProps &
     theme?: DefaultNDSThemeType;
     href?: string;
   };
-
-const getSize = (size: ComponentSize, theme: DefaultNDSThemeType) => {
-  switch (size) {
-    case "small":
-      return {
-        fontSize: `${theme.fontSizes.small}`,
-        lineHeight: `${theme.lineHeights.smallTextCompressed}`,
-        padding: `${subPx(theme.space.half)} ${theme.space.x1}`,
-      };
-
-    case "large":
-      return {
-        fontSize: `${theme.fontSizes.medium}`,
-        padding: `${subPx(theme.space.x2)} ${theme.space.x3}`,
-      };
-
-    case "medium":
-    default:
-      return {
-        fontSize: `${theme.fontSizes.medium}`,
-        padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
-      };
-  }
-};
 
 const WrapperButton = styled.button<ButtonProps>(
   ({ fullWidth }) => ({
@@ -82,18 +58,43 @@ const WrapperButton = styled.button<ButtonProps>(
       opacity: ".5",
     },
   }),
-  ({ size, theme }) => getSize(size, theme),
+  ({ theme }) =>
+    variant({
+      prop: "size",
+      variants: {
+        small: {
+          fontSize: "small",
+          lineHeight: "smallTextCompressed",
+          py: theme.space.half,
+          px: "x1",
+        },
+
+        large: {
+          fontSize: "medium",
+          py: theme.space.x2,
+          px: "x3",
+        },
+
+        medium: {
+          fontSize: "medium",
+          py: theme.space.x1,
+          px: "x2",
+        },
+      },
+    }),
   space
 );
 
 const Button: React.FC<ButtonProps> = React.forwardRef(
-  ({ children, iconSide = "right", icon, className, asLink, size = "medium", ...props }: ButtonProps, ref) => {
+  ({ children, iconSide = "right", icon, className, asLink, size, ...props }: ButtonProps, ref) => {
     const {
       lineHeights: { smallTextCompressed },
     } = useTheme();
 
+    const componentSize = useComponentSize(size as ContextComponentSize);
+
     return (
-      <WrapperButton as={asLink ? "a" : "button"} ref={ref} className={className} size={size} {...props}>
+      <WrapperButton as={asLink ? "a" : "button"} ref={ref} className={className} size={componentSize} {...props}>
         {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
         {children}
         {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}

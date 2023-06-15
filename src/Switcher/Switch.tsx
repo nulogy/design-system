@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { variant } from "styled-system";
 import numberFromDimension from "../utils/numberFromDimension";
-import { DefaultNDSThemeType } from "../theme.type";
-import { ComponentSize } from "../Input/InputField";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 export type SwitchProps = Omit<React.ComponentPropsWithRef<"button">, "value"> & {
   value?: string;
@@ -18,20 +18,6 @@ const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(({ children, ...
     </SwitchButton>
   );
 });
-
-const cssForSize = (size: ComponentSize, theme: DefaultNDSThemeType) => {
-  switch (size) {
-    case "large":
-      return {
-        padding: `${numberFromDimension(theme.space.x2) - 1}px ${theme.space.x3}`,
-      };
-
-    case "medium":
-      return {
-        padding: `${numberFromDimension(theme.space.x1) - 1}px ${theme.space.x2}`,
-      };
-  }
-};
 
 const SwitchButton = styled.button<SwitchProps>(
   ({ selected, theme }) => ({
@@ -60,7 +46,19 @@ const SwitchButton = styled.button<SwitchProps>(
       },
     }),
   }),
-  ({ size, theme }) => cssForSize(size, theme)
+  ({ theme }) =>
+    variant({
+      prop: "size",
+      variants: {
+        large: {
+          padding: `${numberFromDimension(theme.space.x2) - 1}px ${theme.space.x3}`,
+        },
+
+        medium: {
+          padding: `${numberFromDimension(theme.space.x1) - 1}px ${theme.space.x2}`,
+        },
+      },
+    })
 );
 
 Switch.propTypes = {

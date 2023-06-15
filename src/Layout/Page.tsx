@@ -2,7 +2,6 @@ import React from "react";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { FlexProps } from "../Flex/Flex";
-import { BoxProps } from "../Box/Box";
 import Header from "./Header";
 
 type PageProps = FlexProps & {

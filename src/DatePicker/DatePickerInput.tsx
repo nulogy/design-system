@@ -1,7 +1,8 @@
 import React, { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
-import { ComponentSize, InputField } from "../Input/InputField";
+import { InputField } from "../Input/InputField";
 import { InputFieldDefaultProps } from "../Input/InputField.type";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type DatePickerInputProps = {
   size?: ComponentSize;
@@ -33,8 +34,8 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
       onUpKeyPress,
       onDownKeyPress,
       onEnterKeyPress,
+      size,
       "aria-label": ariaLabel,
-      ...props
     },
     ref
   ) => {
@@ -59,6 +60,7 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
         onBlur={onBlur}
         onFocus={onFocus}
         ref={ref}
+        size={size}
         aria-label={ariaLabel || t("select a date")}
         autoComplete="off"
         {...inputProps}
@@ -68,7 +70,6 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
         onClick={onClick}
         onKeyDown={handleKeyDown}
         onChange={handleChange}
-        {...props}
       />
     );
   }
