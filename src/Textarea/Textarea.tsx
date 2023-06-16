@@ -4,6 +4,7 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { getSubset, omitSubset } from "../utils/subset";
+import { useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import StyledTextarea from "./StyledTextarea";
 import { StyledTextareaProps } from "./StyledTextarea";
 
@@ -36,10 +37,12 @@ const Textarea: React.FC<TextareaProps> = forwardRef(
       className,
       rows,
       isResizeable = true,
+      size,
       ...props
     },
     ref
   ) => {
+    const componentSize = useComponentSize(size);
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
 
@@ -57,6 +60,7 @@ const Textarea: React.FC<TextareaProps> = forwardRef(
             error={error}
             rows={rows}
             isResizeable={isResizeable}
+            size={componentSize}
             {...restProps}
           />
         </MaybeFieldLabel>
