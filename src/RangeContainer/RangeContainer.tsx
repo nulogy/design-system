@@ -44,6 +44,7 @@ const RangeContainer: React.FC<RangeContainerProps> = ({
     </Flex>
   );
 };
+
 RangeContainer.defaultProps = {
   labelProps: {
     ...FieldLabelDefaultProps,
@@ -53,4 +54,5 @@ RangeContainer.defaultProps = {
   endComponent: null,
   errorMessages: [],
 };
+
 export default RangeContainer;

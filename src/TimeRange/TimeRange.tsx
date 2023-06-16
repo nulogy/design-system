@@ -1,20 +1,21 @@
-// @ts-nocheck
 import React, { useState, useEffect, forwardRef, useImperativeHandle, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SpaceProps } from "styled-system";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { getDuration } from "./TimeRange.utils";
 
 const DEFAULT_LABEL = "Time Range";
 
 type TimeRangeProps = SpaceProps & {
+  size?: ComponentSize;
   timeFormat?: string;
-  onRangeChange?: (...args: any[]) => any;
-  onStartTimeChange?: (...args: any[]) => any;
-  onEndTimeChange?: (...args: any[]) => any;
-  ref?: any;
+  onRangeChange?: Function;
+  onStartTimeChange?: Function;
+  onEndTimeChange?: Function;
+  ref?: React.MutableRefObject<unknown>;
   errorMessage?: string;
   defaultStartTime?: string;
   defaultEndTime?: string;
@@ -29,7 +30,7 @@ type TimeRangeProps = SpaceProps & {
   startTimeProps?: any;
 };
 
-const TimeRange: React.FC<TimeRangeProps> = forwardRef(
+const TimeRange = forwardRef(
   (
     {
       timeFormat,
@@ -48,38 +49,61 @@ const TimeRange: React.FC<TimeRangeProps> = forwardRef(
       endAriaLabel,
       endTimeProps,
       startTimeProps,
+      size,
       ...props
-    },
+    }: TimeRangeProps,
     ref
   ) => {
     const [startTime, setStartTime] = useState();
     const [endTime, setEndTime] = useState();
     const [rangeError, setRangeError] = useState();
+
     const inputRef1 = useRef();
     const inputRef2 = useRef();
+
+    const { t } = useTranslation();
+
+    const componentSize = useComponentSize(size);
+
     useImperativeHandle(ref, () => ({
       inputRef1: {
         ...inputRef1,
-        focus: () => inputRef1.current.focus(),
+        focus: () => {
+          if (inputRef1.current) {
+            // @ts-ignore
+            inputRef1.current.focus();
+          }
+        },
       },
       inputRef2: {
         ...inputRef2,
-        focus: () => inputRef2.current.focus(),
+        focus: () => {
+          if (inputRef2.current) {
+            // @ts-ignore
+            inputRef2.current.focus();
+          }
+        },
       },
     }));
-    const { t } = useTranslation();
+
+    useEffect(() => {
+      validateTimeRange();
+    }, [startTime, endTime]);
+
     const changeStartTimeHandler = (label, value) => {
       setStartTime(value);
       if (onStartTimeChange) {
         onStartTimeChange(label);
       }
     };
+
     const changeEndTimeHandler = (label, value) => {
       setEndTime(value);
       if (onEndTimeChange) {
         onEndTimeChange(label);
       }
     };
+
     const validateTimeRange = () => {
       let error;
       const end = endTime || defaultEndTime;
@@ -99,6 +123,7 @@ const TimeRange: React.FC<TimeRangeProps> = forwardRef(
         });
       }
     };
+
     const startInput = (
       <TimePicker
         timeFormat={timeFormat}
@@ -112,9 +137,11 @@ const TimeRange: React.FC<TimeRangeProps> = forwardRef(
         data-testid="timerange-start-time"
         ref={inputRef1}
         error={rangeError}
+        size={componentSize}
         {...startTimeProps}
       />
     );
+
     const endInput = (
       <TimePicker
         timeFormat={timeFormat}
@@ -128,12 +155,11 @@ const TimeRange: React.FC<TimeRangeProps> = forwardRef(
         data-testid="timerange-end-time"
         ref={inputRef2}
         error={rangeError}
+        size={componentSize}
         {...endTimeProps}
       />
     );
-    useEffect(() => {
-      validateTimeRange();
-    }, [startTime, endTime]);
+
     return (
       <RangeContainer
         labelProps={{
@@ -141,14 +167,15 @@ const TimeRange: React.FC<TimeRangeProps> = forwardRef(
           labelText: labelProps.labelText === DEFAULT_LABEL ? t("time range") : labelProps.labelText,
         }}
         startComponent={startInput}
-        selected={endTime}
         endComponent={endInput}
         errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
+        size={componentSize}
         {...props}
       />
     );
   }
 );
+
 TimeRange.defaultProps = {
   timeFormat: undefined,
   onRangeChange: null,
@@ -168,4 +195,5 @@ TimeRange.defaultProps = {
   startAriaLabel: undefined,
   endAriaLabel: undefined,
 };
+
 export default TimeRange;
