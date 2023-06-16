@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { Textarea, Button } from "../index";
+import { Flex } from "../Flex";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -24,23 +25,11 @@ export const TextareaWithAllProps = () => (
   />
 );
 
-TextareaWithAllProps.story = {
-  name: "Textarea with all props",
-};
-
 export const SetToDisabled = () => <Textarea labelText="Label" disabled value="Disabled" />;
-
-SetToDisabled.story = {
-  name: "Set to disabled",
-};
 
 export const WithNoResizing = () => (
   <Textarea labelText="Label" value="I shouldn't be able to be resized" isResizeable={false} />
 );
-
-WithNoResizing.story = {
-  name: "With resizing turned off",
-};
 
 export const WithErrorMessage = () => (
   <Textarea
@@ -51,10 +40,6 @@ export const WithErrorMessage = () => (
   />
 );
 
-WithErrorMessage.story = {
-  name: "with error message",
-};
-
 export const WithErrorList = () => (
   <Textarea
     labelText="Label"
@@ -64,25 +49,13 @@ export const WithErrorList = () => (
   />
 );
 
-WithErrorList.story = {
-  name: "with error list",
-};
-
 export const WithCustomNumberOfRows = () => (
   <Textarea labelText="Label" rows={7} onChange={action("value changed")} onBlur={action("blurred")} />
 );
 
-WithCustomNumberOfRows.story = {
-  name: "With custom number of rows",
-};
-
 export const WithCustomId = () => (
   <Textarea id="my-custom-id" labelText="Label" onChange={action("value changed")} onBlur={action("blurred")} />
 );
-
-WithCustomId.story = {
-  name: "With custom id",
-};
 
 export const UsingRefToControlFocus = () => {
   const ref = useRef(null);
@@ -98,6 +71,12 @@ export const UsingRefToControlFocus = () => {
   );
 };
 
-UsingRefToControlFocus.story = {
-  name: "using ref to control focus",
+export const WithDifferentSizes = () => {
+  return (
+    <Flex gap="x2" alignItems="flex-start">
+      <Textarea labelText="Default size" onChange={action("value changed")} onBlur={action("blurred")} />
+      <Textarea size="medium" labelText="Medium size" onChange={action("value changed")} onBlur={action("blurred")} />
+      <Textarea size="large" labelText="Large size" onChange={action("value changed")} onBlur={action("blurred")} />
+    </Flex>
+  );
 };

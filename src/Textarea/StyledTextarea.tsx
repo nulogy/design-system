@@ -1,13 +1,15 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { transparentize } from "polished";
-import { SpaceProps } from "styled-system";
+import { SpaceProps, variant } from "styled-system";
 import { space } from "styled-system";
 import { subPx } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 export type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
   SpaceProps & {
+    size?: ComponentSize;
     theme?: DefaultNDSThemeType;
     errorMessage?: string;
     errorList?: string[];
@@ -43,14 +45,13 @@ const getTextareaStyle = (props) => {
   return textareaStyleMap.default;
 };
 
-const StyledTextarea: React.FC<StyledTextareaProps> = styled.textarea(
+const StyledTextarea = styled.textarea<StyledTextareaProps>(
   space,
-  ({ theme, isResizeable }: any): CSSObject => ({
+  ({ theme, isResizeable, size }): CSSObject => ({
     display: "block",
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,
-    padding: subPx(theme.space.x1),
     fontSize: theme.fontSizes.medium,
     lineHeight: theme.lineHeights.base,
     minHeight: theme.space.x5,
@@ -66,6 +67,18 @@ const StyledTextarea: React.FC<StyledTextareaProps> = styled.textarea(
       color: transparentize(0.4, theme.colors.black),
     },
   }),
+  ({ theme }) =>
+    variant({
+      prop: "size",
+      variants: {
+        large: {
+          padding: `${subPx(theme.space.x2)}`,
+        },
+        medium: {
+          padding: `${subPx(theme.space.x1)}`,
+        },
+      },
+    }),
   (props) => getTextareaStyle(props)
 );
 
