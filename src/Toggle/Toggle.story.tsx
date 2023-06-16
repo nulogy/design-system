@@ -9,18 +9,11 @@ const DashedToggle = dashed(Toggle);
 
 export const WithDifferentSizes = () => (
   <Flex gap="x2" alignItems="flex-start">
-    <DashedToggle
-      onText="Default"
-      offText="Default"
-      pt="x3"
-      data-testid="toggle-example"
-      onChange={action("on change")}
-    />
+    <DashedToggle onText="Default" offText="Default" data-testid="toggle-example" onChange={action("on change")} />
     <DashedToggle
       onText="Medium"
       offText="Medium"
       size="medium"
-      pt="x3"
       data-testid="toggle-example"
       onChange={action("on change")}
     />
@@ -28,7 +21,6 @@ export const WithDifferentSizes = () => (
       onText="Large"
       size="large"
       offText="Large"
-      pt="x3"
       data-testid="toggle-example"
       onChange={action("on change")}
     />
@@ -39,7 +31,7 @@ export default {
   title: "Components/Toggle",
 };
 
-export const _Toggle = () => <Toggle pt="x3" data-testid="toggle-example" onChange={action("on change")} />;
+export const _Toggle = () => <Toggle data-testid="toggle-example" onChange={action("on change")} />;
 
 export const ToggleWithAllProps = () => (
   <Toggle
