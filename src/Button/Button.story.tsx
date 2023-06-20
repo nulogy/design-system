@@ -26,7 +26,7 @@ _QuietButton.story = {
   name: "QuietButton",
 };
 
-export const WithASelectedSize = () => (
+export const WithDifferentSizes = () => (
   <Flex flexDirection="column" gap="x1">
     <Flex alignItems="center" gap="x1">
       <Button size="small">Create project</Button>
@@ -47,10 +47,6 @@ export const WithASelectedSize = () => (
     </Flex>
   </Flex>
 );
-
-WithASelectedSize.story = {
-  name: "With a selected size",
-};
 
 export const WithASelectedIcon = () => (
   <>
