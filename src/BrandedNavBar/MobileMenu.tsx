@@ -89,13 +89,20 @@ const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
     target: menuItem.openInNew ? "_blank" : undefined,
   };
   const topLevel = layer === 0;
-  const MenuLink: React.FC<LinkProps> = topLevel ? TopLevelLink : DropdownLink;
+
   return (
     <li key={menuItem.key ?? menuItem.name}>
-      <MenuLink {...sharedLinkProps}>
-        {menuItem.name}
-        {menuItem.openInNew && <Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />}
-      </MenuLink>
+      {topLevel ? (
+        <TopLevelLink {...sharedLinkProps}>
+          {menuItem.name}
+          {menuItem.openInNew && <Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />}
+        </TopLevelLink>
+      ) : (
+        <DropdownLink {...sharedLinkProps}>
+          {menuItem.name}
+          {menuItem.openInNew && <Icon size={topLevel ? "x3" : "x2"} icon="openInNew" />}
+        </DropdownLink>
+      )}
     </li>
   );
 };
