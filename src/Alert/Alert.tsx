@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { FlexProps } from "../Flex/Flex";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
-import { Link } from "../Link";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import CloseButton from "./CloseButton";
@@ -11,16 +10,16 @@ import CloseButton from "./CloseButton";
 type NotificationType = "danger" | "informative" | "success" | "warning";
 
 export type AlertProps = FlexProps & {
-    isCloseable?: boolean;
-    closeAriaLabel?: string;
-    title?: string;
-    type?: NotificationType;
-    onClose?: any;
-    controlled?: boolean;
-  };
+  isCloseable?: boolean;
+  closeAriaLabel?: string;
+  title?: string;
+  type?: NotificationType;
+  onClose?: any;
+  controlled?: boolean;
+};
 
 const styles = ({ theme }) => ({
-  [`${Link}`]: {
+  a: {
     color: theme.colors.black,
   },
 });

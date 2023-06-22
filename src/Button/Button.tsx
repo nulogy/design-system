@@ -4,6 +4,7 @@ import { space, SpaceProps, variant } from "styled-system";
 import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import { useComponentSize, ComponentSize as ContextComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { subPx } from "../utils";
 
 type ComponentSize = "small" | "medium" | "large";
 
@@ -58,34 +59,29 @@ const WrapperButton = styled.button<ButtonProps>(
       opacity: ".5",
     },
     fontSize: "medium",
-    paddingTop: theme.space.x1,
-    paddingBottom: theme.space.x1,
-    paddingLeft: theme.space.x2,
-    paddingRight: theme.space.x2,
+    padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
   }),
-  variant({
-    prop: "size",
-    variants: {
-      small: {
-        fontSize: "small",
-        lineHeight: "smallTextCompressed",
-        py: "half",
-        px: "x1",
-      },
+  ({ theme }) =>
+    variant({
+      prop: "size",
+      variants: {
+        small: {
+          fontSize: "small",
+          lineHeight: "smallTextCompressed",
+          padding: `${subPx(theme.space.half)} ${theme.space.x1}`,
+        },
 
-      large: {
-        fontSize: "medium",
-        py: "x2",
-        px: "x3",
-      },
+        large: {
+          fontSize: "medium",
+          padding: `${subPx(theme.space.x2)} ${theme.space.x3}`,
+        },
 
-      medium: {
-        fontSize: "medium",
-        py: "x1",
-        px: "x2",
+        medium: {
+          fontSize: "medium",
+          padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
+        },
       },
-    },
-  }),
+    }),
   space
 );
 

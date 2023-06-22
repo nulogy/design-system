@@ -29,12 +29,15 @@ export const BreadcrumbsListItem = styled.li<{ size: ComponentSize }>(
     display: "inline-flex",
     alignSelf: "center",
     color: theme.colors.darkBlue,
+    a: {
+      color: theme.colors.darkBlue,
+    },
     "a:visited": {
       color: theme.colors.darkBlue,
     },
     "a, p": {
-      padding: "0",
-      fontSize: "small",
+      padding: theme.space.none,
+      fontSize: theme.fontSizes.small,
     },
   }),
   variant({
