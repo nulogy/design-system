@@ -28,6 +28,10 @@ const DropdownButton = styled.button<DropdownButtonProps>(
     fontSize: theme.fontSizes.medium,
     transition: ".2s",
     borderLeft: `${theme.space.half} solid transparent`,
+    paddingTop: theme.space.x1,
+    paddingRight: theme.space.x2,
+    paddingBottom: theme.space.x1,
+    paddingLeft: "12px",
     "&:hover": {
       color: theme.colors[hoverColor],
       backgroundColor: disabled ? "transparent" : theme.colors[bgHoverColor],
@@ -51,7 +55,6 @@ const DropdownButton = styled.button<DropdownButtonProps>(
         pb: "x2",
         pl: "12px",
       },
-
       medium: {
         pt: "x1",
         pr: "x2",
@@ -60,7 +63,6 @@ const DropdownButton = styled.button<DropdownButtonProps>(
       },
     },
   }),
-
   addStyledProps
 );
 

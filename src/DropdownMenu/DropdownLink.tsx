@@ -48,6 +48,10 @@ const DropdownLink = styled.a.withConfig<DropdownLinkProps>({
     "&:disabled": {
       opacity: ".5",
     },
+    paddingTop: theme.space.x1,
+    paddingRight: theme.space.x2,
+    paddingBottom: theme.space.x1,
+    paddingLeft: "12px",
   }),
   variant({
     prop: "size",

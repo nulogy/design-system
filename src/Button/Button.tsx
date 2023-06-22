@@ -57,31 +57,35 @@ const WrapperButton = styled.button<ButtonProps>(
     "&:disabled": {
       opacity: ".5",
     },
+    fontSize: "medium",
+    paddingTop: theme.space.x1,
+    paddingBottom: theme.space.x1,
+    paddingLeft: theme.space.x2,
+    paddingRight: theme.space.x2,
   }),
-  ({ theme }) =>
-    variant({
-      prop: "size",
-      variants: {
-        small: {
-          fontSize: "small",
-          lineHeight: "smallTextCompressed",
-          py: theme.space.half,
-          px: "x1",
-        },
-
-        large: {
-          fontSize: "medium",
-          py: theme.space.x2,
-          px: "x3",
-        },
-
-        medium: {
-          fontSize: "medium",
-          py: theme.space.x1,
-          px: "x2",
-        },
+  variant({
+    prop: "size",
+    variants: {
+      small: {
+        fontSize: "small",
+        lineHeight: "smallTextCompressed",
+        py: "half",
+        px: "x1",
       },
-    }),
+
+      large: {
+        fontSize: "medium",
+        py: "x2",
+        px: "x3",
+      },
+
+      medium: {
+        fontSize: "medium",
+        py: "x1",
+        px: "x2",
+      },
+    },
+  }),
   space
 );
 

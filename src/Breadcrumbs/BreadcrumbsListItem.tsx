@@ -32,6 +32,10 @@ export const BreadcrumbsListItem = styled.li<{ size: ComponentSize }>(
     "a:visited": {
       color: theme.colors.darkBlue,
     },
+    "a, p": {
+      padding: "0",
+      fontSize: "small",
+    },
   }),
   variant({
     prop: "size",
