@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Box } from "../Box";
 import FocusManager from "../utils/ts/FocusManager";
 import type { ComponentSize } from "../NDSProvider/ComponentSizeContext";
-import type { SwitchProps } from "./Switch";
 import { useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import type { SwitchProps } from "./Switch";
 
 type SwitcherProps = {
   size?: ComponentSize;

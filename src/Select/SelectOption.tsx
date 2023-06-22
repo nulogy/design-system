@@ -19,7 +19,7 @@ const StyledOption = styled.div<SelectOptionProps>(
     },
     div: {
       height: "auto",
-      padding: subPx(theme.space.x2),
+      padding: subPx(theme.space.x1),
       fontWeight: isSelected ? theme.fontWeights.medium : theme.fontWeights.normal,
       background: isFocused ? theme.colors.lightBlue : null,
       minHeight: theme.space.x4,
