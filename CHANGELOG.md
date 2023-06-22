@@ -1,3 +1,11 @@
+## [8.13.1](https://github.com/nulogy/design-system/compare/v8.13.0...v8.13.1) (2023-06-22)
+
+
+### Bug Fixes
+
+* remove absolute positioning of icon ([fe2afc0](https://github.com/nulogy/design-system/commit/fe2afc05b136887da01f650ffc296f6d56c86a11))
+* remove styling from non text children ([d351423](https://github.com/nulogy/design-system/commit/d3514232f552fcfa70cb1855f952a504e8df2568))
+
 # [8.13.0](https://github.com/nulogy/design-system/compare/v8.12.0...v8.13.0) (2023-06-02)
 
 
