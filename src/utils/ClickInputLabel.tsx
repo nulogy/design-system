@@ -12,6 +12,10 @@ const ClickInputLabel = styled.label<{ size: ComponentSize; disabled: boolean }>
     verticalAlign: "top",
     alignItems: "flex-start",
     userSelect: "none",
+    paddingTop: theme.space.x1,
+    paddingBottom: theme.space.x1,
+    paddingLeft: 0,
+    paddingRight: 0,
   }),
   variant({
     prop: "size",

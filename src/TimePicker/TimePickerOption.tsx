@@ -18,6 +18,7 @@ const TimePickerOption = styled.li<TimePickerOptionProps>(
     "&:hover": {
       background: !isSelected && theme.colors.lightBlue,
     },
+    padding: theme.space.x1,
   }),
   variant({
     prop: "size",

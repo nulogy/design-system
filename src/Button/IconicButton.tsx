@@ -95,6 +95,10 @@ const WrapperButton = styled.button<IconicButtonProps>(
         opacity: "1",
       },
     },
+    paddingTop: theme.space.half,
+    paddingBottom: theme.space.half,
+    paddingLeft: theme.space.none,
+    paddingRight: theme.space.none,
   }),
   variant({
     prop: "size",

@@ -59,6 +59,10 @@ const TabButton = styled.button<TabButtonProps>(
     border: "none",
     margin: theme.space.none,
     position: "relative",
+    paddingTop: theme.space.x1,
+    paddingBottom: theme.space.x1,
+    paddingLeft: theme.space.x3,
+    paddingRight: theme.space.x3,
 
     "&:focus": {
       outline: "none",

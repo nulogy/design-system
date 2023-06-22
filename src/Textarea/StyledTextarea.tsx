@@ -66,6 +66,7 @@ const StyledTextarea = styled.textarea<StyledTextareaProps>(
     "::placeholder": {
       color: transparentize(0.4, theme.colors.black),
     },
+    padding: `${subPx(theme.space.x1)}`,
   }),
   ({ theme }) =>
     variant({

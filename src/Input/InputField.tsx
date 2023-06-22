@@ -108,6 +108,7 @@ const StyledInput = styled.input<StyledInputProps>(
     "::placeholder": {
       color: transparentize(0.4, theme.colors.black),
     },
+    padding: `${subPx(theme.space.x1)}`,
   }),
   ({ theme }) =>
     variant({
@@ -128,7 +129,7 @@ const StyledInput = styled.input<StyledInputProps>(
 const StyledInputIcon = styled(Icon)<{ scale: ComponentSize }>(
   ({ theme }) => ({
     position: "absolute",
-    right: theme.space.x2,
+    right: theme.space.x1,
     color: theme.colors.darkGrey,
     bottom: "50%",
     transform: "translateY(50%)",

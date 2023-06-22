@@ -32,6 +32,7 @@ const SwitchButton = styled.button<SwitchProps>(
     lineHeight: theme.lineHeights.base,
     textDecoration: "none",
     whiteSpace: "nowrap",
+    padding: `${numberFromDimension(theme.space.x1) - 1}px ${theme.space.x2}`,
 
     ...(selected && { boxShadow: theme.shadows.small }),
 
