@@ -150,11 +150,15 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
             }
           </Popper>
         </Manager>
-        {children && !labelHidden && (
-          <Text fontSize={fontSize} mr="half" ml="half" color={color}>
-            {children}
-          </Text>
-        )}
+        {children &&
+          !labelHidden &&
+          (typeof children === "string" || typeof children === "number" ? (
+            <Text fontSize={fontSize} mr="half" ml="half" color={color}>
+              {children}
+            </Text>
+          ) : (
+            children
+          ))}
       </WrapperButton>
     );
   }
