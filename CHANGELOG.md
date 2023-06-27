@@ -1,3 +1,25 @@
+# [8.14.0](https://github.com/nulogy/design-system/compare/v8.13.1...v8.14.0) (2023-06-27)
+
+
+### Features
+
+* add default styling for variants ([18583d5](https://github.com/nulogy/design-system/commit/18583d5fb72c33233fd45c6e1cb63c733999e7a9))
+* adjust styling ([a0302e7](https://github.com/nulogy/design-system/commit/a0302e77512b6608261d83b54baa41222d954792))
+* introduce a large Breadcrumbs size variant ([fd9cb16](https://github.com/nulogy/design-system/commit/fd9cb16bf685236951b0ab240595ede41884a050))
+* introduce a large Checkbox size variant ([858987f](https://github.com/nulogy/design-system/commit/858987faef7a708d834ac211db618e2adb229603))
+* introduce a large DatePicker size variant ([1ab3731](https://github.com/nulogy/design-system/commit/1ab3731b2e004f992d639be90b05113a2af738fa))
+* introduce a large DropdownMenu size variant ([c8917e3](https://github.com/nulogy/design-system/commit/c8917e35501625a5507d8d0423b7ab754b464c74))
+* introduce a large IconicButton size variant ([97ee725](https://github.com/nulogy/design-system/commit/97ee725178cbe32d7f292d5485d88c8cfbef3d93))
+* introduce a large Input size variant ([e43fd4e](https://github.com/nulogy/design-system/commit/e43fd4ed45273bcbfbd2db1536e49856792aadd0))
+* introduce a large Link size variant ([1f5e128](https://github.com/nulogy/design-system/commit/1f5e12818aa70219e98d425bfdc2f790fca545b7))
+* introduce a large Radio size variant ([af4e11c](https://github.com/nulogy/design-system/commit/af4e11c5a489e4e332286fdb8ffc334bd290dbea))
+* introduce a large Switcher size variant ([6ebecf1](https://github.com/nulogy/design-system/commit/6ebecf1aae0324838926c5b36418776fef983f15))
+* introduce a large Tabs size variant ([edf0d6d](https://github.com/nulogy/design-system/commit/edf0d6d7a21e18800ea16638909f1a765db83992))
+* introduce a large Textarea variant ([e28c968](https://github.com/nulogy/design-system/commit/e28c968e56656d71391e18aab9319aca8fe709ae))
+* introduce a large TimePicker size variant ([8e0658c](https://github.com/nulogy/design-system/commit/8e0658c49e836a4154aff8a5aae66971b8587cd4))
+* introduce a large TimeRange variant ([7f8a418](https://github.com/nulogy/design-system/commit/7f8a4185eabcebbda59fe42afc4ff9d612dca355))
+* introduce a large Toggle size variant ([b20a417](https://github.com/nulogy/design-system/commit/b20a4171355ebf7f0b172d2cb8d519ed0ee887af))
+
 ## [8.13.1](https://github.com/nulogy/design-system/compare/v8.13.0...v8.13.1) (2023-06-22)
 
 
