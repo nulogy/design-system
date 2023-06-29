@@ -3,9 +3,10 @@ import styled from "styled-components";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { FlexProps } from "../Flex/Flex";
 import { useSummaryContext } from "./SummaryContext";
 
-type SummaryItemProps = {
+type SummaryItemProps = Omit<FlexProps, "as"> & {
   value: number | string;
   status: React.ReactNode;
 };
