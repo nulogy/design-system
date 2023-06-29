@@ -3,9 +3,10 @@ import styled from "styled-components";
 import numberFromDimension from "../utils/numberFromDimension";
 import { Box } from "../Box";
 import theme from "../theme";
+import { BoxProps } from "../Box/Box";
 import { SummaryContextProvider } from "./SummaryContext";
 
-type SummaryProps = {
+type SummaryProps = Omit<BoxProps, "as"> & {
   breakpoint?: number | string;
 };
 
