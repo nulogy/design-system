@@ -1,3 +1,11 @@
+## [8.14.1](https://github.com/nulogy/design-system/compare/v8.14.0...v8.14.1) (2023-06-29)
+
+
+### Bug Fixes
+
+* change component tag for better semantics ([a944226](https://github.com/nulogy/design-system/commit/a944226616b7b90c3771993c4c0b545c646da250))
+* properly type Summary components ([45326c6](https://github.com/nulogy/design-system/commit/45326c60f4ac02939522f80519e285aeb7fd435a))
+
 # [8.14.0](https://github.com/nulogy/design-system/compare/v8.13.1...v8.14.0) (2023-06-27)
 
 
