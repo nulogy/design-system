@@ -63,7 +63,7 @@ type StatusIndicatorProps = SpaceProps &
     type?: StatusIndicatorType;
   };
 
-const StatusIndicator: React.FC<StatusIndicatorProps> = styled.p(
+const StatusIndicator: React.FC<StatusIndicatorProps> = styled.span(
   space,
   typography,
   flexbox,
@@ -91,4 +91,5 @@ StatusIndicator.defaultProps = {
   lineHeight: "smallerText",
   alignSelf: "center",
 };
+
 export default StatusIndicator;
