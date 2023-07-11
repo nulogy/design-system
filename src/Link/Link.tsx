@@ -1,4 +1,4 @@
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import { variant } from "styled-system";
@@ -9,17 +9,11 @@ import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeCon
 
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
   StyledProps & {
-    className?: string;
     underline?: boolean;
     hover?: string;
-    as?: React.ElementType | string;
     size?: ComponentSize;
     to?: string;
-    color?: string;
-    fontSize?: string;
-    theme?: DefaultNDSThemeType;
-    children: JSX.Element | JSX.Element[] | React.ReactNode;
-    "aria-label"?: string;
+    as?: React.ElementType | string;
   };
 
 const resetButtonStyles = {
@@ -27,20 +21,22 @@ const resetButtonStyles = {
   border: "none",
 };
 
-function getColorFromProps(props: LinkProps) {
+type StyledLinkProps = LinkProps & {
+  theme: DefaultNDSThemeType;
+};
+
+function getColorFromProps(props: StyledLinkProps) {
   return themeGet(`colors.${props.color}`, props.color)(props);
 }
 
-function getColor(props: LinkProps) {
+function getColor(props: StyledLinkProps) {
   return getColorFromProps(props) || props.theme.colors.blue;
 }
 
-const getHoverColor = (props: LinkProps) => (props.hover ? getColor(props) : darken("0.1", getColor(props)));
+const getHoverColor = (props: StyledLinkProps) => (props.hover ? getColor(props) : darken("0.1", getColor(props)));
 
-const StyledLink = styled.a.withConfig<LinkProps>({
-  shouldForwardProp: (prop, defaultValidatorFn) => !["underline", "hover"].includes(prop) && defaultValidatorFn(prop),
-})(
-  ({ underline, as, ...props }): CSSObject => ({
+const StyledLink = styled.a<LinkProps>(
+  ({ underline, as, ...props }) => ({
     ...resetButtonStyles,
     padding: as === "button" ? "0" : undefined,
     textDecoration: underline ? "underline" : "none",
@@ -64,10 +60,10 @@ const StyledLink = styled.a.withConfig<LinkProps>({
   addStyledProps
 );
 
-const Link = React.forwardRef(({ size, ...props }: LinkProps, ref) => {
+const Link = React.forwardRef<HTMLLinkElement, LinkProps>(({ size, ...props }, ref) => {
   const componentSize = useComponentSize(size);
 
-  return <StyledLink size={componentSize} ref={ref} {...props} />;
+  return <StyledLink size={componentSize} {...props} />;
 });
 
 Link.defaultProps = {
