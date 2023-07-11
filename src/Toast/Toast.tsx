@@ -12,7 +12,7 @@ type ToastProps = AlertProps & {
   onHidden?: () => void;
 };
 
-export const TOAST_SHOW_DURATION = 2000; // in ms
+export const TOAST_SHOW_DURATION = 5000; // in ms
 const ANIMATE_OUT_DURATION = 1000;
 
 export const toastAnimationConfig = {
