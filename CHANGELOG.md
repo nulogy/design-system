@@ -1,3 +1,11 @@
+## [8.14.2](https://github.com/nulogy/design-system/compare/v8.14.1...v8.14.2) (2023-07-11)
+
+
+### Bug Fixes
+
+* allow toasts to stay longer on the screen ([15147b2](https://github.com/nulogy/design-system/commit/15147b2e230cf42f33a4159d865dafd7d7c12f58))
+* improve the type for the Link component ([4271d82](https://github.com/nulogy/design-system/commit/4271d82b560fa3aea2ee78a507a75daed241caa5))
+
 ## [8.14.1](https://github.com/nulogy/design-system/compare/v8.14.0...v8.14.1) (2023-06-29)
 
 
