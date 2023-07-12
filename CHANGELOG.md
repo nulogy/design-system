@@ -1,3 +1,10 @@
+## [8.14.3](https://github.com/nulogy/design-system/compare/v8.14.2...v8.14.3) (2023-07-12)
+
+
+### Bug Fixes
+
+* make StyledProps optional ([7d6176f](https://github.com/nulogy/design-system/commit/7d6176f5cc9c4c9b233e5ca0b32a8a04b5b9f749))
+
 ## [8.14.2](https://github.com/nulogy/design-system/compare/v8.14.1...v8.14.2) (2023-07-11)
 
 
