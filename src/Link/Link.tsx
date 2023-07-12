@@ -8,7 +8,7 @@ import { addStyledProps, StyledProps } from "../StyledProps";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
-  StyledProps & {
+  Partial<StyledProps> & {
     underline?: boolean;
     hover?: string;
     size?: ComponentSize;
@@ -63,7 +63,7 @@ const StyledLink = styled.a<LinkProps>(
 const Link = React.forwardRef<HTMLLinkElement, LinkProps>(({ size, ...props }, ref) => {
   const componentSize = useComponentSize(size);
 
-  return <StyledLink size={componentSize} {...props} />;
+  return <StyledLink ref={ref} size={componentSize} {...props} />;
 });
 
 Link.defaultProps = {
