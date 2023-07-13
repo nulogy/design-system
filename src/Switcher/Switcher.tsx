@@ -31,7 +31,7 @@ const Switcher: React.FC<SwitcherProps> = ({ size, selected, onChange, ...rest }
   };
 
   const options = (focusedIndex, setFocusedIndex, handleArrowNavigation) => {
-    return React.Children.map(rest.children, (child, index) => {
+    return React.Children.map(rest.children, (child: ReactElement<SwitchProps>, index) => {
       return React.cloneElement(child, {
         size: componentSize,
         tabIndex: index === focusedIndex ? 0 : -1,
