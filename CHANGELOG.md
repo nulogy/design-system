@@ -1,3 +1,11 @@
+## [8.14.4](https://github.com/nulogy/design-system/compare/v8.14.3...v8.14.4) (2023-07-13)
+
+
+### Bug Fixes
+
+* update React ([48e9949](https://github.com/nulogy/design-system/commit/48e9949ffd11aa400247316a424c3a5808bdf7d7))
+* upgrade enzyme-adapter-react ([831ee08](https://github.com/nulogy/design-system/commit/831ee087ca5acec5955bbc2042f6d42c44ee0330))
+
 ## [8.14.3](https://github.com/nulogy/design-system/compare/v8.14.2...v8.14.3) (2023-07-12)
 
 
