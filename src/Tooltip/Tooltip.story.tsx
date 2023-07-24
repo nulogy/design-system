@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
+import styled from "styled-components";
 
 export default {
   title: "Components/Tooltip",
@@ -179,3 +180,15 @@ export const OpenByDefault = () => (
 OpenByDefault.story = {
   name: "open by default",
 };
+
+export const WithCustomComponent = () => (
+  <Tooltip tooltip="See me on hover!">
+    <CustomComponent />
+  </Tooltip>
+);
+
+const CustomComponent = React.forwardRef<HTMLDivElement, { [key: string]: any }>((props, forwardedRef) => (
+  <span ref={forwardedRef} {...props}>
+    <Text inline>This component uses the forwardedRef from the Tooltip wrapping it</Text>
+  </span>
+));
