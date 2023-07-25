@@ -109,7 +109,7 @@ const AsyncSelect = forwardRef(
             value={value}
             ref={ref}
             defaultInputValue={defaultValue}
-            placeholder={placeholder || t("select ...")}
+            placeholder={placeholder || t("start typing")}
             labelText={labelText}
             styles={customStyles({
               theme: themeContext,
