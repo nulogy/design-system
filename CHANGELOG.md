@@ -1,3 +1,10 @@
+## [8.14.5](https://github.com/nulogy/design-system/compare/v8.14.4...v8.14.5) (2023-07-26)
+
+
+### Bug Fixes
+
+* update select placeholders ([#1217](https://github.com/nulogy/design-system/issues/1217)) ([395d989](https://github.com/nulogy/design-system/commit/395d989d1828a0e3fc0cf6dd3fc36e4020cc60f4))
+
 ## [8.14.4](https://github.com/nulogy/design-system/compare/v8.14.3...v8.14.4) (2023-07-13)
 
 
