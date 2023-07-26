@@ -164,7 +164,7 @@ const ReactSelect = React.forwardRef(
           <WindowedSelect
             size={componentSize}
             ref={reactSelectRef}
-            placeholder={placeholder || t("select ...")}
+            placeholder={placeholder || t("select")}
             windowThreshold={windowThreshold}
             styles={customStyles({
               theme: themeContext,
