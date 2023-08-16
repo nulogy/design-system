@@ -155,7 +155,6 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
               customInput={customInput}
               renderCustomHeader={renderHeader({ locale })}
               disabledKeyboardNavigation
-              strictParsing
               minDate={minDate}
               maxDate={maxDate}
               highlightDates={highlightDates}
