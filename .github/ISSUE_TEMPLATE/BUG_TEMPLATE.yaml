@@ -10,35 +10,28 @@ body:
   - type: markdown 
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out the bug report!
   - type: textarea
     id: bug-description
     attributes:
       label: Describe the bug
-      description: A clear and concise description of the bug
-      placeholder: Tell us what happened!
+      placeholder: Tell us what happened ...
   - type: textarea
     id: steps
     attributes:
       label: Steps to reproduce
-      description: Description of steps to reproduce the behavior
-      placeholder: placeholder
-      value: "value"
+      placeholder: Walk us through steps that result in a described bug ...
   - type: textarea
     id: expected
     attributes:
       label: Expected behaviour
-      description: A clear and concise description of what you expected to happen.
-      placeholder: Tell us what should happen!
-      value: "?"
+      placeholder: Tell us what should happen ...
   - type: textarea
     id: blocked
     attributes:
       label: Is your team blocked from moving forward by the bug?
-      description: Is this problem blocking your team from delivering value to the customer? Is the customer impact high? [...]
-      placeholder: Tell us ...
-      value: "?"
-  - type: checkboxes
+      placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
+  - type: radio
     id: execution
     attributes:
       label: Who would you like to fix the bug?
