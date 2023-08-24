@@ -23,6 +23,10 @@ A clear and concise description of what you expected to happen.
 **Is your team blocked from moving forward by the bug?**
 Is this problem blocking your team from delivering value to the customer? Is the customer impact high? [...]
 
+**Who would you like to fix the bug?**
+[] Myself
+[] DesignOps (is subject to availability / check current estimate completion time)
+
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
