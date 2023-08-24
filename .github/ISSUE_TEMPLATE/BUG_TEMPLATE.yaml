@@ -29,15 +29,6 @@ body:
       value: "value"
     validations:
       required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected behaviour
-      description: A clear and concise description of what you expected to happen.
-      placeholder: Tell us what should happen!
-      value: "?"
-    validations:
-      required: true
     - type: textarea
     id: blocked
     attributes:
