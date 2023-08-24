@@ -20,42 +20,8 @@ body:
       value: "A bug happened!"
     validations:
       required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce
-      description: Description of steps to reproduce the behavior
-      placeholder: placeholder
-      value: "value"
-    validations:
-      required: true
-    - type: textarea
-    id: blocked
-    attributes:
-      label: Is your team blocked from moving forward by the bug?
-      description: Is this problem blocking your team from delivering value to the customer? Is the customer impact high? [...]
-      placeholder: Tell us ...
-      value: "?"
-    validations:
-      required: true
-    - type: checkboxes
-    id: execution
-    attributes:
-      label: Who would you like to fix the bug?
-      options:
-        - label: Myself
-        - DesignOps (is subject to availability / check current estimate completion time)
-          required: true
-    - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots
-      description: If applicable, add screenshots to help explain your problem.
-    - type: textarea
-    id: additional
+
     attributes:
       label: Additional context
       description: If applicable, add screenshots to help explain your problem.
       placeholder: Tell us more ...
-      
-  
