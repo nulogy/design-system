@@ -5,7 +5,7 @@ labels: ["bug", "triage"]
 projects: ["NDS work requests"]
 assignees:
   - haiderhalsh
-  - nikola-nulogy 
+  - nikola-nulogy
 body:
   - type: markdown
     attributes:
