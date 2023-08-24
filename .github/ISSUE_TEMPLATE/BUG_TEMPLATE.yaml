@@ -17,6 +17,7 @@ body:
       label: Describe the bug
       description: A clear and concise description of the bug
       placeholder: Tell us what happened!
+      cols: 200
   - type: textarea
     id: steps
     attributes:
