@@ -25,8 +25,8 @@ body:
     attributes:
       label: Steps to reproduce
       description: Description of steps to reproduce the behavior
-      placeholder: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error
-      value: "?"
+      placeholder: placeholder
+      value: "value"
     validations:
       required: true
   - type: textarea
@@ -39,7 +39,7 @@ body:
     validations:
       required: true
     - type: textarea
-    id: blcoked
+    id: blocked
     attributes:
       label: Is your team blocked from moving forward by the bug?
       description: Is this problem blocking your team from delivering value to the customer? Is the customer impact high? [...]
