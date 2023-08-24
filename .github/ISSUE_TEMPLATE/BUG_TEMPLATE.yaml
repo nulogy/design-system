@@ -52,8 +52,8 @@ body:
     attributes:
       label: Who would you like to fix the bug?
       options:
-        - Myself
-        - DesignOps (is subject to availability / check current estimate completion time)
+        - label: Myself
+        - label: DesignOps (is subject to availability / check current estimate completion time)
         required: true
   - type: textarea
     id: screenshots
