@@ -9,13 +9,11 @@ assignees:
 body:
   - type: markdown
     attributes:
-    name: test3
       value: |
-        Thanks for taking the time to fill out this bug report!
+        "Thanks for taking the time to fill out this bug report!"
   - type: textarea
     id: bug-description
     attributes:
-      name: test1
       label: Describe the bug
       description: A clear and concise description of the bug
       placeholder: Tell us what happend!
@@ -23,7 +21,6 @@ body:
     validations:
       required: true
     attributes:
-      name: test2
       label: Additional context
       description: If applicable, add screenshots to help explain your problem.
       placeholder: Tell us more ...
