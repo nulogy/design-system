@@ -37,15 +37,15 @@ body:
       label: Who would you like to fix the bug?
       options:
       - label: Myself
-      - label: DesignOps (is subject to availability / check current estimate completion time)
+      - label: DesignOps
+      description: DesignOps is subject to availability / check current estimate completion time
   - type: textarea
     id: screenshots
     attributes:
       label: Screenshots
-      description: If applicable, add screenshots to help explain your problem.
+      placeholder: If applicable, add screenshots to help explain your problem.
   - type: textarea
     id: additional
     attributes:
       label: Additional context
-      description: If applicable, add screenshots to help explain your problem.
       placeholder: Tell us more ...
