@@ -4,8 +4,8 @@ title: "[Bug]: "
 labels: ["bug", "triage"]
 projects: ["NDS work requests"]
 assignees:
-  - haiderhalsh
-  - nikola-nulogy
+- haiderhalsh
+- nikola-nulogy
 body:
 - type: markdown
   attributes:
