@@ -54,7 +54,7 @@ body:
       options:
         - label: Myself
         - DesignOps (is subject to availability / check current estimate completion time)
-          required: true
+        required: true
   - type: textarea
     id: screenshots
     attributes:
