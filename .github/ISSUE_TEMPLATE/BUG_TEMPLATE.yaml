@@ -26,6 +26,7 @@ body:
       label: Steps to reproduce
       description: Description of steps to reproduce the behavior
       placeholder: 1. Go to '...' 2. Click on '....' 3. Scroll down to '....' 4. See error
+      value: "?"
     validations:
       required: true
   - type: textarea
