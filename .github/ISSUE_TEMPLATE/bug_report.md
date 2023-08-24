@@ -49,12 +49,3 @@ If applicable, add screenshots to help explain your problem.
 **Additional context**<br/>
 
 Add any other context about the problem here.
-
- - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
