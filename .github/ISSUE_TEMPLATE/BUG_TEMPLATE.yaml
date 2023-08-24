@@ -37,8 +37,8 @@ body:
       label: Who would you like to fix the bug?
       options:
       - label: Myself
-      - label: DesignOps *
-      description: *Please check the current DesignOps' estimated completion time before selecting
+      - label: DesignOps
+      description: Please check the current DesignOps' estimated completion time before selecting
   - type: textarea
     id: screenshots
     attributes:
