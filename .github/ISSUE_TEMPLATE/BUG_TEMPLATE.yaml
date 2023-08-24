@@ -52,7 +52,7 @@ body:
     attributes:
       label: Who would you like to fix the bug?
       options:
-        - label: Myself
+        - Myself
         - DesignOps (is subject to availability / check current estimate completion time)
         required: true
   - type: textarea
