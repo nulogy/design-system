@@ -4,7 +4,7 @@ about: Create a report to help us improve
 title: ''
 labels: bug
 assignees: 'nikola-nulogy'
-project: NDS work requests
+project: 'NDS work requests'
 
 ---
 
