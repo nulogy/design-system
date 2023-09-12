@@ -1,1 +1,48 @@
-
+name: Feature request
+description: File a request for a new functionality/behaviour added to an existing component or a new component
+title: "[Feature Request]: "
+labels: ["feature-request", "triage"]
+projects: ["NDS work requests"]
+assignees:
+  - haiderhalsh
+  - nikola-nulogy
+body:
+  - type: markdown 
+    attributes:
+      value: |
+        Thanks for taking the time to fill out the feature request!
+  - type: textarea
+    id: feature-request-description
+    attributes:
+      label: Is your feature request related to a problem? If so, please describe.
+      placeholder: Describe the problem prompting the need for a new component or a new feature/behaviour of existing components.
+  - type: textarea
+    id: blocked
+    attributes:
+      label: Is your team blocked from moving forward by the lack of this functionality/behaviour?
+      placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
+  - type: checkboxes
+    id: alignment
+    attributes:
+      label: Have you consulted and have an alignment with the product designer?
+      options:
+      - label: Yes
+      - label: No
+  - type: checkboxes
+    id: execution
+    attributes:
+      label: Who would you like to execute this feature?
+      options:
+      - label: Myself
+      - label: DesignOps
+      description: Please check the current DesignOps' estimated completion time before selecting
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      placeholder: If applicable, add screenshots to help explain your problem/idea.
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      placeholder: Tell us more ...
