@@ -1,0 +1,28 @@
+name: Miscellaneous request
+description: File a request that you don't know how to clasify 
+title: "[Miscellaneous request]: "
+labels: ["miscellaneous-request", "triage"]
+projects: ["NDS work requests"]
+assignees:
+  - haiderhalsh
+  - nikola-nulogy
+body:
+  - type: markdown 
+    attributes:
+      value: |
+        Thanks for taking the time to fill out the request!
+  - type: textarea
+    id: miscellaneous-request-description
+    attributes:
+      label: Please describe your request
+      placeholder: Describe the problem and support request.
+  - type: textarea
+    id: blocked
+    attributes:
+      label: Is your team blocked from moving forward by the problem described above?
+      placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      placeholder: Tell us more ...
