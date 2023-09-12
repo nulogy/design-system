@@ -26,8 +26,8 @@ body:
     attributes:
       label: Have you consulted and have an alignment with the product designer?
       options:
-      - label: Yes
-      - label: No
+      - label: "Yes"
+      - label: "No"
   - type: checkboxes
     id: execution
     attributes:
