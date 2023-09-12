@@ -1,0 +1,28 @@
+name: Support request
+description: File a request for a implementation/functionality/design consultation, pairing, or any other type of help that you may need
+title: "[Support request]: "
+labels: ["support-request", "triage"]
+projects: ["NDS work requests"]
+assignees:
+  - haiderhalsh
+  - nikola-nulogy
+body:
+  - type: markdown 
+    attributes:
+      value: |
+        Thanks for taking the time to fill out the feature request!
+  - type: textarea
+    id: support-request-description
+    attributes:
+      label: Please describe your request
+      placeholder: Describe the problem and support request.
+  - type: textarea
+    id: blocked
+    attributes:
+      label: Is your team blocked from moving forward by the problem described above?
+      placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      placeholder: Tell us more ...
