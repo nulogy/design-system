@@ -10,7 +10,7 @@ body:
   - type: markdown 
     attributes:
       value: |
-        Thanks for taking the time to fill out the feature request!
+        Thanks for taking the time to fill out the support request!
   - type: textarea
     id: support-request-description
     attributes:
