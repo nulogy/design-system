@@ -21,6 +21,11 @@ body:
     attributes:
       label: Is your team blocked from moving forward by the lack of this functionality/behaviour?
       placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
+  - type: textarea
+    id: alternative
+    attributes:
+      label: Do you have an alternative solution for the problem?
+      placeholder: Tell us if there are alternative solutions and what are their advantages/disadvantages.
   - type: checkboxes
     id: alignment
     attributes:
