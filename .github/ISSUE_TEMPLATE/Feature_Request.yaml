@@ -1,6 +1,5 @@
 name: Feature request
 description: File a request for a new functionality/behaviour added to an existing component or a new component
-title: "[Feature Request]: "
 labels: ["feature-request"]
 projects: ["NDS work requests"]
 assignees: "haideralsh, nikola-nulogy"
