@@ -1,6 +1,5 @@
 name: Bug report
 description: File a bug report
-title: "[Bug]: "
 labels: ["bug"]
 projects: ["NDS work requests"]
 assignees:
