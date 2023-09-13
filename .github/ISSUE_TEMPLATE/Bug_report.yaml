@@ -1,10 +1,10 @@
 name: Bug report
 description: File a bug report
 title: "[Bug]: "
-labels: ["bug", "triage"]
+labels: ["bug"]
 projects: ["NDS work requests"]
 assignees:
-  - haiderhalsh
+  - haideralsh
   - nikola-nulogy
 body:
   - type: markdown 
