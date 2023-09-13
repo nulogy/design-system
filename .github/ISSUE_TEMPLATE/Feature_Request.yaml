@@ -3,9 +3,7 @@ description: File a request for a new functionality/behaviour added to an existi
 title: "[Feature Request]: "
 labels: ["feature-request", "triage"]
 projects: ["NDS work requests"]
-assignees:
-  - haiderhalsh
-  - nikola-nulogy
+assignees: "haiderhalsh, nikola-nulogy"
 body:
   - type: markdown 
     attributes:
