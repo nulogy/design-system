@@ -1,6 +1,5 @@
 name: Miscellaneous request
-description: File a request that you don't know how to clasify 
-title: "[Miscellaneous request]: "
+description: File a request that you don't know how to classify
 labels: ["miscellaneous-request"]
 projects: ["NDS work requests"]
 assignees:
