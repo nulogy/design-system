@@ -1,6 +1,5 @@
 name: Support request
 description: File a request for a implementation/functionality/design consultation, pairing, or any other type of help that you may need
-title: "[Support request]: "
 labels: ["support-request"]
 projects: ["NDS work requests"]
 assignees:
