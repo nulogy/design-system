@@ -33,7 +33,6 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
       return (
         <LoadingIcon
           color={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
-          size={space[size] || size}
           className={className}
           {...props}
         />

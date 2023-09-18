@@ -1,53 +1,104 @@
 import React from "react";
-import generateId from "../utils/generateId";
 
-type LoadingIconProps = {
-  size?: string | number;
-  color?: string;
-  title?: string;
-  className?: string;
-};
+type LoadingIconProps = React.ComponentPropsWithoutRef<"svg">;
 
-const LoadingIcon: React.FC<LoadingIconProps> = ({
-  color = "currentColor",
-  size = "24px",
-  title = "Loading",
-  ...props
-}: LoadingIconProps) => {
-  const id = generateId();
+const LoadingIcon: React.FC<LoadingIconProps> = (props) => {
   return (
-    // Modified svg By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL
-    <svg width={size} height={size} viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <defs>
-        <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id={id}>
-          <stop stopColor={color} stopOpacity="0" offset="0%" />
-          <stop stopColor={color} stopOpacity=".631" offset="63.146%" />
-          <stop stopColor={color} offset="100%" />
-        </linearGradient>
-      </defs>
-      <g fill="none" fillRule="evenodd">
-        <g transform="translate(1 1)">
-          <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke={`url(#${id})`} strokeWidth="2">
-            <animateTransform
-              attributeName="transform"
-              type="rotate"
-              from="0 18 18"
-              to="360 18 18"
-              dur="0.9s"
-              repeatCount="indefinite"
-            />
-          </path>
-          <circle fill={color} cx="36" cy="18" r="1">
-            <animateTransform
-              attributeName="transform"
-              type="rotate"
-              from="0 18 18"
-              to="360 18 18"
-              dur="0.9s"
-              repeatCount="indefinite"
-            />
-          </circle>
-        </g>
+    <svg
+      viewBox="0 0 24px 24px"
+      width="24px"
+      height="24px"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid"
+      {...props}
+    >
+      <g>
+        <circle cx="3.5" cy="12" fill="#C0C8D1" transform-origin="3.5 3.5">
+          <animate
+            attributeName="r"
+            values="3;3;3.5;3"
+            keySplines="
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;"
+            keyTimes="0; 0.25;0.4; 1"
+            calcMode="spline"
+            dur="0.8s"
+            repeatCount="indefinite"
+          />
+          <animate
+            id="first"
+            attributeName="fill"
+            values="#C0C8D1;#C0C8D1;#434D59;#C0C8D1"
+            keySplines="
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;"
+            keyTimes="0; 0.25;0.4; 1"
+            calcMode="spline"
+            dur="0.8s"
+            repeatCount="indefinite"
+          />
+        </circle>
+        <circle cx="12" cy="12" r="3" fill="#C0C8D1" transform-origin="12 3.5">
+          <animate
+            attributeName="r"
+            begin="0.2s; first.begin"
+            values="3;3;3.5;3"
+            keySplines="
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;"
+            keyTimes="0; 0.25;0.4; 1"
+            calcMode="spline"
+            dur="0.8s"
+            repeatCount="indefinite"
+          />
+          <animate
+            id="second"
+            attributeName="fill"
+            begin="0.2s; first.begin"
+            values="#C0C8D1;#C0C8D1;#434D59;#C0C8D1"
+            keySplines="
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;"
+            keyTimes="0; 0.25;0.4; 1"
+            calcMode="spline"
+            dur="0.8s"
+            repeatCount="indefinite"
+          />
+        </circle>
+        <circle cx="20.5" cy="12" r="3" fill="#C0C8D1" transform-origin="20.5 3.5">
+          <animate
+            attributeName="r"
+            begin="0.3s; first.begin"
+            values="3;3;3.5;3"
+            keySplines="
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;
+                0.1 0.8 0.2 1;"
+            keyTimes="0; 0.25;0.4; 1"
+            calcMode="spline"
+            dur="0.8s"
+            repeatCount="indefinite"
+          />
+          <animate
+            id="third"
+            attributeName="fill"
+            begin="0.3s; first.begin"
+            values="#C0C8D1;#C0C8D1;#434D59;#C0C8D1"
+            keySplines="
+                .24 .1 .35 .8;
+                .24 .1 .35 .8;
+                0.1 0.8 0.2 1"
+            keyTimes="0; 0.25;0.4; 1"
+            calcMode="spline"
+            dur="0.8s"
+            repeatCount="indefinite"
+          />
+        </circle>
       </g>
     </svg>
   );
