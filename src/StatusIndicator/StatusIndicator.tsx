@@ -15,7 +15,7 @@ export const StatusIndicatorValues = {
 
 export type StatusIndicatorType = typeof StatusIndicatorValues[keyof typeof StatusIndicatorValues];
 
-const StatusIndicatorColours = (theme) => ({
+const statusIndicatorStyles = (theme: DefaultNDSThemeType) => ({
   [StatusIndicatorValues.neutral]: {
     borderColor: theme.colors.lightGrey,
     backgroundColor: theme.colors.lightGrey,
@@ -27,7 +27,8 @@ const StatusIndicatorColours = (theme) => ({
     color: theme.colors.white,
   },
   [StatusIndicatorValues.quiet]: {
-    borderColor: theme.colors.white,
+    border: "1px solid",
+    borderColor: theme.colors.grey,
     backgroundColor: theme.colors.white,
     color: theme.colors.darkGrey,
   },
@@ -53,10 +54,6 @@ const StatusIndicatorColours = (theme) => ({
   },
 });
 
-const getStatusIndicatorColours = (type, theme) => {
-  return StatusIndicatorColours(theme)[type];
-};
-
 type StatusIndicatorProps = SpaceProps &
   TypographyProps &
   FlexboxProps & {
@@ -73,7 +70,7 @@ const StatusIndicator: React.FC<StatusIndicatorProps> = styled.span(
     textTransform: "uppercase",
     letterSpacing: ".05em",
     borderRadius: theme.space.x1,
-    ...getStatusIndicatorColours(type, theme),
+    ...statusIndicatorStyles(theme)[type],
   })
 );
 
