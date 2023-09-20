@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Heading1, Heading2, Heading3, Heading4 } from "../index";
+import { Text, Heading1, Heading2, Heading3, Heading4, StatusIndicator } from "../index";
 
 export default {
   title: "Components/Headings",
@@ -36,6 +36,11 @@ export const WithACustomMargin = () => (
   </>
 );
 
-WithACustomMargin.story = {
-  name: "With a custom margin",
-};
+export const Inline = () => (
+  <>
+    <Heading1 inline>Heading1</Heading1>
+    <StatusIndicator ml="x2" type="informative">
+      Status
+    </StatusIndicator>
+  </>
+);
