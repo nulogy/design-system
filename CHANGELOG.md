@@ -1,3 +1,11 @@
+# [8.15.0](https://github.com/nulogy/design-system/compare/v8.14.5...v8.15.0) (2023-09-20)
+
+
+### Features
+
+* change loading icon ([0c7bbdb](https://github.com/nulogy/design-system/commit/0c7bbdb06fddf2e0086e1e1776457cb33dde83cd))
+* change Quiet StatusIndicator border color ([157c995](https://github.com/nulogy/design-system/commit/157c995f074673a978cd0695478833d60ba6ea42))
+
 ## [8.14.5](https://github.com/nulogy/design-system/compare/v8.14.4...v8.14.5) (2023-07-26)
 
 
