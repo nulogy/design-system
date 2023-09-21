@@ -1,3 +1,10 @@
+## [8.15.1](https://github.com/nulogy/design-system/compare/v8.15.0...v8.15.1) (2023-09-21)
+
+
+### Bug Fixes
+
+* remove deprecated APIs ([d48e4fa](https://github.com/nulogy/design-system/commit/d48e4faa861f1dbede8506fa8ab0dd65fb1c4ce0))
+
 # [8.15.0](https://github.com/nulogy/design-system/compare/v8.14.5...v8.15.0) (2023-09-20)
 
 
