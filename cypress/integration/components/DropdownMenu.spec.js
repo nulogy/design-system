@@ -70,24 +70,47 @@ describe("DropdownMenu", () => {
       getDropdownLink().should("be.focused");
     });
   });
-  it("can be opened with a different element", () => {
-    cy.renderFromStorybook("dropdownmenu--with-custom-trigger");
 
-    getOpenButton().click();
+  describe("with custom trigger", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("dropdownmenu--with-custom-trigger");
+    });
 
-    assertDropdownIsOpen();
+    it("can be opened with a different element", () => {
+      getOpenButton().click();
+
+      assertDropdownIsOpen();
+    });
   });
 
-  it("handles submenus that open on hover", () => {
-    cy.renderFromStorybook("dropdownmenu--with-submenu");
+  describe("with button closing menu", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("dropdownmenu--with-button-closing-menu");
+    });
 
-    getOpenButton().click();
-    assertDropdownIsOpen();
+    it("can be closed with a callback function", () => {
+      getOpenButton().click();
+      assertDropdownIsOpen();
 
-    getSubmenuButton().trigger('mouseover')
-    assertSubDropdownIsOpen();
+      getCloseButton().click();
+      assertDropdownIsClosed();
+    });
+  });
 
-    getSubCloseButton().trigger('mouseout')
-    assertSubDropdownIsClosed();
+  describe("with submenu", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("dropdownmenu--with-submenu");
+    });
+
+    it("handles submenus that open on hover", () => {
+      getOpenButton().click();
+      assertDropdownIsOpen();
+
+      getSubmenuButton().trigger("mouseover");
+      assertSubDropdownIsOpen();
+
+      getSubCloseButton().trigger("mouseout");
+      assertSubDropdownIsClosed();
+    });
   });
 });

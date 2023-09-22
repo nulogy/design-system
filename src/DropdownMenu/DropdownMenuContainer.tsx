@@ -4,6 +4,7 @@ import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme.type";
 
 type DropdownMenuContainerProps = {
+  id?: string;
   className?: string;
   backgroundColor?: string;
   showArrow?: boolean;
