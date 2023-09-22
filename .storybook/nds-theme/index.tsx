@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name, react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
-import addons from "@storybook/addons";
+import { addons } from "@storybook/preview-api";
 import { STORY_CHANGED } from "@storybook/core-events";
 import { select } from "@storybook/addon-knobs";
 import { NDSProvider, theme as NDSTheme } from "../../src";

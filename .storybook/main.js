@@ -16,4 +16,8 @@ module.exports = {
     "storybook-addon-performance",
     "./nds-theme/register.js",
   ],
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {},
+  },
 };
