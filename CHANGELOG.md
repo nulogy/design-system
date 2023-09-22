@@ -1,3 +1,10 @@
+## [8.15.2](https://github.com/nulogy/design-system/compare/v8.15.1...v8.15.2) (2023-09-22)
+
+
+### Bug Fixes
+
+* restore closeMenu render prop functionality ([f88f0d5](https://github.com/nulogy/design-system/commit/f88f0d5b8177d449d086f6e7e58ac2f660576d48))
+
 ## [8.15.1](https://github.com/nulogy/design-system/compare/v8.15.0...v8.15.1) (2023-09-21)
 
 
