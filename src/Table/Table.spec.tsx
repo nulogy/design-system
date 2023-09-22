@@ -1,6 +1,5 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-
 import { Pagination } from "../Pagination";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { mountWithNDSProvider } from "../NDSProvider/mountWithNDSProvider.spec-utils";
@@ -23,6 +22,7 @@ describe("Table", () => {
 
         expect(callback).toHaveBeenCalledWith([rowData[0].c1]);
       });
+
       it("returns an empty array if no rows are selected", () => {
         const columns = [{ label: "Column 1", dataKey: "c1" }];
         const rowData = [{ c1: "r1c1" }, { c1: "r2c1" }];
@@ -39,6 +39,7 @@ describe("Table", () => {
       });
     });
   });
+
   describe("expandedRows", () => {
     describe("onRowExpansionChange:", () => {
       it("returns the expanded rows when the a row was expanded or collapsed", () => {
@@ -72,6 +73,7 @@ describe("Table", () => {
 
         expect(callback).toHaveBeenCalledWith(["2"]);
       });
+
       it("returns an empty array if no rows are expanded", () => {
         const expandedContent = () => <p>Expands!</p>;
         const rowData = [
@@ -109,6 +111,7 @@ describe("Table", () => {
       });
     });
   });
+
   describe("pagination", () => {
     describe("onPageChange:", () => {
       it("called when a new page is selected", () => {
@@ -149,6 +152,7 @@ describe("Table", () => {
         expect(pageChangeCallback).toHaveBeenCalledWith(2);
       });
     });
+
     describe("rowsPerPage", () => {
       it("displays the correct number of rows", () => {
         const pageChangeCallback = jest.fn();
@@ -166,6 +170,7 @@ describe("Table", () => {
         const rows = wrapper.find("tbody tr");
         expect(rows.length).toEqual(ROWS_PER_PAGE);
       });
+
       it("renders the inner Pagination with correct props", () => {
         const wrapper = mountWithNDSProvider(
           <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows keyField="c1" rowsPerPage={6} />
@@ -175,6 +180,7 @@ describe("Table", () => {
         expect(pagination.props().totalPages).toEqual(4);
         expect(pagination.props().currentPage).toEqual(1);
       });
+
       it("does not display pagination when rowsPerPage is falsy", () => {
         const wrapper = mountWithNDSProvider(
           <Table columns={mockColumns} rows={getMockRows(20)} hasSelectableRows keyField="c1" />
@@ -186,6 +192,7 @@ describe("Table", () => {
       });
     });
   });
+
   describe("loading", () => {
     it("shows only loading text when loading", () => {
       const wrapper = mountWithNDSProvider(
@@ -196,6 +203,7 @@ describe("Table", () => {
       expect(loadingCell.text()).toEqual("Loading...");
       expect(rows.length).toEqual(1);
     });
+
     it("shows rows when not loading", () => {
       const rowData = getMockRows(20);
       const wrapper = mountWithNDSProvider(
@@ -207,6 +215,7 @@ describe("Table", () => {
       expect(rows.length).toEqual(20);
     });
   });
+
   describe("row hovers", () => {
     describe("onRowMouseEnter", () => {
       it("is called with the row when mouse enters a row", () => {
@@ -224,6 +233,7 @@ describe("Table", () => {
       });
     });
   });
+
   describe("row hovers", () => {
     describe("onRowMouseLeave", () => {
       it("is called with the row when mouse leaves a row", () => {
