@@ -161,5 +161,4 @@ describe("Select", () => {
       assertDropDownIsOpen();
     });
   });
-  describe("Knobs", () => {});
 });
