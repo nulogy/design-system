@@ -1,40 +1,69 @@
-import { boolean, text } from "@storybook/addon-knobs";
+import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 import { Alert } from "../index";
 import { Link } from "../Link";
 
-export default {
+const meta: Meta<typeof Alert> = {
   title: "Components/Alert",
+  component: Alert,
 };
 
-export const Danger = () => <Alert type="danger">{text("Alert Text", "Danger alert")}</Alert>;
-export const Informative = () => <Alert>{text("Alert Text", "Informative alert")}</Alert>;
-export const Success = () => <Alert type="success">{text("Alert Text", "Success alert")}</Alert>;
-export const Warning = () => <Alert type="warning">{text("Alert Text", "Warning alert")}</Alert>;
-export const WithACloseButton = () => (
-  <Alert isCloseable={boolean("isCloseable", true)}>{text("Alert Text", "Warning alert")}</Alert>
-);
+export default meta;
+
+type Story = StoryObj<typeof Alert>;
+
+export const Danger: Story = {
+  args: {
+    type: "danger",
+    children: <>Danger alert</>,
+  },
+};
+
+export const Informative: Story = {
+  args: {
+    children: <>Informative alert</>,
+  },
+};
+
+export const Success: Story = {
+  args: {
+    type: "success",
+    children: <>Success alert</>,
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    type: "warning",
+    children: <>Warning alert</>,
+  },
+};
+
+export const WithACloseButton: Story = {
+  args: {
+    isClosable: true,
+    children: <>Warning alert</>,
+  },
+};
 
 WithACloseButton.story = {
   name: "With a close button",
 };
 
-export const WithATitle = () => (
-  <Alert title="Danger title!" type="danger">
-    {text("Alert Text", "Danger alert")}
-  </Alert>
-);
-
-WithATitle.story = {
-  name: "With a title",
+export const WithATitle: Story = {
+  args: {
+    title: "Danger title!",
+    type: "danger",
+    children: <>Danger alert</>,
+  },
 };
 
-export const WithALink = () => (
-  <Alert>
-    An alert with <Link href="/">linked details</Link>.
-  </Alert>
-);
-
-WithALink.story = {
-  name: "With a link",
+export const WithALink: Story = {
+  args: {
+    children: (
+      <>
+        An alert with <Link href="/">linked details</Link>.
+      </>
+    ),
+  },
 };
