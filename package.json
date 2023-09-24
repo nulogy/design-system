@@ -11,7 +11,7 @@
     "lint": "yarn run tsc && yarn run eslint",
     "eslint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
     "lint:fix": "yarn run eslint --fix",
-    "start": "storybook dev -p 9999",
+    "start": "storybook dev -p 9999 --https --ssl-cert=./localhost.pem --ssl-key=./localhost-key.pem",
     "build": "rollup -c",
     "build:watch": "yarn build --watch",
     "build-storybook": "storybook build",

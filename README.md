@@ -99,3 +99,16 @@ The design-system is a collection of related packages. If you're looking for mor
 | [@nulogy/css](https://github.com/nulogy/nds-css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
 | [@nulogy/icons](https://github.com/nulogy/nds-icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
 | [@nulogy/tokens](https://github.com/nulogy/nds-tokens)         | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens)             |
+
+## Development
+
+### Required packages
+
+- `yarn`
+- `mkcert`
+- `nvm`
+
+### Bootstrap
+
+- `mkcert install`
+- `yarn install`
