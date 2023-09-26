@@ -6,7 +6,7 @@ const newViewports = {
   extraSmall: {
     name: "Extra small",
     styles: {
-      width: theme.breakpoints.extraSmall,
+      width: "320px",
       height: "100%",
     },
   },
@@ -39,6 +39,7 @@ const newViewports = {
     },
   },
 };
+
 export const parameters = {
   viewport: { viewports: newViewports },
   layout: "padded",
