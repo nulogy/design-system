@@ -178,10 +178,12 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(@nulogy|storybook-addon-performance))"
     ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/cypress"
+    ],
     "testMatch": [
-      "**/src/**/*.spec.tsx",
-      "**/src/**/*.spec.ts",
-      "**/spec/**/*.spec.tsx"
+      "**/*.spec.tsx",
+      "**/*.spec.ts"
     ],
     "setupFiles": [
       "<rootDir>/spec/support/registerContext.js"
