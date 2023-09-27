@@ -91,7 +91,7 @@ describe("Tabs", () => {
     });
 
     it("renders both scroll indicators when tabs are hidden on the left and right", () => {
-      cy.get(".tab-container").scrollTo(50);
+      cy.get(".tab-container").scrollTo(50, 0);
 
       cy.get("svg.nds-icon--leftArrow").should("not.exist");
       cy.get("svg.nds-icon--rightArrow").should("exist");

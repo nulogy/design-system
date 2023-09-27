@@ -8,13 +8,16 @@ describe("Sidebar", () => {
     beforeEach(() => {
       cy.renderFromStorybook("sidebar--sidebar");
     });
+
     it("is hidden", () => {
       Sidebar().should("not.be.visible");
     });
+
     it("slides in when triggered", () => {
       trigger().click();
       Sidebar().should("be.visible");
     });
+
     it("slides out", () => {
       trigger().click();
       overlay().should("be.visible");
@@ -22,15 +25,18 @@ describe("Sidebar", () => {
       Sidebar().should("not.be.visible");
     });
   });
+
   describe("Accessibility", () => {
     beforeEach(() => {
       cy.renderFromStorybook("sidebar--sidebar");
     });
+
     it("focuses the close button when opened", () => {
       trigger().click();
       cy.focused().type("{enter}");
       Sidebar().should("not.be.visible");
     });
+
     it("focuses the trigger when closed", () => {
       trigger().click();
       cy.focused().type("{enter}");
@@ -39,27 +45,33 @@ describe("Sidebar", () => {
       Sidebar().should("be.visible");
     });
   });
+
   describe("Open by default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("sidebar--open-by-default");
     });
+
     it("is shown", () => {
       Sidebar().should("be.visible");
     });
+
     it("slides out when overlay clicked", () => {
       overlay().click({ force: true });
       Sidebar().should("not.be.visible");
     });
+
     it("slides out when close button clicked", () => {
       closeButton().click({ force: true });
       Sidebar().should("not.be.visible");
     });
+
     it("slides in", () => {
       overlay().click({ force: true });
       trigger().click();
       Sidebar().should("be.visible");
     });
   });
+
   describe("Custom offset", () => {
     beforeEach(() => {
       cy.renderFromStorybook("sidebar--with-custom-offset");
