@@ -271,11 +271,7 @@ export const WithParentSelector = () => {
 
   return (
     <div id={id}>
-      <Modal
-        title="Modal Title"
-        footerContent={modalButtons}
-        parentSelector={() => document.getElementById(id)}
-      >
+      <Modal title="Modal Title" footerContent={modalButtons} parentSelector={() => document.getElementById(id)}>
         Content
       </Modal>
     </div>

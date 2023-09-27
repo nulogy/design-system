@@ -8,7 +8,7 @@ import { toastAnimationConfig } from "../Toast/Toast";
 
 // We remove the "as" prop because the Alert is wrapped with a styled component
 // resulting in a TypeScript overload error.
-type AlertProps = Omit<OriginalAlertProps, "as">
+type AlertProps = Omit<OriginalAlertProps, "as">;
 
 type ToastFunction = (children: React.ReactNode, props?: AlertProps, options?: ToastOptions) => void;
 
@@ -19,7 +19,7 @@ type ToastFunctions = {
   warning: ToastFunction;
 };
 
-type CustomToastProps = { id: string, isVisible: boolean } & AlertProps
+type CustomToastProps = { id: string; isVisible: boolean } & AlertProps;
 
 const CustomToast: React.FC<CustomToastProps> = ({ isVisible, id, children, ...props }) => {
   const handleClose = () => {
