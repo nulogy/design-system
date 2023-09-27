@@ -19,7 +19,7 @@ jobs:
         run: yarn
 
       - name: Build Storybook
-        run: yarn build-storybook
+        run: yarn build:storybook
 
       - uses: chromaui/action@v1
         with:
