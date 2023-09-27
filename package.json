@@ -10,22 +10,22 @@
     "new": "plop",
 
     "start": "concurrently \"yarn build --watch\" \"start-storybook -p 9999\"",
-    "start:e2e":  "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
+    "start:e2e": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
 
     "build": "rollup -c",
     "build:storybook": "build-storybook",
 
     "check": "yarn check:types && yarn check:lint && yarn check:format",
-    "check:types": "yarn run tsc && cd cypress && yarn run tsc",
+    "check:types": "tsc && cd cypress && tsc",
     "check:lint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
     "check:format": "prettier -c **/*.{ts,tsx,js}",
 
     "fix": "yarn fix:lint && yarn fix:format",
-    "fix:lint": "yarn run check:lint --fix",
+    "fix:lint": "yarn check:lint --fix",
     "fix:format": "prettier -w **/*.{ts,tsx,js}",
 
-    "test": "yarn run test:components && yarn run test:e2e",
-    "test:components": "yarn jest",
+    "test": "yarn test:components && yarn run test:e2e",
+    "test:components": "jest",
     "test:e2e": "yarn build:storybook && yarn concurrently --success \"first\" --kill-others \"yarn http-server -p 9999 ./storybook-static\" \"yarn wait-on http://localhost:9999 && yarn cypress run\"",
     "test:visual": "npx chromatic --project-token $CHROMATIC_TOKEN --exit-zero-on-changes"
   },
@@ -173,7 +173,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn check:lint && yarn check:types && yarn check:format"
+      "pre-push": "yarn check"
     }
   },
   "jest": {

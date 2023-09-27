@@ -16,7 +16,7 @@ import SummaryItem from "../Summary/SummaryItem";
 import SummaryDivider from "../Summary/SummaryDivider";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import { theme } from "..";
-import numberFromDimension from "../utils/numberFromDimension" 
+import numberFromDimension from "../utils/numberFromDimension";
 
 export const Default = () => (
   <Header

@@ -91,5 +91,5 @@ const menuData = {
         { name: "Manage account", href: "/" },
       ],
     },
-  ]
-}
+  ],
+};
