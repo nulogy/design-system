@@ -11,6 +11,7 @@ describe("Radio", () => {
       radio().should("be.checked");
     });
   });
+
   describe("Checked", () => {
     beforeEach(() => {
       cy.renderFromStorybook("radio--set-to-default-checked");
@@ -19,6 +20,7 @@ describe("Radio", () => {
       radio().should("be.checked");
     });
   });
+
   describe("Disabled", () => {
     beforeEach(() => {
       cy.renderFromStorybook("radio--set-to-disabled");
@@ -32,6 +34,7 @@ describe("Radio", () => {
       radio().eq(1).should("be.disabled");
     });
   });
+
   describe("Controlled", () => {
     beforeEach(() => {
       cy.renderFromStorybook("radio--controlled");
@@ -47,6 +50,7 @@ describe("Radio", () => {
       radio().eq(1).should("not.be.checked");
     });
   });
+
   describe("Set Focus", () => {
     beforeEach(() => {
       cy.renderFromStorybook("radio--using-ref-to-control-focus");
@@ -77,6 +81,7 @@ describe("Radio Group", () => {
       radio().eq(1).should("not.be.checked");
     });
   });
+
   describe("All Props", () => {
     beforeEach(() => {
       cy.renderFromStorybook("radiogroup--radio-group-with-all-props");
@@ -87,6 +92,7 @@ describe("Radio Group", () => {
       radio().eq(2).should("not.be.checked");
     });
   });
+
   describe("Disabled", () => {
     beforeEach(() => {
       cy.renderFromStorybook("radiogroup--set-to-disabled");
@@ -102,15 +108,18 @@ describe("Radio Group", () => {
       radio().eq(2).should("be.disabled");
     });
   });
+
   describe("Controlled", () => {
     beforeEach(() => {
       cy.renderFromStorybook("radiogroup--controlled");
     });
+
     it("has the correct initial values", () => {
       radio().eq(0).should("be.checked");
       radio().eq(1).should("not.be.checked");
       radio().eq(2).should("not.be.checked");
     });
+
     it("values are not updated on click", () => {
       radio().eq(0).check();
       radio().eq(1).check();

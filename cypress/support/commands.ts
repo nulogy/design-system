@@ -44,6 +44,7 @@ Cypress.Commands.add("clickOutsideElement", () => {
 
 Cypress.Commands.add("isInViewport", (element) => {
   cy.get(element).then(($el) => {
+    // @ts-ignore
     const bottom = Cypress.$(cy.state("window")).height();
     const rect = $el[0].getBoundingClientRect();
 
@@ -58,7 +59,7 @@ Cypress.Commands.add("isNotInViewport", (element) => {
   });
 });
 
-Cypress.Commands.add("paste", ({ destinationSelector, pastePayload, pasteType }) => {
+Cypress.Commands.add("paste", ({ destinationSelector, pastePayload }) => {
   // https://developer.mozilla.org/en-US/docs/Web/API/Element/paste_event
   cy.get(destinationSelector).then((destination) => {
     const pasteEvent = Object.assign(new Event("paste", { bubbles: true, cancelable: true }), {

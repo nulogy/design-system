@@ -1,5 +1,5 @@
 describe("Alert", () => {
-  before(() => {
+  beforeEach(() => {
     cy.renderFromStorybook("alert--with-a-close-button");
   });
 
@@ -10,7 +10,7 @@ describe("Alert", () => {
 
   it("hides the alert when closed", () => {
     cy.get('[aria-label="Close"]').click();
-    cy.get('[role="alert"]').should("not.be.visible");
+    cy.get('[role="alert"]').should("not.exist");
     cy.get('[role="alert"]').should("not.exist");
   });
 });
