@@ -18,11 +18,11 @@
     "check": "yarn check:types && yarn check:lint && yarn check:format",
     "check:types": "tsc && cd cypress && tsc",
     "check:lint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
-    "check:format": "prettier -c **/*.{ts,tsx,js}",
+    "check:format": "prettier -c .",
 
     "fix": "yarn fix:lint && yarn fix:format",
     "fix:lint": "yarn check:lint --fix",
-    "fix:format": "prettier -w **/*.{ts,tsx,js}",
+    "fix:format": "prettier -w .",
 
     "test": "yarn test:components && yarn run test:e2e",
     "test:components": "jest",
