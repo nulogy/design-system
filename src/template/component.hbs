@@ -1,12 +1,16 @@
 import React from "react";
-import {Box} from "../index";
+import { Box } from "../index";
+
+type {{name}}Ref = HTMLDivElement;
 
 type {{name}}Props = {
-  children?: React.ReactNode
-}
+  children?: React.ReactNode;
+};
 
-const {{name}} = ({children}) => (
-<Box bg="whiteGrey" p="x4">{children}</Box>
-)
+export const {{name}} = React.forwardRef<{{name}}Ref, {{name}}Props>(({ children }, ref) => (
+  <Box ref={ref} bg="whiteGrey" p="x4">
+    {children}
+  </Box>
+));
 
 export default {{name}};
