@@ -1,4 +1,8 @@
+**/*.js
 *.hbs
 *.md
 *.yml
+.github
+package.json
+storybook-static
 dist
