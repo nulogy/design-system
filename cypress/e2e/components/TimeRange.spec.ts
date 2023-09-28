@@ -19,7 +19,7 @@ describe("Time Range", () => {
       getValue().should("have.value", "10:00 AM");
       getEndTimeInputComponent().click();
       getEndTimeOptions().eq(0).should("have.text", "10:00 AM");
-      getEndTimeOptions().each(($el) => cy.get($el).should("not.have.value", "9:45 AM"));
+      getEndTimeOptions().should("not.have.value", "9:45 AM");
     });
     it("shows options that are before the selected end time for the start time", () => {
       getEndTimeInputComponent().click();
@@ -27,7 +27,8 @@ describe("Time Range", () => {
       getValue(1).should("have.value", "9:30 AM");
       getStartTimeInputComponent().click();
       getEndTimeOptions().eq(0).should("have.text", "9:00 AM");
-      getStartTimeOptions().each(($el) => cy.get($el).should("not.have.value", "9:45 AM"));
+      cy.get("[data-testid='timerange-end-time']").find(TIME_OPTION_SELECTOR).should("not.have.value", "9:45 AM");
+      getStartTimeOptions().should("not.have.value", "9:45 AM");
     });
   });
 });
