@@ -7,6 +7,12 @@ import dashed from "../utils/dashed";
 
 export default {
   title: "Components/IconicButton",
+   parameters: {
+    // Sets the diffThreshold for 0.2 for a specific story.
+    chromatic: {
+      diffThreshold: 0.4,
+    },
+  },
 };
 
 export const WithoutALabel = () => <IconicButton icon="delete" />;

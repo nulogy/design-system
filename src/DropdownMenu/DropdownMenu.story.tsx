@@ -20,8 +20,8 @@ const customColors = {
 
 export default {
   title: "Components/DropdownMenu",
-  chromatic: {
-    diffThreshold: 0.4,
+  parameters: {
+    chromatic: { diffThreshold: 0.4 },
   },
 };
 
