@@ -9,6 +9,7 @@ import theme from "../theme";
 import { Button } from "../Button";
 import { Text } from "../Type";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
+import numberFromDimension from "../utils/numberFromDimension";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
@@ -389,9 +390,9 @@ export const WithHamburgerMenu = () => {
 };
 WithHamburgerMenu.parameters = {
   viewport: {
-    defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
+    defaultViewport: "small", // for some reason, this has to match the viewport key, NOT the name!
   },
-  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
+  chromatic: { viewports: [numberFromDimension(theme.breakpoints.small)] },
 };
 
 const customPrimaryMenu = [
@@ -428,7 +429,7 @@ CustomRenderingInHamburger.parameters = {
   viewport: {
     defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
   },
-  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
+  chromatic: { viewports: [numberFromDimension(theme.breakpoints.small)] },
 };
 
 const primaryMenuWithCustomTriggers = [
@@ -487,5 +488,5 @@ CustomMenuTriggersInHamburger.parameters = {
   viewport: {
     defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
   },
-  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
+  chromatic: { viewports: [numberFromDimension(theme.breakpoints.small)] },
 };

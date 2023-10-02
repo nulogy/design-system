@@ -7,6 +7,7 @@ import { Link } from "../Link";
 import { Button, SmallNavBarProps, theme } from "../index";
 import BrandLogoContainer from "./BrandLogoContainer";
 import { SmallNavBar } from "./index";
+import numberFromDimension from "../utils/numberFromDimension";
 
 const ResetStorybookView = styled.div({
   position: "absolute",
@@ -78,7 +79,7 @@ const smallViewport = {
   viewport: {
     defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!
   },
-  chromatic: { viewports: [parseInt(theme.breakpoints.small)] },
+  chromatic: { viewports: [numberFromDimension(theme.breakpoints.small)] },
 };
 
 export default {
