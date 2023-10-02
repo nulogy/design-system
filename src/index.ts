@@ -84,3 +84,4 @@ export { Heading1, Heading2, Heading3, Heading4, Text } from "./Type";
 export type { TextProps } from "./Type";
 export { useWindowDimensions } from "./utils";
 export { InlineValidation } from "./Validation";
+export { Stack } from "./Stack";
