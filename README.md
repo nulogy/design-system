@@ -80,7 +80,7 @@ Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabst
 
 Component documentation and usage guides are stored in the [github.com/nulogy/nulogy.design](https://github.com/nulogy/nulogy.design) repository.
 
-## 💬 Work requests
+## 👋 Work requests
 
 If you encounter a bug, need a new component or new capability of an existing component, or need any other type of support please file a work request in [GitHub Issues](https://github.com/nulogy/design-system/issues). To learn more about how to file a request and what to expect please read [How to file NDS work request](https://github.com/nulogy/design-system/wiki/How-to-file-NDS-work-request).
 - [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
