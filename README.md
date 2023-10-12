@@ -36,7 +36,7 @@ If your application supports Simplified Chinese, you'll also need to load [Noto 
 
 Note that loading fonts from Google API is just an example and not the most performant way to load fonts for your application. You'll most likely want to include the font's inside your existing asset pipeline.
 
-### 2. Wrap your appliction in our theme provider
+### 2. Wrap your application in our theme provider
 
 Wrap your application in the NDSProvider component to access Nulogy's theme values and add typographic defaults.
 
@@ -74,16 +74,20 @@ A `locale` prop can be passed to `<NDSProvider />` to change the language of ari
 
 ## 🎨 UI Kit
 
-Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab). See the [Designers' Getting Started Guide](https://nulogy.design/guides/designers/) for more detail.
+Designers can use NDS in Sketch by downloading the [UI Kit](https://share.goabstract.com/73221fd2-6626-43c8-b95c-e4bec74741ab). See the [Designers' Getting Started Guide](https://nulogy.design/guides/designers/) for more details.
 
 ## 📚 Documentation
 
 Component documentation and usage guides are stored in the [github.com/nulogy/nulogy.design](https://github.com/nulogy/nulogy.design) repository.
 
+## 💬 Work requests
+
+If you encounter a bug, need a new component or new capability of an existing component, or need any other type of support please file a work request in [GitHub Issues](https://nulogy.design/guides/localization](https://github.com/nulogy/design-system/issues). To learn more about how to file a request and what to expect please read [How to file NDS work request]([https://nulogy.design/guides/localization](https://github.com/nulogy/design-system/wiki/How-to-file-NDS-work-request)).
+- [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
+
 ## 🙌 Contributing
 
 Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md) if you work at Nulogy and would like to contribute.
-
 
 ## 💬 Questions
 
