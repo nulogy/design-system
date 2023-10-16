@@ -41,8 +41,8 @@ body:
   - type: textarea
     id: screenshots
     attributes:
-      label: Screenshots
-      placeholder: If applicable, add screenshots to help explain your problem/idea.
+      label: Helpful resources
+      placeholder: If applicable, add screenshot(s), video recording(s), and/or sandbox to help us better understand the request.
   - type: textarea
     id: additional
     attributes:
