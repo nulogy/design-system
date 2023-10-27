@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex } from "../Flex";
-import { Button, PrimaryButton, DangerButton, QuietButton } from ".";
+import { Button, PrimaryButton, DangerButton, QuietButton, WarningButton } from ".";
 import { Text } from "../Type";
 
 export default {
@@ -26,6 +26,12 @@ _QuietButton.story = {
   name: "QuietButton",
 };
 
+export const _WarningButton = () => <WarningButton>Create project</WarningButton>;
+
+_WarningButton.story = {
+  name: "WarningButton",
+};
+
 export const WithDifferentSizes = () => (
   <Flex flexDirection="column" gap="x1">
     <Flex alignItems="center" gap="x1">
@@ -44,6 +50,12 @@ export const WithDifferentSizes = () => (
       <QuietButton size="small">Create project</QuietButton>
       <QuietButton size="medium">Create project</QuietButton>
       <QuietButton size="large">Create project</QuietButton>
+    </Flex>
+
+    <Flex alignItems="center" gap="x1">
+      <WarningButton size="small">Create project</WarningButton>
+      <WarningButton size="medium">Create project</WarningButton>
+      <WarningButton size="large">Create project</WarningButton>
     </Flex>
   </Flex>
 );
