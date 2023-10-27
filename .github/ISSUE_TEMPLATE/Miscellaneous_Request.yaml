@@ -21,6 +21,24 @@ body:
       label: Is your team blocked from moving forward by the problem described above?
       placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
   - type: textarea
+    id: blocked
+    attributes:
+      label: Is your team blocked from moving forward by the bug?
+      placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
+  - type: checkboxes
+    id: execution
+    attributes:
+      label: Who would you like to fix the bug?
+      options:
+      - label: Myself
+      - label: DesignOps
+      description: Please check the current Design Ops' [estimated completion time](https://github.com/nulogy/design-system/wiki/How-to-file-NDS-work-request#process) before selecting
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Helpful resources
+      placeholder: If applicable, add screenshot(s), video recording(s), and/or sandbox to help us better understand the request.
+  - type: textarea
     id: additional
     attributes:
       label: Additional context
