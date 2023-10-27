@@ -23,7 +23,7 @@ body:
   - type: checkboxes
     id: execution
     attributes:
-      label: Who would you like to fix the bug?
+      label: Who would you like to address the problem?
       options:
       - label: Myself
       - label: DesignOps
