@@ -16,7 +16,7 @@
     "build:storybook": "build-storybook",
 
     "check": "yarn check:types && yarn check:lint && yarn check:format",
-    "check:types": "tsc && cd cypress && tsc",
+    "check:types": "tsc && cd cypress && tsc --noEmit",
     "check:lint": "eslint --config ./.eslintrc .'*/**/*.{js,ts,tsx}'",
     "check:format": "prettier -c .",
 
@@ -173,7 +173,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn check"
+      "pre-push": "yarn run check"
     }
   },
   "jest": {
