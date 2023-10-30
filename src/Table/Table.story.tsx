@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean, number } from "@storybook/addon-knobs";
@@ -50,7 +49,7 @@ const columnsWithEverything = [
   { label: "Note", dataKey: "note", width: "45%" },
   {
     label: "",
-    dataKey: "actions",
+    key: "actions",
     width: "5%",
     cellRenderer: dropdownCellRenderer,
   },

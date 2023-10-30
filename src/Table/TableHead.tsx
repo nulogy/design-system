@@ -2,10 +2,10 @@
 import React from "react";
 import styled from "styled-components";
 import StyledTh from "./StyledTh";
-import { ColumnType } from "./Table.types";
+import { Columns } from "./Table.types";
 
 type TableHeadProps = {
-  columns: ColumnType[];
+  columns: Columns;
   compact?: boolean;
   sticky?: boolean;
 };
@@ -23,7 +23,7 @@ const TableHead: React.FC<TableHeadProps> = ({ columns, compact, sticky }) => {
     allColumns.map((column) => (
       <StyledTh
         scope="col"
-        key={column.dataKey}
+        key={column.dataKey ?? column.key ?? index}
         width={column.width}
         compact={compact}
         data-testid="table-head"

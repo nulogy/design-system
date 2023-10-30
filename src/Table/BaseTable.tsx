@@ -6,10 +6,10 @@ import propTypes from "@styled-system/prop-types";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-import { rowsPropType, ColumnType, RowType } from "./Table.types";
+import { rowsPropType, RowType, Columns } from "./Table.types";
 
 export type BaseTableProps = {
-  columns: ColumnType[];
+  columns: Columns;
   rows: RowType[];
   noRowsContent?: string;
   keyField?: string;

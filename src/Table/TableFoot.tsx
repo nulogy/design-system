@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import TableCell from "./TableCell";
 import StyledTh from "./StyledTh";
-import { columnsPropType, rowsPropType, rowPropType } from "./Table.types";
+import { columnsPropType, rowsPropType, rowPropType, RowType, Columns } from "./Table.types";
 
 const StyledFooterRow = styled.tr(({ theme }) => ({
   "&:first-of-type": {
@@ -31,7 +31,7 @@ const TableFooterRow = ({ row, columns, loading, compact }) => {
         ) : (
           !loading && (
             <TableCell
-              key={column.dataKey}
+              key={column.dataKey ?? column.key ?? index}
               row={row}
               column={{
                 dataKey: column.dataKey,
@@ -55,9 +55,19 @@ TableFooterRow.propTypes = {
   compact: PropTypes.bool.isRequired,
 };
 
-const TableFoot = ({ columns, rows, keyField, loading, compact }) => (
-  <tfoot>{renderRows(rows, columns, keyField, loading, compact)}</tfoot>
-);
+const TableFoot = ({
+  columns,
+  rows,
+  keyField,
+  loading,
+  compact,
+}: {
+  columns: Columns;
+  rows: RowType[];
+  keyField?: string;
+  loading?: boolean;
+  compact?: boolean;
+}) => <tfoot>{renderRows(rows, columns, keyField, loading, compact)}</tfoot>;
 
 TableFoot.propTypes = {
   columns: columnsPropType.isRequired,

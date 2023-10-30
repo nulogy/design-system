@@ -1,35 +1,40 @@
+import { Key, CSSProperties } from "react";
 import PropTypes from "prop-types";
 
-export type RowType = any;
+export type RowType = unknown;
 
 export type CellInfoType = {
-  cellData: any;
+  cellData: unknown;
   column: ColumnType;
   row: RowType;
 };
 
 type ColumnInfoType = {
-  align?: string;
+  align?: ColumnAlignment;
   label: string;
-  dataKey?: string;
-  width?: string;
+  dataKey?: Key;
+  width?: string | number;
 };
 
+type ColumnAlignment = "left" | "right" | "center";
+
 export type ColumnType = {
-  align?: string;
+  align?: ColumnAlignment;
   label?: string;
-  dataKey?: string;
-  cellFormatter?: (cell: CellInfoType) => React.ReactNode | JSX.Element;
-  cellRenderer?: (cell: CellInfoType) => React.ReactNode | JSX.Element;
-  headerRenderer?: (column: ColumnInfoType) => React.ReactNode | JSX.Element;
-  headerFormatter?: (column: ColumnInfoType) => React.ReactNode | JSX.Element;
-  width?: string;
-};
+  cellFormatter?: (cell: CellInfoType) => React.ReactNode;
+  cellRenderer?: (cell: CellInfoType) => React.ReactNode;
+  headerRenderer?: (column: ColumnInfoType) => React.ReactNode;
+  headerFormatter?: (column: ColumnInfoType) => React.ReactNode;
+  width?: string | number;
+} & ({ key: Key; dataKey?: never | undefined } | { dataKey: Key; key?: never | undefined });
+
+export type Columns = ColumnType[];
 
 export const columnPropType = PropTypes.shape({
   align: PropTypes.oneOf(["right", "left", "center"]),
   label: PropTypes.string,
-  dataKey: PropTypes.string,
+  dataKey: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  key: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
   cellFormatter: PropTypes.func,
   cellRenderer: PropTypes.func,
   headerRenderer: PropTypes.func,
