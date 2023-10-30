@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
+import { DefaultNDSThemeType } from "../theme.type";
 import { rowsPropType, columnsPropType, rowPropType } from "./Table.types";
 import TableCell from "./TableCell";
-import { DefaultNDSThemeType } from "../theme.type";
 
 const StyledMessageContainer = styled(Box)(({ theme }) => ({
   padding: `${theme.space.x3} 0`,
@@ -64,8 +64,14 @@ const TableBodyRow = ({
   onMouseEnter,
 }: TableBodyRowProps) => {
   const renderAllCells = () =>
-    columns.map((column) => (
-      <TableCell key={column.dataKey} row={row} column={column} cellData={row[column.dataKey]} compact={compact} />
+    columns.map((column, index) => (
+      <TableCell
+        key={column.dataKey ?? column.key ?? index}
+        row={row}
+        column={column}
+        cellData={row[column.dataKey]}
+        compact={compact}
+      />
     ));
   return (
     <>

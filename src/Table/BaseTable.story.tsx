@@ -4,6 +4,7 @@ import { boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import { Box, DropdownButton, DropdownMenu, Button, Text } from "..";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
+import { Columns } from "./Table.types";
 import { Table } from ".";
 
 const dateToString = ({ cellData }) => {
@@ -29,7 +30,7 @@ const dropdownCellRenderer = ({ cellData }) => (
   </Box>
 );
 
-const columns = [
+const columns: Columns = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
   { label: "Actual Quantity", dataKey: "actualQuantity", align: "right" },
@@ -183,7 +184,7 @@ const columnsWithFormatter = [
   { label: "Actual Quantity", dataKey: "actualQuantity" },
 ];
 
-const columnsWithAlignment = [
+const columnsWithAlignment: Columns = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Eaches", dataKey: "expectedQuantity" },
   { label: "Actual Eaches", dataKey: "actualQuantity", align: "right" },
