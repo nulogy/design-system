@@ -410,3 +410,32 @@ export const WithALongTitle = () => {
     </ApplicationFrame>
   );
 };
+
+export const WithDifferentWidths = () => {
+  const [width, setWidth] = useState({ value: "xs", label: "Extra small (xs)" });
+
+  const options = [
+    { value: "xs", label: "Extra small (xs) - Default" },
+    { value: "s", label: "Small (s)" },
+    { value: "m", label: "Medium (m)" },
+    { value: "l", label: "Large (l)" },
+    { value: "xl", label: "Extra large (xl)" },
+    { value: "700px", label: "Custom value (700px)" },
+    { value: "75ch", label: "Custom value (75ch)" },
+    { value: "100%", label: "Custom value (100%)" },
+  ];
+
+  return (
+    <Sidebar hideCloseButton top={0} height="100%" width={width.value} isOpen title={`${width.label} sidebar`}>
+      <Select
+        value={width.value}
+        options={options}
+        onChange={(s: string) => {
+          const [option] = options.filter(({ value }) => value === s);
+          setWidth(option);
+        }}
+        labelText="Sidebar size"
+      />
+    </Sidebar>
+  );
+};
