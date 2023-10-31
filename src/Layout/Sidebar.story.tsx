@@ -11,6 +11,11 @@ import {
   Select,
   PrimaryButton,
   Box,
+  Textarea,
+  Text,
+  Flex,
+  Button,
+  Heading3,
 } from "..";
 
 const primaryMenu = [
@@ -437,5 +442,63 @@ export const WithDifferentWidths = () => {
         labelText="Sidebar size"
       />
     </Sidebar>
+  );
+};
+
+export const WithHelpText = () => {
+  const [helpText, setHelpText] = useState(
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor lacus nec finibus egestas."
+  );
+
+  return (
+    <Sidebar hideCloseButton top={0} height="100%" isOpen title="With help text" helpText={helpText}>
+      <Textarea
+        value={helpText}
+        labelText="Help Text"
+        placeholder="Enter some text..."
+        onChange={(event) => {
+          setHelpText(event.target.value);
+        }}
+      />
+    </Sidebar>
+  );
+};
+export const WithOtherElementsInHelpText = () => {
+  return (
+    <Sidebar
+      hideCloseButton
+      top={0}
+      height="100%"
+      isOpen
+      title="With help text"
+      helpText={
+        <>
+          Carry over remaining quantity to a future PO line item.{" "}
+          <Link underline={false} href="/">
+            Learn more
+          </Link>{" "}
+        </>
+      }
+    ></Sidebar>
+  );
+};
+
+export const WithARenderedHelpText = () => {
+  return (
+    <Sidebar
+      hideCloseButton
+      top={0}
+      height="100%"
+      isOpen
+      title="With help text"
+      renderHelpText={() => (
+        <Heading3 color="red" fontWeight="bold">
+          This is a custom help text{" "}
+          <Link href="/" underline={false}>
+            Learn more
+          </Link>
+        </Heading3>
+      )}
+    ></Sidebar>
   );
 };
