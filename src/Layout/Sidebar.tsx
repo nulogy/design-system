@@ -1,29 +1,46 @@
-import React, { useEffect, useState, useRef, RefObject } from "react";
+import React, { useEffect, useState, useRef, RefObject, CSSProperties } from "react";
 import { AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { IconicButton } from "../Button";
 import { Heading3 } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
-import { useTranslation } from "react-i18next";
 import { PreventBodyElementScrolling } from "../utils";
 
-type SidebarProps = AnimatedBoxProps & {
+type PredefinedSidebarWidth = "xs" | "s" | "m" | "l" | "xl";
+
+// We need (string & {}) to allow passing
+// custom values in addition to the predefined width
+// https://twitter.com/mattpocockuk/status/1671908303918473217
+// eslint-disable-next-line @typescript-eslint/ban-types
+type SidebarWidth = PredefinedSidebarWidth | (string & {});
+
+const sidebarWidths: Record<PredefinedSidebarWidth, CSSProperties["width"]> = {
+  xs: "400px",
+  s: "520px",
+  m: "640px",
+  l: "768px",
+  xl: "1024px",
+} as const;
+
+type SidebarProps = Omit<AnimatedBoxProps, "width"> & {
   children?: React.ReactNode;
-  onClose?: (arg: any) => any;
+  onClose?: () => void;
   title?: string;
   isOpen?: boolean;
   footer?: React.ReactNode;
   closeButtonTestId?: string;
   closeButtonAriaLabel?: string;
   offset?: string;
-  triggerRef?: RefObject<any>;
+  triggerRef?: RefObject<HTMLInputElement | HTMLButtonElement>;
   duration?: number;
   closeOnOutsideClick?: boolean;
   overlay?: boolean;
   disableScroll?: boolean;
   hideCloseButton?: boolean;
+  width?: SidebarWidth;
 };
 
 const focusFirstElement = () => {
@@ -51,10 +68,9 @@ const SidebarOverlay = ({ transitionDuration, top, transparent, zIndex = 799 as 
     onMouseDown={onClick}
   />
 );
-
-const Sidebar: React.FC<SidebarProps> = ({
+function Sidebar({
   p = "x3",
-  width = "400px",
+  width = "xs",
   children,
   onClose,
   title,
@@ -70,14 +86,16 @@ const Sidebar: React.FC<SidebarProps> = ({
   overlay = true,
   disableScroll = true,
   hideCloseButton = false,
-  zIndex,
+  zIndex = "sidebar" as any,
   ...props
-}) => {
+}: SidebarProps) {
   const closeButton = useRef(null);
   const [shouldUpdateFocus, setShouldUpdateFocus] = useState(false);
   const { t } = useTranslation();
   const sideBarRef = useRef(null);
   const contentRef = useRef(null);
+
+  const selectedWidth = sidebarWidths[width] ?? width;
 
   useEffect(() => {
     if (closeButton.current && isOpen) {
@@ -88,7 +106,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       }
     } else if (shouldUpdateFocus) {
       if (triggerRef) {
-        triggerRef.current.focus();
+        triggerRef?.current?.focus();
       } else {
         focusFirstElement();
       }
@@ -160,8 +178,8 @@ const Sidebar: React.FC<SidebarProps> = ({
         position="fixed"
         top={top}
         right={offset}
-        width={typeof width === "string" ? { default: "100%", small: width } : width}
-        zIndex={zIndex || ("sidebar" as any)}
+        width={typeof selectedWidth === "string" ? { default: "100%", small: selectedWidth } : selectedWidth}
+        zIndex={zIndex}
         ref={sideBarRef as any}
         {...props}
       >
@@ -220,6 +238,6 @@ const Sidebar: React.FC<SidebarProps> = ({
       </AnimatedBox>
     </>
   );
-};
+}
 
 export default Sidebar;
