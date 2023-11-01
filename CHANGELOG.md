@@ -1,3 +1,10 @@
+## [8.15.3](https://github.com/nulogy/design-system/compare/v8.15.2...v8.15.3) (2023-11-01)
+
+
+### Bug Fixes
+
+* add a key prop for the table column ([6f3c100](https://github.com/nulogy/design-system/commit/6f3c10082ed79e38ffa45fe6354f5218d882986e)), closes [#1292](https://github.com/nulogy/design-system/issues/1292)
+
 ## [8.15.2](https://github.com/nulogy/design-system/compare/v8.15.1...v8.15.2) (2023-09-22)
 
 
