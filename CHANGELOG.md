@@ -1,3 +1,11 @@
+# [8.16.0](https://github.com/nulogy/design-system/compare/v8.15.3...v8.16.0) (2023-11-01)
+
+
+### Features
+
+* add helpText to the Sidebar ([4295135](https://github.com/nulogy/design-system/commit/42951359e25ff9e3517fb8598908e0b78e1f4d94))
+* add predefined widths to the Sidebar ([3756cfe](https://github.com/nulogy/design-system/commit/3756cfe45f5d2d954aaad6913b20c2479916224a))
+
 ## [8.15.3](https://github.com/nulogy/design-system/compare/v8.15.2...v8.15.3) (2023-11-01)
 
 
