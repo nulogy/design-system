@@ -38,6 +38,10 @@ body:
       - label: Myself
       - label: DesignOps
       description: Please check the current Design Ops' [estimated completion time](https://github.com/nulogy/design-system/wiki/How-to-file-NDS-work-request#process) before selecting
+  - type: input
+    id: due-date
+    attributes:
+      label: When do you need this by?
   - type: textarea
     id: screenshots
     attributes:
