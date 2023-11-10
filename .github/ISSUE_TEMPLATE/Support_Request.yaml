@@ -20,6 +20,10 @@ body:
     attributes:
       label: Is your team blocked from moving forward by the problem described above?
       placeholder: Tell us if this problem is blocking your team from delivering value to the customer. Is the customer impact high?
+  - type: input
+    id: due-date
+    attributes:
+      label: When do you need this by?
   - type: textarea
     id: additional
     attributes:
