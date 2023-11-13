@@ -21,6 +21,7 @@ import { getSubset } from "../utils/subset";
 
 type AsyncSelectProps = {
   windowThreshold?: number;
+  isClearable?: boolean;
   filterOption?: (...args: any[]) => any;
   autocomplete?: boolean;
   disabled?: boolean;
@@ -92,6 +93,7 @@ const AsyncSelect = forwardRef(
       cacheOptions = false,
       defaultOptions,
       loadOptions,
+      isClearable,
       ...props
     }: AsyncSelectProps,
     ref
@@ -150,6 +152,7 @@ const AsyncSelect = forwardRef(
             cacheOptions={cacheOptions}
             defaultOptions={defaultOptions}
             loadOptions={loadOptions}
+            isClearable={isClearable}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>

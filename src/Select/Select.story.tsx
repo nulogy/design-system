@@ -368,6 +368,18 @@ Required.story = {
   name: "set to required",
 };
 
+export const WithAClearButton = () => (
+  <Select
+    isClearable
+    placeholder="Please select inventory status"
+    options={options}
+    labelText="Inventory status"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    onInputChange={action("typed input value changed")}
+  />
+);
+
 export const WithHelpText = () => (
   <Select
     placeholder="Please select inventory status"

@@ -26,16 +26,30 @@ describe("AsyncSelect", () => {
       getMultiselect().contains("Mexico");
     });
 
-    it("clears all selected values", () => {
-      getMultiselect().click();
+    describe("clears selected values", () => {
+      it("clears all multiselect values", () => {
+        getMultiselect().click();
 
-      cy.focused().type("cana");
-      assertDropDownIsOpen().contains("Canada");
-      cy.focused().type("{enter}");
+        cy.focused().type("cana");
+        assertDropDownIsOpen().contains("Canada");
+        cy.focused().type("{enter}");
 
-      getClearButton().click();
+        getClearButton().click();
 
-      getMultiselect().contains("Please select a countries");
+        getMultiselect().contains("Select countries");
+      });
+
+      it("clears single-select values", () => {
+        getSelectComponent().click();
+
+        cy.focused().type("cana");
+        assertDropDownIsOpen().contains("Canada");
+        cy.focused().type("{enter}");
+
+        getClearButton().click();
+
+        getMultiselect().contains("Select countries");
+      });
     });
 
     it("does not show the dropdown arrow", () => {
