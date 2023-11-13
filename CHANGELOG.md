@@ -1,3 +1,10 @@
+# [8.17.0](https://github.com/nulogy/design-system/compare/v8.16.0...v8.17.0) (2023-11-13)
+
+
+### Features
+
+* add `isClearable` prop to Select and AsyncSelect ([#1310](https://github.com/nulogy/design-system/issues/1310)) ([6e80f68](https://github.com/nulogy/design-system/commit/6e80f68f8a0f31bdd8c21dea181823e99958327c))
+
 # [8.16.0](https://github.com/nulogy/design-system/compare/v8.15.3...v8.16.0) (2023-11-01)
 
 
