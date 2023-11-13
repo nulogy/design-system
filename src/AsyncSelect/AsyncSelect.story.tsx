@@ -59,7 +59,17 @@ export const WithDefaultOptions = () => (
     classNamePrefix="SelectTest"
     labelText="Country"
     onInputChange={action("typed input value changed")}
-    defaultOptions={northAmericanCountries}
+    isClearable
+    defaultOptions={[
+      {
+        value: "Canada",
+        label: "Canada",
+      },
+      {
+        value: "United States",
+        label: "United States",
+      },
+    ]}
     loadOptions={loadMatchingCountries}
   />
 );
@@ -88,7 +98,7 @@ WithADefaultValue.story = {
 
 export const Multiselect = () => (
   <AsyncSelect
-    placeholder="Please select a countries"
+    placeholder="Select countries"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     className="Select"
@@ -100,9 +110,19 @@ export const Multiselect = () => (
   />
 );
 
-Multiselect.story = {
-  name: "Multiselect",
-};
+export const WithAClearButton = () => (
+  <AsyncSelect
+    placeholder="Select countries"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    labelText="Countries"
+    isClearable
+    onInputChange={action("typed input value changed")}
+    loadOptions={loadMatchingCountries}
+  />
+);
 
 export const UsingRefToControlFocus = () => {
   const ref = useRef(null);

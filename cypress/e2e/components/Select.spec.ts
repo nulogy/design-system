@@ -129,6 +129,21 @@ describe("Select", () => {
     });
   });
 
+  describe("with clear button", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("select--with-a-clear-button");
+    });
+
+    it("clears single-select values", () => {
+      getSelectComponent().click();
+      cy.focused().type("{downarrow}").type("{enter}");
+
+      getClearButton().click();
+
+      getSelectComponent().contains("Please select inventory status");
+    });
+  });
+
   describe("with state", () => {
     beforeEach(() => {
       cy.renderFromStorybook("select--with-state");

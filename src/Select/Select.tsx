@@ -65,6 +65,7 @@ export type SelectProps = {
   closeMenuOnSelect?: boolean;
   "aria-label"?: string;
   size?: ComponentSize;
+  isClearable?: boolean;
   [key: string]: any; // Allow for custom props to be passed and used inside custom components using the `selectProps` prop
 };
 
