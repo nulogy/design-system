@@ -9,7 +9,6 @@ import theme from "../theme";
 import { Button } from "../Button";
 import { Text } from "../Type";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
-import { devDependencies } from "../../package.json";
 
 const sampleLogo = "http://pigment.github.io/fake-logos/logos/vector/color/auto-speed.svg";
 
@@ -25,7 +24,7 @@ const BrandedNavBar = (props) => (
   <ResetStorybookView>
     <NDSBrandedNavBar {...props} />
     <Heading1 mt="x3" ml="x1">
-      <pre>styled-components version: {devDependencies["styled-components"]}</pre>
+      Some content
     </Heading1>
   </ResetStorybookView>
 );
