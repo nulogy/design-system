@@ -4,7 +4,7 @@ const simulatedAPIRequest = async (
   milliseconds = 450
 ): Promise<Response> => {
   const country = data.find((country) => {
-    return country.value.toLowerCase().startsWith(inputValue);
+    return country.value.toLowerCase().startsWith(inputValue.toLowerCase());
   });
 
   const responseBody = JSON.stringify([{ name: country.value }]);

@@ -83,6 +83,7 @@ const customStyles = ({
       height: 38,
     }),
     control: (provided, state) => ({
+      ...provided,
       display: "flex",
       minHeight: theme.space.x5,
       paddingLeft: theme.space.x1,
@@ -156,9 +157,18 @@ const customStyles = ({
       ...provided,
       color: theme.colors.grey,
     }),
+    singleValue: (provided) => ({
+      ...provided,
+      marginLeft: 2,
+      marginRight: 2,
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
+    }),
     input: () => ({}),
     valueContainer: (provided, state) => ({
       ...provided,
+      display: "flex",
       padding: 0,
       overflow: "auto",
       maxHeight: "150px",
@@ -299,10 +309,17 @@ const customStyles = ({
         : "none",
       borderLeft: `1px solid ${theme.colors.grey}`,
     }),
-    placeholder: (provided, state) => ({
-      ...provided,
-      color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)",
-    }),
+    placeholder: (state) => {
+      return {
+        label: "placeholder",
+        marginLeft: 2,
+        marginRight: 2,
+        position: "absolute",
+        top: "50%",
+        transform: "translateY(-50%)",
+        color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)",
+      };
+    },
   };
 };
 
