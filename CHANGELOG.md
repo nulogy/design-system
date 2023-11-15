@@ -1,3 +1,10 @@
+## [8.17.1](https://github.com/nulogy/design-system/compare/v8.17.0...v8.17.1) (2023-11-15)
+
+
+### Bug Fixes
+
+* improve AsyncSelect UX ([9a74305](https://github.com/nulogy/design-system/commit/9a7430593e68565400c2147edc39d734986332f0))
+
 # [8.17.0](https://github.com/nulogy/design-system/compare/v8.16.0...v8.17.0) (2023-11-13)
 
 
