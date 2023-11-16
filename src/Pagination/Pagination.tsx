@@ -1,13 +1,13 @@
 import React, { ReactNode, RefObject } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
+import { flushSync } from "react-dom";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import { FlexProps } from "../Flex/Flex";
 import PageNumber from "./PageNumber";
 import PreviousButton from "./PreviousButton";
 import NextButton from "./NextButton";
-import { flushSync } from "react-dom";
 
 const SEPARATOR = "...";
 
@@ -36,6 +36,8 @@ type PaginationProps = FlexProps & {
   nextAriaLabel?: string;
   previousLabel?: ReactNode;
   previousAriaLabel?: string;
+  scrollToTopAfterPagination?: boolean;
+  scrollTargetRef?: RefObject<HTMLElement>;
 };
 
 function Pagination({
@@ -48,17 +50,35 @@ function Pagination({
   nextLabel,
   previousAriaLabel,
   previousLabel,
-    previousLabel,
+  scrollToTopAfterPagination,
+  scrollTargetRef,
   "aria-label": ariaLabel,
   ...restProps
 }: PaginationProps) {
   const { t } = useTranslation();
 
+  const scrollToTop = () => {
+    if (scrollToTopAfterPagination) {
+      const top = scrollTargetRef?.current ? window.scrollY + scrollTargetRef.current?.getBoundingClientRect()?.top : 0;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <Flex as="nav" aria-label={ariaLabel || t("pagination navigation")} {...restProps}>
       <PreviousButton
         disabled={currentPage === 1}
-        onClick={onPrevious}
+        onClick={() => {
+          flushSync(() => {
+            onPrevious();
+          });
+
+          scrollToTop();
+        }}
         ariaLabel={previousAriaLabel}
         label={previousLabel}
       />
@@ -67,7 +87,6 @@ function Pagination({
 
         if (page === SEPARATOR)
           return (
-            // eslint-disable-next-line react/no-array-index-key
             <Text key={`sep${index}`} py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
               {SEPARATOR}
             </Text>
@@ -80,13 +99,30 @@ function Pagination({
               disabled={isCurrentPage}
               aria-label={isCurrentPage ? null : t("go to page", { count: Number(page) })}
               key={page}
-              onClick={() => onSelectPage(page)}
+              onClick={() => {
+                flushSync(() => {
+                  onSelectPage(page);
+                });
+
+                scrollToTop();
+              }}
             >
               {page}
             </PageNumber>
           );
       })}
-      <NextButton disabled={currentPage === totalPages} onClick={onNext} ariaLabel={nextAriaLabel} label={nextLabel} />
+      <NextButton
+        disabled={currentPage === totalPages}
+        onClick={() => {
+          flushSync(() => {
+            onNext();
+          });
+
+          scrollToTop();
+        }}
+        ariaLabel={nextAriaLabel}
+        label={nextLabel}
+      />
     </Flex>
   );
 }
