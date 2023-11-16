@@ -1,43 +1,59 @@
-// @ts-nocheck
-import React from "react";
+import React, { ReactNode, RefObject } from "react";
 import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
+import { FlexProps } from "../Flex/Flex";
 import PageNumber from "./PageNumber";
 import PreviousButton from "./PreviousButton";
 import NextButton from "./NextButton";
+import { flushSync } from "react-dom";
 
-const SEPERATOR = "...";
+const SEPARATOR = "...";
 
-export const getPageItemstoDisplay = (totalPages, currentPage) => {
-  const pages = Array.from({ length: totalPages }, (v, k) => k + 1);
+export const getPageItemsToDisplay = (totalPages: number, currentPage: number) => {
   const MAX_PAGES_TO_SHOW = 6;
+
+  const pages = Array.from({ length: totalPages }, (v, i) => i + 1);
+
   if (totalPages <= MAX_PAGES_TO_SHOW) return pages;
   if (currentPage <= MAX_PAGES_TO_SHOW - 1) {
-    return [...pages.slice(0, 5), SEPERATOR, totalPages];
+    return [...pages.slice(0, 5), SEPARATOR, totalPages];
   }
   if (currentPage > totalPages - 5) {
-    return [1, SEPERATOR, ...pages.slice(totalPages - 5)];
+    return [1, SEPARATOR, ...pages.slice(totalPages - 5)];
   }
-  return [1, SEPERATOR, ...pages.slice(currentPage - 2, currentPage + 2), SEPERATOR, totalPages];
+  return [1, SEPARATOR, ...pages.slice(currentPage - 2, currentPage + 2), SEPARATOR, totalPages];
 };
 
-const Pagination: React.FC<any> = (props) => {
-  const {
-    currentPage,
-    totalPages,
-    onNext,
-    onPrevious,
-    onSelectPage,
-    nextAriaLabel,
-    nextLabel,
-    previousAriaLabel,
+type PaginationProps = FlexProps & {
+  currentPage: number;
+  totalPages: number;
+  onNext?: () => void;
+  onPrevious?: () => void;
+  onSelectPage?: (page: string | number) => void;
+  nextLabel?: ReactNode;
+  nextAriaLabel?: string;
+  previousLabel?: ReactNode;
+  previousAriaLabel?: string;
+};
+
+function Pagination({
+  currentPage,
+  totalPages,
+  onNext,
+  onPrevious,
+  onSelectPage,
+  nextAriaLabel,
+  nextLabel,
+  previousAriaLabel,
+  previousLabel,
     previousLabel,
-    "aria-label": ariaLabel,
-    ...restProps
-  } = props;
+  "aria-label": ariaLabel,
+  ...restProps
+}: PaginationProps) {
   const { t } = useTranslation();
+
   return (
     <Flex as="nav" aria-label={ariaLabel || t("pagination navigation")} {...restProps}>
       <PreviousButton
@@ -46,14 +62,14 @@ const Pagination: React.FC<any> = (props) => {
         ariaLabel={previousAriaLabel}
         label={previousLabel}
       />
-      {getPageItemstoDisplay(totalPages, currentPage).map((page, index) => {
+      {getPageItemsToDisplay(totalPages, currentPage).map((page, index) => {
         const isCurrentPage = currentPage === page;
 
-        if (page === SEPERATOR)
+        if (page === SEPARATOR)
           return (
             // eslint-disable-next-line react/no-array-index-key
             <Text key={`sep${index}`} py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
-              {SEPERATOR}
+              {SEPARATOR}
             </Text>
           );
         else
@@ -62,7 +78,7 @@ const Pagination: React.FC<any> = (props) => {
               aria-current={isCurrentPage}
               currentPage={isCurrentPage}
               disabled={isCurrentPage}
-              aria-label={isCurrentPage ? null : t("go to page", { count: page })}
+              aria-label={isCurrentPage ? null : t("go to page", { count: Number(page) })}
               key={page}
               onClick={() => onSelectPage(page)}
             >
@@ -73,7 +89,7 @@ const Pagination: React.FC<any> = (props) => {
       <NextButton disabled={currentPage === totalPages} onClick={onNext} ariaLabel={nextAriaLabel} label={nextLabel} />
     </Flex>
   );
-};
+}
 
 Pagination.propTypes = {
   currentPage: PropTypes.number.isRequired,

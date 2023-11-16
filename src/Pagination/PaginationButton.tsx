@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { DefaultNDSThemeType } from "../theme.type";
 
-const getHoverBackground = (currentPage, disabled, theme) => {
+const getHoverBackground = (currentPage: boolean, disabled: boolean, theme: DefaultNDSThemeType) => {
   if (currentPage) {
     return theme.colors.darkBlue;
   }
   if (disabled) {
-    return "inital";
+    return "initial";
   }
   return theme.colors.lightGrey;
 };

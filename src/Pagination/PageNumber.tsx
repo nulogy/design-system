@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import PaginationButton from "./PaginationButton";
 
-const PageNumber = styled(PaginationButton)(({ theme, currentPage }: any) => ({
+type PageNumberProps = {
+  currentPage: boolean;
+};
+
+const PageNumber = styled(PaginationButton)<PageNumberProps>(({ theme, currentPage }) => ({
   background: currentPage ? theme.colors.darkBlue : "transparent",
   color: currentPage ? theme.colors.whiteGrey : theme.colors.black,
 }));
