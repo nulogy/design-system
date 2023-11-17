@@ -1,3 +1,10 @@
+# [8.18.0](https://github.com/nulogy/design-system/compare/v8.17.1...v8.18.0) (2023-11-17)
+
+
+### Features
+
+* optionally scroll to the top after paginating ([c495914](https://github.com/nulogy/design-system/commit/c49591461eacf71820336ef3ad5045d76b10a65f))
+
 ## [8.17.1](https://github.com/nulogy/design-system/compare/v8.17.0...v8.17.1) (2023-11-15)
 
 
