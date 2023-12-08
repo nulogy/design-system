@@ -3519,22 +3519,12 @@
     react-syntax-highlighter "^13.5.3"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addon-viewport@^6.1.9":
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-6.3.0.tgz#a30660fe1873f16e955798718e3f14e26f4bff09"
-  integrity sha512-aOENuKIfmeQOhm++p2ezwIV9gET05s5/QQ1TTZrrPixQ3FxmCwAb/OqsmD4m/8e075C5gLXQEV47vGAkYyTm0Q==
+"@storybook/addon-viewport@^7.6.4":
+  version "7.6.4"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-7.6.4.tgz#f39601082f48a903c47cae71a84b05428ea20331"
+  integrity sha512-SoTcHIoqybhYD28v7QExF1EZnl7FfxuP74VDhtze5LyMd2CbqmVnUfwewLCz/3IvCNce0GqdNyg1m6QJ7Eq1uw==
   dependencies:
-    "@storybook/addons" "6.3.0"
-    "@storybook/api" "6.3.0"
-    "@storybook/client-logger" "6.3.0"
-    "@storybook/components" "6.3.0"
-    "@storybook/core-events" "6.3.0"
-    "@storybook/theming" "6.3.0"
-    core-js "^3.8.2"
-    global "^4.4.0"
     memoizerific "^1.11.3"
-    prop-types "^15.7.2"
-    regenerator-runtime "^0.13.7"
 
 "@storybook/addons@6.3.0":
   version "6.3.0"
