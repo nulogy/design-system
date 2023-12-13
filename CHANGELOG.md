@@ -1,3 +1,20 @@
+# [9.0.0](https://github.com/nulogy/design-system/compare/v8.18.0...v9.0.0) (2023-12-13)
+
+
+### Bug Fixes
+
+* pass missing argument ([737331c](https://github.com/nulogy/design-system/commit/737331caa2c8a9b5b8f576b8d8459326b6582a4a))
+* prefer interfaces ([4fe1549](https://github.com/nulogy/design-system/commit/4fe1549e630551c6f7c36565a295c25533430899))
+* remaining TableHead type problems ([6275641](https://github.com/nulogy/design-system/commit/627564177d9f3f1b9c254c7ff7f3320ab8147d26))
+* remove unused import and type ([1f92579](https://github.com/nulogy/design-system/commit/1f925796ba77864af3bd3ec76a063d61182bbc95))
+* some type tidying ([f393d1c](https://github.com/nulogy/design-system/commit/f393d1cde7f4f69c4b57f1139c7954b72370a5ee))
+
+
+### BREAKING CHANGES
+
+* only properties conforming to the ColumnType are passed 
+as props to the headerFormatter.
+
 # [8.18.0](https://github.com/nulogy/design-system/compare/v8.17.1...v8.18.0) (2023-11-17)
 
 
