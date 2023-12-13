@@ -1,4 +1,4 @@
-import { Key, CSSProperties } from "react";
+import type { Key } from "react";
 import PropTypes from "prop-types";
 
 export type RowType = unknown;
