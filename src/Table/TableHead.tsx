@@ -20,7 +20,7 @@ const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...
 
 const TableHead: React.FC<TableHeadProps> = ({ columns, compact, sticky }) => {
   const renderColumns = (allColumns) =>
-    allColumns.map((column) => (
+    allColumns.map((column, index) => (
       <StyledTh
         scope="col"
         key={column.dataKey ?? column.key ?? index}
