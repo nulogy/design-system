@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import StyledTh from "./StyledTh";
-import { Columns } from "./Table.types";
+import type { Columns } from "./Table.types";
 
 type TableHeadProps = {
   columns: Columns;
@@ -18,8 +18,8 @@ const StyledHeaderRow = styled.tr(({ theme }) => ({
 const defaultheaderFormatter = ({ label }) => label;
 const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...column }) => headerFormatter(column);
 
-const TableHead: React.FC<TableHeadProps> = ({ columns, compact, sticky }) => {
-  const renderColumns = (allColumns) =>
+const TableHead = ({ columns, compact, sticky }: TableHeadProps) => {
+  const renderColumns = (allColumns: Columns) =>
     allColumns.map((column, index) => (
       <StyledTh
         scope="col"
