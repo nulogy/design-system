@@ -1,22 +1,28 @@
-// @ts-nocheck
 import React from "react";
 import styled from "styled-components";
 import StyledTh from "./StyledTh";
-import type { Columns } from "./Table.types";
+import type { ColumnType, Columns } from "./Table.types";
 
-type TableHeadProps = {
+interface TableHeadProps {
   columns: Columns;
   compact?: boolean;
   sticky?: boolean;
-};
+}
 
 const StyledHeaderRow = styled.tr(({ theme }) => ({
   color: theme.colors.darkGrey,
   borderBottom: `1px solid ${theme.colors.lightGrey}`,
 }));
 
-const defaultheaderFormatter = ({ label }) => label;
-const renderHeaderCellContent = ({ headerFormatter = defaultheaderFormatter, ...column }) => headerFormatter(column);
+const defaultheaderFormatter: ColumnType["headerFormatter"] = ({ label }) => label;
+
+const renderHeaderCellContent = ({
+  headerFormatter = defaultheaderFormatter,
+  align,
+  label,
+  dataKey,
+  width,
+}: ColumnType) => headerFormatter({ align, label, dataKey, width });
 
 const TableHead = ({ columns, compact, sticky }: TableHeadProps) => {
   const renderColumns = (allColumns: Columns) =>
@@ -38,7 +44,5 @@ const TableHead = ({ columns, compact, sticky }: TableHeadProps) => {
     </thead>
   );
 };
-TableHead.defaultProps = {
-  sticky: false,
-};
+
 export default TableHead;
