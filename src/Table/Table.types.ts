@@ -3,18 +3,18 @@ import PropTypes from "prop-types";
 
 export type RowType = unknown;
 
-export type CellInfoType = {
+export interface CellInfoType {
   cellData: unknown;
   column: ColumnType;
   row: RowType;
-};
+}
 
-type ColumnInfoType = {
+interface ColumnInfoType {
   align?: ColumnAlignment;
   label: string;
   dataKey?: Key;
   width?: string | number;
-};
+}
 
 type ColumnAlignment = "left" | "right" | "center";
 
