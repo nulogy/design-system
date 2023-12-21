@@ -51,16 +51,15 @@ const animationConfig: AnimationConfig = {
 const Switch: React.FC<SwitchProps> = ({ children, disabled, toggled, onClick }) => (
   <AnimatedBox
     position="relative"
-    display="flex"
-    alignItems="center"
-    justifyContent={toggled ? "flex-end" : "flex-start"}
     height="24px"
     width="48px"
     bg={disabled ? "grey" : getSwitchBackground(toggled)}
     borderRadius="20px"
     padding="2px"
     boxShadow="small"
-    whileHover="hover"
+    animate={toggled ? "toggled" : "initial"}
+    whileHover="active"
+    whileFocus="active"
     onClick={onClick}
   >
     {children}
@@ -70,18 +69,20 @@ const Switch: React.FC<SwitchProps> = ({ children, disabled, toggled, onClick })
 const Slider: React.FC<SliderProps> = ({ disabled, children }) => (
   <motion.div
     className="slider"
-    layout
+    initial={false}
     variants={{
-      hover: {
+      active: {
         boxShadow: disabled ? undefined : theme.shadows.focus,
         scale: disabled ? undefined : animationConfig.scale,
       },
+      toggled: {
+        marginLeft: theme.space.x3,
+      },
+      initial: {
+        marginLeft: theme.space.none,
+      },
     }}
     transition={animationConfig.transition}
-    whileFocus={{
-      boxShadow: disabled ? undefined : theme.shadows.focus,
-      scale: disabled ? undefined : animationConfig.scale,
-    }}
     style={{
       height: "20px",
       width: "20px",
