@@ -7,11 +7,11 @@ import { Box } from "../Box";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
 import { Text } from "../Type";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
 import ToggleButton from "./ToggleButton";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 const labelTextStyles = (theme: DefaultNDSThemeType) => ({
   fontSize: theme.fontSizes.small,
@@ -25,7 +25,6 @@ type MaybeToggleTitleProps = React.ComponentPropsWithRef<"div"> & {
   helpText?: string;
   children?: any;
 };
-
 const MaybeToggleTitle: React.FC<MaybeToggleTitleProps> = ({
   labelText,
   requirementText,
