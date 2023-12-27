@@ -1,3 +1,10 @@
+## [9.0.1](https://github.com/nulogy/design-system/compare/v9.0.0...v9.0.1) (2023-12-27)
+
+
+### Bug Fixes
+
+* make toggle button non-layout ([3eebead](https://github.com/nulogy/design-system/commit/3eebead413bb5b6e1f1b82d52617abb9da1a6eab))
+
 # [9.0.0](https://github.com/nulogy/design-system/compare/v8.18.0...v9.0.0) (2023-12-13)
 
 
