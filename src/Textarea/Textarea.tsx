@@ -23,7 +23,7 @@ type TextareaProps = StyledTextareaProps & {
   isResizeable?: boolean;
 };
 
-const Textarea: React.FC<TextareaProps> = forwardRef(
+const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   (
     {
       errorMessage,
