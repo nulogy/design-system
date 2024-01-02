@@ -1,7 +1,12 @@
 import React from "react";
 import FieldLabel from "./FieldLabel";
+import type { FieldLabelProps } from "./FieldLabel.type";
 
-const MaybeFieldLabel = ({ labelText, children, ...props }: any) =>
+interface Props extends Omit<FieldLabelProps, "id"> {
+  labelText: string | undefined;
+}
+
+const MaybeFieldLabel = ({ labelText, children, ...props }: Props) =>
   labelText ? (
     <FieldLabel labelText={labelText} {...props}>
       {children}
