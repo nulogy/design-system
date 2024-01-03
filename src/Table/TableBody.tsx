@@ -35,8 +35,8 @@ const renderRows = (rows, columns, keyField, noRowsContent, rowHovers, compact, 
         rowHovers={rowHovers}
         compact={compact}
         rowClassName={row.rowClassName}
-        onMouseEnter={(e) => onRowMouseEnter({ row, e })}
-        onMouseLeave={(e) => onRowMouseLeave({ row, e })}
+        onMouseEnter={(e: MouseEvent) => onRowMouseEnter({ row, e })}
+        onMouseLeave={(e: MouseEvent) => onRowMouseLeave({ row, e })}
       />
     ))
   ) : (
