@@ -1,5 +1,6 @@
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
+
 const stickyStyles = (theme: DefaultNDSThemeType): CSSObject => ({
   position: "sticky",
   top: 0,
@@ -8,14 +9,16 @@ const stickyStyles = (theme: DefaultNDSThemeType): CSSObject => ({
   zIndex: theme.zIndices.tableHeader,
 });
 
-type StyledThProps = {
-  width?: any;
+interface StyledThProps {
+  width?: string | number;
   compact?: boolean;
   theme?: DefaultNDSThemeType;
-  sticky?: any;
-};
+  sticky?: boolean;
+}
+
 const StyledTh = styled.th(({ width, compact, theme, sticky }: StyledThProps): CSSObject => {
   const padding = compact ? theme.space.x1 : theme.space.x2;
+
   return {
     fontWeight: "normal",
     textAlign: "left",
@@ -29,4 +32,5 @@ const StyledTh = styled.th(({ width, compact, theme, sticky }: StyledThProps): C
     width: width || "auto",
   };
 });
+
 export default StyledTh;
