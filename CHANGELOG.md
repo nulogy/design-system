@@ -1,3 +1,12 @@
+## [9.0.2](https://github.com/nulogy/design-system/compare/v9.0.1...v9.0.2) (2024-01-09)
+
+
+### Bug Fixes
+
+* Improve types for MaybeFieldLabel ([75ee442](https://github.com/nulogy/design-system/commit/75ee4421b6b2f376d6083cb42917c6df78f1887d))
+* Truncated Text allows for font size ([#1344](https://github.com/nulogy/design-system/issues/1344)) ([1b4fd2a](https://github.com/nulogy/design-system/commit/1b4fd2a21563c693f07991e0eba55c29937d7a02))
+* Type improvements for Textarea ([746c6b1](https://github.com/nulogy/design-system/commit/746c6b18f032e4f4d06742481877b832348be58d))
+
 ## [9.0.1](https://github.com/nulogy/design-system/compare/v9.0.0...v9.0.1) (2023-12-27)
 
 
