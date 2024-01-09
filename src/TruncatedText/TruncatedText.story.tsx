@@ -7,7 +7,9 @@ export default {
   title: "Components/TruncatedText",
 };
 
-export const _TruncatedText = () => <TruncatedText>Special instructions are provided for the shipment</TruncatedText>;
+export const _TruncatedText = () => (
+  <TruncatedText fontSize="small">Special instructions are provided for the shipment</TruncatedText>
+);
 
 _TruncatedText.story = {
   name: "TruncatedText",

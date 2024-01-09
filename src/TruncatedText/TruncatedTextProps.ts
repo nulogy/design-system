@@ -1,6 +1,7 @@
 import { TooltipProps } from "../Tooltip/Tooltip";
+import { TextProps } from "../Type";
 
-export type TruncatedTextProps = {
+export interface TruncatedTextProps extends TextProps {
   children?: string;
   indicator?: string;
   element?: any;
@@ -9,4 +10,4 @@ export type TruncatedTextProps = {
   fullWidth?: boolean;
   "data-testid"?: string;
   tooltipProps?: TooltipProps;
-};
+}
