@@ -1,3 +1,10 @@
+## [9.0.3](https://github.com/nulogy/design-system/compare/v9.0.2...v9.0.3) (2024-01-16)
+
+
+### Bug Fixes
+
+* allow NDS users to typecheck style-system props ([137f7ea](https://github.com/nulogy/design-system/commit/137f7ea94c4f91b44a6a01ec39705335b27d1152))
+
 ## [9.0.2](https://github.com/nulogy/design-system/compare/v9.0.1...v9.0.2) (2024-01-09)
 
 
