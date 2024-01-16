@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import styled from "styled-components";
 import { boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import { Box, DropdownButton, DropdownMenu, Button, Text } from "..";
@@ -280,7 +281,7 @@ export const WithData = () => (
 );
 
 WithData.story = {
-  name: " with data",
+  name: "with data",
 };
 
 export const WithNoData = () => (
@@ -392,3 +393,24 @@ WithAFooter.story = {
   name: "with a footer",
 };
 /* eslint-enable react/prop-types */
+
+const TableWithBorderedRows = styled(Table)`
+  border-collapse: collapse;
+
+  > tbody > tr {
+    border-bottom: 1px solid;
+    border-color: ${({ theme }) => theme.colors.lightGrey};
+    border-collapse: collapse;
+  }
+`;
+
+export const WithRowBorder = () => (
+  <TableWithBorderedRows
+    columns={columns}
+    rows={rowData}
+    rowHovers={boolean("Show row hovers", true)}
+    compact={boolean("Show with compact styling", false)}
+    loading={boolean("Show loading state", false)}
+    className="Table"
+  />
+);
