@@ -1,1 +1,2 @@
-export { default as Alert } from "./Alert";
+export { default as Alert, NotificationTypes } from "./Alert";
+export type { NotificationType } from "./Alert";
