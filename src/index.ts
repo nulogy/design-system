@@ -1,6 +1,7 @@
 // Alphabetized list of all components, utilities, types and constants exported by the package
 
-export { Alert } from "./Alert";
+export { Alert, NotificationTypes } from "./Alert";
+export type { NotificationType } from "./Alert";
 export { AsyncSelect } from "./AsyncSelect";
 export { Banner } from "./Banner";
 export { AnimatedBox, Box } from "./Box";

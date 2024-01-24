@@ -7,7 +7,14 @@ import { Flex } from "../Flex";
 import { Text } from "../Type";
 import CloseButton from "./CloseButton";
 
-type NotificationType = "danger" | "informative" | "success" | "warning";
+export const NotificationTypes = {
+  danger: "danger",
+  informative: "informative",
+  success: "success",
+  warning: "warning",
+} as const;
+
+export type NotificationType = typeof NotificationTypes[keyof typeof NotificationTypes];
 
 export type AlertProps = FlexProps & {
   isCloseable?: boolean;
