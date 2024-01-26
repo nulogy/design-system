@@ -1,6 +1,6 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties } from "react";
 import styled from "styled-components";
-import { flexbox, system } from "styled-system";
+import { system } from "styled-system";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 
@@ -10,7 +10,7 @@ export type FlexProps = BoxProps & {
   columnGap?: CSSProperties["columnGap"];
 };
 
-const Flex: React.FC<FlexProps> = styled(Box)(
+const Flex = styled(Box)<FlexProps>(
   {
     display: "flex",
   },
@@ -27,8 +27,7 @@ const Flex: React.FC<FlexProps> = styled(Box)(
       property: "columnGap",
       scale: "space",
     },
-  }),
-  flexbox
+  })
 );
 
 export default Flex;
