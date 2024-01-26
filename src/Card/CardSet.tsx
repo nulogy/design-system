@@ -5,7 +5,7 @@ import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 import Card from "./Card";
 
-const UnstyledCardSet: React.FC<BoxProps> = ({ children = [], ...props }) => <Box {...props}>{children}</Box>;
+const UnstyledCardSet = ({ children = [], ...props }: BoxProps) => <Box {...props}>{children}</Box>;
 
 const CardSet = styled(UnstyledCardSet)(space, ({ theme }) => ({
   [`${Card}`]: {

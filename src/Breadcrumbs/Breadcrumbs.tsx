@@ -19,7 +19,7 @@ const insertSeparators = (items: JSX.Element[]) => {
 
 type BreadcrumbsProps = Omit<FlexProps, "size"> & { size?: ComponentSize };
 
-const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size, children, ...props }) => {
+const Breadcrumbs = ({ size, children, ...props }: BreadcrumbsProps) => {
   const componentSize = useComponentSize(size);
 
   const allItems = React.Children.map(children, (child, index) => {
