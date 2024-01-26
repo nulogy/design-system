@@ -16,20 +16,6 @@ const Flex = ({ children, ...props }) => (
   </NDSFlex>
 );
 
-const IE11Flex = ({ children, ...props }) => (
-  <NDSFlex
-    boxSizing="content-box"
-    padding="x3"
-    bg="whiteGrey"
-    style={{
-      boxSizing: "content-box",
-    }}
-    {...props}
-  >
-    {children}
-  </NDSFlex>
-);
-
 const boxStyles = {
   padding: theme.space.x6,
   background: theme.colors.grey,
@@ -321,40 +307,4 @@ export const WithCustomOrder = () => (
 
 WithCustomOrder.story = {
   name: "With custom order",
-};
-
-export const Ie11MinHeightSolution1 = () => (
-  <>
-    <IE11Flex height="400px">
-      <Box style={boxStyles}>1</Box>
-      <Box style={boxStyles}>2</Box>
-      <Box style={boxStyles}>3</Box>
-      <Box style={boxStyles}>4</Box>
-      <Box style={boxStyles}>5</Box>
-    </IE11Flex>
-    <Text my="x2">This solution involves using height instead min-height.</Text>
-  </>
-);
-
-Ie11MinHeightSolution1.story = {
-  name: "IE11 minHeight solution 1",
-};
-
-export const Ie11MinHeightSolution2 = () => (
-  <>
-    <NDSFlex flexDirection="column">
-      <Flex>
-        <Box style={boxStyles}>1</Box>
-        <Box style={boxStyles}>2</Box>
-        <Box style={boxStyles}>3</Box>
-        <Box style={boxStyles}>4</Box>
-        <Box style={boxStyles}>5</Box>
-      </Flex>
-    </NDSFlex>
-    <Text my="x2">This solution involves wrapping Flex element with another Flex element with column direction..</Text>
-  </>
-);
-
-Ie11MinHeightSolution2.story = {
-  name: "IE11 minHeight solution 2",
 };
