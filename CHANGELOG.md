@@ -1,3 +1,17 @@
+# [10.0.0](https://github.com/nulogy/design-system/compare/v9.0.3...v10.0.0) (2024-01-29)
+
+
+### Bug Fixes
+
+* export the default theme type ([a61c6ed](https://github.com/nulogy/design-system/commit/a61c6edc43a4c0643e1e61106171c6e875fc26ad))
+* update Box styled-system props and their types ([1e05962](https://github.com/nulogy/design-system/commit/1e05962e3172fc675fbf4b59b0d339840a198042))
+
+
+### BREAKING CHANGES
+
+* removes boxSizing properties from the supported styled-system 
+props on the Box component.
+
 ## [9.0.3](https://github.com/nulogy/design-system/compare/v9.0.2...v9.0.3) (2024-01-16)
 
 
