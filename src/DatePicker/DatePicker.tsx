@@ -24,6 +24,7 @@ type DatePickerProps = Omit<FieldProps, "size"> & {
   onChange?: ReactDatePickerProps["onChange"];
   onBlur?: ReactDatePickerProps["onBlur"];
   onFocus?: ReactDatePickerProps["onFocus"];
+  disabled?: ReactDatePickerProps["disabled"];
   onInputChange?: (...args: any[]) => any;
   inputProps?: any;
   errorMessage?: string;
@@ -53,6 +54,7 @@ const DatePicker = forwardRef<Ref, DatePickerProps>(
       highlightDates,
       disableFlipping,
       className,
+      disabled,
       onInputChange,
       onChange,
       onBlur,
@@ -153,6 +155,7 @@ const DatePicker = forwardRef<Ref, DatePickerProps>(
               openToDate={selectedDate}
               dateFormat={dateFormat}
               onChange={handleSelectedDateChange}
+              disabled={disabled}
               customInput={customInput}
               renderCustomHeader={renderHeader({ locale })}
               disabledKeyboardNavigation

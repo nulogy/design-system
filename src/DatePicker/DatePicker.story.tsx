@@ -170,3 +170,19 @@ export const UsingRefToControlFocus = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
+
+export const Disabled = () => (
+  <DatePicker
+    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+    onChange={action("date changed")}
+    onFocus={action("date selector focused")}
+    onBlur={action("date selector blurred")}
+    onInputChange={action("input changed")}
+    inputProps={{ labelText: "Expiry Date" }}
+    disabled
+  />
+);
+
+Disabled.story = {
+  name: "disabled",
+};
