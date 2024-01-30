@@ -1,5 +1,5 @@
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
-import React, { useEffect, useState, forwardRef } from "react";
+import React, { useCallback, useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
 import type { ReactDatePickerProps } from "react-datepicker";
 import propTypes from "@styled-system/prop-types";
@@ -11,10 +11,11 @@ import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 import { getSubset } from "../utils/subset";
 import { FieldProps } from "../Form/Field";
+import { useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import type { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 import DatePickerHeader from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 type DatePickerProps = Omit<FieldProps, "size"> & {
   size?: ComponentSize;
@@ -37,7 +38,9 @@ type DatePickerProps = Omit<FieldProps, "size"> & {
 const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
 const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
 
-const DatePicker: React.FC<DatePickerProps> = forwardRef(
+type Ref = HTMLDivElement | undefined;
+
+const DatePicker = forwardRef<Ref, DatePickerProps>(
   (
     {
       dateFormat = DEFAULT_DATE_FORMAT,
@@ -71,7 +74,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
       setSelectedDate(selected);
     }, [selected]);
 
-    const onRefChange = React.useCallback((node) => {
+    const onRefChange = useCallback((node) => {
       if (node) {
         setRef(node);
       }
@@ -107,9 +110,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
 
     const handleEnterKey = () => {
       if (ref) {
-        // @ts-ignore
         const isOpen = ref.isCalendarOpen();
-        // @ts-ignore
         ref.setOpen(!isOpen);
       }
     };
@@ -169,6 +170,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
               onFocus={onFocus}
               onBlur={onBlur}
               popperModifiers={{
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 flip: { enabled: !disableFlipping },
               }}
