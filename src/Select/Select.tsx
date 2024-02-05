@@ -30,8 +30,10 @@ type ReactSelectStateManager = {
   blur: () => void;
 };
 
+// NOTE: We recreate these props as upstream doesn't export them. Note also that
+// we have a default value for windowThreshold, therfore this param is optional.
 interface WindowedSelectProps extends SelectProps {
-  windowThreshold: number;
+  windowThreshold?: number;
 }
 
 interface NDSOptionType {
@@ -53,11 +55,12 @@ interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   size?: ComponentSize;
   error?: boolean;
   options: NDSOptionType[];
+  onChange?: (newValue: unknown) => void;
 }
 
 type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
   WindowedSelectProps,
-  "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue" | "options"
+  "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue" | "options" | "onChange"
 > &
   CustomProps<Option, IsMulti, Group>;
 
@@ -136,13 +139,6 @@ const ReactSelect = React.forwardRef(
       optionsRef.current = options;
     }, [options]);
 
-    const handleChange = useCallback(
-      (option) => {
-        onChange && onChange(extractValue(option, multiselect));
-      },
-      [multiselect, onChange]
-    );
-
     React.useEffect(() => {
       if (ref) {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -171,7 +167,10 @@ const ReactSelect = React.forwardRef(
             aria-invalid={error}
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
-            onChange={handleChange}
+            onChange={(option) => {
+              const value = extractValue(option as NDSOptionType | NDSOptionType[], multiselect);
+              onChange(value);
+            }}
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
             isMulti={multiselect}
