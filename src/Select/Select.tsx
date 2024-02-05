@@ -37,6 +37,7 @@ interface WindowedSelectProps extends SelectProps {
 }
 
 interface NDSOptionType {
+  label: string;
   value: unknown;
 }
 
