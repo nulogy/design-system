@@ -100,15 +100,13 @@ const AsyncSelect = forwardRef(
             ref={ref}
             defaultInputValue={defaultValue}
             placeholder={placeholder || t("start typing")}
-            styles={
-              customStyles({
-                theme,
-                error,
-                maxHeight,
-                windowed: false,
-                hasDefaultOptions: Boolean(defaultOptions),
-              }) as any
-            }
+            styles={customStyles<Option, IsMulti, Group>({
+              theme,
+              error,
+              maxHeight,
+              windowed: false,
+              hasDefaultOptions: Boolean(defaultOptions),
+            })}
             isDisabled={disabled}
             isSearchable={autocomplete}
             aria-required={required}

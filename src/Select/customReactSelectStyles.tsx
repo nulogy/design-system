@@ -1,9 +1,23 @@
 import { transparentize } from "polished";
-import { CSSObject } from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import type { CSSObject } from "styled-components";
+import type { GroupBase, MenuPlacement, StylesConfig } from "react-select";
+import type { CSSProperties } from "react";
+import type { DefaultNDSThemeType } from "../theme.type";
+import type { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
-const getBorderColor = ({ errored, disabled, isOpen, isFocused, theme }) => {
+const getBorderColor = ({
+  errored,
+  disabled,
+  isOpen,
+  isFocused,
+  theme,
+}: {
+  errored: boolean;
+  disabled?: boolean;
+  isOpen: boolean;
+  isFocused: boolean;
+  theme: DefaultNDSThemeType;
+}) => {
   const { red, lightGrey, blue, grey } = theme.colors;
 
   if (errored) return red;
@@ -13,7 +27,7 @@ const getBorderColor = ({ errored, disabled, isOpen, isFocused, theme }) => {
   return grey;
 };
 
-const getShadow = ({ errored, isOpen, theme }) => {
+const getShadow = ({ errored, isOpen, theme }: { errored: boolean; isOpen: boolean; theme: DefaultNDSThemeType }) => {
   if (!isOpen) return null;
 
   const { focus, error } = theme.shadows;
@@ -37,7 +51,7 @@ export function getControlBorderRadius({
   border: Placement;
   isMenuOpen: boolean;
   menuLength: number;
-  menuPlacement: Placement;
+  menuPlacement: MenuPlacement;
   theme: DefaultNDSThemeType;
 }) {
   const isMenuEmpty = menuLength === 0;
@@ -53,9 +67,9 @@ export function getMenuBorderRadius({
   theme,
 }: {
   border: Placement;
-  menuPlacement: Placement;
+  menuPlacement: MenuPlacement;
   theme: DefaultNDSThemeType;
-}) {
+}): { radius: string | number; style: CSSProperties["borderBottomStyle"] } {
   return border === menuPlacement ? { radius: theme.radii.medium, style: "solid" } : { radius: 0, style: "none" };
 }
 
@@ -70,14 +84,14 @@ export function stylesForSize(config: SizeConfig, size: ComponentSize) {
 export const showIndicatorSeparator = ({ isMulti, hasValue, hasDefaultOptions }) =>
   isMulti && hasValue && hasDefaultOptions;
 
-const customStyles = ({
-  theme,
-  error,
-  maxHeight,
-  windowed,
-  size,
-  hasDefaultOptions = true,
-}: { theme: DefaultNDSThemeType } & { [key: string]: any }) => {
+interface Args {
+  theme: DefaultNDSThemeType;
+  [key: string]: any;
+}
+
+const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
+  args: Args
+) => StylesConfig<Option, IsMulti, Group> = ({ theme, error, maxHeight, windowed, size, hasDefaultOptions = true }) => {
   return {
     option: () => ({
       height: 38,
@@ -148,10 +162,10 @@ const customStyles = ({
         }),
       },
     }),
-    dropdownIndicator: (provided, state) => ({
+    dropdownIndicator: (provided) => ({
       ...provided,
       ...(!hasDefaultOptions && { display: "none" }),
-      color: state.isHovered ? theme.colors.blackBlue : theme.colors.grey,
+      color: theme.colors.grey,
     }),
     indicatorsContainer: (provided) => ({
       ...provided,
@@ -194,14 +208,13 @@ const customStyles = ({
       marginBottom: 0,
       position: "absolute",
       overflowX: "auto",
-      zIndex: "100",
+      zIndex: 100,
       width: "100%",
       background: theme.colors.white,
       borderWidth: "1px",
       borderColor: getBorderColor({
         errored: error,
         isOpen: true,
-        disabled: state.isDisabled,
         isFocused: false,
         theme,
       }),
