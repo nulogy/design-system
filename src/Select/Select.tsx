@@ -58,7 +58,7 @@ interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   onChange?: (newValue: unknown) => void;
 }
 
-type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
+export type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
   WindowedSelectProps,
   "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue" | "options" | "onChange"
 > &

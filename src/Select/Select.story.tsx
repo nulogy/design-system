@@ -2,10 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
 import { text, boolean, select } from "@storybook/addon-knobs";
+import { GroupBase } from "react-windowed-select";
 import { Button, Heading2, Select, SelectOption } from "../index";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
-import { SelectProps } from "./Select";
+import { NDSSelectProps } from "./Select";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -60,7 +61,10 @@ const getPhotos = async () => {
   return results;
 };
 
-const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps) => {
+const SelectWithManyOptions = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>({
+  multiselect,
+  labelText,
+}: Pick<NDSSelectProps<Option, IsMulti, Group>, "multiselect" | "labelText">) => {
   const [photoList, setPhotoList] = useState([]);
 
   const setOptions = async () => {
@@ -72,46 +76,35 @@ const SelectWithManyOptions = ({ multiselect, labelText, ...props }: SelectProps
     setOptions();
   }, []);
 
-  return <Select multiselect={multiselect} options={photoList} labelText={labelText} {...props} />;
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} />;
 };
 
-type SelectWithStateProps = SelectProps & {
-  selectedValue: string;
-};
+function SelectWithState<Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
+  props: NDSSelectProps<Option, IsMulti, Group>
+) {
+  const [selectedValue, setSelectedValue] = useState("");
 
-class SelectWithState extends React.Component<{ selectedValue: string }, SelectWithStateProps> {
-  constructor(props) {
-    super(props);
-
-    this.state = { selectedValue: "" };
-    this.handleChange = this.handleChange.bind(this);
-    this.clearSelection = this.clearSelection.bind(this);
+  function handleChange(selectedValue) {
+    setSelectedValue(selectedValue);
   }
 
-  handleChange(selectedValue) {
-    this.setState({ selectedValue });
+  function clearSelection() {
+    setSelectedValue("");
   }
 
-  clearSelection() {
-    this.setState({ selectedValue: "" });
-  }
-
-  render() {
-    const { selectedValue } = this.state;
-    return (
-      <Flex flexDirection="column" gap="x2" alignItems="flex-start">
-        <Select
-          className="Select"
-          classNamePrefix="SelectTest"
-          onChange={this.handleChange}
-          value={selectedValue}
-          options={options}
-          {...this.props}
-        />
-        <Button onClick={this.clearSelection}>Clear selection</Button>
-      </Flex>
-    );
-  }
+  return (
+    <Flex flexDirection="column" gap="x2" alignItems="flex-start">
+      <Select
+        className="Select"
+        classNamePrefix="SelectTest"
+        onChange={handleChange}
+        value={selectedValue}
+        options={options}
+        {...props}
+      />
+      <Button onClick={clearSelection}>Clear selection</Button>
+    </Flex>
+  );
 }
 
 export default {
@@ -156,7 +149,7 @@ export const WithDifferentSizes = () => {
       <Heading2>Standard</Heading2>
       <Flex gap="x2" minHeight="360px">
         <Select
-          defaultMenuIsOpen
+          initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
@@ -166,7 +159,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="medium"
-          defaultMenuIsOpen
+          initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
@@ -176,7 +169,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="large"
-          defaultMenuIsOpen
+          initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
@@ -189,7 +182,7 @@ export const WithDifferentSizes = () => {
       <Heading2>Multi-select</Heading2>
       <Flex gap="x2" alignItems="flex-start">
         <Select
-          defaultMenuIsOpen
+          initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
@@ -199,7 +192,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="medium"
-          defaultMenuIsOpen
+          initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
@@ -209,7 +202,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="large"
-          defaultMenuIsOpen
+          initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
@@ -270,7 +263,6 @@ WithAnOptionSelected.story = {
 };
 
 export const WithState = () => (
-  // @ts-ignore
   <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
 );
 
@@ -627,26 +619,6 @@ export const UsingRefToControlFocus = () => {
         menuPosition="fixed"
       />
       <Button onClick={handleClick}>Focus the Input</Button>
-    </>
-  );
-};
-
-const CustomOption = (props) => {
-  return <SelectOption {...props}>{props.selectProps.myCustomProp}</SelectOption>;
-};
-
-const CustomSingleValue = ({ innerProps, ...props }) => {
-  return <div {...innerProps}>{props.selectProps.myCustomProp}</div>;
-};
-
-export const WithCustomProps = () => {
-  return (
-    <>
-      <Select
-        options={[{ value: "accepted", label: "Accepted" }]}
-        myCustomProp="custom prop value"
-        components={{ Option: CustomOption, SingleValue: CustomSingleValue }}
-      />
     </>
   );
 };

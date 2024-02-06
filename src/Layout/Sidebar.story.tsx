@@ -12,9 +12,6 @@ import {
   PrimaryButton,
   Box,
   Textarea,
-  Text,
-  Flex,
-  Button,
   Heading3,
 } from "..";
 
@@ -435,7 +432,7 @@ export const WithDifferentWidths = () => {
       <Select
         value={width.value}
         options={options}
-        onChange={(s: string) => {
+        onChange={(s) => {
           const [option] = options.filter(({ value }) => value === s);
           setWidth(option);
         }}
