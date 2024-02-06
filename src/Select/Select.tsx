@@ -52,7 +52,6 @@ interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   initialIsOpen?: SelectProps<Option, IsMulti, Group>["defaultMenuIsOpen"];
   multiselect?: SelectProps<Option, IsMulti, Group>["isMulti"];
   maxHeight?: string;
-  defaultValue?: SelectProps<Option, IsMulti, Group>["defaultInputValue"];
   size?: ComponentSize;
   error?: boolean;
   options: NDSOptionType[];
