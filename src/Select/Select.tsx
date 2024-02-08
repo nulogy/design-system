@@ -175,7 +175,7 @@ const ReactSelect = React.forwardRef(
             value={getReactSelectValue(options, value)}
             isMulti={multiselect}
             components={{
-              Option: SelectOption,
+              Option: (props) => <SelectOption size={componentSize} {...props} />,
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,

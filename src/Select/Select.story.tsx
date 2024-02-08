@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import styled from "styled-components";
 import { text, boolean, select } from "@storybook/addon-knobs";
-import { GroupBase } from "react-windowed-select";
+import { GroupBase, OptionProps } from "react-windowed-select";
 import { Button, Heading2, Select, SelectOption } from "../index";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -567,14 +567,18 @@ export const WithCustomOptionComponent = () => {
     height: "10px",
     marginRight: "5px",
   }));
-  const CustomOption = ({ children, ...props }) => {
+  const CustomOption = ({ children, ...props }: OptionProps) => {
     const newChildren = (
       <>
         <Indicator />
         {children}
       </>
     );
-    return <SelectOption {...props}>{newChildren}</SelectOption>;
+    return (
+      <SelectOption size="medium" {...props}>
+        {newChildren}
+      </SelectOption>
+    );
   };
   return (
     <>
