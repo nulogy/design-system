@@ -31,7 +31,7 @@ type ReactSelectStateManager = {
 };
 
 // NOTE: We recreate these props as upstream doesn't export them. Note also that
-// we have a default value for windowThreshold, therfore this param is optional.
+// we have a default value for windowThreshold, therefore this param is optional.
 interface WindowedSelectProps extends SelectProps {
   windowThreshold?: number;
 }
@@ -56,6 +56,7 @@ interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   error?: boolean;
   options: NDSOptionType[];
   onChange?: (newValue: unknown) => void;
+  [key: string]: any;
 }
 
 export type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
@@ -168,6 +169,8 @@ const ReactSelect = React.forwardRef(
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
             onChange={(option) => {
+              if (!onChange) return;
+
               const value = extractValue(option as NDSOptionType | NDSOptionType[], multiselect);
               onChange(value);
             }}
