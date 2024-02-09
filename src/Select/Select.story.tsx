@@ -652,9 +652,7 @@ export const WithCustomProps = () => {
     <>
       <Select
         options={[{ value: "accepted", label: "Accepted" }]}
-        customProps={{
-          myCustomProp: "custom prop value",
-        }}
+        myCustomProp="custom prop value"
         components={{ Option: CustomOption, SingleValue: CustomSingleValue }}
       />
     </>
