@@ -1,3 +1,10 @@
+## [10.0.1](https://github.com/nulogy/design-system/compare/v10.0.0...v10.0.1) (2024-02-12)
+
+
+### Bug Fixes
+
+* Upgrade react-windowed-select ([d7f1703](https://github.com/nulogy/design-system/commit/d7f1703ec20b6ac7d78b2348b533cd35909cba09))
+
 # [10.0.0](https://github.com/nulogy/design-system/compare/v9.0.3...v10.0.0) (2024-01-29)
 
 
