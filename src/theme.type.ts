@@ -1,4 +1,4 @@
-type Colors = {
+interface Colors {
   black: string;
   blackBlue: string;
   darkBlue: string;
@@ -22,9 +22,9 @@ type Colors = {
   categorical4: string;
   categorical5: string;
   categorical6: string;
-};
+}
 
-type FontSizes = {
+interface FontSizes {
   smaller: string;
   small: string;
   medium: string;
@@ -35,9 +35,9 @@ type FontSizes = {
   heading2: string;
   heading3: string;
   heading4: string;
-};
+}
 
-type LineHeights = {
+interface LineHeights {
   base: string;
   smallTextBase: string;
   smallTextCompressed: string;
@@ -49,16 +49,16 @@ type LineHeights = {
   title: string;
   sectionTitle: string;
   subsectionTitle: string;
-};
+}
 
-type FontWeights = {
+interface FontWeights {
   light: number;
   normal: number;
   medium: number;
   bold: number;
-};
+}
 
-type Space = {
+interface Space {
   none: string;
   half: string;
   x1: string;
@@ -68,39 +68,39 @@ type Space = {
   x5: string;
   x6: string;
   x8: string;
-};
+}
 
-type Fonts = {
+interface Fonts {
   base: string;
   mono: string;
   sc: string;
-};
+}
 
 type Borders = Array<any>;
 
-type Shadows = {
+interface Shadows {
   small: string;
   medium: string;
   large: string;
   focus: string;
   error: string;
-};
+}
 
-type Radii = {
+interface Radii {
   small: string;
   medium: string;
   circle: string;
-};
+}
 
-export type Breakpoints = {
+export interface Breakpoints {
   extraSmall: string;
   small: string;
   medium: string;
   large: string;
   extraLarge: string;
-};
+}
 
-type ZIndices = {
+interface ZIndices {
   content: number;
   tabsScollIndicator: number;
   tabsBar: number;
@@ -111,9 +111,9 @@ type ZIndices = {
   openControl: number;
   sidebar: number;
   navBar: number;
-};
+}
 
-export type DefaultNDSThemeType = {
+export interface DefaultNDSThemeType {
   colors: Colors;
   fontSizes: FontSizes;
   lineHeights: LineHeights;
@@ -126,7 +126,7 @@ export type DefaultNDSThemeType = {
   radii: Radii;
   breakpoints: Breakpoints;
   zIndices: ZIndices;
-};
+}
 
 type RecursivePartial<T> = {
   [P in keyof T]?: RecursivePartial<T[P]>;

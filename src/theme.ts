@@ -1,5 +1,5 @@
 import * as tokens from "@nulogy/tokens";
-import { DefaultNDSThemeType } from "./theme.type";
+import type { DefaultNDSThemeType } from "./theme.type";
 
 const Theme: DefaultNDSThemeType = {
   colors: {

@@ -16878,20 +16878,6 @@ react-router@5.2.0:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
 
-react-select@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-3.1.0.tgz#ab098720b2e9fe275047c993f0d0caf5ded17c27"
-  integrity sha512-wBFVblBH1iuCBprtpyGtd1dGMadsG36W5/t2Aj8OE6WbByDg5jIFyT7X5gT+l0qmT5TqWhxX+VsKJvCEl2uL9g==
-  dependencies:
-    "@babel/runtime" "^7.4.4"
-    "@emotion/cache" "^10.0.9"
-    "@emotion/core" "^10.0.9"
-    "@emotion/css" "^10.0.9"
-    memoize-one "^5.0.0"
-    prop-types "^15.6.0"
-    react-input-autosize "^2.2.2"
-    react-transition-group "^4.3.0"
-
 react-select@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-select/-/react-select-3.2.0.tgz#de9284700196f5f9b5277c5d850a9ce85f5c72fe"
@@ -16906,7 +16892,7 @@ react-select@^3.2.0:
     react-input-autosize "^3.0.0"
     react-transition-group "^4.3.0"
 
-react-select@^5.8.0:
+react-select@^5.2.2, react-select@^5.8.0:
   version "5.8.0"
   resolved "https://registry.yarnpkg.com/react-select/-/react-select-5.8.0.tgz#bd5c467a4df223f079dd720be9498076a3f085b5"
   integrity sha512-TfjLDo58XrhP6VG5M/Mi56Us0Yt8X7xD6cDybC7yoRMUNm7BGO7qk8J0TLQOua/prb8vUOtsfnXZwfm30HGsAA==
@@ -16989,21 +16975,21 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react-window@1.8.5:
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/react-window/-/react-window-1.8.5.tgz#a56b39307e79979721021f5d06a67742ecca52d1"
-  integrity sha512-HeTwlNa37AFa8MDZFZOKcNEkuF2YflA0hpGPiTT9vR7OawEt+GZbfM6wqkBahD3D3pUjIabQYzsnY/BSJbgq6Q==
+react-window@^1.8.6:
+  version "1.8.10"
+  resolved "https://registry.yarnpkg.com/react-window/-/react-window-1.8.10.tgz#9e6b08548316814b443f7002b1cf8fd3a1bdde03"
+  integrity sha512-Y0Cx+dnU6NLa5/EvoHukUD0BklJ8qITCtVEPY1C/nL8wwoZ0b5aEw8Ff1dOVHw7fCzMt55XfJDd8S8W8LCaUCg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
 
-react-windowed-select@2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/react-windowed-select/-/react-windowed-select-2.0.5.tgz#4fa56bdbe246706cb3d01f8882933807bea2e900"
-  integrity sha512-HIpl3jl7fjxAFAn9RgY7JMw240Gj1Spookx656zyG7cYucYtCK4RLqv1celqdGHcXTCy5R3IFVoDcVasF2YNDg==
+react-windowed-select@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/react-windowed-select/-/react-windowed-select-5.2.0.tgz#367916ded1ed492ab8319b614681d914ace54388"
+  integrity sha512-NOdkFj3GKjIdSQicPITjvIMzu2y75JIoCAB1CPiMiRfbLCQRwaf5rH6n4EdP38KpDrv6R2Vt8bVo3PUoB+RspA==
   dependencies:
-    react-select "3.1.0"
-    react-window "1.8.5"
+    react-select "^5.2.2"
+    react-window "^1.8.6"
 
 react@17.0.2:
   version "17.0.2"

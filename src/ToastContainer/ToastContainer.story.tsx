@@ -74,7 +74,7 @@ export const WithEverything = () => {
               { value: "top-right", label: "Top right" },
             ]}
             labelText="Position"
-            onChange={(value: ToastPosition) => setPosition(value)}
+            onChange={(value) => setPosition(value as ToastPosition)}
           />
         </Flex>
         <Flex flexDirection="column" flexBasis="100%" gap="x2">
@@ -88,7 +88,7 @@ export const WithEverything = () => {
               defaultValue={type}
               options={[{ value: "random", label: "Random" }, ...types]}
               labelText="Type"
-              onChange={(value) => setType(value)}
+              onChange={(value) => setType(value as ToastPosition)}
             />
             <Select
               defaultValue={behavior}
@@ -98,7 +98,7 @@ export const WithEverything = () => {
                 { label: "Auto-dismissed", value: "auto" },
               ]}
               labelText="Behavior"
-              onChange={(value) => setBehavior(value)}
+              onChange={(value) => setBehavior(value as ToastPosition)}
             />
             <PrimaryButton
               onClick={() => {

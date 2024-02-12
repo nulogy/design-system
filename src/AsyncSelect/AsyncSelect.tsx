@@ -12,6 +12,7 @@ import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
 import { SelectOption } from "../Select/SelectOption";
 import { getSubset } from "../utils/subset";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import {
   SelectControl,
   SelectMultiValue,
@@ -25,6 +26,7 @@ import {
 type AsyncCustomProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = {
   autocomplete?: AsyncProps<Option, IsMulti, Group>["isSearchable"];
   labelText?: string;
+  size?: ComponentSize;
   requirementText?: string;
   helpText?: ReactNode;
   disabled?: AsyncProps<Option, IsMulti, Group>["isDisabled"];
@@ -36,7 +38,7 @@ type AsyncCustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   defaultValue?: AsyncProps<Option, IsMulti, Group>["defaultInputValue"];
 };
 
-type AsyncSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
+export type AsyncSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
   AsyncProps<Option, IsMulti, Group>,
   "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue"
 > &
@@ -77,6 +79,7 @@ const AsyncSelect = forwardRef(
       defaultOptions,
       loadOptions,
       isClearable,
+      size,
       ...props
     }: AsyncSelectProps<Option, IsMulti, Group>,
     ref:
@@ -89,6 +92,8 @@ const AsyncSelect = forwardRef(
     const spaceProps = getSubset(props, propTypes.space);
     const error = !!(errorMessage || errorList);
 
+    const componentSize = useComponentSize(size);
+
     return (
       <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -100,15 +105,13 @@ const AsyncSelect = forwardRef(
             ref={ref}
             defaultInputValue={defaultValue}
             placeholder={placeholder || t("start typing")}
-            styles={
-              customStyles({
-                theme,
-                error,
-                maxHeight,
-                windowed: false,
-                hasDefaultOptions: Boolean(defaultOptions),
-              }) as any
-            }
+            styles={customStyles<Option, IsMulti, Group>({
+              theme,
+              error,
+              maxHeight,
+              windowed: false,
+              hasDefaultOptions: Boolean(defaultOptions),
+            })}
             isDisabled={disabled}
             isSearchable={autocomplete}
             aria-required={required}
@@ -127,7 +130,7 @@ const AsyncSelect = forwardRef(
             onInputChange={onInputChange}
             theme={theme as any}
             components={{
-              Option: SelectOption,
+              Option: (props) => <SelectOption size={componentSize} {...props} />,
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,

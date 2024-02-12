@@ -1,14 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import { components } from "react-windowed-select";
+import { components, OptionProps } from "react-windowed-select";
 import { typography } from "styled-system";
+import { GroupBase } from "react-select";
 import { subPx } from "../utils";
-import { DefaultNDSThemeType } from "../theme.type";
+import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { stylesForSize } from "./customReactSelectStyles";
 
 type SelectOptionProps = {
-  theme?: DefaultNDSThemeType;
-} & { [key: string]: any };
+  isSelected: boolean;
+  isFocused: boolean;
+  size: ComponentSize;
+};
 
 const StyledOption = styled.div<SelectOptionProps>(
   typography,
@@ -31,7 +34,7 @@ const StyledOption = styled.div<SelectOptionProps>(
       },
     },
   }),
-  ({ theme, selectProps }) =>
+  ({ theme, size }) =>
     stylesForSize(
       {
         large: {
@@ -45,14 +48,21 @@ const StyledOption = styled.div<SelectOptionProps>(
           },
         },
       },
-      selectProps.size
+      size
     )
 );
 
-export const SelectOption = (props) => {
+export function SelectOption<Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
+  props: OptionProps<Option, IsMulti, Group> & { size: ComponentSize }
+) {
   return (
-    <StyledOption {...props} cx={null} data-testid="select-option">
+    <StyledOption
+      isSelected={props.isSelected}
+      isFocused={props.isFocused}
+      size={props.size}
+      data-testid="select-option"
+    >
       <components.Option {...props} />
     </StyledOption>
   );
-};
+}
