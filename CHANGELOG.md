@@ -1,3 +1,10 @@
+## [10.0.2](https://github.com/nulogy/design-system/compare/v10.0.1...v10.0.2) (2024-02-29)
+
+
+### Bug Fixes
+
+* Form Props are Now Complete ([0dd2f2c](https://github.com/nulogy/design-system/commit/0dd2f2ce031a5909bb7ac744e32365b94eaa32eb))
+
 ## [10.0.1](https://github.com/nulogy/design-system/compare/v10.0.0...v10.0.1) (2024-02-12)
 
 
