@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent } from "react";
 import {
   Alert,
   Input,
@@ -13,6 +13,7 @@ import {
   ListItem,
   Select,
   Text,
+  Button,
 } from "../index";
 
 const options = [
@@ -161,4 +162,17 @@ export const DemoForm = () => (
 
 DemoForm.story = {
   name: "Demo form",
+};
+
+export const WithAnAction = () => {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    alert("Hello!");
+  }
+
+  return (
+    <Form onSubmit={handleSubmit}>
+      <Button type="submit">Click me</Button>
+    </Form>
+  );
 };

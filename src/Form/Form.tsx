@@ -1,24 +1,20 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
-import { space, SpaceProps } from "styled-system";
+import { space } from "styled-system";
+import type { SpaceProps } from "styled-system";
 import { Heading2 } from "../Type";
 import { Alert } from "../Alert";
-import { ThemeType } from "../theme.type";
+import type { ThemeType } from "../theme.type";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";
 
-type FormProps = SpaceProps & {
-  title?: string;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-  id?: string;
-};
+interface FormProps extends SpaceProps, React.HTMLProps<HTMLFormElement> {}
 
-type FormStylesProps = {
-  title?: string;
+interface FormStylesProps {
+  title?: FormProps["title"];
   theme: ThemeType;
-};
+}
 
 const FormStyles = ({ title, theme }: FormStylesProps) => ({
   width: "100%",
