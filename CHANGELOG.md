@@ -1,3 +1,10 @@
+## [10.0.3](https://github.com/nulogy/design-system/compare/v10.0.2...v10.0.3) (2024-03-05)
+
+
+### Bug Fixes
+
+* improve DatePicker types ([6577934](https://github.com/nulogy/design-system/commit/6577934cd4132b732b00ec3ff557d07bf4cf1808))
+
 ## [10.0.2](https://github.com/nulogy/design-system/compare/v10.0.1...v10.0.2) (2024-02-29)
 
 
