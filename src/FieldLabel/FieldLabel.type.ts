@@ -1,13 +1,12 @@
 import React from "react";
-import { SpaceProps } from "styled-system";
+import type { LabelProps } from "./Label";
 
-export type FieldLabelProps = SpaceProps & {
+export interface FieldLabelProps extends LabelProps {
+  hint?: string;
   labelText: string;
-  children?: React.ReactNode;
   requirementText?: string;
   helpText?: React.ReactNode;
-  id: string;
-};
+}
 
 export const FieldLabelDefaultProps = {
   children: null,
