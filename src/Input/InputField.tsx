@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import styled, { CSSObject } from "styled-components";
 import { transparentize } from "polished";
-import { space, TextAlignProps, variant } from "styled-system";
+import { space, variant } from "styled-system";
 import { Icon } from "../Icon";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
@@ -21,13 +21,13 @@ export type InputFieldProps = NativeInputProps & {
   error?: boolean;
   labelText?: string;
   requirementText?: string;
-  helpText?: React.ReactNode;
+  helpText?: string;
   suffix?: string;
   prefix?: string;
   suffixWidth?: string;
   prefixWidth?: string;
-  suffixAlignment?: TextAlignProps["textAlign"];
-  prefixAlignment?: TextAlignProps["textAlign"];
+  suffixAlignment?: "left" | "right";
+  prefixAlignment?: "left" | "right";
   iconSize?: string;
   inputWidth?: string;
 };
@@ -175,3 +175,11 @@ const cssForState = ({
     borderColor: theme.colors.grey,
   };
 };
+
+export const InputFieldDefaultProps: InputFieldProps = {
+  disabled: false,
+  required: false,
+  error: false,
+  suffixAlignment: "left",
+  prefixAlignment: "left",
+} as const;
