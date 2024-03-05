@@ -1,43 +1,44 @@
-import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
+import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import type { ReactDatePickerProps } from "react-datepicker";
 import propTypes from "@styled-system/prop-types";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
-import { InputFieldDefaultProps } from "../Input/InputField.type";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
 import { LocaleContext } from "../NDSProvider/LocaleContext";
 import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
+import { InputFieldDefaultProps, InputFieldProps } from "../Input/InputField";
 import { getSubset } from "../utils/subset";
 import { FieldProps } from "../Form/Field";
 import DatePickerHeader from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
-type DatePickerProps = Omit<FieldProps, "size"> & {
+type OmittedFieldProps = "size" | "onChange" | "onBlur" | "onFocus";
+
+interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
   size?: ComponentSize;
-  selected?: any;
+  onChange?: (date: Date) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   dateFormat?: string;
-  onChange?: ReactDatePickerProps["onChange"];
-  onBlur?: ReactDatePickerProps["onBlur"];
-  onFocus?: ReactDatePickerProps["onFocus"];
-  onInputChange?: (...args: any[]) => any;
-  inputProps?: any;
+  onInputChange?: (value: string) => void;
+  inputProps?: InputFieldProps;
   errorMessage?: string;
   errorList?: string[];
-  minDate?: any;
-  maxDate?: any;
-  highlightDates?: {}[];
+  minDate?: Date;
+  maxDate?: Date;
+  highlightDates?: ReactDatePickerProps["highlightDates"];
   disableFlipping?: boolean;
-  className?: string;
-};
+  selected?: Date;
+}
 
 const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
 const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
 
-const DatePicker: React.FC<DatePickerProps> = forwardRef(
+const DatePicker = forwardRef<unknown, DatePickerProps>(
   (
     {
       dateFormat = DEFAULT_DATE_FORMAT,
@@ -77,14 +78,13 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
       }
     }, []);
 
-    const handleInputChange = (event) => {
-      const { value } = event.target;
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       if (onInputChange) {
-        onInputChange(value);
+        onInputChange(event.target.value);
       }
     };
 
-    const handleSelectedDateChange = (date) => {
+    const handleSelectedDateChange = (date: Date) => {
       if (onChange) {
         onChange(date);
       }
@@ -107,9 +107,7 @@ const DatePicker: React.FC<DatePickerProps> = forwardRef(
 
     const handleEnterKey = () => {
       if (ref) {
-        // @ts-ignore
         const isOpen = ref.isCalendarOpen();
-        // @ts-ignore
         ref.setOpen(!isOpen);
       }
     };

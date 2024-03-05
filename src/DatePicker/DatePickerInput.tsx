@@ -1,27 +1,23 @@
 import React, { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
-import { InputField } from "../Input/InputField";
-import { InputFieldDefaultProps } from "../Input/InputField.type";
+import { InputField, InputFieldDefaultProps, InputFieldProps } from "../Input/InputField";
 import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
-type DatePickerInputProps = {
+interface InputProps extends InputFieldProps {
+  placeholder?: string;
+}
+
+type DatePickerInputProps = Omit<React.ComponentPropsWithRef<"input">, "size"> & {
   size?: ComponentSize;
-  onBlur?: React.ComponentPropsWithRef<"input">["onBlur"];
-  onFocus?: React.ComponentPropsWithRef<"input">["onFocus"];
-  onClick?: (...args: any[]) => any;
-  onChange?: (...args: any[]) => any;
-  onUpKeyPress?: (...args: any[]) => any;
-  onDownKeyPress?: (...args: any[]) => any;
-  onEnterKeyPress?: (...args: any[]) => any;
-  onSpaceKeyPress?: (...args: any[]) => any;
-  value?: string;
-  onInputChange: (...args: any[]) => any;
   dateFormat?: string;
-  inputProps?: any;
-  "aria-label"?: string;
+  inputProps?: InputProps;
+  onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onUpKeyPress: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  onDownKeyPress: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  onEnterKeyPress: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 };
 
-const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
+const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
   (
     {
       onChange,
@@ -39,22 +35,31 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
     },
     ref
   ) => {
-    const handleChange = (e) => {
-      onInputChange(e);
-      if (onChange) {
-        onChange(e);
-      }
-    };
-    const handleKeyDown = (event) => {
-      if (event.keyCode === 38) {
-        if (onUpKeyPress) onUpKeyPress(event);
-      } else if (event.keyCode === 40) {
-        if (onDownKeyPress) onDownKeyPress(event);
-      } else if (event.keyCode === 13) {
-        if (onEnterKeyPress) onEnterKeyPress(event);
-      }
-    };
     const { t } = useTranslation();
+    const { placeholder, ...inputFieldProps } = inputProps;
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      onInputChange(event);
+      if (onChange) {
+        onChange(event);
+      }
+    };
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+      switch (event.key) {
+        case "ArrowUp":
+          if (onUpKeyPress) onUpKeyPress(event);
+          break;
+
+        case "ArrowDown":
+          if (onDownKeyPress) onDownKeyPress(event);
+          break;
+
+        case "Enter":
+          if (onEnterKeyPress) onEnterKeyPress(event);
+          break;
+      }
+    };
+
     return (
       <InputField
         onBlur={onBlur}
@@ -63,13 +68,13 @@ const DatePickerInput: React.FC<DatePickerInputProps> = forwardRef(
         size={size}
         aria-label={ariaLabel || t("select a date")}
         autoComplete="off"
-        {...inputProps}
         value={value}
-        placeholder={inputProps.placeholder}
+        placeholder={placeholder}
         icon="calendarToday"
         onClick={onClick}
         onKeyDown={handleKeyDown}
         onChange={handleChange}
+        {...inputFieldProps}
       />
     );
   }
