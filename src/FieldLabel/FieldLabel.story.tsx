@@ -2,8 +2,6 @@ import React from "react";
 import { FieldLabel, Input } from "../index";
 import { Link } from "../Link";
 
-const CustomInput = (props) => <Input {...props} />;
-
 const helpTextWithLink = (
   <>
     I am help text. I can be a string or a node that includes a <Link href="http://nulogy.design">link</Link>.
@@ -22,15 +20,7 @@ _FieldLabel.story = {
 
 export const WithHelpText = () => <FieldLabel labelText="Default label" helpText={helpTextWithLink} />;
 
-WithHelpText.story = {
-  name: "with HelpText",
-};
-
 export const WithRequirementText = () => <FieldLabel labelText="Default label" requirementText="(Required)" />;
-
-WithRequirementText.story = {
-  name: "with RequirementText",
-};
 
 export const WithAllAdditionalText = () => (
   <FieldLabel
@@ -40,20 +30,24 @@ export const WithAllAdditionalText = () => (
   />
 );
 
-WithAllAdditionalText.story = {
-  name: "with all additional text",
-};
-
 export const WithAssociatedCustomInputComponent = () => (
   <FieldLabel
     labelText="Default label"
     helpText="I am help text. I can give more details on the input below!"
     requirementText="(Required)"
+    htmlFor="input-1"
   >
-    <CustomInput id="input1" />
+    <Input id="input-1" />
   </FieldLabel>
 );
 
-WithAssociatedCustomInputComponent.story = {
-  name: "with associated custom input component",
-};
+export const WithHint = () => (
+  <FieldLabel
+    labelText="Default label"
+    helpText="I am help text. I can give more details on the input below!"
+    requirementText="(Required)"
+    hint="This is a hint for the input field"
+  >
+    <Input />
+  </FieldLabel>
+);

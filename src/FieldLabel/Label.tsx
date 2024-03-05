@@ -1,14 +1,18 @@
 import styled from "styled-components";
-import { space, color } from "styled-system";
-import PropTypes from "prop-types";
+import { space, color, display, DisplayProps } from "styled-system";
+import type { SpaceProps } from "styled-system";
+import type { ComponentPropsWithRef } from "react";
 
-const Label = styled.label(space, color, () => ({
-  display: "inline-block",
-}));
+export interface LabelProps extends SpaceProps, DisplayProps, Omit<ComponentPropsWithRef<"label">, "color"> {}
 
-Label.propTypes = {
-  color: PropTypes.string,
-};
+const Label = styled.label<LabelProps>(
+  () => ({
+    display: "inline-block",
+  }),
+  display,
+  space,
+  color
+);
 
 Label.defaultProps = {
   color: "black",
