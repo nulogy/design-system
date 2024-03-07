@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { space, typography, flexbox, SpaceProps, TypographyProps, FlexboxProps } from "styled-system";
 import { DefaultNDSThemeType } from "../theme.type";
@@ -54,25 +53,18 @@ const statusIndicatorStyles = (theme: DefaultNDSThemeType) => ({
   },
 });
 
-type StatusIndicatorProps = SpaceProps &
-  TypographyProps &
-  FlexboxProps & {
-    type?: StatusIndicatorType;
-  };
+interface Props extends SpaceProps, TypographyProps, FlexboxProps {
+  type?: StatusIndicatorType;
+}
 
-const StatusIndicator: React.FC<StatusIndicatorProps> = styled.span(
-  space,
-  typography,
-  flexbox,
-  ({ theme, type }: { theme: DefaultNDSThemeType; type: StatusIndicatorType }) => ({
-    display: "inline-block",
-    fontWeight: theme.fontWeights.bold,
-    textTransform: "uppercase",
-    letterSpacing: ".05em",
-    borderRadius: theme.space.x1,
-    ...statusIndicatorStyles(theme)[type],
-  })
-);
+const StatusIndicator = styled.span<Props>(space, typography, flexbox, ({ theme, type }) => ({
+  display: "inline-block",
+  fontWeight: theme.fontWeights.bold,
+  textTransform: "uppercase",
+  letterSpacing: ".05em",
+  borderRadius: theme.space.x1,
+  ...statusIndicatorStyles(theme)[type],
+}));
 
 StatusIndicator.defaultProps = {
   type: StatusIndicatorValues.neutral,
