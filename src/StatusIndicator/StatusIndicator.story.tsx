@@ -96,7 +96,7 @@ export const InsideFlex = () => (
       <Heading2 inline mr="x1" mb="0">
         Label
       </Heading2>
-      <StatusIndicator>Status</StatusIndicator>
+      <StatusIndicator className="my-test-classname">Status</StatusIndicator>
     </Flex>
     <Flex mb="x3">
       <Heading3 inline mr="x1" mb="0">
