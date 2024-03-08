@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { space, SpaceProps, variant } from "styled-system";
 import { Manager, Reference, Popper } from "react-popper-2";
 import { transparentize } from "polished";
@@ -10,18 +9,21 @@ import { Text } from "../Type";
 import { DefaultNDSThemeType } from "../theme.type";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
-type BaseProps = {
+interface BaseProps {
   size?: ComponentSize;
   color?: string;
   labelHidden?: boolean;
-  icon?: any;
+  icon?: string;
   iconSize?: string;
   hoverBackgroundColor?: string;
   fontSize?: string;
-  tooltip?: string;
-};
+  tooltip?: React.ReactNode;
+}
 
-type IconicButtonProps = BaseProps & SpaceProps & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps>;
+interface IconicButtonProps
+  extends BaseProps,
+    SpaceProps,
+    Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> {}
 
 const IconWrapper = styled.span(({ theme, size }: { theme: DefaultNDSThemeType; size: string }) => ({
   display: "inline-flex",
@@ -34,7 +36,7 @@ const IconWrapper = styled.span(({ theme, size }: { theme: DefaultNDSThemeType; 
   transition: ".2s",
 }));
 
-const HoverText: React.FC<any> = styled.div(({ theme }) => ({
+const HoverText = styled.div(({ theme }) => ({
   whiteSpace: "nowrap",
   ontSize: theme.fontSizes.small,
   lineHeight: theme.lineHeights.smallTextCompressed,
@@ -47,7 +49,7 @@ const HoverText: React.FC<any> = styled.div(({ theme }) => ({
 }));
 
 const WrapperButton = styled.button<IconicButtonProps>(
-  ({ disabled, hoverBackgroundColor, theme }: any) => ({
+  ({ disabled, hoverBackgroundColor, theme }) => ({
     background: "transparent",
     border: "none",
     position: "relative",
@@ -165,9 +167,9 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
               },
             ]}
           >
-            {({ ref, style, placement }) =>
+            {({ ref, style }) =>
               labelHidden || tooltip ? (
-                <HoverText ref={ref} style={style} placement={placement}>
+                <HoverText ref={ref} style={style}>
                   {tooltip ? tooltip : children}
                 </HoverText>
               ) : null
@@ -189,16 +191,5 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
 );
 
 export const iconNames = Object.keys(icons);
-
-IconicButton.propTypes = {
-  className: PropTypes.string,
-  color: PropTypes.string,
-  disabled: PropTypes.bool,
-  onClick: PropTypes.func,
-  icon: PropTypes.string,
-  iconSize: PropTypes.string,
-  tooltip: PropTypes.string,
-  children: PropTypes.node,
-};
 
 export default IconicButton;
