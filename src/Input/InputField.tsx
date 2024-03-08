@@ -7,14 +7,14 @@ import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { subPx } from "../utils";
 import { MaybeFieldLabel } from "../FieldLabel";
-import { DefaultNDSThemeType } from "../theme.type";
+import type { DefaultNDSThemeType } from "../theme.type";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
 
 type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
 
-export type InputFieldProps = NativeInputProps & {
+export interface InputFieldProps extends NativeInputProps {
   htmlSize?: number;
   size?: ComponentSize;
   icon?: string;
@@ -30,9 +30,9 @@ export type InputFieldProps = NativeInputProps & {
   prefixAlignment?: "left" | "right";
   iconSize?: string;
   inputWidth?: string;
-};
+}
 
-export const InputField: React.FC<InputFieldProps> = forwardRef<HTMLInputElement, InputFieldProps>(
+export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
   (
     {
       icon,
