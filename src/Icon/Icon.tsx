@@ -6,7 +6,7 @@ import icons from "@nulogy/icons";
 import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
 
-type IconProps = SpaceProps & {
+interface IconProps extends SpaceProps {
   icon: string;
   className?: string;
   size?: string;
@@ -14,7 +14,7 @@ type IconProps = SpaceProps & {
   color?: string;
   focusable?: boolean;
   style?: React.CSSProperties;
-};
+}
 
 /* eslint-disable react/no-array-index-key */
 const getPathElements = (icon: any) => (

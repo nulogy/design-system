@@ -84,6 +84,16 @@ WithATooltipAndLabel.story = {
   name: "with a tooltip and label",
 };
 
+export const WithAComplicatedTooltipAndLabel = () => (
+  <IconicButton tooltip={<Box>Hello</Box>} icon="close">
+    Please stop
+  </IconicButton>
+);
+
+WithAComplicatedTooltipAndLabel.story = {
+  name: "with a complicated tooltip and label",
+};
+
 export const rightAligned = () => (
   <Flex px="x3" height="150px">
     <Flex justifyContent="flex-end" alignItems="flex-start" width="100%">
