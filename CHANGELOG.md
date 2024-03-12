@@ -1,3 +1,10 @@
+# [10.1.0](https://github.com/nulogy/design-system/compare/v10.0.3...v10.1.0) (2024-03-12)
+
+
+### Features
+
+* add hint prop to the FieldLabel ([1fb35c2](https://github.com/nulogy/design-system/commit/1fb35c241ee20c99225b0137cd7ca1afc41e2c3e))
+
 ## [10.0.3](https://github.com/nulogy/design-system/compare/v10.0.2...v10.0.3) (2024-03-05)
 
 
