@@ -1,3 +1,10 @@
+## [10.1.2](https://github.com/nulogy/design-system/compare/v10.1.1...v10.1.2) (2024-03-13)
+
+
+### Bug Fixes
+
+* remove double props occurrence on the Heading ([0c71b2f](https://github.com/nulogy/design-system/commit/0c71b2f0b497535913587d7faeb6fde8d995cb21))
+
 ## [10.1.1](https://github.com/nulogy/design-system/compare/v10.1.0...v10.1.1) (2024-03-13)
 
 
