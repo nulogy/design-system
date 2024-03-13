@@ -1,7 +1,6 @@
 import styled, { CSSObject } from "styled-components";
 import type { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
-const getAttrs = (inline?: boolean) => (inline ? { as: "span" } : null);
 
 export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
   inline?: boolean;
@@ -22,8 +21,8 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
   fontSize?: string;
 } & StyledProps & { theme?: DefaultNDSThemeType };
 
-const Text = styled.p.attrs<TextProps>((props: TextProps) => getAttrs(props.inline))<TextProps>(
-  ({ disabled, textTransform, theme }: TextProps): CSSObject => ({
+const Text = styled.p<TextProps>(
+  ({ disabled, textTransform, inline, theme }): CSSObject => ({
     textTransform,
     color: "currentColor",
     marginTop: 0,
@@ -31,9 +30,11 @@ const Text = styled.p.attrs<TextProps>((props: TextProps) => getAttrs(props.inli
     fontSize: theme.fontSizes.medium,
     lineHeight: theme.lineHeights.base,
     opacity: disabled ? "0.7" : undefined,
+    display: inline ? "inline" : undefined,
   }),
   addStyledProps
 );
+
 Text.defaultProps = {
   inline: false,
   disabled: false,
