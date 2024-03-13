@@ -14,18 +14,16 @@ type InputProps = InputFieldProps &
     className?: string;
   };
 
-const Input: React.FC<InputProps> = forwardRef<HTMLInputElement, InputProps>(
-  ({ errorMessage, errorList, className, ...props }, ref) => {
-    const spaceProps = getSubset(props, propTypes.space);
-    const restProps = omitSubset(props, propTypes.space);
+const Input = forwardRef<HTMLInputElement, InputProps>(({ errorMessage, errorList, className, ...props }, ref) => {
+  const spaceProps = getSubset(props, propTypes.space);
+  const restProps = omitSubset(props, propTypes.space);
 
-    return (
-      <Field className={className} {...spaceProps}>
-        <InputField {...restProps} error={!!(errorMessage || errorList)} ref={ref} />
-        <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-      </Field>
-    );
-  }
-);
+  return (
+    <Field className={className} {...spaceProps}>
+      <InputField {...restProps} error={!!(errorMessage || errorList)} ref={ref} />
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Field>
+  );
+});
 
 export default Input;
