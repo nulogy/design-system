@@ -1,3 +1,10 @@
+## [10.1.1](https://github.com/nulogy/design-system/compare/v10.1.0...v10.1.1) (2024-03-13)
+
+
+### Bug Fixes
+
+* Type the ref properly in the Input component ([#1378](https://github.com/nulogy/design-system/issues/1378)) ([f8eb1fa](https://github.com/nulogy/design-system/commit/f8eb1faf2a703b4ae4b1169ca8e991063d6df766))
+
 # [10.1.0](https://github.com/nulogy/design-system/compare/v10.0.3...v10.1.0) (2024-03-12)
 
 
