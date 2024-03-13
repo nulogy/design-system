@@ -32,7 +32,7 @@ interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
   maxDate?: Date;
   highlightDates?: ReactDatePickerProps["highlightDates"];
   disableFlipping?: boolean;
-  selected?: Date;
+  selected?: Date | null;
 }
 
 const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
