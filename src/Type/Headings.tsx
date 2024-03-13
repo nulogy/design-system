@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { addStyledProps } from "../StyledProps";
-import Text from "./Text";
+import Text, { TextProps } from "./Text";
 
-export const Heading1 = styled(Text).attrs((props) => ({
+export const Heading1 = styled(Text).attrs(() => ({
   as: "h1",
-  ...props,
-}))(
+}))<TextProps>(
   ({ theme }) => ({
     fontSize: theme.fontSizes.heading1,
     lineHeight: theme.lineHeights.heading1,
@@ -16,9 +15,8 @@ export const Heading1 = styled(Text).attrs((props) => ({
   addStyledProps
 );
 
-export const Heading2 = styled(Text).attrs((props) => ({
+export const Heading2 = styled(Text).attrs(() => ({
   as: "h2",
-  ...props,
 }))(
   ({ theme }) => ({
     fontSize: theme.fontSizes.heading2,
@@ -30,9 +28,8 @@ export const Heading2 = styled(Text).attrs((props) => ({
   addStyledProps
 );
 
-export const Heading3 = styled(Text).attrs((props) => ({
-  as: "h3",
-  ...props,
+export const Heading3 = styled(Text).attrs(() => ({
+  as: "h4",
 }))(
   ({ theme }) => ({
     fontSize: theme.fontSizes.heading3,
@@ -44,9 +41,8 @@ export const Heading3 = styled(Text).attrs((props) => ({
   addStyledProps
 );
 
-export const Heading4 = styled(Text).attrs((props) => ({
+export const Heading4 = styled(Text).attrs(() => ({
   as: "h4",
-  ...props,
 }))(
   ({ theme }) => ({
     fontSize: theme.fontSizes.heading4,
