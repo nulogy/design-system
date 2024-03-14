@@ -1,3 +1,10 @@
+## [10.2.1](https://github.com/nulogy/design-system/compare/v10.2.0...v10.2.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* Fix StatusIndicator types ([15c31eb](https://github.com/nulogy/design-system/commit/15c31ebdaa0b98b68f42f6e5920fe9672bffcac1))
+
 # [10.2.0](https://github.com/nulogy/design-system/compare/v10.1.3...v10.2.0) (2024-03-14)
 
 
