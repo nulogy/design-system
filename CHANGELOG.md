@@ -1,3 +1,10 @@
+## [10.1.3](https://github.com/nulogy/design-system/compare/v10.1.2...v10.1.3) (2024-03-14)
+
+
+### Bug Fixes
+
+* DatePicker should allow null values ([b6d962d](https://github.com/nulogy/design-system/commit/b6d962d0d5ec1b8179bd104e15debe968f74f66d))
+
 ## [10.1.2](https://github.com/nulogy/design-system/compare/v10.1.1...v10.1.2) (2024-03-13)
 
 
