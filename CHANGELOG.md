@@ -1,3 +1,10 @@
+# [10.2.0](https://github.com/nulogy/design-system/compare/v10.1.3...v10.2.0) (2024-03-14)
+
+
+### Features
+
+* IconicButton can have complex tooltips ([150f171](https://github.com/nulogy/design-system/commit/150f1715cca3bad6b00ad09315864ba77d56aba2))
+
 ## [10.1.3](https://github.com/nulogy/design-system/compare/v10.1.2...v10.1.3) (2024-03-14)
 
 
