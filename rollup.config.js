@@ -33,7 +33,6 @@ const GLOBALS = {
   warning: "warning",
   exenv: "exenv",
   classnames: "t",
-  "react-input-autosize": "AutosizeInput",
   "html-parse-stringify2": "HTML",
   "smoothscroll-polyfill": "smoothscroll",
   "react-fast-compare": "isEqual",
@@ -54,7 +53,7 @@ const CORE_PLUGINS = [
   commonjs({
     /* include: include all items in node_modules folders (in entire monorepo) */
     include: [/node_modules/],
-    /* namedExports: sometimes commonjs can't resolve named exports from certain libraries, 
+    /* namedExports: sometimes commonjs can't resolve named exports from certain libraries,
     ex: import {exportName} from "package-name"; => exportName module not found
     in those cases, it needs to be added as ["package-name"]: "exportName" here */
     namedExports: {
