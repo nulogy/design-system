@@ -7,11 +7,11 @@ import { subPx } from "../utils";
 import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { stylesForSize } from "./customReactSelectStyles";
 
-type SelectOptionProps = {
+interface SelectOptionProps {
   isSelected: boolean;
   isFocused: boolean;
   size: ComponentSize;
-};
+}
 
 const StyledOption = styled.div<SelectOptionProps>(
   typography,
