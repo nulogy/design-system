@@ -10,7 +10,6 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
-import { SelectOption } from "../Select/SelectOption";
 import { getSubset } from "../utils/subset";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import {
@@ -21,6 +20,7 @@ import {
   SelectInput,
   SelectDropdownIndicator,
   SelectMenu,
+  SelectOption,
 } from "./AsyncSelectComponents";
 
 type AsyncCustomProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = {
@@ -130,7 +130,11 @@ const AsyncSelect = forwardRef(
             onInputChange={onInputChange}
             theme={theme as any}
             components={{
-              Option: (props) => <SelectOption size={componentSize} {...props} />,
+              Option: (props) => (
+                <SelectOption size={componentSize} {...props}>
+                  {props.children}
+                </SelectOption>
+              ),
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,

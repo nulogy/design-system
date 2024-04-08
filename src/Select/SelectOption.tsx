@@ -12,7 +12,7 @@ type SelectOptionProps = {
   size: ComponentSize;
 };
 
-const StyledOption = styled.div<SelectOptionProps>(
+export const StyledOption = styled.div<SelectOptionProps>(
   typography,
   ({ isSelected, isFocused, theme }) => ({
     "&:last-child": {
