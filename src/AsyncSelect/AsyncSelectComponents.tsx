@@ -10,6 +10,9 @@ import {
   MultiValueProps,
 } from "react-select";
 import { components, GroupBase } from "react-select";
+import { OptionProps } from "react-windowed-select";
+import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { StyledOption } from "../Select/SelectOption";
 
 export const SelectControl = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
   props: ControlProps<Option, IsMulti, Group>
@@ -22,7 +25,9 @@ export const SelectControl = <Option, IsMulti extends boolean, Group extends Gro
         className={isFocused ? "nds-select--is-focused" : null}
         isFocused={isFocused}
         {...props}
-      />
+      >
+        {props.children}
+      </selectComponents.Control>
     </div>
   );
 };
@@ -32,7 +37,7 @@ export const SelectMultiValue = <Option, IsMulti extends boolean, Group extends 
 ) => {
   return (
     <div data-testid="select-multivalue">
-      <selectComponents.MultiValue {...props} />
+      <selectComponents.MultiValue {...props}>{props.children}</selectComponents.MultiValue>
     </div>
   );
 };
@@ -42,7 +47,7 @@ export const SelectClearIndicator = <Option, IsMulti extends boolean, Group exte
 ) => {
   return (
     <div data-testid="select-clear">
-      <selectComponents.ClearIndicator {...props} />
+      <selectComponents.ClearIndicator {...props}>{props.children}</selectComponents.ClearIndicator>
     </div>
   );
 };
@@ -52,7 +57,7 @@ export const SelectDropdownIndicator = <Option, IsMulti extends boolean, Group e
 ) => {
   return (
     <div data-testid="select-arrow">
-      <selectComponents.DropdownIndicator {...props} />
+      <selectComponents.DropdownIndicator {...props}>{props.children}</selectComponents.DropdownIndicator>
     </div>
   );
 };
@@ -62,7 +67,7 @@ export const SelectContainer = <Option, IsMulti extends boolean, Group extends G
 ) => {
   return (
     <div data-testid="select-container">
-      <selectComponents.SelectContainer {...props} />
+      <selectComponents.SelectContainer {...props}>{props.children}</selectComponents.SelectContainer>
     </div>
   );
 };
@@ -72,7 +77,7 @@ export const SelectInput = <Option, IsMulti extends boolean, Group extends Group
 ) => {
   return (
     <div data-testid="select-input">
-      <selectComponents.Input {...props} />
+      <selectComponents.Input {...props}>{props.children}</selectComponents.Input>
     </div>
   );
 };
@@ -86,7 +91,19 @@ export const SelectMenu = <Option, IsMulti extends boolean, Group extends GroupB
 
   return (
     <div data-testid="select-dropdown">
-      <components.Menu {...props} />
+      <components.Menu {...props}>{props.children}</components.Menu>
     </div>
   );
 };
+
+export function SelectOption<Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
+  props: OptionProps<Option, IsMulti, Group> & { size?: ComponentSize }
+) {
+  const size = useComponentSize(props.size);
+
+  return (
+    <StyledOption isSelected={props.isSelected} isFocused={props.isFocused} size={size} data-testid="select-option">
+      <components.Option {...props}>{props.children}</components.Option>
+    </StyledOption>
+  );
+}
