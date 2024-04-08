@@ -567,6 +567,7 @@ export const WithCustomOptionComponent = () => {
     height: "10px",
     marginRight: "5px",
   }));
+
   const CustomOption = ({ children, ...props }: OptionProps) => {
     const newChildren = (
       <>
@@ -574,12 +575,9 @@ export const WithCustomOptionComponent = () => {
         {children}
       </>
     );
-    return (
-      <SelectOption size="medium" {...props}>
-        {newChildren}
-      </SelectOption>
-    );
+    return <SelectOption {...props}>{newChildren}</SelectOption>;
   };
+
   return (
     <>
       <Box position="relative" overflow="hidden" width="300px" height="600px">
