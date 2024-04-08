@@ -1,3 +1,11 @@
+## [10.2.2](https://github.com/nulogy/design-system/compare/v10.2.1...v10.2.2) (2024-04-08)
+
+
+### Bug Fixes
+
+* custom select option props are incorrect ([630bc41](https://github.com/nulogy/design-system/commit/630bc41bc119fbb6459473904b646e95db9d1ca6))
+* import from the right component ([39edbbd](https://github.com/nulogy/design-system/commit/39edbbd0c6175ea365748a6dc51b2c7df3fd85fa))
+
 ## [10.2.1](https://github.com/nulogy/design-system/compare/v10.2.0...v10.2.1) (2024-03-14)
 
 
