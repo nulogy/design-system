@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import propTypes from "@styled-system/prop-types";
 import WindowedSelect, { GroupBase } from "react-windowed-select";
-import type { MenuPlacement, MenuPosition, Props as SelectProps } from "react-select";
+import type { MenuPlacement, MenuPosition, OnChangeValue, Props as SelectProps } from "react-select";
 import { useTranslation } from "react-i18next";
 import { ThemeContext } from "styled-components";
 import { Field } from "../Form";
@@ -21,6 +21,7 @@ import {
   SelectInput,
   SelectDropdownIndicator,
 } from "./SelectComponents";
+import { IsOptional } from "prop-types";
 
 type ReactSelectStateManager = {
   state: {
@@ -32,13 +33,14 @@ type ReactSelectStateManager = {
 
 // NOTE: We recreate these props as upstream doesn't export them. Note also that
 // we have a default value for windowThreshold, therefore this param is optional.
-interface WindowedSelectProps extends SelectProps {
+interface WindowedSelectProps<Option extends unknown, IsMulti extends boolean, Group extends GroupBase<Option>>
+  extends SelectProps<Option, IsMulti, Group> {
   windowThreshold?: number;
 }
 
-interface NDSOptionType {
+export interface NDSOptionType<Value = unknown> {
   label: string;
-  value: unknown;
+  value: Value;
 }
 
 interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> {
@@ -55,12 +57,12 @@ interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   size?: ComponentSize;
   error?: boolean;
   options: NDSOptionType[];
-  onChange?: (newValue: unknown) => void;
+  onChange?: (newValue: OnChangeValue<Option, IsMulti>) => void;
   [key: string]: any;
 }
 
 export type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
-  WindowedSelectProps,
+  WindowedSelectProps<Option, IsMulti, Group>,
   "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue" | "options" | "onChange"
 > &
   CustomProps<Option, IsMulti, Group>;
@@ -155,7 +157,7 @@ const ReactSelect = React.forwardRef(
             ref={reactSelectRef}
             placeholder={placeholder || t("select")}
             windowThreshold={windowThreshold}
-            styles={customStyles({
+            styles={customStyles<Option, IsMulti, Group>({
               theme: themeContext,
               error,
               maxHeight,

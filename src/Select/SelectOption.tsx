@@ -51,7 +51,7 @@ export const StyledOption = styled.div<SelectOptionProps>(
     )
 );
 
-interface CustomOptionProps extends OptionProps {
+interface CustomOptionProps extends OptionProps<any> {
   size?: ComponentSize;
 }
 
