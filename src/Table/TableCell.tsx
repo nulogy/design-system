@@ -1,15 +1,9 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
-import { columnPropType, rowPropType } from "./Table.types";
-import { DefaultNDSThemeType } from "../theme.type";
+import { ColumnAlignment, ColumnType } from "./Table.types";
 
-type StyledTableCellProps = {
-  align?: any;
-  compact?: boolean;
-  theme?: DefaultNDSThemeType;
-};
-const StyledTableCell: React.FC<StyledTableCellProps> = styled.td(
-  ({ align, compact, theme }: StyledTableCellProps): CSSObject => {
+const StyledTableCell = styled.td<{ align?: ColumnAlignment; compact?: boolean }>(
+  ({ align, compact, theme }): CSSObject => {
     const padding = compact ? theme.space.x1 : theme.space.x2;
     return {
       paddingTop: padding,
@@ -22,32 +16,33 @@ const StyledTableCell: React.FC<StyledTableCellProps> = styled.td(
     };
   }
 );
-type TableCellProps = {
-  column?: any;
-  row?: any;
+
+export default function TableCell<Row>({
+  row,
+  column,
+  colSpan,
+  cellData,
+  compact,
+}: {
+  column?: ColumnType<Row>;
+  row?: Row;
   colSpan?: number;
-  cellData?: object | React.ReactNode | boolean;
+  cellData?: React.ReactNode;
   compact?: boolean;
-};
-const TableCell: React.FC<TableCellProps> = ({ row, column, colSpan, cellData, compact }) => {
+}) {
   const cellRenderer = row.cellRenderer || column.cellRenderer;
   const { cellFormatter } = column;
   const isCustomCell = Boolean(cellRenderer);
+
   const cellContent = cellFormatter ? cellFormatter({ cellData, column, row }) : cellData;
+
   if (isCustomCell) {
     return <td colSpan={colSpan}>{cellRenderer ? cellRenderer({ cellData, column, row }) : cellData}</td>;
   }
+
   return (
     <StyledTableCell align={column.align} compact={compact}>
       {cellContent}
     </StyledTableCell>
   );
-};
-TableCell.defaultProps = {
-  column: {},
-  row: {},
-  cellData: "",
-  colSpan: undefined,
-  compact: false,
-};
-export default TableCell;
+}

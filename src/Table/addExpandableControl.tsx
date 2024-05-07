@@ -1,8 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { ControlIcon } from "../Button";
-import { rowPropType } from "./Table.types";
 import { SELECTABLE_COLUMN_DATA_KEY } from "./addSelectableControl";
 
 const EXPANDABLE_COLUMN_DATA_KEY = "expanded";
@@ -25,20 +23,15 @@ const ExpandCell = ({ row, onRowExpansionChange }) => {
   );
 };
 
-ExpandCell.propTypes = {
-  row: rowPropType.isRequired,
-  onRowExpansionChange: PropTypes.func,
-  collapseAriaLabel: PropTypes.string,
-  expandAriaLabel: PropTypes.string,
-};
-
 ExpandCell.defaultProps = {
   onRowExpansionChange: null,
   collapseAriaLabel: undefined,
   expandAriaLabel: undefined,
 };
-const expandCellRenderer = (onRowExpansionChange) => (props) =>
-  <ExpandCell onRowExpansionChange={onRowExpansionChange} {...props} />;
+
+const expandCellRenderer = (onRowExpansionChange) => (props) => (
+  <ExpandCell onRowExpansionChange={onRowExpansionChange} {...props} />
+);
 const addExpandableColumn = ({ columns, onRowExpansionChange }) => {
   const expandableColumn = {
     dataKey: EXPANDABLE_COLUMN_DATA_KEY,

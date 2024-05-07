@@ -1,9 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import TableCell from "./TableCell";
 import StyledTh from "./StyledTh";
-import { columnsPropType, rowsPropType, rowPropType, RowType, Columns } from "./Table.types";
 
 const StyledFooterRow = styled.tr(({ theme }) => ({
   "&:first-of-type": {
@@ -11,10 +9,11 @@ const StyledFooterRow = styled.tr(({ theme }) => ({
   },
 }));
 
-const renderRows = (rows, columns, keyField, loading, compact) =>
-  rows.map((row) => (
+function renderRows<Row, Column>(rows: Row[], columns: Column[], keyField: string, loading: boolean, compact: boolean) {
+  return rows.map((row) => (
     <TableFooterRow row={row} columns={columns} key={row[keyField]} loading={loading} compact={compact} />
   ));
+}
 
 const TableFooterRow = ({ row, columns, loading, compact }) => {
   const columnsWithoutControls = columns.filter(
@@ -48,34 +47,17 @@ const TableFooterRow = ({ row, columns, loading, compact }) => {
   );
 };
 
-TableFooterRow.propTypes = {
-  row: rowPropType.isRequired,
-  columns: columnsPropType.isRequired,
-  loading: PropTypes.bool.isRequired,
-  compact: PropTypes.bool.isRequired,
-};
-
-const TableFoot = ({
-  columns,
-  rows,
-  keyField,
-  loading,
-  compact,
-}: {
-  columns: Columns;
-  rows: RowType[];
+type TableFootProps<Column, Row> = {
+  columns: Column[];
+  rows: Row[];
   keyField?: string;
   loading?: boolean;
   compact?: boolean;
-}) => <tfoot>{renderRows(rows, columns, keyField, loading, compact)}</tfoot>;
-
-TableFoot.propTypes = {
-  columns: columnsPropType.isRequired,
-  rows: rowsPropType.isRequired,
-  keyField: PropTypes.string,
-  loading: PropTypes.bool,
-  compact: PropTypes.bool,
 };
+
+function TableFoot<Column, Row>({ columns, rows, keyField, loading, compact }: TableFootProps<Column, Row>) {
+  return <tfoot>{renderRows(rows, columns, keyField, loading, compact)}</tfoot>;
+}
 
 TableFoot.defaultProps = {
   keyField: "id",

@@ -1,11 +1,10 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import styled from "styled-components";
 import { boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import { Box, DropdownButton, DropdownMenu, Button, Text } from "..";
+import { ColumnType } from "./Table.types";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
-import { Columns } from "./Table.types";
 import { Table } from ".";
 
 const dateToString = ({ cellData }) => {
@@ -31,7 +30,15 @@ const dropdownCellRenderer = ({ cellData }) => (
   </Box>
 );
 
-const columns: Columns = [
+type Row = {
+  date: string;
+  expectedQuantity: string;
+  actualQuantity: string;
+  note?: string;
+  id: string;
+};
+
+const columns: ColumnType<Row>[] = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
   { label: "Actual Quantity", dataKey: "actualQuantity", align: "right" },
@@ -185,7 +192,7 @@ const columnsWithFormatter = [
   { label: "Actual Quantity", dataKey: "actualQuantity" },
 ];
 
-const columnsWithAlignment: Columns = [
+const columnsWithAlignment: ColumnType<Row>[] = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Eaches", dataKey: "expectedQuantity" },
   { label: "Actual Eaches", dataKey: "actualQuantity", align: "right" },
@@ -392,7 +399,6 @@ export const WithAFooter = () => (
 WithAFooter.story = {
   name: "with a footer",
 };
-/* eslint-enable react/prop-types */
 
 const TableWithBorderedRows = styled(Table)`
   border-collapse: collapse;

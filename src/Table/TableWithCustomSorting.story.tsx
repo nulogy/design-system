@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import { Table } from "..";
 
@@ -91,4 +90,3 @@ export const WithCustomSorting = () => <TableWithCustomSorting />;
 WithCustomSorting.story = {
   name: "with custom sorting",
 };
-/* eslint-enable react/prop-types */

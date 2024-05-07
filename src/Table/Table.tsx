@@ -1,16 +1,9 @@
 import React from "react";
-import StatefulTable from "./StatefulTable";
+import StatefulTable, { StatefulTableProps } from "./StatefulTable";
 import BaseTable from "./BaseTable";
 import SortingColumnHeader from "./SortingColumnHeader";
-import { StatefulTableProps } from "./StatefulTable";
-import { ColumnType, RowType, CellInfoType } from "./Table.types";
 
-export type TableProps = StatefulTableProps;
-export type TableColumnType = ColumnType;
-export type TableRowType = RowType;
-export type TableCellInfoType = CellInfoType;
-
-const Table = ({
+export default function Table({
   hasSelectableRows,
   rowsPerPage,
   hasExpandableRows,
@@ -23,8 +16,8 @@ const Table = ({
   paginationCss,
   paginationProps,
   ...props
-}: TableProps) =>
-  hasSelectableRows || rowsPerPage || hasExpandableRows ? (
+}: StatefulTableProps) {
+  return hasSelectableRows || rowsPerPage || hasExpandableRows ? (
     <StatefulTable
       hasExpandableRows={hasExpandableRows}
       hasSelectableRows={hasSelectableRows}
@@ -42,6 +35,6 @@ const Table = ({
   ) : (
     <BaseTable {...props} />
   );
-Table.SortingHeader = SortingColumnHeader;
+}
 
-export default Table;
+Table.SortingHeader = SortingColumnHeader;

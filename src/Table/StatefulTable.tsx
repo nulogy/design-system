@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+import propTypes from "@styled-system/prop-types";
 import { Pagination } from "../Pagination";
 import { getSubset } from "../utils/subset";
 import BaseTable, { BaseTableProps } from "./BaseTable";
 import { addExpandableControl } from "./addExpandableControl";
 import { addSelectableControl } from "./addSelectableControl";
 
-export type StatefulTableProps = BaseTableProps & {
+export type StatefulTableProps = BaseTableProps<unknown> & {
   selectedRows?: string[];
   onRowSelectionChange?: (...args: any[]) => any;
   onRowExpansionChange?: (...args: any[]) => any;
@@ -224,7 +226,33 @@ class StatefulTable extends Component<StatefulTableProps, StatefulTableState> {
   render() {
     const { paginatedRows, currentPage } = this.state;
     const { rowsPerPage, paginationProps, paginationCss } = this.props;
-    const baseTableProps = getSubset(this.getControlProps(), BaseTable.propTypes);
+    const baseTableProps = getSubset(this.getControlProps(), {
+      ...propTypes.space,
+      columns: PropTypes.any,
+      rows: PropTypes.any,
+      noRowsContent: PropTypes.string,
+      keyField: PropTypes.string,
+      id: PropTypes.string,
+      loading: PropTypes.bool,
+      rowHovers: PropTypes.bool,
+      compact: PropTypes.bool,
+      className: PropTypes.string,
+      stickyHeader: PropTypes.bool,
+      onRowMouseEnter: PropTypes.func,
+      onRowMouseLeave: PropTypes.func,
+      footerRows: PropTypes.arrayOf(
+        PropTypes.objectOf(
+          PropTypes.oneOfType([
+            PropTypes.number,
+            PropTypes.string,
+            PropTypes.bool,
+            PropTypes.func,
+            PropTypes.node,
+            PropTypes.shape({}),
+          ])
+        )
+      ),
+    });
     return (
       <>
         <BaseTable {...baseTableProps} />

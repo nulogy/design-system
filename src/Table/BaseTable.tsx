@@ -1,102 +1,86 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
-import { space } from "styled-system";
-import propTypes from "@styled-system/prop-types";
+import { addStyledProps } from "../StyledProps";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-import { rowsPropType, RowType, Columns } from "./Table.types";
+import { ColumnType } from "./Table.types";
 
-export type BaseTableProps = {
-  columns: Columns;
-  rows: RowType[];
+export type BaseTableProps<Row extends unknown> = {
+  columns: ColumnType<Row>[];
+  rows: Row[];
   noRowsContent?: string;
   keyField?: string;
   id?: string;
   loading?: boolean;
-  footerRows?: any;
+  footerRows?: Row[];
   rowHovers?: boolean;
   compact?: boolean;
   className?: string;
   stickyHeader?: boolean;
-  onRowMouseEnter?: (...args: any[]) => any;
-  onRowMouseLeave?: (...args: any[]) => any;
-  onMouseEnter?: any;
-  onMouseLeave?: any;
+  onRowMouseEnter?: React.DOMAttributes<HTMLTableRowElement>["onMouseEnter"];
+  onRowMouseLeave?: React.DOMAttributes<HTMLTableRowElement>["onMouseLeave"];
+  onMouseEnter?: React.DOMAttributes<HTMLTableElement>["onMouseEnter"];
+  onMouseLeave?: React.DOMAttributes<HTMLTableElement>["onMouseLeave"];
 };
 
-const StyledTable = styled.table<any>(space, {
-  borderCollapse: "collapse",
-  width: "100%",
-  background: "white",
-  position: "relative",
-});
+const StyledTable = styled.table(
+  {
+    borderCollapse: "collapse",
+    width: "100%",
+    background: "white",
+    position: "relative",
+  },
+  addStyledProps
+);
 
-const BaseTable: React.FC<BaseTableProps> = ({
+export default function BaseTable<Row>({
   columns,
   rows,
   noRowsContent = "No records have been created for this table.",
-  keyField = "id",
+  keyField,
   id,
   loading,
-  footerRows = [],
-  rowHovers = true,
+  footerRows,
+  rowHovers,
   compact,
   className,
   stickyHeader,
-  onRowMouseEnter = () => {},
-  onRowMouseLeave = () => {},
+  onRowMouseEnter,
+  onRowMouseLeave,
   ...props
-}) => (
-  <StyledTable id={id} className={className} {...props}>
-    <TableHead columns={columns} compact={compact} sticky={stickyHeader} />
-    <TableBody
-      columns={columns}
-      rows={rows}
-      keyField={keyField}
-      noRowsContent={noRowsContent}
-      loading={loading}
-      rowHovers={rowHovers}
-      compact={compact}
-      onRowMouseLeave={onRowMouseLeave}
-      onRowMouseEnter={onRowMouseEnter}
-    />
-    {footerRows && (
-      <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} compact={compact} />
-    )}
-  </StyledTable>
-);
+}: BaseTableProps<Row>) {
+  return (
+    <StyledTable id={id} className={className} {...props}>
+      <TableHead columns={columns} compact={compact} sticky={stickyHeader} />
+      <TableBody
+        columns={columns}
+        rows={rows}
+        keyField={keyField}
+        noRowsContent={noRowsContent}
+        loading={loading}
+        rowHovers={rowHovers}
+        compact={compact}
+        onRowMouseLeave={onRowMouseLeave}
+        onRowMouseEnter={onRowMouseEnter}
+      />
+      {footerRows && (
+        <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} compact={compact} />
+      )}
+    </StyledTable>
+  );
+}
 
-BaseTable.propTypes = {
-  ...propTypes.space,
-  columns: PropTypes.any,
-  rows: PropTypes.any,
-  noRowsContent: PropTypes.string,
-  keyField: PropTypes.string,
-  id: PropTypes.string,
-  loading: PropTypes.bool,
-  footerRows: rowsPropType,
-  rowHovers: PropTypes.bool,
-  compact: PropTypes.bool,
-  className: PropTypes.string,
-  stickyHeader: PropTypes.bool,
-  onRowMouseEnter: PropTypes.func,
-  onRowMouseLeave: PropTypes.func,
-};
+const noop = () => {};
 
 BaseTable.defaultProps = {
   noRowsContent: "No records have been created for this table.",
   keyField: "id",
-  id: undefined,
   loading: false,
   footerRows: [],
   rowHovers: true,
   compact: false,
-  className: undefined,
   stickyHeader: false,
-  onRowMouseEnter: () => {},
-  onRowMouseLeave: () => {},
+  onRowMouseEnter: noop,
+  onRowMouseLeave: noop,
 };
-
-export default BaseTable;

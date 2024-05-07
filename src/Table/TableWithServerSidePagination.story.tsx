@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { Table } from "..";
 import { Pagination } from "../Pagination";
 
@@ -8,13 +8,20 @@ const COLUMNS = [
   { label: "Completed", dataKey: "completed" },
 ];
 
+type Row = {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+};
+
 type TableState = {
   page: number;
   loading: boolean;
-  rows: Array<any>;
+  rows: Array<Row>;
 };
 
-class TableWithServerSidePagination extends React.Component<{}, TableState> {
+class TableWithServerSidePagination extends React.Component<{ children?: ReactNode }, TableState> {
   constructor(props) {
     super(props);
 

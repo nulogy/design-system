@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import StyledTh from "./StyledTh";
-import type { ColumnType, Columns } from "./Table.types";
+import type { ColumnType } from "./Table.types";
 
 interface TableHeadProps {
   columns: Columns;
