@@ -55,19 +55,21 @@ TableFooterRow.propTypes = {
   compact: PropTypes.bool.isRequired,
 };
 
-const TableFoot = ({
+function TableFoot<ColumnMetadata>({
   columns,
   rows,
   keyField,
   loading,
   compact,
 }: {
-  columns: Columns;
+  columns: Columns<ColumnMetadata>;
   rows: RowType[];
   keyField?: string;
   loading?: boolean;
   compact?: boolean;
-}) => <tfoot>{renderRows(rows, columns, keyField, loading, compact)}</tfoot>;
+}) {
+  return <tfoot>{renderRows(rows, columns, keyField, loading, compact)}</tfoot>;
+}
 
 TableFoot.propTypes = {
   columns: columnsPropType.isRequired,

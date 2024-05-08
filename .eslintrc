@@ -2,6 +2,15 @@
   "parser": "@typescript-eslint/parser",
   "extends": ["@nulogy/nulogy"],
   "rules": {
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
     "jsx-a11y/label-has-associated-control": [
       2,
       {

@@ -3,8 +3,8 @@ import styled from "styled-components";
 import StyledTh from "./StyledTh";
 import type { ColumnType, Columns } from "./Table.types";
 
-interface TableHeadProps {
-  columns: Columns;
+interface TableHeadProps<ColumnMetadata> {
+  columns: Columns<ColumnMetadata>;
   compact?: boolean;
   sticky?: boolean;
 }
@@ -14,18 +14,22 @@ const StyledHeaderRow = styled.tr(({ theme }) => ({
   borderBottom: `1px solid ${theme.colors.lightGrey}`,
 }));
 
-const defaultheaderFormatter: ColumnType["headerFormatter"] = ({ label }) => label;
-
-const renderHeaderCellContent = ({
-  headerFormatter = defaultheaderFormatter,
+function renderHeaderCellContent<ColumnMetadata>({
+  headerFormatter = ({ label }) => label,
   align,
   label,
-  dataKey,
   width,
-}: ColumnType) => headerFormatter({ align, label, dataKey, width });
+  metadata,
+  dataKey,
+  key,
+}: ColumnType<ColumnMetadata>) {
+  return key
+    ? headerFormatter({ align, label, width, metadata, key })
+    : headerFormatter({ align, label, width, metadata, dataKey });
+}
 
-const TableHead = ({ columns, compact, sticky }: TableHeadProps) => {
-  const renderColumns = (allColumns: Columns) =>
+function TableHead<ColumnMetadata>({ columns, compact, sticky }: TableHeadProps<ColumnMetadata>) {
+  const renderColumns = (allColumns: Columns<ColumnMetadata>) =>
     allColumns.map((column, index) => (
       <StyledTh
         scope="col"
@@ -43,6 +47,6 @@ const TableHead = ({ columns, compact, sticky }: TableHeadProps) => {
       <StyledHeaderRow>{renderColumns(columns)}</StyledHeaderRow>
     </thead>
   );
-};
+}
 
 export default TableHead;
