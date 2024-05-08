@@ -5,12 +5,12 @@ import SortingColumnHeader from "./SortingColumnHeader";
 import { StatefulTableProps } from "./StatefulTable";
 import { ColumnType, RowType, CellInfoType } from "./Table.types";
 
-export type TableProps = StatefulTableProps;
-export type TableColumnType = ColumnType;
+export type TableProps<ColumnMetadata> = StatefulTableProps<ColumnMetadata>;
+export type TableColumnType<ColumnMetadata> = ColumnType<ColumnMetadata>;
 export type TableRowType = RowType;
-export type TableCellInfoType = CellInfoType;
+export type TableCellInfoType<ColumnMetadata> = CellInfoType<ColumnMetadata>;
 
-const Table = ({
+function Table<ColumnMetadata>({
   hasSelectableRows,
   rowsPerPage,
   hasExpandableRows,
@@ -23,9 +23,9 @@ const Table = ({
   paginationCss,
   paginationProps,
   ...props
-}: TableProps) =>
-  hasSelectableRows || rowsPerPage || hasExpandableRows ? (
-    <StatefulTable
+}: TableProps<ColumnMetadata>) {
+  return hasSelectableRows || rowsPerPage || hasExpandableRows ? (
+    <StatefulTable<ColumnMetadata>
       hasExpandableRows={hasExpandableRows}
       hasSelectableRows={hasSelectableRows}
       onRowExpansionChange={onRowExpansionChange}
@@ -42,6 +42,7 @@ const Table = ({
   ) : (
     <BaseTable {...props} />
   );
+}
 Table.SortingHeader = SortingColumnHeader;
 
 export default Table;

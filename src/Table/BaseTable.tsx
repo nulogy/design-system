@@ -8,8 +8,8 @@ import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
 import { rowsPropType, RowType, Columns } from "./Table.types";
 
-export type BaseTableProps = {
-  columns: Columns;
+export type BaseTableProps<ColumnMetaData> = {
+  columns: Columns<ColumnMetaData>;
   rows: RowType[];
   noRowsContent?: string;
   keyField?: string;
@@ -33,7 +33,7 @@ const StyledTable = styled.table<any>(space, {
   position: "relative",
 });
 
-const BaseTable: React.FC<BaseTableProps> = ({
+function BaseTable<ColumnMetaData>({
   columns,
   rows,
   noRowsContent = "No records have been created for this table.",
@@ -48,25 +48,27 @@ const BaseTable: React.FC<BaseTableProps> = ({
   onRowMouseEnter = () => {},
   onRowMouseLeave = () => {},
   ...props
-}) => (
-  <StyledTable id={id} className={className} {...props}>
-    <TableHead columns={columns} compact={compact} sticky={stickyHeader} />
-    <TableBody
-      columns={columns}
-      rows={rows}
-      keyField={keyField}
-      noRowsContent={noRowsContent}
-      loading={loading}
-      rowHovers={rowHovers}
-      compact={compact}
-      onRowMouseLeave={onRowMouseLeave}
-      onRowMouseEnter={onRowMouseEnter}
-    />
-    {footerRows && (
-      <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} compact={compact} />
-    )}
-  </StyledTable>
-);
+}: BaseTableProps<ColumnMetaData>) {
+  return (
+    <StyledTable id={id} className={className} {...props}>
+      <TableHead columns={columns} compact={compact} sticky={stickyHeader} />
+      <TableBody
+        columns={columns}
+        rows={rows}
+        keyField={keyField}
+        noRowsContent={noRowsContent}
+        loading={loading}
+        rowHovers={rowHovers}
+        compact={compact}
+        onRowMouseLeave={onRowMouseLeave}
+        onRowMouseEnter={onRowMouseEnter}
+      />
+      {footerRows && (
+        <TableFoot columns={columns} rows={footerRows} keyField={keyField} loading={loading} compact={compact} />
+      )}
+    </StyledTable>
+  );
+}
 
 BaseTable.propTypes = {
   ...propTypes.space,

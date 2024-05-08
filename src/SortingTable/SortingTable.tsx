@@ -3,11 +3,11 @@ import { Table } from "../Table";
 import type { TableProps } from "../Table";
 import type { RowType, ColumnType } from "../Table/Table.types";
 
-type SortingTableProps = TableProps & {
+type SortingTableProps<ColumnMetadata> = TableProps<ColumnMetadata> & {
   initialSortColumn: string;
 };
 
-type SortableColumnType = ColumnType & { numeric?: boolean };
+type SortableColumnType<ColumnMetadata> = ColumnType<ColumnMetadata> & { numeric?: boolean };
 
 type SortState = {
   ascending: boolean;
@@ -17,26 +17,31 @@ type SortState = {
 const numericAlphabeticalSort = (a, b, numeric) =>
   String(a).localeCompare(b, undefined, { numeric, sensitivity: "base" });
 
-const applySort = (rows: RowType[], sortColumn: string, columns: SortableColumnType[]) =>
-  [...rows].sort((a, b) => {
+function applySort<ColumnMetadata>(rows: RowType[], sortColumn: string, columns: SortableColumnType<ColumnMetadata>[]) {
+  return [...rows].sort((a, b) => {
     const column = columns.find((col) => col.dataKey === sortColumn);
     const { numeric } = column;
 
     return numericAlphabeticalSort(a[sortColumn], b[sortColumn], numeric);
   });
+}
 
-const sortRows = (rows: RowType[], columns: SortableColumnType[], sortState: SortState) => {
+function sortRows<ColumnMetadata>(
+  rows: RowType[],
+  columns: SortableColumnType<ColumnMetadata>[],
+  sortState: SortState
+) {
   const sortedRows = applySort(rows, sortState.sortColumn, columns);
 
   return sortState.ascending ? sortedRows : sortedRows.reverse();
-};
+}
 
-const SortingTable: React.FC<SortingTableProps> = ({
+function SortingTable<ColumnMetadata>({
   columns: incomingColumns,
   rows: incomingRows,
   initialSortColumn,
   ...props
-}) => {
+}: SortingTableProps<ColumnMetadata>) {
   const [sortState, setSortState] = useState<SortState>({
     ascending: true,
     sortColumn: initialSortColumn,
@@ -77,6 +82,6 @@ const SortingTable: React.FC<SortingTableProps> = ({
   const columns = incomingColumns.map((column) => transformColumn(column));
 
   return <Table columns={columns} rows={rows} {...props} />;
-};
+}
 
 export default SortingTable;

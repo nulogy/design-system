@@ -3,32 +3,26 @@ import PropTypes from "prop-types";
 
 export type RowType = unknown;
 
-export interface CellInfoType {
+export interface CellInfoType<ColumnMetadata> {
   cellData: unknown;
-  column: ColumnType;
+  column: ColumnType<ColumnMetadata>;
   row: RowType;
-}
-
-interface ColumnInfoType {
-  align?: ColumnAlignment;
-  label: string;
-  dataKey?: Key;
-  width?: string | number;
 }
 
 type ColumnAlignment = "left" | "right" | "center";
 
-export type ColumnType = {
+export type ColumnType<ColumnMetadata> = {
   align?: ColumnAlignment;
   label?: string;
-  cellFormatter?: (cell: CellInfoType) => React.ReactNode;
-  cellRenderer?: (cell: CellInfoType) => React.ReactNode;
-  headerRenderer?: (column: ColumnInfoType) => React.ReactNode;
-  headerFormatter?: (column: ColumnInfoType) => React.ReactNode;
+  cellFormatter?: (cell: CellInfoType<ColumnMetadata>) => React.ReactNode;
+  cellRenderer?: (cell: CellInfoType<ColumnMetadata>) => React.ReactNode;
+  headerRenderer?: (column: ColumnType<ColumnMetadata>) => React.ReactNode;
+  headerFormatter?: (column: ColumnType<ColumnMetadata>) => React.ReactNode;
   width?: string | number;
+  metadata?: ColumnMetadata;
 } & ({ key: Key; dataKey?: never | undefined } | { dataKey: Key; key?: never | undefined });
 
-export type Columns = ColumnType[];
+export type Columns<ColumnMetadata> = ColumnType<ColumnMetadata>[];
 
 export const columnPropType = PropTypes.shape({
   align: PropTypes.oneOf(["right", "left", "center"]),

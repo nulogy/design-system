@@ -5,7 +5,7 @@ import BaseTable, { BaseTableProps } from "./BaseTable";
 import { addExpandableControl } from "./addExpandableControl";
 import { addSelectableControl } from "./addSelectableControl";
 
-export type StatefulTableProps = BaseTableProps & {
+export type StatefulTableProps<ColumnMetaData> = BaseTableProps<ColumnMetaData> & {
   selectedRows?: string[];
   onRowSelectionChange?: (...args: any[]) => any;
   onRowExpansionChange?: (...args: any[]) => any;
@@ -36,7 +36,7 @@ type StatefulTableState = {
   currentPage: number;
   paginatedRows: any;
 };
-class StatefulTable extends Component<StatefulTableProps, StatefulTableState> {
+class StatefulTable<ColumnMetaData> extends Component<StatefulTableProps<ColumnMetaData>, StatefulTableState> {
   static defaultProps = {
     ...BaseTable.defaultProps,
     hasSelectableRows: false,
@@ -208,7 +208,7 @@ class StatefulTable extends Component<StatefulTableProps, StatefulTableState> {
       onRowExpansionChange: this.onExpandRow,
       expandedRows,
     };
-    const props: StatefulTableProps = {
+    const props: StatefulTableProps<ColumnMetaData> = {
       ...this.props,
       rows: this.rowsByPageSelector(currentPage) || [],
       ...(hasSelectableRows && selectionConfig),

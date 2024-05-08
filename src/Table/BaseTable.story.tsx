@@ -1,9 +1,8 @@
-/* eslint-disable react/prop-types */
 import React from "react";
 import styled from "styled-components";
 import { boolean, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import { Box, DropdownButton, DropdownMenu, Button, Text } from "..";
+import { Box, DropdownButton, DropdownMenu, Button, Text, Flex } from "..";
 import { getMockRows, mockColumns } from "./Table.mock-utils";
 import { Columns } from "./Table.types";
 import { Table } from ".";
@@ -11,8 +10,6 @@ import { Table } from ".";
 const dateToString = ({ cellData }) => {
   return new Date(cellData).toUTCString().split(" ").splice(0, 4).join(" ");
 };
-
-const buttonRenderer = ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>;
 
 const sectionRow = ({ cellData }) => (
   <Box bg="lightBlue" py="x1" px="x2">
@@ -31,7 +28,7 @@ const dropdownCellRenderer = ({ cellData }) => (
   </Box>
 );
 
-const columns: Columns = [
+const columns: Columns<{}> = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
   { label: "Actual Quantity", dataKey: "actualQuantity", align: "right" },
@@ -43,6 +40,7 @@ const columnsWithWidths = [
   { label: "Actual Quantity", dataKey: "actualQuantity" },
   { label: "Note", dataKey: "note", width: "50%" },
 ];
+
 const rowData = [
   {
     date: "2019-10-01",
@@ -185,7 +183,7 @@ const columnsWithFormatter = [
   { label: "Actual Quantity", dataKey: "actualQuantity" },
 ];
 
-const columnsWithAlignment: Columns = [
+const columnsWithAlignment: Columns<{}> = [
   { label: "Date", dataKey: "date" },
   { label: "Expected Eaches", dataKey: "expectedQuantity" },
   { label: "Actual Eaches", dataKey: "actualQuantity", align: "right" },
@@ -195,13 +193,6 @@ const getColumnsWithCellRenderer = (cellRenderer) => [
   { label: "Date", dataKey: "date" },
   { label: "Expected Quantity", dataKey: "expectedQuantity" },
   { label: "", dataKey: "actualQuantity", cellRenderer },
-];
-
-const getColumnsWithHeaderFormatter = (headerFormatter) => [
-  { label: "Date", dataKey: "date" },
-  { label: "Expected Quantity", dataKey: "expectedQuantity" },
-  { label: "Actual Quantity", dataKey: "actualQuantity" },
-  { label: "Add record", dataKey: "c4", headerFormatter },
 ];
 
 const footerRowData = [
@@ -280,10 +271,6 @@ export const WithData = () => (
   />
 );
 
-WithData.story = {
-  name: "with data",
-};
-
 export const WithNoData = () => (
   <Table
     columns={columns}
@@ -292,10 +279,6 @@ export const WithNoData = () => (
     loading={boolean("Show loading state", false)}
   />
 );
-
-WithNoData.story = {
-  name: "with no data",
-};
 
 export const WithStickyHeader = () => (
   <Box mt="x4">
@@ -311,10 +294,6 @@ export const WithStickyHeader = () => (
   </Box>
 );
 
-WithStickyHeader.story = {
-  name: "with sticky header",
-};
-
 export const WithLotsOfRowsAndColumns = () => (
   <Table
     columns={mockColumns}
@@ -325,49 +304,57 @@ export const WithLotsOfRowsAndColumns = () => (
   />
 );
 
-WithLotsOfRowsAndColumns.story = {
-  name: "with lots of rows and columns",
-};
-
 export const WithCustomColumnWidths = () => <Table columns={columnsWithWidths} rows={rowDataWithWidths} />;
-
-WithCustomColumnWidths.story = {
-  name: "with custom column widths",
-};
 
 export const WithACustomCellComponent = () => (
   <Table columns={getColumnsWithCellRenderer(dropdownCellRenderer)} rows={rowData} />
 );
 
-WithACustomCellComponent.story = {
-  name: "with a custom cell component",
-};
-
 export const WithCellAlignment = () => <Table columns={columnsWithAlignment} rows={rowData} />;
-
-WithCellAlignment.story = {
-  name: "with cell alignment",
-};
 
 export const WithACellFormatter = () => <Table columns={columnsWithFormatter} rows={rowData} />;
 
-WithACellFormatter.story = {
-  name: "with a cell formatter",
-};
-
 export const WithACustomColumnLabelComponent = () => (
-  <Table columns={getColumnsWithHeaderFormatter(buttonRenderer)} rows={rowData} />
+  <Table
+    columns={[
+      { label: "Date", dataKey: "date" },
+      { label: "Expected Quantity", dataKey: "expectedQuantity" },
+      { label: "Actual Quantity", dataKey: "actualQuantity" },
+      {
+        label: "Add record",
+        dataKey: "c4",
+        headerFormatter: ({ label }) => <Button onClick={action("button clicked")}>{label}</Button>,
+      },
+    ]}
+    rows={rowData}
+  />
 );
 
-WithACustomColumnLabelComponent.story = {
-  name: "with a custom column label component",
-};
+export const WithMetadata = () => (
+  <Table
+    columns={[
+      { label: "Date", dataKey: "date" },
+      { label: "Expected Quantity", dataKey: "expectedQuantity" },
+      { label: "Actual Quantity", dataKey: "actualQuantity" },
+      {
+        label: "Add record",
+        dataKey: "c4",
+        metadata: { helpText: "Allows adding a new record" },
+        headerFormatter: ({ label, metadata }) => (
+          <Flex flexDirection="column">
+            <Text>{label}</Text>
+            <Text fontSize="small" fontWeight="medium" color="midGrey">
+              {metadata.helpText}
+            </Text>
+          </Flex>
+        ),
+      },
+    ]}
+    rows={rowData}
+  />
+);
 
 export const WithFullWidthSection = () => <Table columns={columns} rows={rowDataWithSections} />;
-
-WithFullWidthSection.story = {
-  name: "with full width section",
-};
 
 export const WithAFooter = () => (
   <>
@@ -388,11 +375,6 @@ export const WithAFooter = () => (
     />
   </>
 );
-
-WithAFooter.story = {
-  name: "with a footer",
-};
-/* eslint-enable react/prop-types */
 
 const TableWithBorderedRows = styled(Table)`
   border-collapse: collapse;
