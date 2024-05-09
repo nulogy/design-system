@@ -1,3 +1,10 @@
+## [10.2.3](https://github.com/nulogy/design-system/compare/v10.2.2...v10.2.3) (2024-05-09)
+
+
+### Bug Fixes
+
+* allow passing metadata to the table columns ([99b4a28](https://github.com/nulogy/design-system/commit/99b4a28b6a310f2c4967a4170b954700d8a0bd43))
+
 ## [10.2.2](https://github.com/nulogy/design-system/compare/v10.2.1...v10.2.2) (2024-04-08)
 
 
