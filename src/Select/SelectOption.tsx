@@ -6,13 +6,13 @@ import { subPx } from "../utils";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { stylesForSize } from "./customReactSelectStyles";
 
-type SelectOptionProps = {
+type StyledOptionProps = {
   isSelected: boolean;
   isFocused: boolean;
   size: ComponentSize;
 };
 
-export const StyledOption = styled.div<SelectOptionProps>(
+export const StyledOption = styled.div<StyledOptionProps>(
   typography,
   ({ isSelected, isFocused, theme }) => ({
     "&:last-child": {
@@ -51,11 +51,11 @@ export const StyledOption = styled.div<SelectOptionProps>(
     )
 );
 
-interface CustomOptionProps extends OptionProps {
+interface SelectOptionProps extends OptionProps {
   size?: ComponentSize;
 }
 
-export function SelectOption(props: CustomOptionProps) {
+export function SelectOption(props: SelectOptionProps) {
   const size = useComponentSize(props.size);
 
   return (
