@@ -1,104 +1,54 @@
-import React, { ReactNode } from "react";
-import propTypes from "@styled-system/prop-types";
+import React, { forwardRef, ReactNode, MutableRefObject } from "react";
+import Select from "react-select/base";
 import WindowedSelect, { GroupBase } from "react-windowed-select";
-import type { MenuPlacement, MenuPosition, Props as SelectProps } from "react-select";
+import type { Props as SelectProps } from "react-select";
 import { useTranslation } from "react-i18next";
-import { ThemeContext } from "styled-components";
+import { useTheme } from "styled-components";
+import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
+import customStyles from "../Select/customReactSelectStyles";
 import { getSubset } from "../utils/subset";
+import { SelectControl } from "../AsyncSelect/AsyncSelectComponents";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
-import customStyles from "./customReactSelectStyles";
-import { SelectOption } from "./SelectOption";
-
 import {
-  SelectControl,
   SelectMultiValue,
   SelectClearIndicator,
   SelectContainer,
-  SelectMenu,
   SelectInput,
   SelectDropdownIndicator,
+  SelectMenu,
 } from "./SelectComponents";
+import { SelectOption } from "./SelectOption";
 
-type ReactSelectStateManager = {
-  state: {
-    value: any[];
-  };
-  setState: (prevState: any) => void;
-  blur: () => void;
-};
-
-// NOTE: We recreate these props as upstream doesn't export them. Note also that
-// we have a default value for windowThreshold, therefore this param is optional.
-interface WindowedSelectProps extends SelectProps {
-  windowThreshold?: number;
+interface WindowedSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>>
+  extends SelectProps<Option, IsMulti, Group> {
+  windowThreshold: number;
 }
 
-interface NDSOptionType {
-  label: string;
-  value: unknown;
-}
-
-interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> {
-  autocomplete?: SelectProps<Option, IsMulti, Group>["isSearchable"];
+type CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = {
+  autocomplete?: WindowedSelectProps<Option, IsMulti, Group>["isSearchable"];
   labelText?: string;
+  size?: ComponentSize;
   requirementText?: string;
   helpText?: ReactNode;
-  disabled?: SelectProps<Option, IsMulti, Group>["isDisabled"];
+  disabled?: WindowedSelectProps<Option, IsMulti, Group>["isDisabled"];
   errorMessage?: string;
   errorList?: string[];
-  initialIsOpen?: SelectProps<Option, IsMulti, Group>["defaultMenuIsOpen"];
-  multiselect?: SelectProps<Option, IsMulti, Group>["isMulti"];
+  initialIsOpen?: WindowedSelectProps<Option, IsMulti, Group>["defaultMenuIsOpen"];
+  multiselect?: WindowedSelectProps<Option, IsMulti, Group>["isMulti"];
   maxHeight?: string;
-  size?: ComponentSize;
-  error?: boolean;
-  options: NDSOptionType[];
-  onChange?: (newValue: unknown) => void;
-  [key: string]: any;
-}
+  defaultValue?: WindowedSelectProps<Option, IsMulti, Group>["defaultInputValue"];
+};
 
 export type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
-  WindowedSelectProps,
-  "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue" | "options" | "onChange"
+  WindowedSelectProps<Option, IsMulti, Group>,
+  "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue"
 > &
   CustomProps<Option, IsMulti, Group>;
 
-export const SelectDefaultProps = {
-  autocomplete: true,
-  disabled: undefined,
-  defaultValue: undefined,
-  error: undefined,
-  errorMessage: undefined,
-  errorList: undefined,
-  labelText: undefined,
-  helpText: undefined,
-  noOptionsMessage: undefined,
-  requirementText: undefined,
-  id: undefined,
-  initialIsOpen: undefined,
-  maxHeight: "248px",
-  menuPosition: "absolute" as MenuPosition,
-  menuPlacement: "bottom" as MenuPlacement,
-  multiselect: false,
-  name: undefined,
-  onBlur: undefined,
-  onChange: undefined,
-  placeholder: undefined,
-  required: false,
-  value: undefined,
-  className: undefined,
-  classNamePrefix: "ndsSelect", // a prefix is required in react-select top put classes on all buttons to apply style overrides
-  menuIsOpen: undefined,
-  onMenuOpen: undefined,
-  onMenuClose: undefined,
-  onInputChange: undefined,
-  components: undefined,
-  closeMenuOnSelect: true,
-};
-
-const ReactSelect = React.forwardRef(
+const NDSSelect = forwardRef(
   <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
     {
       size,
@@ -111,74 +61,81 @@ const ReactSelect = React.forwardRef(
       disabled,
       errorMessage,
       errorList,
-      error = !!(errorMessage || errorList),
       id,
       initialIsOpen,
       maxHeight,
-      multiselect,
+      isClearable,
       onChange,
+      multiselect,
       placeholder,
       value,
       defaultValue,
+      noOptionsMessage,
+      menuPosition,
+      name,
+      className,
+      classNamePrefix,
+      onBlur,
+      menuIsOpen,
+      onMenuOpen,
+      onMenuClose,
+      onInputChange,
       components,
       "aria-label": ariaLabel,
-      windowThreshold = 300,
+      windowThreshold = 100,
       ...props
     }: NDSSelectProps<Option, IsMulti, Group>,
-    ref
+    ref:
+      | ((instance: Select<Option, IsMulti, Group> | null) => void)
+      | MutableRefObject<Select<Option, IsMulti, Group> | null>
+      | null
   ) => {
     const { t } = useTranslation();
-    const themeContext = React.useContext(ThemeContext);
+    const theme = useTheme();
     const spaceProps = getSubset(props, propTypes.space);
-    const reactSelectRef = React.useRef<ReactSelectStateManager>(null);
-    const optionsRef = React.useRef(options);
+    const error = !!(errorMessage || errorList);
 
     const componentSize = useComponentSize(size);
-
-    React.useEffect(() => {
-      checkOptionsAreValid(options);
-      optionsRef.current = options;
-    }, [options]);
-
-    React.useEffect(() => {
-      if (ref) {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        ref.current = reactSelectRef.current;
-      }
-    }, [reactSelectRef, ref]);
 
     return (
       <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <WindowedSelect
-            ref={reactSelectRef}
-            placeholder={placeholder || t("select")}
-            windowThreshold={windowThreshold}
+            className={className}
+            classNamePrefix={classNamePrefix}
+            noOptionsMessage={noOptionsMessage}
+            value={value}
+            ref={ref}
+            defaultInputValue={defaultValue}
+            placeholder={placeholder || t("start typing")}
             styles={customStyles({
-              theme: themeContext,
+              theme,
               error,
               maxHeight,
-              size: componentSize,
               windowed: options.length > windowThreshold,
             })}
             isDisabled={disabled}
             isSearchable={autocomplete}
             aria-required={required}
+            required={required}
             aria-invalid={error}
             defaultMenuIsOpen={initialIsOpen}
             inputId={id}
-            onChange={(option) => {
-              if (!onChange) return;
-
-              const value = extractValue(option as NDSOptionType | NDSOptionType[], multiselect);
-              onChange(value);
-            }}
-            defaultValue={getReactSelectValue(options, defaultValue)}
-            value={getReactSelectValue(options, value)}
+            onBlur={onBlur}
+            onChange={onChange}
+            name={name}
             isMulti={multiselect}
+            menuIsOpen={menuIsOpen}
+            onMenuOpen={onMenuOpen}
+            onMenuClose={onMenuClose}
+            menuPosition={menuPosition}
+            onInputChange={onInputChange}
             components={{
-              Option: (props) => <SelectOption size={componentSize} {...props} />,
+              SelectOption: (props) => (
+                <SelectOption size={componentSize} {...props}>
+                  {props.children}
+                </SelectOption>
+              ),
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,
@@ -189,8 +146,7 @@ const ReactSelect = React.forwardRef(
               ...components,
             }}
             aria-label={ariaLabel}
-            options={options}
-            {...props}
+            isClearable={isClearable}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
@@ -199,54 +155,4 @@ const ReactSelect = React.forwardRef(
   }
 );
 
-const checkOptionsAreValid = (options: NDSOptionType[]) => {
-  if (options && process.env.NODE_ENV === "development") {
-    const uniq = (a: unknown[]) => Array.from(new Set(a));
-
-    const uniqueValues = uniq(options.map(({ value }) => (value === null ? "_null_" : value)));
-
-    if (uniqueValues.length < options.length) {
-      console.warn("NDS: The options prop passed to Select must have unique values for each option", options);
-    }
-  }
-};
-
-export const getOption = (options: NDSOptionType[], value: unknown) => {
-  // allows an option with  a null value to be matched
-  if (options.length > 0 && value !== undefined) {
-    const optionWithMatchingValue = options.find((o) => o.value === value);
-    return optionWithMatchingValue || null;
-  }
-  return value;
-};
-
-const getReactSelectValue = (options: NDSOptionType[], input: unknown) => {
-  if (Array.isArray(input)) {
-    return input.map((i) => getOption(options, i));
-  }
-  return getOption(options, input);
-};
-
-function extractValue(options: NDSOptionType[] | NDSOptionType, isMulti: boolean) {
-  if (Array.isArray(options)) {
-    if (isMulti) {
-      return options && options.length ? options.map((o) => o.value) : [];
-    } else {
-      throw new Error("UNEXPECTED ERROR: don't forget to enable isMulti");
-    }
-  }
-
-  if (options === null) {
-    return options;
-  } else {
-    return options.value;
-  }
-}
-
-ReactSelect.defaultProps = {
-  ...SelectDefaultProps,
-  windowThreshold: 300,
-  filterOption: undefined,
-};
-
-export default ReactSelect;
+export default NDSSelect;
