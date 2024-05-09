@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme.type";
-import { rowsPropType, columnsPropType, rowPropType } from "./Table.types";
+import { columnsPropType, rowPropType } from "./Table.types";
 import TableCell from "./TableCell";
 
 const StyledMessageContainer = styled(Box)(({ theme }) => ({

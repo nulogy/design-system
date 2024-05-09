@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
-import { columnPropType, rowPropType } from "./Table.types";
 import { DefaultNDSThemeType } from "../theme.type";
 
 type StyledTableCellProps = {
