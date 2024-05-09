@@ -1,3 +1,11 @@
+## [10.2.4](https://github.com/nulogy/design-system/compare/v10.2.3...v10.2.4) (2024-05-09)
+
+
+### Bug Fixes
+
+* Remove dead prop reference ([ee81011](https://github.com/nulogy/design-system/commit/ee810119f3981072a38f06379893bbf309f44f32))
+* Walk back some `unknown`s ([058297a](https://github.com/nulogy/design-system/commit/058297ae7ca9c3e8cb817d5ecbe57c476c7b0a42))
+
 ## [10.2.3](https://github.com/nulogy/design-system/compare/v10.2.2...v10.2.3) (2024-05-09)
 
 
