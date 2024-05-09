@@ -1,10 +1,10 @@
 import type { Key } from "react";
 import PropTypes from "prop-types";
 
-export type RowType = unknown;
+export type RowType = any;
 
 export interface CellInfoType<ColumnMetadata> {
-  cellData: unknown;
+  cellData: any;
   column: ColumnType<ColumnMetadata>;
   row: RowType;
 }
