@@ -1,7 +1,7 @@
 import React, { forwardRef, ReactNode, MutableRefObject } from "react";
 import Select from "react-select/base";
-import WindowedSelect from "react-windowed-select";
-import type { Props as SelectProps } from "react-select";
+import ReactSelect, { PropsValue } from "react-select";
+import type { GroupBase, Props } from "react-select";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
 import propTypes from "@styled-system/prop-types";
@@ -12,49 +12,55 @@ import customStyles from "../Select/customReactSelectStyles";
 import { getSubset } from "../utils/subset";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import {
+  SelectControl,
   SelectMultiValue,
   SelectClearIndicator,
   SelectContainer,
   SelectInput,
   SelectDropdownIndicator,
   SelectMenu,
-  SelectControl,
-} from "./SelectComponents";
-import { SelectOption } from "./SelectOption";
-import { checkOptionsAreValid, getReactSelectValue } from "./lib";
+  SelectOption,
+} from "../AsyncSelect/AsyncSelectComponents";
+import { checkOptionsAreValid, extractValue, getReactSelectValue } from "./lib";
 
-interface WindowedSelectProps extends SelectProps {
-  windowThreshold: number;
+export type NDSOptionValue = string | number | boolean | null;
+
+export interface NDSOption {
+  label: string;
+  value: NDSOptionValue;
 }
 
-type CustomProps = {
-  autocomplete?: WindowedSelectProps["isSearchable"];
+type CustomProps<IsMulti extends boolean, Group extends GroupBase<NDSOption>> = {
+  autocomplete?: Props<NDSOption, IsMulti, Group>["isSearchable"];
   labelText?: string;
   size?: ComponentSize;
   requirementText?: string;
   helpText?: ReactNode;
-  disabled?: WindowedSelectProps["isDisabled"];
+  disabled?: Props<NDSOption, IsMulti, Group>["isDisabled"];
   errorMessage?: string;
   errorList?: string[];
-  initialIsOpen?: WindowedSelectProps["defaultMenuIsOpen"];
-  multiselect?: WindowedSelectProps["isMulti"];
+  initialIsOpen?: Props<NDSOption, IsMulti, Group>["defaultMenuIsOpen"];
+  multiselect?: Props<NDSOption, IsMulti, Group>["isMulti"];
   maxHeight?: string;
-  defaultValue?: WindowedSelectProps["defaultInputValue"];
-  value?: string;
+  defaultValue?: PropsValue<NDSOptionValue>;
+  value?: PropsValue<NDSOptionValue>;
+  options: NDSOption[];
+  onChange?: (newValue: PropsValue<NDSOptionValue>) => void;
+  windowThreshold?: number;
 };
 
-export type NDSSelectProps = Omit<
-  WindowedSelectProps,
-  "isSearchable" | "isDisabled" | "isMulti" | "defaultMenuIsOpen" | "defaultInputValue" | "value"
-> &
-  CustomProps;
+export type NDSSelectProps<
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<NDSOption> = GroupBase<NDSOption>
+> = Omit<Props<NDSOption, IsMulti, Group>, keyof CustomProps<IsMulti, Group>> & CustomProps<IsMulti, Group>;
 
 const NDSSelect = forwardRef(
-  (
+  <IsMulti extends boolean = boolean, Group extends GroupBase<NDSOption> = GroupBase<NDSOption>>(
     {
-      size,
       autocomplete,
-      options,
+      value,
+      onChange,
+      defaultValue,
       labelText,
       required,
       requirementText,
@@ -65,35 +71,24 @@ const NDSSelect = forwardRef(
       id,
       initialIsOpen,
       maxHeight,
-      isClearable,
-      onChange,
       multiselect,
       placeholder,
-      value,
-      defaultValue,
-      noOptionsMessage,
-      menuPosition,
-      name,
-      className,
-      classNamePrefix,
-      onBlur,
-      menuIsOpen,
-      onMenuOpen,
-      onMenuClose,
-      onInputChange,
       components,
-      "aria-label": ariaLabel,
-      windowThreshold = 100,
+      size,
+      windowThreshold,
+      options,
       ...props
-    }: NDSSelectProps,
-    ref: ((instance: Select | null) => void) | MutableRefObject<Select | null> | null
+    }: NDSSelectProps<IsMulti, Group>,
+    ref:
+      | ((instance: Select<NDSOption, IsMulti, Group> | null) => void)
+      | MutableRefObject<Select<NDSOption, IsMulti, Group> | null>
+      | null
   ) => {
     const { t } = useTranslation();
     const theme = useTheme();
     const spaceProps = getSubset(props, propTypes.space);
     const error = !!(errorMessage || errorList);
     const optionsRef = React.useRef(options);
-
     const componentSize = useComponentSize(size);
 
     React.useEffect(() => {
@@ -104,38 +99,34 @@ const NDSSelect = forwardRef(
     return (
       <Field {...spaceProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
-          <WindowedSelect
-            windowThreshold={windowThreshold}
-            className={className}
-            classNamePrefix={classNamePrefix}
-            noOptionsMessage={noOptionsMessage}
+          <ReactSelect
+            ref={ref}
+            isSearchable={autocomplete}
+            isDisabled={disabled}
+            defaultMenuIsOpen={initialIsOpen}
+            isMulti={multiselect}
             defaultValue={getReactSelectValue(options, defaultValue)}
             value={getReactSelectValue(options, value)}
-            ref={ref}
-            placeholder={placeholder || t("start typing")}
-            styles={customStyles({
-              theme,
-              error,
-              maxHeight,
-              windowed: options.length > windowThreshold,
-            })}
             options={options}
-            isDisabled={disabled}
-            isSearchable={autocomplete}
+            onChange={(newValue) => {
+              if (!onChange) return;
+
+              const value = extractValue(newValue, multiselect);
+              onChange(value);
+            }}
+            // windowThreshold={windowThreshold}
+            placeholder={placeholder || t("start typing")}
             aria-required={required}
             required={required}
             aria-invalid={error}
-            defaultMenuIsOpen={initialIsOpen}
             inputId={id}
-            onBlur={onBlur}
-            onChange={onChange}
-            name={name}
-            isMulti={multiselect}
-            menuIsOpen={menuIsOpen}
-            onMenuOpen={onMenuOpen}
-            onMenuClose={onMenuClose}
-            menuPosition={menuPosition}
-            onInputChange={onInputChange}
+            styles={customStyles<NDSOption, IsMulti, Group>({
+              theme: theme,
+              error,
+              maxHeight,
+              size: componentSize,
+              windowed: options.length > windowThreshold,
+            })}
             components={{
               Option: (props) => (
                 <SelectOption size={componentSize} {...props}>
@@ -151,8 +142,7 @@ const NDSSelect = forwardRef(
               Input: SelectInput,
               ...components,
             }}
-            aria-label={ariaLabel}
-            isClearable={isClearable}
+            {...props}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>

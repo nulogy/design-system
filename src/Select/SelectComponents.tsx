@@ -8,9 +8,10 @@ import {
   MenuProps,
   MultiValueProps,
   components as selectComponents,
-} from "react-windowed-select";
+} from "react-select";
+import { NDSOption } from "./Select";
 
-export const SelectControl = (props: ControlProps) => {
+export function SelectControl<IsMulti extends boolean = boolean>(props: ControlProps<NDSOption, IsMulti>) {
   const { isFocused } = props;
   return (
     <div data-testid="select-control">
@@ -18,55 +19,61 @@ export const SelectControl = (props: ControlProps) => {
         className={isFocused ? "nds-select--is-focused" : null}
         isFocused={isFocused}
         {...props}
-      />
+      >
+        {props.children}
+      </selectComponents.Control>
     </div>
   );
-};
+}
 
-export const SelectMultiValue = (props: MultiValueProps) => {
+export function SelectMultiValue<IsMulti extends boolean = boolean>(props: MultiValueProps<NDSOption, IsMulti>) {
   return (
     <div data-testid="select-multivalue">
-      <selectComponents.MultiValue {...props} />
+      <selectComponents.MultiValue {...props}>{props.children}</selectComponents.MultiValue>
     </div>
   );
-};
+}
 
-export const SelectClearIndicator = (props: ClearIndicatorProps) => {
+export function SelectClearIndicator<IsMulti extends boolean = boolean>(
+  props: ClearIndicatorProps<NDSOption, IsMulti>
+) {
   return (
     <div data-testid="select-clear">
       <selectComponents.ClearIndicator {...props} />
     </div>
   );
-};
+}
 
-export const SelectDropdownIndicator = (props: DropdownIndicatorProps) => {
+export function SelectDropdownIndicator<IsMulti extends boolean = boolean>(
+  props: DropdownIndicatorProps<NDSOption, IsMulti>
+) {
   return (
     <div data-testid="select-arrow">
       <selectComponents.DropdownIndicator {...props} />
     </div>
   );
-};
+}
 
-export const SelectMenu = (props: MenuProps) => {
+export function SelectMenu<IsMulti extends boolean = boolean>(props: MenuProps<NDSOption, IsMulti>) {
   return (
     <div data-testid="select-dropdown">
-      <selectComponents.Menu {...props} />
+      <selectComponents.Menu {...props}>{props.children}</selectComponents.Menu>
     </div>
   );
-};
+}
 
-export const SelectContainer = (props: ContainerProps) => {
+export function SelectContainer<IsMulti extends boolean = boolean>(props: ContainerProps<NDSOption, IsMulti>) {
   return (
     <div data-testid="select-container">
-      <selectComponents.SelectContainer {...props} />
+      <selectComponents.SelectContainer {...props}>{props.children}</selectComponents.SelectContainer>
     </div>
   );
-};
+}
 
-export const SelectInput = (props: InputProps) => {
+export function SelectInput<IsMulti extends boolean = boolean>(props: InputProps<NDSOption, IsMulti>) {
   return (
     <div data-testid="select-input">
-      <selectComponents.Input {...props} />
+      <selectComponents.Input {...props}>{props.children}</selectComponents.Input>
     </div>
   );
-};
+}

@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { components, OptionProps } from "react-windowed-select";
+import { components, OptionProps } from "react-select";
 import { typography } from "styled-system";
 import { subPx } from "../utils";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { stylesForSize } from "./customReactSelectStyles";
+import { NDSOption } from "./Select";
 
 type StyledOptionProps = {
   isSelected: boolean;
@@ -51,7 +52,7 @@ export const StyledOption = styled.div<StyledOptionProps>(
     )
 );
 
-interface SelectOptionProps extends OptionProps {
+export interface SelectOptionProps<IsMulti extends boolean = boolean> extends OptionProps<NDSOption, IsMulti> {
   size?: ComponentSize;
 }
 
