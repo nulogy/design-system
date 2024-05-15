@@ -19,9 +19,10 @@ import {
   SelectInput,
   SelectDropdownIndicator,
   SelectMenu,
-  SelectOption,
-} from "../AsyncSelect/AsyncSelectComponents";
-import { checkOptionsAreValid, extractValue, getReactSelectValue } from "./lib";
+} from "./SelectComponents";
+import { SelectOption } from "./SelectOption";
+import MenuList from "./MenuList";
+import { calcOptionsLength, checkOptionsAreValid, extractValue, getReactSelectValue } from "./lib";
 
 export type NDSOptionValue = string | number | boolean | null;
 
@@ -90,6 +91,8 @@ const NDSSelect = forwardRef(
     const error = !!(errorMessage || errorList);
     const optionsRef = React.useRef(options);
     const componentSize = useComponentSize(size);
+    const optionsLength = React.useMemo(() => calcOptionsLength(options), [options]);
+    const isWindowed = optionsLength >= windowThreshold;
 
     React.useEffect(() => {
       checkOptionsAreValid(options);
@@ -114,7 +117,6 @@ const NDSSelect = forwardRef(
               const value = extractValue(newValue, multiselect);
               onChange(value);
             }}
-            // windowThreshold={windowThreshold}
             placeholder={placeholder || t("start typing")}
             aria-required={required}
             required={required}
@@ -140,6 +142,7 @@ const NDSSelect = forwardRef(
               SelectContainer: SelectContainer,
               Menu: SelectMenu,
               Input: SelectInput,
+              ...(isWindowed ? { MenuList } : {}),
               ...components,
             }}
             {...props}

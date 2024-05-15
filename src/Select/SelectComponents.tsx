@@ -7,73 +7,94 @@ import {
   InputProps,
   MenuProps,
   MultiValueProps,
-  components as selectComponents,
+  GroupBase,
+  components,
 } from "react-select";
 import { NDSOption } from "./Select";
 
-export function SelectControl<IsMulti extends boolean = boolean>(props: ControlProps<NDSOption, IsMulti>) {
+export function SelectControl<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: ControlProps<Option, IsMulti, Group>) {
   const { isFocused } = props;
   return (
     <div data-testid="select-control">
-      <selectComponents.Control
-        className={isFocused ? "nds-select--is-focused" : null}
-        isFocused={isFocused}
-        {...props}
-      >
+      <components.Control className={isFocused ? "nds-select--is-focused" : null} isFocused={isFocused} {...props}>
         {props.children}
-      </selectComponents.Control>
+      </components.Control>
     </div>
   );
 }
 
-export function SelectMultiValue<IsMulti extends boolean = boolean>(props: MultiValueProps<NDSOption, IsMulti>) {
+export function SelectMultiValue<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: MultiValueProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-multivalue">
-      <selectComponents.MultiValue {...props}>{props.children}</selectComponents.MultiValue>
+      <components.MultiValue {...props}>{props.children}</components.MultiValue>
     </div>
   );
 }
 
-export function SelectClearIndicator<IsMulti extends boolean = boolean>(
-  props: ClearIndicatorProps<NDSOption, IsMulti>
-) {
+export function SelectClearIndicator<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: ClearIndicatorProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-clear">
-      <selectComponents.ClearIndicator {...props} />
+      <components.ClearIndicator {...props} />
     </div>
   );
 }
 
-export function SelectDropdownIndicator<IsMulti extends boolean = boolean>(
-  props: DropdownIndicatorProps<NDSOption, IsMulti>
-) {
+export function SelectDropdownIndicator<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: DropdownIndicatorProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-arrow">
-      <selectComponents.DropdownIndicator {...props} />
+      <components.DropdownIndicator {...props} />
     </div>
   );
 }
 
-export function SelectMenu<IsMulti extends boolean = boolean>(props: MenuProps<NDSOption, IsMulti>) {
+export function SelectMenu<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: MenuProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-dropdown">
-      <selectComponents.Menu {...props}>{props.children}</selectComponents.Menu>
+      <components.Menu {...props}>{props.children}</components.Menu>
     </div>
   );
 }
 
-export function SelectContainer<IsMulti extends boolean = boolean>(props: ContainerProps<NDSOption, IsMulti>) {
+export function SelectContainer<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: ContainerProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-container">
-      <selectComponents.SelectContainer {...props}>{props.children}</selectComponents.SelectContainer>
+      <components.SelectContainer {...props}>{props.children}</components.SelectContainer>
     </div>
   );
 }
 
-export function SelectInput<IsMulti extends boolean = boolean>(props: InputProps<NDSOption, IsMulti>) {
+export function SelectInput<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: InputProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-input">
-      <selectComponents.Input {...props}>{props.children}</selectComponents.Input>
+      <components.Input {...props}>{props.children}</components.Input>
     </div>
   );
 }
