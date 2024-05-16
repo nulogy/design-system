@@ -117,7 +117,7 @@ const NDSSelect = forwardRef(
               const value = extractValue(newValue, multiselect);
               onChange(value);
             }}
-            placeholder={placeholder || t("start typing")}
+            placeholder={placeholder || t("select")}
             aria-required={required}
             required={required}
             aria-invalid={error}
