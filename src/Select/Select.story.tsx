@@ -111,7 +111,7 @@ export const WithDifferentSizes = () => {
       <Heading2>Standard</Heading2>
       <Flex gap="x2" minHeight="360px">
         <Select
-          defaultMenuIsOpen
+          initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
@@ -121,7 +121,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="medium"
-          defaultMenuIsOpen
+          initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
@@ -131,7 +131,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="large"
-          defaultMenuIsOpen
+          initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
@@ -144,7 +144,7 @@ export const WithDifferentSizes = () => {
       <Heading2>Multi-select</Heading2>
       <Flex gap="x2" alignItems="flex-start">
         <Select
-          defaultMenuIsOpen
+          initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
@@ -154,7 +154,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="medium"
-          defaultMenuIsOpen
+          initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
@@ -164,7 +164,7 @@ export const WithDifferentSizes = () => {
         />
         <Select
           size="large"
-          defaultMenuIsOpen
+          initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
