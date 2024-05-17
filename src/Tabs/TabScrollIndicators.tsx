@@ -1,7 +1,6 @@
 // @ts-nocheck
 import styled from "styled-components";
 import React from "react";
-import smoothscroll from "smoothscroll-polyfill";
 import TabScrollIndicator from "./TabScrollIndicator";
 const TabScrollIndicatorContainer = styled.div(({ width, theme }) => ({
   position: "absolute",
@@ -37,7 +36,6 @@ class TabScrollIndicators extends React.Component<TabScrollIndicatorsProps, TabS
   }
   componentDidMount() {
     this.conditionallyUpdateState();
-    smoothscroll.polyfill();
   }
   getScrollLeftValueByTabIndex(index) {
     const { tabRefs } = this.props;
