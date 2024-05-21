@@ -142,6 +142,8 @@
     "@nulogy/tokens": "^5.4.0",
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
+    "@types/react-window": "^1.8.8",
+    "@types/styled-system": "5.1.22",
     "body-scroll-lock": "^3.1.5",
     "core-js": "3",
     "create-react-context": "^0.3.0",
@@ -160,11 +162,9 @@
     "react-popper": "1.3.11",
     "react-popper-2": "npm:react-popper@2.2.4",
     "react-resize-detector": "^9.1.0",
-    "react-windowed-select": "^5.2.0",
-    "smoothscroll-polyfill": "^0.4.4",
     "react-select": "^5.8.0",
-    "styled-system": "^5.1.4",
-    "@types/styled-system": "5.1.22"
+    "react-window": "^1.8.10",
+    "styled-system": "^5.1.4"
   },
   "husky": {
     "hooks": {

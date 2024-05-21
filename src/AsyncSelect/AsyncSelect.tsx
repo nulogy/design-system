@@ -128,7 +128,6 @@ const AsyncSelect = forwardRef(
             onMenuClose={onMenuClose}
             menuPosition={menuPosition}
             onInputChange={onInputChange}
-            theme={theme as any}
             components={{
               Option: (props) => (
                 <SelectOption size={componentSize} {...props}>

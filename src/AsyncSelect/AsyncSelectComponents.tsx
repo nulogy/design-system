@@ -10,7 +10,7 @@ import {
   MultiValueProps,
 } from "react-select";
 import { components, GroupBase } from "react-select";
-import { OptionProps } from "react-windowed-select";
+import { OptionProps } from "react-select";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { StyledOption } from "../Select/SelectOption";
 

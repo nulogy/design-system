@@ -1,18 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import { components, OptionProps } from "react-windowed-select";
+import { components, GroupBase, OptionProps } from "react-select";
 import { typography } from "styled-system";
 import { subPx } from "../utils";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { stylesForSize } from "./customReactSelectStyles";
+import { NDSOption } from "./Select";
+import Option from "react-select/dist/declarations/src/components/Option";
 
-type SelectOptionProps = {
+type StyledOptionProps = {
   isSelected: boolean;
   isFocused: boolean;
   size: ComponentSize;
 };
 
-export const StyledOption = styled.div<SelectOptionProps>(
+export const StyledOption = styled.div<StyledOptionProps>(
   typography,
   ({ isSelected, isFocused, theme }) => ({
     "&:last-child": {
@@ -51,11 +53,19 @@ export const StyledOption = styled.div<SelectOptionProps>(
     )
 );
 
-interface CustomOptionProps extends OptionProps {
+export type SelectOptionProps<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+> = OptionProps<Option, IsMulti, Group> & {
   size?: ComponentSize;
-}
+};
 
-export function SelectOption(props: CustomOptionProps) {
+export function SelectOption<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: SelectOptionProps<Option, IsMulti, Group>) {
   const size = useComponentSize(props.size);
 
   return (
