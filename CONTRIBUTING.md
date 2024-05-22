@@ -38,6 +38,9 @@ Note: NDS follows the [Conventional Commits](https://www.conventionalcommits.org
 
 **WARNING**: using a `!` after the [Conventional Commits](https://www.conventionalcommits.org) `type/scope` (e.g. `feat`) is not sufficient for [semantic-release](https://semantic-release.gitbook.io/semantic-release/recipes/release-workflow/maintenance-releases#releasing-a-breaking-change) to detect a breaking change. ` BREAKING CHANGE` needs to be explicitly included in the body of the commit message.
 
+### Beta releases
+To create a beta release, create a pull request (PR) and merge it into the beta branch.
+
 ## Testing
 
 - To run everything:
