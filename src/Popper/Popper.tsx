@@ -50,24 +50,29 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
     popperRef
   ) => {
     let timeoutID;
+
     const [isOpen, setIsOpen] = useState(defaultOpen);
-    const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
+
+    const conditionallyApplyDelay = (fnc: () => void, delay: number, skipDelay = true) => {
       if (!skipDelay) {
         timeoutID = setTimeout(fnc, delay);
       } else {
         fnc();
       }
     };
-    const setPopUpState = (nextIsOpenState, skipDelay) => {
+
+    const setPopUpState = (nextIsOpenState: boolean, skipDelay: boolean) => {
       clearTimeout(timeoutID);
       conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
     };
-    const closePopUp = (skipDelay) => {
+
+    const closePopUp = (skipDelay: boolean) => {
       setPopUpState(false, skipDelay);
     };
+
     useEffect(() => {
-      const handleKeyDown = (event) => {
-        switch (event.keyCode) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        switch (event.code) {
           case keyCodes.ESC:
             closePopUp();
             break;
@@ -75,16 +80,20 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
             break;
         }
       };
+
       document.addEventListener("keydown", handleKeyDown);
+
       const cleanup = () => {
         document.removeEventListener("keydown", handleKeyDown);
         clearTimeout(timeoutID);
       };
       return cleanup;
     }, []);
-    const openPopUp = (skipDelay) => {
+
+    const openPopUp = (skipDelay: boolean) => {
       setPopUpState(true, skipDelay);
     };
+
     const onClickEventHandlers = openOnClick
       ? {
           onClick: () => {
@@ -96,12 +105,14 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
           },
         }
       : null;
+
     const onHoverHandlers = openOnHover
       ? {
           onMouseEnter: () => openPopUp(false),
           onMouseLeave: () => closePopUp(false),
         }
       : null;
+
     const eventHandlers = {
       onFocus: () => openPopUp(false),
       onBlur: () => {
@@ -110,6 +121,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
       ...onHoverHandlers,
       ...onClickEventHandlers,
     };
+
     const transformInnerChildren = (elements) =>
       makeArray(elements).map((element, i) => {
         const transformedElement = wrapInFunction(element)({
@@ -127,13 +139,18 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
           key: i,
         });
       });
+
     const renderInnerChildren = () => {
       const innerChildren = children.props.children;
       return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
     };
+
     const { t } = useTranslation();
+
     const openLabel = openAriaLabel || t("open");
+
     const closeLabel = closeAriaLabel || t("close");
+
     return (
       <Manager ref={popperRef}>
         <Reference>
