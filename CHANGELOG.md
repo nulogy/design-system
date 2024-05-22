@@ -1,3 +1,20 @@
+# [11.0.0-beta.1](https://github.com/nulogy/design-system/compare/v10.2.4...v11.0.0-beta.1) (2024-05-22)
+
+
+### Bug Fixes
+
+* NDS Select props are broken ([#1408](https://github.com/nulogy/design-system/issues/1408)) ([bc42a90](https://github.com/nulogy/design-system/commit/bc42a90748515b71bc0a5e559720a7692745d654))
+
+
+### BREAKING CHANGES
+
+* removes the ability to pass custom props to the Select component.
+
+* feat: remove react-windowed-select
+* feat: Roll our own windowing Select
+* chore: Inline react-select license
+* chore: remove smoothscroll-polyfill: https://caniuse.com/css-scroll-behavior
+
 ## [10.2.4](https://github.com/nulogy/design-system/compare/v10.2.3...v10.2.4) (2024-05-09)
 
 
