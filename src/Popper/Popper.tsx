@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { useTranslation } from "react-i18next";
 import { PopperArrow } from "../utils";
@@ -49,20 +49,28 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
     },
     popperRef
   ) => {
-    let timeoutID;
+    // We're going to manage the ID of the timeout in a ref so that we can examine
+    // it without causing a re-render. Note that "0" will denote "no jobs running",
+    // whereas positive values are the ID of the running job.
+    const timeoutId = useRef(0);
+
+    const resetTimeoutId = () => {
+      clearTimeout(timeoutId.current);
+      timeoutId.current = 0;
+    };
 
     const [isOpen, setIsOpen] = useState(defaultOpen);
 
     const conditionallyApplyDelay = (fnc: () => void, delay: number, skipDelay = true) => {
       if (!skipDelay) {
-        timeoutID = setTimeout(fnc, delay);
+        timeoutId.current = setTimeout(fnc, delay);
       } else {
         fnc();
       }
     };
 
     const setPopUpState = (nextIsOpenState: boolean, skipDelay: boolean) => {
-      clearTimeout(timeoutID);
+      resetTimeoutId();
       conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
     };
 
@@ -85,7 +93,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
 
       const cleanup = () => {
         document.removeEventListener("keydown", handleKeyDown);
-        clearTimeout(timeoutID);
+        resetTimeoutId();
       };
       return cleanup;
     }, []);
