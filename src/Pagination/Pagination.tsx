@@ -26,7 +26,7 @@ export const getPageItemsToDisplay = (totalPages: number, currentPage: number): 
   return [1, SEPARATOR, ...pages.slice(currentPage - 2, currentPage + 2), SEPARATOR, totalPages];
 };
 
-type PaginationProps = FlexProps & {
+interface PaginationProps extends FlexProps {
   currentPage: number;
   totalPages: number;
   onNext?: () => void;
@@ -38,7 +38,7 @@ type PaginationProps = FlexProps & {
   previousAriaLabel?: string;
   scrollToTopAfterPagination?: boolean;
   scrollTargetRef?: RefObject<HTMLElement>;
-};
+}
 
 function Pagination({
   currentPage,
