@@ -10,14 +10,16 @@ type OverlayProps = FlexProps & {
   theme?: DefaultNDSThemeType;
 };
 
-const Overlay: React.FC<OverlayProps> = styled(Flex)<OverlayProps>(({ dark, theme }: OverlayProps) => ({
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  zIndex: theme.zIndices.overlay,
-  backgroundColor: dark ? transparentize(0.5, theme.colors.blackBlue) : transparentize(0.05, theme.colors.white),
-}));
+const Overlay: React.FC<React.PropsWithChildren<OverlayProps>> = styled(Flex)<OverlayProps>(
+  ({ dark, theme }: OverlayProps) => ({
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: theme.zIndices.overlay,
+    backgroundColor: dark ? transparentize(0.5, theme.colors.blackBlue) : transparentize(0.05, theme.colors.white),
+  })
+);
 Overlay.defaultProps = {
   position: "fixed",
   justifyContent: "center",

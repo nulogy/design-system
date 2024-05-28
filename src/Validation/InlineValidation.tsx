@@ -22,7 +22,7 @@ type InlineValidationProps = SpaceProps & {
   children?: React.ReactNode;
 };
 
-const InlineValidation: React.FC<InlineValidationProps> = ({
+const InlineValidation: React.FC<React.PropsWithChildren<InlineValidationProps>> = ({
   className,
   errorMessage,
   errorList,

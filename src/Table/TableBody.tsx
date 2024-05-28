@@ -18,7 +18,7 @@ type StyledTrProps = React.ComponentProps<"tr"> & {
   className?: string;
 };
 
-const StyledTr: React.FC<StyledTrProps> = styled.tr(({ rowHovers, theme }: StyledTrProps) => ({
+const StyledTr: React.FC<React.PropsWithChildren<StyledTrProps>> = styled.tr(({ rowHovers, theme }: StyledTrProps) => ({
   "&:hover": {
     backgroundColor: rowHovers ? theme.colors.whiteGrey : null,
   },

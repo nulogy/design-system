@@ -6,7 +6,7 @@ type ListItemProps = React.ComponentPropsWithRef<"li"> &
   TypographyProps & {
     className?: string;
   };
-const ListItem: React.FC<ListItemProps> = styled.li(space, color, typography, {
+const ListItem: React.FC<React.PropsWithChildren<ListItemProps>> = styled.li(space, color, typography, {
   "&:last-child": {
     marginBottom: 0,
   },

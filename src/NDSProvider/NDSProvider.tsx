@@ -48,7 +48,7 @@ const AllNDSGlobalStyles = ({ theme, locale, disableGlobalStyles, children }: Al
     children
   );
 
-const NDSProvider: React.FC<NDSProviderProps> = ({
+const NDSProvider: React.FC<React.PropsWithChildren<NDSProviderProps>> = ({
   theme,
   children,
   disableGlobalStyles = false,

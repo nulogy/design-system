@@ -21,7 +21,7 @@ type ToastFunctions = {
 
 type CustomToastProps = { id: string; isVisible: boolean } & AlertProps;
 
-const CustomToast: React.FC<CustomToastProps> = ({ isVisible, id, children, ...props }) => {
+const CustomToast: React.FC<React.PropsWithChildren<CustomToastProps>> = ({ isVisible, id, children, ...props }) => {
   const handleClose = () => {
     _toast.dismiss(id);
   };

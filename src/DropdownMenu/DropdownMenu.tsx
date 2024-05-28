@@ -47,7 +47,10 @@ const transformPropsToModifiers = ({ boundariesElement }) => ({
   boundariesElement,
 });
 
-const DropdownMenu: React.FC<DropdownMenuProps> = React.forwardRef<Reference, DropdownMenuProps>(
+const DropdownMenu: React.FC<React.PropsWithChildren<DropdownMenuProps>> = React.forwardRef<
+  Reference,
+  DropdownMenuProps
+>(
   (
     {
       trigger = () => <IconicButton icon="more" />,

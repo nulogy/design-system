@@ -227,7 +227,7 @@ type BaseMobileMenuProps = {
   showNulogyLogo?: boolean;
 };
 
-const BaseMobileMenu: React.FC<BaseMobileMenuProps> = ({
+const BaseMobileMenu: React.FC<React.PropsWithChildren<BaseMobileMenuProps>> = ({
   menuData,
   closeMenu,
   subtext,

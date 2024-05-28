@@ -2,7 +2,7 @@ import React from "react";
 
 type LoadingIconProps = React.ComponentPropsWithoutRef<"svg">;
 
-const LoadingIcon: React.FC<LoadingIconProps> = (props) => {
+const LoadingIcon: React.FC<React.PropsWithChildren<LoadingIconProps>> = (props) => {
   return (
     <svg
       viewBox="0 0 24px 24px"

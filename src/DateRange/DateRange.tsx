@@ -46,7 +46,7 @@ type DateRangeProps = FieldProps & {
 
 const DEFAULT_LABEL = "Date Range";
 
-const DateRange: React.FC<DateRangeProps> = forwardRef(
+const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
   (
     {
       dateFormat,

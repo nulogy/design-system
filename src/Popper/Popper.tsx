@@ -28,7 +28,7 @@ type PopperProps = {
   openAriaLabel?: string;
   closeAriaLabel?: string;
 };
-const Popper: React.FC<PopperProps> = React.forwardRef(
+const Popper: React.FC<React.PropsWithChildren<PopperProps>> = React.forwardRef(
   (
     {
       popperPlacement,

@@ -113,7 +113,7 @@ type RadioProps = NativeInputProps &
     error?: boolean;
   };
 
-const Radio: React.FC<RadioProps> = forwardRef(
+const Radio: React.FC<React.PropsWithChildren<RadioProps>> = forwardRef(
   ({ className, labelText, disabled, checked, required, error, size, ...props }, ref) => {
     const componentSize = useComponentSize(size);
     const spaceProps = getSubset(props, propTypes.space);

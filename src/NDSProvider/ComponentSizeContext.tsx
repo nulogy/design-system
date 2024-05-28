@@ -17,7 +17,10 @@ export function useComponentSize(selectedSize?: ComponentSize) {
   return selectedSize ?? context.size;
 }
 
-const ComponentSizeContextProvider: React.FC<ComponentSizeContextValue> = ({ size, children }) => {
+const ComponentSizeContextProvider: React.FC<React.PropsWithChildren<ComponentSizeContextValue>> = ({
+  size,
+  children,
+}) => {
   return <ComponentSizeContext.Provider value={{ size }}>{children}</ComponentSizeContext.Provider>;
 };
 

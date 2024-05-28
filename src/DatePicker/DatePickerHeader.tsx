@@ -13,7 +13,7 @@ type DatePickerHeaderProps = {
   locale?: string;
 };
 
-const DatePickerHeader: React.FC<DatePickerHeaderProps> = ({
+const DatePickerHeader: React.FC<React.PropsWithChildren<DatePickerHeaderProps>> = ({
   date,
   decreaseMonth,
   increaseMonth,

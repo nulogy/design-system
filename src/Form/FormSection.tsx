@@ -12,7 +12,7 @@ const FormSectionTitle = styled(Heading3).attrs({
   as: "legend",
 })({});
 
-const BaseFormSection: React.FC<BaseFormSectionProps> = ({ title, children, ...props }) => (
+const BaseFormSection: React.FC<React.PropsWithChildren<BaseFormSectionProps>> = ({ title, children, ...props }) => (
   <fieldset {...props}>
     {title != null && <FormSectionTitle>{title}</FormSectionTitle>}
     {children}

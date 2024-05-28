@@ -127,7 +127,7 @@ const CheckboxInput = styled.input<CheckboxProps>((props) => ({
   },
 }));
 
-const Checkbox: React.FC<CheckboxProps> = forwardRef((props, ref) => {
+const Checkbox: React.FC<React.PropsWithChildren<CheckboxProps>> = forwardRef((props, ref) => {
   const { size, className, labelText, disabled, checked, required, error, indeterminate } = props;
 
   const componentSize = useComponentSize(size);

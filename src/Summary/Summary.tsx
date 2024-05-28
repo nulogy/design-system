@@ -32,7 +32,11 @@ const SummaryWrapper = styled(Box)<{ breakpoint: number }>(({ theme, breakpoint 
 
 const DEFAULT_BREAKPOINT = theme.breakpoints.medium;
 
-const Summary: React.FC<SummaryProps> = ({ breakpoint = DEFAULT_BREAKPOINT, children, ...rest }) => {
+const Summary: React.FC<React.PropsWithChildren<SummaryProps>> = ({
+  breakpoint = DEFAULT_BREAKPOINT,
+  children,
+  ...rest
+}) => {
   const breakpointPx = numberFromDimension(breakpoint);
 
   return (

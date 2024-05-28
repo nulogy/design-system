@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 
-const Card: React.FC<BoxProps> = styled(Box)({});
+const Card: React.FC<React.PropsWithChildren<BoxProps>> = styled(Box)({});
 
 Card.defaultProps = {
   children: [],

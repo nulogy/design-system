@@ -22,7 +22,7 @@ type HeaderProps = BoxProps & {
   };
 };
 
-const Header: React.FC<HeaderProps> = ({
+const Header: React.FC<React.PropsWithChildren<HeaderProps>> = ({
   background,
   renderBreadcrumbs,
   title,

@@ -26,7 +26,7 @@ export type TooltipProps = {
   children?: React.ReactNode;
 };
 
-const Tooltip: React.FC<TooltipProps> = React.forwardRef(
+const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = React.forwardRef(
   ({ className, tooltip, maxWidth, children, placement, showDelay, hideDelay, defaultOpen }, ref) => (
     <Popper
       ref={ref}
