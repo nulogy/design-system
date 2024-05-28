@@ -37,7 +37,7 @@ const getMenuMargin = (placement, showArrow) => {
   }
 };
 
-const DropdownMenuContainer: React.FC<DropdownMenuContainerProps> = styled(Box)(
+const DropdownMenuContainer: React.FC<React.PropsWithChildren<DropdownMenuContainerProps>> = styled(Box)(
   color,
   ({ dataPlacement, showArrow = true, backgroundColor = "white", theme }: DropdownMenuContainerProps): any => ({
     borderRadius: theme.radii.medium,

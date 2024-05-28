@@ -85,7 +85,7 @@ const WrapperButton = styled.button<ButtonProps>(
   space
 );
 
-const Button: React.FC<ButtonProps> = React.forwardRef(
+const Button: React.FC<React.PropsWithChildren<ButtonProps>> = React.forwardRef(
   ({ children, iconSide = "right", icon, className, asLink, size, ...props }: ButtonProps, ref) => {
     const {
       lineHeights: { smallTextCompressed },

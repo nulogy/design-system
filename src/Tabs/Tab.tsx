@@ -101,7 +101,7 @@ type TabProps = TabButtonProps & {
   label?: React.ReactNode;
 };
 
-const Tab: React.FC<TabProps> = React.forwardRef(({ label, ...props }, ref) => (
+const Tab: React.FC<React.PropsWithChildren<TabProps>> = React.forwardRef(({ label, ...props }, ref) => (
   <TabButton role="tab" type="button" ref={ref} {...props}>
     {label}
   </TabButton>

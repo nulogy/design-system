@@ -32,7 +32,7 @@ type MediumNavBarProps = {
   subtext?: string;
 };
 
-const MediumNavBar: React.FC<MediumNavBarProps> = ({
+const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
   menuData,
   environment,
   logo,

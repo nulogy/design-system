@@ -48,7 +48,7 @@ const animationConfig: AnimationConfig = {
   scale: 1.08,
 };
 
-const Switch: React.FC<SwitchProps> = ({ children, disabled, toggled, onClick }) => (
+const Switch: React.FC<React.PropsWithChildren<SwitchProps>> = ({ children, disabled, toggled, onClick }) => (
   <AnimatedBox
     position="relative"
     height="24px"
@@ -66,7 +66,7 @@ const Switch: React.FC<SwitchProps> = ({ children, disabled, toggled, onClick })
   </AnimatedBox>
 );
 
-const Slider: React.FC<SliderProps> = ({ disabled, children }) => (
+const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, children }) => (
   <motion.div
     className="slider"
     initial={false}
@@ -110,7 +110,7 @@ const ToggleInput = styled.input(
   })
 );
 
-const ToggleButton: React.FC<ToggleButtonProps> = React.forwardRef((props, ref) => {
+const ToggleButton: React.FC<React.PropsWithChildren<ToggleButtonProps>> = React.forwardRef((props, ref) => {
   const { disabled, defaultToggled, toggled } = props;
   const inputRef = useRef(null);
 

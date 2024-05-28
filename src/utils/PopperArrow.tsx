@@ -118,7 +118,7 @@ const drawArrow = (placement, borderColor, backgroundColor) => {
   }
 };
 
-const PopperArrow: React.FC<PopperArrowProps> = styled.div(
+const PopperArrow: React.FC<React.PropsWithChildren<PopperArrowProps>> = styled.div(
   {
     position: "absolute",
     height: theme.space.x1,

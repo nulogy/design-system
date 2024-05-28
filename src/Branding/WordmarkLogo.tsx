@@ -19,7 +19,12 @@ type WordmarkLogoProps = {
   letterFill?: string;
   size?: string;
 };
-const WordmarkLogo: React.FC<WordmarkLogoProps> = ({ size, logoFill, letterFill, ...props }) => (
+const WordmarkLogo: React.FC<React.PropsWithChildren<WordmarkLogoProps>> = ({
+  size,
+  logoFill,
+  letterFill,
+  ...props
+}) => (
   <svg
     {...getSize(size)}
     {...props}

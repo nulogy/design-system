@@ -4,7 +4,7 @@ import { Text } from "../Type";
 import { TextProps } from "../Type/Text";
 import { addStyledProps } from "../StyledProps";
 
-const DropdownText: React.FC<TextProps> = styled(Text)(
+const DropdownText: React.FC<React.PropsWithChildren<TextProps>> = styled(Text)(
   ({ theme }: TextProps): CSSObject => ({
     color: theme.colors.darkGrey,
     fontWeight: theme.fontWeights.medium,

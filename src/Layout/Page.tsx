@@ -13,7 +13,7 @@ type PageProps = FlexProps & {
   renderHeader?: () => JSX.Element;
 };
 
-export const Page: React.FC<PageProps> = ({
+export const Page: React.FC<React.PropsWithChildren<PageProps>> = ({
   breadcrumbs,
   title,
   children,

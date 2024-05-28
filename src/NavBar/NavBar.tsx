@@ -62,7 +62,7 @@ type MediumNavBarProps = {
   environment?: "development" | "training";
 };
 
-const MediumNavBar: React.FC<MediumNavBarProps> = ({
+const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
   menuData,
   themeColor,
   subtext,

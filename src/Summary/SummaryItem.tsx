@@ -20,7 +20,7 @@ const SummaryItemWrapper = styled(Flex)<{ breakpoint: number }>(({ theme, breakp
   },
 }));
 
-const SummaryItem: React.FC<SummaryItemProps> = ({ value, status, ...rest }) => {
+const SummaryItem: React.FC<React.PropsWithChildren<SummaryItemProps>> = ({ value, status, ...rest }) => {
   const { breakpoint } = useSummaryContext();
   const matches = useMediaQuery(`(max-width: ${breakpoint}px)`);
 

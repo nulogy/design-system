@@ -8,7 +8,7 @@ type DropdownItemProps = {
   bgHoverColor?: string;
 };
 
-const DropdownItem: React.FC<DropdownItemProps> = styled.div(
+const DropdownItem: React.FC<React.PropsWithChildren<DropdownItemProps>> = styled.div(
   ({ theme, color, hoverColor, bgHoverColor }: DropdownItemProps): CSSObject => ({
     "*": {
       color: theme.colors[color],

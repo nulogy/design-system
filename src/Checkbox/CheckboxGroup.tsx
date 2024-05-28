@@ -51,7 +51,7 @@ const Legend = styled.legend(({ theme }) => ({
   marginBottom: theme.space.x1,
 }));
 
-const CheckboxGroup: React.FC<CheckboxGroupProps> = ({
+const CheckboxGroup: React.FC<React.PropsWithChildren<CheckboxGroupProps>> = ({
   className,
   id,
   errorMessage,

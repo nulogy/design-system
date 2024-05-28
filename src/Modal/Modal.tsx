@@ -82,7 +82,9 @@ type ModalProps = {
   parentSelector?: (...args: any) => HTMLElement;
 };
 
-const Modal: React.FC<ModalProps> & { setAppElement: (element: string | HTMLElement) => void } = ({
+const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
+  setAppElement: (element: string | HTMLElement) => void;
+} = ({
   isOpen,
   children,
   title,

@@ -13,7 +13,7 @@ type SwitcherProps = {
   onChange?: (value: string) => void;
 };
 
-const Switcher: React.FC<SwitcherProps> = ({ size, selected, onChange, ...rest }) => {
+const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ size, selected, onChange, ...rest }) => {
   const componentSize = useComponentSize(size);
 
   const optionRefs = [];

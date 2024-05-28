@@ -126,7 +126,7 @@ export const getTimeOptions = (interval, timeFormat, minTime, maxTime, locale) =
     .slice(startingInterval, finalInterval);
 };
 
-const TimePicker: React.FC<TimePickerProps> = forwardRef(
+const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRef(
   (
     {
       timeFormat,
