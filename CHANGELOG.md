@@ -1,3 +1,10 @@
+## [10.2.5](https://github.com/nulogy/design-system/compare/v10.2.4...v10.2.5) (2024-05-28)
+
+
+### Bug Fixes
+
+* types for React 18 ([e1fc3c7](https://github.com/nulogy/design-system/commit/e1fc3c76d1fe3b7f62de99984fd3041de39eea67))
+
 ## [10.2.4](https://github.com/nulogy/design-system/compare/v10.2.3...v10.2.4) (2024-05-09)
 
 
