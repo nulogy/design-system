@@ -1,3 +1,10 @@
+# [11.0.0-beta.2](https://github.com/nulogy/design-system/compare/v11.0.0-beta.1...v11.0.0-beta.2) (2024-05-29)
+
+
+### Bug Fixes
+
+* export NDSOption & NDSOptionValue types ([1bc3aa8](https://github.com/nulogy/design-system/commit/1bc3aa8f96d0e4cb0f829aa3266359dce5dfad66))
+
 # [11.0.0-beta.1](https://github.com/nulogy/design-system/compare/v10.2.4...v11.0.0-beta.1) (2024-05-22)
 
 
