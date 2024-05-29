@@ -60,6 +60,8 @@ export {
   SelectMenu,
   SelectMultiValue,
   SelectOption,
+  type NDSOption,
+  type NDSOptionValue,
 } from "./Select";
 export { SortingTable } from "./SortingTable";
 export { StatusIndicator, StatusIndicatorValues } from "./StatusIndicator";
