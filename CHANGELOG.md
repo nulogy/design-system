@@ -1,3 +1,10 @@
+# [11.0.0-beta.3](https://github.com/nulogy/design-system/compare/v11.0.0-beta.2...v11.0.0-beta.3) (2024-05-30)
+
+
+### Bug Fixes
+
+* widen select option label type ([262fde9](https://github.com/nulogy/design-system/commit/262fde98b631eb6cef366f7fe5cdb206d629ad27))
+
 # [11.0.0-beta.2](https://github.com/nulogy/design-system/compare/v11.0.0-beta.1...v11.0.0-beta.2) (2024-05-29)
 
 
