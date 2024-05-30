@@ -27,7 +27,7 @@ import { calcOptionsLength, checkOptionsAreValid, extractValue, getReactSelectVa
 export type NDSOptionValue = string | number | boolean | null;
 
 export interface NDSOption {
-  label: string;
+  label: ReactNode;
   value: NDSOptionValue;
 }
 
