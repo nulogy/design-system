@@ -1,3 +1,10 @@
+# [11.0.0-beta.4](https://github.com/nulogy/design-system/compare/v11.0.0-beta.3...v11.0.0-beta.4) (2024-06-03)
+
+
+### Features
+
+* allow Select styles users to use the provided styles config ([8533f59](https://github.com/nulogy/design-system/commit/8533f5904025d22e714ff0b7741ab3b96796986a))
+
 # [11.0.0-beta.3](https://github.com/nulogy/design-system/compare/v11.0.0-beta.2...v11.0.0-beta.3) (2024-05-30)
 
 
