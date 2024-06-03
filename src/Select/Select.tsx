@@ -1,15 +1,15 @@
 import React, { forwardRef, ReactNode, MutableRefObject } from "react";
 import Select from "react-select/base";
 import ReactSelect, { PropsValue } from "react-select";
-import type { GroupBase, Props } from "react-select";
+import type { GroupBase, Props, StylesConfig } from "react-select";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
-import propTypes from "@styled-system/prop-types";
 import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
 import { getSubset } from "../utils/subset";
+import { addStyledProps, StyledProps } from "../StyledProps";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import {
   SelectControl,
@@ -31,7 +31,7 @@ export interface NDSOption {
   value: NDSOptionValue;
 }
 
-type CustomProps<IsMulti extends boolean, Group extends GroupBase<NDSOption>> = {
+interface CustomProps<IsMulti extends boolean, Group extends GroupBase<NDSOption>> extends StyledProps {
   autocomplete?: Props<NDSOption, IsMulti, Group>["isSearchable"];
   labelText?: string;
   size?: ComponentSize;
@@ -48,14 +48,15 @@ type CustomProps<IsMulti extends boolean, Group extends GroupBase<NDSOption>> = 
   options: NDSOption[];
   onChange?: (newValue: PropsValue<NDSOptionValue>) => void;
   windowThreshold?: number;
-};
+  styles?: (selectStyles: StylesConfig<NDSOption, IsMulti, Group>) => StylesConfig<NDSOption, IsMulti, Group>;
+}
 
 export type NDSSelectProps<
   IsMulti extends boolean = boolean,
   Group extends GroupBase<NDSOption> = GroupBase<NDSOption>
 > = Omit<
   Props<NDSOption, IsMulti, Group>,
-  keyof CustomProps<IsMulti, Group> | "isSearchable" | "isDisabled" | "defaultMenuIsOpen" | "isMulti"
+  keyof CustomProps<IsMulti, Group> | "isSearchable" | "isDisabled" | "defaultMenuIsOpen" | "isMulti" | "styles"
 > &
   CustomProps<IsMulti, Group>;
 
@@ -82,6 +83,7 @@ const NDSSelect = forwardRef(
       size,
       windowThreshold,
       options,
+      styles,
       ...props
     }: NDSSelectProps<IsMulti, Group>,
     ref:
@@ -91,7 +93,7 @@ const NDSSelect = forwardRef(
   ) => {
     const { t } = useTranslation();
     const theme = useTheme();
-    const spaceProps = getSubset(props, propTypes.space);
+    const styledProps = getSubset(props, addStyledProps);
     const error = !!(errorMessage || errorList);
     const optionsRef = React.useRef(options);
     const componentSize = useComponentSize(size);
@@ -103,8 +105,16 @@ const NDSSelect = forwardRef(
       optionsRef.current = options;
     }, [options]);
 
+    const stylesConfig = customStyles<NDSOption, IsMulti, Group>({
+      theme: theme,
+      error,
+      maxHeight,
+      size: componentSize,
+      windowed: options.length > windowThreshold,
+    });
+
     return (
-      <Field {...spaceProps}>
+      <Field {...styledProps}>
         <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
           <ReactSelect
             ref={ref}
@@ -126,13 +136,7 @@ const NDSSelect = forwardRef(
             required={required}
             aria-invalid={error}
             inputId={id}
-            styles={customStyles<NDSOption, IsMulti, Group>({
-              theme: theme,
-              error,
-              maxHeight,
-              size: componentSize,
-              windowed: options.length > windowThreshold,
-            })}
+            styles={styles ? styles(stylesConfig) : stylesConfig}
             components={{
               Option: (props) => (
                 <SelectOption size={componentSize} {...props}>
