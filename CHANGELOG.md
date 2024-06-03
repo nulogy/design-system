@@ -1,3 +1,10 @@
+## [10.2.6](https://github.com/nulogy/design-system/compare/v10.2.5...v10.2.6) (2024-06-03)
+
+
+### Bug Fixes
+
+* Improve Pagination type for onSelectPage  ([9f3861e](https://github.com/nulogy/design-system/commit/9f3861e4b1df09d1825e194d00bae13b3658658b))
+
 ## [10.2.5](https://github.com/nulogy/design-system/compare/v10.2.4...v10.2.5) (2024-05-28)
 
 
