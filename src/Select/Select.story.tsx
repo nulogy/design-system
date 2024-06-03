@@ -177,6 +177,21 @@ export const WithDifferentSizes = () => {
   );
 };
 
+export const WithStyledProps = () => {
+  return (
+    <Select
+      initialIsOpen
+      placeholder="Please select inventory status"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      maxWidth="300px"
+      options={options}
+      labelText="Default size"
+      onInputChange={action("typed input value changed")}
+    />
+  );
+};
+
 export const WithABlankValue = () => {
   const optionsWithBlank = [{ value: null, label: "" }, ...options];
   return (
@@ -578,6 +593,20 @@ export const WithTopMenuPlacement = () => {
   );
 };
 
-UsingRefToControlFocus.story = {
-  name: "using ref to control focus",
+export const WithCustomStyles = () => {
+  return (
+    <Select
+      options={options}
+      menuPlacement="top"
+      styles={(styles) => {
+        return {
+          ...styles,
+          control: (provided, props) => ({
+            ...styles.control(provided, props),
+            border: "2px solid lightblue",
+          }),
+        };
+      }}
+    />
+  );
 };
