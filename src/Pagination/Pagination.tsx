@@ -9,9 +9,9 @@ import PageNumber from "./PageNumber";
 import PreviousButton from "./PreviousButton";
 import NextButton from "./NextButton";
 
-const SEPARATOR = "...";
+const SEPARATOR = "..." as const;
 
-export const getPageItemsToDisplay = (totalPages: number, currentPage: number) => {
+export const getPageItemsToDisplay = (totalPages: number, currentPage: number): Array<typeof SEPARATOR | number> => {
   const MAX_PAGES_TO_SHOW = 6;
 
   const pages = Array.from({ length: totalPages }, (v, i) => i + 1);
@@ -26,19 +26,19 @@ export const getPageItemsToDisplay = (totalPages: number, currentPage: number) =
   return [1, SEPARATOR, ...pages.slice(currentPage - 2, currentPage + 2), SEPARATOR, totalPages];
 };
 
-type PaginationProps = FlexProps & {
+interface PaginationProps extends FlexProps {
   currentPage: number;
   totalPages: number;
   onNext?: () => void;
   onPrevious?: () => void;
-  onSelectPage?: (page: string | number) => void;
+  onSelectPage?: (page: number) => void;
   nextLabel?: ReactNode;
   nextAriaLabel?: string;
   previousLabel?: ReactNode;
   previousAriaLabel?: string;
   scrollToTopAfterPagination?: boolean;
   scrollTargetRef?: RefObject<HTMLElement>;
-};
+}
 
 function Pagination({
   currentPage,

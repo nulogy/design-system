@@ -41,7 +41,7 @@ describe("Pagination", () => {
           onSelectPage={onSelectPageCallback}
         />
       );
-      const clickPage = (pageNum) => {
+      const clickPage = (pageNum: number) => {
         fireEvent.click(getAllByLabelText("Go to page {{count}}")[pageNum]);
       };
       clickPage(2);
