@@ -29,6 +29,7 @@ const BrandLogoContainer = ({
         to={brandingLinkTo}
         as={brandingLinkComponent}
         underline={false}
+        size="medium"
         style={{ display: "block" }}
       >
         {logoSrc && <img src={logoSrc} style={{ maxWidth: MAX_LOGO_WIDTH, maxHeight: MAX_LOGO_HEIGHT }} alt="" />}

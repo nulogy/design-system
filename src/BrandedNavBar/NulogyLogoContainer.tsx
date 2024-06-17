@@ -16,7 +16,6 @@ export const NulogyLogoContainer = ({ subText, height }: NulogyLogoContainerProp
     px="x1"
     py="half"
     alignItems="center"
-    // boxShadow="small"
     justifyContent="center"
     flexDirection={subText ? "column" : "row"}
     height={height}
