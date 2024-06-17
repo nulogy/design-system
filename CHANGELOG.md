@@ -1,3 +1,10 @@
+## [10.2.7](https://github.com/nulogy/design-system/compare/v10.2.6...v10.2.7) (2024-06-17)
+
+
+### Bug Fixes
+
+* logo overflow when using large components ([#1426](https://github.com/nulogy/design-system/issues/1426)) ([e30739e](https://github.com/nulogy/design-system/commit/e30739e416be2e9f9e73f2e06538689687d018ff))
+
 ## [10.2.6](https://github.com/nulogy/design-system/compare/v10.2.5...v10.2.6) (2024-06-03)
 
 
