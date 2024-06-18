@@ -79,15 +79,11 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
     };
 
     useEffect(() => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        switch (event.code) {
-          case keyCodes.ESC:
-            closePopUp();
-            break;
-          default:
-            break;
+      function handleKeyDown(event: KeyboardEvent) {
+        if (event.code === "Escape") {
+          closePopUp();
         }
-      };
+      }
 
       document.addEventListener("keydown", handleKeyDown);
 
@@ -95,6 +91,7 @@ const Popper: React.FC<PopperProps> = React.forwardRef(
         document.removeEventListener("keydown", handleKeyDown);
         resetTimeoutId();
       };
+
       return cleanup;
     }, []);
 
