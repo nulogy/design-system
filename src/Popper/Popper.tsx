@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { useTranslation } from "react-i18next";
 import { PopperArrow } from "../utils";
-import { keyCodes } from "../constants";
 const makeArray = (children) => {
   if (!Array.isArray(children)) {
     return [children];
