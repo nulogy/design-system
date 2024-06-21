@@ -6,7 +6,6 @@ import { subPx } from "../utils";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { stylesForSize } from "./customReactSelectStyles";
 import { NDSOption } from "./Select";
-import Option from "react-select/dist/declarations/src/components/Option";
 
 type StyledOptionProps = {
   isSelected: boolean;

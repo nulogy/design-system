@@ -25,14 +25,27 @@ export type {
 } from "./BrandedNavBar";
 export { Branding } from "./Branding";
 export { Breadcrumbs } from "./Breadcrumbs";
-export { Button, ControlIcon, DangerButton, IconicButton, PrimaryButton, QuietButton } from "./Button";
+export {
+  Button,
+  ControlIcon,
+  DangerButton,
+  IconicButton,
+  PrimaryButton,
+  QuietButton,
+} from "./Button";
 export { ButtonGroup } from "./ButtonGroup";
 export { Card, CardSet } from "./Card";
 export { Checkbox, CheckboxGroup } from "./Checkbox";
 export { DatePicker } from "./DatePicker";
 export { DateRange } from "./DateRange";
 export { Divider } from "./Divider";
-export { DropdownButton, DropdownItem, DropdownLink, DropdownMenu, DropdownText } from "./DropdownMenu";
+export {
+  DropdownButton,
+  DropdownItem,
+  DropdownLink,
+  DropdownMenu,
+  DropdownText,
+} from "./DropdownMenu";
 export { FieldLabel, HelpText, RequirementText } from "./FieldLabel";
 export { Flex } from "./Flex";
 export { Field, Fieldset, Form, FormSection } from "./Form";
@@ -60,8 +73,10 @@ export {
   SelectMenu,
   SelectMultiValue,
   SelectOption,
+  type SelectOptionProps,
   type NDSOption,
   type NDSOptionValue,
+  type NDSSelectProps,
 } from "./Select";
 export { SortingTable } from "./SortingTable";
 export { StatusIndicator, StatusIndicatorValues } from "./StatusIndicator";
@@ -71,7 +86,12 @@ export type { StyledProps } from "./StyledProps";
 export { Summary, SummaryDivider, SummaryItem } from "./Summary/index";
 export { Switch, Switcher } from "./Switcher";
 export { Table } from "./Table";
-export type { TableCellInfoType, TableColumnType, TableProps, TableRowType } from "./Table";
+export type {
+  TableCellInfoType,
+  TableColumnType,
+  TableProps,
+  TableRowType,
+} from "./Table";
 export { Tab, Tabs } from "./Tabs";
 export { Textarea } from "./Textarea";
 export { default as theme } from "./theme";
