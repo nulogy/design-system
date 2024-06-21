@@ -1,3 +1,10 @@
+## [10.2.8](https://github.com/nulogy/design-system/compare/v10.2.7...v10.2.8) (2024-06-21)
+
+
+### Bug Fixes
+
+* Popper Timeout Tracking ([#1417](https://github.com/nulogy/design-system/issues/1417)) ([e026714](https://github.com/nulogy/design-system/commit/e026714af13cde7cfc91bd80cc23d3477ea0846f))
+
 ## [10.2.7](https://github.com/nulogy/design-system/compare/v10.2.6...v10.2.7) (2024-06-17)
 
 
