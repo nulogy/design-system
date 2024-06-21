@@ -1,9 +1,8 @@
 // @ts-nocheck
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { useTranslation } from "react-i18next";
 import { PopperArrow } from "../utils";
-import { keyCodes } from "../constants";
 const makeArray = (children) => {
   if (!Array.isArray(children)) {
     return [children];
@@ -49,42 +48,56 @@ const Popper: React.FC<React.PropsWithChildren<PopperProps>> = React.forwardRef(
     },
     popperRef
   ) => {
-    let timeoutID;
+    // We're going to manage the ID of the timeout in a ref so that we can examine
+    // it without causing a re-render. Note that "0" will denote "no jobs running",
+    // whereas positive values are the ID of the running job.
+    const timeoutId = useRef(0);
+
+    const resetTimeoutId = () => {
+      clearTimeout(timeoutId.current);
+      timeoutId.current = 0;
+    };
+
     const [isOpen, setIsOpen] = useState(defaultOpen);
-    const conditionallyApplyDelay = (fnc, delay, skipDelay = true) => {
+
+    const conditionallyApplyDelay = (fnc: () => void, delay: number, skipDelay = true) => {
       if (!skipDelay) {
-        timeoutID = setTimeout(fnc, delay);
+        timeoutId.current = setTimeout(fnc, delay);
       } else {
         fnc();
       }
     };
-    const setPopUpState = (nextIsOpenState, skipDelay) => {
-      clearTimeout(timeoutID);
+
+    const setPopUpState = (nextIsOpenState: boolean, skipDelay: boolean) => {
+      resetTimeoutId();
       conditionallyApplyDelay(() => setIsOpen(nextIsOpenState), nextIsOpenState ? showDelay : hideDelay, skipDelay);
     };
-    const closePopUp = (skipDelay) => {
+
+    const closePopUp = (skipDelay: boolean) => {
       setPopUpState(false, skipDelay);
     };
+
     useEffect(() => {
-      const handleKeyDown = (event) => {
-        switch (event.keyCode) {
-          case keyCodes.ESC:
-            closePopUp();
-            break;
-          default:
-            break;
+      function handleKeyDown(event: KeyboardEvent) {
+        if (event.code === "Escape") {
+          closePopUp();
         }
-      };
+      }
+
       document.addEventListener("keydown", handleKeyDown);
+
       const cleanup = () => {
         document.removeEventListener("keydown", handleKeyDown);
-        clearTimeout(timeoutID);
+        resetTimeoutId();
       };
+
       return cleanup;
     }, []);
-    const openPopUp = (skipDelay) => {
+
+    const openPopUp = (skipDelay: boolean) => {
       setPopUpState(true, skipDelay);
     };
+
     const onClickEventHandlers = openOnClick
       ? {
           onClick: () => {
@@ -96,12 +109,14 @@ const Popper: React.FC<React.PropsWithChildren<PopperProps>> = React.forwardRef(
           },
         }
       : null;
+
     const onHoverHandlers = openOnHover
       ? {
           onMouseEnter: () => openPopUp(false),
           onMouseLeave: () => closePopUp(false),
         }
       : null;
+
     const eventHandlers = {
       onFocus: () => openPopUp(false),
       onBlur: () => {
@@ -110,6 +125,7 @@ const Popper: React.FC<React.PropsWithChildren<PopperProps>> = React.forwardRef(
       ...onHoverHandlers,
       ...onClickEventHandlers,
     };
+
     const transformInnerChildren = (elements) =>
       makeArray(elements).map((element, i) => {
         const transformedElement = wrapInFunction(element)({
@@ -127,13 +143,18 @@ const Popper: React.FC<React.PropsWithChildren<PopperProps>> = React.forwardRef(
           key: i,
         });
       });
+
     const renderInnerChildren = () => {
       const innerChildren = children.props.children;
       return typeof innerChildren !== "string" ? transformInnerChildren(innerChildren) : innerChildren;
     };
+
     const { t } = useTranslation();
+
     const openLabel = openAriaLabel || t("open");
+
     const closeLabel = closeAriaLabel || t("close");
+
     return (
       <Manager ref={popperRef}>
         <Reference>
