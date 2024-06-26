@@ -37,8 +37,9 @@ ExpandCell.defaultProps = {
   collapseAriaLabel: undefined,
   expandAriaLabel: undefined,
 };
-const expandCellRenderer = (onRowExpansionChange) => (props) =>
-  <ExpandCell onRowExpansionChange={onRowExpansionChange} {...props} />;
+const expandCellRenderer = (onRowExpansionChange) => (props) => (
+  <ExpandCell onRowExpansionChange={onRowExpansionChange} {...props} />
+);
 const addExpandableColumn = ({ columns, onRowExpansionChange }) => {
   const expandableColumn = {
     dataKey: EXPANDABLE_COLUMN_DATA_KEY,
