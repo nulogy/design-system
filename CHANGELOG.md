@@ -1,3 +1,10 @@
+# [11.0.0-beta.5](https://github.com/nulogy/design-system/compare/v11.0.0-beta.4...v11.0.0-beta.5) (2024-06-26)
+
+
+### Bug Fixes
+
+* export missing Select types  ([e81b1ee](https://github.com/nulogy/design-system/commit/e81b1ee7c1032ca63906c76c381f15503a97ff68))
+
 # [11.0.0-beta.4](https://github.com/nulogy/design-system/compare/v11.0.0-beta.3...v11.0.0-beta.4) (2024-06-03)
 
 
