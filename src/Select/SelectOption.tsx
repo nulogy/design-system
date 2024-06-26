@@ -6,7 +6,6 @@ import { subPx } from "../utils";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { stylesForSize } from "./customReactSelectStyles";
 import { NDSOption } from "./Select";
-import Option from "react-select/dist/declarations/src/components/Option";
 
 type StyledOptionProps = {
   isSelected: boolean;
@@ -56,7 +55,7 @@ export const StyledOption = styled.div<StyledOptionProps>(
 export type SelectOptionProps<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 > = OptionProps<Option, IsMulti, Group> & {
   size?: ComponentSize;
 };
@@ -64,7 +63,7 @@ export type SelectOptionProps<
 export function SelectOption<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: SelectOptionProps<Option, IsMulti, Group>) {
   const size = useComponentSize(props.size);
 

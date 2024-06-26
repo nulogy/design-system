@@ -32,6 +32,7 @@ export { Checkbox, CheckboxGroup } from "./Checkbox";
 export { DatePicker } from "./DatePicker";
 export { DateRange } from "./DateRange";
 export { Divider } from "./Divider";
+
 export { DropdownButton, DropdownItem, DropdownLink, DropdownMenu, DropdownText } from "./DropdownMenu";
 export { FieldLabel, HelpText, RequirementText } from "./FieldLabel";
 export { Flex } from "./Flex";
@@ -60,8 +61,10 @@ export {
   SelectMenu,
   SelectMultiValue,
   SelectOption,
+  type SelectOptionProps,
   type NDSOption,
   type NDSOptionValue,
+  type NDSSelectProps,
 } from "./Select";
 export { SortingTable } from "./SortingTable";
 export { StatusIndicator, StatusIndicatorValues } from "./StatusIndicator";

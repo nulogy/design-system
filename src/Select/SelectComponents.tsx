@@ -15,7 +15,7 @@ import { NDSOption } from "./Select";
 export function SelectControl<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: ControlProps<Option, IsMulti, Group>) {
   const { isFocused } = props;
   return (
@@ -30,7 +30,7 @@ export function SelectControl<
 export function SelectMultiValue<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: MultiValueProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-multivalue">
@@ -42,7 +42,7 @@ export function SelectMultiValue<
 export function SelectClearIndicator<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: ClearIndicatorProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-clear">
@@ -54,7 +54,7 @@ export function SelectClearIndicator<
 export function SelectDropdownIndicator<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: DropdownIndicatorProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-arrow">
@@ -66,7 +66,7 @@ export function SelectDropdownIndicator<
 export function SelectMenu<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: MenuProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-dropdown">
@@ -78,7 +78,7 @@ export function SelectMenu<
 export function SelectContainer<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: ContainerProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-container">
@@ -90,7 +90,7 @@ export function SelectContainer<
 export function SelectInput<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: InputProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-input">
