@@ -1,16 +1,24 @@
 import { boolean, text } from "@storybook/addon-knobs";
 import React from "react";
-import { Alert } from "../index";
+import { Alert, Flex } from "../index";
 import { Link } from "../Link";
 
 export default {
   title: "Components/Alert",
 };
 
-export const Danger = () => <Alert type="danger">{text("Alert Text", "Danger alert")}</Alert>;
-export const Informative = () => <Alert>{text("Alert Text", "Informative alert")}</Alert>;
-export const Success = () => <Alert type="success">{text("Alert Text", "Success alert")}</Alert>;
-export const Warning = () => <Alert type="warning">{text("Alert Text", "Warning alert")}</Alert>;
+const alertTypes = ["danger", "informative", "success", "warning"] as const;
+
+export const AlertTypes = () => (
+  <Flex flexDirection="column" gap="x1">
+    {alertTypes.map((type) => (
+      <Alert key={type} type={type} title={type}>
+        This is an alert with type &quot;{type}&quot;
+      </Alert>
+    ))}
+  </Flex>
+);
+
 export const WithACloseButton = () => (
   <Alert isCloseable={boolean("isCloseable", true)}>{text("Alert Text", "Warning alert")}</Alert>
 );
