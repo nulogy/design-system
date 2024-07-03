@@ -1,3 +1,10 @@
+## [10.2.9](https://github.com/nulogy/design-system/compare/v10.2.8...v10.2.9) (2024-07-03)
+
+
+### Bug Fixes
+
+* default ColumnMetadata to unknown ([e129e1d](https://github.com/nulogy/design-system/commit/e129e1d50d25ce1747a3dc6dcffd0bd5341c04a9))
+
 ## [10.2.8](https://github.com/nulogy/design-system/compare/v10.2.7...v10.2.8) (2024-06-21)
 
 
