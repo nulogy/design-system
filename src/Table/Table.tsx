@@ -5,10 +5,10 @@ import SortingColumnHeader from "./SortingColumnHeader";
 import { StatefulTableProps } from "./StatefulTable";
 import { ColumnType, RowType, CellInfoType } from "./Table.types";
 
-export type TableProps<ColumnMetadata> = StatefulTableProps<ColumnMetadata>;
-export type TableColumnType<ColumnMetadata> = ColumnType<ColumnMetadata>;
+export type TableProps<ColumnMetadata = unknown> = StatefulTableProps<ColumnMetadata>;
+export type TableColumnType<ColumnMetadata = unknown> = ColumnType<ColumnMetadata>;
 export type TableRowType = RowType;
-export type TableCellInfoType<ColumnMetadata> = CellInfoType<ColumnMetadata>;
+export type TableCellInfoType<ColumnMetadata = unknown> = CellInfoType<ColumnMetadata>;
 
 function Table<ColumnMetadata>({
   hasSelectableRows,
