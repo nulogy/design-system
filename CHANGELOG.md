@@ -1,3 +1,10 @@
+## [10.2.10](https://github.com/nulogy/design-system/compare/v10.2.9...v10.2.10) (2024-07-24)
+
+
+### Bug Fixes
+
+* Improve types for the PrimaryButton component ([#1429](https://github.com/nulogy/design-system/issues/1429)) ([d3bb61c](https://github.com/nulogy/design-system/commit/d3bb61c0ca95530e2d254dafcef8be6399db9c2d))
+
 ## [10.2.9](https://github.com/nulogy/design-system/compare/v10.2.8...v10.2.9) (2024-07-03)
 
 
