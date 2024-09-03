@@ -2912,10 +2912,10 @@
     eslint-plugin-react-hooks "^4.0.4"
     prettier "^2.0.5"
 
-"@nulogy/icons@^4.26.0":
-  version "4.26.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.26.0.tgz#d3e179c1b582c83dd82f70f71420fadce9b4d891"
-  integrity sha512-bM6z9FvVPbbYKo0YZwgkqb3KXi7AWXpQbxH1YCa6/InVSSPZP73EL+6k/oL8DmsCnFunx7Y7q8hGeDS3FR4n3A==
+"@nulogy/icons@4.34.1":
+  version "4.34.1"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.34.1.tgz#9255e637909b403dd877ad7631879b0b9fff023d"
+  integrity sha512-ZqOMxPcN/ZXFa5yhBY4cV5tMTorMPQ4BhcWpU1y8VmLftxcQS61gGhIg5MfogON4yUZJIZWrGaIRi6r2s6Qr1Q==
 
 "@nulogy/tokens@^5.4.0":
   version "5.4.0"
