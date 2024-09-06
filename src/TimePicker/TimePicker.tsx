@@ -149,6 +149,7 @@ const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRe
       error,
       disabled,
       size,
+
       ...props
     },
     inputRef

@@ -97,18 +97,6 @@ const TableBodyRow = ({
   );
 };
 
-TableBodyRow.propTypes = {
-  row: rowPropType.isRequired,
-  columns: columnsPropType.isRequired,
-  rowHovers: PropTypes.bool.isRequired,
-  compact: PropTypes.bool.isRequired,
-  rowClassName: PropTypes.string,
-};
-
-TableBodyRow.defaultProps = {
-  rowClassName: undefined,
-};
-
 const TableMessageContainer = ({ colSpan, children }) => (
   <tr data-testid="table-message-container">
     <td colSpan={colSpan}>
@@ -116,11 +104,6 @@ const TableMessageContainer = ({ colSpan, children }) => (
     </td>
   </tr>
 );
-
-TableMessageContainer.propTypes = {
-  colSpan: PropTypes.number.isRequired,
-  children: PropTypes.node.isRequired,
-};
 
 const LoadingContent = ({ colSpan }) => <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>;
 

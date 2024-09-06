@@ -1,5 +1,4 @@
 import React, { ReactNode, RefObject } from "react";
-import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { flushSync } from "react-dom";
 import { Flex } from "../Flex";
@@ -41,11 +40,11 @@ interface PaginationProps extends FlexProps {
 }
 
 function Pagination({
-  currentPage,
-  totalPages,
   onNext,
   onPrevious,
   onSelectPage,
+  currentPage,
+  totalPages,
   nextAriaLabel,
   nextLabel,
   previousAriaLabel,
@@ -126,29 +125,5 @@ function Pagination({
     </Flex>
   );
 }
-
-Pagination.propTypes = {
-  currentPage: PropTypes.number.isRequired,
-  totalPages: PropTypes.number.isRequired,
-  onNext: PropTypes.func,
-  onPrevious: PropTypes.func,
-  onSelectPage: PropTypes.func,
-  nextLabel: PropTypes.node,
-  nextAriaLabel: PropTypes.string,
-  previousLabel: PropTypes.node,
-  previousAriaLabel: PropTypes.string,
-  "aria-label": PropTypes.string,
-};
-
-Pagination.defaultProps = {
-  onNext: null,
-  onPrevious: null,
-  onSelectPage: null,
-  nextLabel: undefined,
-  nextAriaLabel: undefined,
-  previousLabel: undefined,
-  previousAriaLabel: undefined,
-  "aria-label": undefined,
-};
 
 export default Pagination;

@@ -4,23 +4,23 @@ import { Text } from "../Type";
 import { ControlIcon } from "../Button";
 import { localizedFormat } from "../utils/localized-date-fns";
 
-type DatePickerHeaderProps = {
-  date: any;
-  decreaseMonth: (...args: any[]) => any;
-  increaseMonth: (...args: any[]) => any;
+type Props = {
+  date: number;
+  decreaseMonth: React.MouseEventHandler<HTMLButtonElement>;
+  increaseMonth: React.MouseEventHandler<HTMLButtonElement>;
   prevMonthButtonDisabled: boolean;
   nextMonthButtonDisabled: boolean;
   locale?: string;
 };
 
-const DatePickerHeader: React.FC<React.PropsWithChildren<DatePickerHeaderProps>> = ({
+export default function DatePickerHeader({
   date,
   decreaseMonth,
   increaseMonth,
   prevMonthButtonDisabled,
   nextMonthButtonDisabled,
   locale,
-}) => {
+}: Props) {
   return (
     <Flex justifyContent="space-between" alignItems="center" py="half" px="x1">
       <ControlIcon
@@ -47,8 +47,4 @@ const DatePickerHeader: React.FC<React.PropsWithChildren<DatePickerHeaderProps>>
       />
     </Flex>
   );
-};
-DatePickerHeader.defaultProps = {
-  locale: undefined,
-};
-export default DatePickerHeader;
+}

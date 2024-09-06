@@ -26,16 +26,17 @@ type TextareaProps = StyledTextareaProps & {
 const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   (
     {
+      disabled = false,
+      required = false,
+      rows = 3,
       errorMessage,
       errorList,
       error = !!(errorMessage || errorList),
-      required,
       labelText,
       requirementText,
       helpText,
       id,
       className,
-      rows,
       isResizeable = true,
       size,
       ...props
@@ -61,6 +62,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             rows={rows}
             isResizeable={isResizeable}
             size={componentSize}
+            disabled={disabled}
             {...restProps}
           />
         </MaybeFieldLabel>
@@ -69,18 +71,5 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     );
   }
 );
-
-Textarea.defaultProps = {
-  className: undefined,
-  id: undefined,
-  disabled: false,
-  errorMessage: undefined,
-  errorList: undefined,
-  required: false,
-  labelText: undefined,
-  helpText: undefined,
-  requirementText: undefined,
-  rows: 3,
-};
 
 export default Textarea;

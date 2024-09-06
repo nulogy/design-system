@@ -1,15 +1,13 @@
-import styled, { CSSObject } from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
+import styled from "styled-components";
 
-type DropdownItemProps = {
-  theme?: DefaultNDSThemeType;
+type Props = {
   color?: string;
   hoverColor?: string;
   bgHoverColor?: string;
 };
 
-const DropdownItem: React.FC<React.PropsWithChildren<DropdownItemProps>> = styled.div(
-  ({ theme, color, hoverColor, bgHoverColor }: DropdownItemProps): CSSObject => ({
+const DropdownItem = styled.div<Props>(
+  ({ theme, color = "darkGrey", hoverColor = "darkBlue", bgHoverColor = "lightBlue" }) => ({
     "*": {
       color: theme.colors[color],
       fontWeight: theme.fontWeights.medium,
@@ -40,9 +38,5 @@ const DropdownItem: React.FC<React.PropsWithChildren<DropdownItemProps>> = style
     },
   })
 );
-DropdownItem.defaultProps = {
-  color: "darkGrey",
-  hoverColor: "darkBlue",
-  bgHoverColor: "lightBlue",
-};
+
 export default DropdownItem;

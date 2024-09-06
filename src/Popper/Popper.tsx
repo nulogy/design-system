@@ -1,17 +1,20 @@
 // @ts-nocheck
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, LegacyRef } from "react";
 import { Manager, Reference, Popper as ReactPopperPopUp } from "react-popper";
 import { useTranslation } from "react-i18next";
 import { PopperArrow } from "../utils";
+
 const makeArray = (children) => {
   if (!Array.isArray(children)) {
     return [children];
   }
   return children;
 };
-const wrapInFunction = (x) => (typeof x === "function" ? x : () => x);
+
+const wrapInFunction = (x: unknown) => (typeof x === "function" ? x : () => x);
+
 type PopperProps = {
-  ref: any;
+  children?: React.ReactNode;
   popperPlacement?: string;
   defaultOpen?: boolean;
   showDelay?: string | number;
@@ -27,24 +30,25 @@ type PopperProps = {
   openAriaLabel?: string;
   closeAriaLabel?: string;
 };
-const Popper: React.FC<React.PropsWithChildren<PopperProps>> = React.forwardRef(
+
+const Popper = React.forwardRef<LegacyRef, PopperProps>(
   (
     {
-      popperPlacement,
-      defaultOpen,
       id,
-      showDelay,
-      hideDelay,
       trigger,
       children,
-      openOnClick,
-      openOnHover,
-      modifiers,
       backgroundColor,
       borderColor,
-      showArrow,
       openAriaLabel,
       closeAriaLabel,
+      modifiers,
+      showDelay = "100",
+      hideDelay = "350",
+      defaultOpen = false,
+      popperPlacement = "bottom",
+      openOnClick = false,
+      openOnHover = true,
+      showArrow = true,
     },
     popperRef
   ) => {
@@ -209,19 +213,5 @@ const Popper: React.FC<React.PropsWithChildren<PopperProps>> = React.forwardRef(
     );
   }
 );
-Popper.defaultProps = {
-  showDelay: "100",
-  hideDelay: "350",
-  defaultOpen: false,
-  popperPlacement: "bottom",
-  id: null,
-  openOnClick: false,
-  openOnHover: true,
-  modifiers: null,
-  backgroundColor: undefined,
-  borderColor: undefined,
-  showArrow: true,
-  openAriaLabel: undefined,
-  closeAriaLabel: undefined,
-};
+
 export default Popper;

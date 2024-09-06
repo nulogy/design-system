@@ -57,28 +57,26 @@ interface Props extends SpaceProps, TypographyProps, FlexboxProps {
   type?: StatusIndicatorType;
 }
 
-const StatusIndicator = styled.span<Props>(space, typography, flexbox, ({ theme, type }) => ({
-  display: "inline-block",
-  fontWeight: theme.fontWeights.bold,
-  textTransform: "uppercase",
-  letterSpacing: ".05em",
-  borderRadius: theme.space.x1,
-  ...statusIndicatorStyles(theme)[type],
-}));
-
-StatusIndicator.defaultProps = {
-  type: StatusIndicatorValues.neutral,
-  mt: "0",
-  mr: "0",
-  mb: "0",
-  ml: "0",
-  pt: "0",
-  pr: "x1",
-  pb: "0",
-  pl: "x1",
-  fontSize: "smaller",
-  lineHeight: "smallerText",
-  alignSelf: "center",
-};
+const StatusIndicator = styled.span<Props>(
+  ({ theme, type = StatusIndicatorValues.neutral }) => ({
+    margin: theme.space.none,
+    paddingTop: theme.space.none,
+    paddingRight: theme.space.x1,
+    paddingBottom: theme.space.none,
+    paddingLeft: theme.space.x1,
+    fontSize: theme.fontSizes.smaller,
+    lineHeight: theme.lineHeights.smallerText,
+    alignSelf: "center",
+    display: "inline-block",
+    fontWeight: theme.fontWeights.bold,
+    textTransform: "uppercase",
+    letterSpacing: ".05em",
+    borderRadius: theme.space.x1,
+    ...statusIndicatorStyles(theme)[type],
+  }),
+  space,
+  typography,
+  flexbox
+);
 
 export default StatusIndicator;

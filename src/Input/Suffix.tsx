@@ -3,20 +3,15 @@ import { Box } from "../Box";
 import { Text } from "../Type";
 import { TextProps } from "../Type/Text";
 
-type SuffixProps = TextProps & {
+interface SuffixProps extends TextProps {
   suffix?: string;
   suffixWidth?: string;
-};
+}
 
-const Suffix = ({ suffix, suffixWidth, ...props }: SuffixProps) =>
-  suffix ? (
+export default function Suffix({ suffix, suffixWidth, ...props }: SuffixProps) {
+  return suffix ? (
     <Box width={suffixWidth} pt="x1" pb="x1" pl="x1">
       <Text {...props}>{suffix}</Text>
     </Box>
   ) : null;
-Suffix.defaultProps = {
-  suffix: null,
-  children: null,
-  suffixWidth: null,
-};
-export default Suffix;
+}

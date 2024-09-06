@@ -131,11 +131,6 @@ BaseDesktopMenu.propTypes = {
   themeColorObject: PropTypes.shape({}),
 };
 
-BaseDesktopMenu.defaultProps = {
-  menuData: null,
-  themeColorObject: null,
-};
-
 const DesktopMenu = styled(BaseDesktopMenu)({
   "> div": {
     ":not(:last-of-type)": {

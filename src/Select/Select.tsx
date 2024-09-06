@@ -65,47 +65,12 @@ export type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupB
 > &
   CustomProps<Option, IsMulti, Group>;
 
-export const SelectDefaultProps = {
-  autocomplete: true,
-  disabled: undefined,
-  defaultValue: undefined,
-  error: undefined,
-  errorMessage: undefined,
-  errorList: undefined,
-  labelText: undefined,
-  helpText: undefined,
-  noOptionsMessage: undefined,
-  requirementText: undefined,
-  id: undefined,
-  initialIsOpen: undefined,
-  maxHeight: "248px",
-  menuPosition: "absolute" as MenuPosition,
-  menuPlacement: "bottom" as MenuPlacement,
-  multiselect: false,
-  name: undefined,
-  onBlur: undefined,
-  onChange: undefined,
-  placeholder: undefined,
-  required: false,
-  value: undefined,
-  className: undefined,
-  classNamePrefix: "ndsSelect", // a prefix is required in react-select top put classes on all buttons to apply style overrides
-  menuIsOpen: undefined,
-  onMenuOpen: undefined,
-  onMenuClose: undefined,
-  onInputChange: undefined,
-  components: undefined,
-  closeMenuOnSelect: true,
-};
-
 const ReactSelect = React.forwardRef(
   <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
     {
       size,
-      autocomplete,
       options,
       labelText,
-      required,
       requirementText,
       helpText,
       disabled,
@@ -114,8 +79,6 @@ const ReactSelect = React.forwardRef(
       error = !!(errorMessage || errorList),
       id,
       initialIsOpen,
-      maxHeight,
-      multiselect,
       onChange,
       placeholder,
       value,
@@ -123,6 +86,14 @@ const ReactSelect = React.forwardRef(
       components,
       "aria-label": ariaLabel,
       windowThreshold = 300,
+      autocomplete = true,
+      maxHeight = "248px",
+      required = false,
+      menuPosition = "absolute" as MenuPosition,
+      menuPlacement = "bottom" as MenuPlacement,
+      multiselect,
+      classNamePrefix = "ndsSelect",
+      closeMenuOnSelect = true,
       ...props
     }: NDSSelectProps<Option, IsMulti, Group>,
     ref
@@ -190,6 +161,10 @@ const ReactSelect = React.forwardRef(
             }}
             aria-label={ariaLabel}
             options={options}
+            menuPosition={menuPosition}
+            menuPlacement={menuPlacement}
+            classNamePrefix={classNamePrefix}
+            closeMenuOnSelect={closeMenuOnSelect}
             {...props}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
@@ -242,11 +217,5 @@ function extractValue(options: NDSOptionType[] | NDSOptionType, isMulti: boolean
     return options.value;
   }
 }
-
-ReactSelect.defaultProps = {
-  ...SelectDefaultProps,
-  windowThreshold: 300,
-  filterOption: undefined,
-};
 
 export default ReactSelect;

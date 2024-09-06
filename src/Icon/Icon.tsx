@@ -2,8 +2,6 @@ import React from "react";
 import styled, { CSSObject, useTheme } from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
-
-import theme from "../theme";
 import LoadingIcon from "./LoadingIcon";
 
 interface IconProps extends SpaceProps {
@@ -27,8 +25,20 @@ const getPathElements = (icon: any) => (
 /* eslint-enable react/no-array-index-key */
 
 const Svg = React.forwardRef<SVGSVGElement, IconProps>(
-  ({ icon, size, focusable, className, color: fillColor, title, ...props }: IconProps, ref) => {
-    const { space } = useTheme();
+  (
+    {
+      color: fillColor = "currentColor",
+      className = undefined,
+      title = undefined,
+      size = "24px",
+      focusable = false,
+      icon,
+      ...props
+    }: IconProps,
+    ref
+  ) => {
+    const theme = useTheme();
+
     if (icon === "loading") {
       return (
         <LoadingIcon
@@ -43,8 +53,8 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
         <svg
           ref={ref}
           aria-hidden={title == null}
-          width={space[size] || size}
-          height={space[size] || size}
+          width={theme.space[size] || size}
+          height={theme.space[size] || size}
           fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
           viewBox={icons[icon].viewBox}
           focusable={focusable}
@@ -58,28 +68,13 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
   }
 );
 
-Svg.displayName = "Svg";
-
-Svg.defaultProps = {
-  color: "currentColor",
-  className: undefined,
-  title: undefined,
-  size: "24px",
-  focusable: false,
-};
-
 const Icon = styled(Svg)<IconProps>(
   space,
-  ({ size }: IconProps): CSSObject => ({
+  ({ color = "currentColor", size = "24px" }): CSSObject => ({
     minWidth: size,
+    color: color,
   })
 );
-
-Icon.defaultProps = {
-  color: "currentColor",
-  title: undefined,
-  size: "24px",
-};
 
 const iconSizeRatio = 1.25;
 
@@ -96,10 +91,12 @@ const IconContainer = styled.span(space, {
   width: `${iconSizeRatio}em`,
 });
 
-export const InlineIcon = (props: IconProps) => (
-  <IconContainer {...props}>
-    <CenteredIcon size={`${iconSizeRatio}em`} {...props} />
-  </IconContainer>
-);
+export function InlineIcon(props: IconProps) {
+  return (
+    <IconContainer {...props}>
+      <CenteredIcon size={`${iconSizeRatio}em`} {...props} />
+    </IconContainer>
+  );
+}
 
 export default Icon;

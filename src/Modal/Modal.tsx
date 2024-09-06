@@ -85,22 +85,22 @@ type ModalProps = {
 const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
   setAppElement: (element: string | HTMLElement) => void;
 } = ({
-  isOpen,
+  isOpen = true,
+  shouldFocusAfterRender = true,
+  shouldReturnFocusAfterClose = true,
+  maxWidth = "624px",
+  ariaHideApp = true,
   children,
   title,
   onRequestClose,
   onAfterOpen,
-  shouldFocusAfterRender,
-  shouldReturnFocusAfterClose,
   ariaLabel,
   ariaDescribedBy,
   portalClassName,
   overlayClassName,
   className,
   id,
-  maxWidth,
   appElement,
-  ariaHideApp,
   footerContent,
   closeAriaLabel,
   parentSelector,
@@ -151,27 +151,6 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
       </PreventBodyElementScrolling>
     </StyledReactModal>
   );
-};
-
-Modal.defaultProps = {
-  isOpen: true,
-  title: undefined,
-  ariaLabel: undefined,
-  onRequestClose: undefined,
-  closeAriaLabel: undefined,
-  onAfterOpen: undefined,
-  shouldFocusAfterRender: true,
-  shouldReturnFocusAfterClose: true,
-  ariaDescribedBy: undefined,
-  maxWidth: "624px",
-  portalClassName: undefined,
-  overlayClassName: undefined,
-  className: undefined,
-  id: undefined,
-  appElement: undefined,
-  ariaHideApp: true,
-  footerContent: undefined,
-  parentSelector: undefined,
 };
 
 Modal.setAppElement = ReactModal.setAppElement;

@@ -6,16 +6,13 @@ import type { ComponentPropsWithRef } from "react";
 export interface LabelProps extends SpaceProps, DisplayProps, Omit<ComponentPropsWithRef<"label">, "color"> {}
 
 const Label = styled.label<LabelProps>(
-  () => ({
+  ({ color = "black" }) => ({
+    color: color,
     display: "inline-block",
   }),
   display,
   space,
   color
 );
-
-Label.defaultProps = {
-  color: "black",
-};
 
 export default Label;

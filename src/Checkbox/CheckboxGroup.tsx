@@ -6,6 +6,7 @@ import { Fieldset } from "../Form";
 import Checkbox from "./Checkbox";
 
 interface CheckboxGroupProps {
+  children?: React.ReactNode;
   errorMessage?: string;
   errorList?: string[];
   labelText: string;
@@ -19,6 +20,30 @@ interface CheckboxGroupProps {
   requirementText?: string;
   required?: boolean;
   disabled?: boolean;
+}
+
+export default function CheckboxGroup({
+  className,
+  id,
+  errorMessage,
+  errorList,
+  labelText,
+  helpText,
+  requirementText,
+  ...props
+}: CheckboxGroupProps) {
+  const otherProps = { ...props, errorMessage, errorList };
+  return (
+    <Fieldset className={className} id={id} hasHelpText={!!helpText}>
+      <Legend>
+        <LabelText>{labelText}</LabelText>
+        {requirementText && <RequirementText>{requirementText}</RequirementText>}
+      </Legend>
+      {helpText && <HelpText>{helpText}</HelpText>}
+      {getCheckboxButtons(otherProps)}
+      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
+    </Fieldset>
+  );
 }
 
 const getCheckboxButtons = (props) => {
@@ -41,7 +66,7 @@ const getCheckboxButtons = (props) => {
   return checkboxButtons;
 };
 
-const LabelText = styled.span<any>(({ theme }) => ({
+const LabelText = styled.span(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.bold,
   lineHeight: theme.lineHeights.smallTextBase,
@@ -50,42 +75,3 @@ const LabelText = styled.span<any>(({ theme }) => ({
 const Legend = styled.legend(({ theme }) => ({
   marginBottom: theme.space.x1,
 }));
-
-const CheckboxGroup: React.FC<React.PropsWithChildren<CheckboxGroupProps>> = ({
-  className,
-  id,
-  errorMessage,
-  errorList,
-  labelText,
-  helpText,
-  requirementText,
-  ...props
-}) => {
-  const otherProps = { ...props, errorMessage, errorList };
-  return (
-    <Fieldset className={className} id={id} hasHelpText={!!helpText}>
-      <Legend>
-        <LabelText>{labelText}</LabelText>
-        {requirementText && <RequirementText>{requirementText}</RequirementText>}
-      </Legend>
-      {helpText && <HelpText>{helpText}</HelpText>}
-      {getCheckboxButtons(otherProps)}
-      <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
-    </Fieldset>
-  );
-};
-
-CheckboxGroup.defaultProps = {
-  errorMessage: undefined,
-  errorList: undefined,
-  defaultValue: undefined,
-  checkedValue: undefined,
-  onChange: undefined,
-  className: undefined,
-  id: undefined,
-  helpText: undefined,
-  requirementText: undefined,
-  disabled: false,
-};
-
-export default CheckboxGroup;

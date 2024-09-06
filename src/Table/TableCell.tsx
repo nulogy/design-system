@@ -1,9 +1,9 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import styled, { CSSObject } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
 
 type StyledTableCellProps = {
-  align?: any;
+  align?: CSSProperties["textAlign"];
   compact?: boolean;
   theme?: DefaultNDSThemeType;
 };
@@ -21,14 +21,16 @@ const StyledTableCell: React.FC<React.PropsWithChildren<StyledTableCellProps>> =
     };
   }
 );
+
 type TableCellProps = {
   column?: any;
   row?: any;
   colSpan?: number;
-  cellData?: object | React.ReactNode | boolean;
+  cellData?: Record<string, unknown> | React.ReactNode | boolean;
   compact?: boolean;
 };
-const TableCell: React.FC<React.PropsWithChildren<TableCellProps>> = ({ row, column, colSpan, cellData, compact }) => {
+
+const TableCell = ({ column = {}, row = {}, cellData = "", colSpan = undefined, compact = false }: TableCellProps) => {
   const cellRenderer = row.cellRenderer || column.cellRenderer;
   const { cellFormatter } = column;
   const isCustomCell = Boolean(cellRenderer);
@@ -42,11 +44,5 @@ const TableCell: React.FC<React.PropsWithChildren<TableCellProps>> = ({ row, col
     </StyledTableCell>
   );
 };
-TableCell.defaultProps = {
-  column: {},
-  row: {},
-  cellData: "",
-  colSpan: undefined,
-  compact: false,
-};
+
 export default TableCell;

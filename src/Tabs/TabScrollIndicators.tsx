@@ -151,9 +151,11 @@ class TabScrollIndicators extends React.Component<TabScrollIndicatorsProps, TabS
     );
   }
 }
+
 TabScrollIndicators.defaultProps = {
   tabRefs: undefined,
   tabContainerRef: undefined,
   indicatorWidth: 40,
 };
+
 export default TabScrollIndicators;

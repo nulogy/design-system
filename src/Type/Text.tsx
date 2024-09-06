@@ -1,4 +1,4 @@
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import type { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
@@ -22,7 +22,7 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
 } & StyledProps & { theme?: DefaultNDSThemeType };
 
 const Text = styled.p<TextProps>(
-  ({ disabled, textTransform, inline, theme }): CSSObject => ({
+  ({ disabled = false, textTransform, inline = false, theme }) => ({
     textTransform,
     color: "currentColor",
     marginTop: 0,
@@ -35,8 +35,4 @@ const Text = styled.p<TextProps>(
   addStyledProps
 );
 
-Text.defaultProps = {
-  inline: false,
-  disabled: false,
-};
 export default Text;

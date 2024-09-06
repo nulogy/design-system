@@ -2,24 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { variant } from "styled-system";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { DefaultNDSThemeType } from "../theme.type";
 import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
-type DropdownLinkProps = React.ComponentPropsWithRef<"a"> &
-  StyledProps & {
-    disabled?: boolean;
-    size?: ComponentSize;
-    color?: string;
-    theme?: DefaultNDSThemeType;
-    hoverColor?: string;
-    bgHoverColor?: string;
-  };
+interface Props extends React.ComponentPropsWithRef<"a">, StyledProps {
+  disabled?: boolean;
+  size?: ComponentSize;
+  color?: string;
+  hoverColor?: string;
+  bgHoverColor?: string;
+}
 
-const DropdownLink = styled.a.withConfig<DropdownLinkProps>({
+const DropdownLink = styled.a.withConfig<Props>({
   shouldForwardProp: (prop, defaultValidatorFn) =>
     !["hoverColor", "bgHoverColor"].includes(prop) && defaultValidatorFn(prop),
 })(
-  ({ theme, color, bgHoverColor, hoverColor }) => ({
+  ({ theme, color = "darkGrey", hoverColor = "darkBlue", bgHoverColor = "lightBlue" }) => ({
     color: theme.colors[color],
     fontWeight: theme.fontWeights.medium,
     display: "flex",
@@ -74,10 +71,4 @@ const DropdownLink = styled.a.withConfig<DropdownLinkProps>({
   addStyledProps
 );
 
-DropdownLink.defaultProps = {
-  disabled: false,
-  color: "darkGrey",
-  hoverColor: "darkBlue",
-  bgHoverColor: "lightBlue",
-};
 export default DropdownLink;

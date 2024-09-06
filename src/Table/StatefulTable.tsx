@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import propTypes from "@styled-system/prop-types";
+import PropTypes from "prop-types";
 import { Pagination } from "../Pagination";
 import { getSubset } from "../utils/subset";
 import BaseTable, { BaseTableProps } from "./BaseTable";
 import { addExpandableControl } from "./addExpandableControl";
 import { addSelectableControl } from "./addSelectableControl";
+import { rowsPropType } from "./Table.types";
 
 export type StatefulTableProps<ColumnMetaData> = BaseTableProps<ColumnMetaData> & {
   selectedRows?: string[];
@@ -36,9 +39,20 @@ type StatefulTableState = {
   currentPage: number;
   paginatedRows: any;
 };
+
 class StatefulTable<ColumnMetaData> extends Component<StatefulTableProps<ColumnMetaData>, StatefulTableState> {
   static defaultProps = {
-    ...BaseTable.defaultProps,
+    noRowsContent: "No records have been created for this table.",
+    keyField: "id",
+    id: undefined,
+    loading: false,
+    footerRows: [],
+    rowHovers: true,
+    compact: false,
+    className: undefined,
+    stickyHeader: false,
+    onRowMouseEnter: () => {},
+    onRowMouseLeave: () => {},
     hasSelectableRows: false,
     selectedRows: [],
     isHeaderSelected: false,
@@ -224,7 +238,7 @@ class StatefulTable<ColumnMetaData> extends Component<StatefulTableProps<ColumnM
   render() {
     const { paginatedRows, currentPage } = this.state;
     const { rowsPerPage, paginationProps, paginationCss } = this.props;
-    const baseTableProps = getSubset(this.getControlProps(), BaseTable.propTypes);
+    const baseTableProps = getSubset(this.getControlProps(), BaseTablePropTypes);
     return (
       <>
         <BaseTable {...baseTableProps} />
@@ -246,5 +260,22 @@ class StatefulTable<ColumnMetaData> extends Component<StatefulTableProps<ColumnM
     );
   }
 }
+
+const BaseTablePropTypes = {
+  ...propTypes.space,
+  columns: PropTypes.any,
+  rows: PropTypes.any,
+  noRowsContent: PropTypes.string,
+  keyField: PropTypes.string,
+  id: PropTypes.string,
+  loading: PropTypes.bool,
+  footerRows: rowsPropType,
+  rowHovers: PropTypes.bool,
+  compact: PropTypes.bool,
+  className: PropTypes.string,
+  stickyHeader: PropTypes.bool,
+  onRowMouseEnter: PropTypes.func,
+  onRowMouseLeave: PropTypes.func,
+};
 
 export default StatefulTable;

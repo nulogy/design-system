@@ -1,12 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { space } from "styled-system";
-import propTypes from "@styled-system/prop-types";
 import TableHead from "./TableHead";
 import TableBody from "./TableBody";
 import TableFoot from "./TableFoot";
-import { rowsPropType, RowType, Columns } from "./Table.types";
+import { RowType, Columns } from "./Table.types";
 
 export type BaseTableProps<ColumnMetaData> = {
   columns: Columns<ColumnMetaData>;
@@ -34,19 +32,19 @@ const StyledTable = styled.table<any>(space, {
 });
 
 function BaseTable<ColumnMetaData>({
-  columns,
-  rows,
   noRowsContent = "No records have been created for this table.",
   keyField = "id",
-  id,
-  loading,
+  loading = false,
   footerRows = [],
   rowHovers = true,
-  compact,
-  className,
-  stickyHeader,
+  compact = false,
+  stickyHeader = false,
   onRowMouseEnter = () => {},
   onRowMouseLeave = () => {},
+  columns,
+  rows,
+  id,
+  className,
   ...props
 }: BaseTableProps<ColumnMetaData>) {
   return (
@@ -69,36 +67,5 @@ function BaseTable<ColumnMetaData>({
     </StyledTable>
   );
 }
-
-BaseTable.propTypes = {
-  ...propTypes.space,
-  columns: PropTypes.any,
-  rows: PropTypes.any,
-  noRowsContent: PropTypes.string,
-  keyField: PropTypes.string,
-  id: PropTypes.string,
-  loading: PropTypes.bool,
-  footerRows: rowsPropType,
-  rowHovers: PropTypes.bool,
-  compact: PropTypes.bool,
-  className: PropTypes.string,
-  stickyHeader: PropTypes.bool,
-  onRowMouseEnter: PropTypes.func,
-  onRowMouseLeave: PropTypes.func,
-};
-
-BaseTable.defaultProps = {
-  noRowsContent: "No records have been created for this table.",
-  keyField: "id",
-  id: undefined,
-  loading: false,
-  footerRows: [],
-  rowHovers: true,
-  compact: false,
-  className: undefined,
-  stickyHeader: false,
-  onRowMouseEnter: () => {},
-  onRowMouseLeave: () => {},
-};
 
 export default BaseTable;

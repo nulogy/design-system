@@ -60,14 +60,10 @@ const StyledLink = styled.a<LinkProps>(
   addStyledProps
 );
 
-const Link = React.forwardRef<HTMLLinkElement, LinkProps>(({ size, ...props }, ref) => {
+const Link = React.forwardRef<HTMLLinkElement, LinkProps>(({ size, underline = true, ...props }, ref) => {
   const componentSize = useComponentSize(size);
 
-  return <StyledLink ref={ref} size={componentSize} {...props} />;
+  return <StyledLink ref={ref} size={componentSize} underline={underline} {...props} />;
 });
-
-Link.defaultProps = {
-  underline: true,
-};
 
 export default Link;

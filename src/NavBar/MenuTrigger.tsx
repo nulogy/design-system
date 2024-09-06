@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { ReactNode } from "react";
+import styled, { useTheme } from "styled-components";
 import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
 import theme from "../theme";
@@ -9,7 +9,7 @@ import SubMenuTrigger from "./SubMenuTrigger";
 import renderSubMenuItems from "./renderSubMenuItems";
 
 export type MenuTriggerProps = {
-  name?: string;
+  name?: ReactNode;
   "aria-label"?: string;
   color?: string;
   hoverColor?: string;
@@ -20,11 +20,11 @@ export type MenuTriggerProps = {
 const StyledButton = styled.button<{
   hoverColor: string;
   hoverBackground: string;
-}>(({ color, hoverColor, hoverBackground }) => ({
+}>(({ color = "white", hoverColor = "lightBlue", hoverBackground = "black", ...props }) => ({
   display: "flex",
   alignItems: "center",
   position: "relative",
-  color: themeGet(`colors.${color}`, color)(color),
+  color: themeGet(`colors.${color}`, color)(props),
   border: "none",
   backgroundColor: "transparent",
   textDecoration: "none",
@@ -35,8 +35,8 @@ const StyledButton = styled.button<{
   borderRadius: theme.radii.medium,
   "&:hover, &:focus": {
     outline: "none",
-    color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+    color: themeGet(`colors.${hoverColor}`, hoverColor)(props),
+    backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(props),
     cursor: "pointer",
   },
   "&:focus": {
@@ -53,11 +53,7 @@ StyledButton.propTypes = {
   hoverBackground: PropTypes.string,
 };
 
-StyledButton.defaultProps = {
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black,
-};
+StyledButton.defaultProps = {};
 
 const MenuTriggerButton = React.forwardRef<any, MenuTriggerProps>(
   ({ name, color, hoverColor, hoverBackground, ...props }, ref) => (
@@ -81,14 +77,21 @@ MenuTriggerButton.propTypes = {
   hoverBackground: PropTypes.string,
 };
 
-MenuTriggerButton.defaultProps = {
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black,
-};
+function MenuTrigger({
+  menuData,
+  name,
+  color,
+  hoverColor,
+  hoverBackground,
+  "aria-label": ariaLabel,
+  ...otherProps
+}: MenuTriggerProps) {
+  const theme = useTheme();
 
-const MenuTrigger = (props) => {
-  const { menuData, name, color, hoverColor, hoverBackground, "aria-label": ariaLabel, ...otherProps } = props;
+  color = color || theme.colors.white;
+  hoverColor = hoverColor || theme.colors.lightBlue;
+  hoverBackground = hoverBackground || theme.colors.black;
+
   let dropdownMinWidth = "auto";
   const setDropdownMinWidth = (popperData) => {
     // Popper.js throws an error if popperData is not returned from this fn
@@ -142,23 +145,6 @@ const MenuTrigger = (props) => {
       )}
     </NavBarDropdownMenu>
   );
-};
-
-MenuTrigger.propTypes = {
-  name: PropTypes.node.isRequired,
-  "aria-label": PropTypes.string,
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  color: PropTypes.string,
-  hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string,
-};
-
-MenuTrigger.defaultProps = {
-  menuData: null,
-  "aria-label": undefined,
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black,
-};
+}
 
 export default MenuTrigger;

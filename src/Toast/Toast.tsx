@@ -33,12 +33,12 @@ export const toastAnimationConfig = {
 };
 
 export const Toast = ({
-  triggered,
+  triggered = false,
+  isCloseable = false,
+  showDuration = TOAST_SHOW_DURATION,
   onHide,
   onShow,
-  isCloseable,
   children,
-  showDuration,
   onHidden,
   zIndex,
   ...props
@@ -137,15 +137,6 @@ export const Toast = ({
       )}
     </AnimatePresence>
   );
-};
-
-Toast.defaultProps = {
-  triggered: false,
-  isCloseable: false,
-  showDuration: TOAST_SHOW_DURATION,
-  onShow: () => {},
-  onHide: () => {},
-  onHidden: () => {},
 };
 
 export default Toast;

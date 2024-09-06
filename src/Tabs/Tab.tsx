@@ -101,12 +101,10 @@ type TabProps = TabButtonProps & {
   label?: React.ReactNode;
 };
 
-const Tab: React.FC<React.PropsWithChildren<TabProps>> = React.forwardRef(({ label, ...props }, ref) => (
+const Tab = React.forwardRef<HTMLButtonElement, TabProps>(({ label, ...props }, ref) => (
   <TabButton role="tab" type="button" ref={ref} {...props}>
     {label}
   </TabButton>
 ));
-Tab.defaultProps = {
-  label: null,
-};
+
 export default Tab;

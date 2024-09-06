@@ -1,13 +1,27 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { Text } from "../Type";
 import { Flex } from "../Flex";
 import { ControlIcon } from "../Button";
 
-const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) => {
+interface SortingColumnHeaderProps {
+  onChange?: React.MouseEventHandler<HTMLButtonElement>;
+  ariaLabel?: string;
+  label?: string;
+  ascending?: boolean;
+  active?: boolean;
+}
+
+function SortingColumnHeader({
+  onChange,
+  label,
+  ariaLabel,
+  ascending = false,
+  active = false,
+}: SortingColumnHeaderProps) {
   const { t } = useTranslation();
   const defaultAriaLabel = ascending ? t("sort descending") : t("sort ascending");
+
   return (
     <Flex alignItems="center">
       <Text mr="x1">{label}</Text>
@@ -20,21 +34,6 @@ const SortingColumnHeader = ({ onChange, label, ascending, active, ariaLabel }) 
       />
     </Flex>
   );
-};
-
-SortingColumnHeader.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  ariaLabel: PropTypes.string,
-  label: PropTypes.string,
-  ascending: PropTypes.bool,
-  active: PropTypes.bool,
-};
-
-SortingColumnHeader.defaultProps = {
-  ariaLabel: null,
-  label: null,
-  ascending: false,
-  active: false,
-};
+}
 
 export default SortingColumnHeader;

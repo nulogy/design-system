@@ -4,20 +4,21 @@ import { Heading3 } from "../Type";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
 
-type BaseFormSectionProps = React.ComponentPropsWithRef<"fieldset"> & {
+interface BaseFormSectionProps extends React.ComponentPropsWithRef<"fieldset"> {
   title?: string;
-};
+}
 
-const FormSectionTitle = styled(Heading3).attrs({
-  as: "legend",
-})({});
-
-const BaseFormSection: React.FC<React.PropsWithChildren<BaseFormSectionProps>> = ({ title, children, ...props }) => (
+const BaseFormSection = ({ title, children, ...props }: BaseFormSectionProps) => (
   <fieldset {...props}>
     {title != null && <FormSectionTitle>{title}</FormSectionTitle>}
     {children}
   </fieldset>
 );
+
+const FormSectionTitle = styled(Heading3).attrs({
+  as: "legend",
+})({});
+
 const FormSection = styled(BaseFormSection)(({ title, theme }) => ({
   width: "100%",
   padding: 0,
@@ -34,8 +35,5 @@ const FormSection = styled(BaseFormSection)(({ title, theme }) => ({
     },
   },
 }));
-BaseFormSection.defaultProps = {
-  children: [],
-  title: undefined,
-};
+
 export default FormSection;

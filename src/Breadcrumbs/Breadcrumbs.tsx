@@ -19,7 +19,7 @@ const insertSeparators = (items: JSX.Element[]) => {
 
 type BreadcrumbsProps = Omit<FlexProps, "size"> & { size?: ComponentSize };
 
-const Breadcrumbs = ({ size, children, ...props }: BreadcrumbsProps) => {
+const Breadcrumbs = ({ size, as = "nav", children, ...props }: BreadcrumbsProps) => {
   const componentSize = useComponentSize(size);
 
   const allItems = React.Children.map(children, (child, index) => {
@@ -33,14 +33,10 @@ const Breadcrumbs = ({ size, children, ...props }: BreadcrumbsProps) => {
   }).filter(Boolean);
 
   return (
-    <Flex {...props}>
+    <Flex as={as} {...props}>
       <BreadcrumbsList>{insertSeparators(allItems)}</BreadcrumbsList>
     </Flex>
   );
-};
-
-Breadcrumbs.defaultProps = {
-  as: "nav",
 };
 
 export default Breadcrumbs;
