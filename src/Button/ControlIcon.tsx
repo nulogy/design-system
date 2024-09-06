@@ -5,7 +5,7 @@ import { Icon } from "../Icon";
 
 type ControlIconProps = React.ComponentPropsWithRef<"button"> &
   SpaceProps & {
-    onClick?: (...args: any[]) => any;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
     icon: string;
     toggled?: boolean;
     disabled?: boolean;
