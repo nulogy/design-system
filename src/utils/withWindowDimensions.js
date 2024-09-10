@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 class WindowDimensions extends React.Component {
   constructor(props) {
@@ -32,15 +31,10 @@ class WindowDimensions extends React.Component {
   }
 }
 
-WindowDimensions.propTypes = {
-  children: PropTypes.func.isRequired,
-};
-
-const withWindowDimensions = (Component) => (props) =>
-  (
-    <WindowDimensions>
-      {(windowDimensions) => <Component windowDimensions={windowDimensions} {...props} />}
-    </WindowDimensions>
-  );
+const withWindowDimensions = (Component) => (props) => (
+  <WindowDimensions>
+    {(windowDimensions) => <Component windowDimensions={windowDimensions} {...props} />}
+  </WindowDimensions>
+);
 
 export default withWindowDimensions;

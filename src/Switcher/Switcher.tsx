@@ -1,5 +1,4 @@
 import React, { ReactElement } from "react";
-import PropTypes from "prop-types";
 import { Box } from "../Box";
 import FocusManager from "../utils/ts/FocusManager";
 import type { ComponentSize } from "../NDSProvider/ComponentSizeContext";
@@ -61,12 +60,6 @@ const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ size, sele
       </FocusManager>
     </Box>
   );
-};
-
-Switcher.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.element),
-  selected: PropTypes.string,
-  onChange: PropTypes.func,
 };
 
 export default Switcher;

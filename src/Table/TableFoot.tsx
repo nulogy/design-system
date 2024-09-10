@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import TableCell from "./TableCell";
 import StyledTh from "./StyledTh";
-import { columnsPropType, rowPropType, RowType, Columns } from "./Table.types";
+import { RowType, Columns } from "./Table.types";
 
 const StyledFooterRow = styled.tr(({ theme }) => ({
   "&:first-of-type": {
@@ -46,13 +45,6 @@ const TableFooterRow = ({ row, columns, loading, compact }) => {
       )}
     </StyledFooterRow>
   );
-};
-
-TableFooterRow.propTypes = {
-  row: rowPropType.isRequired,
-  columns: columnsPropType.isRequired,
-  loading: PropTypes.bool.isRequired,
-  compact: PropTypes.bool.isRequired,
 };
 
 function TableFoot<ColumnMetadata>({

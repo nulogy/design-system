@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const isValidMenuItem = function validArrayItem(arr, idx, componentName, location, propFullName) {
   const obj = arr[idx];
 
@@ -8,19 +6,6 @@ const isValidMenuItem = function validArrayItem(arr, idx, componentName, locatio
       `Invalid ${propFullName} of type \`${typeof obj}\` supplied to \`${componentName}\`, expected \`object\``
     );
   }
-
-  PropTypes.checkPropTypes(
-    {
-      name: PropTypes.node.isRequired,
-      ariaLabel: PropTypes.string,
-      href: PropTypes.string,
-      items: PropTypes.arrayOf(isValidMenuItem),
-      render: PropTypes.func,
-    },
-    obj,
-    propFullName,
-    componentName
-  );
 
   let numberOfDefiningKeys = 0;
   const definingKeys = ["href", "items", "render"];

@@ -12,7 +12,7 @@ export const omitSubset = (o, propObj) => {
   }, {});
 };
 
-const pick = (o, ...fields) => {
+export const pick = (o, ...fields) => {
   const objectProps = Object.keys(o);
   return fields.reduce((a, x) => {
     if (objectProps.includes(x)) a[x] = o[x];

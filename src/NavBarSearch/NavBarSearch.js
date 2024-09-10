@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { darken, transparentize } from "polished";
 import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";
@@ -72,11 +71,6 @@ const NavBarSearch = styled(BaseNavBarSearch)({
     },
   },
 });
-
-BaseNavBarSearch.propTypes = {
-  name: PropTypes.string,
-  onSubmit: PropTypes.func,
-};
 
 BaseNavBarSearch.defaultProps = {
   name: "global-search",

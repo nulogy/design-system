@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import styled, { useTheme } from "styled-components";
-import PropTypes from "prop-types";
 import { themeGet } from "@styled-system/theme-get";
 import theme from "../theme";
 import { Icon } from "../Icon";
@@ -47,12 +46,6 @@ const StyledButton = styled.button<{
   },
 }));
 
-StyledButton.propTypes = {
-  color: PropTypes.string,
-  hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string,
-};
-
 StyledButton.defaultProps = {};
 
 const MenuTriggerButton = React.forwardRef<any, MenuTriggerProps>(
@@ -69,13 +62,6 @@ const MenuTriggerButton = React.forwardRef<any, MenuTriggerProps>(
     </StyledButton>
   )
 );
-
-MenuTriggerButton.propTypes = {
-  name: PropTypes.string.isRequired,
-  color: PropTypes.string,
-  hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string,
-};
 
 function MenuTrigger({
   menuData,

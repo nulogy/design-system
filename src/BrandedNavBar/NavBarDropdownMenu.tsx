@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick, withMenuState, PopperArrow } from "../utils";
 import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
@@ -158,22 +157,6 @@ class StatelessNavBarDropdownMenu extends StatelessNavBarDropdownMenuClass {
 }
 /* eslint-enable react/destructuring-assignment */
 
-// @ts-ignore
-StatelessNavBarDropdownMenu.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool,
-    openMenu: PropTypes.func,
-    closeMenu: PropTypes.func,
-    toggleMenu: PropTypes.func,
-  }).isRequired,
-  showArrow: PropTypes.bool,
-  placement: PropTypes.oneOf(["bottom-start", "right-start", "left-start"]),
-  modifiers: PropTypes.shape({}),
-  triggerTogglesMenuState: PropTypes.bool,
-  dropdownMenuContainerEventHandlers: PropTypes.func,
-};
 // @ts-ignore
 StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,

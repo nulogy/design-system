@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Icon } from "../Icon";
 import theme from "../theme";
 
@@ -89,9 +88,5 @@ class ScrollIndicators extends React.Component {
   }
 }
 /* eslint-enable react/destructuring-assignment */
-
-ScrollIndicators.propTypes = {
-  children: PropTypes.element.isRequired,
-};
 
 export default ScrollIndicators;

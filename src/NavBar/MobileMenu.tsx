@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import type { CSSObject } from "styled-components";
 import { display } from "styled-system";
@@ -55,13 +54,6 @@ const ApplyMenuLinkStyles = styled.li<{
     },
   },
 }));
-
-ApplyMenuLinkStyles.propTypes = {
-  layer: PropTypes.number,
-  color: PropTypes.string,
-  hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string,
-};
 
 ApplyMenuLinkStyles.defaultProps = {
   layer: 0,
@@ -178,22 +170,6 @@ const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
   </>
 );
 
-const ThemeColorObjectPropTypes = {
-  textColor: PropTypes.string,
-  background: PropTypes.string,
-  logoColor: PropTypes.string,
-};
-
-SubMenu.propTypes = {
-  layer: PropTypes.number.isRequired,
-  menuItem: PropTypes.shape({
-    items: PropTypes.arrayOf(PropTypes.shape({})),
-    name: PropTypes.string.isRequired,
-  }).isRequired,
-  linkOnClick: PropTypes.func,
-  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes),
-};
-
 SubMenu.defaultProps = {
   linkOnClick: null,
   themeColorObject: undefined,
@@ -234,17 +210,6 @@ const BaseMobileMenu = ({ menuData, closeMenu, subtext, includeSubtext, themeCol
     </Menu>
   </Nav>
 );
-
-BaseMobileMenu.propTypes = {
-  menuData: PropTypes.shape({
-    primaryMenu: PropTypes.arrayOf(PropTypes.shape({})),
-    secondaryMenu: PropTypes.arrayOf(PropTypes.shape({})),
-  }),
-  subtext: PropTypes.string,
-  includeSubtext: PropTypes.bool,
-  closeMenu: PropTypes.func,
-  themeColorObject: PropTypes.shape(ThemeColorObjectPropTypes),
-};
 
 BaseMobileMenu.defaultProps = {
   menuData: null,
