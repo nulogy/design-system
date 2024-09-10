@@ -1,6 +1,5 @@
 import React, { useMemo } from "react";
 import propTypes from "@styled-system/prop-types";
-import { Reference } from "react-popper";
 import { IconicButton } from "../Button";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { Popper } from "../Popper";
@@ -9,6 +8,7 @@ import { StyledProps } from "../StyledProps";
 import DropdownMenuContainer from "./DropdownMenuContainer";
 
 type DropdownMenuProps = {
+  children?: React.ReactNode;
   className?: string;
   size?: ComponentSize;
   id?: string;
@@ -47,10 +47,7 @@ const transformPropsToModifiers = ({ boundariesElement }) => ({
   boundariesElement,
 });
 
-const DropdownMenu: React.FC<React.PropsWithChildren<DropdownMenuProps>> = React.forwardRef<
-  Reference,
-  DropdownMenuProps
->(
+const DropdownMenu = React.forwardRef<React.Ref<unknown>, DropdownMenuProps>(
   (
     {
       trigger = () => <IconicButton icon="more" />,

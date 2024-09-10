@@ -31,7 +31,7 @@ type PopperProps = {
   closeAriaLabel?: string;
 };
 
-const Popper = React.forwardRef<LegacyRef, PopperProps>(
+const Popper = React.forwardRef<React.Ref<unknown>, PopperProps>(
   (
     {
       id,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { LegacyRef } from "react";
 import { Popper } from "../Popper";
 import { generateId } from "../utils";
 import TooltipContainer from "./TooltipContainer";
@@ -26,7 +26,7 @@ export type TooltipProps = {
   children?: React.ReactNode;
 };
 
-const Tooltip = React.forwardRef<any, TooltipProps>(
+const Tooltip = React.forwardRef<React.Ref<unknown>, TooltipProps>(
   (
     {
       showDelay = "100",
