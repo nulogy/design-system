@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import type { CSSObject } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
@@ -42,12 +41,6 @@ const ApplyMenuLinkStyles = styled.div<{
     },
   },
 }));
-
-ApplyMenuLinkStyles.propTypes = {
-  color: PropTypes.string,
-  hoverColor: PropTypes.string,
-  hoverBackground: PropTypes.string,
-};
 
 ApplyMenuLinkStyles.defaultProps = {
   color: theme.colors.white,
@@ -125,16 +118,6 @@ const renderMenuItem = (menuItem, themeColorObject) => getRenderFunction(menuIte
 const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
   <Nav {...props}>{menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}</Nav>
 );
-
-BaseDesktopMenu.propTypes = {
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  themeColorObject: PropTypes.shape({}),
-};
-
-BaseDesktopMenu.defaultProps = {
-  menuData: null,
-  themeColorObject: null,
-};
 
 const DesktopMenu = styled(BaseDesktopMenu)({
   "> div": {

@@ -40,8 +40,6 @@ const TimeRange = forwardRef(
       errorMessage,
       defaultStartTime,
       defaultEndTime,
-      disableRangeValidation,
-      labelProps,
       minTime,
       maxTime,
       interval,
@@ -50,6 +48,11 @@ const TimeRange = forwardRef(
       endTimeProps,
       startTimeProps,
       size,
+      disableRangeValidation = false,
+      labelProps = {
+        ...FieldLabelDefaultProps,
+        labelText: DEFAULT_LABEL,
+      },
       ...props
     }: TimeRangeProps,
     ref
@@ -175,25 +178,5 @@ const TimeRange = forwardRef(
     );
   }
 );
-
-TimeRange.defaultProps = {
-  timeFormat: undefined,
-  onRangeChange: null,
-  onStartTimeChange: null,
-  onEndTimeChange: null,
-  errorMessage: null,
-  defaultStartTime: null,
-  defaultEndTime: null,
-  disableRangeValidation: false,
-  labelProps: {
-    ...FieldLabelDefaultProps,
-    labelText: DEFAULT_LABEL,
-  },
-  minTime: null,
-  maxTime: null,
-  interval: undefined,
-  startAriaLabel: undefined,
-  endAriaLabel: undefined,
-};
 
 export default TimeRange;

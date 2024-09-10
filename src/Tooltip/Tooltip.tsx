@@ -1,4 +1,4 @@
-import React from "react";
+import React, { LegacyRef } from "react";
 import { Popper } from "../Popper";
 import { generateId } from "../utils";
 import TooltipContainer from "./TooltipContainer";
@@ -26,8 +26,20 @@ export type TooltipProps = {
   children?: React.ReactNode;
 };
 
-const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = React.forwardRef(
-  ({ className, tooltip, maxWidth, children, placement, showDelay, hideDelay, defaultOpen }, ref) => (
+const Tooltip = React.forwardRef<React.Ref<unknown>, TooltipProps>(
+  (
+    {
+      showDelay = "100",
+      hideDelay = "350",
+      defaultOpen = false,
+      placement = "bottom",
+      maxWidth = "24em",
+      className,
+      tooltip,
+      children,
+    },
+    ref
+  ) => (
     <Popper
       ref={ref}
       popperPlacement={placement}
@@ -43,14 +55,5 @@ const Tooltip: React.FC<React.PropsWithChildren<TooltipProps>> = React.forwardRe
     </Popper>
   )
 );
-
-Tooltip.defaultProps = {
-  showDelay: "100",
-  hideDelay: "350",
-  defaultOpen: false,
-  className: undefined,
-  placement: "bottom",
-  maxWidth: "24em",
-};
 
 export default Tooltip;

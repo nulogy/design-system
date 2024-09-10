@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-import PropTypes from "prop-types";
 import { ThemeContext } from "styled-components";
 import { SpaceProps } from "styled-system";
 import propTypes from "@styled-system/prop-types";
@@ -23,15 +22,10 @@ type MaybeToggleTitleProps = React.ComponentPropsWithRef<"div"> & {
   labelText?: string;
   requirementText?: string;
   helpText?: string;
-  children?: any;
+  children?: React.ReactNode;
 };
-const MaybeToggleTitle: React.FC<React.PropsWithChildren<MaybeToggleTitleProps>> = ({
-  labelText,
-  requirementText,
-  helpText,
-  children,
-  ...props
-}) => {
+
+function MaybeToggleTitle({ labelText, requirementText, helpText, children, ...props }: MaybeToggleTitleProps) {
   const themeContext = useContext(ThemeContext);
   return labelText ? (
     <div {...props}>
@@ -45,7 +39,7 @@ const MaybeToggleTitle: React.FC<React.PropsWithChildren<MaybeToggleTitleProps>>
   ) : (
     <>{children}</>
   );
-};
+}
 
 type BaseToggleProps = SpaceProps & {
   onChange?: (...args: any[]) => any;
@@ -57,7 +51,7 @@ type BaseToggleProps = SpaceProps & {
   id?: string;
   className?: string;
   required?: boolean;
-  helpText?: any;
+  helpText?: string;
   labelText?: string;
   requirementText?: string;
   error?: boolean;
@@ -93,6 +87,7 @@ const BaseToggle = ({
   const componentSize = useComponentSize(size);
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
+
   return (
     <Field className={className} alignItems="flex-start" py="half" {...spaceProps}>
       <MaybeToggleTitle
@@ -127,22 +122,6 @@ const BaseToggle = ({
   );
 };
 
-BaseToggle.defaultProps = {
-  onChange: () => {},
-  toggled: undefined,
-  disabled: false,
-  onText: undefined,
-  offText: undefined,
-  id: undefined,
-  className: undefined,
-  required: false,
-  helpText: undefined,
-  labelText: undefined,
-  requirementText: undefined,
-  error: false,
-  onClick: () => {},
-};
-
 type StatefulToggleProps = BaseToggleProps & {
   defaultToggled?: boolean;
   onClick?: boolean;
@@ -157,16 +136,6 @@ const StatefulToggle = ({ defaultToggled, onClick, disabled, ...props }: Statefu
   };
 
   return <BaseToggle toggled={toggled} onClick={handleClick} disabled={disabled} {...props} />;
-};
-
-StatefulToggle.propTypes = {
-  defaultToggled: PropTypes.bool,
-  onClick: PropTypes.func,
-};
-
-StatefulToggle.defaultProps = {
-  defaultToggled: undefined,
-  onClick: () => {},
 };
 
 type ToggleProps = StatefulToggleProps;

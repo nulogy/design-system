@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import icons from "@nulogy/icons";
 
 import { Box, Flex, Icon, InlineIcon } from "../index";
@@ -15,10 +14,6 @@ const IconCode = ({ icon }) => (
     &quot;&gt;
   </code>
 );
-
-IconCode.propTypes = {
-  icon: PropTypes.string.isRequired,
-};
 
 export default {
   title: "Components/Icon",

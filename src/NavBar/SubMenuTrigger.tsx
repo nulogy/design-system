@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import theme from "../theme";
 import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
@@ -50,11 +49,6 @@ const SubMenuTriggerButton = React.forwardRef<any, SubMenuTriggerButtonProps>(({
   </StyledButton>
 ));
 
-SubMenuTriggerButton.propTypes = {
-  name: PropTypes.string.isRequired,
-  isOpen: PropTypes.bool,
-};
-
 SubMenuTriggerButton.defaultProps = {
   isOpen: false,
 };
@@ -81,12 +75,6 @@ const SubMenuTrigger = (props) => {
       </ul>
     </NavBarDropdownMenu>
   );
-};
-
-SubMenuTrigger.propTypes = {
-  name: PropTypes.string.isRequired,
-  menuData: PropTypes.arrayOf(PropTypes.shape({})),
-  onItemClick: PropTypes.func,
 };
 
 SubMenuTrigger.defaultProps = {

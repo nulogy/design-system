@@ -1,9 +1,11 @@
-// @ts-nocheck
 import styled from "styled-components";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Icon } from "../Icon";
-const TabScrollIndicatorButton = styled.button(({ side, width, theme }) => ({
+
+type Side = "left" | "right";
+
+const TabScrollIndicatorButton = styled.button<{ side: Side; width: string | number }>(({ side, width, theme }) => ({
   position: "absolute",
   color: theme.colors.black,
   top: 0,
@@ -37,34 +39,38 @@ const TabScrollIndicatorButton = styled.button(({ side, width, theme }) => ({
     opacity: ".5",
   },
 }));
-function preventFocusMovement(e) {
-  e.preventDefault();
-}
+
 type TabScrollIndicatorProps = {
-  onClick?: (...args: any[]) => any;
-  side?: "left" | "right";
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  side?: Side;
   width?: string | number;
   ariaLabelLeft?: string;
   ariaLabelRight?: string;
 };
+
 const TabScrollIndicator: React.FC<React.PropsWithChildren<TabScrollIndicatorProps>> = ({
-  onClick,
-  side,
+  side = "left",
+  width = 40,
   ariaLabelLeft,
   ariaLabelRight,
+  onClick,
   ...props
 }) => {
   const { t } = useTranslation();
-  const handleClick = () => {
-    onClick(side);
-  };
+
   const rightArrowLabel = ariaLabelRight || t("next");
   const leftArrowLabel = ariaLabelLeft || t("previous");
+
+  function preventFocusMovement(event: React.MouseEvent<HTMLButtonElement>) {
+    event.preventDefault();
+  }
+
   return (
     <TabScrollIndicatorButton
       {...props}
+      width={width}
       tabIndex={-1}
-      onClick={handleClick}
+      onClick={onClick}
       onMouseDown={preventFocusMovement}
       side={side}
       aria-label={side === "right" ? rightArrowLabel : leftArrowLabel}
@@ -73,11 +79,5 @@ const TabScrollIndicator: React.FC<React.PropsWithChildren<TabScrollIndicatorPro
     </TabScrollIndicatorButton>
   );
 };
-TabScrollIndicator.defaultProps = {
-  onClick: () => {},
-  side: "left",
-  width: 40,
-  ariaLabelLeft: undefined,
-  ariaLabelRight: undefined,
-};
+
 export default TabScrollIndicator;

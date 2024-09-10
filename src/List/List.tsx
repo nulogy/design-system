@@ -1,19 +1,18 @@
 import styled from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import ListItem from "./ListItem";
 
-type ListProps = React.ComponentPropsWithRef<"ul"> &
-  StyledProps & {
-    theme?: DefaultNDSThemeType;
-    className?: string;
-    compact?: boolean;
-    leftAlign?: boolean;
-    listStyle?: string;
-  };
-const List: React.FC<React.PropsWithChildren<ListProps>> = styled.ul(
-  ({ compact, theme, leftAlign, listStyle }: ListProps) => ({
+interface Props extends React.ComponentPropsWithRef<"ul">, StyledProps {
+  className?: string;
+  compact?: boolean;
+  leftAlign?: boolean;
+  listStyle?: string;
+}
+
+const List = styled.ul<Props>(
+  ({ compact = false, leftAlign = false, color = "currentColor", theme, listStyle }) => ({
     margin: 0,
+    color: color,
     paddingLeft: leftAlign ? "18px" : undefined,
     listStyle,
     [`${ListItem}`]: {
@@ -22,11 +21,5 @@ const List: React.FC<React.PropsWithChildren<ListProps>> = styled.ul(
   }),
   addStyledProps
 );
-List.defaultProps = {
-  className: undefined,
-  compact: false,
-  leftAlign: false,
-  listStyle: undefined,
-  color: "currentColor",
-};
+
 export default List;

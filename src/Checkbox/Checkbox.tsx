@@ -14,6 +14,7 @@ type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
 
 type CheckboxProps = NativeInputProps &
   SpaceProps & {
+    children?: React.ReactNode;
     htmlSize?: number;
     size?: ComponentSize;
     labelText?: string;
@@ -24,7 +25,7 @@ type CheckboxProps = NativeInputProps &
     theme?: DefaultNDSThemeType;
   };
 
-const checkboxStyle = (theme) => ({
+const checkboxStyle = (theme: DefaultNDSThemeType) => ({
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
@@ -55,7 +56,7 @@ const checkboxStyle = (theme) => ({
   },
 });
 
-const getCheckboxStyle = (props, checked) => {
+const getCheckboxStyle = (props: CheckboxProps, checked: "checked" | "unchecked") => {
   const checkboxStyleMap = checkboxStyle(props.theme);
   if (props.disabled) {
     return checkboxStyleMap[checked].disabled;
@@ -127,7 +128,9 @@ const CheckboxInput = styled.input<CheckboxProps>((props) => ({
   },
 }));
 
-const Checkbox: React.FC<React.PropsWithChildren<CheckboxProps>> = forwardRef((props, ref) => {
+type Ref = HTMLInputElement;
+
+const Checkbox = forwardRef<Ref, CheckboxProps>((props, ref) => {
   const { size, className, labelText, disabled, checked, required, error, indeterminate } = props;
 
   const componentSize = useComponentSize(size);
@@ -162,17 +165,5 @@ const Checkbox: React.FC<React.PropsWithChildren<CheckboxProps>> = forwardRef((p
     </Box>
   );
 });
-
-Checkbox.defaultProps = {
-  labelText: undefined,
-  checked: undefined,
-  defaultChecked: undefined,
-  disabled: false,
-  error: false,
-  id: undefined,
-  className: undefined,
-  required: false,
-  indeterminate: undefined,
-};
 
 export default Checkbox;

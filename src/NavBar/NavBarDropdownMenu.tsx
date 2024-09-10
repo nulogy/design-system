@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from "react";
-import PropTypes from "prop-types";
 import { Manager, Reference, Popper } from "react-popper";
 import { DetectOutsideClick, withMenuState, PopperArrow } from "../utils";
 import DropdownMenuContainer from "../DropdownMenu/DropdownMenuContainer";
@@ -129,22 +128,6 @@ class StatelessNavBarDropdownMenu extends React.Component {
 }
 /* eslint-enable react/destructuring-assignment */
 
-StatelessNavBarDropdownMenu.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  trigger: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool,
-    openMenu: PropTypes.func,
-    closeMenu: PropTypes.func,
-    toggleMenu: PropTypes.func,
-  }).isRequired,
-  showArrow: PropTypes.bool,
-  placement: PropTypes.oneOf(["bottom-start", "right-start"]),
-  modifiers: PropTypes.shape({}),
-  triggerTogglesMenuState: PropTypes.bool,
-  dropdownMenuContainerEventHandlers: PropTypes.func,
-};
-
 StatelessNavBarDropdownMenu.defaultProps = {
   showArrow: true,
   placement: "bottom-start",
@@ -154,11 +137,6 @@ StatelessNavBarDropdownMenu.defaultProps = {
 };
 
 const NavBarDropdownMenu = withMenuState(StatelessNavBarDropdownMenu);
-
-NavBarDropdownMenu.propTypes = {
-  showDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  hideDelay: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-};
 
 NavBarDropdownMenu.defaultProps = {
   showDelay: "0",

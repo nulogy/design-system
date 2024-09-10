@@ -9,7 +9,7 @@ import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 
-const radioStyle = (theme) => ({
+const radioStyle = (theme: DefaultNDSThemeType) => ({
   checked: {
     disabled: {
       borderColor: theme.colors.lightGrey,
@@ -113,8 +113,10 @@ type RadioProps = NativeInputProps &
     error?: boolean;
   };
 
-const Radio: React.FC<React.PropsWithChildren<RadioProps>> = forwardRef(
-  ({ className, labelText, disabled, checked, required, error, size, ...props }, ref) => {
+type Ref = HTMLInputElement;
+
+const Radio = forwardRef<Ref, RadioProps>(
+  ({ disabled = false, error = false, required = false, className, labelText, checked, size, ...props }, ref) => {
     const componentSize = useComponentSize(size);
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
@@ -143,15 +145,5 @@ const Radio: React.FC<React.PropsWithChildren<RadioProps>> = forwardRef(
     );
   }
 );
-
-Radio.defaultProps = {
-  checked: undefined,
-  defaultChecked: undefined,
-  disabled: false,
-  error: false,
-  id: undefined,
-  className: undefined,
-  required: false,
-};
 
 export default Radio;

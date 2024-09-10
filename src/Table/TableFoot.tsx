@@ -1,9 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import TableCell from "./TableCell";
 import StyledTh from "./StyledTh";
-import { columnsPropType, rowsPropType, rowPropType, RowType, Columns } from "./Table.types";
+import { RowType, Columns } from "./Table.types";
 
 const StyledFooterRow = styled.tr(({ theme }) => ({
   "&:first-of-type": {
@@ -48,19 +47,12 @@ const TableFooterRow = ({ row, columns, loading, compact }) => {
   );
 };
 
-TableFooterRow.propTypes = {
-  row: rowPropType.isRequired,
-  columns: columnsPropType.isRequired,
-  loading: PropTypes.bool.isRequired,
-  compact: PropTypes.bool.isRequired,
-};
-
 function TableFoot<ColumnMetadata>({
   columns,
   rows,
-  keyField,
-  loading,
-  compact,
+  keyField = "id",
+  loading = false,
+  compact = false,
 }: {
   columns: Columns<ColumnMetadata>;
   rows: RowType[];
@@ -70,19 +62,5 @@ function TableFoot<ColumnMetadata>({
 }) {
   return <tfoot>{renderRows(rows, columns, keyField, loading, compact)}</tfoot>;
 }
-
-TableFoot.propTypes = {
-  columns: columnsPropType.isRequired,
-  rows: rowsPropType.isRequired,
-  keyField: PropTypes.string,
-  loading: PropTypes.bool,
-  compact: PropTypes.bool,
-};
-
-TableFoot.defaultProps = {
-  keyField: "id",
-  loading: false,
-  compact: false,
-};
 
 export default TableFoot;

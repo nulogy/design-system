@@ -43,6 +43,7 @@ function Table<ColumnMetadata>({
     <BaseTable {...props} />
   );
 }
+
 Table.SortingHeader = SortingColumnHeader;
 
 export default Table;

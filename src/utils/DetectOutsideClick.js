@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-class DetectOutsideClick extends React.Component {
+export default class DetectOutsideClick extends React.Component {
   constructor(props) {
     super(props);
 
@@ -44,16 +43,3 @@ class DetectOutsideClick extends React.Component {
     return <>{children}</>;
   }
 }
-
-DetectOutsideClick.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  clickRef: PropTypes.oneOfType([PropTypes.shape({}), PropTypes.arrayOf(PropTypes.shape({}))]),
-  children: PropTypes.node,
-};
-
-DetectOutsideClick.defaultProps = {
-  clickRef: null,
-  children: undefined,
-};
-
-export default DetectOutsideClick;

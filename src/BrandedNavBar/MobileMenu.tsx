@@ -8,7 +8,6 @@ import { BrandingText } from "../Branding";
 import { DropdownLink, DropdownText } from "../DropdownMenu";
 import { Icon } from "../Icon";
 import { Link } from "../Link";
-import { LinkProps } from "../Link/Link";
 import { addStyledProps } from "../StyledProps";
 import NulogyLogo from "./NulogyLogo";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
@@ -163,7 +162,7 @@ const getSubMenuHeading = (layer, name) =>
 type ThemeColorObject = {
   textColor?: string;
   background?: string;
-  logoColor?: string;
+  logoColor?: "white" | "blue";
 };
 
 type MenuItem = {
@@ -237,7 +236,7 @@ const BaseMobileMenu: React.FC<React.PropsWithChildren<BaseMobileMenuProps>> = (
 }) => (
   <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     <BrandingWrap>
-      <BrandingText logoColor={themeColorObject && themeColorObject.logoColor} />
+      <BrandingText logoColor={themeColorObject?.logoColor} />
     </BrandingWrap>
     <Menu>
       {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}

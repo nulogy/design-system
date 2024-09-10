@@ -1,6 +1,5 @@
 // @ts-nocheck
 import React from "react";
-import PropTypes from "prop-types";
 import { Branding } from "../Branding";
 import { Flex } from "../Flex";
 import theme from "../theme";
@@ -10,7 +9,6 @@ import MobileMenu from "./MobileMenu";
 import {
   BrandingLink,
   getThemeColor,
-  MenuDataPropTypes,
   MenuIcon,
   MobileMenuTrigger,
   NavBarBackground,
@@ -94,21 +92,6 @@ class SmallNavBarNoState extends React.Component {
     );
   }
 }
-
-SmallNavBarNoState.propTypes = {
-  menuState: PropTypes.shape({
-    isOpen: PropTypes.bool,
-    toggleMenu: PropTypes.func,
-    closeMenu: PropTypes.func,
-  }).isRequired,
-  menuData: PropTypes.shape(MenuDataPropTypes),
-  subtext: PropTypes.string,
-  brandingLinkHref: PropTypes.string,
-  brandingLinkTo: PropTypes.string,
-  breakpointLower: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  width: PropTypes.number,
-  themeColor: PropTypes.oneOf(["blue", "white"]),
-};
 
 SmallNavBarNoState.defaultProps = {
   menuData: null,

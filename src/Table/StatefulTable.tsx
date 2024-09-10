@@ -1,9 +1,27 @@
 import React, { Component } from "react";
+import propTypes from "@styled-system/prop-types";
 import { Pagination } from "../Pagination";
-import { getSubset } from "../utils/subset";
+import { pick } from "../utils/subset";
 import BaseTable, { BaseTableProps } from "./BaseTable";
 import { addExpandableControl } from "./addExpandableControl";
 import { addSelectableControl } from "./addSelectableControl";
+
+const propNames = [
+  ...Object.keys(propTypes.space),
+  "columns",
+  "rows",
+  "noRowsContent",
+  "keyField",
+  "id",
+  "loading",
+  "footerRows",
+  "rowHovers",
+  "compact",
+  "className",
+  "stickyHeader",
+  "onRowMouseEnter",
+  "onRowMouseLeave",
+];
 
 export type StatefulTableProps<ColumnMetaData> = BaseTableProps<ColumnMetaData> & {
   selectedRows?: string[];
@@ -36,9 +54,20 @@ type StatefulTableState = {
   currentPage: number;
   paginatedRows: any;
 };
+
 class StatefulTable<ColumnMetaData> extends Component<StatefulTableProps<ColumnMetaData>, StatefulTableState> {
   static defaultProps = {
-    ...BaseTable.defaultProps,
+    noRowsContent: "No records have been created for this table.",
+    keyField: "id",
+    id: undefined,
+    loading: false,
+    footerRows: [],
+    rowHovers: true,
+    compact: false,
+    className: undefined,
+    stickyHeader: false,
+    onRowMouseEnter: () => {},
+    onRowMouseLeave: () => {},
     hasSelectableRows: false,
     selectedRows: [],
     isHeaderSelected: false,
@@ -224,7 +253,7 @@ class StatefulTable<ColumnMetaData> extends Component<StatefulTableProps<ColumnM
   render() {
     const { paginatedRows, currentPage } = this.state;
     const { rowsPerPage, paginationProps, paginationCss } = this.props;
-    const baseTableProps = getSubset(this.getControlProps(), BaseTable.propTypes);
+    const baseTableProps = pick(this.getControlProps(), ...propNames);
     return (
       <>
         <BaseTable {...baseTableProps} />

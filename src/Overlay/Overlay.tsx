@@ -2,28 +2,21 @@ import styled from "styled-components";
 import { transparentize } from "polished";
 import { Flex } from "../Flex";
 import { FlexProps } from "../Flex/Flex";
-import { DefaultNDSThemeType } from "../theme.type";
-import CSSObject from "styled-components";
 
-type OverlayProps = FlexProps & {
+interface Props extends FlexProps {
   dark?: boolean;
-  theme?: DefaultNDSThemeType;
-};
+}
 
-const Overlay: React.FC<React.PropsWithChildren<OverlayProps>> = styled(Flex)<OverlayProps>(
-  ({ dark, theme }: OverlayProps) => ({
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: theme.zIndices.overlay,
-    backgroundColor: dark ? transparentize(0.5, theme.colors.blackBlue) : transparentize(0.05, theme.colors.white),
-  })
-);
-Overlay.defaultProps = {
+const Overlay = styled(Flex)<Props>(({ dark = false, theme }) => ({
   position: "fixed",
   justifyContent: "center",
   alignItems: "center",
-  dark: false,
-};
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: theme.zIndices.overlay,
+  backgroundColor: dark ? transparentize(0.5, theme.colors.blackBlue) : transparentize(0.05, theme.colors.white),
+}));
+
 export default Overlay;

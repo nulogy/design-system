@@ -1,10 +1,11 @@
 import React from "react";
 import { useTheme } from "styled-components";
 
-type LoadingAnimationProps = React.ComponentPropsWithRef<"svg"> & {
+interface Props extends React.ComponentPropsWithRef<"svg"> {
   inactive?: boolean;
-};
-const LoadingAnimation: React.FC<React.PropsWithChildren<LoadingAnimationProps>> = ({ inactive }) => {
+}
+
+export default function LoadingAnimation({ inactive = false }: Props) {
   const { colors } = useTheme();
 
   const color1 = inactive ? colors.grey : colors.blue;
@@ -113,8 +114,4 @@ const LoadingAnimation: React.FC<React.PropsWithChildren<LoadingAnimationProps>>
       </g>
     </svg>
   );
-};
-LoadingAnimation.defaultProps = {
-  inactive: false,
-};
-export default LoadingAnimation;
+}

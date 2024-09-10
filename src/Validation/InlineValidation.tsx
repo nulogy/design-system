@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { SpaceProps } from "styled-system";
 import { Text } from "../Type";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import mapErrorsToList from "./mapErrorsToList";
-import { SpaceProps } from "styled-system";
 
 const Wrapper = styled.div(({ theme }) => ({
   [`${Text}`]: {
@@ -22,14 +22,14 @@ type InlineValidationProps = SpaceProps & {
   children?: React.ReactNode;
 };
 
-const InlineValidation: React.FC<React.PropsWithChildren<InlineValidationProps>> = ({
+export default function InlineValidation({
   className,
   errorMessage,
   errorList,
   children,
   ...boxProps
-}) =>
-  errorMessage || errorList ? (
+}: InlineValidationProps) {
+  return errorMessage || errorList ? (
     <Flex className={className} color="red" {...boxProps}>
       <Icon icon="error" mr="x1" />
       <Wrapper>
@@ -39,11 +39,4 @@ const InlineValidation: React.FC<React.PropsWithChildren<InlineValidationProps>>
       </Wrapper>
     </Flex>
   ) : null;
-
-InlineValidation.defaultProps = {
-  className: undefined,
-  errorMessage: undefined,
-  errorList: undefined,
-  children: undefined,
-};
-export default InlineValidation;
+}

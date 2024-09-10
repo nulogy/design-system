@@ -1,8 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { Checkbox } from "../Checkbox";
-import { rowPropType } from "./Table.types";
 
 export const SELECTABLE_COLUMN_DATA_KEY = "selected";
 
@@ -22,15 +20,6 @@ const SelectCell = ({ row, onSelectRow }) => {
   const uncheckedAriaLabel = row.deselectAriaLabel || t("select row");
   const ariaLabel = checked ? checkedAriaLabel : uncheckedAriaLabel;
   return <Checkbox aria-label={ariaLabel} checked={checked} onChange={selectRowHandler} />;
-};
-
-SelectCell.propTypes = {
-  row: rowPropType.isRequired,
-  onSelectRow: PropTypes.func,
-};
-
-SelectCell.defaultProps = {
-  onSelectRow: null,
 };
 
 const selectCellRenderer = (onSelectRow) => (props) => <SelectCell onSelectRow={onSelectRow} {...props} />;

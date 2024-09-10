@@ -11,7 +11,7 @@ export const NDS_TO_DATE_FN_LOCALES_MAP = {
   pt_BR: ptBR,
   ro_RO: ro,
   zh_CN: zhCN,
-};
+} as const;
 
 export const ALL_NDS_LOCALES = [
   {

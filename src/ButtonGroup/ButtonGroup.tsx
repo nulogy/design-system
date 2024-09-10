@@ -3,6 +3,7 @@ import { Flex } from "../Flex";
 import { FlexProps } from "../Flex/Flex";
 
 type ButtonGroupProps = FlexProps & {
+  children?: React.ReactNode;
   alignment?: "left" | "spaced" | "right";
   className?: string;
 };
@@ -12,6 +13,7 @@ const alignments = {
   spaced: "space-between",
   right: "flex-end",
 };
+
 const buttonSpacings = (theme) => ({
   left: {
     "button:not(:last-child)": {
@@ -29,10 +31,11 @@ const buttonSpacings = (theme) => ({
     },
   },
 });
+
 const getAlignment = (alignment) => alignments[alignment] || alignments.left;
 const getButtonSpacing = (alignment, theme) => buttonSpacings(theme)[alignment] || buttonSpacings(theme).left;
 
-const ButtonGroup: React.FC<React.PropsWithChildren<ButtonGroupProps>> = styled(Flex)(({ alignment, theme }: any) => ({
+const ButtonGroup = styled(Flex)<ButtonGroupProps>(({ alignment = "left", theme }) => ({
   flexWrap: "wrap",
   marginBottom: `-${theme.space.x1}`,
   justifyContent: getAlignment(alignment),
@@ -41,8 +44,5 @@ const ButtonGroup: React.FC<React.PropsWithChildren<ButtonGroupProps>> = styled(
   },
   ...getButtonSpacing(alignment, theme),
 }));
-ButtonGroup.defaultProps = {
-  alignment: "left",
-  className: undefined,
-};
+
 export default ButtonGroup;

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { variant } from "styled-system";
 import numberFromDimension from "../utils/numberFromDimension";
 import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
@@ -61,11 +60,5 @@ const SwitchButton = styled.button<SwitchProps>(
       },
     })
 );
-
-Switch.propTypes = {
-  children: PropTypes.node,
-  selected: PropTypes.bool,
-  value: PropTypes.string,
-};
 
 export default Switch;

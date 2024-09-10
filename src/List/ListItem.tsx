@@ -1,19 +1,20 @@
+import React from "react";
 import styled from "styled-components";
 import { space, color, typography, SpaceProps, ColorProps, TypographyProps } from "styled-system";
-type ListItemProps = React.ComponentPropsWithRef<"li"> &
-  SpaceProps &
-  ColorProps &
-  TypographyProps & {
-    className?: string;
-  };
-const ListItem: React.FC<React.PropsWithChildren<ListItemProps>> = styled.li(space, color, typography, {
-  "&:last-child": {
-    marginBottom: 0,
-  },
-});
-ListItem.defaultProps = {
-  className: undefined,
-  color: "currentColor",
-  mb: "x1",
-};
+
+type Props = React.ComponentPropsWithRef<"li"> & SpaceProps & ColorProps & TypographyProps;
+
+const ListItem = styled.li<Props>(
+  ({ theme }) => ({
+    color: "currentcolor",
+    marginBottom: theme.space.x1,
+    "&:last-child": {
+      marginBottom: 0,
+    },
+  }),
+  space,
+  color,
+  typography
+);
+
 export default ListItem;

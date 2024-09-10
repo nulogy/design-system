@@ -1,9 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { Box } from "../Box";
 import { DefaultNDSThemeType } from "../theme.type";
-import { columnsPropType, rowPropType } from "./Table.types";
 import TableCell from "./TableCell";
 
 const StyledMessageContainer = styled(Box)(({ theme }) => ({
@@ -97,18 +95,6 @@ const TableBodyRow = ({
   );
 };
 
-TableBodyRow.propTypes = {
-  row: rowPropType.isRequired,
-  columns: columnsPropType.isRequired,
-  rowHovers: PropTypes.bool.isRequired,
-  compact: PropTypes.bool.isRequired,
-  rowClassName: PropTypes.string,
-};
-
-TableBodyRow.defaultProps = {
-  rowClassName: undefined,
-};
-
 const TableMessageContainer = ({ colSpan, children }) => (
   <tr data-testid="table-message-container">
     <td colSpan={colSpan}>
@@ -117,16 +103,7 @@ const TableMessageContainer = ({ colSpan, children }) => (
   </tr>
 );
 
-TableMessageContainer.propTypes = {
-  colSpan: PropTypes.number.isRequired,
-  children: PropTypes.node.isRequired,
-};
-
 const LoadingContent = ({ colSpan }) => <TableMessageContainer colSpan={colSpan}>Loading...</TableMessageContainer>;
-
-LoadingContent.propTypes = {
-  colSpan: PropTypes.number.isRequired,
-};
 
 type TableBodyProps = {
   rows: any[];

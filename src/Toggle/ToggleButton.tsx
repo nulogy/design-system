@@ -8,9 +8,10 @@ import { default as theme } from "../theme";
 import { AnimatedBox } from "../Box";
 
 type SwitchProps = {
+  children?: React.ReactNode;
   disabled?: boolean;
   toggled?: boolean;
-  onClick?: (event: React.MouseEvent<any>) => void;
+  onClick?: (event: React.MouseEvent) => void;
 };
 
 type SliderProps = {
@@ -48,23 +49,25 @@ const animationConfig: AnimationConfig = {
   scale: 1.08,
 };
 
-const Switch: React.FC<React.PropsWithChildren<SwitchProps>> = ({ children, disabled, toggled, onClick }) => (
-  <AnimatedBox
-    position="relative"
-    height="24px"
-    width="48px"
-    bg={disabled ? "grey" : getSwitchBackground(toggled)}
-    borderRadius="20px"
-    padding="2px"
-    boxShadow="small"
-    animate={toggled ? "toggled" : "initial"}
-    whileHover="active"
-    whileFocus="active"
-    onClick={onClick}
-  >
-    {children}
-  </AnimatedBox>
-);
+function Switch({ children, disabled, toggled, onClick }: SwitchProps) {
+  return (
+    <AnimatedBox
+      position="relative"
+      height="24px"
+      width="48px"
+      bg={disabled ? "grey" : getSwitchBackground(toggled)}
+      borderRadius="20px"
+      padding="2px"
+      boxShadow="small"
+      animate={toggled ? "toggled" : "initial"}
+      whileHover="active"
+      whileFocus="active"
+      onClick={onClick}
+    >
+      {children}
+    </AnimatedBox>
+  );
+}
 
 const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, children }) => (
   <motion.div
@@ -110,7 +113,7 @@ const ToggleInput = styled.input(
   })
 );
 
-const ToggleButton: React.FC<React.PropsWithChildren<ToggleButtonProps>> = React.forwardRef((props, ref) => {
+const ToggleButton = React.forwardRef<React.Ref<HTMLInputElement>, ToggleButtonProps>((props, ref) => {
   const { disabled, defaultToggled, toggled } = props;
   const inputRef = useRef(null);
 
@@ -136,10 +139,5 @@ const ToggleButton: React.FC<React.PropsWithChildren<ToggleButtonProps>> = React
     </Switch>
   );
 });
-
-ToggleButton.defaultProps = {
-  defaultToggled: undefined,
-  disabled: false,
-};
 
 export default ToggleButton;

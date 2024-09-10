@@ -1,13 +1,20 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { ControlIcon } from "../Button";
-import { rowPropType } from "./Table.types";
 import { SELECTABLE_COLUMN_DATA_KEY } from "./addSelectableControl";
 
 const EXPANDABLE_COLUMN_DATA_KEY = "expanded";
 
-const ExpandCell = ({ row, onRowExpansionChange }) => {
+type Row = Record<string, number | string | boolean | React.ReactNode | Record<string, unknown>>;
+
+interface ExpandCellProps {
+  row: Row;
+  onRowExpansionChange: (row: Row) => void;
+  collapseAriaLabel?: string;
+  expandAriaLabel?: string;
+}
+
+const ExpandCell = ({ row, onRowExpansionChange }: ExpandCellProps) => {
   const expandRowHandler = () => onRowExpansionChange(row);
   const { t } = useTranslation();
   const collapseLabel = row.collapseAriaLabel || t("collapse row");
@@ -25,18 +32,6 @@ const ExpandCell = ({ row, onRowExpansionChange }) => {
   );
 };
 
-ExpandCell.propTypes = {
-  row: rowPropType.isRequired,
-  onRowExpansionChange: PropTypes.func,
-  collapseAriaLabel: PropTypes.string,
-  expandAriaLabel: PropTypes.string,
-};
-
-ExpandCell.defaultProps = {
-  onRowExpansionChange: null,
-  collapseAriaLabel: undefined,
-  expandAriaLabel: undefined,
-};
 const expandCellRenderer = (onRowExpansionChange) => (props) =>
   <ExpandCell onRowExpansionChange={onRowExpansionChange} {...props} />;
 const addExpandableColumn = ({ columns, onRowExpansionChange }) => {

@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import ReactResizeDetector from "react-resize-detector";
@@ -120,22 +119,6 @@ const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
   );
 };
 
-export const MenuDataPropTypes = {
-  primaryMenu: PropTypes.arrayOf(isValidMenuItem),
-  secondaryMenu: PropTypes.arrayOf(isValidMenuItem),
-  search: PropTypes.shape({
-    onSubmit: PropTypes.func,
-  }),
-};
-
-MediumNavBar.propTypes = {
-  subtext: PropTypes.string,
-  brandingLinkHref: PropTypes.string,
-  menuData: PropTypes.shape(MenuDataPropTypes),
-  brandingLinkTo: PropTypes.string,
-  themeColor: PropTypes.oneOf(["blue", "white"]),
-};
-
 MediumNavBar.defaultProps = {
   subtext: null,
   brandingLinkHref: "/",
@@ -192,10 +175,6 @@ export const MenuIcon = ({ isOpen }) => {
   return <Icon icon={icon} title={title} />;
 };
 
-MenuIcon.propTypes = {
-  isOpen: PropTypes.bool,
-};
-
 MenuIcon.defaultProps = {
   isOpen: false,
 };
@@ -218,13 +197,6 @@ const NavBar = (props) => (
     <SelectNavBarBasedOnWidth {...props} />
   </ReactResizeDetector>
 );
-
-NavBar.propTypes = {
-  menuData: PropTypes.shape(MenuDataPropTypes),
-  className: PropTypes.string,
-  breakpointUpper: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  themeColor: PropTypes.oneOf(["blue", "white"]),
-};
 
 NavBar.defaultProps = {
   menuData: null,

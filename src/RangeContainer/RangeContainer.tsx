@@ -14,16 +14,20 @@ type RangeContainerProps = {
   endComponent?: React.ReactNode;
   size?: ComponentSize;
   errorMessages?: (string | undefined)[];
+  children?: React.ReactNode;
 };
 
-const RangeContainer: React.FC<React.PropsWithChildren<RangeContainerProps>> = ({
-  labelProps,
+const RangeContainer = ({
   startComponent,
   endComponent,
   errorMessages = [],
+  labelProps = {
+    ...FieldLabelDefaultProps,
+    labelText: "Range",
+  },
   size,
   ...props
-}) => {
+}: RangeContainerProps) => {
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
 
@@ -43,16 +47,6 @@ const RangeContainer: React.FC<React.PropsWithChildren<RangeContainerProps>> = (
       ))}
     </Flex>
   );
-};
-
-RangeContainer.defaultProps = {
-  labelProps: {
-    ...FieldLabelDefaultProps,
-    labelText: "Range",
-  },
-  startComponent: null,
-  endComponent: null,
-  errorMessages: [],
 };
 
 export default RangeContainer;
