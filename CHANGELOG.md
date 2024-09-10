@@ -1,3 +1,10 @@
+## [10.2.11](https://github.com/nulogy/design-system/compare/v10.2.10...v10.2.11) (2024-09-10)
+
+
+### Bug Fixes
+
+* remove defaultProps and propTypes ([#1434](https://github.com/nulogy/design-system/issues/1434)) ([c38bfc6](https://github.com/nulogy/design-system/commit/c38bfc6358e9b01c1c15421e2523c7f8c8bc8e09))
+
 ## [10.2.10](https://github.com/nulogy/design-system/compare/v10.2.9...v10.2.10) (2024-07-24)
 
 
