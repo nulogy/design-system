@@ -69,11 +69,11 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
 );
 
 const Icon = styled(Svg)<IconProps>(
-  space,
   ({ color = "currentColor", size = "24px" }): CSSObject => ({
     minWidth: size,
     color: color,
-  })
+  }),
+  space
 );
 
 const iconSizeRatio = 1.25;
