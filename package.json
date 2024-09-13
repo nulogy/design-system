@@ -1,0 +1,75 @@
+{
+  "name": "@nulogy/components",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "Next version of Nulogy's component library",
+  "keywords": [
+    "design-system",
+    "react",
+    "typescript"
+  ],
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "homepage": "nulogy.design",
+  "bugs": {
+    "url": "https://github.com/nulogy/design-system/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "check-types": "tsc",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "ci": "npm install && npm run build && npm run check-format && npm run check-types",
+    "ci:chromatic": "npm install && npm run build-storybook",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "author": "Nulogy <info@nulogy.com> (https://github.com/nulogy)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nulogy/design-system"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@storybook/addon-essentials": "^8.3.0",
+    "@storybook/addon-interactions": "^8.3.0",
+    "@storybook/addon-links": "^8.3.0",
+    "@storybook/addon-onboarding": "^8.3.0",
+    "@storybook/blocks": "^8.3.0",
+    "@storybook/react": "^8.3.0",
+    "@storybook/react-vite": "^8.3.0",
+    "@storybook/test": "^8.3.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "prettier": "^3.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.3.0",
+    "tsup": "^8.2.4",
+    "typescript": "^5.6.2"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "dependencies": {
+    "@radix-ui/react-navigation-menu": "^1.2.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@react-hook/resize-observer": "^2.0.2",
+    "deepmerge": "^4.3.1",
+    "i18next": "^23.15.1",
+    "react-i18next": "^15.0.1",
+    "styled-components": "^6.1.13"
+  }
+}

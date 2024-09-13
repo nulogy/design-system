@@ -1,0 +1,9 @@
+.idea
+*storybook.log
+*.log
+.DS_Store
+node_modules
+.cache
+coverage
+dist
+.vscode
