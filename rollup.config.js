@@ -32,7 +32,6 @@ const GLOBALS = {
   warning: "warning",
   exenv: "exenv",
   classnames: "t",
-  "react-input-autosize": "AutosizeInput",
   "html-parse-stringify2": "HTML",
   "smoothscroll-polyfill": "smoothscroll",
   "react-fast-compare": "isEqual",
