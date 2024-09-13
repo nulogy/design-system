@@ -1,7 +1,7 @@
-import React, { type ReactNode } from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import styled from 'styled-components';
-import { NAVBAR } from './constants';
+import React, { type ReactNode } from 'react'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import styled from 'styled-components'
+import { NAVBAR } from '../constants'
 
 const Menu = styled.ul(({ theme }) => ({
   display: 'flex',
@@ -18,7 +18,7 @@ const Menu = styled.ul(({ theme }) => ({
   paddingBottom: theme.space.x2,
   padingLeft: theme.space.none,
   paddingRight: theme.space.none,
-}));
+}))
 
 const Link = styled.a(({ theme }) => ({
   textDecoration: 'none',
@@ -33,7 +33,7 @@ const Link = styled.a(({ theme }) => ({
   '&:hover, &:focus': {
     backgroundColor: theme.colors.lightBlue,
   },
-}));
+}))
 
 const Title = styled.p(({ theme }) => ({
   margin: 0,
@@ -41,7 +41,7 @@ const Title = styled.p(({ theme }) => ({
   fontSize: theme.fontSizes.medium,
   fontWeight: theme.fontWeights.medium,
   lineHeight: theme.lineHeights.base,
-}));
+}))
 
 const Description = styled.p(({ theme }) => ({
   color: theme.colors.darkGrey,
@@ -49,7 +49,7 @@ const Description = styled.p(({ theme }) => ({
   fontSize: theme.fontSizes.small,
   fontWeight: theme.fontWeights.normal,
   lineHeight: theme.lineHeights.base,
-}));
+}))
 
 const Item = React.forwardRef<HTMLAnchorElement, React.ComponentPropsWithoutRef<'a'>>(
   ({ children, ...props }, forwardedRef) => (
@@ -62,7 +62,7 @@ const Item = React.forwardRef<HTMLAnchorElement, React.ComponentPropsWithoutRef<
       </NavigationMenu.Link>
     </li>
   ),
-);
+)
 
 const AppSwitcher = Object.assign(
   {},
@@ -73,6 +73,6 @@ const AppSwitcher = Object.assign(
     Title,
     Description,
   },
-);
+)
 
-export default AppSwitcher;
+export default AppSwitcher

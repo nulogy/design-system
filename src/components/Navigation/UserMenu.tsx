@@ -1,7 +1,7 @@
-import * as React from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import styled from 'styled-components';
-import { NAVBAR } from './constants';
+import * as React from 'react'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import styled from 'styled-components'
+import { NAVBAR } from './constants'
 
 export const HorizontalDivider = styled('span')({
   display: 'inline-block',
@@ -10,28 +10,28 @@ export const HorizontalDivider = styled('span')({
   backgroundColor: '#E4E7EB',
   marginTop: 24,
   marginBottom: 24,
-});
+})
 
 type UserMenuProps = {
-  children?: React.ReactNode;
-};
+  children?: React.ReactNode
+}
 
-type UserMenuOptions = UserMenuOption[];
+type UserMenuOptions = UserMenuOption[]
 
 type UserMenuOption = {
-  label: string;
-  key?: string;
-} & (UserMenuButton | UserMenuLink);
+  label: string
+  key?: string
+} & (UserMenuButton | UserMenuLink)
 
 type UserMenuButton = {
-  type: 'button';
-  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Trigger>;
-};
+  type: 'button'
+  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Trigger>
+}
 
 type UserMenuLink = {
-  type: 'link';
-  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Link>;
-};
+  type: 'link'
+  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Link>
+}
 
 export const Options = ({ options }: { options: UserMenuOptions }) => {
   return (
@@ -87,8 +87,8 @@ export const Options = ({ options }: { options: UserMenuOptions }) => {
         )}
       </NavigationMenu.List>
     </NavigationMenu.Sub>
-  );
-};
+  )
+}
 
 export const Header = ({ headerName, headerEmail, ...props }: { headerName: string; headerEmail: string }) => {
   return (
@@ -132,12 +132,12 @@ export const Header = ({ headerName, headerEmail, ...props }: { headerName: stri
         {headerEmail}
       </p>
     </div>
-  );
-};
+  )
+}
 
 export const Content = styled('div')({
   padding: 16,
-});
+})
 
 const UserMenuWrapper = styled.div(({ theme }) => ({
   display: 'flex',
@@ -153,7 +153,7 @@ const UserMenuWrapper = styled.div(({ theme }) => ({
   paddingLeft: theme.space.none,
   paddingRight: theme.space.none,
   overflow: 'hidden',
-}));
+}))
 
 export const UserMenu = Object.assign(
   React.forwardRef<HTMLDivElement, UserMenuProps>(({ children }, forwardedRef) => (
@@ -173,6 +173,6 @@ export const UserMenu = Object.assign(
     ],
     Options,
   },
-);
+)
 
-export default UserMenu;
+export default UserMenu

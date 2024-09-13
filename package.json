@@ -2,7 +2,7 @@
   "name": "@nulogy/components",
   "license": "MIT",
   "version": "1.0.0",
-  "description": "Next version of Nulogy's component library",
+  "description": "Nulogy's design system",
   "keywords": [
     "design-system",
     "react",

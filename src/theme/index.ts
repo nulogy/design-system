@@ -1,4 +1,4 @@
-type Theme = typeof theme;
+type Theme = typeof theme
 
 const theme = {
   colors: {
@@ -116,6 +116,6 @@ const theme = {
     navBar: 900,
     sidebar: 800,
   },
-} as const;
+} as const
 
-export { theme, type Theme };
+export { theme, type Theme }

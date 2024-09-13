@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 function useMoreMenuSize({
   maxMoreMenuSize,
@@ -6,30 +6,30 @@ function useMoreMenuSize({
   growThreshold,
   shrinkThreshold,
 }: {
-  maxMoreMenuSize: number;
-  distance: number;
-  growThreshold: number;
-  shrinkThreshold: number;
+  maxMoreMenuSize: number
+  distance: number
+  growThreshold: number
+  shrinkThreshold: number
 }) {
-  const [moreMenuSize, setMoreMenuSize] = React.useState<number>(0);
+  const [moreMenuSize, setMoreMenuSize] = React.useState<number>(0)
 
   React.useLayoutEffect(() => {
-    if (distance === undefined) return;
+    if (distance === undefined) return
     if (distance > growThreshold) {
-      showLeftMenuElem();
+      showLeftMenuElem()
     } else if (distance < shrinkThreshold) {
-      hideLeftMenuElem();
+      hideLeftMenuElem()
     }
 
     function hideLeftMenuElem() {
-      setMoreMenuSize((prev) => (prev < maxMoreMenuSize ? prev + 1 : prev));
+      setMoreMenuSize((prev) => (prev < maxMoreMenuSize ? prev + 1 : prev))
     }
     function showLeftMenuElem() {
-      setMoreMenuSize((prev) => (prev > 0 ? prev - 1 : prev));
+      setMoreMenuSize((prev) => (prev > 0 ? prev - 1 : prev))
     }
-  }, [distance, growThreshold, maxMoreMenuSize, shrinkThreshold]);
+  }, [distance, growThreshold, maxMoreMenuSize, shrinkThreshold])
 
-  return moreMenuSize;
+  return moreMenuSize
 }
 
-export default useMoreMenuSize;
+export default useMoreMenuSize

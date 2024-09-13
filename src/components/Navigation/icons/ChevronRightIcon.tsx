@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export default function ChevronRightIcon() {
   return (
@@ -10,5 +10,5 @@ export default function ChevronRightIcon() {
         clip-rule="evenodd"
       ></path>
     </svg>
-  );
+  )
 }

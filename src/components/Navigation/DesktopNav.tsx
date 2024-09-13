@@ -1,92 +1,92 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import styled, { type CSSProperties } from 'styled-components';
-import Logo from './logos/Logo';
-import SettingsIcon from './icons/SettingsIcon';
-import SignPostIcon from './icons/SignpostIcon';
-import SearchIcon from './icons/SearchIcon';
-import HelpIcon from './icons/HelpIcon';
-import CustomLogo from './logos/CustomLogo';
-import { type MenuItem, type MenuItems, NavigationMenuItem } from './NavigationMenuItem';
-import UserMenu, { HorizontalDivider } from './UserMenu';
-import { NulogyAppSwitcher } from './MobileNav';
-import { NAVBAR } from './constants';
-import ChevronDownIcon from "./icons/ChevronDownIcon";
+import React, { useLayoutEffect, useRef, useState } from 'react'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import styled, { type CSSProperties } from 'styled-components'
+import Logo from './logos/Logo'
+import SettingsIcon from './icons/SettingsIcon'
+import SignPostIcon from './icons/SignpostIcon'
+import SearchIcon from './icons/SearchIcon'
+import HelpIcon from './icons/HelpIcon'
+import CustomLogo from './logos/CustomLogo'
+import { type MenuItem, type MenuItems, NavigationMenuItem } from './NavigationMenuItem'
+import UserMenu, { HorizontalDivider } from './UserMenu'
+import { NulogyAppSwitcher } from './MobileNav'
+import { NAVBAR } from './constants'
+import ChevronDownIcon from './icons/ChevronDownIcon'
 
 // Here is what is left:
 // Loading the page, the menu is not working like it should
 // likely because react renders twice in dev mode
 
 function deleteLastElement<T>(array: T[]) {
-  return array.slice(0, -1);
+  return array.slice(0, -1)
 }
 
 function getLastElement<T>(array: T[]) {
-  return array[array.length - 1];
+  return array[array.length - 1]
 }
 
 const DesktopNav = ({ primaryMenu, userMenuInputs }: { primaryMenu: MenuItems; userMenuInputs?: React.ReactNode }) => {
   const [hiddenMenuItem, setHiddenMenuItem] = useState<MenuItem>({
     label: '',
     type: 'button',
-  });
+  })
 
-  const primaryMenuRef = useRef<HTMLUListElement>(null);
-  const secondaryMenuRef = useRef<HTMLUListElement | null>(null);
+  const primaryMenuRef = useRef<HTMLUListElement>(null)
+  const secondaryMenuRef = useRef<HTMLUListElement | null>(null)
 
-  const hiddenButtonRef = useRef<HTMLLIElement | null>(null);
+  const hiddenButtonRef = useRef<HTMLLIElement | null>(null)
 
-  const [menuItems, setMenuItems] = useState<MenuItems>(primaryMenu);
-  const [hiddenMenu, setHiddenMenu] = useState<MenuItems>([]);
+  const [menuItems, setMenuItems] = useState<MenuItems>(primaryMenu)
+  const [hiddenMenu, setHiddenMenu] = useState<MenuItems>([])
 
   const moreMenu: MenuItem = {
     label: 'More',
     type: 'button',
     items: hiddenMenu,
-  };
+  }
 
   const calculateDistance = () => {
     if (primaryMenuRef.current && secondaryMenuRef.current && hiddenButtonRef.current) {
-      const primaryMenuRect = primaryMenuRef.current.getBoundingClientRect();
-      const secondaryMenuRect = secondaryMenuRef.current.getBoundingClientRect();
-      const hiddenButtonWidth = hiddenButtonRef.current.getBoundingClientRect().width;
+      const primaryMenuRect = primaryMenuRef.current.getBoundingClientRect()
+      const secondaryMenuRect = secondaryMenuRef.current.getBoundingClientRect()
+      const hiddenButtonWidth = hiddenButtonRef.current.getBoundingClientRect().width
 
-      const distance = secondaryMenuRect.left - primaryMenuRect.right;
+      const distance = secondaryMenuRect.left - primaryMenuRect.right
 
       if (distance < NAVBAR.minDistanceBetweenMenus) {
         // going down
         if (menuItems.length) {
-          const item = getLastElement(menuItems);
-          setMenuItems(deleteLastElement(menuItems));
+          const item = getLastElement(menuItems)
+          setMenuItems(deleteLastElement(menuItems))
 
           if (item) {
-            setHiddenMenu((prevState) => [...prevState, item]);
-            setHiddenMenuItem(item);
+            setHiddenMenu((prevState) => [...prevState, item])
+            setHiddenMenuItem(item)
           }
         }
       } else if (Math.floor(distance - hiddenButtonWidth - 8) > NAVBAR.minDistanceBetweenMenus) {
         // going up
         if (hiddenMenu.length > 0) {
-          const lastItem = getLastElement(hiddenMenu);
-          setHiddenMenu(deleteLastElement(hiddenMenu));
+          const lastItem = getLastElement(hiddenMenu)
+          setHiddenMenu(deleteLastElement(hiddenMenu))
 
           if (lastItem) {
-            setMenuItems((prevState) => [...prevState, lastItem]);
+            setMenuItems((prevState) => [...prevState, lastItem])
           }
         }
       }
     }
-  };
+  }
 
   useLayoutEffect(() => {
-    calculateDistance(); // Initial calculation
+    calculateDistance() // Initial calculation
 
-    window.addEventListener('resize', calculateDistance);
+    window.addEventListener('resize', calculateDistance)
 
     return () => {
-      window.removeEventListener('resize', calculateDistance);
-    };
-  }, [calculateDistance]);
+      window.removeEventListener('resize', calculateDistance)
+    }
+  }, [calculateDistance])
 
   return (
     <NavigationMenuRoot
@@ -237,7 +237,7 @@ const DesktopNav = ({ primaryMenu, userMenuInputs }: { primaryMenu: MenuItems; u
                       type: 'button',
                       props: {
                         onClick: () => {
-                          return undefined;
+                          return undefined
                         },
                       },
                     },
@@ -254,8 +254,8 @@ const DesktopNav = ({ primaryMenu, userMenuInputs }: { primaryMenu: MenuItems; u
         </NavigationMenu.Item>
       </NavigationMenuList>
     </NavigationMenuRoot>
-  );
-};
+  )
+}
 
 const VerticalDivider = styled('span')({
   display: 'inline-block',
@@ -263,7 +263,7 @@ const VerticalDivider = styled('span')({
   width: 1,
   margin: '0px 16px',
   backgroundColor: '#E4E7EB',
-});
+})
 
 export const NavigationMenuRoot = styled(NavigationMenu.Root)({
   display: 'block',
@@ -271,7 +271,7 @@ export const NavigationMenuRoot = styled(NavigationMenu.Root)({
   '& > div': {
     display: 'flex',
   },
-});
+})
 
 export const NavigationMenuList = styled(NavigationMenu.List)({
   display: 'flex',
@@ -281,7 +281,7 @@ export const NavigationMenuList = styled(NavigationMenu.List)({
   listStyle: 'none',
   margin: 0,
   gap: 8,
-});
+})
 
 const itemStyles: CSSProperties = {
   padding: '8px',
@@ -294,7 +294,7 @@ const itemStyles: CSSProperties = {
   color: '#434D59',
   transition: 'background-color 250ms ease',
   whiteSpace: 'nowrap',
-};
+}
 
 export const NavigationMenuTrigger = styled(NavigationMenu.Trigger)({
   all: 'unset',
@@ -306,7 +306,7 @@ export const NavigationMenuTrigger = styled(NavigationMenu.Trigger)({
   gap: 2,
   '&:focus': { boxShadow: `0px 0px 5px 0px rgba(33, 107, 235, 0.90)` },
   '&:hover': { backgroundColor: '#E1EBFA' },
-});
+})
 
 export const NavigationMenuLink = styled(NavigationMenu.Link)({
   ...itemStyles,
@@ -316,6 +316,6 @@ export const NavigationMenuLink = styled(NavigationMenu.Link)({
   lineHeight: '16px',
   '&:focus': { boxShadow: `0px 0px 5px 0px rgba(33, 107, 235, 0.90)` },
   '&:hover': { backgroundColor: '#E1EBFA' },
-});
+})
 
-export default DesktopNav;
+export default DesktopNav

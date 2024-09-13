@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function CustomLogo() {
   return (
@@ -17,5 +17,5 @@ export default function CustomLogo() {
         </clipPath>
       </defs>
     </svg>
-  );
+  )
 }

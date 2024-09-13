@@ -1,8 +1,8 @@
-import * as React from 'react';
-import type { MenuItems } from '../NavigationMenuItem';
+import * as React from 'react'
+import type { MenuItems } from '../NavigationMenuItem'
 
 function Link(props: { href: string; body: string }) {
-  return <a href={props.href}>{props.body}</a>;
+  return <a href={props.href}>{props.body}</a>
 }
 
 export const menuItems: MenuItems = [
@@ -91,4 +91,4 @@ export const menuItems: MenuItems = [
     label: 'Imports and exports',
     type: 'link',
   },
-];
+]

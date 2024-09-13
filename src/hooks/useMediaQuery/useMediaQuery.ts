@@ -1,37 +1,37 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
 function useMediaQuery(query: string): boolean {
-  const isUnsupported = typeof window === 'undefined' || typeof window.matchMedia === 'undefined';
+  const isUnsupported = typeof window === 'undefined' || typeof window.matchMedia === 'undefined'
 
   const getMatches = (query: string): boolean => {
     if (isUnsupported) {
-      return false;
+      return false
     }
 
-    return window.matchMedia(query).matches;
-  };
+    return window.matchMedia(query).matches
+  }
 
-  const [matches, setMatches] = useState<boolean>(getMatches(query));
+  const [matches, setMatches] = useState<boolean>(getMatches(query))
 
   function handleChange() {
-    setMatches(getMatches(query));
+    setMatches(getMatches(query))
   }
 
   useEffect(() => {
-    if (isUnsupported) return;
+    if (isUnsupported) return
 
-    const matchMedia = window.matchMedia(query);
+    const matchMedia = window.matchMedia(query)
 
-    handleChange();
+    handleChange()
 
-    matchMedia.addEventListener('change', handleChange);
+    matchMedia.addEventListener('change', handleChange)
 
     return () => {
-      matchMedia.removeEventListener('change', handleChange);
-    };
-  }, [query]);
+      matchMedia.removeEventListener('change', handleChange)
+    }
+  }, [query])
 
-  return matches;
+  return matches
 }
 
-export default useMediaQuery;
+export default useMediaQuery

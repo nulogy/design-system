@@ -1,7 +1,7 @@
-import * as React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
-import Nav from '../Nav';
-import { menuItems } from './fixtures';
+import * as React from 'react'
+import type { Meta, StoryObj } from '@storybook/react'
+import Nav from '../Nav'
+import { menuItems } from './fixtures'
 
 const meta = {
   title: 'Components/Navigation',
@@ -21,13 +21,13 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof Nav>;
+} satisfies Meta<typeof Nav>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
     menuItems: menuItems,
   },
-};
+}

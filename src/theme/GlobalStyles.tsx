@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { createGlobalStyle } from 'styled-components';
-import React from 'react';
-import type { NDSProviderProps } from './NDSProvider';
+import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
+import React from 'react'
+import type { NDSProviderProps } from './NDSProvider'
 
 export default function GlobalStyles({ theme, locale, disableGlobalStyles, children }: Omit<NDSProviderProps, 'size'>) {
   return !disableGlobalStyles ? (
@@ -13,13 +13,13 @@ export default function GlobalStyles({ theme, locale, disableGlobalStyles, child
     </>
   ) : (
     children
-  );
+  )
 }
 
 const TextStyles = styled.div<{
-  locale?: string;
+  locale?: string
 }>(({ theme, locale }) => {
-  const fontFamily = locale === 'zh_CN' ? theme.fonts.sc : theme.fonts.base;
+  const fontFamily = locale === 'zh_CN' ? theme.fonts.sc : theme.fonts.base
 
   return {
     color: theme.colors.black,
@@ -44,13 +44,13 @@ const TextStyles = styled.div<{
     textarea: {
       fontFamily,
     },
-  };
-});
+  }
+})
 
 const Reset = createGlobalStyle(() => {
   return {
     body: {
       margin: 0,
     },
-  };
-});
+  }
+})

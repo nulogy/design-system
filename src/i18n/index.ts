@@ -1,13 +1,13 @@
-import i18n from 'i18next';
-import de_DE from './locales/de_DE.json';
-import en_US from './locales/en_US.json';
-import es_MX from './locales/es_MX.json';
-import fr_FR from './locales/fr_FR.json';
-import nl_NL from './locales/nl_NL.json';
-import pl_PL from './locales/pl_PL.json';
-import pt_BR from './locales/pt_BR.json';
-import ro_RO from './locales/ro_RO.json';
-import zh_CN from './locales/zh_CN.json';
+import i18n from 'i18next'
+import de_DE from './locales/de_DE.json'
+import en_US from './locales/en_US.json'
+import es_MX from './locales/es_MX.json'
+import fr_FR from './locales/fr_FR.json'
+import nl_NL from './locales/nl_NL.json'
+import pl_PL from './locales/pl_PL.json'
+import pt_BR from './locales/pt_BR.json'
+import ro_RO from './locales/ro_RO.json'
+import zh_CN from './locales/zh_CN.json'
 
 const resources = {
   de_DE: {
@@ -37,7 +37,7 @@ const resources = {
   zh_CN: {
     nds: zh_CN,
   },
-};
+}
 
 i18n.init({
   ns: ['nds'],
@@ -48,6 +48,6 @@ i18n.init({
   interpolation: {
     escapeValue: false,
   },
-});
+})
 
-export default i18n;
+export default i18n

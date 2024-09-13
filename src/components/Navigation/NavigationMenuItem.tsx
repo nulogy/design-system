@@ -1,38 +1,38 @@
-import React, { type CSSProperties, type ReactNode } from 'react';
-import styled from 'styled-components';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { NavigationMenuLink, NavigationMenuTrigger } from './DesktopNav';
-import type { NavigationMenuItemProps } from '@radix-ui/react-navigation-menu';
-import ChevronDownIcon from './icons/ChevronDownIcon';
-import ChevronRightIcon from './icons/ChevronRightIcon';
+import React, { type CSSProperties, type ReactNode } from 'react'
+import styled from 'styled-components'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import { NavigationMenuLink, NavigationMenuTrigger } from './DesktopNav'
+import type { NavigationMenuItemProps } from '@radix-ui/react-navigation-menu'
+import ChevronDownIcon from './icons/ChevronDownIcon'
+import ChevronRightIcon from './icons/ChevronRightIcon'
 
-export type MenuItems = MenuItem[];
+export type MenuItems = MenuItem[]
 
 export type MenuItem = {
-  label: string;
-} & (MenuItemButton | MenuItemLink);
+  label: string
+} & (MenuItemButton | MenuItemLink)
 
 type CustomProps = {
-  component?: (...props: unknown[]) => ReactNode;
-  props?: Record<string, unknown>;
-};
+  component?: (...props: unknown[]) => ReactNode
+  props?: Record<string, unknown>
+}
 
 type MenuItemButton = {
-  type: 'button';
-  items?: MenuItem[];
-} & (CustomProps | ButtonProps);
+  type: 'button'
+  items?: MenuItem[]
+} & (CustomProps | ButtonProps)
 
 type ButtonProps = {
-  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Trigger>;
-};
+  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Trigger>
+}
 
 type MenuItemLink = {
-  type: 'link';
-} & (CustomProps | LinkProps);
+  type: 'link'
+} & (CustomProps | LinkProps)
 
 type LinkProps = {
-  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Link>;
-};
+  props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Link>
+}
 
 const NavigationSubMenuContent = styled(NavigationMenu.Content)({
   position: 'absolute',
@@ -51,7 +51,7 @@ const NavigationSubMenuContent = styled(NavigationMenu.Content)({
   '& > div': {
     width: '100%',
   },
-});
+})
 
 const SubMenuItemLink = styled(NavigationMenu.Link)({
   textDecoration: 'none',
@@ -73,7 +73,7 @@ const SubMenuItemLink = styled(NavigationMenu.Link)({
   '&:visited': {
     color: 'inherit',
   },
-});
+})
 
 const SubMenuItemButton = styled(NavigationMenu.Trigger)({
   background: 'none',
@@ -98,11 +98,11 @@ const SubMenuItemButton = styled(NavigationMenu.Trigger)({
     backgroundColor: '#E1EBFA',
     color: '#00438F',
   },
-});
+})
 
 interface Props extends NavigationMenuItemProps {
-  item: MenuItem;
-  style?: CSSProperties;
+  item: MenuItem
+  style?: CSSProperties
 }
 
 export const NavigationMenuItem = React.forwardRef<HTMLLIElement, Props>(({ item, style, ...props }, forwardedRef) => (
@@ -142,7 +142,7 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, Props>(({ item
       </NavigationMenuLink>
     )}
   </NavigationMenu.Item>
-));
+))
 
 const NavigationMenuSubItem = ({ item }: { item: MenuItem }) => {
   return (
@@ -181,5 +181,5 @@ const NavigationMenuSubItem = ({ item }: { item: MenuItem }) => {
         )}
       </NavigationMenu.Item>
     </>
-  );
-};
+  )
+}

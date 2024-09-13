@@ -1,7 +1,7 @@
-import * as React from 'react';
-import type { Preview } from '@storybook/react';
-import NDSProvider from '../src/theme/NDSProvider';
-import { theme } from '../src/theme';
+import * as React from 'react'
+import type { Preview } from '@storybook/react'
+import NDSProvider from '../src/theme/NDSProvider'
+import { theme } from '../src/theme'
 
 const VIEW_PORTS = {
   small: {
@@ -32,7 +32,7 @@ const VIEW_PORTS = {
       height: '100%',
     },
   },
-};
+}
 
 const preview: Preview = {
   parameters: {
@@ -53,6 +53,6 @@ const preview: Preview = {
       </NDSProvider>
     ),
   ],
-};
+}
 
-export default preview;
+export default preview

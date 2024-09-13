@@ -1,10 +1,10 @@
-import React from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import AppSwitcher from './AppSwitcher';
-import { type MenuItem, type MenuItems } from './NavigationMenuItem';
-import { NavigationMenuLink, NavigationMenuList, NavigationMenuRoot, NavigationMenuTrigger } from './DesktopNav';
-import UserMenu, { HorizontalDivider } from './UserMenu';
-import Logo from './logos/Logo';
+import React from 'react'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import AppSwitcher from './AppSwitcher/AppSwitcher'
+import { type MenuItem, type MenuItems } from './NavigationMenuItem'
+import { NavigationMenuLink, NavigationMenuList, NavigationMenuRoot, NavigationMenuTrigger } from './DesktopNav'
+import UserMenu, { HorizontalDivider } from './UserMenu'
+import Logo from './logos/Logo'
 
 export const NulogyAppSwitcher = () => (
   <AppSwitcher.Menu>
@@ -32,15 +32,15 @@ export const NulogyAppSwitcher = () => (
       <AppSwitcher.Description>Build high-quality, accessible design systems and web apps.</AppSwitcher.Description>
     </AppSwitcher.Item>
   </AppSwitcher.Menu>
-);
+)
 
 const MobileNav = ({
   primaryMenu,
   children,
 }: // secondaryMenu,
 {
-  primaryMenu: MenuItems;
-  children?: React.ReactNode;
+  primaryMenu: MenuItems
+  children?: React.ReactNode
   // secondaryMenu: unknown;
 }) => {
   return (
@@ -134,7 +134,7 @@ const MobileNav = ({
                       type: 'button',
                       props: {
                         onClick: () => {
-                          return undefined;
+                          return undefined
                         },
                       },
                     },
@@ -151,8 +151,8 @@ const MobileNav = ({
         </NavigationMenu.Item>
       </NavigationMenuList>
     </NavigationMenuRoot>
-  );
-};
+  )
+}
 
 const MobileNavigationMenu = ({ menu }: { menu: MenuItems }) => {
   return (
@@ -161,8 +161,8 @@ const MobileNavigationMenu = ({ menu }: { menu: MenuItems }) => {
         <MobileMenuItem menuItem={item} key={item.label} />
       ))}
     </>
-  );
-};
+  )
+}
 
 const MobileMenuItem = ({ menuItem }: { menuItem: MenuItem }) => {
   if (menuItem.type === 'button') {
@@ -188,7 +188,7 @@ const MobileMenuItem = ({ menuItem }: { menuItem: MenuItem }) => {
             <MobileNavigationMenu menu={menuItem.items} />
           </div>
         </>
-      );
+      )
     } else {
       return (
         <NavigationMenu.Trigger
@@ -215,7 +215,7 @@ const MobileMenuItem = ({ menuItem }: { menuItem: MenuItem }) => {
         >
           {menuItem.label}
         </NavigationMenu.Trigger>
-      );
+      )
     }
   } else {
     return (
@@ -238,8 +238,8 @@ const MobileMenuItem = ({ menuItem }: { menuItem: MenuItem }) => {
       >
         {menuItem.label}
       </NavigationMenu.Link>
-    );
+    )
   }
-};
+}
 
-export default MobileNav;
+export default MobileNav

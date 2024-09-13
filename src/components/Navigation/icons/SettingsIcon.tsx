@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export default function SettingsIcon() {
   return (
@@ -8,5 +8,5 @@ export default function SettingsIcon() {
         fill="#434D59"
       />
     </svg>
-  );
+  )
 }
