@@ -16,7 +16,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    "jsx": "react",
+    "jsx": "react-jsx",
     "noEmit": true,
     "module": "Preserve"
   }

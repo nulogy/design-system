@@ -1,4 +1,4 @@
-name: 'Chromatic'
+name: "Chromatic"
 
 on: push
 
@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
       - name: Install dependencies
         run: npm run ci:chromatic
       - name: Run Chromatic

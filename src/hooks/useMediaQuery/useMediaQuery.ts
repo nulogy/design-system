@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
 function useMediaQuery(query: string): boolean {
-  const isUnsupported = typeof window === 'undefined' || typeof window.matchMedia === 'undefined'
+  const isUnsupported = typeof window === "undefined" || typeof window.matchMedia === "undefined"
 
   const getMatches = (query: string): boolean => {
     if (isUnsupported) {
@@ -24,10 +24,10 @@ function useMediaQuery(query: string): boolean {
 
     handleChange()
 
-    matchMedia.addEventListener('change', handleChange)
+    matchMedia.addEventListener("change", handleChange)
 
     return () => {
-      matchMedia.removeEventListener('change', handleChange)
+      matchMedia.removeEventListener("change", handleChange)
     }
   }, [query])
 

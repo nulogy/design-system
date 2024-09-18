@@ -1,8 +1,8 @@
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext } from "react"
 
-const DEFAULT_SIZE = 'medium'
+const DEFAULT_SIZE = "medium"
 
-type ComponentSize = 'medium' | 'large'
+type ComponentSize = "medium" | "large"
 
 type ComponentSizeContextValue = {
   size?: ComponentSize

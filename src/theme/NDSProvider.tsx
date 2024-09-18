@@ -1,43 +1,29 @@
-import React, { useEffect } from 'react'
-import { ThemeProvider } from 'styled-components'
-import { I18nextProvider } from 'react-i18next'
-import { theme as defaultTheme, type Theme } from '.'
-import i18n from '../i18n'
-import { LocaleProvider } from '../i18n/LocaleContext'
-import { ComponentSizeContextProvider, type ComponentSize } from './ComponentSize'
-import GlobalStyles from './GlobalStyles'
-import { mergeTheme } from './mergeTheme'
+import React, { useEffect } from "react"
+import { I18nextProvider } from "react-i18next"
+import i18n from "../i18n"
+import { LocaleProvider } from "../i18n/LocaleContext"
+import { ComponentSizeContextProvider, type ComponentSize } from "./ComponentSize"
 
 export type NDSProviderProps = {
-  theme?: Partial<Theme>
   locale?: string
-  disableGlobalStyles?: boolean
   children?: React.ReactNode
   size?: ComponentSize
 }
 
-const NDSProvider = ({
-  theme: userProvidedTheme = {},
-  disableGlobalStyles = false,
-  locale,
-  size,
-  children,
-}: NDSProviderProps) => {
-  const theme = mergeTheme(defaultTheme, userProvidedTheme)
-
+const NDSProvider = ({ locale, size, children }: NDSProviderProps) => {
   useEffect(() => {
     i18n.changeLanguage(locale)
   }, [locale])
 
+  const fontFamily = locale === "zh_CN" ? "font-sc" : "font-sans"
+
   return (
     <LocaleProvider locale={locale}>
-      <ComponentSizeContextProvider size={size}>
-        <GlobalStyles theme={theme} locale={locale} disableGlobalStyles={disableGlobalStyles}>
-          <I18nextProvider i18n={i18n}>
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
-          </I18nextProvider>
-        </GlobalStyles>
-      </ComponentSizeContextProvider>
+      <div className={fontFamily}>
+        <ComponentSizeContextProvider size={size}>
+          <I18nextProvider i18n={i18n}>{children}</I18nextProvider>
+        </ComponentSizeContextProvider>
+      </div>
     </LocaleProvider>
   )
 }

@@ -1,35 +1,35 @@
-import * as React from 'react'
-import type { Preview } from '@storybook/react'
-import NDSProvider from '../src/theme/NDSProvider'
-import { theme } from '../src/theme'
+import type { Preview } from "@storybook/react"
+import config from "../src/theme/config"
+import "../src/theme/output.css"
+import NDSProvider from "../src/theme/NDSProvider"
 
 const VIEW_PORTS = {
   small: {
-    name: 'Small',
+    name: "Small",
     styles: {
-      width: theme.breakpoints.small,
-      height: '100%',
+      width: config.theme.screens.sm,
+      height: "100%",
     },
   },
   medium: {
-    name: 'Medium',
+    name: "Medium",
     styles: {
-      width: theme.breakpoints.medium,
-      height: '100%',
+      width: config.theme.screens.md,
+      height: "100%",
     },
   },
   large: {
-    name: 'Large',
+    name: "Large",
     styles: {
-      width: theme.breakpoints.large,
-      height: '100%',
+      width: config.theme.screens.lg,
+      height: "100%",
     },
   },
   extraLarge: {
-    name: 'Extra Large',
+    name: "Extra Large",
     styles: {
-      width: theme.breakpoints.extraLarge,
-      height: '100%',
+      width: config.theme.screens.xl,
+      height: "100%",
     },
   },
 }
