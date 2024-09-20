@@ -1,9 +1,19 @@
-import React from "react";
-import { Box } from "../Box";
-import { BoxProps } from "../Box/Box";
+import styled from "styled-components";
+import { addStyledProps, StyledProps } from "../StyledProps";
 
-const Divider = ({ borderColor = "lightGrey", ...props }: BoxProps) => (
-  <Box as="hr" borderTop="1px solid" borderColor={borderColor} {...props} />
+type Props = StyledProps;
+
+const Divider = styled.div<Props>(
+  ({ theme, color }) => ({
+    display: "flex",
+    marginTop: theme.space.x2,
+    marginBottom: theme.space.x2,
+    marginLeft: "0",
+    marginRight: "0",
+    borderBottom: "1px solid",
+    borderColor: color ? color : theme.colors.lightGrey,
+  }),
+  addStyledProps
 );
 
 export default Divider;
