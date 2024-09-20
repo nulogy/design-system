@@ -3,8 +3,8 @@ import { Slot } from "@radix-ui/react-slot"
 import Icon from "../icon/Icon"
 import { type VariantProps } from "tailwind-variants"
 import { tv } from "../../theme/tailwind-variants"
-import { type ComponentSize, useComponentSize } from "../../theme/ComponentSize"
 import { cx } from "../../utils/cx"
+import { type ComponentSize, useComponentSize } from "../../providers/component-size"
 
 const buttonVariants = tv({
   base: [

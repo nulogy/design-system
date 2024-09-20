@@ -8,3 +8,4 @@ coverage
 dist
 .vscode
 output.css
+storybook-static

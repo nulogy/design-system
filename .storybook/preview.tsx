@@ -1,34 +1,34 @@
 import type { Preview } from "@storybook/react"
-import config from "../src/theme/config"
-import "../src/theme/output.css"
-import NDSProvider from "../src/theme/NDSProvider"
+import preset from "../src/theme/tailwind-preset"
+import "../src/theme/main.css"
+import NDSProvider from "../src/providers/nds-provider"
 
 const VIEW_PORTS = {
   small: {
     name: "Small",
     styles: {
-      width: config.theme.screens.sm,
+      width: preset.theme.screens.sm,
       height: "100%",
     },
   },
   medium: {
     name: "Medium",
     styles: {
-      width: config.theme.screens.md,
+      width: preset.theme.screens.md,
       height: "100%",
     },
   },
   large: {
     name: "Large",
     styles: {
-      width: config.theme.screens.lg,
+      width: preset.theme.screens.lg,
       height: "100%",
     },
   },
   extraLarge: {
     name: "Extra Large",
     styles: {
-      width: config.theme.screens.xl,
+      width: preset.theme.screens.xl,
       height: "100%",
     },
   },
