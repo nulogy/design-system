@@ -448,7 +448,14 @@ export const WithHelpText = () => {
   );
 
   return (
-    <Sidebar hideCloseButton top={0} height="100%" isOpen title="With help text" helpText={helpText}>
+    <Sidebar
+      footer={<PrimaryButton>Apply</PrimaryButton>}
+      top={0}
+      height="100%"
+      isOpen
+      title="With help text"
+      helpText={helpText}
+    >
       <Textarea
         value={helpText}
         labelText="Help Text"

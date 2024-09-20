@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 import { IconicButton } from "../Button";
-import { Heading3, Text } from "../Type";
+import { Heading2, Text } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
 import { PreventBodyElementScrolling } from "../utils";
@@ -170,6 +170,7 @@ function Sidebar({
       )}
       <AnimatedBox
         role="dialog"
+        paddingX="x1"
         bg="white"
         display="flex"
         flexDirection="column"
@@ -189,6 +190,36 @@ function Sidebar({
         {...props}
       >
         <Flex
+          flexDirection="column"
+          p="x2"
+          borderBottomWidth="1px"
+          borderBottomStyle="solid"
+          borderBottomColor="lightGrey"
+        >
+          <Flex flexDirection="column" gap="x1">
+            <Flex justifyContent="space-between" alignItems="flex-start">
+              {title && (
+                <Flex alignItems="center" height="100%">
+                  <Heading2 mb={0}>{title}</Heading2>
+                </Flex>
+              )}
+              {!hideCloseButton && (
+                <Box marginLeft="x2">
+                  <IconicButton
+                    type="button"
+                    ref={closeButton}
+                    icon="close"
+                    onClick={onClose}
+                    data-testid={closeButtonTestId}
+                    aria-label={closeButtonAriaLabel || t("close")}
+                  />
+                </Box>
+              )}
+            </Flex>
+            {renderHelpText ? renderHelpText() : helpText && <Text color="midGrey">{helpText}</Text>}
+          </Flex>
+        </Flex>
+        <Flex
           p={p}
           maxHeight="100%"
           overflow="auto"
@@ -196,37 +227,6 @@ function Sidebar({
           flexDirection="column"
           style={{ overflowBehaviour: "contain" } as any}
         >
-          <Flex flexDirection="column" pb="x3">
-            <Flex flexDirection="column" pb="x2">
-              <Flex justifyContent="space-between" alignItems="flex-start">
-                {title && (
-                  <Flex alignItems="center" height="100%">
-                    <Heading3 mb={0}>{title}</Heading3>
-                  </Flex>
-                )}
-                {!hideCloseButton && (
-                  <Box marginLeft="x2">
-                    <IconicButton
-                      type="button"
-                      ref={closeButton}
-                      icon="close"
-                      onClick={onClose}
-                      data-testid={closeButtonTestId}
-                      aria-label={closeButtonAriaLabel || t("close")}
-                    />
-                  </Box>
-                )}
-              </Flex>
-              {renderHelpText
-                ? renderHelpText()
-                : helpText && (
-                    <Text pt="x1" color="midGrey">
-                      {helpText}
-                    </Text>
-                  )}
-            </Flex>
-            <Divider m="0 -8px" width="calc(100% + 16px)" />
-          </Flex>
           <AnimatedBox
             variants={childVariants}
             animate={isOpen ? "open" : "closed"}
