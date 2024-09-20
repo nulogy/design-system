@@ -1,3 +1,10 @@
+## [10.2.12](https://github.com/nulogy/design-system/compare/v10.2.11...v10.2.12) (2024-09-20)
+
+
+### Bug Fixes
+
+* Correct padding in sidebar header and footer ([#1441](https://github.com/nulogy/design-system/issues/1441)) ([478c0b2](https://github.com/nulogy/design-system/commit/478c0b2fc65bd2c05f8271619476ff81cb6fe757))
+
 ## [10.2.11](https://github.com/nulogy/design-system/compare/v10.2.10...v10.2.11) (2024-09-10)
 
 
