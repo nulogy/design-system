@@ -9,7 +9,7 @@ This is a guide for Nulogy employees who wish to contribute to the Design System
 
 ### Cloning the repo
 
-1. In the directory you want to install the design system, run `git clone https://github.com/nulogy/design-system/ && cd design-system`
+1. In the directory you want to install the design system, run `git clone git@github.com:nulogy/design-system.git && cd design-system`
 2. Run `yarn` to install dependencies
 3. Run `yarn build` to build the components for the first time
 
