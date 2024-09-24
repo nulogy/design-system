@@ -1,45 +1,18 @@
 import React from "react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
-import AppSwitcher from "./AppSwitcher/AppSwitcher"
-import { type MenuItem, type MenuItems } from "./NavigationMenuItem"
-import { NavigationMenuLink, NavigationMenuList, NavigationMenuRoot, NavigationMenuTrigger } from "./DesktopNav"
-import UserMenu, { HorizontalDivider } from "./UserMenu"
-import Logo from "./logos/Logo"
-
-export const NulogyAppSwitcher = () => (
-  <AppSwitcher.Menu>
-    <AppSwitcher.Item href="/">
-      <AppSwitcher.Title>Connections</AppSwitcher.Title>
-      <AppSwitcher.Description>Multi-tiered bandwidth-monitored process improvement</AppSwitcher.Description>
-    </AppSwitcher.Item>
-    <AppSwitcher.Item href="/">
-      <AppSwitcher.Title>Digital quality control</AppSwitcher.Title>
-      <AppSwitcher.Description>Cloned global attitude fully-configurable motivating support</AppSwitcher.Description>
-    </AppSwitcher.Item>
-    <AppSwitcher.Item href="/">
-      <AppSwitcher.Title>Production scheduling</AppSwitcher.Title>
-      <AppSwitcher.Description>
-        Assimilated 24 hour capability operative demand-driven model object-based zero tolerance model
-        fully-configurable regional analyzer
-      </AppSwitcher.Description>
-    </AppSwitcher.Item>
-    <AppSwitcher.Item href="/">
-      <AppSwitcher.Title>Introduction</AppSwitcher.Title>
-      <AppSwitcher.Description>Build high-quality, accessible design systems and web apps.</AppSwitcher.Description>
-    </AppSwitcher.Item>
-    <AppSwitcher.Item href="/">
-      <AppSwitcher.Title>Introduction</AppSwitcher.Title>
-      <AppSwitcher.Description>Build high-quality, accessible design systems and web apps.</AppSwitcher.Description>
-    </AppSwitcher.Item>
-  </AppSwitcher.Menu>
-)
+import type { MenuItem, MenuItems } from "./menu-item"
+import { NavigationMenuLink, NavigationMenuList, NavigationMenuRoot, NavigationMenuTrigger } from "./desktop-navigation"
+import Logo from "../logos/NulogyLogo"
+import { HorizontalDivider, UserMenu } from "./user-menu"
 
 const MobileNav = ({
   primaryMenu,
+  appSwitcher,
   children,
 }: // secondaryMenu,
 {
   primaryMenu: MenuItems
+  appSwitcher: React.ReactNode
   children?: React.ReactNode
   // secondaryMenu: unknown;
 }) => {
@@ -75,7 +48,7 @@ const MobileNav = ({
             onPointerLeave={(event) => event.preventDefault()}
             style={{ position: "absolute", top: "calc(100% + 8px)" }}
           >
-            <NulogyAppSwitcher />
+            {appSwitcher}
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>

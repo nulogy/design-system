@@ -1,37 +1,30 @@
-import React, { type CSSProperties, type ReactNode } from "react"
+import React, { type CSSProperties } from "react"
 import styled from "styled-components"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
-import { NavigationMenuLink, NavigationMenuTrigger } from "./DesktopNav"
 import type { NavigationMenuItemProps } from "@radix-ui/react-navigation-menu"
-import ChevronDownIcon from "./icons/ChevronDownIcon"
-import ChevronRightIcon from "./icons/ChevronRightIcon"
+import { NavigationMenuLink, NavigationMenuTrigger } from "./desktop-navigation"
+import { ChevronDownIcon, ChevronRightIcon } from "@radix-ui/react-icons"
 
 export type MenuItems = MenuItem[]
 
 export type MenuItem = {
   label: string
-} & (MenuItemButton | MenuItemLink)
-
-type CustomProps = {
-  component?: (...props: unknown[]) => ReactNode
-  props?: Record<string, unknown>
-}
+} & (MenuItemButton | MenuItemLink | MenuItemFragment)
 
 type MenuItemButton = {
   type: "button"
   items?: MenuItem[]
-} & (CustomProps | ButtonProps)
-
-type ButtonProps = {
   props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Trigger>
 }
 
 type MenuItemLink = {
   type: "link"
-} & (CustomProps | LinkProps)
-
-type LinkProps = {
   props?: React.ComponentPropsWithoutRef<typeof NavigationMenu.Link>
+}
+
+type MenuItemFragment = {
+  type: "fragment"
+  items: MenuItem[]
 }
 
 const NavigationSubMenuContent = styled(NavigationMenu.Content)({
@@ -107,7 +100,7 @@ interface Props extends NavigationMenuItemProps {
 
 export const NavigationMenuItem = React.forwardRef<HTMLLIElement, Props>(({ item, style, ...props }, forwardedRef) => (
   <NavigationMenu.Item ref={forwardedRef} style={{ position: "relative", ...style }} {...props}>
-    {item.type === "button" ? (
+    {item.type === "button" && (
       <>
         <NavigationMenuTrigger
           style={{ padding: "12px 8px" }}
@@ -136,11 +129,13 @@ export const NavigationMenuItem = React.forwardRef<HTMLLIElement, Props>(({ item
           </NavigationSubMenuContent>
         )}
       </>
-    ) : (
+    )}
+    {item.type === "link" && (
       <NavigationMenuLink style={{ padding: "12px 8px" }} {...item.props}>
         {item.label}
       </NavigationMenuLink>
     )}
+    {item.type === "fragment" && <NavigationMenuLink asChild>{item.label}</NavigationMenuLink>}
   </NavigationMenu.Item>
 ))
 

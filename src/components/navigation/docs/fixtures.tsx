@@ -1,5 +1,6 @@
 import * as React from "react"
-import type { MenuItems } from "../NavigationMenuItem"
+import type { MenuItems } from "../components/menu-item"
+import { AppSwitcher } from "../components/app-switcher"
 
 function Link(props: { href: string; body: string }) {
   return <a href={props.href}>{props.body}</a>
@@ -11,9 +12,8 @@ export const menuItems: MenuItems = [
   // @ts-ignore
   {
     label: "Order management",
-    type: "button",
-    component: Link,
-    props: { body: "Yep" },
+    type: "fragment",
+    props: { to: "foo" },
   },
   {
     label: "Analytics",
@@ -76,7 +76,7 @@ export const menuItems: MenuItems = [
     label: "Inventory management",
     type: "link",
     props: {
-      href: "/yoyo",
+      href: "/",
     },
   },
   {
@@ -92,3 +92,33 @@ export const menuItems: MenuItems = [
     type: "link",
   },
 ]
+
+export const DefaultAppSwitcher = () => (
+  <AppSwitcher.Menu>
+    <AppSwitcher.Item href="/">
+      <AppSwitcher.Title>Connections</AppSwitcher.Title>
+      <AppSwitcher.Description>Multi-tiered bandwidth-monitored process improvement</AppSwitcher.Description>
+    </AppSwitcher.Item>
+    <AppSwitcher.Item href="/">
+      <AppSwitcher.Title>Digital quality control</AppSwitcher.Title>
+      <AppSwitcher.Description>Cloned global attitude fully-configurable motivating support</AppSwitcher.Description>
+    </AppSwitcher.Item>
+    <AppSwitcher.Item href="/">
+      <AppSwitcher.Title>Production scheduling</AppSwitcher.Title>
+      <AppSwitcher.Description>
+        Assimilated 24 hour capability operative demand-driven model object-based zero tolerance model
+        fully-configurable regional analyzer
+      </AppSwitcher.Description>
+    </AppSwitcher.Item>
+    <AppSwitcher.Item href="/">
+      <AppSwitcher.Title>Shop floor control</AppSwitcher.Title>
+      <AppSwitcher.Description>Persevering mobile capacity synchronised intangible core</AppSwitcher.Description>
+    </AppSwitcher.Item>
+    <AppSwitcher.Item href="/">
+      <AppSwitcher.Title>Supplier collaboration</AppSwitcher.Title>
+      <AppSwitcher.Description>
+        Function-based coherent process improvement cloned encompassing info-mediates
+      </AppSwitcher.Description>
+    </AppSwitcher.Item>
+  </AppSwitcher.Menu>
+)

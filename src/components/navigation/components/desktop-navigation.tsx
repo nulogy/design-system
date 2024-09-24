@@ -1,17 +1,16 @@
 import React, { useLayoutEffect, useRef, useState } from "react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import styled, { type CSSProperties } from "styled-components"
-import Logo from "./logos/Logo"
-import SettingsIcon from "./icons/SettingsIcon"
-import SignPostIcon from "./icons/SignpostIcon"
-import SearchIcon from "./icons/SearchIcon"
-import HelpIcon from "./icons/HelpIcon"
-import CustomLogo from "./logos/CustomLogo"
-import { type MenuItem, type MenuItems, NavigationMenuItem } from "./NavigationMenuItem"
-import UserMenu, { HorizontalDivider } from "./UserMenu"
-import { NulogyAppSwitcher } from "./MobileNav"
-import { NAVBAR } from "./constants"
-import ChevronDownIcon from "./icons/ChevronDownIcon"
+import { type MenuItem, type MenuItems, NavigationMenuItem } from "./menu-item"
+import { NAVBAR } from "../constants"
+import Logo from "../logos/NulogyLogo"
+import SearchIcon from "../icons/SearchIcon"
+import SettingsIcon from "../icons/SettingsIcon"
+import SignPostIcon from "../icons/SignpostIcon"
+import HelpIcon from "../icons/HelpIcon"
+import CustomLogo from "../logos/CustomLogo"
+import { ChevronDownIcon } from "@radix-ui/react-icons"
+import { HorizontalDivider, UserMenu } from "./user-menu"
 
 // Here is what is left:
 // Loading the page, the menu is not working like it should
@@ -25,7 +24,13 @@ function getLastElement<T>(array: T[]) {
   return array[array.length - 1]
 }
 
-const DesktopNav = ({ primaryMenu, userMenuInputs }: { primaryMenu: MenuItems; userMenuInputs?: React.ReactNode }) => {
+interface Props {
+  primaryMenu: MenuItems
+  userMenuInputs?: React.ReactNode
+  appSwitcher: React.ReactNode
+}
+
+const DesktopNavigation = ({ primaryMenu, userMenuInputs, appSwitcher }: Props) => {
   const [hiddenMenuItem, setHiddenMenuItem] = useState<MenuItem>({
     label: "",
     type: "button",
@@ -121,7 +126,7 @@ const DesktopNav = ({ primaryMenu, userMenuInputs }: { primaryMenu: MenuItems; u
             onPointerLeave={(event) => event.preventDefault()}
             style={{ position: "absolute", top: "calc(100% + 8px)" }}
           >
-            <NulogyAppSwitcher />
+            {appSwitcher}
           </NavigationMenu.Content>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
@@ -318,4 +323,4 @@ export const NavigationMenuLink = styled(NavigationMenu.Link)({
   "&:hover": { backgroundColor: "#E1EBFA" },
 })
 
-export default DesktopNav
+export default DesktopNavigation
