@@ -1,3 +1,10 @@
+## [10.2.13](https://github.com/nulogy/design-system/compare/v10.2.12...v10.2.13) (2024-09-24)
+
+
+### Bug Fixes
+
+* do not use an <hr /> as a divider ([#1443](https://github.com/nulogy/design-system/issues/1443)) ([76a3891](https://github.com/nulogy/design-system/commit/76a38910560c6604d5c778061fd5186324e29c14))
+
 ## [10.2.12](https://github.com/nulogy/design-system/compare/v10.2.11...v10.2.12) (2024-09-20)
 
 
