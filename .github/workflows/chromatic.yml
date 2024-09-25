@@ -1,28 +1,40 @@
-name: Chromatic
-on:
-  push:
+name: "Chromatic"
+
+on: push
+
 jobs:
-  test:
+  chromatic-1:
+    name: Visual Regression Testing 1
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
-
+          node-version-file: ".nvmrc"
       - name: Install dependencies
-        run: yarn
-
-      - name: Build Storybook
-        run: yarn build:storybook
-
-      - uses: chromaui/action@v1
+        run: npm run ci:chromatic
+      - name: Run Chromatic
+        uses: chromaui/action@latest
         with:
           projectToken: ${{ secrets.CHROMATIC_TOKEN }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          storybookBuildDir: "storybook-static"
+
+  chromatic-2:
+    name: Visual Regression Testing 2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+      - name: Install dependencies
+        run: npm run ci:chromatic
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
