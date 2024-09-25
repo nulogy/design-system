@@ -3,8 +3,26 @@ name: "Chromatic"
 on: push
 
 jobs:
-  chromatic:
-    name: Run Chromatic
+  chromatic-1:
+    name: Visual Regression Testing 1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+      - name: Install dependencies
+        run: npm run ci:chromatic
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_TOKEN }}
+
+  chromatic-2:
+    name: Visual Regression Testing 2
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
