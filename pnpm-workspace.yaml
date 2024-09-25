@@ -1,0 +1,4 @@
+packages:
+  - "docs/*"
+  - "packages/desktop-component"
+  - "packages/mobile-component"
