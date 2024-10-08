@@ -47,6 +47,17 @@ WithCustomDateFormat.story = {
   name: "with custom date format",
 };
 
+export const WithDisabled = () => (
+  <DatePicker
+    selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
+    disabled={true}
+  />
+);
+
+WithDisabled.story = {
+  name: "with disabled",
+};
+
 export const WithDifferentSizes = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DatePicker

@@ -20,6 +20,7 @@ type DatePickerInputProps = Omit<React.ComponentPropsWithRef<"input">, "size"> &
 const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
   (
     {
+      disabled,
       onChange,
       onClick,
       onBlur,
@@ -37,6 +38,7 @@ const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
   ) => {
     const { t } = useTranslation();
     const { placeholder, ...inputFieldProps } = inputProps;
+    inputFieldProps.disabled = disabled;
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       onInputChange(event);
@@ -62,6 +64,7 @@ const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
 
     return (
       <InputField
+        disabled={disabled}
         onBlur={onBlur}
         onFocus={onFocus}
         ref={ref}

@@ -33,6 +33,7 @@ interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
   highlightDates?: ReactDatePickerProps["highlightDates"];
   disableFlipping?: boolean;
   selected?: Date | null;
+  disabled?: boolean;
 }
 
 const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
@@ -56,6 +57,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
       onBlur,
       onFocus,
       selected,
+      disabled,
       ...props
     },
     datePickerRef
@@ -128,6 +130,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
 
     const customInput = (
       <DatePickerInput
+        disabled={disabled}
         size={componentSize}
         inputProps={customInputProps}
         dateFormat={dateFormat}
@@ -147,6 +150,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
           {({ locale }) => (
             <ReactDatePicker
               selected={selectedDate}
+              disabled={disabled}
               openToDate={selectedDate}
               dateFormat={dateFormat}
               onChange={handleSelectedDateChange}
