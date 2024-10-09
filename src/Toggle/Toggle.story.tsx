@@ -58,6 +58,22 @@ ToggleSetToDefaultToggled.story = {
   name: "Toggle set to defaultToggled",
 };
 
+export const ToggleWithWrappingText = () => (
+  <Flex width="200px">
+    <Toggle
+      labelText="Toggle"
+      onText="The quick brown fox jumped over the lazy dog."
+      offText="The quick brown fox jumped over the lazy dog."
+      defaultToggled
+      onChange={action("on change")}
+    />
+  </Flex>
+);
+
+ToggleWithWrappingText.story = {
+  name: "Toggle with wrapping text",
+};
+
 export const ToggleSetToDisabled = () => (
   <>
     <Toggle
