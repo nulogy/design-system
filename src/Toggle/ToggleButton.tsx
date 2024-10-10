@@ -53,6 +53,7 @@ function Switch({ children, disabled, toggled, onClick }: SwitchProps) {
   return (
     <AnimatedBox
       position="relative"
+      flexShrink={0}
       height="24px"
       width="48px"
       bg={disabled ? "grey" : getSwitchBackground(toggled)}
