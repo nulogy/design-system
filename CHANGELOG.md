@@ -1,3 +1,10 @@
+## [10.2.14](https://github.com/nulogy/design-system/compare/v10.2.13...v10.2.14) (2024-10-10)
+
+
+### Bug Fixes
+
+* do not shrink the toggle when put in a small container ([#1450](https://github.com/nulogy/design-system/issues/1450)) ([6b3b63f](https://github.com/nulogy/design-system/commit/6b3b63ffa6f201da721748344cc571c0523fce88))
+
 ## [10.2.13](https://github.com/nulogy/design-system/compare/v10.2.12...v10.2.13) (2024-09-24)
 
 
