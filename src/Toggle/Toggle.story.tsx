@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean } from "@storybook/addon-knobs";
-import { Toggle, Button } from "../index";
+import { Toggle, Button, Box } from "../index";
 import { Flex } from "../Flex";
 import dashed from "../utils/dashed";
 
 const DashedToggle = dashed(Toggle);
+const DashedBox = dashed(Box);
 
 export const WithDifferentSizes = () => (
   <Flex gap="x2" alignItems="flex-start">
@@ -111,6 +112,18 @@ export const WithLongText = () => (
 WithLongText.story = {
   name: "With long text",
 };
+
+export const WithContraintWidth = () => (
+  <DashedBox width="200px" padding="x2">
+    <Toggle
+      labelText="Toggle"
+      onText="This is a long On label for the toggle component."
+      offText="This is a long Off label for the toggle component."
+      defaultToggled
+      onChange={action("on change")}
+    />
+  </DashedBox>
+);
 
 export const ControlledToggle = () => (
   <Toggle
