@@ -96,3 +96,12 @@ yarn-error.log*
 
 # asdf version manager
 .tool-versions
+
+# storybook
+*storybook.log
+
+# output
+*.log
+.DS_Store
+.cache
+coverage
