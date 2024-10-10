@@ -10,6 +10,7 @@ import {
   PrimaryButton,
   StatusIndicator,
   Header,
+  Text,
 } from "..";
 import Summary from "../Summary/Summary";
 import SummaryItem from "../Summary/SummaryItem";
@@ -71,6 +72,7 @@ export const WithContent = () => (
       <Breadcrumbs>
         <Link href="/">Home</Link>
         <Link href="/">Materials</Link>
+        <Text>Orders</Text>
       </Breadcrumbs>
     )}
     title="Materials Overview"

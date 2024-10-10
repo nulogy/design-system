@@ -28,9 +28,10 @@ export const BreadcrumbsListItem = styled.li<{ size: ComponentSize }>(
     listStyle: "none",
     display: "inline-flex",
     alignSelf: "center",
-    color: theme.colors.darkBlue,
+    color: theme.colors.midGrey,
     a: {
       color: theme.colors.darkBlue,
+      textDecorationLine: "none",
     },
     "a:visited": {
       color: theme.colors.darkBlue,
@@ -46,7 +47,7 @@ export const BreadcrumbsListItem = styled.li<{ size: ComponentSize }>(
       large: {
         "a, p": {
           py: "x2",
-          px: "x1",
+          px: "x0",
           fontSize: "medium",
         },
       },
