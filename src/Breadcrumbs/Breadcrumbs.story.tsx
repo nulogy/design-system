@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Link } from "../Link";
 import { Text } from "../Type";
-import { Breadcrumbs } from "./index";
 import { Flex } from "../Flex";
 import dashed from "../utils/dashed";
+import { Breadcrumbs } from "./index";
 
 export default {
   title: "Components/Breadcrumbs",
@@ -17,7 +17,7 @@ export const _Breadcrumbs = () => (
     </Breadcrumbs>
     <Breadcrumbs>
       <Link href="/">Home</Link>
-      <Link href="/Tenants">Tenants</Link>
+      <Link href="/">Tenants</Link>
     </Breadcrumbs>
   </>
 );
@@ -44,7 +44,7 @@ export const WithDifferentSizes = () => (
 export const WithoutLink = () => (
   <Breadcrumbs>
     <Link href="/">Home</Link>
-    <Link href="/Tenants">Tenants</Link>
+    <Link href="/">Tenants</Link>
     <Text>Current Tenant</Text>
   </Breadcrumbs>
 );
@@ -59,7 +59,7 @@ export const WithReactRouter = () => (
       <Link as={ReactRouterLink} to="/">
         Home
       </Link>
-      <Link as={ReactRouterLink} to="/Tenants">
+      <Link as={ReactRouterLink} to="/">
         Tenants
       </Link>
       <Text>Current Tenant</Text>
