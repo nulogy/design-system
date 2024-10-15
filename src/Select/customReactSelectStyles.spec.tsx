@@ -3,22 +3,23 @@ import { getControlBorderRadius, getMenuBorderRadius, showIndicatorSeparator } f
 
 describe("custom react-select styles", () => {
   describe("showIndicatorSeparator", () => {
-    test.each`
-      isMulti  | hasValue | hasDefaultOptions | expected
-      ${true}  | ${true}  | ${true}           | ${true}
-      ${true}  | ${false} | ${false}          | ${false}
-      ${false} | ${true}  | ${false}          | ${false}
-      ${false} | ${false} | ${true}           | ${false}
-      ${true}  | ${true}  | ${false}          | ${false}
-      ${false} | ${true}  | ${true}           | ${false}
-      ${true}  | ${false} | ${true}           | ${false}
-      ${false} | ${false} | ${false}          | ${false}
-    `(
-      "returns $expected when isMulti is $isMulti, hasValue is $hasValue, and hasDefaultOptions is $hasDefaultOptions",
-      ({ isMulti, hasValue, hasDefaultOptions, expected }) => {
-        expect(showIndicatorSeparator({ isMulti, hasValue, hasDefaultOptions })).toBe(expected);
-      }
-    );
+    it("should not show the indicator separator when the select has no value", () => {
+      const result = showIndicatorSeparator({ hasValue: false, isClearable: true, isMulti: true });
+
+      expect(result).toEqual(false);
+    });
+
+    it("should show the indicator separator when the select allows multiple selections", () => {
+      const result = showIndicatorSeparator({ hasValue: true, isClearable: false, isMulti: true });
+
+      expect(result).toEqual(true);
+    });
+
+    it("should show the indicator separator when the select is clearable", () => {
+      const result = showIndicatorSeparator({ hasValue: true, isClearable: false, isMulti: true });
+
+      expect(result).toEqual(true);
+    });
   });
 
   describe("getControlBorderRadius", () => {

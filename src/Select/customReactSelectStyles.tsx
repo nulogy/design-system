@@ -77,12 +77,13 @@ type SizeConfig = {
   [key in ComponentSize]: CSSObject;
 };
 
-export function stylesForSize(config: SizeConfig, size: ComponentSize) {
+export function stylesForSize(config: SizeConfig, size: ComponentSize = "medium") {
   return config[size];
 }
 
-export const showIndicatorSeparator = ({ isMulti, hasValue, hasDefaultOptions }) =>
-  isMulti && hasValue && hasDefaultOptions;
+export function showIndicatorSeparator({ hasValue, isClearable, isMulti }) {
+  return hasValue && (isMulti || isClearable);
+}
 
 interface Args {
   theme: DefaultNDSThemeType;
@@ -96,6 +97,10 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
     option: () => ({
       height: 38,
     }),
+    clearIndicator: (provided) => ({
+      ...provided,
+      color: theme.colors.midGrey,
+    }),
     control: (provided, state) => ({
       ...provided,
       display: "flex",
@@ -107,7 +112,6 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       lineHeight: theme.lineHeights.base,
       color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : theme.colors.black,
       background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,
-      border: `1px solid ${theme.colors.grey}`,
       borderColor: getBorderColor({
         errored: error,
         disabled: state.isDisabled,
@@ -136,7 +140,6 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
         menuPlacement: state.selectProps.menuPlacement,
         theme: theme,
       }),
-
       borderTopRightRadius: getControlBorderRadius({
         border: "top",
         isMenuOpen: state.selectProps.menuIsOpen,
@@ -151,7 +154,6 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
         menuPlacement: state.selectProps.menuPlacement,
         theme: theme,
       }),
-
       "&:hover, &:focus": {
         borderColor: getBorderColor({
           errored: error,
@@ -165,11 +167,11 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
     dropdownIndicator: (provided) => ({
       ...provided,
       ...(!hasDefaultOptions && { display: "none" }),
-      color: theme.colors.grey,
+      color: theme.colors.midGrey,
     }),
     indicatorsContainer: (provided) => ({
       ...provided,
-      color: theme.colors.grey,
+      color: theme.colors.midGrey,
     }),
     singleValue: (provided) => ({
       ...provided,
@@ -181,8 +183,8 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
     }),
     valueContainer: (provided, state) => ({
       ...provided,
-      display: "flex",
       padding: 0,
+      display: "flex",
       overflow: "auto",
       maxHeight: "150px",
       gap: theme.space.half,
@@ -194,8 +196,8 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
             gap: theme.space.x1,
           },
           medium: {
-            paddingTop: theme.space.half,
-            paddingBottom: theme.space.half,
+            paddingTop: theme.space.none,
+            paddingBottom: theme.space.none,
           },
         },
         size
@@ -313,9 +315,9 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
     indicatorSeparator: (provided, state) => ({
       ...provided,
       display: showIndicatorSeparator({
-        isMulti: state.isMulti,
         hasValue: state.hasValue,
-        hasDefaultOptions,
+        isClearable: state.selectProps.isClearable,
+        isMulti: state.isMulti,
       })
         ? "block"
         : "none",
@@ -329,7 +331,7 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
         position: "absolute",
         top: "50%",
         transform: "translateY(-50%)",
-        color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : "hsl(0,0%,50%)",
+        color: state.isDisabled ? transparentize(0.7, theme.colors.midGrey) : theme.colors.midGrey,
       };
     },
   };
