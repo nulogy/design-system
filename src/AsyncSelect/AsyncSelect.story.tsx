@@ -2,31 +2,13 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
 import { AsyncSelect, Button } from "../index";
-import simulatedAPIRequest from "../utils/story/simulatedAPIRequest";
+import { filterOptions } from "../utils/story/simulatedAPIRequests";
+import { provinces } from "./fixtures";
+import { Flex } from "../Flex";
 
-const northAmericanCountries = [
-  {
-    value: "Canada",
-    label: "Canada",
-  },
-  {
-    value: "United States",
-    label: "United States",
-  },
-  {
-    value: "Mexico",
-    label: "Mexico",
-  },
-];
-
-const loadMatchingCountries = async (inputValue: string) => {
-  const data = await simulatedAPIRequest(inputValue, northAmericanCountries);
-  const results = await data.json();
-
-  return results.map(({ name }) => ({
-    label: name,
-    value: name,
-  }));
+const loadMatchingProvinces = async (inputValue: string) => {
+  const data = await filterOptions(inputValue, provinces);
+  return await data.json();
 };
 
 export default {
@@ -35,14 +17,14 @@ export default {
 
 export const Default = () => (
   <AsyncSelect
-    placeholder="Please select a country"
+    placeholder="Enter a province"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     className="Select"
     classNamePrefix="SelectTest"
-    labelText="Country"
+    labelText="Province"
     onInputChange={action("typed input value changed")}
-    loadOptions={loadMatchingCountries}
+    loadOptions={loadMatchingProvinces}
   />
 );
 
@@ -52,25 +34,25 @@ Default.story = {
 
 export const WithDefaultOptions = () => (
   <AsyncSelect
-    placeholder="Filter Countries"
+    placeholder="Enter a province"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     className="Select"
     classNamePrefix="SelectTest"
-    labelText="Country"
+    labelText="Province"
     onInputChange={action("typed input value changed")}
     isClearable
     defaultOptions={[
       {
-        value: "Canada",
-        label: "Canada",
+        value: "ON",
+        label: "Ontario",
       },
       {
-        value: "United States",
-        label: "United States",
+        value: "QC",
+        label: "Quebec",
       },
     ]}
-    loadOptions={loadMatchingCountries}
+    loadOptions={loadMatchingProvinces}
   />
 );
 
@@ -80,15 +62,15 @@ WithDefaultOptions.story = {
 
 export const WithADefaultValue = () => (
   <AsyncSelect
-    placeholder="Please select a country"
+    placeholder="Enter a province"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     className="Select"
     classNamePrefix="SelectTest"
-    labelText="Country"
-    defaultValue="Can"
+    labelText="Province"
+    defaultValue="Ontario"
     onInputChange={action("typed input value changed")}
-    loadOptions={loadMatchingCountries}
+    loadOptions={loadMatchingProvinces}
   />
 );
 
@@ -98,29 +80,29 @@ WithADefaultValue.story = {
 
 export const Multiselect = () => (
   <AsyncSelect
-    placeholder="Select countries"
+    placeholder="Enter a province"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     className="Select"
     classNamePrefix="SelectTest"
-    labelText="Countries"
+    labelText="Provinces"
     multiselect
     onInputChange={action("typed input value changed")}
-    loadOptions={loadMatchingCountries}
+    loadOptions={loadMatchingProvinces}
   />
 );
 
 export const WithAClearButton = () => (
   <AsyncSelect
-    placeholder="Select countries"
+    placeholder="Enter a province"
     onChange={action("selection changed")}
     onBlur={action("blurred")}
     className="Select"
     classNamePrefix="SelectTest"
-    labelText="Countries"
+    labelText="Provinces"
     isClearable
     onInputChange={action("typed input value changed")}
-    loadOptions={loadMatchingCountries}
+    loadOptions={loadMatchingProvinces}
   />
 );
 
@@ -131,21 +113,21 @@ export const UsingRefToControlFocus = () => {
   };
 
   return (
-    <>
+    <Flex gap="x2" flexDirection="column">
       <AsyncSelect
         ref={ref}
-        placeholder="Please select a country"
+        placeholder="Enter a province"
         onChange={action("selection changed")}
         onBlur={action("blurred")}
         className="Select"
         classNamePrefix="SelectTest"
-        labelText="Country"
-        defaultValue="Can"
+        labelText="Province"
+        defaultValue="Ontario"
         onInputChange={action("typed input value changed")}
-        loadOptions={loadMatchingCountries}
+        loadOptions={loadMatchingProvinces}
       />
       <Button onClick={handleClick}>Focus the Input</Button>
-    </>
+    </Flex>
   );
 };
 
@@ -164,12 +146,13 @@ export const Controlled = () => {
   };
 
   return (
-    <>
-      <AsyncSelect onChange={handleChange} value={value} labelText="Country" loadOptions={loadMatchingCountries} />
+    <Flex gap="x2" flexDirection="column">
+      <AsyncSelect onChange={handleChange} value={value} labelText="Province" loadOptions={loadMatchingProvinces} />
       <Button onClick={handleClear}>Clear</Button>
-    </>
+    </Flex>
   );
 };
+
 Controlled.story = {
   name: "controlled",
 };

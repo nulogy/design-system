@@ -479,7 +479,7 @@ WithCloseMenuOnSelectTurnedOff.story = {
 };
 
 export const TestMultiselectOverflow = () => (
-  <>
+  <Flex gap="x2" flexDirection="column">
     <Select
       defaultValue={["accepted", "assigned"]}
       noOptionsMessage={() => "No options"}
@@ -517,7 +517,7 @@ export const TestMultiselectOverflow = () => (
         onInputChange={action("typed input value changed")}
       />
     </Box>
-  </>
+  </Flex>
 );
 
 TestMultiselectOverflow.story = {
@@ -551,10 +551,10 @@ WithFixedPositioning.story = {
 };
 
 export const WithFetchedOptions = () => (
-  <Box style={{ width: "300px" }}>
+  <Flex flexDirection="column" gap="x2" width="300px">
     <SelectWithManyOptions labelText="Select from many options:" />
     <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
-  </Box>
+  </Flex>
 );
 
 export const WithCustomOptionComponent = () => {
@@ -609,7 +609,7 @@ export const UsingRefToControlFocus = () => {
   };
 
   return (
-    <>
+    <Flex flexDirection="column" gap="x2">
       <Select
         defaultValue={["accepted"]}
         noOptionsMessage={() => "No options"}
@@ -621,7 +621,7 @@ export const UsingRefToControlFocus = () => {
         menuPosition="fixed"
       />
       <Button onClick={handleClick}>Focus the Input</Button>
-    </>
+    </Flex>
   );
 };
 

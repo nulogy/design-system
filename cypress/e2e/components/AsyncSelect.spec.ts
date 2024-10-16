@@ -14,41 +14,41 @@ describe("AsyncSelect", () => {
     it("can select multiple values", () => {
       getMultiselect().click();
 
-      cy.focused().type("cana");
-      assertDropDownIsOpen().contains("Canada");
+      cy.focused().type("on");
+      assertDropDownIsOpen().contains("Ontario");
       cy.focused().type("{enter}");
 
-      cy.focused().type("mex");
-      assertDropDownIsOpen().contains("Mexico");
+      cy.focused().type("qu");
+      assertDropDownIsOpen().contains("Quebec");
       cy.focused().type("{enter}");
 
-      getMultiselect().contains("Canada");
-      getMultiselect().contains("Mexico");
+      getMultiselect().contains("Ontario");
+      getMultiselect().contains("Quebec");
     });
 
     describe("clears selected values", () => {
       it("clears all multiselect values", () => {
         getMultiselect().click();
 
-        cy.focused().type("cana");
-        assertDropDownIsOpen().contains("Canada");
+        cy.focused().type("on");
+        assertDropDownIsOpen().contains("Ontario");
         cy.focused().type("{enter}");
 
         getClearButton().click();
 
-        getMultiselect().contains("Select countries");
+        getMultiselect().contains("Enter a province");
       });
 
       it("clears single-select values", () => {
         getSelectComponent().click();
 
-        cy.focused().type("cana");
-        assertDropDownIsOpen().contains("Canada");
+        cy.focused().type("on");
+        assertDropDownIsOpen().contains("Ontario");
         cy.focused().type("{enter}");
 
         getClearButton().click();
 
-        getMultiselect().contains("Select countries");
+        getMultiselect().contains("Enter a province");
       });
     });
 
