@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import ReactResizeDetector from "react-resize-detector";
 import { useTranslation } from "react-i18next";
@@ -9,33 +9,33 @@ import { Icon } from "../Icon";
 import { Link } from "../Link";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { Branding } from "../Branding";
-import theme from "../theme";
 import { subPx } from "../utils";
-import { DefaultNDSThemeType } from "../theme.type";
+import type { DefaultNDSThemeType } from "../theme.type";
 import DesktopMenu from "./DesktopMenu";
-import isValidMenuItem from "./isValidMenuItem";
 import SmallNavBar from "./SmallNavBar";
 
-const themeColors = {
-  blue: {
-    color: theme.colors.white,
-    hoverColor: theme.colors.lightBlue,
-    background: theme.colors.blackBlue,
-    hoverBackground: theme.colors.black,
-    textColor: theme.colors.grey,
-    logoColor: "white",
-  },
-  white: {
-    color: theme.colors.darkBlue,
-    hoverColor: theme.colors.blackBlue,
-    background: theme.colors.white,
-    hoverBackground: theme.colors.whiteGrey,
-    textColor: theme.colors.blackBlue,
-    logoColor: "blue",
-  },
-};
+export function getThemeColor(color: "blue" | "white" = "blue", theme: DefaultNDSThemeType) {
+  const config = {
+    blue: {
+      color: theme.colors.white,
+      hoverColor: theme.colors.lightBlue,
+      background: theme.colors.blackBlue,
+      hoverBackground: theme.colors.black,
+      textColor: theme.colors.grey,
+      logoColor: "white",
+    },
+    white: {
+      color: theme.colors.darkBlue,
+      hoverColor: theme.colors.blackBlue,
+      background: theme.colors.white,
+      hoverBackground: theme.colors.whiteGrey,
+      textColor: theme.colors.blackBlue,
+      logoColor: "blue",
+    },
+  } as const;
 
-export const getThemeColor = (themeColor) => themeColors[themeColor] || themeColors.blue;
+  return config[color];
+}
 
 export const NavBarBackground = styled(Flex)<{
   backgroundColor: string;
@@ -54,7 +54,7 @@ export const BrandingLink = ({ to, href, children, ...props }) => (
 type MediumNavBarProps = {
   subtext?: string;
   menuData?: any;
-  themeColor?: string;
+  themeColor?: "blue" | "white";
   brandingLinkHref?: string;
   brandingLinkTo?: string;
   brandingLinkComponent?: React.ElementType;
@@ -71,9 +71,11 @@ const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
   ...props
 }) => {
   const { t } = useTranslation();
+  const theme = useTheme();
+
   return (
     <header {...props}>
-      <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
+      <NavBarBackground backgroundColor={getThemeColor(themeColor, theme).background}>
         <BrandingLink
           aria-label="Nulogy logo"
           underline={false}
@@ -84,7 +86,7 @@ const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
           as={brandingLinkComponent}
           to={brandingLinkTo}
         >
-          <Branding logoColor={getThemeColor(themeColor).logoColor} subtext={subtext} />
+          <Branding logoColor={getThemeColor(themeColor, theme).logoColor} subtext={subtext} />
         </BrandingLink>
         <Flex
           justifyContent="space-between"
@@ -93,7 +95,7 @@ const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
         >
           {menuData.primaryMenu && (
             <DesktopMenu
-              themeColorObject={getThemeColor(themeColor)}
+              themeColorObject={getThemeColor(themeColor, theme)}
               style={{ paddingRight: theme.space.x3 }}
               aria-label={t("primary navigation")}
               menuData={menuData.primaryMenu}
@@ -107,7 +109,7 @@ const MediumNavBar: React.FC<React.PropsWithChildren<MediumNavBarProps>> = ({
             )}
             {menuData.secondaryMenu && (
               <DesktopMenu
-                themeColorObject={getThemeColor(themeColor)}
+                themeColorObject={getThemeColor(themeColor, theme)}
                 aria-label={t("secondary navigation")}
                 menuData={menuData.secondaryMenu}
               />
@@ -130,7 +132,7 @@ MediumNavBar.defaultProps = {
 export const MobileMenuTrigger = styled.button<{
   hoverColor: string;
   hoverBackground: string;
-}>(({ color, hoverColor, hoverBackground }) => ({
+}>(({ color, hoverColor, hoverBackground, theme }) => ({
   color: themeGet(`colors.${color}`, color)(color),
   background: "none",
   border: "none",
@@ -150,7 +152,7 @@ export const MobileMenuTrigger = styled.button<{
   },
 }));
 
-export const SmallHeader = styled.header<{ isOpen: boolean }>(({ isOpen }) =>
+export const SmallHeader = styled.header<{ isOpen: boolean }>(({ isOpen, theme }) =>
   isOpen
     ? {
         position: "fixed",
@@ -179,7 +181,7 @@ MenuIcon.defaultProps = {
   isOpen: false,
 };
 
-const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...props }) => {
+const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...props }: any) => {
   const currentWidth = width || (typeof window !== "undefined" && window.innerWidth);
 
   if (currentWidth >= pixelDigitsFrom(breakpointUpper)) {
@@ -192,17 +194,15 @@ const SelectNavBarBasedOnWidth = ({ width, defaultOpen, breakpointUpper, ...prop
   }
 };
 
-const NavBar = (props) => (
-  <ReactResizeDetector handleWidth>
-    <SelectNavBarBasedOnWidth {...props} />
-  </ReactResizeDetector>
-);
+const NavBar = ({ themeColor = "blue", breakpointUpper, ...props }) => {
+  const theme = useTheme();
+  breakpointUpper ||= theme.breakpoints.medium;
 
-NavBar.defaultProps = {
-  menuData: null,
-  className: undefined,
-  breakpointUpper: theme.breakpoints.medium,
-  themeColor: "blue",
+  return (
+    <ReactResizeDetector handleWidth>
+      <SelectNavBarBasedOnWidth breakpointUpper={breakpointUpper} themeColor={themeColor} {...props} />
+    </ReactResizeDetector>
+  );
 };
 
 export default NavBar;

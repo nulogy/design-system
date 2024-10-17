@@ -1,10 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import numberFromDimension from "../utils/numberFromDimension";
 import { Box } from "../Box";
-import theme from "../theme";
 import { BoxProps } from "../Box/Box";
 import { SummaryContextProvider } from "./SummaryContext";
+import { DefaultNDSThemeType } from "../theme.type";
 
 type SummaryProps = Omit<BoxProps, "as"> & {
   breakpoint?: number | string;
@@ -30,13 +30,10 @@ const SummaryWrapper = styled(Box)<{ breakpoint: number }>(({ theme, breakpoint 
   },
 }));
 
-const DEFAULT_BREAKPOINT = theme.breakpoints.medium;
+const Summary: React.FC<React.PropsWithChildren<SummaryProps>> = ({ breakpoint, children, ...rest }) => {
+  const theme = useTheme();
+  breakpoint ||= theme.breakpoints.medium;
 
-const Summary: React.FC<React.PropsWithChildren<SummaryProps>> = ({
-  breakpoint = DEFAULT_BREAKPOINT,
-  children,
-  ...rest
-}) => {
   const breakpointPx = numberFromDimension(breakpoint);
 
   return (

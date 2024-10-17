@@ -2,8 +2,8 @@ import React from "react";
 import icons from "@nulogy/icons";
 import type { IconName } from "@nulogy/icons";
 
-import { Box, Flex, Icon, InlineIcon } from "../index";
-import theme from "../theme";
+import { Box, DefaultNDSThemeType, Flex, Icon, InlineIcon } from "../index";
+import { useTheme } from "styled-components";
 
 const iconNames = [...Object.keys(icons), "loading"] as IconName[];
 const iconSubset = [...iconNames.slice(0, 5), "loading"] as IconName[];
@@ -68,17 +68,21 @@ WithAColor.story = {
   name: "With a color",
 };
 
-export const WithASize = () => (
-  <>
-    {[theme.space.x1, theme.space.x2, theme.space.x3].map((size) => (
-      <Box key={size}>
-        {iconSubset.map((iconName) => (
-          <Icon icon={iconName} size={size} key={iconName} />
-        ))}
-      </Box>
-    ))}
-  </>
-);
+export const WithASize = () => {
+  const theme = useTheme();
+
+  return (
+    <>
+      {[theme.space.x1, theme.space.x2, theme.space.x3].map((size) => (
+        <Box key={size}>
+          {iconSubset.map((iconName) => (
+            <Icon icon={iconName} size={size} key={iconName} />
+          ))}
+        </Box>
+      ))}
+    </>
+  );
+};
 
 WithASize.story = {
   name: "With a size",
