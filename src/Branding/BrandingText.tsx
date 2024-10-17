@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import theme from "../theme";
 
 type BrandingTextProps = {
   logoColor?: "blue" | "white";
@@ -7,13 +6,13 @@ type BrandingTextProps = {
 };
 
 const logoColors = {
-  white: theme.colors.white,
+  white: "#FFFFFF",
   blue: "#0E77D2",
 };
 
 const getLogoColor = (logoColor) => logoColors[logoColor] || logoColors.blue;
 
-const BrandingText = styled.span<BrandingTextProps>(({ logoColor = "blue", size }) => ({
+const BrandingText = styled.span<BrandingTextProps>(({ logoColor = "blue", size, theme }) => ({
   color: getLogoColor(logoColor),
   textDecoration: "none",
   fontWeight: theme.fontWeights.medium,
