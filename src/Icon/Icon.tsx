@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { CSSObject, useTheme } from "styled-components";
-import { space, SpaceProps } from "styled-system";
+import { display, DisplayProps, space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
 import LoadingIcon from "./LoadingIcon";
 

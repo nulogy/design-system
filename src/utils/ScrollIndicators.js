@@ -1,43 +1,35 @@
 import React from "react";
 import { Icon } from "../Icon";
-import theme from "../theme";
+import styled from "styled-components";
+import { position } from "styled-system";
 
-const ScrollIndicatorTop = () => (
-  <div
-    style={{
-      position: "absolute",
-      top: 0,
-      left: `calc(50% - ${theme.space.x3})`,
-      right: `calc(50% - ${theme.space.x3})`,
-      height: theme.space.x3,
-      width: theme.space.x6,
-      background: theme.colors.lightGrey,
-      opacity: 0.8,
-      borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
-      pointerEvents: "none",
-    }}
-  >
-    <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="upArrow" />
-  </div>
+const ScrollIndicatorWrapper = styled.div(
+  ({ theme }) => ({
+    position: "absolute",
+    left: `calc(50% - ${theme.space.x3})`,
+    right: `calc(50% - ${theme.space.x3})`,
+    height: theme.space.x3,
+    width: theme.space.x6,
+    background: theme.colors.lightGrey,
+    opacity: 0.8,
+    borderRadius: `0 0 ${theme.radii.medium} ${theme.radii.medium}`,
+    pointerEvents: "none",
+  }),
+  position
 );
 
+const ScrollIndicatorTop = () => {
+  return (
+    <ScrollIndicatorWrapper top={0}>
+      <Icon margin="0 auto" display="block" color="darkGrey" icon="upArrow" />
+    </ScrollIndicatorWrapper>
+  );
+};
+
 const ScrollIndicatorBottom = () => (
-  <div
-    style={{
-      position: "absolute",
-      bottom: 1,
-      left: `calc(50% - ${theme.space.x3})`,
-      right: `calc(50% - ${theme.space.x3})`,
-      height: theme.space.x3,
-      width: theme.space.x6,
-      background: theme.colors.lightGrey,
-      opacity: 0.8,
-      borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
-      pointerEvents: "none",
-    }}
-  >
-    <Icon style={{ display: "block", margin: "0 auto" }} color="darkGrey" icon="downArrow" />
-  </div>
+  <ScrollIndicatorWrapper bottom={1}>
+    <Icon display="block" margin="0 auto" color="darkGrey" icon="downArrow" />
+  </ScrollIndicatorWrapper>
 );
 
 /* eslint-disable react/destructuring-assignment */

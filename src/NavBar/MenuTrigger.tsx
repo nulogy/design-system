@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
 import styled, { useTheme } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
-import theme from "../theme";
 import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import SubMenuTrigger from "./SubMenuTrigger";
@@ -19,7 +18,7 @@ export type MenuTriggerProps = {
 const StyledButton = styled.button<{
   hoverColor: string;
   hoverBackground: string;
-}>(({ color = "white", hoverColor = "lightBlue", hoverBackground = "black", ...props }) => ({
+}>(({ color = "white", hoverColor = "lightBlue", hoverBackground = "black", theme, ...props }) => ({
   display: "flex",
   alignItems: "center",
   position: "relative",
