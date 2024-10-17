@@ -5,10 +5,9 @@ import { useTranslation } from "react-i18next";
 import { Flex } from "../Flex";
 import { Input } from "../Input";
 import { Icon } from "../Icon";
-import theme from "../theme";
 import { subPx } from "../utils";
 
-const BaseNavBarSearch = ({ name, onSubmit, ...props }) => {
+const BaseNavBarSearch = ({ name = "global-search", onSubmit, ...props }) => {
   const handleOnSubmit = (e) => {
     e.preventDefault();
     onSubmit(e);
@@ -26,7 +25,7 @@ const BaseNavBarSearch = ({ name, onSubmit, ...props }) => {
   );
 };
 
-const NavBarSearch = styled(BaseNavBarSearch)({
+const NavBarSearch = styled(BaseNavBarSearch)(({ theme }) => ({
   background: theme.colors.lightBlue,
   borderRadius: theme.radii.medium,
   height: theme.space.x5,
@@ -70,11 +69,6 @@ const NavBarSearch = styled(BaseNavBarSearch)({
       },
     },
   },
-});
-
-BaseNavBarSearch.defaultProps = {
-  name: "global-search",
-  onSubmit: () => {},
-};
+}));
 
 export default NavBarSearch;

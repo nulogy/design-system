@@ -1,40 +1,41 @@
 import { useState, useEffect } from "react";
-import Theme from "../theme";
 import convertPxToNumber from "./convertPxToNumber";
+import { useTheme } from "styled-components";
 
-const xlargeBreakpoint = convertPxToNumber(Theme.breakpoints.extraLarge);
-const largeBreakpoint = convertPxToNumber(Theme.breakpoints.large);
-const mediumBreakpoint = convertPxToNumber(Theme.breakpoints.medium);
-const smallBreakpoint = convertPxToNumber(Theme.breakpoints.small);
-const xSmallBreakpoint = convertPxToNumber(Theme.breakpoints.extraSmall);
+const xlargeBreakpoint = (theme) => convertPxToNumber(theme.breakpoints.extraLarge);
+const largeBreakpoint = (theme) => convertPxToNumber(theme.breakpoints.large);
+const mediumBreakpoint = (theme) => convertPxToNumber(theme.breakpoints.medium);
+const smallBreakpoint = (theme) => convertPxToNumber(theme.breakpoints.small);
+const xSmallBreakpoint = (theme) => convertPxToNumber(theme.breakpoints.extraSmall);
 
-export const getWindowDimensionInfo = (width, height) => ({
+export const getWindowDimensionInfo = (width, height, theme) => ({
   width,
   height,
   widthBreakpoints: {
-    xlargeBreakpoint,
-    largeBreakpoint,
-    mediumBreakpoint,
-    smallBreakpoint,
-    xSmallBreakpoint,
-    isXlargeScreen: width >= xlargeBreakpoint,
-    isLargeScreen: width >= largeBreakpoint && width < xlargeBreakpoint,
-    isMediumScreen: width >= mediumBreakpoint && width < largeBreakpoint,
-    isSmallScreen: width >= smallBreakpoint && width < mediumBreakpoint,
-    isSmallestScreen: width >= xSmallBreakpoint && width < smallBreakpoint,
-    isGreaterThanLargeScreen: width >= largeBreakpoint,
-    isGreaterThanMediumScreen: width >= mediumBreakpoint,
-    isGreaterThanSmallScreen: width >= smallBreakpoint,
+    xlargeBreakpoint: xlargeBreakpoint(theme),
+    largeBreakpoint: largeBreakpoint(theme),
+    mediumBreakpoint: mediumBreakpoint(theme),
+    smallBreakpoint: smallBreakpoint(theme),
+    xSmallBreakpoint: xSmallBreakpoint(theme),
+    isXlargeScreen: width >= xlargeBreakpoint(theme),
+    isLargeScreen: width >= largeBreakpoint(theme) && width < xlargeBreakpoint(theme),
+    isMediumScreen: width >= mediumBreakpoint(theme) && width < largeBreakpoint(theme),
+    isSmallScreen: width >= smallBreakpoint(theme) && width < mediumBreakpoint(theme),
+    isSmallestScreen: width >= xSmallBreakpoint(theme) && width < smallBreakpoint(theme),
+    isGreaterThanLargeScreen: width >= largeBreakpoint(theme),
+    isGreaterThanMediumScreen: width >= mediumBreakpoint(theme),
+    isGreaterThanSmallScreen: width >= smallBreakpoint(theme),
   },
 });
 
 const useWindowDimensions = () => {
   const hasWindow = typeof window !== "undefined";
+  const theme = useTheme();
 
   const getWindowDimensions = () => {
     const width = hasWindow ? window.innerWidth : null;
     const height = hasWindow ? window.innerHeight : null;
-    return getWindowDimensionInfo(width, height);
+    return getWindowDimensionInfo(width, height, theme);
   };
 
   const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());

@@ -72,7 +72,7 @@ export { Table } from "./Table";
 export type { TableCellInfoType, TableColumnType, TableProps, TableRowType } from "./Table";
 export { Tab, Tabs } from "./Tabs";
 export { Textarea } from "./Textarea";
-export { default as theme } from "./theme";
+export { desktopTheme as theme } from "./theme";
 export type { ThemeType, DefaultNDSThemeType } from "./theme.type";
 export { TimePicker } from "./TimePicker";
 export { TimeRange } from "./TimeRange";
