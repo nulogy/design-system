@@ -4,9 +4,10 @@ import { select } from "@storybook/addon-knobs";
 import { Heading1 } from "../Type";
 import { Branding } from "../Branding";
 import { Link } from "../Link";
-import { Button, SmallNavBarProps, theme } from "../index";
+import { Button, SmallNavBarProps } from "../index";
 import BrandLogoContainer from "./BrandLogoContainer";
 import { SmallNavBar } from "./index";
+import { desktopTheme as theme } from "../theme";
 
 const ResetStorybookView = styled.div({
   position: "absolute",
