@@ -1,8 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { isBefore, addDays, differenceInDays } from "date-fns";
 
-import theme from "../theme";
-
 const START_DATE_CLASS = "nds-datepicker-day--start-date";
 const END_DATE_CLASS = "nds-datepicker-day--end-date";
 const IN_RANGE_CLASS = "nds-datepicker-day--in-range";
@@ -34,7 +32,7 @@ export const highlightDates = (startDate, endDate) => {
   ];
 };
 
-export const DateRangeStyles = createGlobalStyle({
+export const DateRangeStyles = createGlobalStyle(({ theme }) => ({
   ".nds-date-picker": {
     [`.react-datepicker__day.${IN_RANGE_CLASS}`]: {
       backgroundColor: theme.colors.whiteGrey,
@@ -64,4 +62,4 @@ export const DateRangeStyles = createGlobalStyle({
       },
     },
   },
-});
+}));

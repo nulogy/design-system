@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { space } from "styled-system";
-const Fieldset: React.FC<React.PropsWithChildren<any>> = styled.fieldset(
+
+const Fieldset = styled.fieldset(
   {
     padding: 0,
     border: 0,
@@ -12,4 +13,5 @@ const Fieldset: React.FC<React.PropsWithChildren<any>> = styled.fieldset(
   },
   space
 );
+
 export default Fieldset;

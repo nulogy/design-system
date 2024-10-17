@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import theme from "../theme";
 import { Icon } from "../Icon";
 import NavBarDropdownMenu from "./NavBarDropdownMenu";
 import renderSubMenuItems from "./renderSubMenuItems";
 
-const StyledButton = styled.button<{ isOpen: boolean }>(({ isOpen }) => ({
+const StyledButton = styled.button<{ isOpen: boolean }>(({ isOpen, theme }) => ({
   display: "block",
   position: "relative",
   color: theme.colors.darkBlue,

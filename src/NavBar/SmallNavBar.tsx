@@ -2,10 +2,11 @@
 import React from "react";
 import { Branding } from "../Branding";
 import { Flex } from "../Flex";
-import theme from "../theme";
+import { desktopTheme as theme } from "../theme";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { PreventBodyElementScrolling, withMenuState } from "../utils";
 import MobileMenu from "./MobileMenu";
+
 import {
   BrandingLink,
   getThemeColor,
@@ -44,7 +45,7 @@ class SmallNavBarNoState extends React.Component {
     } = this.props;
     return (
       <SmallHeader ref={this.navRef} isOpen={isOpen} {...props}>
-        <NavBarBackground backgroundColor={getThemeColor(themeColor).background}>
+        <NavBarBackground backgroundColor={getThemeColor(themeColor, theme).background}>
           <BrandingLink
             aria-label="Nulogy logo"
             display="block"
@@ -55,7 +56,7 @@ class SmallNavBarNoState extends React.Component {
             to={brandingLinkTo}
           >
             <Branding
-              logoColor={getThemeColor(themeColor).logoColor}
+              logoColor={getThemeColor(themeColor, theme).logoColor}
               logoType={this.isSmallScreen() ? "lettermark" : "wordmark"}
               subtext={this.isSmallScreen() ? null : subtext}
             />
@@ -68,7 +69,7 @@ class SmallNavBarNoState extends React.Component {
             )}
             {(menuData.primaryMenu || menuData.secondaryMenu) && (
               <MobileMenuTrigger
-                {...getThemeColor(themeColor)}
+                {...getThemeColor(themeColor, theme)}
                 onClick={toggleMenu}
                 aria-expanded={isOpen ? true : null}
               >
@@ -80,7 +81,7 @@ class SmallNavBarNoState extends React.Component {
         {isOpen && (
           <PreventBodyElementScrolling>
             <MobileMenu
-              themeColorObject={getThemeColor(themeColor)}
+              themeColorObject={getThemeColor(themeColor, theme)}
               subtext={subtext}
               includeSubtext={this.isSmallScreen()}
               menuData={menuData}

@@ -2,9 +2,8 @@ import React, { useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
 import type { TransformProperties } from "framer-motion/types/motion/types";
 import type { Transition } from "framer-motion";
-import styled, { CSSObject } from "styled-components";
+import styled, { CSSObject, useTheme } from "styled-components";
 import { DefaultNDSThemeType } from "../theme.type";
-import { default as theme } from "../theme";
 import { AnimatedBox } from "../Box";
 
 type SwitchProps = {
@@ -70,33 +69,37 @@ function Switch({ children, disabled, toggled, onClick }: SwitchProps) {
   );
 }
 
-const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, children }) => (
-  <motion.div
-    className="slider"
-    initial={false}
-    variants={{
-      active: {
-        boxShadow: disabled ? undefined : theme.shadows.focus,
-        scale: disabled ? undefined : animationConfig.scale,
-      },
-      toggled: {
-        marginLeft: theme.space.x3,
-      },
-      initial: {
-        marginLeft: theme.space.none,
-      },
-    }}
-    transition={animationConfig.transition}
-    style={{
-      height: "20px",
-      width: "20px",
-      borderRadius: "50%",
-      backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.white,
-    }}
-  >
-    {children}
-  </motion.div>
-);
+const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, children }) => {
+  const theme = useTheme();
+
+  return (
+    <motion.div
+      className="slider"
+      initial={false}
+      variants={{
+        active: {
+          boxShadow: disabled ? undefined : theme.shadows.focus,
+          scale: disabled ? undefined : animationConfig.scale,
+        },
+        toggled: {
+          marginLeft: theme.space.x3,
+        },
+        initial: {
+          marginLeft: theme.space.none,
+        },
+      }}
+      transition={animationConfig.transition}
+      style={{
+        height: "20px",
+        width: "20px",
+        borderRadius: "50%",
+        backgroundColor: disabled ? theme.colors.whiteGrey : theme.colors.white,
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const ToggleInput = styled.input(
   ({ disabled, theme }: ToggleInputProps): CSSObject => ({

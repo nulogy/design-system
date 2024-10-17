@@ -1,22 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import type { CSSObject } from "styled-components";
 import { display } from "styled-system";
 import { themeGet } from "@styled-system/theme-get";
 import { Text, Heading3 } from "../Type";
 import { BrandingText } from "../Branding";
-import theme from "../theme";
 
-const BrandingWrap = styled.div({
+const BrandingWrap = styled.div(({ theme }) => ({
   marginTop: `-${theme.space.x1}`,
   marginBottom: theme.space.x3,
   marginLeft: theme.space.x3,
   color: theme.colors.white,
-});
+}));
 
 const getPaddingLeft = (layer) => `${24 * layer + 24}px`;
 
-const getSharedStyles = ({ color, layer }): CSSObject => ({
+const getSharedStyles = ({ color, layer, theme }): CSSObject => ({
   display: "flex",
   alignItems: "center",
   gap: theme.space.half,
@@ -36,38 +35,39 @@ const ApplyMenuLinkStyles = styled.li<{
   hoverColor: string;
   hoverBackground: string;
   layer?: number;
-}>(({ color, hoverColor, hoverBackground, layer }) => ({
-  display: "block",
-  "*": {
-    ...getSharedStyles({ color, layer }),
-    textDecoration: "none",
-    "&:hover, &:focus": {
-      outline: "none",
-      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+}>(
+  ({
+    theme,
+    layer = 0,
+    color = theme.colors.white,
+    hoverColor = theme.colors.lightBlue,
+    hoverBackground = theme.colors.black,
+  }) => ({
+    display: "block",
+    "*": {
+      ...getSharedStyles({ color, layer, theme }),
+      textDecoration: "none",
+      "&:hover, &:focus": {
+        outline: "none",
+        color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+        backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+      },
+      "&:disabled": {
+        opacity: ".5",
+      },
+      "&:focus": {
+        boxShadow: theme.shadows.focus,
+      },
     },
-    "&:disabled": {
-      opacity: ".5",
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus,
-    },
-  },
-}));
-
-ApplyMenuLinkStyles.defaultProps = {
-  layer: 0,
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black,
-};
+  })
+);
 
 const MenuLink = styled.a<{
   hoverColor: string;
   hoverBackground: string;
   layer: number;
-}>(({ color, hoverColor, hoverBackground, layer }) => ({
-  ...getSharedStyles({ color, layer }),
+}>(({ color, hoverColor, hoverBackground, layer, theme }) => ({
+  ...getSharedStyles({ color, layer, theme }),
   width: "100%",
   borderRadius: "0",
   transition: ".2s",
@@ -88,8 +88,8 @@ const MenuLink = styled.a<{
 const MenuText = styled.li<{
   textColor: string;
   layer: number;
-}>(({ textColor, layer }) => ({
-  ...getSharedStyles({ color: textColor, layer }),
+}>(({ textColor, layer, theme }) => ({
+  ...getSharedStyles({ color: textColor, layer, theme }),
 }));
 
 const SubMenuItemsList = styled.ul({
@@ -98,20 +98,23 @@ const SubMenuItemsList = styled.ul({
   margin: "0",
 });
 
-const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => (
-  <li key={menuItem.name} style={{ display: "block", marginBottom: theme.space.x1 }}>
-    <MenuLink
-      layer={layer}
-      {...themeColorObject}
-      onClick={linkOnClick}
-      href={menuItem.href}
-      to={menuItem.to}
-      as={menuItem.as}
-    >
-      {menuItem.name}
-    </MenuLink>
-  </li>
-);
+const renderMenuLink = (menuItem, linkOnClick, themeColorObject, layer) => {
+  const theme = useTheme();
+  return (
+    <li key={menuItem.name} style={{ display: "block", marginBottom: theme.space.x1 }}>
+      <MenuLink
+        layer={layer}
+        {...themeColorObject}
+        onClick={linkOnClick}
+        href={menuItem.href}
+        to={menuItem.to}
+        as={menuItem.as}
+      >
+        {menuItem.name}
+      </MenuLink>
+    </li>
+  );
+};
 
 const renderCustom = (menuItem, linkOnClick, themeColorObject, layer) => (
   <ApplyMenuLinkStyles key={menuItem.name} {...themeColorObject} layer={layer} onClick={linkOnClick}>
@@ -152,7 +155,7 @@ const renderMenuItems = (menuItems, linkOnClick, themeColorObject, layer) =>
 const renderTopLayerMenuItems = (menuData, linkOnClick, themeColorObject) =>
   renderMenuItems(menuData, linkOnClick, themeColorObject, 0);
 
-const getSubMenuHeading = (layer, color, name) =>
+const getSubMenuHeading = (layer, color, name, theme) =>
   layer === 0 ? (
     <Heading3 mb={theme.space.x1} color={color}>
       {name}
@@ -163,19 +166,18 @@ const getSubMenuHeading = (layer, color, name) =>
     </Text>
   );
 
-const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => (
-  <>
-    {getSubMenuHeading(layer, themeColorObject && themeColorObject.textColor, menuItem.name)}
-    <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
-  </>
-);
+const SubMenu = ({ menuItem, linkOnClick, themeColorObject, layer }) => {
+  const theme = useTheme();
 
-SubMenu.defaultProps = {
-  linkOnClick: null,
-  themeColorObject: undefined,
+  return (
+    <>
+      {getSubMenuHeading(layer, themeColorObject && themeColorObject.textColor, menuItem.name, theme)}
+      <SubMenuItemsList>{renderMenuItems(menuItem.items, linkOnClick, themeColorObject, layer + 1)}</SubMenuItemsList>
+    </>
+  );
 };
 
-const Menu = styled.ul(() => ({
+const Menu = styled.ul(({ theme }) => ({
   margin: "0",
   padding: `${theme.space.x1} 0`,
   zIndex: theme.zIndices.content,

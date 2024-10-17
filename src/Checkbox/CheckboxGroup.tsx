@@ -34,7 +34,7 @@ export default function CheckboxGroup({
 }: CheckboxGroupProps) {
   const otherProps = { ...props, errorMessage, errorList };
   return (
-    <Fieldset className={className} id={id} hasHelpText={!!helpText}>
+    <Fieldset className={className} id={id}>
       <Legend>
         <LabelText>{labelText}</LabelText>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { DefaultNDSThemeType } from "../theme.type";
 
-export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
+export const DatePickerStyles = createGlobalStyle<{ theme: DefaultNDSThemeType }>(({ theme }) => ({
   ".nds-date-picker": {
     ".react-datepicker-wrapper": {
       width: "fit-content",
@@ -82,10 +83,9 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
         cursor: "pointer",
       },
     },
-    ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover":
-      {
-        backgroundColor: "transparent",
-      },
+    ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover": {
+      backgroundColor: "transparent",
+    },
     ".react-datepicker__day-names, .react-datepicker__week": {
       whiteSpace: "nowrap",
     },

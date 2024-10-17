@@ -22,6 +22,7 @@ import {
   SelectMenu,
   SelectOption,
 } from "./AsyncSelectComponents";
+import { DefaultNDSThemeType } from "../theme.type";
 
 type AsyncCustomProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = {
   autocomplete?: AsyncProps<Option, IsMulti, Group>["isSearchable"];

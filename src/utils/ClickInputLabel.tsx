@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { variant } from "styled-system";
-import theme from "../theme";
 import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
 
 const ClickInputLabel = styled.label<{ size: ComponentSize; disabled: boolean }>(
-  ({ disabled }) => ({
+  ({ disabled, theme }) => ({
     cursor: disabled ? undefined : "pointer",
     display: "inline-flex",
     width: "auto",

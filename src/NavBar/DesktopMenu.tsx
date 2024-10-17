@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import type { CSSObject } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
-import theme from "../theme";
 import MenuTrigger from "./MenuTrigger";
 
-const getSharedStyles = (color): CSSObject => ({
+const getSharedStyles = (color, theme): CSSObject => ({
   display: "flex",
   alignItems: "center",
   gap: theme.space.half,
@@ -23,34 +22,35 @@ const getSharedStyles = (color): CSSObject => ({
 const ApplyMenuLinkStyles = styled.div<{
   hoverColor: string;
   hoverBackground: string;
-}>(({ color, hoverColor, hoverBackground }) => ({
-  "*": {
-    ...getSharedStyles(color),
-    transition: ".2s",
-    "&:hover, &:focus": {
-      outline: "none",
-      color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
-      backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
-      cursor: "pointer",
+}>(
+  ({
+    theme,
+    color = theme.colors.white,
+    hoverColor = theme.colors.lightBlue,
+    hoverBackground = theme.colors.black,
+  }) => ({
+    "*": {
+      ...getSharedStyles(color, theme),
+      transition: ".2s",
+      "&:hover, &:focus": {
+        outline: "none",
+        color: themeGet(`colors.${hoverColor}`, hoverColor)(hoverColor),
+        backgroundColor: themeGet(`colors.${hoverBackground}`, hoverBackground)(hoverBackground),
+        cursor: "pointer",
+      },
+      "&:disabled": {
+        opacity: ".5",
+      },
+      "&:focus": {
+        boxShadow: theme.shadows.focus,
+      },
     },
-    "&:disabled": {
-      opacity: ".5",
-    },
-    "&:focus": {
-      boxShadow: theme.shadows.focus,
-    },
-  },
-}));
-
-ApplyMenuLinkStyles.defaultProps = {
-  color: theme.colors.white,
-  hoverColor: theme.colors.lightBlue,
-  hoverBackground: theme.colors.black,
-};
+  })
+);
 
 const MenuLink = styled.a<{ hoverColor: string; hoverBackground: string }>(
-  ({ color, hoverColor, hoverBackground }) => ({
-    ...getSharedStyles(color),
+  ({ color, hoverColor, hoverBackground, theme }) => ({
+    ...getSharedStyles(color, theme),
     transition: ".2s",
     "&:hover, &:focus": {
       outline: "none",
@@ -67,8 +67,8 @@ const MenuLink = styled.a<{ hoverColor: string; hoverBackground: string }>(
   })
 );
 
-const MenuText = styled.div<{ textColor: string }>(({ textColor }) => ({
-  ...getSharedStyles(textColor),
+const MenuText = styled.div<{ textColor: string }>(({ textColor, theme }) => ({
+  ...getSharedStyles(textColor, theme),
 }));
 
 const Nav = styled.nav({
@@ -119,12 +119,12 @@ const BaseDesktopMenu = ({ menuData, themeColorObject, ...props }) => (
   <Nav {...props}>{menuData.map((menuItem) => renderMenuItem(menuItem, themeColorObject))}</Nav>
 );
 
-const DesktopMenu = styled(BaseDesktopMenu)({
+const DesktopMenu = styled(BaseDesktopMenu)(({ theme }) => ({
   "> div": {
     ":not(:last-of-type)": {
       marginRight: theme.space.x1,
     },
   },
-});
+}));
 
 export default DesktopMenu;

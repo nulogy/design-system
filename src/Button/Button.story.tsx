@@ -1,7 +1,6 @@
 import React from "react";
 import { Flex } from "../Flex";
 import { Button, PrimaryButton, DangerButton, QuietButton } from ".";
-import { Text } from "../Type";
 
 export default {
   title: "Components/Buttons",

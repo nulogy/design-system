@@ -38,7 +38,7 @@ export default function RadioGroup({
   const themeContext = useContext(ThemeContext);
 
   return (
-    <Fieldset className={className} id={id} hasHelpText={!!helpText}>
+    <Fieldset className={className} id={id}>
       <legend style={{ marginBottom: themeContext.space.x1 }}>
         <span style={labelTextStyles(themeContext)}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}

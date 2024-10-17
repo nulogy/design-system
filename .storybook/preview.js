@@ -1,5 +1,5 @@
 import { create } from "@storybook/theming";
-import { theme } from "../src";
+import { desktopTheme as theme } from "../src/theme";
 import withNDSTheme from "./nds-theme";
 
 const newViewports = {

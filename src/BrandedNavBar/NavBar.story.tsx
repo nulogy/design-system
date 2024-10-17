@@ -5,7 +5,7 @@ import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
 import { DropdownButton, DropdownLink } from "../DropdownMenu";
-import theme from "../theme";
+import { desktopTheme as theme } from "../theme";
 import { Button } from "../Button";
 import { Text } from "../Type";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";
@@ -386,6 +386,7 @@ WithReactRouter.story = {
 export const WithHamburgerMenu = () => {
   return <BrandedNavBar menuData={{ primaryMenu, secondaryMenu }} defaultOpen />;
 };
+
 WithHamburgerMenu.parameters = {
   viewport: {
     defaultViewport: "small", // for some reason this has to match the viewport key, NOT the name!

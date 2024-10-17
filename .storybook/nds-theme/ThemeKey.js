@@ -5,7 +5,7 @@ const ThemeKey = styled(Text)(({ theme }) => ({
   display: "inline-block",
   width: "250px",
   fontSize: theme.fontSizes.small,
-  fontFamily: `${theme.fonts.mono} !important`,
+  fontFamily: `${theme.fonts.mono} important`,
   marginRight: theme.space.x3,
 }));
 

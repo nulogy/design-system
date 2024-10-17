@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Flex as NDSFlex, Text } from "../index";
-import theme from "../theme";
+import { Box, Flex as NDSFlex } from "../index";
+import styled from "styled-components";
 
 const Flex = ({ children, ...props }) => (
   <NDSFlex
@@ -16,11 +16,11 @@ const Flex = ({ children, ...props }) => (
   </NDSFlex>
 );
 
-const boxStyles = {
+const StyledBox = styled(Box)(({ theme }) => ({
   padding: theme.space.x6,
   background: theme.colors.grey,
   outline: `2px dotted ${theme.colors.darkGrey}`,
-};
+}));
 
 export default {
   title: "Components/Flex",
@@ -30,32 +30,32 @@ export const _Flex = () => (
   <Flex
     style={{
       boxSizing: "content-box",
-      padding: theme.space.x3,
-      background: theme.colors.whiteGrey,
     }}
+    padding="x3"
+    bg="whiteGrey"
   >
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
 export const FlexDirectionSetToRowReverse = () => (
   <Flex
-    flexDirection="row-reverse"
     style={{
       boxSizing: "content-box",
-      padding: theme.space.x3,
-      background: theme.colors.whiteGrey,
     }}
+    flexDirection="row-reverse"
+    padding="x3"
+    bg="whiteGrey"
   >
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -65,11 +65,11 @@ FlexDirectionSetToRowReverse.story = {
 
 export const FlexDirectionSetToColumn = () => (
   <Flex flexDirection="column">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -79,11 +79,11 @@ FlexDirectionSetToColumn.story = {
 
 export const FlexDirectionSetToColumnReverse = () => (
   <Flex flexDirection="column-reverse">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -94,13 +94,13 @@ FlexDirectionSetToColumnReverse.story = {
 export const FlexWrapSetToNoWrapDefault = () => (
   <Box width={500}>
     <Flex flexWrap="nowrap">
-      <Box style={boxStyles}>1</Box>
-      <Box style={boxStyles}>2</Box>
-      <Box style={boxStyles}>3</Box>
-      <Box style={boxStyles}>4</Box>
-      <Box style={boxStyles}>5</Box>
-      <Box style={boxStyles}>6</Box>
-      <Box style={boxStyles}>7</Box>
+      <StyledBox>1</StyledBox>
+      <StyledBox>2</StyledBox>
+      <StyledBox>3</StyledBox>
+      <StyledBox>4</StyledBox>
+      <StyledBox>5</StyledBox>
+      <StyledBox>6</StyledBox>
+      <StyledBox>7</StyledBox>
     </Flex>
   </Box>
 );
@@ -112,13 +112,13 @@ FlexWrapSetToNoWrapDefault.story = {
 export const FlexWrapSetToWrap = () => (
   <Box width={500}>
     <Flex flexWrap="wrap">
-      <Box style={boxStyles}>1</Box>
-      <Box style={boxStyles}>2</Box>
-      <Box style={boxStyles}>3</Box>
-      <Box style={boxStyles}>4</Box>
-      <Box style={boxStyles}>5</Box>
-      <Box style={boxStyles}>6</Box>
-      <Box style={boxStyles}>7</Box>
+      <StyledBox>1</StyledBox>
+      <StyledBox>2</StyledBox>
+      <StyledBox>3</StyledBox>
+      <StyledBox>4</StyledBox>
+      <StyledBox>5</StyledBox>
+      <StyledBox>6</StyledBox>
+      <StyledBox>7</StyledBox>
     </Flex>
   </Box>
 );
@@ -130,13 +130,13 @@ FlexWrapSetToWrap.story = {
 export const FlexWrapSetToWrapReverse = () => (
   <Box width={500}>
     <Flex flexWrap="wrap-reverse">
-      <Box style={boxStyles}>1</Box>
-      <Box style={boxStyles}>2</Box>
-      <Box style={boxStyles}>3</Box>
-      <Box style={boxStyles}>4</Box>
-      <Box style={boxStyles}>5</Box>
-      <Box style={boxStyles}>6</Box>
-      <Box style={boxStyles}>7</Box>
+      <StyledBox>1</StyledBox>
+      <StyledBox>2</StyledBox>
+      <StyledBox>3</StyledBox>
+      <StyledBox>4</StyledBox>
+      <StyledBox>5</StyledBox>
+      <StyledBox>6</StyledBox>
+      <StyledBox>7</StyledBox>
     </Flex>
   </Box>
 );
@@ -147,11 +147,11 @@ FlexWrapSetToWrapReverse.story = {
 
 export const JustifyContentSetToFlexStartDefault = () => (
   <Flex justifyContent="flex-start">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -161,11 +161,11 @@ JustifyContentSetToFlexStartDefault.story = {
 
 export const JustifyContentSetToFlexEnd = () => (
   <Flex justifyContent="flex-end">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -175,11 +175,11 @@ JustifyContentSetToFlexEnd.story = {
 
 export const JustifyContentSetToCenter = () => (
   <Flex justifyContent="center">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -189,11 +189,11 @@ JustifyContentSetToCenter.story = {
 
 export const JustifyContentSetToSpaceBetween = () => (
   <Flex justifyContent="space-between">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -203,11 +203,11 @@ JustifyContentSetToSpaceBetween.story = {
 
 export const JustifyContentSetToSpaceAround = () => (
   <Flex justifyContent="space-around">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -217,11 +217,11 @@ JustifyContentSetToSpaceAround.story = {
 
 export const JustifyContentSetToSpaceEvenly = () => (
   <Flex justifyContent="space-evenly">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -231,11 +231,11 @@ JustifyContentSetToSpaceEvenly.story = {
 
 export const AlignItemsSetToStretchDefault = () => (
   <Flex alignItems="stretch">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -245,11 +245,11 @@ AlignItemsSetToStretchDefault.story = {
 
 export const AlignItemsSetToFlexStart = () => (
   <Flex alignItems="flex-start">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -259,11 +259,11 @@ AlignItemsSetToFlexStart.story = {
 
 export const AlignItemsSetToCenter = () => (
   <Flex alignItems="center">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -273,11 +273,11 @@ AlignItemsSetToCenter.story = {
 
 export const AlignItemsSetToFlexEnd = () => (
   <Flex alignItems="flex-end">
-    <Box style={boxStyles}>1</Box>
-    <Box style={boxStyles}>2</Box>
-    <Box style={boxStyles}>3</Box>
-    <Box style={boxStyles}>4</Box>
-    <Box style={boxStyles}>5</Box>
+    <StyledBox>1</StyledBox>
+    <StyledBox>2</StyledBox>
+    <StyledBox>3</StyledBox>
+    <StyledBox>4</StyledBox>
+    <StyledBox>5</StyledBox>
   </Flex>
 );
 
@@ -287,21 +287,11 @@ AlignItemsSetToFlexEnd.story = {
 
 export const WithCustomOrder = () => (
   <Flex>
-    <Box style={boxStyles} order={1}>
-      1
-    </Box>
-    <Box style={boxStyles} order={3}>
-      2
-    </Box>
-    <Box style={boxStyles} order={2}>
-      3
-    </Box>
-    <Box style={boxStyles} order={5}>
-      4
-    </Box>
-    <Box style={boxStyles} order={4}>
-      5
-    </Box>
+    <StyledBox order={1}>1</StyledBox>
+    <StyledBox order={3}>2</StyledBox>
+    <StyledBox order={2}>3</StyledBox>
+    <StyledBox order={5}>4</StyledBox>
+    <StyledBox order={4}>5</StyledBox>
   </Flex>
 );
 

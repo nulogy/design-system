@@ -1,10 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React, { ComponentProps, ComponentPropsWithRef, PropsWithoutRef } from "react";
+import styled, { useTheme } from "styled-components";
 import { useTranslation } from "react-i18next";
 import { Icon } from "../Icon";
-import theme from "../theme";
 
-const WrapperButton = styled.button(({ disabled }) => ({
+const WrapperButton = styled.button(({ disabled, theme }) => ({
   background: "transparent",
   border: "none",
   position: "relative",
@@ -44,8 +43,11 @@ const WrapperButton = styled.button(({ disabled }) => ({
     },
   },
 }));
-const CloseButton = React.forwardRef(({ ...props }: any, ref) => {
+
+const CloseButton = React.forwardRef<HTMLButtonElement, ComponentPropsWithRef<"button">>((props, ref) => {
   const { t } = useTranslation();
+  const theme = useTheme();
+
   return (
     <WrapperButton aria-label={t("close")} ref={ref} {...props}>
       <Icon size={theme.space.x4} icon="close" p="half" />
