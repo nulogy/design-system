@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ChromePicker } from "react-color";
 import styled from "styled-components";
 
-import ThemeInput from "./ThemeInput";
+import { ThemeInput } from "./ThemeInput";
 
 const Popover = styled.div({
   position: "absolute",
