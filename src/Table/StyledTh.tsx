@@ -14,21 +14,19 @@ type StyledThProps = {
   compact?: boolean;
   sticky?: any;
 };
-const StyledTh = styled.th<StyledThProps>(
-  ({ compact, theme, sticky, width }): CSSObject => {
-    const padding = compact ? theme.space.x1 : theme.space.x2;
-    return {
-      fontWeight: "normal",
-      textAlign: "left",
-      padding: `${padding} 0`,
-      paddingRight: padding,
-      color: theme.colors.darkGrey,
-      ...(sticky && stickyStyles(theme)),
-      "&:first-child": {
-        paddingLeft: padding,
-      },
-      width: width || "auto",
-    };
-  }
-);
+const StyledTh = styled.th<StyledThProps>(({ compact, theme, sticky, width }): CSSObject => {
+  const padding = compact ? theme.space.x1 : theme.space.x2;
+  return {
+    fontWeight: "normal",
+    textAlign: "left",
+    padding: `${padding} 0`,
+    paddingRight: padding,
+    color: theme.colors.darkGrey,
+    ...(sticky && stickyStyles(theme)),
+    "&:first-child": {
+      paddingLeft: padding,
+    },
+    width: width || "auto",
+  };
+});
 export default StyledTh;

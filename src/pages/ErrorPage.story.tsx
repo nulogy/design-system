@@ -3,12 +3,25 @@
 import React from "react";
 import { Alert, Box, Branding, DefaultNDSThemeType, Flex, Link } from "../index";
 import { useTheme } from "styled-components";
+import { Text } from "../Type";
 
 const ErrorPageWidth = "672px";
 const ErrorPageAlertWidth = "432px";
 
 export default {
   title: "Pages/ErrorPage",
+};
+
+export const Static = () => (
+  <Text>
+    For non-React, static HTML error pages see the Nulogy error pages repository{" "}
+    <Link href="https://github.com/nulogy/error-pages">on GitHub</Link> or preview them{" "}
+    <Link href="https://nulogy.github.io/error-pages/">here</Link>.
+  </Text>
+);
+
+Static.parameters = {
+  chromatic: { disable: true },
 };
 
 export const Base = () => (
