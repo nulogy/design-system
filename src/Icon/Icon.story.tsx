@@ -1,7 +1,6 @@
 import React from "react";
 import icons from "@nulogy/icons";
-
-import { Box, DefaultNDSThemeType, Flex, Icon, InlineIcon } from "../index";
+import { Box, Flex, Icon, InlineIcon, NDSProvider } from "../index";
 import { useTheme } from "styled-components";
 
 const iconNames = [...Object.keys(icons), "loading"];
