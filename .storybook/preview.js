@@ -1,6 +1,7 @@
+import React from "react";
 import { create } from "@storybook/theming";
-import { theme } from "../src";
-import withNDSTheme from "./nds-theme";
+import { desktopTheme as theme } from "../src/theme";
+import StorybookNDSProvider from "./nds-theme";
 
 const newViewports = {
   extraSmall: {
@@ -53,4 +54,10 @@ export const parameters = {
   },
 };
 
-export const decorators = [(Story) => withNDSTheme(Story())];
+export const decorators = [
+  (Story) => (
+    <StorybookNDSProvider>
+      <Story />
+    </StorybookNDSProvider>
+  ),
+];
