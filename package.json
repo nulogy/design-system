@@ -8,8 +8,10 @@
   },
   "scripts": {
     "new": "plop",
-    "start": "concurrently \"yarn build --watch\" \"start-storybook -p 9999\"",
+    "start": "concurrently \"yarn build --watch\" \"yarn start:storybook\"",
     "start:e2e": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
+    "start:storybook": "start-storybook -p 9999",
+    "clean:storybook": "rm -rf node_modules/.cache/storybook && rm -rf ./storybook-static",
     "build": "rollup -c",
     "build:storybook": "build-storybook",
     "check": "yarn check:types && yarn check:lint && yarn check:format",
