@@ -6,7 +6,7 @@ import { AddonPanel } from "@storybook/components";
 import { useChannel, useAddonState } from "@storybook/api";
 import { STORY_CHANGED } from "@storybook/core-events";
 import { Box, Flex, NDSProvider, Heading3, Heading2 } from "../../src";
-import { desktopTheme as NDSTheme } from "../../src/theme";
+import { desktop as NDSTheme } from "../../src/theme";
 import ThemeKey from "./ThemeKey";
 import { ThemeInput, ThemeOption, ThemeSelect } from "./ThemeInput";
 import ThemeColorInput from "./ThemeColorInput";

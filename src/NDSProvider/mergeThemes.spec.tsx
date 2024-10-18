@@ -1,5 +1,5 @@
 import { mergeThemes } from "./mergeThemes.util";
-import { desktopTheme as NDSTheme } from "../theme";
+import { desktop as NDSTheme } from "../theme";
 
 describe("mergedThemes", () => {
   it("returns the default nds theme if custom theme is undefined", () => {

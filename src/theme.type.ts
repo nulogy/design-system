@@ -1,3 +1,5 @@
+import { RecursivePartial } from "./utils/ts/recursivePartial";
+
 interface Colors {
   black: string;
   blackBlue: string;
@@ -41,6 +43,7 @@ interface LineHeights {
   base: string;
   smallTextBase: string;
   smallTextCompressed: string;
+  relaxed: string;
   smallerText: string;
   heading1: string;
   heading2: string;
@@ -90,6 +93,7 @@ interface Radii {
   small: string;
   medium: string;
   circle: string;
+  rounded: string;
 }
 
 export interface Breakpoints {
@@ -127,9 +131,5 @@ export interface DefaultNDSThemeType {
   breakpoints: Breakpoints;
   zIndices: ZIndices;
 }
-
-type RecursivePartial<T> = {
-  [P in keyof T]?: RecursivePartial<T[P]>;
-};
 
 export type ThemeType = RecursivePartial<DefaultNDSThemeType>;
