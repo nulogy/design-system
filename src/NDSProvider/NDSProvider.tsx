@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { I18nextProvider } from "react-i18next";
-import { desktopTheme } from "../theme";
+import { desktop } from "../theme";
 import i18n from "../i18n";
 import { ThemeType, DefaultNDSThemeType, Breakpoints } from "../theme.type";
 import { LocaleContext } from "./LocaleContext";
@@ -59,7 +59,7 @@ const NDSProvider: React.FC<React.PropsWithChildren<NDSProviderProps>> = ({
     i18n.changeLanguage(locale);
   }, [locale]);
 
-  const mergedTheme = mergeThemes(desktopTheme, theme);
+  const mergedTheme = mergeThemes(desktop, theme);
   const themeWithBreakpoints = { ...mergedTheme, breakpoints: buildBreakPoints(mergedTheme.breakpoints) };
 
   return (

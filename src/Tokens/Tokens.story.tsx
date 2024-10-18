@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Text, Box, Flex, Heading3, DefaultNDSThemeType } from "..";
+import { Text, Box, Flex, Heading3 } from "..";
 import { useTheme } from "styled-components";
 
 export default {
@@ -151,13 +151,16 @@ export const Radii = () => {
 
 export const Breakpoints = () => {
   const theme = useTheme();
+
   return (
     <Box>
-      {Object.keys(theme.breakpoints).map((breakpoint) => (
-        <Text mb="x2">
-          {breakpoint}: {theme.breakpoints[breakpoint]}
-        </Text>
-      ))}
+      {Object.keys(theme.breakpoints)
+        .filter((bp) => bp !== "map")
+        .map((breakpoint) => (
+          <Text mb="x2">
+            {breakpoint}: {theme.breakpoints[breakpoint]}
+          </Text>
+        ))}
     </Box>
   );
 };
