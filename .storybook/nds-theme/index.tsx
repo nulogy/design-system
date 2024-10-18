@@ -3,7 +3,7 @@ import addons from "@storybook/addons";
 import { select } from "@storybook/addon-knobs";
 import { NDSProvider } from "../../src";
 import { ALL_NDS_LOCALES } from "../../src/locales.const";
-import { desktopTheme as NDSTheme } from "../../src/theme";
+import { desktop as NDSTheme } from "../../src/theme";
 import { ComponentSize } from "../../src/NDSProvider/ComponentSizeContext";
 import { EVENTS } from "./register";
 

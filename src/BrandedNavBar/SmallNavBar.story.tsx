@@ -7,7 +7,7 @@ import { Link } from "../Link";
 import { Button, SmallNavBarProps } from "../index";
 import BrandLogoContainer from "./BrandLogoContainer";
 import { SmallNavBar } from "./index";
-import { desktopTheme as theme } from "../theme";
+import { desktop as theme } from "../theme";
 
 const ResetStorybookView = styled.div({
   position: "absolute",
