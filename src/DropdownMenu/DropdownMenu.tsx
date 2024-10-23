@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import propTypes from "@styled-system/prop-types";
 import { IconicButton } from "../Button";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { Popper } from "../Popper";
 import { getSubset, omitSubset } from "../utils/subset";
 import { StyledProps } from "../StyledProps";
@@ -10,7 +10,7 @@ import DropdownMenuContainer from "./DropdownMenuContainer";
 type DropdownMenuProps = {
   children?: React.ReactNode;
   className?: string;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   id?: string;
   disabled?: boolean;
   trigger?: () => React.FunctionComponentElement<unknown>;
@@ -53,7 +53,7 @@ const DropdownMenu = React.forwardRef<React.Ref<unknown>, DropdownMenuProps>(
       trigger = () => <IconicButton icon="more" />,
       children,
       showArrow = true,
-      size,
+      variant,
       disabled,
       defaultOpen,
       backgroundColor = "white",
@@ -76,7 +76,7 @@ const DropdownMenu = React.forwardRef<React.Ref<unknown>, DropdownMenuProps>(
       return transformPropsToModifiers({ boundariesElement });
     }, [boundariesElement]);
 
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     return (
       <Popper
@@ -111,7 +111,7 @@ const DropdownMenu = React.forwardRef<React.Ref<unknown>, DropdownMenuProps>(
             ? children
             : React.Children.map(children, (child) => {
                 if (React.isValidElement(child)) {
-                  return React.cloneElement(child, { size: componentSize, ...child.props }, child.props.children);
+                  return React.cloneElement(child, { size: componentVariant, ...child.props }, child.props.children);
                 }
               })}
         </DropdownMenuContainer>

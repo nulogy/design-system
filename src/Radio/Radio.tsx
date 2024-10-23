@@ -7,7 +7,7 @@ import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 const radioStyle = (theme: DefaultNDSThemeType) => ({
   checked: {
@@ -106,7 +106,7 @@ type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
 type RadioProps = NativeInputProps &
   SpaceProps & {
     htmlSize?: number;
-    size?: ComponentSize;
+    variant?: ComponentVariant;
     labelText?: ReactNode;
     checked?: boolean;
     defaultChecked?: boolean;
@@ -116,13 +116,14 @@ type RadioProps = NativeInputProps &
 type Ref = HTMLInputElement;
 
 const Radio = forwardRef<Ref, RadioProps>(
-  ({ disabled = false, error = false, required = false, className, labelText, checked, size, ...props }, ref) => {
-    const componentSize = useComponentSize(size);
+  ({ disabled = false, error = false, required = false, className, labelText, checked, variant, ...props }, ref) => {
+    const componentVariant = useComponentVariant(variant);
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
+
     return (
       <Box position="relative" className={className} px="0" {...spaceProps}>
-        <ClickInputLabel size={componentSize} disabled={disabled}>
+        <ClickInputLabel variant={componentVariant} disabled={disabled}>
           <RadioInput
             type="radio"
             ref={ref}

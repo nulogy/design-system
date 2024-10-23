@@ -8,7 +8,7 @@ import { Flex } from "../Flex";
 import { subPx } from "../utils";
 import { MaybeFieldLabel } from "../FieldLabel";
 import type { DefaultNDSThemeType } from "../theme.type";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
 
@@ -16,7 +16,7 @@ type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
 
 export interface InputFieldProps extends NativeInputProps {
   htmlSize?: number;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   icon?: string;
   error?: boolean;
   labelText?: string;
@@ -49,13 +49,13 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       suffixWidth,
       inputWidth,
       iconSize,
-      size,
+      variant,
       htmlSize,
       ...props
     },
     ref
   ) => {
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     return (
       <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
@@ -69,11 +69,11 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
               error={error}
               ref={ref}
               size={htmlSize}
-              scale={componentSize}
+              variant={componentVariant}
               inputWidth={inputWidth}
               {...props}
             />
-            {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} scale={componentSize} />}
+            {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} variant={componentVariant} />}
           </Box>
           <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
         </Flex>
@@ -82,7 +82,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
   }
 );
 
-type StyledInputProps = Omit<InputFieldProps, "htmlSize" | "size"> & { scale: ComponentSize };
+type StyledInputProps = Omit<InputFieldProps, "htmlSize" | "size"> & { variant: ComponentVariant };
 
 const StyledInput = styled.input<StyledInputProps>(
   ({ theme, inputWidth }): CSSObject => ({
@@ -112,12 +112,11 @@ const StyledInput = styled.input<StyledInputProps>(
   }),
   ({ theme }) =>
     variant({
-      prop: "scale",
       variants: {
-        large: {
+        touch: {
           padding: `${subPx(theme.space.x2)}`,
         },
-        medium: {
+        desktop: {
           padding: `${subPx(theme.space.x1)}`,
         },
       },
@@ -126,7 +125,7 @@ const StyledInput = styled.input<StyledInputProps>(
   space
 );
 
-const StyledInputIcon = styled(Icon)<{ scale: ComponentSize }>(
+const StyledInputIcon = styled(Icon)<{ variant: ComponentVariant }>(
   ({ theme }) => ({
     position: "absolute",
     right: theme.space.x1,
@@ -136,12 +135,11 @@ const StyledInputIcon = styled(Icon)<{ scale: ComponentSize }>(
     pointerEvents: "none",
   }),
   variant({
-    prop: "scale",
     variants: {
-      large: {
+      touch: {
         right: "x2",
       },
-      medium: {
+      desktop: {
         right: "x1",
       },
     },

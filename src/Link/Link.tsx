@@ -5,13 +5,13 @@ import { variant } from "styled-system";
 import React from "react";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
   Partial<StyledProps> & {
     underline?: boolean;
     hover?: string;
-    size?: ComponentSize;
+    variant?: ComponentVariant;
     to?: string;
     as?: React.ElementType | string;
   };
@@ -48,9 +48,8 @@ const StyledLink = styled.a<LinkProps>(
     },
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         py: "x2",
         px: "0",
       },
@@ -60,10 +59,10 @@ const StyledLink = styled.a<LinkProps>(
   addStyledProps
 );
 
-const Link = React.forwardRef<HTMLLinkElement, LinkProps>(({ size, underline = true, ...props }, ref) => {
-  const componentSize = useComponentSize(size);
+const Link = React.forwardRef<HTMLLinkElement, LinkProps>(({ variant, underline = true, ...props }, ref) => {
+  const componentVariant = useComponentVariant(variant);
 
-  return <StyledLink ref={ref} size={componentSize} underline={underline} {...props} />;
+  return <StyledLink ref={ref} variant={componentVariant} underline={underline} {...props} />;
 });
 
 export default Link;

@@ -3,7 +3,7 @@ import type { CSSObject } from "styled-components";
 import type { GroupBase, MenuPlacement, StylesConfig } from "react-select";
 import type { CSSProperties } from "react";
 import type { DefaultNDSThemeType } from "../theme.type";
-import type { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 const getBorderColor = ({
   errored,
@@ -73,12 +73,12 @@ export function getMenuBorderRadius({
   return border === menuPlacement ? { radius: theme.radii.medium, style: "solid" } : { radius: 0, style: "none" };
 }
 
-type SizeConfig = {
-  [key in ComponentSize]: CSSObject;
+type VariantConfig = {
+  [key in ComponentVariant]: CSSObject;
 };
 
-export function stylesForSize(config: SizeConfig, size: ComponentSize = "medium") {
-  return config[size];
+export function stylesForVariant(config: VariantConfig, variant: ComponentVariant = "desktop") {
+  return config[variant];
 }
 
 export function showIndicatorSeparator({ hasValue, isClearable, isMulti }) {
@@ -92,7 +92,14 @@ interface Args {
 
 const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
   args: Args
-) => StylesConfig<Option, IsMulti, Group> = ({ theme, error, maxHeight, windowed, size, hasDefaultOptions = true }) => {
+) => StylesConfig<Option, IsMulti, Group> = ({
+  theme,
+  error,
+  maxHeight,
+  windowed,
+  variant,
+  hasDefaultOptions = true,
+}) => {
   return {
     option: () => ({
       height: 38,
@@ -188,19 +195,19 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       overflow: "auto",
       maxHeight: "150px",
       gap: theme.space.half,
-      ...stylesForSize(
+      ...stylesForVariant(
         {
-          large: {
+          touch: {
             paddingTop: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
             paddingBottom: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
             gap: theme.space.x1,
           },
-          medium: {
+          desktop: {
             paddingTop: theme.space.none,
             paddingBottom: theme.space.none,
           },
         },
-        size
+        variant
       ),
     }),
     menu: (provided, state) => ({
@@ -269,20 +276,20 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       color: theme.colors.black,
       borderRadius: theme.radii.small,
       fontSize: theme.fontSizes.small,
-      ...stylesForSize(
+      ...stylesForVariant(
         {
-          large: {
+          touch: {
             fontSize: theme.fontSizes.medium,
             lineHeight: theme.lineHeights.base,
             padding: theme.space.x1,
             paddingRight: theme.space.half,
           },
-          medium: {
+          desktop: {
             padding: theme.space.half,
             paddingLeft: theme.space.x1,
           },
         },
-        size
+        variant
       ),
     }),
     multiValueRemove: (provided) => ({
@@ -295,16 +302,16 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
         cursor: "pointer",
         svg: { fill: theme.colors.white },
       },
-      ...stylesForSize(
+      ...stylesForVariant(
         {
-          large: {
+          touch: {
             padding: theme.space.x1,
           },
-          medium: {
+          desktop: {
             // Nothing
           },
         },
-        size
+        variant
       ),
     }),
     noOptionsMessage: (provided) => ({

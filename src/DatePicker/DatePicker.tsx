@@ -3,7 +3,7 @@ import ReactDatePicker from "react-datepicker";
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import type { ReactDatePickerProps } from "react-datepicker";
 import propTypes from "@styled-system/prop-types";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
@@ -16,10 +16,10 @@ import DatePickerHeader from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
 
-type OmittedFieldProps = "size" | "onChange" | "onBlur" | "onFocus";
+type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
 
 interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   onChange?: (date: Date) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
@@ -42,7 +42,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
   (
     {
       dateFormat = DEFAULT_DATE_FORMAT,
-      size,
+      variant,
       errorMessage,
       errorList,
       inputProps,
@@ -63,7 +63,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
     const [selectedDate, setSelectedDate] = useState(selected);
     const [ref, setRef] = useState(null);
 
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     useEffect(() => {
       registerDatePickerLocales();
@@ -118,7 +118,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
 
     const customInputProps = {
       ...InputFieldDefaultProps,
-      inputWidth: componentSize === "large" ? "240px" : "184px",
+      inputWidth: componentVariant === "touch" ? "240px" : "184px",
       error: !!(errorMessage || errorList),
       ...inputProps,
       placeholder:
@@ -128,7 +128,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
 
     const customInput = (
       <DatePickerInput
-        size={componentSize}
+        variant={componentVariant}
         inputProps={customInputProps}
         dateFormat={dateFormat}
         onInputChange={handleInputChange}

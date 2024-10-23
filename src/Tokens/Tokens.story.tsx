@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Text, Box, Flex, Heading3 } from "..";
 import { useTheme } from "styled-components";
 
@@ -85,6 +84,7 @@ export const FontWeights = () => {
 
 export const SpaceAndSize = () => {
   const theme = useTheme();
+
   return (
     <Box>
       {Object.keys(theme.space).map((space) => (

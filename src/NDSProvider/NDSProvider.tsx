@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import { I18nextProvider } from "react-i18next";
-import { desktop } from "../theme";
+import { themes } from "../theme";
 import i18n from "../i18n";
 import { ThemeType, DefaultNDSThemeType, Breakpoints } from "../theme.type";
 import { LocaleContext } from "./LocaleContext";
@@ -9,7 +9,7 @@ import { mergeThemes } from "./mergeThemes.util";
 import GlobalStyles from "./GlobalStyles";
 import ModalStyleOverride from "./ModalStyleOverride";
 import Reset from "./Reset";
-import ComponentSizeContextProvider, { ComponentSize } from "./ComponentSizeContext";
+import ComponentVariantContextProvider, { ComponentVariant } from "./ComponentVariantContext";
 
 export const buildBreakPoints = (breakpointsConfig: Readonly<Breakpoints>) => ({
   ...breakpointsConfig,
@@ -24,8 +24,8 @@ type NDSProviderProps = {
   theme?: ThemeType;
   locale?: string;
   disableGlobalStyles?: boolean;
-  children?: any;
-  size?: ComponentSize;
+  children?: React.ReactNode;
+  variant?: ComponentVariant;
 };
 
 type AllNDSGlobalStylesProps = {
@@ -48,31 +48,38 @@ const AllNDSGlobalStyles = ({ theme, locale, disableGlobalStyles, children }: Al
     children
   );
 
-const NDSProvider: React.FC<React.PropsWithChildren<NDSProviderProps>> = ({
+function NDSProvider({
   theme,
   children,
   disableGlobalStyles = false,
   locale = "en_US",
-  size = "medium",
-}) => {
+  variant = "desktop",
+}: NDSProviderProps) {
   useEffect(() => {
     i18n.changeLanguage(locale);
   }, [locale]);
 
-  const mergedTheme = mergeThemes(desktop, theme);
+  if (!(variant in themes)) {
+    throw new Error(
+      `Invalid variant "${variant}" provided to NDSProvider. Valid variants are: ${Object.keys(themes).join(", ")}`
+    );
+  }
+
+  const themeVariant = themes[variant];
+  const mergedTheme = mergeThemes(themeVariant, theme);
   const themeWithBreakpoints = { ...mergedTheme, breakpoints: buildBreakPoints(mergedTheme.breakpoints) };
 
   return (
     <LocaleContext.Provider value={{ locale }}>
-      <ComponentSizeContextProvider size={size}>
+      <ComponentVariantContextProvider variant={variant}>
         <AllNDSGlobalStyles theme={themeWithBreakpoints} locale={locale} disableGlobalStyles={disableGlobalStyles}>
           <I18nextProvider i18n={i18n}>
             <ThemeProvider theme={themeWithBreakpoints}>{children}</ThemeProvider>
           </I18nextProvider>
         </AllNDSGlobalStyles>
-      </ComponentSizeContextProvider>
+      </ComponentVariantContextProvider>
     </LocaleContext.Provider>
   );
-};
+}
 
 export default NDSProvider;
