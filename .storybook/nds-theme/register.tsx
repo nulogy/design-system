@@ -1,21 +1,22 @@
 // .storybook/my-addon/register.js
 
 import React, { useEffect } from "react";
-import { addons, types } from "@storybook/addons";
+import { addons, types, RenderOptions } from "@storybook/addons";
 import { AddonPanel } from "@storybook/components";
-import { useChannel, useAddonState } from "@storybook/api";
+import { useChannel } from "@storybook/api";
 import { STORY_CHANGED } from "@storybook/core-events";
 import { Box, Flex, NDSProvider, Heading3, Heading2 } from "../../src";
-import { desktop as NDSTheme } from "../../src/theme";
 import ThemeKey from "./ThemeKey";
 import { ThemeInput, ThemeOption, ThemeSelect } from "./ThemeInput";
 import ThemeColorInput from "./ThemeColorInput";
+import { useLocalStorage } from "./useLocalStorage/useLocalStorage";
+import { themes } from "../../src/theme";
 
 const ADDON_ID = "ndsThemeAddon";
 const PANEL_ID = `${ADDON_ID}/panel`;
 
 export const EVENTS = {
-  UPDATE: "theme-update",
+  THEME_UPDATE: "theme-update",
   VARIANT_UPDATE: "theme-variant-update",
 };
 
@@ -34,15 +35,18 @@ const composeTheme = (data, theme) => {
 };
 
 const ThemePanel = () => {
-  const [themeVariant, setThemeVariant] = useAddonState("ndsThemeVariantAddon", "medium");
-  const [theme, setTheme] = useAddonState("ndsThemeAddon", NDSTheme);
+  const [themeVariant, setThemeVariant] = useLocalStorage("nds-sb-theme-variant", "desktop");
+  const [theme, setTheme] = useLocalStorage("nds-sb-theme", themes[themeVariant], {
+    serializer: (value) => JSON.stringify(value),
+    deserializer: (value) => JSON.parse(value),
+  });
   const channel = addons.getChannel();
   const emit = useChannel({});
 
   useEffect(() => {
     channel.on(STORY_CHANGED, () => {
       emit(EVENTS.VARIANT_UPDATE, themeVariant);
-      emit(EVENTS.UPDATE, theme);
+      emit(EVENTS.THEME_UPDATE, theme);
     });
   });
 
@@ -57,7 +61,7 @@ const ThemePanel = () => {
       theme
     );
     setTheme(nextTheme);
-    emit(EVENTS.UPDATE, nextTheme);
+    emit(EVENTS.THEME_UPDATE, nextTheme);
   };
 
   const onChangeColor = (group, prop) => (e) => {
@@ -71,11 +75,16 @@ const ThemePanel = () => {
       theme
     );
     setTheme(nextTheme);
-    emit(EVENTS.UPDATE, nextTheme);
+    emit(EVENTS.THEME_UPDATE, nextTheme);
   };
 
   const onVariantChange = (e) => {
-    setThemeVariant(e.target.value);
+    const variant = e.target.value;
+    setThemeVariant(variant);
+
+    const theme = themes[variant];
+    setTheme(theme);
+
     emit(EVENTS.VARIANT_UPDATE, e.target.value);
   };
 
@@ -84,20 +93,20 @@ const ThemePanel = () => {
       <Box m="x3">
         <Heading2 fontWeight="light">Variant</Heading2>
         <ThemeSelect value={themeVariant} onChange={onVariantChange}>
-          <ThemeOption value="medium">Medium</ThemeOption>
-          <ThemeOption value="large">Large</ThemeOption>
+          <ThemeOption value="desktop">Desktop</ThemeOption>
+          <ThemeOption value="touch">Touch</ThemeOption>
         </ThemeSelect>
       </Box>
-      {Object.keys(NDSTheme).map((group) => (
+      {Object.keys(theme).map((group) => (
         <Box m="x3" key={group} maxWidth="500px">
           <Heading3 fontWeight="light">{group}</Heading3>
-          {Object.keys(NDSTheme[group]).map((prop) => (
+          {Object.keys(theme[group]).map((prop) => (
             <Flex alignItems="center" mb="x2" key={`${group}-${prop}`}>
               <ThemeKey>{prop}</ThemeKey>
               {group === "colors" ? (
-                <ThemeColorInput color={NDSTheme[group][prop]} onChange={onChangeColor(group, prop)} />
+                <ThemeColorInput color={theme[group][prop]} onChange={onChangeColor(group, prop)} />
               ) : (
-                <ThemeInput defaultValue={NDSTheme[group][prop]} onChange={onChange(group, prop)} />
+                <ThemeInput defaultValue={theme[group][prop]} onChange={onChange(group, prop)} />
               )}
             </Flex>
           ))}
@@ -107,7 +116,7 @@ const ThemePanel = () => {
   );
 };
 
-const ThemeAddonPanel = ({ active, key }) => (
+const ThemeAddonPanel = ({ active, key }: RenderOptions) => (
   <AddonPanel key={key} active={active}>
     <ThemePanel />
   </AddonPanel>
@@ -117,7 +126,6 @@ addons.register(ADDON_ID, () => {
   addons.add(PANEL_ID, {
     type: types.PANEL,
     title: "Theme",
-    skipIfNoParametersOrOptions: false,
     render: ThemeAddonPanel,
   });
 });
