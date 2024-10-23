@@ -141,17 +141,17 @@ export const UsingRefToControlFocus = () => {
   );
 };
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Default size" />
     <TimePicker
-      size="medium"
+      variant="desktop"
       onChange={action("time changed")}
       onInputChange={action("input changed")}
       labelText="Medium size"
     />
     <TimePicker
-      size="large"
+      variant="touch"
       onChange={action("time changed")}
       onInputChange={action("input changed")}
       labelText="Large size"

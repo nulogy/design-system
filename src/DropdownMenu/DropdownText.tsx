@@ -1,11 +1,10 @@
-import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { Text } from "../Type";
-import { TextProps } from "../Type/Text";
+import type { TextProps } from "../Type";
 import { addStyledProps } from "../StyledProps";
 
-const DropdownText: React.FC<React.PropsWithChildren<TextProps>> = styled(Text)(
-  ({ theme }: TextProps): CSSObject => ({
+const DropdownText = styled(Text)<TextProps>(
+  ({ theme }): CSSObject => ({
     color: theme.colors.darkGrey,
     fontWeight: theme.fontWeights.medium,
     display: "block",

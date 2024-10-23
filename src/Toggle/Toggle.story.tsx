@@ -8,7 +8,7 @@ import dashed from "../utils/dashed";
 const DashedToggle = dashed(Toggle);
 const DashedBox = dashed(Box);
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedToggle onText="Default" offText="Default" data-testid="toggle-example" onChange={action("on change")} />
     <DashedToggle

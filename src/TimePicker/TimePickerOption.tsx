@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { variant } from "styled-system";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 type TimePickerOptionProps = React.ComponentProps<"li"> & {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   isSelected: boolean;
   isFocused: boolean;
   isClosest: boolean;
@@ -21,9 +21,8 @@ const TimePickerOption = styled.li<TimePickerOptionProps>(
     padding: theme.space.x1,
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         px: "x1",
         py: "x2",
       },

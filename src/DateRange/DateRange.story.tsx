@@ -17,7 +17,7 @@ export const Default = () => (
   />
 );
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" flexDirection="column" alignItems="flex-start">
     <DateRange
       onRangeChange={action("range changed")}
@@ -31,7 +31,7 @@ export const WithDifferentSizes = () => (
     />
 
     <DateRange
-      size="medium"
+      variant="desktop"
       onRangeChange={action("range changed")}
       onStartDateChange={action("start date changed")}
       onEndDateChange={action("end date changed")}
@@ -43,7 +43,7 @@ export const WithDifferentSizes = () => (
     />
 
     <DateRange
-      size="large"
+      variant="touch"
       onRangeChange={action("range changed")}
       onStartDateChange={action("start date changed")}
       onEndDateChange={action("end date changed")}

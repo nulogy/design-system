@@ -8,7 +8,7 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { getSubset } from "../utils/subset";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import customStyles from "./customReactSelectStyles";
 import { SelectOption } from "./SelectOption";
 
@@ -52,7 +52,7 @@ interface CustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   initialIsOpen?: SelectProps<Option, IsMulti, Group>["defaultMenuIsOpen"];
   multiselect?: SelectProps<Option, IsMulti, Group>["isMulti"];
   maxHeight?: string;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   error?: boolean;
   options: NDSOptionType[];
   onChange?: (newValue: unknown) => void;
@@ -68,7 +68,7 @@ export type NDSSelectProps<Option, IsMulti extends boolean, Group extends GroupB
 const ReactSelect = React.forwardRef(
   <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
     {
-      size,
+      variant,
       options,
       labelText,
       requirementText,
@@ -104,7 +104,7 @@ const ReactSelect = React.forwardRef(
     const reactSelectRef = React.useRef<ReactSelectStateManager>(null);
     const optionsRef = React.useRef(options);
 
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     React.useEffect(() => {
       checkOptionsAreValid(options);
@@ -130,7 +130,7 @@ const ReactSelect = React.forwardRef(
               theme: themeContext,
               error,
               maxHeight,
-              size: componentSize,
+              size: componentVariant,
               windowed: options.length > windowThreshold,
             })}
             isDisabled={disabled}
@@ -149,7 +149,7 @@ const ReactSelect = React.forwardRef(
             value={getReactSelectValue(options, value)}
             isMulti={multiselect}
             components={{
-              Option: (props) => <SelectOption size={componentSize} {...props} />,
+              Option: (props) => <SelectOption variant={componentVariant} {...props} />,
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,

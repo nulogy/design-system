@@ -143,7 +143,7 @@ export const _Select = () => (
   />
 );
 
-export const WithDifferentSizes = () => {
+export const WithDifferentVariants = () => {
   return (
     <Flex flexDirection="column" gap="x2">
       <Heading2>Standard</Heading2>

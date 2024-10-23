@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { variant } from "styled-system";
 import numberFromDimension from "../utils/numberFromDimension";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export type SwitchProps = Omit<React.ComponentPropsWithRef<"button">, "value"> & {
   value?: string;
   selected?: boolean;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
 };
 
 const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(({ children, ...rest }, ref) => {
@@ -48,13 +48,11 @@ const SwitchButton = styled.button<SwitchProps>(
   }),
   ({ theme }) =>
     variant({
-      prop: "size",
       variants: {
-        large: {
+        touch: {
           padding: `${numberFromDimension(theme.space.x2) - 1}px ${theme.space.x3}`,
         },
-
-        medium: {
+        desktop: {
           padding: `${numberFromDimension(theme.space.x1) - 1}px ${theme.space.x2}`,
         },
       },
