@@ -3,9 +3,9 @@ import addons from "@storybook/addons";
 import { select } from "@storybook/addon-knobs";
 import { NDSProvider } from "../../src";
 import { ALL_NDS_LOCALES } from "../../src/locales.const";
-import { desktop as NDSTheme } from "../../src/theme";
-import { ComponentSize } from "../../src/NDSProvider/ComponentSizeContext";
-import { EVENTS } from "./register";
+import { desktop, desktop as NDSTheme } from "../../src/theme";
+import { ComponentVariant } from "../../src/NDSProvider/ComponentVariantContext";
+import { useLocalStorage } from "./useLocalStorage/useLocalStorage";
 
 const localeKnobOptions = ALL_NDS_LOCALES.reduce(
   (obj, i) => ({
@@ -16,33 +16,17 @@ const localeKnobOptions = ALL_NDS_LOCALES.reduce(
 );
 
 const StorybookNDSProvider = ({ children }) => {
-  const channel = addons.getChannel();
-  const [theme, setTheme] = useState(NDSTheme);
-  const [themeVariant, setThemeVariant] = useState<ComponentSize>("medium");
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setLoading(false);
-  }, [setLoading]);
-
-  useEffect(() => {
-    channel.on(EVENTS.UPDATE, (data) => {
-      setTheme(data);
-      if (loading) {
-        setLoading(false);
-      }
-    });
-    channel.on(EVENTS.VARIANT_UPDATE, (data) => {
-      setThemeVariant(data);
-    });
-  }, [setLoading, channel, loading]);
+  const [theme] = useLocalStorage("nds-sb-theme", desktop, {
+    serializer: (value) => JSON.stringify(value),
+    deserializer: (value) => JSON.parse(value),
+  });
+  const [themeVariant] = useLocalStorage<ComponentVariant>("nds-sb-theme-variant", "desktop");
+  // const [loading, setLoading] = useState(true);
 
   return (
-    !loading && (
-      <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} theme={theme} size={themeVariant}>
-        {children}
-      </NDSProvider>
-    )
+    <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} variant={themeVariant} theme={theme}>
+      {children}
+    </NDSProvider>
   );
 };
 
