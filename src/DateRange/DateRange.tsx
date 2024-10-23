@@ -10,7 +10,7 @@ import { DateRangeStyles, highlightDates } from "./DateRangeStyles";
 import { getDuration } from "../TimeRange/TimeRange.utils";
 import EndTime from "./EndTime";
 import StartTime from "./StartTime";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 type DateRangeProps = FieldProps & {
   dateFormat?: string;
@@ -41,12 +41,12 @@ type DateRangeProps = FieldProps & {
   disableFlipping?: boolean;
   endTimeProps?: any;
   startTimeProps?: any;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
 };
 
 const DEFAULT_LABEL = "Date Range";
 
-const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
+const DateRange = forwardRef<unknown, DateRangeProps>(
   (
     {
       dateFormat,
@@ -80,7 +80,7 @@ const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
       locale,
       endTimeProps,
       startTimeProps,
-      size,
+      variant,
       ...props
     },
     ref
@@ -96,7 +96,7 @@ const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
     const [rangeError, setRangeError] = useState();
     const { t } = useTranslation();
 
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     useImperativeHandle(ref, () => ({
       dateRef1: {
@@ -183,7 +183,7 @@ const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
     const startDateInput = (
       <>
         <DatePicker
-          size={componentSize}
+          variant={componentVariant}
           dateFormat={dateFormat}
           selected={startDate}
           onChange={changeStartDateHandler}
@@ -198,7 +198,7 @@ const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
         />
         {showTimes && (
           <StartTime
-            size={componentSize}
+            variant={componentVariant}
             selected={startTime}
             defaultValue={defaultStartTime}
             aria-label={t("select a start time")}
@@ -221,7 +221,7 @@ const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
       <>
         {showTimes && (
           <EndTime
-            size={componentSize}
+            variant={componentVariant}
             selected={endTime}
             defaultValue={defaultEndTime}
             minTime={minTime}
@@ -238,7 +238,7 @@ const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
           />
         )}
         <DatePicker
-          size={componentSize}
+          variant={componentVariant}
           dateFormat={dateFormat}
           selected={endDate}
           onChange={changeEndDateHandler}
@@ -262,7 +262,7 @@ const DateRange: React.FC<React.PropsWithChildren<DateRangeProps>> = forwardRef(
       <>
         <DateRangeStyles />
         <RangeContainer
-          size={componentSize}
+          variant={componentVariant}
           labelProps={{
             ...labelProps,
             labelText: labelProps.labelText === DEFAULT_LABEL ? t("date range") : labelProps.labelText,

@@ -100,7 +100,7 @@ SetToRequired.story = {
 
 const DashedCheckbox = dashed(Checkbox);
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedCheckbox id="checkbox-1" labelText="I am a default sized Checkbox" />
     <DashedCheckbox id="checkbox-1" size="medium" labelText="I am a medium sized Checkbox" />

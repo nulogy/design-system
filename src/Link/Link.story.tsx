@@ -52,7 +52,7 @@ export const WithADifferentFontSize = () => (
 
 const DashedLink = dashed(Link);
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedLink href="http://nulogy.design">Default Link</DashedLink>
 
