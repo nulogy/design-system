@@ -4,13 +4,13 @@ import { SpaceProps } from "styled-system";
 import { TimePicker } from "../TimePicker";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { getDuration } from "./TimeRange.utils";
 
 const DEFAULT_LABEL = "Time Range";
 
 type TimeRangeProps = SpaceProps & {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   timeFormat?: string;
   onRangeChange?: Function;
   onStartTimeChange?: Function;
@@ -47,7 +47,7 @@ const TimeRange = forwardRef(
       endAriaLabel,
       endTimeProps,
       startTimeProps,
-      size,
+      variant,
       disableRangeValidation = false,
       labelProps = {
         ...FieldLabelDefaultProps,
@@ -66,7 +66,7 @@ const TimeRange = forwardRef(
 
     const { t } = useTranslation();
 
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     useImperativeHandle(ref, () => ({
       inputRef1: {
@@ -140,7 +140,7 @@ const TimeRange = forwardRef(
         data-testid="timerange-start-time"
         ref={inputRef1}
         error={rangeError}
-        size={componentSize}
+        variant={componentVariant}
         {...startTimeProps}
       />
     );
@@ -158,7 +158,7 @@ const TimeRange = forwardRef(
         data-testid="timerange-end-time"
         ref={inputRef2}
         error={rangeError}
-        size={componentSize}
+        variant={componentVariant}
         {...endTimeProps}
       />
     );
@@ -172,7 +172,7 @@ const TimeRange = forwardRef(
         startComponent={startInput}
         endComponent={endInput}
         errorMessages={!disableRangeValidation ? [rangeError, errorMessage] : [errorMessage]}
-        size={componentSize}
+        variant={componentVariant}
         {...props}
       />
     );

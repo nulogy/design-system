@@ -24,7 +24,7 @@ export const _Breadcrumbs = () => (
 
 const DashedBreadcrumbs = dashed(Breadcrumbs);
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedBreadcrumbs>
       <Link href="/">Default</Link>

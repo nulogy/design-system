@@ -3,11 +3,11 @@ import styled from "styled-components";
 import { variant } from "styled-system";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 type DropdownButtonProps = React.ComponentPropsWithRef<"button"> &
   StyledProps & {
-    size?: ComponentSize;
+    variant?: ComponentVariant;
     color?: string;
     theme?: DefaultNDSThemeType;
     hoverColor?: string;
@@ -47,15 +47,14 @@ const DropdownButton = styled.button<DropdownButtonProps>(
     },
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         pt: "x2",
         pr: "x2",
         pb: "x2",
         pl: "12px",
       },
-      medium: {
+      desktop: {
         pt: "x1",
         pr: "x2",
         pb: "x1",

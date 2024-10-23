@@ -7,10 +7,10 @@ import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 import { DefaultNDSThemeType } from "../theme.type";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 interface BaseProps {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   color?: string;
   labelHidden?: boolean;
   icon?: string;
@@ -103,13 +103,12 @@ const WrapperButton = styled.button<IconicButtonProps>(
     paddingRight: theme.space.none,
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         py: "x1",
         px: "none",
       },
-      medium: {
+      desktop: {
         py: "half",
         px: "none",
       },
@@ -130,12 +129,12 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
       iconSize = "x3",
       fontSize,
       tooltip,
-      size,
+      variant,
       ...props
     },
     forwardedRef
   ) => {
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     return (
       <WrapperButton
@@ -143,7 +142,7 @@ const IconicButton = React.forwardRef<HTMLButtonElement, IconicButtonProps>(
         aria-label={props["aria-label"] ? props["aria-label"] : typeof children === "string" ? children : undefined}
         className={className}
         hoverBackgroundColor={hoverBackgroundColor}
-        size={componentSize}
+        variant={componentVariant}
         {...props}
       >
         <Manager>

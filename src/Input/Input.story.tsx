@@ -27,7 +27,7 @@ WithAllProps.story = {
   name: "with all props",
 };
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex alignItems="flex-start">
     <Input
       placeholder="Placeholder"
@@ -47,7 +47,7 @@ export const WithDifferentSizes = () => (
       requirementText="Required"
       onChange={action("value changed")}
       onBlur={action("blurred")}
-      size="medium"
+      variant="desktop"
       required
     />
     <Input
@@ -58,7 +58,7 @@ export const WithDifferentSizes = () => (
       requirementText="Required"
       onChange={action("value changed")}
       onBlur={action("blurred")}
-      size="large"
+      variant="touch"
       required
     />
   </Flex>
