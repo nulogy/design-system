@@ -2,7 +2,7 @@ import React, { isValidElement } from "react";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
 import { FlexProps } from "../Flex/Flex";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import BreadcrumbsList from "./BreadcrumbsList";
 import { BreadcrumbsListItem, BreadcrumbsListSeparator } from "./BreadcrumbsListItem";
 
@@ -17,16 +17,16 @@ const insertSeparators = (items: JSX.Element[]) => {
   }, []);
 };
 
-type BreadcrumbsProps = Omit<FlexProps, "size"> & { size?: ComponentSize };
+type BreadcrumbsProps = FlexProps & { variant?: ComponentVariant };
 
-const Breadcrumbs = ({ size, as = "nav", children, ...props }: BreadcrumbsProps) => {
-  const componentSize = useComponentSize(size);
+const Breadcrumbs = ({ variant, as = "nav", children, ...props }: BreadcrumbsProps) => {
+  const componentVariant = useComponentVariant(variant);
 
   const allItems = React.Children.map(children, (child, index) => {
     if (!isValidElement(child)) return null;
 
     return (
-      <BreadcrumbsListItem size={componentSize} key={`child-${index}`}>
+      <BreadcrumbsListItem variant={componentVariant} key={`child-${index}`}>
         {child}
       </BreadcrumbsListItem>
     );

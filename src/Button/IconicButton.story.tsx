@@ -127,7 +127,7 @@ export const WithACustomFontSize = () => (
 
 const DashedIconicButton = dashed(IconicButton);
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedIconicButton tooltip="Stop job" icon="close">
       Default size

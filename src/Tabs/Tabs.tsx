@@ -5,14 +5,14 @@ import ReactResizeDetector from "react-resize-detector";
 import { getSubset } from "../utils/subset";
 import FocusManager from "../utils/ts/FocusManager";
 import { Box } from "../Box";
-import { ComponentSize, ComponentSizeContext } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, ComponentVariantContext } from "../NDSProvider/ComponentVariantContext";
 import TabContainer from "./TabContainer";
 import TabScrollIndicators from "./TabScrollIndicators";
 
 export type TabsProps = {
   className?: string;
   selectedIndex?: number;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   defaultSelectedIndex?: number;
   renderTabContentOnlyWhenSelected?: boolean;
   fitted?: boolean;
@@ -24,7 +24,7 @@ export type TabsState = {
 };
 
 class Tabs extends React.Component<TabsProps, TabsState> {
-  static contextType = ComponentSizeContext;
+  static contextType = ComponentVariantContext;
 
   constructor(props) {
     super(props);
@@ -46,9 +46,9 @@ class Tabs extends React.Component<TabsProps, TabsState> {
   }
 
   getTabs(setFocusToTab, focusedIndex, handleArrowNavigation) {
-    const { fitted, children, onTabClick, size } = this.props;
+    const { fitted, children, onTabClick, variant } = this.props;
 
-    const componentSize = size ?? this.context.size;
+    const componentVariant = variant ?? this.context.size;
 
     const selectedIndex = this.getSelectedIndex();
     const tabs = React.Children.toArray(children);
@@ -73,7 +73,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
           },
           onKeyDown: handleArrowNavigation,
           index,
-          size: componentSize,
+          size: componentVariant,
           tabIndex: index === focusedIndex ? 0 : -1,
           selected: index === selectedIndex,
           "aria-selected": index === selectedIndex,
