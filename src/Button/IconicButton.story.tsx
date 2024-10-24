@@ -132,11 +132,11 @@ export const WithDifferentVariants = () => (
     <DashedIconicButton tooltip="Stop job" icon="close">
       Default size
     </DashedIconicButton>
-    <DashedIconicButton size="medium" tooltip="Stop job" icon="close">
-      Medium size
+    <DashedIconicButton variant="desktop" tooltip="Stop job" icon="close">
+      Desktop size
     </DashedIconicButton>
-    <DashedIconicButton size="large" tooltip="Stop job" icon="close">
-      Large size
+    <DashedIconicButton variant="touch" tooltip="Stop job" icon="close">
+      Touch size
     </DashedIconicButton>
   </Flex>
 );
