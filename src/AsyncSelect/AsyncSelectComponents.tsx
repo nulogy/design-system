@@ -9,9 +9,10 @@ import {
   MenuProps,
   MultiValueProps,
 } from "react-select";
-import { components, type GroupBase } from "react-select";
+import { components, GroupBase } from "react-select";
 import type { OptionProps } from "react-windowed-select";
-import { type ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { StyledOption } from "../Select/SelectOption";
 
 export const SelectControl = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
