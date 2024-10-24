@@ -25,7 +25,7 @@ _QuietButton.story = {
   name: "QuietButton",
 };
 
-export const WithDifferentVariants = () => (
+export const WithDifferentSizes = () => (
   <Flex flexDirection="column" gap="x1">
     <Flex alignItems="center" gap="x1">
       <Button size="small">Create project</Button>

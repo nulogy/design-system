@@ -56,12 +56,12 @@ export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedLink href="http://nulogy.design">Default Link</DashedLink>
 
-    <DashedLink size="medium" href="http://nulogy.design">
-      Medium Link
+    <DashedLink variant="desktop" href="http://nulogy.design">
+      Desktop Link
     </DashedLink>
 
-    <DashedLink size="large" href="http://nulogy.design">
-      Large Link
+    <DashedLink variant="touch" href="http://nulogy.design">
+      Touch Link
     </DashedLink>
   </Flex>
 );
