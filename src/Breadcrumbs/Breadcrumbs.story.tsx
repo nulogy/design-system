@@ -30,12 +30,12 @@ export const WithDifferentVariants = () => (
       <Link href="/">Default</Link>
       <Link href="/">Size</Link>
     </DashedBreadcrumbs>
-    <DashedBreadcrumbs size="medium">
-      <Link href="/">Medium</Link>
+    <DashedBreadcrumbs size="desktop">
+      <Link href="/">Desktop</Link>
       <Link href="/">Size</Link>
     </DashedBreadcrumbs>
-    <DashedBreadcrumbs size="large">
-      <Link href="/">Large</Link>
+    <DashedBreadcrumbs variant="touch">
+      <Link href="/">Touch</Link>
       <Link href="/">Size</Link>
     </DashedBreadcrumbs>
   </Flex>

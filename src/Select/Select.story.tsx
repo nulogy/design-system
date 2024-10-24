@@ -158,23 +158,23 @@ export const WithDifferentVariants = () => {
           onInputChange={action("typed input value changed")}
         />
         <Select
-          size="medium"
+          variant="desktop"
           initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
           options={options}
-          labelText="Medium size"
+          labelText="desktop size"
           onInputChange={action("typed input value changed")}
         />
         <Select
-          size="large"
+          variant="touch"
           initialIsOpen
           placeholder="Please select inventory status"
           onChange={action("selection changed")}
           onBlur={action("blurred")}
           options={options}
-          labelText="Large size"
+          labelText="Touch size"
           onInputChange={action("typed input value changed")}
         />
       </Flex>
@@ -191,23 +191,23 @@ export const WithDifferentVariants = () => {
           multiselect
         />
         <Select
-          size="medium"
+          variant="desktop"
           initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
           options={PCNList}
-          labelText="Medium Size"
+          labelText="Desktop Size"
           multiselect
         />
         <Select
-          size="large"
+          variant="touch"
           initialIsOpen
           defaultValue={[partnerCompanyName[0].value, partnerCompanyName[2].value]}
           noOptionsMessage={() => "No options"}
           placeholder="Please select inventory status"
           options={PCNList}
-          labelText="Large Size"
+          labelText="Touch Size"
           multiselect
         />
       </Flex>
