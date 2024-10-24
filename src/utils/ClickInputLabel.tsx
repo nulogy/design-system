@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { variant } from "styled-system";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
-const ClickInputLabel = styled.label<{ size: ComponentSize; disabled: boolean }>(
+const ClickInputLabel = styled.label<{ variant?: ComponentVariant; disabled?: boolean }>(
   ({ disabled, theme }) => ({
     cursor: disabled ? undefined : "pointer",
     display: "inline-flex",
@@ -17,14 +17,12 @@ const ClickInputLabel = styled.label<{ size: ComponentSize; disabled: boolean }>
     paddingRight: 0,
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         py: "x2",
         px: "0",
       },
-
-      medium: {
+      desktop: {
         py: "x1",
         px: "0",
       },

@@ -17,7 +17,7 @@ export const WithSelectedValue = () => {
   );
 };
 
-export const WithDifferentSizes = () => {
+export const WithDifferentVariants = () => {
   const [selectedDefault, setSelectedDefault] = useState("option_1");
   const [selectedMedium, setSelectedMedium] = useState("option_1");
   const [selectedLarge, setSelectedLarge] = useState("option_1");
@@ -29,12 +29,17 @@ export const WithDifferentSizes = () => {
         <Switch value="option_2">Size</Switch>
       </Switcher>
 
-      <Switcher size="medium" aria-label="storybook-switcher" selected={selectedMedium} onChange={setSelectedMedium}>
+      <Switcher
+        variant="desktop"
+        aria-label="storybook-switcher"
+        selected={selectedMedium}
+        onChange={setSelectedMedium}
+      >
         <Switch value="option_1">Medium</Switch>
         <Switch value="option_2">Size</Switch>
       </Switcher>
 
-      <Switcher size="large" aria-label="storybook-switcher" selected={selectedLarge} onChange={setSelectedLarge}>
+      <Switcher variant="touch" aria-label="storybook-switcher" selected={selectedLarge} onChange={setSelectedLarge}>
         <Switch value="option_1">Large</Switch>
         <Switch value="option_2">Size</Switch>
       </Switcher>

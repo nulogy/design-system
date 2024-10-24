@@ -1,7 +1,9 @@
 import * as tokens from "@nulogy/tokens";
 import type { DefaultNDSThemeType } from "./theme.type";
 
-const desktopTheme: DefaultNDSThemeType = {
+type ThemeKey = "desktop" | "touch";
+
+const BASE_THEME = {
   colors: {
     black: tokens.color_base_black,
     blackBlue: tokens.color_base_black_blue,
@@ -41,6 +43,7 @@ const desktopTheme: DefaultNDSThemeType = {
   },
   lineHeights: {
     base: tokens.line_height_base,
+    relaxed: "1.66666667",
     smallTextBase: tokens.line_height_small_text_base,
     smallTextCompressed: tokens.line_height_small_text_compressed,
     smallerText: tokens.line_height_smaller_text,
@@ -97,6 +100,7 @@ const desktopTheme: DefaultNDSThemeType = {
     small: tokens.radius_border_small,
     medium: tokens.radius_border_medium,
     circle: tokens.radius_border_circle,
+    rounded: "9999px",
   },
   breakpoints: {
     extraSmall: tokens.size_breakpoint_extra_small,
@@ -119,67 +123,68 @@ const desktopTheme: DefaultNDSThemeType = {
   },
 };
 
-const touchTheme: DefaultNDSThemeType = {
-  ...desktopTheme,
-  fontSizes: {
-    smaller: "18px",
-    small: "21px",
-    medium: "24px",
-    large: "27px",
-    larger: "30px",
-    largest: "42px",
-    heading1: "30px",
-    heading2: "24px",
-    heading3: "21px",
-    heading4: "18px",
+const themes: Record<ThemeKey, DefaultNDSThemeType> = {
+  desktop: {
+    ...BASE_THEME,
   },
-  lineHeights: {
-    base: "1.33333333",
-    // relaxed: "1.66666667",
-    smallTextBase: "1.33333333",
-    smallTextCompressed: "1.33333333",
-    smallerText: "1.33333333",
-    heading1: "1.33333333",
-    heading2: "1.33333333",
-    heading3: "1.33333333",
-    heading4: "1.33333333",
-    title: "1.33333333",
-    sectionTitle: "1.33333333",
-    subsectionTitle: "1.33333333",
-  },
-  space: {
-    none: "0px",
-    half: "5.4px",
-    x1: "10.8px",
-    x2: "21.6px",
-    x3: "32.4px",
-    x4: "43.2px",
-    x5: "54px",
-    x6: "64.8px",
-    x8: "75.6px",
-  },
-  sizes: {
-    none: "0px",
-    half: "5.4px",
-    x1: "10.8px",
-    x2: "21.6px",
-    x3: "32.4px",
-    x4: "43.2px",
-    x5: "54px",
-    x6: "64.8px",
-    x8: "75.6px",
-  },
-  radii: {
-    small: "2.7px",
-    medium: "5.4px",
-    circle: "50%",
-    // rounded: "99999px",
+  touch: {
+    ...BASE_THEME,
+    fontSizes: {
+      smaller: "18px",
+      small: "21px",
+      medium: "24px",
+      large: "27px",
+      larger: "30px",
+      largest: "42px",
+      heading1: "30px",
+      heading2: "24px",
+      heading3: "21px",
+      heading4: "18px",
+    },
+    lineHeights: {
+      base: "1.33333333",
+      relaxed: "1.66666667",
+      smallTextBase: "1.33333333",
+      smallTextCompressed: "1.33333333",
+      smallerText: "1.33333333",
+      heading1: "1.33333333",
+      heading2: "1.33333333",
+      heading3: "1.33333333",
+      heading4: "1.33333333",
+      title: "1.33333333",
+      sectionTitle: "1.33333333",
+      subsectionTitle: "1.33333333",
+    },
+    space: {
+      none: "0px",
+      half: "5.4px",
+      x1: "10.8px",
+      x2: "21.6px",
+      x3: "32.4px",
+      x4: "43.2px",
+      x5: "54px",
+      x6: "64.8px",
+      x8: "75.6px",
+    },
+    sizes: {
+      none: "0px",
+      half: "5.4px",
+      x1: "10.8px",
+      x2: "21.6px",
+      x3: "32.4px",
+      x4: "43.2px",
+      x5: "54px",
+      x6: "64.8px",
+      x8: "75.6px",
+    },
+    radii: {
+      small: "2.7px",
+      medium: "5.4px",
+      circle: "50%",
+      rounded: "9999px",
+    },
   },
 };
 
-const themePerSize = {
-  medium: desktopTheme,
-  large: touchTheme,
-};
-
-export { touchTheme, desktopTheme, themePerSize };
+export { themes };
+export const { desktop, touch } = themes;

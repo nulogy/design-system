@@ -11,7 +11,7 @@ import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
 import { getSubset } from "../utils/subset";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import {
   SelectControl,
   SelectMultiValue,
@@ -22,12 +22,11 @@ import {
   SelectMenu,
   SelectOption,
 } from "./AsyncSelectComponents";
-import { DefaultNDSThemeType } from "../theme.type";
 
 type AsyncCustomProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = {
   autocomplete?: AsyncProps<Option, IsMulti, Group>["isSearchable"];
   labelText?: string;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   requirementText?: string;
   helpText?: ReactNode;
   disabled?: AsyncProps<Option, IsMulti, Group>["isDisabled"];
@@ -80,7 +79,7 @@ const AsyncSelect = forwardRef(
       defaultOptions,
       loadOptions,
       isClearable,
-      size,
+      variant,
       ...props
     }: AsyncSelectProps<Option, IsMulti, Group>,
     ref:
@@ -93,7 +92,7 @@ const AsyncSelect = forwardRef(
     const spaceProps = getSubset(props, propTypes.space);
     const error = !!(errorMessage || errorList);
 
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     return (
       <Field {...spaceProps}>
@@ -132,7 +131,7 @@ const AsyncSelect = forwardRef(
             theme={theme as any}
             components={{
               Option: (props) => (
-                <SelectOption size={componentSize} {...props}>
+                <SelectOption variant={componentVariant} {...props}>
                   {props.children}
                 </SelectOption>
               ),

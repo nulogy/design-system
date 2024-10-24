@@ -5,7 +5,7 @@ import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Heading1 } from "../Type";
 import { Icon } from "../Icon";
 import { DropdownButton, DropdownLink } from "../DropdownMenu";
-import { desktopTheme as theme } from "../theme";
+import { desktop as theme } from "../theme";
 import { Button } from "../Button";
 import { Text } from "../Type";
 import { BrandedNavBar as NDSBrandedNavBar } from "./index";

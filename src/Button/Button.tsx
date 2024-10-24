@@ -3,17 +3,20 @@ import styled, { useTheme } from "styled-components";
 import { space, SpaceProps, variant } from "styled-system";
 import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
-import { useComponentSize, ComponentSize as ContextComponentSize } from "../NDSProvider/ComponentSizeContext";
+import {
+  useComponentVariant,
+  ComponentVariant as ContextComponentSize,
+  ComponentVariant,
+} from "../NDSProvider/ComponentVariantContext";
 import { subPx } from "../utils";
-
-type ComponentSize = "small" | "medium" | "large";
 
 export type ButtonProps = SpaceProps &
   React.ComponentPropsWithRef<"button"> & {
     className?: string;
     icon?: any;
     iconSide?: "left" | "right";
-    size?: ComponentSize;
+    size?: "small" | "medium";
+    variant?: ComponentVariant;
     fullWidth?: boolean;
     asLink?: boolean;
     children?: React.ReactNode;
@@ -71,30 +74,45 @@ const WrapperButton = styled.button<ButtonProps>(
           padding: `${subPx(theme.space.half)} ${theme.space.x1}`,
         },
 
-        large: {
-          fontSize: "medium",
-          padding: `${subPx(theme.space.x2)} ${theme.space.x3}`,
-        },
-
         medium: {
           fontSize: "medium",
           padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
         },
       },
     }),
+  ({ theme }) =>
+    variant({
+      variants: {
+        desktop: {
+          fontSize: "medium",
+          padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
+        },
+        touch: {
+          fontSize: "medium",
+          padding: `${subPx(theme.space.x2)} ${theme.space.x3}`,
+        },
+      },
+    }),
   space
 );
 
-const Button: React.FC<React.PropsWithChildren<ButtonProps>> = React.forwardRef(
-  ({ children, iconSide = "right", icon, className, asLink, size, ...props }: ButtonProps, ref) => {
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, iconSide = "right", icon, className, asLink, variant, size, ...props }: ButtonProps, ref) => {
     const {
       lineHeights: { smallTextCompressed },
     } = useTheme();
 
-    const componentSize = useComponentSize(size as ContextComponentSize);
+    const componentVariant = useComponentVariant(variant as ContextComponentSize);
 
     return (
-      <WrapperButton as={asLink ? "a" : "button"} ref={ref} className={className} size={componentSize} {...props}>
+      <WrapperButton
+        as={asLink ? "a" : "button"}
+        ref={ref}
+        className={className}
+        variant={componentVariant}
+        size={size}
+        {...props}
+      >
         {icon && iconSide === "left" && <Icon size={`${smallTextCompressed}em`} mr="half" icon={icon} />}
         {children}
         {icon && iconSide === "right" && <Icon size={`${smallTextCompressed}em`} ml="half" icon={icon} />}

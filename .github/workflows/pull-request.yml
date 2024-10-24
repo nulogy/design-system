@@ -2,7 +2,10 @@ name: CI
 
 on:
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - next
+      - beta
 
 jobs:
   build:

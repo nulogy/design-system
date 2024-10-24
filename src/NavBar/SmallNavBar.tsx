@@ -2,7 +2,7 @@
 import React from "react";
 import { Branding } from "../Branding";
 import { Flex } from "../Flex";
-import { desktopTheme as theme } from "../theme";
+import { desktop as theme } from "../theme";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { PreventBodyElementScrolling, withMenuState } from "../utils";
 import MobileMenu from "./MobileMenu";

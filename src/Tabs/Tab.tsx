@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { variant } from "styled-system";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 const barStyles = (theme): { expanded: CSSObject; default: CSSObject } => ({
   expanded: {
@@ -41,7 +41,7 @@ const getBarHoverStyles = (selected, disabled, theme) => {
 };
 
 type TabButtonProps = React.ComponentPropsWithRef<"button"> & {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   selected?: boolean;
   fullWidth?: boolean;
 };
@@ -83,13 +83,12 @@ const TabButton = styled.button<TabButtonProps>(
     },
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         py: "x2",
         px: "x4",
       },
-      medium: {
+      desktop: {
         py: "x1",
         px: "x3",
       },

@@ -47,7 +47,7 @@ WithCustomDateFormat.story = {
   name: "with custom date format",
 };
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DatePicker
       selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
@@ -59,24 +59,24 @@ export const WithDifferentSizes = () => (
       inputProps={{ labelText: "Default size" }}
     />
     <DatePicker
-      size="medium"
+      variant="desktop"
       selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
       onFocus={action("date selector focused")}
       onBlur={action("date selector blurred")}
       onInputChange={action("input changed")}
-      inputProps={{ labelText: "Medium size" }}
+      inputProps={{ labelText: "Desktop size" }}
     />
     <DatePicker
-      size="large"
+      variant="touch"
       selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
       dateFormat="MMMM d, yyyy"
       onChange={action("date changed")}
       onFocus={action("date selector focused")}
       onBlur={action("date selector blurred")}
       onInputChange={action("input changed")}
-      inputProps={{ labelText: "Large size" }}
+      inputProps={{ labelText: "Touch size" }}
     />
   </Flex>
 );

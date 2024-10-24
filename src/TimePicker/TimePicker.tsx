@@ -10,13 +10,13 @@ import { localizedFormat } from "../utils/localized-date-fns";
 import { DetectOutsideClick } from "../utils";
 import { Box } from "../Box";
 import { keyCodes } from "../constants";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import TimePickerOption from "./TimePickerOption";
 import TimePickerDropdown from "./TimePickerDropdown";
 import TimePickerInput from "./TimePickerInput";
 
 type TimePickerProps = SpaceProps & {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   disabled?: boolean;
   value?: string;
   timeFormat?: string;
@@ -148,8 +148,7 @@ const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRe
       value,
       error,
       disabled,
-      size,
-
+      variant,
       ...props
     },
     inputRef
@@ -161,7 +160,7 @@ const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRe
     const [ref, setRef] = useState(null);
     const dropdownRef = useRef(null);
     const { t } = useTranslation();
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
 
     const scrollToSelection = useCallback(
       debounce((currentOption, dropdown) => {
@@ -267,7 +266,7 @@ const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRe
           className={`nds-time-picker ${className || ""}`}
           position="relative"
           ref={onRefChange}
-          width={componentSize === "large" ? "208px" : "130px"}
+          width={componentVariant === "touch" ? "208px" : "130px"}
           data-testid="select-container"
           {...props}
         >
@@ -283,14 +282,14 @@ const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRe
             onClick={handleClickInput}
             onKeyDown={(e) => handleKeyDown(e)}
             aria-label={ariaLabel || t("Select a time")}
-            inputWidth={componentSize === "large" ? "208px" : "130px"}
+            inputWidth={componentVariant === "touch" ? "208px" : "130px"}
             iconSize="20px"
             data-testid="select-input"
             type="text"
             ref={inputRef}
             disabled={disabled}
             autoComplete="off"
-            size={componentSize}
+            variant={componentVariant}
           />
           <TimePickerDropdown
             isOpen={dropdownIsOpen}
@@ -317,7 +316,7 @@ const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRe
                   }}
                   role="option"
                   data-testid={`select-option ${closestTestId} ${selectedTestId}`}
-                  size={componentSize}
+                  variant={componentVariant}
                 >
                   {option.label}
                 </TimePickerOption>

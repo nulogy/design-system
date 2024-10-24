@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { variant } from "styled-system";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 interface Props extends React.ComponentPropsWithRef<"a">, StyledProps {
   disabled?: boolean;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   color?: string;
   hoverColor?: string;
   bgHoverColor?: string;
@@ -51,16 +51,15 @@ const DropdownLink = styled.a.withConfig<Props>({
     paddingLeft: "12px",
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         pt: "x2",
         pr: "x2",
         pb: "x2",
         pl: "12px",
       },
 
-      medium: {
+      desktop: {
         pt: "x1",
         pr: "x2",
         pb: "x1",

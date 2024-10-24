@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import type { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
 export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
@@ -19,7 +18,7 @@ export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
     | "uppercase"
     | undefined;
   fontSize?: string;
-} & StyledProps & { theme?: DefaultNDSThemeType };
+} & StyledProps;
 
 const Text = styled.p<TextProps>(
   ({ disabled = false, textTransform, inline = false, theme }) => ({

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { space, color, flexbox, layout, variant } from "styled-system";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export const BreadcrumbsListSeparator = styled.li(
   ({ theme }) => ({
@@ -22,7 +22,7 @@ export const BreadcrumbsListSeparator = styled.li(
   flexbox
 );
 
-export const BreadcrumbsListItem = styled.li<{ size: ComponentSize }>(
+export const BreadcrumbsListItem = styled.li<{ variant: ComponentVariant }>(
   ({ theme }) => ({
     margin: 0,
     listStyle: "none",
@@ -42,16 +42,15 @@ export const BreadcrumbsListItem = styled.li<{ size: ComponentSize }>(
     },
   }),
   variant({
-    prop: "size",
     variants: {
-      large: {
+      touch: {
         "a, p": {
           py: "x2",
           px: "x0",
           fontSize: "medium",
         },
       },
-      medium: {
+      desktop: {
         "a, p": {
           py: "0",
           px: "0",

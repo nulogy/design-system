@@ -10,8 +10,9 @@ import {
   MultiValueProps,
 } from "react-select";
 import { components, GroupBase } from "react-select";
-import { OptionProps } from "react-windowed-select";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import type { OptionProps } from "react-windowed-select";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { StyledOption } from "../Select/SelectOption";
 
 export const SelectControl = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
@@ -97,12 +98,17 @@ export const SelectMenu = <Option, IsMulti extends boolean, Group extends GroupB
 };
 
 export function SelectOption<Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
-  props: OptionProps<Option, IsMulti, Group> & { size?: ComponentSize }
+  props: OptionProps<Option, IsMulti, Group> & { variant?: ComponentVariant }
 ) {
-  const size = useComponentSize(props.size);
+  const variant = useComponentVariant(props.variant);
 
   return (
-    <StyledOption isSelected={props.isSelected} isFocused={props.isFocused} size={size} data-testid="select-option">
+    <StyledOption
+      isSelected={props.isSelected}
+      isFocused={props.isFocused}
+      variant={variant}
+      data-testid="select-option"
+    >
       <components.Option {...props}>{props.children}</components.Option>
     </StyledOption>
   );

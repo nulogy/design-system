@@ -1,6 +1,6 @@
 import React from "react";
 import { create } from "@storybook/theming";
-import { desktopTheme as theme } from "../src/theme";
+import { desktop as theme } from "../src/theme";
 import StorybookNDSProvider from "./nds-theme";
 
 const newViewports = {

@@ -66,7 +66,7 @@ WithCustomColors.story = {
   name: "with custom colors",
 };
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="48px">
     <DropdownMenu
       trigger={() => <IconicButton icon="more">Default menu</IconicButton>}
@@ -83,7 +83,7 @@ export const WithDifferentSizes = () => (
       defaultOpen
       openAriaLabel="open dropdown"
       closeAriaLabel="close dropdown"
-      size="medium"
+      variant="desktop"
     >
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
@@ -94,7 +94,7 @@ export const WithDifferentSizes = () => (
       defaultOpen
       openAriaLabel="open dropdown"
       closeAriaLabel="close dropdown"
-      size="large"
+      variant="touch"
     >
       <DropdownLink href="/">Dropdown Link</DropdownLink>
       <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>

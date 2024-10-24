@@ -6,13 +6,13 @@ import { FieldLabel } from "../FieldLabel";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
 import { InlineValidation } from "../Validation";
 import { getSubset, omitSubset } from "../utils/subset";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 type RangeContainerProps = {
   labelProps?: any;
   startComponent?: React.ReactNode;
   endComponent?: React.ReactNode;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   errorMessages?: (string | undefined)[];
   children?: React.ReactNode;
 };
@@ -25,7 +25,7 @@ const RangeContainer = ({
     ...FieldLabelDefaultProps,
     labelText: "Range",
   },
-  size,
+  variant,
   ...props
 }: RangeContainerProps) => {
   const spaceProps = getSubset(props, propTypes.space);
@@ -37,7 +37,7 @@ const RangeContainer = ({
       <Flex flexWrap="wrap" mt="x1" mb={errorMessages.length ? "x1" : "x3"}>
         <Flex>{startComponent}</Flex>
         <Flex px="half" alignItems="flex-end" alignSelf="flex-end">
-          <Text lineHeight={size === "large" ? "56px" : "38px"}>-</Text>
+          <Text lineHeight={variant === "touch" ? "56px" : "38px"}>-</Text>
         </Flex>
         <Flex>{endComponent}</Flex>
       </Flex>

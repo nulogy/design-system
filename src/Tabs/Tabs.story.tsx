@@ -184,19 +184,19 @@ export const WithConditionallyRenderedTabs = () => (
   </Tabs>
 );
 
-export const WithDifferentSizes = () => (
+export const WithDifferentVariants = () => (
   <Flex gap="x4">
     <Tabs defaultSelectedIndex={2}>
       <Tab label="Default tab 1">Tab 1 Content</Tab>
       <Tab label="Default tab 2">Tab 2 Content</Tab>
     </Tabs>
 
-    <Tabs defaultSelectedIndex={2} size="medium">
+    <Tabs defaultSelectedIndex={2} variant="desktop">
       <Tab label="Medium tab 1">Tab 1 Content</Tab>
       <Tab label="Medium tab 2">Tab 2 Content</Tab>
     </Tabs>
 
-    <Tabs defaultSelectedIndex={2} size="large">
+    <Tabs defaultSelectedIndex={2} variant="touch">
       <Tab label="Large tab 1">Tab 1 Content</Tab>
       <Tab label="Large tab 2">Tab 2 Content</Tab>
     </Tabs>

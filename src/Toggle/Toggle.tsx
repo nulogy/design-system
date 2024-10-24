@@ -6,7 +6,7 @@ import { Box } from "../Box";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { Field } from "../Form";
 import { Text } from "../Type";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
 import { getSubset, omitSubset } from "../utils/subset";
@@ -43,7 +43,7 @@ function MaybeToggleTitle({ labelText, requirementText, helpText, children, ...p
 
 type BaseToggleProps = SpaceProps & {
   onChange?: (...args: any[]) => any;
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   toggled?: boolean;
   disabled?: boolean;
   onText?: string;
@@ -76,7 +76,7 @@ const BaseToggle = ({
   helpText,
   toggled,
   onClick,
-  size,
+  variant,
   "data-testid": dataTestId,
   ...props
 }: BaseToggleProps) => {
@@ -84,7 +84,7 @@ const BaseToggle = ({
     if (onClick) onClick(e);
   };
 
-  const componentSize = useComponentSize(size);
+  const componentVariant = useComponentVariant(variant);
   const spaceProps = getSubset(props, propTypes.space);
   const restProps = omitSubset(props, propTypes.space);
 
@@ -96,7 +96,13 @@ const BaseToggle = ({
         requirementText={requirementText}
         helpText={helpText}
       >
-        <ClickInputLabel size={componentSize} as="div" onClick={onClick} disabled={disabled} data-testid={dataTestId}>
+        <ClickInputLabel
+          variant={componentVariant}
+          as="div"
+          onClick={onClick}
+          disabled={disabled}
+          data-testid={dataTestId}
+        >
           <ToggleButton
             id={id}
             checked={toggled}

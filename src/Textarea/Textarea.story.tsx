@@ -71,12 +71,17 @@ export const UsingRefToControlFocus = () => {
   );
 };
 
-export const WithDifferentSizes = () => {
+export const WithDifferentVariants = () => {
   return (
     <Flex gap="x2" alignItems="flex-start">
       <Textarea labelText="Default size" onChange={action("value changed")} onBlur={action("blurred")} />
-      <Textarea size="medium" labelText="Medium size" onChange={action("value changed")} onBlur={action("blurred")} />
-      <Textarea size="large" labelText="Large size" onChange={action("value changed")} onBlur={action("blurred")} />
+      <Textarea
+        variant="desktop"
+        labelText="Medium size"
+        onChange={action("value changed")}
+        onBlur={action("blurred")}
+      />
+      <Textarea variant="touch" labelText="Large size" onChange={action("value changed")} onBlur={action("blurred")} />
     </Flex>
   );
 };

@@ -26,6 +26,6 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
     "storybook-addon-performance",
-    "./nds-theme/register.js",
+    "./nds-theme/register.tsx",
   ],
 };

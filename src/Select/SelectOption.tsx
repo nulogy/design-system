@@ -3,13 +3,13 @@ import styled from "styled-components";
 import { components, OptionProps } from "react-windowed-select";
 import { typography } from "styled-system";
 import { subPx } from "../utils";
-import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
-import { stylesForSize } from "./customReactSelectStyles";
+import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { stylesForVariant } from "./customReactSelectStyles";
 
 type SelectOptionProps = {
   isSelected: boolean;
   isFocused: boolean;
-  size: ComponentSize;
+  variant: ComponentVariant;
 };
 
 export const StyledOption = styled.div<SelectOptionProps>(
@@ -33,33 +33,38 @@ export const StyledOption = styled.div<SelectOptionProps>(
       },
     },
   }),
-  ({ theme, size }) =>
-    stylesForSize(
+  ({ theme, variant }) =>
+    stylesForVariant(
       {
-        large: {
+        touch: {
           div: {
             padding: subPx(theme.space.x2),
           },
         },
-        medium: {
+        desktop: {
           div: {
             padding: subPx(theme.space.x1),
           },
         },
       },
-      size
+      variant
     )
 );
 
 interface CustomOptionProps extends OptionProps {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
 }
 
 export function SelectOption(props: CustomOptionProps) {
-  const size = useComponentSize(props.size);
+  const variant = useComponentVariant(props.variant);
 
   return (
-    <StyledOption isSelected={props.isSelected} isFocused={props.isFocused} size={size} data-testid="select-option">
+    <StyledOption
+      isSelected={props.isSelected}
+      isFocused={props.isFocused}
+      variant={variant}
+      data-testid="select-option"
+    >
       <components.Option {...props}>{props.children}</components.Option>
     </StyledOption>
   );

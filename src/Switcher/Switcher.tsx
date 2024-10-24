@@ -1,19 +1,19 @@
 import React, { ReactElement } from "react";
 import { Box } from "../Box";
 import FocusManager from "../utils/ts/FocusManager";
-import type { ComponentSize } from "../NDSProvider/ComponentSizeContext";
-import { useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import type { SwitchProps } from "./Switch";
 
 type SwitcherProps = {
-  size?: ComponentSize;
+  variant?: ComponentVariant;
   children?: ReactElement<SwitchProps>[];
   selected?: string;
   onChange?: (value: string) => void;
 };
 
-const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ size, selected, onChange, ...rest }) => {
-  const componentSize = useComponentSize(size);
+const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ variant, selected, onChange, ...rest }) => {
+  const componentVariant = useComponentVariant(variant);
 
   const optionRefs = [];
 
@@ -32,7 +32,7 @@ const Switcher: React.FC<React.PropsWithChildren<SwitcherProps>> = ({ size, sele
   const options = (focusedIndex, setFocusedIndex, handleArrowNavigation) => {
     return React.Children.map(rest.children, (child: ReactElement<SwitchProps>, index) => {
       return React.cloneElement(child, {
-        size: componentSize,
+        variant: componentVariant,
         tabIndex: index === focusedIndex ? 0 : -1,
         selected: isSelected(child.props.value, index),
         "aria-selected": isSelected(child.props.value, index),

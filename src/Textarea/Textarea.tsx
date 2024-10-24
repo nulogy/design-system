@@ -4,7 +4,7 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { getSubset, omitSubset } from "../utils/subset";
-import { useComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import StyledTextarea from "./StyledTextarea";
 import { StyledTextareaProps } from "./StyledTextarea";
 
@@ -38,12 +38,12 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
       id,
       className,
       isResizeable = true,
-      size,
+      variant,
       ...props
     },
     ref
   ) => {
-    const componentSize = useComponentSize(size);
+    const componentVariant = useComponentVariant(variant);
     const spaceProps = getSubset(props, propTypes.space);
     const restProps = omitSubset(props, propTypes.space);
 
@@ -61,7 +61,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
             error={error}
             rows={rows}
             isResizeable={isResizeable}
-            size={componentSize}
+            variant={componentVariant}
             disabled={disabled}
             {...restProps}
           />

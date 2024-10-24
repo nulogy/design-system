@@ -5,11 +5,11 @@ import { SpaceProps, variant } from "styled-system";
 import { space } from "styled-system";
 import { subPx } from "../utils";
 import { DefaultNDSThemeType } from "../theme.type";
-import { ComponentSize } from "../NDSProvider/ComponentSizeContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
   SpaceProps & {
-    size?: ComponentSize;
+    variant?: ComponentVariant;
     theme?: DefaultNDSThemeType;
     errorMessage?: string;
     errorList?: string[];
@@ -47,7 +47,7 @@ const getTextareaStyle = (props) => {
 
 const StyledTextarea = styled.textarea<StyledTextareaProps>(
   space,
-  ({ theme, isResizeable, size }): CSSObject => ({
+  ({ theme, isResizeable }) => ({
     display: "block",
     width: "100%",
     border: "1px solid",
@@ -70,12 +70,11 @@ const StyledTextarea = styled.textarea<StyledTextareaProps>(
   }),
   ({ theme }) =>
     variant({
-      prop: "size",
       variants: {
-        large: {
+        touch: {
           padding: `${subPx(theme.space.x2)}`,
         },
-        medium: {
+        desktop: {
           padding: `${subPx(theme.space.x1)}`,
         },
       },

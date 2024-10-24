@@ -1,4 +1,4 @@
-import { desktopTheme as theme } from "../theme";
+import { desktop as theme } from "../theme";
 import { getControlBorderRadius, getMenuBorderRadius, showIndicatorSeparator } from "./customReactSelectStyles";
 
 describe("custom react-select styles", () => {

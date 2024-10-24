@@ -30,19 +30,16 @@ export const WithDifferentSizes = () => (
     <Flex alignItems="center" gap="x1">
       <Button size="small">Create project</Button>
       <Button size="medium">Create project</Button>
-      <Button size="large">Create project</Button>
     </Flex>
 
     <Flex alignItems="center" gap="x1">
       <PrimaryButton size="small">Create project</PrimaryButton>
       <PrimaryButton size="medium">Create project</PrimaryButton>
-      <PrimaryButton size="large">Create project</PrimaryButton>
     </Flex>
 
     <Flex alignItems="center" gap="x1">
       <QuietButton size="small">Create project</QuietButton>
       <QuietButton size="medium">Create project</QuietButton>
-      <QuietButton size="large">Create project</QuietButton>
     </Flex>
   </Flex>
 );
