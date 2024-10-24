@@ -103,8 +103,8 @@ const DashedCheckbox = dashed(Checkbox);
 export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedCheckbox id="checkbox-1" labelText="I am a default sized Checkbox" />
-    <DashedCheckbox id="checkbox-1" size="medium" labelText="I am a medium sized Checkbox" />
-    <DashedCheckbox id="checkbox-1" size="large" labelText="I am a large sized Checkbox" />
+    <DashedCheckbox id="checkbox-1" variant="desktop" labelText="I am a desktop sized Checkbox" />
+    <DashedCheckbox id="checkbox-1" variant="touch" labelText="I am a touch sized Checkbox" />
   </Flex>
 );
 
