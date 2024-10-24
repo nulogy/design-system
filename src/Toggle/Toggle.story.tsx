@@ -12,16 +12,16 @@ export const WithDifferentVariants = () => (
   <Flex gap="x2" alignItems="flex-start">
     <DashedToggle onText="Default" offText="Default" data-testid="toggle-example" onChange={action("on change")} />
     <DashedToggle
-      onText="Medium"
-      offText="Medium"
-      size="medium"
+      onText="Desktop"
+      offText="Desktop"
+      variant="desktop"
       data-testid="toggle-example"
       onChange={action("on change")}
     />
     <DashedToggle
-      onText="Large"
-      size="large"
-      offText="Large"
+      onText="Touch"
+      offText="Touch"
+      variant="touch"
       data-testid="toggle-example"
       onChange={action("on change")}
     />
