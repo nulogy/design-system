@@ -18,8 +18,8 @@ const DangerButton = styled(Button)(({ disabled, theme }: DangerButtonProps) => 
   "&:focus": {
     outline: "none",
     backgroundColor: theme.colors.red,
-    borderColor: theme.colors.blue,
-    boxShadow: theme.shadows.focus,
+    borderColor: theme.colors.red,
+    boxShadow: theme.shadows.error,
     "&:hover": {
       backgroundColor: darken(0.1, theme.colors.red),
     },

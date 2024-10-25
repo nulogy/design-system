@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex } from "../Flex";
 import { Button, PrimaryButton, DangerButton, QuietButton } from ".";
+import { Heading2, Heading4 } from "../Type";
 
 export default {
   title: "Components/Buttons",
@@ -26,20 +27,24 @@ _QuietButton.story = {
 };
 
 export const WithDifferentSizes = () => (
-  <Flex flexDirection="column" gap="x1">
-    <Flex alignItems="center" gap="x1">
-      <Button size="small">Create project</Button>
-      <Button size="medium">Create project</Button>
+  <Flex flexDirection="column" gap="x2">
+    <Flex flexDirection="column">
+      <Heading4>Medium size (default)</Heading4>
+      <Flex gap="x1">
+        <Button>Secondary Button</Button>
+        <PrimaryButton>Primary Button</PrimaryButton>
+        <DangerButton>Danger Button</DangerButton>
+        <QuietButton>Quiet Button</QuietButton>
+      </Flex>
     </Flex>
-
-    <Flex alignItems="center" gap="x1">
-      <PrimaryButton size="small">Create project</PrimaryButton>
-      <PrimaryButton size="medium">Create project</PrimaryButton>
-    </Flex>
-
-    <Flex alignItems="center" gap="x1">
-      <QuietButton size="small">Create project</QuietButton>
-      <QuietButton size="medium">Create project</QuietButton>
+    <Flex flexDirection="column">
+      <Heading4>Small size</Heading4>
+      <Flex gap="x1">
+        <Button size="small">Secondary Button</Button>
+        <PrimaryButton size="small">Primary Button</PrimaryButton>
+        <DangerButton size="small">Danger Button</DangerButton>
+        <QuietButton size="small">Quiet Button</QuietButton>
+      </Flex>
     </Flex>
   </Flex>
 );

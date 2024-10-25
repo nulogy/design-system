@@ -1,3 +1,10 @@
+import { filterOptions } from "../utils/story/simulatedAPIRequests";
+
+export const loadMatchingProvinces = async (inputValue: string) => {
+  const data = await filterOptions(inputValue, provinces);
+  return await data.json();
+};
+
 export const provinces = [
   {
     label: "Alberta",

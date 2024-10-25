@@ -79,7 +79,9 @@ const Alert = ({
   return (
     <Flex
       bg={alertColours[type].backgroundColor}
-      p="x2"
+      py="x2"
+      paddingLeft="x2"
+      paddingRight="x1_5"
       borderRadius="medium"
       borderLeftWidth="4px"
       borderLeftColor={alertColours[type].borderColor}
@@ -88,12 +90,12 @@ const Alert = ({
       alignItems={children ? "flex-start" : undefined}
       {...props}
     >
-      {type === "danger" && <Icon icon="error" mr="x1" color={alertColours[type].borderColor} />}
-      {type === "success" && <Icon icon="check" mr="x1" color={alertColours[type].borderColor} />}
-      <Box mr="auto">
+      {type === "danger" && <Icon size="x3" icon="error" mr="x1" color={alertColours[type].borderColor} />}
+      {type === "success" && <Icon size="x3" icon="check" mr="x1" color={alertColours[type].borderColor} />}
+      <Flex flexDirection="column" gap="half" mr="auto">
         {title && <Text fontWeight="bold">{title}</Text>}
-        {children}
-      </Box>
+        <Box>{children}</Box>
+      </Flex>
       {isCloseable && <CloseButton onClick={hideAlert} aria-label={closeAriaLabel} />}
     </Flex>
   );

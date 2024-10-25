@@ -198,9 +198,11 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       ...stylesForVariant(
         {
           touch: {
-            paddingTop: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
-            paddingBottom: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
-            gap: theme.space.x1,
+            // paddingTop: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
+            // paddingBottom: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
+            // gap: theme.space.x1,
+            paddingTop: theme.space.none,
+            paddingBottom: theme.space.none,
           },
           desktop: {
             paddingTop: theme.space.none,
@@ -279,10 +281,12 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       ...stylesForVariant(
         {
           touch: {
-            fontSize: theme.fontSizes.medium,
-            lineHeight: theme.lineHeights.base,
-            padding: theme.space.x1,
-            paddingRight: theme.space.half,
+            // fontSize: theme.fontSizes.medium,
+            // lineHeight: theme.lineHeights.base,
+            // padding: theme.space.x1,
+            // paddingRight: theme.space.half,
+            padding: theme.space.half,
+            paddingLeft: theme.space.x1,
           },
           desktop: {
             padding: theme.space.half,
@@ -305,7 +309,7 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       ...stylesForVariant(
         {
           touch: {
-            padding: theme.space.x1,
+            // padding: theme.space.x1,
           },
           desktop: {
             // Nothing
@@ -317,7 +321,7 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
     noOptionsMessage: (provided) => ({
       ...provided,
       color: theme.colors.black,
-      fontSize: "14px",
+      fontSize: theme.fontSizes.small,
     }),
     indicatorSeparator: (provided, state) => ({
       ...provided,

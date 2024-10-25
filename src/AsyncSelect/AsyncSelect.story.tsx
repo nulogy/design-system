@@ -2,14 +2,8 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
 import { AsyncSelect, Button } from "../index";
-import { filterOptions } from "../utils/story/simulatedAPIRequests";
-import { provinces } from "./fixtures";
+import { loadMatchingProvinces } from "./fixtures";
 import { Flex } from "../Flex";
-
-const loadMatchingProvinces = async (inputValue: string) => {
-  const data = await filterOptions(inputValue, provinces);
-  return await data.json();
-};
 
 export default {
   title: "Components/AsyncSelect",

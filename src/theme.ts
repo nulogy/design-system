@@ -3,7 +3,7 @@ import type { DefaultNDSThemeType } from "./theme.type";
 
 type ThemeKey = "desktop" | "touch";
 
-const BASE_THEME = {
+const BASE_THEME: DefaultNDSThemeType = {
   colors: {
     black: tokens.color_base_black,
     blackBlue: tokens.color_base_black_blue,
@@ -64,7 +64,10 @@ const BASE_THEME = {
   space: {
     none: tokens.size_base_none,
     half: tokens.size_base_half,
+    x0: tokens.size_base_none,
+    x0_5: tokens.size_base_half,
     x1: tokens.size_base_x_1,
+    x1_5: "12px",
     x2: tokens.size_base_x_2,
     x3: tokens.size_base_x_3,
     x4: tokens.size_base_x_4,
@@ -75,7 +78,10 @@ const BASE_THEME = {
   sizes: {
     none: tokens.size_base_none,
     half: tokens.size_base_half,
+    x0: tokens.size_base_none,
+    x0_5: tokens.size_base_half,
     x1: tokens.size_base_x_1,
+    x1_5: "12px",
     x2: tokens.size_base_x_2,
     x3: tokens.size_base_x_3,
     x4: tokens.size_base_x_4,
@@ -158,7 +164,10 @@ const themes: Record<ThemeKey, DefaultNDSThemeType> = {
     space: {
       none: "0px",
       half: "5.4px",
+      x0: "0px",
+      x0_5: "5.4px",
       x1: "10.8px",
+      x1_5: "16.2px",
       x2: "21.6px",
       x3: "32.4px",
       x4: "43.2px",
@@ -169,7 +178,10 @@ const themes: Record<ThemeKey, DefaultNDSThemeType> = {
     sizes: {
       none: "0px",
       half: "5.4px",
+      x0: "0px",
+      x0_5: "5.4px",
       x1: "10.8px",
+      x1_5: "16.2px",
       x2: "21.6px",
       x3: "32.4px",
       x4: "43.2px",
