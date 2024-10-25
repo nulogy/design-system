@@ -1,11 +1,12 @@
 import icons from "@nulogy/icons";
 import React from "react";
 import styled from "styled-components";
-import { space, SpaceProps } from "styled-system";
+import { layout, LayoutProps, space, SpaceProps } from "styled-system";
 import { Icon } from "../Icon";
 
 type ControlIconProps = React.ComponentPropsWithRef<"button"> &
-  SpaceProps & {
+  SpaceProps &
+  LayoutProps & {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
     icon: keyof typeof icons | "loading";
     toggled?: boolean;
@@ -16,17 +17,18 @@ type ControlIconProps = React.ComponentPropsWithRef<"button"> &
   };
 
 const getIconColorByState = ({ toggled, disabled, theme }) => {
-  if (toggled) {
-    return theme.colors.darkBlue;
-  }
-  if (disabled) {
-    return theme.colors.grey;
-  }
+  if (toggled) return theme.colors.darkBlue;
+
+  if (disabled) return theme.colors.grey;
+
   return theme.colors.darkGrey;
 };
 
-const StyledButton: React.FC<React.PropsWithChildren<any>> = styled.button(
-  ({ toggled, disabled, theme }: any) => ({
+const StyledButton = styled.button<{
+  toggled?: ControlIconProps["toggled"];
+  disabled?: ControlIconProps["disabled"];
+}>(
+  ({ toggled, disabled, theme }) => ({
     background: "transparent",
     border: "none",
     display: "flex",
@@ -44,12 +46,22 @@ const StyledButton: React.FC<React.PropsWithChildren<any>> = styled.button(
       backgroundColor: theme.colors.lightGrey,
     },
   }),
-  space
+  space,
+  layout
 );
 
-const ControlIcon = React.forwardRef(
-  ({ icon, toggled, disabled, label, size = "x4", type = "button", ...props }: ControlIconProps, ref) => (
-    <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} type={type} {...props}>
+const ControlIcon = React.forwardRef<HTMLButtonElement, ControlIconProps>(
+  ({ icon, toggled, disabled, label, size = "x4", type = "button", ...props }, ref) => (
+    <StyledButton
+      height={size}
+      width={size}
+      aria-label={label}
+      ref={ref}
+      disabled={disabled}
+      toggled={toggled}
+      type={type}
+      {...props}
+    >
       <Icon size={size} icon={icon} />
     </StyledButton>
   )

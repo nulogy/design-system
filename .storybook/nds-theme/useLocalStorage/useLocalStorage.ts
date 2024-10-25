@@ -1,6 +1,7 @@
-import {  useCallback, useEffect, useState,  type Dispatch, type SetStateAction } from "react";
-import {useEventCallback} from "./useEventCallback";
-import {useEventListener} from "./useEventListener";
+import { useCallback, useEffect, useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
+import { useEventCallback } from "./useEventCallback";
+import { useEventListener } from "./useEventListener";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
@@ -42,7 +43,7 @@ export function useLocalStorage<T>(
       }
       // Support 'undefined' as a value
       if (value === "undefined") {
-        return (undefined as unknown) as T;
+        return undefined as unknown as T;
       }
 
       const defaultValue = initialValue instanceof Function ? initialValue() : initialValue;

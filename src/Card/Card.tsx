@@ -3,17 +3,25 @@ import { Box } from "../Box";
 import { BoxProps } from "../Box/Box";
 
 export default function Card({
-  children = [],
   borderRadius = "medium",
   boxShadow = "small",
-  bg = "whiteGrey",
   py = "x2",
   px = "x2",
   position = "relative",
+  children,
   ...props
 }: BoxProps) {
   return (
-    <Box borderRadius={borderRadius} boxShadow={boxShadow} bg={bg} py={py} px={px} position={position} {...props}>
+    <Box
+      border="1px solid"
+      borderColor="lightGrey"
+      borderRadius={borderRadius}
+      boxShadow={boxShadow}
+      py={py}
+      px={px}
+      position={position}
+      {...props}
+    >
       {children}
     </Box>
   );

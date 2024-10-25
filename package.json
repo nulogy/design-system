@@ -7,6 +7,7 @@
     "access": "public"
   },
   "scripts": {
+    "ci": "yarn && yarn build && yarn test && yarn run check",
     "new": "plop",
     "start": "concurrently \"yarn build --watch\" \"yarn start:storybook\"",
     "start:e2e": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
@@ -77,6 +78,7 @@
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@storybook/addon-a11y": "^6.1.9",
     "@storybook/addon-actions": "^6.1.9",
+    "@storybook/addon-docs": "6.1.9",
     "@storybook/addon-knobs": "^6.1.9",
     "@storybook/addon-storysource": "^6.1.9",
     "@storybook/addon-viewport": "^7.6.6",
@@ -168,7 +170,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn run check"
+      "pre-push": "yarn run ci"
     }
   },
   "jest": {

@@ -73,7 +73,7 @@ class Tabs extends React.Component<TabsProps, TabsState> {
           },
           onKeyDown: handleArrowNavigation,
           index,
-          size: componentVariant,
+          variant: componentVariant,
           tabIndex: index === focusedIndex ? 0 : -1,
           selected: index === selectedIndex,
           "aria-selected": index === selectedIndex,

@@ -48,6 +48,7 @@ const SwitchButton = styled.button<SwitchProps>(
   }),
   ({ theme }) =>
     variant({
+      prop: "foo",
       variants: {
         touch: {
           padding: `${numberFromDimension(theme.space.x2) - 1}px ${theme.space.x3}`,

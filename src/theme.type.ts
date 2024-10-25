@@ -64,7 +64,10 @@ interface FontWeights {
 interface Space {
   none: string;
   half: string;
+  x0: string;
+  x0_5: string;
   x1: string;
+  x1_5: string;
   x2: string;
   x3: string;
   x4: string;

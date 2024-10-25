@@ -38,6 +38,7 @@ function useEventListener<K extends keyof DocumentEventMap>(
   options?: boolean | AddEventListenerOptions
 ): void;
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function useEventListener<
   KW extends keyof WindowEventMap,
   KH extends keyof HTMLElementEventMap & keyof SVGElementEventMap,

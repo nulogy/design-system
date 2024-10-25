@@ -21,6 +21,7 @@ const TimePickerOption = styled.li<TimePickerOptionProps>(
     padding: theme.space.x1,
   }),
   variant({
+    prop: "foo",
     variants: {
       touch: {
         px: "x1",
