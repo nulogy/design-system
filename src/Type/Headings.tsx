@@ -29,7 +29,7 @@ export const Heading2 = styled(Text).attrs(() => ({
 );
 
 export const Heading3 = styled(Text).attrs(() => ({
-  as: "h4",
+  as: "h3",
 }))(
   ({ theme }) => ({
     fontSize: theme.fontSizes.heading3,

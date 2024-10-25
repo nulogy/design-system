@@ -1,11 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Icon } from "../Icon";
-import { Link } from "../Link";
 import { Flex } from "../Flex";
+import { ControlIcon } from "../Button";
 
 type CloseButtonProps = {
-  onClick: any;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   "aria-label": string;
 };
 
@@ -13,17 +12,7 @@ const CloseButton = ({ onClick, "aria-label": ariaLabel }: CloseButtonProps) => 
   const { t } = useTranslation();
   return (
     <Flex ml="x2" height="x3">
-      <Link
-        as="button"
-        type="button"
-        color="darkGrey"
-        lineHeight="0"
-        hover="blue"
-        onClick={onClick}
-        aria-label={ariaLabel || t("close")}
-      >
-        <Icon icon="close" size="x2" />
-      </Link>
+      <ControlIcon size="x3" icon="close" onClick={onClick} aria-label={ariaLabel || t("close")} label={t("close")} />
     </Flex>
   );
 };

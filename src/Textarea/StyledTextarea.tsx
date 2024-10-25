@@ -70,6 +70,7 @@ const StyledTextarea = styled.textarea<StyledTextareaProps>(
   }),
   ({ theme }) =>
     variant({
+      prop: "foo",
       variants: {
         touch: {
           padding: `${subPx(theme.space.x2)}`,

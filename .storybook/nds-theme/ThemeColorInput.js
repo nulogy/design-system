@@ -27,15 +27,14 @@ const Swatch = styled.div(({ color }) => ({
 
 const ThemeColorInput = ({ color, onChange }) => {
   const [displayColorPicker, setDisplayColorPicker] = useState(false);
-  const [value, setValue] = useState(color || "#000");
   return (
     <>
-      <Swatch color={value} />
-      <ThemeInput onClick={() => setDisplayColorPicker(true)} value={value} readOnly />
+      <Swatch color={color} />
+      <ThemeInput onClick={() => setDisplayColorPicker(true)} value={color} readOnly />
       {displayColorPicker ? (
         <Popover>
           <CloseableArea onClick={() => setDisplayColorPicker(false)} />
-          <ChromePicker color={value} onChange={(e) => setValue(e.hex)} onChangeComplete={(e) => onChange(e)} />
+          <ChromePicker color={color} onChangeComplete={(e) => onChange(e)} />
         </Popover>
       ) : null}
     </>
