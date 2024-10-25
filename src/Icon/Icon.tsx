@@ -1,6 +1,6 @@
 import React from "react";
-import styled, { CSSObject, useTheme } from "styled-components";
-import { display, DisplayProps, space, SpaceProps } from "styled-system";
+import styled, { useTheme } from "styled-components";
+import { space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
 import LoadingIcon from "./LoadingIcon";
 
@@ -14,7 +14,6 @@ interface IconProps extends SpaceProps {
   style?: React.CSSProperties;
 }
 
-/* eslint-disable react/no-array-index-key */
 const getPathElements = (icon: any) => (
   <>
     {icon.path.map((path: string, index: number) => (
@@ -22,7 +21,8 @@ const getPathElements = (icon: any) => (
     ))}
   </>
 );
-/* eslint-enable react/no-array-index-key */
+
+const ICON_SIZE_RATIO = 1.25;
 
 const Svg = React.forwardRef<SVGSVGElement, IconProps>(
   (
@@ -68,15 +68,10 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
   }
 );
 
-const Icon = styled(Svg)<IconProps>(
-  space,
-  ({ color = "currentColor", size = "24px" }): CSSObject => ({
-    minWidth: size,
-    color: color,
-  })
-);
-
-const iconSizeRatio = 1.25;
+const Icon = styled(Svg)<IconProps>(space, ({ theme, color = "currentColor", size = theme.sizes.x3 }) => ({
+  minWidth: size,
+  color: color,
+}));
 
 const CenteredIcon = styled(Svg)({
   position: "absolute",
@@ -88,13 +83,13 @@ const IconContainer = styled.span(space, {
   alignSelf: "center",
   position: "relative",
   height: "1em",
-  width: `${iconSizeRatio}em`,
+  width: `${ICON_SIZE_RATIO}em`,
 });
 
 export function InlineIcon(props: IconProps) {
   return (
     <IconContainer {...props}>
-      <CenteredIcon size={`${iconSizeRatio}em`} {...props} />
+      <CenteredIcon size={`${ICON_SIZE_RATIO}em`} {...props} />
     </IconContainer>
   );
 }

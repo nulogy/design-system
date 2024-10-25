@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { space } from "styled-system";
+import { addStyledProps } from "../StyledProps";
 import { Flex } from "../Flex";
 
 const CardSet = styled(Flex)(
@@ -7,7 +7,7 @@ const CardSet = styled(Flex)(
     flexDirection: "column",
     gap: theme.space.x1,
   }),
-  space
+  addStyledProps
 );
 
 export default CardSet;

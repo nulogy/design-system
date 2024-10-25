@@ -8,9 +8,9 @@ export default {
 };
 
 const alertTypes = ["danger", "informative", "success", "warning"] as const;
-
 export const AlertTypes = () => (
   <Flex flexDirection="column" gap="x1">
+    {" "}
     {alertTypes.map((type) => (
       <Alert key={type} type={type} title={type}>
         This is an alert with type &quot;{type}&quot;

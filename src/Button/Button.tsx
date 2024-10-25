@@ -30,9 +30,12 @@ const WrapperButton = styled.button<ButtonProps>(
     width: fullWidth ? "100%" : "auto",
   }),
   ({ disabled, theme }) => ({
+    userSelect: "none",
+    touchAction: "none",
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
+    fontSize: theme.fontSizes.medium,
     fontWeight: theme.fontWeights.medium,
     textDecoration: "none",
     verticalAlign: "middle",
@@ -62,7 +65,6 @@ const WrapperButton = styled.button<ButtonProps>(
     "&:disabled": {
       opacity: ".5",
     },
-    fontSize: "medium",
     padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
   }),
   ({ theme }) =>
@@ -78,19 +80,6 @@ const WrapperButton = styled.button<ButtonProps>(
         medium: {
           fontSize: "medium",
           padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
-        },
-      },
-    }),
-  ({ theme }) =>
-    variant({
-      variants: {
-        desktop: {
-          fontSize: "medium",
-          padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
-        },
-        touch: {
-          fontSize: "medium",
-          padding: `${subPx(theme.space.x2)} ${theme.space.x3}`,
         },
       },
     }),
