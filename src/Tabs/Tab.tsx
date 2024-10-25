@@ -83,6 +83,7 @@ const TabButton = styled.button<TabButtonProps>(
     },
   }),
   variant({
+    prop: "foo",
     variants: {
       touch: {
         py: "x2",
@@ -96,7 +97,7 @@ const TabButton = styled.button<TabButtonProps>(
   })
 );
 
-type TabProps = TabButtonProps & {
+export type TabProps = TabButtonProps & {
   label?: React.ReactNode;
 };
 

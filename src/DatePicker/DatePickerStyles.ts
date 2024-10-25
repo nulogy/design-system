@@ -56,7 +56,7 @@ export const DatePickerStyles = createGlobalStyle<{ theme: DefaultNDSThemeType }
       display: "inline-block",
       lineHeight: theme.space.x4,
       textAlign: "center",
-      width: "28px",
+      width: `calc(${theme.space.x3}+${theme.space.half})`,
       margin: theme.space.half,
       boxSizing: "content-box",
       "&:hover": {
@@ -83,10 +83,9 @@ export const DatePickerStyles = createGlobalStyle<{ theme: DefaultNDSThemeType }
         cursor: "pointer",
       },
     },
-    ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover":
-      {
-        backgroundColor: "transparent",
-      },
+    ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover": {
+      backgroundColor: "transparent",
+    },
     ".react-datepicker__day-names, .react-datepicker__week": {
       whiteSpace: "nowrap",
     },

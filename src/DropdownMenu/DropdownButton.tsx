@@ -47,6 +47,7 @@ const DropdownButton = styled.button<DropdownButtonProps>(
     },
   }),
   variant({
+    prop: "foo",
     variants: {
       touch: {
         pt: "x2",

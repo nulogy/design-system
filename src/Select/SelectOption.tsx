@@ -38,7 +38,8 @@ export const StyledOption = styled.div<SelectOptionProps>(
       {
         touch: {
           div: {
-            padding: subPx(theme.space.x2),
+            // padding: subPx(theme.space.x2),
+            padding: subPx(theme.space.x1),
           },
         },
         desktop: {

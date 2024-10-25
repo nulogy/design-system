@@ -51,6 +51,7 @@ const DropdownLink = styled.a.withConfig<Props>({
     paddingLeft: "12px",
   }),
   variant({
+    prop: "foo",
     variants: {
       touch: {
         pt: "x2",

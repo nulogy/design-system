@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import addons from "@storybook/addons";
+import React from "react";
 import { select } from "@storybook/addon-knobs";
 import { NDSProvider } from "../../src";
 import { ALL_NDS_LOCALES } from "../../src/locales.const";
-import { desktop, desktop as NDSTheme } from "../../src/theme";
+import { desktop } from "../../src/theme";
 import { ComponentVariant } from "../../src/NDSProvider/ComponentVariantContext";
 import { useLocalStorage } from "./useLocalStorage/useLocalStorage";
 
@@ -21,7 +20,6 @@ const StorybookNDSProvider = ({ children }) => {
     deserializer: (value) => JSON.parse(value),
   });
   const [themeVariant] = useLocalStorage<ComponentVariant>("nds-sb-theme-variant", "desktop");
-  // const [loading, setLoading] = useState(true);
 
   return (
     <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} variant={themeVariant} theme={theme}>
