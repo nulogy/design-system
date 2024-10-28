@@ -66,42 +66,6 @@ WithCustomColors.story = {
   name: "with custom colors",
 };
 
-export const WithDifferentVariants = () => (
-  <Flex gap="48px">
-    <DropdownMenu
-      trigger={() => <IconicButton icon="more">Default menu</IconicButton>}
-      defaultOpen
-      openAriaLabel="open dropdown"
-      closeAriaLabel="close dropdown"
-    >
-      <DropdownLink href="/">Dropdown Link</DropdownLink>
-      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-    </DropdownMenu>
-
-    <DropdownMenu
-      trigger={() => <IconicButton icon="more">Medium menu</IconicButton>}
-      defaultOpen
-      openAriaLabel="open dropdown"
-      closeAriaLabel="close dropdown"
-      variant="desktop"
-    >
-      <DropdownLink href="/">Dropdown Link</DropdownLink>
-      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-    </DropdownMenu>
-
-    <DropdownMenu
-      trigger={() => <IconicButton icon="more">Large menu</IconicButton>}
-      defaultOpen
-      openAriaLabel="open dropdown"
-      closeAriaLabel="close dropdown"
-      variant="touch"
-    >
-      <DropdownLink href="/">Dropdown Link</DropdownLink>
-      <DropdownButton onClick={() => {}}>Dropdown Button</DropdownButton>
-    </DropdownMenu>
-  </Flex>
-);
-
 export const WithButtonClosingMenu = () => (
   <DropdownMenu openAriaLabel="open dropdown" closeAriaLabel="close dropdown">
     {({ closeMenu }) => <DropdownButton onClick={closeMenu}>Dropdown Button</DropdownButton>}
