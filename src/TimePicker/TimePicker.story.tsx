@@ -141,24 +141,6 @@ export const UsingRefToControlFocus = () => {
   );
 };
 
-export const WithDifferentVariants = () => (
-  <Flex gap="x2" alignItems="flex-start">
-    <TimePicker onChange={action("time changed")} onInputChange={action("input changed")} labelText="Default size" />
-    <TimePicker
-      variant="desktop"
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="Medium size"
-    />
-    <TimePicker
-      variant="touch"
-      onChange={action("time changed")}
-      onInputChange={action("input changed")}
-      labelText="Large size"
-    />
-  </Flex>
-);
-
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
