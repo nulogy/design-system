@@ -17,45 +17,6 @@ export const Default = () => (
   />
 );
 
-export const WithDifferentVariants = () => (
-  <Flex gap="x2" flexDirection="column" alignItems="flex-start">
-    <DateRange
-      onRangeChange={action("range changed")}
-      onStartDateChange={action("start date changed")}
-      onEndDateChange={action("end date changed")}
-      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
-      defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
-      showTimes
-      defaultStartTime="13:30"
-      defaultEndTime="10:30"
-    />
-
-    <DateRange
-      variant="desktop"
-      onRangeChange={action("range changed")}
-      onStartDateChange={action("start date changed")}
-      onEndDateChange={action("end date changed")}
-      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
-      defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
-      showTimes
-      defaultStartTime="13:30"
-      defaultEndTime="10:30"
-    />
-
-    <DateRange
-      variant="touch"
-      onRangeChange={action("range changed")}
-      onStartDateChange={action("start date changed")}
-      onEndDateChange={action("end date changed")}
-      defaultStartDate={new Date("2019-07-05T05:00:00.000Z")}
-      defaultEndDate={new Date("2019-07-05T05:00:00.000Z")}
-      showTimes
-      defaultStartTime="13:30"
-      defaultEndTime="10:30"
-    />
-  </Flex>
-);
-
 export const DefaultStartAndEndDate = () => (
   <DateRange
     defaultStartDate={new Date("2019-01-01T05:00:00.000Z")}

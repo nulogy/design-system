@@ -50,22 +50,6 @@ export const WithADifferentFontSize = () => (
   </Link>
 );
 
-const DashedLink = dashed(Link);
-
-export const WithDifferentVariants = () => (
-  <Flex gap="x2" alignItems="flex-start">
-    <DashedLink href="http://nulogy.design">Default Link</DashedLink>
-
-    <DashedLink variant="desktop" href="http://nulogy.design">
-      Desktop Link
-    </DashedLink>
-
-    <DashedLink variant="touch" href="http://nulogy.design">
-      Touch Link
-    </DashedLink>
-  </Flex>
-);
-
 export const AsAButton = () => <Link as="button">Link</Link>;
 
 AsAButton.story = {

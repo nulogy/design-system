@@ -2,31 +2,9 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean } from "@storybook/addon-knobs";
 import { Toggle, Button, Box } from "../index";
-import { Flex } from "../Flex";
 import dashed from "../utils/dashed";
 
-const DashedToggle = dashed(Toggle);
 const DashedBox = dashed(Box);
-
-export const WithDifferentVariants = () => (
-  <Flex gap="x2" alignItems="flex-start">
-    <DashedToggle onText="Default" offText="Default" data-testid="toggle-example" onChange={action("on change")} />
-    <DashedToggle
-      onText="Desktop"
-      offText="Desktop"
-      variant="desktop"
-      data-testid="toggle-example"
-      onChange={action("on change")}
-    />
-    <DashedToggle
-      onText="Touch"
-      offText="Touch"
-      variant="touch"
-      data-testid="toggle-example"
-      onChange={action("on change")}
-    />
-  </Flex>
-);
 
 export default {
   title: "Components/Toggle",
