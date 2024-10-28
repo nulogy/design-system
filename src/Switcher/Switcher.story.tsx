@@ -17,36 +17,6 @@ export const WithSelectedValue = () => {
   );
 };
 
-export const WithDifferentVariants = () => {
-  const [selectedDefault, setSelectedDefault] = useState("option_1");
-  const [selectedMedium, setSelectedMedium] = useState("option_1");
-  const [selectedLarge, setSelectedLarge] = useState("option_1");
-
-  return (
-    <Flex gap="x2" alignItems="center">
-      <Switcher aria-label="storybook-switcher" selected={selectedDefault} onChange={setSelectedDefault}>
-        <Switch value="option_1">Default</Switch>
-        <Switch value="option_2">Size</Switch>
-      </Switcher>
-
-      <Switcher
-        variant="desktop"
-        aria-label="storybook-switcher"
-        selected={selectedMedium}
-        onChange={setSelectedMedium}
-      >
-        <Switch value="option_1">Medium</Switch>
-        <Switch value="option_2">Size</Switch>
-      </Switcher>
-
-      <Switcher variant="touch" aria-label="storybook-switcher" selected={selectedLarge} onChange={setSelectedLarge}>
-        <Switch value="option_1">Large</Switch>
-        <Switch value="option_2">Size</Switch>
-      </Switcher>
-    </Flex>
-  );
-};
-
 export const WithOtherInteractiveElements = () => (
   <Flex gap="x1" alignItems="center">
     <Button>Click me</Button>

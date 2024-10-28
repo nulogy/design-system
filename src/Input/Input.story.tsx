@@ -27,43 +27,6 @@ WithAllProps.story = {
   name: "with all props",
 };
 
-export const WithDifferentVariants = () => (
-  <Flex alignItems="flex-start">
-    <Input
-      placeholder="Placeholder"
-      p="x3"
-      labelText="Default size"
-      helpText="Additional help text"
-      requirementText="Required"
-      onChange={action("value changed")}
-      onBlur={action("blurred")}
-      required
-    />
-    <Input
-      placeholder="Placeholder"
-      p="x3"
-      labelText="Medium size"
-      helpText="Additional help text"
-      requirementText="Required"
-      onChange={action("value changed")}
-      onBlur={action("blurred")}
-      variant="desktop"
-      required
-    />
-    <Input
-      placeholder="Placeholder"
-      p="x3"
-      labelText="Large size"
-      helpText="Additional help text"
-      requirementText="Required"
-      onChange={action("value changed")}
-      onBlur={action("blurred")}
-      variant="touch"
-      required
-    />
-  </Flex>
-);
-
 export const SetToDisabled = () => (
   <Input labelText="Set to disabled" disabled onBlur={action("blurred")} value="Disabled" />
 );

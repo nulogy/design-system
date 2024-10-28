@@ -24,23 +24,6 @@ export const _Breadcrumbs = () => (
 
 const DashedBreadcrumbs = dashed(Breadcrumbs);
 
-export const WithDifferentVariants = () => (
-  <Flex gap="x2" alignItems="flex-start">
-    <DashedBreadcrumbs>
-      <Link href="/">Default</Link>
-      <Link href="/">Size</Link>
-    </DashedBreadcrumbs>
-    <DashedBreadcrumbs size="desktop">
-      <Link href="/">Desktop</Link>
-      <Link href="/">Size</Link>
-    </DashedBreadcrumbs>
-    <DashedBreadcrumbs variant="touch">
-      <Link href="/">Touch</Link>
-      <Link href="/">Size</Link>
-    </DashedBreadcrumbs>
-  </Flex>
-);
-
 export const WithoutLink = () => (
   <Breadcrumbs>
     <Link href="/">Home</Link>

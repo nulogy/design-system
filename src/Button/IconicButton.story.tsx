@@ -127,20 +127,6 @@ export const WithACustomFontSize = () => (
 
 const DashedIconicButton = dashed(IconicButton);
 
-export const WithDifferentVariants = () => (
-  <Flex gap="x2" alignItems="flex-start">
-    <DashedIconicButton tooltip="Stop job" icon="close">
-      Default size
-    </DashedIconicButton>
-    <DashedIconicButton variant="desktop" tooltip="Stop job" icon="close">
-      Desktop size
-    </DashedIconicButton>
-    <DashedIconicButton variant="touch" tooltip="Stop job" icon="close">
-      Touch size
-    </DashedIconicButton>
-  </Flex>
-);
-
 WithACustomFontSize.story = {
   name: "with a custom font size",
 };

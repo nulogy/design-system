@@ -128,9 +128,7 @@ const CheckboxInput = styled.input<CheckboxProps>((props) => ({
   },
 }));
 
-type Ref = HTMLInputElement;
-
-const Checkbox = forwardRef<Ref, CheckboxProps>((props, ref) => {
+const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
   const { variant, className, labelText, disabled, checked, required, error, indeterminate } = props;
 
   const componentVariant = useComponentVariant(variant);
