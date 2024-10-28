@@ -98,16 +98,6 @@ SetToRequired.story = {
   name: "Set to required",
 };
 
-const DashedCheckbox = dashed(Checkbox);
-
-export const WithDifferentVariants = () => (
-  <Flex gap="x2" alignItems="flex-start">
-    <DashedCheckbox id="checkbox-1" labelText="I am a default sized Checkbox" />
-    <DashedCheckbox id="checkbox-1" variant="desktop" labelText="I am a desktop sized Checkbox" />
-    <DashedCheckbox id="checkbox-1" variant="touch" labelText="I am a touch sized Checkbox" />
-  </Flex>
-);
-
 export const Indeterminate = () => (
   <>
     <Checkbox id="checkbox" labelText="I am an indeterminate checkbox" readOnly checked indeterminate />
