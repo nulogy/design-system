@@ -26,7 +26,7 @@ export default function FieldLabel({
           </Flex>
           {hint && (
             <Flex display="inline-flex" ml="half">
-              <FramedIcon iconSize="20px" icon="info" tooltip={hint} />
+              <FramedIcon iconSize="x2_5" icon="info" tooltip={hint} />
             </Flex>
           )}
         </Flex>
