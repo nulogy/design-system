@@ -30,7 +30,7 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
       color: fillColor = "currentColor",
       className = undefined,
       title = undefined,
-      size = "24px",
+      size,
       focusable = false,
       icon,
       ...props
@@ -38,12 +38,18 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
     ref
   ) => {
     const theme = useTheme();
+    size ||= theme.sizes.x3;
 
     if (icon === "loading") {
       return (
         <LoadingIcon
-          color={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
-          className={className}
+          ref={ref}
+          aria-hidden={title == null}
+          width={theme.space[size] || size}
+          height={theme.space[size] || size}
+          fill={theme.colors[fillColor] ? theme.colors[fillColor] : fillColor}
+          focusable={focusable}
+          className={`${className} nds-icon--${icon}`}
           {...props}
         />
       );

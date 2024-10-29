@@ -118,7 +118,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
 
     const customInputProps = {
       ...InputFieldDefaultProps,
-      inputWidth: componentVariant === "touch" ? "240px" : "184px",
+      inputWidth: componentVariant === "touch" ? "280px" : "184px",
       error: !!(errorMessage || errorList),
       ...inputProps,
       placeholder:
@@ -167,6 +167,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
               onFocus={onFocus}
               onBlur={onBlur}
               popperModifiers={{
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
                 // @ts-ignore
                 flip: { enabled: !disableFlipping },
               }}
