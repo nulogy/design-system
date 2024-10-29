@@ -113,7 +113,7 @@ const StyledInput = styled.input<StyledInputProps>(
   }),
   ({ theme }) =>
     variant({
-      prop: "foo",
+      prop: "scale",
       variants: {
         touch: {
           padding: `${subPx(theme.space.x2)}`,
@@ -137,7 +137,7 @@ const StyledInputIcon = styled(Icon)<{ variant: ComponentVariant }>(
     pointerEvents: "none",
   }),
   variant({
-    prop: "foo",
+    prop: "scale",
     variants: {
       touch: {
         right: "x2",

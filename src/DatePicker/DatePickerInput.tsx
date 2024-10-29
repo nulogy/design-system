@@ -71,6 +71,7 @@ const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
         value={value}
         placeholder={placeholder}
         icon="calendarToday"
+        iconSize="x2"
         onClick={onClick}
         onKeyDown={handleKeyDown}
         onChange={handleChange}

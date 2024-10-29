@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
 export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
+  variant?: ComponentVariant;
   inline?: boolean;
   disabled?: boolean;
   textTransform?:

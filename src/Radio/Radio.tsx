@@ -59,6 +59,9 @@ type VisualRadioProps = {
 
 const VisualRadio = styled.div<VisualRadioProps>(
   ({ disabled, theme }: VisualRadioProps): CSSObject => ({
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     minWidth: theme.space.x2,
     height: theme.space.x2,
     marginRight: theme.space.x1,
@@ -70,13 +73,9 @@ const VisualRadio = styled.div<VisualRadioProps>(
       cursor: disabled ? undefined : "pointer",
       content: "''",
       display: "none",
-      position: "relative",
-      left: "4px",
-      top: "4px",
-      width: "2px",
-      height: "2px",
+      width: theme.sizes.x1,
+      height: theme.sizes.x1,
       background: theme.colors.white,
-      border: `2px solid ${theme.colors.white}`,
       borderRadius: theme.radii.circle,
     },
   })

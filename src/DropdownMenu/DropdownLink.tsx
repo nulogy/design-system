@@ -40,7 +40,7 @@ const DropdownLink = styled.a.withConfig<Props>({
       outline: "none",
       color: theme.colors[hoverColor],
       backgroundColor: theme.colors[bgHoverColor],
-      borderLeft: `${theme.space.half}  solid ${theme.colors.blue}`,
+      borderLeft: `${theme.space.half} solid ${theme.colors.blue}`,
     },
     "&:disabled": {
       opacity: ".5",
@@ -48,10 +48,10 @@ const DropdownLink = styled.a.withConfig<Props>({
     paddingTop: theme.space.x1,
     paddingRight: theme.space.x2,
     paddingBottom: theme.space.x1,
-    paddingLeft: "12px",
+    paddingLeft: `calc(${theme.space.x2} - ${theme.space.half})`,
   }),
   variant({
-    prop: "foo",
+    prop: "scale",
     variants: {
       touch: {
         pt: "x2",

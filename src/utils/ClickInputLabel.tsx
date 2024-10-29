@@ -17,7 +17,7 @@ const ClickInputLabel = styled.label<{ variant?: ComponentVariant; disabled?: bo
     paddingRight: 0,
   }),
   variant({
-    prop: "foo",
+    prop: "scale",
     variants: {
       touch: {
         py: "x2",

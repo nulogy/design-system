@@ -7,6 +7,10 @@ type ComponentVariantContextValue = {
   children?: React.ReactNode;
 };
 
+export default function ComponentVariantContextProvider({ variant, children }: ComponentVariantContextValue) {
+  return <ComponentVariantContext.Provider value={{ variant: variant }}>{children}</ComponentVariantContext.Provider>;
+}
+
 export const ComponentVariantContext = createContext<ComponentVariantContextValue>(undefined);
 
 export function useComponentVariant(selectedVariant?: ComponentVariant) {
@@ -18,8 +22,14 @@ export function useComponentVariant(selectedVariant?: ComponentVariant) {
   return selectedVariant ?? context.variant;
 }
 
-const ComponentVariantContextProvider = ({ variant, children }: ComponentVariantContextValue) => {
-  return <ComponentVariantContext.Provider value={{ variant: variant }}>{children}</ComponentVariantContext.Provider>;
+type WithVariantProps = {
+  variant?: ComponentVariant;
 };
 
-export default ComponentVariantContextProvider;
+export function withComponentVariant<P extends WithVariantProps>(WrappedComponent: React.ComponentType<P>) {
+  return function ComponentWithVariant(props: P) {
+    const variant = useComponentVariant(props.variant);
+
+    return <WrappedComponent {...(props as P)} variant={variant} />;
+  };
+}

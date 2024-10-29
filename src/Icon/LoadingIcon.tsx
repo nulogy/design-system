@@ -1,13 +1,20 @@
 import React from "react";
+import { useTheme } from "styled-components";
 
-type LoadingIconProps = React.ComponentPropsWithoutRef<"svg">;
+interface LoadingIconProps extends React.ComponentPropsWithRef<"svg"> {
+  size?: string;
+}
 
-const LoadingIcon: React.FC<React.PropsWithChildren<LoadingIconProps>> = (props) => {
+const LoadingIcon = React.forwardRef<SVGSVGElement, LoadingIconProps>(({ size, ...props }, ref) => {
+  const theme = useTheme();
+  size ||= theme.sizes.x3;
+
   return (
     <svg
+      ref={ref}
       viewBox="0 0 24px 24px"
-      width="24px"
-      height="24px"
+      width={size}
+      height={size}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
@@ -102,6 +109,6 @@ const LoadingIcon: React.FC<React.PropsWithChildren<LoadingIconProps>> = (props)
       </g>
     </svg>
   );
-};
+});
 
 export default LoadingIcon;
