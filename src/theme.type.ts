@@ -69,6 +69,7 @@ interface Space {
   x1: string;
   x1_5: string;
   x2: string;
+  x2_5: string;
   x3: string;
   x4: string;
   x5: string;

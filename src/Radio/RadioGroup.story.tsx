@@ -1,5 +1,5 @@
 import React from "react";
-import { Radio, RadioGroup, Icon, Tooltip } from "../index";
+import { Radio, RadioGroup, Icon, Tooltip, Flex } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -34,12 +34,12 @@ export const RadioGroupWithAllProps = () => (
     <Radio
       value="a"
       labelText={
-        <>
+        <Flex alignItems="center">
           Option A
           <Tooltip placement="bottom" tooltip="Option A is a special option with extra information" defaultOpen>
-            <Icon icon="help" color="darkBlue" size="16px" ml="x1" />
+            <Icon icon="help" color="darkBlue" size="x2" ml="x1" />
           </Tooltip>
-        </>
+        </Flex>
       }
     />
     <Radio value="b" labelText="Option B" />

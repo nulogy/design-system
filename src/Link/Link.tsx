@@ -49,10 +49,7 @@ const StyledLink = styled.a<LinkProps>(
   }),
   variant({
     variants: {
-      touch: {
-        py: "x2",
-        px: "0",
-      },
+      touch: {},
       medium: {},
     },
   }),

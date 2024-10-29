@@ -53,13 +53,13 @@ export const CustomizingInputProps = () => (
   <DateRange
     startDateInputProps={{
       placeholder: "From (Mon YYYY)",
-      inputWidth: "200px",
+      inputWidth: "280px",
       labelText: "From",
       error: true,
     }}
     endDateInputProps={{
       placeholder: "To (Mon YYYY)",
-      inputWidth: "180px",
+      inputWidth: "260px",
       labelText: "To",
     }}
     labelProps={{ labelText: "" }}
@@ -126,8 +126,8 @@ export const WithTimes = () => (
 
 export const CustomizingInputPropsWithTimes = () => (
   <DateRange
-    startDateInputProps={{ placeholder: "From", inputWidth: "130px" }}
-    endDateInputProps={{ placeholder: "To", inputWidth: "130px" }}
+    startDateInputProps={{ placeholder: "From", inputWidth: "280px" }}
+    endDateInputProps={{ placeholder: "To", inputWidth: "280px" }}
     onRangeChange={action("range changed")}
     onStartDateChange={action("start date changed")}
     onEndDateChange={action("end date changed")}
