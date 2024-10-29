@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CSSObject, ThemeContext } from "styled-components";
+import { CSSObject, ThemeContext, useTheme } from "styled-components";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
@@ -15,7 +15,7 @@ interface RadioGroupProps {
   helpText?: string;
   required?: boolean;
   requirementText?: string;
-  children?: any;
+  children?: React.ReactNode;
   name?: string;
   disabled?: boolean;
   defaultValue?: string;
@@ -35,12 +35,12 @@ export default function RadioGroup({
   ...props
 }: RadioGroupProps) {
   const otherProps = { ...props, errorMessage, errorList };
-  const themeContext = useContext(ThemeContext);
+  const theme = useTheme();
 
   return (
     <Fieldset className={className} id={id}>
-      <legend style={{ marginBottom: themeContext.space.x1 }}>
-        <span style={labelTextStyles(themeContext)}>{labelText}</span>
+      <legend style={{ marginBottom: theme.space.x1 }}>
+        <span style={labelTextStyles(theme)}>{labelText}</span>
         {requirementText && <RequirementText>{requirementText}</RequirementText>}
       </legend>
       {helpText && <HelpText>{helpText}</HelpText>}
