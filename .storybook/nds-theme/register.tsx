@@ -1,14 +1,17 @@
 // .storybook/my-addon/register.js
 
-import React from "react";
+import React, { useEffect } from "react";
 import { addons, types, RenderOptions } from "@storybook/addons";
 import { AddonPanel } from "@storybook/components";
-import { Box, Flex, NDSProvider, Heading3, Heading2, QuietButton } from "../../src";
-import { themes } from "../../src/theme";
+import { Box, Flex, NDSProvider, Heading3, Heading2, QuietButton, DefaultNDSThemeType } from "../../src";
+import { desktop, themes } from "../../src/theme";
 import ThemeKey from "./ThemeKey";
 import { ThemeInput, ThemeOption, ThemeSelect } from "./ThemeInput";
 import ThemeColorInput from "./ThemeColorInput";
 import { useLocalStorage } from "./useLocalStorage/useLocalStorage";
+import { ComponentVariant } from "../../src/NDSProvider/ComponentVariantContext";
+import useMediaQuery from "../../src/hooks/useMediaQuery";
+import { getThemeByVariant } from "../../src/NDSProvider/useNDSTheme";
 
 const ADDON_ID = "ndsThemeAddon";
 const PANEL_ID = `${ADDON_ID}/panel`;
@@ -29,11 +32,20 @@ const composeTheme = (data, theme) => {
 const DEFAULT_THEME_VARIANT = "desktop";
 
 const ThemePanel = () => {
-  const [themeVariant, setThemeVariant] = useLocalStorage("nds-sb-theme-variant", DEFAULT_THEME_VARIANT);
+  const [themeVariant, setThemeVariant] = useLocalStorage<ComponentVariant>(
+    "nds-sb-theme-variant",
+    DEFAULT_THEME_VARIANT
+  );
   const [theme, setTheme] = useLocalStorage("nds-sb-theme", themes[themeVariant], {
     serializer: (value) => JSON.stringify(value),
     deserializer: (value) => JSON.parse(value),
   });
+  const isTabletSize = useMediaQuery(`(min-width: ${desktop.breakpoints.small})`);
+
+  useEffect(() => {
+    const newTheme = getThemeByVariant(themeVariant, isTabletSize);
+    setTheme(newTheme);
+  }, [themeVariant, isTabletSize]);
 
   const onChange = (group, prop) => (e) => {
     const value = e.target.value;
