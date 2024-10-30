@@ -1,7 +1,7 @@
 import * as tokens from "@nulogy/tokens";
 import type { DefaultNDSThemeType } from "./theme.type";
 
-type ThemeKey = "desktop" | "touch";
+type ThemeKey = "desktop" | "tablet" | "phone";
 
 const BASE_THEME: DefaultNDSThemeType = {
   colors: {
@@ -135,7 +135,7 @@ const themes: Record<ThemeKey, DefaultNDSThemeType> = {
   desktop: {
     ...BASE_THEME,
   },
-  touch: {
+  tablet: {
     ...BASE_THEME,
     fontSizes: {
       smaller: "18px",
@@ -200,7 +200,72 @@ const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       rounded: "9999px",
     },
   },
+  phone: {
+    ...BASE_THEME,
+    fontSizes: {
+      smaller: "13.5px",
+      small: "15.75px",
+      medium: "18px",
+      large: "20.25px",
+      larger: "22.5px",
+      largest: "31.5px",
+      heading1: "22.5px",
+      heading2: "18px",
+      heading3: "15.75px",
+      heading4: "13.5px",
+    },
+    lineHeights: {
+      base: "1.33333333",
+      relaxed: "1.66666667",
+      smallTextBase: "1.33333333",
+      smallTextCompressed: "1.33333333",
+      smallerText: "1.33333333",
+      heading1: "1.33333333",
+      heading2: "1.33333333",
+      heading3: "1.33333333",
+      heading4: "1.33333333",
+      title: "1.33333333",
+      sectionTitle: "1.33333333",
+      subsectionTitle: "1.33333333",
+    },
+    space: {
+      none: "0px",
+      half: "3.6px",
+      x0_5: "3.6px",
+      x0: "0px",
+      x1: "7.2px",
+      x1_5: "10.8",
+      x2: "14.4px",
+      x2_5: "18px",
+      x3: "21.6px",
+      x4: "28.8px",
+      x5: "36px",
+      x6: "43.2px",
+      x8: "50.4px",
+    },
+    sizes: {
+      none: "0px",
+      half: "3.6px",
+      x0_5: "3.6px",
+      x0: "0px",
+      x1: "7.2px",
+      x1_5: "10.8",
+      x2: "14.4px",
+      x2_5: "18px",
+      x3: "21.6px",
+      x4: "28.8px",
+      x5: "36px",
+      x6: "43.2px",
+      x8: "50.4px",
+    },
+    radii: {
+      small: "1.8px",
+      medium: "3.6px",
+      circle: "50%",
+      rounded: "9999px",
+    },
+  },
 };
 
 export { themes };
-export const { desktop, touch } = themes;
+export const { desktop, tablet, phone } = themes;
