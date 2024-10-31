@@ -41,10 +41,12 @@ interface FontSizes {
 
 interface LineHeights {
   base: string;
+  baseRelaxed: string;
   smallTextBase: string;
+  smallRelaxed: string;
   smallTextCompressed: string;
-  relaxed: string;
   smallerText: string;
+  smallerRelaxed: string;
   heading1: string;
   heading2: string;
   heading3: string;
