@@ -6,6 +6,7 @@ import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import CloseButton from "./CloseButton";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export const NotificationTypes = {
   danger: "danger",
@@ -66,6 +67,7 @@ const Alert = ({
   ...props
 }: AlertProps) => {
   const [isVisible, setIsVisible] = useState(true);
+  const componentVariant = useComponentVariant();
 
   const hideAlert = () => {
     if (onClose) onClose();
@@ -92,7 +94,7 @@ const Alert = ({
     >
       {type === "danger" && <Icon size="x3" icon="error" mr="x1" color={alertColours[type].borderColor} />}
       {type === "success" && <Icon size="x3" icon="check" mr="x1" color={alertColours[type].borderColor} />}
-      <Flex flexDirection="column" gap="half" mr="auto">
+      <Flex flexDirection="column" gap={componentVariant === "touch" ? "half" : "none"} mr="auto">
         {title && <Text fontWeight="bold">{title}</Text>}
         <Box>{children}</Box>
       </Flex>
