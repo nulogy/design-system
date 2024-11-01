@@ -3,15 +3,15 @@
 import React, { useEffect } from "react";
 import { addons, types, RenderOptions } from "@storybook/addons";
 import { AddonPanel } from "@storybook/components";
-import { Box, Flex, NDSProvider, Heading3, Heading2, QuietButton, DefaultNDSThemeType } from "../../src";
+import { Box, Flex, NDSProvider, Heading3, Heading2, QuietButton } from "../../src";
 import { desktop, themes } from "../../src/theme";
+import { ComponentVariant } from "../../src/NDSProvider/ComponentVariantContext";
+import useMediaQuery from "../../src/hooks/useMediaQuery";
+import { getThemeByVariant } from "../../src/NDSProvider/useNDSTheme";
 import ThemeKey from "./ThemeKey";
 import { ThemeInput, ThemeOption, ThemeSelect } from "./ThemeInput";
 import ThemeColorInput from "./ThemeColorInput";
 import { useLocalStorage } from "./useLocalStorage/useLocalStorage";
-import { ComponentVariant } from "../../src/NDSProvider/ComponentVariantContext";
-import useMediaQuery from "../../src/hooks/useMediaQuery";
-import { getThemeByVariant } from "../../src/NDSProvider/useNDSTheme";
 
 const ADDON_ID = "ndsThemeAddon";
 const PANEL_ID = `${ADDON_ID}/panel`;
@@ -45,7 +45,7 @@ const ThemePanel = () => {
   useEffect(() => {
     const newTheme = getThemeByVariant(themeVariant, isTabletSize);
     setTheme(newTheme);
-  }, [themeVariant, isTabletSize]);
+  }, [themeVariant, isTabletSize, setTheme]);
 
   const onChange = (group, prop) => (e) => {
     const value = e.target.value;
