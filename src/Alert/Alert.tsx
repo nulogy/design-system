@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FlexProps } from "../Flex/Flex";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { Box } from "../Box";
 import { Icon } from "../Icon";
 import { Flex } from "../Flex";
 import { Text } from "../Type";
 import CloseButton from "./CloseButton";
-import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export const NotificationTypes = {
   danger: "danger",

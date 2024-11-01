@@ -1,4 +1,4 @@
-import React, { ComponentProps, ComponentPropsWithRef, PropsWithoutRef } from "react";
+import React, { ComponentPropsWithRef } from "react";
 import styled, { useTheme } from "styled-components";
 import { useTranslation } from "react-i18next";
 import { Icon } from "../Icon";
