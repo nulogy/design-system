@@ -75,7 +75,7 @@ const Svg = React.forwardRef<SVGSVGElement, IconProps>(
 );
 
 const Icon = styled(Svg)<IconProps>(space, ({ theme, color = "currentColor", size }) => ({
-  minWidth: theme.sizes[size] ?? theme.sizes.x3,
+  minWidth: theme.sizes[size] ?? size ?? theme.sizes.x3,
   color: color,
 }));
 

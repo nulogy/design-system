@@ -39,6 +39,7 @@ export const BreadcrumbsListItem = styled.li<{ variant: ComponentVariant }>(
     "a, p": {
       padding: theme.space.none,
       fontSize: theme.fontSizes.small,
+      lineHeight: theme.lineHeights.smallTextBase,
     },
   }),
   variant({
