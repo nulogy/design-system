@@ -51,16 +51,7 @@ const StyledButton = styled.button<{
 
 const ControlIcon = React.forwardRef<HTMLButtonElement, ControlIconProps>(
   ({ icon, toggled, disabled, label, size = "x4", type = "button", ...props }, ref) => (
-    <StyledButton
-      height={size}
-      width={size}
-      aria-label={label}
-      ref={ref}
-      disabled={disabled}
-      toggled={toggled}
-      type={type}
-      {...props}
-    >
+    <StyledButton aria-label={label} ref={ref} disabled={disabled} toggled={toggled} type={type} {...props}>
       <Icon size={size} icon={icon} />
     </StyledButton>
   )
