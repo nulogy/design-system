@@ -57,25 +57,30 @@ interface LineHeights {
 }
 
 interface FontWeights {
-  light: number;
-  normal: number;
-  medium: number;
-  bold: number;
+  light: string;
+  normal: string;
+  medium: string;
+  bold: string;
 }
 
 interface Space {
   none: string;
   half: string;
   x0: string;
+  x0_25: string;
   x0_5: string;
+  x0_75: string;
   x1: string;
+  x1_25: string;
   x1_5: string;
+  x1_75: string;
   x2: string;
   x2_5: string;
   x3: string;
   x4: string;
   x5: string;
   x6: string;
+  x7: string;
   x8: string;
 }
 
@@ -98,6 +103,7 @@ interface Shadows {
 interface Radii {
   small: string;
   medium: string;
+  large: string;
   circle: string;
   rounded: string;
 }

@@ -9,6 +9,7 @@
   "scripts": {
     "ci": "yarn && yarn build && yarn test && yarn run check",
     "new": "plop",
+    "generate:theme": "npx tsx src/scripts/generateTheme.ts",
     "start": "concurrently \"yarn build --watch\" \"yarn start:storybook\"",
     "start:cypress": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
     "start:storybook": "start-storybook -p 9999",
