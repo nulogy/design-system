@@ -15,14 +15,10 @@ const localeKnobOptions = ALL_NDS_LOCALES.reduce(
 );
 
 const StorybookNDSProvider = ({ children }) => {
-  const [theme] = useLocalStorage("nds-sb-theme", desktop, {
-    serializer: (value) => JSON.stringify(value),
-    deserializer: (value) => JSON.parse(value),
-  });
   const [themeVariant] = useLocalStorage<ComponentVariant>("nds-sb-theme-variant", "desktop");
 
   return (
-    <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} variant={themeVariant} theme={theme}>
+    <NDSProvider locale={select("NDSProvider Locale", localeKnobOptions, "en_US")} variant={themeVariant}>
       {children}
     </NDSProvider>
   );
