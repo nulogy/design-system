@@ -195,7 +195,7 @@ const Menu = styled.ul(({ theme }) => ({
   zIndex: theme.zIndices.content,
   width: "100%",
   color: theme.colors.white,
-  [`${Heading3}`]: {
+  [`${TopLevelText}`]: {
     padding: `${theme.space.x1} 0 ${theme.space.x1} ${theme.space.x3}`,
   },
 }));
@@ -226,14 +226,14 @@ type BaseMobileMenuProps = {
   showNulogyLogo?: boolean;
 };
 
-const BaseMobileMenu: React.FC<React.PropsWithChildren<BaseMobileMenuProps>> = ({
+const BaseMobileMenu = ({
   menuData,
   closeMenu,
   subtext,
   themeColorObject,
   showNulogyLogo,
   ...props
-}) => (
+}: BaseMobileMenuProps) => (
   <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
     <BrandingWrap>
       <BrandingText logoColor={themeColorObject?.logoColor} />

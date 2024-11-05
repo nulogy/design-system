@@ -81,9 +81,7 @@ const Alert = ({
   return (
     <Flex
       bg={alertColours[type].backgroundColor}
-      py="x2"
-      paddingLeft="x2"
-      paddingRight="x1_5"
+      p="x2"
       borderRadius="medium"
       borderLeftWidth="4px"
       borderLeftColor={alertColours[type].borderColor}
