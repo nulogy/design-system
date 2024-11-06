@@ -32,10 +32,10 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       "categorical6": "#d3d322"
     },
     "fontWeights": {
-      "light": "300",
-      "normal": "400",
-      "medium": "500",
-      "bold": "600"
+      "light": 300,
+      "normal": 400,
+      "medium": 500,
+      "bold": 600
     },
     "fonts": {
       "base": "'IBM Plex Sans', sans-serif",
@@ -172,10 +172,10 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       "categorical6": "#d3d322"
     },
     "fontWeights": {
-      "light": "300",
-      "normal": "400",
-      "medium": "500",
-      "bold": "600"
+      "light": 300,
+      "normal": 400,
+      "medium": 500,
+      "bold": 600
     },
     "fonts": {
       "base": "'IBM Plex Sans', sans-serif",
@@ -238,43 +238,43 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
     },
     "space": {
       "none": "0px",
-      "half": "2.8px",
       "x0": "0px",
-      "x0_25": "1.4px",
-      "x0_5": "2.8px",
-      "x0_75": "4.199999999999999px",
-      "x1": "5.6px",
-      "x1_25": "7px",
-      "x1_5": "8.399999999999999px",
-      "x1_75": "9.799999999999999px",
-      "x2": "11.2px",
-      "x2_5": "14px",
-      "x3": "16.799999999999997px",
-      "x4": "22.4px",
-      "x5": "28px",
-      "x6": "33.599999999999994px",
-      "x7": "39.199999999999996px",
-      "x8": "44.8px"
+      "x0_25": "2.8px",
+      "half": "5.6px",
+      "x0_5": "5.6px",
+      "x0_75": "8.399999999999999px",
+      "x1": "11.2px",
+      "x1_25": "14px",
+      "x1_5": "16.799999999999997px",
+      "x1_75": "19.599999999999998px",
+      "x2": "22.4px",
+      "x2_5": "28px",
+      "x3": "33.599999999999994px",
+      "x4": "44.8px",
+      "x5": "56px",
+      "x6": "67.19999999999999px",
+      "x7": "78.39999999999999px",
+      "x8": "89.6px"
     },
     "sizes": {
       "none": "0px",
-      "half": "2.8px",
       "x0": "0px",
-      "x0_25": "1.4px",
-      "x0_5": "2.8px",
-      "x0_75": "4.199999999999999px",
-      "x1": "5.6px",
-      "x1_25": "7px",
-      "x1_5": "8.399999999999999px",
-      "x1_75": "9.799999999999999px",
-      "x2": "11.2px",
-      "x2_5": "14px",
-      "x3": "16.799999999999997px",
-      "x4": "22.4px",
-      "x5": "28px",
-      "x6": "33.599999999999994px",
-      "x7": "39.199999999999996px",
-      "x8": "44.8px"
+      "x0_25": "2.8px",
+      "half": "5.6px",
+      "x0_5": "5.6px",
+      "x0_75": "8.399999999999999px",
+      "x1": "11.2px",
+      "x1_25": "14px",
+      "x1_5": "16.799999999999997px",
+      "x1_75": "19.599999999999998px",
+      "x2": "22.4px",
+      "x2_5": "28px",
+      "x3": "33.599999999999994px",
+      "x4": "44.8px",
+      "x5": "56px",
+      "x6": "67.19999999999999px",
+      "x7": "78.39999999999999px",
+      "x8": "89.6px"
     },
     "radii": {
       "small": "2.8px",
@@ -312,10 +312,10 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
       "categorical6": "#d3d322"
     },
     "fontWeights": {
-      "light": "300",
-      "normal": "400",
-      "medium": "500",
-      "bold": "600"
+      "light": 300,
+      "normal": 400,
+      "medium": 500,
+      "bold": 600
     },
     "fonts": {
       "base": "'IBM Plex Sans', sans-serif",
@@ -378,43 +378,43 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
     },
     "space": {
       "none": "0px",
-      "half": "1.8px",
       "x0": "0px",
-      "x0_25": "0.9px",
-      "x0_5": "1.8px",
-      "x0_75": "2.7px",
-      "x1": "3.6px",
-      "x1_25": "4.5px",
-      "x1_5": "5.4px",
-      "x1_75": "6.3px",
-      "x2": "7.2px",
-      "x2_5": "9px",
-      "x3": "10.8px",
-      "x4": "14.4px",
-      "x5": "18px",
-      "x6": "21.6px",
-      "x7": "25.2px",
-      "x8": "28.8px"
+      "x0_25": "1.8px",
+      "half": "3.6px",
+      "x0_5": "3.6px",
+      "x0_75": "5.4px",
+      "x1": "7.2px",
+      "x1_25": "9px",
+      "x1_5": "10.8px",
+      "x1_75": "12.6px",
+      "x2": "14.4px",
+      "x2_5": "18px",
+      "x3": "21.6px",
+      "x4": "28.8px",
+      "x5": "36px",
+      "x6": "43.2px",
+      "x7": "50.4px",
+      "x8": "57.6px"
     },
     "sizes": {
       "none": "0px",
-      "half": "1.8px",
       "x0": "0px",
-      "x0_25": "0.9px",
-      "x0_5": "1.8px",
-      "x0_75": "2.7px",
-      "x1": "3.6px",
-      "x1_25": "4.5px",
-      "x1_5": "5.4px",
-      "x1_75": "6.3px",
-      "x2": "7.2px",
-      "x2_5": "9px",
-      "x3": "10.8px",
-      "x4": "14.4px",
-      "x5": "18px",
-      "x6": "21.6px",
-      "x7": "25.2px",
-      "x8": "28.8px"
+      "x0_25": "1.8px",
+      "half": "3.6px",
+      "x0_5": "3.6px",
+      "x0_75": "5.4px",
+      "x1": "7.2px",
+      "x1_25": "9px",
+      "x1_5": "10.8px",
+      "x1_75": "12.6px",
+      "x2": "14.4px",
+      "x2_5": "18px",
+      "x3": "21.6px",
+      "x4": "28.8px",
+      "x5": "36px",
+      "x6": "43.2px",
+      "x7": "50.4px",
+      "x8": "57.6px"
     },
     "radii": {
       "small": "1.8px",
@@ -425,6 +425,6 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
     },
     "borders": []
   }
-} as const;
+};
 
 export const { desktop, tablet, phone } = themes;

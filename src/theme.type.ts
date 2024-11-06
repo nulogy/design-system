@@ -57,10 +57,10 @@ interface LineHeights {
 }
 
 interface FontWeights {
-  light: string;
-  normal: string;
-  medium: string;
-  bold: string;
+  light: number;
+  normal: number;
+  medium: number;
+  bold: number;
 }
 
 interface Space {
