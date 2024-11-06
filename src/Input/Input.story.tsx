@@ -114,6 +114,29 @@ WithAAffixPrefixAndSuffix.story = {
   name: "with a affix (prefix and suffix)",
 };
 
+export const WithAnIcon = () => (
+  <Flex flexDirection="column" gap="x2">
+    <Input maxWidth="320px" inputWidth="320px" iconLeft="search" placeholder="Search by SKU" labelText="Left Icon" />
+    <Input maxWidth="320px" inputWidth="320px" iconRight="barcode" placeholder="Search by SKU" labelText="Right Icon" />
+    <Input
+      maxWidth="320px"
+      inputWidth="320px"
+      iconRight="barcode"
+      iconLeft="search"
+      placeholder="Search by SKU"
+      labelText="Left and right icons"
+    />
+    <Input
+      maxWidth="320px"
+      inputWidth="320px"
+      iconLeft="search"
+      iconLeftSize="x2"
+      placeholder="Search by SKU"
+      labelText="Custom icon size"
+    />
+  </Flex>
+);
+
 export const UsingRefToControlFocus = () => {
   const ref = useRef(null);
   const handleClick = () => {
