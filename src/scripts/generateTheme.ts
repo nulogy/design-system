@@ -38,10 +38,10 @@ const BASE_THEME = {
     categorical6: tokens.color_base_categorical_6,
   },
   fontWeights: {
-    light: tokens.weight_font_light,
-    normal: tokens.weight_font_normal,
-    medium: tokens.weight_font_medium,
-    bold: tokens.weight_font_bold,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    bold: 600,
   },
   fonts: {
     base: tokens.font_family_base,
@@ -184,23 +184,23 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
 
   const space = {
     none: px(0),
-    half: px(baseUnit * 0.5),
     x0: px(0),
-    x0_25: px(baseUnit * 0.25),
-    x0_5: px(baseUnit * 0.5),
-    x0_75: px(baseUnit * 0.75),
-    x1: px(baseUnit * 1),
-    x1_25: px(baseUnit * 1.25),
-    x1_5: px(baseUnit * 1.5),
-    x1_75: px(baseUnit * 1.75),
-    x2: px(baseUnit * 2),
-    x2_5: px(baseUnit * 2.5),
-    x3: px(baseUnit * 3),
-    x4: px(baseUnit * 4),
-    x5: px(baseUnit * 5),
-    x6: px(baseUnit * 6),
-    x7: px(baseUnit * 7),
-    x8: px(baseUnit * 8),
+    x0_25: px(baseUnit * 0.5),
+    half: px(baseUnit * 1),
+    x0_5: px(baseUnit * 1),
+    x0_75: px(baseUnit * 1.5),
+    x1: px(baseUnit * 2),
+    x1_25: px(baseUnit * 2.5),
+    x1_5: px(baseUnit * 3),
+    x1_75: px(baseUnit * 3.5),
+    x2: px(baseUnit * 4),
+    x2_5: px(baseUnit * 5),
+    x3: px(baseUnit * 6),
+    x4: px(baseUnit * 8),
+    x5: px(baseUnit * 10),
+    x6: px(baseUnit * 12),
+    x7: px(baseUnit * 14),
+    x8: px(baseUnit * 16),
   };
 
   return {
@@ -250,7 +250,7 @@ import { DefaultNDSThemeType } from "./theme.type";
 
 type ThemeKey = "desktop" | "tablet" | "phone";
 
-export const themes: Record<ThemeKey, DefaultNDSThemeType> = ${JSON.stringify(generatedThemes, null, 2)} as const;
+export const themes: Record<ThemeKey, DefaultNDSThemeType> = ${JSON.stringify(generatedThemes, null, 2)};
 
 export const { desktop, tablet, phone } = themes;
 `;
