@@ -44,7 +44,6 @@ export { List, ListItem } from "./List";
 export { LoadingAnimation } from "./LoadingAnimation";
 export { ALL_NDS_LOCALES } from "./locales.const";
 export { Modal } from "./Modal";
-export { NavBar } from "./NavBar";
 export { NDSProvider } from "./NDSProvider";
 export { Overlay } from "./Overlay";
 export { Pagination } from "./Pagination";
