@@ -2,7 +2,6 @@ import React from "react";
 import { select } from "@storybook/addon-knobs";
 import { NDSProvider } from "../../src";
 import { ALL_NDS_LOCALES } from "../../src/locales.const";
-import { desktop } from "../../src/theme";
 import { ComponentVariant } from "../../src/NDSProvider/ComponentVariantContext";
 import { useLocalStorage } from "./useLocalStorage/useLocalStorage";
 
