@@ -1,9 +1,8 @@
 import React, { forwardRef } from "react";
-import styled, { CSSObject } from "styled-components";
-import { transparentize } from "polished";
-import { space, variant } from "styled-system";
+import styled, { CSSObject, useTheme } from "styled-components";
+import { position, PositionProps, space, SpaceProps, variant } from "styled-system";
 import { Icon } from "../Icon";
-import { Box } from "../Box";
+import { Box, BoxProps } from "../Box";
 import { Flex } from "../Flex";
 import { subPx } from "../utils";
 import { MaybeFieldLabel } from "../FieldLabel";
@@ -11,32 +10,36 @@ import type { DefaultNDSThemeType } from "../theme.type";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
-import icons from "@nulogy/icons";
 
-type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
+type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size" | "height" | "width">;
 
 export interface InputFieldProps extends NativeInputProps {
   htmlSize?: number;
-  size?: ComponentSize;
-  icon?: keyof typeof icons | "loading";
+  variant?: ComponentVariant;
+  iconRight?: keyof typeof icons | "loading";
+  iconLeft?: keyof typeof icons | "loading";
+  iconRightSize?: keyof typeof icons | "loading";
+  iconLeftSize?: keyof typeof icons | "loading";
   error?: boolean;
   labelText?: string;
   requirementText?: string;
-  helpText?: string;
+  helpText?: React.ReactNode;
   suffix?: string;
   prefix?: string;
   suffixWidth?: string;
   prefixWidth?: string;
   suffixAlignment?: "left" | "right";
   prefixAlignment?: "left" | "right";
-  iconSize?: string;
   inputWidth?: string;
 }
 
 export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
   (
     {
-      icon,
+      iconRight,
+      iconLeft,
+      iconRightSize = "x3",
+      iconLeftSize = "x3",
       error,
       required,
       labelText,
@@ -49,7 +52,6 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       suffixAlignment,
       suffixWidth,
       inputWidth,
-      iconSize,
       variant,
       htmlSize,
       ...props
@@ -57,13 +59,17 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
     ref
   ) => {
     const componentVariant = useComponentVariant(variant);
+    const theme = useTheme();
 
     return (
       <MaybeFieldLabel labelText={labelText} requirementText={requirementText} helpText={helpText}>
         <Flex alignItems="flex-start">
           <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
-          <Box position="relative" display="flex" flexGrow={1} maxWidth={inputWidth}>
+          <InputWrapper maxWidth={inputWidth}>
+            {iconLeft && <StyledInputIcon left="x1" icon={iconLeft} size={iconLeftSize} variant={variant} />}
             <StyledInput
+              paddingLeft={iconLeft ? `calc(${theme.space[iconLeftSize]} + ${theme.space.x1_5})` : theme.space.x1}
+              paddingRight={iconRight ? `calc(${theme.space[iconRightSize]} + ${theme.space.x1_5})` : theme.space.x1}
               aria-invalid={error}
               aria-required={required}
               required={required}
@@ -74,8 +80,8 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
               inputWidth={inputWidth}
               {...props}
             />
-            {icon && <StyledInputIcon icon={icon} size={iconSize || "x2"} variant={componentVariant} />}
-          </Box>
+            {iconRight && <StyledInputIcon right="x1" icon={iconRight} size={iconRightSize} variant={variant} />}
+          </InputWrapper>
           <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
         </Flex>
       </MaybeFieldLabel>
@@ -83,7 +89,19 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
   }
 );
 
-type StyledInputProps = Omit<InputFieldProps, "htmlSize" | "size"> & { variant: ComponentVariant };
+const InputWrapper = styled(Box)<BoxProps>(({ theme }) => ({
+  position: "relative",
+  display: "flex",
+  flexGrow: 1,
+
+  ":focus-within": {
+    svg: {
+      color: theme.colors.darkBlue,
+    },
+  },
+}));
+
+type StyledInputProps = Omit<InputFieldProps, "htmlSize" | "size"> & { variant: ComponentVariant } & SpaceProps;
 
 const StyledInput = styled.input<StyledInputProps>(
   ({ theme, inputWidth }): CSSObject => ({
@@ -102,14 +120,15 @@ const StyledInput = styled.input<StyledInputProps>(
       color: theme.colors.black,
       borderColor: theme.colors.blue,
       boxShadow: theme.shadows.focus,
-      " ~ svg": {
-        fill: theme.colors.darkBlue,
+      "& svg": {
+        color: theme.colors.darkBlue,
       },
     },
     "::placeholder": {
-      color: transparentize(0.4, theme.colors.black),
+      color: theme.colors.midGrey,
     },
-    padding: `${subPx(theme.space.x1)}`,
+    paddingTop: `${subPx(theme.space.x1)}`,
+    paddingBottom: `${subPx(theme.space.x1)}`,
   }),
   ({ theme }) =>
     variant({
@@ -127,26 +146,15 @@ const StyledInput = styled.input<StyledInputProps>(
   space
 );
 
-const StyledInputIcon = styled(Icon)<{ variant: ComponentVariant }>(
+const StyledInputIcon = styled(Icon)<{ variant: ComponentVariant } & PositionProps>(
   ({ theme }) => ({
     position: "absolute",
-    right: theme.space.x1,
-    color: theme.colors.darkGrey,
+    color: theme.colors.midGrey,
     bottom: "50%",
     transform: "translateY(50%)",
     pointerEvents: "none",
   }),
-  variant({
-    prop: "scale",
-    variants: {
-      touch: {
-        right: "x2",
-      },
-      desktop: {
-        right: "x1",
-      },
-    },
-  })
+  position
 );
 
 const cssForState = ({
@@ -160,7 +168,7 @@ const cssForState = ({
 }) => {
   if (disabled)
     return {
-      color: transparentize(0.33, theme.colors.black),
+      color: theme.colors.midGrey,
       borderColor: theme.colors.lightGrey,
       backgroundColor: theme.colors.whiteGrey,
     };
