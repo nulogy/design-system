@@ -50,7 +50,7 @@ const ThemePanel = () => {
 };
 
 const ThemeAddonPanel = ({ active, key }: RenderOptions) => (
-  <AddonPanel key={key} active={active}>
+  <AddonPanel key={key} active={Boolean(active)}>
     <ThemePanel />
   </AddonPanel>
 );
