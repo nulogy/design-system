@@ -21,15 +21,3 @@ export function useComponentVariant(selectedVariant?: ComponentVariant) {
 
   return selectedVariant ?? context.variant;
 }
-
-type WithVariantProps = {
-  variant?: ComponentVariant;
-};
-
-export function withComponentVariant<P extends WithVariantProps>(WrappedComponent: React.ComponentType<P>) {
-  return function ComponentWithVariant(props: P) {
-    const variant = useComponentVariant(props.variant);
-
-    return <WrappedComponent {...(props as P)} variant={variant} />;
-  };
-}
