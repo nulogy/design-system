@@ -278,12 +278,12 @@ const TimePicker: React.FC<React.PropsWithChildren<TimePickerProps>> = forwardRe
             onFocus={handleFocus}
             value={displayValue}
             placeholder={placeholder}
-            icon="queryBuilder"
+            iconRight="queryBuilder"
             onClick={handleClickInput}
             onKeyDown={(e) => handleKeyDown(e)}
             aria-label={ariaLabel || t("Select a time")}
             inputWidth={componentVariant === "touch" ? "208px" : "130px"}
-            iconSize="x2"
+            iconRightSize="x2"
             data-testid="select-input"
             type="text"
             ref={inputRef}
