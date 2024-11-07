@@ -188,7 +188,7 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       top: "50%",
       transform: "translateY(-50%)",
     }),
-    valueContainer: (provided, state) => ({
+    valueContainer: (provided) => ({
       ...provided,
       padding: 0,
       display: "flex",
