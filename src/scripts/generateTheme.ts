@@ -165,6 +165,7 @@ function pxs<T extends Record<string, number>>(config: T): { [K in keyof T]: str
     {}
   ) as { [K in keyof T]: string };
 }
+
 function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
   const fontSizes = {
     smaller: baseUnit * 3,
@@ -244,7 +245,7 @@ const generatedThemes = {
   phone: generateThemeConfig(deviceBaseUnits.phone),
 };
 
-const output = `// This file is auto-generated using scripts/generateTheme.ts
+const output = `// This file is auto-generated using "npm run generate:theme"
 // Do not edit directly.
 import { DefaultNDSThemeType } from "./theme.type";
 
