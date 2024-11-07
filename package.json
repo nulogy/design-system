@@ -145,6 +145,7 @@
   "dependencies": {
     "@babel/runtime": "^7.9.6",
     "@nulogy/tokens": "^5.4.0",
+    "@reach/dialog": "0.17.0",
     "@styled-system/prop-types": "^5.1.4",
     "@styled-system/theme-get": "^5.1.2",
     "@types/styled-system": "5.1.22",
