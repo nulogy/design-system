@@ -6,6 +6,7 @@ import { DefaultNDSThemeType } from "../theme.type";
 const deviceBaseUnits = {
   tablet: 5.6,
   phone: 3.6,
+  desktop: 4,
 } as const;
 
 const px = (value: number) => `${value}px`;
@@ -177,10 +178,10 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
   } as const;
 
   const headings = {
-    heading1: fontSizes.large,
-    heading2: fontSizes.medium,
-    heading3: fontSizes.small,
-    heading4: fontSizes.smaller,
+    heading1: fontSizes.larger,
+    heading2: fontSizes.large,
+    heading3: fontSizes.medium,
+    heading4: fontSizes.small,
   } as const;
 
   const space = {
@@ -245,7 +246,7 @@ const generatedThemes = {
   phone: generateThemeConfig(deviceBaseUnits.phone),
 };
 
-const output = `// This file is auto-generated using "npm run generate:theme"
+const output = `// This file is auto-generated using "yarn generate:theme"
 // Do not edit directly.
 import { DefaultNDSThemeType } from "./theme.type";
 
