@@ -1,4 +1,4 @@
-import React, { LegacyRef } from "react";
+import React from "react";
 import { Popper } from "../Popper";
 import { generateId } from "../utils";
 import TooltipContainer from "./TooltipContainer";

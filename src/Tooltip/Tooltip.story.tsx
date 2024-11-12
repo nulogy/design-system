@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
-import styled from "styled-components";
 
 export default {
   title: "Components/Tooltip",
@@ -186,6 +185,16 @@ export const WithCustomComponent = () => (
     <CustomComponent />
   </Tooltip>
 );
+
+export const WithRef = () => {
+  const ref = React.useRef(null);
+
+  return (
+    <Tooltip tooltip="I am a Tooltip!" ref={ref}>
+      <Button> Button </Button>
+    </Tooltip>
+  );
+};
 
 const CustomComponent = React.forwardRef<HTMLDivElement, { [key: string]: any }>((props, forwardedRef) => (
   <span ref={forwardedRef} {...props}>
