@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { space, typography, flexbox, SpaceProps, TypographyProps, FlexboxProps } from "styled-system";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 export const StatusIndicatorValues = {
   neutral: "neutral",

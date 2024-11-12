@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { transparentize } from "polished";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 const getHeaderPaddingRight = (closeButtonIncluded?: boolean, theme?: DefaultNDSThemeType) =>
   closeButtonIncluded ? theme.space.x8 : theme.space.x3;

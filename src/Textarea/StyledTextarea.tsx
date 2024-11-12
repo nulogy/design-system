@@ -4,7 +4,7 @@ import { transparentize } from "polished";
 import { SpaceProps, variant } from "styled-system";
 import { space } from "styled-system";
 import { subPx } from "../utils";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export type StyledTextareaProps = React.ComponentPropsWithRef<"textarea"> &
@@ -52,7 +52,7 @@ const StyledTextarea = styled.textarea<StyledTextareaProps>(
     width: "100%",
     border: "1px solid",
     borderRadius: theme.radii.medium,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     lineHeight: theme.lineHeights.base,
     minHeight: theme.space.x5,
     minWidth: "20em",

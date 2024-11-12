@@ -2,7 +2,7 @@ import { transparentize } from "polished";
 import type { CSSObject } from "styled-components";
 import type { GroupBase, MenuPlacement, StylesConfig } from "react-select";
 import type { CSSProperties } from "react";
-import type { DefaultNDSThemeType } from "../theme.type";
+import type { DefaultNDSThemeType } from "../theme";
 import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 const getBorderColor = ({
@@ -115,7 +115,7 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       paddingLeft: theme.space.x1,
       position: "relative",
       width: "100%",
-      fontSize: theme.fontSizes.medium,
+      fontSize: theme.fontSizes.base,
       lineHeight: theme.lineHeights.base,
       color: state.isDisabled ? transparentize(0.6667, theme.colors.black) : theme.colors.black,
       background: state.isDisabled ? theme.colors.whiteGrey : theme.colors.white,

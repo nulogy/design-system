@@ -2,7 +2,7 @@ import React from "react";
 import styled, { CSSObject } from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { Icon } from "../Icon";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 type StyledButtonProps = React.ComponentPropsWithRef<"button"> & {
   color?: string;
@@ -23,7 +23,7 @@ const StyledButton = styled.button(
     textDecoration: "none",
     lineHeight: theme.lineHeights.base,
     transition: "background-color .2s",
-    fontSize: `${theme.fontSizes.medium}`,
+    fontSize: `${theme.fontSizes.base}`,
     padding: `${theme.space.x1} 28px ${theme.space.x1} ${theme.space.x2}`,
     borderRadius: theme.radii.medium,
     "&:hover, &:focus": {

@@ -30,6 +30,7 @@ interface FontSizes {
   smaller: string;
   small: string;
   medium: string;
+  base: string;
   large: string;
   larger: string;
   largest: string;
@@ -37,6 +38,13 @@ interface FontSizes {
   heading2: string;
   heading3: string;
   heading4: string;
+  xxs: string;
+  xs: string;
+  sm: string;
+  md: string;
+  lg: string;
+  xl: string;
+  xxl: string;
 }
 
 interface LineHeights {

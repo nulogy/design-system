@@ -4,7 +4,7 @@ import { Flex } from "../Flex";
 import BrandingText from "./BrandingText";
 import LettermarkLogo from "./LettermarkLogo";
 import WordmarkLogo from "./WordmarkLogo";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 type BrandingProps = {
   logoType?: "wordmark" | "lettermark";

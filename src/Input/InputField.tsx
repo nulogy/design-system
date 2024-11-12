@@ -6,7 +6,7 @@ import { Box, BoxProps } from "../Box";
 import { Flex } from "../Flex";
 import { subPx } from "../utils";
 import { MaybeFieldLabel } from "../FieldLabel";
-import type { DefaultNDSThemeType } from "../theme.type";
+import type { DefaultNDSThemeType } from "../theme";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
@@ -109,7 +109,7 @@ const StyledInput = styled.input<StyledInputProps>(
     flexGrow: 1,
     border: "1px solid",
     borderRadius: theme.radii.medium,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     lineHeight: theme.lineHeights.base,
     margin: theme.space.none,
     minHeight: theme.space.x5,

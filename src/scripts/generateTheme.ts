@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import * as tokens from "@nulogy/tokens";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 const deviceBaseUnits = {
   tablet: 5.6,
@@ -77,7 +77,7 @@ const BASE_THEME = {
   },
 };
 
-const desktop: DefaultNDSThemeType = {
+const legacy: DefaultNDSThemeType = {
   ...BASE_THEME,
   fontSizes: {
     smaller: tokens.size_font_smaller,
@@ -86,6 +86,14 @@ const desktop: DefaultNDSThemeType = {
     large: tokens.size_font_large,
     larger: tokens.size_font_larger,
     largest: tokens.size_font_largest,
+    base: tokens.size_font_medium,
+    xxs: tokens.size_font_smaller,
+    xs: tokens.size_font_smaller,
+    sm: tokens.size_font_small,
+    md: tokens.size_font_medium,
+    lg: tokens.size_font_large,
+    xl: tokens.size_font_larger,
+    xxl: tokens.size_font_largest,
     heading1: tokens.size_font_heading_1,
     heading2: tokens.size_font_heading_2,
     heading3: tokens.size_font_heading_3,
@@ -171,17 +179,26 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
   const fontSizes = {
     smaller: baseUnit * 3,
     small: baseUnit * 3.75,
-    medium: baseUnit * 4.5,
+    medium: baseUnit * 3.75,
     large: baseUnit * 5.25,
     larger: baseUnit * 6,
     largest: baseUnit * 7.5,
+
+    xxs: baseUnit * 2.25,
+    xs: baseUnit * 3,
+    sm: baseUnit * 3.75,
+    md: baseUnit * 4.5,
+    lg: baseUnit * 5.25,
+    xl: baseUnit * 6,
+    xxl: baseUnit * 7.5,
   } as const;
 
-  const headings = {
+  const semanticFontSizes = {
     heading1: fontSizes.larger,
     heading2: fontSizes.large,
     heading3: fontSizes.medium,
     heading4: fontSizes.small,
+    base: fontSizes.small,
   } as const;
 
   const space = {
@@ -209,23 +226,23 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
     ...BASE_THEME,
     fontSizes: {
       ...pxs(fontSizes),
-      ...pxs(headings),
+      ...pxs(semanticFontSizes),
     },
     lineHeights: {
-      base: s((6 * baseUnit) / fontSizes.medium),
-      baseRelaxed: s((7 * baseUnit) / fontSizes.medium),
+      base: s((6 * baseUnit) / semanticFontSizes.base),
+      baseRelaxed: s((7 * baseUnit) / semanticFontSizes.base),
       smallTextBase: s((5 * baseUnit) / fontSizes.small),
       smallTextCompressed: s((5 * baseUnit) / fontSizes.small),
       smallRelaxed: s((6 * baseUnit) / fontSizes.small),
       smallerText: s((4 * baseUnit) / fontSizes.smaller),
       smallerRelaxed: s((5 * baseUnit) / fontSizes.smaller),
-      heading1: s((7 * baseUnit) / headings.heading1),
-      heading2: s((6 * baseUnit) / headings.heading2),
-      heading3: s((5 * baseUnit) / headings.heading3),
-      heading4: s((4 * baseUnit) / headings.heading4),
-      title: s((7 * baseUnit) / headings.heading1),
-      sectionTitle: s((6 * baseUnit) / headings.heading2),
-      subsectionTitle: s((5 * baseUnit) / headings.heading3),
+      heading1: s((7 * baseUnit) / semanticFontSizes.heading1),
+      heading2: s((6 * baseUnit) / semanticFontSizes.heading2),
+      heading3: s((5 * baseUnit) / semanticFontSizes.heading3),
+      heading4: s((4 * baseUnit) / semanticFontSizes.heading4),
+      title: s((7 * baseUnit) / semanticFontSizes.heading1),
+      sectionTitle: s((6 * baseUnit) / semanticFontSizes.heading2),
+      subsectionTitle: s((5 * baseUnit) / semanticFontSizes.heading3),
     },
     space,
     sizes: space,
@@ -241,7 +258,8 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
 }
 
 const generatedThemes = {
-  desktop,
+  legacy,
+  desktop: generateThemeConfig(deviceBaseUnits.desktop),
   tablet: generateThemeConfig(deviceBaseUnits.tablet),
   phone: generateThemeConfig(deviceBaseUnits.phone),
 };
@@ -250,14 +268,14 @@ const output = `// This file is auto-generated using "yarn generate:theme"
 // Do not edit directly.
 import { DefaultNDSThemeType } from "./theme.type";
 
-type ThemeKey = "desktop" | "tablet" | "phone";
+type ThemeKey = "legacy" | "desktop" | "tablet" | "phone";
 
 export const themes: Record<ThemeKey, DefaultNDSThemeType> = ${JSON.stringify(generatedThemes, null, 2)};
 
-export const { desktop, tablet, phone } = themes;
+export const { legacy, desktop, tablet, phone } = themes;
 `;
 
-const outputPath = path.join(__dirname, "..", "theme.ts");
+const outputPath = path.join(__dirname, "..", "theme/theme.ts");
 fs.writeFileSync(outputPath, output, "utf8");
 
 console.info(`Theme file generated at: ${outputPath}`);

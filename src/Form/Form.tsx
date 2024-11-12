@@ -4,7 +4,7 @@ import { space } from "styled-system";
 import type { SpaceProps } from "styled-system";
 import { Heading2 } from "../Type";
 import { Alert } from "../Alert";
-import type { ThemeType } from "../theme.type";
+import type { ThemeType } from "../theme";
 import Field from "./Field";
 import Fieldset from "./Fieldset";
 import FormSection from "./FormSection";

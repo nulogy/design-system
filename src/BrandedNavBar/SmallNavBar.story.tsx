@@ -1,13 +1,13 @@
+import { select } from "@storybook/addon-knobs";
 import React from "react";
 import styled from "styled-components";
-import { select } from "@storybook/addon-knobs";
-import { Heading1 } from "../Type";
 import { Branding } from "../Branding";
-import { Link } from "../Link";
 import { Button, SmallNavBarProps } from "../index";
+import { Link } from "../Link";
+import { legacy as theme } from "../theme/theme";
+import { Heading1 } from "../Type";
 import BrandLogoContainer from "./BrandLogoContainer";
 import { SmallNavBar } from "./index";
-import { desktop as theme } from "../theme";
 
 const ResetStorybookView = styled.div({
   position: "absolute",

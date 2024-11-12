@@ -6,7 +6,7 @@ import { transparentize } from "polished";
 import icons from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 interface BaseProps {

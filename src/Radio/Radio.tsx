@@ -5,7 +5,7 @@ import { SpaceProps } from "styled-system";
 import { Box } from "../Box";
 import { Text } from "../Type";
 import { ClickInputLabel } from "../utils";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import { getSubset, omitSubset } from "../utils/subset";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
