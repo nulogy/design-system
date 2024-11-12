@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 const getHoverBackground = (currentPage: boolean, disabled: boolean, theme: DefaultNDSThemeType) => {
   if (currentPage) {

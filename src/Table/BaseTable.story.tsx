@@ -343,7 +343,7 @@ export const WithMetadata = () => (
         headerFormatter: ({ label, metadata }) => (
           <Flex flexDirection="column">
             <Text>{label}</Text>
-            <Text fontSize="small" fontWeight="medium" color="midGrey">
+            <Text fontSize="small" fontWeight="base" color="midGrey">
               {metadata.helpText}
             </Text>
           </Flex>

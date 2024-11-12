@@ -33,20 +33,21 @@ export const getThemeByVariant = (
   if (variant === "touch") {
     return isTabletSize ? themes.tablet : themes.phone;
   }
+
   return futureFlags.newDesktopTypographyScale ? themes.desktop : themes.legacy;
 };
 
 export function useNDSTheme(variant: ComponentVariant = "desktop", customTheme?: ThemeType): DefaultNDSThemeType {
   validateVariantOrThrow(variant);
-  const futureFlags = useFutureFlags();
+  const { newDesktopTypographyScale } = useFutureFlags();
 
   const [themeVariant, setThemeVariant] = useState<DefaultNDSThemeType>(legacy);
   const isTabletSize = useMediaQuery(`(min-width: ${legacy.breakpoints.small})`);
 
   useEffect(() => {
-    const newTheme = getThemeByVariant(variant, isTabletSize, futureFlags);
+    const newTheme = getThemeByVariant(variant, isTabletSize, { newDesktopTypographyScale });
     setThemeVariant(newTheme);
-  }, [variant, isTabletSize, futureFlags]);
+  }, [variant, isTabletSize, newDesktopTypographyScale]);
 
   const mergedTheme = mergeThemes(themeVariant, customTheme);
   return {

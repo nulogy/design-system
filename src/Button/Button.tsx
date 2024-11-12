@@ -2,7 +2,7 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import { space, SpaceProps, variant } from "styled-system";
 import { Icon } from "../Icon";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import {
   useComponentVariant,
   ComponentVariant as ContextComponentSize,
@@ -34,7 +34,7 @@ const WrapperButton = styled.button<ButtonProps>(
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     fontWeight: theme.fontWeights.medium,
     textDecoration: "none",
     verticalAlign: "middle",
@@ -77,11 +77,19 @@ const WrapperButton = styled.button<ButtonProps>(
         },
 
         medium: {
-          fontSize: "medium",
+          fontSize: "base",
           padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
         },
       },
     }),
+  variant({
+    variants: {
+      touch: {
+        fontSize: "md",
+        lineHeight: "base",
+      },
+    },
+  }),
   space
 );
 

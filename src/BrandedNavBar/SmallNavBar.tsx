@@ -2,7 +2,7 @@ import styled, { CSSObject, useTheme } from "styled-components";
 import { useTranslation } from "react-i18next";
 import React, { useEffect } from "react";
 import { Icon } from "../Icon";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import { Flex } from "../Flex";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
 import { PreventBodyElementScrolling, withMenuState, WithMenuStateProps, AcceptsMenuStateProps } from "../utils";

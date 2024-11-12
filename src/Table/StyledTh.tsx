@@ -1,5 +1,5 @@
 import styled, { CSSObject } from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 const stickyStyles = (theme: DefaultNDSThemeType): CSSObject => ({
   position: "sticky",

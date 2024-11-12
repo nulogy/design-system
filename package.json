@@ -9,7 +9,7 @@
   "scripts": {
     "ci": "yarn && yarn build && yarn test && yarn run check",
     "new": "plop",
-    "generate:theme": "npx tsx src/scripts/generateTheme.ts && prettier -w src/theme.ts",
+    "generate:theme": "npx tsx src/scripts/generateTheme.ts && prettier -w src/theme/theme.ts",
     "start": "concurrently \"yarn build --watch\" \"yarn start:storybook\"",
     "start:cypress": "yarn concurrently --kill-others \"yarn start --ci\" \"yarn wait-on http://localhost:9999 && cypress open\"",
     "start:storybook": "start-storybook -p 9999",
@@ -82,7 +82,8 @@
     "@storybook/addon-docs": "6.1.9",
     "@storybook/addon-knobs": "^6.1.9",
     "@storybook/addon-storysource": "^6.1.9",
-    "@storybook/addon-viewport": "^7.6.6",
+    "@storybook/addon-toolbars": "^6.1.9",
+    "@storybook/addon-viewport": "^6.1.9",
     "@storybook/codemod": "^6.1.9",
     "@storybook/react": "^6.3.12",
     "@storybook/theming": "^6.1.9",

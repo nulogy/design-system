@@ -3,7 +3,7 @@ import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
 import { variant } from "styled-system";
 import React from "react";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
@@ -40,7 +40,7 @@ const Link = styled.a<LinkProps>(
     ...resetButtonStyles,
     padding: as === "button" ? "0" : undefined,
     textDecoration: underline ? "underline" : "none",
-    fontSize: props.theme.fontSizes.medium,
+    fontSize: props.theme.fontSizes.base,
     color: getColor(props),
     "&:hover": {
       cursor: "pointer",

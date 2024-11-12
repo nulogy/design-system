@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Box } from "../Box";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import TableCell from "./TableCell";
 
 const StyledMessageContainer = styled(Box)(({ theme }) => ({

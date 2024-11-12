@@ -26,7 +26,7 @@ const DropdownLink = styled.a.withConfig<Props>({
     borderColor: "transparent",
     backgroundColor: "transparent",
     lineHeight: theme.lineHeights.base,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     transition: ".2s",
     borderLeft: `${theme.space.half} solid transparent`,
     "&:visited": {

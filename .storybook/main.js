@@ -13,7 +13,7 @@ module.exports = {
     return config;
   },
   addons: [
-    "@storybook/addon-knobs",
+    "@storybook/addon-toolbars",
     "@storybook/addon-viewport",
     {
       name: "@storybook/addon-storysource",
@@ -26,6 +26,5 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-actions",
     "storybook-addon-performance",
-    "./nds-theme/register.tsx",
   ],
 };

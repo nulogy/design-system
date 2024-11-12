@@ -1,5 +1,5 @@
 import React from "react";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import Reset from "./Reset";
 import ModalStyleOverride from "./ModalStyleOverride";
 import GlobalStyles from "./GlobalStyles";

@@ -17,7 +17,7 @@ import SummaryItem from "../Summary/SummaryItem";
 import SummaryDivider from "../Summary/SummaryDivider";
 import DropdownMenu from "../DropdownMenu/DropdownMenu";
 import numberFromDimension from "../utils/numberFromDimension";
-import { desktop as theme } from "../theme";
+import { legacy as theme } from "../theme/theme";
 
 export const Default = () => (
   <Header
