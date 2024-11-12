@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import { toast as _toast, Toaster, ToasterProps, useToasterStore } from "react-hot-toast";
 import { useTheme } from "styled-components";
-import numberFromDimension from "../utils/numberFromDimension";
 import { TOAST_SHOW_DURATION } from "../Toast/Toast";
+import numberFromDimension from "../utils/numberFromDimension";
 import { ToastOptions } from "./ToastFunction";
-import { DefaultNDSThemeType } from "../theme.type";
 
 type ToastContainerProps = {
   gap?: number;

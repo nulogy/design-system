@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { color } from "styled-system";
 import { Box } from "../Box";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 type DropdownMenuContainerProps = {
   id?: string;

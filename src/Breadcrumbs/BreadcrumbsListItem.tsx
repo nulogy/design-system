@@ -10,7 +10,7 @@ export const BreadcrumbsListSeparator = styled.li(
     alignSelf: "center",
     color: theme.colors.midGrey,
     "a, p": {
-      fontSize: theme.fontSizes.medium,
+      fontSize: theme.fontSizes.base,
     },
     "a:visited": {
       color: theme.colors.darkBlue,
@@ -48,7 +48,7 @@ export const BreadcrumbsListItem = styled.li<{ variant: ComponentVariant }>(
         "a, p": {
           py: "x2",
           px: "x0",
-          fontSize: "medium",
+          fontSize: "base",
         },
       },
       desktop: {

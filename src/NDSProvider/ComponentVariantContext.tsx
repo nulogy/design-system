@@ -7,11 +7,11 @@ type ComponentVariantContextValue = {
   children?: React.ReactNode;
 };
 
+export const ComponentVariantContext = createContext<ComponentVariantContextValue>(undefined);
+
 export default function ComponentVariantContextProvider({ variant, children }: ComponentVariantContextValue) {
   return <ComponentVariantContext.Provider value={{ variant: variant }}>{children}</ComponentVariantContext.Provider>;
 }
-
-export const ComponentVariantContext = createContext<ComponentVariantContextValue>(undefined);
 
 export function useComponentVariant(selectedVariant?: ComponentVariant) {
   const context = useContext(ComponentVariantContext);

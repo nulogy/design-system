@@ -8,7 +8,7 @@ import { Field } from "../Form";
 import { Text } from "../Type";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { ClickInputLabel } from "../utils";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import { getSubset, omitSubset } from "../utils/subset";
 import ToggleButton from "./ToggleButton";
 

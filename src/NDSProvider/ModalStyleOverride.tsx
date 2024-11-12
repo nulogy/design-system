@@ -10,7 +10,7 @@ const ModalStyleOverride = createGlobalStyle(({ theme, locale }: GlobalStylesPro
       "*": { boxSizing: "border-box" },
       color: theme.colors.black,
       fontFamily,
-      fontSize: theme.fontSizes.medium,
+      fontSize: theme.fontSizes.base,
       lineHeight: theme.lineHeights.base,
       img: {
         maxWidth: "100%",

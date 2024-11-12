@@ -3,7 +3,7 @@ import { CSSObject, ThemeContext, useTheme } from "styled-components";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import Radio from "./Radio";
 
 interface RadioGroupProps {

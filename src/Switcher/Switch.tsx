@@ -26,7 +26,7 @@ const SwitchButton = styled.button<SwitchProps>(
     cursor: "pointer",
     border: "none",
     borderRadius: 9999, // todo: move to a token
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     fontWeight: theme.fontWeights.medium,
     lineHeight: theme.lineHeights.base,
     textDecoration: "none",

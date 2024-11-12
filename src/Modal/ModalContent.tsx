@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 type ModalContentProps = React.ComponentPropsWithRef<"div"> & {
   hasFooter?: any;

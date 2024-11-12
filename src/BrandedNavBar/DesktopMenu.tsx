@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import type { CSSObject } from "styled-components";
 import { Icon } from "../Icon";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import MenuTrigger from "./MenuTrigger";
 import type { MenuType } from "./MenuTrigger";
 
@@ -17,7 +17,7 @@ const getSharedStyles = (color, theme): CSSObject => {
     backgroundColor: "transparent",
     verticalAlign: "middle",
     lineHeight: theme.lineHeights.base,
-    fontSize: `${theme.fontSizes.medium}`,
+    fontSize: `${theme.fontSizes.base}`,
     padding: `${theme.space.x1} ${theme.space.x2}`,
     borderRadius: theme.radii.medium,
   };

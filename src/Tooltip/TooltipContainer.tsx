@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { PositionProps } from "styled-system";
 import { Box } from "../Box";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 
 type TooltipContainerProps = PositionProps & {
   theme?: DefaultNDSThemeType;

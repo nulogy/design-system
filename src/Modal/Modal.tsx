@@ -54,7 +54,7 @@ const StyledReactModal = styled(ReactModal)(
       boxSizing: "border-box",
     },
     color: theme.colors.black,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     lineHeight: theme.lineHeights.base,
     WebkitFontSmoothing: "antialiased",
     MozOsxFontSmoothing: "grayscale",

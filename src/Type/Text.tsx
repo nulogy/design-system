@@ -29,7 +29,7 @@ const Text = styled.p<TextProps>(
     color: "currentColor",
     marginTop: 0,
     marginBottom: 0,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     lineHeight: theme.lineHeights.base,
     opacity: disabled ? "0.7" : undefined,
     display: inline ? "inline" : undefined,

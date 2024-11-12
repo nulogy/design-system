@@ -19,7 +19,7 @@ const DropdownItem = styled.div<Props>(
       backgroundColor: "transparent",
       lineHeight: theme.lineHeights.base,
       transition: ".2s",
-      fontSize: `${theme.fontSizes.medium}`,
+      fontSize: `${theme.fontSizes.base}`,
       padding: `${theme.space.x1} ${theme.space.x2}`,
       "&:hover, &:focus": {
         outline: "none",

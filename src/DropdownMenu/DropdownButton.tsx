@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { variant } from "styled-system";
-import { DefaultNDSThemeType } from "../theme.type";
+import { DefaultNDSThemeType } from "../theme";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
@@ -25,7 +25,7 @@ const DropdownButton = styled.button<DropdownButtonProps>(
     textAlign: "left",
     backgroundColor: "transparent",
     lineHeight: theme.lineHeights.base,
-    fontSize: theme.fontSizes.medium,
+    fontSize: theme.fontSizes.base,
     transition: ".2s",
     borderLeft: `${theme.space.half} solid transparent`,
     paddingTop: theme.space.x1,
