@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
-import styled from "styled-components";
 
 export default {
   title: "Components/Tooltip",
