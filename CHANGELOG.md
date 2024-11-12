@@ -1,3 +1,17 @@
+# [10.3.0](https://github.com/nulogy/design-system/compare/v10.2.13...v10.3.0) (2024-11-12)
+
+
+### Bug Fixes
+
+* do not shrink the toggle when put in a small container ([#1450](https://github.com/nulogy/design-system/issues/1450)) ([6b3b63f](https://github.com/nulogy/design-system/commit/6b3b63ffa6f201da721748344cc571c0523fce88))
+* make the icons and indicators in the select accessible ([#1462](https://github.com/nulogy/design-system/issues/1462)) ([3b6d900](https://github.com/nulogy/design-system/commit/3b6d900c212df12801228ebc9b4e7a221770a552))
+* remove underlines from breadcrumbs ([#1451](https://github.com/nulogy/design-system/issues/1451)) ([6a68084](https://github.com/nulogy/design-system/commit/6a6808417460dc2e97837ba14447d6521fdc8b88))
+
+
+### Features
+
+* add the ability to pass refs to Tooltips ([9183e97](https://github.com/nulogy/design-system/commit/9183e97b597a3548a60d374e6854837fd24f8637))
+
 ## [10.2.14](https://github.com/nulogy/design-system/compare/v10.2.13...v10.2.14) (2024-10-16)
 
 
