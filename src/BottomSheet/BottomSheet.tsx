@@ -9,9 +9,9 @@ import { BottomSheetParts } from "./BottomSheet.parts";
 
 interface Props {
   isOpen: boolean;
-  "aria-label": string;
+  "aria-label"?: string;
   onClose?: () => void;
-  title?: React.ReactNode;
+  title?: string;
   helpText?: React.ReactNode;
   closeActionLabel?: string;
   secondaryAction?: (props: { onClose: () => void }) => React.ReactElement;
@@ -43,7 +43,7 @@ export default function BottomSheet({
   return (
     <BottomSheetParts.Root isOpen={isOpen} onClose={onClose}>
       <BottomSheetParts.Overlay closeOnClick={closeOnOverlayClick}>
-        <BottomSheetParts.Sheet width={sheetWidth} aria-label={props["aria-label"]}>
+        <BottomSheetParts.Sheet width={sheetWidth} aria-label={props["aria-label"] ?? title}>
           <BottomSheetParts.ContentContainer>
             <Box width={contentWidth} margin="0 auto">
               <BottomSheetParts.Header>
