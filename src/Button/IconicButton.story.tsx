@@ -3,7 +3,6 @@ import { IconicButton } from "../index";
 import { Flex } from "../Flex";
 import { StatusIndicator } from "../StatusIndicator";
 import { Box } from "../Box";
-import dashed from "../utils/dashed";
 
 export default {
   title: "Components/IconicButton",
@@ -124,8 +123,6 @@ export const WithACustomFontSize = () => (
     </IconicButton>
   </Flex>
 );
-
-const DashedIconicButton = dashed(IconicButton);
 
 WithACustomFontSize.story = {
   name: "with a custom font size",

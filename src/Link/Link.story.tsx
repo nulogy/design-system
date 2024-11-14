@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Link } from "../index";
-import { Flex } from "../Flex";
-import dashed from "../utils/dashed";
 
 export default {
   title: "Components/Link",

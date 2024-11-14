@@ -1,5 +1,6 @@
 import React from "react";
 import { createContext, useContext } from "react";
+import { noop } from "../utils/noop";
 
 interface BottomSheetContextType {
   isOpen: boolean;
@@ -17,8 +18,8 @@ function useBottomSheet() {
 }
 
 function BottomSheetProvider({
-  isOpen,
-  onClose,
+  isOpen = false,
+  onClose = noop,
   children,
 }: {
   isOpen: boolean;

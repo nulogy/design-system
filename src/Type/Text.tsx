@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "../Link";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
@@ -32,6 +33,11 @@ const Text = styled.p<TextProps>(
     lineHeight: theme.lineHeights.base,
     opacity: disabled ? "0.7" : undefined,
     display: inline ? "inline" : undefined,
+
+    [`${Link}`]: {
+      fontSize: "inherit",
+      lineHeight: "inherit",
+    },
   }),
   addStyledProps
 );

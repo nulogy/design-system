@@ -1,23 +1,6 @@
-import { variant } from "styled-system";
 import styled from "styled-components";
-import { DefaultNDSThemeType } from "../theme.type";
-import { addStyledProps } from "../StyledProps";
-import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { addStyledProps, variant } from "../StyledProps";
 import Text, { TextProps } from "./Text";
-
-const useVariantStyles = ({ theme }: { theme: DefaultNDSThemeType }) => {
-  const componentVariant = useComponentVariant();
-
-  return variant({
-    variants: {
-      touch: {
-        fontWeight: theme.fontWeights.bold,
-        marginBottom: theme.space.none,
-      },
-    },
-    prop: "variant",
-  })({ theme, variant: componentVariant });
-};
 
 export const Heading1 = styled(Text).attrs(() => ({
   as: "h1",
@@ -29,7 +12,14 @@ export const Heading1 = styled(Text).attrs(() => ({
     marginTop: 0,
     marginBottom: theme.space.x6,
   }),
-  useVariantStyles,
+  variant({
+    variants: {
+      touch: {
+        fontWeight: "medium",
+        marginBottom: "none",
+      },
+    },
+  }),
   addStyledProps
 );
 
@@ -43,7 +33,14 @@ export const Heading2 = styled(Text).attrs(() => ({
     marginTop: 0,
     marginBottom: theme.space.x2,
   }),
-  useVariantStyles,
+  variant({
+    variants: {
+      touch: {
+        fontWeight: "medium",
+        marginBottom: "none",
+      },
+    },
+  }),
   addStyledProps
 );
 
@@ -57,7 +54,14 @@ export const Heading3 = styled(Text).attrs(() => ({
     marginTop: 0,
     marginBottom: theme.space.x1,
   }),
-  useVariantStyles,
+  variant({
+    variants: {
+      touch: {
+        fontWeight: "medium",
+        marginBottom: "none",
+      },
+    },
+  }),
   addStyledProps
 );
 
@@ -71,6 +75,13 @@ export const Heading4 = styled(Text).attrs(() => ({
     marginTop: 0,
     marginBottom: theme.space.x1,
   }),
-  useVariantStyles,
+  variant({
+    variants: {
+      touch: {
+        fontWeight: "medium",
+        marginBottom: "none",
+      },
+    },
+  }),
   addStyledProps
 );

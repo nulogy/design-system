@@ -1,23 +1,24 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "styled-components";
 import { WidthProps } from "styled-system";
 import { Box } from "../Box";
-import { Button } from "../Button";
+import { QuietButton } from "../Button";
 import { Flex } from "../Flex";
 import { noop } from "../utils/noop";
 import { BottomSheetParts } from "./BottomSheet.parts";
 
 interface Props {
-  isOpen: boolean;
+  isOpen?: boolean;
   "aria-label"?: string;
   onClose?: () => void;
   title?: string;
   helpText?: React.ReactNode;
-  closeActionLabel?: string;
+  closeButtonLabel?: string;
+  hideCloseButton?: boolean;
   secondaryAction?: (props: { onClose: () => void }) => React.ReactElement;
   primaryAction?: (props: { onClose: () => void }) => React.ReactElement;
-  onCloseEnd?: () => void;
-  closeOnOverlayClick?: boolean;
+  disableCloseOnOverlayClick?: boolean;
   sheetWidth?: WidthProps["width"];
   contentWidth?: WidthProps["width"];
   children?: React.ReactNode;
@@ -26,40 +27,54 @@ interface Props {
 export default function BottomSheet({
   title,
   helpText,
-  closeActionLabel: closeButtonLabel,
-  secondaryAction: secondaryButton,
-  primaryAction: primaryButton,
-  isOpen,
+  closeButtonLabel,
+  secondaryAction,
+  primaryAction,
+  isOpen = false,
   onClose = noop,
-  closeOnOverlayClick,
-  sheetWidth,
+  sheetWidth = "100%",
   contentWidth = { small: "100%", medium: 704 },
+  disableCloseOnOverlayClick = false,
+  hideCloseButton = false,
   children,
   ...props
 }: Props) {
   const { t } = useTranslation();
+  const theme = useTheme();
+
   closeButtonLabel ||= t("close");
+  const closeOnClick = !disableCloseOnOverlayClick;
 
   return (
     <BottomSheetParts.Root isOpen={isOpen} onClose={onClose}>
-      <BottomSheetParts.Overlay closeOnClick={closeOnOverlayClick}>
-        <BottomSheetParts.Sheet width={sheetWidth} aria-label={props["aria-label"] ?? title}>
+      <BottomSheetParts.Overlay closeOnClick={closeOnClick}>
+        <BottomSheetParts.Sheet
+          width={sheetWidth}
+          maxWidth={{ small: `calc(100% - ${theme.space.x8})` }}
+          maxHeight={{ small: `calc(100dvh - ${theme.space.x7})`, medium: "85.4dvh" }}
+          aria-label={props["aria-label"] ?? title}
+        >
           <BottomSheetParts.ContentContainer>
             <Box width={contentWidth} margin="0 auto">
               <BottomSheetParts.Header>
                 {title && <BottomSheetParts.Title>{title}</BottomSheetParts.Title>}
-                {helpText && <BottomSheetParts.HelpText>{helpText}</BottomSheetParts.HelpText>}
+                {helpText &&
+                  (typeof helpText === "string" ? (
+                    <BottomSheetParts.HelpText>{helpText}</BottomSheetParts.HelpText>
+                  ) : (
+                    helpText
+                  ))}
               </BottomSheetParts.Header>
               <Box px="x3" py="x4">
                 {children}
               </Box>
             </Box>
             <BottomSheetParts.Footer>
-              <Flex justifyContent="space-between">
-                <Button onClick={onClose}>{closeButtonLabel}</Button>
-                <Flex gap="x2">
-                  {secondaryButton && secondaryButton({ onClose })}
-                  {primaryButton && primaryButton({ onClose })}
+              <Flex alignItems="center" justifyContent="space-between" gap="x2">
+                {!hideCloseButton && <QuietButton onClick={onClose}>{closeButtonLabel}</QuietButton>}
+                <Flex gap="x2" alignItems="center" ml="auto">
+                  {secondaryAction && secondaryAction({ onClose })}
+                  {primaryAction && primaryAction({ onClose })}
                 </Flex>
               </Flex>
             </BottomSheetParts.Footer>

@@ -2,8 +2,6 @@ import React from "react";
 import { BrowserRouter, Link as ReactRouterLink } from "react-router-dom";
 import { Link } from "../Link";
 import { Text } from "../Type";
-import { Flex } from "../Flex";
-import dashed from "../utils/dashed";
 import { Breadcrumbs } from "./index";
 
 export default {
@@ -21,8 +19,6 @@ export const _Breadcrumbs = () => (
     </Breadcrumbs>
   </>
 );
-
-const DashedBreadcrumbs = dashed(Breadcrumbs);
 
 export const WithoutLink = () => (
   <Breadcrumbs>
