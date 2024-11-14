@@ -7,9 +7,10 @@ import type { AnimationProps } from "framer-motion";
 import { motion } from "framer-motion";
 import { transparentize } from "polished";
 import styled from "styled-components";
-import { height, layout, maxHeight, maxWidth, space, width } from "styled-system";
+import { compose, height, layout, maxHeight, maxWidth, space, styleFn, width } from "styled-system";
 import type { HeightProps, LayoutProps, MaxHeightProps, MaxWidthProps, SpaceProps, WidthProps } from "styled-system";
 import { Heading2, Text } from "../Type";
+import { excludeStyledProps } from "../StyledProps";
 
 const Overlay = styled(motion(ReachDialogOverlay))(({ theme }) => ({
   position: "fixed",
@@ -21,16 +22,20 @@ const Overlay = styled(motion(ReachDialogOverlay))(({ theme }) => ({
 }));
 
 interface SheetProps
-  extends WidthProps,
+  extends DialogContentProps,
+    AnimationProps,
+    WidthProps,
     MaxWidthProps,
     HeightProps,
     MaxHeightProps,
-    DialogContentProps,
     SpaceProps,
-    LayoutProps,
-    AnimationProps {}
+    LayoutProps {}
 
-const Sheet = styled(motion(ReachDialogContent))<SheetProps>(
+const styleFns = [width, maxWidth, height, maxHeight, space, layout];
+
+const Sheet = styled(motion(ReachDialogContent)).withConfig({
+  shouldForwardProp: excludeStyledProps(...styleFns),
+})<SheetProps>(
   ({ theme }) => ({
     ":focus": {
       outline: "none",
@@ -51,27 +56,14 @@ const Sheet = styled(motion(ReachDialogContent))<SheetProps>(
     WebkitFontSmoothing: "antialiased",
     WebkitTapHighlightColor: "transparent",
     MozOsxFontSmoothing: "grayscale",
-
     position: "relative",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     background: "white",
-    width: "100%",
-    maxHeight: `calc(100dvh - ${theme.space.x7})`,
     boxShadow: theme.shadows.large,
-
-    [`@media (min-width: ${theme.breakpoints.small})`]: {
-      maxWidth: `calc(100% - ${theme.space.x8})`,
-      maxHeight: "85.4dvh", // Golden Ratio
-    },
   }),
-  width,
-  maxWidth,
-  height,
-  maxHeight,
-  space,
-  layout
+  compose(...styleFns)
 );
 
 const ContentContainer = styled.div((_) => ({
@@ -99,7 +91,7 @@ const Footer = styled.div(({ theme }) => ({
 }));
 
 const Header = styled.div(({ theme }) => ({
-  textAlign: "center",
+  textAlign: "left",
   paddingTop: theme.space.x3,
   paddingLeft: theme.space.x3,
   paddingRight: theme.space.x3,

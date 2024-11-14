@@ -1,4 +1,4 @@
-# BottomSheet Component
+# BottomSheet 
 
 The BottomSheet component is a modal interface element that slides up from the bottom of the screen, providing additional content or actions while maintaining context with the main view.
 
@@ -12,7 +12,7 @@ The BottomSheet is ideal for:
 ## Basic Usage
 
 ```tsx
-import { BottomSheet } from '@/components';
+import { BottomSheet } from '@nulogy/components';
 
 function MyComponent() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,47 +31,49 @@ function MyComponent() {
 
 ## Props
 
-| Prop | Type | Description |
-|------|------|-------------|
-| `isOpen` | boolean | Controls the visibility of the bottom sheet |
-| `onClose` | function | Callback function when the sheet is closed using either the close action or an overlay|
-| `title` | string | Main heading of the sheet. Used as an `aria-label` when it is not passed|
-| `helpText` | ReactNode | Optional explanatory text below the title |
-| `closeOnOverlayClick` | boolean | Enables closing the sheet by clicking the overlay |
-| `aria-label` | string | Accessibility label for the sheet |
-| `sheetWidth` | ResponsiveWidth | Responsive width configuration |
-| `contentWidth` | ResponsiveWidth | Width of the content area |
-| `closeActionLabel` | string | Label for close action. Default: `Close` |
-| `primaryAction` | Function | Renders primary action button |
-| `secondaryAction` | Function | Renders secondary action button |
+| Prop | Type | Description | Default | 
+|------|------|-------------|---------|
+| `isOpen` | boolean | Controls the visibility of the bottom sheet | `false` | 
+| `onClose` | function | Callback function when the sheet is closed using either the close action or an overlay | `noop` |  
+| `title` | string | Main heading of the sheet. Used as an `aria-label` when an `aria-label` it is not passed | - |  
+| `helpText` | ReactNode | Optional explanatory content below the title | - |  
+| `disableCloseOnOverlayClick` | boolean | Enables closing the sheet by clicking the overlay | `false` |  
+| `hideCloseButton` | boolean | Hides the close button | `false` |  
+| `aria-label` | string | Accessibility label for the sheet | - |  
+| `sheetWidth` | ResponsiveWidth | Controls the width of the entire sheet | `"100%"` |  
+| `contentWidth` | ResponsiveWidth | Controls the width of the content container inside the sheet | `{ small: "100%", medium: 704 }` |  
+| `closeButtonLabel` | string | Label for close action. Internationalized `Close` is used if no value is supplied | `t("close")` |  
+| `primaryAction` | Function | Renders primary action | - |  
+| `secondaryAction` | Function | Renders secondary action | - |  
+| `children` | ReactNode | Content to be displayed inside the sheet | - |  
 
 ## Compositional API
 
-For more complex use cases, the BottomSheet can be composed using parts:
+For more complex use cases, the BottomSheet can be composed using parts. You can override the styles, or replace the default parts with custom components.
 
 ```tsx
-import { BottomSheetParts } from '@/components';
+import { BottomSheetParts as BottomSheet } from '@nulogy/components';
 
-<BottomSheetParts.Root>
-  <BottomSheetParts.Overlay>
-    <BottomSheetParts.Sheet>
-      <BottomSheetParts.ContentContainer>
-        <BottomSheetParts.Header>
-          <BottomSheetParts.Title>
-          <BottomSheetParts.HelpText>
-        </BottomSheetParts.Header>
+<BottomSheet.Root>
+  <BottomSheet.Overlay>
+    <BottomSheet.Sheet>
+      <BottomSheet.ContentContainer>
+        <BottomSheet.Header>
+          <BottomSheet.Title>
+          <BottomSheet.HelpText>
+        </BottomSheet.Header>
         {/* Content */}
-        <BottomSheetParts.Footer>
+        <BottomSheet.Footer>
           {/* Actions */}
-        </BottomSheetParts.Footer>
-      </BottomSheetParts.ContentContainer>
-    </BottomSheetParts.Sheet>
-  </BottomSheetParts.Overlay>
-</BottomSheetParts.Root>
+        </BottomSheet.Footer>
+      </BottomSheet.ContentContainer>
+    </BottomSheet.Sheet>
+  </BottomSheet.Overlay>
+</BottomSheet.Root>
 ```
 ## Accessibility
 
-- Automatically focuses on the first focusable element inside the Sheet. The focus is returned to the last focused element when the sheet is closed.
+- Automatically focuses on the first focusable element inside the Sheet, the focus is then returned to the last focused element when the sheet is closed
 - Always provide a clear `title` or `aria-label` that describes the sheet's purpose
 
 ## Best Practices
@@ -80,7 +82,7 @@ import { BottomSheetParts } from '@/components';
 2. Consider mobile viewports when setting widths
 3. Implement proper error handling and loading states
 4. Use appropriate action buttons that clearly communicate their purpose
-5. Consider implementing `closeOnOverlayClick` for better user experience
+5. Only toggle `disableCloseOnOverlayClick` and `hideCloseAction` on if there is an alternate way to close the sheet
 
 ## Technical Considerations
 
