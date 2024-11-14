@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { Radio, Button } from "../index";
-import { Flex } from "../Flex";
-import dashed from "../utils/dashed";
 
 export default {
   title: "Components/Radio",

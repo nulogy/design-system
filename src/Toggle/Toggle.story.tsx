@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean } from "@storybook/addon-knobs";
 import { Toggle, Button, Box } from "../index";
-import dashed from "../utils/dashed";
+import { dashed } from "../utils/story/dashed";
 
 const DashedBox = dashed(Box);
 

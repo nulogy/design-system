@@ -5,7 +5,7 @@ import { variant } from "styled-system";
 import React from "react";
 import { DefaultNDSThemeType } from "../theme.type";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 export type LinkProps = React.ComponentPropsWithRef<"a"> &
   Partial<StyledProps> & {
@@ -35,8 +35,8 @@ function getColor(props: StyledLinkProps) {
 
 const getHoverColor = (props: StyledLinkProps) => (props.hover ? getColor(props) : darken("0.1", getColor(props)));
 
-const StyledLink = styled.a<LinkProps>(
-  ({ underline, as, ...props }) => ({
+const Link = styled.a<LinkProps>(
+  ({ underline = true, as, ...props }) => ({
     ...resetButtonStyles,
     padding: as === "button" ? "0" : undefined,
     textDecoration: underline ? "underline" : "none",
@@ -50,16 +50,9 @@ const StyledLink = styled.a<LinkProps>(
   variant({
     variants: {
       touch: {},
-      medium: {},
     },
   }),
   addStyledProps
 );
-
-const Link = React.forwardRef<HTMLLinkElement, LinkProps>(({ variant, underline = true, ...props }, ref) => {
-  const componentVariant = useComponentVariant(variant);
-
-  return <StyledLink ref={ref} variant={componentVariant} underline={underline} {...props} />;
-});
 
 export default Link;
