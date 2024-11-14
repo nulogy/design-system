@@ -1,3 +1,4 @@
+import { useTheme } from "styled-components";
 import {
   space,
   margin,
@@ -74,6 +75,8 @@ import {
   backgroundRepeat,
   backgroundPosition,
   backgroundImage,
+  styleFn,
+  variant as styledSystemVariant,
 } from "styled-system";
 
 import type {
@@ -152,6 +155,26 @@ import type {
   LayoutProps,
 } from "styled-system";
 import { CSSProperties } from "react";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+
+export function getStyledPropNames(...styleFns: styleFn[]): string[] {
+  return styleFns.reduce(
+    (acc: string[], fn: styleFn) => (fn.propNames ? acc.concat(fn.propNames) : acc),
+    [] as string[]
+  );
+}
+
+export const excludeStyledProps =
+  (...styleFns: styleFn[]) =>
+  (prop: string | number): boolean =>
+    !getStyledPropNames(...styleFns).includes(String(prop));
+
+export const variant: typeof styledSystemVariant = (variants) => () => {
+  const componentVariant = useComponentVariant();
+  const theme = useTheme();
+
+  return styledSystemVariant(variants)({ theme, variant: componentVariant });
+};
 
 export const addStyledProps = compose(
   // After
@@ -237,6 +260,7 @@ export const addStyledProps = compose(
     cursor: true,
   })
 );
+
 interface TransitionProps {
   transition?: CSSProperties["transition"];
   transitionDelay?: CSSProperties["transitionDelay"];

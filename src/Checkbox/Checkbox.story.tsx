@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
-import { Checkbox, Button, Flex } from "../index";
-import dashed from "../utils/dashed";
+import { Checkbox, Button } from "../index";
 
 type CheckboxState = {
   checkbox1: boolean;
