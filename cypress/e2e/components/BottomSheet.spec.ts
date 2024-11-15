@@ -1,10 +1,9 @@
-const BottomSheet = () => cy.get('[role="dialog"]');
-const title = (text: string) => cy.contains(text);
-const openButton = () => cy.contains("Open Sheet");
-const overlay = () => cy.get("[data-reach-dialog-overlay]");
-const closeButton = () => cy.contains("Close");
-
 describe("BottomSheet", () => {
+  const BottomSheet = () => cy.get('[role="dialog"]');
+  const openButton = () => cy.contains("Open Sheet");
+  const overlay = () => cy.get("[data-reach-dialog-overlay]");
+  const closeButton = () => cy.contains("Close");
+
   describe("Default", () => {
     beforeEach(() => {
       cy.renderFromStorybook("bottomsheet--basic-usage");
