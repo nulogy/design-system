@@ -5,6 +5,7 @@ import { DefaultNDSThemeType } from "../../theme.type";
 /**
  * A styled utility that adds a dashed border around a component
  * to highlight its boundaries. To be used in Storybook exclusively.
+ * Do not export for production.
  */
 export const dashed = <P extends object>(
   component: ComponentType<P>
