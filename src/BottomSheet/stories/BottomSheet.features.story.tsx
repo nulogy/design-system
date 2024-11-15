@@ -16,40 +16,40 @@ export default {
 };
 
 export const WithCustomWidths = () => {
+  const [isOpen, setIsOpen] = React.useState(true);
+
   return (
-    <BottomSheet
-      aria-label="Example BottomSheet"
-      title="Edit Profile"
-      sheetWidth={{ extraSmall: "100%", small: 480, medium: 640, large: 768 }}
-      contentWidth={{ small: 320, medium: 420, large: 600 }}
-      isOpen
-    >
-      <Placeholder />
-    </BottomSheet>
+    <>
+      <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
+      <BottomSheet
+        aria-label="Example BottomSheet"
+        title="Edit Profile"
+        sheetWidth={{ extraSmall: "100%", small: 480, medium: 640, large: 768 }}
+        contentWidth={{ small: 320, medium: 420, large: 600 }}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        <Placeholder />
+      </BottomSheet>
+    </>
   );
 };
 
 export const DisableCloseOnOverlayClick = () => {
   const [isOpen, setIsOpen] = React.useState(true);
 
-  function open() {
-    setIsOpen(true);
-  }
-
-  function close() {
-    setIsOpen(false);
-  }
-
   return (
     <Box>
-      <Button onClick={open}>Open Sheet</Button>
+      <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
       <BottomSheet
         disableCloseOnOverlayClick
         aria-label="Example BottomSheet"
         title="Disabled overlay"
         helpText="This BottomSheet can not be dismissed by clicking on the overlay"
         isOpen={isOpen}
-        onClose={close}
+        onClose={() => {
+          setIsOpen(false);
+        }}
       >
         <Placeholder />
       </BottomSheet>
@@ -60,19 +60,11 @@ export const DisableCloseOnOverlayClick = () => {
 export const AdvancedUsage = () => {
   const [isOpen, setIsOpen] = React.useState(true);
 
-  function open() {
-    setIsOpen(true);
-  }
-
-  function close() {
-    setIsOpen(false);
-  }
-
   return (
     <>
       <ToastContainer />
       <Box>
-        <Button onClick={open}>Open BottomSheet</Button>
+        <Button onClick={() => setIsOpen(true)}>Open BottomSheet</Button>
         <BottomSheet
           aria-label="Example BottomSheet"
           title="Edit profile"
@@ -100,7 +92,7 @@ export const AdvancedUsage = () => {
           )}
           closeButtonLabel="Dismiss"
           isOpen={isOpen}
-          onClose={close}
+          onClose={() => setIsOpen(false)}
           sheetWidth={{ small: "100%" }}
           contentWidth="100%"
         >
