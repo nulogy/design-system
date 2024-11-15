@@ -1,11 +1,11 @@
-import React, { useEffect, useState, useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import styled from "styled-components";
-import { text, boolean, select } from "@storybook/addon-knobs";
+import { boolean, select, text } from "@storybook/addon-knobs";
+import React, { useEffect, useRef, useState } from "react";
 import { GroupBase, OptionProps } from "react-windowed-select";
-import { Button, Heading2, Select, SelectOption } from "../index";
+import styled from "styled-components";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
+import { Button, Select, SelectOption, StatusIndicator, Text } from "../index";
 import { NDSSelectProps } from "./Select";
 
 const errorList = ["Error message 1", "Error message 2"];
@@ -523,6 +523,45 @@ export const WithCustomOptionComponent = () => {
         />
       </Box>
     </>
+  );
+};
+
+const optionsWithMetadata = [
+  { value: "accepted", label: "Accepted", description: "Request has been reviewed and accepted", issues: 0 },
+  {
+    value: "assigned",
+    label: "Assigned to a line",
+    description: "Request has been assigned to a production line",
+    issues: 2,
+  },
+  { value: "hold", label: "On hold", description: "Request is temporarily paused", issues: 4 },
+  { value: "rejected", label: "Rejected", description: "Request has been reviewed and rejected", issues: 2 },
+  { value: "open", label: "Open", description: "New request awaiting review", issues: 5 },
+  { value: "progress", label: "In progress", description: "Request is actively being worked on", issues: 3 },
+  { value: "quarantine", label: "In quarantine", description: "Request requires additional verification", issues: 0 },
+];
+
+export const WithACustomSelectedOption = () => {
+  return (
+    <Select
+      defaultValue={["accepted"]}
+      placeholder="Please select inventory status"
+      labelText="Inventory status"
+      options={optionsWithMetadata}
+      getOptionLabel={({ label, issues, description }) => (
+        <Flex gap="x1" alignItems="center">
+          <Text fontSize="small" fontWeight="medium">
+            {label}
+          </Text>
+          <Text color="grey">|</Text>
+          <Text color="midGrey" fontSize="small">
+            {description}
+          </Text>
+
+          {issues > 0 && <StatusIndicator type={issues > 3 ? "warning" : "neutral"}>{issues} items</StatusIndicator>}
+        </Flex>
+      )}
+    />
   );
 };
 
