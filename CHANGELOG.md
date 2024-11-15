@@ -1,3 +1,23 @@
+# [11.1.0](https://github.com/nulogy/design-system/compare/v11.0.0...v11.1.0) (2024-11-15)
+
+
+### Bug Fixes
+
+* cypress global scope const declaration ([029fb35](https://github.com/nulogy/design-system/commit/029fb35186616a34bde7fd2844e07a1cab174b09))
+* minor format/copy corrections ([e4b8458](https://github.com/nulogy/design-system/commit/e4b8458d19addd22ced78f54407e5499712eded2))
+* unused parameter ([9959206](https://github.com/nulogy/design-system/commit/99592060dc5da4881eca903c9e6f9b74ba8e9a6b))
+
+
+### Features
+
+* add a BottomSheet component ([9f6eddd](https://github.com/nulogy/design-system/commit/9f6eddd7d0aa3e6038cb9fc6d70640fa20dcb7dd))
+* add a component spec ([2e1a59c](https://github.com/nulogy/design-system/commit/2e1a59c6dff88d5e157fe5ff5cb0512314aa0545))
+* add BottomSheet parts ([6b8ad6c](https://github.com/nulogy/design-system/commit/6b8ad6cb60db70b0e516e64e0499ee169f1ed73b))
+* Add documentation and refine the API ([1ef3c5f](https://github.com/nulogy/design-system/commit/1ef3c5fb9e4d6192b5e03167c22f296ab51fdb6e))
+* further refine the API, stories, and documentation ([fd308f9](https://github.com/nulogy/design-system/commit/fd308f93c904a08435186920b59dc38f27b72cb3))
+* improve BottomSheet API and types ([fe42f8b](https://github.com/nulogy/design-system/commit/fe42f8b3b4232ad44f89c5ad1e663747d4e758aa))
+* test the BottomSheet interactivity ([463fd2d](https://github.com/nulogy/design-system/commit/463fd2d252342208ade5e89edcf805e6ab2ab04d))
+
 # [11.0.0](https://github.com/nulogy/design-system/compare/v10.2.13...v11.0.0) (2024-11-07)
 
 
