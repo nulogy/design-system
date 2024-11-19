@@ -68,18 +68,14 @@ const StyledTextarea = styled.textarea<StyledTextareaProps>(
     },
     padding: `${subPx(theme.space.x1)}`,
   }),
-  ({ theme }) =>
-    variant({
-      prop: "scale",
-      variants: {
-        touch: {
-          padding: `${subPx(theme.space.x2)}`,
-        },
-        desktop: {
-          padding: `${subPx(theme.space.x1)}`,
-        },
+  variant({
+    variants: {
+      touch: {
+        fontSize: "md",
+        lineHeight: "base",
       },
-    }),
+    },
+  }),
   (props) => getTextareaStyle(props)
 );
 

@@ -31,7 +31,7 @@ const DropdownButton = styled.button<DropdownButtonProps>(
     paddingTop: theme.space.x1,
     paddingRight: theme.space.x2,
     paddingBottom: theme.space.x1,
-    paddingLeft: "12px",
+    paddingLeft: `calc(${theme.space.x2} - ${theme.space.half})`,
     "&:hover": {
       color: theme.colors[hoverColor],
       backgroundColor: disabled ? "transparent" : theme.colors[bgHoverColor],
@@ -47,19 +47,10 @@ const DropdownButton = styled.button<DropdownButtonProps>(
     },
   }),
   variant({
-    prop: "scale",
     variants: {
       touch: {
-        pt: "x2",
-        pr: "x2",
-        pb: "x2",
-        pl: "12px",
-      },
-      desktop: {
-        pt: "x1",
-        pr: "x2",
-        pb: "x1",
-        pl: "12px",
+        fontSize: "md",
+        lineHeight: "base",
       },
     },
   }),

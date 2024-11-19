@@ -51,20 +51,10 @@ const DropdownLink = styled.a.withConfig<Props>({
     paddingLeft: `calc(${theme.space.x2} - ${theme.space.half})`,
   }),
   variant({
-    prop: "scale",
     variants: {
       touch: {
-        pt: "x2",
-        pr: "x2",
-        pb: "x2",
-        pl: "12px",
-      },
-
-      desktop: {
-        pt: "x1",
-        pr: "x2",
-        pb: "x1",
-        pl: "12px",
+        fontSize: "md",
+        lineHeight: "base",
       },
     },
   }),

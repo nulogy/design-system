@@ -83,15 +83,10 @@ const TabButton = styled.button<TabButtonProps>(
     },
   }),
   variant({
-    prop: "scale",
     variants: {
       touch: {
-        py: "x2",
-        px: "x4",
-      },
-      desktop: {
-        py: "x1",
-        px: "x3",
+        fontSize: "md",
+        lineHeight: "base",
       },
     },
   })

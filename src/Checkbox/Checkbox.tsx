@@ -152,10 +152,14 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref) => {
           checked={checked}
           indeterminate={indeterminate}
           data-testid="visual-checkbox"
-          marginTop={labelText ? "half" : "0px"}
         />
         {labelText && (
-          <Text disabled={disabled} ml="x1">
+          <Text
+            fontSize={componentVariant === "touch" ? "md" : undefined}
+            lineHeight={componentVariant === "touch" ? "base" : undefined}
+            disabled={disabled}
+            ml="x1"
+          >
             {labelText}
           </Text>
         )}
