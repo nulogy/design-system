@@ -47,11 +47,6 @@ const Link = styled.a<LinkProps>(
       color: getHoverColor(props),
     },
   }),
-  variant({
-    variants: {
-      touch: {},
-    },
-  }),
   addStyledProps
 );
 

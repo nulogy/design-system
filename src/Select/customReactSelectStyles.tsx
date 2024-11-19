@@ -74,7 +74,7 @@ export function getMenuBorderRadius({
 }
 
 type VariantConfig = {
-  [key in ComponentVariant]: CSSObject;
+  [key in ComponentVariant]?: CSSObject;
 };
 
 export function stylesForVariant(config: VariantConfig, variant: ComponentVariant = "desktop") {
@@ -195,18 +195,13 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       overflow: "auto",
       maxHeight: "150px",
       gap: theme.space.half,
+      paddingTop: theme.space.none,
+      paddingBottom: theme.space.none,
       ...stylesForVariant(
         {
           touch: {
-            // paddingTop: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
-            // paddingBottom: state.isMulti && state.hasValue ? theme.space.x1 : theme.space.x2,
-            // gap: theme.space.x1,
-            paddingTop: theme.space.none,
-            paddingBottom: theme.space.none,
-          },
-          desktop: {
-            paddingTop: theme.space.none,
-            paddingBottom: theme.space.none,
+            fontSize: "md",
+            lineHeight: "base",
           },
         },
         variant
@@ -281,16 +276,8 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       ...stylesForVariant(
         {
           touch: {
-            // fontSize: theme.fontSizes.medium,
-            // lineHeight: theme.lineHeights.base,
-            // padding: theme.space.x1,
-            // paddingRight: theme.space.half,
-            padding: theme.space.half,
-            paddingLeft: theme.space.x1,
-          },
-          desktop: {
-            padding: theme.space.half,
-            paddingLeft: theme.space.x1,
+            fontSize: "md",
+            lineHeight: "base",
           },
         },
         variant
@@ -309,10 +296,8 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       ...stylesForVariant(
         {
           touch: {
-            // padding: theme.space.x1,
-          },
-          desktop: {
-            // Nothing
+            fontSize: "md",
+            lineHeight: "base",
           },
         },
         variant

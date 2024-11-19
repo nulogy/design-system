@@ -130,18 +130,14 @@ const StyledInput = styled.input<StyledInputProps>(
     paddingTop: `${subPx(theme.space.x1)}`,
     paddingBottom: `${subPx(theme.space.x1)}`,
   }),
-  ({ theme }) =>
-    variant({
-      prop: "scale",
-      variants: {
-        touch: {
-          padding: `${subPx(theme.space.x2)}`,
-        },
-        desktop: {
-          padding: `${subPx(theme.space.x1)}`,
-        },
+  variant({
+    variants: {
+      touch: {
+        fontSize: "md",
+        lineHeight: "base",
       },
-    }),
+    },
+  }),
   ({ disabled, error, theme }) => cssForState({ disabled, error, theme }),
   space
 );

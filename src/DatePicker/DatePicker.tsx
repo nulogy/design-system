@@ -146,7 +146,6 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
         <LocaleContext.Consumer>
           {({ locale }) => (
             <ReactDatePicker
-              showTimeSelect
               selected={selectedDate}
               openToDate={selectedDate}
               dateFormat={dateFormat}

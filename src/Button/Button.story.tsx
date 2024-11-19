@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "../Flex";
 import { Button, PrimaryButton, DangerButton, QuietButton } from ".";
-import { Heading2, Heading4 } from "../Type";
+import { Heading4 } from "../Type";
 
 export default {
   title: "Components/Buttons",
@@ -27,8 +27,8 @@ _QuietButton.story = {
 };
 
 export const WithDifferentSizes = () => (
-  <Flex flexDirection="column" gap="x2">
-    <Flex flexDirection="column">
+  <Flex flexDirection="column" gap="x3">
+    <Flex flexDirection="column" gap="x1">
       <Heading4>Medium size (default)</Heading4>
       <Flex gap="x1">
         <Button>Secondary Button</Button>
@@ -37,7 +37,7 @@ export const WithDifferentSizes = () => (
         <QuietButton>Quiet Button</QuietButton>
       </Flex>
     </Flex>
-    <Flex flexDirection="column">
+    <Flex flexDirection="column" gap="x1">
       <Heading4>Small size</Heading4>
       <Flex gap="x1">
         <Button size="small">Secondary Button</Button>
