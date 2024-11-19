@@ -8,6 +8,7 @@ import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme";
 import { getSubset, omitSubset } from "../utils/subset";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { variant } from "../StyledProps";
 
 const radioStyle = (theme: DefaultNDSThemeType) => ({
   checked: {
@@ -68,17 +69,27 @@ const VisualRadio = styled.div<VisualRadioProps>(
     borderRadius: theme.radii.circle,
     border: "solid 1px",
     position: "relative",
-    top: theme.space.half,
     "&:before": {
       cursor: disabled ? undefined : "pointer",
       content: "''",
       display: "none",
-      width: theme.sizes.x1,
-      height: theme.sizes.x1,
+      width: `calc(${theme.sizes.x1} - 2px)`,
+      height: `calc(${theme.sizes.x1} - 2px)`,
       background: theme.colors.white,
       borderRadius: theme.radii.circle,
     },
-  })
+  }),
+  ({ theme }) =>
+    variant({
+      variants: {
+        touch: {
+          "&:before": {
+            width: `calc(${theme.sizes.x1} - 3px)`,
+            height: `calc(${theme.sizes.x1} - 3px)`,
+          },
+        },
+      },
+    })
 );
 
 const RadioInput = styled.input<RadioProps>((props) => ({
@@ -136,7 +147,12 @@ const Radio = forwardRef<Ref, RadioProps>(
             aria-invalid={error}
           />
           <VisualRadio disabled={disabled} />
-          <Text inline disabled={disabled}>
+          <Text
+            inline
+            disabled={disabled}
+            fontSize={componentVariant === "touch" ? "md" : undefined}
+            lineHeight={componentVariant === "touch" ? "base" : undefined}
+          >
             {" "}
             {labelText}{" "}
           </Text>

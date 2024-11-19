@@ -42,24 +42,6 @@ export const BreadcrumbsListItem = styled.li<{ variant: ComponentVariant }>(
       lineHeight: theme.lineHeights.smallTextBase,
     },
   }),
-  variant({
-    variants: {
-      touch: {
-        "a, p": {
-          py: "x2",
-          px: "x0",
-          fontSize: "base",
-        },
-      },
-      desktop: {
-        "a, p": {
-          py: "0",
-          px: "0",
-          fontSize: "small",
-        },
-      },
-    },
-  }),
   space,
   layout,
   color,

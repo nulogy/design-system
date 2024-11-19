@@ -25,7 +25,7 @@ const SwitchButton = styled.button<SwitchProps>(
     color: selected ? theme.colors.darkBlue : theme.colors.darkGrey,
     cursor: "pointer",
     border: "none",
-    borderRadius: 9999, // todo: move to a token
+    borderRadius: theme.radii.pill,
     fontSize: theme.fontSizes.base,
     fontWeight: theme.fontWeights.medium,
     lineHeight: theme.lineHeights.base,
@@ -46,18 +46,14 @@ const SwitchButton = styled.button<SwitchProps>(
       },
     }),
   }),
-  ({ theme }) =>
-    variant({
-      prop: "scale",
-      variants: {
-        touch: {
-          padding: `${numberFromDimension(theme.space.x2) - 1}px ${theme.space.x3}`,
-        },
-        desktop: {
-          padding: `${numberFromDimension(theme.space.x1) - 1}px ${theme.space.x2}`,
-        },
+  variant({
+    variants: {
+      touch: {
+        fontSize: "md",
+        lineHeight: "base",
       },
-    })
+    },
+  })
 );
 
 export default Switch;

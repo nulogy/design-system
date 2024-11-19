@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { variant } from "../StyledProps";
 
 type Props = {
   color?: string;
@@ -34,6 +35,14 @@ const DropdownItem = styled.div<Props>(
       },
       "&:active": {
         color: theme.colors[hoverColor],
+      },
+    },
+  }),
+  variant({
+    variants: {
+      touch: {
+        fontSize: "md",
+        lineHeight: "base",
       },
     },
   })

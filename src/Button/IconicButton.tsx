@@ -103,15 +103,10 @@ const WrapperButton = styled.button<IconicButtonProps>(
     paddingRight: theme.space.none,
   }),
   variant({
-    prop: "scale",
     variants: {
       touch: {
-        py: "x1",
-        px: "none",
-      },
-      desktop: {
-        py: "half",
-        px: "none",
+        fontSize: "md",
+        lineHeight: "base",
       },
     },
   }),

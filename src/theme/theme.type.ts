@@ -113,7 +113,7 @@ interface Radii {
   medium: string;
   large: string;
   circle: string;
-  rounded: string;
+  pill: string;
 }
 
 export interface Breakpoints {
