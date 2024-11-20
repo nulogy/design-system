@@ -7,7 +7,7 @@ describe("Radio", () => {
     });
     it("can be checked", () => {
       radio().should("not.be.checked");
-      radio().check();
+      radio().check({ force: true });
       radio().should("be.checked");
     });
   });
@@ -44,9 +44,9 @@ describe("Radio", () => {
       radio().eq(0).should("be.checked");
     });
     it("inputs do not update on click", () => {
-      radio().eq(0).click();
+      radio().eq(0).click({ force: true });
       radio().eq(0).should("be.checked");
-      radio().eq(1).click();
+      radio().eq(1).click({ force: true });
       radio().eq(1).should("not.be.checked");
     });
   });
@@ -74,9 +74,9 @@ describe("Radio Group", () => {
       radio().eq(2).should("not.be.checked");
     });
     it("can be checked", () => {
-      radio().eq(1).check();
+      radio().eq(1).check({ force: true });
       radio().eq(1).should("be.checked");
-      radio().eq(2).check();
+      radio().eq(2).check({ force: true });
       radio().eq(2).should("be.checked");
       radio().eq(1).should("not.be.checked");
     });
@@ -121,9 +121,9 @@ describe("Radio Group", () => {
     });
 
     it("values are not updated on click", () => {
-      radio().eq(0).check();
-      radio().eq(1).check();
-      radio().eq(2).check();
+      radio().eq(0).check({ force: true });
+      radio().eq(1).check({ force: true });
+      radio().eq(2).check({ force: true });
       radio().eq(0).should("be.checked");
       radio().eq(1).should("not.be.checked");
       radio().eq(2).should("not.be.checked");
