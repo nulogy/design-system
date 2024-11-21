@@ -1,6 +1,6 @@
 import styled, { StyledComponent } from "styled-components";
 import { ComponentType } from "react";
-import { DefaultNDSThemeType } from "../../theme.type";
+import { DefaultNDSThemeType } from "../../theme";
 
 /**
  * A styled utility that adds a dashed border around a component
