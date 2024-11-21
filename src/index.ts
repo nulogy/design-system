@@ -4,6 +4,8 @@ export { Alert, NotificationTypes } from "./Alert";
 export type { NotificationType } from "./Alert";
 export { AsyncSelect } from "./AsyncSelect";
 export { Banner } from "./Banner";
+export { BottomSheet, BottomSheetParts } from "./BottomSheet";
+export type { BottomSheetProps } from "./BottomSheet";
 export { AnimatedBox, Box } from "./Box";
 export {
   BrandedNavBar,
@@ -71,11 +73,11 @@ export { Table } from "./Table";
 export type { TableCellInfoType, TableColumnType, TableProps, TableRowType } from "./Table";
 export { Tab, Tabs } from "./Tabs";
 export { Textarea } from "./Textarea";
-export type { ThemeType, DefaultNDSThemeType } from "./theme";
+export type { DefaultNDSThemeType, ThemeType } from "./theme";
 export { TimePicker } from "./TimePicker";
 export { TimeRange } from "./TimeRange";
 export { Toast } from "./Toast";
-export { ToastContainer, toast } from "./ToastContainer";
+export { toast, ToastContainer } from "./ToastContainer";
 export { Toggle } from "./Toggle";
 export { Tooltip } from "./Tooltip";
 export { TruncatedText } from "./TruncatedText";

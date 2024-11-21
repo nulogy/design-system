@@ -8,7 +8,7 @@ import { Flex } from "../Flex";
 import { noop } from "../utils/noop";
 import { BottomSheetParts } from "./BottomSheet.parts";
 
-interface Props {
+export interface Props {
   isOpen?: boolean;
   "aria-label"?: string;
   onClose?: () => void;
