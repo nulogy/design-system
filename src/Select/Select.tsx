@@ -130,7 +130,7 @@ const ReactSelect = React.forwardRef(
               theme: themeContext,
               error,
               maxHeight,
-              size: componentVariant,
+              variant: componentVariant,
               windowed: options.length > windowThreshold,
             })}
             isDisabled={disabled}

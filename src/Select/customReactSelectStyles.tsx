@@ -273,6 +273,8 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       color: theme.colors.black,
       borderRadius: theme.radii.small,
       fontSize: theme.fontSizes.small,
+      padding: theme.space.half,
+      paddingLeft: theme.space.x1,
       ...stylesForVariant(
         {
           touch: {
@@ -288,6 +290,8 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       svg: { fill: theme.colors.black, height: theme.sizes.x2, width: theme.sizes.x2 },
       borderBottomLeftRadius: 0,
       borderTopLeftRadius: 0,
+      padding: theme.space.half,
+      paddingLeft: theme.space.x1,
       "&:hover": {
         background: theme.colors.darkGrey,
         cursor: "pointer",
