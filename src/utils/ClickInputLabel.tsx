@@ -4,7 +4,6 @@ import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 const ClickInputLabel = styled.label<{ variant?: ComponentVariant; disabled?: boolean }>(({ disabled, theme }) => ({
   cursor: disabled ? undefined : "pointer",
   display: "inline-flex",
-  alignItems: "center",
   width: "auto",
   minHeight: theme.space.x3,
   userSelect: "none",
