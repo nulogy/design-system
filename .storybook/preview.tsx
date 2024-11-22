@@ -66,13 +66,13 @@ export const globalTypes = {
   },
   desktopScale: {
     name: "Desktop typography scale",
-    description: "Toggles between the legacy and new desktop typography scale",
-    defaultValue: "legacy",
+    description: "Toggles between the standard and the new experimental desktop typography scale",
+    defaultValue: "standard",
     toolbar: {
       icon: "paragraph",
       items: [
-        { value: "legacy", title: "Legacy desktop scale" },
-        { value: "new", title: "New desktop scale" },
+        { value: "standard", title: "Standard desktop scale" },
+        { value: "experimental", title: "Experimental desktop scale (intended for design team testing)" },
       ],
       dynamicTitle: true,
     },
@@ -96,7 +96,11 @@ const withThemeProvider = (Story, context) => {
   const { theme, locale, desktopScale } = context.globals;
 
   return (
-    <NDSProvider locale={locale} variant={theme} futureFlags={{ newDesktopTypographyScale: desktopScale === "new" }}>
+    <NDSProvider
+      locale={locale}
+      variant={theme}
+      featureFlags={{ experimentalDesktopTypographyScale: desktopScale === "experimental" }}
+    >
       <Story />
     </NDSProvider>
   );
