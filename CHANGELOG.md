@@ -24,6 +24,8 @@
 * unused parameter ([9959206](https://github.com/nulogy/design-system/commit/99592060dc5da4881eca903c9e6f9b74ba8e9a6b))
 
 
+# [11.0.0](https://github.com/nulogy/design-system/compare/v10.3.0...v11.0.0) (2024-11-22)
+
 ### Features
 
 * add a BottomSheet component ([9f6eddd](https://github.com/nulogy/design-system/commit/9f6eddd7d0aa3e6038cb9fc6d70640fa20dcb7dd))
