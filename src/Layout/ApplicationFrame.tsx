@@ -1,5 +1,4 @@
 import React from "react";
-
 import Box from "../Box/Box";
 import Flex, { FlexProps } from "../Flex/Flex";
 import EnvironmentBanner from "../BrandedNavBar/EnvironmentBanner";

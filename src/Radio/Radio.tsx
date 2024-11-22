@@ -67,6 +67,7 @@ const VisualRadio = styled.div<VisualRadioProps>(
     height: theme.space.x2,
     marginRight: theme.space.x1,
     borderRadius: theme.radii.circle,
+    marginTop: theme.space.x0_5,
     border: "solid 1px",
     position: "relative",
     "&:before": {

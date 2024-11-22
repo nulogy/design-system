@@ -5,6 +5,7 @@ import type { Transition } from "framer-motion";
 import styled, { CSSObject, useTheme } from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
 import { AnimatedBox } from "../Box";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 type SwitchProps = {
   children?: React.ReactNode;
@@ -49,8 +50,11 @@ const animationConfig: AnimationConfig = {
 };
 
 function Switch({ children, disabled, toggled, onClick }: SwitchProps) {
+  const componentVariant = useComponentVariant();
+
   return (
     <AnimatedBox
+      marginTop={componentVariant === "touch" ? "x0_25" : "none"}
       position="relative"
       flexShrink={0}
       height="24px"
@@ -82,7 +86,7 @@ const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, chil
           scale: disabled ? undefined : animationConfig.scale,
         },
         toggled: {
-          marginLeft: theme.space.x3,
+          marginLeft: "24px",
         },
         initial: {
           marginLeft: theme.space.none,
