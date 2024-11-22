@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
-import { FutureFlags, useFutureFlags } from "../NDSProvider/FutureFlagsContext";
+import { FeatureFlags, useFeatureFlags } from "../NDSProvider/FeatureFlagsContext";
 import { mergeThemes } from "./mergeThemes.util";
 import { legacy, themes } from "./theme";
 import { Breakpoints, DefaultNDSThemeType, ThemeType } from "./theme.type";
@@ -28,26 +28,26 @@ const validateVariantOrThrow = (variant: ComponentVariant): void => {
 export const getThemeByVariant = (
   variant: ComponentVariant,
   isTabletSize: boolean,
-  futureFlags: FutureFlags
+  featureFlags: FeatureFlags
 ): DefaultNDSThemeType => {
   if (variant === "touch") {
     return isTabletSize ? themes.tablet : themes.phone;
   }
 
-  return futureFlags.newDesktopTypographyScale ? themes.desktop : themes.legacy;
+  return featureFlags.experimentalDesktopTypographyScale ? themes.desktop : themes.legacy;
 };
 
 export function useNDSTheme(variant: ComponentVariant = "desktop", customTheme?: ThemeType): DefaultNDSThemeType {
   validateVariantOrThrow(variant);
-  const { newDesktopTypographyScale } = useFutureFlags();
+  const { experimentalDesktopTypographyScale } = useFeatureFlags();
 
   const [themeVariant, setThemeVariant] = useState<DefaultNDSThemeType>(legacy);
   const isTabletSize = useMediaQuery(`(min-width: ${legacy.breakpoints.small})`);
 
   useEffect(() => {
-    const newTheme = getThemeByVariant(variant, isTabletSize, { newDesktopTypographyScale });
+    const newTheme = getThemeByVariant(variant, isTabletSize, { experimentalDesktopTypographyScale });
     setThemeVariant(newTheme);
-  }, [variant, isTabletSize, newDesktopTypographyScale]);
+  }, [variant, isTabletSize, experimentalDesktopTypographyScale]);
 
   const mergedTheme = mergeThemes(themeVariant, customTheme);
   return {

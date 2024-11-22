@@ -4,7 +4,7 @@ import i18n from "../i18n";
 import { ThemeType } from "../theme";
 import NDSThemeProvider from "../theme/NDSThemeProvider";
 import ComponentVariantContextProvider, { ComponentVariant } from "./ComponentVariantContext";
-import FutureFlagsContextProvider, { FutureFlags } from "./FutureFlagsContext";
+import FeatureFlagsContextProvider, { FeatureFlags } from "./FeatureFlagsContext";
 import GlobalStylesComposer from "./GlobalStylesComposer";
 import { LocaleContext } from "./LocaleContext";
 
@@ -14,7 +14,7 @@ type NDSProviderProps = {
   disableGlobalStyles?: boolean;
   children?: React.ReactNode;
   variant?: ComponentVariant;
-  futureFlags?: FutureFlags;
+  featureFlags?: FeatureFlags;
 };
 
 function NDSProvider({
@@ -23,8 +23,8 @@ function NDSProvider({
   disableGlobalStyles = false,
   locale = "en_US",
   variant = "desktop",
-  futureFlags = {
-    newDesktopTypographyScale: false,
+  featureFlags = {
+    experimentalDesktopTypographyScale: false,
   },
 }: NDSProviderProps) {
   useEffect(() => {
@@ -33,7 +33,7 @@ function NDSProvider({
 
   return (
     <LocaleContext.Provider value={{ locale }}>
-      <FutureFlagsContextProvider futureFlags={futureFlags}>
+      <FeatureFlagsContextProvider featureFlags={featureFlags}>
         <ComponentVariantContextProvider variant={variant}>
           <I18nextProvider i18n={i18n}>
             <NDSThemeProvider customTheme={customTheme}>
@@ -43,7 +43,7 @@ function NDSProvider({
             </NDSThemeProvider>
           </I18nextProvider>
         </ComponentVariantContextProvider>
-      </FutureFlagsContextProvider>
+      </FeatureFlagsContextProvider>
     </LocaleContext.Provider>
   );
 }
