@@ -94,6 +94,7 @@ const VisualCheckbox = styled.div<VisualCheckboxProps>(
     borderRadius: theme.radii.small,
     border: "solid 1px",
     position: "relative",
+    marginTop: theme.space.x0_5,
     // checkmark
     "&:before": {
       content: "''",
