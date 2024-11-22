@@ -13,6 +13,10 @@ import BottomSheet from "../BottomSheet";
 
 export default {
   title: "Components/BottomSheet/Features",
+  decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
+  parameters: {
+    chromatic: { delay: 1000 },
+  },
 };
 
 export const WithCustomWidths = () => {
