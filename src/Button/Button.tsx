@@ -34,7 +34,7 @@ const WrapperButton = styled.button<ButtonProps>(
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: theme.fontSizes.base,
+    fontSize: theme.fontSizes.medium,
     fontWeight: theme.fontWeights.medium,
     textDecoration: "none",
     verticalAlign: "middle",
