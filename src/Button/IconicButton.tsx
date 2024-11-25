@@ -13,7 +13,7 @@ interface BaseProps {
   size?: ComponentSize;
   color?: string;
   labelHidden?: boolean;
-  icon?: string;
+  icon?: keyof typeof icons | "loading";
   iconSize?: string;
   hoverBackgroundColor?: string;
   fontSize?: string;

@@ -5,13 +5,14 @@ import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme.type";
 import { useComponentSize, ComponentSize as ContextComponentSize } from "../NDSProvider/ComponentSizeContext";
 import { subPx } from "../utils";
+import icons from "@nulogy/icons";
 
 type ComponentSize = "small" | "medium" | "large";
 
 export type ButtonProps = SpaceProps &
   React.ComponentPropsWithRef<"button"> & {
     className?: string;
-    icon?: any;
+    icon?: keyof typeof icons | "loading";
     iconSide?: "left" | "right";
     size?: ComponentSize;
     fullWidth?: boolean;

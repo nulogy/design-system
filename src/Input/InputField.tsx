@@ -11,13 +11,14 @@ import type { DefaultNDSThemeType } from "../theme.type";
 import { ComponentSize, useComponentSize } from "../NDSProvider/ComponentSizeContext";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
+import icons from "@nulogy/icons";
 
 type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size">;
 
 export interface InputFieldProps extends NativeInputProps {
   htmlSize?: number;
   size?: ComponentSize;
-  icon?: string;
+  icon?: keyof typeof icons | "loading";
   error?: boolean;
   labelText?: string;
   requirementText?: string;
