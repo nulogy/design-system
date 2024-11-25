@@ -1,3 +1,132 @@
+# [11.0.0](https://github.com/nulogy/design-system/compare/v10.4.0...v11.0.0) (2024-11-25)
+
+
+### Bug Fixes
+
+* Add vertical margin to checkboxes with labels only ([8fe0688](https://github.com/nulogy/design-system/commit/8fe06882e70e48d563982074ef809a47c3a0a011))
+* align interactive elements with the label ([5044ecf](https://github.com/nulogy/design-system/commit/5044ecfee69ea70d5ea9d536815f2fb277fe2882))
+* change the fontSize back to medium ([983ae7b](https://github.com/nulogy/design-system/commit/983ae7b559a614ae7bf516e244329090a09abb82))
+* CI issues ([9ff5fb8](https://github.com/nulogy/design-system/commit/9ff5fb837e1c7e9b97ca3e5c212defba048a5376))
+* correct the theme generator scale and types ([3503e87](https://github.com/nulogy/design-system/commit/3503e870130ec648e90fc22c953fd0a7445f32d0))
+* cypress global scope const declaration ([7c99f19](https://github.com/nulogy/design-system/commit/7c99f19d658bbe091dfd855e9592dba89c90f74d))
+* format theme after generating it ([38da451](https://github.com/nulogy/design-system/commit/38da451385a493f7fdd0e9332a96ba0c0fd346b7))
+* issues with scaling up the theme ([33dcc7c](https://github.com/nulogy/design-system/commit/33dcc7ccaa631607aa8bb37a2ea60e33d023705c))
+* lint issues ([70399f9](https://github.com/nulogy/design-system/commit/70399f9904a93426078762dacd63b263eac7f49d))
+* lint issues ([9c064d6](https://github.com/nulogy/design-system/commit/9c064d653ea44da18ecad6621b8e9f202d104873))
+* lint issues ([314413e](https://github.com/nulogy/design-system/commit/314413e8f3ac156938307bef375a606791b99415))
+* minor format/copy corrections ([e64733a](https://github.com/nulogy/design-system/commit/e64733a6c271dc7a1b580b418b9b7c3d1ac60c07))
+* MultiSelect pills padding ([21f7b75](https://github.com/nulogy/design-system/commit/21f7b759e9fc472c13eb8bba75ef1b336aeaecfd))
+* pipeline build errors ([6059b25](https://github.com/nulogy/design-system/commit/6059b2539bd839c06a1698745ed9090134cf02f6))
+* preserve styled components composability ([a653085](https://github.com/nulogy/design-system/commit/a6530853f644a7cdf06f6e151fbe0610c66193ec))
+* prevent shrinking icon ([555ae83](https://github.com/nulogy/design-system/commit/555ae83cf5de01ef1c535f0e8f24f4fbc7021289))
+* remove obsolete stories ([b4060cc](https://github.com/nulogy/design-system/commit/b4060cc4bc153a7b3a6e95083c2356711f8790aa))
+* remove theme configuration panel ([d44fb39](https://github.com/nulogy/design-system/commit/d44fb3974fa63a78f8224a86268b610141d2878b))
+* TypeScript parse error ([4c24edc](https://github.com/nulogy/design-system/commit/4c24edca6f2e8b94876fe55f3edc8bc06019136b))
+* unexport the theme directly ([8efc00a](https://github.com/nulogy/design-system/commit/8efc00af9047e9df63db57e0db90e72127e79d8f))
+* unused parameter ([dd83f4e](https://github.com/nulogy/design-system/commit/dd83f4e4674a43a79b2d225eed6b19a7c7161093))
+* Use a specific width and height for Chromatic ([a8ac7c5](https://github.com/nulogy/design-system/commit/a8ac7c59b48635b41f832241c833bd07cee84f76))
+* visual defects following theme change ([66dc7c5](https://github.com/nulogy/design-system/commit/66dc7c5e1de06934ec417130184ad1f3c43c1c81))
+* visual defects in the touch variant ([e05fa5d](https://github.com/nulogy/design-system/commit/e05fa5d4367135156c798f20932626525cb48232))
+
+
+### Code Refactoring
+
+* removes old NavBar ([074407e](https://github.com/nulogy/design-system/commit/074407e4a2eef129d24971c28a4efa477e6dccbc))
+
+
+### Features
+
+* add a BottomSheet component ([bfbb8a9](https://github.com/nulogy/design-system/commit/bfbb8a927f1087210bff9f9686e90a955f16d988))
+* add a component spec ([2606c7a](https://github.com/nulogy/design-system/commit/2606c7aebe26eb2460a5dc04f4f3d47a02f70a9c))
+* add a touch variant ([9208f0a](https://github.com/nulogy/design-system/commit/9208f0a797a51aedbadf3b74b76206396afa27e2))
+* add BottomSheet parts ([9450193](https://github.com/nulogy/design-system/commit/945019301fefd3d1f8de709a20fd1fe1b1b4fc86))
+* Add documentation and refine the API ([2ac885b](https://github.com/nulogy/design-system/commit/2ac885be2f51c7d39050cdf1e81a0b0d5fcc70aa))
+* add futureFlags ([ffe95a7](https://github.com/nulogy/design-system/commit/ffe95a722b22224c31e5d9e32de8ca03a238e77c))
+* allow adding left and right icons to the input ([03fb009](https://github.com/nulogy/design-system/commit/03fb009562206d47f010f3240b141a1d6c6d6556))
+* change font size and line height for touch interactive elements ([9592de0](https://github.com/nulogy/design-system/commit/9592de0bbf142b04330d63907203bba8ad8e5966))
+* export the BottomSheet ([3ef420d](https://github.com/nulogy/design-system/commit/3ef420d88c430e1d9fad1e189d931dc4292d3fe4))
+* further refine the API, stories, and documentation ([d575059](https://github.com/nulogy/design-system/commit/d57505913d53ad5a29b630a9400d8d174877a3ba))
+* generate the theme based on a base unit ([ef28b78](https://github.com/nulogy/design-system/commit/ef28b78f6d5e30a49a9466d44801f24bc18dd852))
+* improve BottomSheet API and types ([08061f5](https://github.com/nulogy/design-system/commit/08061f5e6fa7c6c69d70010b3d9996abd0816b60))
+* improve BottomSheet API and types ([c852179](https://github.com/nulogy/design-system/commit/c852179e897be323363104469c8bb7c2b5c0dda2))
+* introduce new desktop typography scale ([e4c4353](https://github.com/nulogy/design-system/commit/e4c4353d81f5656a8f42faeb2f254e1d41c40124))
+* refactor away from size to variant ([5024a5d](https://github.com/nulogy/design-system/commit/5024a5d2b9c81e824551801d4064816c5baea7d0))
+* support tablet and phone media queries ([a75a3a0](https://github.com/nulogy/design-system/commit/a75a3a00494043dec04f429bd2db7f23e0690995))
+* test the BottomSheet interactivity ([1891d56](https://github.com/nulogy/design-system/commit/1891d56cfacb0d128329d79db348d86e54357b67))
+* update theme ([3f80200](https://github.com/nulogy/design-system/commit/3f80200343d21e4fb96001b8123b1a27a8ca7381))
+
+
+### BREAKING CHANGES
+
+* removes the old unused NavBar component that was
+replaced with the BrandedNavBar
+* removes the `icon` and `iconSize` props from the input
+in-favor of `iconLeft`, `iconRight`, `iconRightSize`, `iconLeftSize`
+
+Migration:
+* Replace `icon` prop with `iconRight`
+* Replace `iconSize` prop with `iconRightSize`
+* changes NDSProvider `size` prop to `variant`.
+
+The `size` prop was originally used sparingly in some components like the
+Button and the Icon to resize those components.
+
+It was later extended to make all interactive components large enough to
+be used on a touch screen, through changing the `size` prop directly or
+by passing a `size` prop to the NDSProvider globally.
+
+With this change, we retain the use of the `size` prop for select
+components, and introduce a `variant` prop that can be passed either to
+individual components or the NDSProvider globally with the value of
+either `desktop` or `touch`.
+* theme can no longer be imported from "@nulogy/components"
+
+NDS is introducing context-specific default themes. Directly importing
+themes from NDS may result in using the wrong theme, causing conflicts
+between custom app themes, desktop, and touch variants.
+
+Instead of importing the theme from NDS like so:
+`import { theme } from "@nulogy/components"`,
+you can use and access the theme in one of the following ways:
+
+- Inside styled components
+```tsx
+const Example = styled.div(({ theme }) => ({
+  marginLeft: theme.space.x3,
+  marginBottom: theme.space.x1,
+  color: theme.colors.darkBlue,
+}));
+```
+
+- Inside components: using styled props
+```tsx
+function Component(props: Props) {
+  return (
+    <Box ml="x3" mb="x1" color="darkBlue">
+      {props.children}
+    </Box>
+  )
+}
+```
+
+- Inside components: using useTheme()
+```tsx
+import { useTheme } from "styled-components"
+
+function getPaddingBasedOnSomeProp(foo, theme) { ... }
+
+function Component(props: Props) {
+  const theme = useTheme()
+  const horizontalPadding = getPaddingBasedOnSomeProp(props.foo, theme)
+
+  return (
+    <Box px={horizontalPadding}>
+      {props.children}
+    </Box>
+  )
+}
+```
+
 # [10.4.0](https://github.com/nulogy/design-system/compare/v10.3.0...v10.4.0) (2024-11-25)
 
 
