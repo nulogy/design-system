@@ -1,8 +1,8 @@
 import React from "react";
+import { useTheme } from "styled-components";
 import icons from "@nulogy/icons";
 import type { IconName } from "@nulogy/icons";
-import { Box, DefaultNDSThemeType, Flex, Icon, InlineIcon } from "../index";
-import { useTheme } from "styled-components";
+import { Box, Flex, Icon, InlineIcon } from "../index";
 
 const iconNames = [...Object.keys(icons), "loading"] as IconName[];
 const iconSubset = [...iconNames.slice(0, 5), "loading"] as IconName[];

@@ -2,10 +2,11 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import { space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
+import { IconName } from "@nulogy/icons";
 import LoadingIcon from "./LoadingIcon";
 
 interface IconProps extends SpaceProps {
-  icon: keyof typeof icons | "loading";
+  icon: IconName | "loading";
   className?: string;
   size?: string;
   title?: string;

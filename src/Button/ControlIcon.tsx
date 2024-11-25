@@ -1,4 +1,4 @@
-import icons from "@nulogy/icons";
+import type { IconName } from "@nulogy/icons";
 import React from "react";
 import styled from "styled-components";
 import { layout, LayoutProps, space, SpaceProps } from "styled-system";
@@ -8,7 +8,7 @@ type ControlIconProps = React.ComponentPropsWithRef<"button"> &
   SpaceProps &
   LayoutProps & {
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
-    icon: keyof typeof icons | "loading";
+    icon: IconName | "loading";
     toggled?: boolean;
     disabled?: boolean;
     size?: string;
