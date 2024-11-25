@@ -1,3 +1,10 @@
+# [10.4.0](https://github.com/nulogy/design-system/compare/v10.3.0...v10.4.0) (2024-11-25)
+
+
+### Features
+
+* type the icon prop to improve DX ([4f215fa](https://github.com/nulogy/design-system/commit/4f215fac4f5e85bd45eda76a3589f2b84fd5becb))
+
 # [10.3.0](https://github.com/nulogy/design-system/compare/v10.2.13...v10.3.0) (2024-11-12)
 
 
