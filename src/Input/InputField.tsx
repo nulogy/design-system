@@ -1,6 +1,7 @@
 import React, { forwardRef } from "react";
 import styled, { CSSObject, useTheme } from "styled-components";
 import { position, PositionProps, space, SpaceProps, variant } from "styled-system";
+import { IconName } from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Box, BoxProps } from "../Box";
 import { Flex } from "../Flex";
@@ -16,10 +17,10 @@ type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size" | "hei
 export interface InputFieldProps extends NativeInputProps {
   htmlSize?: number;
   variant?: ComponentVariant;
-  iconRight?: keyof typeof icons | "loading";
-  iconLeft?: keyof typeof icons | "loading";
-  iconRightSize?: keyof typeof icons | "loading";
-  iconLeftSize?: keyof typeof icons | "loading";
+  iconRight?: IconName | "loading";
+  iconLeft?: IconName | "loading";
+  iconRightSize?: string;
+  iconLeftSize?: string;
   error?: boolean;
   labelText?: string;
   requirementText?: string;

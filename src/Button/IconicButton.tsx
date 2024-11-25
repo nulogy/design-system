@@ -4,6 +4,7 @@ import { space, SpaceProps, variant } from "styled-system";
 import { Manager, Reference, Popper } from "react-popper-2";
 import { transparentize } from "polished";
 import icons from "@nulogy/icons";
+import { IconName } from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
 import { DefaultNDSThemeType } from "../theme";
@@ -13,7 +14,7 @@ interface BaseProps {
   variant?: ComponentVariant;
   color?: string;
   labelHidden?: boolean;
-  icon?: keyof typeof icons | "loading";
+  icon?: IconName | "loading";
   iconSize?: string;
   hoverBackgroundColor?: string;
   fontSize?: string;

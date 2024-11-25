@@ -13,6 +13,7 @@ module.exports = {
     return config;
   },
   addons: [
+    "@storybook/addon-knobs",
     "@storybook/addon-toolbars",
     "@storybook/addon-viewport",
     {

@@ -2,7 +2,7 @@
 // Do not edit directly.
 import { DefaultNDSThemeType } from "./theme.type";
 
-type ThemeKey = "legacy" | "desktop" | "tablet" | "phone";
+type ThemeKey = "legacy" | "experimental" | "tablet" | "phone";
 
 export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
   legacy: {
@@ -153,7 +153,7 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
     },
     borders: [],
   },
-  desktop: {
+  experimental: {
     colors: {
       black: "#011e38",
       blackBlue: "#122b47",
@@ -599,4 +599,4 @@ export const themes: Record<ThemeKey, DefaultNDSThemeType> = {
   },
 };
 
-export const { legacy, desktop, tablet, phone } = themes;
+export const { legacy, experimental, tablet, phone } = themes;

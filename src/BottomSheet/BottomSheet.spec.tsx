@@ -11,6 +11,7 @@ describe("BottomSheet", () => {
 
     renderWithNDSProvider(
       <BottomSheet
+        title="Some title"
         isOpen={true}
         onClose={onCloseMock}
         primaryAction={primaryActionMock}

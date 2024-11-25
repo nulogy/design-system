@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
+import type { IconName } from "@nulogy/icons";
 import { space, SpaceProps, variant } from "styled-system";
 import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme";
@@ -9,12 +10,11 @@ import {
   ComponentVariant,
 } from "../NDSProvider/ComponentVariantContext";
 import { subPx } from "../utils";
-import icons from "@nulogy/icons";
 
 export type ButtonProps = SpaceProps &
   React.ComponentPropsWithRef<"button"> & {
     className?: string;
-    icon?: keyof typeof icons | "loading";
+    icon?: IconName | "loading";
     iconSide?: "left" | "right";
     size?: "small" | "medium";
     variant?: ComponentVariant;

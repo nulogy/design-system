@@ -34,7 +34,7 @@ export const getThemeByVariant = (
     return isTabletSize ? themes.tablet : themes.phone;
   }
 
-  return featureFlags.experimentalDesktopTypographyScale ? themes.desktop : themes.legacy;
+  return featureFlags.experimentalDesktopTypographyScale ? themes.experimental : themes.legacy;
 };
 
 export function useNDSTheme(variant: ComponentVariant = "desktop", customTheme?: ThemeType): DefaultNDSThemeType {
