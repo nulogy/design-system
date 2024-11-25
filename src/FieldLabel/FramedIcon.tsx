@@ -1,11 +1,12 @@
 import React, { ReactElement } from "react";
+import icons from "@nulogy/icons";
 import { Flex } from "../Flex";
 import { Tooltip } from "../Tooltip";
 import { Icon } from "../Icon";
 
 interface FramedIconProps extends React.ComponentPropsWithoutRef<"svg"> {
   iconSize: string;
-  icon: string;
+  icon: keyof typeof icons | "loading";
   focusable?: boolean;
   maxWidth?: string;
   tooltip?: string | ReactElement;

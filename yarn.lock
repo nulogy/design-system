@@ -3110,10 +3110,10 @@
     eslint-plugin-react-hooks "^4.0.4"
     prettier "^2.0.5"
 
-"@nulogy/icons@4.34.1":
-  version "4.34.1"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.34.1.tgz#9255e637909b403dd877ad7631879b0b9fff023d"
-  integrity sha512-ZqOMxPcN/ZXFa5yhBY4cV5tMTorMPQ4BhcWpU1y8VmLftxcQS61gGhIg5MfogON4yUZJIZWrGaIRi6r2s6Qr1Q==
+"@nulogy/icons@^4.36.0":
+  version "4.36.0"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.36.0.tgz#3d7858b7d7a4ec83abe09f8715408344f96cf4c4"
+  integrity sha512-xpwbTaZbZ4qoV/FgzepxxDXDm6xzYpPnQh6OQL5l/C9aRjs7Khl2sI57zxK4DUGsLGWTeGGdXXjaxMyC99GISw==
 
 "@nulogy/tokens@^5.4.0":
   version "5.4.0"
@@ -7511,14 +7511,9 @@ camelize@^1.0.0:
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
-caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001280, caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001587:
+caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001125, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001280, caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001587, caniuse-lite@^1.0.30001663:
   version "1.0.30001668"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001668.tgz"
-  integrity sha512-nWLrdxqCdblixUO+27JtGJJE/txpJlyUy5YN1u53wLZkP0emYCo5zgS6QYft7VUYR42LGgi/S5hdLZTrnyIddw==
-
-caniuse-lite@^1.0.30001663:
-  version "1.0.30001668"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001668.tgz#98e214455329f54bf7a4d70b49c9794f0fbedbed"
   integrity sha512-nWLrdxqCdblixUO+27JtGJJE/txpJlyUy5YN1u53wLZkP0emYCo5zgS6QYft7VUYR42LGgi/S5hdLZTrnyIddw==
 
 cardinal@^2.1.1:
