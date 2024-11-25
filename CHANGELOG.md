@@ -1,28 +1,4 @@
-# [10.4.0](https://github.com/nulogy/design-system/compare/v10.3.0...v10.4.0) (2024-11-25)
-
-
-### Features
-
-* type the icon prop to improve DX ([4f215fa](https://github.com/nulogy/design-system/commit/4f215fac4f5e85bd45eda76a3589f2b84fd5becb))
-
-# [10.3.0](https://github.com/nulogy/design-system/compare/v10.2.13...v10.3.0) (2024-11-12)
-
-
-### Bug Fixes
-
-* do not shrink the toggle when put in a small container ([#1450](https://github.com/nulogy/design-system/issues/1450)) ([6b3b63f](https://github.com/nulogy/design-system/commit/6b3b63ffa6f201da721748344cc571c0523fce88))
-* make the icons and indicators in the select accessible ([#1462](https://github.com/nulogy/design-system/issues/1462)) ([3b6d900](https://github.com/nulogy/design-system/commit/3b6d900c212df12801228ebc9b4e7a221770a552))
-* remove underlines from breadcrumbs ([#1451](https://github.com/nulogy/design-system/issues/1451)) ([6a68084](https://github.com/nulogy/design-system/commit/6a6808417460dc2e97837ba14447d6521fdc8b88))
-
 # [11.1.0](https://github.com/nulogy/design-system/compare/v11.0.0...v11.1.0) (2024-11-15)
-
-
-### Bug Fixes
-
-* cypress global scope const declaration ([029fb35](https://github.com/nulogy/design-system/commit/029fb35186616a34bde7fd2844e07a1cab174b09))
-* minor format/copy corrections ([e4b8458](https://github.com/nulogy/design-system/commit/e4b8458d19addd22ced78f54407e5499712eded2))
-* unused parameter ([9959206](https://github.com/nulogy/design-system/commit/99592060dc5da4881eca903c9e6f9b74ba8e9a6b))
-
 
 ### Features
 
@@ -33,6 +9,12 @@
 * further refine the API, stories, and documentation ([fd308f9](https://github.com/nulogy/design-system/commit/fd308f93c904a08435186920b59dc38f27b72cb3))
 * improve BottomSheet API and types ([fe42f8b](https://github.com/nulogy/design-system/commit/fe42f8b3b4232ad44f89c5ad1e663747d4e758aa))
 * test the BottomSheet interactivity ([463fd2d](https://github.com/nulogy/design-system/commit/463fd2d252342208ade5e89edcf805e6ab2ab04d))
+
+### Bug Fixes
+
+* cypress global scope const declaration ([029fb35](https://github.com/nulogy/design-system/commit/029fb35186616a34bde7fd2844e07a1cab174b09))
+* minor format/copy corrections ([e4b8458](https://github.com/nulogy/design-system/commit/e4b8458d19addd22ced78f54407e5499712eded2))
+* unused parameter ([9959206](https://github.com/nulogy/design-system/commit/99592060dc5da4881eca903c9e6f9b74ba8e9a6b))
 
 # [11.0.0](https://github.com/nulogy/design-system/compare/v10.2.13...v11.0.0) (2024-11-07)
 
@@ -142,6 +124,20 @@ function Component(props: Props) {
   )
 }
 ```
+
+# [10.4.0](https://github.com/nulogy/design-system/compare/v10.3.0...v10.4.0) (2024-11-25)
+
+### Features
+
+* type the icon prop to improve DX ([4f215fa](https://github.com/nulogy/design-system/commit/4f215fac4f5e85bd45eda76a3589f2b84fd5becb))
+
+# [10.3.0](https://github.com/nulogy/design-system/compare/v10.2.13...v10.3.0) (2024-11-12)
+
+### Bug Fixes
+
+* do not shrink the toggle when put in a small container ([#1450](https://github.com/nulogy/design-system/issues/1450)) ([6b3b63f](https://github.com/nulogy/design-system/commit/6b3b63ffa6f201da721748344cc571c0523fce88))
+* make the icons and indicators in the select accessible ([#1462](https://github.com/nulogy/design-system/issues/1462)) ([3b6d900](https://github.com/nulogy/design-system/commit/3b6d900c212df12801228ebc9b4e7a221770a552))
+* remove underlines from breadcrumbs ([#1451](https://github.com/nulogy/design-system/issues/1451)) ([6a68084](https://github.com/nulogy/design-system/commit/6a6808417460dc2e97837ba14447d6521fdc8b88))
 
 ## [10.2.14](https://github.com/nulogy/design-system/compare/v10.2.13...v10.2.14) (2024-10-16)
 
