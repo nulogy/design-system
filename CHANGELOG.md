@@ -1,3 +1,28 @@
+# [11.2.0](https://github.com/nulogy/design-system/compare/v11.1.0...v11.2.0) (2024-11-26)
+
+
+### Bug Fixes
+
+* Add vertical margin to checkboxes with labels only ([ccceb0e](https://github.com/nulogy/design-system/commit/ccceb0ef2146f57c79edea420e742161492d171c))
+* align interactive elements with the label ([c67a53d](https://github.com/nulogy/design-system/commit/c67a53d608c62baf4f1f9e24f1ea6b653f80673d))
+* change the fontSize back to medium ([73622fd](https://github.com/nulogy/design-system/commit/73622fd5f9f60002d512cf0d3fafcd3a2dbd4435))
+* CI issues ([5e699a0](https://github.com/nulogy/design-system/commit/5e699a0acc44086bf5d64604ed26dedece8e8308))
+* lint issues ([5c2a476](https://github.com/nulogy/design-system/commit/5c2a4765fbecceaccbfbfd7837e7d2609daf72d3))
+* MultiSelect pills padding ([9fc499c](https://github.com/nulogy/design-system/commit/9fc499c3a8d121daaed72b75db3c4c7c4b92dc70))
+* pipeline build errors ([97ccfde](https://github.com/nulogy/design-system/commit/97ccfdecc8bd6f7ad59f8b4e88d0f1bb20ee7f21))
+* Use a specific width and height for Chromatic ([861cd58](https://github.com/nulogy/design-system/commit/861cd58106f899ea009ab50e3364e2e555576c7c))
+
+
+### Features
+
+* add futureFlags ([6da589b](https://github.com/nulogy/design-system/commit/6da589be05223f6c7f522351ff190c42f8397a4b))
+* change font size and line height for touch interactive elements ([e0848a2](https://github.com/nulogy/design-system/commit/e0848a2b6731097e1797d0e41fdcaf96fc74e688))
+* export the BottomSheet ([ff29269](https://github.com/nulogy/design-system/commit/ff2926910396701bdd3a64221fa009c4826a27cd))
+* improve BottomSheet API and types ([1b1bf85](https://github.com/nulogy/design-system/commit/1b1bf858163fe028576509156e09d352a11b5387))
+* introduce new desktop typography scale ([5bd7744](https://github.com/nulogy/design-system/commit/5bd7744b8ecf41568c31ad7034590bd06f93ed5c))
+* prop for secondary dividers ([1fbd983](https://github.com/nulogy/design-system/commit/1fbd98307177dfc3faaab84390599c14f642d636))
+* release v11 changes ([0157626](https://github.com/nulogy/design-system/commit/01576268850325d54598d7e8b7f70fdd0a4c4671))
+
 # [11.0.0](https://github.com/nulogy/design-system/compare/v10.4.0...v11.0.0) (2024-11-25)
 
 
