@@ -1,17 +1,19 @@
 import styled from "styled-components";
 import { addStyledProps, StyledProps } from "../StyledProps";
 
-type Props = StyledProps;
+export interface DividerProps extends StyledProps, React.HTMLAttributes<HTMLHRElement> {
+  secondary?: boolean;
+}
 
-const Divider = styled.div<Props>(
-  ({ theme, color }) => ({
-    display: "flex",
+const Divider = styled.hr<DividerProps>(
+  ({ theme, color, secondary }) => ({
+    border: "none",
+    borderTopWidth: "1px",
+    borderTopStyle: "solid",
+    width: "100%",
     marginTop: theme.space.x2,
     marginBottom: theme.space.x2,
-    marginLeft: "0",
-    marginRight: "0",
-    borderBottom: "1px solid",
-    borderColor: color ? color : theme.colors.lightGrey,
+    borderColor: color || (secondary ? theme.colors.whiteGrey : theme.colors.lightGrey),
   }),
   addStyledProps
 );
