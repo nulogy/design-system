@@ -38,6 +38,7 @@ export { DropdownButton, DropdownItem, DropdownLink, DropdownMenu, DropdownText 
 export { FieldLabel, HelpText, RequirementText } from "./FieldLabel";
 export { Flex } from "./Flex";
 export { Field, Fieldset, Form, FormSection } from "./Form";
+export { default as useMediaQuery } from "./hooks/useMediaQuery";
 export { Icon, InlineIcon } from "./Icon";
 export { Input } from "./Input";
 export { ApplicationFrame, Header, Page, Sidebar } from "./Layout";
