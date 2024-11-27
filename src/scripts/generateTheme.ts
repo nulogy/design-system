@@ -62,6 +62,13 @@ const BASE_THEME = {
     medium: tokens.size_breakpoint_medium,
     large: tokens.size_breakpoint_large,
     extraLarge: tokens.size_breakpoint_extra_large,
+
+    phonePortrait: "320px",
+    phoneLandscape: "640px",
+    tabletPortrait: "768px",
+    tabletLandscape: "1024px",
+    laptop: "1280px",
+    desktop: "1440px",
   },
   zIndices: {
     content: tokens.z_indices_content,

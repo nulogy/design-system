@@ -122,6 +122,12 @@ export interface Breakpoints {
   medium: string;
   large: string;
   extraLarge: string;
+  phonePortrait: string;
+  phoneLandscape: string;
+  tabletPortrait: string;
+  tabletLandscape: string;
+  laptop: string;
+  desktop: string;
 }
 
 interface ZIndices {
