@@ -259,7 +259,7 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
 
 const generatedThemes = {
   legacy,
-  desktop: generateThemeConfig(deviceBaseUnits.desktop),
+  experimental: generateThemeConfig(deviceBaseUnits.desktop),
   tablet: generateThemeConfig(deviceBaseUnits.tablet),
   phone: generateThemeConfig(deviceBaseUnits.phone),
 };
@@ -268,11 +268,11 @@ const output = `// This file is auto-generated using "yarn generate:theme"
 // Do not edit directly.
 import { DefaultNDSThemeType } from "./theme.type";
 
-type ThemeKey = "legacy" | "desktop" | "tablet" | "phone";
+type ThemeKey = "legacy" | "experimental" | "tablet" | "phone";
 
 export const themes: Record<ThemeKey, DefaultNDSThemeType> = ${JSON.stringify(generatedThemes, null, 2)};
 
-export const { legacy, desktop, tablet, phone } = themes;
+export const { legacy, experimental, tablet, phone } = themes;
 `;
 
 const outputPath = path.join(__dirname, "..", "theme/theme.ts");
