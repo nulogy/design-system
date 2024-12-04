@@ -1,4 +1,3 @@
-import { ReactRouterLink } from "react-router-dom";
 import { MenuItems } from "../components/MenuItem";
 
 export const menuItems: MenuItems = [
@@ -6,8 +5,7 @@ export const menuItems: MenuItems = [
     title: "Home",
     description: "Go to the home page",
     icon: "home",
-    as: ReactRouterLink,
-    to: "/home",
+    href: "/home",
   },
   {
     title: "Historical orders",
@@ -18,13 +16,12 @@ export const menuItems: MenuItems = [
   {
     title: "Pallet inspection",
     icon: "barcode",
-    to: "/pallet-inspection",
-    as: ReactRouterLink,
+    href: "/historical-orders",
   },
   {
     title: "Pick Schedule",
     icon: "calendarToday",
-    href: "#",
+    href: "/pick-schedule",
   },
   {
     title: "Settings",

@@ -124,7 +124,7 @@ const Overlay = styled(motion(DialogOverlay))(({ theme }) => ({
   backgroundColor: transparentize(0.85, theme.colors.white),
 }));
 
-const TileLink = styled(motion.a)(({ theme }) => ({
+const TileLink = styled.a(({ theme }) => ({
   backgroundColor: transparentize(0.15)(theme.colors.blackBlue),
   borderRadius: theme.radii.large,
   display: "flex",
@@ -138,7 +138,7 @@ const TileLink = styled(motion.a)(({ theme }) => ({
   textOverflow: "hidden",
 }));
 
-const StyledMenuItem = styled.li(({ theme }) => ({
+const StyledMenuItem = styled(motion.li)(({ theme }) => ({
   "&:only-child": {
     [`@media (min-width: ${theme.breakpoints.medium})`]: {
       gridColumn: "span 2",

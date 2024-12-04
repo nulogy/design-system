@@ -39,18 +39,11 @@ interface MenuItemProps extends ComponentProps<typeof TileLink> {
 
 export function MenuItem({ description, title, icon, ...props }: MenuItemProps) {
   return (
-    <StyledMenuItem>
-      <TileLink initial="hidden" animate="visible" exit="hidden" variants={fadeInVariants} {...props}>
+    <StyledMenuItem initial="hidden" animate="visible" exit="hidden" variants={fadeInVariants}>
+      <TileLink {...props}>
         <Icon icon={icon} size="x3" />
         <Flex flexDirection="column" justifyContent="center">
-          <MotionText
-            // maxWidth="14ch"
-            // textOverflow="ellipsis"
-            // overflow="hidden"
-            fontWeight="medium"
-            fontSize="md"
-            lineHeight="base"
-          >
+          <MotionText fontWeight="medium" fontSize="md" lineHeight="base">
             {title}
           </MotionText>
           <MotionText fontSize="xs">{description}</MotionText>
