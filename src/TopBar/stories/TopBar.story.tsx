@@ -1,8 +1,9 @@
 import React from "react";
-import { FormSection } from "../Form";
-import { Input } from "../Input";
-import { Page, ApplicationFrame } from "../Layout";
-import TopBar from "./TopBar";
+import { FormSection } from "../../Form";
+import { Input } from "../../Input";
+import { ApplicationFrame, Page } from "../../Layout";
+import { TopBar } from "../TopBar";
+import { menuItems } from "./fixtures";
 
 export default {
   title: "Components/TopBar",
@@ -11,14 +12,44 @@ export default {
   },
 };
 
-export const Default = () => <TopBar previousPageTitle="Cycle counts" currentPageTitle="Cycle count #3992" />;
-
-export const WithALongTitle = () => (
-  <TopBar previousPageTitle="Back" currentPageTitle="A long title that can not fit on smaller screens" />
+export const Default = () => (
+  <TopBar.Root>
+    <TopBar.BackButton href="#">Cycle counts</TopBar.BackButton>
+    <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+    <TopBar.Menu>
+      {menuItems.map((props, i) => (
+        <TopBar.MenuItem key={props.title} order={i} {...props} />
+      ))}
+    </TopBar.Menu>
+  </TopBar.Root>
 );
 
-export const WithApplicationFrame = () => (
-  <ApplicationFrame navBar={<TopBar previousPageTitle="Cycle counts" currentPageTitle="Cycle count #3992" />}>
+export const WithALongTitle = () => (
+  <TopBar.Root>
+    <TopBar.BackButton href="#">Previous page title</TopBar.BackButton>
+    <TopBar.PageTitle>A long title that can not fit on smaller screens</TopBar.PageTitle>
+    <TopBar.Menu>
+      {menuItems.map((props, i) => (
+        <TopBar.MenuItem key={props.title} order={i} {...props} />
+      ))}
+    </TopBar.Menu>
+  </TopBar.Root>
+);
+
+export const WithAnApplicationFrame = () => (
+  <ApplicationFrame
+    navBar={
+      <TopBar.Root>
+        <TopBar.BackButton href="#">Cycle counts</TopBar.BackButton>
+        <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+        <TopBar.Menu>
+          {menuItems.map((props) => (
+            <TopBar.MenuItem key={props.title} {...props} />
+          ))}
+        </TopBar.Menu>
+      </TopBar.Root>
+    }
+  >
     <Page fullHeight>
       <FormSection title="Personal Information">
         <Input id="name" labelText="Name" />
