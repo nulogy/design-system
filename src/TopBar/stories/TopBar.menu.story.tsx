@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, BrowserRouter } from "react-router-dom";
 import { TopBar } from "../TopBar";
 import { menuItems } from "./fixtures";
 
@@ -53,6 +54,20 @@ export const WithThreeItems = () => (
       {menuItems.slice(0, 3).map((props) => (
         <TopBar.MenuItem key={props.title} {...props} />
       ))}
+    </TopBar.Menu>
+  </TopBar.Root>
+);
+
+export const WithRouterLinks = () => (
+  <TopBar.Root>
+    <TopBar.BackLink href="#">Cycle counts</TopBar.BackLink>
+    <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+    <TopBar.Menu defaultOpened>
+      <BrowserRouter>
+        {[{ ...menuItems[0], as: Link, to: "/home" }].map((props) => (
+          <TopBar.MenuItem key={props.title} {...props} />
+        ))}
+      </BrowserRouter>
     </TopBar.Menu>
   </TopBar.Root>
 );
