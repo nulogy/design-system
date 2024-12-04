@@ -1,5 +1,5 @@
 import React from "react";
-import { BackButton } from "./components/BackButton";
+import { BackLink } from "./components/BackLink";
 import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
 import { PageTitle } from "./components/PageTitle";
@@ -22,7 +22,7 @@ export default function Root({ children }: TopBarProps) {
 export const TopBar = {
   Root,
   PageTitle,
-  BackButton,
+  BackLink,
   Menu,
   MenuItem,
 };

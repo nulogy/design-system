@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { darken } from "polished";
 import { themeGet } from "@styled-system/theme-get";
-import { variant } from "styled-system";
 import React from "react";
 import { DefaultNDSThemeType } from "../theme";
 import { addStyledProps, StyledProps } from "../StyledProps";

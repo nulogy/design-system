@@ -14,15 +14,14 @@ const MenuItemList = styled.ul(({ theme }) => ({
   padding: theme.space.x3,
   margin: 0,
   maxHeight: `calc(100dvh - ${theme.space[TOPBAR.themedHeight]})`,
-  overflow: "scroll",
-
+  overflow: "auto",
   gridTemplateColumns: "1fr",
 
-  [`@media (min-width: ${theme.breakpoints.small})`]: {
+  [`@media (min-width: ${theme.breakpoints.medium})`]: {
     gridTemplateColumns: "repeat(2, 1fr)",
   },
 
-  [`@media (min-width: ${theme.breakpoints.medium})`]: {
+  [`@media (min-width: ${theme.breakpoints.large})`]: {
     gridTemplateColumns: "repeat(3, 1fr)",
   },
 }));
@@ -69,8 +68,10 @@ const MenuButton = styled(StylelessButton)(({ theme }) => ({
   justifyContent: "center",
   padding: theme.space.x1,
   borderRadius: theme.radii.medium,
+  transition: "background-color 0.2s",
+  cursor: "pointer",
 
-  "&:active": {
+  "&:active, &:hover": {
     backgroundColor: theme.colors.lightGrey,
   },
 }));
@@ -86,7 +87,7 @@ const NavigationItemsList = styled.ul({
   whiteSpace: "nowrap",
 });
 
-const StyledBackButton = styled.a(({ theme }) => ({
+const StyledBackLink = styled.a(({ theme }) => ({
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "flex-start",
@@ -139,15 +140,15 @@ const TileLink = styled(motion.a)(({ theme }) => ({
 
 const StyledMenuItem = styled.li(({ theme }) => ({
   "&:only-child": {
-    [`@media (min-width: ${theme.breakpoints.small})`]: {
+    [`@media (min-width: ${theme.breakpoints.medium})`]: {
       gridColumn: "span 2",
     },
-    [`@media (min-width: ${theme.breakpoints.medium})`]: {
+    [`@media (min-width: ${theme.breakpoints.large})`]: {
       gridColumn: "span 3",
     },
   },
 
-  [`@media (min-width: ${theme.breakpoints.medium})`]: {
+  [`@media (min-width: ${theme.breakpoints.large})`]: {
     "&:first-child:nth-last-child(2), &:last-child:nth-child(2)": {
       gridColumn: "span 3",
     },
@@ -158,7 +159,7 @@ export {
   Navigation,
   Header,
   NavigationItemsList,
-  StyledBackButton,
+  StyledBackLink,
   StyledPageTitle,
   Overlay,
   TileLink,

@@ -1,18 +1,31 @@
 import React from "react";
-import { ReactRouterLink } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 import { TopBar } from "../TopBar";
 import { menuItems } from "./fixtures";
 
 export default {
-  title: "Components/TopBar/BackButton",
+  title: "Components/TopBar/BackLink",
   parameters: {
     layout: "fullscreen",
   },
 };
 
+export const WithNoLabel = () => (
+  <TopBar.Root>
+    <TopBar.BackLink href="/cycle-counts" />
+    <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+    <TopBar.Menu>
+      {menuItems.map((props) => (
+        <TopBar.MenuItem key={props.title} {...props} />
+      ))}
+    </TopBar.Menu>
+  </TopBar.Root>
+);
+
 export const WithACustomMaxWidth = () => (
   <TopBar.Root>
-    <TopBar.BackButton
+    <TopBar.BackLink
+      href="/cycle-counts"
       maxWidth={{
         small: "10ch",
         medium: "8ch",
@@ -21,7 +34,7 @@ export const WithACustomMaxWidth = () => (
       }}
     >
       Cycle counts
-    </TopBar.BackButton>
+    </TopBar.BackLink>
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu>
       {menuItems.map((props) => (
@@ -32,15 +45,17 @@ export const WithACustomMaxWidth = () => (
 );
 
 export const WithARouterLink = () => (
-  <TopBar.Root>
-    <TopBar.BackButton as={ReactRouterLink} to="#">
-      Cycle counts
-    </TopBar.BackButton>
-    <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
-    <TopBar.Menu>
-      {menuItems.map((props) => (
-        <TopBar.MenuItem key={props.title} {...props} />
-      ))}
-    </TopBar.Menu>
-  </TopBar.Root>
+  <BrowserRouter>
+    <TopBar.Root>
+      <TopBar.BackLink as={Link} to="/cycle-counts">
+        Cycle counts
+      </TopBar.BackLink>
+      <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+      <TopBar.Menu>
+        {menuItems.map((props) => (
+          <TopBar.MenuItem key={props.title} {...props} />
+        ))}
+      </TopBar.Menu>
+    </TopBar.Root>
+  </BrowserRouter>
 );

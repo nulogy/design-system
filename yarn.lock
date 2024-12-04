@@ -4090,10 +4090,10 @@
     eslint-plugin-react-hooks "^4.0.4"
     prettier "^2.0.5"
 
-"@nulogy/icons@^4.36.0":
-  version "4.36.0"
-  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.36.0.tgz#3d7858b7d7a4ec83abe09f8715408344f96cf4c4"
-  integrity sha512-xpwbTaZbZ4qoV/FgzepxxDXDm6xzYpPnQh6OQL5l/C9aRjs7Khl2sI57zxK4DUGsLGWTeGGdXXjaxMyC99GISw==
+"@nulogy/icons@^4.37.2":
+  version "4.37.2"
+  resolved "https://registry.yarnpkg.com/@nulogy/icons/-/icons-4.37.2.tgz#2fcf555460036219dd67d82c6a9072096691b4c0"
+  integrity sha512-Mfu4U7djXis5h8KzRHL6/e/mA3z0Q6ix4B0q9b4UCMPgzgKCJiX+ZSNvEWVP/08luHdhG4Ya8hvE7MIwy2vpIw==
 
 "@nulogy/tokens@^5.4.0":
   version "5.4.0"
