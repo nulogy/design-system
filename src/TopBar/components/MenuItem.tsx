@@ -11,8 +11,9 @@ const MotionText = motion(Text);
 const fadeInVariants = {
   hidden: {
     opacity: 0,
-    y: -15,
-    scale: 0.9,
+    filter: "blur(8px)",
+    y: -16,
+    scale: 0.95,
     transition: {
       ease: "easeOut",
       duration: 0.25,
@@ -20,11 +21,12 @@ const fadeInVariants = {
   },
   visible: {
     opacity: 1,
+    filter: "blur(0px)",
     y: 0,
     scale: 1,
     transition: {
       type: "spring",
-      duration: 1,
+      duration: 0.75,
     },
   },
 };
@@ -41,7 +43,14 @@ export function MenuItem({ description, title, icon, ...props }: MenuItemProps) 
       <TileLink initial="hidden" animate="visible" exit="hidden" variants={fadeInVariants} {...props}>
         <Icon icon={icon} size="x3" />
         <Flex flexDirection="column" justifyContent="center">
-          <MotionText fontWeight="medium" fontSize="md" lineHeight="base">
+          <MotionText
+            // maxWidth="14ch"
+            // textOverflow="ellipsis"
+            // overflow="hidden"
+            fontWeight="medium"
+            fontSize="md"
+            lineHeight="base"
+          >
             {title}
           </MotionText>
           <MotionText fontSize="xs">{description}</MotionText>

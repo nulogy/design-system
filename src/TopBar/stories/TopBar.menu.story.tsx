@@ -11,7 +11,7 @@ export default {
 
 export const withDefaultOpenMenu = () => (
   <TopBar.Root>
-    <TopBar.BackButton href="#">Cycle counts</TopBar.BackButton>
+    <TopBar.BackLink href="#">Cycle counts</TopBar.BackLink>
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.map((props) => (
@@ -23,7 +23,7 @@ export const withDefaultOpenMenu = () => (
 
 export const WithOneMenuItem = () => (
   <TopBar.Root>
-    <TopBar.BackButton href="#">Cycle counts</TopBar.BackButton>
+    <TopBar.BackLink href="#">Cycle counts</TopBar.BackLink>
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.slice(0, 1).map((props) => (
@@ -35,7 +35,7 @@ export const WithOneMenuItem = () => (
 
 export const WithTwoItems = () => (
   <TopBar.Root>
-    <TopBar.BackButton href="#">Cycle counts</TopBar.BackButton>
+    <TopBar.BackLink href="#">Cycle counts</TopBar.BackLink>
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.slice(0, 2).map((props) => (
@@ -47,7 +47,7 @@ export const WithTwoItems = () => (
 
 export const WithThreeItems = () => (
   <TopBar.Root>
-    <TopBar.BackButton href="#">Cycle counts</TopBar.BackButton>
+    <TopBar.BackLink href="#">Cycle counts</TopBar.BackLink>
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.slice(0, 3).map((props) => (

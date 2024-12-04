@@ -1,6 +1,6 @@
 import { DialogContent } from "@reach/dialog";
 import { AnimatePresence } from "framer-motion";
-import React, { ComponentPropsWithoutRef } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Flex } from "../../Flex";
 import { Icon } from "../../Icon";
