@@ -20,7 +20,7 @@ export function BackLink({ children, maxWidth = BACK_LINK_MAX_WIDTH, ...props }:
 
   return (
     <Box as="li" flex="1 1">
-      <StyledBackLink {...props}>
+      <StyledBackLink {...props} data-testid="topbar-back-link">
         <Icon icon="arrowBack" />
         {md && (
           <Text maxWidth={maxWidth} textOverflow="ellipsis" overflow="hidden" fontSize="small">

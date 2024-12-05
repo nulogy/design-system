@@ -29,7 +29,15 @@ const blurVariants = {
   },
 };
 
-export function Menu({ children, defaultOpened = false }: { defaultOpened?: boolean; children: React.ReactNode }) {
+export function Menu({
+  children,
+  defaultOpened = false,
+  ...props
+}: {
+  defaultOpened?: boolean;
+  children: React.ReactNode;
+  "aria-label"?: string;
+}) {
   const [showMenu, setShowMenu] = React.useState(defaultOpened);
   const { t } = useTranslation();
 
@@ -43,12 +51,13 @@ export function Menu({ children, defaultOpened = false }: { defaultOpened?: bool
 
   return (
     <Flex justifyContent="flex-end" as="li" color="black" flex="1 1">
-      <MenuButton onClick={toggle}>
+      <MenuButton onClick={toggle} data-testid="topbar-menu-button">
         <Icon size="x3" color="midGrey" icon={showMenu ? "close" : "apps"} />
       </MenuButton>
       <AnimatePresence>
         {showMenu && (
           <Overlay
+            data-testid="topbar-menu-overlay"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -56,7 +65,7 @@ export function Menu({ children, defaultOpened = false }: { defaultOpened?: bool
             isOpen={showMenu}
             onDismiss={close}
           >
-            <DialogContent aria-label={t("menu options")}>
+            <DialogContent data-testid="topbar-menu" aria-label={props["aria-label"] ?? t("menu options")}>
               <MenuItemList>{children}</MenuItemList>
             </DialogContent>
           </Overlay>
