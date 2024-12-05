@@ -3,12 +3,16 @@ import { Button } from "../../Button";
 import { Placeholder } from "../../utils/story/placeholder";
 import BottomSheet from "../BottomSheet";
 
-export default {
-  title: "Components/BottomSheet",
+export const storyParams = {
   decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
   parameters: {
     chromatic: { delay: 1000 },
   },
+} as const;
+
+export default {
+  ...storyParams,
+  title: "Components/BottomSheet",
 };
 
 export const BasicUsage = () => {

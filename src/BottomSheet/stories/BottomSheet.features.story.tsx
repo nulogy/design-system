@@ -10,13 +10,11 @@ import { toast, ToastContainer } from "../../ToastContainer";
 import { Text } from "../../Type";
 import { Placeholder } from "../../utils/story/placeholder";
 import BottomSheet from "../BottomSheet";
+import { storyParams } from "./BottomSheet.story";
 
 export default {
+  ...storyParams,
   title: "Components/BottomSheet/Features",
-  decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
-  parameters: {
-    chromatic: { delay: 1000 },
-  },
 };
 
 export const WithCustomWidths = () => {
