@@ -2,14 +2,24 @@ import React from "react";
 import { FormSection } from "../../Form";
 import { Input } from "../../Input";
 import { ApplicationFrame, Page } from "../../Layout";
+import { legacy as theme } from "../../theme/theme";
+import numberFromDimension from "../../utils/numberFromDimension";
 import { TopBar } from "../TopBar";
 import { menuItems } from "./fixtures";
 
-export default {
-  title: "Components/TopBar",
+export const storyParams = {
   parameters: {
     layout: "fullscreen",
+    chromatic: {
+      viewports: [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(numberFromDimension),
+      delay: 1000,
+    },
   },
+} as const;
+
+export default {
+  ...storyParams,
+  title: "Components/TopBar",
 };
 
 export const Default = () => (

@@ -2,12 +2,11 @@ import React from "react";
 import { Link, BrowserRouter } from "react-router-dom";
 import { TopBar } from "../TopBar";
 import { menuItems } from "./fixtures";
+import { storyParams } from "./TopBar.story";
 
 export default {
+  ...storyParams,
   title: "Components/TopBar/Menu",
-  parameters: {
-    layout: "fullscreen",
-  },
 };
 
 export const withDefaultOpenMenu = () => (
