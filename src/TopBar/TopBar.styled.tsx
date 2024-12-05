@@ -11,7 +11,7 @@ const MenuItemList = styled.ul(({ theme }) => ({
   gap: theme.space.x1,
   flexWrap: "wrap",
   listStyle: "none",
-  padding: theme.space.x3,
+  padding: theme.space.x1_5,
   margin: 0,
   maxHeight: `calc(100dvh - ${theme.space[TOPBAR.themedHeight]})`,
   overflow: "auto",
