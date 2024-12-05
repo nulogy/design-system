@@ -1,6 +1,8 @@
 # TopBar
 
-The TopBar component provides users a consistent navigation experience across touch application page. It combines functionality from the `Header` and the `BrandedNavBar` components.
+The TopBar component provides users a consistent navigation experience across touch application pages. 
+It combines functionality from the desktop `Header` and the `BrandedNavBar` components. 
+The component is meant to be used in applications where the primary input device is a touch screen. 
 
 ## Basic Usage
 
@@ -78,6 +80,7 @@ Individual menu items with icons and descriptions. Extends and accepts props for
 ## Accessibility
 
 - Menu sets the focus to the first in the menu when opened, returns the focus to the menu trigger when closed
+- When the Menu is opened, the focus is trapped within the menu
 - Supports keyboard navigation
 - Includes proper ARIA labels for the menu
 
