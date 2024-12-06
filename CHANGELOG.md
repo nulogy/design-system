@@ -1,3 +1,25 @@
+# [11.3.0](https://github.com/nulogy/design-system/compare/v11.2.0...v11.3.0) (2024-12-06)
+
+
+### Bug Fixes
+
+* change desktop to experimental to reflect alpha stage of the theme ([8c61aea](https://github.com/nulogy/design-system/commit/8c61aea5a00d444833084bcf28d2ac549babc079))
+* change MenuItems distance to the Menu ([942c5dc](https://github.com/nulogy/design-system/commit/942c5dc2b165c2ef6034b70dfbdac282095c49b6))
+* Export the useMediaQuery Hook ([29087ad](https://github.com/nulogy/design-system/commit/29087ad0fb781fd70725b112e051949028b5dae0))
+* use the right testing mode in Chromatic ([3cfb81d](https://github.com/nulogy/design-system/commit/3cfb81db267c98b47ce5af2eeb08a0b07351389d))
+
+
+### Features
+
+* add semantic breakpoints ([21bd5b4](https://github.com/nulogy/design-system/commit/21bd5b4ec8a687393187086f03f2956bdaffdcfa))
+* add TopBar component ([6d6a95a](https://github.com/nulogy/design-system/commit/6d6a95aa0e0dfcca40b3f5a279f2f1e7e18fddad))
+* allow MenuItems to be router links ([658def4](https://github.com/nulogy/design-system/commit/658def4e8851fae53184cc9c96b989cfcfea3e05))
+* documentation improvements ([a48a687](https://github.com/nulogy/design-system/commit/a48a687e977754bf6180d7606ce45f86235c61fe))
+* further revise TopBar API, animation, and default behavior ([70754c1](https://github.com/nulogy/design-system/commit/70754c1988c73e82c53f9b6b6f0e8b8e1bf3068c))
+* localize TopBar accessible strings and add e2e specs ([234dc45](https://github.com/nulogy/design-system/commit/234dc45ecded9d97590d70339049a44593338990))
+* revise API and add documentation ([c9c96ec](https://github.com/nulogy/design-system/commit/c9c96ec079683d72ead4a9183833d3b3dde4cd49))
+* revise TopBar API and add more stories ([f0a8d18](https://github.com/nulogy/design-system/commit/f0a8d18fcc97f4bd4eb5032eacd84726d2156fee))
+
 # [11.2.0](https://github.com/nulogy/design-system/compare/v11.1.0...v11.2.0) (2024-11-26)
 
 
