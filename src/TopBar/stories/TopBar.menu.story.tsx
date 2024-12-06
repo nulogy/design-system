@@ -1,11 +1,18 @@
 import React from "react";
 import { Link, BrowserRouter } from "react-router-dom";
+import { legacy as theme } from "../../theme/theme";
+import numberFromDimension from "../../utils/numberFromDimension";
 import { TopBar } from "../TopBar";
 import { menuItems } from "./fixtures";
-import { storyParams } from "./TopBar.story";
 
 export default {
-  ...storyParams,
+  parameters: {
+    layout: "fullscreen",
+    chromatic: {
+      viewports: [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(numberFromDimension),
+      delay: 1000,
+    },
+  },
   title: "Components/TopBar/Menu",
 };
 

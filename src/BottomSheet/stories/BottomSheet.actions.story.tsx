@@ -2,11 +2,13 @@ import React from "react";
 import { Button, PrimaryButton, QuietButton } from "../../Button";
 import { Placeholder } from "../../utils/story/placeholder";
 import BottomSheet from "../BottomSheet";
-import { storyParams } from "./BottomSheet.story";
 
 export default {
-  ...storyParams,
   title: "Components/BottomSheet/Actions",
+  parameters: {
+    chromatic: { delay: 1000 },
+  },
+  decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
 };
 
 export const WithAHiddenCloseButton = () => {

@@ -5,11 +5,13 @@ import { Flex } from "../../Flex";
 import { Link } from "../../Link";
 import { Placeholder } from "../../utils/story/placeholder";
 import { BottomSheetParts as BottomSheet } from "../BottomSheet.parts";
-import { storyParams } from "./BottomSheet.story";
 
 export default {
-  ...storyParams,
   title: "Components/BottomSheet/Parts",
+  parameters: {
+    chromatic: { delay: 1000 },
+  },
+  decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
 };
 
 export const RenderedUsingCompositionalAPI = () => {
