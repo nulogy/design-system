@@ -8,10 +8,10 @@ import { BottomSheetParts as BottomSheet } from "../BottomSheet.parts";
 
 export default {
   title: "Components/BottomSheet/Parts",
+  decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
   parameters: {
     chromatic: { delay: 1000 },
   },
-  decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
 };
 
 export const RenderedUsingCompositionalAPI = () => {

@@ -8,14 +8,20 @@ import numberFromDimension from "../../utils/numberFromDimension";
 import { menuItems } from "./fixtures";
 
 export default {
+  title: "Components/TopBar",
   parameters: {
     layout: "fullscreen",
     chromatic: {
-      viewports: [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(numberFromDimension),
-      delay: 1000,
+      modes: {
+        locale: "en",
+        desktopScale: "standard",
+        theme: "touch",
+        viewports: [theme.breakpoints.small, theme.breakpoints.medium, theme.breakpoints.large].map(
+          numberFromDimension
+        ),
+      },
     },
   },
-  title: "Components/TopBar",
 };
 
 export const Default = () => (
