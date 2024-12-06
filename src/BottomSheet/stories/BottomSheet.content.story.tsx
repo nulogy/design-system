@@ -4,11 +4,13 @@ import { Link } from "../../Link";
 import { Text } from "../../Type";
 import { Placeholder } from "../../utils/story/placeholder";
 import BottomSheet from "../BottomSheet";
-import { storyParams } from "./BottomSheet.story";
 
 export default {
-  ...storyParams,
   title: "Components/BottomSheet/Content",
+  parameters: {
+    chromatic: { delay: 1000 },
+  },
+  decorators: [(storyFn) => <div style={{ width: "800px", height: "800px" }}>{storyFn()}</div>],
 };
 
 export const WithHelpText = () => {

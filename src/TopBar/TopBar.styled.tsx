@@ -135,7 +135,8 @@ const TileLink = styled.a(({ theme }) => ({
   color: theme.colors.white,
   gap: theme.space.x1_5,
   whiteSpace: "nowrap",
-  textOverflow: "hidden",
+  outlineOffset: theme.space.x0_25,
+  outlineColor: theme.colors.blue,
 }));
 
 const StyledMenuItem = styled(motion.li)(({ theme }) => ({

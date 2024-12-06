@@ -2,12 +2,12 @@ import React from "react";
 import { FormSection } from "../../Form";
 import { Input } from "../../Input";
 import { ApplicationFrame, Page } from "../../Layout";
+import { TopBar } from "../TopBar";
 import { legacy as theme } from "../../theme/theme";
 import numberFromDimension from "../../utils/numberFromDimension";
-import { TopBar } from "../TopBar";
 import { menuItems } from "./fixtures";
 
-export const storyParams = {
+export default {
   parameters: {
     layout: "fullscreen",
     chromatic: {
@@ -15,10 +15,6 @@ export const storyParams = {
       delay: 1000,
     },
   },
-} as const;
-
-export default {
-  ...storyParams,
   title: "Components/TopBar",
 };
 
