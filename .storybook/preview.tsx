@@ -2,7 +2,7 @@ import React from "react";
 import { desktop as theme } from "../src/theme";
 import { ALL_NDS_LOCALES, NDSProvider } from "../src";
 
-const newViewports = {
+const viewports = {
   extraSmall: {
     name: "Extra small",
     styles: {
@@ -41,7 +41,7 @@ const newViewports = {
 };
 
 export const parameters = {
-  viewport: { viewports: newViewports },
+  viewport: { viewports },
   layout: "padded",
   options: {
     storySort: {
