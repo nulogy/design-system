@@ -1,3 +1,10 @@
+## [11.3.1](https://github.com/nulogy/design-system/compare/v11.3.0...v11.3.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* BottomSheet footer blur Firefox bug ([06fb9ef](https://github.com/nulogy/design-system/commit/06fb9ef30a14ac5eaf0b2f8b949ab751f36776aa))
+
 # [11.3.0](https://github.com/nulogy/design-system/compare/v11.2.0...v11.3.0) (2024-12-06)
 
 
