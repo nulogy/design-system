@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { components, OptionProps } from "react-windowed-select";
 import { typography } from "styled-system";
 import { subPx } from "../utils";
+import { variant } from "../StyledProps";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
-import { stylesForVariant } from "./customReactSelectStyles";
 
 type SelectOptionProps = {
   isSelected: boolean;
@@ -33,12 +33,11 @@ export const StyledOption = styled.div<SelectOptionProps>(
       },
     },
   }),
-  ({ theme, variant }) =>
-    stylesForVariant(
-      {
+  ({ theme }) =>
+    variant({
+      variants: {
         touch: {
           div: {
-            // padding: subPx(theme.space.x2),
             padding: subPx(theme.space.x1),
           },
         },
@@ -48,8 +47,7 @@ export const StyledOption = styled.div<SelectOptionProps>(
           },
         },
       },
-      variant
-    )
+    })
 );
 
 interface CustomOptionProps extends OptionProps {

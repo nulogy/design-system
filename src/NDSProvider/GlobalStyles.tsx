@@ -1,12 +1,8 @@
-import styled, { CSSObject } from "styled-components";
-import { DefaultNDSThemeType } from "../theme";
+import styled from "styled-components";
 
-export type GlobalStylesProps = {
-  theme?: DefaultNDSThemeType;
+const GlobalStyles = styled.div<{
   locale?: string;
-};
-
-const GlobalStyles = styled.div(({ theme, locale }: GlobalStylesProps): CSSObject => {
+}>(({ theme, locale }) => {
   const fontFamily = locale === "zh_CN" ? theme.fonts.sc : theme.fonts.base;
   return {
     color: theme.colors.black,

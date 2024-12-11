@@ -67,6 +67,14 @@ const WrapperButton = styled.button<ButtonProps>(
     },
     padding: `${subPx(theme.space.x1)} ${theme.space.x2}`,
   }),
+  variant({
+    variants: {
+      touch: {
+        fontSize: "md",
+        lineHeight: "base",
+      },
+    },
+  }),
   ({ theme }) =>
     variant({
       prop: "size",
@@ -83,14 +91,6 @@ const WrapperButton = styled.button<ButtonProps>(
         },
       },
     }),
-  variant({
-    variants: {
-      touch: {
-        fontSize: "md",
-        lineHeight: "base",
-      },
-    },
-  }),
   space
 );
 

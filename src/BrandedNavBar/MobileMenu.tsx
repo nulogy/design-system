@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import type { CSSObject } from "styled-components";
 import { display } from "styled-system";
-import { Text, Heading3 } from "../Type";
+import { Text } from "../Type";
 import { Flex } from "../Flex";
 import { BrandingText } from "../Branding";
 import { DropdownLink, DropdownText } from "../DropdownMenu";
@@ -204,8 +204,8 @@ type NavProps = {
   backgroundColor: string;
 };
 
-const Nav = styled.nav(
-  ({ backgroundColor }: NavProps) => ({
+const Nav = styled.nav<NavProps>(
+  ({ backgroundColor }) => ({
     backgroundColor,
   }),
   {

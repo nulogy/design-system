@@ -43,7 +43,7 @@ type SmallHeaderProps = {
   breakpointLower?: string | number;
 };
 
-const SmallHeader = styled.header(
+const SmallHeader = styled.header<SmallHeaderProps>(
   ({ isOpen, theme }: SmallHeaderProps): CSSObject =>
     isOpen
       ? {

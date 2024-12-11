@@ -105,21 +105,19 @@ const Slider: React.FC<React.PropsWithChildren<SliderProps>> = ({ disabled, chil
   );
 };
 
-const ToggleInput = styled.input(
-  ({ disabled, theme }: ToggleInputProps): CSSObject => ({
-    width: "1px",
-    height: "1px",
-    opacity: 0,
-    position: "absolute",
-    [`&:checked + .slider}`]: {
-      backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue,
-    },
-    [`&:focus + .slider`]: {
-      transform: disabled ? null : `scale(${animationConfig.scale})`,
-      boxShadow: disabled ? undefined : theme.shadows.focus,
-    },
-  })
-);
+const ToggleInput = styled.input<ToggleButtonProps>(({ disabled, theme }) => ({
+  width: "1px",
+  height: "1px",
+  opacity: 0,
+  position: "absolute",
+  [`&:checked + .slider}`]: {
+    backgroundColor: disabled ? theme.colors.grey : theme.colors.darkBlue,
+  },
+  [`&:focus + .slider`]: {
+    transform: disabled ? null : `scale(${animationConfig.scale})`,
+    boxShadow: disabled ? undefined : theme.shadows.focus,
+  },
+}));
 
 const ToggleButton = React.forwardRef<React.Ref<HTMLInputElement>, ToggleButtonProps>((props, ref) => {
   const { disabled, defaultToggled, toggled } = props;

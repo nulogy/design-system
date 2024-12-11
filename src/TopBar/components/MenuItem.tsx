@@ -1,12 +1,5 @@
-import { IconName } from "@nulogy/icons";
-import { motion } from "framer-motion";
-import React, { ComponentProps } from "react";
-import { Flex } from "../../Flex";
-import { Icon } from "../../Icon";
-import { Text } from "../../Type";
-import { StyledMenuItem, TileLink } from "../TopBar.styled";
-
-const MotionText = motion(Text);
+import React from "react";
+import { StyledMenuItem } from "../TopBar.styled";
 
 const fadeInVariants = {
   hidden: {
@@ -31,13 +24,7 @@ const fadeInVariants = {
   },
 };
 
-interface MenuItemProps extends ComponentProps<typeof TileLink> {
-  title: string;
-  description?: string;
-  icon: IconName;
-}
-
-export function MenuItem({ description, title, icon, ...props }: MenuItemProps) {
+export function MenuItem({ children }: React.PropsWithChildren<{}>) {
   return (
     <StyledMenuItem
       data-testid="topbar-menu-item"
@@ -46,17 +33,7 @@ export function MenuItem({ description, title, icon, ...props }: MenuItemProps) 
       exit="hidden"
       variants={fadeInVariants}
     >
-      <TileLink {...props}>
-        <Icon icon={icon} size="x3" />
-        <Flex flexDirection="column" justifyContent="center">
-          <MotionText fontWeight="medium" fontSize="md" lineHeight="base">
-            {title}
-          </MotionText>
-          <MotionText fontSize="xs">{description}</MotionText>
-        </Flex>
-      </TileLink>
+      {children}
     </StyledMenuItem>
   );
 }
-
-export type MenuItems = MenuItemProps[];

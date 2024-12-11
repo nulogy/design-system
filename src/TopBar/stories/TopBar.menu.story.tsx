@@ -29,7 +29,9 @@ export const withDefaultOpenMenu = () => (
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.map((props) => (
-        <TopBar.MenuItem key={props.title} {...props} />
+        <TopBar.MenuItem key={props.title}>
+          <TopBar.MenuItemLink {...props} />
+        </TopBar.MenuItem>
       ))}
     </TopBar.Menu>
   </TopBar.Root>
@@ -41,7 +43,9 @@ export const WithOneMenuItem = () => (
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.slice(0, 1).map((props) => (
-        <TopBar.MenuItem key={props.title} {...props} />
+        <TopBar.MenuItem key={props.title}>
+          <TopBar.MenuItemLink {...props} />
+        </TopBar.MenuItem>
       ))}
     </TopBar.Menu>
   </TopBar.Root>
@@ -53,7 +57,9 @@ export const WithTwoItems = () => (
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.slice(0, 2).map((props) => (
-        <TopBar.MenuItem key={props.title} {...props} />
+        <TopBar.MenuItem key={props.title}>
+          <TopBar.MenuItemLink {...props} />
+        </TopBar.MenuItem>
       ))}
     </TopBar.Menu>
   </TopBar.Root>
@@ -65,22 +71,33 @@ export const WithThreeItems = () => (
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu defaultOpened>
       {menuItems.slice(0, 3).map((props) => (
-        <TopBar.MenuItem key={props.title} {...props} />
+        <TopBar.MenuItem key={props.title}>
+          <TopBar.MenuItemLink {...props} />
+        </TopBar.MenuItem>
       ))}
     </TopBar.Menu>
   </TopBar.Root>
 );
 
-export const WithRouterLinks = () => (
-  <TopBar.Root>
-    <TopBar.BackLink href="#">Cycle counts</TopBar.BackLink>
-    <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
-    <TopBar.Menu defaultOpened>
-      <BrowserRouter>
-        {[{ ...menuItems[0], as: Link, to: "/home" }].map((props) => (
-          <TopBar.MenuItem key={props.title} {...props} />
-        ))}
-      </BrowserRouter>
-    </TopBar.Menu>
-  </TopBar.Root>
-);
+export const WithRouterLinks = () => {
+  const routerMenuItems = menuItems.map(({ href, ...item }) => ({
+    ...item,
+    to: href,
+  }));
+
+  return (
+    <TopBar.Root>
+      <TopBar.BackLink href="#">Cycle counts</TopBar.BackLink>
+      <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
+      <TopBar.Menu defaultOpened>
+        <BrowserRouter basename="/">
+          {routerMenuItems.map((item) => (
+            <TopBar.MenuItem key={item.title}>
+              <Link component={TopBar.MenuItemLink} {...item} />
+            </TopBar.MenuItem>
+          ))}
+        </BrowserRouter>
+      </TopBar.Menu>
+    </TopBar.Root>
+  );
+};

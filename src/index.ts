@@ -81,6 +81,7 @@ export { Toast } from "./Toast";
 export { toast, ToastContainer } from "./ToastContainer";
 export { Toggle } from "./Toggle";
 export { Tooltip } from "./Tooltip";
+export { TopBar } from "./TopBar";
 export { TruncatedText } from "./TruncatedText";
 export { Heading1, Heading2, Heading3, Heading4, Text } from "./Type";
 export type { TextProps } from "./Type";
