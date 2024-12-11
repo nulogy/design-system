@@ -9,7 +9,7 @@ export default {
   parameters: {
     layout: "fullscreen",
     chromatic: {
-      delay: 1000,
+      delay: 3000,
       modes: {
         locale: "en",
         desktopScale: "standard",
