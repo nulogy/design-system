@@ -26,7 +26,7 @@ interface IconicButtonProps
     SpaceProps,
     Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps> {}
 
-const IconWrapper = styled.span(({ theme, size }: { theme: DefaultNDSThemeType; size: string }) => ({
+const IconWrapper = styled.span<{ size: string }>(({ theme, size }) => ({
   display: "inline-flex",
   flexShrink: 0,
   alignItems: "center",

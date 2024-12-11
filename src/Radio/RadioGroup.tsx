@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { CSSObject, ThemeContext, useTheme } from "styled-components";
+import React, { CSSProperties, useContext } from "react";
+import { ThemeContext, useTheme } from "styled-components";
 import { HelpText, RequirementText } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import { Fieldset } from "../Form";
@@ -50,7 +50,7 @@ export default function RadioGroup({
   );
 }
 
-const labelTextStyles = (theme: DefaultNDSThemeType): CSSObject => ({
+const labelTextStyles = (theme: DefaultNDSThemeType): CSSProperties => ({
   fontSize: theme.fontSizes.small,
   fontWeight: Number(theme.fontWeights.bold),
   lineHeight: theme.lineHeights.smallTextBase,

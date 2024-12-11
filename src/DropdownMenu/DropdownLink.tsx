@@ -12,10 +12,9 @@ interface Props extends React.ComponentPropsWithRef<"a">, StyledProps {
   bgHoverColor?: string;
 }
 
-const DropdownLink = styled.a.withConfig<Props>({
-  shouldForwardProp: (prop, defaultValidatorFn) =>
-    !["hoverColor", "bgHoverColor"].includes(prop) && defaultValidatorFn(prop),
-})(
+const DropdownLink = styled.a.withConfig({
+  shouldForwardProp: (prop) => !["hoverColor", "bgHoverColor"].includes(prop),
+})<Props>(
   ({ theme, color = "darkGrey", hoverColor = "darkBlue", bgHoverColor = "lightBlue" }) => ({
     color: theme.colors[color],
     fontWeight: theme.fontWeights.medium,

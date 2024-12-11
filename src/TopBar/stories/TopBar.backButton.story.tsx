@@ -50,7 +50,9 @@ export const WithACustomMaxWidth = () => (
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu>
       {menuItems.map((props) => (
-        <TopBar.MenuItem key={props.title} {...props} />
+        <TopBar.MenuItem key={props.title}>
+          <TopBar.MenuItemLink {...props} />
+        </TopBar.MenuItem>
       ))}
     </TopBar.Menu>
   </TopBar.Root>
@@ -59,13 +61,15 @@ export const WithACustomMaxWidth = () => (
 export const WithARouterLink = () => (
   <BrowserRouter>
     <TopBar.Root>
-      <TopBar.BackLink as={Link} to="/cycle-counts">
+      <Link component={TopBar.BackLink} to="/cycle-counts">
         Cycle counts
-      </TopBar.BackLink>
+      </Link>
       <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
       <TopBar.Menu>
         {menuItems.map((props) => (
-          <TopBar.MenuItem key={props.title} {...props} />
+          <TopBar.MenuItem key={props.title}>
+            <TopBar.MenuItemLink {...props} />
+          </TopBar.MenuItem>
         ))}
       </TopBar.Menu>
     </TopBar.Root>

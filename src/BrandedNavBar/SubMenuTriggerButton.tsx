@@ -1,4 +1,4 @@
-import styled, { CSSObject, StyledComponentPropsWithRef } from "styled-components";
+import styled, { CSSObject } from "styled-components";
 import React from "react";
 import { DropdownButton } from "../DropdownMenu";
 import { Icon } from "../Icon";

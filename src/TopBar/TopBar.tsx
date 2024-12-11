@@ -2,6 +2,7 @@ import React from "react";
 import { BackLink } from "./components/BackLink";
 import { Menu } from "./components/Menu";
 import { MenuItem } from "./components/MenuItem";
+import { MenuItemLink } from "./components/MenuItemLink";
 import { PageTitle } from "./components/PageTitle";
 import { Header, Navigation, NavigationItemsList } from "./TopBar.styled";
 
@@ -25,4 +26,5 @@ export const TopBar = {
   BackLink,
   Menu,
   MenuItem,
+  MenuItemLink,
 };

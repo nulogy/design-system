@@ -21,7 +21,6 @@ export default {
 
 export const WithCustomWidths = () => {
   const [isOpen, setIsOpen] = React.useState(true);
-
   return (
     <>
       <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
@@ -41,7 +40,6 @@ export const WithCustomWidths = () => {
 
 export const DisableCloseOnOverlayClick = () => {
   const [isOpen, setIsOpen] = React.useState(true);
-
   return (
     <Box>
       <Button onClick={() => setIsOpen(true)}>Open Sheet</Button>
@@ -63,7 +61,6 @@ export const DisableCloseOnOverlayClick = () => {
 
 export const AdvancedUsage = () => {
   const [isOpen, setIsOpen] = React.useState(true);
-
   return (
     <>
       <ToastContainer />

@@ -1,6 +1,4 @@
-import { MenuItems } from "../components/MenuItem";
-
-export const menuItems: MenuItems = [
+export const menuItems = [
   {
     title: "Home",
     description: "Go to the home page",
@@ -53,4 +51,4 @@ export const menuItems: MenuItems = [
     icon: "warningOutline",
     href: "/shipping",
   },
-];
+] as const;

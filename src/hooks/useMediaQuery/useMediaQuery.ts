@@ -1,12 +1,12 @@
-import { useCallback, useEffect, useState } from "react";
-import { useTheme } from "styled-components";
+import { ThemeContext } from "styled-components";
+import React, { useCallback, useEffect, useState } from "react";
 import { Breakpoints } from "../../theme";
 
 type Query = keyof Breakpoints | (string & {});
 
 function useMediaQuery(q: Query): boolean {
   const isUnsupported = typeof window === "undefined" || typeof window.matchMedia === "undefined";
-  const theme = useTheme();
+  const theme = React.useContext(ThemeContext);
   const query = theme?.breakpoints?.[q] ? `(min-width: ${theme.breakpoints[q]})` : q;
 
   const getMatches = useCallback(

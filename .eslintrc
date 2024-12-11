@@ -24,7 +24,7 @@
       "error",
       {
         "components": ["Link"],
-        "specialLink": ["as"]
+        "specialLink": ["as", "to"]
       }
     ],
     "react/display-name": "off",

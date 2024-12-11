@@ -29,8 +29,10 @@ export const Default = () => (
     <TopBar.BackLink href="/cycle-counts">Cycle counts</TopBar.BackLink>
     <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
     <TopBar.Menu>
-      {menuItems.map((props, i) => (
-        <TopBar.MenuItem key={props.title} order={i} {...props} />
+      {menuItems.map((props) => (
+        <TopBar.MenuItem key={props.title}>
+          <TopBar.MenuItemLink {...props} />
+        </TopBar.MenuItem>
       ))}
     </TopBar.Menu>
   </TopBar.Root>
@@ -41,8 +43,10 @@ export const WithALongTitle = () => (
     <TopBar.BackLink href="/cycle-counts">Previous page title</TopBar.BackLink>
     <TopBar.PageTitle>A long title that can not fit on smaller screens</TopBar.PageTitle>
     <TopBar.Menu>
-      {menuItems.map((props, i) => (
-        <TopBar.MenuItem key={props.title} order={i} {...props} />
+      {menuItems.map((props) => (
+        <TopBar.MenuItem key={props.title}>
+          <TopBar.MenuItemLink {...props} />
+        </TopBar.MenuItem>
       ))}
     </TopBar.Menu>
   </TopBar.Root>
@@ -56,7 +60,9 @@ export const WithAnApplicationFrame = () => (
         <TopBar.PageTitle>Cycle count #3992</TopBar.PageTitle>
         <TopBar.Menu>
           {menuItems.map((props) => (
-            <TopBar.MenuItem key={props.title} {...props} />
+            <TopBar.MenuItem key={props.title}>
+              <TopBar.MenuItemLink {...props} />
+            </TopBar.MenuItem>
           ))}
         </TopBar.Menu>
       </TopBar.Root>

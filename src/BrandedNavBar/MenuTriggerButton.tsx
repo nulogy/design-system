@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import { themeGet } from "@styled-system/theme-get";
 import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme";
@@ -11,8 +11,8 @@ type StyledButtonProps = React.ComponentPropsWithRef<"button"> & {
   theme?: DefaultNDSThemeType;
 };
 
-const StyledButton = styled.button(
-  ({ color = "white", hoverColor = "lightBlue", hoverBackground = "black", theme }: StyledButtonProps): CSSObject => ({
+const StyledButton = styled.button<StyledButtonProps>(
+  ({ color = "white", hoverColor = "lightBlue", hoverBackground = "black", theme }) => ({
     display: "flex",
     alignItems: "center",
     position: "relative",

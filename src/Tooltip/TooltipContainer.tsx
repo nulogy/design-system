@@ -50,7 +50,7 @@ const getTooltipMargin = (placement) => {
   }
 };
 
-const TooltipContainer = styled(Box)(({ theme, dataPlacement, open, position }: TooltipContainerProps): any => ({
+const TooltipContainer = styled(Box)<TooltipContainerProps>(({ theme, dataPlacement, open, position }) => ({
   color: tooltipStyles(theme).textColor,
   display: "flex",
   flexDirection: "column",

@@ -1,5 +1,4 @@
 import { transparentize } from "polished";
-import type { CSSObject } from "styled-components";
 import type { GroupBase, MenuPlacement, StylesConfig } from "react-select";
 import type { CSSProperties } from "react";
 import type { DefaultNDSThemeType } from "../theme";
@@ -74,7 +73,7 @@ export function getMenuBorderRadius({
 }
 
 type VariantConfig = {
-  [key in ComponentVariant]?: CSSObject;
+  [key in ComponentVariant]?: CSSProperties;
 };
 
 export function stylesForVariant(config: VariantConfig, variant: ComponentVariant = "desktop") {
