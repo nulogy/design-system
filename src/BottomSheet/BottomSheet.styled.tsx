@@ -78,8 +78,10 @@ const ContentContainer = styled.div((_) => ({
 }));
 
 const Footer = styled.div(({ theme }) => ({
-  position: "sticky",
+  position: "fixed",
   bottom: 0,
+  left: 0,
+  right: 0,
   marginLeft: theme.space.x1,
   marginRight: theme.space.x1,
   padding: theme.space.x2,
