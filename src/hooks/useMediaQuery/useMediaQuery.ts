@@ -1,6 +1,8 @@
 import { ThemeContext } from "styled-components";
 import React, { useCallback, useEffect, useState } from "react";
-import { Breakpoints } from "../../theme";
+import { DefaultNDSThemeType } from "../../theme";
+
+type Breakpoints = DefaultNDSThemeType["breakpoints"];
 
 type Query = keyof Breakpoints | (string & {});
 

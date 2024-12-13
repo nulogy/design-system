@@ -4,9 +4,11 @@ import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { FeatureFlags, useFeatureFlags } from "../NDSProvider/FeatureFlagsContext";
 import { mergeThemes } from "./mergeThemes.util";
 import { legacy, themes } from "./theme";
-import { Breakpoints, DefaultNDSThemeType, ThemeType } from "./theme.type";
+import { DefaultNDSThemeType, ThemeType } from "./theme.type";
 
 const THEME_VARIANTS: ReadonlySet<ComponentVariant> = new Set(["desktop", "touch"]);
+
+type Breakpoints = DefaultNDSThemeType["breakpoints"];
 
 export const buildBreakPoints = (breakpointsConfig: Readonly<Breakpoints>) => ({
   ...breakpointsConfig,

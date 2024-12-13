@@ -1,6 +1,6 @@
 import React from "react";
-import { Text, Box, Flex, Heading3 } from "..";
 import { useTheme } from "styled-components";
+import { Text, Box, Flex, Heading3 } from "..";
 
 export default {
   title: "Tokens",
@@ -40,7 +40,7 @@ export const FontSizes = () => {
   return (
     <Box>
       {Object.keys(theme.fontSizes).map((fontSize) => (
-        <Text mb="x2" fontSize={fontSize}>
+        <Text key={fontSize} mb="x2" fontSize={fontSize}>
           {fontSize}: {theme.fontSizes[fontSize]}
         </Text>
       ))}
@@ -74,7 +74,7 @@ export const FontWeights = () => {
   return (
     <Box>
       {Object.keys(theme.fontWeights).map((fontWeight) => (
-        <Text mb="x2" fontWeight={fontWeight}>
+        <Text key={fontWeight} mb="x2" fontWeight={fontWeight}>
           {fontWeight}: {theme.fontWeights[fontWeight]}
         </Text>
       ))}
@@ -88,7 +88,7 @@ export const SpaceAndSize = () => {
   return (
     <Box>
       {Object.keys(theme.space).map((space) => (
-        <Flex mb="x2" alignItems="center" width="300px">
+        <Flex key={space} mb="x2" alignItems="center" width="300px">
           <Flex width="80px" justifyContent="flex-end" mr="x1">
             <Box bg="lightGrey" height={space} width={space} />
           </Flex>
@@ -106,7 +106,7 @@ export const Font = () => {
   return (
     <Box>
       {Object.keys(theme.fonts).map((font) => (
-        <Text mb="x2" fontFamily={font}>
+        <Text key={font} mb="x2" fontFamily={font}>
           {font}: {theme.fonts[font]}
         </Text>
       ))}
@@ -119,7 +119,7 @@ export const Shadows = () => {
   return (
     <Box>
       {Object.keys(theme.shadows).map((shadow) => (
-        <Box mb="x2" p="x1" borderRadius="small" boxShadow={shadow}>
+        <Box key={shadow} mb="x2" p="x1" borderRadius="small" boxShadow={shadow}>
           {shadow}: {theme.shadows[shadow]}
         </Box>
       ))}
@@ -133,6 +133,7 @@ export const Radii = () => {
     <Flex maxWidth="300px" flexDirection="column" alignItems="center">
       {Object.keys(theme.radii).map((radius) => (
         <Flex
+          key={radius}
           mb="x2"
           p="x1"
           borderRadius={radius}
@@ -157,7 +158,7 @@ export const Breakpoints = () => {
       {Object.keys(theme.breakpoints)
         .filter((bp) => bp !== "map")
         .map((breakpoint) => (
-          <Text mb="x2">
+          <Text mb="x2" key={breakpoint}>
             {breakpoint}: {theme.breakpoints[breakpoint]}
           </Text>
         ))}
