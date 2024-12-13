@@ -1,3 +1,16 @@
+# [12.1.0](https://github.com/nulogy/design-system/compare/v12.0.0...v12.1.0) (2024-12-13)
+
+
+### Bug Fixes
+
+* export TopBar ([104b4dc](https://github.com/nulogy/design-system/commit/104b4dc1e0bf592fc1b7e92c85c9b1530d8be765))
+* layout, visual and API issues with the DescriptionList ([a52f836](https://github.com/nulogy/design-system/commit/a52f836d66e7372fa67f107fc55cd1c1ad6dc8c3))
+
+
+### Features
+
+* Add a DescriptionList component ([92a6a51](https://github.com/nulogy/design-system/commit/92a6a514829e5275db1eecf605e50162406127a3))
+
 # [12.0.0](https://github.com/nulogy/design-system/compare/v11.3.1...v12.0.0) (2024-12-13)
 
 
