@@ -1,3 +1,26 @@
+# [12.0.0](https://github.com/nulogy/design-system/compare/v11.3.1...v12.0.0) (2024-12-13)
+
+
+### Bug Fixes
+
+* increase chromatic delay for bottomSheet ([85d95a7](https://github.com/nulogy/design-system/commit/85d95a714aad8ccad4660c59e5c7d902885d46bc))
+* prefix Pseudo-classes with an ampersand ([cf17a6e](https://github.com/nulogy/design-system/commit/cf17a6e72ebd118fd5594b6ea2df55d9ee44cb19))
+
+
+### Features
+
+* upgrade to styled components version 6 ([a099133](https://github.com/nulogy/design-system/commit/a099133f5b0a0e1e6bd1206d712bd7ab09f2f5a0)), closes [/styled-components.com/docs/faqs#what-do-i-need-to-do-to-migrate-to-v6](https://github.com//styled-components.com/docs/faqs/issues/what-do-i-need-to-do-to-migrate-to-v6)
+
+
+### BREAKING CHANGES
+
+* styled-components peer dependency bumped up to v6
+
+NDS was upgraded with [re-enabled vendor prefixes](https://styled-components.com/docs/faqs#shouldforwardprop-is-no-longer-provided-by-default)
+and using a [StyleSheetManager to restore v5 behaviour for shouldForwardProp](https://styled-components.com/docs/faqs#shouldforwardprop-is-no-longer-provided-by-default)
+
+Follow the migration guide for app upgrades to v6
+
 ## [11.3.1](https://github.com/nulogy/design-system/compare/v11.3.0...v11.3.1) (2024-12-11)
 
 
