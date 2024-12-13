@@ -1,7 +1,6 @@
 # DescriptionList
 
-The DescriptionList component is a structured list that pairs terms with their descriptions, providing a clear way to display key-value information.
-The DescriptionList is ideal for displaying key-value pair information in a structured format organizing and explaining related information.
+The DescriptionList component is a structured list that pairs terms with their descriptions, providing a standardized way to display key-value pair information in a structured format organizing and explaining related information.
 
 ## Basic Usage
 
@@ -27,10 +26,11 @@ function MyComponent() {
 | `layout` | "stacked" \| "inline" \| "auto" | Controls the arrangement of terms and details | `"auto"` |
 | `density` | "compact" \| "medium" \| "relaxed" | Controls the spacing between items | `"medium"` |
 | `fontSize` | `keyof FontSizes` | Controls the text size | `"medium"` |
+| `lineHeight` | `keyof LineHeights` | Controls the text line height | `"base"` |
 | `showDivider` | boolean | Shows divider lines between items | `false` |
 | `descriptionTermMaxWidth` | string | Controls the maximum width of description terms | `"50%"` |
 | `autoLayoutBreakpoint` | string | Defines the container width at which the layout changes when layout is set to `auto` | `"640px"` |
-| `children` | ReactNode | Content to be displayed inside the list | - |
+| `children` | ReactNode | `DescriptionTerm` and `DescriptionDetails` to be placed inside the list | - |
 
 ## Accessibility
 

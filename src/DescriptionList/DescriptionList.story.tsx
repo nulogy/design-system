@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex } from "../Flex";
-import { Heading4 } from "../Type";
+import { Heading4, Text } from "../Type";
 import { Link } from "../Link";
 import { Icon } from "../Icon";
 import { StatusIndicator } from "../StatusIndicator";
@@ -16,9 +16,10 @@ const SampleContent = () => (
     <DescriptionTerm>Customer</DescriptionTerm>
     <DescriptionDetails>Nulogy</DescriptionDetails>
     <DescriptionTerm>
-      <Flex display="inlineFlex" as="span" alignItems="center" gap="half">
-        Order number <Icon icon="info" size="x2_5" />
-      </Flex>
+      <Text display="inline-flex" alignItems="end">
+        Order number
+        <Icon icon="info" size="x3" paddingLeft="half" />
+      </Text>
     </DescriptionTerm>
     <DescriptionDetails>
       <Link href="/customer-details">P12-90381-2039</Link>
@@ -38,37 +39,34 @@ const SampleContent = () => (
   </>
 );
 
-export function WithDifferentLayouts() {
+export function Layout() {
   return (
-    <Flex flexDirection="column" gap="x4">
+    <Flex flexDirection="column" gap="x8">
       <Flex flexDirection="column" gap="x1" flex="1">
         <Heading4>Auto Layout (Default)</Heading4>
         <DescriptionList layout="auto">
           <SampleContent />
         </DescriptionList>
       </Flex>
-      <Flex>
-        <Flex flexDirection="column" gap="x1" flex="1">
-          <Heading4>Stacked Layout</Heading4>
-          <DescriptionList layout="stacked">
-            <SampleContent />
-          </DescriptionList>
-        </Flex>
-
-        <Flex flexDirection="column" gap="x1" flex="1">
-          <Heading4>Inline Layout</Heading4>
-          <DescriptionList layout="inline">
-            <SampleContent />
-          </DescriptionList>
-        </Flex>
+      <Flex flexDirection="column" gap="x1" flex="1">
+        <Heading4>Stacked Layout</Heading4>
+        <DescriptionList layout="stacked">
+          <SampleContent />
+        </DescriptionList>
+      </Flex>
+      <Flex flexDirection="column" gap="x1" flex="1">
+        <Heading4>Inline Layout</Heading4>
+        <DescriptionList layout="inline">
+          <SampleContent />
+        </DescriptionList>
       </Flex>
     </Flex>
   );
 }
 
-export function WithDifferentDensities() {
+export function Density() {
   return (
-    <Flex gap="x4" flexDirection="column">
+    <Flex gap="x8" flexDirection="column">
       <Flex flexDirection="column" gap="x1">
         <Heading4>Compact Density</Heading4>
         <Flex>
@@ -108,9 +106,9 @@ export function WithDifferentDensities() {
   );
 }
 
-export function WithDifferentFontSizes() {
+export function FontSize() {
   return (
-    <Flex gap="x4">
+    <Flex gap="x8">
       <Flex flexDirection="column" gap="x1" flexBasis="100%">
         <Heading4>Smaller Font Size</Heading4>
         <DescriptionList fontSize="smaller">
@@ -135,9 +133,9 @@ export function WithDifferentFontSizes() {
   );
 }
 
-export function WithDividers() {
+export function Divider() {
   return (
-    <Flex gap="x4">
+    <Flex gap="x8">
       <Flex flexDirection="column" gap="x1" flexBasis="100%">
         <Heading4>With Dividers (Stacked layout)</Heading4>
         <DescriptionList showDivider layout="stacked">
@@ -154,9 +152,9 @@ export function WithDividers() {
   );
 }
 
-export function WithCustomBreakpoints() {
+export function AutoLayoutCustomBreakpoint() {
   return (
-    <Flex gap="x4" flexDirection="column">
+    <Flex gap="x8" flexDirection="column">
       <Flex flexDirection="column" gap="x1">
         <Heading4>Auto layout custom breakpoint (800px)</Heading4>
         <DescriptionList layout="auto" autoLayoutBreakpoint="800px">
@@ -167,9 +165,9 @@ export function WithCustomBreakpoints() {
   );
 }
 
-export function WithCustomDescriptionTermWidth() {
+export function CustomDescriptionTermWidth() {
   return (
-    <Flex gap="x4" flexDirection="column">
+    <Flex gap="x8" flexDirection="column">
       <Flex flexDirection="column" gap="x1">
         <Heading4>Custom description term max-width (33.33%)</Heading4>
         <DescriptionList layout="inline" descriptionTermMaxWidth="30%">
@@ -194,19 +192,24 @@ export function WithCustomDescriptionTermWidth() {
 
 export function CombinedFeatures() {
   return (
-    <Flex gap="x4" flexDirection="column">
+    <Flex gap="x8" flexDirection="column">
       <Flex flexDirection="column" gap="x1">
         <Heading4>
-          Auto Layout + Dividers + Compact Density + Small Font + 40% Term Width + 720px auto layout breakpoint
+          Auto Layout, divider, compact density, small font, 40% term width, 720px auto layout breakpoint
         </Heading4>
         <DescriptionList
-          layout="auto"
           showDivider
           density="compact"
           fontSize="small"
           descriptionTermMaxWidth="40%"
           autoLayoutBreakpoint="720px"
         >
+          <SampleContent />
+        </DescriptionList>
+      </Flex>
+      <Flex flexDirection="column" gap="x1">
+        <Heading4>Stacked, no dividers, relaxed, large font</Heading4>
+        <DescriptionList layout="stacked" density="relaxed" fontSize="large">
           <SampleContent />
         </DescriptionList>
       </Flex>
