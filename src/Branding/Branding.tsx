@@ -1,10 +1,10 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
 import { Flex } from "../Flex";
+import { DefaultNDSThemeType } from "../theme";
 import BrandingText from "./BrandingText";
 import LettermarkLogo from "./LettermarkLogo";
 import WordmarkLogo from "./WordmarkLogo";
-import { DefaultNDSThemeType } from "../theme";
 
 type BrandingProps = {
   logoType?: "wordmark" | "lettermark";
@@ -57,7 +57,7 @@ const BrandingWrap = styled.div<{ size: string; alignment: Alignment }>(({ align
 const Line = styled.div<{ logoColor: "white" | "blue" }>(({ logoColor, theme }) => ({
   position: "relative",
   width: "100%",
-  ":before": {
+  "&:before": {
     content: "''",
     position: "absolute",
     top: "50%",

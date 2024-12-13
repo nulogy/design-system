@@ -38,7 +38,7 @@ const NavBarSearch = styled(BaseNavBarSearch)(({ theme }) => ({
     border: "solid 1px transparent",
     borderRadius: theme.radii.medium,
     minWidth: theme.space.x5,
-    ":focus": {
+    "&:focus": {
       color: theme.colors.white,
       background: darken(0.1, theme.colors.blue),
       border: `solid 1px ${theme.colors.lightBlue}`,
@@ -54,7 +54,7 @@ const NavBarSearch = styled(BaseNavBarSearch)(({ theme }) => ({
     background: "transparent",
     border: "solid 1px transparent",
     borderRadius: theme.radii.medium,
-    ":focus": {
+    "&:focus": {
       background: theme.colors.white,
       border: "solid 1px transparent",
       boxShadow: "none",

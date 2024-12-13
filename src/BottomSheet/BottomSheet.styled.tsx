@@ -37,7 +37,7 @@ const Sheet = styled(motion(ReachDialogContent)).withConfig({
   shouldForwardProp: excludeStyledProps(...styleFns),
 })<SheetProps>(
   ({ theme }) => ({
-    ":focus": {
+    "&:focus": {
       outline: "none",
     },
     inset: 0,
