@@ -1,3 +1,10 @@
+# [12.2.0](https://github.com/nulogy/design-system/compare/v12.1.0...v12.2.0) (2024-12-13)
+
+
+### Features
+
+* re-export NDS themes to be used as an escape hatch ([0a5ddf4](https://github.com/nulogy/design-system/commit/0a5ddf472afa6d878911f0d02081156a039365ce))
+
 # [12.1.0](https://github.com/nulogy/design-system/compare/v12.0.0...v12.1.0) (2024-12-13)
 
 
