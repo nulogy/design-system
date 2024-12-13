@@ -27,7 +27,7 @@ const StyledReactModal = styled(ReactModal)(
     maxWidth,
   }),
   ({ theme }): CSSObject => ({
-    ":focus": {
+    "&:focus": {
       outline: "none",
     },
     display: "flex",

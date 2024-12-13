@@ -139,8 +139,8 @@ const BaseDesktopMenu = React.forwardRef<HTMLElement, DesktopMenuProps>(
 );
 
 const DesktopMenu = styled(BaseDesktopMenu)({
-  "> div": {
-    ":not(:last-of-type)": {
+  "& > div": {
+    "&:not(:last-of-type)": {
       marginRight: "8px",
     },
   },

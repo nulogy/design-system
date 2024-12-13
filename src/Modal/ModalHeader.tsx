@@ -13,7 +13,7 @@ const ModalHeader = styled.div<{
   backgroundColor: transparentize(0.1, theme.colors.white),
   zIndex: theme.zIndices.modalHeaderAndFooter,
   borderRadius: `${theme.radii.medium} ${theme.radii.medium} 0 0`,
-  ":after": {
+  "&:after": {
     content: "''",
     position: "absolute",
     bottom: 0,

@@ -95,7 +95,7 @@ const InputWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   display: "flex",
   flexGrow: 1,
 
-  ":focus-within": {
+  "&:focus-within": {
     svg: {
       color: theme.colors.darkBlue,
     },
