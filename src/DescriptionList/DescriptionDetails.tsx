@@ -5,22 +5,39 @@ export const DescriptionDetails = styled.dd(({ theme }) => {
   const { autoLayoutBreakpoint, showDivider, density, layout } = useDescriptionListContext();
 
   return {
+    // narrow stuff + non-auto layout
     margin: 0,
+    color: theme.colors.black,
     paddingLeft: theme.space.none,
     paddingRight: theme.space.none,
-    color: theme.colors.darkGrey,
+
+    ...(layout !== "inline" && {
+      paddingTop: theme.space.none,
+    }),
 
     ...(density === "compact" && {
-      paddingTop: theme.space.x0_25,
       paddingBottom: theme.space.x0_25,
+
+      ...(layout === "inline" && {
+        paddingTop: theme.space.x0_25,
+      }),
     }),
+
     ...(density === "medium" && {
-      paddingTop: theme.space.x0_75,
       paddingBottom: theme.space.x0_75,
+
+      ...(layout === "inline" && {
+        paddingTop: theme.space.x0_75,
+      }),
     }),
+
     ...(density === "relaxed" && {
-      paddingTop: theme.space.x1_5,
       paddingBottom: theme.space.x1_5,
+      paddingTop: theme.space.x0_25,
+
+      ...(layout === "inline" && {
+        paddingTop: theme.space.x1_5,
+      }),
     }),
 
     ...(showDivider &&
@@ -30,7 +47,12 @@ export const DescriptionDetails = styled.dd(({ theme }) => {
         borderTopColor: theme.colors.lightGrey,
       }),
 
+    "&:nth-child(2)": {
+      border: "none",
+    },
+
     [`@container (min-width: ${autoLayoutBreakpoint})`]: {
+      // wide auto layout
       ...(showDivider &&
         layout !== "stacked" && {
           borderTopWidth: "1px",
@@ -38,9 +60,18 @@ export const DescriptionDetails = styled.dd(({ theme }) => {
           borderTopColor: theme.colors.lightGrey,
         }),
 
-      "&:nth-child(2)": {
-        border: "none",
-      },
+      ...(density === "compact" &&
+        layout !== "stacked" && {
+          paddingTop: theme.space.x0_25,
+        }),
+      ...(density === "medium" &&
+        layout !== "stacked" && {
+          paddingTop: theme.space.x0_75,
+        }),
+      ...(density === "relaxed" &&
+        layout !== "stacked" && {
+          paddingTop: theme.space.x1_5,
+        }),
     },
   };
 });

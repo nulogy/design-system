@@ -7,6 +7,7 @@ export interface DescriptionListConfig {
   showDivider?: boolean;
   density?: "medium" | "compact" | "relaxed";
   fontSize?: keyof DefaultNDSThemeType["fontSizes"];
+  lineHeight?: keyof DefaultNDSThemeType["lineHeights"];
   autoLayoutBreakpoint?: string;
 }
 

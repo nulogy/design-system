@@ -11,6 +11,7 @@ export function DescriptionList({
   showDivider = false,
   density = "medium",
   fontSize = "medium",
+  lineHeight = "base",
   autoLayoutBreakpoint = "640px",
   children,
 }: Props) {
@@ -21,6 +22,7 @@ export function DescriptionList({
       showDivider={showDivider}
       density={density}
       fontSize={fontSize}
+      lineHeight={lineHeight}
       autoLayoutBreakpoint={autoLayoutBreakpoint}
     >
       <DescriptionListContainer>
@@ -36,13 +38,13 @@ export const DescriptionListContainer = styled.div({
 });
 
 export const StyledDescriptionList = styled.dl(({ theme }) => {
-  const { descriptionTermMaxWidth, layout, fontSize, autoLayoutBreakpoint } = useDescriptionListContext();
+  const { descriptionTermMaxWidth, layout, fontSize, lineHeight, autoLayoutBreakpoint } = useDescriptionListContext();
 
   return {
     margin: 0,
     display: "grid",
     fontSize: theme.fontSizes[fontSize] ?? theme.fontSizes.medium,
-    lineHeight: theme.lineHeights.base,
+    lineHeight: theme.lineHeights[lineHeight] ?? theme.lineHeights.base,
 
     ...(layout === "inline" && {
       gridTemplateColumns: `minmax(0, ${descriptionTermMaxWidth}) auto`,
