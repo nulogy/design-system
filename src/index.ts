@@ -33,6 +33,7 @@ export { Card, CardSet } from "./Card";
 export { Checkbox, CheckboxGroup } from "./Checkbox";
 export { DatePicker } from "./DatePicker";
 export { DateRange } from "./DateRange";
+export { DescriptionDetails, DescriptionList, DescriptionTerm } from "./DescriptionList";
 export { Divider } from "./Divider";
 export { DropdownButton, DropdownItem, DropdownLink, DropdownMenu, DropdownText } from "./DropdownMenu";
 export { FieldLabel, HelpText, RequirementText } from "./FieldLabel";
