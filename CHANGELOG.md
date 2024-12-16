@@ -1,3 +1,10 @@
+## [12.2.1](https://github.com/nulogy/design-system/compare/v12.2.0...v12.2.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* export DescriptionList ([31bc808](https://github.com/nulogy/design-system/commit/31bc8084adce5f42b4dbbc08ec446910f43e1322))
+
 # [12.2.0](https://github.com/nulogy/design-system/compare/v12.1.0...v12.2.0) (2024-12-13)
 
 
