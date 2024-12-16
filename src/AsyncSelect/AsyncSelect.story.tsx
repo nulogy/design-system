@@ -22,10 +22,6 @@ export const Default = () => (
   />
 );
 
-Default.story = {
-  name: "default",
-};
-
 export const WithDefaultOptions = () => (
   <AsyncSelect
     placeholder="Enter a province"
@@ -147,6 +143,16 @@ export const Controlled = () => {
   );
 };
 
-Controlled.story = {
-  name: "controlled",
-};
+export const WithIcon = () => (
+  <AsyncSelect
+    iconLeft="search"
+    placeholder="Search for a province"
+    onChange={action("selection changed")}
+    onBlur={action("blurred")}
+    className="Select"
+    classNamePrefix="SelectTest"
+    labelText="Province"
+    onInputChange={action("typed input value changed")}
+    loadOptions={loadMatchingProvinces}
+  />
+);

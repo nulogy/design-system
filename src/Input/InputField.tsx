@@ -11,6 +11,7 @@ import type { DefaultNDSThemeType } from "../theme";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
+import { InputIcon } from "../Icon/Icon";
 
 type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size" | "height" | "width">;
 
@@ -67,7 +68,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
         <Flex alignItems="flex-start">
           <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
           <InputWrapper maxWidth={inputWidth}>
-            {iconLeft && <StyledInputIcon left="x1" icon={iconLeft} size={iconLeftSize} variant={variant} />}
+            {iconLeft && <InputIcon left="x1" icon={iconLeft} size={iconLeftSize} />}
             <StyledInput
               paddingLeft={iconLeft ? `calc(${theme.space[iconLeftSize]} + ${theme.space.x1_5})` : theme.space.x1}
               paddingRight={iconRight ? `calc(${theme.space[iconRightSize]} + ${theme.space.x1_5})` : theme.space.x1}
@@ -81,7 +82,7 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
               inputWidth={inputWidth}
               {...props}
             />
-            {iconRight && <StyledInputIcon right="x1" icon={iconRight} size={iconRightSize} variant={variant} />}
+            {iconRight && <InputIcon right="x1" icon={iconRight} size={iconRightSize} />}
           </InputWrapper>
           <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
         </Flex>
@@ -141,17 +142,6 @@ const StyledInput = styled.input<StyledInputProps>(
   }),
   ({ disabled, error, theme }) => cssForState({ disabled, error, theme }),
   space
-);
-
-const StyledInputIcon = styled(Icon)<{ variant: ComponentVariant } & PositionProps>(
-  ({ theme }) => ({
-    position: "absolute",
-    color: theme.colors.midGrey,
-    bottom: "50%",
-    transform: "translateY(50%)",
-    pointerEvents: "none",
-  }),
-  position
 );
 
 const cssForState = ({

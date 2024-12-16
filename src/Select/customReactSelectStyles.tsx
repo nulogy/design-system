@@ -96,6 +96,7 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
   error,
   maxHeight,
   windowed,
+  hasIcon,
   variant,
   hasDefaultOptions = true,
 }) => {
@@ -169,6 +170,9 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
           theme,
         }),
       },
+      ...(hasIcon && {
+        paddingLeft: `calc(${theme.space.x3} + ${theme.space.x1_5})`,
+      }),
     }),
     dropdownIndicator: (provided) => ({
       ...provided,
