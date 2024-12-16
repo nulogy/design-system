@@ -1,3 +1,10 @@
+# [12.3.0](https://github.com/nulogy/design-system/compare/v12.2.1...v12.3.0) (2024-12-16)
+
+
+### Features
+
+* add iconLeft prop to AsyncSelect ([4c5d1a7](https://github.com/nulogy/design-system/commit/4c5d1a77fb7fda346f827116ae755cd22eb8c1c0))
+
 ## [12.2.1](https://github.com/nulogy/design-system/compare/v12.2.0...v12.2.1) (2024-12-16)
 
 
