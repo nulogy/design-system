@@ -14,12 +14,17 @@ import type { OptionProps } from "react-windowed-select";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { StyledOption } from "../Select/SelectOption";
+import { IconName } from "@nulogy/icons";
+import { InputIcon } from "../Icon/Icon";
 
-export const SelectControl = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
-  props: ControlProps<Option, IsMulti, Group>
-) => {
-  // eslint-disable-next-line react/prop-types
-  const { isFocused } = props;
+export const SelectControl = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>({
+  iconLeft,
+  isFocused,
+  children,
+  ...props
+}: ControlProps<Option, IsMulti, Group> & {
+  iconLeft?: IconName | "loading";
+}) => {
   return (
     <div data-testid="select-control">
       <selectComponents.Control
@@ -27,7 +32,8 @@ export const SelectControl = <Option, IsMulti extends boolean, Group extends Gro
         isFocused={isFocused}
         {...props}
       >
-        {props.children}
+        {iconLeft && <InputIcon left="x1" icon={iconLeft} size="x3" />}
+        {children}
       </selectComponents.Control>
     </div>
   );

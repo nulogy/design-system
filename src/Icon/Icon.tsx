@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
-import { space, SpaceProps } from "styled-system";
+import { position, PositionProps, space, SpaceProps } from "styled-system";
 import icons from "@nulogy/icons";
 import { IconName } from "@nulogy/icons";
 import LoadingIcon from "./LoadingIcon";
@@ -100,5 +100,16 @@ export function InlineIcon(props: IconProps) {
     </IconContainer>
   );
 }
+
+export const InputIcon = styled(Icon)<PositionProps>(
+  ({ theme }) => ({
+    position: "absolute",
+    color: theme.colors.midGrey,
+    bottom: "50%",
+    transform: "translateY(50%)",
+    pointerEvents: "none",
+  }),
+  position
+);
 
 export default Icon;

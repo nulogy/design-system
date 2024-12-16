@@ -1,4 +1,5 @@
 import React, { forwardRef, ReactNode, MutableRefObject } from "react";
+import { IconName } from "@nulogy/icons";
 import Select from "react-select/base";
 import AsyncReactSelect from "react-select/async";
 import { AsyncProps } from "react-select/async";
@@ -36,6 +37,7 @@ type AsyncCustomProps<Option, IsMulti extends boolean, Group extends GroupBase<O
   multiselect?: AsyncProps<Option, IsMulti, Group>["isMulti"];
   maxHeight?: string;
   defaultValue?: AsyncProps<Option, IsMulti, Group>["defaultInputValue"];
+  iconLeft?: IconName | "loading";
 };
 
 export type AsyncSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>> = Omit<
@@ -80,6 +82,7 @@ const AsyncSelect = forwardRef(
       loadOptions,
       isClearable,
       variant,
+      iconLeft,
       ...props
     }: AsyncSelectProps<Option, IsMulti, Group>,
     ref:
@@ -106,6 +109,7 @@ const AsyncSelect = forwardRef(
             defaultInputValue={defaultValue}
             placeholder={placeholder || t("start typing")}
             styles={customStyles<Option, IsMulti, Group>({
+              hasIcon: Boolean(iconLeft),
               theme,
               error,
               maxHeight,
@@ -135,7 +139,11 @@ const AsyncSelect = forwardRef(
                   {props.children}
                 </SelectOption>
               ),
-              Control: SelectControl,
+              Control: (props) => (
+                <SelectControl iconLeft={iconLeft} {...props}>
+                  {props.children}
+                </SelectControl>
+              ),
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,
               DropdownIndicator: SelectDropdownIndicator,
