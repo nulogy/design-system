@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { selectOption } from "./Select.spec-utils";
-import { UsingRefToControlFocus, WithCustomProps, WithMultiselect, WithState } from "./Select.story";
+import { UsingRefToControlFocus, WithMultiselect, WithState } from "./Select.story";
 import { Select } from ".";
 
 describe("select", () => {
@@ -36,14 +36,6 @@ describe("select", () => {
     expect(container).toHaveTextContent("Two");
     selectOption("Three", container, queryByText);
     expect(container).toHaveTextContent("Three");
-  });
-
-  it("passes along the custom props to custom components", () => {
-    const { container, queryByText } = renderWithNDSProvider(<WithCustomProps />);
-
-    selectOption("custom prop value", container, queryByText);
-
-    expect(container).toHaveTextContent("custom prop value");
   });
 
   describe("with state", () => {

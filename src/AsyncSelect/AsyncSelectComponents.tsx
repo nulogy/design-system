@@ -10,11 +10,11 @@ import {
   MultiValueProps,
 } from "react-select";
 import { components, GroupBase } from "react-select";
-import type { OptionProps } from "react-windowed-select";
+import { OptionProps } from "react-select";
+import { IconName } from "@nulogy/icons";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { StyledOption } from "../Select/SelectOption";
-import { IconName } from "@nulogy/icons";
 import { InputIcon } from "../Icon/Icon";
 
 export const SelectControl = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>({

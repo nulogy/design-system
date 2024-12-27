@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import { components, OptionProps } from "react-windowed-select";
+import { components, GroupBase, OptionProps } from "react-select";
 import { typography } from "styled-system";
 import { subPx } from "../utils";
-import { variant } from "../StyledProps";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { variant } from "../StyledProps";
+import { NDSOption } from "./Select";
 
-type SelectOptionProps = {
+type StyledOptionProps = {
   isSelected: boolean;
   isFocused: boolean;
   variant: ComponentVariant;
 };
 
-export const StyledOption = styled.div<SelectOptionProps>(
+export const StyledOption = styled.div<StyledOptionProps>(
   typography,
   ({ isSelected, isFocused, theme }) => ({
     "&:last-child": {
@@ -50,11 +51,19 @@ export const StyledOption = styled.div<SelectOptionProps>(
     })
 );
 
-interface CustomOptionProps extends OptionProps {
+export type SelectOptionProps<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+> = OptionProps<Option, IsMulti, Group> & {
   variant?: ComponentVariant;
-}
+};
 
-export function SelectOption(props: CustomOptionProps) {
+export function SelectOption<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: SelectOptionProps<Option, IsMulti, Group>) {
   const variant = useComponentVariant(props.variant);
 
   return (
