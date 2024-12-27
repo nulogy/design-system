@@ -1,64 +1,100 @@
 import React from "react";
-import { components as selectComponents } from "react-windowed-select";
+import {
+  ClearIndicatorProps,
+  ContainerProps,
+  ControlProps,
+  DropdownIndicatorProps,
+  InputProps,
+  MenuProps,
+  MultiValueProps,
+  GroupBase,
+  components,
+} from "react-select";
+import { NDSOption } from "./Select";
 
-export const SelectControl = (props) => {
-  // eslint-disable-next-line react/prop-types
+export function SelectControl<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: ControlProps<Option, IsMulti, Group>) {
   const { isFocused } = props;
   return (
     <div data-testid="select-control">
-      <selectComponents.Control
-        className={isFocused ? "nds-select--is-focused" : null}
-        isFocused={isFocused}
-        {...props}
-      />
+      <components.Control className={isFocused ? "nds-select--is-focused" : null} isFocused={isFocused} {...props}>
+        {props.children}
+      </components.Control>
     </div>
   );
-};
+}
 
-export const SelectMultiValue = (props) => {
+export function SelectMultiValue<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: MultiValueProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-multivalue">
-      <selectComponents.MultiValue {...props} />
+      <components.MultiValue {...props}>{props.children}</components.MultiValue>
     </div>
   );
-};
+}
 
-export const SelectClearIndicator = (props) => {
+export function SelectClearIndicator<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: ClearIndicatorProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-clear">
-      <selectComponents.ClearIndicator {...props} />
+      <components.ClearIndicator {...props} />
     </div>
   );
-};
+}
 
-export const SelectDropdownIndicator = (props) => {
+export function SelectDropdownIndicator<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: DropdownIndicatorProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-arrow">
-      <selectComponents.DropdownIndicator {...props} />
+      <components.DropdownIndicator {...props} />
     </div>
   );
-};
+}
 
-export const SelectMenu = (props) => {
+export function SelectMenu<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: MenuProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-dropdown">
-      <selectComponents.Menu {...props} />
+      <components.Menu {...props}>{props.children}</components.Menu>
     </div>
   );
-};
+}
 
-export const SelectContainer = (props) => {
+export function SelectContainer<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: ContainerProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-container">
-      <selectComponents.SelectContainer {...props} />
+      <components.SelectContainer {...props}>{props.children}</components.SelectContainer>
     </div>
   );
-};
+}
 
-export const SelectInput = (props) => {
+export function SelectInput<
+  Option = NDSOption,
+  IsMulti extends boolean = boolean,
+  Group extends GroupBase<Option> = GroupBase<Option>
+>(props: InputProps<Option, IsMulti, Group>) {
   return (
     <div data-testid="select-input">
-      <selectComponents.Input {...props} />
+      <components.Input {...props}>{props.children}</components.Input>
     </div>
   );
-};
+}

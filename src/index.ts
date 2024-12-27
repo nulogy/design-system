@@ -63,6 +63,10 @@ export {
   SelectMenu,
   SelectMultiValue,
   SelectOption,
+  type SelectOptionProps,
+  type NDSOption,
+  type NDSOptionValue,
+  type NDSSelectProps,
 } from "./Select";
 export { SortingTable } from "./SortingTable";
 export { StatusIndicator, StatusIndicatorValues } from "./StatusIndicator";

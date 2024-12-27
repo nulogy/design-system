@@ -1,70 +1,22 @@
+import React, { useEffect, useRef, useState } from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs";
-import React, { useEffect, useRef, useState } from "react";
-import { GroupBase, OptionProps } from "react-windowed-select";
-import styled from "styled-components";
+import { PropsValue } from "react-select";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
-import { Button, Select, SelectOption, StatusIndicator, Text } from "../index";
-import { NDSSelectProps } from "./Select";
+import { Button } from "../index";
+import Select, { NDSOptionValue, NDSSelectProps } from "./Select";
+import {
+  CustomOption,
+  getPhotos,
+  options,
+  partnerCompanyName,
+  wrappingOptions,
+  PCNList,
+  errorList,
+} from "./Select.story.fixture";
 
-const errorList = ["Error message 1", "Error message 2"];
-
-const options = [
-  { value: "accepted", label: "Accepted" },
-  { value: "assigned", label: "Assigned to a line" },
-  { value: "hold", label: "On hold" },
-  { value: "rejected", label: "Rejected" },
-  { value: "open", label: "Open" },
-  { value: "progress", label: "In progress" },
-  { value: "quarantine", label: "In quarantine" },
-];
-
-const partnerCompanyName = [
-  { value: "2", label: "PCN2 12387387484895884957848576867587685780" },
-  { value: "4", label: "PCN4 12387387484895884957848576867587685780" },
-  { value: "1", label: "PCN1 12387387484895884957848576867587685780" },
-  { value: "9", label: "PCN9 12387387484895884957848576867587685780" },
-  { value: "7", label: "PCN7 12387387484895884957848576867587685780" },
-  { value: "6", label: "PCN6 12387387484895884957848576867587685780" },
-  { value: "3", label: "PCN3 12387387484895884957848576867587685780e" },
-];
-
-const wrappingOptions = [
-  {
-    value: "onestring",
-    label:
-      "Onelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstringonelongstring",
-  },
-  {
-    value: "manywords",
-    label:
-      "Many words many words many words many words many words many words many words many words many words many words many words many words many words",
-  },
-];
-
-const PCNList = [
-  { value: "2", label: "PCN2" },
-  { value: "4", label: "PCN4" },
-  { value: "1", label: "PCN1" },
-  { value: "9", label: "PCN9" },
-];
-
-const getPhotos = async () => {
-  // returns 5000 items
-  const data = await fetch("https://jsonplaceholder.typicode.com/photos");
-  const json = await data.json();
-  const results = json.map(({ title, id }) => ({
-    label: title,
-    value: id,
-  }));
-  return results;
-};
-
-const SelectWithManyOptions = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>({
-  multiselect,
-  labelText,
-}: Pick<NDSSelectProps<Option, IsMulti, Group>, "multiselect" | "labelText">) => {
+const SelectWithManyOptions = ({ multiselect, labelText, ...props }: Partial<NDSSelectProps>) => {
   const [photoList, setPhotoList] = useState([]);
 
   const setOptions = async () => {
@@ -76,35 +28,46 @@ const SelectWithManyOptions = <Option, IsMulti extends boolean, Group extends Gr
     setOptions();
   }, []);
 
-  return <Select multiselect={multiselect} options={photoList} labelText={labelText} />;
+  return <Select multiselect={multiselect} options={photoList} labelText={labelText} {...props} />;
 };
 
-function SelectWithState<Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
-  props: NDSSelectProps<Option, IsMulti, Group>
-) {
-  const [selectedValue, setSelectedValue] = useState("");
+type SelectWithStateProps = NDSSelectProps & {
+  selectedValue: string;
+};
 
-  function handleChange(selectedValue) {
-    setSelectedValue(selectedValue);
+class SelectWithState extends React.Component<SelectWithStateProps, { selectedValue: PropsValue<NDSOptionValue> }> {
+  constructor(props) {
+    super(props);
+
+    this.state = { selectedValue: "" };
+    this.handleChange = this.handleChange.bind(this);
+    this.clearSelection = this.clearSelection.bind(this);
   }
 
-  function clearSelection() {
-    setSelectedValue("");
+  handleChange(selectedValue: PropsValue<NDSOptionValue>) {
+    this.setState({ selectedValue });
   }
 
-  return (
-    <Flex flexDirection="column" gap="x2" alignItems="flex-start">
-      <Select
-        className="Select"
-        classNamePrefix="SelectTest"
-        onChange={handleChange}
-        value={selectedValue}
-        options={options}
-        {...props}
-      />
-      <Button onClick={clearSelection}>Clear selection</Button>
-    </Flex>
-  );
+  clearSelection() {
+    this.setState({ selectedValue: "" });
+  }
+
+  render() {
+    const { selectedValue } = this.state;
+    return (
+      <Flex flexDirection="column" gap="x2" alignItems="flex-start">
+        <Select
+          className="Select"
+          classNamePrefix="SelectTest"
+          onChange={this.handleChange}
+          value={selectedValue}
+          options={options}
+          {...this.props}
+        />
+        <Button onClick={this.clearSelection}>Clear selection</Button>
+      </Flex>
+    );
+  }
 }
 
 export default {
@@ -120,7 +83,6 @@ export const _Select = () => (
     closeMenuOnSelect={boolean("closeMenuOnSelect", true)}
     disabled={boolean("disabled", false)}
     defaultValue={select("defaultValue", [undefined, ...options.map(({ value }) => value)], undefined)}
-    error={boolean("error", false)}
     errorMessage={text("errorMessage", "")}
     labelText={text("labelText", "Inventory Status")}
     helpText={text("helpText", undefined)}
@@ -142,6 +104,21 @@ export const _Select = () => (
     onBlur={action("blurred")}
   />
 );
+
+export const WithStyledProps = () => {
+  return (
+    <Select
+      initialIsOpen
+      placeholder="Please select inventory status"
+      onChange={action("selection changed")}
+      onBlur={action("blurred")}
+      maxWidth="300px"
+      options={options}
+      labelText="Default size"
+      onInputChange={action("typed input value changed")}
+    />
+  );
+};
 
 export const WithABlankValue = () => {
   const optionsWithBlank = [{ value: null, label: "" }, ...options];
@@ -191,7 +168,12 @@ WithAnOptionSelected.story = {
 };
 
 export const WithState = () => (
-  <SelectWithState placeholder="Please select inventory status" options={options} labelText="Inventory status" />
+  <SelectWithState
+    selectedValue="foo"
+    placeholder="Please select inventory status"
+    options={options}
+    labelText="Inventory status"
+  />
 );
 
 WithState.story = {
@@ -407,7 +389,7 @@ WithCloseMenuOnSelectTurnedOff.story = {
 };
 
 export const TestMultiselectOverflow = () => (
-  <Flex gap="x2" flexDirection="column">
+  <>
     <Select
       defaultValue={["accepted", "assigned"]}
       noOptionsMessage={() => "No options"}
@@ -445,7 +427,7 @@ export const TestMultiselectOverflow = () => (
         onInputChange={action("typed input value changed")}
       />
     </Box>
-  </Flex>
+  </>
 );
 
 TestMultiselectOverflow.story = {
@@ -479,89 +461,28 @@ WithFixedPositioning.story = {
 };
 
 export const WithFetchedOptions = () => (
-  <Flex flexDirection="column" gap="x2" width="300px">
+  <Box style={{ width: "300px" }}>
     <SelectWithManyOptions labelText="Select from many options:" />
     <SelectWithManyOptions multiselect labelText="Multiselect many options:" />
-  </Flex>
+  </Box>
 );
 
 export const WithCustomOptionComponent = () => {
-  const Indicator = styled.span(() => ({
-    borderRadius: "25%",
-    background: "green",
-    lineHeight: "0",
-    display: "inline-block",
-    width: "10px",
-    height: "10px",
-    marginRight: "5px",
-  }));
-
-  const CustomOption = ({ children, ...props }: OptionProps) => {
-    const newChildren = (
-      <>
-        <Indicator />
-        {children}
-      </>
-    );
-    return <SelectOption {...props}>{newChildren}</SelectOption>;
-  };
-
   return (
-    <>
-      <Box position="relative" overflow="hidden" width="300px" height="600px">
-        <Select
-          defaultValue={["accepted"]}
-          noOptionsMessage={() => "No options"}
-          placeholder="Please select inventory status"
-          options={options}
-          components={{
-            Option: CustomOption,
-          }}
-          multiselect
-          labelText="Inventory status"
-          menuPosition="fixed"
-        />
-      </Box>
-    </>
-  );
-};
-
-const optionsWithMetadata = [
-  { value: "accepted", label: "Accepted", description: "Request has been reviewed and accepted", issues: 0 },
-  {
-    value: "assigned",
-    label: "Assigned to a line",
-    description: "Request has been assigned to a production line",
-    issues: 2,
-  },
-  { value: "hold", label: "On hold", description: "Request is temporarily paused", issues: 4 },
-  { value: "rejected", label: "Rejected", description: "Request has been reviewed and rejected", issues: 2 },
-  { value: "open", label: "Open", description: "New request awaiting review", issues: 5 },
-  { value: "progress", label: "In progress", description: "Request is actively being worked on", issues: 3 },
-  { value: "quarantine", label: "In quarantine", description: "Request requires additional verification", issues: 0 },
-];
-
-export const WithACustomSelectedOption = () => {
-  return (
-    <Select
-      defaultValue={["accepted"]}
-      placeholder="Please select inventory status"
-      labelText="Inventory status"
-      options={optionsWithMetadata}
-      getOptionLabel={({ label, issues, description }) => (
-        <Flex gap="x1" alignItems="center">
-          <Text fontSize="small" fontWeight="medium">
-            {label}
-          </Text>
-          <Text color="grey">|</Text>
-          <Text color="midGrey" fontSize="small">
-            {description}
-          </Text>
-
-          {issues > 0 && <StatusIndicator type={issues > 3 ? "warning" : "neutral"}>{issues} items</StatusIndicator>}
-        </Flex>
-      )}
-    />
+    <Box position="relative" overflow="hidden" width="300px" height="600px">
+      <Select
+        defaultValue={["accepted"]}
+        noOptionsMessage={() => "No options"}
+        placeholder="Please select inventory status"
+        options={options}
+        components={{
+          Option: CustomOption,
+        }}
+        multiselect
+        labelText="Inventory status"
+        menuPosition="fixed"
+      />
+    </Box>
   );
 };
 
@@ -576,7 +497,7 @@ export const UsingRefToControlFocus = () => {
   };
 
   return (
-    <Flex flexDirection="column" gap="x2">
+    <>
       <Select
         defaultValue={["accepted"]}
         noOptionsMessage={() => "No options"}
@@ -588,7 +509,7 @@ export const UsingRefToControlFocus = () => {
         menuPosition="fixed"
       />
       <Button onClick={handleClick}>Focus the Input</Button>
-    </Flex>
+    </>
   );
 };
 
@@ -600,26 +521,20 @@ export const WithTopMenuPlacement = () => {
   );
 };
 
-UsingRefToControlFocus.story = {
-  name: "using ref to control focus",
-};
-
-const CustomOption = (props) => {
-  return <SelectOption {...props}>{props.selectProps.myCustomProp}</SelectOption>;
-};
-
-const CustomSingleValue = ({ innerProps, ...props }) => {
-  return <div {...innerProps}>{props.selectProps.myCustomProp}</div>;
-};
-
-export const WithCustomProps = () => {
+export const WithCustomStyles = () => {
   return (
-    <>
-      <Select
-        options={[{ value: "accepted", label: "Accepted" }]}
-        myCustomProp="custom prop value"
-        components={{ Option: CustomOption, SingleValue: CustomSingleValue }}
-      />
-    </>
+    <Select
+      options={options}
+      menuPlacement="top"
+      styles={(styles) => {
+        return {
+          ...styles,
+          control: (provided, props) => ({
+            ...styles.control(provided, props),
+            border: "2px solid lightblue",
+          }),
+        };
+      }}
+    />
   );
 };
