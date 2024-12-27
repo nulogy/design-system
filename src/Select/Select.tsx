@@ -53,7 +53,7 @@ interface CustomProps<IsMulti extends boolean, Group extends GroupBase<NDSOption
 
 export type NDSSelectProps<
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<NDSOption> = GroupBase<NDSOption>
+  Group extends GroupBase<NDSOption> = GroupBase<NDSOption>,
 > = Omit<
   Props<NDSOption, IsMulti, Group>,
   keyof CustomProps<IsMulti, Group> | "isSearchable" | "isDisabled" | "defaultMenuIsOpen" | "isMulti" | "styles"

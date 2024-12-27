@@ -54,7 +54,7 @@ export const StyledOption = styled.div<StyledOptionProps>(
 export type SelectOptionProps<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 > = OptionProps<Option, IsMulti, Group> & {
   variant?: ComponentVariant;
 };
@@ -62,7 +62,7 @@ export type SelectOptionProps<
 export function SelectOption<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<Option> = GroupBase<Option>
+  Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: SelectOptionProps<Option, IsMulti, Group>) {
   const variant = useComponentVariant(props.variant);
 

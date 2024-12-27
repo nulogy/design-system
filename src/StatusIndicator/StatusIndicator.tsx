@@ -12,7 +12,7 @@ export const StatusIndicatorValues = {
   quiet: "quiet",
 } as const;
 
-export type StatusIndicatorType = typeof StatusIndicatorValues[keyof typeof StatusIndicatorValues];
+export type StatusIndicatorType = (typeof StatusIndicatorValues)[keyof typeof StatusIndicatorValues];
 
 const statusIndicatorStyles = (theme: DefaultNDSThemeType) => ({
   [StatusIndicatorValues.neutral]: {
