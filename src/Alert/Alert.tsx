@@ -15,7 +15,7 @@ export const NotificationTypes = {
   warning: "warning",
 } as const;
 
-export type NotificationType = typeof NotificationTypes[keyof typeof NotificationTypes];
+export type NotificationType = (typeof NotificationTypes)[keyof typeof NotificationTypes];
 
 export type AlertProps = FlexProps & {
   isCloseable?: boolean;
