@@ -14,6 +14,7 @@ import {
   wrappingOptions,
   PCNList,
   errorList,
+  CustomFieldsOption,
 } from "./Select.story.fixture";
 
 const SelectWithManyOptions = ({ multiselect, labelText, ...props }: Partial<NDSSelectProps>) => {
@@ -336,7 +337,7 @@ WithSmallerMaxHeight.story = {
 export const WithWrappingText = () => (
   <Select
     initialIsOpen
-    value={options[0].value}
+    value={wrappingOptions[0].value}
     placeholder="Please select inventory status"
     options={wrappingOptions}
     labelText="Inventory status"
@@ -535,6 +536,24 @@ export const WithCustomStyles = () => {
           }),
         };
       }}
+    />
+  );
+};
+
+export const WithCustomOptionFields = () => {
+  const descriptiveOptions = [
+    { value: "accepted", label: "Accepted", description: "This item has been accepted" },
+    { value: "assigned", label: "Assigned to a line", description: "This item is assigned to a production line" },
+  ];
+
+  return (
+    <Select
+      defaultValue={descriptiveOptions[0].value}
+      options={descriptiveOptions}
+      components={{
+        Option: CustomFieldsOption,
+      }}
+      labelText="Inventory status"
     />
   );
 };
