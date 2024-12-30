@@ -1,6 +1,6 @@
+import * as React from "react";
 import { Options, PropsValue } from "react-select";
 import { NDSOption, NDSOptionValue } from "./Select";
-import * as React from "react";
 
 export function calcOptionsLength(options) {
   options = options || [];

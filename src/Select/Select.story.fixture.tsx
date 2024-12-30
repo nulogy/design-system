@@ -1,4 +1,5 @@
 import React from "react";
+import { GroupBase } from "react-select";
 import styled from "styled-components";
 import { SelectOption, SelectOptionProps } from "./SelectOption";
 import { NDSOption } from "./Select";
@@ -65,7 +66,7 @@ const Indicator = styled.span(() => ({
   marginRight: "5px",
 }));
 
-export const CustomOption = ({ children, ...props }: SelectOptionProps) => {
+export const CustomOption = ({ children, ...props }: SelectOptionProps<NDSOption, true, GroupBase<NDSOption>>) => {
   const newChildren = (
     <>
       <Indicator />
@@ -73,4 +74,19 @@ export const CustomOption = ({ children, ...props }: SelectOptionProps) => {
     </>
   );
   return <SelectOption {...props}>{newChildren}</SelectOption>;
+};
+
+export interface DescriptiveOption extends NDSOption {
+  description: string;
+}
+
+export const CustomFieldsOption = ({
+  ...props
+}: SelectOptionProps<DescriptiveOption, true, GroupBase<DescriptiveOption>>) => {
+  return (
+    <SelectOption {...props}>
+      <span>{props.data.label}</span>
+      <span>{props.data.description}</span>
+    </SelectOption>
+  );
 };

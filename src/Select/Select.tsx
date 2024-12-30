@@ -31,37 +31,43 @@ export interface NDSOption {
   value: NDSOptionValue;
 }
 
-interface CustomProps<IsMulti extends boolean, Group extends GroupBase<NDSOption>> extends StyledProps {
-  autocomplete?: Props<NDSOption, IsMulti, Group>["isSearchable"];
+interface CustomProps<Option extends NDSOption, IsMulti extends boolean, Group extends GroupBase<Option>>
+  extends StyledProps {
+  autocomplete?: Props<Option, IsMulti, Group>["isSearchable"];
   labelText?: string;
   size?: ComponentVariant;
   requirementText?: string;
   helpText?: ReactNode;
-  disabled?: Props<NDSOption, IsMulti, Group>["isDisabled"];
+  disabled?: Props<Option, IsMulti, Group>["isDisabled"];
   errorMessage?: string;
   errorList?: string[];
-  initialIsOpen?: Props<NDSOption, IsMulti, Group>["defaultMenuIsOpen"];
-  multiselect?: Props<NDSOption, IsMulti, Group>["isMulti"];
+  initialIsOpen?: Props<Option, IsMulti, Group>["defaultMenuIsOpen"];
+  multiselect?: Props<Option, IsMulti, Group>["isMulti"];
   maxHeight?: string;
-  defaultValue?: PropsValue<NDSOptionValue>;
-  value?: PropsValue<NDSOptionValue>;
-  options: NDSOption[];
-  onChange?: (newValue: PropsValue<NDSOptionValue>) => void;
+  defaultValue?: PropsValue<Option["value"]>;
+  value?: PropsValue<Option["value"]>;
+  options: readonly Option[];
+  onChange?: (newValue: PropsValue<Option["value"]>) => void;
   windowThreshold?: number;
-  styles?: (selectStyles: StylesConfig<NDSOption, IsMulti, Group>) => StylesConfig<NDSOption, IsMulti, Group>;
+  styles?: (selectStyles: StylesConfig<Option, IsMulti, Group>) => StylesConfig<Option, IsMulti, Group>;
 }
 
 export type NDSSelectProps<
+  Option extends NDSOption = NDSOption,
   IsMulti extends boolean = boolean,
-  Group extends GroupBase<NDSOption> = GroupBase<NDSOption>,
+  Group extends GroupBase<Option> = GroupBase<Option>,
 > = Omit<
-  Props<NDSOption, IsMulti, Group>,
-  keyof CustomProps<IsMulti, Group> | "isSearchable" | "isDisabled" | "defaultMenuIsOpen" | "isMulti" | "styles"
+  Props<Option, IsMulti, Group>,
+  keyof CustomProps<Option, IsMulti, Group> | "isSearchable" | "isDisabled" | "defaultMenuIsOpen" | "isMulti" | "styles"
 > &
-  CustomProps<IsMulti, Group>;
+  CustomProps<Option, IsMulti, Group>;
 
 const NDSSelect = forwardRef(
-  <IsMulti extends boolean = boolean, Group extends GroupBase<NDSOption> = GroupBase<NDSOption>>(
+  <
+    Option extends NDSOption = NDSOption,
+    IsMulti extends boolean = boolean,
+    Group extends GroupBase<Option> = GroupBase<Option>,
+  >(
     {
       autocomplete,
       value,
@@ -85,10 +91,10 @@ const NDSSelect = forwardRef(
       options,
       styles,
       ...props
-    }: NDSSelectProps<IsMulti, Group>,
+    }: NDSSelectProps<Option, IsMulti, Group>,
     ref:
-      | ((instance: Select<NDSOption, IsMulti, Group> | null) => void)
-      | MutableRefObject<Select<NDSOption, IsMulti, Group> | null>
+      | ((instance: Select<Option, IsMulti, Group> | null) => void)
+      | MutableRefObject<Select<Option, IsMulti, Group> | null>
       | null
   ) => {
     const { t } = useTranslation();
@@ -105,7 +111,7 @@ const NDSSelect = forwardRef(
       optionsRef.current = options;
     }, [options]);
 
-    const stylesConfig = customStyles<NDSOption, IsMulti, Group>({
+    const stylesConfig = customStyles<Option, IsMulti, Group>({
       theme: theme,
       error,
       maxHeight,
@@ -160,6 +166,12 @@ const NDSSelect = forwardRef(
       </Field>
     );
   }
-);
+) as <
+  Option extends NDSOption = NDSOption,
+  IsMulti extends boolean = false,
+  Group extends GroupBase<Option> = GroupBase<Option>,
+>(
+  props: NDSSelectProps<Option, IsMulti, Group> & React.RefAttributes<Select<Option, IsMulti, Group>>
+) => React.ReactElement;
 
 export default NDSSelect;
