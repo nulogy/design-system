@@ -15,7 +15,6 @@ const PEER_DEPENDENCIES = {
 
 const GLOBALS = {
   ...PEER_DEPENDENCIES,
-  "react-windowed-select": "components",
   "@babel/runtime/helpers/typeof": "typeof",
   "@babel/runtime/helpers/defineProperty": "defineProperty",
   "@babel/runtime/helpers/classCallCheck": "classCallCheck",
@@ -57,7 +56,6 @@ const CORE_PLUGINS = [
     in those cases, it needs to be added as ["package-name"]: "exportName" here */
     namedExports: {
       debounce: ["debounce"],
-      "react-windowed-select": ["components"],
     },
   }),
   /* babel: transiles the bundle according to babel.config */

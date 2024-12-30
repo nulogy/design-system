@@ -172,7 +172,6 @@
     "react-resize-detector": "^9.1.0",
     "react-select": "^5.8.0",
     "react-window": "^1.8.11",
-    "react-windowed-select": "^5.2.0",
     "smoothscroll-polyfill": "^0.4.4",
     "styled-system": "^5.1.4",
     "stylis": "^4.0.0"
