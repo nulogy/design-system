@@ -3,14 +3,12 @@ import styled from "styled-components";
 import { components, GroupBase, OptionProps } from "react-select";
 import { typography } from "styled-system";
 import { subPx } from "../utils";
-import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { variant } from "../StyledProps";
 import { NDSOption } from "./Select";
 
 type StyledOptionProps = {
   isSelected: boolean;
   isFocused: boolean;
-  variant: ComponentVariant;
 };
 
 export const StyledOption = styled.div<StyledOptionProps>(
@@ -51,28 +49,20 @@ export const StyledOption = styled.div<StyledOptionProps>(
     })
 );
 
-export type SelectOptionProps<
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+export interface SelectOptionProps<
   Option = NDSOption,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>,
-> = OptionProps<Option, IsMulti, Group> & {
-  variant?: ComponentVariant;
-};
+> extends OptionProps<Option, IsMulti, Group> {}
 
 export function SelectOption<
-  Option = NDSOption,
+  Option extends NDSOption = NDSOption,
   IsMulti extends boolean = boolean,
   Group extends GroupBase<Option> = GroupBase<Option>,
 >(props: SelectOptionProps<Option, IsMulti, Group>) {
-  const variant = useComponentVariant(props.variant);
-
   return (
-    <StyledOption
-      isSelected={props.isSelected}
-      isFocused={props.isFocused}
-      variant={variant}
-      data-testid="select-option"
-    >
+    <StyledOption isSelected={props.isSelected} isFocused={props.isFocused} data-testid="select-option">
       <components.Option {...props}>{props.children}</components.Option>
     </StyledOption>
   );
