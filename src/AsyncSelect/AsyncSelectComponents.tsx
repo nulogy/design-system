@@ -12,7 +12,6 @@ import {
 import { components, GroupBase } from "react-select";
 import { OptionProps } from "react-select";
 import { IconName } from "@nulogy/icons";
-import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { StyledOption } from "../Select/SelectOption";
 import { InputIcon } from "../Icon/Icon";
@@ -106,15 +105,8 @@ export const SelectMenu = <Option, IsMulti extends boolean, Group extends GroupB
 export function SelectOption<Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
   props: OptionProps<Option, IsMulti, Group> & { variant?: ComponentVariant }
 ) {
-  const variant = useComponentVariant(props.variant);
-
   return (
-    <StyledOption
-      isSelected={props.isSelected}
-      isFocused={props.isFocused}
-      variant={variant}
-      data-testid="select-option"
-    >
+    <StyledOption isSelected={props.isSelected} isFocused={props.isFocused} data-testid="select-option">
       <components.Option {...props}>{props.children}</components.Option>
     </StyledOption>
   );

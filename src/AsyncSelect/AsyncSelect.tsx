@@ -81,7 +81,6 @@ const AsyncSelect = forwardRef(
       defaultOptions,
       loadOptions,
       isClearable,
-      variant,
       iconLeft,
       ...props
     }: AsyncSelectProps<Option, IsMulti, Group>,
@@ -91,6 +90,7 @@ const AsyncSelect = forwardRef(
       | null
   ) => {
     const { t } = useTranslation();
+    const variant = useComponentVariant();
     const theme = useTheme();
     const spaceProps = getSubset(props, propTypes.space);
     const error = !!(errorMessage || errorList);
@@ -112,6 +112,7 @@ const AsyncSelect = forwardRef(
               hasIcon: Boolean(iconLeft),
               theme,
               error,
+              variant,
               maxHeight,
               windowed: false,
               hasDefaultOptions: Boolean(defaultOptions),

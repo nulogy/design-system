@@ -8,9 +8,9 @@ import { Field } from "../Form";
 import { MaybeFieldLabel } from "../FieldLabel";
 import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { getSubset } from "../utils/subset";
 import { addStyledProps, StyledProps } from "../StyledProps";
-import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import {
   SelectControl,
   SelectMultiValue,
@@ -35,7 +35,6 @@ interface CustomProps<Option extends NDSOption, IsMulti extends boolean, Group e
   extends StyledProps {
   autocomplete?: Props<Option, IsMulti, Group>["isSearchable"];
   labelText?: string;
-  size?: ComponentVariant;
   requirementText?: string;
   helpText?: ReactNode;
   disabled?: Props<Option, IsMulti, Group>["isDisabled"];
@@ -86,7 +85,6 @@ const NDSSelect = forwardRef(
       multiselect,
       placeholder,
       components,
-      size,
       windowThreshold,
       options,
       styles,
@@ -98,11 +96,11 @@ const NDSSelect = forwardRef(
       | null
   ) => {
     const { t } = useTranslation();
+    const variant = useComponentVariant();
     const theme = useTheme();
     const styledProps = getSubset(props, addStyledProps);
     const error = !!(errorMessage || errorList);
     const optionsRef = React.useRef(options);
-    const componentVariant = useComponentVariant(size);
     const optionsLength = React.useMemo(() => calcOptionsLength(options), [options]);
     const isWindowed = optionsLength >= windowThreshold;
 
@@ -114,8 +112,8 @@ const NDSSelect = forwardRef(
     const stylesConfig = customStyles<Option, IsMulti, Group>({
       theme: theme,
       error,
+      variant,
       maxHeight,
-      variant: componentVariant,
       windowed: options.length > windowThreshold,
     });
 
@@ -144,11 +142,7 @@ const NDSSelect = forwardRef(
             inputId={id}
             styles={styles ? styles(stylesConfig) : stylesConfig}
             components={{
-              Option: (props) => (
-                <SelectOption variant={componentVariant} {...props}>
-                  {props.children}
-                </SelectOption>
-              ),
+              Option: (props) => <SelectOption {...props}>{props.children}</SelectOption>,
               Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,

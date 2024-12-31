@@ -84,13 +84,18 @@ export function showIndicatorSeparator({ hasValue, isClearable, isMulti }) {
   return hasValue && (isMulti || isClearable);
 }
 
-interface Args {
+interface CustomStylesArgs {
   theme: DefaultNDSThemeType;
-  [key: string]: any;
+  error: boolean;
+  maxHeight: string;
+  windowed: boolean;
+  variant: ComponentVariant;
+  hasIcon?: boolean;
+  hasDefaultOptions?: boolean;
 }
 
 const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Option>>(
-  args: Args
+  args: CustomStylesArgs
 ) => StylesConfig<Option, IsMulti, Group> = ({
   theme,
   error,
