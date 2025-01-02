@@ -1,3 +1,27 @@
+# [13.0.0](https://github.com/nulogy/design-system/compare/v12.3.0...v13.0.0) (2025-01-02)
+
+
+### Bug Fixes
+
+* remove react-windowed-select ([315d202](https://github.com/nulogy/design-system/commit/315d2024364364e515305a9f6993b8149eecdafb))
+
+
+### Features
+
+* allow the NDSOption type to be extended ([ab795fa](https://github.com/nulogy/design-system/commit/ab795fa877975e29e042fe4fc9c7125c1dc6c937))
+* Depart away from react-windowed-select ([05d17c0](https://github.com/nulogy/design-system/commit/05d17c010b238d6b2fb1a8d723e161fc1483a65a))
+
+
+### BREAKING CHANGES
+
+* Revises the Select component API by removing arbitrary
+props on select component, and using types coming from upstream
+react-select.
+
+In this release, we roll our own windowing inside of react-select. This
+is mainly done because react-windowed-select types are outdated and
+causing many downstream issues for the Select and AsyncSelect users.
+
 # [12.3.0](https://github.com/nulogy/design-system/compare/v12.2.1...v12.3.0) (2024-12-16)
 
 
