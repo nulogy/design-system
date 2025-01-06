@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { styled } from "styled-components";
 import { action } from "@storybook/addon-actions";
 import { Switch, Switcher } from "../Switcher";
 import { Flex } from "../Flex";
 import { Heading1, Text } from "../Type";
 import { Box } from "../Box";
 import { Pagination } from ".";
-import { styled } from "styled-components";
 
 export default {
   title: "Components/Pagination",

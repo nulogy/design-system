@@ -8,7 +8,6 @@ type PaginationCountProps = {
 };
 
 const PaginationCount = ({ currentPage, totalPages }: PaginationCountProps) => {
-  console.log("asdasdkalksdlaksdlkasdl", { currentPage, totalPages });
   const { t } = useTranslation();
 
   return (
