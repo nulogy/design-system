@@ -26,9 +26,6 @@ const PaginationButton = styled.button<{
   border: `1px solid ${currentPage ? theme.colors.darkBlue : theme.colors.lightGrey}`,
   color: disabled ? theme.colors.grey : theme.colors.black,
   minWidth: iconOnly ? theme.space.x4 : "auto",
-  "&:not(:last-child)": {
-    marginRight: theme.space.x2,
-  },
   cursor: disabled ? "default" : "pointer",
   "&:hover": {
     background: getHoverBackground(currentPage, disabled, theme),

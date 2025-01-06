@@ -61,7 +61,7 @@ function Pagination({
   };
 
   return (
-    <Flex as="nav" aria-label={ariaLabel || t("pagination navigation")} alignItems="center" {...restProps}>
+    <Flex as="nav" gap="x2" aria-label={ariaLabel || t("pagination navigation")} alignItems="center" {...restProps}>
       <PreviousButton
         disabled={currentPage === 1}
         onClick={() => {
@@ -81,7 +81,7 @@ function Pagination({
 
           if (page === SEPARATOR)
             return (
-              <Text key={`sep${index}`} py="x1" mr="x2" fontSize="small" lineHeight="smallTextBase">
+              <Text key={`sep${index}`} py="x1" fontSize="small" lineHeight="smallTextBase">
                 {SEPARATOR}
               </Text>
             );
