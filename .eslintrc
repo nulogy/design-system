@@ -28,7 +28,6 @@
       }
     ],
     "react/display-name": "off",
-    // rules below are to override nulogy config
     "react/jsx-filename-extension": [
       1,
       {

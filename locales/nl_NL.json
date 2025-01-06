@@ -12,6 +12,7 @@
   "expand row": "Rij uitvouwen",
   "go to next results": "Ga naar volgende resultaten",
   "go to page": "Ga naar pagina {{count}}",
+  "current page of total": "Pagina {{currentPage}} van {{totalPages}}",
   "go to previous results": "Ga naar vorige resultaten",
   "go to": "Ga naar",
   "hide actions": "Acties verbergen",

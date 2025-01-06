@@ -12,6 +12,7 @@
   "expand row": "Expandir fila",
   "go to next results": "Ir para resultados seguintes",
   "go to page": "Ir para página {{count}}",
+  "current page of total": "Página {{currentPage}} de {{totalPages}}",
   "go to previous results": "Ir para resultados anteriores",
   "go to": "Ir para",
   "hide actions": "Ocultar ações",

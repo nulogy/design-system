@@ -12,6 +12,7 @@
   "expand row": "展开行",
   "go to next results": "访问之后的结果",
   "go to page": "访问第 {{count}} 页 ",
+  "current page of total": "第 {{currentPage}} 页，共 {{totalPages}} 页",
   "go to previous results": "访问之前的结果",
   "go to": "访问 ",
   "hide actions": "隐藏操作",

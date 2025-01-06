@@ -1,17 +1,18 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { action } from "@storybook/addon-actions";
 import { Switch, Switcher } from "../Switcher";
 import { Flex } from "../Flex";
 import { Heading1, Text } from "../Type";
 import { Box } from "../Box";
 import { Pagination } from ".";
+import { styled } from "styled-components";
 
 export default {
   title: "Components/Pagination",
 };
 
 export const _Pagination = () => (
-  <>
+  <Flex gap="x2" flexDirection="column">
     <Pagination
       currentPage={1}
       totalPages={7}
@@ -25,7 +26,7 @@ export const _Pagination = () => (
     <Pagination currentPage={5} totalPages={7} />
     <Pagination currentPage={6} totalPages={7} />
     <Pagination currentPage={7} totalPages={7} />
-  </>
+  </Flex>
 );
 
 export const OnTheFirstPage = () => <Pagination currentPage={1} totalPages={10} />;
@@ -41,6 +42,68 @@ OnTheLastPage.story = {
 };
 
 export const WithLessThan5Pages = () => <Pagination currentPage={3} totalPages={4} />;
+
+const AccentedRange = styled.input.attrs({ type: "range" })`
+  accent-color: ${({ theme }) => theme.colors.darkBlue};
+`;
+
+export const CustomMaxVisiblePages = () => {
+  const [maxVisiblePages, setMaxVisiblePages] = useState(5);
+  const [currentPage, setCurrentPage] = useState(3);
+  const [totalPages, setTotalPages] = useState(12);
+
+  useEffect(
+    function () {
+      setCurrentPage((page) => Math.min(page, totalPages));
+    },
+    [totalPages]
+  );
+
+  return (
+    <Flex flexDirection="column" gap="x3">
+      <label htmlFor="totalPages">Total pages: {totalPages}</label>
+      <AccentedRange
+        name="totalPages"
+        min="1"
+        max="100"
+        value={totalPages}
+        onChange={(e) => setTotalPages(Number(e.target.value))}
+      />
+
+      <label htmlFor="currentPage">Current page: {currentPage}</label>
+      <AccentedRange
+        name="currentPage"
+        min="1"
+        max={totalPages}
+        value={currentPage}
+        onChange={(e) => setCurrentPage(Number(e.target.value))}
+      />
+
+      <label htmlFor="maxVisible">
+        <Text>Max visible pages {maxVisiblePages}</Text>
+        <Text fontSize="smaller">Value can be between 3 and 12. Values higher or lower will be clamped.</Text>
+      </label>
+      <AccentedRange
+        name="maxVisible"
+        min="3"
+        max="12"
+        value={maxVisiblePages}
+        onChange={(e) => setMaxVisiblePages(Number(e.target.value))}
+      />
+
+      <Pagination
+        maxVisiblePages={maxVisiblePages}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onNext={() => setCurrentPage((p) => p + 1)}
+        onPrevious={() => setCurrentPage((p) => p - 1)}
+        onSelectPage={(page) => {
+          setCurrentPage(Number(page));
+        }}
+      />
+    </Flex>
+  );
+};
 
 WithLessThan5Pages.story = {
   name: "with less than 5 pages",
