@@ -1,3 +1,15 @@
+# [13.1.0](https://github.com/nulogy/design-system/compare/v13.0.0...v13.1.0) (2025-01-06)
+
+
+### Bug Fixes
+
+* visual issue with the tabs when scrolling is not available ([4fae2de](https://github.com/nulogy/design-system/commit/4fae2de6e5668088ea045a6e93b3d8705ec2ccea))
+
+
+### Features
+
+* make pagination responsive ([fed83d9](https://github.com/nulogy/design-system/commit/fed83d9558615f0d22f77e45aaa724799507a09a))
+
 # [13.0.0](https://github.com/nulogy/design-system/compare/v12.3.0...v13.0.0) (2025-01-02)
 
 
