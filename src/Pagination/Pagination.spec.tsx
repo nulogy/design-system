@@ -60,7 +60,7 @@ describe("Pagination", () => {
           onNext={onNextCallback}
           onPrevious={onPreviousCallback}
           onSelectPage={onSelectPageCallback}
-        />,
+        />
       );
       const clickPage = (pageNum: number) => {
         fireEvent.click(getAllByLabelText("Go to page {{count}}")[pageNum]);
@@ -78,7 +78,7 @@ describe("Pagination", () => {
           onNext={onNextCallback}
           onPrevious={onPreviousCallback}
           onSelectPage={onSelectPageCallback}
-        />,
+        />
       );
       const clickPrevious = () => {
         const PreviousButton = getByLabelText("Go to previous results");
@@ -95,7 +95,7 @@ describe("Pagination", () => {
           onNext={onNextCallback}
           onPrevious={onPreviousCallback}
           onSelectPage={onSelectPageCallback}
-        />,
+        />
       );
       const clickPrevious = () => {
         const PreviousButton = getByLabelText("Go to previous results");
@@ -112,7 +112,7 @@ describe("Pagination", () => {
           onNext={onNextCallback}
           onPrevious={onPreviousCallback}
           onSelectPage={onSelectPageCallback}
-        />,
+        />
       );
       const NextButton = getByLabelText("Go to next results");
 
