@@ -12,6 +12,7 @@
   "expand row": "Extindere rând",
   "go to next results": "Mergeți la următoarele rezultate",
   "go to page": "Mergeți la pagina {{count}}",
+  "current page of total": "Pagina {{currentPage}} din {{totalPages}}",
   "go to previous results": "Mergeți la rezultatele anterioare",
   "go to": "Mergeți la",
   "hide actions": "Ascundere acțiuni",

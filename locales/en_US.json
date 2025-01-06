@@ -12,6 +12,7 @@
   "expand row": "Expand row",
   "go to next results": "Go to next results",
   "go to page": "Go to page {{count}}",
+  "current page of total": "Page {{currentPage}} of {{totalPages}}",
   "go to previous results": "Go to previous results",
   "go to": "Go to",
   "hide actions": "Hide actions",

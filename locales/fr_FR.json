@@ -12,6 +12,7 @@
   "expand row": "Développer la ligne",
   "go to next results": "Aller aux résultats suivants",
   "go to page": "Aller à la page {{count}}",
+  "current page of total": "Page {{currentPage}} sur {{totalPages}}",
   "go to previous results": "Aller aux résultats précédents",
   "go to": "Aller à",
   "hide actions": "Masquer les actions",

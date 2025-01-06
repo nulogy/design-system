@@ -12,6 +12,7 @@
   "expand row": "Zeile erweitern",
   "go to next results": "Zu den nächsten Ergebnissen wechseln",
   "go to page": "Zu Seite {{count}} wechseln",
+  "current page of total": "Seite {{currentPage}} von {{totalPages}}",
   "go to previous results": "Zu den vorherigen Ergebnissen wechseln",
   "go to": "Wechseln zu",
   "hide actions": "Aktionen verbergen",

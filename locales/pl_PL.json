@@ -12,6 +12,7 @@
   "expand row": "Rozwiń wiersz",
   "go to next results": "Przejdź do następnych wyników",
   "go to page": "Przejdź do strony {{count}}",
+  "current page of total": "Strona {{currentPage}} z {{totalPages}}",
   "go to previous results": "Przejdź do poprzednich wyników",
   "go to": "Przejdź do",
   "hide actions": "Hide actions",
