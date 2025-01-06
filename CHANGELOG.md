@@ -1,3 +1,10 @@
+## [13.1.1](https://github.com/nulogy/design-system/compare/v13.1.0...v13.1.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* spacing issue with the pagination ([55376af](https://github.com/nulogy/design-system/commit/55376af839f58ff2b6cd93b1944714f4f8aefaf2))
+
 # [13.1.0](https://github.com/nulogy/design-system/compare/v13.0.0...v13.1.0) (2025-01-06)
 
 
