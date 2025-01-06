@@ -4,7 +4,7 @@ import { Box } from "../Box";
 const TabContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   whiteSpace: "nowrap",
-  overflowX: "scroll",
+  overflowX: "auto",
   overflowY: "hidden",
   marginBottom: theme.space.x1,
   "::-webkit-scrollbar": {
