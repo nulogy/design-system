@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Options, PropsValue } from "react-select";
+import { OnChangeValue, Options, PropsValue } from "react-select";
 import { NDSOption, NDSOptionValue } from "./Select";
 
 export function calcOptionsLength(options) {
@@ -92,20 +92,22 @@ export function getReactSelectValue(options: Options<NDSOption>, input: PropsVal
   return getOption(options, input);
 }
 
-export function extractValue(
-  options: Options<NDSOption> | NDSOption,
-  isMulti: boolean
-): NDSOptionValue[] | NDSOptionValue {
+export type CustomOnChangeValue<IsMulti extends boolean> = IsMulti extends true ? NDSOptionValue[] : NDSOptionValue;
+
+export function extractValue<IsMulti extends boolean>(
+  options: OnChangeValue<NDSOption, IsMulti>,
+  isMulti: IsMulti
+): CustomOnChangeValue<IsMulti> {
   if (options === null) {
     return null;
   }
 
   if (!Array.isArray(options)) {
-    return (options as NDSOption).value;
+    return (options as NDSOption).value as CustomOnChangeValue<IsMulti>;
   }
 
   if (isMulti) {
-    return options && options.length ? options.map((o) => o.value) : [];
+    return (options && options.length ? options.map((o) => o.value) : []) as CustomOnChangeValue<IsMulti>;
   }
 
   throw new Error("UNEXPECTED ERROR: don't forget to enable isMulti");
