@@ -1,3 +1,10 @@
+## [13.1.2](https://github.com/nulogy/design-system/compare/v13.1.1...v13.1.2) (2025-01-07)
+
+
+### Bug Fixes
+
+* a more accurate type for the Select onChange prop ([e417d24](https://github.com/nulogy/design-system/commit/e417d24e4f8a23c5b9fd3b3ed1093ad03fe16064))
+
 ## [13.1.1](https://github.com/nulogy/design-system/compare/v13.1.0...v13.1.1) (2025-01-06)
 
 
