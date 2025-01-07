@@ -22,7 +22,7 @@ import {
 } from "./SelectComponents";
 import { SelectOption } from "./SelectOption";
 import MenuList from "./MenuList";
-import { calcOptionsLength, checkOptionsAreValid, extractValue, getReactSelectValue } from "./lib";
+import { calcOptionsLength, checkOptionsAreValid, CustomOnChangeValue, extractValue, getReactSelectValue } from "./lib";
 
 export type NDSOptionValue = string | number | boolean | null;
 
@@ -46,7 +46,7 @@ interface CustomProps<Option extends NDSOption, IsMulti extends boolean, Group e
   defaultValue?: PropsValue<Option["value"]>;
   value?: PropsValue<Option["value"]>;
   options: readonly Option[];
-  onChange?: (newValue: PropsValue<Option["value"]>) => void;
+  onChange?: (newValue: CustomOnChangeValue<IsMulti>) => void;
   windowThreshold?: number;
   styles?: (selectStyles: StylesConfig<Option, IsMulti, Group>) => StylesConfig<Option, IsMulti, Group>;
 }
