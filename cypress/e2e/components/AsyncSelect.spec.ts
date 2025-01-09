@@ -70,4 +70,48 @@ describe("AsyncSelect", () => {
       getDropdownButton().should("be.visible");
     });
   });
+
+  describe.only("AsyncSelect with GraphQL", () => {
+    const getSelectComponent = () => cy.get("[data-testid='select-container']");
+    const getDropdownMenu = () => cy.get("[data-testid='select-dropdown']");
+    const assertDropDownIsOpen = () => getDropdownMenu().should("exist");
+
+    beforeEach(() => {
+      cy.renderFromStorybook("asyncselect-graphql--with-apollo-client-example");
+    });
+
+    it("loads and filters countries based on input", () => {
+      getSelectComponent().click();
+      cy.focused().type("cana");
+
+      assertDropDownIsOpen();
+      getDropdownMenu().contains("Canada");
+      getDropdownMenu().should("not.contain", "Mexico");
+    });
+
+    it("can select a country", () => {
+      getSelectComponent().click();
+      cy.focused().type("cana");
+      assertDropDownIsOpen();
+      cy.focused().type("{enter}");
+
+      getSelectComponent().contains("Canada");
+    });
+
+    it("shows placeholder text initially", () => {
+      getSelectComponent().contains("Search for a country");
+    });
+
+    it("shows label text", () => {
+      cy.contains("Country");
+    });
+
+    it("handles empty search results", () => {
+      getSelectComponent().click();
+      cy.focused().type("xyz");
+
+      assertDropDownIsOpen();
+      getDropdownMenu().contains("No options");
+    });
+  });
 });
