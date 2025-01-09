@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { useState } from "react";
-import { AsyncSelect, Button } from "../index";
+import { AsyncSelect, Button, Flex } from "../index";
 import { loadMatchingProvinces } from "./fixtures";
-import { Flex } from "../Flex";
 
 export default {
   title: "Components/AsyncSelect",
