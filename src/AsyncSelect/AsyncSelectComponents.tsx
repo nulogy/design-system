@@ -8,6 +8,7 @@ import {
   InputProps,
   MenuProps,
   MultiValueProps,
+  Props,
 } from "react-select";
 import { components, GroupBase } from "react-select";
 import { OptionProps } from "react-select";
@@ -16,13 +17,17 @@ import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { StyledOption } from "../Select/SelectOption";
 import { InputIcon } from "../Icon/Icon";
 
+interface CustomSelectProps<Option, IsMulti extends boolean, Group extends GroupBase<Option>>
+  extends Props<Option, IsMulti, Group> {
+  iconLeft?: IconName | "loading";
+}
+
 export const SelectControl = <Option, IsMulti extends boolean, Group extends GroupBase<Option>>({
-  iconLeft,
   isFocused,
   children,
   ...props
 }: ControlProps<Option, IsMulti, Group> & {
-  iconLeft?: IconName | "loading";
+  selectProps: CustomSelectProps<Option, IsMulti, Group>;
 }) => {
   return (
     <div data-testid="select-control">
@@ -31,7 +36,7 @@ export const SelectControl = <Option, IsMulti extends boolean, Group extends Gro
         isFocused={isFocused}
         {...props}
       >
-        {iconLeft && <InputIcon left="x1" icon={iconLeft} size="x3" />}
+        {props.selectProps.iconLeft && <InputIcon left="x1" icon={props.selectProps.iconLeft} size="x3" />}
         {children}
       </selectComponents.Control>
     </div>
