@@ -1,3 +1,11 @@
+## [13.1.3](https://github.com/nulogy/design-system/compare/v13.1.2...v13.1.3) (2025-01-10)
+
+
+### Bug Fixes
+
+* bug causing the Select Control to recreate on every rerender ([c654abf](https://github.com/nulogy/design-system/commit/c654abfc1cd30ce556217c950baa6fe1c118473d))
+* upgrade react-select ([e760380](https://github.com/nulogy/design-system/commit/e760380365dfa06e4093c3891c912b7e26c4bf59))
+
 ## [13.1.2](https://github.com/nulogy/design-system/compare/v13.1.1...v13.1.2) (2025-01-07)
 
 
