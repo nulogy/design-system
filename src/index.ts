@@ -31,6 +31,8 @@ export { Button, ControlIcon, DangerButton, IconicButton, PrimaryButton, QuietBu
 export { ButtonGroup } from "./ButtonGroup";
 export { Card, CardSet } from "./Card";
 export { Checkbox, CheckboxGroup } from "./Checkbox";
+export { CheckboxSelect } from "./CheckboxSelect";
+export type { CheckboxSelectOption, CheckboxSelectProps } from "./CheckboxSelect";
 export { DatePicker } from "./DatePicker";
 export { DateRange } from "./DateRange";
 export { DescriptionDetails, DescriptionList, DescriptionTerm } from "./DescriptionList";
