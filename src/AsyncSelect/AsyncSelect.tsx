@@ -81,7 +81,6 @@ const AsyncSelect = forwardRef(
       defaultOptions,
       loadOptions,
       isClearable,
-      iconLeft,
       ...props
     }: AsyncSelectProps<Option, IsMulti, Group>,
     ref:
@@ -109,7 +108,7 @@ const AsyncSelect = forwardRef(
             defaultInputValue={defaultValue}
             placeholder={placeholder || t("start typing")}
             styles={customStyles<Option, IsMulti, Group>({
-              hasIcon: Boolean(iconLeft),
+              hasIcon: Boolean(props.iconLeft),
               theme,
               error,
               variant,
@@ -133,18 +132,13 @@ const AsyncSelect = forwardRef(
             onMenuClose={onMenuClose}
             menuPosition={menuPosition}
             onInputChange={onInputChange}
-            theme={theme as any}
             components={{
               Option: (props) => (
                 <SelectOption variant={componentVariant} {...props}>
                   {props.children}
                 </SelectOption>
               ),
-              Control: (props) => (
-                <SelectControl iconLeft={iconLeft} {...props}>
-                  {props.children}
-                </SelectControl>
-              ),
+              Control: SelectControl,
               MultiValue: SelectMultiValue,
               ClearIndicator: SelectClearIndicator,
               DropdownIndicator: SelectDropdownIndicator,
@@ -158,6 +152,7 @@ const AsyncSelect = forwardRef(
             defaultOptions={defaultOptions}
             loadOptions={loadOptions}
             isClearable={isClearable}
+            {...props}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
         </MaybeFieldLabel>
