@@ -14,6 +14,8 @@ import {
   Textarea,
   Heading3,
 } from "..";
+import { useUrlProps } from "../utils/testing/useUrlProps";
+import { SidebarProps } from "./Sidebar";
 
 const primaryMenu = [
   {
@@ -122,6 +124,7 @@ const ExampleSidebar = ({ isOpen, onClose, ...props }) => (
 export const _Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const triggerRef = useRef(null);
+  const urlProps = useUrlProps<SidebarProps>();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -154,6 +157,7 @@ export const _Sidebar = () => {
           onClose={closeSidebar}
           triggerRef={triggerRef}
           aria-controls="openSidebarTrigger"
+          {...urlProps}
         />
       </Page>
     </ApplicationFrame>

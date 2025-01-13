@@ -5,7 +5,7 @@ import { Icon } from "../Icon";
 import { DefaultNDSThemeType } from "../theme";
 import { Flex } from "../Flex";
 import NavBarSearch from "../NavBarSearch/NavBarSearch";
-import { PreventBodyElementScrolling, withMenuState, WithMenuStateProps, AcceptsMenuStateProps } from "../utils";
+import { withMenuState, WithMenuStateProps, AcceptsMenuStateProps } from "../utils";
 import EnvironmentBanner from "./EnvironmentBanner";
 import MobileMenu from "./MobileMenu";
 import NavBarBackground from "./NavBarBackground";
@@ -145,15 +145,13 @@ const SmallNavBarNoState = ({
         </Flex>
       </NavBarBackground>
       {isOpen && (
-        <PreventBodyElementScrolling>
-          <MobileMenu
-            themeColorObject={themeColorObject}
-            subtext={subtext}
-            menuData={menuData}
-            closeMenu={closeMenu}
-            showNulogyLogo={showNulogyLogo}
-          />
-        </PreventBodyElementScrolling>
+        <MobileMenu
+          themeColorObject={themeColorObject}
+          subtext={subtext}
+          menuData={menuData}
+          closeMenu={closeMenu}
+          showNulogyLogo={showNulogyLogo}
+        />
       )}
     </SmallHeader>
   );

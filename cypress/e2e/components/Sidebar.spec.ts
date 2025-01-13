@@ -121,4 +121,55 @@ describe("Sidebar", () => {
       Sidebar().should("have.css", "right", "0px");
     });
   });
+
+  describe("Scroll Lock", () => {
+    beforeEach(() => {
+      cy.renderFromStorybook("sidebar--sidebar");
+    });
+
+    it("locks body scroll when sidebar is open", () => {
+      cy.get("body").should("not.have.css", "overflow", "hidden");
+
+      trigger().click();
+
+      cy.get("body").should("have.css", "overflow", "hidden");
+    });
+
+    it("unlocks body scroll when sidebar is closed", () => {
+      trigger().click();
+
+      closeButton().click();
+
+      cy.get("body").should("not.have.css", "overflow", "hidden");
+    });
+
+    it("respects disableScroll prop when set to false", () => {
+      cy.renderFromStorybook("sidebar--sidebar", {
+        disableScroll: false,
+      });
+
+      trigger().click();
+
+      cy.get("body").should("not.have.css", "overflow", "hidden");
+    });
+
+    it("respects overlay prop when set to false", () => {
+      cy.renderFromStorybook("sidebar--without-overlay");
+
+      trigger().click();
+
+      cy.get("body").should("not.have.css", "overflow", "hidden");
+    });
+
+    it("maintains scroll lock when closing and reopening quickly", () => {
+      trigger().click();
+
+      cy.get("body").should("have.css", "overflow", "hidden");
+
+      closeButton().click();
+      trigger().click();
+
+      cy.get("body").should("have.css", "overflow", "hidden");
+    });
+  });
 });

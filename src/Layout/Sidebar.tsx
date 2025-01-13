@@ -7,8 +7,7 @@ import { IconicButton } from "../Button";
 import { Heading2, Text } from "../Type";
 import { AnimatedBoxProps, AnimatedBox } from "../Box/Box";
 import { NAVBAR_HEIGHT } from "../BrandedNavBar/NavBar";
-import { PreventBodyElementScrolling } from "../utils";
-import { Divider } from "../Divider";
+import { useScrollLock } from "../utils/useScrollLock";
 
 type PredefinedSidebarWidth = "xs" | "s" | "m" | "l" | "xl";
 
@@ -26,7 +25,7 @@ const sidebarWidths: Record<PredefinedSidebarWidth, CSSProperties["width"]> = {
   xl: "1024px",
 } as const;
 
-type SidebarProps = Omit<AnimatedBoxProps, "width"> & {
+export type SidebarProps = Omit<AnimatedBoxProps, "width"> & {
   children?: React.ReactNode;
   onClose?: () => void;
   title?: string;
@@ -99,8 +98,11 @@ function Sidebar({
   const { t } = useTranslation();
   const sideBarRef = useRef(null);
   const contentRef = useRef(null);
-
   const selectedWidth = sidebarWidths[width] ?? width;
+
+  useScrollLock({
+    autoLock: overlay && disableScroll && isOpen,
+  });
 
   useEffect(() => {
     if (closeButton.current && isOpen) {
@@ -225,14 +227,9 @@ function Sidebar({
           overflow="auto"
           flexGrow={1}
           flexDirection="column"
-          style={{ overflowBehaviour: "contain" } as any}
+          style={{ overflowBehaviour: "contain" } as CSSProperties}
         >
-          <AnimatedBox
-            variants={childVariants}
-            animate={isOpen ? "open" : "closed"}
-            flexGrow={1}
-            ref={contentRef as any}
-          >
+          <AnimatedBox variants={childVariants} animate={isOpen ? "open" : "closed"} flexGrow={1} ref={contentRef}>
             {children}
           </AnimatedBox>
         </Flex>
@@ -251,7 +248,6 @@ function Sidebar({
             {footer}
           </Box>
         )}
-        {overlay && disableScroll && isOpen && <PreventBodyElementScrolling scrollRef={sideBarRef} />}
       </AnimatedBox>
     </>
   );

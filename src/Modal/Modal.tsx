@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import styled, { ThemeContext, CSSObject } from "styled-components";
+import styled, { ThemeContext, CSSObject, useTheme } from "styled-components";
 import ReactModal from "react-modal";
 import { transparentize } from "polished";
 import { Heading2 } from "../Type";
-import { PreventBodyElementScrolling } from "../utils";
+import { useScrollLock } from "../utils/useScrollLock";
 import ModalContent from "./ModalContent";
 import ModalFooter from "./ModalFooter";
 import ModalHeader from "./ModalHeader";
@@ -105,7 +105,7 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
   closeAriaLabel,
   parentSelector,
 }) => {
-  const modalHasHeader = onRequestClose || title;
+  const modalHasHeader = Boolean(onRequestClose || title);
   const themeContext = useContext(ThemeContext);
   return (
     <StyledReactModal
@@ -133,25 +133,56 @@ const Modal: React.FC<React.PropsWithChildren<ModalProps>> & {
       ariaHideApp={ariaHideApp}
       parentSelector={parentSelector}
     >
-      <PreventBodyElementScrolling>
-        {modalHasHeader && (
-          <ModalHeader hasCloseButton={Boolean(onRequestClose)}>
-            {title ? (
-              <Heading2 id="modal-title" mb="none">
-                {title}
-              </Heading2>
-            ) : (
-              <div style={{ height: themeContext.space.x4 }} />
-            )}
-            {onRequestClose && <ModalCloseButton onClick={onRequestClose} aria-label={closeAriaLabel} />}
-          </ModalHeader>
-        )}
-        <ModalContent hasFooter={!!footerContent}>{children}</ModalContent>
-        {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
-      </PreventBodyElementScrolling>
+      <ModalWrapper
+        closeAriaLabel={closeAriaLabel}
+        modalHasHeader={modalHasHeader}
+        title={title}
+        onRequestClose={onRequestClose}
+        footerContent={footerContent}
+      >
+        {children}
+      </ModalWrapper>
     </StyledReactModal>
   );
 };
+
+function ModalWrapper({
+  modalHasHeader,
+  title,
+  onRequestClose,
+  closeAriaLabel,
+  children,
+  footerContent,
+}: {
+  modalHasHeader: boolean;
+  title: string;
+  onRequestClose: (...args: any[]) => any;
+  closeAriaLabel: string;
+  children: React.ReactNode;
+  footerContent: React.ReactNode;
+}) {
+  const theme = useTheme();
+  useScrollLock();
+
+  return (
+    <>
+      {modalHasHeader && (
+        <ModalHeader hasCloseButton={Boolean(onRequestClose)}>
+          {title ? (
+            <Heading2 id="modal-title" mb="none">
+              {title}
+            </Heading2>
+          ) : (
+            <div style={{ height: theme.space.x4 }} />
+          )}
+          {onRequestClose && <ModalCloseButton onClick={onRequestClose} aria-label={closeAriaLabel} />}
+        </ModalHeader>
+      )}
+      <ModalContent hasFooter={!!footerContent}>{children}</ModalContent>
+      {footerContent && <ModalFooter>{footerContent}</ModalFooter>}
+    </>
+  );
+}
 
 Modal.setAppElement = ReactModal.setAppElement;
 
