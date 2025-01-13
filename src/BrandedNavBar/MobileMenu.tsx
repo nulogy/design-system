@@ -11,6 +11,7 @@ import { Link } from "../Link";
 import { addStyledProps } from "../StyledProps";
 import NulogyLogo from "./NulogyLogo";
 import { TriggerFunctionProps } from "./TriggerFunctionProps";
+import { useScrollLock } from "../utils/useScrollLock";
 
 const borderStyle = "1px solid #e4e7eb";
 
@@ -233,34 +234,38 @@ const BaseMobileMenu = ({
   themeColorObject,
   showNulogyLogo,
   ...props
-}: BaseMobileMenuProps) => (
-  <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
-    <BrandingWrap>
-      <BrandingText logoColor={themeColorObject?.logoColor} />
-    </BrandingWrap>
-    <Menu>
-      {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
-      {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
-    </Menu>
-    {showNulogyLogo && (
-      <Flex textAlign="center" borderTop={borderStyle} height="40px" alignItems="center" justifyContent="center">
-        <NulogyLogo />
-        {subtext && (
-          <Text
-            fontSize="8px"
-            lineHeight="0"
-            color="darkGrey"
-            fontWeight="medium"
-            textTransform="uppercase"
-            letterSpacing=".5px"
-          >
-            {subtext}
-          </Text>
-        )}
-      </Flex>
-    )}
-  </Nav>
-);
+}: BaseMobileMenuProps) => {
+  useScrollLock();
+
+  return (
+    <Nav backgroundColor={themeColorObject && themeColorObject.background} {...props}>
+      <BrandingWrap>
+        <BrandingText logoColor={themeColorObject?.logoColor} />
+      </BrandingWrap>
+      <Menu>
+        {menuData.primaryMenu && renderTopLayerMenuItems(menuData.primaryMenu, closeMenu, themeColorObject)}
+        {menuData.secondaryMenu && renderTopLayerMenuItems(menuData.secondaryMenu, closeMenu, themeColorObject)}
+      </Menu>
+      {showNulogyLogo && (
+        <Flex textAlign="center" borderTop={borderStyle} height="40px" alignItems="center" justifyContent="center">
+          <NulogyLogo />
+          {subtext && (
+            <Text
+              fontSize="8px"
+              lineHeight="0"
+              color="darkGrey"
+              fontWeight="medium"
+              textTransform="uppercase"
+              letterSpacing=".5px"
+            >
+              {subtext}
+            </Text>
+          )}
+        </Flex>
+      )}
+    </Nav>
+  );
+};
 
 const MobileMenu = styled(BaseMobileMenu)(display);
 

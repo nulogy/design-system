@@ -26,10 +26,18 @@
 
 // cypress-enter-plugin: fills in missing functionality in cypress so that enter can be used as click
 // The plugin overrides the type command and manually triggers a click
+
 import "cypress-enter-plugin";
 
-Cypress.Commands.add("renderFromStorybook", (component) => {
-  cy.visit(`/iframe.html?path=/story/components-${component}`);
+Cypress.Commands.add("renderFromStorybook", (component, props) => {
+  const baseUrl = `/iframe.html?path=/story/components-${component}`;
+
+  if (props) {
+    const encodedProps = encodeURIComponent(JSON.stringify(props));
+    cy.visit(`${baseUrl}&args=${encodedProps}`);
+  } else {
+    cy.visit(baseUrl);
+  }
 });
 
 Cypress.Commands.add("pressEscapeKey", () => {

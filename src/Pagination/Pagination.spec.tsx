@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import { createMatchMedia } from "../utils/testHelpers/createMatchMedia";
+import { createMatchMedia } from "../utils/testing/createMatchMedia";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { getPageItemsToDisplay } from "./lib";
 import { Pagination } from ".";

@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { Pagination } from "../Pagination";
-import { createMatchMedia } from "../utils/testHelpers/createMatchMedia";
+import { createMatchMedia } from "../utils/testing/createMatchMedia";
 import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
 import { mountWithNDSProvider } from "../NDSProvider/mountWithNDSProvider.spec-utils";
 import { mockColumns, getMockRows, getMockColumns } from "./Table.mock-utils";
