@@ -1,3 +1,10 @@
+## [13.1.4](https://github.com/nulogy/design-system/compare/v13.1.3...v13.1.4) (2025-01-13)
+
+
+### Bug Fixes
+
+* Sidebar scroll lock behavior ([7fb8a2f](https://github.com/nulogy/design-system/commit/7fb8a2f7ed29beccdea540c8c30ab9e3ea068a59))
+
 ## [13.1.3](https://github.com/nulogy/design-system/compare/v13.1.2...v13.1.3) (2025-01-10)
 
 
