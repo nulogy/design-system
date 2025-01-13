@@ -1,3 +1,10 @@
+## [13.1.5](https://github.com/nulogy/design-system/compare/v13.1.4...v13.1.5) (2025-01-13)
+
+
+### Bug Fixes
+
+* re-add select default props ([1b8e885](https://github.com/nulogy/design-system/commit/1b8e885eeec9b0d58b626ba6578751444617948b))
+
 ## [13.1.4](https://github.com/nulogy/design-system/compare/v13.1.3...v13.1.4) (2025-01-13)
 
 
