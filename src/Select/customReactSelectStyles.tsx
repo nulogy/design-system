@@ -3,6 +3,7 @@ import type { GroupBase, MenuPlacement, StylesConfig } from "react-select";
 import type { CSSProperties } from "react";
 import type { DefaultNDSThemeType } from "../theme";
 import type { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import numberFromDimension from "../utils/numberFromDimension";
 
 const getBorderColor = ({
   errored,
@@ -263,7 +264,7 @@ const customStyles: <Option, IsMulti extends boolean, Group extends GroupBase<Op
       ...provided,
       minWidth: "fit-content",
       padding: 0,
-      maxHeight: parseInt(maxHeight, 10),
+      maxHeight: numberFromDimension(maxHeight),
       borderRadius: theme.radii.medium,
       marginTop: windowed ? "-4px" : 0,
       marginBottom: windowed ? "-4px" : 0,

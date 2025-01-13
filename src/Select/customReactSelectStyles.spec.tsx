@@ -51,38 +51,38 @@ describe("custom react-select styles", () => {
 
     it("has border radius when empty", () => {
       const expected = theme.radii.medium;
-      const results = [];
+      const configs = [
+        {
+          border: "bottom",
+          isMenuOpen: true,
+          menuLength: 0,
+          menuPlacement: "bottom",
+          theme,
+        },
+        {
+          border: "top",
+          isMenuOpen: true,
+          menuLength: 0,
+          menuPlacement: "bottom",
+          theme,
+        },
+        {
+          border: "bottom",
+          isMenuOpen: true,
+          menuLength: 0,
+          menuPlacement: "top",
+          theme,
+        },
+        {
+          border: "top",
+          isMenuOpen: true,
+          menuLength: 0,
+          menuPlacement: "top",
+          theme,
+        },
+      ] as const;
 
-      results.push(
-        getControlBorderRadius({
-          border: "bottom",
-          isMenuOpen: true,
-          menuLength: 0,
-          menuPlacement: "bottom",
-          theme,
-        }),
-        getControlBorderRadius({
-          border: "top",
-          isMenuOpen: true,
-          menuLength: 0,
-          menuPlacement: "bottom",
-          theme,
-        }),
-        getControlBorderRadius({
-          border: "bottom",
-          isMenuOpen: true,
-          menuLength: 0,
-          menuPlacement: "top",
-          theme,
-        }),
-        getControlBorderRadius({
-          border: "top",
-          isMenuOpen: true,
-          menuLength: 0,
-          menuPlacement: "top",
-          theme,
-        })
-      );
+      const results = configs.map(getControlBorderRadius);
 
       for (const result of results) {
         expect(result).toEqual(expected);

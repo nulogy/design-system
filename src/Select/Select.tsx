@@ -1,6 +1,6 @@
 import React, { forwardRef, ReactNode, MutableRefObject } from "react";
 import Select from "react-select/base";
-import ReactSelect, { PropsValue } from "react-select";
+import ReactSelect, { MenuPlacement, MenuPosition, PropsValue } from "react-select";
 import type { GroupBase, Props, StylesConfig } from "react-select";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "styled-components";
@@ -10,6 +10,7 @@ import { InlineValidation } from "../Validation";
 import customStyles from "../Select/customReactSelectStyles";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { getSubset } from "../utils/subset";
+import numberFromDimension from "../utils/numberFromDimension";
 import { addStyledProps, StyledProps } from "../StyledProps";
 import {
   SelectControl,
@@ -68,12 +69,10 @@ const NDSSelect = forwardRef(
     Group extends GroupBase<Option> = GroupBase<Option>,
   >(
     {
-      autocomplete,
       value,
       onChange,
       defaultValue,
       labelText,
-      required,
       requirementText,
       helpText,
       disabled,
@@ -81,13 +80,19 @@ const NDSSelect = forwardRef(
       errorList,
       id,
       initialIsOpen,
-      maxHeight,
       multiselect,
       placeholder,
       components,
-      windowThreshold,
       options,
       styles,
+      windowThreshold = 300,
+      autocomplete = true,
+      maxHeight = "248px",
+      required = false,
+      menuPosition = "absolute" as MenuPosition,
+      menuPlacement = "bottom" as MenuPlacement,
+      classNamePrefix = "ndsSelect",
+      closeMenuOnSelect = true,
       ...props
     }: NDSSelectProps<Option, IsMulti, Group>,
     ref:
@@ -153,6 +158,11 @@ const NDSSelect = forwardRef(
               ...(isWindowed ? { MenuList } : {}),
               ...components,
             }}
+            closeMenuOnSelect={closeMenuOnSelect}
+            classNamePrefix={classNamePrefix}
+            menuPosition={menuPosition}
+            menuPlacement={menuPlacement}
+            maxMenuHeight={numberFromDimension(maxHeight)}
             {...props}
           />
           <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
