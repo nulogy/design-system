@@ -1,9 +1,10 @@
 import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
+import type { ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import type { ReactDatePickerProps } from "react-datepicker";
 import propTypes from "@styled-system/prop-types";
-import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { InlineValidation } from "../Validation";
 import { Field } from "../Form";
 import { registerDatePickerLocales } from "../utils/datePickerLocales";
@@ -12,15 +13,17 @@ import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 import { InputFieldDefaultProps, InputFieldProps } from "../Input/InputField";
 import { getSubset } from "../utils/subset";
 import { FieldProps } from "../Form/Field";
-import DatePickerHeader from "./DatePickerHeader";
+import { DatePickerHeader, MonthDatePickerHeader } from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
 
 type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
 
+type PickerType = "date" | "month";
+
 interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
-  variant?: ComponentVariant;
   onChange?: (date: Date) => void;
+  open?: boolean;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   dateFormat?: string;
@@ -33,16 +36,18 @@ interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
   highlightDates?: ReactDatePickerProps["highlightDates"];
   disableFlipping?: boolean;
   selected?: Date | null;
+  type?: PickerType;
 }
 
-const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
+const DEFAULT_DATE_PICKER_FORMAT = "yyyy-MMM-dd";
+const DEFAULT_MONTH_PICKER_FORMAT = "yyyy-MMM";
 const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
 
 const DatePicker = forwardRef<unknown, DatePickerProps>(
   (
     {
-      dateFormat = DEFAULT_DATE_FORMAT,
-      variant,
+      type = "date",
+      dateFormat = type === "date" ? DEFAULT_DATE_PICKER_FORMAT : DEFAULT_MONTH_PICKER_FORMAT,
       errorMessage,
       errorList,
       inputProps,
@@ -56,14 +61,16 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
       onBlur,
       onFocus,
       selected,
+      open = false,
       ...props
     },
     datePickerRef
   ) => {
     const [selectedDate, setSelectedDate] = useState(selected);
+    const { locale } = React.useContext(LocaleContext);
     const [ref, setRef] = useState(null);
 
-    const componentVariant = useComponentVariant(variant);
+    const componentVariant = useComponentVariant();
 
     useEffect(() => {
       registerDatePickerLocales();
@@ -112,8 +119,14 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
       }
     };
 
-    const renderHeader = ({ locale }) => {
-      return (props) => <DatePickerHeader locale={locale} {...props} />;
+    const renderCustomHeader = (props: ReactDatePickerCustomHeaderProps) => {
+      switch (type) {
+        case "month":
+          return <MonthDatePickerHeader locale={locale} {...props} />;
+        case "date":
+        default:
+          return <DatePickerHeader locale={locale} {...props} />;
+      }
     };
 
     const customInputProps = {
@@ -123,7 +136,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
       ...inputProps,
       placeholder:
         (inputProps && inputProps.placeholder) ||
-        (dateFormat === DEFAULT_DATE_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
+        (dateFormat === DEFAULT_DATE_PICKER_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
     };
 
     const customInput = (
@@ -143,37 +156,35 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
     return (
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
-        <LocaleContext.Consumer>
-          {({ locale }) => (
-            <ReactDatePicker
-              selected={selectedDate}
-              openToDate={selectedDate}
-              dateFormat={dateFormat}
-              onChange={handleSelectedDateChange}
-              customInput={customInput}
-              renderCustomHeader={renderHeader({ locale })}
-              disabledKeyboardNavigation
-              strictParsing
-              minDate={minDate}
-              maxDate={maxDate}
-              highlightDates={highlightDates}
-              locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
-              ref={(r) => {
-                if (datePickerRef) {
-                  datePickerRef["current"] = r;
-                }
-                onRefChange(r);
-              }}
-              onFocus={onFocus}
-              onBlur={onBlur}
-              popperModifiers={{
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-ignore
-                flip: { enabled: !disableFlipping },
-              }}
-            />
-          )}
-        </LocaleContext.Consumer>
+        <ReactDatePicker
+          selected={selectedDate}
+          openToDate={selectedDate}
+          dateFormat={dateFormat}
+          onChange={handleSelectedDateChange}
+          customInput={customInput}
+          renderCustomHeader={renderCustomHeader}
+          disabledKeyboardNavigation
+          strictParsing
+          minDate={minDate}
+          maxDate={maxDate}
+          highlightDates={highlightDates}
+          locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
+          ref={(r) => {
+            if (datePickerRef) {
+              datePickerRef["current"] = r;
+            }
+            onRefChange(r);
+          }}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          showMonthYearPicker={type === "month"}
+          popperModifiers={{
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            flip: { enabled: !disableFlipping },
+          }}
+          open={open}
+        />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />
       </Field>
     );

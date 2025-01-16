@@ -10,6 +10,8 @@
   "end month is before start month": "End month is before start month",
   "end time is before start time": "End time is before start time",
   "expand row": "Expand row",
+  "go to previous year": "Go to previous year",
+  "go to next year": "Go to next year",
   "go to next results": "Go to next results",
   "go to page": "Go to page {{count}}",
   "current page of total": "Page {{currentPage}} of {{totalPages}}",

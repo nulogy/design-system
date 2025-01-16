@@ -10,6 +10,8 @@
   "end month is before start month": "A data de término é anterior à data de início",
   "end time is before start time": "O horário de término é anterior ao horário de início",
   "expand row": "Expandir fila",
+  "go to previous year": "Ir para o ano anterior",
+  "go to next year": "Ir para o próximo ano",
   "go to next results": "Ir para resultados seguintes",
   "go to page": "Ir para página {{count}}",
   "current page of total": "Página {{currentPage}} de {{totalPages}}",

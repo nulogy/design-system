@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { select, boolean } from "@storybook/addon-knobs";
@@ -17,6 +16,8 @@ export default {
 
 export const Default = () => (
   <DatePicker
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
     selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     onChange={action("date changed")}
     onFocus={action("date selector focused")}
@@ -32,6 +33,8 @@ Default.story = {
 
 export const WithCustomDateFormat = () => (
   <DatePicker
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
     selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     dateFormat="MMMM d, yyyy"
     onChange={action("date changed")}
@@ -96,6 +99,8 @@ WithMinAndMaxDate.story = {
 
 export const DisableFlipping = () => (
   <DatePicker
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    //@ts-ignore
     selected={select("selected", selectedDateExamples, selectedDateExamples[0], "selected")}
     onBlur={action("date selector blurred")}
     onFocus={action("date selector focused")}
@@ -134,4 +139,8 @@ export const UsingRefToControlFocus = () => {
 
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
+};
+
+export const MonthPicker = () => {
+  return <DatePicker type="month" inputProps={{ labelText: "Expiry Date" }} open />;
 };

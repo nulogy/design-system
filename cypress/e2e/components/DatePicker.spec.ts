@@ -133,4 +133,75 @@ describe("Datepicker", () => {
       });
     });
   });
+
+  describe("MonthPicker", () => {
+    const getDateInputComponent = () => cy.get("[aria-label='select a date']");
+    const CALENDAR_SELECTOR = ".react-datepicker-popper";
+    const getCalendarComponent = () => cy.get(CALENDAR_SELECTOR);
+
+    beforeEach(() => {
+      cy.renderFromStorybook("datepicker--month-picker");
+    });
+
+    describe("displays a month picker", () => {
+      it("can open a month picker on click", () => {
+        getCalendarComponent().should("not.exist");
+        getDateInputComponent().click();
+        getCalendarComponent().should("exist");
+      });
+
+      it("displays months instead of days", () => {
+        getDateInputComponent().click();
+        cy.get(".react-datepicker__month-text").should("have.length", 12);
+        cy.get(".react-datepicker__month-text").first().should("contain", "Jan");
+        cy.get(".react-datepicker__month-text").last().should("contain", "Dec");
+      });
+
+      it("can close the month picker on click outside", () => {
+        getDateInputComponent().click();
+        cy.isInViewport(CALENDAR_SELECTOR);
+        cy.clickOutsideElement();
+        getCalendarComponent().should("not.exist");
+      });
+
+      it("can close the month picker on enter", () => {
+        getDateInputComponent().click();
+        getDateInputComponent().type("{enter}");
+        getCalendarComponent().should("not.exist");
+      });
+    });
+
+    describe("selects a month", () => {
+      it("allows the user to select a month by clicking", () => {
+        getDateInputComponent().click();
+        cy.get(".react-datepicker__month-text").contains("Mar").click();
+        getDateInputComponent().should("have.value", "2025-Mar");
+      });
+
+      it("hides the calendar when a month is selected", () => {
+        getDateInputComponent().click();
+        cy.get(".react-datepicker__month-text").contains("Mar").click();
+        getCalendarComponent().should("not.exist");
+      });
+
+      it("allows the user to select a month in a previous year", () => {
+        getDateInputComponent().click();
+        cy.get("[aria-label='Go to previous year']").click();
+        cy.get(`${CALENDAR_SELECTOR} p`).contains("2024");
+      });
+
+      it("allows the user to select a month in a future year", () => {
+        getDateInputComponent().click();
+        cy.get("[aria-label='Go to next year']").click();
+        cy.get(`${CALENDAR_SELECTOR} p`).contains("2026");
+      });
+
+      it("highlights the selected month", () => {
+        getDateInputComponent().click();
+        cy.get(".react-datepicker__month-text").contains("Mar").click();
+        getDateInputComponent().click();
+        cy.get(".react-datepicker__month--selected").should("contain", "Mar");
+      });
+    });
+  });
 });

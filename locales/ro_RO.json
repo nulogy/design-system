@@ -10,6 +10,8 @@
   "end month is before start month": "Data de sfârșit este înaintea datei de început",
   "end time is before start time": "Ora de sfârșit este înaintea orei de început",
   "expand row": "Extindere rând",
+  "go to previous year": "Mergeți la anul anterior",
+  "go to next year": "Mergeți la anul următor",
   "go to next results": "Mergeți la următoarele rezultate",
   "go to page": "Mergeți la pagina {{count}}",
   "current page of total": "Pagina {{currentPage}} din {{totalPages}}",

@@ -10,6 +10,8 @@
   "end month is before start month": "结束日期早于开始日期",
   "end time is before start time": "结束时间早于开始时间",
   "expand row": "展开行",
+  "go to previous year": "转到上一年",
+  "go to next year": "转到下一年",
   "go to next results": "访问之后的结果",
   "go to page": "访问第 {{count}} 页 ",
   "current page of total": "第 {{currentPage}} 页，共 {{totalPages}} 页",

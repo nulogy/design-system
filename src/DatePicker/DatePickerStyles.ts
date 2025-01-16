@@ -67,8 +67,8 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
         color: theme.colors.black,
       },
       "&--outside-month": {
-        color: theme.colors.darkGrey,
-        fontSize: theme.fontSizes.smaller,
+        color: theme.colors.midGrey,
+        fontSize: theme.fontSizes.small,
       },
       "&--disabled": {
         color: theme.colors.grey,
@@ -99,6 +99,44 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
         color: theme.colors.white,
         background: theme.colors.darkBlue,
       },
+    },
+
+    ".react-datepicker__aria-live": {
+      position: "absolute",
+      clipPath: "circle(0)",
+      border: "0",
+      height: "1px",
+      margin: "-1px",
+      overflow: "hidden",
+      padding: "0",
+      width: "1px",
+      whiteSpace: "nowrap",
+    },
+    ".react-datepicker:has(.react-datepicker__month)": {
+      padding: theme.space.x2,
+    },
+    ".react-datepicker__monthPicker": {
+      display: "grid",
+      padding: theme.space.x1,
+      gridTemplateColumns: "repeat(3, 1fr)",
+      columnGap: theme.space.x4,
+      rowGap: theme.space.x1,
+    },
+    ".react-datepicker__month-wrapper": {
+      display: "contents",
+      width: "fit-content",
+    },
+    ".react-datepicker__month-text": {
+      padding: theme.space.x1,
+      fontSize: theme.fontSizes.base,
+      color: theme.colors.darkGrey,
+      borderRadius: theme.radii.medium,
+      textAlign: "center",
+      cursor: "pointer",
+    },
+    ".react-datepicker__month--selected": {
+      backgroundColor: theme.colors.darkBlue,
+      color: "#ffffff",
     },
   },
 }));

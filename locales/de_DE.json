@@ -6,6 +6,8 @@
   "date range": "Datumsbereich",
   "deselect all rows": "Alle Zeilen deselektieren",
   "deselect row": "Zeile deselektieren",
+  "go to previous year": "Zum vorherigen Jahr",
+  "go to next year": "Zum nächsten Jahr",
   "end date is before start date": "Das Enddatum liegt vor dem Startdatum",
   "end month is before start month": "Das Enddatum liegt vor dem Startdatum",
   "end time is before start time": "Die Endzeit liegt vor der Startzeit",

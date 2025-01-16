@@ -10,6 +10,8 @@
   "end month is before start month": "Einddatum is eerder dan startdatum",
   "end time is before start time": "Eindtijd is eerder dan starttijd",
   "expand row": "Rij uitvouwen",
+  "go to previous year": "Ga naar vorig jaar",
+  "go to next year": "Ga naar volgend jaar",
   "go to next results": "Ga naar volgende resultaten",
   "go to page": "Ga naar pagina {{count}}",
   "current page of total": "Pagina {{currentPage}} van {{totalPages}}",
