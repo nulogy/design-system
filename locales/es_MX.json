@@ -10,6 +10,8 @@
   "end month is before start month": "La fecha de finalización es anterior a la fecha de inicio",
   "end time is before start time": "El tiempo de finalización es anterior al tiempo de inicio",
   "expand row": "Expandir fila",
+  "go to previous year": "Ir al año anterior",
+  "go to next year": "Ir al año siguiente",
   "go to next results": "Ir a los resultados siguientes",
   "go to page": "Ir a la página {{count}}",
   "go to previous results": "Ir a los resultados anteriores",

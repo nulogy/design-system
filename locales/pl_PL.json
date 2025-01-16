@@ -10,6 +10,8 @@
   "end month is before start month": "Data zakończenia jest wcześniejsza niż data rozpoczęcia",
   "end time is before start time": "Godzina zakończenia jest wcześniejsza niż godzina rozpoczęcia",
   "expand row": "Rozwiń wiersz",
+  "go to previous year": "Przejdź do poprzedniego roku",
+  "go to next year": "Przejdź do następnego roku",
   "go to next results": "Przejdź do następnych wyników",
   "go to page": "Przejdź do strony {{count}}",
   "current page of total": "Strona {{currentPage}} z {{totalPages}}",
