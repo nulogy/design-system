@@ -1,3 +1,10 @@
+## [13.1.6](https://github.com/nulogy/design-system/compare/v13.1.5...v13.1.6) (2025-01-16)
+
+
+### Bug Fixes
+
+* @types/react-router-dom is not a dependency ([bb74e03](https://github.com/nulogy/design-system/commit/bb74e03a449a94d106e46bbc065b81564c83987f))
+
 ## [13.1.5](https://github.com/nulogy/design-system/compare/v13.1.4...v13.1.5) (2025-01-13)
 
 
