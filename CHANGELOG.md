@@ -188,6 +188,24 @@ Follow the migration guide for app upgrades to v6
 * prop for secondary dividers ([1fbd983](https://github.com/nulogy/design-system/commit/1fbd98307177dfc3faaab84390599c14f642d636))
 * release v11 changes ([0157626](https://github.com/nulogy/design-system/commit/01576268850325d54598d7e8b7f70fdd0a4c4671))
 
+# [11.1.0](https://github.com/nulogy/design-system/compare/v11.0.0...v11.1.0) (2024-11-15)
+
+### Features
+
+* add a BottomSheet component ([9f6eddd](https://github.com/nulogy/design-system/commit/9f6eddd7d0aa3e6038cb9fc6d70640fa20dcb7dd))
+* add a component spec ([2e1a59c](https://github.com/nulogy/design-system/commit/2e1a59c6dff88d5e157fe5ff5cb0512314aa0545))
+* add BottomSheet parts ([6b8ad6c](https://github.com/nulogy/design-system/commit/6b8ad6cb60db70b0e516e64e0499ee169f1ed73b))
+* Add documentation and refine the API ([1ef3c5f](https://github.com/nulogy/design-system/commit/1ef3c5fb9e4d6192b5e03167c22f296ab51fdb6e))
+* further refine the API, stories, and documentation ([fd308f9](https://github.com/nulogy/design-system/commit/fd308f93c904a08435186920b59dc38f27b72cb3))
+* improve BottomSheet API and types ([fe42f8b](https://github.com/nulogy/design-system/commit/fe42f8b3b4232ad44f89c5ad1e663747d4e758aa))
+* test the BottomSheet interactivity ([463fd2d](https://github.com/nulogy/design-system/commit/463fd2d252342208ade5e89edcf805e6ab2ab04d))
+
+### Bug Fixes
+
+* cypress global scope const declaration ([029fb35](https://github.com/nulogy/design-system/commit/029fb35186616a34bde7fd2844e07a1cab174b09))
+* minor format/copy corrections ([e4b8458](https://github.com/nulogy/design-system/commit/e4b8458d19addd22ced78f54407e5499712eded2))
+* unused parameter ([9959206](https://github.com/nulogy/design-system/commit/99592060dc5da4881eca903c9e6f9b74ba8e9a6b))
+
 # [11.0.0](https://github.com/nulogy/design-system/compare/v10.4.0...v11.0.0) (2024-11-25)
 
 
@@ -245,133 +263,6 @@ Follow the migration guide for app upgrades to v6
 * support tablet and phone media queries ([2e4e4b7](https://github.com/nulogy/design-system/commit/2e4e4b71aceb639d009c9de2939c8e7642acedfb))
 * test the BottomSheet interactivity ([bf02d85](https://github.com/nulogy/design-system/commit/bf02d850b94420324afba85d03aad3c61116fbf8))
 * update theme ([08ab964](https://github.com/nulogy/design-system/commit/08ab9645598dfb988f27c00159ee504d964f6d4f))
-
-
-### BREAKING CHANGES
-
-* removes the old unused NavBar component that was
-replaced with the BrandedNavBar
-* removes the `icon` and `iconSize` props from the input
-in-favor of `iconLeft`, `iconRight`, `iconRightSize`, `iconLeftSize`
-
-Migration:
-* Replace `icon` prop with `iconRight`
-* Replace `iconSize` prop with `iconRightSize`
-* changes NDSProvider `size` prop to `variant`.
-
-The `size` prop was originally used sparingly in some components like the
-Button and the Icon to resize those components.
-
-It was later extended to make all interactive components large enough to
-be used on a touch screen, through changing the `size` prop directly or
-by passing a `size` prop to the NDSProvider globally.
-
-With this change, we retain the use of the `size` prop for select
-components, and introduce a `variant` prop that can be passed either to
-individual components or the NDSProvider globally with the value of
-either `desktop` or `touch`.
-* theme can no longer be imported from "@nulogy/components"
-
-NDS is introducing context-specific default themes. Directly importing
-themes from NDS may result in using the wrong theme, causing conflicts
-between custom app themes, desktop, and touch variants.
-
-Instead of importing the theme from NDS like so:
-`import { theme } from "@nulogy/components"`,
-you can use and access the theme in one of the following ways:
-
-- Inside styled components
-```tsx
-const Example = styled.div(({ theme }) => ({
-  marginLeft: theme.space.x3,
-  marginBottom: theme.space.x1,
-  color: theme.colors.darkBlue,
-}));
-```
-
-- Inside components: using styled props
-```tsx
-function Component(props: Props) {
-  return (
-    <Box ml="x3" mb="x1" color="darkBlue">
-      {props.children}
-    </Box>
-  )
-}
-```
-
-- Inside components: using useTheme()
-```tsx
-import { useTheme } from "styled-components"
-
-function getPaddingBasedOnSomeProp(foo, theme) { ... }
-
-function Component(props: Props) {
-  const theme = useTheme()
-  const horizontalPadding = getPaddingBasedOnSomeProp(props.foo, theme)
-
-  return (
-    <Box px={horizontalPadding}>
-      {props.children}
-    </Box>
-  )
-}
-```
-
-# [11.1.0](https://github.com/nulogy/design-system/compare/v11.0.0...v11.1.0) (2024-11-15)
-
-### Features
-
-* add a BottomSheet component ([9f6eddd](https://github.com/nulogy/design-system/commit/9f6eddd7d0aa3e6038cb9fc6d70640fa20dcb7dd))
-* add a component spec ([2e1a59c](https://github.com/nulogy/design-system/commit/2e1a59c6dff88d5e157fe5ff5cb0512314aa0545))
-* add BottomSheet parts ([6b8ad6c](https://github.com/nulogy/design-system/commit/6b8ad6cb60db70b0e516e64e0499ee169f1ed73b))
-* Add documentation and refine the API ([1ef3c5f](https://github.com/nulogy/design-system/commit/1ef3c5fb9e4d6192b5e03167c22f296ab51fdb6e))
-* further refine the API, stories, and documentation ([fd308f9](https://github.com/nulogy/design-system/commit/fd308f93c904a08435186920b59dc38f27b72cb3))
-* improve BottomSheet API and types ([fe42f8b](https://github.com/nulogy/design-system/commit/fe42f8b3b4232ad44f89c5ad1e663747d4e758aa))
-* test the BottomSheet interactivity ([463fd2d](https://github.com/nulogy/design-system/commit/463fd2d252342208ade5e89edcf805e6ab2ab04d))
-
-### Bug Fixes
-
-* cypress global scope const declaration ([029fb35](https://github.com/nulogy/design-system/commit/029fb35186616a34bde7fd2844e07a1cab174b09))
-* minor format/copy corrections ([e4b8458](https://github.com/nulogy/design-system/commit/e4b8458d19addd22ced78f54407e5499712eded2))
-* unused parameter ([9959206](https://github.com/nulogy/design-system/commit/99592060dc5da4881eca903c9e6f9b74ba8e9a6b))
-
-# [11.0.0](https://github.com/nulogy/design-system/compare/v10.2.13...v11.0.0) (2024-11-07)
-
-
-### Bug Fixes
-
-* correct the theme generator scale and types ([8741ce1](https://github.com/nulogy/design-system/commit/8741ce183891a66b551d2e86cfdab177141b9f07))
-* do not shrink the toggle when put in a small container ([#1450](https://github.com/nulogy/design-system/issues/1450)) ([6b3b63f](https://github.com/nulogy/design-system/commit/6b3b63ffa6f201da721748344cc571c0523fce88))
-* format theme after generating it ([039a996](https://github.com/nulogy/design-system/commit/039a9963b070d7b82fe9502e1981cb4f999b4733))
-* issues with scaling up the theme ([88d09bb](https://github.com/nulogy/design-system/commit/88d09bba2047b5726945c15cf9e6bc05d406c98c))
-* lint issues ([6e7588f](https://github.com/nulogy/design-system/commit/6e7588f0a0ed27fb937b56f0299901a47ce61f5b))
-* lint issues ([48e5ac6](https://github.com/nulogy/design-system/commit/48e5ac6f6372cfc2d6886e5d768f208e4a4f6e3a))
-* make the icons and indicators in the select accessible ([#1462](https://github.com/nulogy/design-system/issues/1462)) ([3b6d900](https://github.com/nulogy/design-system/commit/3b6d900c212df12801228ebc9b4e7a221770a552))
-* preserve styled components composability ([baa07de](https://github.com/nulogy/design-system/commit/baa07de6d89f76dcf926dd029cc6d91fe3db9947))
-* prevent shrinking icon ([d499bd1](https://github.com/nulogy/design-system/commit/d499bd149704cf0ed8435b5681c21a48cef47934))
-* remove obsolete stories ([9dfe9ad](https://github.com/nulogy/design-system/commit/9dfe9ad84c054155d056695747039d18e9eccd45))
-* remove theme configuration panel ([4317987](https://github.com/nulogy/design-system/commit/431798705174ca00803f791142e57821a023210e))
-* remove underlines from breadcrumbs ([#1451](https://github.com/nulogy/design-system/issues/1451)) ([6a68084](https://github.com/nulogy/design-system/commit/6a6808417460dc2e97837ba14447d6521fdc8b88))
-* TypeScript parse error ([31259ba](https://github.com/nulogy/design-system/commit/31259baeb9e25d330359000e940fa164d6e01914))
-* unexport the theme directly ([38dda4b](https://github.com/nulogy/design-system/commit/38dda4b67cd863b0a7fb063feb7d493f6afb9841))
-* visual defects following theme change ([b7f5879](https://github.com/nulogy/design-system/commit/b7f587992085d86c32c923bb926bee8b8ea7e2be))
-* visual defects in the touch variant ([6504bc4](https://github.com/nulogy/design-system/commit/6504bc4fd41a5745d519862793ce48a6d45b22cb))
-
-
-### Code Refactoring
-
-* removes old NavBar ([d8f3bf6](https://github.com/nulogy/design-system/commit/d8f3bf6d321b6337a1e27a6e56ca0a5b37505fcc))
-
-
-### Features
-
-* add a touch variant ([7532270](https://github.com/nulogy/design-system/commit/753227035652c9775774fa0ff54b828132af8abd))
-* allow adding left and right icons to the input ([bfdfa88](https://github.com/nulogy/design-system/commit/bfdfa88d4552d25138c31f12a64ec3e7628d755e))
-* generate the theme based on a base unit ([414c19a](https://github.com/nulogy/design-system/commit/414c19a032c79edc68b2bfcc057af03c18d3bfee))
-* refactor away from size to variant ([7fb639a](https://github.com/nulogy/design-system/commit/7fb639a63f681994d48b05c62f4d14da59f7ca06))
-* support tablet and phone media queries ([aa06d15](https://github.com/nulogy/design-system/commit/aa06d15f9ba90d00c5b359c0d1fcf75500210150))
-* update theme ([e6ce943](https://github.com/nulogy/design-system/commit/e6ce943eef0016fe6647e542e4d4182f121b587b))
 
 
 ### BREAKING CHANGES
