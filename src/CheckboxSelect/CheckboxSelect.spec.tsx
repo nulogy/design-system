@@ -12,19 +12,19 @@ describe("CheckboxSelect", () => {
   it("displays the selected option if only one is selected", () => {
     const component = new Component({ value: [2] });
 
-    expect(component.triggerInput).toHaveDisplayValue("Line 2 (1/3)");
+    expect(component.triggerInput).toHaveDisplayValue("{{selectedName}} (1/{{total}})");
   });
 
   it("displays multiple when multiple options are selected", () => {
     const component = new Component({ value: [1, 2] });
 
-    expect(component.triggerInput).toHaveDisplayValue("Multiple (2/3)");
+    expect(component.triggerInput).toHaveDisplayValue("Multiple ({{selectedCount}}/{{total}})");
   });
 
   it("displays all when all options are selected", () => {
     const component = new Component({ value: [1, 2, 3] });
 
-    expect(component.triggerInput).toHaveDisplayValue("All (3/3)");
+    expect(component.triggerInput).toHaveDisplayValue("All ({{total}}/{{total}})");
   });
 });
 
