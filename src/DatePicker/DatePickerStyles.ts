@@ -76,6 +76,14 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
           color: theme.colors.grey,
         },
       },
+      "&--highlighted": {
+        backgroundColor: theme.colors.darkBlue,
+        color: theme.colors.white,
+        "&:hover": {
+          backgroundColor: theme.colors.darkBlue,
+          color: theme.colors.white,
+        },
+      },
     },
     ".react-datepicker__day, .react-datepicker__month-text, .react-datepicker__quarter-text": {
       "&[aria-disabled='false']": {

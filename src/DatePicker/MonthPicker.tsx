@@ -1,8 +1,6 @@
 import React, { useEffect, useState, forwardRef } from "react";
 import ReactDatePicker from "react-datepicker";
 import type { ReactDatePickerCustomHeaderProps } from "react-datepicker";
-import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
-import type { ReactDatePickerProps } from "react-datepicker";
 import propTypes from "@styled-system/prop-types";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 import { InlineValidation } from "../Validation";
@@ -13,20 +11,20 @@ import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
 import { InputFieldDefaultProps, InputFieldProps } from "../Input/InputField";
 import { getSubset } from "../utils/subset";
 import { FieldProps } from "../Form/Field";
-import { DatePickerHeader } from "./DatePickerHeader";
+import { MonthDatePickerHeader } from "./DatePickerHeader";
 import DatePickerInput from "./DatePickerInput";
 import { DatePickerStyles } from "./DatePickerStyles";
 
 type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
 
-interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
-  /** Callback when a date is selected */
+interface MonthPickerProps extends Omit<FieldProps, OmittedFieldProps> {
+  /** Callback when a month is selected. Returns the first day of the selected month */
   onChange?: (date: Date) => void;
   /** Callback when the input loses focus */
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   /** Callback when the input gains focus */
   onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
-  /** Format for displaying the selected date. Defaults to "yyyy-MMM-dd" */
+  /** Format for displaying the selected month. Defaults to "yyyy-MMM" */
   dateFormat?: string;
   /** Callback when the input value changes */
   onInputChange?: (value: string) => void;
@@ -40,27 +38,24 @@ interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
   minDate?: Date;
   /** Maximum selectable date */
   maxDate?: Date;
-  /** Array of dates to highlight */
-  highlightDates?: ReactDatePickerProps["highlightDates"];
   /** Whether to disable flipping the calendar when it hits the viewport edges */
   disableFlipping?: boolean;
-  /** Currently selected date */
+  /** Currently selected month */
   selected?: Date | null;
 }
 
-const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
-const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
+const DEFAULT_MONTH_FORMAT = "yyyy-MMM";
+const DEFAULT_PLACEHOLDER = "YYYY-Mon";
 
-const DatePicker = forwardRef<unknown, DatePickerProps>(
+const MonthPicker = forwardRef<unknown, MonthPickerProps>(
   (
     {
-      dateFormat = DEFAULT_DATE_FORMAT,
+      dateFormat = DEFAULT_MONTH_FORMAT,
       errorMessage,
       errorList,
       inputProps,
       minDate,
       maxDate,
-      highlightDates,
       disableFlipping,
       className,
       onInputChange,
@@ -70,12 +65,11 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
       selected,
       ...props
     },
-    datePickerRef
+    monthPickerRef
   ) => {
-    const [selectedDate, setSelectedDate] = useState(selected);
+    const [selectedMonth, setSelectedMonth] = useState(selected);
     const { locale } = React.useContext(LocaleContext);
     const [ref, setRef] = useState(null);
-
     const componentVariant = useComponentVariant();
 
     useEffect(() => {
@@ -83,7 +77,7 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
     }, []);
 
     useEffect(() => {
-      setSelectedDate(selected);
+      setSelectedMonth(selected);
     }, [selected]);
 
     const onRefChange = React.useCallback((node) => {
@@ -98,25 +92,11 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
       }
     };
 
-    const handleSelectedDateChange = (date: Date) => {
+    const handleSelectedMonthChange = (date: Date) => {
       if (onChange) {
         onChange(date);
       }
-      setSelectedDate(date);
-    };
-
-    const handleDownKey = () => {
-      const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
-      if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
-        handleSelectedDateChange(newSelectedDate);
-      }
-    };
-
-    const handleUpKey = () => {
-      const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
-      if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
-        handleSelectedDateChange(newSelectedDate);
-      }
+      setSelectedMonth(date);
     };
 
     const handleEnterKey = () => {
@@ -140,8 +120,6 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
         inputProps={customInputProps}
         dateFormat={dateFormat}
         onInputChange={handleInputChange}
-        onUpKeyPress={handleUpKey}
-        onDownKeyPress={handleDownKey}
         onEnterKeyPress={handleEnterKey}
       />
     );
@@ -152,28 +130,27 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
         <ReactDatePicker
-          selected={selectedDate}
-          openToDate={selectedDate}
+          selected={selectedMonth}
+          openToDate={selectedMonth}
           dateFormat={dateFormat}
-          onChange={handleSelectedDateChange}
+          onChange={handleSelectedMonthChange}
           customInput={customInput}
           renderCustomHeader={(props: ReactDatePickerCustomHeaderProps) => (
-            <DatePickerHeader locale={locale} {...props} />
+            <MonthDatePickerHeader locale={locale} {...props} />
           )}
-          disabledKeyboardNavigation
           strictParsing
           minDate={minDate}
           maxDate={maxDate}
-          highlightDates={highlightDates}
           locale={NDS_TO_DATE_FN_LOCALES_MAP[locale]}
           ref={(r) => {
-            if (datePickerRef) {
-              datePickerRef["current"] = r;
+            if (monthPickerRef) {
+              monthPickerRef["current"] = r;
             }
             onRefChange(r);
           }}
           onFocus={onFocus}
           onBlur={onBlur}
+          showMonthYearPicker
           popperModifiers={{
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
@@ -186,4 +163,4 @@ const DatePicker = forwardRef<unknown, DatePickerProps>(
   }
 );
 
-export default DatePicker;
+export default MonthPicker;

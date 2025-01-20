@@ -140,7 +140,7 @@ describe("Datepicker", () => {
     const getCalendarComponent = () => cy.get(CALENDAR_SELECTOR);
 
     beforeEach(() => {
-      cy.renderFromStorybook("datepicker--month-picker");
+      cy.renderFromStorybook("datepicker-monthpicker--default");
     });
 
     describe("displays a month picker", () => {

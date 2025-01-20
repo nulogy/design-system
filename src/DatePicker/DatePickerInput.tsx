@@ -11,9 +11,9 @@ type DatePickerInputProps = React.ComponentPropsWithRef<"input"> & {
   variant?: ComponentVariant;
   dateFormat?: string;
   inputProps?: InputProps;
-  onInputChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onUpKeyPress: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-  onDownKeyPress: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onUpKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  onDownKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   onEnterKeyPress: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 };
 

@@ -141,6 +141,22 @@ UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
 
-export const MonthPicker = () => {
-  return <DatePicker type="month" inputProps={{ labelText: "Expiry Date" }} open />;
-};
+
+// export const WeekPicker = () => {
+//   return <DatePicker type="week" inputProps={{ labelText: "Expiry Date" }} open />;
+// };
+
+// WeekPicker.story = {
+//   name: "week picker",
+//   parameters: {
+//     docs: {
+//       description: {
+//         story: `
+//           The week picker allows users to select a specific week of the year.
+//           It displays week numbers and highlights the selected week.
+//           The date format shows the week number and year.
+//         `,
+//       },
+//     },
+//   },
+// };
