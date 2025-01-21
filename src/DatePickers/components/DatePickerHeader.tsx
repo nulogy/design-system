@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import type { ReactDatePickerCustomHeaderProps } from "react-datepicker";
-import { Flex } from "../Flex";
-import { Text } from "../Type";
-import { ControlIcon } from "../Button";
-import { localizedFormat } from "../utils/localized-date-fns";
+import { Flex } from "../../Flex";
+import { Text } from "../../Type";
+import { ControlIcon } from "../../Button";
+import { localizedFormat } from "../../utils/localized-date-fns";
 
 type Props = {
   date: Date;

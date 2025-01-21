@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from "react";
 import { isBefore, isSameDay } from "date-fns";
 import { useTranslation } from "react-i18next";
-import { DatePicker } from "../DatePicker";
+import { DatePicker } from "../DatePickers";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
 import { FieldProps } from "../Form/Field";

@@ -1,8 +1,8 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 
-import { renderWithNDSProvider } from "../NDSProvider/renderWithNDSProvider.spec-utils";
-import { DatePicker } from ".";
+import { renderWithNDSProvider } from "../../NDSProvider/renderWithNDSProvider.spec-utils";
+import { DatePicker } from "..";
 
 describe("DatePicker", () => {
   describe("date selection", () => {

@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import { useTranslation } from "react-i18next";
-import { InputField, InputFieldDefaultProps, InputFieldProps } from "../Input/InputField";
-import { ComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { InputField, InputFieldDefaultProps, InputFieldProps } from "../../Input/InputField";
+import { ComponentVariant } from "../../NDSProvider/ComponentVariantContext";
 
 interface InputProps extends InputFieldProps {
   placeholder?: string;
