@@ -1,8 +1,8 @@
-// @ts-nocheck
 import React, { useState, useEffect, useRef, useImperativeHandle, forwardRef } from "react";
 import { isBefore, isSameDay } from "date-fns";
 import { useTranslation } from "react-i18next";
 import { DatePicker } from "../DatePickers";
+import type { ReactDatePicker } from "react-datepicker";
 import { RangeContainer } from "../RangeContainer";
 import { FieldLabelDefaultProps } from "../FieldLabel/FieldLabel.type";
 import { FieldProps } from "../Form/Field";
@@ -85,10 +85,10 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
     },
     ref
   ) => {
-    const dateRef1 = useRef();
-    const dateRef2 = useRef();
-    const timeRef1 = useRef();
-    const timeRef2 = useRef();
+    const dateRef1 = useRef<ReactDatePicker>(null);
+    const dateRef2 = useRef<ReactDatePicker>(null);
+    const timeRef1 = useRef<HTMLInputElement>(null);
+    const timeRef2 = useRef<HTMLInputElement>(null);
     const [startDate, setStartDate] = useState(defaultStartDate);
     const [endDate, setEndDate] = useState(defaultEndDate);
     const [startTime, setStartTime] = useState(defaultStartTime);
@@ -101,19 +101,19 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
     useImperativeHandle(ref, () => ({
       dateRef1: {
         ...dateRef1,
-        focus: () => dateRef1.current.setFocus(),
+        focus: () => dateRef1.current?.setFocus(),
       },
       dateRef2: {
         ...dateRef2,
-        focus: () => dateRef2.current.setFocus(),
+        focus: () => dateRef2.current?.setFocus(),
       },
       timeRef1: {
         ...timeRef1,
-        focus: () => timeRef1.current.focus(),
+        focus: () => timeRef1.current?.focus(),
       },
       timeRef2: {
         ...timeRef2,
-        focus: () => timeRef2.current.focus(),
+        focus: () => timeRef2.current?.focus(),
       },
     }));
 
@@ -183,7 +183,6 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
     const startDateInput = (
       <>
         <DatePicker
-          variant={componentVariant}
           dateFormat={dateFormat}
           selected={startDate}
           onChange={changeStartDateHandler}
@@ -238,7 +237,6 @@ const DateRange = forwardRef<unknown, DateRangeProps>(
           />
         )}
         <DatePicker
-          variant={componentVariant}
           dateFormat={dateFormat}
           selected={endDate}
           onChange={changeEndDateHandler}
