@@ -200,7 +200,7 @@ describe("Datepicker", () => {
         getDateInputComponent().click();
         cy.get(".react-datepicker__month-text").contains("Mar").click();
         getDateInputComponent().click();
-        cy.get(".react-datepicker__month--selected").should("contain", "Mar");
+        cy.get(".react-datepicker__month-text--selected").should("contain", "Mar");
       });
     });
   });

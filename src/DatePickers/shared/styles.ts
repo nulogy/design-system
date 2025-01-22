@@ -141,10 +141,18 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       borderRadius: theme.radii.medium,
       textAlign: "center",
       cursor: "pointer",
+      "&:hover": {
+        backgroundColor: theme.colors.lightBlue,
+        color: theme.colors.darkGrey,
+      },
     },
-    ".react-datepicker__month--selected": {
+    ".react-datepicker__month-text--selected": {
       backgroundColor: theme.colors.darkBlue,
-      color: "#ffffff",
+      color: theme.colors.white,
+      "&:hover": {
+        backgroundColor: theme.colors.darkBlue,
+        color: theme.colors.white,
+      },
     },
   },
 }));
