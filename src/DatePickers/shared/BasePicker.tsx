@@ -24,7 +24,7 @@ interface BasePickerProps extends BaseDatePickerProps {
   onEnterKeyPress?: () => void;
 }
 
-export const BasePicker = forwardRef<unknown, BasePickerProps>(
+export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
   (
     {
       dateFormat,
