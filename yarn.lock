@@ -6644,7 +6644,7 @@
     "@types/react" "*"
     "@types/reactcss" "*"
 
-"@types/react-datepicker@^4.25.0":
+"@types/react-datepicker@^4.19.6":
   version "4.19.6"
   resolved "https://registry.yarnpkg.com/@types/react-datepicker/-/react-datepicker-4.19.6.tgz#3095fb3c4b38b598c7e3104d73d246c9b4eddb19"
   integrity sha512-uH5fzxt9eXxnc+hDCy/iRSFqU2+9lR/q2lAmaG4WILMai1o3IOdpcV+VSypzBFJLTEC2jrfeDXcdol0CJVMq4g==
