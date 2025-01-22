@@ -1,8 +1,6 @@
-import React from "react";
-import type { FieldProps } from "../../Form/Field";
-import { InputFieldProps } from "../../Input/InputField";
-import type { ReactDatePickerProps } from "react-datepicker";
 import { SpaceProps } from "styled-system";
+import { InputFieldProps } from "../../Input/InputField";
+import { ReactDatePickerProps } from "react-datepicker";
 
 export type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
 
@@ -12,6 +10,7 @@ export interface BaseDatePickerProps extends SpaceProps {
   disableFlipping?: boolean;
   errorList?: string[];
   errorMessage?: string;
+  highlightDates?: ReactDatePickerProps["highlightDates"];
   inputProps?: InputFieldProps;
   locale?: string;
   maxDate?: Date;
