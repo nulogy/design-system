@@ -9,7 +9,7 @@ import { ComponentVariant, ComponentVariantContext } from "../NDSProvider/Compon
 import TabContainer from "./TabContainer";
 import TabScrollIndicators from "./TabScrollIndicators";
 
-export type TabsProps = {
+export type TabsProps = React.PropsWithChildren<{
   className?: string;
   selectedIndex?: number;
   variant?: ComponentVariant;
@@ -17,7 +17,7 @@ export type TabsProps = {
   renderTabContentOnlyWhenSelected?: boolean;
   fitted?: boolean;
   onTabClick?: (...args: any[]) => any;
-};
+}>;
 
 export type TabsState = {
   selectedIndex: any;
