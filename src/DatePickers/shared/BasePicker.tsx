@@ -40,6 +40,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
       onBlur,
       onFocus,
       selected,
+      highlightDates,
       defaultFormat,
       defaultPlaceholder,
       showMonthYearPicker,
@@ -106,6 +107,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
         <ReactDatePicker
+          highlightDates={highlightDates}
           selected={selected}
           openToDate={selected}
           dateFormat={dateFormat || defaultFormat}
