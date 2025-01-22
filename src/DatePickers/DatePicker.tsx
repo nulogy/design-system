@@ -1,5 +1,5 @@
 import React, { forwardRef, useState, useCallback, useEffect } from "react";
-import type { ReactDatePickerCustomHeaderProps } from "react-datepicker";
+import type { ReactDatePicker, ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
 import type { ReactDatePickerProps } from "react-datepicker";
 import { BaseDatePickerProps } from "./shared/types";
@@ -13,7 +13,7 @@ interface DatePickerProps extends BaseDatePickerProps {
 const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
 const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
 
-const DatePicker = forwardRef<unknown, DatePickerProps>(
+const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
   ({ highlightDates, selected, onChange, ...props }, datePickerRef) => {
     const [selectedDate, setSelectedDate] = useState(selected);
     const [ref, setRef] = useState(null);
