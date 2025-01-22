@@ -1,4 +1,4 @@
-import React, { forwardRef, useState, useEffect } from "react";
+import React, { forwardRef, useState } from "react";
 import propTypes from "@styled-system/prop-types";
 import ReactDatePicker, { ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { Field } from "../../Form";
@@ -21,6 +21,7 @@ interface BasePickerProps extends BaseDatePickerProps {
   renderHeader: (props: ReactDatePickerCustomHeaderProps) => JSX.Element;
   onUpKeyPress?: () => void;
   onDownKeyPress?: () => void;
+  onEnterKeyPress?: () => void;
 }
 
 export const BasePicker = forwardRef<unknown, BasePickerProps>(
@@ -45,29 +46,19 @@ export const BasePicker = forwardRef<unknown, BasePickerProps>(
       renderHeader,
       onUpKeyPress,
       onDownKeyPress,
+      onEnterKeyPress,
       locale,
       disabledKeyboardNavigation,
       ...props
     },
     pickerRef
   ) => {
-    const [selectedDate, setSelectedDate] = useState(selected);
     const { locale: contextLocale } = useLocale();
     const [ref, setRef] = useState(null);
     const componentVariant = useComponentVariant();
 
-    useEffect(() => {
+    React.useEffect(() => {
       registerDatePickerLocales();
-    }, []);
-
-    useEffect(() => {
-      setSelectedDate(selected);
-    }, [selected]);
-
-    const onRefChange = React.useCallback((node) => {
-      if (node) {
-        setRef(node);
-      }
     }, []);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -76,12 +67,11 @@ export const BasePicker = forwardRef<unknown, BasePickerProps>(
       }
     };
 
-    const handleSelectedDateChange = (date: Date) => {
-      if (onChange) {
-        onChange(date);
+    const onRefChange = React.useCallback((node) => {
+      if (node) {
+        setRef(node);
       }
-      setSelectedDate(date);
-    };
+    }, []);
 
     const handleEnterKey = () => {
       if (ref) {
@@ -116,10 +106,10 @@ export const BasePicker = forwardRef<unknown, BasePickerProps>(
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
         <ReactDatePicker
-          selected={selectedDate}
-          openToDate={selectedDate}
+          selected={selected}
+          openToDate={selected}
           dateFormat={dateFormat || defaultFormat}
-          onChange={handleSelectedDateChange}
+          onChange={onChange}
           customInput={customInput}
           renderCustomHeader={renderHeader}
           strictParsing
@@ -135,11 +125,12 @@ export const BasePicker = forwardRef<unknown, BasePickerProps>(
           onFocus={onFocus}
           onBlur={onBlur}
           showMonthYearPicker={showMonthYearPicker}
-          popperModifiers={{
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-ignore
-            flip: { enabled: !disableFlipping },
-          }}
+          popperModifiers={[
+            {
+              name: "flip",
+              enabled: !disableFlipping,
+            },
+          ]}
           disabledKeyboardNavigation={disabledKeyboardNavigation}
         />
         <InlineValidation mt="x1" errorMessage={errorMessage} errorList={errorList} />

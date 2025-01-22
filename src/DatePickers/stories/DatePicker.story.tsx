@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
 import { select, boolean } from "@storybook/addon-knobs";
 
-import { DatePicker, Button } from "../index";
+import { DatePicker } from "../index";
+import { Button } from "../..";
 
 const selectedDateExamples = [
   new Date("2019-01-01T05:00:00.000Z"),
@@ -140,23 +141,3 @@ export const UsingRefToControlFocus = () => {
 UsingRefToControlFocus.story = {
   name: "using ref to control focus",
 };
-
-
-// export const WeekPicker = () => {
-//   return <DatePicker type="week" inputProps={{ labelText: "Expiry Date" }} open />;
-// };
-
-// WeekPicker.story = {
-//   name: "week picker",
-//   parameters: {
-//     docs: {
-//       description: {
-//         story: `
-//           The week picker allows users to select a specific week of the year.
-//           It displays week numbers and highlights the selected week.
-//           The date format shows the week number and year.
-//         `,
-//       },
-//     },
-//   },
-// };
