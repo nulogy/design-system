@@ -16,8 +16,6 @@ export function MonthDatePickerHeader({
 }: ReactDatePickerCustomHeaderProps & { locale?: string }) {
   const { t } = useTranslation();
 
-  console.log(t("go to previous year"));
-
   return (
     <Flex justifyContent="space-between" alignItems="center" pb="x1_5">
       <ControlIcon
