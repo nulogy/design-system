@@ -1,10 +1,11 @@
 import { SpaceProps } from "styled-system";
 import { InputFieldProps } from "../../Input/InputField";
 import { ReactDatePickerProps } from "react-datepicker";
+import { FieldProps } from "../../Form/Field";
 
-export type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
+type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
 
-export interface BaseDatePickerProps extends SpaceProps {
+export interface BaseDatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
   className?: string;
   dateFormat?: string;
   disableFlipping?: boolean;
@@ -15,10 +16,9 @@ export interface BaseDatePickerProps extends SpaceProps {
   locale?: string;
   maxDate?: Date;
   minDate?: Date;
-  onBlur?: () => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onFocus?: (event: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (date: Date) => void;
-  onFocus?: () => void;
   onInputChange?: (value: string) => void;
-  onRefChange?: (node: any) => void;
   selected?: Date;
 }

@@ -11,19 +11,13 @@ const DEFAULT_MONTH_FORMAT = "yyyy-MMM";
 const DEFAULT_PLACEHOLDER = "YYYY-Mon";
 
 const MonthPicker = forwardRef<ReactDatePicker, MonthPickerProps>(
-  ({ selected, onChange, ...props }, monthPickerRef) => {
+  ({ selected, dateFormat = DEFAULT_MONTH_FORMAT, onChange, ...props }, monthPickerRef) => {
     const [selectedDate, setSelectedDate] = useState(selected);
-    const [ref, setRef] = useState(null);
+    const [ref] = useState(null);
 
     useEffect(() => {
       setSelectedDate(selected);
     }, [selected]);
-
-    const onRefChange = useCallback((node) => {
-      if (node) {
-        setRef(node);
-      }
-    }, []);
 
     const handleSelectedDateChange = (date: Date) => {
       if (onChange) {
@@ -48,7 +42,7 @@ const MonthPicker = forwardRef<ReactDatePicker, MonthPickerProps>(
         selected={selectedDate}
         onChange={handleSelectedDateChange}
         ref={monthPickerRef}
-        onRefChange={onRefChange}
+        dateFormat={dateFormat}
         defaultFormat={DEFAULT_MONTH_FORMAT}
         defaultPlaceholder={DEFAULT_PLACEHOLDER}
         showMonthYearPicker={true}
