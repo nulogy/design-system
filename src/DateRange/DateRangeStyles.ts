@@ -6,7 +6,7 @@ const END_DATE_CLASS = "nds-datepicker-day--end-date";
 const IN_RANGE_CLASS = "nds-datepicker-day--in-range";
 const TWO_DAY_RANGE_CLASS = "nds-datepicker-two-day-range";
 
-const getAllDaysInRange = (startDate, endDate) => {
+const getAllDaysInRange = (startDate: Date, endDate: Date) => {
   if (endDate && startDate && isBefore(startDate, endDate)) {
     const days = Array(differenceInDays(new Date(endDate), new Date(startDate)) + 1);
     return days.fill(0).map((_, i) => addDays(new Date(startDate), i));
@@ -14,7 +14,7 @@ const getAllDaysInRange = (startDate, endDate) => {
   return [];
 };
 
-export const highlightDates = (startDate, endDate) => {
+export const highlightDates = (startDate: Date, endDate: Date) => {
   const datesInRange = getAllDaysInRange(startDate, endDate);
   return [
     {
