@@ -86,14 +86,15 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
       inputWidth: componentVariant === "touch" ? "280px" : "184px",
       error: !!(errorMessage || errorList),
       ...inputProps,
-      placeholder: (inputProps && inputProps.placeholder) || defaultPlaceholder,
+      placeholder:
+        (inputProps && inputProps.placeholder) || (dateFormat === defaultFormat ? defaultPlaceholder : dateFormat),
     };
 
     const customInput = (
       <DatePickerInput
         variant={componentVariant}
         inputProps={customInputProps}
-        dateFormat={dateFormat || defaultFormat}
+        dateFormat={dateFormat}
         onInputChange={handleInputChange}
         onUpKeyPress={onUpKeyPress}
         onDownKeyPress={onDownKeyPress}
@@ -110,7 +111,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
           highlightDates={highlightDates}
           selected={selected}
           openToDate={selected}
-          dateFormat={dateFormat || defaultFormat}
+          dateFormat={dateFormat}
           onChange={onChange}
           customInput={customInput}
           renderCustomHeader={renderHeader}

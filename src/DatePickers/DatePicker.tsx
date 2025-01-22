@@ -10,67 +10,63 @@ const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
 
 type DatePickerProps = BaseDatePickerProps;
 
-const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(({ selected, onChange, ...props }, datePickerRef) => {
-  const [selectedDate, setSelectedDate] = useState(selected);
-  const [ref, setRef] = useState(null);
+const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
+  ({ selected, dateFormat = DEFAULT_DATE_FORMAT, onChange, ...props }, datePickerRef) => {
+    const [selectedDate, setSelectedDate] = useState(selected);
+    const [ref] = useState(null);
 
-  useEffect(() => {
-    setSelectedDate(selected);
-  }, [selected]);
+    useEffect(() => {
+      setSelectedDate(selected);
+    }, [selected]);
 
-  const onRefChange = useCallback((node) => {
-    if (node) {
-      setRef(node);
-    }
-  }, []);
+    const handleSelectedDateChange = (date: Date) => {
+      if (onChange) {
+        onChange(date);
+      }
+      setSelectedDate(date);
+    };
 
-  const handleSelectedDateChange = (date: Date) => {
-    if (onChange) {
-      onChange(date);
-    }
-    setSelectedDate(date);
-  };
+    const handleDownKey = () => {
+      const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
+      if (!props.minDate || isAfter(newSelectedDate, props.minDate) || isSameDay(newSelectedDate, props.minDate)) {
+        handleSelectedDateChange(newSelectedDate);
+      }
+    };
 
-  const handleDownKey = () => {
-    const newSelectedDate = isValid(selectedDate) ? subDays(selectedDate, 1) : new Date();
-    if (!props.minDate || isAfter(newSelectedDate, props.minDate) || isSameDay(newSelectedDate, props.minDate)) {
-      handleSelectedDateChange(newSelectedDate);
-    }
-  };
+    const handleUpKey = () => {
+      const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
+      if (!props.maxDate || isBefore(newSelectedDate, props.maxDate) || isSameDay(newSelectedDate, props.maxDate)) {
+        handleSelectedDateChange(newSelectedDate);
+      }
+    };
 
-  const handleUpKey = () => {
-    const newSelectedDate = isValid(selectedDate) ? addDays(selectedDate, 1) : new Date();
-    if (!props.maxDate || isBefore(newSelectedDate, props.maxDate) || isSameDay(newSelectedDate, props.maxDate)) {
-      handleSelectedDateChange(newSelectedDate);
-    }
-  };
+    const handleEnterKey = () => {
+      if (ref) {
+        const isOpen = ref.isCalendarOpen();
+        ref.setOpen(!isOpen);
+      }
+    };
 
-  const handleEnterKey = () => {
-    if (ref) {
-      const isOpen = ref.isCalendarOpen();
-      ref.setOpen(!isOpen);
-    }
-  };
-
-  return (
-    <BasePicker
-      {...props}
-      selected={selectedDate}
-      onChange={handleSelectedDateChange}
-      ref={datePickerRef}
-      onRefChange={onRefChange}
-      defaultFormat={DEFAULT_DATE_FORMAT}
-      defaultPlaceholder={DEFAULT_PLACEHOLDER}
-      showMonthYearPicker={false}
-      renderHeader={(headerProps: ReactDatePickerCustomHeaderProps) => (
-        <DatePickerHeader locale={props.locale} {...headerProps} />
-      )}
-      disabledKeyboardNavigation
-      onUpKeyPress={handleUpKey}
-      onDownKeyPress={handleDownKey}
-      onEnterKeyPress={handleEnterKey}
-    />
-  );
-});
+    return (
+      <BasePicker
+        {...props}
+        selected={selectedDate}
+        dateFormat={dateFormat}
+        onChange={handleSelectedDateChange}
+        ref={datePickerRef}
+        defaultFormat={DEFAULT_DATE_FORMAT}
+        defaultPlaceholder={DEFAULT_PLACEHOLDER}
+        showMonthYearPicker={false}
+        renderHeader={(headerProps: ReactDatePickerCustomHeaderProps) => (
+          <DatePickerHeader locale={props.locale} {...headerProps} />
+        )}
+        disabledKeyboardNavigation
+        onUpKeyPress={handleUpKey}
+        onDownKeyPress={handleDownKey}
+        onEnterKeyPress={handleEnterKey}
+      />
+    );
+  }
+);
 
 export default DatePicker;
