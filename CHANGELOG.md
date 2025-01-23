@@ -1,3 +1,10 @@
+## [13.3.1](https://github.com/nulogy/design-system/compare/v13.3.0...v13.3.1) (2025-01-23)
+
+
+### Bug Fixes
+
+* Change Table Key type ([965e5b1](https://github.com/nulogy/design-system/commit/965e5b1b675c5e11b5e198cc7adff5d8a276aecd))
+
 # [13.3.0](https://github.com/nulogy/design-system/compare/v13.2.0...v13.3.0) (2025-01-23)
 
 
