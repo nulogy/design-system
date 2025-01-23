@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { useTheme } from "styled-components";
-import { position, PositionProps, space, SpaceProps } from "styled-system";
+import { height, position, PositionProps, space, SpaceProps, width } from "styled-system";
 import icons from "@nulogy/icons";
 import { IconName } from "@nulogy/icons";
 import LoadingIcon from "./LoadingIcon";
@@ -107,7 +107,6 @@ export const InputIcon = styled(Icon)<PositionProps>(
     color: theme.colors.midGrey,
     bottom: "50%",
     transform: "translateY(50%)",
-    pointerEvents: "none",
   }),
   position
 );
