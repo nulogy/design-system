@@ -1,3 +1,26 @@
+# [13.2.0](https://github.com/nulogy/design-system/compare/v13.1.6...v13.2.0) (2025-01-23)
+
+
+### Bug Fixes
+
+* add children to the TabProps type ([566f15f](https://github.com/nulogy/design-system/commit/566f15f98ef24f8f6ef4f17b38ee48bb43d8caab))
+* bump react-datepicker ([e646a6e](https://github.com/nulogy/design-system/commit/e646a6ebef0c29c6c573b53c0e51b1f5f619bcd8))
+* Changelog had two 11.0.0 entries ([e9fccf3](https://github.com/nulogy/design-system/commit/e9fccf31b28321168fb7c996d9ca73a002c3d6f1))
+* DateRange cypress test ([0630f7e](https://github.com/nulogy/design-system/commit/0630f7e8d773ff1f768fe1c24135ec43b8c9cfb1))
+* Make the MonthPicker a standalone component ([7eeb061](https://github.com/nulogy/design-system/commit/7eeb06156c1ffc792a4e78aed926960af88387a5))
+* move BasePicker state up to the Date and Month pickers ([50e9529](https://github.com/nulogy/design-system/commit/50e952963fbcd425bcdddd731b0b4a87099ea4c7))
+* narrow ref type ([f97d218](https://github.com/nulogy/design-system/commit/f97d2183d59f5979597e038db9efb7acb0d2fe8a))
+* reduce vertical padding in the Switcher ([7e4250b](https://github.com/nulogy/design-system/commit/7e4250b3ef51d46188f18eb217e4c5c495cb0e77))
+* remove logging ([4fc1c7b](https://github.com/nulogy/design-system/commit/4fc1c7bb01ee1f423b6bb19dc1997b564ada7611))
+* remove parent onRefChange ([753b50f](https://github.com/nulogy/design-system/commit/753b50fa00d986461745334578aca28fe3783c53))
+* restore types ([a48daef](https://github.com/nulogy/design-system/commit/a48daef0ddc4fd47384383df8bfa480bb9aef162))
+* use the right types version ([ab91ca5](https://github.com/nulogy/design-system/commit/ab91ca58dbf634f508aab9d7902df999b161d612))
+
+
+### Features
+
+* add a month picker ([dc025b1](https://github.com/nulogy/design-system/commit/dc025b1918812ab9bd66b64a04e4e52d763dafcf))
+
 ## [13.1.6](https://github.com/nulogy/design-system/compare/v13.1.5...v13.1.6) (2025-01-16)
 
 
