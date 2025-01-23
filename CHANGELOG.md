@@ -1,3 +1,10 @@
+# [13.3.0](https://github.com/nulogy/design-system/compare/v13.2.0...v13.3.0) (2025-01-23)
+
+
+### Features
+
+* add tooltip to input icons ([2ffa0f4](https://github.com/nulogy/design-system/commit/2ffa0f44a39bcadfcd296f14c0c55c7d3f1edd9d))
+
 # [13.2.0](https://github.com/nulogy/design-system/compare/v13.1.6...v13.2.0) (2025-01-23)
 
 
