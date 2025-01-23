@@ -1,5 +1,4 @@
-import type { Key } from "react";
-
+type Key = string | number;
 export type RowType = any;
 
 export interface CellInfoType<ColumnMetadata> {
