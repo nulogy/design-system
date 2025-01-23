@@ -1,17 +1,18 @@
+import { IconName } from "@nulogy/icons";
 import React, { forwardRef } from "react";
 import styled, { CSSObject, useTheme } from "styled-components";
-import { position, PositionProps, space, SpaceProps, variant } from "styled-system";
-import { IconName } from "@nulogy/icons";
-import { Icon } from "../Icon";
+import { space, SpaceProps, variant } from "styled-system";
 import { Box, BoxProps } from "../Box";
-import { Flex } from "../Flex";
-import { subPx } from "../utils";
 import { MaybeFieldLabel } from "../FieldLabel";
-import type { DefaultNDSThemeType } from "../theme";
+import { Flex } from "../Flex";
+import { InputIcon } from "../Icon/Icon";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import type { DefaultNDSThemeType } from "../theme";
+import { Tooltip } from "../Tooltip";
+import { TooltipProps } from "../Tooltip/Tooltip";
+import { subPx } from "../utils";
 import Prefix from "./Prefix";
 import Suffix from "./Suffix";
-import { InputIcon } from "../Icon/Icon";
 
 type NativeInputProps = Omit<React.ComponentPropsWithRef<"input">, "size" | "height" | "width">;
 
@@ -22,6 +23,10 @@ export interface InputFieldProps extends NativeInputProps {
   iconLeft?: IconName | "loading";
   iconRightSize?: string;
   iconLeftSize?: string;
+  iconLeftTooltip?: React.ReactNode;
+  iconRightTooltip?: React.ReactNode;
+  iconLeftTooltipProps?: Omit<TooltipProps, "tooltip">;
+  iconRightTooltipProps?: Omit<TooltipProps, "tooltip">;
   error?: boolean;
   labelText?: string;
   requirementText?: string;
@@ -42,6 +47,10 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
       iconLeft,
       iconRightSize = "x3",
       iconLeftSize = "x3",
+      iconLeftTooltip,
+      iconRightTooltip,
+      iconLeftTooltipProps,
+      iconRightTooltipProps,
       error,
       required,
       labelText,
@@ -68,7 +77,14 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
         <Flex alignItems="flex-start">
           <Prefix prefix={prefix} prefixWidth={prefixWidth} textAlign={prefixAlignment} />
           <InputWrapper maxWidth={inputWidth}>
-            {iconLeft && <InputIcon left="x1" icon={iconLeft} size={iconLeftSize} />}
+            {iconLeft &&
+              (iconLeftTooltip ? (
+                <Tooltip tooltip={iconLeftTooltip} {...iconLeftTooltipProps}>
+                  <InputIcon left="x1" icon={iconLeft} size={iconLeftSize} />
+                </Tooltip>
+              ) : (
+                <InputIcon left="x1" icon={iconLeft} size={iconLeftSize} />
+              ))}
             <StyledInput
               paddingLeft={iconLeft ? `calc(${theme.space[iconLeftSize]} + ${theme.space.x1_5})` : theme.space.x1}
               paddingRight={iconRight ? `calc(${theme.space[iconRightSize]} + ${theme.space.x1_5})` : theme.space.x1}
@@ -82,7 +98,14 @@ export const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
               inputWidth={inputWidth}
               {...props}
             />
-            {iconRight && <InputIcon right="x1" icon={iconRight} size={iconRightSize} />}
+            {iconRight &&
+              (iconRightTooltip ? (
+                <Tooltip tooltip={iconRightTooltip} {...iconRightTooltipProps}>
+                  <InputIcon right="x1" icon={iconRight} size={iconRightSize} />
+                </Tooltip>
+              ) : (
+                <InputIcon right="x1" icon={iconRight} size={iconRightSize} />
+              ))}
           </InputWrapper>
           <Suffix suffix={suffix} suffixWidth={suffixWidth} textAlign={suffixAlignment} />
         </Flex>

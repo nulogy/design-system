@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { action } from "@storybook/addon-actions";
-import { Input, Form, FormSection, PrimaryButton, Button, Flex } from "../index";
+import { Input, Form, FormSection, PrimaryButton, Button, Flex, Heading1, Heading4 } from "../index";
 
 const errorList = ["Error message 1", "Error message 2"];
 
@@ -133,6 +133,57 @@ export const WithAnIcon = () => (
       iconLeftSize="x2"
       placeholder="Search by SKU"
       labelText="Custom icon size"
+    />
+  </Flex>
+);
+
+export const WithIconTooltips = () => (
+  <Flex flexDirection="column" gap="x2">
+    <Heading4>
+      You can use tooltips to provide additional information about the icon. Tooltips can be customized with the same
+      props as the Tooltip component.
+    </Heading4>
+    <Input
+      maxWidth="320px"
+      inputWidth="320px"
+      iconLeft="search"
+      iconLeftTooltip="Search products"
+      iconLeftTooltipProps={{
+        placement: "right",
+        showDelay: "500",
+      }}
+      placeholder="Search by SKU"
+      labelText="Hover over the search icon (right placement, 500ms delay)"
+    />
+    <Input
+      maxWidth="320px"
+      inputWidth="320px"
+      iconRight="barcode"
+      iconRightTooltip="Scan barcode"
+      iconRightTooltipProps={{
+        placement: "left",
+        hideDelay: "1000",
+      }}
+      placeholder="Scan product"
+      labelText="Hover over the barcode icon (left placement, 1s hide delay)"
+    />
+    <Input
+      maxWidth="320px"
+      inputWidth="320px"
+      iconLeft="search"
+      iconRight="close"
+      iconLeftTooltip="Search products"
+      iconRightTooltip="Clear search"
+      iconLeftTooltipProps={{
+        placement: "top",
+        maxWidth: "150px",
+      }}
+      iconRightTooltipProps={{
+        placement: "bottom",
+        maxWidth: "150px",
+      }}
+      placeholder="Search with both tooltips"
+      labelText="Different placements (top and bottom)"
     />
   </Flex>
 );
