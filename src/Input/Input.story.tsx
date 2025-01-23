@@ -170,19 +170,19 @@ export const WithIconTooltips = () => (
     <Input
       maxWidth="320px"
       inputWidth="320px"
-      iconLeft="search"
-      iconRight="close"
-      iconLeftTooltip="Search products"
-      iconRightTooltip="Clear search"
-      iconLeftTooltipProps={{
-        placement: "top",
-        maxWidth: "150px",
-      }}
+      iconRight="info"
+      iconRightTooltip="Your access number can be found on your access card"
+      iconLeft="lock"
+      iconLeftTooltip="Your information is secure"
       iconRightTooltipProps={{
         placement: "bottom",
         maxWidth: "150px",
       }}
-      placeholder="Search with both tooltips"
+      iconLeftTooltipProps={{
+        placement: "top",
+        maxWidth: "150px",
+      }}
+      placeholder="Enter your access number"
       labelText="Different placements (top and bottom)"
     />
   </Flex>
