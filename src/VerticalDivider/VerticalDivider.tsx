@@ -18,7 +18,7 @@ const VerticalDivider = styled.div<DividerProps>(
     marginLeft: theme.space.x2,
     marginRight: theme.space.x2,
   }),
-  addStyledProps,
+  addStyledProps
 );
 VerticalDivider.displayName = "VerticalDivider";
 
