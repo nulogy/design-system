@@ -1,3 +1,10 @@
+# [13.4.0](https://github.com/nulogy/design-system/compare/v13.3.1...v13.4.0) (2025-01-27)
+
+
+### Features
+
+* Add VerticalDivider ([2e99f6c](https://github.com/nulogy/design-system/commit/2e99f6c8ea5c0c98b80d629ed3e7f68f459a2713))
+
 ## [13.3.1](https://github.com/nulogy/design-system/compare/v13.3.0...v13.3.1) (2025-01-23)
 
 
