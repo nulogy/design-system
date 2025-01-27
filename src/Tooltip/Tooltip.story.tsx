@@ -1,5 +1,18 @@
 import React from "react";
-import { Button, Box, Link, Flex, Text, Tooltip } from "../index";
+import {
+  Box,
+  Button,
+  DescriptionDetails,
+  DescriptionList,
+  DescriptionTerm,
+  Divider,
+  Flex,
+  Icon,
+  Link,
+  StatusIndicator,
+  Text,
+  Tooltip,
+} from "../index";
 
 export default {
   title: "Components/Tooltip",
@@ -201,3 +214,50 @@ const CustomComponent = React.forwardRef<HTMLDivElement, { [key: string]: any }>
     <Text inline>This component uses the forwardedRef from the Tooltip wrapping it</Text>
   </span>
 ));
+
+const CustomTooltip = () => (
+  <Flex flexDirection="column" width="320px" p="x1_5">
+    <Text fontSize="smaller" fontWeight="medium" textTransform="uppercase" color="midGrey">
+      Purchase Order
+    </Text>
+    <Text color="darkGrey">PO 12389</Text>
+    <Divider />
+    <DescriptionList>
+      <DescriptionTerm>Customer</DescriptionTerm>
+      <DescriptionDetails>Nulogy</DescriptionDetails>
+      <DescriptionTerm>
+        <Text display="inline-flex" alignItems="end">
+          Order number
+          <Icon icon="info" size="x3" paddingLeft="half" />
+        </Text>
+      </DescriptionTerm>
+      <DescriptionDetails>
+        <Link href="/customer-details">P12-90381-2039</Link>
+      </DescriptionDetails>
+      <DescriptionTerm>Status</DescriptionTerm>
+      <DescriptionDetails>
+        <StatusIndicator type="success">Paid</StatusIndicator>
+      </DescriptionDetails>
+      <DescriptionTerm>Amount</DescriptionTerm>
+      <DescriptionDetails>$202.12</DescriptionDetails>
+      <DescriptionTerm>Amount after exchange</DescriptionTerm>
+      <DescriptionDetails>
+        <Flex as="span" alignItems="center" gap="half">
+          US $202.12 <Icon icon="arrowForward" color="midGrey" /> CA $287.43
+        </Flex>
+      </DescriptionDetails>
+    </DescriptionList>
+  </Flex>
+);
+
+export const WithCustomTooltip = () => (
+  <Flex alignItems="center" gap="half">
+    <Text fontSize="small" color="darkGrey">
+      You can embed custom components in the tooltip
+    </Text>
+
+    <Tooltip maxWidth="340px" tooltip={<CustomTooltip />}>
+      <Icon icon="info" size="x3" color="darkGrey" />
+    </Tooltip>
+  </Flex>
+);
