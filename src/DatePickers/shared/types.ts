@@ -5,7 +5,7 @@ import { FieldProps } from "../../Form/Field";
 
 type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
 
-export interface BaseDatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
+export interface DatePickerProps extends Omit<FieldProps, OmittedFieldProps> {
   className?: string;
   dateFormat?: string;
   disableFlipping?: boolean;

@@ -12,7 +12,7 @@ const selectedDateExamples = [
 ];
 
 export default {
-  title: "Components/DatePicker",
+  title: "Components/DatePickers/DatePicker",
 };
 
 export const Default = () => (
@@ -28,10 +28,6 @@ export const Default = () => (
   />
 );
 
-Default.story = {
-  name: "default",
-};
-
 export const WithCustomDateFormat = () => (
   <DatePicker
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -46,10 +42,6 @@ export const WithCustomDateFormat = () => (
   />
 );
 
-WithCustomDateFormat.story = {
-  name: "with custom date format",
-};
-
 export const WithCustomPlaceholder = () => (
   <DatePicker
     dateFormat="MMMM d, yyyy"
@@ -60,10 +52,6 @@ export const WithCustomPlaceholder = () => (
     inputProps={{ labelText: "Expiry Date", placeholder: "Month day, year" }}
   />
 );
-
-WithCustomPlaceholder.story = {
-  name: "with custom placeholder",
-};
 
 export const WithErrorState = () => (
   <DatePicker
@@ -76,10 +64,6 @@ export const WithErrorState = () => (
     errorMessage="The date is invalid"
   />
 );
-
-WithErrorState.story = {
-  name: "with error state",
-};
 
 export const WithMinAndMaxDate = () => (
   <DatePicker
@@ -94,10 +78,6 @@ export const WithMinAndMaxDate = () => (
   />
 );
 
-WithMinAndMaxDate.story = {
-  name: "with min and max date",
-};
-
 export const DisableFlipping = () => (
   <DatePicker
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -111,10 +91,6 @@ export const DisableFlipping = () => (
     disableFlipping={boolean("disableFlipping", true)}
   />
 );
-
-DisableFlipping.story = {
-  name: "disable flipping",
-};
 
 export const UsingRefToControlFocus = () => {
   const ref = useRef(null);
@@ -136,8 +112,4 @@ export const UsingRefToControlFocus = () => {
       <Button onClick={handleClick}>Focus the Toggle</Button>
     </>
   );
-};
-
-UsingRefToControlFocus.story = {
-  name: "using ref to control focus",
 };

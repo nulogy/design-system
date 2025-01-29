@@ -1,14 +1,12 @@
-import React, { forwardRef, useState, useCallback, useEffect } from "react";
+import React, { forwardRef, useState, useEffect } from "react";
 import type { ReactDatePicker, ReactDatePickerCustomHeaderProps } from "react-datepicker";
 import { subDays, addDays, isValid, isAfter, isBefore, isSameDay } from "date-fns";
-import { BaseDatePickerProps } from "./shared/types";
-import { BasePicker } from "./shared/BasePicker";
-import { DatePickerHeader } from "./components/DatePickerHeader";
+import { DatePickerProps } from "./shared/types";
+import { BasePicker } from "./shared/components/BasePicker";
+import { DatePickerHeader } from "./shared/components/DatePickerHeader";
 
 const DEFAULT_DATE_FORMAT = "yyyy-MMM-dd";
 const DEFAULT_PLACEHOLDER = "YYYY-Mon-DD";
-
-type DatePickerProps = BaseDatePickerProps;
 
 const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
   ({ selected, dateFormat = DEFAULT_DATE_FORMAT, onChange, ...props }, datePickerRef) => {
@@ -57,13 +55,13 @@ const DatePicker = forwardRef<ReactDatePicker, DatePickerProps>(
         defaultFormat={DEFAULT_DATE_FORMAT}
         defaultPlaceholder={DEFAULT_PLACEHOLDER}
         showMonthYearPicker={false}
-        renderHeader={(headerProps: ReactDatePickerCustomHeaderProps) => (
-          <DatePickerHeader locale={props.locale} {...headerProps} />
-        )}
         disabledKeyboardNavigation
         onUpKeyPress={handleUpKey}
         onDownKeyPress={handleDownKey}
         onEnterKeyPress={handleEnterKey}
+        renderHeader={(headerProps: ReactDatePickerCustomHeaderProps) => (
+          <DatePickerHeader locale={props.locale} {...headerProps} />
+        )}
       />
     );
   }
