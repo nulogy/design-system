@@ -90,6 +90,10 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
         cursor: "pointer",
       },
     },
+    ".react-datepicker__month-text--today": {
+      fontWeight: theme.fontWeights.bold,
+      color: theme.colors.black,
+    },
     ".react-datepicker__day--disabled:hover,.react-datepicker__month-text--disabled:hover,.react-datepicker__quarter-text--disabled:hover":
       {
         backgroundColor: "transparent",
@@ -140,10 +144,16 @@ export const DatePickerStyles = createGlobalStyle(({ theme }) => ({
       color: theme.colors.darkGrey,
       borderRadius: theme.radii.medium,
       textAlign: "center",
-      cursor: "pointer",
-      "&:hover": {
+      "&:not(.react-datepicker__month-text--disabled):hover": {
         backgroundColor: theme.colors.lightBlue,
         color: theme.colors.darkGrey,
+      },
+      "&--disabled": {
+        userSelect: "none",
+        color: theme.colors.grey,
+        "&:hover": {
+          color: theme.colors.grey,
+        },
       },
     },
     ".react-datepicker__month-text--selected": {

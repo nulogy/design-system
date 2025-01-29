@@ -1,14 +1,14 @@
 import React, { forwardRef, useState, useCallback, useEffect } from "react";
 import type { ReactDatePicker, ReactDatePickerCustomHeaderProps } from "react-datepicker";
-import { BaseDatePickerProps } from "./shared/types";
+import { DatePickerProps } from "./shared/types";
 import { noop } from "../utils/noop";
-import { BasePicker } from "./shared/BasePicker";
-import { MonthDatePickerHeader } from "./components/MonthPickerHeader";
+import { BasePicker } from "./shared/components/BasePicker";
+import { MonthDatePickerHeader } from "./custom/MonthPickerHeader";
 
-type MonthPickerProps = BaseDatePickerProps;
+type MonthPickerProps = DatePickerProps;
 
-const DEFAULT_MONTH_FORMAT = "yyyy-MMM";
-const DEFAULT_PLACEHOLDER = "YYYY-Mon";
+export const DEFAULT_MONTH_FORMAT = "yyyy-MMM";
+export const DEFAULT_PLACEHOLDER = "YYYY-Mon";
 
 const MonthPicker = forwardRef<ReactDatePicker, MonthPickerProps>(
   ({ selected, dateFormat = DEFAULT_MONTH_FORMAT, onChange, ...props }, monthPickerRef) => {
