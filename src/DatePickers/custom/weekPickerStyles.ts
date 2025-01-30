@@ -48,8 +48,10 @@ export const WeekPickerStyles = createGlobalStyle(({ theme }) => ({
     paddingRight: theme.space.x3,
     paddingTop: theme.space.x1_5,
     paddingBottom: theme.space.x1_5,
+    color: theme.colors.grey,
 
-    "&--clickable": {
+    "&--clickable:not(:has(~ .react-datepicker__day--disabled))": {
+      color: theme.colors.darkGrey,
       cursor: "pointer",
     },
   },
@@ -91,8 +93,15 @@ export const WeekPickerStyles = createGlobalStyle(({ theme }) => ({
 
   ".nds-date-picker .react-datepicker__week": {
     borderRadius: theme.radii.large,
-    "&:hover": {
+    "&:not(:has(.react-datepicker__day--disabled)):hover": {
       backgroundColor: theme.colors.lightBlue,
+    },
+
+    "&--selected .react-datepicker__day": {
+      "&:hover": {
+        backgroundColor: theme.colors.darkBlue,
+        color: theme.colors.white,
+      },
     },
 
     "&--selected, &:has(.react-datepicker__day--selected)": {

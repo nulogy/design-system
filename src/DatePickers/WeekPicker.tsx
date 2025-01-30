@@ -56,6 +56,18 @@ const WEEK_START_DAY = 1; // Monday
 const DEFAULT_DATE_PICKER_FORMAT = "'Week of' MMM d, yyyy";
 const DEFAULT_PLACEHOLDER = "Week of Mon DD, YYYY";
 
+const roundMinDateToWeekStart = (date: Date | undefined): Date | undefined => {
+  if (!date) return undefined;
+  const weekStart = startOfWeek(date, { weekStartsOn: WEEK_START_DAY });
+  return isBefore(date, weekStart) ? weekStart : addDays(weekStart, 7);
+};
+
+const roundMaxDateToWeekEnd = (date: Date | undefined): Date | undefined => {
+  if (!date) return undefined;
+  const weekEnd = endOfWeek(date, { weekStartsOn: WEEK_START_DAY });
+  return isBefore(date, weekEnd) ? addDays(startOfWeek(date, { weekStartsOn: WEEK_START_DAY }), -1) : weekEnd;
+};
+
 const WeekPicker = forwardRef<unknown, WeekPickerProps>(
   (
     {
@@ -92,6 +104,9 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
       setSelectedDate(selected);
     }, [selected]);
 
+    const roundedMinDate = roundMinDateToWeekStart(minDate);
+    const roundedMaxDate = roundMaxDateToWeekEnd(maxDate);
+
     const onRefChange = React.useCallback((node) => {
       if (node) {
         setRef(node);
@@ -120,7 +135,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
       const newSelectedDate = isValid(selectedDate)
         ? subDays(selectedDate, 7)
         : startOfWeek(new Date(), { weekStartsOn: 1 });
-      if (!minDate || isAfter(newSelectedDate, minDate) || isSameDay(newSelectedDate, minDate)) {
+      if (!roundedMinDate || isAfter(newSelectedDate, roundedMinDate) || isSameDay(newSelectedDate, roundedMinDate)) {
         handleSelectedDateChange(newSelectedDate);
       }
     };
@@ -129,7 +144,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
       const newSelectedDate = isValid(selectedDate)
         ? addDays(selectedDate, 7)
         : startOfWeek(new Date(), { weekStartsOn: 1 });
-      if (!maxDate || isBefore(newSelectedDate, maxDate) || isSameDay(newSelectedDate, maxDate)) {
+      if (!roundedMaxDate || isBefore(newSelectedDate, roundedMaxDate) || isSameDay(newSelectedDate, roundedMaxDate)) {
         handleSelectedDateChange(newSelectedDate);
       }
     };
@@ -188,8 +203,8 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
           customInput={customInput}
           renderCustomHeader={renderCustomHeader}
           strictParsing
-          minDate={minDate}
-          maxDate={maxDate}
+          minDate={roundedMinDate}
+          maxDate={roundedMaxDate}
           locale={NDS_TO_DATE_FN_LOCALES_MAP[locale || contextLocale]}
           ref={weekPickerRefHandler}
           onFocus={onFocus}
