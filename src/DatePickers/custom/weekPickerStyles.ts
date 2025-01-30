@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { ComponentVariant } from "../../NDSProvider/ComponentVariantContext";
 
-export const WeekPickerStyles = createGlobalStyle(({ theme }) => ({
+export const WeekPickerStyles = createGlobalStyle<{ variant: ComponentVariant }>(({ theme, variant }) => ({
   ".nds-date-picker": {
     ".react-datepicker__week-number": {
       marginRight: theme.space.x2,
@@ -61,14 +62,14 @@ export const WeekPickerStyles = createGlobalStyle(({ theme }) => ({
     paddingBottom: theme.space.x1_5,
 
     "&:first-child": {
-      width: 61,
+      width: variant === "desktop" ? 61 : 85,
       paddingLeft: theme.space.x1,
       paddingRight: theme.space.x3,
       borderRight: `1px solid ${theme.colors.grey}`,
     },
 
     "&:nth-child(2)": {
-      width: 61,
+      width: variant === "desktop" ? 61 : 85,
       paddingLeft: theme.space.x3,
       paddingRight: theme.space.x3,
     },

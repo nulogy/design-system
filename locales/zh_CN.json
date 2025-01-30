@@ -41,5 +41,8 @@
   "show actions": "显示操作",
   "sort ascending": "升序排列",
   "sort descending": "降序排列",
-  "time range": "时间范围"
+  "time range": "时间范围",
+  "weekPicker date format": "'周'ww - yyyy年MMM d日",
+  "weekPicker placeholder": "周52 - 2023年12月31日",
+  "week shorthand": "周"
 }

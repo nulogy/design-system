@@ -41,5 +41,8 @@
   "show actions": "Exibir ações",
   "sort ascending": "Classificação ascendente",
   "sort descending": "Classificação descendente",
-  "time range": "Intervalo de horários"
+  "time range": "Intervalo de horários",
+  "weekPicker date format": "'S'ww - d 'de' MMM yyyy",
+  "weekPicker placeholder": "S52 - 31 de dez 2023",
+  "week shorthand": "S"
 }
