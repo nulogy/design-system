@@ -1,31 +1,32 @@
-import { InputFieldDefaultProps, InputFieldProps } from "../Input/InputField";
 import propTypes from "@styled-system/prop-types";
-import { getSubset } from "../utils/subset";
-import Field, { FieldProps } from "../Form/Field";
 import {
-  isValid,
-  subDays,
-  isAfter,
-  isSameDay,
   addDays,
-  isBefore,
-  startOfWeek,
   endOfWeek,
   getWeek,
   getYear,
+  isAfter,
+  isBefore,
+  isSameDay,
+  isValid,
+  startOfWeek,
+  subDays,
 } from "date-fns";
-import React, { forwardRef, useState, useEffect } from "react";
-import ReactDatePicker, { ReactDatePickerProps, ReactDatePickerCustomHeaderProps } from "react-datepicker";
-import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
-import { LocaleContext, useLocale } from "../NDSProvider/LocaleContext";
-import { registerDatePickerLocales } from "../utils/datePickerLocales";
-import { InlineValidation } from "../Validation";
-import DatePickerInput from "./shared/components/DatePickerInput";
-import { DatePickerHeader } from "./shared/components/DatePickerHeader";
+import React, { forwardRef, useEffect, useState } from "react";
+import ReactDatePicker, { ReactDatePickerCustomHeaderProps } from "react-datepicker";
+import { useTranslation } from "react-i18next";
+import Field, { FieldProps } from "../Form/Field";
+import { InputFieldDefaultProps, InputFieldProps } from "../Input/InputField";
 import { NDS_TO_DATE_FN_LOCALES_MAP } from "../locales.const";
+import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
+import { useLocale } from "../NDSProvider/LocaleContext";
+import { registerDatePickerLocales } from "../utils/datePickerLocales";
+import { getSubset } from "../utils/subset";
+import { InlineValidation } from "../Validation";
 import { WeekPickerStyles } from "./custom/weekPickerStyles";
-import { DatePickerStyles } from "./shared/styles";
+import { DatePickerHeader } from "./shared/components/DatePickerHeader";
+import DatePickerInput from "./shared/components/DatePickerInput";
 import { getPopperModifiers } from "./shared/helpers";
+import { DatePickerStyles } from "./shared/styles";
 
 type OmittedFieldProps = "onChange" | "onBlur" | "onFocus";
 
@@ -53,8 +54,6 @@ interface WeekPickerProps extends Omit<FieldProps, OmittedFieldProps> {
 }
 
 const WEEK_START_DAY = 1; // Monday
-const DEFAULT_DATE_PICKER_FORMAT = "'Week of' MMM d, yyyy";
-const DEFAULT_PLACEHOLDER = "Week of Mon DD, YYYY";
 
 const roundMinDateToWeekStart = (date: Date | undefined): Date | undefined => {
   if (!date) return undefined;
@@ -71,7 +70,7 @@ const roundMaxDateToWeekEnd = (date: Date | undefined): Date | undefined => {
 const WeekPicker = forwardRef<unknown, WeekPickerProps>(
   (
     {
-      dateFormat = DEFAULT_DATE_PICKER_FORMAT,
+      dateFormat,
       errorMessage,
       errorList,
       inputProps,
@@ -91,10 +90,17 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
   ) => {
     const [selectedDate, setSelectedDate] = useState(selected);
     const { locale: contextLocale } = useLocale();
+    const { t } = useTranslation();
     const [ref, setRef] = useState(null);
     const spaceProps = getSubset(props, propTypes.space);
+    const currentLocale = locale || contextLocale;
 
     const componentVariant = useComponentVariant();
+    const defaultDateFormat = t("weekPicker date format");
+    const defaultPlaceholder = t("weekPicker placeholder");
+    const weekShorthand = t("week shorthand");
+
+    const finalDateFormat = dateFormat || defaultDateFormat;
 
     useEffect(() => {
       registerDatePickerLocales();
@@ -120,6 +126,10 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
     };
 
     const handleSelectedDateChange = (date: Date) => {
+      if (!isValid(date)) {
+        return;
+      }
+
       if (onChange) {
         onChange({
           startDate: startOfWeek(date, { weekStartsOn: WEEK_START_DAY }),
@@ -157,7 +167,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
     };
 
     const renderCustomHeader = (props: ReactDatePickerCustomHeaderProps) => {
-      return <DatePickerHeader locale={locale} {...props} />;
+      return <DatePickerHeader locale={locale || currentLocale} {...props} />;
     };
 
     const weekPickerRefHandler = (r: ReactDatePicker<string>) => {
@@ -173,14 +183,14 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
       ...inputProps,
       placeholder:
         (inputProps && inputProps.placeholder) ||
-        (dateFormat === DEFAULT_DATE_PICKER_FORMAT ? DEFAULT_PLACEHOLDER : dateFormat),
+        (finalDateFormat === defaultDateFormat ? defaultPlaceholder : finalDateFormat),
     };
 
     const customInput = (
       <DatePickerInput
         variant={componentVariant}
         inputProps={customInputProps}
-        dateFormat={dateFormat}
+        dateFormat={finalDateFormat}
         onInputChange={handleInputChange}
         onUpKeyPress={handleUpKey}
         onDownKeyPress={handleDownKey}
@@ -191,21 +201,22 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
     return (
       <Field className={`${className} nds-date-picker`} {...spaceProps}>
         <DatePickerStyles />
-        <WeekPickerStyles />
+        <WeekPickerStyles variant={componentVariant} />
         <ReactDatePicker
           showWeekNumbers
           showWeekPicker
+          weekLabel={weekShorthand}
           calendarStartDay={WEEK_START_DAY}
           selected={selectedDate}
           openToDate={selectedDate}
-          dateFormat={dateFormat}
+          dateFormat={finalDateFormat}
           onChange={handleSelectedDateChange}
           customInput={customInput}
           renderCustomHeader={renderCustomHeader}
           strictParsing
           minDate={roundedMinDate}
           maxDate={roundedMaxDate}
-          locale={NDS_TO_DATE_FN_LOCALES_MAP[locale || contextLocale]}
+          locale={NDS_TO_DATE_FN_LOCALES_MAP[currentLocale]}
           ref={weekPickerRefHandler}
           onFocus={onFocus}
           onBlur={onBlur}

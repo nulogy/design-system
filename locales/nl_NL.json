@@ -41,5 +41,8 @@
   "show actions": "Acties tonen",
   "sort ascending": "Oplopend sorteren",
   "sort descending": "Aflopend sorteren",
-  "time range": "Tijdbereik"
+  "time range": "Tijdsbereik",
+  "weekPicker date format": "'W'ww - d MMM yyyy",
+  "weekPicker placeholder": "W52 - 31 dec 2023",
+  "week shorthand": "W"
 }

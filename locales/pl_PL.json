@@ -41,5 +41,8 @@
   "show actions": "Show actions",
   "sort ascending": "Sortuj rosnąco",
   "sort descending": "Sortuj malejąco",
-  "time range": "Zakres czasu"
+  "time range": "Zakres czasu",
+  "weekPicker date format": "'T'ww - d MMM yyyy",
+  "weekPicker placeholder": "T52 - 31 gru 2023",
+  "week shorthand": "T"
 }

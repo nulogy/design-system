@@ -41,5 +41,8 @@
   "show actions": "Afișare acțiuni",
   "sort ascending": "Sortare ascendentă",
   "sort descending": "Sortare descendentă",
-  "time range": "Interval oră"
+  "time range": "Interval oră",
+  "weekPicker date format": "'S'ww - d MMM yyyy",
+  "weekPicker placeholder": "S52 - 31 dec. 2023",
+  "week shorthand": "S"
 }

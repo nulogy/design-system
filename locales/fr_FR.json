@@ -41,5 +41,8 @@
   "show actions": "Afficher les actions",
   "sort ascending": "Tri croissant",
   "sort descending": "Tri décroissant",
-  "time range": "Plage de horaire"
+  "time range": "Plage de horaire",
+  "weekPicker date format": "'S'ww - d MMM yyyy",
+  "weekPicker placeholder": "S52 - 31 déc. 2023",
+  "week shorthand": "S"
 }
