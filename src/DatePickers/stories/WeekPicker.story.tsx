@@ -1,7 +1,6 @@
 import React from "react";
-import WeekPicker from "../WeekPicker";
-import { addDays, subDays } from "date-fns";
 import { Text } from "../../Type";
+import WeekPicker from "../WeekPicker";
 
 export default {
   title: "Components/DatePickers/WeekPicker",
@@ -14,7 +13,6 @@ export const WithError = () => (
 );
 
 export const WithMinMaxDates = () => {
-  const today = new Date();
   return (
     <>
       <Text mb="x2">

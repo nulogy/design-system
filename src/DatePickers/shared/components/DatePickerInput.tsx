@@ -11,6 +11,7 @@ type DatePickerInputProps = React.ComponentPropsWithRef<"input"> & {
   variant?: ComponentVariant;
   dateFormat?: string;
   inputProps?: InputProps;
+  locale: string;
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onUpKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   onDownKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
@@ -31,11 +32,12 @@ const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
       onDownKeyPress,
       onEnterKeyPress,
       variant,
+      locale,
       "aria-label": ariaLabel,
     },
     ref
   ) => {
-    const { t } = useTranslation();
+    const { i18n } = useTranslation();
     const { placeholder, ...inputFieldProps } = inputProps;
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,6 +46,11 @@ const DatePickerInput = forwardRef<HTMLInputElement, DatePickerInputProps>(
         onChange(event);
       }
     };
+
+    const t = React.useMemo(() => {
+      return i18n.getFixedT(locale);
+    }, [i18n, locale]);
+
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       switch (event.key) {
         case "ArrowUp":
