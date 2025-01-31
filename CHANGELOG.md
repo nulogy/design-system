@@ -1,3 +1,20 @@
+# [13.5.0](https://github.com/nulogy/design-system/compare/v13.4.0...v13.5.0) (2025-01-31)
+
+
+### Bug Fixes
+
+* different date pickers enhancements ([3051149](https://github.com/nulogy/design-system/commit/30511498e8dbd73bbb811209334384a96aea48c5))
+* export the WeekPicker ([f477cff](https://github.com/nulogy/design-system/commit/f477cff268cde1b6e40fd3e58ffaeaf7d96989a3))
+* failing cypress specs ([ec528b8](https://github.com/nulogy/design-system/commit/ec528b801207497e4472b6723d146f70b4729c02))
+* mock the getFixedT function ([3a564c4](https://github.com/nulogy/design-system/commit/3a564c419ab3ef8aa61d4dec301d997611236591))
+* replace circle border radius with pill ([09d87cb](https://github.com/nulogy/design-system/commit/09d87cb0739e5468d20526818bd9976d12fdf2f3))
+* use the appropriate locale inside the date picker's input ([574a93f](https://github.com/nulogy/design-system/commit/574a93f5070aaf1c206223f211862884aeb01390))
+
+
+### Features
+
+* lay the ground work for the WeekPicker ([7e99968](https://github.com/nulogy/design-system/commit/7e9996803b8df2c3c544a51003b2d6a58a81fb0e))
+
 # [13.4.0](https://github.com/nulogy/design-system/compare/v13.3.1...v13.4.0) (2025-01-27)
 
 
