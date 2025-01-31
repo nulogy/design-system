@@ -1,9 +1,7 @@
-/* eslint-disable */
 const React = require("react");
 const reactI18next = require("react-i18next");
 
 const en_US = require("../locales/en_US.json");
-/* eslint-enable */
 
 const hasChildren = (node) => node && (node.children || (node.props && node.props.children));
 
@@ -23,7 +21,6 @@ const renderNodes = (reactNodes) => {
     }
     if (hasChildren(child)) {
       const inner = renderNodes(getChildren(child));
-      // eslint-disable-next-line react/no-array-index-key
       return React.cloneElement(child, { ...child.props, key: i }, inner);
     }
     if (typeof child === "object" && !isElement) {
@@ -36,7 +33,9 @@ const renderNodes = (reactNodes) => {
 
 const useMock = [(k) => k, {}];
 useMock.t = (k) => en_US[k] || k;
-useMock.i18n = {};
+useMock.i18n = {
+  getFixedT: (_) => (k) => en_US[k] || k,
+};
 
 module.exports = {
   // this mock makes sure any components using the translate HoC receive the t function as a prop

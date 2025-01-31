@@ -1,9 +1,8 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-
+import { startOfWeek, endOfWeek, getWeek, getYear } from "date-fns";
 import { renderWithNDSProvider } from "../../NDSProvider/renderWithNDSProvider.spec-utils";
 import { DatePicker, WeekPicker } from "..";
-import { startOfWeek, endOfWeek, getWeek, getYear } from "date-fns";
 
 describe("DatePicker", () => {
   describe("date selection", () => {
