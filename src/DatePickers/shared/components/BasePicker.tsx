@@ -11,8 +11,8 @@ import { getSubset } from "../../../utils/subset";
 import { InlineValidation } from "../../../Validation";
 import { DatePickerStyles } from "../styles";
 import { DatePickerProps } from "../types";
-import DatePickerInput from "./DatePickerInput";
 import { getPopperModifiers } from "../helpers";
+import DatePickerInput from "./DatePickerInput";
 
 interface BasePickerProps extends DatePickerProps {
   defaultFormat: string;
@@ -61,6 +61,8 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
     const [ref, setRef] = useState(null);
     const componentVariant = useComponentVariant();
 
+    const currentLocale = locale || contextLocale;
+
     React.useEffect(() => {
       registerDatePickerLocales();
     }, []);
@@ -95,6 +97,7 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
 
     const customInput = (
       <DatePickerInput
+        locale={currentLocale}
         variant={componentVariant}
         inputProps={customInputProps}
         dateFormat={dateFormat}
@@ -128,12 +131,13 @@ export const BasePicker = forwardRef<ReactDatePicker, BasePickerProps>(
           strictParsing
           minDate={minDate}
           maxDate={maxDate}
-          locale={NDS_TO_DATE_FN_LOCALES_MAP[locale || contextLocale]}
+          locale={NDS_TO_DATE_FN_LOCALES_MAP[currentLocale]}
           ref={pickerRefHandler}
           onFocus={onFocus}
           onBlur={onBlur}
           showMonthYearPicker={showMonthYearPicker}
           showWeekNumbers={showWeekNumbers}
+          onEnterKeyPress={onEnterKeyPress}
           popperModifiers={getPopperModifiers(disableFlipping)}
           disabledKeyboardNavigation={disabledKeyboardNavigation}
         />

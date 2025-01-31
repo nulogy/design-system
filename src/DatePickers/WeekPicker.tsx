@@ -90,12 +90,18 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
   ) => {
     const [selectedDate, setSelectedDate] = useState(selected);
     const { locale: contextLocale } = useLocale();
-    const { t } = useTranslation();
+    const { i18n } = useTranslation();
     const [ref, setRef] = useState(null);
     const spaceProps = getSubset(props, propTypes.space);
+
     const currentLocale = locale || contextLocale;
 
     const componentVariant = useComponentVariant();
+
+    const t = React.useMemo(() => {
+      return i18n.getFixedT(currentLocale);
+    }, [i18n, currentLocale]);
+
     const defaultDateFormat = t("weekPicker date format");
     const defaultPlaceholder = t("weekPicker placeholder");
     const weekShorthand = t("week shorthand");
@@ -104,7 +110,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
 
     useEffect(() => {
       registerDatePickerLocales();
-    });
+    }, []);
 
     useEffect(() => {
       setSelectedDate(selected);
@@ -167,7 +173,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
     };
 
     const renderCustomHeader = (props: ReactDatePickerCustomHeaderProps) => {
-      return <DatePickerHeader locale={locale || currentLocale} {...props} />;
+      return <DatePickerHeader locale={currentLocale} {...props} />;
     };
 
     const weekPickerRefHandler = (r: ReactDatePicker<string>) => {
@@ -188,6 +194,7 @@ const WeekPicker = forwardRef<unknown, WeekPickerProps>(
 
     const customInput = (
       <DatePickerInput
+        locale={currentLocale}
         variant={componentVariant}
         inputProps={customInputProps}
         dateFormat={finalDateFormat}
