@@ -34,7 +34,7 @@ const StyledButton = styled.button<{
     display: "flex",
     alignItems: "center",
     padding: theme.space.half,
-    borderRadius: theme.radii.circle,
+    borderRadius: theme.radii.pill,
     color: getIconColorByState({ toggled, disabled, theme }),
     "&:focus": {
       outline: "none",
