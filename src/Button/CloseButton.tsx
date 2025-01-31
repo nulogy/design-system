@@ -13,7 +13,7 @@ const WrapperButton = styled.button(({ disabled, theme }) => ({
   color: theme.colors.black,
   cursor: disabled ? "arrow" : "pointer",
   [`${Icon}`]: {
-    borderRadius: theme.radii.circle,
+    borderRadius: theme.radii.pill,
     transition: ".2s",
   },
   "&:hover": {

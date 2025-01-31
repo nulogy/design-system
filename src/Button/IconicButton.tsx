@@ -31,7 +31,7 @@ const IconWrapper = styled.span<{ size: string }>(({ theme, size }) => ({
   flexShrink: 0,
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: theme.radii.circle,
+  borderRadius: theme.radii.pill,
   height: `calc(${theme.sizes[size] ?? size} + ${theme.sizes.x1})`,
   width: `calc(${theme.sizes[size] ?? size} + ${theme.sizes.x1})`,
   transition: ".2s",

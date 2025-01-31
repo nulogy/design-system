@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { CSSObject } from "styled-components";
+import styled from "styled-components";
 import { transparentize } from "polished";
 import { SpaceProps, variant } from "styled-system";
 import { space } from "styled-system";
