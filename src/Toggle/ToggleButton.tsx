@@ -2,7 +2,7 @@ import React, { useRef, useImperativeHandle } from "react";
 import { motion } from "framer-motion";
 import type { TransformProperties } from "framer-motion/types/motion/types";
 import type { Transition } from "framer-motion";
-import styled, { CSSObject, useTheme } from "styled-components";
+import styled, { useTheme } from "styled-components";
 import { DefaultNDSThemeType } from "../theme";
 import { AnimatedBox } from "../Box";
 import { useComponentVariant } from "../NDSProvider/ComponentVariantContext";
@@ -16,12 +16,6 @@ type SwitchProps = {
 
 type SliderProps = {
   disabled?: boolean;
-};
-
-type ToggleInputProps = React.ComponentPropsWithRef<"input"> & {
-  disabled?: boolean;
-  name?: string;
-  theme?: DefaultNDSThemeType;
 };
 
 type ToggleButtonProps = React.ComponentPropsWithRef<"input"> & {
@@ -119,7 +113,7 @@ const ToggleInput = styled.input<ToggleButtonProps>(({ disabled, theme }) => ({
   },
 }));
 
-const ToggleButton = React.forwardRef<React.Ref<HTMLInputElement>, ToggleButtonProps>((props, ref) => {
+const ToggleButton = React.forwardRef<HTMLInputElement, ToggleButtonProps>((props, ref) => {
   const { disabled, defaultToggled, toggled } = props;
   const inputRef = useRef(null);
 
