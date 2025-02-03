@@ -10,6 +10,7 @@ import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentV
 import { ClickInputLabel } from "../utils";
 import { DefaultNDSThemeType } from "../theme";
 import { getSubset, omitSubset } from "../utils/subset";
+import { noop } from "../utils/noop";
 import ToggleButton from "./ToggleButton";
 
 const labelTextStyles = (theme: DefaultNDSThemeType) => ({
@@ -42,7 +43,7 @@ function MaybeToggleTitle({ labelText, requirementText, helpText, children, ...p
 }
 
 type BaseToggleProps = SpaceProps & {
-  onChange?: (...args: any[]) => any;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   variant?: ComponentVariant;
   toggled?: boolean;
   disabled?: boolean;
@@ -55,8 +56,8 @@ type BaseToggleProps = SpaceProps & {
   labelText?: string;
   requirementText?: string;
   error?: boolean;
-  onClick?: any;
-  innerRef?: any;
+  onClick?: (e: React.MouseEvent) => void;
+  innerRef?: React.Ref<HTMLInputElement>;
   name?: string;
   theme?: DefaultNDSThemeType;
   "data-testid"?: string;
@@ -75,13 +76,13 @@ const BaseToggle = ({
   requirementText,
   helpText,
   toggled,
-  onClick,
+  onClick = noop,
   variant,
   "data-testid": dataTestId,
   ...props
 }: BaseToggleProps) => {
-  const handleClick = (e) => {
-    if (onClick) onClick(e);
+  const handleClick = (e: React.MouseEvent) => {
+    onClick(e);
   };
 
   const componentVariant = useComponentVariant(variant);
@@ -130,15 +131,14 @@ const BaseToggle = ({
 
 type StatefulToggleProps = BaseToggleProps & {
   defaultToggled?: boolean;
-  onClick?: boolean;
 };
 
-const StatefulToggle = ({ defaultToggled, onClick, disabled, ...props }: StatefulToggleProps) => {
+const StatefulToggle = ({ defaultToggled, onClick = noop, disabled, ...props }: StatefulToggleProps) => {
   const [toggled, setToggled] = useState(defaultToggled);
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent) => {
     if (!disabled) setToggled(!toggled);
-    if (onClick) onClick(e);
+    onClick(e);
   };
 
   return <BaseToggle toggled={toggled} onClick={handleClick} disabled={disabled} {...props} />;
@@ -149,7 +149,7 @@ type ToggleProps = StatefulToggleProps;
 const Toggle = ({ toggled, ...props }: ToggleProps) =>
   toggled === undefined ? <StatefulToggle {...props} /> : <BaseToggle toggled={toggled} {...props} />;
 
-const ToggleComponent = React.forwardRef<React.ComponentPropsWithRef<"input">, ToggleProps>((props, ref) => (
+const ToggleComponent = React.forwardRef<HTMLInputElement, ToggleProps>((props, ref) => (
   <Toggle innerRef={ref} {...props} />
 ));
 
