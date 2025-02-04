@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { useDescriptionListContext } from "./DescriptionListContext";
 
 export const DescriptionDetails = styled.dd(({ theme }) => {
-  const { autoLayoutBreakpoint, showDivider, density, layout } = useDescriptionListContext();
+  const { showDivider, density, layout } = useDescriptionListContext();
 
   return {
     // narrow stuff + non-auto layout
@@ -49,29 +49,6 @@ export const DescriptionDetails = styled.dd(({ theme }) => {
 
     "&:nth-child(2)": {
       border: "none",
-    },
-
-    [`@container (min-width: ${autoLayoutBreakpoint})`]: {
-      // wide auto layout
-      ...(showDivider &&
-        layout !== "stacked" && {
-          borderTopWidth: "1px",
-          borderTopStyle: "solid",
-          borderTopColor: theme.colors.lightGrey,
-        }),
-
-      ...(density === "compact" &&
-        layout !== "stacked" && {
-          paddingTop: theme.space.x0_25,
-        }),
-      ...(density === "medium" &&
-        layout !== "stacked" && {
-          paddingTop: theme.space.x0_75,
-        }),
-      ...(density === "relaxed" &&
-        layout !== "stacked" && {
-          paddingTop: theme.space.x1_5,
-        }),
     },
   };
 });

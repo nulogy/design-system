@@ -7,12 +7,11 @@ export type Props = PropsWithChildren<DescriptionListConfig>;
 
 export function DescriptionList({
   descriptionTermMaxWidth = "50%",
-  layout = "auto",
+  layout = "stacked",
   showDivider = false,
   density = "medium",
   fontSize = "medium",
   lineHeight = "base",
-  autoLayoutBreakpoint = "640px",
   children,
 }: Props) {
   return (
@@ -23,7 +22,6 @@ export function DescriptionList({
       density={density}
       fontSize={fontSize}
       lineHeight={lineHeight}
-      autoLayoutBreakpoint={autoLayoutBreakpoint}
     >
       <DescriptionListContainer>
         <StyledDescriptionList>{children}</StyledDescriptionList>
@@ -38,7 +36,7 @@ export const DescriptionListContainer = styled.div({
 });
 
 export const StyledDescriptionList = styled.dl(({ theme }) => {
-  const { descriptionTermMaxWidth, layout, fontSize, lineHeight, autoLayoutBreakpoint } = useDescriptionListContext();
+  const { descriptionTermMaxWidth, layout, fontSize, lineHeight } = useDescriptionListContext();
 
   return {
     margin: 0,
@@ -50,19 +48,13 @@ export const StyledDescriptionList = styled.dl(({ theme }) => {
       gridTemplateColumns: `minmax(0, ${descriptionTermMaxWidth}) auto`,
     }),
 
-    ...((layout === "stacked" || layout === "auto") && {
+    ...(layout === "stacked" && {
       gridTemplateColumns: "1fr",
     }),
 
     [`${Link}`]: {
       fontSize: "inherit",
       lineHeight: "inherit",
-    },
-
-    [`@container (min-width: ${autoLayoutBreakpoint})`]: {
-      ...(layout === "auto" && {
-        gridTemplateColumns: `minmax(0, min(50%, ${descriptionTermMaxWidth})) auto`,
-      }),
     },
   };
 });
