@@ -1,3 +1,10 @@
+## [13.5.1](https://github.com/nulogy/design-system/compare/v13.5.0...v13.5.1) (2025-02-04)
+
+
+### Bug Fixes
+
+* improve Toggle props ([4ec6ac5](https://github.com/nulogy/design-system/commit/4ec6ac5e4352ef429f13634004ffc0a5555e2b20))
+
 # [13.5.0](https://github.com/nulogy/design-system/compare/v13.4.0...v13.5.0) (2025-01-31)
 
 
