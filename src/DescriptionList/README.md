@@ -23,13 +23,12 @@ function MyComponent() {
 
 | Prop | Type | Description | Default |
 |------|------|-------------|---------|
-| `layout` | "stacked" \| "inline" \| "auto" | Controls the arrangement of terms and details | `"auto"` |
+| `layout` | "stacked" \| "inline" | Controls the arrangement of terms and details | `"stacked"` |
 | `density` | "compact" \| "medium" \| "relaxed" | Controls the spacing between items | `"medium"` |
 | `fontSize` | `keyof FontSizes` | Controls the text size | `"medium"` |
 | `lineHeight` | `keyof LineHeights` | Controls the text line height | `"base"` |
 | `showDivider` | boolean | Shows divider lines between items | `false` |
 | `descriptionTermMaxWidth` | string | Controls the maximum width of description terms | `"50%"` |
-| `autoLayoutBreakpoint` | string | Defines the container width at which the layout changes when layout is set to `auto` | `"640px"` |
 | `children` | ReactNode | `DescriptionTerm` and `DescriptionDetails` to be placed inside the list | - |
 
 ## Accessibility

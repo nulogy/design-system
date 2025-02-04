@@ -3,12 +3,11 @@ import { DefaultNDSThemeType } from "../theme";
 
 export interface DescriptionListConfig {
   descriptionTermMaxWidth?: string;
-  layout?: "stacked" | "inline" | "auto";
+  layout?: "stacked" | "inline";
   showDivider?: boolean;
   density?: "medium" | "compact" | "relaxed";
   fontSize?: keyof DefaultNDSThemeType["fontSizes"];
   lineHeight?: keyof DefaultNDSThemeType["lineHeights"];
-  autoLayoutBreakpoint?: string;
 }
 
 const DescriptionListContext = React.createContext<DescriptionListConfig>({});

@@ -43,12 +43,6 @@ export function Layout() {
   return (
     <Flex flexDirection="column" gap="x8">
       <Flex flexDirection="column" gap="x1" flex="1">
-        <Heading4>Auto Layout (Default)</Heading4>
-        <DescriptionList layout="auto">
-          <SampleContent />
-        </DescriptionList>
-      </Flex>
-      <Flex flexDirection="column" gap="x1" flex="1">
         <Heading4>Stacked Layout</Heading4>
         <DescriptionList layout="stacked">
           <SampleContent />
@@ -152,19 +146,6 @@ export function Divider() {
   );
 }
 
-export function AutoLayoutCustomBreakpoint() {
-  return (
-    <Flex gap="x8" flexDirection="column">
-      <Flex flexDirection="column" gap="x1">
-        <Heading4>Auto layout custom breakpoint (800px)</Heading4>
-        <DescriptionList layout="auto" autoLayoutBreakpoint="800px">
-          <SampleContent />
-        </DescriptionList>
-      </Flex>
-    </Flex>
-  );
-}
-
 export function CustomDescriptionTermWidth() {
   return (
     <Flex gap="x8" flexDirection="column">
@@ -197,13 +178,7 @@ export function CombinedFeatures() {
         <Heading4>
           Auto Layout, divider, compact density, small font, 40% term width, 720px auto layout breakpoint
         </Heading4>
-        <DescriptionList
-          showDivider
-          density="compact"
-          fontSize="small"
-          descriptionTermMaxWidth="40%"
-          autoLayoutBreakpoint="720px"
-        >
+        <DescriptionList showDivider density="compact" fontSize="small" descriptionTermMaxWidth="40%">
           <SampleContent />
         </DescriptionList>
       </Flex>
