@@ -6,6 +6,7 @@ import { addStyledProps, StyledProps } from "../StyledProps";
 export type TextProps = React.HTMLAttributes<HTMLParagraphElement> & {
   variant?: ComponentVariant;
   inline?: boolean;
+  compact?: boolean;
   disabled?: boolean;
   textTransform?:
     | "none"

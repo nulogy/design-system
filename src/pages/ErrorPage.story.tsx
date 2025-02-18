@@ -1,8 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import React from "react";
-import { Alert, Box, Branding, DefaultNDSThemeType, Flex, Link } from "../index";
 import { useTheme } from "styled-components";
+import { Alert, Box, Branding, Flex, Link } from "../index";
 import { Text } from "../Type";
 
 const ErrorPageWidth = "672px";
@@ -45,6 +43,7 @@ export const Base = () => (
   </Flex>
 );
 
+/* eslint-disable jsx-a11y/anchor-is-valid */
 export const WithALink = () => {
   const theme = useTheme();
   return (
@@ -69,6 +68,7 @@ export const WithALink = () => {
     </Flex>
   );
 };
+/* eslint-enable jsx-a11y/anchor-is-valid */
 
 WithALink.story = {
   name: "With a link",
