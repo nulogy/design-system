@@ -1,19 +1,10 @@
 import React, { PropsWithChildren } from "react";
-import { DefaultNDSThemeType } from "../theme";
+import { DescriptionListPartsProps } from "./DescriptionList.parts";
 
-export interface DescriptionListConfig {
-  descriptionTermMaxWidth?: string;
-  layout?: "stacked" | "inline";
-  showDivider?: boolean;
-  density?: "medium" | "compact" | "relaxed";
-  fontSize?: keyof DefaultNDSThemeType["fontSizes"];
-  lineHeight?: keyof DefaultNDSThemeType["lineHeights"];
-}
-
-const DescriptionListContext = React.createContext<DescriptionListConfig>({});
+const DescriptionListContext = React.createContext<DescriptionListPartsProps>({});
 
 export const useDescriptionListContext = () => React.useContext(DescriptionListContext);
 
-export function DescriptionListProvider({ children, ...config }: PropsWithChildren<DescriptionListConfig>) {
+export function DescriptionListProvider({ children, ...config }: PropsWithChildren<DescriptionListPartsProps>) {
   return <DescriptionListContext.Provider value={{ ...config }}>{children}</DescriptionListContext.Provider>;
 }
