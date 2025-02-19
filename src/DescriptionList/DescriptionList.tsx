@@ -1,7 +1,7 @@
 import React from "react";
 import { DefaultNDSThemeType } from "../theme";
 import { Breakpoints } from "../theme/theme.type";
-import { Dl } from "./DescriptionList.parts";
+import { Dl, DlContainer } from "./DescriptionList.parts";
 import { DescriptionListProvider } from "./DescriptionListContext";
 
 export interface DescriptionListItem {
@@ -76,7 +76,9 @@ export function DescriptionList({
       columns={columns}
       groupMinWidth={groupMinWidth}
     >
-      <Dl>{children}</Dl>
+      <DlContainer>
+        <Dl>{children}</Dl>
+      </DlContainer>
     </DescriptionListProvider>
   );
 }
