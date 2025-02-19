@@ -37,7 +37,7 @@ export type SidebarProps = Omit<AnimatedBoxProps, "width"> & {
   triggerRef?: RefObject<HTMLInputElement | HTMLButtonElement>;
   duration?: number;
   closeOnOutsideClick?: boolean;
-  overlay?: boolean;
+  overlay?: boolean | "show" | "hide" | "transparent";
   disableScroll?: boolean;
   hideCloseButton?: boolean;
   width?: SidebarWidth;
@@ -85,7 +85,7 @@ function Sidebar({
   duration = 0.25,
   top = NAVBAR_HEIGHT,
   closeOnOutsideClick = true,
-  overlay = true,
+  overlay = "show",
   disableScroll = true,
   hideCloseButton = false,
   zIndex = "sidebar" as any,
@@ -159,10 +159,10 @@ function Sidebar({
     <>
       {closeOnOutsideClick && (
         <AnimatePresence>
-          {isOpen && overlay && (
+          {isOpen && overlay !== "hide" && (
             <SidebarOverlay
               top={top}
-              transparent={!overlay}
+              transparent={overlay === "transparent" || overlay === false}
               transitionDuration={duration}
               zIndex={zIndex}
               onClick={closeOnOutsideClick && isOpen && onClose}
