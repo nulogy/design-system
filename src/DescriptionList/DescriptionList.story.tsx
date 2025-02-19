@@ -19,9 +19,9 @@ import { Breakpoints } from "../theme/theme.type";
 import { Tooltip } from "../Tooltip";
 import { Heading1, Heading3, Heading4, Text } from "../Type";
 import { dashed } from "../utils/story/dashed";
-import type { Density as DensityType, Layout } from "./DescriptionList";
-import { DescriptionList } from "./DescriptionList";
+import DescriptionList from "./DescriptionList";
 import { DescriptionDetails, DescriptionGroup, DescriptionTerm } from "./DescriptionList.parts";
+import type { Layout, Density as DensityType } from "./lib/types";
 
 export default {
   title: "Components/DescriptionList",

@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Link } from "../Link";
 import { DefaultNDSThemeType } from "../theme";
 import { Text } from "../Type";
-import { BaseDescriptionListProps, Columns, Density, GroupMinWidth } from "./DescriptionList";
 import { useDescriptionListContext } from "./DescriptionListContext";
+import { BaseDescriptionListProps, Columns, Density, GroupMinWidth } from "./lib/types";
 
 export type DescriptionListPartsProps = BaseDescriptionListProps & Partial<Columns> & Partial<GroupMinWidth>;
 
