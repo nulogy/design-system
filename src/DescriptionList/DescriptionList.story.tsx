@@ -3,7 +3,7 @@ import { Resizable } from "re-resizable";
 import React, { useState } from "react";
 import styled, { useTheme } from "styled-components";
 import { Box } from "../Box";
-import { Button, IconicButton, QuietButton } from "../Button";
+import { IconicButton } from "../Button";
 import { Checkbox } from "../Checkbox";
 import { Divider as HorizontalDivider } from "../Divider";
 import { Flex } from "../Flex";
@@ -21,72 +21,76 @@ import { Heading1, Heading3, Heading4, Text } from "../Type";
 import { dashed } from "../utils/story/dashed";
 import type { Density as DensityType, Layout } from "./DescriptionList";
 import { DescriptionList } from "./DescriptionList";
-import { Dd, DGroup, Dt } from "./DescriptionList.parts";
+import { DescriptionDetails, DescriptionGroup, DescriptionTerm } from "./DescriptionList.parts";
 
 export default {
   title: "Components/DescriptionList",
   component: DescriptionList,
 };
 
-const ColouredDt = styled(Dt)<{ $coloured: boolean; $highlighted?: boolean }>(({ $coloured, $highlighted, theme }) => ({
-  backgroundClip: "content-box",
-  backgroundColor: $highlighted
-    ? transparentize($coloured ? 0.7 : 0.9, theme.colors.categorical1)
-    : $coloured
-      ? transparentize(0.9, theme.colors.categorical1)
-      : undefined,
-  transition: "background-color 0.25s ease-in-out",
-}));
+const OutlinedDt = styled(DescriptionTerm)<{ $outlined: boolean; $highlighted?: boolean }>(
+  ({ $outlined, $highlighted, theme }) => ({
+    backgroundClip: "content-box",
+    backgroundColor: $highlighted
+      ? transparentize($outlined ? 0.7 : 0.9, theme.colors.categorical1)
+      : $outlined
+        ? transparentize(0.9, theme.colors.categorical1)
+        : undefined,
+    transition: "background-color 0.25s ease-in-out",
+  })
+);
 
-const ColouredDd = styled(Dd)<{ $coloured: boolean; $highlighted?: boolean }>(({ $coloured, $highlighted, theme }) => ({
-  backgroundClip: "content-box",
-  backgroundColor: $highlighted
-    ? transparentize($coloured ? 0.7 : 0.9, theme.colors.categorical2)
-    : $coloured
-      ? transparentize(0.9, theme.colors.categorical2)
-      : undefined,
-  transition: "background-color 0.25s ease-in-out",
-}));
+const OutlinedDd = styled(DescriptionDetails)<{ $outlined: boolean; $highlighted?: boolean }>(
+  ({ $outlined, $highlighted, theme }) => ({
+    backgroundClip: "content-box",
+    backgroundColor: $highlighted
+      ? transparentize($outlined ? 0.7 : 0.9, theme.colors.categorical2)
+      : $outlined
+        ? transparentize(0.9, theme.colors.categorical2)
+        : undefined,
+    transition: "background-color 0.25s ease-in-out",
+  })
+);
 
 const DashedBox = dashed(Box);
 
 const SampleContent = () => (
   <>
-    <DGroup>
-      <Dt>Customer</Dt>
-      <Dd>Nulogy</Dd>
-    </DGroup>
-    <DGroup>
-      <Dt>
+    <DescriptionGroup>
+      <DescriptionTerm>Customer</DescriptionTerm>
+      <DescriptionDetails>Nulogy</DescriptionDetails>
+    </DescriptionGroup>
+    <DescriptionGroup>
+      <DescriptionTerm>
         <Text display="inline-flex" alignItems="end">
           Order number
           <Tooltip tooltip="The unique identifier assigned to this order when it was placed by the customer.">
             <Icon icon="info" size="x3" paddingLeft="half" />
           </Tooltip>
         </Text>
-      </Dt>
-      <Dd>
+      </DescriptionTerm>
+      <DescriptionDetails>
         <Link href="/customer-details">P12-90381-2039</Link>
-      </Dd>
-    </DGroup>
-    <DGroup>
-      <Dt>Status</Dt>
-      <Dd>
+      </DescriptionDetails>
+    </DescriptionGroup>
+    <DescriptionGroup>
+      <DescriptionTerm>Status</DescriptionTerm>
+      <DescriptionDetails>
         <StatusIndicator type="success">Paid</StatusIndicator>
-      </Dd>
-    </DGroup>
-    <DGroup>
-      <Dt>Amount</Dt>
-      <Dd>$202.12</Dd>
-    </DGroup>
-    <DGroup>
-      <Dt>Amount after exchange</Dt>
-      <Dd>
+      </DescriptionDetails>
+    </DescriptionGroup>
+    <DescriptionGroup>
+      <DescriptionTerm>Amount</DescriptionTerm>
+      <DescriptionDetails>$202.12</DescriptionDetails>
+    </DescriptionGroup>
+    <DescriptionGroup>
+      <DescriptionTerm>Amount after exchange</DescriptionTerm>
+      <DescriptionDetails>
         <Flex as="span" alignItems="center" gap="half">
           US $202.12 <Icon icon="arrowForward" color="midGrey" /> CA $287.43
         </Flex>
-      </Dd>
-    </DGroup>
+      </DescriptionDetails>
+    </DescriptionGroup>
   </>
 );
 
@@ -221,126 +225,126 @@ export function GroupMinWidth() {
 }
 
 export function Columns() {
-  const [coloured, setColoured] = useState(false);
+  const [outlined, setOutlined] = useState(false);
 
   return (
     <Flex flexDirection="column" gap="x4">
       <Heading3>Columns</Heading3>
-      <Checkbox labelText="Show outline" checked={coloured} onChange={() => setColoured(!coloured)} />
+      <Checkbox labelText="Show outline" checked={outlined} onChange={() => setOutlined(!outlined)} />
       <Flex flexDirection="column">
         <Heading4>The number of columns is set to 2</Heading4>
         <DescriptionList columns={2}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column">
         <Heading4>The number of columns is set to 3</Heading4>
         <DescriptionList columns={3}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column">
         <Heading4>The number of columns is set to 4</Heading4>
         <DescriptionList columns={4}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column">
         <Heading4>Extra small: 1 column, Small: 2 columns, Medium: 3 columns, Large: 6 columns</Heading4>
         <DescriptionList columns={{ extraSmall: 1, small: 2, medium: 3, large: 6 }}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
     </Flex>
@@ -348,107 +352,107 @@ export function Columns() {
 }
 
 export function WithColumnSpan() {
-  const [coloured, setColoured] = useState(false);
+  const [outlined, setOutlined] = useState(false);
 
   return (
     <Flex flexDirection="column" gap="x4">
-      <label htmlFor="coloured">
+      <label htmlFor="outlined">
         <Checkbox
-          id="coloured"
+          id="outlined"
           labelText="Show outline"
-          defaultChecked={coloured}
-          onClick={() => setColoured(!coloured)}
+          defaultChecked={outlined}
+          onClick={() => setOutlined(!outlined)}
         />
       </label>
       <Flex flexDirection="column" gap="x2">
         <Heading3>2 columns, span 2</Heading3>
         <DescriptionList layout="stacked" columns={2}>
-          <DGroup columnSpan={2}>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup columnSpan={2}>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column" gap="x2">
         <Heading3>3 columns, span 3</Heading3>
         <DescriptionList layout="stacked" columns={3}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup columnSpan={3}>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>This value is very long and it will span 3 columns</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup columnSpan={3}>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>This value is very long and it will span 3 columns</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column" gap="x2">
         <Heading3>4 columns, span 4</Heading3>
         <DescriptionList layout="stacked" columns={4}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup columnSpan={4}>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup columnSpan={4}>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>
               This value is very long and it spans 4 columns, so it will take the space of 4 columns and not wrap
-            </ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>
+            </OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>
               This value is very long but it only spans 1 column, so it will only take the space of 1 column
-            </ColouredDd>
-          </DGroup>
+            </OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
     </Flex>
@@ -456,100 +460,100 @@ export function WithColumnSpan() {
 }
 
 export function WithRowSpan() {
-  const [coloured, setColoured] = useState(false);
+  const [outlined, setOutlined] = useState(false);
 
   return (
     <Flex flexDirection="column" gap="x4">
-      <Checkbox labelText="Show outline" checked={coloured} onChange={() => setColoured(!coloured)} />
+      <Checkbox labelText="Show outline" checked={outlined} onChange={() => setOutlined(!outlined)} />
       <Flex flexDirection="column" gap="x2">
         <Heading3>2 columns, span 2</Heading3>
         <DescriptionList layout="stacked" columns={2}>
-          <DGroup rowSpan={2}>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup rowSpan={2}>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column" gap="x2">
         <Heading3>3 columns, span 3</Heading3>
         <DescriptionList layout="stacked" columns={3}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup rowSpan={3}>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>This value is very long and it will span 3 columns</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup rowSpan={3}>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>This value is very long and it will span 3 columns</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column" gap="x2">
         <Heading3>4 columns, span 4</Heading3>
         <DescriptionList layout="stacked" columns={4}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup rowSpan={4}>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup rowSpan={4}>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>
               This value is very long and it spans 4 rows, so it will take the space of 4 rows and not wrap
-            </ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>
+            </OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>
               This value is very long but it only spans 1 row, so it will only take the space of 1 row
-            </ColouredDd>
-          </DGroup>
+            </OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
     </Flex>
@@ -557,100 +561,100 @@ export function WithRowSpan() {
 }
 
 export function WithColumnAndRowSpan() {
-  const [coloured, setColoured] = useState(false);
+  const [outlined, setOutlined] = useState(false);
 
   return (
     <Flex flexDirection="column" gap="x4">
-      <Checkbox labelText="Show outline" checked={coloured} onChange={() => setColoured(!coloured)} />
+      <Checkbox labelText="Show outline" checked={outlined} onChange={() => setOutlined(!outlined)} />
       <Flex flexDirection="column" gap="x2">
         <Heading3>2 columns, span 2</Heading3>
         <DescriptionList layout="stacked" columns={3}>
-          <DGroup rowSpan={2} columnSpan={2}>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup rowSpan={2} columnSpan={2}>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column" gap="x2">
         <Heading3>3 columns, span 3</Heading3>
         <DescriptionList layout="stacked" columns={3}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup rowSpan={3} columnSpan={3}>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>This value is very long and it will span 3 columns</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 4</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 6</ColouredDd>
-          </DGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup rowSpan={3} columnSpan={3}>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>This value is very long and it will span 3 columns</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 4</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 6</OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
       <Flex flexDirection="column" gap="x2">
         <Heading3>4 columns, span 4</Heading3>
         <DescriptionList layout="stacked" columns={4}>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 1</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 1</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 2</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 2</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 3</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 3</ColouredDd>
-          </DGroup>
-          <DGroup rowSpan={4} columnSpan={4}>
-            <ColouredDt $coloured={coloured}>Key 4</ColouredDt>
-            <ColouredDd $coloured={coloured}>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 1</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 1</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 2</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 2</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 3</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 3</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup rowSpan={4} columnSpan={4}>
+            <OutlinedDt $outlined={outlined}>Key 4</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>
               This value is very long and it spans 4 rows, so it will take the space of 4 rows and not wrap
-            </ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 5</ColouredDt>
-            <ColouredDd $coloured={coloured}>Value 5</ColouredDd>
-          </DGroup>
-          <DGroup>
-            <ColouredDt $coloured={coloured}>Key 6</ColouredDt>
-            <ColouredDd $coloured={coloured}>
+            </OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 5</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>Value 5</OutlinedDd>
+          </DescriptionGroup>
+          <DescriptionGroup>
+            <OutlinedDt $outlined={outlined}>Key 6</OutlinedDt>
+            <OutlinedDd $outlined={outlined}>
               This value is very long but it only spans 1 row, so it will only take the space of 1 row
-            </ColouredDd>
-          </DGroup>
+            </OutlinedDd>
+          </DescriptionGroup>
         </DescriptionList>
       </Flex>
     </Flex>
@@ -659,7 +663,7 @@ export function WithColumnAndRowSpan() {
 
 export function Playground() {
   const [hoveredGroupIndex, setHoveredGroupIndex] = useState<number | null>(null);
-  const [coloured, setColoured] = useState(false);
+  const [outlined, setOutlined] = useState(false);
   const [containerOutline, setContainerOutline] = useState(true);
   const [layout, setLayout] = useState<Layout>("stacked");
   const [density, setDensity] = useState<DensityType>("medium");
@@ -729,47 +733,47 @@ export function Playground() {
       fontSize={fontSize}
       lineHeight={lineHeight}
     >
-      <DGroup>
-        <ColouredDt $coloured={coloured} $highlighted={false}>
+      <DescriptionGroup>
+        <OutlinedDt $outlined={outlined} $highlighted={false}>
           Customer
-        </ColouredDt>
-        <ColouredDd $coloured={coloured} $highlighted={false}>
+        </OutlinedDt>
+        <OutlinedDd $outlined={outlined} $highlighted={false}>
           Nulogy
-        </ColouredDd>
-      </DGroup>
-      <DGroup>
-        <ColouredDt $coloured={coloured} $highlighted={false}>
+        </OutlinedDd>
+      </DescriptionGroup>
+      <DescriptionGroup>
+        <OutlinedDt $outlined={outlined} $highlighted={false}>
           Order number
-        </ColouredDt>
-        <ColouredDd $coloured={coloured} $highlighted={false}>
+        </OutlinedDt>
+        <OutlinedDd $outlined={outlined} $highlighted={false}>
           <Link href="/customer-details">P12-90381-2039</Link>
-        </ColouredDd>
-      </DGroup>
-      <DGroup>
-        <ColouredDt $coloured={coloured} $highlighted={false}>
+        </OutlinedDd>
+      </DescriptionGroup>
+      <DescriptionGroup>
+        <OutlinedDt $outlined={outlined} $highlighted={false}>
           Status
-        </ColouredDt>
-        <ColouredDd $coloured={coloured} $highlighted={false}>
+        </OutlinedDt>
+        <OutlinedDd $outlined={outlined} $highlighted={false}>
           <StatusIndicator type="success">Paid</StatusIndicator>
-        </ColouredDd>
-      </DGroup>
-      <DGroup>
-        <ColouredDt $coloured={coloured} $highlighted={false}>
+        </OutlinedDd>
+      </DescriptionGroup>
+      <DescriptionGroup>
+        <OutlinedDt $outlined={outlined} $highlighted={false}>
           Amount
-        </ColouredDt>
-        <ColouredDd $coloured={coloured} $highlighted={false}>
+        </OutlinedDt>
+        <OutlinedDd $outlined={outlined} $highlighted={false}>
           $202.12
-        </ColouredDd>
-      </DGroup>
+        </OutlinedDd>
+      </DescriptionGroup>
       {additionalGroups.map((group, index) => (
-        <DGroup rowSpan={group.rowSpan} columnSpan={group.columnSpan} key={index}>
-          <ColouredDt $coloured={coloured} $highlighted={hoveredGroupIndex === index}>
+        <DescriptionGroup rowSpan={group.rowSpan} columnSpan={group.columnSpan} key={index}>
+          <OutlinedDt $outlined={outlined} $highlighted={hoveredGroupIndex === index}>
             {group.dt}
-          </ColouredDt>
-          <ColouredDd $coloured={coloured} $highlighted={hoveredGroupIndex === index}>
+          </OutlinedDt>
+          <OutlinedDd $outlined={outlined} $highlighted={hoveredGroupIndex === index}>
             {group.dd}
-          </ColouredDd>
-        </DGroup>
+          </OutlinedDd>
+        </DescriptionGroup>
       ))}
     </DescriptionList>
   );
@@ -782,7 +786,7 @@ export function Playground() {
         hideCloseButton
         isOpen
         title="Controls"
-        overlay={false}
+        overlay="hide"
         top="0px"
         bottom="0px"
       >
@@ -979,7 +983,7 @@ export function Playground() {
           <Checkbox labelText="Show divider" checked={showDivider} onChange={() => setShowDivider(!showDivider)} />
           <HorizontalDivider />
           <Text fontWeight="bold">Debugging</Text>
-          <Checkbox labelText="Show Group outline" checked={coloured} onChange={() => setColoured(!coloured)} />
+          <Checkbox labelText="Show Group outline" checked={outlined} onChange={() => setOutlined(!outlined)} />
           <Input
             value={containerWidth}
             onChange={(e) => setContainerWidth(e.target.value)}
@@ -995,9 +999,7 @@ export function Playground() {
           <HorizontalDivider />
           <Flex justifyContent="space-between" alignItems="center">
             <Text fontWeight="bold">Additional Groups</Text>
-            <Button onClick={addRandomGroup} icon="add" iconSide="left">
-              Add
-            </Button>
+            <IconicButton onClick={addRandomGroup} icon="add" />
           </Flex>
           <Box>
             {additionalGroups.length === 0 && (
@@ -1022,9 +1024,7 @@ export function Playground() {
                         />
                         <Text>Group {index + 1}</Text>
                       </Flex>
-                      <QuietButton size="small" onClick={() => deleteGroup(index)}>
-                        Delete
-                      </QuietButton>
+                      <IconicButton onClick={() => deleteGroup(index)} icon="delete" />
                     </Flex>
                     {group.isExpanded && (
                       <Flex flexDirection="column" gap="x2">
