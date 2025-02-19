@@ -13,12 +13,12 @@ const gapConfig: Record<Density, keyof DefaultNDSThemeType["space"]> = {
   relaxed: "x3",
 };
 
-export const DlContainer = styled.div({
+export const DescriptionListContainer = styled.div({
   containerType: "inline-size",
   width: "100%",
 });
 
-export const Dl = styled.dl(({ theme }) => {
+export const DescriptionList = styled.dl(({ theme }) => {
   const { fontSize, lineHeight, density, columns, groupMinWidth } = useDescriptionListContext();
 
   return {
@@ -58,41 +58,43 @@ export const Dl = styled.dl(({ theme }) => {
   };
 });
 
-export const DGroup = styled.div<{ rowSpan?: number; columnSpan?: number }>(({ theme, rowSpan, columnSpan }) => {
-  const { descriptionTermMaxWidth, layout, showDivider, autoLayoutBreakpoint } = useDescriptionListContext();
+export const DescriptionGroup = styled.div<{ rowSpan?: number; columnSpan?: number }>(
+  ({ theme, rowSpan, columnSpan }) => {
+    const { descriptionTermMaxWidth, layout, showDivider, autoLayoutBreakpoint } = useDescriptionListContext();
 
-  return {
-    display: "grid",
-    gridTemplateRows: "auto 1fr",
-    ...(showDivider && {
-      borderBottom: `1px solid ${theme.colors.lightGrey}`,
-    }),
-
-    ...(layout === "inline" && {
-      gridTemplateColumns: `minmax(0, ${descriptionTermMaxWidth}) 1fr`,
-    }),
-
-    ...((layout === "stacked" || layout === "auto") && {
-      gridTemplateColumns: "1fr",
-    }),
-
-    ...(columnSpan && {
-      gridColumn: `span ${columnSpan} / span ${columnSpan}`,
-    }),
-
-    ...(rowSpan && {
-      gridRow: `span ${rowSpan} / span ${rowSpan}`,
-    }),
-
-    [`@container (min-width: ${autoLayoutBreakpoint})`]: {
-      ...(layout === "auto" && {
-        gridTemplateColumns: `minmax(0, min(50%, ${descriptionTermMaxWidth})) 1fr`,
+    return {
+      display: "grid",
+      gridTemplateRows: "auto 1fr",
+      ...(showDivider && {
+        borderBottom: `1px solid ${theme.colors.lightGrey}`,
       }),
-    },
-  };
-});
 
-export const Dt = styled.dt(({ theme }) => {
+      ...(layout === "inline" && {
+        gridTemplateColumns: `minmax(0, ${descriptionTermMaxWidth}) 1fr`,
+      }),
+
+      ...((layout === "stacked" || layout === "auto") && {
+        gridTemplateColumns: "1fr",
+      }),
+
+      ...(columnSpan && {
+        gridColumn: `span ${columnSpan} / span ${columnSpan}`,
+      }),
+
+      ...(rowSpan && {
+        gridRow: `span ${rowSpan} / span ${rowSpan}`,
+      }),
+
+      [`@container (min-width: ${autoLayoutBreakpoint})`]: {
+        ...(layout === "auto" && {
+          gridTemplateColumns: `minmax(0, min(50%, ${descriptionTermMaxWidth})) 1fr`,
+        }),
+      },
+    };
+  }
+);
+
+export const DescriptionTerm = styled.dt(({ theme }) => {
   const { showDivider, layout, density, autoLayoutBreakpoint } = useDescriptionListContext();
 
   return {
@@ -165,7 +167,7 @@ export const Dt = styled.dt(({ theme }) => {
   };
 });
 
-export const Dd = styled.dd(({ theme }) => {
+export const DescriptionDetails = styled.dd(({ theme }) => {
   const { autoLayoutBreakpoint, showDivider, density, layout } = useDescriptionListContext();
 
   return {
