@@ -981,7 +981,7 @@ const ResizeHandle = styled.div`
   width: 4px;
   right: 4px;
   border-radius: 9999px;
-  background-color: ${({ theme }) => theme.colors.midGrey};
+  background-color: ${({ theme }) => theme.colors.grey};
 `;
 
 Playground.parameters = {

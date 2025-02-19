@@ -13,10 +13,18 @@ const gapConfig: Record<Density, keyof DefaultNDSThemeType["space"]> = {
   relaxed: "x3",
 };
 
+export const DlContainer = styled.div(({ theme }) => {
+  return {
+    containerType: "inline-size",
+    width: "100%",
+  };
+});
+
 export const Dl = styled.dl(({ theme }) => {
   const { fontSize, lineHeight, density, columns, groupMinWidth } = useDescriptionListContext();
 
   return {
+    containerType: "inline-size",
     width: "100%",
     margin: 0,
     display: "grid",
@@ -44,7 +52,7 @@ export const Dl = styled.dl(({ theme }) => {
     ...(typeof columns === "object" && {
       ...Object.fromEntries(
         Object.entries(columns).map(([key, value]) => [
-          `@media (min-width: ${theme.breakpoints[key]})`,
+          `@container (min-width: ${theme.breakpoints[key]})`,
           { gridTemplateColumns: `repeat(${value}, minmax(0, 1fr))` },
         ])
       ),
@@ -78,7 +86,7 @@ export const DGroup = styled.div<{ rowSpan?: number; columnSpan?: number }>(({ t
       gridRow: `span ${rowSpan} / span ${rowSpan}`,
     }),
 
-    [`@media (min-width: ${autoLayoutBreakpoint})`]: {
+    [`@container (min-width: ${autoLayoutBreakpoint})`]: {
       ...(layout === "auto" && {
         gridTemplateColumns: `minmax(0, min(50%, ${descriptionTermMaxWidth})) 1fr`,
       }),
@@ -134,7 +142,7 @@ export const Dt = styled.dt(({ theme }) => {
       border: "none",
     },
 
-    [`@media (min-width: ${autoLayoutBreakpoint})`]: {
+    [`@container (min-width: ${autoLayoutBreakpoint})`]: {
       // wide auto layout
       ...(showDivider &&
         layout !== "stacked" && {
@@ -209,7 +217,7 @@ export const Dd = styled.dd(({ theme }) => {
       border: "none",
     },
 
-    [`@media (min-width: ${autoLayoutBreakpoint})`]: {
+    [`@container (min-width: ${autoLayoutBreakpoint})`]: {
       // wide auto layout
       ...(showDivider &&
         layout !== "stacked" && {
