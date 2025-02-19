@@ -1,23 +1,25 @@
 import { transparentize } from "polished";
+import { Resizable } from "re-resizable";
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
+import { Box } from "../Box";
+import { Button, IconicButton, QuietButton } from "../Button";
 import { Checkbox } from "../Checkbox";
+import { Divider as HorizontalDivider } from "../Divider";
 import { Flex } from "../Flex";
 import { Icon } from "../Icon";
+import { Input } from "../Input";
+import Sidebar from "../Layout/Sidebar";
 import { Link } from "../Link";
+import { Select } from "../Select";
 import { StatusIndicator } from "../StatusIndicator";
+import { Textarea } from "../Textarea";
+import { DefaultNDSThemeType } from "../theme";
 import { Tooltip } from "../Tooltip";
 import { Heading3, Heading4, Text } from "../Type";
-import { Select } from "../Select";
-import { Input } from "../Input";
-import { Box } from "../Box";
-import Sidebar from "../Layout/Sidebar";
-import { Divider as HorizontalDivider } from "../Divider";
-import { Textarea } from "../Textarea";
 import { dashed } from "../utils/story/dashed";
-import { Button, QuietButton } from "../Button";
+import type { Density as DensityType, Layout } from "./DescriptionList";
 import { DescriptionList } from "./DescriptionList";
-import type { Layout, Density as DensityType } from "./DescriptionList";
 import { Dd, DGroup, Dt } from "./DescriptionList.parts";
 
 export default {
@@ -25,15 +27,23 @@ export default {
   component: DescriptionList,
 };
 
-const ColouredDt = styled(Dt)<{ $coloured: boolean }>(({ $coloured, theme }) => ({
+const ColouredDt = styled(Dt)<{ $coloured: boolean; $highlighted?: boolean }>(({ $coloured, $highlighted, theme }) => ({
   backgroundClip: "content-box",
-  backgroundColor: $coloured ? transparentize(0.9, theme.colors.categorical1) : undefined,
+  backgroundColor: $highlighted
+    ? transparentize($coloured ? 0.7 : 0.9, theme.colors.categorical1)
+    : $coloured
+      ? transparentize(0.9, theme.colors.categorical1)
+      : undefined,
   transition: "background-color 0.25s ease-in-out",
 }));
 
-const ColouredDd = styled(Dd)<{ $coloured: boolean }>(({ $coloured, theme }) => ({
+const ColouredDd = styled(Dd)<{ $coloured: boolean; $highlighted?: boolean }>(({ $coloured, $highlighted, theme }) => ({
   backgroundClip: "content-box",
-  backgroundColor: $coloured ? transparentize(0.9, theme.colors.categorical2) : undefined,
+  backgroundColor: $highlighted
+    ? transparentize($coloured ? 0.7 : 0.9, theme.colors.categorical2)
+    : $coloured
+      ? transparentize(0.9, theme.colors.categorical2)
+      : undefined,
   transition: "background-color 0.25s ease-in-out",
 }));
 
@@ -647,29 +657,60 @@ export function WithColumnAndRowSpan() {
 }
 
 export function Playground() {
+  const [hoveredGroupIndex, setHoveredGroupIndex] = useState<number | null>(null);
   const [coloured, setColoured] = useState(false);
   const [containerOutline, setContainerOutline] = useState(true);
   const [layout, setLayout] = useState<Layout>("stacked");
   const [density, setDensity] = useState<DensityType>("medium");
+  const [descriptionTermMaxWidth, setDescriptionTermMaxWidth] = useState("320px");
+  const [fontSize, setFontSize] = useState<keyof DefaultNDSThemeType["fontSizes"]>("medium");
+  const [lineHeight, setLineHeight] = useState<keyof DefaultNDSThemeType["lineHeights"]>("base");
   const [columns, setColumns] = useState<number | undefined>(undefined);
   const [groupMinWidth, setGroupMinWidth] = useState<string | undefined>(undefined);
   const [containerWidth, setContainerWidth] = useState<string | undefined>("720px");
   const [showDivider, setShowDivider] = useState(false);
   const [autoLayoutBreakpoint, setAutoLayoutBreakpoint] = useState("640px");
-  const [rowSpan, setRowSpan] = useState(0);
-  const [columnSpan, setColumnSpan] = useState(0);
+  const [rowSpan] = useState(0);
+  const [columnSpan] = useState(0);
   const [additionalGroups, setAdditionalGroups] = useState<
-    Array<{ dt: string; dd: string; rowSpan: number; columnSpan: number }>
+    Array<{ dt: string; dd: string; rowSpan: number; columnSpan: number; isExpanded: boolean }>
   >([]);
-  const [DtValue, setDtValue] = useState("Key");
-  const [DdValue, setDdValue] = useState("Value");
+  const [DtValue] = useState("Key");
+  const [DdValue] = useState("Value");
+  const theme = useTheme();
 
   const updateGroup = (index: number, updates: Partial<(typeof additionalGroups)[0]>) => {
-    setAdditionalGroups((groups) => groups.map((group, i) => (i === index ? { ...group, ...updates } : group)));
+    setAdditionalGroups((groups) =>
+      groups.map((group, i) => {
+        if (i === index) {
+          return { ...group, ...updates };
+        }
+        return group;
+      })
+    );
   };
 
   const deleteGroup = (index: number) => {
     setAdditionalGroups((groups) => groups.filter((_, i) => i !== index));
+  };
+
+  const addRandomGroup = () => {
+    setAdditionalGroups([
+      ...additionalGroups,
+      {
+        dt: DtValue,
+        dd: DdValue,
+        rowSpan: rowSpan,
+        columnSpan: columnSpan,
+        isExpanded: false,
+      },
+    ]);
+  };
+
+  const toggleGroupExpansion = (index: number) => {
+    setAdditionalGroups((groups) =>
+      groups.map((group, i) => (i === index ? { ...group, isExpanded: !group.isExpanded } : group))
+    );
   };
 
   const DescriptionListElement = (
@@ -680,51 +721,54 @@ export function Playground() {
       groupMinWidth={groupMinWidth}
       showDivider={showDivider}
       autoLayoutBreakpoint={autoLayoutBreakpoint}
+      descriptionTermMaxWidth={descriptionTermMaxWidth}
+      fontSize={fontSize}
+      lineHeight={lineHeight}
     >
       <DGroup>
-        <ColouredDt $coloured={coloured}>Customer</ColouredDt>
-        <ColouredDd $coloured={coloured}>Nulogy</ColouredDd>
+        <ColouredDt $coloured={coloured} $highlighted={false}>
+          Customer
+        </ColouredDt>
+        <ColouredDd $coloured={coloured} $highlighted={false}>
+          Nulogy
+        </ColouredDd>
       </DGroup>
       <DGroup>
-        <ColouredDt $coloured={coloured}>Order number</ColouredDt>
-        <ColouredDd $coloured={coloured}>
+        <ColouredDt $coloured={coloured} $highlighted={false}>
+          Order number
+        </ColouredDt>
+        <ColouredDd $coloured={coloured} $highlighted={false}>
           <Link href="/customer-details">P12-90381-2039</Link>
         </ColouredDd>
       </DGroup>
       <DGroup>
-        <ColouredDt $coloured={coloured}>Status</ColouredDt>
-        <ColouredDd $coloured={coloured}>
+        <ColouredDt $coloured={coloured} $highlighted={false}>
+          Status
+        </ColouredDt>
+        <ColouredDd $coloured={coloured} $highlighted={false}>
           <StatusIndicator type="success">Paid</StatusIndicator>
         </ColouredDd>
       </DGroup>
       <DGroup>
-        <ColouredDt $coloured={coloured}>Amount</ColouredDt>
-        <ColouredDd $coloured={coloured}>$202.12</ColouredDd>
+        <ColouredDt $coloured={coloured} $highlighted={false}>
+          Amount
+        </ColouredDt>
+        <ColouredDd $coloured={coloured} $highlighted={false}>
+          $202.12
+        </ColouredDd>
       </DGroup>
       {additionalGroups.map((group, index) => (
         <DGroup rowSpan={group.rowSpan} columnSpan={group.columnSpan} key={index}>
-          <ColouredDt $coloured={coloured}>{group.dt}</ColouredDt>
-          <ColouredDd $coloured={coloured}>{group.dd}</ColouredDd>
+          <ColouredDt $coloured={coloured} $highlighted={hoveredGroupIndex === index}>
+            {group.dt}
+          </ColouredDt>
+          <ColouredDd $coloured={coloured} $highlighted={hoveredGroupIndex === index}>
+            {group.dd}
+          </ColouredDd>
         </DGroup>
       ))}
     </DescriptionList>
   );
-
-  const addRandomGroup = () => {
-    setAdditionalGroups([
-      ...additionalGroups,
-      {
-        dt: DtValue,
-        dd: DdValue,
-        rowSpan: rowSpan,
-        columnSpan: columnSpan,
-      },
-    ]);
-  };
-
-  const removeLastGroup = () => {
-    setAdditionalGroups(additionalGroups.slice(0, -1));
-  };
 
   return (
     <Flex>
@@ -740,6 +784,12 @@ export function Playground() {
       >
         <Flex flexDirection="column" gap="x2">
           <Flex gap="x2" flexDirection="column">
+            <Input
+              value={descriptionTermMaxWidth}
+              onChange={(e) => setDescriptionTermMaxWidth(e.target.value)}
+              labelText="Description Term Max Width"
+              placeholder="e.g., 320px"
+            />
             <Select
               value={layout}
               onChange={(value) => setLayout(value as Layout)}
@@ -768,6 +818,25 @@ export function Playground() {
             ]}
             labelText="Density"
           />
+          <Select
+            value={fontSize}
+            onChange={(value) => setFontSize(value as keyof DefaultNDSThemeType["fontSizes"])}
+            options={Object.keys(theme.fontSizes).map((size) => ({
+              value: size,
+              label: size,
+            }))}
+            labelText="Font Size"
+          />
+          <Select
+            value={lineHeight}
+            onChange={(value) => setLineHeight(value as keyof DefaultNDSThemeType["lineHeights"])}
+            options={Object.keys(theme.lineHeights).map((height) => ({
+              value: height,
+              label: height,
+            }))}
+            labelText="Line Height"
+          />
+
           <Input
             type="number"
             value={columns?.toString() ?? ""}
@@ -819,45 +888,57 @@ export function Playground() {
                 No additional groups
               </Text>
             )}
-            <Flex flexDirection="column" gap="x2">
+            <Flex flexDirection="column">
               {additionalGroups.map((group, index) => (
                 <>
-                  {index > 0 && <HorizontalDivider secondary />}
-                  <Box key={index}>
-                    <Flex justifyContent="space-between" alignItems="center" mb="x2">
-                      <Text>Group {index + 1}</Text>
+                  {index > 0 && <HorizontalDivider />}
+                  <Box
+                    key={index}
+                    onMouseEnter={() => setHoveredGroupIndex(index)}
+                    onMouseLeave={() => setHoveredGroupIndex(null)}
+                  >
+                    <Flex justifyContent="space-between" alignItems="center" mb={group.isExpanded ? "x2" : "none"}>
+                      <Flex alignItems="center" gap="x2">
+                        <IconicButton
+                          icon={group.isExpanded ? "downArrow" : "rightArrow"}
+                          onClick={() => toggleGroupExpansion(index)}
+                        />
+                        <Text>Group {index + 1}</Text>
+                      </Flex>
                       <QuietButton size="small" onClick={() => deleteGroup(index)}>
                         Delete
                       </QuietButton>
                     </Flex>
-                    <Flex flexDirection="column" gap="x2">
-                      <Input
-                        value={group.dt}
-                        onChange={(e) => updateGroup(index, { dt: e.target.value })}
-                        labelText="Description Term"
-                      />
-                      <Textarea
-                        value={group.dd}
-                        onChange={(e) => updateGroup(index, { dd: e.target.value })}
-                        labelText="Description Data"
-                      />
-                      <Flex gap="x2">
+                    {group.isExpanded && (
+                      <Flex flexDirection="column" gap="x2">
                         <Input
-                          type="number"
-                          value={group.rowSpan}
-                          onChange={(e) => updateGroup(index, { rowSpan: Number(e.target.value) })}
-                          labelText="Row Span"
-                          min={1}
+                          value={group.dt}
+                          onChange={(e) => updateGroup(index, { dt: e.target.value })}
+                          labelText="Description Term"
                         />
-                        <Input
-                          type="number"
-                          value={group.columnSpan}
-                          onChange={(e) => updateGroup(index, { columnSpan: Number(e.target.value) })}
-                          labelText="Column Span"
-                          min={1}
+                        <Textarea
+                          value={group.dd}
+                          onChange={(e) => updateGroup(index, { dd: e.target.value })}
+                          labelText="Description Data"
                         />
+                        <Flex gap="x2">
+                          <Input
+                            type="number"
+                            value={group.rowSpan}
+                            onChange={(e) => updateGroup(index, { rowSpan: Number(e.target.value) })}
+                            labelText="Row Span"
+                            min={1}
+                          />
+                          <Input
+                            type="number"
+                            value={group.columnSpan}
+                            onChange={(e) => updateGroup(index, { columnSpan: Number(e.target.value) })}
+                            labelText="Column Span"
+                            min={1}
+                          />
+                        </Flex>
                       </Flex>
-                    </Flex>
+                    )}
                   </Box>
                 </>
               ))}
@@ -867,19 +948,41 @@ export function Playground() {
       </Sidebar>
       <Box flex={1}>
         <Heading3 mb="x3">Playground</Heading3>
-        {containerOutline ? (
-          <DashedBox flex={1} width={containerWidth}>
-            {DescriptionListElement}
-          </DashedBox>
-        ) : (
-          <Box flex={1} width={containerWidth}>
-            {DescriptionListElement}
-          </Box>
-        )}
+        <Resizable
+          enable={{
+            right: true,
+          }}
+          size={{
+            width: containerWidth,
+          }}
+          onResizeStop={(_, __, ref) => {
+            setContainerWidth(`${ref.getBoundingClientRect().width}px`);
+          }}
+          handleComponent={{
+            right: <ResizeHandle />,
+          }}
+        >
+          {containerOutline ? (
+            <DashedBox flex={1}>{DescriptionListElement}</DashedBox>
+          ) : (
+            <Box flex={1}>{DescriptionListElement}</Box>
+          )}
+        </Resizable>
       </Box>
     </Flex>
   );
 }
+
+const ResizeHandle = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4rem;
+  width: 4px;
+  right: 4px;
+  border-radius: 9999px;
+  background-color: ${({ theme }) => theme.colors.midGrey};
+`;
 
 Playground.parameters = {
   chromatic: { disable: true },

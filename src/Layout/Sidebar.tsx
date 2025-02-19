@@ -159,7 +159,7 @@ function Sidebar({
     <>
       {closeOnOutsideClick && (
         <AnimatePresence>
-          {isOpen && (
+          {isOpen && overlay && (
             <SidebarOverlay
               top={top}
               transparent={!overlay}
