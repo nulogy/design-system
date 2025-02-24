@@ -38,7 +38,7 @@ export const RenderedUsingCompositionalAPI = () => {
                   <BottomSheet.Title>Title</BottomSheet.Title>
                   <BottomSheet.HelpText>
                     <>
-                      Help text can further explains the purpose and content of the BottomSheet{" "}
+                      Help text can further explain the purpose and content of the BottomSheet{" "}
                       <Link href="#story">Learn more</Link>
                     </>
                   </BottomSheet.HelpText>
