@@ -1,10 +1,10 @@
 # @nulogy/components
+
 ![npm (scoped)](https://img.shields.io/npm/v/@nulogy/components.svg?style=flat-square)
 ![Build](https://img.shields.io/github/workflow/status/nulogy/design-system/Release?style=flat-square)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/nulogy/design-system/blob/master/CONTRIBUTING.md)
 
 > Built with React, components make it easy to create interfaces that conform to the principles of the Nulogy Design System.
-
 
 ## 📦 Installation
 
@@ -83,6 +83,7 @@ Component documentation and usage guides are stored in the [github.com/nulogy/nu
 ## 👋 Work requests
 
 If you encounter a bug, need a new component or new capability of an existing component, or need any other type of support please file a work request in [GitHub Issues](https://github.com/nulogy/design-system/issues). To learn more about how to file a request and what to expect please read [How to file NDS work request](https://github.com/nulogy/design-system/wiki/How-to-file-NDS-work-request).
+
 - [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
 
 ## 🙌 Contributing
@@ -93,13 +94,12 @@ Please see [Contributing.MD](https://github.com/nulogy/design-system/blob/master
 
 - [#design-system](slack://channel?team=T024N2KKA&id=CBAFQ4X7X)
 
-
 ## 📦 Related Packages
 
 The design-system is a collection of related packages. If you're looking for more packages, see below.
 
-| Package                                                                                       | Description                                                                        |                                                                                                                                             |
-| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [@nulogy/css](https://github.com/nulogy/nds-css)               | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)                      |
-| [@nulogy/icons](https://github.com/nulogy/nds-icons)           | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)                |
-| [@nulogy/tokens](https://github.com/nulogy/nds-tokens)         | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens)             |
+| Package                                                | Description                                                                        |                                                                                                                                 |
+| ------------------------------------------------------ | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [@nulogy/css](https://github.com/nulogy/nds-css)       | CSS components and utility classes for adding new styles to non-React applications | [![CSS on NPM](https://img.shields.io/npm/v/@nulogy/css?style=flat-square)](https://www.npmjs.com/package/@nulogy/css)          |
+| [@nulogy/icons](https://github.com/nulogy/nds-icons)   | A selection of Material Icon `svgs` used by Nulogy applications                    | [![Icons on NPM](https://img.shields.io/npm/v/@nulogy/icons?style=flat-square)](https://www.npmjs.com/package/@nulogy/icons)    |
+| [@nulogy/tokens](https://github.com/nulogy/nds-tokens) | Design language styles (e.g colours, type, spacing, shadows, etc.)                 | [![Tokens on NPM](https://img.shields.io/npm/v/@nulogy/tokens?style=flat-square)](https://www.npmjs.com/package/@nulogy/tokens) |
