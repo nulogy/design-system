@@ -1,8 +1,8 @@
 import { DescriptionListProps, Columns, GroupMinWidth } from "./types";
 
 export function validateAndExtractGridProps(props: DescriptionListProps): {
-  columns?: Columns["columns"];
-  groupMinWidth?: GroupMinWidth["groupMinWidth"];
+  columns?: Columns;
+  groupMinWidth?: GroupMinWidth;
 } {
   const columns = "columns" in props ? props.columns : undefined;
   const groupMinWidth = "groupMinWidth" in props ? props.groupMinWidth : undefined;

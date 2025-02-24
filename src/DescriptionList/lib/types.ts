@@ -5,13 +5,8 @@ import { Breakpoints } from "../../theme/theme.type";
 export type Density = "medium" | "compact" | "relaxed";
 export type Layout = "stacked" | "inline" | "auto";
 
-export interface Columns {
-  columns?: number | Partial<Record<keyof Breakpoints, number>>;
-}
-
-export interface GroupMinWidth {
-  groupMinWidth?: string;
-}
+export type Columns = number | Partial<Record<keyof Breakpoints, number>>;
+export type GroupMinWidth = string;
 
 export interface BaseDescriptionListProps {
   descriptionTermMaxWidth?: string;
@@ -24,7 +19,10 @@ export interface BaseDescriptionListProps {
   children?: React.ReactNode;
 }
 
-export type DescriptionListWithColumns = BaseDescriptionListProps & Columns & { itemWidths?: never };
-export type DescriptionListWithGroupMinWidth = BaseDescriptionListProps & GroupMinWidth & { columns?: never };
+export type DescriptionListWithColumns = BaseDescriptionListProps & { columns?: Columns; groupMinWidth?: never };
+export type DescriptionListWithGroupMinWidth = BaseDescriptionListProps & {
+  groupMinWidth?: GroupMinWidth;
+  columns?: never;
+};
 
 export type DescriptionListProps = DescriptionListWithColumns | DescriptionListWithGroupMinWidth;
