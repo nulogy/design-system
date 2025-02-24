@@ -1,3 +1,34 @@
+# [14.0.0](https://github.com/nulogy/design-system/compare/v13.5.1...v14.0.0) (2025-02-24)
+
+
+### Bug Fixes
+
+* break into multiple stories and change structure ([cba8dd3](https://github.com/nulogy/design-system/commit/cba8dd326da3016b619b27b0c739ee40b5152ad6))
+* explore alternatives to auto layout ([01ff99e](https://github.com/nulogy/design-system/commit/01ff99ed489420fe360a0e799bd237842fddf769))
+* rename components to resemble the old API ([9150d91](https://github.com/nulogy/design-system/commit/9150d911cc895128428f0a89866e1b37e3edbcc7))
+
+
+### Features
+
+* add features to the DescriptionList ([6fb1357](https://github.com/nulogy/design-system/commit/6fb13577b213394722626da07930975185e231d1))
+* add more options to the Playground ([b3e0d97](https://github.com/nulogy/design-system/commit/b3e0d97ead7dbd65d5504ab39f3f4d1aaa52bbef))
+* change `pill` border radius to `rounded` ([7c0d9f1](https://github.com/nulogy/design-system/commit/7c0d9f118995191bb681ede7c31118d59a16800f))
+* customize columns in the Playground ([8c02d37](https://github.com/nulogy/design-system/commit/8c02d37784f74083ea13fd25cbb10c6da2f14f33))
+* Extend overlay prop to support new visibility options ([ccc9f41](https://github.com/nulogy/design-system/commit/ccc9f411b82c03b1b2740e9fb91214034caac0ae))
+* prefer container queries for DescriptionList ([5da9ccb](https://github.com/nulogy/design-system/commit/5da9ccb2e369ba20e5bf51a34ae5eb83538caa5a))
+
+
+### BREAKING CHANGES
+
+* changes the name to align with the intention behind the
+theme value.
+* Introduces a DescriptionGroup that allows the
+DescriptionList to be displayed in advanced layouts. Each pair of
+DescriptionTerm and DescriptionDetail needs to be wrapped with a
+DescriptionGroup following this release.
+
+Introduces `columns` and `groupMinWidth` props on the DescriptionList.
+
 ## [13.5.1](https://github.com/nulogy/design-system/compare/v13.5.0...v13.5.1) (2025-02-04)
 
 ### Bug Fixes
