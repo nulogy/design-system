@@ -23,11 +23,14 @@ Stories within any component folder can be tested and additional stories just fo
 # How do I run e2e specs?
 
 To test in the cypress runner (to see the tests run):
+
 - `yarn cypress:open`
   - Then run whichever file you want.
 
 CLI:
+
 - `yarn e2e:test`
 
 IN BROWSER:
+
 - `yarn e2e:start`

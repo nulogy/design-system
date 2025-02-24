@@ -1,5 +1,4 @@
 *.hbs
-*.md
 *.yml
 .github
 package.json

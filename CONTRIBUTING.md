@@ -2,7 +2,7 @@ This is a guide for Nulogy employees who wish to contribute to the Design System
 
 ### Before Starting Development
 
-Before you begin working on a feature or a new component, ensure that the proposed changes align with the design system's vision by having a discussion with the design system team. 
+Before you begin working on a feature or a new component, ensure that the proposed changes align with the design system's vision by having a discussion with the design system team.
 Additionally, verify that the new component has already been added to the design system's Figma library before opening a pull request.
 
 ### Prerequisites

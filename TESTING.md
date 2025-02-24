@@ -2,7 +2,7 @@
 
 ## Component API Testing
 
-All parts of the component API should be tested. If the prop only results in a visual change it may be covered with visual tests only. If there are functional differences make sure to test capture these in written tests. 
+All parts of the component API should be tested. If the prop only results in a visual change it may be covered with visual tests only. If there are functional differences make sure to test capture these in written tests.
 
 ### Visual Testing
 
@@ -41,7 +41,7 @@ And we avoid using:
 - Most HTML tags
 
 Test IDs are added when other options are hard to use.
-Test IDs should be maintained while refactoring to avoid breaking changes that could cause tests to fail in consuming applications. 
+Test IDs should be maintained while refactoring to avoid breaking changes that could cause tests to fail in consuming applications.
 
 ## Utilities Testing
 

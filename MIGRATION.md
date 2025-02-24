@@ -2,18 +2,18 @@
 
 ## Migrating from v5 to v6:
 
-### Remove deprecated props and components 
+### Remove deprecated props and components
 
-* `Title`, `SectionTitle`, and `SubsectionTitle`  should be replaced with  `Heading1`, `Heading2`, and `Heading3`
-* The `showTraining` prop has been removed from `BrandedNavBar`. Use `environment="training"` instead. 
+- `Title`, `SectionTitle`, and `SubsectionTitle` should be replaced with `Heading1`, `Heading2`, and `Heading3`
+- The `showTraining` prop has been removed from `BrandedNavBar`. Use `environment="training"` instead.
 
-### Replace theme.zindex with theme.zindices 
+### Replace theme.zindex with theme.zindices
 
-This shouldn't cause an issue if you're interacting with zIndex via properties, but if you were directly importing the theme then any reference to theme.zIndex should be replaced with theme.zIndices. 
+This shouldn't cause an issue if you're interacting with zIndex via properties, but if you were directly importing the theme then any reference to theme.zIndex should be replaced with theme.zIndices.
 
-### Install @nulogy/icons as a peerDependency 
+### Install @nulogy/icons as a peerDependency
 
-The upgrade in v5 didn't take due to a rollup setting, so if you still haven't added @nulogy/icons with `yarn add @nulogy/icons` then now is the time. 
+The upgrade in v5 didn't take due to a rollup setting, so if you still haven't added @nulogy/icons with `yarn add @nulogy/icons` then now is the time.
 
 ## Migrating from v4 to v5:
 
@@ -30,14 +30,16 @@ This was done to support using new icons without having to upgrade @nulogy/compo
 ### 2. AsyncSelect onChange handler
 
 If you are using the AsyncSelect component in your project, please update the onChange handler if you are using it. `onChange` now returns the complete option object that is selected rather than just the string value.
-    ```
-    onChange = (value) => {}
-    
+
+`````
+onChange = (value) => {}
+
     //becomes
-    
+
     onChange = ({value, label}). => {}
     ````
-If you needed to use the AsyncSelect as a controlled component, this was broken in previous verisons but now you can do so  by using the `onChange` and `value` prop.
+
+If you needed to use the AsyncSelect as a controlled component, this was broken in previous verisons but now you can do so by using the `onChange` and `value` prop.
 
 ### 3. MonthPicker and MonthRange components
 
@@ -65,3 +67,4 @@ All components must be wrapped in an <NDSProvider> component. This was already a
 All tests using NDS components must be wrapped in the NDSProvider as well. You can make a custom helper that can be reused throughout your app to wrap components in the Providers you need.
 
 You can use the [render](https://github.com/nulogy/design-system/blob/master/components/src/NDSProvider/render.spec-utils.js) we use as a guide to write your own
+`````
