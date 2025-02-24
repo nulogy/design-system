@@ -8,7 +8,7 @@ import { TileLink } from "../TopBar.styled";
 
 const MotionText = motion(Text);
 
-interface MenuItemLinkProps extends ComponentProps<typeof TileLink> {
+export interface MenuItemLinkProps extends ComponentProps<typeof TileLink> {
   title: string;
   description?: string;
   icon: IconName;

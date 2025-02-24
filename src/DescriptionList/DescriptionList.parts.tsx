@@ -5,7 +5,10 @@ import { Text } from "../Type";
 import { useDescriptionListContext } from "./DescriptionListContext";
 import { BaseDescriptionListProps, Columns, Density, GroupMinWidth } from "./lib/types";
 
-export type DescriptionListPartsProps = BaseDescriptionListProps & Partial<Columns> & Partial<GroupMinWidth>;
+export type DescriptionListPartsProps = BaseDescriptionListProps & {
+  columns?: Columns;
+  groupMinWidth?: GroupMinWidth;
+};
 
 const gapConfig: Record<Density, keyof DefaultNDSThemeType["space"]> = {
   compact: "x0_75",
