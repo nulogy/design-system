@@ -7,7 +7,6 @@ import icons from "@nulogy/icons";
 import { IconName } from "@nulogy/icons";
 import { Icon } from "../Icon";
 import { Text } from "../Type";
-import { DefaultNDSThemeType } from "../theme";
 import { ComponentVariant, useComponentVariant } from "../NDSProvider/ComponentVariantContext";
 
 interface BaseProps {
@@ -31,7 +30,7 @@ const IconWrapper = styled.span<{ size: string }>(({ theme, size }) => ({
   flexShrink: 0,
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: theme.radii.pill,
+  borderRadius: theme.radii.rounded,
   height: `calc(${theme.sizes[size] ?? size} + ${theme.sizes.x1})`,
   width: `calc(${theme.sizes[size] ?? size} + ${theme.sizes.x1})`,
   transition: ".2s",

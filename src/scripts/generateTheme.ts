@@ -167,7 +167,7 @@ const legacy: DefaultNDSThemeType = {
     medium: tokens.radius_border_medium,
     large: "8px",
     circle: tokens.radius_border_circle,
-    pill: "9999px",
+    rounded: "9999px",
   },
   borders: [],
 };
@@ -258,7 +258,7 @@ function generateThemeConfig(baseUnit: number): DefaultNDSThemeType {
       medium: px(baseUnit * 1),
       large: px(baseUnit * 2),
       circle: "50%",
-      pill: px(99999),
+      rounded: px(9999),
     },
     borders: [],
   };

@@ -25,7 +25,7 @@ const SwitchButton = styled.button<SwitchProps>(
     color: selected ? theme.colors.darkBlue : theme.colors.darkGrey,
     cursor: "pointer",
     border: "none",
-    borderRadius: theme.radii.pill,
+    borderRadius: theme.radii.rounded,
     fontSize: theme.fontSizes.base,
     fontWeight: theme.fontWeights.medium,
     lineHeight: theme.lineHeights.base,

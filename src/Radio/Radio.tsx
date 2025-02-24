@@ -66,7 +66,7 @@ const VisualRadio = styled.div<VisualRadioProps>(
     minWidth: theme.space.x2,
     height: theme.space.x2,
     marginRight: theme.space.x1,
-    borderRadius: theme.radii.pill,
+    borderRadius: theme.radii.rounded,
     marginTop: theme.space.x0_5,
     border: "solid 1px",
     position: "relative",
@@ -77,7 +77,7 @@ const VisualRadio = styled.div<VisualRadioProps>(
       width: `calc(${theme.sizes.x1} - 2px)`,
       height: `calc(${theme.sizes.x1} - 2px)`,
       background: theme.colors.white,
-      borderRadius: theme.radii.pill,
+      borderRadius: theme.radii.rounded,
     },
   }),
   ({ theme }) =>
